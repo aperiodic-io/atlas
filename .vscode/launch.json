@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Securities Master - Update All",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/securities_master/update.py",
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    },
+  ]
+}
