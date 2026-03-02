@@ -1,6 +1,5 @@
 import logging
-
-import pandas as pd
+from datetime import datetime
 import requests
 import tenacity
 
@@ -29,14 +28,22 @@ def _fetch_exchange(exchange: str) -> dict:
 
 def get_symbols(exchange: str, from_date: str, to_date: str) -> list[str]:
     exchange_details = _fetch_exchange(exchange)
+    from_dt = datetime.fromisoformat(from_date.replace("Z", "+00:00")).replace(
+        tzinfo=None
+    )
+    to_dt = datetime.fromisoformat(to_date.replace("Z", "+00:00")).replace(tzinfo=None)
     return [
         s["id"]
         for s in exchange_details["availableSymbols"]
-        if pd.to_datetime(s["availableSince"]).tz_localize(None)
-        <= pd.to_datetime(from_date)
+        if datetime.fromisoformat(s["availableSince"].replace("Z", "+00:00")).replace(
+            tzinfo=None
+        )
+        <= from_dt
         and (
-            pd.to_datetime(s["availableTo"]).tz_localize(None)
-            >= pd.to_datetime(to_date)
+            datetime.fromisoformat(s["availableTo"].replace("Z", "+00:00")).replace(
+                tzinfo=None
+            )
+            >= to_dt
             if "availableTo" in s and s["availableTo"] is not None
             else True
         )
