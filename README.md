@@ -61,9 +61,9 @@ print(contract.internal_id)  # spot-BTC-USDT
 
 ```python
 from datetime import datetime
-from atlas import SecuritiesMaster
+from atlas import SecurityMaster
 
-sm = SecuritiesMaster.load()
+sm = SecurityMaster.load()
 
 iid = sm.by_exchange_and_original_id("binance-spot", "BTCUSDT")
 print(iid)
@@ -164,7 +164,7 @@ The repository currently ships precomputed JSON snapshots for:
 - No options mapping in the securities master map:
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
-- Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecuritiesMaster` lookups.
+- Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
 - `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 

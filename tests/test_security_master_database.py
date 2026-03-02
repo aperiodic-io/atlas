@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from atlas.database import SecuritiesMaster
+from atlas.database import SecurityMaster
 
 
 def _write_exchange(tmp_path: Path, name: str, rows: list[dict]) -> None:
@@ -53,7 +53,7 @@ def test_exchanges_for_contract_matches_symbol_denominator_margin(tmp_path: Path
         ],
     )
 
-    sm = SecuritiesMaster.load(data_dir=tmp_path)
+    sm = SecurityMaster.load(data_dir=tmp_path)
 
     assert sm.exchanges_for_contract("btc", "usdt", "usdt") == ["binance-futures"]
     assert sm.exchanges_for_contract("BTC", "USDT", None) == [

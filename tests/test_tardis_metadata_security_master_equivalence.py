@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from atlas.database import SecuritiesMaster
+from atlas.database import SecurityMaster
 from atlas.exchange_ids import to_tardis_exchange_id
 from atlas.utils import _fetch_exchange
 
@@ -108,7 +108,7 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         f"for {exchange} (tardis id: {tardis_exchange})"
     )
 
-    sm = SecuritiesMaster.load(exchanges=[exchange])
+    sm = SecurityMaster.load(exchanges=[exchange])
     starts = [
         datetime.fromisoformat(_row_first_capture(r).replace("Z", "+00:00")) for r in rows
     ]

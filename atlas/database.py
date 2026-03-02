@@ -14,7 +14,7 @@ def _parse_iso_timestamp(value: str | None) -> datetime | None:
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
-class SecuritiesMaster:
+class SecurityMaster:
     def __init__(
         self,
         internal_id_map: dict[tuple[str, str], str],
@@ -30,7 +30,7 @@ class SecuritiesMaster:
         cls,
         data_dir: Path = _DATA_DIR,
         exchanges: list[str] | None = None,
-    ) -> SecuritiesMaster:
+    ) -> SecurityMaster:
         """Load pre-computed internal_ids from per-exchange JSON files.
 
         The internal_id field is written by update.py; symbols without one
@@ -123,4 +123,4 @@ class SecuritiesMaster:
 
     def __repr__(self) -> str:
         exchanges = len({ex for ex, _ in self._internal_id_map})
-        return f"SecuritiesMaster({len(self._internal_id_map)} symbols, {exchanges} exchanges)"
+        return f"SecurityMaster({len(self._internal_id_map)} symbols, {exchanges} exchanges)"
