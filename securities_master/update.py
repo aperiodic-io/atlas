@@ -39,7 +39,7 @@ EXCHANGES = [
     "hyperliquid",
     "kraken",
     "kucoin",
-    "okex-futures",
+    "okx-perps",
     "okex-swap",
     "okex",
     "phemex",

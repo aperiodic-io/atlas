@@ -398,9 +398,9 @@ class TestBitmexFuture:
         assert c.delivery_date == datetime(2025, 9, 1)
 
 
-class TestOkexFutures:
+class TestOkxPerps:
     def test_inverse(self):
-        c = _parse("okex-futures", "BTC-USD-250328", "future")
+        c = _parse("okx-perps", "BTC-USD-250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -408,7 +408,7 @@ class TestOkexFutures:
         assert c.delivery_date == datetime(2025, 3, 28)
 
     def test_linear(self):
-        c = _parse("okex-futures", "BTC-USDT-250328", "future")
+        c = _parse("okx-perps", "BTC-USDT-250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -416,7 +416,7 @@ class TestOkexFutures:
 
     def test_wrong_part_count_skipped(self):
         with pytest.raises(SkipSymbol):
-            _parse("okex-futures", "BTC-USD", "future")
+            _parse("okx-perps", "BTC-USD", "future")
 
 
 class TestBybitFuture:
