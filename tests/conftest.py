@@ -10,6 +10,6 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture()
+@pytest.fixture
 def update_snapshots(request):
     return request.config.getoption("--update-snapshots")

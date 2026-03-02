@@ -117,6 +117,39 @@ def _normalize_binance_derivative_type(symbol_id: str, current_type: str | None)
     return current_type
 
 
+def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> None:
+    if exchange not in {"binance-futures", "binance-futures-cm"}:
+        return
+    for sd in symbols:
+        sid = sd.get("id")
+        if not sid:
+            continue
+        sd["type"] = _normalize_binance_derivative_type(sid, sd.get("type"))
+
+
+def _apply_snapshot_metadata(symbols: list[dict]) -> None:
+    for sd in symbols:
+        if "availableSince" in sd:
+            sd["first_capture"] = sd["availableSince"]
+        # Persist the normalized project field name, not raw Tardis key.
+        sd.pop("availableSince", None)
+        if "availableTo" in sd:
+            sd["end_date"] = sd["availableTo"]
+
+
+def _merge_missing_rows(
+    incoming_symbols: list[dict], existing_rows: list[dict]
+) -> list[dict]:
+    symbols_by_id: dict[str, dict] = {
+        sd["id"]: sd for sd in incoming_symbols if isinstance(sd, dict) and "id" in sd
+    }
+    for row in existing_rows:
+        row_id = row.get("id")
+        if row_id and row_id not in symbols_by_id:
+            symbols_by_id[row_id] = row
+    return list(symbols_by_id.values())
+
+
 def update(
     exchanges: list[str] = EXCHANGES,
     source: SymbolSource | None = None,
@@ -144,32 +177,14 @@ def update(
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
         ]
-        if exchange in {"binance-futures", "binance-futures-cm"}:
-            for sd in incoming_symbols:
-                sid = sd.get("id")
-                if not sid:
-                    continue
-                sd["type"] = _normalize_binance_derivative_type(sid, sd.get("type"))
+        _normalize_exchange_symbols(exchange, incoming_symbols)
         _merge_existing_fields(incoming_symbols, existing_by_id)
+        _apply_snapshot_metadata(incoming_symbols)
         for sd in incoming_symbols:
-            if "availableSince" in sd:
-                sd["first_capture"] = sd["availableSince"]
-            # Persist the normalized project field name, not raw Tardis key.
-            sd.pop("availableSince", None)
-            if "availableTo" in sd:
-                sd["end_date"] = sd["availableTo"]
             _enrich(exchange, sd)
 
         # Never drop existing rows if the source omits them.
-        symbols_by_id: dict[str, dict] = {
-            sd["id"]: sd for sd in incoming_symbols if isinstance(sd, dict) and "id" in sd
-        }
-        for row in existing_rows:
-            row_id = row.get("id")
-            if row_id and row_id not in symbols_by_id:
-                symbols_by_id[row_id] = row
-
-        symbols = list(symbols_by_id.values())
+        symbols = _merge_missing_rows(incoming_symbols, existing_rows)
         symbols.sort(
             key=lambda sd: (
                 sd.get("id", ""),
