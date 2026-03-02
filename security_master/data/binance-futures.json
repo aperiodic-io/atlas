@@ -5254,6 +5254,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "katusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-KAT-USDT:USDT",
+    "symbol": "KAT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "kavausdt",
     "type": "perpetual",
     "first_capture": "2020-07-29T00:00:00.000Z",

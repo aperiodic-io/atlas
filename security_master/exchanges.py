@@ -32,7 +32,7 @@ from .exchange_definitions.huobi import (
 from .exchange_definitions.hyperliquid import parse_hyperliquid
 from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
-from .exchange_definitions.okex import (
+from .exchange_definitions.okx import (
     fetch_okx_futures,
     fetch_okx_spot,
     fetch_okx_swap,

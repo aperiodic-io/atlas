@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -56,14 +57,15 @@ EXCHANGES = [
 ]
 
 
-def _load_existing_symbols(path: Path) -> dict[str, dict]:
+def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
     if not path.exists():
-        return {}
+        return [], {}
     try:
         rows = json.loads(path.read_text())
     except json.JSONDecodeError:
-        return {}
-    return {row["id"]: row for row in rows if isinstance(row, dict) and "id" in row}
+        return [], {}
+    rows = [row for row in rows if isinstance(row, dict) and "id" in row]
+    return rows, {row["id"]: row for row in rows}
 
 
 def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
@@ -103,6 +105,18 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd.update(_NONE)
 
 
+def _normalize_binance_derivative_type(symbol_id: str, current_type: str | None) -> str | None:
+    sid = symbol_id.upper()
+    if "_PERP" in sid or sid.endswith("PERP"):
+        return "perpetual"
+    if re.search(r"_\d{6}$", sid) or re.search(r"\d{6}$", sid):
+        return "future"
+    if current_type in {None, "", "future", "perpetual"}:
+        # On Binance futures endpoints, a non-dated symbol is perpetual.
+        return "perpetual"
+    return current_type
+
+
 def update(
     exchanges: list[str] = EXCHANGES,
     source: SymbolSource = HybridSymbolSource(),
@@ -111,7 +125,7 @@ def update(
     total = 0
     for exchange in exchanges:
         path = _DATA_DIR / f"{exchange}.json"
-        existing_by_id = _load_existing_symbols(path)
+        existing_rows, existing_by_id = _load_existing_symbols(path)
         if is_beta_exchange(exchange):
             print(f"Skipping {exchange} (beta exchange)", flush=True)
             continue
@@ -123,13 +137,19 @@ def update(
             continue
 
         allowed_types = {"spot", "perpetual", "future"}
-        symbols = [
+        incoming_symbols = [
             sd
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
         ]
-        _merge_existing_fields(symbols, existing_by_id)
-        for sd in symbols:
+        if exchange in {"binance-futures", "binance-futures-cm"}:
+            for sd in incoming_symbols:
+                sid = sd.get("id")
+                if not sid:
+                    continue
+                sd["type"] = _normalize_binance_derivative_type(sid, sd.get("type"))
+        _merge_existing_fields(incoming_symbols, existing_by_id)
+        for sd in incoming_symbols:
             if "availableSince" in sd:
                 sd["first_capture"] = sd["availableSince"]
             # Persist the normalized project field name, not raw Tardis key.
@@ -137,6 +157,17 @@ def update(
             if "availableTo" in sd:
                 sd["end_date"] = sd["availableTo"]
             _enrich(exchange, sd)
+
+        # Never drop existing rows if the source omits them.
+        symbols_by_id: dict[str, dict] = {
+            sd["id"]: sd for sd in incoming_symbols if isinstance(sd, dict) and "id" in sd
+        }
+        for row in existing_rows:
+            row_id = row.get("id")
+            if row_id and row_id not in symbols_by_id:
+                symbols_by_id[row_id] = row
+
+        symbols = list(symbols_by_id.values())
         symbols.sort(
             key=lambda sd: (
                 sd.get("id", ""),

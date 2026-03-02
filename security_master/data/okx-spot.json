@@ -62,6 +62,17 @@
     "margin": null
   },
   {
+    "id": "2Z-EUR",
+    "type": "spot",
+    "internal_id": "spot-2Z-EUR",
+    "symbol": "2Z",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "2Z-USD",
     "type": "spot",
     "internal_id": "spot-2Z-USD",
@@ -72,6 +83,17 @@
     "contract_size": 1.0,
     "first_capture": "2025-11-14T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "2Z-USDC",
+    "type": "spot",
+    "internal_id": "spot-2Z-USDC",
+    "symbol": "2Z",
+    "denominator": "USDC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "2Z-USDT",
@@ -2430,6 +2452,17 @@
     "margin": null
   },
   {
+    "id": "BARD-EUR",
+    "type": "spot",
+    "internal_id": "spot-BARD-EUR",
+    "symbol": "BARD",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "BARD-USD",
     "type": "spot",
     "internal_id": "spot-BARD-USD",
@@ -2440,6 +2473,17 @@
     "contract_size": 1.0,
     "first_capture": "2025-09-18T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "BARD-USDC",
+    "type": "spot",
+    "internal_id": "spot-BARD-USDC",
+    "symbol": "BARD",
+    "denominator": "USDC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "BARD-USDT",
@@ -4108,6 +4152,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "CFX-EUR",
+    "type": "spot",
+    "internal_id": "spot-CFX-EUR",
+    "symbol": "CFX",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "CFX-USD",
     "type": "spot",
     "internal_id": "spot-CFX-USD",
@@ -5024,6 +5079,17 @@
     "internal_id": "spot-CVT-USDT",
     "symbol": "CVT",
     "denominator": "USDT",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
+    "id": "CVX-EUR",
+    "type": "spot",
+    "internal_id": "spot-CVX-EUR",
+    "symbol": "CVX",
+    "denominator": "EUR",
     "margin": null,
     "contract_type": "spot",
     "delivery_date": null,
@@ -6514,6 +6580,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "ENS-EUR",
+    "type": "spot",
+    "internal_id": "spot-ENS-EUR",
+    "symbol": "ENS",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "ENS-USD",
     "type": "spot",
     "internal_id": "spot-ENS-USD",
@@ -6974,6 +7051,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "ETHFI-EUR",
+    "type": "spot",
+    "internal_id": "spot-ETHFI-EUR",
+    "symbol": "ETHFI",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "ETHFI-TRY",
     "type": "spot",
     "internal_id": "spot-ETHFI-TRY",
@@ -7386,6 +7474,17 @@
     "internal_id": "spot-FLM-USDT",
     "symbol": "FLM",
     "denominator": "USDT",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
+    "id": "FLOKI-EUR",
+    "type": "spot",
+    "internal_id": "spot-FLOKI-EUR",
+    "symbol": "FLOKI",
+    "denominator": "EUR",
     "margin": null,
     "contract_type": "spot",
     "delivery_date": null,
@@ -7944,6 +8043,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "GALA-EUR",
+    "type": "spot",
+    "internal_id": "spot-GALA-EUR",
+    "symbol": "GALA",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "GALA-USD",
     "type": "spot",
     "internal_id": "spot-GALA-USD",
@@ -8246,6 +8356,17 @@
     "internal_id": "spot-GLM-BTC",
     "symbol": "GLM",
     "denominator": "BTC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
+    "id": "GLM-EUR",
+    "type": "spot",
+    "internal_id": "spot-GLM-EUR",
+    "symbol": "GLM",
+    "denominator": "EUR",
     "margin": null,
     "contract_type": "spot",
     "delivery_date": null,
@@ -10058,6 +10179,17 @@
     "margin": null
   },
   {
+    "id": "KAIA-EUR",
+    "type": "spot",
+    "internal_id": "spot-KAIA-EUR",
+    "symbol": "KAIA",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "KAIA-USD",
     "type": "spot",
     "internal_id": "spot-KAIA-USD",
@@ -10344,6 +10476,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "KITE-EUR",
+    "type": "spot",
+    "internal_id": "spot-KITE-EUR",
+    "symbol": "KITE",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "KITE-USD",
     "type": "spot",
     "internal_id": "spot-KITE-USD",
@@ -10354,6 +10497,17 @@
     "contract_size": 1.0,
     "first_capture": "2025-11-03T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "KITE-USDC",
+    "type": "spot",
+    "internal_id": "spot-KITE-USDC",
+    "symbol": "KITE",
+    "denominator": "USDC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "KITE-USDT",
@@ -12758,6 +12912,17 @@
     "margin": null
   },
   {
+    "id": "MORPHO-EUR",
+    "type": "spot",
+    "internal_id": "spot-MORPHO-EUR",
+    "symbol": "MORPHO",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "MORPHO-USD",
     "type": "spot",
     "internal_id": "spot-MORPHO-USD",
@@ -14616,6 +14781,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "PENDLE-EUR",
+    "type": "spot",
+    "internal_id": "spot-PENDLE-EUR",
+    "symbol": "PENDLE",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "PENDLE-USD",
     "type": "spot",
     "internal_id": "spot-PENDLE-USD",
@@ -15656,6 +15832,17 @@
     "contract_size": 1.0,
     "first_capture": "2025-07-18T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "PYTH-EUR",
+    "type": "spot",
+    "internal_id": "spot-PYTH-EUR",
+    "symbol": "PYTH",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "PYTH-USD",
@@ -16992,6 +17179,17 @@
     "margin": null
   },
   {
+    "id": "SENT-EUR",
+    "type": "spot",
+    "internal_id": "spot-SENT-EUR",
+    "symbol": "SENT",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "SENT-TRY",
     "type": "spot",
     "internal_id": "spot-SENT-TRY",
@@ -17014,6 +17212,17 @@
     "contract_size": 1.0,
     "first_capture": "2026-01-27T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "SENT-USDC",
+    "type": "spot",
+    "internal_id": "spot-SENT-USDC",
+    "symbol": "SENT",
+    "denominator": "USDC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "SENT-USDT",
@@ -18098,6 +18307,17 @@
     "margin": null
   },
   {
+    "id": "STRK-EUR",
+    "type": "spot",
+    "internal_id": "spot-STRK-EUR",
+    "symbol": "STRK",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "STRK-TRY",
     "type": "spot",
     "internal_id": "spot-STRK-TRY",
@@ -18710,6 +18930,17 @@
     "internal_id": "spot-THG-USDT",
     "symbol": "THG",
     "denominator": "USDT",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
+    "id": "TIA-EUR",
+    "type": "spot",
+    "internal_id": "spot-TIA-EUR",
+    "symbol": "TIA",
+    "denominator": "EUR",
     "margin": null,
     "contract_type": "spot",
     "delivery_date": null,
@@ -20312,6 +20543,17 @@
     "margin": null
   },
   {
+    "id": "VIRTUAL-EUR",
+    "type": "spot",
+    "internal_id": "spot-VIRTUAL-EUR",
+    "symbol": "VIRTUAL",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "VIRTUAL-USD",
     "type": "spot",
     "internal_id": "spot-VIRTUAL-USD",
@@ -20322,6 +20564,17 @@
     "contract_size": 1.0,
     "first_capture": "2025-10-28T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "VIRTUAL-USDC",
+    "type": "spot",
+    "internal_id": "spot-VIRTUAL-USDC",
+    "symbol": "VIRTUAL",
+    "denominator": "USDC",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "VIRTUAL-USDT",
@@ -22156,6 +22409,17 @@
     "contract_size": 1.0
   },
   {
+    "id": "ZBCN-EUR",
+    "type": "spot",
+    "internal_id": "spot-ZBCN-EUR",
+    "symbol": "ZBCN",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "ZBCN-USD",
     "type": "spot",
     "internal_id": "spot-ZBCN-USD",
@@ -22568,6 +22832,17 @@
     "contract_size": 1.0,
     "first_capture": "2019-12-13T00:00:00.000Z",
     "margin": null
+  },
+  {
+    "id": "ZK-EUR",
+    "type": "spot",
+    "internal_id": "spot-ZK-EUR",
+    "symbol": "ZK",
+    "denominator": "EUR",
+    "margin": null,
+    "contract_type": "spot",
+    "delivery_date": null,
+    "contract_size": 1.0
   },
   {
     "id": "ZK-TRY",

@@ -75,7 +75,7 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
         "https://api.binance.com/api/v3/exchangeInfo", timeout=timeout_seconds
     ).json()
     return [
-        _to_symbol(item["symbol"], "spot")
+        _to_symbol(item["symbol"].lower(), "spot")
         for item in payload.get("symbols", [])
         if item.get("status") == "TRADING"
     ]
@@ -90,7 +90,10 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict[str, str]]:
         "https://fapi.binance.com/fapi/v1/exchangeInfo", timeout=timeout_seconds
     ).json()
     return [
-        _to_symbol(item["symbol"], _normalize_binance_contract_type(item.get("contractType")))
+        _to_symbol(
+            item["symbol"].lower(),
+            _normalize_binance_contract_type(item.get("contractType")),
+        )
         for item in payload.get("symbols", [])
         if item.get("status") == "TRADING"
     ]
@@ -101,7 +104,10 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict[str, str]]:
         "https://dapi.binance.com/dapi/v1/exchangeInfo", timeout=timeout_seconds
     ).json()
     return [
-        _to_symbol(item["symbol"], _normalize_binance_contract_type(item.get("contractType")))
+        _to_symbol(
+            item["symbol"].lower(),
+            _normalize_binance_contract_type(item.get("contractType")),
+        )
         for item in payload.get("symbols", [])
         if item.get("status") == "TRADING"
     ]

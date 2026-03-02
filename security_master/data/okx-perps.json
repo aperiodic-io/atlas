@@ -2728,6 +2728,17 @@
     "first_capture": "2025-02-20T00:00:00.000Z"
   },
   {
+    "id": "KAT-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-KAT-USDT:USDT",
+    "symbol": "KAT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "delivery_date": null,
+    "contract_size": 1.0
+  },
+  {
     "id": "KGEN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-KGEN-USDT:USDT",
