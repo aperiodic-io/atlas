@@ -4,6 +4,8 @@ import pandas as pd
 import requests
 import tenacity
 
+from securities_master.exchange_ids import to_tardis_exchange_id
+
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
 
@@ -17,11 +19,12 @@ _exchange_cache: dict[str, dict] = {}
 )
 def _fetch_exchange(exchange: str) -> dict:
     """Fetch and cache the full exchange details from Tardis."""
-    if exchange not in _exchange_cache:
-        _exchange_cache[exchange] = requests.get(
-            f"https://api.tardis.dev/v1/exchanges/{exchange}"
+    tardis_exchange_id = to_tardis_exchange_id(exchange)
+    if tardis_exchange_id not in _exchange_cache:
+        _exchange_cache[tardis_exchange_id] = requests.get(
+            f"https://api.tardis.dev/v1/exchanges/{tardis_exchange_id}"
         ).json()
-    return _exchange_cache[exchange]
+    return _exchange_cache[tardis_exchange_id]
 
 
 def get_symbols(exchange: str, from_date: str, to_date: str) -> list[str]:
@@ -47,4 +50,3 @@ def get_symbols_all_time(exchange: str) -> dict[str, tuple[str, str]]:
         s["id"]: (s["availableSince"], s.get("availableTo") or "present")
         for s in exchange_details["availableSymbols"]
     }
-

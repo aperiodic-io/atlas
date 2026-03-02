@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import requests
+
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from .common import (
@@ -40,3 +42,43 @@ def parse_okex_futures(exchange: str, sd: SymbolData) -> Contract:
     ctype = contract_type(sd)
     margin = resolve_margin(symbol, denominator, ctype)
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
+
+
+def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
+    return {"id": id_value, "type": type_value}
+
+
+def fetch_okx_spot(timeout_seconds: int) -> list[dict[str, str]]:
+    payload = requests.get(
+        "https://www.okx.com/api/v5/public/instruments?instType=SPOT",
+        timeout=timeout_seconds,
+    ).json()
+    return [
+        _to_symbol(item["instId"], "spot")
+        for item in payload.get("data", [])
+        if item.get("state") == "live"
+    ]
+
+
+def fetch_okx_swap(timeout_seconds: int) -> list[dict[str, str]]:
+    payload = requests.get(
+        "https://www.okx.com/api/v5/public/instruments?instType=SWAP",
+        timeout=timeout_seconds,
+    ).json()
+    return [
+        _to_symbol(item["instId"], "perpetual")
+        for item in payload.get("data", [])
+        if item.get("state") == "live"
+    ]
+
+
+def fetch_okx_futures(timeout_seconds: int) -> list[dict[str, str]]:
+    payload = requests.get(
+        "https://www.okx.com/api/v5/public/instruments?instType=FUTURES",
+        timeout=timeout_seconds,
+    ).json()
+    return [
+        _to_symbol(item["instId"], "future")
+        for item in payload.get("data", [])
+        if item.get("state") == "live"
+    ]

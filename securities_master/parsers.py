@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from .contracts import Contract
-from .exchange_parsers import PARSERS, SkipSymbol
+from .exchange_definitions import SkipSymbol
+from .exchanges import PARSERS
 from .parser_interface import SymbolData
 
 

@@ -6,9 +6,41 @@ from pathlib import Path
 import pytest
 
 from securities_master.database import SecuritiesMaster
-from securities_master.utils import _fetch_exchange, get_symbols
+from securities_master.exchange_ids import to_tardis_exchange_id
+from securities_master.utils import _fetch_exchange
 
-_ALLOWED_TYPES = {"spot", "perpetual", "future"}
+_LEGACY_TO_INTERNAL_EXCHANGE = {
+    "binance": "binance-spot",
+    "binance-futures": "binance-futures",
+    "binance-perps": "binance-futures",
+    "binance-delivery": "binance-futures-cm",
+    "okex": "okx-spot",
+    "okex-futures": "okx-futures",
+    "okex-swap": "okx-perps",
+}
+
+
+def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
+    return _LEGACY_TO_INTERNAL_EXCHANGE.get(exchange_file_stem, exchange_file_stem)
+
+
+def _row_first_capture(row: dict) -> str | None:
+    return row.get("first_capture") or row.get("tardis_first_capture")
+
+
+def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
+    available_since = datetime.fromisoformat(
+        symbol["availableSince"].replace("Z", "+00:00")
+    ).replace(tzinfo=None)
+    available_to_raw = symbol.get("availableTo")
+    available_to = (
+        datetime.fromisoformat(available_to_raw.replace("Z", "+00:00")).replace(
+            tzinfo=None
+        )
+        if available_to_raw
+        else None
+    )
+    return available_since <= start and (available_to is None or available_to >= end)
 
 
 @pytest.mark.parametrize(
@@ -23,20 +55,25 @@ _ALLOWED_TYPES = {"spot", "perpetual", "future"}
 def test_get_symbols_matches_local_securities_master_for_all_covered_exchanges(
     exchange_file: Path,
 ) -> None:
-    exchange = exchange_file.stem
+    exchange = _internal_exchange_for_data_file(exchange_file.stem)
+    tardis_exchange = to_tardis_exchange_id(exchange)
     rows = json.loads(exchange_file.read_text())
-    rows = [row for row in rows if row.get("tardis_first_capture")]
-    assert rows, f"no rows with tardis_first_capture in {exchange_file}"
+    rows = [row for row in rows if _row_first_capture(row)]
+    if not rows:
+        pytest.skip(
+            "snapshot has no first_capture metadata "
+            f"(likely generated from direct exchange APIs): {exchange_file}"
+        )
 
     live_symbols = [
         s
         for s in _fetch_exchange(exchange).get("availableSymbols", [])
-        if s.get("type") in _ALLOWED_TYPES
+        if s.get("type") in {"spot", "perpetual", "future"}
     ]
     local_start_dates = {
-        row["id"]: datetime.fromisoformat(
-            row["tardis_first_capture"].replace("Z", "+00:00")
-        ).replace(tzinfo=None)
+        row["id"]: datetime.fromisoformat(_row_first_capture(row).replace("Z", "+00:00")).replace(
+            tzinfo=None
+        )
         for row in rows
     }
     tardis_start_dates = {
@@ -49,7 +86,8 @@ def test_get_symbols_matches_local_securities_master_for_all_covered_exchanges(
     assert sorted(tardis_start_dates.items(), key=lambda x: x[0]) == sorted(
         local_start_dates.items(), key=lambda x: x[0]
     ), (
-        f"tardis_first_capture mismatch between tardis metadata and local securities master for {exchange}"
+        "first_capture mismatch between tardis metadata and local "
+        f"securities master for {exchange} (tardis id: {tardis_exchange})"
     )
     local_end_dates = {
         row["id"]: datetime.fromisoformat(
@@ -68,12 +106,13 @@ def test_get_symbols_matches_local_securities_master_for_all_covered_exchanges(
     assert sorted(tardis_end_dates.items(), key=lambda x: x[0]) == sorted(
         local_end_dates.items(), key=lambda x: x[0]
     ), (
-        f"end_date mismatch between tardis metadata and local securities master for {exchange}"
+        "end_date mismatch between tardis metadata and local securities master "
+        f"for {exchange} (tardis id: {tardis_exchange})"
     )
 
     sm = SecuritiesMaster.load(exchanges=[exchange])
     starts = [
-        datetime.fromisoformat(r["tardis_first_capture"].replace("Z", "+00:00")) for r in rows
+        datetime.fromisoformat(_row_first_capture(r).replace("Z", "+00:00")) for r in rows
     ]
     ends = [
         datetime.fromisoformat(r["end_date"].replace("Z", "+00:00"))
@@ -90,11 +129,9 @@ def test_get_symbols_matches_local_securities_master_for_all_covered_exchanges(
         month_start.month,
         calendar.monthrange(month_start.year, month_start.month)[1],
     )
-    tardis_symbols = get_symbols(
-        exchange=exchange,
-        from_date=month_start.strftime("%Y-%m-%d"),
-        to_date=month_end.strftime("%Y-%m-%d"),
-    )
+    tardis_symbols = [
+        symbol["id"] for symbol in live_symbols if _is_active_in_window(symbol, month_start, month_end)
+    ]
     local_symbols = sm.symbol_ids(
         exchange=exchange,
         tardis_first_capture=month_start,

@@ -3,6 +3,7 @@ from datetime import datetime
 
 
 from securities_master.contracts import ContractType
+from securities_master.exchange_definitions import is_beta_exchange
 from securities_master.parsers import SkipSymbol, parse_contract
 
 
@@ -33,6 +34,11 @@ class TestHelpers:
         with pytest.raises(KeyError):
             parse_contract("binance", {})
 
+    def test_beta_exchange_classification(self):
+        assert is_beta_exchange("binance-spot") is False
+        assert is_beta_exchange("okx-spot") is False
+        assert is_beta_exchange("coinbase") is True
+
 
 # ---------------------------------------------------------------------------
 # Spot exchanges
@@ -60,9 +66,50 @@ class TestBinanceSpot:
         assert c.symbol == "BNB"
         assert c.denominator == "BUSD"
 
+    def test_trxxrp_alias_binance_spot(self):
+        c = _parse("binance-spot", "trxxrp", "spot")
+        assert c.symbol == "TRX"
+        assert c.denominator == "XRP"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
+    def test_wintrx_alias_binance_spot(self):
+        c = _parse("binance-spot", "wintrx", "spot")
+        assert c.symbol == "WIN"
+        assert c.denominator == "TRX"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
+    def test_btcpln_alias_binance_spot(self):
+        c = _parse("binance-spot", "btcpln", "spot")
+        assert c.symbol == "BTC"
+        assert c.denominator == "PLN"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
+    def test_usdtars_alias_binance_spot(self):
+        c = _parse("binance-spot", "usdtars", "spot")
+        assert c.symbol == "USDT"
+        assert c.denominator == "ARS"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
+    def test_bnbjpy_alias_binance_spot(self):
+        c = _parse("binance-spot", "bnbjpy", "spot")
+        assert c.symbol == "BNB"
+        assert c.denominator == "JPY"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
     def test_unrecognised_quote_raises(self):
         with pytest.raises(SkipSymbol):
             _parse("binance", "ABCXYZ", "spot")
+
+    def test_alias_binance_spot(self):
+        c = _parse("binance-spot", "BTCUSDT", "spot")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USDT"
+        assert c.contract_type == ContractType.spot
 
 
 class TestCoinbase:
@@ -194,6 +241,15 @@ class TestKucoin:
         assert c.contract_type == ContractType.spot
 
 
+class TestOkxSpot:
+    def test_btc_usdt(self):
+        c = _parse("okx-spot", "BTC-USDT", "spot")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USDT"
+        assert c.margin is None
+        assert c.contract_type == ContractType.spot
+
+
 class TestGateIo:
     def test_spot(self):
         c = _parse("gate-io", "BTC_USDT", "spot")
@@ -216,7 +272,7 @@ class TestBinanceFuturesPerp:
         assert c.contract_type == ContractType.perpetual
 
     def test_inverse_perp(self):
-        c = _parse("binance-futures", "BTCUSD_PERP", "perpetual")
+        c = _parse("binance-futures-cm", "BTCUSD_PERP", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -248,23 +304,23 @@ class TestBitmexPerp:
         assert c.denominator == "USD"
 
 
-class TestOkexSwap:
+class TestOkxPerps:
     def test_inverse(self):
-        c = _parse("okex-swap", "BTC-USD-SWAP", "perpetual")
+        c = _parse("okx-perps", "BTC-USD-SWAP", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.contract_type == ContractType.perpetual
 
     def test_linear(self):
-        c = _parse("okex-swap", "BTC-USDT-SWAP", "perpetual")
+        c = _parse("okx-perps", "BTC-USDT-SWAP", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
 
     def test_non_swap_suffix_skipped(self):
         with pytest.raises(SkipSymbol):
-            _parse("okex-swap", "BTC-USD-250328", "future")
+            _parse("okx-perps", "BTC-USD-250328", "future")
 
 
 class TestBybit:
@@ -361,7 +417,7 @@ class TestBinanceFuturesDated:
 
 class TestBinanceDelivery:
     def test_inverse_future(self):
-        c = _parse("binance-delivery", "BTCUSD_250328", "future")
+        c = _parse("binance-futures-cm", "BTCUSD_250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -369,7 +425,7 @@ class TestBinanceDelivery:
         assert c.delivery_date == datetime(2025, 3, 28)
 
     def test_inverse_perp(self):
-        c = _parse("binance-delivery", "BTCUSD_PERP", "perpetual")
+        c = _parse("binance-futures-cm", "BTCUSD_PERP", "perpetual")
         assert c.symbol == "BTC"
         assert c.contract_type == ContractType.perpetual
         assert c.delivery_date is None
@@ -398,9 +454,9 @@ class TestBitmexFuture:
         assert c.delivery_date == datetime(2025, 9, 1)
 
 
-class TestOkxPerps:
+class TestOkexFutures:
     def test_inverse(self):
-        c = _parse("okx-perps", "BTC-USD-250328", "future")
+        c = _parse("okx-futures", "BTC-USD-250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -408,7 +464,7 @@ class TestOkxPerps:
         assert c.delivery_date == datetime(2025, 3, 28)
 
     def test_linear(self):
-        c = _parse("okx-perps", "BTC-USDT-250328", "future")
+        c = _parse("okx-futures", "BTC-USDT-250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -416,7 +472,7 @@ class TestOkxPerps:
 
     def test_wrong_part_count_skipped(self):
         with pytest.raises(SkipSymbol):
-            _parse("okx-perps", "BTC-USD", "future")
+            _parse("okx-futures", "BTC-USD", "future")
 
 
 class TestBybitFuture:

@@ -1,21 +1,29 @@
-"""Fetch securities master data from Tardis and save one JSON file per exchange."""
-
 from __future__ import annotations
 
 import json
 import sys
 from pathlib import Path
 
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from securities_master.exchange_definitions import is_beta_exchange
 from securities_master.parsers import SkipSymbol, parse_contract
+from securities_master.update_sources import (
+    ExchangeApiSymbolSource,
+    HybridSymbolSource,
+    SymbolSource,
+    TardisSymbolSource,
+)
 from dotenv import load_dotenv
-from utils import _fetch_exchange
 
 _DATA_DIR = Path(__file__).parent / "data"
 
 EXCHANGES = [
-    "binance-delivery",
     "binance-futures",
-    "binance",
+    "binance-futures-cm",
+    "binance-spot",
     "bitfinex-derivatives",
     "bitfinex",
     "bitget-futures",
@@ -40,12 +48,35 @@ EXCHANGES = [
     "kraken",
     "kucoin",
     "okx-perps",
-    "okex-swap",
-    "okex",
+    "okx-futures",
+    "okx-spot",
     "phemex",
     "poloniex",
     "upbit",
 ]
+
+
+def _load_existing_symbols(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    try:
+        rows = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return {}
+    return {row["id"]: row for row in rows if isinstance(row, dict) and "id" in row}
+
+
+def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+    """
+    Keep existing metadata for symbols when the current source does not provide it.
+    Source payload values take precedence; existing values fill only missing keys.
+    """
+    for sd in symbols:
+        existing = existing_by_id.get(sd.get("id"))
+        if existing is None:
+            continue
+        for key, value in existing.items():
+            sd.setdefault(key, value)
 
 
 def _enrich(exchange: str, sd: dict) -> None:
@@ -64,11 +95,7 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd["internal_id"] = c.internal_id
         sd["symbol"] = c.symbol
         sd["denominator"] = c.denominator
-        # Spot instruments are not margined; do not persist a margin field.
-        if c.contract_type.value == "spot":
-            sd.pop("margin", None)
-        else:
-            sd["margin"] = c.margin
+        sd["margin"] = c.margin
         sd["contract_type"] = c.contract_type.value
         sd["delivery_date"] = c.delivery_date.isoformat() if c.delivery_date else None
         sd["contract_size"] = c.contract_size
@@ -76,37 +103,47 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd.update(_NONE)
 
 
-def update(exchanges: list[str] = EXCHANGES) -> None:
+def update(
+    exchanges: list[str] = EXCHANGES,
+    source: SymbolSource = HybridSymbolSource(),
+) -> None:
     _DATA_DIR.mkdir(exist_ok=True)
     total = 0
-    allowed_types = {"spot", "perpetual", "future"}
     for exchange in exchanges:
+        path = _DATA_DIR / f"{exchange}.json"
+        existing_by_id = _load_existing_symbols(path)
+        if is_beta_exchange(exchange):
+            print(f"Skipping {exchange} (beta exchange)", flush=True)
+            continue
         print(f"Fetching {exchange}...", flush=True)
         try:
-            data = _fetch_exchange(exchange)
+            data = source.fetch_exchange(exchange)
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
             continue
 
+        allowed_types = {"spot", "perpetual", "future"}
         symbols = [
             sd
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
         ]
+        _merge_existing_fields(symbols, existing_by_id)
         for sd in symbols:
             if "availableSince" in sd:
-                sd["tardis_first_capture"] = sd.pop("availableSince")
+                sd["first_capture"] = sd["availableSince"]
+            # Persist the normalized project field name, not raw Tardis key.
+            sd.pop("availableSince", None)
             if "availableTo" in sd:
-                sd["end_date"] = sd.pop("availableTo")
+                sd["end_date"] = sd["availableTo"]
             _enrich(exchange, sd)
         symbols.sort(
             key=lambda sd: (
                 sd.get("id", ""),
-                sd.get("tardis_first_capture") or "",
+                sd.get("first_capture") or "",
                 sd.get("end_date") or "",
             )
         )
-        path = _DATA_DIR / f"{exchange}.json"
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")
@@ -118,14 +155,36 @@ if __name__ == "__main__":
     load_dotenv()
     import argparse
 
-    parser = argparse.ArgumentParser(description="Update securities master from Tardis")
+    parser = argparse.ArgumentParser(
+        description=(
+            "Update securities master using exchange APIs for Binance/OKX and "
+            "Tardis fallback for all other exchanges"
+        )
+    )
     parser.add_argument(
         "--exchanges",
         type=str,
         default="",
         help="Comma-separated list of exchanges (default: all)",
     )
+    parser.add_argument(
+        "--source",
+        choices=["hybrid", "tardis", "exchange"],
+        default="hybrid",
+        help=(
+            "Data source mode: hybrid (default, Binance/OKX direct + Tardis fallback), "
+            "tardis (all via Tardis), exchange (direct only; only Binance/OKX supported)"
+        ),
+    )
     args = parser.parse_args()
 
     exchanges = [e.strip() for e in args.exchanges.split(",") if e.strip()] or EXCHANGES
-    update(exchanges)
+    source: SymbolSource
+    if args.source == "tardis":
+        source = TardisSymbolSource()
+    elif args.source == "exchange":
+        source = ExchangeApiSymbolSource()
+    else:
+        source = HybridSymbolSource()
+
+    update(exchanges, source=source)

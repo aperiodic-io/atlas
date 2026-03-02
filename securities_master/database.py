@@ -43,7 +43,9 @@ class SecuritiesMaster:
             rows = json.loads(json_file.read_text())
             windows: list[tuple[str, datetime, datetime | None]] = []
             for sd in rows:
-                start_dt = _parse_iso_timestamp(sd.get("tardis_first_capture"))
+                start_dt = _parse_iso_timestamp(
+                    sd.get("first_capture") or sd.get("tardis_first_capture")
+                )
                 if start_dt is None:
                     continue
                 end_dt = _parse_iso_timestamp(sd.get("end_date"))

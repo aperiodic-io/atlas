@@ -2,19 +2,20 @@
   {
     "id": "0G-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-22T00:00:00.000Z",
     "internal_id": "perpetual-0G-USDT:USDT",
     "symbol": "0G",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-22T00:00:00.000Z"
   },
   {
     "id": "1INCH-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-09T00:00:00.000Z",
+    "availableTo": "2025-04-09T00:00:00.000Z",
+    "first_capture": "2021-04-09T00:00:00.000Z",
     "end_date": "2025-04-09T00:00:00.000Z",
     "internal_id": "perpetual-1INCH-USD:1INCH",
     "symbol": "1INCH",
@@ -27,55 +28,57 @@
   {
     "id": "1INCH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-25T00:00:00.000Z",
     "internal_id": "perpetual-1INCH-USDT:USDT",
     "symbol": "1INCH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-25T00:00:00.000Z"
   },
   {
     "id": "2Z-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-02T00:00:00.000Z",
     "internal_id": "perpetual-2Z-USDT:USDT",
     "symbol": "2Z",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-02T00:00:00.000Z"
   },
   {
     "id": "A-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-29T00:00:00.000Z",
     "internal_id": "perpetual-A-USDT:USDT",
     "symbol": "A",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-29T00:00:00.000Z"
   },
   {
     "id": "AAVE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-10T00:00:00.000Z",
     "internal_id": "perpetual-AAVE-USDT:USDT",
     "symbol": "AAVE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-10T00:00:00.000Z"
   },
   {
     "id": "ACE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-18T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2023-12-18T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-ACE-USDT:USDT",
     "symbol": "ACE",
     "denominator": "USDT",
@@ -87,103 +90,104 @@
   {
     "id": "ACH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-22T00:00:00.000Z",
     "internal_id": "perpetual-ACH-USDT:USDT",
     "symbol": "ACH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-02-22T00:00:00.000Z"
   },
   {
     "id": "ACT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-14T00:00:00.000Z",
     "internal_id": "perpetual-ACT-USDT:USDT",
     "symbol": "ACT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-11-14T00:00:00.000Z"
   },
   {
     "id": "ACU-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-23T00:00:00.000Z",
     "internal_id": "perpetual-ACU-USDT:USDT",
     "symbol": "ACU",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-23T00:00:00.000Z"
   },
   {
     "id": "ADA-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-29T00:00:00.000Z",
     "internal_id": "perpetual-ADA-USD:ADA",
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-04-29T00:00:00.000Z"
   },
   {
     "id": "ADA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-29T00:00:00.000Z",
     "internal_id": "perpetual-ADA-USDT:USDT",
     "symbol": "ADA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-04-29T00:00:00.000Z"
   },
   {
     "id": "ADA-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-ADA-USD_UM:ADA",
     "symbol": "ADA",
     "denominator": "USD_UM",
     "margin": "ADA",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "AERO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-03T00:00:00.000Z",
     "internal_id": "perpetual-AERO-USDT:USDT",
     "symbol": "AERO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-03T00:00:00.000Z"
   },
   {
     "id": "AEVO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-13T00:00:00.000Z",
     "internal_id": "perpetual-AEVO-USDT:USDT",
     "symbol": "AEVO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-03-13T00:00:00.000Z"
   },
   {
     "id": "AGIX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-27T00:00:00.000Z",
+    "availableTo": "2024-06-29T00:00:00.000Z",
+    "first_capture": "2023-11-27T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
     "internal_id": "perpetual-AGIX-USDT:USDT",
     "symbol": "AGIX",
@@ -196,19 +200,20 @@
   {
     "id": "AGLD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-09-07T00:00:00.000Z",
     "internal_id": "perpetual-AGLD-USDT:USDT",
     "symbol": "AGLD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-09-07T00:00:00.000Z"
   },
   {
     "id": "AI16Z-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-20T00:00:00.000Z",
+    "availableTo": "2025-11-07T00:00:00.000Z",
+    "first_capture": "2024-12-20T00:00:00.000Z",
     "end_date": "2025-11-07T00:00:00.000Z",
     "internal_id": "perpetual-AI16Z-USDT:USDT",
     "symbol": "AI16Z",
@@ -221,7 +226,8 @@
   {
     "id": "AIDOGE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-05-03T00:00:00.000Z",
+    "availableTo": "2025-08-02T00:00:00.000Z",
+    "first_capture": "2023-05-03T00:00:00.000Z",
     "end_date": "2025-08-02T00:00:00.000Z",
     "internal_id": "perpetual-AIDOGE-USDT:USDT",
     "symbol": "AIDOGE",
@@ -234,19 +240,20 @@
   {
     "id": "AIXBT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-03T00:00:00.000Z",
     "internal_id": "perpetual-AIXBT-USDT:USDT",
     "symbol": "AIXBT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-03T00:00:00.000Z"
   },
   {
     "id": "ALCH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-03T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2025-01-03T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-ALCH-USDT:USDT",
     "symbol": "ALCH",
@@ -259,7 +266,8 @@
   {
     "id": "ALGO-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-13T00:00:00.000Z",
+    "availableTo": "2025-06-28T00:00:00.000Z",
+    "first_capture": "2020-05-13T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
     "internal_id": "perpetual-ALGO-USD:ALGO",
     "symbol": "ALGO",
@@ -272,31 +280,32 @@
   {
     "id": "ALGO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-13T00:00:00.000Z",
     "internal_id": "perpetual-ALGO-USDT:USDT",
     "symbol": "ALGO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-13T00:00:00.000Z"
   },
   {
     "id": "ALLO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-11T00:00:00.000Z",
     "internal_id": "perpetual-ALLO-USDT:USDT",
     "symbol": "ALLO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-11T00:00:00.000Z"
   },
   {
     "id": "ALPHA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-18T00:00:00.000Z",
+    "availableTo": "2025-07-05T00:00:00.000Z",
+    "first_capture": "2021-03-18T00:00:00.000Z",
     "end_date": "2025-07-05T00:00:00.000Z",
     "internal_id": "perpetual-ALPHA-USDT:USDT",
     "symbol": "ALPHA",
@@ -309,19 +318,20 @@
   {
     "id": "AMZN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-AMZN-USDT:USDT",
     "symbol": "AMZN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "ANC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-08T00:00:00.000Z",
+    "availableTo": "2022-05-14T00:00:00.000Z",
+    "first_capture": "2021-04-08T00:00:00.000Z",
     "end_date": "2022-05-14T00:00:00.000Z",
     "internal_id": "perpetual-ANC-USDT:USDT",
     "symbol": "ANC",
@@ -334,19 +344,20 @@
   {
     "id": "ANIME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-23T00:00:00.000Z",
     "internal_id": "perpetual-ANIME-USDT:USDT",
     "symbol": "ANIME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-23T00:00:00.000Z"
   },
   {
     "id": "ANT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-21T00:00:00.000Z",
+    "availableTo": "2024-05-24T00:00:00.000Z",
+    "first_capture": "2020-08-21T00:00:00.000Z",
     "end_date": "2024-05-24T00:00:00.000Z",
     "internal_id": "perpetual-ANT-USDT:USDT",
     "symbol": "ANT",
@@ -359,79 +370,80 @@
   {
     "id": "APE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-03-17T00:00:00.000Z",
     "internal_id": "perpetual-APE-USDT:USDT",
     "symbol": "APE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-03-17T00:00:00.000Z"
   },
   {
     "id": "API3-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-03-03T00:00:00.000Z",
     "internal_id": "perpetual-API3-USDT:USDT",
     "symbol": "API3",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-03-03T00:00:00.000Z"
   },
   {
     "id": "APR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-24T00:00:00.000Z",
     "internal_id": "perpetual-APR-USDT:USDT",
     "symbol": "APR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-24T00:00:00.000Z"
   },
   {
     "id": "APT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-10-19T00:00:00.000Z",
     "internal_id": "perpetual-APT-USDT:USDT",
     "symbol": "APT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-10-19T00:00:00.000Z"
   },
   {
     "id": "AR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-14T00:00:00.000Z",
     "internal_id": "perpetual-AR-USDT:USDT",
     "symbol": "AR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-14T00:00:00.000Z"
   },
   {
     "id": "ARB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-03-23T00:00:00.000Z",
     "internal_id": "perpetual-ARB-USDT:USDT",
     "symbol": "ARB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-03-23T00:00:00.000Z"
   },
   {
     "id": "ARC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-24T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2025-01-24T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-ARC-USDT:USDT",
     "symbol": "ARC",
@@ -444,43 +456,44 @@
   {
     "id": "ARKM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-21T00:00:00.000Z",
     "internal_id": "perpetual-ARKM-USDT:USDT",
     "symbol": "ARKM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-11-21T00:00:00.000Z"
   },
   {
     "id": "ASTER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-22T00:00:00.000Z",
     "internal_id": "perpetual-ASTER-USDT:USDT",
     "symbol": "ASTER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-22T00:00:00.000Z"
   },
   {
     "id": "ASTER-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-ASTER-USD_UM:ASTER",
     "symbol": "ASTER",
     "denominator": "USD_UM",
     "margin": "ASTER",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "ASTR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-04-14T00:00:00.000Z",
+    "availableTo": "2022-11-17T00:00:00.000Z",
+    "first_capture": "2022-04-14T00:00:00.000Z",
     "end_date": "2022-11-17T00:00:00.000Z",
     "internal_id": "perpetual-ASTR-USDT:USDT",
     "symbol": "ASTR",
@@ -493,31 +506,32 @@
   {
     "id": "AT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-30T00:00:00.000Z",
     "internal_id": "perpetual-AT-USDT:USDT",
     "symbol": "AT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-30T00:00:00.000Z"
   },
   {
     "id": "ATH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-06-13T00:00:00.000Z",
     "internal_id": "perpetual-ATH-USDT:USDT",
     "symbol": "ATH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "ATOM-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-06T00:00:00.000Z",
+    "availableTo": "2025-08-16T00:00:00.000Z",
+    "first_capture": "2020-05-06T00:00:00.000Z",
     "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "perpetual-ATOM-USD:ATOM",
     "symbol": "ATOM",
@@ -530,31 +544,32 @@
   {
     "id": "ATOM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-06T00:00:00.000Z",
     "internal_id": "perpetual-ATOM-USDT:USDT",
     "symbol": "ATOM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-06T00:00:00.000Z"
   },
   {
     "id": "AUCTION-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-01T00:00:00.000Z",
     "internal_id": "perpetual-AUCTION-USDT:USDT",
     "symbol": "AUCTION",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-12-01T00:00:00.000Z"
   },
   {
     "id": "AVAAI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-27T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2025-01-27T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-AVAAI-USDT:USDT",
     "symbol": "AVAAI",
@@ -567,91 +582,92 @@
   {
     "id": "AVAX-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-25T00:00:00.000Z",
     "internal_id": "perpetual-AVAX-USD:AVAX",
     "symbol": "AVAX",
     "denominator": "USD",
     "margin": "AVAX",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-11-25T00:00:00.000Z"
   },
   {
     "id": "AVAX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-23T00:00:00.000Z",
     "internal_id": "perpetual-AVAX-USDT:USDT",
     "symbol": "AVAX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-23T00:00:00.000Z"
   },
   {
     "id": "AVNT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-22T00:00:00.000Z",
     "internal_id": "perpetual-AVNT-USDT:USDT",
     "symbol": "AVNT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-22T00:00:00.000Z"
   },
   {
     "id": "AXS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-07-28T00:00:00.000Z",
     "internal_id": "perpetual-AXS-USDT:USDT",
     "symbol": "AXS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-07-28T00:00:00.000Z"
   },
   {
     "id": "AXS-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-AXS-USD_UM:AXS",
     "symbol": "AXS",
     "denominator": "USD_UM",
     "margin": "AXS",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "AZTEC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-11T00:00:00.000Z",
     "internal_id": "perpetual-AZTEC-USDT:USDT",
     "symbol": "AZTEC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "BABY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-10T00:00:00.000Z",
     "internal_id": "perpetual-BABY-USDT:USDT",
     "symbol": "BABY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-04-10T00:00:00.000Z"
   },
   {
     "id": "BABYDOGE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-05T00:00:00.000Z",
+    "availableTo": "2022-11-26T00:00:00.000Z",
+    "first_capture": "2021-11-05T00:00:00.000Z",
     "end_date": "2022-11-26T00:00:00.000Z",
     "internal_id": "perpetual-BABYDOGE-USDT:USDT",
     "symbol": "BABYDOGE",
@@ -664,7 +680,8 @@
   {
     "id": "BADGER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-01-29T00:00:00.000Z",
+    "availableTo": "2025-07-26T00:00:00.000Z",
+    "first_capture": "2021-01-29T00:00:00.000Z",
     "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "perpetual-BADGER-USDT:USDT",
     "symbol": "BADGER",
@@ -677,7 +694,8 @@
   {
     "id": "BAL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
+    "availableTo": "2025-07-26T00:00:00.000Z",
+    "first_capture": "2020-09-09T00:00:00.000Z",
     "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "perpetual-BAL-USDT:USDT",
     "symbol": "BAL",
@@ -690,151 +708,152 @@
   {
     "id": "BAND-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-07T00:00:00.000Z",
     "internal_id": "perpetual-BAND-USDT:USDT",
     "symbol": "BAND",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-07T00:00:00.000Z"
   },
   {
     "id": "BARD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-18T00:00:00.000Z",
     "internal_id": "perpetual-BARD-USDT:USDT",
     "symbol": "BARD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-18T00:00:00.000Z"
   },
   {
     "id": "BAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-28T00:00:00.000Z",
     "internal_id": "perpetual-BAT-USDT:USDT",
     "symbol": "BAT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-08-28T00:00:00.000Z"
   },
   {
     "id": "BCH-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-BCH-USD:BCH",
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "BCH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-27T00:00:00.000Z",
     "internal_id": "perpetual-BCH-USDT:USDT",
     "symbol": "BCH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-27T00:00:00.000Z"
   },
   {
     "id": "BCH-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-BCH-USD_UM:BCH",
     "symbol": "BCH",
     "denominator": "USD_UM",
     "margin": "BCH",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "BEAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-12T00:00:00.000Z",
     "internal_id": "perpetual-BEAT-USDT:USDT",
     "symbol": "BEAT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-12T00:00:00.000Z"
   },
   {
     "id": "BEAT-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-BEAT-USD_UM:BEAT",
     "symbol": "BEAT",
     "denominator": "USD_UM",
     "margin": "BEAT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "BERA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-06T00:00:00.000Z",
     "internal_id": "perpetual-BERA-USDT:USDT",
     "symbol": "BERA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-06T00:00:00.000Z"
   },
   {
     "id": "BICO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-12-09T00:00:00.000Z",
     "internal_id": "perpetual-BICO-USDT:USDT",
     "symbol": "BICO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-12-09T00:00:00.000Z"
   },
   {
     "id": "BIGTIME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-12T00:00:00.000Z",
     "internal_id": "perpetual-BIGTIME-USDT:USDT",
     "symbol": "BIGTIME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-10-12T00:00:00.000Z"
   },
   {
     "id": "BIO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-03T00:00:00.000Z",
     "internal_id": "perpetual-BIO-USDT:USDT",
     "symbol": "BIO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-03T00:00:00.000Z"
   },
   {
     "id": "BLOCK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-11T00:00:00.000Z",
+    "availableTo": "2024-08-23T00:00:00.000Z",
+    "first_capture": "2024-04-11T00:00:00.000Z",
     "end_date": "2024-08-23T00:00:00.000Z",
     "internal_id": "perpetual-BLOCK-USDT:USDT",
     "symbol": "BLOCK",
@@ -847,7 +866,8 @@
   {
     "id": "BLUAI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-23T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-10-23T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-BLUAI-USDT:USDT",
     "symbol": "BLUAI",
@@ -860,43 +880,44 @@
   {
     "id": "BLUR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-15T00:00:00.000Z",
     "internal_id": "perpetual-BLUR-USDT:USDT",
     "symbol": "BLUR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-15T00:00:00.000Z"
   },
   {
     "id": "BNB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-12-23T00:00:00.000Z",
     "internal_id": "perpetual-BNB-USDT:USDT",
     "symbol": "BNB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-12-23T00:00:00.000Z"
   },
   {
     "id": "BNB-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-BNB-USD_UM:BNB",
     "symbol": "BNB",
     "denominator": "USD_UM",
     "margin": "BNB",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "BNT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-22T00:00:00.000Z",
+    "availableTo": "2025-11-15T00:00:00.000Z",
+    "first_capture": "2020-12-22T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
     "internal_id": "perpetual-BNT-USDT:USDT",
     "symbol": "BNT",
@@ -909,19 +930,20 @@
   {
     "id": "BOME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-15T00:00:00.000Z",
     "internal_id": "perpetual-BOME-USDT:USDT",
     "symbol": "BOME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-08-15T00:00:00.000Z"
   },
   {
     "id": "BONE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-15T00:00:00.000Z",
+    "availableTo": "2025-03-12T00:00:00.000Z",
+    "first_capture": "2024-03-15T00:00:00.000Z",
     "end_date": "2025-03-12T00:00:00.000Z",
     "internal_id": "perpetual-BONE-USDT:USDT",
     "symbol": "BONE",
@@ -934,19 +956,20 @@
   {
     "id": "BONK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-08T00:00:00.000Z",
     "internal_id": "perpetual-BONK-USDT:USDT",
     "symbol": "BONK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-01-08T00:00:00.000Z"
   },
   {
     "id": "BR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-03-21T00:00:00.000Z",
+    "availableTo": "2025-06-13T00:00:00.000Z",
+    "first_capture": "2025-03-21T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-BR-USDT:USDT",
     "symbol": "BR",
@@ -959,31 +982,32 @@
   {
     "id": "BRETT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-06T00:00:00.000Z",
     "internal_id": "perpetual-BRETT-USDT:USDT",
     "symbol": "BRETT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-09-06T00:00:00.000Z"
   },
   {
     "id": "BREV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-30T00:00:00.000Z",
     "internal_id": "perpetual-BREV-USDT:USDT",
     "symbol": "BREV",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-30T00:00:00.000Z"
   },
   {
     "id": "BSV-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
+    "availableTo": "2025-05-17T00:00:00.000Z",
+    "first_capture": "2019-03-30T00:00:00.000Z",
     "end_date": "2025-05-17T00:00:00.000Z",
     "internal_id": "perpetual-BSV-USD:BSV",
     "symbol": "BSV",
@@ -996,7 +1020,8 @@
   {
     "id": "BSV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-31T00:00:00.000Z",
+    "availableTo": "2025-06-13T00:00:00.000Z",
+    "first_capture": "2019-12-31T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-BSV-USDT:USDT",
     "symbol": "BSV",
@@ -1009,19 +1034,20 @@
   {
     "id": "BTC-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USD:BTC",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "BTC-USDC-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-10-18T00:00:00.000Z",
+    "availableTo": "2025-12-12T00:00:00.000Z",
+    "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USDC:USDC",
     "symbol": "BTC",
@@ -1034,31 +1060,32 @@
   {
     "id": "BTC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-04T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USDT:USDT",
     "symbol": "BTC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-04T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-05T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USD_UM:BTC",
     "symbol": "BTC",
     "denominator": "USD_UM",
     "margin": "BTC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-05T00:00:00.000Z"
   },
   {
     "id": "BTM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
+    "availableTo": "2022-08-19T00:00:00.000Z",
+    "first_capture": "2020-09-09T00:00:00.000Z",
     "end_date": "2022-08-19T00:00:00.000Z",
     "internal_id": "perpetual-BTM-USDT:USDT",
     "symbol": "BTM",
@@ -1071,7 +1098,8 @@
   {
     "id": "BTT-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-09T00:00:00.000Z",
+    "availableTo": "2021-12-30T00:00:00.000Z",
+    "first_capture": "2021-04-09T00:00:00.000Z",
     "end_date": "2021-12-30T00:00:00.000Z",
     "internal_id": "perpetual-BTT-USD:BTT",
     "symbol": "BTT",
@@ -1084,7 +1112,8 @@
   {
     "id": "BTT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
+    "availableTo": "2022-11-11T00:00:00.000Z",
+    "first_capture": "2020-09-09T00:00:00.000Z",
     "end_date": "2022-11-11T00:00:00.000Z",
     "internal_id": "perpetual-BTT-USDT:USDT",
     "symbol": "BTT",
@@ -1097,7 +1126,8 @@
   {
     "id": "BUZZ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-27T00:00:00.000Z",
+    "availableTo": "2025-05-22T00:00:00.000Z",
+    "first_capture": "2025-01-27T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z",
     "internal_id": "perpetual-BUZZ-USDT:USDT",
     "symbol": "BUZZ",
@@ -1110,7 +1140,8 @@
   {
     "id": "BZZ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-06-24T00:00:00.000Z",
+    "availableTo": "2022-08-24T00:00:00.000Z",
+    "first_capture": "2021-06-24T00:00:00.000Z",
     "end_date": "2022-08-24T00:00:00.000Z",
     "internal_id": "perpetual-BZZ-USDT:USDT",
     "symbol": "BZZ",
@@ -1123,7 +1154,9 @@
   {
     "id": "CAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-06T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2024-09-06T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-CAT-USDT:USDT",
     "symbol": "CAT",
     "denominator": "USDT",
@@ -1135,7 +1168,8 @@
   {
     "id": "CATI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-20T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2024-09-20T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-CATI-USDT:USDT",
     "symbol": "CATI",
@@ -1148,19 +1182,20 @@
   {
     "id": "CC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-31T00:00:00.000Z",
     "internal_id": "perpetual-CC-USDT:USDT",
     "symbol": "CC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-31T00:00:00.000Z"
   },
   {
     "id": "CEL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-06-17T00:00:00.000Z",
+    "availableTo": "2024-07-16T00:00:00.000Z",
+    "first_capture": "2022-06-17T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-CEL-USDT:USDT",
     "symbol": "CEL",
@@ -1173,19 +1208,20 @@
   {
     "id": "CELO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-09-24T00:00:00.000Z",
     "internal_id": "perpetual-CELO-USDT:USDT",
     "symbol": "CELO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-09-24T00:00:00.000Z"
   },
   {
     "id": "CETUS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-05-10T00:00:00.000Z",
+    "availableTo": "2025-12-27T00:00:00.000Z",
+    "first_capture": "2023-05-10T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z",
     "internal_id": "perpetual-CETUS-USDT:USDT",
     "symbol": "CETUS",
@@ -1198,67 +1234,68 @@
   {
     "id": "CFX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-12T00:00:00.000Z",
     "internal_id": "perpetual-CFX-USDT:USDT",
     "symbol": "CFX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-03-12T00:00:00.000Z"
   },
   {
     "id": "CHZ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-12T00:00:00.000Z",
     "internal_id": "perpetual-CHZ-USDT:USDT",
     "symbol": "CHZ",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-03-12T00:00:00.000Z"
   },
   {
     "id": "COAI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-15T00:00:00.000Z",
     "internal_id": "perpetual-COAI-USDT:USDT",
     "symbol": "COAI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-15T00:00:00.000Z"
   },
   {
     "id": "COIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-COIN-USDT:USDT",
     "symbol": "COIN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "COMP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-07-01T00:00:00.000Z",
     "internal_id": "perpetual-COMP-USDT:USDT",
     "symbol": "COMP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-07-01T00:00:00.000Z"
   },
   {
     "id": "CONV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-01T00:00:00.000Z",
+    "availableTo": "2022-08-25T00:00:00.000Z",
+    "first_capture": "2021-04-01T00:00:00.000Z",
     "end_date": "2022-08-25T00:00:00.000Z",
     "internal_id": "perpetual-CONV-USDT:USDT",
     "symbol": "CONV",
@@ -1271,7 +1308,8 @@
   {
     "id": "COOKIE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-24T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-01-24T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-COOKIE-USDT:USDT",
     "symbol": "COOKIE",
@@ -1284,19 +1322,20 @@
   {
     "id": "CORE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-08T00:00:00.000Z",
     "internal_id": "perpetual-CORE-USDT:USDT",
     "symbol": "CORE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-08T00:00:00.000Z"
   },
   {
     "id": "CQT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-08-20T00:00:00.000Z",
+    "availableTo": "2022-08-28T00:00:00.000Z",
+    "first_capture": "2021-08-20T00:00:00.000Z",
     "end_date": "2022-08-28T00:00:00.000Z",
     "internal_id": "perpetual-CQT-USDT:USDT",
     "symbol": "CQT",
@@ -1309,31 +1348,32 @@
   {
     "id": "CRCL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-CRCL-USDT:USDT",
     "symbol": "CRCL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "CRO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-08T00:00:00.000Z",
     "internal_id": "perpetual-CRO-USDT:USDT",
     "symbol": "CRO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-04-08T00:00:00.000Z"
   },
   {
     "id": "CRV-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-04T00:00:00.000Z",
+    "availableTo": "2025-05-27T00:00:00.000Z",
+    "first_capture": "2020-09-04T00:00:00.000Z",
     "end_date": "2025-05-27T00:00:00.000Z",
     "internal_id": "perpetual-CRV-USD:CRV",
     "symbol": "CRV",
@@ -1346,19 +1386,20 @@
   {
     "id": "CRV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-04T00:00:00.000Z",
     "internal_id": "perpetual-CRV-USDT:USDT",
     "symbol": "CRV",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-04T00:00:00.000Z"
   },
   {
     "id": "CSPR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-05-14T00:00:00.000Z",
+    "availableTo": "2025-08-02T00:00:00.000Z",
+    "first_capture": "2021-05-14T00:00:00.000Z",
     "end_date": "2025-08-02T00:00:00.000Z",
     "internal_id": "perpetual-CSPR-USDT:USDT",
     "symbol": "CSPR",
@@ -1371,7 +1412,8 @@
   {
     "id": "CTC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-14T00:00:00.000Z",
+    "availableTo": "2025-11-15T00:00:00.000Z",
+    "first_capture": "2023-12-14T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
     "internal_id": "perpetual-CTC-USDT:USDT",
     "symbol": "CTC",
@@ -1384,7 +1426,8 @@
   {
     "id": "CVC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-10T00:00:00.000Z",
+    "availableTo": "2025-11-15T00:00:00.000Z",
+    "first_capture": "2020-12-10T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
     "internal_id": "perpetual-CVC-USDT:USDT",
     "symbol": "CVC",
@@ -1397,19 +1440,20 @@
   {
     "id": "CVX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-06-25T00:00:00.000Z",
     "internal_id": "perpetual-CVX-USDT:USDT",
     "symbol": "CVX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-06-25T00:00:00.000Z"
   },
   {
     "id": "DASH-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-11T00:00:00.000Z",
+    "availableTo": "2023-12-20T00:00:00.000Z",
+    "first_capture": "2020-03-11T00:00:00.000Z",
     "end_date": "2023-12-20T00:00:00.000Z",
     "internal_id": "perpetual-DASH-USD:DASH",
     "symbol": "DASH",
@@ -1422,19 +1466,20 @@
   {
     "id": "DASH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-11T00:00:00.000Z",
     "internal_id": "perpetual-DASH-USDT:USDT",
     "symbol": "DASH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-03-11T00:00:00.000Z"
   },
   {
     "id": "DEGEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-21T00:00:00.000Z",
+    "availableTo": "2025-12-27T00:00:00.000Z",
+    "first_capture": "2024-11-21T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z",
     "internal_id": "perpetual-DEGEN-USDT:USDT",
     "symbol": "DEGEN",
@@ -1447,7 +1492,8 @@
   {
     "id": "DGB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-01T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2024-03-01T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-DGB-USDT:USDT",
     "symbol": "DGB",
@@ -1460,7 +1506,8 @@
   {
     "id": "DMAIL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-30T00:00:00.000Z",
+    "availableTo": "2024-08-30T00:00:00.000Z",
+    "first_capture": "2024-01-30T00:00:00.000Z",
     "end_date": "2024-08-30T00:00:00.000Z",
     "internal_id": "perpetual-DMAIL-USDT:USDT",
     "symbol": "DMAIL",
@@ -1473,7 +1520,8 @@
   {
     "id": "DOG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-19T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2024-11-19T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-DOG-USDT:USDT",
     "symbol": "DOG",
@@ -1486,43 +1534,44 @@
   {
     "id": "DOGE-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-02-02T00:00:00.000Z",
     "internal_id": "perpetual-DOGE-USD:DOGE",
     "symbol": "DOGE",
     "denominator": "USD",
     "margin": "DOGE",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-02-02T00:00:00.000Z"
   },
   {
     "id": "DOGE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-07-10T00:00:00.000Z",
     "internal_id": "perpetual-DOGE-USDT:USDT",
     "symbol": "DOGE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-07-10T00:00:00.000Z"
   },
   {
     "id": "DOGE-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-DOGE-USD_UM:DOGE",
     "symbol": "DOGE",
     "denominator": "USD_UM",
     "margin": "DOGE",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "DOGS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-26T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2024-08-26T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-DOGS-USDT:USDT",
     "symbol": "DOGS",
@@ -1535,7 +1584,8 @@
   {
     "id": "DOME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-03-08T00:00:00.000Z",
+    "availableTo": "2023-03-09T00:00:00.000Z",
+    "first_capture": "2022-03-08T00:00:00.000Z",
     "end_date": "2023-03-09T00:00:00.000Z",
     "internal_id": "perpetual-DOME-USDT:USDT",
     "symbol": "DOME",
@@ -1548,19 +1598,20 @@
   {
     "id": "DOOD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-12T00:00:00.000Z",
     "internal_id": "perpetual-DOOD-USDT:USDT",
     "symbol": "DOOD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-12T00:00:00.000Z"
   },
   {
     "id": "DORA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-01T00:00:00.000Z",
+    "availableTo": "2023-08-25T00:00:00.000Z",
+    "first_capture": "2021-04-01T00:00:00.000Z",
     "end_date": "2023-08-25T00:00:00.000Z",
     "internal_id": "perpetual-DORA-USDT:USDT",
     "symbol": "DORA",
@@ -1573,31 +1624,32 @@
   {
     "id": "DOT-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-02T00:00:00.000Z",
     "internal_id": "perpetual-DOT-USD:DOT",
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-02T00:00:00.000Z"
   },
   {
     "id": "DOT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-07-22T00:00:00.000Z",
     "internal_id": "perpetual-DOT-USDT:USDT",
     "symbol": "DOT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-07-22T00:00:00.000Z"
   },
   {
     "id": "DUCK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-16T00:00:00.000Z",
+    "availableTo": "2025-09-20T00:00:00.000Z",
+    "first_capture": "2025-01-16T00:00:00.000Z",
     "end_date": "2025-09-20T00:00:00.000Z",
     "internal_id": "perpetual-DUCK-USDT:USDT",
     "symbol": "DUCK",
@@ -1610,31 +1662,32 @@
   {
     "id": "DYDX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-09-08T00:00:00.000Z",
     "internal_id": "perpetual-DYDX-USDT:USDT",
     "symbol": "DYDX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-09-08T00:00:00.000Z"
   },
   {
     "id": "EDEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-30T00:00:00.000Z",
     "internal_id": "perpetual-EDEN-USDT:USDT",
     "symbol": "EDEN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-30T00:00:00.000Z"
   },
   {
     "id": "EFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-08-20T00:00:00.000Z",
+    "availableTo": "2022-08-18T00:00:00.000Z",
+    "first_capture": "2021-08-20T00:00:00.000Z",
     "end_date": "2022-08-18T00:00:00.000Z",
     "internal_id": "perpetual-EFI-USDT:USDT",
     "symbol": "EFI",
@@ -1647,31 +1700,32 @@
   {
     "id": "EGLD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-22T00:00:00.000Z",
     "internal_id": "perpetual-EGLD-USDT:USDT",
     "symbol": "EGLD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-22T00:00:00.000Z"
   },
   {
     "id": "EIGEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-01T00:00:00.000Z",
     "internal_id": "perpetual-EIGEN-USDT:USDT",
     "symbol": "EIGEN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-10-01T00:00:00.000Z"
   },
   {
     "id": "ELON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-05T00:00:00.000Z",
+    "availableTo": "2022-11-26T00:00:00.000Z",
+    "first_capture": "2021-11-05T00:00:00.000Z",
     "end_date": "2022-11-26T00:00:00.000Z",
     "internal_id": "perpetual-ELON-USDT:USDT",
     "symbol": "ELON",
@@ -1684,55 +1738,56 @@
   {
     "id": "ENA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-17T00:00:00.000Z",
     "internal_id": "perpetual-ENA-USDT:USDT",
     "symbol": "ENA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-17T00:00:00.000Z"
   },
   {
     "id": "ENJ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-01T00:00:00.000Z",
     "internal_id": "perpetual-ENJ-USDT:USDT",
     "symbol": "ENJ",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-04-01T00:00:00.000Z"
   },
   {
     "id": "ENS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-11T00:00:00.000Z",
     "internal_id": "perpetual-ENS-USDT:USDT",
     "symbol": "ENS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-11-11T00:00:00.000Z"
   },
   {
     "id": "ENSO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-29T00:00:00.000Z",
     "internal_id": "perpetual-ENSO-USDT:USDT",
     "symbol": "ENSO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-29T00:00:00.000Z"
   },
   {
     "id": "EOS-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
+    "availableTo": "2025-05-23T00:00:00.000Z",
+    "first_capture": "2019-03-30T00:00:00.000Z",
     "end_date": "2025-05-23T00:00:00.000Z",
     "internal_id": "perpetual-EOS-USD:EOS",
     "symbol": "EOS",
@@ -1745,7 +1800,8 @@
   {
     "id": "EOS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-04T00:00:00.000Z",
+    "availableTo": "2025-05-23T00:00:00.000Z",
+    "first_capture": "2019-12-04T00:00:00.000Z",
     "end_date": "2025-05-23T00:00:00.000Z",
     "internal_id": "perpetual-EOS-USDT:USDT",
     "symbol": "EOS",
@@ -1758,55 +1814,56 @@
   {
     "id": "ESP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-10T00:00:00.000Z",
     "internal_id": "perpetual-ESP-USDT:USDT",
     "symbol": "ESP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-10T00:00:00.000Z"
   },
   {
     "id": "ETC-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-ETC-USD:ETC",
     "symbol": "ETC",
     "denominator": "USD",
     "margin": "ETC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "ETC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-30T00:00:00.000Z",
     "internal_id": "perpetual-ETC-USDT:USDT",
     "symbol": "ETC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-30T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-ETH-USD:ETH",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "ETH-USDC-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-10-18T00:00:00.000Z",
+    "availableTo": "2025-12-12T00:00:00.000Z",
+    "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z",
     "internal_id": "perpetual-ETH-USDC:USDC",
     "symbol": "ETH",
@@ -1819,79 +1876,80 @@
   {
     "id": "ETH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-04T00:00:00.000Z",
     "internal_id": "perpetual-ETH-USDT:USDT",
     "symbol": "ETH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-04T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-05T00:00:00.000Z",
     "internal_id": "perpetual-ETH-USD_UM:ETH",
     "symbol": "ETH",
     "denominator": "USD_UM",
     "margin": "ETH",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-05T00:00:00.000Z"
   },
   {
     "id": "ETHFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-18T00:00:00.000Z",
     "internal_id": "perpetual-ETHFI-USDT:USDT",
     "symbol": "ETHFI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-03-18T00:00:00.000Z"
   },
   {
     "id": "ETHW-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-09-16T00:00:00.000Z",
     "internal_id": "perpetual-ETHW-USDT:USDT",
     "symbol": "ETHW",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-09-16T00:00:00.000Z"
   },
   {
     "id": "F-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-F-USDT:USDT",
     "symbol": "F",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-25T00:00:00.000Z"
   },
   {
     "id": "FARTCOIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-20T00:00:00.000Z",
     "internal_id": "perpetual-FARTCOIN-USDT:USDT",
     "symbol": "FARTCOIN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-20T00:00:00.000Z"
   },
   {
     "id": "FET-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-27T00:00:00.000Z",
+    "availableTo": "2024-07-06T00:00:00.000Z",
+    "first_capture": "2023-11-27T00:00:00.000Z",
     "end_date": "2024-07-06T00:00:00.000Z",
     "internal_id": "perpetual-FET-USDT:USDT",
     "symbol": "FET",
@@ -1904,43 +1962,44 @@
   {
     "id": "FIL-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-10T00:00:00.000Z",
     "internal_id": "perpetual-FIL-USD:FIL",
     "symbol": "FIL",
     "denominator": "USD",
     "margin": "FIL",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-10T00:00:00.000Z"
   },
   {
     "id": "FIL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-07-22T00:00:00.000Z",
     "internal_id": "perpetual-FIL-USDT:USDT",
     "symbol": "FIL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-07-22T00:00:00.000Z"
   },
   {
     "id": "FIL-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-FIL-USD_UM:FIL",
     "symbol": "FIL",
     "denominator": "USD_UM",
     "margin": "FIL",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "FITFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-05-12T00:00:00.000Z",
+    "availableTo": "2024-08-23T00:00:00.000Z",
+    "first_capture": "2022-05-12T00:00:00.000Z",
     "end_date": "2024-08-23T00:00:00.000Z",
     "internal_id": "perpetual-FITFI-USDT:USDT",
     "symbol": "FITFI",
@@ -1953,7 +2012,8 @@
   {
     "id": "FLM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-29T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2020-09-29T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-FLM-USDT:USDT",
     "symbol": "FLM",
@@ -1966,31 +2026,32 @@
   {
     "id": "FLOKI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-20T00:00:00.000Z",
     "internal_id": "perpetual-FLOKI-USDT:USDT",
     "symbol": "FLOKI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-20T00:00:00.000Z"
   },
   {
     "id": "FLOW-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-07T00:00:00.000Z",
     "internal_id": "perpetual-FLOW-USDT:USDT",
     "symbol": "FLOW",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-11-07T00:00:00.000Z"
   },
   {
     "id": "FLR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-06T00:00:00.000Z",
+    "availableTo": "2024-10-16T00:00:00.000Z",
+    "first_capture": "2024-02-06T00:00:00.000Z",
     "end_date": "2024-10-16T00:00:00.000Z",
     "internal_id": "perpetual-FLR-USDT:USDT",
     "symbol": "FLR",
@@ -2003,19 +2064,20 @@
   {
     "id": "FOGO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-10T00:00:00.000Z",
     "internal_id": "perpetual-FOGO-USDT:USDT",
     "symbol": "FOGO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-10T00:00:00.000Z"
   },
   {
     "id": "FOXY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-12T00:00:00.000Z",
+    "availableTo": "2025-05-22T00:00:00.000Z",
+    "first_capture": "2024-04-12T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z",
     "internal_id": "perpetual-FOXY-USDT:USDT",
     "symbol": "FOXY",
@@ -2028,7 +2090,8 @@
   {
     "id": "FRONT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-09T00:00:00.000Z",
+    "availableTo": "2024-09-05T00:00:00.000Z",
+    "first_capture": "2023-10-09T00:00:00.000Z",
     "end_date": "2024-09-05T00:00:00.000Z",
     "internal_id": "perpetual-FRONT-USDT:USDT",
     "symbol": "FRONT",
@@ -2041,7 +2104,8 @@
   {
     "id": "FTM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-18T00:00:00.000Z",
+    "availableTo": "2025-01-08T00:00:00.000Z",
+    "first_capture": "2021-03-18T00:00:00.000Z",
     "end_date": "2025-01-08T00:00:00.000Z",
     "internal_id": "perpetual-FTM-USDT:USDT",
     "symbol": "FTM",
@@ -2054,7 +2118,9 @@
   {
     "id": "FUN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-17T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2026-01-17T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-FUN-USDT:USDT",
     "symbol": "FUN",
     "denominator": "USDT",
@@ -2066,7 +2132,8 @@
   {
     "id": "FXS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-12T00:00:00.000Z",
+    "availableTo": "2025-12-27T00:00:00.000Z",
+    "first_capture": "2024-01-12T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z",
     "internal_id": "perpetual-FXS-USDT:USDT",
     "symbol": "FXS",
@@ -2079,7 +2146,8 @@
   {
     "id": "GAL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-09T00:00:00.000Z",
+    "availableTo": "2024-07-16T00:00:00.000Z",
+    "first_capture": "2024-01-09T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-GAL-USDT:USDT",
     "symbol": "GAL",
@@ -2092,31 +2160,32 @@
   {
     "id": "GALA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-09-24T00:00:00.000Z",
     "internal_id": "perpetual-GALA-USDT:USDT",
     "symbol": "GALA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-09-24T00:00:00.000Z"
   },
   {
     "id": "GAS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-24T00:00:00.000Z",
     "internal_id": "perpetual-GAS-USDT:USDT",
     "symbol": "GAS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-10-24T00:00:00.000Z"
   },
   {
     "id": "GF-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-15T00:00:00.000Z",
+    "availableTo": "2024-04-23T00:00:00.000Z",
+    "first_capture": "2024-03-15T00:00:00.000Z",
     "end_date": "2024-04-23T00:00:00.000Z",
     "internal_id": "perpetual-GF-USDT:USDT",
     "symbol": "GF",
@@ -2129,7 +2198,8 @@
   {
     "id": "GFT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-23T00:00:00.000Z",
+    "availableTo": "2024-12-04T00:00:00.000Z",
+    "first_capture": "2023-02-23T00:00:00.000Z",
     "end_date": "2024-12-04T00:00:00.000Z",
     "internal_id": "perpetual-GFT-USDT:USDT",
     "symbol": "GFT",
@@ -2142,55 +2212,56 @@
   {
     "id": "GIGGLE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-GIGGLE-USDT:USDT",
     "symbol": "GIGGLE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-25T00:00:00.000Z"
   },
   {
     "id": "GLM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-05-10T00:00:00.000Z",
     "internal_id": "perpetual-GLM-USDT:USDT",
     "symbol": "GLM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-05-10T00:00:00.000Z"
   },
   {
     "id": "GMT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-04-01T00:00:00.000Z",
     "internal_id": "perpetual-GMT-USDT:USDT",
     "symbol": "GMT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-04-01T00:00:00.000Z"
   },
   {
     "id": "GMX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-02T00:00:00.000Z",
     "internal_id": "perpetual-GMX-USDT:USDT",
     "symbol": "GMX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-02T00:00:00.000Z"
   },
   {
     "id": "GOAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-24T00:00:00.000Z",
+    "availableTo": "2025-12-18T00:00:00.000Z",
+    "first_capture": "2024-10-24T00:00:00.000Z",
     "end_date": "2025-12-18T00:00:00.000Z",
     "internal_id": "perpetual-GOAT-USDT:USDT",
     "symbol": "GOAT",
@@ -2203,7 +2274,8 @@
   {
     "id": "GODS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-05T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2021-11-05T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-GODS-USDT:USDT",
     "symbol": "GODS",
@@ -2216,19 +2288,20 @@
   {
     "id": "GPS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-03-04T00:00:00.000Z",
     "internal_id": "perpetual-GPS-USDT:USDT",
     "symbol": "GPS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-03-04T00:00:00.000Z"
   },
   {
     "id": "GPT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-28T00:00:00.000Z",
+    "availableTo": "2024-10-16T00:00:00.000Z",
+    "first_capture": "2024-02-28T00:00:00.000Z",
     "end_date": "2024-10-16T00:00:00.000Z",
     "internal_id": "perpetual-GPT-USDT:USDT",
     "symbol": "GPT",
@@ -2241,19 +2314,20 @@
   {
     "id": "GRASS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-28T00:00:00.000Z",
     "internal_id": "perpetual-GRASS-USDT:USDT",
     "symbol": "GRASS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-10-28T00:00:00.000Z"
   },
   {
     "id": "GRIFFAIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-27T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-GRIFFAIN-USDT:USDT",
     "symbol": "GRIFFAIN",
@@ -2266,7 +2340,8 @@
   {
     "id": "GRT-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-09T00:00:00.000Z",
+    "availableTo": "2025-04-09T00:00:00.000Z",
+    "first_capture": "2021-04-09T00:00:00.000Z",
     "end_date": "2025-04-09T00:00:00.000Z",
     "internal_id": "perpetual-GRT-USD:GRT",
     "symbol": "GRT",
@@ -2279,19 +2354,20 @@
   {
     "id": "GRT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-20T00:00:00.000Z",
     "internal_id": "perpetual-GRT-USDT:USDT",
     "symbol": "GRT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-20T00:00:00.000Z"
   },
   {
     "id": "GUN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-03-31T00:00:00.000Z",
+    "availableTo": "2025-06-13T00:00:00.000Z",
+    "first_capture": "2025-03-31T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-GUN-USDT:USDT",
     "symbol": "GUN",
@@ -2304,127 +2380,128 @@
   {
     "id": "H-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-03T00:00:00.000Z",
     "internal_id": "perpetual-H-USDT:USDT",
     "symbol": "H",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-03T00:00:00.000Z"
   },
   {
     "id": "HBAR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-08-16T00:00:00.000Z",
     "internal_id": "perpetual-HBAR-USDT:USDT",
     "symbol": "HBAR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-08-16T00:00:00.000Z"
   },
   {
     "id": "HMSTR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-26T00:00:00.000Z",
     "internal_id": "perpetual-HMSTR-USDT:USDT",
     "symbol": "HMSTR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-09-26T00:00:00.000Z"
   },
   {
     "id": "HOME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-HOME-USDT:USDT",
     "symbol": "HOME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-13T00:00:00.000Z"
   },
   {
     "id": "HOOD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-25T00:00:00.000Z",
     "internal_id": "perpetual-HOOD-USDT:USDT",
     "symbol": "HOOD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-25T00:00:00.000Z"
   },
   {
     "id": "HUMA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-26T00:00:00.000Z",
     "internal_id": "perpetual-HUMA-USDT:USDT",
     "symbol": "HUMA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-26T00:00:00.000Z"
   },
   {
     "id": "HYPE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-21T00:00:00.000Z",
     "internal_id": "perpetual-HYPE-USDT:USDT",
     "symbol": "HYPE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-21T00:00:00.000Z"
   },
   {
     "id": "HYPE-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-HYPE-USD_UM:HYPE",
     "symbol": "HYPE",
     "denominator": "USD_UM",
     "margin": "HYPE",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "ICP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-05-14T00:00:00.000Z",
     "internal_id": "perpetual-ICP-USDT:USDT",
     "symbol": "ICP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-05-14T00:00:00.000Z"
   },
   {
     "id": "ICX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-23T00:00:00.000Z",
     "internal_id": "perpetual-ICX-USDT:USDT",
     "symbol": "ICX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-02-23T00:00:00.000Z"
   },
   {
     "id": "ID-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-08T00:00:00.000Z",
+    "availableTo": "2025-08-02T00:00:00.000Z",
+    "first_capture": "2023-12-08T00:00:00.000Z",
     "end_date": "2025-08-02T00:00:00.000Z",
     "internal_id": "perpetual-ID-USDT:USDT",
     "symbol": "ID",
@@ -2437,55 +2514,56 @@
   {
     "id": "IMX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-18T00:00:00.000Z",
     "internal_id": "perpetual-IMX-USDT:USDT",
     "symbol": "IMX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-11-18T00:00:00.000Z"
   },
   {
     "id": "INIT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-24T00:00:00.000Z",
     "internal_id": "perpetual-INIT-USDT:USDT",
     "symbol": "INIT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-04-24T00:00:00.000Z"
   },
   {
     "id": "INJ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-30T00:00:00.000Z",
     "internal_id": "perpetual-INJ-USDT:USDT",
     "symbol": "INJ",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-11-30T00:00:00.000Z"
   },
   {
     "id": "INTC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-INTC-USDT:USDT",
     "symbol": "INTC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "IOST-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-13T00:00:00.000Z",
+    "availableTo": "2022-11-24T00:00:00.000Z",
+    "first_capture": "2020-05-13T00:00:00.000Z",
     "end_date": "2022-11-24T00:00:00.000Z",
     "internal_id": "perpetual-IOST-USD:IOST",
     "symbol": "IOST",
@@ -2498,19 +2576,20 @@
   {
     "id": "IOST-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-13T00:00:00.000Z",
     "internal_id": "perpetual-IOST-USDT:USDT",
     "symbol": "IOST",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-13T00:00:00.000Z"
   },
   {
     "id": "IOTA-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-18T00:00:00.000Z",
+    "availableTo": "2022-11-24T00:00:00.000Z",
+    "first_capture": "2020-05-18T00:00:00.000Z",
     "end_date": "2022-11-24T00:00:00.000Z",
     "internal_id": "perpetual-IOTA-USD:IOTA",
     "symbol": "IOTA",
@@ -2523,31 +2602,32 @@
   {
     "id": "IOTA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-18T00:00:00.000Z",
     "internal_id": "perpetual-IOTA-USDT:USDT",
     "symbol": "IOTA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-18T00:00:00.000Z"
   },
   {
     "id": "IP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-13T00:00:00.000Z",
     "internal_id": "perpetual-IP-USDT:USDT",
     "symbol": "IP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-13T00:00:00.000Z"
   },
   {
     "id": "J-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-22T00:00:00.000Z",
+    "availableTo": "2025-06-06T00:00:00.000Z",
+    "first_capture": "2025-01-22T00:00:00.000Z",
     "end_date": "2025-06-06T00:00:00.000Z",
     "internal_id": "perpetual-J-USDT:USDT",
     "symbol": "J",
@@ -2560,7 +2640,8 @@
   {
     "id": "JCT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-20T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-11-20T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-JCT-USDT:USDT",
     "symbol": "JCT",
@@ -2573,19 +2654,20 @@
   {
     "id": "JELLYJELLY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-03-26T00:00:00.000Z",
     "internal_id": "perpetual-JELLYJELLY-USDT:USDT",
     "symbol": "JELLYJELLY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-03-26T00:00:00.000Z"
   },
   {
     "id": "JOE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-11T00:00:00.000Z",
+    "availableTo": "2025-11-15T00:00:00.000Z",
+    "first_capture": "2024-01-11T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
     "internal_id": "perpetual-JOE-USDT:USDT",
     "symbol": "JOE",
@@ -2598,7 +2680,8 @@
   {
     "id": "JST-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-08T00:00:00.000Z",
+    "availableTo": "2025-08-30T00:00:00.000Z",
+    "first_capture": "2020-09-08T00:00:00.000Z",
     "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "perpetual-JST-USDT:USDT",
     "symbol": "JST",
@@ -2611,55 +2694,56 @@
   {
     "id": "JTO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-08T00:00:00.000Z",
     "internal_id": "perpetual-JTO-USDT:USDT",
     "symbol": "JTO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-01-08T00:00:00.000Z"
   },
   {
     "id": "JUP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-31T00:00:00.000Z",
     "internal_id": "perpetual-JUP-USDT:USDT",
     "symbol": "JUP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-01-31T00:00:00.000Z"
   },
   {
     "id": "KAITO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-20T00:00:00.000Z",
     "internal_id": "perpetual-KAITO-USDT:USDT",
     "symbol": "KAITO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-20T00:00:00.000Z"
   },
   {
     "id": "KGEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-18T00:00:00.000Z",
     "internal_id": "perpetual-KGEN-USDT:USDT",
     "symbol": "KGEN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-18T00:00:00.000Z"
   },
   {
     "id": "KISHU-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-05T00:00:00.000Z",
+    "availableTo": "2025-04-09T00:00:00.000Z",
+    "first_capture": "2021-11-05T00:00:00.000Z",
     "end_date": "2025-04-09T00:00:00.000Z",
     "internal_id": "perpetual-KISHU-USDT:USDT",
     "symbol": "KISHU",
@@ -2672,7 +2756,8 @@
   {
     "id": "KITE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-29T00:00:00.000Z",
+    "availableTo": "2025-12-09T00:00:00.000Z",
+    "first_capture": "2025-10-29T00:00:00.000Z",
     "end_date": "2025-12-09T00:00:00.000Z",
     "internal_id": "perpetual-KITE-USDT:USDT",
     "symbol": "KITE",
@@ -2685,7 +2770,8 @@
   {
     "id": "KLAY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-10-26T00:00:00.000Z",
+    "availableTo": "2024-10-26T00:00:00.000Z",
+    "first_capture": "2022-10-26T00:00:00.000Z",
     "end_date": "2024-10-26T00:00:00.000Z",
     "internal_id": "perpetual-KLAY-USDT:USDT",
     "symbol": "KLAY",
@@ -2698,19 +2784,20 @@
   {
     "id": "KMNO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-30T00:00:00.000Z",
     "internal_id": "perpetual-KMNO-USDT:USDT",
     "symbol": "KMNO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-30T00:00:00.000Z"
   },
   {
     "id": "KNC-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-06-17T00:00:00.000Z",
+    "availableTo": "2022-11-25T00:00:00.000Z",
+    "first_capture": "2020-06-17T00:00:00.000Z",
     "end_date": "2022-11-25T00:00:00.000Z",
     "internal_id": "perpetual-KNC-USD:KNC",
     "symbol": "KNC",
@@ -2723,7 +2810,8 @@
   {
     "id": "KNC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-06-17T00:00:00.000Z",
+    "availableTo": "2025-07-05T00:00:00.000Z",
+    "first_capture": "2020-06-17T00:00:00.000Z",
     "end_date": "2025-07-05T00:00:00.000Z",
     "internal_id": "perpetual-KNC-USDT:USDT",
     "symbol": "KNC",
@@ -2736,7 +2824,8 @@
   {
     "id": "KSM-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-09T00:00:00.000Z",
+    "availableTo": "2024-07-16T00:00:00.000Z",
+    "first_capture": "2021-04-09T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-KSM-USD:KSM",
     "symbol": "KSM",
@@ -2749,43 +2838,44 @@
   {
     "id": "KSM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-08T00:00:00.000Z",
     "internal_id": "perpetual-KSM-USDT:USDT",
     "symbol": "KSM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
     "id": "LA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-LA-USDT:USDT",
     "symbol": "LA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-13T00:00:00.000Z"
   },
   {
     "id": "LAB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-01T00:00:00.000Z",
     "internal_id": "perpetual-LAB-USDT:USDT",
     "symbol": "LAB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-01T00:00:00.000Z"
   },
   {
     "id": "LAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-05-14T00:00:00.000Z",
+    "availableTo": "2022-08-27T00:00:00.000Z",
+    "first_capture": "2021-05-14T00:00:00.000Z",
     "end_date": "2022-08-27T00:00:00.000Z",
     "internal_id": "perpetual-LAT-USDT:USDT",
     "symbol": "LAT",
@@ -2798,7 +2888,8 @@
   {
     "id": "LAUNCHCOIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-03T00:00:00.000Z",
+    "availableTo": "2025-10-24T00:00:00.000Z",
+    "first_capture": "2025-06-03T00:00:00.000Z",
     "end_date": "2025-10-24T00:00:00.000Z",
     "internal_id": "perpetual-LAUNCHCOIN-USDT:USDT",
     "symbol": "LAUNCHCOIN",
@@ -2811,31 +2902,32 @@
   {
     "id": "LAYER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-11T00:00:00.000Z",
     "internal_id": "perpetual-LAYER-USDT:USDT",
     "symbol": "LAYER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-11T00:00:00.000Z"
   },
   {
     "id": "LDO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-02T00:00:00.000Z",
     "internal_id": "perpetual-LDO-USDT:USDT",
     "symbol": "LDO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-02T00:00:00.000Z"
   },
   {
     "id": "LEND-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-28T00:00:00.000Z",
+    "availableTo": "2020-10-11T00:00:00.000Z",
+    "first_capture": "2020-08-28T00:00:00.000Z",
     "end_date": "2020-10-11T00:00:00.000Z",
     "internal_id": "perpetual-LEND-USDT:USDT",
     "symbol": "LEND",
@@ -2848,79 +2940,80 @@
   {
     "id": "LIGHT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-16T00:00:00.000Z",
     "internal_id": "perpetual-LIGHT-USDT:USDT",
     "symbol": "LIGHT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-16T00:00:00.000Z"
   },
   {
     "id": "LINEA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-01T00:00:00.000Z",
     "internal_id": "perpetual-LINEA-USDT:USDT",
     "symbol": "LINEA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-01T00:00:00.000Z"
   },
   {
     "id": "LINK-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-09T00:00:00.000Z",
     "internal_id": "perpetual-LINK-USD:LINK",
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-03-09T00:00:00.000Z"
   },
   {
     "id": "LINK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-09T00:00:00.000Z",
     "internal_id": "perpetual-LINK-USDT:USDT",
     "symbol": "LINK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-03-09T00:00:00.000Z"
   },
   {
     "id": "LINK-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-LINK-USD_UM:LINK",
     "symbol": "LINK",
     "denominator": "USD_UM",
     "margin": "LINK",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "LIT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-24T00:00:00.000Z",
     "internal_id": "perpetual-LIT-USDT:USDT",
     "symbol": "LIT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "LON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-01-22T00:00:00.000Z",
+    "availableTo": "2022-08-17T00:00:00.000Z",
+    "first_capture": "2021-01-22T00:00:00.000Z",
     "end_date": "2022-08-17T00:00:00.000Z",
     "internal_id": "perpetual-LON-USDT:USDT",
     "symbol": "LON",
@@ -2933,7 +3026,8 @@
   {
     "id": "LOOKS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-02-17T00:00:00.000Z",
+    "availableTo": "2025-07-19T00:00:00.000Z",
+    "first_capture": "2022-02-17T00:00:00.000Z",
     "end_date": "2025-07-19T00:00:00.000Z",
     "internal_id": "perpetual-LOOKS-USDT:USDT",
     "symbol": "LOOKS",
@@ -2946,43 +3040,44 @@
   {
     "id": "LPT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-23T00:00:00.000Z",
     "internal_id": "perpetual-LPT-USDT:USDT",
     "symbol": "LPT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-04-23T00:00:00.000Z"
   },
   {
     "id": "LQTY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-12T00:00:00.000Z",
     "internal_id": "perpetual-LQTY-USDT:USDT",
     "symbol": "LQTY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-01-12T00:00:00.000Z"
   },
   {
     "id": "LRC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
     "internal_id": "perpetual-LRC-USDT:USDT",
     "symbol": "LRC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
     "id": "LSK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-30T00:00:00.000Z",
+    "availableTo": "2025-07-19T00:00:00.000Z",
+    "first_capture": "2024-01-30T00:00:00.000Z",
     "end_date": "2025-07-19T00:00:00.000Z",
     "internal_id": "perpetual-LSK-USDT:USDT",
     "symbol": "LSK",
@@ -2995,55 +3090,56 @@
   {
     "id": "LTC-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-LTC-USD:LTC",
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "LTC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-27T00:00:00.000Z",
     "internal_id": "perpetual-LTC-USDT:USDT",
     "symbol": "LTC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-27T00:00:00.000Z"
   },
   {
     "id": "LTC-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-LTC-USD_UM:LTC",
     "symbol": "LTC",
     "denominator": "USD_UM",
     "margin": "LTC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "LUNA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-18T00:00:00.000Z",
     "internal_id": "perpetual-LUNA-USDT:USDT",
     "symbol": "LUNA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-03-18T00:00:00.000Z"
   },
   {
     "id": "LUNC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-09-09T00:00:00.000Z",
+    "availableTo": "2025-09-19T00:00:00.000Z",
+    "first_capture": "2022-09-09T00:00:00.000Z",
     "end_date": "2025-09-19T00:00:00.000Z",
     "internal_id": "perpetual-LUNC-USDT:USDT",
     "symbol": "LUNC",
@@ -3056,19 +3152,20 @@
   {
     "id": "MAGIC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-02T00:00:00.000Z",
     "internal_id": "perpetual-MAGIC-USDT:USDT",
     "symbol": "MAGIC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-02T00:00:00.000Z"
   },
   {
     "id": "MAJOR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-28T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2024-11-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-MAJOR-USDT:USDT",
     "symbol": "MAJOR",
@@ -3081,7 +3178,8 @@
   {
     "id": "MANA-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-25T00:00:00.000Z",
+    "availableTo": "2025-05-27T00:00:00.000Z",
+    "first_capture": "2021-11-25T00:00:00.000Z",
     "end_date": "2025-05-27T00:00:00.000Z",
     "internal_id": "perpetual-MANA-USD:MANA",
     "symbol": "MANA",
@@ -3094,31 +3192,32 @@
   {
     "id": "MANA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-12T00:00:00.000Z",
     "internal_id": "perpetual-MANA-USDT:USDT",
     "symbol": "MANA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-03-12T00:00:00.000Z"
   },
   {
     "id": "MASK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-03-04T00:00:00.000Z",
     "internal_id": "perpetual-MASK-USDT:USDT",
     "symbol": "MASK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-03-04T00:00:00.000Z"
   },
   {
     "id": "MATIC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-29T00:00:00.000Z",
+    "availableTo": "2024-09-05T00:00:00.000Z",
+    "first_capture": "2021-04-29T00:00:00.000Z",
     "end_date": "2024-09-05T00:00:00.000Z",
     "internal_id": "perpetual-MATIC-USDT:USDT",
     "symbol": "MATIC",
@@ -3131,7 +3230,8 @@
   {
     "id": "MAX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-06T00:00:00.000Z",
+    "availableTo": "2025-04-09T00:00:00.000Z",
+    "first_capture": "2024-08-06T00:00:00.000Z",
     "end_date": "2025-04-09T00:00:00.000Z",
     "internal_id": "perpetual-MAX-USDT:USDT",
     "symbol": "MAX",
@@ -3144,31 +3244,32 @@
   {
     "id": "ME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-10T00:00:00.000Z",
     "internal_id": "perpetual-ME-USDT:USDT",
     "symbol": "ME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-10T00:00:00.000Z"
   },
   {
     "id": "MEME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-03T00:00:00.000Z",
     "internal_id": "perpetual-MEME-USDT:USDT",
     "symbol": "MEME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-11-03T00:00:00.000Z"
   },
   {
     "id": "MEMEFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-22T00:00:00.000Z",
+    "availableTo": "2025-05-14T00:00:00.000Z",
+    "first_capture": "2024-11-22T00:00:00.000Z",
     "end_date": "2025-05-14T00:00:00.000Z",
     "internal_id": "perpetual-MEMEFI-USDT:USDT",
     "symbol": "MEMEFI",
@@ -3181,67 +3282,68 @@
   {
     "id": "MERL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-19T00:00:00.000Z",
     "internal_id": "perpetual-MERL-USDT:USDT",
     "symbol": "MERL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "MET-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-10T00:00:00.000Z",
     "internal_id": "perpetual-MET-USDT:USDT",
     "symbol": "MET",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-10T00:00:00.000Z"
   },
   {
     "id": "METIS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-28T00:00:00.000Z",
     "internal_id": "perpetual-METIS-USDT:USDT",
     "symbol": "METIS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-12-28T00:00:00.000Z"
   },
   {
     "id": "MEW-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-15T00:00:00.000Z",
     "internal_id": "perpetual-MEW-USDT:USDT",
     "symbol": "MEW",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-04-15T00:00:00.000Z"
   },
   {
     "id": "MINA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-06-09T00:00:00.000Z",
     "internal_id": "perpetual-MINA-USDT:USDT",
     "symbol": "MINA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-06-09T00:00:00.000Z"
   },
   {
     "id": "MIR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-02-24T00:00:00.000Z",
+    "availableTo": "2022-05-14T00:00:00.000Z",
+    "first_capture": "2021-02-24T00:00:00.000Z",
     "end_date": "2022-05-14T00:00:00.000Z",
     "internal_id": "perpetual-MIR-USDT:USDT",
     "symbol": "MIR",
@@ -3254,7 +3356,8 @@
   {
     "id": "MKR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-21T00:00:00.000Z",
+    "availableTo": "2025-09-05T00:00:00.000Z",
+    "first_capture": "2020-08-21T00:00:00.000Z",
     "end_date": "2025-09-05T00:00:00.000Z",
     "internal_id": "perpetual-MKR-USDT:USDT",
     "symbol": "MKR",
@@ -3267,19 +3370,21 @@
   {
     "id": "MMT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-04T00:00:00.000Z",
     "internal_id": "perpetual-MMT-USDT:USDT",
     "symbol": "MMT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-04T00:00:00.000Z"
   },
   {
     "id": "MOG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-17T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2025-07-17T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-MOG-USDT:USDT",
     "symbol": "MOG",
     "denominator": "USDT",
@@ -3291,55 +3396,56 @@
   {
     "id": "MON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-10T00:00:00.000Z",
     "internal_id": "perpetual-MON-USDT:USDT",
     "symbol": "MON",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-10T00:00:00.000Z"
   },
   {
     "id": "MOODENG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-03T00:00:00.000Z",
     "internal_id": "perpetual-MOODENG-USDT:USDT",
     "symbol": "MOODENG",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-10-03T00:00:00.000Z"
   },
   {
     "id": "MORPHO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-25T00:00:00.000Z",
     "internal_id": "perpetual-MORPHO-USDT:USDT",
     "symbol": "MORPHO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-11-25T00:00:00.000Z"
   },
   {
     "id": "MOVE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-09T00:00:00.000Z",
     "internal_id": "perpetual-MOVE-USDT:USDT",
     "symbol": "MOVE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-09T00:00:00.000Z"
   },
   {
     "id": "MOVR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-09T00:00:00.000Z",
+    "availableTo": "2025-06-06T00:00:00.000Z",
+    "first_capture": "2024-01-09T00:00:00.000Z",
     "end_date": "2025-06-06T00:00:00.000Z",
     "internal_id": "perpetual-MOVR-USDT:USDT",
     "symbol": "MOVR",
@@ -3352,7 +3458,8 @@
   {
     "id": "MSN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-29T00:00:00.000Z",
+    "availableTo": "2024-08-07T00:00:00.000Z",
+    "first_capture": "2024-04-29T00:00:00.000Z",
     "end_date": "2024-08-07T00:00:00.000Z",
     "internal_id": "perpetual-MSN-USDT:USDT",
     "symbol": "MSN",
@@ -3365,31 +3472,32 @@
   {
     "id": "MSTR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-25T00:00:00.000Z",
     "internal_id": "perpetual-MSTR-USDT:USDT",
     "symbol": "MSTR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-25T00:00:00.000Z"
   },
   {
     "id": "MUBARAK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-03T00:00:00.000Z",
     "internal_id": "perpetual-MUBARAK-USDT:USDT",
     "symbol": "MUBARAK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-03T00:00:00.000Z"
   },
   {
     "id": "NC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-17T00:00:00.000Z",
+    "availableTo": "2025-07-05T00:00:00.000Z",
+    "first_capture": "2025-01-17T00:00:00.000Z",
     "end_date": "2025-07-05T00:00:00.000Z",
     "internal_id": "perpetual-NC-USDT:USDT",
     "symbol": "NC",
@@ -3402,31 +3510,32 @@
   {
     "id": "NEAR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-12-21T00:00:00.000Z",
     "internal_id": "perpetual-NEAR-USDT:USDT",
     "symbol": "NEAR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-12-21T00:00:00.000Z"
   },
   {
     "id": "NEIRO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-03T00:00:00.000Z",
     "internal_id": "perpetual-NEIRO-USDT:USDT",
     "symbol": "NEIRO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-10-03T00:00:00.000Z"
   },
   {
     "id": "NEIROETH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-06T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2024-09-06T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-NEIROETH-USDT:USDT",
     "symbol": "NEIROETH",
@@ -3439,7 +3548,8 @@
   {
     "id": "NEO-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-05T00:00:00.000Z",
+    "availableTo": "2025-05-17T00:00:00.000Z",
+    "first_capture": "2020-03-05T00:00:00.000Z",
     "end_date": "2025-05-17T00:00:00.000Z",
     "internal_id": "perpetual-NEO-USD:NEO",
     "symbol": "NEO",
@@ -3452,19 +3562,20 @@
   {
     "id": "NEO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-03-05T00:00:00.000Z",
     "internal_id": "perpetual-NEO-USDT:USDT",
     "symbol": "NEO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-03-05T00:00:00.000Z"
   },
   {
     "id": "NEWT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-25T00:00:00.000Z",
+    "availableTo": "2025-12-18T00:00:00.000Z",
+    "first_capture": "2025-07-25T00:00:00.000Z",
     "end_date": "2025-12-18T00:00:00.000Z",
     "internal_id": "perpetual-NEWT-USDT:USDT",
     "symbol": "NEWT",
@@ -3477,7 +3588,8 @@
   {
     "id": "NFT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-12-02T00:00:00.000Z",
+    "availableTo": "2025-05-17T00:00:00.000Z",
+    "first_capture": "2021-12-02T00:00:00.000Z",
     "end_date": "2025-05-17T00:00:00.000Z",
     "internal_id": "perpetual-NFT-USDT:USDT",
     "symbol": "NFT",
@@ -3490,31 +3602,32 @@
   {
     "id": "NIGHT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-09T00:00:00.000Z",
     "internal_id": "perpetual-NIGHT-USDT:USDT",
     "symbol": "NIGHT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-09T00:00:00.000Z"
   },
   {
     "id": "NIGHT-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-NIGHT-USD_UM:NIGHT",
     "symbol": "NIGHT",
     "denominator": "USD_UM",
     "margin": "NIGHT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "NIL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-08T00:00:00.000Z",
+    "availableTo": "2025-07-26T00:00:00.000Z",
+    "first_capture": "2025-05-08T00:00:00.000Z",
     "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "perpetual-NIL-USDT:USDT",
     "symbol": "NIL",
@@ -3527,31 +3640,32 @@
   {
     "id": "NMR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-01-11T00:00:00.000Z",
     "internal_id": "perpetual-NMR-USDT:USDT",
     "symbol": "NMR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-01-11T00:00:00.000Z"
   },
   {
     "id": "NOT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-05-16T00:00:00.000Z",
     "internal_id": "perpetual-NOT-USDT:USDT",
     "symbol": "NOT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-05-16T00:00:00.000Z"
   },
   {
     "id": "NXPC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-03T00:00:00.000Z",
+    "availableTo": "2025-10-31T00:00:00.000Z",
+    "first_capture": "2025-06-03T00:00:00.000Z",
     "end_date": "2025-10-31T00:00:00.000Z",
     "internal_id": "perpetual-NXPC-USDT:USDT",
     "symbol": "NXPC",
@@ -3564,7 +3678,8 @@
   {
     "id": "NYM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-04-21T00:00:00.000Z",
+    "availableTo": "2022-11-18T00:00:00.000Z",
+    "first_capture": "2022-04-21T00:00:00.000Z",
     "end_date": "2022-11-18T00:00:00.000Z",
     "internal_id": "perpetual-NYM-USDT:USDT",
     "symbol": "NYM",
@@ -3577,31 +3692,32 @@
   {
     "id": "OKB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-04T00:00:00.000Z",
     "internal_id": "perpetual-OKB-USDT:USDT",
     "symbol": "OKB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-04T00:00:00.000Z"
   },
   {
     "id": "OL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-22T00:00:00.000Z",
     "internal_id": "perpetual-OL-USDT:USDT",
     "symbol": "OL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-11-22T00:00:00.000Z"
   },
   {
     "id": "OM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-20T00:00:00.000Z",
+    "availableTo": "2026-02-21T00:00:00.000Z",
+    "first_capture": "2024-02-20T00:00:00.000Z",
     "end_date": "2026-02-21T00:00:00.000Z",
     "internal_id": "perpetual-OM-USDT:USDT",
     "symbol": "OM",
@@ -3614,7 +3730,8 @@
   {
     "id": "OMG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-28T00:00:00.000Z",
+    "availableTo": "2024-07-16T00:00:00.000Z",
+    "first_capture": "2020-08-28T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-OMG-USDT:USDT",
     "symbol": "OMG",
@@ -3627,31 +3744,32 @@
   {
     "id": "ONDO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-06T00:00:00.000Z",
     "internal_id": "perpetual-ONDO-USDT:USDT",
     "symbol": "ONDO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-08-06T00:00:00.000Z"
   },
   {
     "id": "ONE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-20T00:00:00.000Z",
     "internal_id": "perpetual-ONE-USDT:USDT",
     "symbol": "ONE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-02-20T00:00:00.000Z"
   },
   {
     "id": "ONT-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-06T00:00:00.000Z",
+    "availableTo": "2022-11-24T00:00:00.000Z",
+    "first_capture": "2020-05-06T00:00:00.000Z",
     "end_date": "2022-11-24T00:00:00.000Z",
     "internal_id": "perpetual-ONT-USD:ONT",
     "symbol": "ONT",
@@ -3664,19 +3782,20 @@
   {
     "id": "ONT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-06T00:00:00.000Z",
     "internal_id": "perpetual-ONT-USDT:USDT",
     "symbol": "ONT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-06T00:00:00.000Z"
   },
   {
     "id": "OP-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-05-13T00:00:00.000Z",
+    "availableTo": "2025-08-16T00:00:00.000Z",
+    "first_capture": "2024-05-13T00:00:00.000Z",
     "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "perpetual-OP-USD:OP",
     "symbol": "OP",
@@ -3689,31 +3808,32 @@
   {
     "id": "OP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "perpetual-OP-USDT:USDT",
     "symbol": "OP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-06-01T00:00:00.000Z"
   },
   {
     "id": "OPN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-23T00:00:00.000Z",
     "internal_id": "perpetual-OPN-USDT:USDT",
     "symbol": "OPN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-23T00:00:00.000Z"
   },
   {
     "id": "ORBS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-17T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2023-10-17T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-ORBS-USDT:USDT",
     "symbol": "ORBS",
@@ -3726,103 +3846,104 @@
   {
     "id": "ORDER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-30T00:00:00.000Z",
     "internal_id": "perpetual-ORDER-USDT:USDT",
     "symbol": "ORDER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-30T00:00:00.000Z"
   },
   {
     "id": "ORDI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-05-21T00:00:00.000Z",
     "internal_id": "perpetual-ORDI-USDT:USDT",
     "symbol": "ORDI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-05-21T00:00:00.000Z"
   },
   {
     "id": "PARTI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-03-25T00:00:00.000Z",
     "internal_id": "perpetual-PARTI-USDT:USDT",
     "symbol": "PARTI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-03-25T00:00:00.000Z"
   },
   {
     "id": "PENDLE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-17T00:00:00.000Z",
     "internal_id": "perpetual-PENDLE-USDT:USDT",
     "symbol": "PENDLE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-17T00:00:00.000Z"
   },
   {
     "id": "PENGU-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-17T00:00:00.000Z",
     "internal_id": "perpetual-PENGU-USDT:USDT",
     "symbol": "PENGU",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-17T00:00:00.000Z"
   },
   {
     "id": "PEOPLE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-12-02T00:00:00.000Z",
     "internal_id": "perpetual-PEOPLE-USDT:USDT",
     "symbol": "PEOPLE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-12-02T00:00:00.000Z"
   },
   {
     "id": "PEPE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-05-03T00:00:00.000Z",
     "internal_id": "perpetual-PEPE-USDT:USDT",
     "symbol": "PEPE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-05-03T00:00:00.000Z"
   },
   {
     "id": "PEPE-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-PEPE-USD_UM:PEPE",
     "symbol": "PEPE",
     "denominator": "USD_UM",
     "margin": "PEPE",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "PERP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-02T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2021-04-02T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-PERP-USDT:USDT",
     "symbol": "PERP",
@@ -3835,43 +3956,44 @@
   {
     "id": "PI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-20T00:00:00.000Z",
     "internal_id": "perpetual-PI-USDT:USDT",
     "symbol": "PI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-20T00:00:00.000Z"
   },
   {
     "id": "PIEVERSE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-16T00:00:00.000Z",
     "internal_id": "perpetual-PIEVERSE-USDT:USDT",
     "symbol": "PIEVERSE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-16T00:00:00.000Z"
   },
   {
     "id": "PIEVERSE-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-PIEVERSE-USD_UM:PIEVERSE",
     "symbol": "PIEVERSE",
     "denominator": "USD_UM",
     "margin": "PIEVERSE",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "PIGGY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-29T00:00:00.000Z",
+    "availableTo": "2025-12-08T00:00:00.000Z",
+    "first_capture": "2025-10-29T00:00:00.000Z",
     "end_date": "2025-12-08T00:00:00.000Z",
     "internal_id": "perpetual-PIGGY-USDT:USDT",
     "symbol": "PIGGY",
@@ -3884,91 +4006,92 @@
   {
     "id": "PIPPIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-27T00:00:00.000Z",
     "internal_id": "perpetual-PIPPIN-USDT:USDT",
     "symbol": "PIPPIN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-27T00:00:00.000Z"
   },
   {
     "id": "PIPPIN-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-PIPPIN-USD_UM:PIPPIN",
     "symbol": "PIPPIN",
     "denominator": "USD_UM",
     "margin": "PIPPIN",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "PLTR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-PLTR-USDT:USDT",
     "symbol": "PLTR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "PLUME-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-08T00:00:00.000Z",
     "internal_id": "perpetual-PLUME-USDT:USDT",
     "symbol": "PLUME",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-08T00:00:00.000Z"
   },
   {
     "id": "PNUT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-12T00:00:00.000Z",
     "internal_id": "perpetual-PNUT-USDT:USDT",
     "symbol": "PNUT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-11-12T00:00:00.000Z"
   },
   {
     "id": "POL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-24T00:00:00.000Z",
     "internal_id": "perpetual-POL-USDT:USDT",
     "symbol": "POL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-09-24T00:00:00.000Z"
   },
   {
     "id": "POPCAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-29T00:00:00.000Z",
     "internal_id": "perpetual-POPCAT-USDT:USDT",
     "symbol": "POPCAT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-08-29T00:00:00.000Z"
   },
   {
     "id": "PRCL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-16T00:00:00.000Z",
+    "availableTo": "2025-12-18T00:00:00.000Z",
+    "first_capture": "2024-04-16T00:00:00.000Z",
     "end_date": "2025-12-18T00:00:00.000Z",
     "internal_id": "perpetual-PRCL-USDT:USDT",
     "symbol": "PRCL",
@@ -3981,7 +4104,9 @@
   {
     "id": "PROMPT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-10T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2025-04-10T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-PROMPT-USDT:USDT",
     "symbol": "PROMPT",
     "denominator": "USDT",
@@ -3993,19 +4118,20 @@
   {
     "id": "PROVE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-17T00:00:00.000Z",
     "internal_id": "perpetual-PROVE-USDT:USDT",
     "symbol": "PROVE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-17T00:00:00.000Z"
   },
   {
     "id": "PUFFER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-14T00:00:00.000Z",
+    "availableTo": "2025-06-06T00:00:00.000Z",
+    "first_capture": "2024-10-14T00:00:00.000Z",
     "end_date": "2025-06-06T00:00:00.000Z",
     "internal_id": "perpetual-PUFFER-USDT:USDT",
     "symbol": "PUFFER",
@@ -4018,43 +4144,44 @@
   {
     "id": "PUMP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-14T00:00:00.000Z",
     "internal_id": "perpetual-PUMP-USDT:USDT",
     "symbol": "PUMP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-14T00:00:00.000Z"
   },
   {
     "id": "PUMP-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-PUMP-USD_UM:PUMP",
     "symbol": "PUMP",
     "denominator": "USD_UM",
     "margin": "PUMP",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "PYTH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-20T00:00:00.000Z",
     "internal_id": "perpetual-PYTH-USDT:USDT",
     "symbol": "PYTH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-11-20T00:00:00.000Z"
   },
   {
     "id": "QTUM-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-11T00:00:00.000Z",
+    "availableTo": "2022-11-24T00:00:00.000Z",
+    "first_capture": "2020-05-11T00:00:00.000Z",
     "end_date": "2022-11-24T00:00:00.000Z",
     "internal_id": "perpetual-QTUM-USD:QTUM",
     "symbol": "QTUM",
@@ -4067,19 +4194,20 @@
   {
     "id": "QTUM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-11T00:00:00.000Z",
     "internal_id": "perpetual-QTUM-USDT:USDT",
     "symbol": "QTUM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-11T00:00:00.000Z"
   },
   {
     "id": "RACA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-24T00:00:00.000Z",
+    "availableTo": "2025-03-12T00:00:00.000Z",
+    "first_capture": "2023-10-24T00:00:00.000Z",
     "end_date": "2025-03-12T00:00:00.000Z",
     "internal_id": "perpetual-RACA-USDT:USDT",
     "symbol": "RACA",
@@ -4092,31 +4220,32 @@
   {
     "id": "RAVE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-15T00:00:00.000Z",
     "internal_id": "perpetual-RAVE-USDT:USDT",
     "symbol": "RAVE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-15T00:00:00.000Z"
   },
   {
     "id": "RAY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-12T00:00:00.000Z",
     "internal_id": "perpetual-RAY-USDT:USDT",
     "symbol": "RAY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-03-12T00:00:00.000Z"
   },
   {
     "id": "RDNT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-04-24T00:00:00.000Z",
+    "availableTo": "2025-08-02T00:00:00.000Z",
+    "first_capture": "2023-04-24T00:00:00.000Z",
     "end_date": "2025-08-02T00:00:00.000Z",
     "internal_id": "perpetual-RDNT-USDT:USDT",
     "symbol": "RDNT",
@@ -4129,19 +4258,20 @@
   {
     "id": "RECALL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-30T00:00:00.000Z",
     "internal_id": "perpetual-RECALL-USDT:USDT",
     "symbol": "RECALL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-30T00:00:00.000Z"
   },
   {
     "id": "REN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-08T00:00:00.000Z",
+    "availableTo": "2024-08-30T00:00:00.000Z",
+    "first_capture": "2020-09-08T00:00:00.000Z",
     "end_date": "2024-08-30T00:00:00.000Z",
     "internal_id": "perpetual-REN-USDT:USDT",
     "symbol": "REN",
@@ -4154,79 +4284,80 @@
   {
     "id": "RENDER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-08-08T00:00:00.000Z",
     "internal_id": "perpetual-RENDER-USDT:USDT",
     "symbol": "RENDER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-08-08T00:00:00.000Z"
   },
   {
     "id": "RESOLV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-10T00:00:00.000Z",
     "internal_id": "perpetual-RESOLV-USDT:USDT",
     "symbol": "RESOLV",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-10T00:00:00.000Z"
   },
   {
     "id": "RESOLV-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-RESOLV-USD_UM:RESOLV",
     "symbol": "RESOLV",
     "denominator": "USD_UM",
     "margin": "RESOLV",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "RIVER-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-09T00:00:00.000Z",
     "internal_id": "perpetual-RIVER-USDT:USDT",
     "symbol": "RIVER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-09T00:00:00.000Z"
   },
   {
     "id": "RIVER-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-RIVER-USD_UM:RIVER",
     "symbol": "RIVER",
     "denominator": "USD_UM",
     "margin": "RIVER",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "RLS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-RLS-USDT:USDT",
     "symbol": "RLS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "RNDR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-09T00:00:00.000Z",
+    "availableTo": "2024-07-10T00:00:00.000Z",
+    "first_capture": "2023-10-09T00:00:00.000Z",
     "end_date": "2024-07-10T00:00:00.000Z",
     "internal_id": "perpetual-RNDR-USDT:USDT",
     "symbol": "RNDR",
@@ -4239,19 +4370,20 @@
   {
     "id": "ROBO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-ROBO-USDT:USDT",
     "symbol": "ROBO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "RON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-11T00:00:00.000Z",
+    "availableTo": "2025-05-22T00:00:00.000Z",
+    "first_capture": "2023-12-11T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z",
     "internal_id": "perpetual-RON-USDT:USDT",
     "symbol": "RON",
@@ -4264,19 +4396,20 @@
   {
     "id": "RSR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
     "internal_id": "perpetual-RSR-USDT:USDT",
     "symbol": "RSR",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
     "id": "RSS3-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-02-24T00:00:00.000Z",
+    "availableTo": "2022-08-26T00:00:00.000Z",
+    "first_capture": "2022-02-24T00:00:00.000Z",
     "end_date": "2022-08-26T00:00:00.000Z",
     "internal_id": "perpetual-RSS3-USDT:USDT",
     "symbol": "RSS3",
@@ -4289,43 +4422,44 @@
   {
     "id": "RVN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-23T00:00:00.000Z",
     "internal_id": "perpetual-RVN-USDT:USDT",
     "symbol": "RVN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-04-23T00:00:00.000Z"
   },
   {
     "id": "S-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-21T00:00:00.000Z",
     "internal_id": "perpetual-S-USDT:USDT",
     "symbol": "S",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-21T00:00:00.000Z"
   },
   {
     "id": "SAHARA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-26T00:00:00.000Z",
     "internal_id": "perpetual-SAHARA-USDT:USDT",
     "symbol": "SAHARA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-26T00:00:00.000Z"
   },
   {
     "id": "SAND-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-25T00:00:00.000Z",
+    "availableTo": "2025-06-28T00:00:00.000Z",
+    "first_capture": "2021-11-25T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
     "internal_id": "perpetual-SAND-USD:SAND",
     "symbol": "SAND",
@@ -4338,43 +4472,44 @@
   {
     "id": "SAND-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-02T00:00:00.000Z",
     "internal_id": "perpetual-SAND-USDT:USDT",
     "symbol": "SAND",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-04-02T00:00:00.000Z"
   },
   {
     "id": "SAPIEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-06T00:00:00.000Z",
     "internal_id": "perpetual-SAPIEN-USDT:USDT",
     "symbol": "SAPIEN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-06T00:00:00.000Z"
   },
   {
     "id": "SATS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-18T00:00:00.000Z",
     "internal_id": "perpetual-SATS-USDT:USDT",
     "symbol": "SATS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-12-18T00:00:00.000Z"
   },
   {
     "id": "SC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-08T00:00:00.000Z",
+    "availableTo": "2022-11-12T00:00:00.000Z",
+    "first_capture": "2021-04-08T00:00:00.000Z",
     "end_date": "2022-11-12T00:00:00.000Z",
     "internal_id": "perpetual-SC-USDT:USDT",
     "symbol": "SC",
@@ -4387,7 +4522,8 @@
   {
     "id": "SCR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-22T00:00:00.000Z",
+    "availableTo": "2025-10-31T00:00:00.000Z",
+    "first_capture": "2024-10-22T00:00:00.000Z",
     "end_date": "2025-10-31T00:00:00.000Z",
     "internal_id": "perpetual-SCR-USDT:USDT",
     "symbol": "SCR",
@@ -4400,79 +4536,80 @@
   {
     "id": "SEI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-14T00:00:00.000Z",
     "internal_id": "perpetual-SEI-USDT:USDT",
     "symbol": "SEI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-14T00:00:00.000Z"
   },
   {
     "id": "SENT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-14T00:00:00.000Z",
     "internal_id": "perpetual-SENT-USDT:USDT",
     "symbol": "SENT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-14T00:00:00.000Z"
   },
   {
     "id": "SHELL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-02-27T00:00:00.000Z",
     "internal_id": "perpetual-SHELL-USDT:USDT",
     "symbol": "SHELL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-02-27T00:00:00.000Z"
   },
   {
     "id": "SHIB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-05-09T00:00:00.000Z",
     "internal_id": "perpetual-SHIB-USDT:USDT",
     "symbol": "SHIB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-05-09T00:00:00.000Z"
   },
   {
     "id": "SIGN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-28T00:00:00.000Z",
     "internal_id": "perpetual-SIGN-USDT:USDT",
     "symbol": "SIGN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-04-28T00:00:00.000Z"
   },
   {
     "id": "SKY-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-11T00:00:00.000Z",
     "internal_id": "perpetual-SKY-USDT:USDT",
     "symbol": "SKY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-11T00:00:00.000Z"
   },
   {
     "id": "SLERF-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-21T00:00:00.000Z",
+    "availableTo": "2025-07-05T00:00:00.000Z",
+    "first_capture": "2024-11-21T00:00:00.000Z",
     "end_date": "2025-07-05T00:00:00.000Z",
     "internal_id": "perpetual-SLERF-USDT:USDT",
     "symbol": "SLERF",
@@ -4485,7 +4622,8 @@
   {
     "id": "SLP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-08-26T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2021-08-26T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-SLP-USDT:USDT",
     "symbol": "SLP",
@@ -4498,55 +4636,56 @@
   {
     "id": "SNX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-21T00:00:00.000Z",
     "internal_id": "perpetual-SNX-USDT:USDT",
     "symbol": "SNX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
     "id": "SOL-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-25T00:00:00.000Z",
     "internal_id": "perpetual-SOL-USD:SOL",
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-11-25T00:00:00.000Z"
   },
   {
     "id": "SOL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-01-22T00:00:00.000Z",
     "internal_id": "perpetual-SOL-USDT:USDT",
     "symbol": "SOL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-01-22T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-26T00:00:00.000Z",
     "internal_id": "perpetual-SOL-USD_UM:SOL",
     "symbol": "SOL",
     "denominator": "USD_UM",
     "margin": "SOL",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-09-26T00:00:00.000Z"
   },
   {
     "id": "SOLV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-17T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-01-17T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-SOLV-USDT:USDT",
     "symbol": "SOLV",
@@ -4559,7 +4698,8 @@
   {
     "id": "SONIC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-07T00:00:00.000Z",
+    "availableTo": "2025-12-18T00:00:00.000Z",
+    "first_capture": "2025-01-07T00:00:00.000Z",
     "end_date": "2025-12-18T00:00:00.000Z",
     "internal_id": "perpetual-SONIC-USDT:USDT",
     "symbol": "SONIC",
@@ -4572,31 +4712,32 @@
   {
     "id": "SOON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-23T00:00:00.000Z",
     "internal_id": "perpetual-SOON-USDT:USDT",
     "symbol": "SOON",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-23T00:00:00.000Z"
   },
   {
     "id": "SOPH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-28T00:00:00.000Z",
     "internal_id": "perpetual-SOPH-USDT:USDT",
     "symbol": "SOPH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-28T00:00:00.000Z"
   },
   {
     "id": "SOS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-12-30T00:00:00.000Z",
+    "availableTo": "2022-11-16T00:00:00.000Z",
+    "first_capture": "2021-12-30T00:00:00.000Z",
     "end_date": "2022-11-16T00:00:00.000Z",
     "internal_id": "perpetual-SOS-USDT:USDT",
     "symbol": "SOS",
@@ -4609,19 +4750,20 @@
   {
     "id": "SPACE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-23T00:00:00.000Z",
     "internal_id": "perpetual-SPACE-USDT:USDT",
     "symbol": "SPACE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-23T00:00:00.000Z"
   },
   {
     "id": "SPELL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-22T00:00:00.000Z",
+    "availableTo": "2024-07-16T00:00:00.000Z",
+    "first_capture": "2024-02-22T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-SPELL-USDT:USDT",
     "symbol": "SPELL",
@@ -4634,31 +4776,32 @@
   {
     "id": "SPK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-06-17T00:00:00.000Z",
     "internal_id": "perpetual-SPK-USDT:USDT",
     "symbol": "SPK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-06-17T00:00:00.000Z"
   },
   {
     "id": "SPX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-17T00:00:00.000Z",
     "internal_id": "perpetual-SPX-USDT:USDT",
     "symbol": "SPX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "SRM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-17T00:00:00.000Z",
+    "availableTo": "2022-11-15T00:00:00.000Z",
+    "first_capture": "2020-08-17T00:00:00.000Z",
     "end_date": "2022-11-15T00:00:00.000Z",
     "internal_id": "perpetual-SRM-USDT:USDT",
     "symbol": "SRM",
@@ -4671,31 +4814,32 @@
   {
     "id": "SSV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-11-23T00:00:00.000Z",
     "internal_id": "perpetual-SSV-USDT:USDT",
     "symbol": "SSV",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-11-23T00:00:00.000Z"
   },
   {
     "id": "STABLE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-08T00:00:00.000Z",
     "internal_id": "perpetual-STABLE-USDT:USDT",
     "symbol": "STABLE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-08T00:00:00.000Z"
   },
   {
     "id": "STARL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-05T00:00:00.000Z",
+    "availableTo": "2024-05-24T00:00:00.000Z",
+    "first_capture": "2021-11-05T00:00:00.000Z",
     "end_date": "2024-05-24T00:00:00.000Z",
     "internal_id": "perpetual-STARL-USDT:USDT",
     "symbol": "STARL",
@@ -4708,7 +4852,8 @@
   {
     "id": "STORJ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
+    "availableTo": "2025-10-31T00:00:00.000Z",
+    "first_capture": "2020-09-09T00:00:00.000Z",
     "end_date": "2025-10-31T00:00:00.000Z",
     "internal_id": "perpetual-STORJ-USDT:USDT",
     "symbol": "STORJ",
@@ -4721,67 +4866,68 @@
   {
     "id": "STRK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-20T00:00:00.000Z",
     "internal_id": "perpetual-STRK-USDT:USDT",
     "symbol": "STRK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-02-20T00:00:00.000Z"
   },
   {
     "id": "STX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-21T00:00:00.000Z",
     "internal_id": "perpetual-STX-USDT:USDT",
     "symbol": "STX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-21T00:00:00.000Z"
   },
   {
     "id": "SUI-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-18T00:00:00.000Z",
     "internal_id": "perpetual-SUI-USD:SUI",
     "symbol": "SUI",
     "denominator": "USD",
     "margin": "SUI",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-10-18T00:00:00.000Z"
   },
   {
     "id": "SUI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-05-05T00:00:00.000Z",
     "internal_id": "perpetual-SUI-USDT:USDT",
     "symbol": "SUI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-05-05T00:00:00.000Z"
   },
   {
     "id": "SUI-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-SUI-USD_UM:SUI",
     "symbol": "SUI",
     "denominator": "USD_UM",
     "margin": "SUI",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "SUN-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-17T00:00:00.000Z",
+    "availableTo": "2021-06-24T00:00:00.000Z",
+    "first_capture": "2020-09-17T00:00:00.000Z",
     "end_date": "2021-06-24T00:00:00.000Z",
     "internal_id": "perpetual-SUN-USD:SUN",
     "symbol": "SUN",
@@ -4794,7 +4940,8 @@
   {
     "id": "SUN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-11T00:00:00.000Z",
+    "availableTo": "2021-06-24T00:00:00.000Z",
+    "first_capture": "2020-09-11T00:00:00.000Z",
     "end_date": "2021-06-24T00:00:00.000Z",
     "internal_id": "perpetual-SUN-USDT:USDT",
     "symbol": "SUN",
@@ -4807,7 +4954,8 @@
   {
     "id": "SUNDOG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-11T00:00:00.000Z",
+    "availableTo": "2025-06-06T00:00:00.000Z",
+    "first_capture": "2024-12-11T00:00:00.000Z",
     "end_date": "2025-06-06T00:00:00.000Z",
     "internal_id": "perpetual-SUNDOG-USDT:USDT",
     "symbol": "SUNDOG",
@@ -4820,7 +4968,8 @@
   {
     "id": "SUSHI-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-03T00:00:00.000Z",
+    "availableTo": "2025-05-17T00:00:00.000Z",
+    "first_capture": "2020-09-03T00:00:00.000Z",
     "end_date": "2025-05-17T00:00:00.000Z",
     "internal_id": "perpetual-SUSHI-USD:SUSHI",
     "symbol": "SUSHI",
@@ -4833,19 +4982,20 @@
   {
     "id": "SUSHI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-03T00:00:00.000Z",
     "internal_id": "perpetual-SUSHI-USDT:USDT",
     "symbol": "SUSHI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-03T00:00:00.000Z"
   },
   {
     "id": "SWARMS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-24T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2025-01-24T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-SWARMS-USDT:USDT",
     "symbol": "SWARMS",
@@ -4858,7 +5008,8 @@
   {
     "id": "SWEAT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-09-15T00:00:00.000Z",
+    "availableTo": "2025-06-06T00:00:00.000Z",
+    "first_capture": "2022-09-15T00:00:00.000Z",
     "end_date": "2025-06-06T00:00:00.000Z",
     "internal_id": "perpetual-SWEAT-USDT:USDT",
     "symbol": "SWEAT",
@@ -4871,7 +5022,8 @@
   {
     "id": "SWELL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-11-25T00:00:00.000Z",
+    "availableTo": "2025-06-13T00:00:00.000Z",
+    "first_capture": "2024-11-25T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-SWELL-USDT:USDT",
     "symbol": "SWELL",
@@ -4884,7 +5036,8 @@
   {
     "id": "SWRV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-11T00:00:00.000Z",
+    "availableTo": "2022-08-13T00:00:00.000Z",
+    "first_capture": "2020-09-11T00:00:00.000Z",
     "end_date": "2022-08-13T00:00:00.000Z",
     "internal_id": "perpetual-SWRV-USDT:USDT",
     "symbol": "SWRV",
@@ -4897,19 +5050,20 @@
   {
     "id": "SYRUP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-03T00:00:00.000Z",
     "internal_id": "perpetual-SYRUP-USDT:USDT",
     "symbol": "SYRUP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-03T00:00:00.000Z"
   },
   {
     "id": "T-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-23T00:00:00.000Z",
+    "availableTo": "2025-10-25T00:00:00.000Z",
+    "first_capture": "2024-02-23T00:00:00.000Z",
     "end_date": "2025-10-25T00:00:00.000Z",
     "internal_id": "perpetual-T-USDT:USDT",
     "symbol": "T",
@@ -4922,19 +5076,20 @@
   {
     "id": "TAO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-09-20T00:00:00.000Z",
     "internal_id": "perpetual-TAO-USDT:USDT",
     "symbol": "TAO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-09-20T00:00:00.000Z"
   },
   {
     "id": "THETA-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-06-15T00:00:00.000Z",
+    "availableTo": "2025-05-27T00:00:00.000Z",
+    "first_capture": "2020-06-15T00:00:00.000Z",
     "end_date": "2025-05-27T00:00:00.000Z",
     "internal_id": "perpetual-THETA-USD:THETA",
     "symbol": "THETA",
@@ -4947,31 +5102,32 @@
   {
     "id": "THETA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-06-15T00:00:00.000Z",
     "internal_id": "perpetual-THETA-USDT:USDT",
     "symbol": "THETA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-06-15T00:00:00.000Z"
   },
   {
     "id": "TIA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-31T00:00:00.000Z",
     "internal_id": "perpetual-TIA-USDT:USDT",
     "symbol": "TIA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-10-31T00:00:00.000Z"
   },
   {
     "id": "TNSR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-08T00:00:00.000Z",
+    "availableTo": "2025-10-31T00:00:00.000Z",
+    "first_capture": "2024-04-08T00:00:00.000Z",
     "end_date": "2025-10-31T00:00:00.000Z",
     "internal_id": "perpetual-TNSR-USDT:USDT",
     "symbol": "TNSR",
@@ -4984,7 +5140,8 @@
   {
     "id": "TON-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-18T00:00:00.000Z",
+    "availableTo": "2025-06-28T00:00:00.000Z",
+    "first_capture": "2024-10-18T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
     "internal_id": "perpetual-TON-USD:TON",
     "symbol": "TON",
@@ -4997,19 +5154,20 @@
   {
     "id": "TON-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-12-28T00:00:00.000Z",
     "internal_id": "perpetual-TON-USDT:USDT",
     "symbol": "TON",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2022-12-28T00:00:00.000Z"
   },
   {
     "id": "TONCOIN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-11-12T00:00:00.000Z",
+    "availableTo": "2022-04-21T00:00:00.000Z",
+    "first_capture": "2021-11-12T00:00:00.000Z",
     "end_date": "2022-04-21T00:00:00.000Z",
     "internal_id": "perpetual-TONCOIN-USDT:USDT",
     "symbol": "TONCOIN",
@@ -5022,7 +5180,8 @@
   {
     "id": "TORN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-02-24T00:00:00.000Z",
+    "availableTo": "2022-09-27T00:00:00.000Z",
+    "first_capture": "2021-02-24T00:00:00.000Z",
     "end_date": "2022-09-27T00:00:00.000Z",
     "internal_id": "perpetual-TORN-USDT:USDT",
     "symbol": "TORN",
@@ -5035,19 +5194,20 @@
   {
     "id": "TRB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-08T00:00:00.000Z",
     "internal_id": "perpetual-TRB-USDT:USDT",
     "symbol": "TRB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
     "id": "TREE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-29T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-07-29T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-TREE-USDT:USDT",
     "symbol": "TREE",
@@ -5060,55 +5220,56 @@
   {
     "id": "TRIA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-05T00:00:00.000Z",
     "internal_id": "perpetual-TRIA-USDT:USDT",
     "symbol": "TRIA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-05T00:00:00.000Z"
   },
   {
     "id": "TRUMP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-19T00:00:00.000Z",
     "internal_id": "perpetual-TRUMP-USDT:USDT",
     "symbol": "TRUMP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-01-19T00:00:00.000Z"
   },
   {
     "id": "TRUST-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-05T00:00:00.000Z",
     "internal_id": "perpetual-TRUST-USDT:USDT",
     "symbol": "TRUST",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-05T00:00:00.000Z"
   },
   {
     "id": "TRUTH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-11-28T00:00:00.000Z",
     "internal_id": "perpetual-TRUTH-USDT:USDT",
     "symbol": "TRUTH",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-11-28T00:00:00.000Z"
   },
   {
     "id": "TRX-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
+    "availableTo": "2025-08-16T00:00:00.000Z",
+    "first_capture": "2019-03-30T00:00:00.000Z",
     "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "perpetual-TRX-USD:TRX",
     "symbol": "TRX",
@@ -5121,43 +5282,44 @@
   {
     "id": "TRX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-31T00:00:00.000Z",
     "internal_id": "perpetual-TRX-USDT:USDT",
     "symbol": "TRX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-31T00:00:00.000Z"
   },
   {
     "id": "TSLA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-25T00:00:00.000Z",
     "internal_id": "perpetual-TSLA-USDT:USDT",
     "symbol": "TSLA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-25T00:00:00.000Z"
   },
   {
     "id": "TURBO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-12-14T00:00:00.000Z",
     "internal_id": "perpetual-TURBO-USDT:USDT",
     "symbol": "TURBO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-12-14T00:00:00.000Z"
   },
   {
     "id": "TURTLE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-24T00:00:00.000Z",
+    "availableTo": "2026-01-25T00:00:00.000Z",
+    "first_capture": "2025-10-24T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z",
     "internal_id": "perpetual-TURTLE-USDT:USDT",
     "symbol": "TURTLE",
@@ -5170,7 +5332,8 @@
   {
     "id": "ULTI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-06-07T00:00:00.000Z",
+    "availableTo": "2025-05-22T00:00:00.000Z",
+    "first_capture": "2024-06-07T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z",
     "internal_id": "perpetual-ULTI-USDT:USDT",
     "symbol": "ULTI",
@@ -5183,19 +5346,20 @@
   {
     "id": "UMA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-04T00:00:00.000Z",
     "internal_id": "perpetual-UMA-USDT:USDT",
     "symbol": "UMA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-04T00:00:00.000Z"
   },
   {
     "id": "UMEE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-02-24T00:00:00.000Z",
+    "availableTo": "2022-11-26T00:00:00.000Z",
+    "first_capture": "2022-02-24T00:00:00.000Z",
     "end_date": "2022-11-26T00:00:00.000Z",
     "internal_id": "perpetual-UMEE-USDT:USDT",
     "symbol": "UMEE",
@@ -5208,55 +5372,56 @@
   {
     "id": "UNI-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-17T00:00:00.000Z",
     "internal_id": "perpetual-UNI-USD:UNI",
     "symbol": "UNI",
     "denominator": "USD",
     "margin": "UNI",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-17T00:00:00.000Z"
   },
   {
     "id": "UNI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-17T00:00:00.000Z",
     "internal_id": "perpetual-UNI-USDT:USDT",
     "symbol": "UNI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-17T00:00:00.000Z"
   },
   {
     "id": "USDC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-03-12T00:00:00.000Z",
     "internal_id": "perpetual-USDC-USDT:USDT",
     "symbol": "USDC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-03-12T00:00:00.000Z"
   },
   {
     "id": "USELESS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-07-25T00:00:00.000Z",
     "internal_id": "perpetual-USELESS-USDT:USDT",
     "symbol": "USELESS",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-07-25T00:00:00.000Z"
   },
   {
     "id": "USTC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-11-03T00:00:00.000Z",
+    "availableTo": "2025-09-19T00:00:00.000Z",
+    "first_capture": "2022-11-03T00:00:00.000Z",
     "end_date": "2025-09-19T00:00:00.000Z",
     "internal_id": "perpetual-USTC-USDT:USDT",
     "symbol": "USTC",
@@ -5269,7 +5434,8 @@
   {
     "id": "UXLINK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-07-18T00:00:00.000Z",
+    "availableTo": "2025-09-24T00:00:00.000Z",
+    "first_capture": "2024-07-18T00:00:00.000Z",
     "end_date": "2025-09-24T00:00:00.000Z",
     "internal_id": "perpetual-UXLINK-USDT:USDT",
     "symbol": "UXLINK",
@@ -5282,19 +5448,20 @@
   {
     "id": "VANA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-17T00:00:00.000Z",
     "internal_id": "perpetual-VANA-USDT:USDT",
     "symbol": "VANA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-17T00:00:00.000Z"
   },
   {
     "id": "VELO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-12T00:00:00.000Z",
+    "availableTo": "2025-05-22T00:00:00.000Z",
+    "first_capture": "2024-03-12T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z",
     "internal_id": "perpetual-VELO-USDT:USDT",
     "symbol": "VELO",
@@ -5307,7 +5474,8 @@
   {
     "id": "VENOM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-25T00:00:00.000Z",
+    "availableTo": "2024-08-30T00:00:00.000Z",
+    "first_capture": "2024-03-25T00:00:00.000Z",
     "end_date": "2024-08-30T00:00:00.000Z",
     "internal_id": "perpetual-VENOM-USDT:USDT",
     "symbol": "VENOM",
@@ -5320,7 +5488,8 @@
   {
     "id": "VINE-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-01-26T00:00:00.000Z",
+    "availableTo": "2025-09-27T00:00:00.000Z",
+    "first_capture": "2025-01-26T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-VINE-USDT:USDT",
     "symbol": "VINE",
@@ -5333,19 +5502,20 @@
   {
     "id": "VIRTUAL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-11T00:00:00.000Z",
     "internal_id": "perpetual-VIRTUAL-USDT:USDT",
     "symbol": "VIRTUAL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-12-11T00:00:00.000Z"
   },
   {
     "id": "VRA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-06T00:00:00.000Z",
+    "availableTo": "2025-05-14T00:00:00.000Z",
+    "first_capture": "2023-10-06T00:00:00.000Z",
     "end_date": "2025-05-14T00:00:00.000Z",
     "internal_id": "perpetual-VRA-USDT:USDT",
     "symbol": "VRA",
@@ -5358,31 +5528,32 @@
   {
     "id": "W-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-03T00:00:00.000Z",
     "internal_id": "perpetual-W-USDT:USDT",
     "symbol": "W",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-04-03T00:00:00.000Z"
   },
   {
     "id": "WAL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-05-08T00:00:00.000Z",
     "internal_id": "perpetual-WAL-USDT:USDT",
     "symbol": "WAL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-05-08T00:00:00.000Z"
   },
   {
     "id": "WAVES-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-28T00:00:00.000Z",
+    "availableTo": "2024-02-02T00:00:00.000Z",
+    "first_capture": "2020-08-28T00:00:00.000Z",
     "end_date": "2024-02-02T00:00:00.000Z",
     "internal_id": "perpetual-WAVES-USDT:USDT",
     "symbol": "WAVES",
@@ -5395,7 +5566,8 @@
   {
     "id": "WAXP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-19T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2023-10-19T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-WAXP-USDT:USDT",
     "symbol": "WAXP",
@@ -5408,19 +5580,20 @@
   {
     "id": "WCT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-15T00:00:00.000Z",
     "internal_id": "perpetual-WCT-USDT:USDT",
     "symbol": "WCT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-04-15T00:00:00.000Z"
   },
   {
     "id": "WEMIX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2022-11-08T00:00:00.000Z",
+    "availableTo": "2022-12-09T00:00:00.000Z",
+    "first_capture": "2022-11-08T00:00:00.000Z",
     "end_date": "2022-12-09T00:00:00.000Z",
     "internal_id": "perpetual-WEMIX-USDT:USDT",
     "symbol": "WEMIX",
@@ -5433,55 +5606,56 @@
   {
     "id": "WET-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-12-09T00:00:00.000Z",
     "internal_id": "perpetual-WET-USDT:USDT",
     "symbol": "WET",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-12-09T00:00:00.000Z"
   },
   {
     "id": "WIF-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-15T00:00:00.000Z",
     "internal_id": "perpetual-WIF-USDT:USDT",
     "symbol": "WIF",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-04-15T00:00:00.000Z"
   },
   {
     "id": "WLD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-07-24T00:00:00.000Z",
     "internal_id": "perpetual-WLD-USDT:USDT",
     "symbol": "WLD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-07-24T00:00:00.000Z"
   },
   {
     "id": "WLFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-08-23T00:00:00.000Z",
     "internal_id": "perpetual-WLFI-USDT:USDT",
     "symbol": "WLFI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-08-23T00:00:00.000Z"
   },
   {
     "id": "WNCG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-08-20T00:00:00.000Z",
+    "availableTo": "2022-08-20T00:00:00.000Z",
+    "first_capture": "2021-08-20T00:00:00.000Z",
     "end_date": "2022-08-20T00:00:00.000Z",
     "internal_id": "perpetual-WNCG-USDT:USDT",
     "symbol": "WNCG",
@@ -5494,7 +5668,8 @@
   {
     "id": "WNXM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
+    "availableTo": "2022-11-15T00:00:00.000Z",
+    "first_capture": "2020-09-09T00:00:00.000Z",
     "end_date": "2022-11-15T00:00:00.000Z",
     "internal_id": "perpetual-WNXM-USDT:USDT",
     "symbol": "WNXM",
@@ -5507,19 +5682,20 @@
   {
     "id": "WOO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-02-14T00:00:00.000Z",
     "internal_id": "perpetual-WOO-USDT:USDT",
     "symbol": "WOO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2023-02-14T00:00:00.000Z"
   },
   {
     "id": "WSM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2023-10-06T00:00:00.000Z",
+    "availableTo": "2024-02-23T00:00:00.000Z",
+    "first_capture": "2023-10-06T00:00:00.000Z",
     "end_date": "2024-02-23T00:00:00.000Z",
     "internal_id": "perpetual-WSM-USDT:USDT",
     "symbol": "WSM",
@@ -5532,7 +5708,8 @@
   {
     "id": "X-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-10-25T00:00:00.000Z",
+    "availableTo": "2025-06-13T00:00:00.000Z",
+    "first_capture": "2024-10-25T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
     "internal_id": "perpetual-X-USDT:USDT",
     "symbol": "X",
@@ -5545,19 +5722,21 @@
   {
     "id": "XAG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-XAG-USDT:USDT",
     "symbol": "XAG",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "XAN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-09-29T00:00:00.000Z",
+    "availableTo": "2026-02-28T00:00:00.000Z",
+    "first_capture": "2025-09-29T00:00:00.000Z",
+    "end_date": "2026-02-28T00:00:00.000Z",
     "internal_id": "perpetual-XAN-USDT:USDT",
     "symbol": "XAN",
     "denominator": "USDT",
@@ -5569,31 +5748,32 @@
   {
     "id": "XAU-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-15T00:00:00.000Z",
     "internal_id": "perpetual-XAU-USDT:USDT",
     "symbol": "XAU",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-15T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-04T00:00:00.000Z",
     "internal_id": "perpetual-XAU-USD_UM:XAU",
     "symbol": "XAU",
     "denominator": "USD_UM",
     "margin": "XAU",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-04T00:00:00.000Z"
   },
   {
     "id": "XAUT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-04-09T00:00:00.000Z",
+    "availableTo": "2026-01-16T00:00:00.000Z",
+    "first_capture": "2025-04-09T00:00:00.000Z",
     "end_date": "2026-01-16T00:00:00.000Z",
     "internal_id": "perpetual-XAUT-USDT:USDT",
     "symbol": "XAUT",
@@ -5606,7 +5786,8 @@
   {
     "id": "XCH-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-05-08T00:00:00.000Z",
+    "availableTo": "2025-08-02T00:00:00.000Z",
+    "first_capture": "2021-05-08T00:00:00.000Z",
     "end_date": "2025-08-02T00:00:00.000Z",
     "internal_id": "perpetual-XCH-USDT:USDT",
     "symbol": "XCH",
@@ -5619,7 +5800,8 @@
   {
     "id": "XEM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-04-08T00:00:00.000Z",
+    "availableTo": "2022-11-25T00:00:00.000Z",
+    "first_capture": "2021-04-08T00:00:00.000Z",
     "end_date": "2022-11-25T00:00:00.000Z",
     "internal_id": "perpetual-XEM-USDT:USDT",
     "symbol": "XEM",
@@ -5632,7 +5814,8 @@
   {
     "id": "XLM-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-11T00:00:00.000Z",
+    "availableTo": "2025-08-16T00:00:00.000Z",
+    "first_capture": "2020-05-11T00:00:00.000Z",
     "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "perpetual-XLM-USD:XLM",
     "symbol": "XLM",
@@ -5645,19 +5828,20 @@
   {
     "id": "XLM-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-11T00:00:00.000Z",
     "internal_id": "perpetual-XLM-USDT:USDT",
     "symbol": "XLM",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-05-11T00:00:00.000Z"
   },
   {
     "id": "XMR-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-18T00:00:00.000Z",
+    "availableTo": "2023-12-20T00:00:00.000Z",
+    "first_capture": "2020-05-18T00:00:00.000Z",
     "end_date": "2023-12-20T00:00:00.000Z",
     "internal_id": "perpetual-XMR-USD:XMR",
     "symbol": "XMR",
@@ -5670,7 +5854,8 @@
   {
     "id": "XMR-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-05-18T00:00:00.000Z",
+    "availableTo": "2023-12-20T00:00:00.000Z",
+    "first_capture": "2020-05-18T00:00:00.000Z",
     "end_date": "2023-12-20T00:00:00.000Z",
     "internal_id": "perpetual-XMR-USDT:USDT",
     "symbol": "XMR",
@@ -5683,91 +5868,92 @@
   {
     "id": "XPD-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-02T00:00:00.000Z",
     "internal_id": "perpetual-XPD-USDT:USDT",
     "symbol": "XPD",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-02T00:00:00.000Z"
   },
   {
     "id": "XPL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-08-28T00:00:00.000Z",
     "internal_id": "perpetual-XPL-USDT:USDT",
     "symbol": "XPL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-08-28T00:00:00.000Z"
   },
   {
     "id": "XPL-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-XPL-USD_UM:XPL",
     "symbol": "XPL",
     "denominator": "USD_UM",
     "margin": "XPL",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "XPT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-02T00:00:00.000Z",
     "internal_id": "perpetual-XPT-USDT:USDT",
     "symbol": "XPT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-02T00:00:00.000Z"
   },
   {
     "id": "XRP-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-03-30T00:00:00.000Z",
     "internal_id": "perpetual-XRP-USD:XRP",
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
     "id": "XRP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2019-12-30T00:00:00.000Z",
     "internal_id": "perpetual-XRP-USDT:USDT",
     "symbol": "XRP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2019-12-30T00:00:00.000Z"
   },
   {
     "id": "XRP-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-XRP-USD_UM:XRP",
     "symbol": "XRP",
     "denominator": "USD_UM",
     "margin": "XRP",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "XTZ-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-23T00:00:00.000Z",
+    "availableTo": "2022-11-25T00:00:00.000Z",
+    "first_capture": "2020-04-23T00:00:00.000Z",
     "end_date": "2022-11-25T00:00:00.000Z",
     "internal_id": "perpetual-XTZ-USD:XTZ",
     "symbol": "XTZ",
@@ -5780,31 +5966,32 @@
   {
     "id": "XTZ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-23T00:00:00.000Z",
     "internal_id": "perpetual-XTZ-USDT:USDT",
     "symbol": "XTZ",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-04-23T00:00:00.000Z"
   },
   {
     "id": "YB-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-12T00:00:00.000Z",
     "internal_id": "perpetual-YB-USDT:USDT",
     "symbol": "YB",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-12T00:00:00.000Z"
   },
   {
     "id": "YFI-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-02T00:00:00.000Z",
+    "availableTo": "2025-05-17T00:00:00.000Z",
+    "first_capture": "2020-09-02T00:00:00.000Z",
     "end_date": "2025-05-17T00:00:00.000Z",
     "internal_id": "perpetual-YFI-USD:YFI",
     "symbol": "YFI",
@@ -5817,19 +6004,20 @@
   {
     "id": "YFI-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-02T00:00:00.000Z",
     "internal_id": "perpetual-YFI-USDT:USDT",
     "symbol": "YFI",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-02T00:00:00.000Z"
   },
   {
     "id": "YFII-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-17T00:00:00.000Z",
+    "availableTo": "2022-11-25T00:00:00.000Z",
+    "first_capture": "2020-09-17T00:00:00.000Z",
     "end_date": "2022-11-25T00:00:00.000Z",
     "internal_id": "perpetual-YFII-USD:YFII",
     "symbol": "YFII",
@@ -5842,7 +6030,8 @@
   {
     "id": "YFII-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-02T00:00:00.000Z",
+    "availableTo": "2024-02-08T00:00:00.000Z",
+    "first_capture": "2020-09-02T00:00:00.000Z",
     "end_date": "2024-02-08T00:00:00.000Z",
     "internal_id": "perpetual-YFII-USDT:USDT",
     "symbol": "YFII",
@@ -5855,7 +6044,8 @@
   {
     "id": "YFV-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-07T00:00:00.000Z",
+    "availableTo": "2020-10-30T00:00:00.000Z",
+    "first_capture": "2020-09-07T00:00:00.000Z",
     "end_date": "2020-10-30T00:00:00.000Z",
     "internal_id": "perpetual-YFV-USDT:USDT",
     "symbol": "YFV",
@@ -5868,43 +6058,44 @@
   {
     "id": "YGG-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2021-08-06T00:00:00.000Z",
     "internal_id": "perpetual-YGG-USDT:USDT",
     "symbol": "YGG",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2021-08-06T00:00:00.000Z"
   },
   {
     "id": "ZAMA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-09T00:00:00.000Z",
     "internal_id": "perpetual-ZAMA-USDT:USDT",
     "symbol": "ZAMA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-09T00:00:00.000Z"
   },
   {
     "id": "ZBT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-17T00:00:00.000Z",
     "internal_id": "perpetual-ZBT-USDT:USDT",
     "symbol": "ZBT",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-17T00:00:00.000Z"
   },
   {
     "id": "ZEC-USD-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-27T00:00:00.000Z",
+    "availableTo": "2023-12-20T00:00:00.000Z",
+    "first_capture": "2020-04-27T00:00:00.000Z",
     "end_date": "2023-12-20T00:00:00.000Z",
     "internal_id": "perpetual-ZEC-USD:ZEC",
     "symbol": "ZEC",
@@ -5917,43 +6108,44 @@
   {
     "id": "ZEC-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-04-27T00:00:00.000Z",
     "internal_id": "perpetual-ZEC-USDT:USDT",
     "symbol": "ZEC",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-04-27T00:00:00.000Z"
   },
   {
     "id": "ZEC-USD_UM-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-02-27T00:00:00.000Z",
     "internal_id": "perpetual-ZEC-USD_UM:ZEC",
     "symbol": "ZEC",
     "denominator": "USD_UM",
     "margin": "ZEC",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "ZEN-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-11-27T00:00:00.000Z",
     "internal_id": "perpetual-ZEN-USDT:USDT",
     "symbol": "ZEN",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-11-27T00:00:00.000Z"
   },
   {
     "id": "ZENT-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-05-09T00:00:00.000Z",
+    "availableTo": "2025-12-18T00:00:00.000Z",
+    "first_capture": "2024-05-09T00:00:00.000Z",
     "end_date": "2025-12-18T00:00:00.000Z",
     "internal_id": "perpetual-ZENT-USDT:USDT",
     "symbol": "ZENT",
@@ -5966,7 +6158,8 @@
   {
     "id": "ZEREBRO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-27T00:00:00.000Z",
+    "availableTo": "2025-09-13T00:00:00.000Z",
+    "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-09-13T00:00:00.000Z",
     "internal_id": "perpetual-ZEREBRO-USDT:USDT",
     "symbol": "ZEREBRO",
@@ -5979,7 +6172,8 @@
   {
     "id": "ZERO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-05-06T00:00:00.000Z",
+    "availableTo": "2024-10-16T00:00:00.000Z",
+    "first_capture": "2024-05-06T00:00:00.000Z",
     "end_date": "2024-10-16T00:00:00.000Z",
     "internal_id": "perpetual-ZERO-USDT:USDT",
     "symbol": "ZERO",
@@ -5992,19 +6186,20 @@
   {
     "id": "ZETA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-02-01T00:00:00.000Z",
     "internal_id": "perpetual-ZETA-USDT:USDT",
     "symbol": "ZETA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-02-01T00:00:00.000Z"
   },
   {
     "id": "ZEUS-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-04-05T00:00:00.000Z",
+    "availableTo": "2024-10-16T00:00:00.000Z",
+    "first_capture": "2024-04-05T00:00:00.000Z",
     "end_date": "2024-10-16T00:00:00.000Z",
     "internal_id": "perpetual-ZEUS-USDT:USDT",
     "symbol": "ZEUS",
@@ -6017,31 +6212,32 @@
   {
     "id": "ZIL-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-09-09T00:00:00.000Z",
     "internal_id": "perpetual-ZIL-USDT:USDT",
     "symbol": "ZIL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
     "id": "ZK-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-03-19T00:00:00.000Z",
     "internal_id": "perpetual-ZK-USDT:USDT",
     "symbol": "ZK",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-03-19T00:00:00.000Z"
   },
   {
     "id": "ZKJ-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-12-06T00:00:00.000Z",
+    "availableTo": "2025-05-01T00:00:00.000Z",
+    "first_capture": "2024-12-06T00:00:00.000Z",
     "end_date": "2025-05-01T00:00:00.000Z",
     "internal_id": "perpetual-ZKJ-USDT:USDT",
     "symbol": "ZKJ",
@@ -6054,49 +6250,49 @@
   {
     "id": "ZKP-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2026-01-07T00:00:00.000Z",
     "internal_id": "perpetual-ZKP-USDT:USDT",
     "symbol": "ZKP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2026-01-07T00:00:00.000Z"
   },
   {
     "id": "ZORA-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2025-10-10T00:00:00.000Z",
     "internal_id": "perpetual-ZORA-USDT:USDT",
     "symbol": "ZORA",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2025-10-10T00:00:00.000Z"
   },
   {
     "id": "ZRO-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2024-06-20T00:00:00.000Z",
     "internal_id": "perpetual-ZRO-USDT:USDT",
     "symbol": "ZRO",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2024-06-20T00:00:00.000Z"
   },
   {
     "id": "ZRX-USDT-SWAP",
     "type": "perpetual",
-    "tardis_first_capture": "2020-08-21T00:00:00.000Z",
     "internal_id": "perpetual-ZRX-USDT:USDT",
     "symbol": "ZRX",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
     "delivery_date": null,
-    "contract_size": 1.0
+    "contract_size": 1.0,
+    "first_capture": "2020-08-21T00:00:00.000Z"
   }
 ]

@@ -2,12 +2,45 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Securities Master - Update All",
+      "name": "Securities Master - Update All (Hybrid)",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/securities_master/update.py",
+      "args": ["--source", "hybrid"],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
     },
+    {
+      "name": "Securities Master - Update All (Tardis)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/securities_master/update.py",
+      "args": ["--source", "tardis"],
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    },
+    {
+      "name": "Securities Master - Update All (Exchange)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/securities_master/update.py",
+      "args": ["--source", "exchange"],
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    },
+    {
+      "name": "Securities Master - Update Stable (Tardis)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/securities_master/update.py",
+      "args": [
+        "--source",
+        "tardis",
+        "--exchanges",
+        "binance-spot,binance-futures,binance-futures-cm,okx-spot,okx-perps,okx-futures"
+      ],
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    }
   ]
 }
