@@ -1,6 +1,21 @@
-# Security Master
+```
+      ___                                     ___           ___     
+     /  /\          ___                      /  /\         /  /\    
+    /  /::\        /  /\                    /  /::\       /  /:/_   
+   /  /:/\:\      /  /:/    ___     ___    /  /:/\:\     /  /:/ /\  
+  /  /:/~/::\    /  /:/    /__/\   /  /\  /  /:/~/::\   /  /:/ /::\ 
+ /__/:/ /:/\:\  /  /::\    \  \:\ /  /:/ /__/:/ /:/\:\ /__/:/ /:/\:\
+ \  \:\/:/__\/ /__/:/\:\    \  \:\  /:/  \  \:\/:/__\/ \  \:\/:/~/:/
+  \  \::/      \__\/  \:\    \  \:\/:/    \  \::/       \  \::/ /:/ 
+   \  \:\           \  \:\    \  \::/      \  \:\        \__\/ /:/  
+    \  \:\           \__\/     \__\/        \  \:\         /__/:/   
+     \__\/                                   \__\/         \__\/    
+     
+```
 
-Security Master is a Python securities master for crypto venues. It normalizes exchange-native instrument IDs into a consistent `Contract` model and builds a fast lookup map (`internal_id`) from precomputed JSON snapshots.
+# Atlas - Crypto Security Master
+
+Atlas - Crypto Security Master is a Python securities master for crypto venues. It normalizes exchange-native instrument IDs into a consistent `Contract` model and builds a fast lookup map (`internal_id`) from precomputed JSON snapshots.
 
 ## What It Does
 
@@ -77,7 +92,7 @@ python3 security_master/update.py --exchanges binance-spot,okx-spot
 
 ## Supported Exchanges
 
-Security Master currently contains parsers for the following exchange IDs.
+Atlas - Crypto Security Master currently contains parsers for the following exchange IDs.
 
 **Stability warning:** any row marked **UNSTABLE (BETA)** is treated as beta by the codebase and is skipped by `update.py` in default runs.
 
