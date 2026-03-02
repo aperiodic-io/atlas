@@ -15,7 +15,13 @@ from .exchange_definitions.bitfinex import parse_bitfinex, parse_bitfinex_deriva
 from .exchange_definitions.bitget import parse_bitget, parse_bitget_futures
 from .exchange_definitions.bitmex import parse_bitmex
 from .exchange_definitions.bitstamp import parse_bitstamp
-from .exchange_definitions.bybit import parse_bybit, parse_bybit_spot
+from .exchange_definitions.bybit import (
+    fetch_bybit_futures,
+    fetch_bybit_perps,
+    fetch_bybit_spot,
+    parse_bybit,
+    parse_bybit_spot,
+)
 from .exchange_definitions.coinbase import parse_coinbase
 from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.crypto_com import parse_crypto_com
@@ -57,7 +63,7 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance"))
+    return exchange.startswith(("okx", "binance", "bybit"))
 
 
 def _define(
@@ -98,8 +104,21 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "bitget": _define("bitget", parse_bitget),
     "bitget-futures": _define("bitget-futures", parse_bitget_futures),
     "bitstamp": _define("bitstamp", parse_bitstamp),
-    "bybit": _define("bybit", parse_bybit),
-    "bybit-spot": _define("bybit-spot", parse_bybit_spot),
+    "bybit-spot": _define(
+        "bybit-spot",
+        parse_bybit_spot,
+        tardis_id="bybit",
+        exchange_fetcher=fetch_bybit_spot,
+    ),
+    "bybit-perps": _define(
+        "bybit-perps", parse_bybit, tardis_id="bybit", exchange_fetcher=fetch_bybit_perps
+    ),
+    "bybit-futures": _define(
+        "bybit-futures",
+        parse_bybit,
+        tardis_id="bybit",
+        exchange_fetcher=fetch_bybit_futures,
+    ),
     "coinbase": _define("coinbase", parse_coinbase),
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),

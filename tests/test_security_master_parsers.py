@@ -323,16 +323,35 @@ class TestOkxPerps:
             _parse("okx-perps", "BTC-USD-250328", "future")
 
 
-class TestBybit:
+class TestBybitSpot:
+    def test_btc_usdt(self):
+        c = _parse("bybit-spot", "BTCUSDT", "spot")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USDT"
+        assert c.margin is None
+
+    def test_mnt_quote(self):
+        c = _parse("bybit-spot", "ADAMNT", "spot")
+        assert c.symbol == "ADA"
+        assert c.denominator == "MNT"
+
+
+class TestBybitPerps:
     def test_inverse_perp(self):
-        c = _parse("bybit", "BTCUSD", "perpetual")
+        c = _parse("bybit-perps", "BTCUSD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.contract_type == ContractType.perpetual
 
+    def test_inverse_perp_with_suffix(self):
+        c = _parse("bybit-perps", "BTCPERP", "perpetual")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USD"
+        assert c.margin == "BTC"
+
     def test_linear_perp(self):
-        c = _parse("bybit", "BTCUSDT", "perpetual")
+        c = _parse("bybit-perps", "BTCUSDT", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -475,9 +494,9 @@ class TestOkexFutures:
             _parse("okx-futures", "BTC-USD", "future")
 
 
-class TestBybitFuture:
+class TestBybitFutures:
     def test_inverse(self):
-        c = _parse("bybit", "BTCUSD-28MAR25", "future")
+        c = _parse("bybit-futures", "BTCUSD-28MAR25", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -485,11 +504,18 @@ class TestBybitFuture:
         assert c.delivery_date == datetime(2025, 3, 28)
 
     def test_linear(self):
-        c = _parse("bybit", "BTCUSDT-28MAR25", "future")
+        c = _parse("bybit-futures", "BTCUSDT-28MAR25", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
         assert c.delivery_date == datetime(2025, 3, 28)
+
+    def test_cme_style_inverse(self):
+        c = _parse("bybit-futures", "BTCUSDH26", "future")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USD"
+        assert c.margin == "BTC"
+        assert c.delivery_date == datetime(2026, 3, 1)
 
 
 class TestDeribit:
