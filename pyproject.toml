@@ -35,7 +35,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 
 [tool.hatch.version]
-path = "src/atlas/__init__.py"
+path = "security_master/__init__.py"
 
 
 [project.urls]
@@ -87,6 +87,9 @@ exclude = [
   "/.gitignore",
   "/tests",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["security_master"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
