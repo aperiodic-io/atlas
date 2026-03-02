@@ -43,9 +43,7 @@ class SecuritiesMaster:
             rows = json.loads(json_file.read_text())
             windows: list[tuple[str, datetime, datetime | None]] = []
             for sd in rows:
-                start_dt = _parse_iso_timestamp(
-                    sd.get("first_capture") or sd.get("tardis_first_capture")
-                )
+                start_dt = _parse_iso_timestamp(sd.get("first_capture"))
                 if start_dt is None:
                     continue
                 end_dt = _parse_iso_timestamp(sd.get("end_date"))
@@ -62,7 +60,7 @@ class SecuritiesMaster:
         return self._internal_id_map.get((exchange, original_id))
 
     def symbol_ids(
-        self, exchange: str, tardis_first_capture: datetime, end_date: datetime
+        self, exchange: str, first_capture: datetime, end_date: datetime
     ) -> list[str]:
         """Return symbol ids active for the requested date window."""
         windows = self._symbol_windows.get(exchange, [])
@@ -70,9 +68,9 @@ class SecuritiesMaster:
             return []
 
         start = (
-            tardis_first_capture.replace(tzinfo=UTC)
-            if tardis_first_capture.tzinfo is None
-            else tardis_first_capture.astimezone(UTC)
+            first_capture.replace(tzinfo=UTC)
+            if first_capture.tzinfo is None
+            else first_capture.astimezone(UTC)
         )
         end = (
             end_date.replace(tzinfo=UTC)

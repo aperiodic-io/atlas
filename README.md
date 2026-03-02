@@ -68,7 +68,7 @@ print(iid)
 
 active = sm.symbol_ids(
     exchange="binance-spot",
-    tardis_first_capture=datetime(2024, 1, 1),
+    first_capture=datetime(2024, 1, 1),
     end_date=datetime(2024, 1, 31),
 )
 print(len(active))
