@@ -106,18 +106,19 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 
 | Exchange ID | Stability |
 | --- | --- |
-| `binance` | `STABLE` |
-| `binance-spot` | `STABLE` |
-| `binance-futures` | `STABLE` |
-| `binance-futures-cm` | `STABLE` |
+| `binance` | ✅ **`STABLE`** |
+| `binance-spot` | ✅ **`STABLE`** |
+| `binance-futures` | ✅ **`STABLE`** |
+| `binance-futures-cm` | ✅ **`STABLE`** |
 | `bitmex` | **`UNSTABLE (BETA)`** |
 | `bitfinex` | **`UNSTABLE (BETA)`** |
 | `bitfinex-derivatives` | **`UNSTABLE (BETA)`** |
 | `bitget` | **`UNSTABLE (BETA)`** |
 | `bitget-futures` | **`UNSTABLE (BETA)`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
-| `bybit` | **`UNSTABLE (BETA)`** |
-| `bybit-spot` | **`UNSTABLE (BETA)`** |
+| `bybit-spot` | ✅ **`STABLE`** |
+| `bybit-perps` | ✅ **`STABLE`** |
+| `bybit-futures` | ✅ **`STABLE`** |
 | `coinbase` | **`UNSTABLE (BETA)`** |
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
@@ -130,12 +131,13 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-linear-swap` | **`UNSTABLE (BETA)`** |
-| `hyperliquid` | **`UNSTABLE (BETA)`** |
+| `hyperliquid-spot` | ✅ **`STABLE`** |
+| `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
-| `okx-spot` | `STABLE` |
-| `okx-perps` | `STABLE` |
-| `okx-futures` | `STABLE` |
+| `okx-spot` | ✅ **`STABLE`** |
+| `okx-perps` | ✅ **`STABLE`** |
+| `okx-futures` | ✅ **`STABLE`** |
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
@@ -147,6 +149,11 @@ The repository currently ships precomputed JSON snapshots for:
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
+- `bybit-spot`
+- `bybit-perps`
+- `bybit-futures`
+- `hyperliquid-spot`
+- `hyperliquid-perps`
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`

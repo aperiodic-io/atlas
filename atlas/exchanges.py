@@ -35,7 +35,11 @@ from .exchange_definitions.huobi import (
     parse_huobi_dm_linear_swap,
     parse_huobi_dm_swap,
 )
-from .exchange_definitions.hyperliquid import parse_hyperliquid
+from .exchange_definitions.hyperliquid import (
+    fetch_hyperliquid_perps,
+    fetch_hyperliquid_spot,
+    parse_hyperliquid,
+)
 from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
 from .exchange_definitions.okx import (
@@ -63,7 +67,7 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance", "bybit"))
+    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid"))
 
 
 def _define(
@@ -131,7 +135,18 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "huobi-dm": _define("huobi-dm", parse_huobi_dm),
     "huobi-dm-swap": _define("huobi-dm-swap", parse_huobi_dm_swap),
     "huobi-dm-linear-swap": _define("huobi-dm-linear-swap", parse_huobi_dm_linear_swap),
-    "hyperliquid": _define("hyperliquid", parse_hyperliquid),
+    "hyperliquid-spot": _define(
+        "hyperliquid-spot",
+        parse_hyperliquid,
+        tardis_id="hyperliquid",
+        exchange_fetcher=fetch_hyperliquid_spot,
+    ),
+    "hyperliquid-perps": _define(
+        "hyperliquid-perps",
+        parse_hyperliquid,
+        tardis_id="hyperliquid",
+        exchange_fetcher=fetch_hyperliquid_perps,
+    ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),
     "okx-spot": _define(

@@ -359,15 +359,21 @@ class TestBybitPerps:
 
 class TestHyperliquid:
     def test_btc_perpetual(self):
-        c = _parse("hyperliquid", "BTC", "perpetual")
+        c = _parse("hyperliquid-perps", "BTC", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDC"
         assert c.margin == "USDC"
         assert c.contract_type == ContractType.perpetual
 
+    def test_spot(self):
+        c = _parse("hyperliquid-spot", "PURR/USDC", "spot")
+        assert c.symbol == "PURR"
+        assert c.denominator == "USDC"
+        assert c.margin is None
+
     def test_at_prefix_skipped(self):
         with pytest.raises(SkipSymbol):
-            _parse("hyperliquid", "@0", "spot")
+            _parse("hyperliquid-perps", "@0", "spot")
 
 
 class TestBitfinexDerivatives:
