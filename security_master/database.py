@@ -19,9 +19,11 @@ class SecuritiesMaster:
         self,
         internal_id_map: dict[tuple[str, str], str],
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]],
+        contract_index: dict[tuple[str, str, str | None], set[str]],
     ) -> None:
         self._internal_id_map = internal_id_map
         self._symbol_windows = symbol_windows
+        self._contract_index = contract_index
 
     @classmethod
     def load(
@@ -36,6 +38,7 @@ class SecuritiesMaster:
         """
         internal_id_map: dict[tuple[str, str], str] = {}
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]] = {}
+        contract_index: dict[tuple[str, str, str | None], set[str]] = {}
         for json_file in sorted(data_dir.glob("*.json")):
             exchange = json_file.stem
             if exchanges is not None and exchange not in exchanges:
@@ -50,14 +53,44 @@ class SecuritiesMaster:
                 windows.append((sd["id"], start_dt, end_dt))
                 if iid := sd.get("internal_id"):
                     internal_id_map[(exchange, sd["id"])] = iid
+                symbol = sd.get("symbol")
+                denominator = sd.get("denominator")
+                if symbol and denominator:
+                    margin = sd.get("margin")
+                    key = (
+                        str(symbol).upper(),
+                        str(denominator).upper(),
+                        str(margin).upper() if isinstance(margin, str) else None,
+                    )
+                    contract_index.setdefault(key, set()).add(exchange)
             symbol_windows[exchange] = windows
-        return cls(internal_id_map, symbol_windows)
+        return cls(internal_id_map, symbol_windows, contract_index)
 
     def by_exchange_and_original_id(
         self, exchange: str, original_id: str
     ) -> str | None:
         """Return the pre-computed internal_id for a given exchange + raw symbol id."""
         return self._internal_id_map.get((exchange, original_id))
+
+    def exchanges_for_original_id(self, original_id: str) -> list[str]:
+        """Return all exchanges that contain the given raw symbol id."""
+        exchanges = {
+            exchange
+            for (exchange, oid) in self._internal_id_map
+            if oid == original_id
+        }
+        return sorted(exchanges)
+
+    def exchanges_for_contract(
+        self, symbol: str, denominator: str, margin: str | None
+    ) -> list[str]:
+        """Return all exchanges that contain the given symbol/denominator/margin."""
+        key = (
+            symbol.upper(),
+            denominator.upper(),
+            margin.upper() if isinstance(margin, str) else None,
+        )
+        return sorted(self._contract_index.get(key, set()))
 
     def symbol_ids(
         self, exchange: str, first_capture: datetime, end_date: datetime

@@ -96,7 +96,7 @@ testpaths = ["tests"]
 allow-direct-references = true
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py312"
 
 lint.ignore = [
   "BLE001",

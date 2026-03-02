@@ -66,6 +66,12 @@ sm = SecuritiesMaster.load()
 iid = sm.by_exchange_and_original_id("binance-spot", "BTCUSDT")
 print(iid)
 
+exchanges = sm.exchanges_for_original_id("BTCUSDT")
+print(exchanges)
+
+exchanges = sm.exchanges_for_contract("BTC", "USDT", "USDT")
+print(exchanges)
+
 active = sm.symbol_ids(
     exchange="binance-spot",
     first_capture=datetime(2024, 1, 1),
