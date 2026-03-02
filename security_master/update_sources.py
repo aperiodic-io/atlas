@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 from security_master.exchanges import get_exchange_fetcher
@@ -35,8 +35,8 @@ class HybridSymbolSource:
     Use exchange APIs for selected exchanges and fall back to Tardis for the rest.
     """
 
-    exchange_source: ExchangeApiSymbolSource = ExchangeApiSymbolSource()
-    tardis_source: TardisSymbolSource = TardisSymbolSource()
+    exchange_source: ExchangeApiSymbolSource = field(default_factory=ExchangeApiSymbolSource)
+    tardis_source: TardisSymbolSource = field(default_factory=TardisSymbolSource)
 
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
         if get_exchange_fetcher(exchange) is not None:

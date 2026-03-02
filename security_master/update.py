@@ -119,8 +119,10 @@ def _normalize_binance_derivative_type(symbol_id: str, current_type: str | None)
 
 def update(
     exchanges: list[str] = EXCHANGES,
-    source: SymbolSource = HybridSymbolSource(),
+    source: SymbolSource | None = None,
 ) -> None:
+    if source is None:
+        source = HybridSymbolSource()
     _DATA_DIR.mkdir(exist_ok=True)
     total = 0
     for exchange in exchanges:

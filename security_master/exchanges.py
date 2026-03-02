@@ -57,7 +57,7 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith("okx") or exchange.startswith("binance")
+    return exchange.startswith(("okx", "binance"))
 
 
 def _define(

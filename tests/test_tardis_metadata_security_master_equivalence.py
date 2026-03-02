@@ -22,8 +22,8 @@ def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
     return _LEGACY_TO_INTERNAL_EXCHANGE.get(exchange_file_stem, exchange_file_stem)
 
 
-    def _row_first_capture(row: dict) -> str | None:
-        return row.get("first_capture")
+def _row_first_capture(row: dict) -> str | None:
+    return row.get("first_capture")
 
 
 def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
