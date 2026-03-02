@@ -2,9 +2,9 @@ import pytest
 from datetime import datetime
 
 
-from security_master.contracts import ContractType
-from security_master.exchange_definitions import is_beta_exchange
-from security_master.parsers import SkipSymbol, parse_contract
+from atlas.contracts import ContractType
+from atlas.exchange_definitions import is_beta_exchange
+from atlas.parsers import SkipSymbol, parse_contract
 
 
 def _sd(id: str, type: str) -> dict:

@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from security_master.database import SecuritiesMaster
-from security_master.exchange_ids import to_tardis_exchange_id
-from security_master.utils import _fetch_exchange
+from atlas.database import SecuritiesMaster
+from atlas.exchange_ids import to_tardis_exchange_id
+from atlas.utils import _fetch_exchange
 
 _LEGACY_TO_INTERNAL_EXCHANGE = {
     "binance": "binance-spot",
@@ -44,13 +44,13 @@ def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
 @pytest.mark.parametrize(
     "exchange_file",
     sorted(
-        (Path(__file__).resolve().parents[1] / "security_master" / "data").glob(
+        (Path(__file__).resolve().parents[1] / "atlas" / "data").glob(
             "*.json"
         )
     ),
     ids=lambda p: p.stem,
 )
-def test_get_symbols_matches_local_security_master_for_all_covered_exchanges(
+def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
     exchange_file: Path,
 ) -> None:
     exchange = _internal_exchange_for_data_file(exchange_file.stem)

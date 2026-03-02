@@ -9,9 +9,9 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from security_master.exchange_definitions import is_beta_exchange
-from security_master.parsers import SkipSymbol, parse_contract
-from security_master.update_sources import (
+from atlas.exchange_definitions import is_beta_exchange
+from atlas.parsers import SkipSymbol, parse_contract
+from atlas.update_sources import (
     ExchangeApiSymbolSource,
     HybridSymbolSource,
     SymbolSource,

@@ -27,13 +27,13 @@ jobs:
           pip install -e .
 
       - name: run-update
-        run: python security_master/update.py --source hybrid
+        run: python atlas/update.py --source hybrid
 
       - name: commit-updated-jsons
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add security_master/data/*.json
+          git add atlas/data/*.json
           if git diff --cached --quiet; then
             echo "No JSON changes to commit"
             exit 0

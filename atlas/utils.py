@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 import tenacity
 
-from security_master.exchange_ids import to_tardis_exchange_id
+from atlas.exchange_ids import to_tardis_exchange_id
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)

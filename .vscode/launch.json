@@ -5,7 +5,7 @@
       "name": "Atlas - Crypto Security Master - Update All (Hybrid)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/security_master/update.py",
+      "program": "${workspaceFolder}/atlas/update.py",
       "args": ["--source", "hybrid"],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
@@ -14,7 +14,7 @@
       "name": "Atlas - Crypto Security Master - Update All (Tardis)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/security_master/update.py",
+      "program": "${workspaceFolder}/atlas/update.py",
       "args": ["--source", "tardis"],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
@@ -23,7 +23,7 @@
       "name": "Atlas - Crypto Security Master - Update All (Exchange)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/security_master/update.py",
+      "program": "${workspaceFolder}/atlas/update.py",
       "args": ["--source", "exchange"],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
@@ -32,7 +32,7 @@
       "name": "Atlas - Crypto Security Master - Update Stable (Tardis)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/security_master/update.py",
+      "program": "${workspaceFolder}/atlas/update.py",
       "args": [
         "--source",
         "tardis",

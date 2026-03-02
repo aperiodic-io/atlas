@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from security_master.database import SecuritiesMaster
+from atlas.database import SecuritiesMaster
 
 
 def _write_exchange(tmp_path: Path, name: str, rows: list[dict]) -> None:

@@ -49,7 +49,7 @@ pip install -e .
 ### Parse a single symbol
 
 ```python
-from security_master.parsers import parse_contract
+from atlas.parsers import parse_contract
 
 symbol_data = {"id": "BTCUSDT", "type": "spot"}
 contract = parse_contract("binance-spot", symbol_data)
@@ -61,7 +61,7 @@ print(contract.internal_id)  # spot-BTC-USDT
 
 ```python
 from datetime import datetime
-from security_master import SecuritiesMaster
+from atlas import SecuritiesMaster
 
 sm = SecuritiesMaster.load()
 
@@ -86,16 +86,16 @@ print(len(active))
 
 ```bash
 # Hybrid mode (default): Binance/OKX direct API + Tardis fallback
-python3 security_master/update.py --source hybrid
+python3 atlas/update.py --source hybrid
 
 # Tardis only
-python3 security_master/update.py --source tardis
+python3 atlas/update.py --source tardis
 
 # Exchange API only (supported exchanges only)
-python3 security_master/update.py --source exchange
+python3 atlas/update.py --source exchange
 
 # Restrict to selected exchanges
-python3 security_master/update.py --exchanges binance-spot,okx-spot
+python3 atlas/update.py --exchanges binance-spot,okx-spot
 ```
 
 ## Supported Exchanges
@@ -166,16 +166,16 @@ The repository currently ships precomputed JSON snapshots for:
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecuritiesMaster` lookups.
 - `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
-- The bundled data is limited to the snapshot files present in `security_master/data`; all other exchange coverage depends on running updates with an available upstream source.
+- The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout
 
-- `security_master/contracts.py`: normalized `Contract` model.
-- `security_master/exchanges.py`: exchange registry (parser + source metadata).
-- `security_master/parsers.py`: parse entrypoint (`parse_contract`).
-- `security_master/database.py`: load/query local securities master snapshots.
-- `security_master/update.py`: snapshot updater CLI.
-- `security_master/data/*.json`: generated per-exchange snapshot files.
+- `atlas/contracts.py`: normalized `Contract` model.
+- `atlas/exchanges.py`: exchange registry (parser + source metadata).
+- `atlas/parsers.py`: parse entrypoint (`parse_contract`).
+- `atlas/database.py`: load/query local securities master snapshots.
+- `atlas/update.py`: snapshot updater CLI.
+- `atlas/data/*.json`: generated per-exchange snapshot files.
 
 ## Testing
 

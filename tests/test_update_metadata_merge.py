@@ -1,4 +1,4 @@
-from security_master.update import _merge_existing_fields
+from atlas.update import _merge_existing_fields
 
 
 def test_merge_existing_fields_keeps_metadata_when_source_missing() -> None:

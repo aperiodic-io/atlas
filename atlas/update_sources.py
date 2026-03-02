@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
-from security_master.exchanges import get_exchange_fetcher
-from security_master.utils import _fetch_exchange
+from atlas.exchanges import get_exchange_fetcher
+from atlas.utils import _fetch_exchange
 
 
 class SymbolSource(Protocol):
