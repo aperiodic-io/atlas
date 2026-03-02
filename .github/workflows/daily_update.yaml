@@ -1,0 +1,42 @@
+name: daily-update
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-security-master:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: run-update
+        run: python security_master/update.py --source hybrid
+
+      - name: commit-updated-jsons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add security_master/data/*.json
+          if git diff --cached --quiet; then
+            echo "No JSON changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): daily security master update"
+          git push
