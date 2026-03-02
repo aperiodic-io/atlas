@@ -17,6 +17,8 @@
 
 Atlas - Crypto Security Master is a Python securities master for crypto venues. It normalizes exchange-native instrument IDs into a consistent `Contract` model and builds a fast lookup map (`internal_id`) from precomputed JSON snapshots.
 
+**Daily updates:** snapshot JSONs are refreshed automatically every day via GitHub Actions, and committed back to this repository.
+
 ## What It Does
 
 - Normalizes instrument metadata across exchanges into:
