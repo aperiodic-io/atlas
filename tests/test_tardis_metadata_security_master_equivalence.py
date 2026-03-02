@@ -5,15 +5,13 @@ from pathlib import Path
 
 import pytest
 
-from securities_master.database import SecuritiesMaster
-from securities_master.exchange_ids import to_tardis_exchange_id
-from securities_master.utils import _fetch_exchange
+from security_master.database import SecuritiesMaster
+from security_master.exchange_ids import to_tardis_exchange_id
+from security_master.utils import _fetch_exchange
 
 _LEGACY_TO_INTERNAL_EXCHANGE = {
     "binance": "binance-spot",
     "binance-futures": "binance-futures",
-    "binance-perps": "binance-futures",
-    "binance-delivery": "binance-futures-cm",
     "okex": "okx-spot",
     "okex-futures": "okx-futures",
     "okex-swap": "okx-perps",
@@ -46,13 +44,13 @@ def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
 @pytest.mark.parametrize(
     "exchange_file",
     sorted(
-        (Path(__file__).resolve().parents[1] / "securities_master" / "data").glob(
+        (Path(__file__).resolve().parents[1] / "security_master" / "data").glob(
             "*.json"
         )
     ),
     ids=lambda p: p.stem,
 )
-def test_get_symbols_matches_local_securities_master_for_all_covered_exchanges(
+def test_get_symbols_matches_local_security_master_for_all_covered_exchanges(
     exchange_file: Path,
 ) -> None:
     exchange = _internal_exchange_for_data_file(exchange_file.stem)

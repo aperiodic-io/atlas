@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 import tenacity
 
-from securities_master.exchange_ids import to_tardis_exchange_id
+from security_master.exchange_ids import to_tardis_exchange_id
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)

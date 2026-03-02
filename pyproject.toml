@@ -3,7 +3,7 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [project]
-name = "atlas"
+name = "security-master"
 version = "3.0.14"
 authors = [
   { name = "Mark Aron Szulyovszky", email = "mark@myalo.finance" },
@@ -15,7 +15,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
-  "License :: Other/Proprietary License",
+  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
 
@@ -61,7 +61,7 @@ push = false
 
 
 [tool.hatch.envs.quality]
-dependencies = ["atlas[quality]"]
+dependencies = ["security-master[quality]"]
 detached = true
 
 [tool.hatch.envs.quality.scripts]
@@ -69,7 +69,7 @@ check = ["ruff lint ."]
 format = ["ruff format ."]
 
 [tool.hatch.envs.test]
-dependencies = ["atlas[tests]"]
+dependencies = ["security-master[tests]"]
 
 [tool.hatch.envs.test.scripts]
 run = "pytest tests/ --durations 0 -s"

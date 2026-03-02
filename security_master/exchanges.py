@@ -92,18 +92,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         tardis_id="binance-delivery",
         exchange_fetcher=fetch_binance_futures_coinm,
     ),
-    "binance-perps": _define(
-        "binance-perps",
-        parse_binance_futures,
-        tardis_id="binance-futures",
-        exchange_fetcher=fetch_binance_futures_usdm,
-    ),
-    "binance-delivery": _define(
-        "binance-delivery",
-        parse_binance_delivery,
-        tardis_id="binance-delivery",
-        exchange_fetcher=fetch_binance_futures_coinm,
-    ),
     "bitmex": _define("bitmex", parse_bitmex),
     "bitfinex": _define("bitfinex", parse_bitfinex),
     "bitfinex-derivatives": _define("bitfinex-derivatives", parse_bitfinex_derivatives),

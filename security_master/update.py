@@ -8,9 +8,9 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from securities_master.exchange_definitions import is_beta_exchange
-from securities_master.parsers import SkipSymbol, parse_contract
-from securities_master.update_sources import (
+from security_master.exchange_definitions import is_beta_exchange
+from security_master.parsers import SkipSymbol, parse_contract
+from security_master.update_sources import (
     ExchangeApiSymbolSource,
     HybridSymbolSource,
     SymbolSource,
