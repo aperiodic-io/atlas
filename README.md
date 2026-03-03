@@ -36,6 +36,22 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - Tardis
   - hybrid mode (exchange API first, Tardis fallback)
 
+## Symbology
+
+Atlas uses a normalized `internal_id` format:
+
+`<contract_type>-<symbol>-<denominator>[:<margin>][-<delivery_yyyymmdd>]`
+
+- Spot omits margin and delivery date.
+- Perpetual includes margin, but no delivery date.
+- Dated futures include both margin and delivery date.
+
+Examples:
+
+- Spot: `btcusdt` (Binance spot) -> `spot-BTC-USDT`
+- Perpetual: `btcusdt` (Binance futures) -> `perpetual-BTC-USDT:USDT`
+- Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
+
 ## Installation
 
 Python 3.12+ is required.
