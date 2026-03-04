@@ -135,6 +135,7 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> None:
         sd.pop("availableSince", None)
         if "availableTo" in sd:
             sd["end_date"] = sd["availableTo"]
+        sd.pop("availableTo", None)
 
 
 def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:

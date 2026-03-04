@@ -776,6 +776,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "BSBUSDT",
+    "type": "spot",
+    "internal_id": "spot-BSB-USDT",
+    "symbol": "BSB",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "BTCBRL",
     "type": "spot",
     "internal_id": "spot-BTC-BRL",
