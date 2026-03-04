@@ -41,6 +41,24 @@
       ],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    },
+    {
+      "name": "Atlas - ARC Metadata Populate",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/integrations/arc.py",
+      "args": [],
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
+    },
+    {
+      "name": "Atlas - CoinGecko Metadata Populate",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/integrations/coingecko_metadata.py",
+      "args": [],
+      "justMyCode": true,
+      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
     }
   ]
 }

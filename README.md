@@ -114,6 +114,43 @@ python3 atlas/update.py --source exchange
 python3 atlas/update.py --exchanges binance-spot,okx-spot
 ```
 
+### Populate ARC metadata
+
+```bash
+# Dry-run (prints match stats, does not modify files)
+python3 integrations/arc.py --dry-run
+
+# Write ARC instrument + asset metadata into atlas/data/*.json
+python3 integrations/arc.py
+
+# Use an existing local ARC clone and process only selected exchanges
+python3 integrations/arc.py \
+  --arc-path /path/to/arc \
+  --exchanges binance-spot,bybit-perps,okx-perps
+```
+
+### Populate CoinGecko metadata
+
+```bash
+# Dry-run (prints match stats, does not modify files)
+python3 integrations/coingecko_metadata.py --dry-run
+
+# Write verified coingecko_id into atlas/data/*.json
+# Verification compares CoinGecko last price from derivatives/tickers
+# (single call per run) against Binance latest close.
+python3 integrations/coingecko_metadata.py
+
+# Rate-limit verification requests to avoid HTTP 429
+python3 integrations/coingecko_metadata.py \
+  --max-verifications 25 \
+  --coingecko-min-interval-seconds 1.2
+```
+
+### Historical Data Integrations
+
+- `integrations/binance.py`: fetches Binance historical klines via `/api/v3/klines`.
+- `integrations/coingecko.py`: fetches CoinGecko historical market chart data via `/api/v3/coins/{id}/market_chart`.
+
 ## Supported Exchanges
 
 Atlas - Crypto Security Master currently contains parsers for the following exchange IDs.
