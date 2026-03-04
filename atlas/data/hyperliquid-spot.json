@@ -1899,6 +1899,15 @@
     "contract_size": 1.0
   },
   {
+    "id": "STHYPE/USDH",
+    "type": "spot",
+    "internal_id": "spot-STHYPE-USDH",
+    "symbol": "STHYPE",
+    "denominator": "USDH",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "STLOOP/USDC",
     "type": "spot",
     "internal_id": "spot-STLOOP-USDC",
