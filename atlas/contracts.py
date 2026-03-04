@@ -22,7 +22,6 @@ class Contract:
     margin: str | None  # e.g. USDT for linear, BTC for inverse (coin-margined)
     contract_type: ContractType
     delivery_date: datetime | None = None
-    contract_size: float = 1.0
 
     def __str__(self) -> str:
         core = f"{self.contract_type.value}-{self.symbol}-{self.denominator}"

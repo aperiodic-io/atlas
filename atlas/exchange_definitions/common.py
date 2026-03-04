@@ -91,7 +91,9 @@ def contract_type(sd: SymbolData) -> ContractType:
     return TYPE_MAP.get(sd.get("type", ""), ContractType.unknown)
 
 
-def split_concat(symbol: str, quotes: list[str] = KNOWN_QUOTES) -> tuple[str, str] | None:
+def split_concat(
+    symbol: str, quotes: list[str] = KNOWN_QUOTES
+) -> tuple[str, str] | None:
     """Split a concatenated pair like BTCUSDT -> (BTC, USDT)."""
     for quote in quotes:
         if symbol.endswith(quote):
@@ -163,7 +165,6 @@ def make_contract(
     margin: str | None,
     ctype: ContractType,
     delivery_date: datetime | None = None,
-    contract_size: float = 1.0,
 ) -> Contract:
     return Contract(
         exchange=exchange,
@@ -173,11 +174,12 @@ def make_contract(
         margin=margin.upper() if margin is not None else None,
         delivery_date=delivery_date,
         contract_type=ctype,
-        contract_size=contract_size,
     )
 
 
-def parse_concat(exchange: str, sd: SymbolData, quotes: list[str] = KNOWN_QUOTES) -> Contract:
+def parse_concat(
+    exchange: str, sd: SymbolData, quotes: list[str] = KNOWN_QUOTES
+) -> Contract:
     pair = split_concat(sd["id"].upper(), quotes)
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
@@ -191,7 +193,9 @@ def parse_dash(exchange: str, sd: SymbolData) -> Contract:
     if len(parts) == 2:
         symbol, denominator = parts
         margin = resolve_margin(symbol, denominator, contract_type(sd))
-        return make_contract(exchange, sd, symbol, denominator, margin, contract_type(sd))
+        return make_contract(
+            exchange, sd, symbol, denominator, margin, contract_type(sd)
+        )
     raise SkipSymbol(f"{exchange}: expected 2 dash-separated parts in {sd['id']!r}")
 
 

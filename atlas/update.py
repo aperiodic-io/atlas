@@ -92,7 +92,6 @@ def _enrich(exchange: str, sd: dict) -> None:
         "margin": None,
         "contract_type": None,
         "delivery_date": None,
-        "contract_size": None,
     }
     try:
         c = parse_contract(exchange, sd)
@@ -102,7 +101,6 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd["margin"] = c.margin
         sd["contract_type"] = c.contract_type.value
         sd["delivery_date"] = c.delivery_date.isoformat() if c.delivery_date else None
-        sd["contract_size"] = c.contract_size
     except SkipSymbol:
         sd.update(_NONE)
 
