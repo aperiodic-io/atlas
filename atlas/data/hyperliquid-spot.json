@@ -1424,6 +1424,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "RAM/USDC",
+    "type": "spot",
+    "internal_id": "spot-RAM-USDC",
+    "symbol": "RAM",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "RANK/USDC",
     "type": "spot",
     "internal_id": "spot-RANK-USDC",
