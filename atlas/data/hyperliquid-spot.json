@@ -392,6 +392,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "DIME/USDC",
+    "type": "spot",
+    "internal_id": "spot-DIME-USDC",
+    "symbol": "DIME",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "DROP/USDC",
     "type": "spot",
     "internal_id": "spot-DROP-USDC",
