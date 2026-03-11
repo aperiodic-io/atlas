@@ -2991,6 +2991,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "NG-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-NG-USDT:USDT",
+    "symbol": "NG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "NIGHT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-NIGHT-USDT:USDT",
