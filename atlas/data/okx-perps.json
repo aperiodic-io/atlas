@@ -267,6 +267,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "AMD-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-AMD-USDT:USDT",
+    "symbol": "AMD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "AMZN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AMZN-USDT:USDT",
@@ -1581,6 +1590,24 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2022-09-16T00:00:00.000Z"
+  },
+  {
+    "id": "EWJ-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-EWJ-USDT:USDT",
+    "symbol": "EWJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "EWY-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-EWY-USDT:USDT",
+    "symbol": "EWY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "F-USDT-SWAP",
@@ -2980,6 +3007,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "NFLX-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-NFLX-USDT:USDT",
+    "symbol": "NFLX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "NFT-USDT-SWAP",
     "type": "perpetual",
     "first_capture": "2021-12-02T00:00:00.000Z",
@@ -3202,6 +3238,15 @@
     "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "perpetual-ORBS-USDT:USDT",
     "symbol": "ORBS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "ORCL-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-ORCL-USDT:USDT",
+    "symbol": "ORCL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -4422,6 +4467,15 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-02-25T00:00:00.000Z"
+  },
+  {
+    "id": "TSM-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-TSM-USDT:USDT",
+    "symbol": "TSM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "TURBO-USDT-SWAP",
