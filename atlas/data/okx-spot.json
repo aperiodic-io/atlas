@@ -7916,6 +7916,30 @@
     "contract_type": "spot"
   },
   {
+    "id": "KAT-TRY",
+    "type": "spot",
+    "internal_id": "spot-KAT-TRY",
+    "symbol": "KAT",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "KAT-USD",
+    "type": "spot",
+    "internal_id": "spot-KAT-USD",
+    "symbol": "KAT",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "KAT-USDT",
+    "type": "spot",
+    "internal_id": "spot-KAT-USDT",
+    "symbol": "KAT",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "KCAL-USDC",
     "type": "spot",
     "first_capture": "2022-11-11T00:00:00.000Z",
