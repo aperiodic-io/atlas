@@ -153,6 +153,14 @@
     "first_capture": "2024-03-14T00:00:00.000Z"
   },
   {
+    "id": "AAVE-TRY",
+    "type": "spot",
+    "internal_id": "spot-AAVE-TRY",
+    "symbol": "AAVE",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "AAVE-USD",
     "type": "spot",
     "internal_id": "spot-AAVE-USD",
@@ -565,6 +573,14 @@
     "internal_id": "spot-AIDOGE-USDT",
     "symbol": "AIDOGE",
     "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AIXBT-TRY",
+    "type": "spot",
+    "internal_id": "spot-AIXBT-TRY",
+    "symbol": "AIXBT",
+    "denominator": "TRY",
     "contract_type": "spot"
   },
   {
@@ -1963,6 +1979,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "BARD-TRY",
+    "type": "spot",
+    "internal_id": "spot-BARD-TRY",
+    "symbol": "BARD",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "BARD-USD",
     "type": "spot",
     "internal_id": "spot-BARD-USD",
@@ -3252,6 +3276,14 @@
     "internal_id": "spot-CFG-EUR",
     "symbol": "CFG",
     "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "CFG-TRY",
+    "type": "spot",
+    "internal_id": "spot-CFG-TRY",
+    "symbol": "CFG",
+    "denominator": "TRY",
     "contract_type": "spot"
   },
   {
@@ -4668,6 +4700,14 @@
     "denominator": "EUR",
     "contract_type": "spot",
     "first_capture": "2023-11-21T00:00:00.000Z"
+  },
+  {
+    "id": "DOT-TRY",
+    "type": "spot",
+    "internal_id": "spot-DOT-TRY",
+    "symbol": "DOT",
+    "denominator": "TRY",
+    "contract_type": "spot"
   },
   {
     "id": "DOT-USD",
@@ -8164,6 +8204,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "KITE-TRY",
+    "type": "spot",
+    "internal_id": "spot-KITE-TRY",
+    "symbol": "KITE",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "KITE-USD",
     "type": "spot",
     "internal_id": "spot-KITE-USD",
@@ -10470,6 +10518,14 @@
     "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
+    "id": "NEAR-TRY",
+    "type": "spot",
+    "internal_id": "spot-NEAR-TRY",
+    "symbol": "NEAR",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "NEAR-USD",
     "type": "spot",
     "internal_id": "spot-NEAR-USD",
@@ -11823,6 +11879,14 @@
     "internal_id": "spot-PHA-ETH",
     "symbol": "PHA",
     "denominator": "ETH",
+    "contract_type": "spot"
+  },
+  {
+    "id": "PHA-TRY",
+    "type": "spot",
+    "internal_id": "spot-PHA-TRY",
+    "symbol": "PHA",
+    "denominator": "TRY",
     "contract_type": "spot"
   },
   {
@@ -13487,6 +13551,14 @@
     "denominator": "EUR",
     "contract_type": "spot",
     "first_capture": "2026-02-26T00:00:00.000Z"
+  },
+  {
+    "id": "SEI-TRY",
+    "type": "spot",
+    "internal_id": "spot-SEI-TRY",
+    "symbol": "SEI",
+    "denominator": "TRY",
+    "contract_type": "spot"
   },
   {
     "id": "SEI-USD",

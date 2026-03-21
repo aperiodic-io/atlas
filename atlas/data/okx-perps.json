@@ -4292,6 +4292,15 @@
     "first_capture": "2024-09-20T00:00:00.000Z"
   },
   {
+    "id": "TEST10-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-TEST10-USDT:USDT",
+    "symbol": "TEST10",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "THETA-USD-SWAP",
     "type": "perpetual",
     "first_capture": "2020-06-15T00:00:00.000Z",
