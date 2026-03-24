@@ -1976,6 +1976,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "USDUC/USDC",
+    "type": "spot",
+    "internal_id": "spot-USDUC-USDC",
+    "symbol": "USDUC",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "USDXL/USDC",
     "type": "spot",
     "internal_id": "spot-USDXL-USDC",
