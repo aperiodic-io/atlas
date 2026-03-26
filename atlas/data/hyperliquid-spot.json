@@ -1512,6 +1512,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "RIVER/USDC",
+    "type": "spot",
+    "internal_id": "spot-RIVER-USDC",
+    "symbol": "RIVER",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "RUB/USDC",
     "type": "spot",
     "internal_id": "spot-RUB-USDC",
