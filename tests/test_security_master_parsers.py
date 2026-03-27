@@ -7,8 +7,8 @@ from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import SkipSymbol, parse_contract
 
 
-def _sd(id: str, type: str) -> dict:
-    return {"id": id, "type": type}
+def _sd(id: str, type: str, **extra: object) -> dict:
+    return {"id": id, "type": type, **extra}
 
 
 def _parse(exchange: str, id: str, type: str):
@@ -665,6 +665,11 @@ class TestContractFields:
 
     def test_default_contract_size(self):
         c = _parse("binance", "BTCUSDT", "spot")
+        assert c.contract_size is None
+
+    def test_contract_size_preserved(self):
+        sd = _sd("BTCUSDT", "spot", contract_size=1.0)
+        c = parse_contract("binance", sd)
         assert c.contract_size == 1.0
 
     def test_symbols_uppercased(self):
