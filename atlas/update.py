@@ -93,6 +93,7 @@ def _enrich(exchange: str, sd: dict) -> None:
         "denominator": None,
         "margin": None,
         "contract_type": None,
+        "contract_size": None,
         "delivery_date": None,
     }
     try:
@@ -102,6 +103,7 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd["denominator"] = c.denominator
         sd["margin"] = c.margin
         sd["contract_type"] = c.contract_type.value
+        sd["contract_size"] = c.contract_size
         sd["delivery_date"] = c.delivery_date.isoformat() if c.delivery_date else None
     except SkipSymbol:
         sd.update(_NONE)

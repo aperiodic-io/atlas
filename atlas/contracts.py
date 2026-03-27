@@ -21,6 +21,7 @@ class Contract:
     denominator: str  # e.g. USDT (quote / settlement currency)
     margin: str | None  # e.g. USDT for linear, BTC for inverse (coin-margined)
     contract_type: ContractType
+    contract_size: float | None = None
     delivery_date: datetime | None = None
 
     def __str__(self) -> str:
