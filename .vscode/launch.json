@@ -35,7 +35,7 @@
       "program": "${workspaceFolder}/atlas/update.py",
       "args": [
         "--source",
-        "tardis",
+        "hybrid",
         "--exchanges",
         "binance-spot,binance-futures,binance-futures-cm,okx-spot,okx-perps,okx-futures"
       ],

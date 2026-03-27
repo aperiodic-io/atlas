@@ -5050,14 +5050,6 @@
   {
     "id": "bnbusd",
     "type": "spot",
-    "internal_id": "spot-BN-BUSD",
-    "symbol": "BN",
-    "denominator": "BUSD",
-    "contract_type": "spot"
-  },
-  {
-    "id": "bnbusd",
-    "type": "spot",
     "first_capture": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-BN-BUSD",
     "symbol": "BN",
@@ -10334,14 +10326,6 @@
     "internal_id": "spot-ETHUP-USDT",
     "symbol": "ETHUP",
     "denominator": "USDT",
-    "contract_type": "spot"
-  },
-  {
-    "id": "ethusd",
-    "type": "spot",
-    "internal_id": "spot-ETH-USD",
-    "symbol": "ETH",
-    "denominator": "USD",
     "contract_type": "spot"
   },
   {
@@ -16651,30 +16635,6 @@
     "first_capture": "2024-01-18T00:00:00.000Z",
     "internal_id": "spot-MANTA-USDT",
     "symbol": "MANTA",
-    "denominator": "USDT",
-    "contract_type": "spot"
-  },
-  {
-    "id": "mantratry",
-    "type": "spot",
-    "internal_id": "spot-MANTRA-TRY",
-    "symbol": "MANTRA",
-    "denominator": "TRY",
-    "contract_type": "spot"
-  },
-  {
-    "id": "mantrausdc",
-    "type": "spot",
-    "internal_id": "spot-MANTRA-USDC",
-    "symbol": "MANTRA",
-    "denominator": "USDC",
-    "contract_type": "spot"
-  },
-  {
-    "id": "mantrausdt",
-    "type": "spot",
-    "internal_id": "spot-MANTRA-USDT",
-    "symbol": "MANTRA",
     "denominator": "USDT",
     "contract_type": "spot"
   },
@@ -24485,14 +24445,6 @@
     "internal_id": "spot-SOL-U",
     "symbol": "SOL",
     "denominator": "U",
-    "contract_type": "spot"
-  },
-  {
-    "id": "solusd",
-    "type": "spot",
-    "internal_id": "spot-SOL-USD",
-    "symbol": "SOL",
-    "denominator": "USD",
     "contract_type": "spot"
   },
   {

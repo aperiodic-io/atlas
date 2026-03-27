@@ -1571,6 +1571,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "bsbusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-BSB-USDT:USDT",
+    "symbol": "BSB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "bsvusdt",
     "type": "perpetual",
     "first_capture": "2023-10-20T00:00:00.000Z",
@@ -1930,6 +1939,16 @@
     "delivery_date": "2026-06-26T00:00:00"
   },
   {
+    "id": "btcusdt_260925",
+    "type": "future",
+    "internal_id": "future-BTC-USDT:USDT-20260925",
+    "symbol": "BTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
+  },
+  {
     "id": "btrusdt",
     "type": "perpetual",
     "first_capture": "2025-08-27T00:00:00.000Z",
@@ -2068,6 +2087,15 @@
     "first_capture": "2024-11-06T00:00:00.000Z",
     "internal_id": "perpetual-CETUS-USDT:USDT",
     "symbol": "CETUS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "cfgusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-CFG-USDT:USDT",
+    "symbol": "CFG",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -2242,6 +2270,15 @@
     "first_capture": "2025-01-07T00:00:00.000Z",
     "internal_id": "perpetual-COOKIE-USDT:USDT",
     "symbol": "COOKIE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "copperusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-COPPER-USDT:USDT",
+    "symbol": "COPPER",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -2724,6 +2761,15 @@
     "first_capture": "2025-09-30T00:00:00.000Z",
     "internal_id": "perpetual-EDEN-USDT:USDT",
     "symbol": "EDEN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "edgeusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-EDGE-USDT:USDT",
+    "symbol": "EDGE",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -3225,6 +3271,16 @@
     "delivery_date": "2026-06-26T00:00:00"
   },
   {
+    "id": "ethusdt_260925",
+    "type": "future",
+    "internal_id": "future-ETH-USDT:USDT-20260925",
+    "symbol": "ETH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
+  },
+  {
     "id": "ethwusdt",
     "type": "perpetual",
     "first_capture": "2023-11-28T00:00:00.000Z",
@@ -3250,6 +3306,24 @@
     "first_capture": "2025-10-03T00:00:00.000Z",
     "internal_id": "perpetual-EVAA-USDT:USDT",
     "symbol": "EVAA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "ewjusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-EWJ-USDT:USDT",
+    "symbol": "EWJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "ewyusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-EWY-USDT:USDT",
+    "symbol": "EWY",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -3696,6 +3770,15 @@
     "first_capture": "2024-10-24T00:00:00.000Z",
     "internal_id": "perpetual-GOAT-USDT:USDT",
     "symbol": "GOAT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "googlusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-GOOGL-USDT:USDT",
+    "symbol": "GOOGL",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -4995,6 +5078,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "metausdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-META-USDT:USDT",
+    "symbol": "META",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "metisusdt",
     "type": "perpetual",
     "first_capture": "2024-03-12T00:00:00.000Z",
@@ -5423,6 +5515,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "nvdausdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-NVDA-USDT:USDT",
+    "symbol": "NVDA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "nxpcusdt",
     "type": "perpetual",
     "first_capture": "2025-05-15T00:00:00.000Z",
@@ -5674,6 +5775,15 @@
     "first_capture": "2025-03-27T00:00:00.000Z",
     "internal_id": "perpetual-PAXG-USDT:USDT",
     "symbol": "PAXG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "paypusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-PAYP-USDT:USDT",
+    "symbol": "PAYP",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
@@ -7816,6 +7926,15 @@
     "contract_type": "perpetual"
   },
   {
+    "id": "xautusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-XAUT-USDT:USDT",
+    "symbol": "XAUT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xauusdt",
     "type": "perpetual",
     "first_capture": "2025-12-11T00:00:00.000Z",
@@ -8207,6 +8326,15 @@
     "first_capture": "2026-01-21T00:00:00.000Z",
     "internal_id": "perpetual-\u6211\u8e0f\u9a6c\u6765\u4e86-USDT:USDT",
     "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "\u9f99\u867eusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-\u9f99\u867e-USDT:USDT",
+    "symbol": "\u9f99\u867e",
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual"
