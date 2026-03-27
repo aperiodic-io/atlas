@@ -1200,6 +1200,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "NEKO/USDC",
+    "type": "spot",
+    "internal_id": "spot-NEKO-USDC",
+    "symbol": "NEKO",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "NFT/USDC",
     "type": "spot",
     "internal_id": "spot-NFT-USDC",
@@ -1756,6 +1764,14 @@
     "type": "spot",
     "internal_id": "spot-SYLVI-USDC",
     "symbol": "SYLVI",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "TAO1/USDC",
+    "type": "spot",
+    "internal_id": "spot-TAO1-USDC",
+    "symbol": "TAO1",
     "denominator": "USDC",
     "contract_type": "spot"
   },
