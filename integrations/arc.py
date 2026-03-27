@@ -190,6 +190,47 @@ def _resolve_arc_path(arc_path: str | None, arc_repo: str) -> tuple[Path, tempfi
     return clone_target, temp_dir
 
 
+def _process_row_arc_metadata(
+    row: dict,
+    exchange: str,
+    instrument_index: dict[tuple[str, str], list[dict]],
+    assets_by_id: dict[str, dict],
+) -> str:
+    if not isinstance(row, dict) or "id" not in row:
+        return "invalid"
+
+    symbol_id = str(row["id"])
+    keys = _candidate_keys(symbol_id)
+    candidates: list[dict] = []
+    for key in keys:
+        candidates.extend(instrument_index.get((exchange, key), []))
+
+    result = _pick_best_match(row, candidates)
+    if result.ambiguous:
+        for k in ARC_META_KEYS:
+            row.pop(k, None)
+        return "ambiguous"
+    if result.instrument is None:
+        for k in ARC_META_KEYS:
+            row.pop(k, None)
+        return "unmatched"
+
+    instrument = result.instrument
+    row["arc_instrument"] = instrument
+    arc_id = instrument.get("assetArcId")
+    if isinstance(arc_id, str):
+        row["arc_asset_arc_id"] = arc_id
+        asset = assets_by_id.get(arc_id)
+        if asset is not None:
+            row["arc_asset"] = asset
+        else:
+            row.pop("arc_asset", None)
+    else:
+        row.pop("arc_asset_arc_id", None)
+        row.pop("arc_asset", None)
+    return "matched"
+
+
 def populate_arc_metadata(
     data_dir: Path,
     arc_root: Path,
@@ -212,41 +253,13 @@ def populate_arc_metadata(
         unmatched = 0
         ambiguous = 0
         for row in rows:
-            if not isinstance(row, dict) or "id" not in row:
-                continue
-
-            symbol_id = str(row["id"])
-            keys = _candidate_keys(symbol_id)
-            candidates: list[dict] = []
-            for key in keys:
-                candidates.extend(instrument_index.get((exchange, key), []))
-
-            result = _pick_best_match(row, candidates)
-            if result.ambiguous:
-                ambiguous += 1
-                for k in ARC_META_KEYS:
-                    row.pop(k, None)
-                continue
-            if result.instrument is None:
+            res = _process_row_arc_metadata(row, exchange, instrument_index, assets_by_id)
+            if res == "matched":
+                matched += 1
+            elif res == "unmatched":
                 unmatched += 1
-                for k in ARC_META_KEYS:
-                    row.pop(k, None)
-                continue
-
-            instrument = result.instrument
-            row["arc_instrument"] = instrument
-            arc_id = instrument.get("assetArcId")
-            if isinstance(arc_id, str):
-                row["arc_asset_arc_id"] = arc_id
-                asset = assets_by_id.get(arc_id)
-                if asset is not None:
-                    row["arc_asset"] = asset
-                else:
-                    row.pop("arc_asset", None)
-            else:
-                row.pop("arc_asset_arc_id", None)
-                row.pop("arc_asset", None)
-            matched += 1
+            elif res == "ambiguous":
+                ambiguous += 1
 
         if not dry_run:
             json_file.write_text(json.dumps(rows, indent=2))

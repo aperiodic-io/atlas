@@ -42,21 +42,7 @@ def _parse_exchanges(raw: str) -> set[str] | None:
     return values or None
 
 
-def populate_coingecko_metadata(
-    data_dir: Path,
-    exchanges: set[str] | None = None,
-    dry_run: bool = False,
-    timeout_seconds: int = 30,
-    max_verifications: int = 25,
-    coingecko_min_interval_seconds: float = 1.2,
-    max_relative_diff: float = 0.05,
-) -> dict[str, dict[str, int]]:
-    binance_symbols = fetch_spot_symbols(timeout_seconds=timeout_seconds)
-    coingecko_coins = fetch_coin_list(timeout_seconds=timeout_seconds)
-    symbol_to_coingecko = match_binance_symbols_to_coingecko_ids(
-        binance_symbols,
-        coingecko_coins,
-    )
+def _get_base_to_binance_symbol_map(binance_symbols: list[dict]) -> dict[str, str]:
     base_to_binance_symbol: dict[str, str] = {}
     for quote in PREFERRED_QUOTES:
         for row in binance_symbols:
@@ -73,31 +59,15 @@ def populate_coingecko_metadata(
                 and base.upper() not in base_to_binance_symbol
             ):
                 base_to_binance_symbol[base.upper()] = symbol.upper()
+    return base_to_binance_symbol
 
-    verified_by_symbol: dict[str, bool] = {}
-    ordered_symbols: list[str] = []
-    for symbol in PREFERRED_VERIFICATION_SYMBOLS:
-        if symbol in symbol_to_coingecko:
-            ordered_symbols.append(symbol)
-    for symbol in sorted(symbol_to_coingecko):
-        if symbol not in ordered_symbols:
-            ordered_symbols.append(symbol)
 
-    symbols_to_verify: list[tuple[str, str, str]] = []
-    for base_symbol in ordered_symbols:
-        if len(symbols_to_verify) >= max_verifications:
-            break
-        coingecko_id = symbol_to_coingecko[base_symbol]
-        binance_symbol = base_to_binance_symbol.get(base_symbol)
-        if not binance_symbol:
-            continue
-        symbols_to_verify.append((base_symbol, coingecko_id, binance_symbol))
-
+def _get_coingecko_last_prices(timeout_seconds: int, min_interval_seconds: float) -> dict[str, float]:
     coingecko_last_by_binance_symbol: dict[str, float] = {}
     try:
         tickers = fetch_derivatives_tickers(
             timeout_seconds=timeout_seconds,
-            min_interval_seconds=coingecko_min_interval_seconds,
+            min_interval_seconds=min_interval_seconds,
         )
     except Exception:
         tickers = []
@@ -120,84 +90,188 @@ def populate_coingecko_metadata(
                     last = usd_price
         if isinstance(last, (float, int)):
             coingecko_last_by_binance_symbol[norm_symbol] = float(last)
+    return coingecko_last_by_binance_symbol
 
-    verification_attempted = len(symbols_to_verify)
+
+def _verify_symbol(
+    base_symbol: str,
+    coingecko_id: str,
+    binance_symbol: str,
+    symbols_to_verify: list[tuple[str, str, str]],
+    coingecko_last_by_binance_symbol: dict[str, float],
+    timeout_seconds: int,
+    max_relative_diff: float,
+) -> bool:
+    if (base_symbol, coingecko_id, binance_symbol) not in symbols_to_verify:
+        return False
+    coingecko_price = coingecko_last_by_binance_symbol.get(_normalize_symbol(binance_symbol))
+    if coingecko_price is None or coingecko_price == 0:
+        return False
+    try:
+        binance_klines = fetch_historical_klines(
+            symbol=binance_symbol,
+            interval="1d",
+            limit=1,
+            timeout_seconds=timeout_seconds,
+        )
+    except Exception:
+        return False
+    if not binance_klines:
+        return False
+    close = binance_klines[-1].get("close")
+    if not isinstance(close, (float, int)) or close == 0:
+        return False
+    rel_diff = abs(float(coingecko_price) - float(close)) / abs(float(close))
+    return rel_diff <= max_relative_diff
+
+
+def _get_ordered_symbols(symbol_to_coingecko: dict[str, str]) -> list[str]:
+    ordered_symbols: list[str] = []
+    for symbol in PREFERRED_VERIFICATION_SYMBOLS:
+        if symbol in symbol_to_coingecko:
+            ordered_symbols.append(symbol)
+    for symbol in sorted(symbol_to_coingecko):
+        if symbol not in ordered_symbols:
+            ordered_symbols.append(symbol)
+    return ordered_symbols
+
+
+def _get_symbols_to_verify(
+    ordered_symbols: list[str],
+    symbol_to_coingecko: dict[str, str],
+    base_to_binance_symbol: dict[str, str],
+    max_verifications: int,
+) -> list[tuple[str, str, str]]:
+    symbols_to_verify: list[tuple[str, str, str]] = []
+    for base_symbol in ordered_symbols:
+        if len(symbols_to_verify) >= max_verifications:
+            break
+        coingecko_id = symbol_to_coingecko[base_symbol]
+        binance_symbol = base_to_binance_symbol.get(base_symbol)
+        if binance_symbol:
+            symbols_to_verify.append((base_symbol, coingecko_id, binance_symbol))
+    return symbols_to_verify
+
+
+def _get_verified_by_symbol(
+    ordered_symbols: list[str],
+    symbol_to_coingecko: dict[str, str],
+    base_to_binance_symbol: dict[str, str],
+    symbols_to_verify: list[tuple[str, str, str]],
+    coingecko_last_by_binance_symbol: dict[str, float],
+    timeout_seconds: int,
+    max_relative_diff: float,
+) -> dict[str, bool]:
+    verified_by_symbol: dict[str, bool] = {}
     for base_symbol in ordered_symbols:
         coingecko_id = symbol_to_coingecko[base_symbol]
         binance_symbol = base_to_binance_symbol.get(base_symbol)
         if not binance_symbol:
             verified_by_symbol[base_symbol] = False
             continue
-        if (base_symbol, coingecko_id, binance_symbol) not in symbols_to_verify:
-            verified_by_symbol[base_symbol] = False
+        verified_by_symbol[base_symbol] = _verify_symbol(
+            base_symbol,
+            coingecko_id,
+            binance_symbol,
+            symbols_to_verify,
+            coingecko_last_by_binance_symbol,
+            timeout_seconds,
+            max_relative_diff,
+        )
+    return verified_by_symbol
+
+
+def _process_exchange_file(
+    json_file: Path,
+    symbol_to_coingecko: dict[str, str],
+    verified_by_symbol: dict[str, bool],
+    dry_run: bool,
+    verification_attempted: int,
+) -> tuple[str, dict[str, int]] | None:
+    exchange = json_file.stem
+    rows = json.loads(json_file.read_text())
+    if not isinstance(rows, list):
+        return None
+
+    matched, unverified, unmatched = 0, 0, 0
+    for row in rows:
+        if not isinstance(row, dict):
             continue
-        coingecko_price = coingecko_last_by_binance_symbol.get(_normalize_symbol(binance_symbol))
-        if coingecko_price is None or coingecko_price == 0:
-            verified_by_symbol[base_symbol] = False
+        symbol = row.get("symbol")
+        if not isinstance(symbol, str):
+            row.pop(COINGECKO_KEY, None)
+            unmatched += 1
             continue
-        try:
-            binance_klines = fetch_historical_klines(
-                symbol=binance_symbol,
-                interval="1d",
-                limit=1,
-                timeout_seconds=timeout_seconds,
-            )
-        except Exception:
-            verified_by_symbol[base_symbol] = False
-            continue
-        if not binance_klines:
-            verified_by_symbol[base_symbol] = False
-            continue
-        close = binance_klines[-1].get("close")
-        if not isinstance(close, (float, int)) or close == 0:
-            verified_by_symbol[base_symbol] = False
-            continue
-        rel_diff = abs(float(coingecko_price) - float(close)) / abs(float(close))
-        verified_by_symbol[base_symbol] = rel_diff <= max_relative_diff
+
+        coingecko_id = symbol_to_coingecko.get(symbol.upper())
+        if coingecko_id and verified_by_symbol.get(symbol.upper(), False):
+            row[COINGECKO_KEY] = coingecko_id
+            matched += 1
+        elif coingecko_id:
+            row.pop(COINGECKO_KEY, None)
+            unverified += 1
+        else:
+            row.pop(COINGECKO_KEY, None)
+            unmatched += 1
+
+    if not dry_run:
+        json_file.write_text(json.dumps(rows, indent=2))
+
+    return exchange, {
+        "matched": matched,
+        "unverified": unverified,
+        "unmatched": unmatched,
+        "verification_attempted": verification_attempted,
+        "rows": len(rows),
+    }
+
+
+def populate_coingecko_metadata(
+    data_dir: Path,
+    exchanges: set[str] | None = None,
+    dry_run: bool = False,
+    timeout_seconds: int = 30,
+    max_verifications: int = 25,
+    coingecko_min_interval_seconds: float = 1.2,
+    max_relative_diff: float = 0.05,
+) -> dict[str, dict[str, int]]:
+    binance_symbols = fetch_spot_symbols(timeout_seconds=timeout_seconds)
+    coingecko_coins = fetch_coin_list(timeout_seconds=timeout_seconds)
+    symbol_to_coingecko = match_binance_symbols_to_coingecko_ids(
+        binance_symbols,
+        coingecko_coins,
+    )
+    base_to_binance_symbol = _get_base_to_binance_symbol_map(binance_symbols)
+    ordered_symbols = _get_ordered_symbols(symbol_to_coingecko)
+    symbols_to_verify = _get_symbols_to_verify(
+        ordered_symbols, symbol_to_coingecko, base_to_binance_symbol, max_verifications
+    )
+    coingecko_last_by_binance_symbol = _get_coingecko_last_prices(
+        timeout_seconds, coingecko_min_interval_seconds
+    )
+    verified_by_symbol = _get_verified_by_symbol(
+        ordered_symbols,
+        symbol_to_coingecko,
+        base_to_binance_symbol,
+        symbols_to_verify,
+        coingecko_last_by_binance_symbol,
+        timeout_seconds,
+        max_relative_diff,
+    )
 
     stats: dict[str, dict[str, int]] = {}
     for json_file in sorted(data_dir.glob("*.json")):
-        exchange = json_file.stem
-        if exchanges and exchange not in exchanges:
+        if exchanges and json_file.stem not in exchanges:
             continue
-
-        rows = json.loads(json_file.read_text())
-        if not isinstance(rows, list):
-            continue
-
-        matched = 0
-        unverified = 0
-        unmatched = 0
-        for row in rows:
-            if not isinstance(row, dict):
-                continue
-            symbol = row.get("symbol")
-            if not isinstance(symbol, str):
-                row.pop(COINGECKO_KEY, None)
-                unmatched += 1
-                continue
-
-            coingecko_id = symbol_to_coingecko.get(symbol.upper())
-            if coingecko_id and verified_by_symbol.get(symbol.upper(), False):
-                row[COINGECKO_KEY] = coingecko_id
-                matched += 1
-            elif coingecko_id:
-                row.pop(COINGECKO_KEY, None)
-                unverified += 1
-            else:
-                row.pop(COINGECKO_KEY, None)
-                unmatched += 1
-
-        if not dry_run:
-            json_file.write_text(json.dumps(rows, indent=2))
-
-        stats[exchange] = {
-            "matched": matched,
-            "unverified": unverified,
-            "unmatched": unmatched,
-            "verification_attempted": verification_attempted,
-            "rows": len(rows),
-        }
+        res = _process_exchange_file(
+            json_file,
+            symbol_to_coingecko,
+            verified_by_symbol,
+            dry_run,
+            len(symbols_to_verify),
+        )
+        if res:
+            stats[res[0]] = res[1]
 
     return stats
 

@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 
 
 COINGECKO_API_BASE = "https://api.coingecko.com/api/v3"
-_LAST_REQUEST_TS = 0.0
+_STATE = {"last_request_ts": 0.0}
 
 
 def _get_json(
@@ -20,12 +20,11 @@ def _get_json(
     max_retries: int = 4,
     min_interval_seconds: float = 1.2,
 ) -> Any:
-    global _LAST_REQUEST_TS
     query = f"?{urlencode(params)}" if params else ""
     backoff_seconds = 1.0
     for attempt in range(max_retries + 1):
         now = time.monotonic()
-        elapsed = now - _LAST_REQUEST_TS
+        elapsed = now - _STATE["last_request_ts"]
         if elapsed < min_interval_seconds:
             time.sleep(min_interval_seconds - elapsed)
 
@@ -35,10 +34,10 @@ def _get_json(
         )
         try:
             with urlopen(request, timeout=timeout_seconds) as response:
-                _LAST_REQUEST_TS = time.monotonic()
+                _STATE["last_request_ts"] = time.monotonic()
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as exc:
-            _LAST_REQUEST_TS = time.monotonic()
+            _STATE["last_request_ts"] = time.monotonic()
             if exc.code != 429 or attempt >= max_retries:
                 raise
             retry_after = exc.headers.get("Retry-After")

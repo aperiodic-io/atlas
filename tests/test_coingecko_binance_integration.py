@@ -1,6 +1,5 @@
 from integrations.coingecko import (
     fetch_derivatives_tickers,
-    fetch_historical_market_chart,
     fetch_coin_list,
     coingecko_prices_match_binance_klines,
     match_binance_symbols_to_coingecko_ids,
@@ -47,26 +46,72 @@ def test_coingecko_prices_match_binance_klines() -> None:
     )
 
 
-def test_match_binance_symbols_to_coingecko_ids_live_all_symbols() -> None:
+def _fetch_live_test_data() -> tuple[list[dict], list[dict]]:
     try:
         binance_spot_symbols = fetch_spot_symbols(timeout_seconds=30)
         coingecko_coins = fetch_coin_list(timeout_seconds=30)
-    except Exception as exc:  # pragma: no cover - network-dependent test guard
+        return binance_spot_symbols, coingecko_coins
+    except Exception as exc:  # pragma: no cover
         import pytest
 
         pytest.skip(f"live endpoint fetch failed: {exc}")
+        return [], []
 
-    mapping = match_binance_symbols_to_coingecko_ids(binance_spot_symbols, coingecko_coins)
 
+def _get_coin_ids_by_symbol(coingecko_coins: list[dict]) -> dict[str, set[str]]:
     coin_ids_by_symbol: dict[str, set[str]] = {}
     for coin in coingecko_coins:
         symbol = coin.get("symbol")
         coin_id = coin.get("id")
-        if not isinstance(symbol, str) or not isinstance(coin_id, str):
-            continue
-        key = symbol.upper()
-        coin_ids_by_symbol.setdefault(key, set()).add(coin_id)
+        if isinstance(symbol, str) and isinstance(coin_id, str):
+            coin_ids_by_symbol.setdefault(symbol.upper(), set()).add(coin_id)
+    return coin_ids_by_symbol
 
+
+def _get_base_to_usdt_symbol(binance_spot_symbols: list[dict]) -> dict[str, str]:
+    base_to_usdt_symbol: dict[str, str] = {}
+    for row in binance_spot_symbols:
+        if not isinstance(row, dict):
+            continue
+        base = row.get("baseAsset")
+        quote = row.get("quoteAsset")
+        symbol = row.get("symbol")
+        if (
+            isinstance(base, str)
+            and isinstance(quote, str)
+            and isinstance(symbol, str)
+            and quote.upper() == "USDT"
+        ):
+            base_to_usdt_symbol.setdefault(base.upper(), symbol.upper())
+    return base_to_usdt_symbol
+
+
+def _get_coingecko_last_by_symbol() -> dict[str, float]:
+    try:
+        derivatives_tickers = fetch_derivatives_tickers(timeout_seconds=30, min_interval_seconds=1.2)
+    except Exception:
+        derivatives_tickers = []
+    coingecko_last_by_symbol: dict[str, float] = {}
+    for ticker in derivatives_tickers:
+        if not isinstance(ticker, dict):
+            continue
+        market = ticker.get("market")
+        symbol = ticker.get("symbol")
+        last = ticker.get("last")
+        if not (isinstance(market, str) and "binance" in market.lower()):
+            continue
+        if isinstance(symbol, str) and isinstance(last, (float, int)):
+            norm = "".join(ch for ch in symbol.upper() if ch.isalnum())
+            if norm:
+                coingecko_last_by_symbol[norm] = float(last)
+    return coingecko_last_by_symbol
+
+
+def test_match_binance_symbols_to_coingecko_ids_live_all_symbols() -> None:
+    binance_spot_symbols, coingecko_coins = _fetch_live_test_data()
+    mapping = match_binance_symbols_to_coingecko_ids(binance_spot_symbols, coingecko_coins)
+
+    coin_ids_by_symbol = _get_coin_ids_by_symbol(coingecko_coins)
     base_symbols = {
         str(row.get("baseAsset", "")).upper()
         for row in binance_spot_symbols
@@ -83,22 +128,8 @@ def test_match_binance_symbols_to_coingecko_ids_live_all_symbols() -> None:
         else:
             assert base not in mapping
 
-    # Live last-price comparison using CoinGecko derivatives/tickers (single call).
-    base_to_usdt_symbol: dict[str, str] = {}
-    for row in binance_spot_symbols:
-        if not isinstance(row, dict):
-            continue
-        base = row.get("baseAsset")
-        quote = row.get("quoteAsset")
-        symbol = row.get("symbol")
-        if not isinstance(base, str) or not isinstance(quote, str) or not isinstance(symbol, str):
-            continue
-        if quote.upper() == "USDT":
-            base_to_usdt_symbol.setdefault(base.upper(), symbol.upper())
+    base_to_usdt_symbol = _get_base_to_usdt_symbol(binance_spot_symbols)
 
-    compared = 0
-    matched = 0
-    max_symbols_to_compare = 15
     preferred = ["BTC", "ETH", "BNB", "SOL", "XRP", "ADA", "DOGE", "TRX", "LTC", "LINK"]
     ordered_bases: list[str] = []
     for base in preferred:
@@ -108,32 +139,39 @@ def test_match_binance_symbols_to_coingecko_ids_live_all_symbols() -> None:
         if base not in ordered_bases:
             ordered_bases.append(base)
 
-    try:
-        derivatives_tickers = fetch_derivatives_tickers(timeout_seconds=30, min_interval_seconds=1.2)
-    except Exception:
-        derivatives_tickers = []
-    coingecko_last_by_symbol: dict[str, float] = {}
-    for ticker in derivatives_tickers:
-        if not isinstance(ticker, dict):
-            continue
-        market = ticker.get("market")
-        symbol = ticker.get("symbol")
-        last = ticker.get("last")
-        if not isinstance(market, str) or "binance" not in market.lower():
-            continue
-        if not isinstance(symbol, str) or not isinstance(last, (float, int)):
-            continue
-        norm = "".join(ch for ch in symbol.upper() if ch.isalnum())
-        if norm:
-            coingecko_last_by_symbol[norm] = float(last)
+    coingecko_last_by_symbol = _get_coingecko_last_by_symbol()
 
+    compared, matched = _compare_live_prices(
+        ordered_bases,
+        base_to_usdt_symbol,
+        coingecko_last_by_symbol,
+        max_symbols_to_compare=15,
+    )
+
+    if compared < 1:
+        import pytest
+
+        pytest.skip("insufficient live historical comparisons (endpoint variability)")
+    assert matched / compared >= 0.8, "coingecko/binance historical price match rate too low"
+
+
+def _compare_live_prices(
+    ordered_bases: list[str],
+    base_to_usdt_symbol: dict[str, str],
+    coingecko_last_by_symbol: dict[str, float],
+    max_symbols_to_compare: int,
+) -> tuple[int, int]:
+    compared = 0
+    matched = 0
     for base in ordered_bases:
         if compared >= max_symbols_to_compare:
             break
         symbol = base_to_usdt_symbol.get(base)
         if not symbol:
             continue
-        coingecko_last = coingecko_last_by_symbol.get("".join(ch for ch in symbol.upper() if ch.isalnum()))
+        coingecko_last = coingecko_last_by_symbol.get(
+            "".join(ch for ch in symbol.upper() if ch.isalnum())
+        )
         if coingecko_last is None:
             continue
         try:
@@ -155,9 +193,4 @@ def test_match_binance_symbols_to_coingecko_ids_live_all_symbols() -> None:
         rel_diff = abs(float(coingecko_last) - float(close)) / abs(float(close))
         if rel_diff <= 0.05:
             matched += 1
-
-    if compared < 1:
-        import pytest
-
-        pytest.skip("insufficient live historical comparisons (endpoint variability)")
-    assert matched / compared >= 0.8, "coingecko/binance historical price match rate too low"
+    return compared, matched
