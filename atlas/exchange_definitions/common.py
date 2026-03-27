@@ -174,6 +174,9 @@ def make_contract(
         margin=margin.upper() if margin is not None else None,
         delivery_date=delivery_date,
         contract_type=ctype,
+        contract_size=(
+            float(sd["contract_size"]) if sd.get("contract_size") is not None else None
+        ),
     )
 
 

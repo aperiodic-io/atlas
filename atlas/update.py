@@ -5,9 +5,10 @@ import re
 import sys
 from pathlib import Path
 
-
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import SkipSymbol, parse_contract
@@ -17,7 +18,6 @@ from atlas.update_sources import (
     SymbolSource,
     TardisSymbolSource,
 )
-from dotenv import load_dotenv
 
 _DATA_DIR = Path(__file__).parent / "data"
 
@@ -70,7 +70,9 @@ def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
     return rows, {row["id"]: row for row in rows}
 
 
-def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+def _merge_existing_fields(
+    symbols: list[dict], existing_by_id: dict[str, dict], ignore_metadata: bool = False
+) -> None:
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence; existing values fill only missing keys.
@@ -91,6 +93,7 @@ def _enrich(exchange: str, sd: dict) -> None:
         "denominator": None,
         "margin": None,
         "contract_type": None,
+        "contract_size": None,
         "delivery_date": None,
     }
     try:
@@ -100,12 +103,15 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd["denominator"] = c.denominator
         sd["margin"] = c.margin
         sd["contract_type"] = c.contract_type.value
+        sd["contract_size"] = c.contract_size
         sd["delivery_date"] = c.delivery_date.isoformat() if c.delivery_date else None
     except SkipSymbol:
         sd.update(_NONE)
 
 
-def _normalize_binance_derivative_type(symbol_id: str, current_type: str | None) -> str | None:
+def _normalize_binance_derivative_type(
+    symbol_id: str, current_type: str | None
+) -> str | None:
     sid = symbol_id.upper()
     if "_PERP" in sid or sid.endswith("PERP"):
         return "perpetual"
@@ -130,12 +136,9 @@ def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> None:
 def _apply_snapshot_metadata(symbols: list[dict]) -> None:
     for sd in symbols:
         if "availableSince" in sd:
-            sd["first_capture"] = sd["availableSince"]
-        # Persist the normalized project field name, not raw Tardis key.
-        sd.pop("availableSince", None)
+            sd["first_capture"] = sd.pop("availableSince")
         if "availableTo" in sd:
-            sd["end_date"] = sd["availableTo"]
-        sd.pop("availableTo", None)
+            sd["end_date"] = sd.pop("availableTo")
 
 
 def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
@@ -185,14 +188,22 @@ def update(
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
         ]
+
+        is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
+
         _normalize_exchange_symbols(exchange, incoming_symbols)
-        _merge_existing_fields(incoming_symbols, existing_by_id)
         _apply_snapshot_metadata(incoming_symbols)
+        _merge_existing_fields(
+            incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
+        )
         for sd in incoming_symbols:
             _enrich(exchange, sd)
 
         # Never drop existing rows if the source omits them.
-        symbols = _merge_missing_rows(incoming_symbols, existing_rows)
+        if isinstance(source, TardisSymbolSource):
+            symbols = incoming_symbols
+        else:
+            symbols = _merge_missing_rows(incoming_symbols, existing_rows)
         symbols.sort(
             key=lambda sd: (
                 sd.get("id", ""),
@@ -200,7 +211,7 @@ def update(
                 sd.get("end_date") or "",
             )
         )
-        _drop_none_fields(symbols, {"margin", "delivery_date"})
+        _drop_none_fields(symbols, {"margin", "delivery_date", "end_date"})
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")

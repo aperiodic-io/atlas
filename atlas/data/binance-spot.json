@@ -405,6 +405,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "aaveu",
+    "type": "spot",
+    "first_capture": "2026-03-17T00:00:00.000Z",
+    "internal_id": "spot-AAVE-U",
+    "symbol": "AAVE",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "aaveupusdt",
     "type": "spot",
     "first_capture": "2020-11-26T00:00:00.000Z",
@@ -3359,6 +3369,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "avaxu",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-AVAX-U",
+    "symbol": "AVAX",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "avaxusd1",
     "type": "spot",
     "first_capture": "2026-01-06T00:00:00.000Z",
@@ -4205,6 +4225,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "bchu",
+    "type": "spot",
+    "first_capture": "2026-03-10T00:00:00.000Z",
+    "internal_id": "spot-BCH-U",
+    "symbol": "BCH",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "bchupusdt",
     "type": "spot",
     "first_capture": "2020-10-28T00:00:00.000Z",
@@ -5020,10 +5050,12 @@
   {
     "id": "bnbusd",
     "type": "spot",
+    "first_capture": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-BN-BUSD",
     "symbol": "BN",
     "denominator": "BUSD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "bnbusd1",
@@ -5319,6 +5351,7 @@
     "id": "bonkbrl",
     "type": "spot",
     "first_capture": "2024-08-16T00:00:00.000Z",
+    "end_date": "2026-03-21T00:00:00.000Z",
     "internal_id": "spot-BONK-BRL",
     "symbol": "BONK",
     "denominator": "BRL",
@@ -6610,6 +6643,36 @@
     "contract_type": "spot"
   },
   {
+    "id": "cfgtry",
+    "type": "spot",
+    "first_capture": "2026-03-16T00:00:00.000Z",
+    "internal_id": "spot-CFG-TRY",
+    "symbol": "CFG",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "cfgusdc",
+    "type": "spot",
+    "first_capture": "2026-03-16T00:00:00.000Z",
+    "internal_id": "spot-CFG-USDC",
+    "symbol": "CFG",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "cfgusdt",
+    "type": "spot",
+    "first_capture": "2026-03-16T00:00:00.000Z",
+    "internal_id": "spot-CFG-USDT",
+    "symbol": "CFG",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "cfxbtc",
     "type": "spot",
     "first_capture": "2021-03-29T00:00:00.000Z",
@@ -6786,6 +6849,7 @@
     "id": "chzbnb",
     "type": "spot",
     "first_capture": "2020-12-28T00:00:00.000Z",
+    "end_date": "2026-03-07T00:00:00.000Z",
     "internal_id": "spot-CHZ-BNB",
     "symbol": "CHZ",
     "denominator": "BNB",
@@ -8258,6 +8322,7 @@
     "id": "dodobtc",
     "type": "spot",
     "first_capture": "2021-02-19T00:00:00.000Z",
+    "end_date": "2026-03-14T00:00:00.000Z",
     "internal_id": "spot-DODO-BTC",
     "symbol": "DODO",
     "denominator": "BTC",
@@ -9264,6 +9329,7 @@
     "id": "enabrl",
     "type": "spot",
     "first_capture": "2024-12-04T00:00:00.000Z",
+    "end_date": "2026-03-07T00:00:00.000Z",
     "internal_id": "spot-ENA-BRL",
     "symbol": "ENA",
     "denominator": "BRL",
@@ -10265,10 +10331,12 @@
   {
     "id": "ethusd",
     "type": "spot",
+    "first_capture": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-ETH-USD",
     "symbol": "ETH",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "ethusd1",
@@ -12096,6 +12164,7 @@
     "id": "gmteur",
     "type": "spot",
     "first_capture": "2022-04-01T00:00:00.000Z",
+    "end_date": "2026-03-14T00:00:00.000Z",
     "internal_id": "spot-GMT-EUR",
     "symbol": "GMT",
     "denominator": "EUR",
@@ -14506,6 +14575,36 @@
     "contract_type": "spot"
   },
   {
+    "id": "kattry",
+    "type": "spot",
+    "first_capture": "2026-03-18T00:00:00.000Z",
+    "internal_id": "spot-KAT-TRY",
+    "symbol": "KAT",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "katusdc",
+    "type": "spot",
+    "first_capture": "2026-03-18T00:00:00.000Z",
+    "internal_id": "spot-KAT-USDC",
+    "symbol": "KAT",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "katusdt",
+    "type": "spot",
+    "first_capture": "2026-03-18T00:00:00.000Z",
+    "internal_id": "spot-KAT-USDT",
+    "symbol": "KAT",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "kavabnb",
     "type": "spot",
     "first_capture": "2020-11-23T00:00:00.000Z",
@@ -15497,6 +15596,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "linku",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-LINK-U",
+    "symbol": "LINK",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "linkupusdt",
     "type": "spot",
     "first_capture": "2020-07-16T00:00:00.000Z",
@@ -16062,6 +16171,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "ltcu",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-LTC-U",
+    "symbol": "LTC",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "ltcuah",
     "type": "spot",
     "first_capture": "2021-09-24T00:00:00.000Z",
@@ -16522,26 +16641,32 @@
   {
     "id": "mantratry",
     "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "spot-MANTRA-TRY",
     "symbol": "MANTRA",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "mantrausdc",
     "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "spot-MANTRA-USDC",
     "symbol": "MANTRA",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "mantrausdt",
     "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "spot-MANTRA-USDT",
     "symbol": "MANTRA",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "maskbnb",
@@ -17037,6 +17162,7 @@
     "id": "mefdusd",
     "type": "spot",
     "first_capture": "2024-12-10T00:00:00.000Z",
+    "end_date": "2026-03-21T00:00:00.000Z",
     "internal_id": "spot-ME-FDUSD",
     "symbol": "ME",
     "denominator": "FDUSD",
@@ -18102,6 +18228,26 @@
     "contract_type": "spot"
   },
   {
+    "id": "nearu",
+    "type": "spot",
+    "first_capture": "2026-03-10T00:00:00.000Z",
+    "internal_id": "spot-NEAR-U",
+    "symbol": "NEAR",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "nearusd1",
+    "type": "spot",
+    "first_capture": "2026-03-10T00:00:00.000Z",
+    "internal_id": "spot-NEAR-USD1",
+    "symbol": "NEAR",
+    "denominator": "USD1",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "nearusdc",
     "type": "spot",
     "first_capture": "2024-03-13T00:00:00.000Z",
@@ -18202,6 +18348,7 @@
     "id": "neirojpy",
     "type": "spot",
     "first_capture": "2025-06-25T00:00:00.000Z",
+    "end_date": "2026-03-07T00:00:00.000Z",
     "internal_id": "spot-NEIRO-JPY",
     "symbol": "NEIRO",
     "denominator": "JPY",
@@ -18442,6 +18589,46 @@
     "symbol": "NFP",
     "denominator": "USDT",
     "contract_type": "spot"
+  },
+  {
+    "id": "nightbnb",
+    "type": "spot",
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "internal_id": "spot-NIGHT-BNB",
+    "symbol": "NIGHT",
+    "denominator": "BNB",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "nighttry",
+    "type": "spot",
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "internal_id": "spot-NIGHT-TRY",
+    "symbol": "NIGHT",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "nightusdc",
+    "type": "spot",
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "internal_id": "spot-NIGHT-USDC",
+    "symbol": "NIGHT",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "nightusdt",
+    "type": "spot",
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "internal_id": "spot-NIGHT-USDT",
+    "symbol": "NIGHT",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "nilbnb",
@@ -19175,6 +19362,7 @@
     "id": "omtry",
     "type": "spot",
     "first_capture": "2024-03-05T00:00:00.000Z",
+    "end_date": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-OM-TRY",
     "symbol": "OM",
     "denominator": "TRY",
@@ -19184,6 +19372,7 @@
     "id": "omusdc",
     "type": "spot",
     "first_capture": "2024-11-22T00:00:00.000Z",
+    "end_date": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-OM-USDC",
     "symbol": "OM",
     "denominator": "USDC",
@@ -19193,6 +19382,7 @@
     "id": "omusdt",
     "type": "spot",
     "first_capture": "2021-03-08T00:00:00.000Z",
+    "end_date": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-OM-USDT",
     "symbol": "OM",
     "denominator": "USDT",
@@ -19519,6 +19709,66 @@
     "symbol": "OP",
     "denominator": "FDUSD",
     "contract_type": "spot"
+  },
+  {
+    "id": "opnbnb",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-BNB",
+    "symbol": "OPN",
+    "denominator": "BNB",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "opntry",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-TRY",
+    "symbol": "OPN",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "opnu",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-U",
+    "symbol": "OPN",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "opnusd1",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-USD1",
+    "symbol": "OPN",
+    "denominator": "USD1",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "opnusdc",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-USDC",
+    "symbol": "OPN",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "opnusdt",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-OPN-USDT",
+    "symbol": "OPN",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "optry",
@@ -19860,6 +20110,16 @@
     "symbol": "PAXG",
     "denominator": "TRY",
     "contract_type": "spot"
+  },
+  {
+    "id": "paxgu",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-PAXG-U",
+    "symbol": "PAXG",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "paxgusd1",
@@ -22316,6 +22576,7 @@
     "id": "rlcbtc",
     "type": "spot",
     "first_capture": "2020-09-03T00:00:00.000Z",
+    "end_date": "2026-03-07T00:00:00.000Z",
     "internal_id": "spot-RLC-BTC",
     "symbol": "RLC",
     "denominator": "BTC",
@@ -22446,6 +22707,36 @@
     "symbol": "RNDR",
     "denominator": "USDT",
     "contract_type": "spot"
+  },
+  {
+    "id": "robotry",
+    "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
+    "internal_id": "spot-ROBO-TRY",
+    "symbol": "ROBO",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "robousdc",
+    "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
+    "internal_id": "spot-ROBO-USDC",
+    "symbol": "ROBO",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "robousdt",
+    "type": "spot",
+    "first_capture": "2026-03-04T00:00:00.000Z",
+    "internal_id": "spot-ROBO-USDT",
+    "symbol": "ROBO",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "roninbtc",
@@ -24159,10 +24450,12 @@
   {
     "id": "solusd",
     "type": "spot",
+    "first_capture": "2026-03-03T00:00:00.000Z",
     "internal_id": "spot-SOL-USD",
     "symbol": "SOL",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "solusd1",
@@ -25615,6 +25908,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "taou",
+    "type": "spot",
+    "first_capture": "2026-03-17T00:00:00.000Z",
+    "internal_id": "spot-TAO-U",
+    "symbol": "TAO",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "taousd1",
     "type": "spot",
     "first_capture": "2026-02-25T00:00:00.000Z",
@@ -26711,6 +27014,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "trxu",
+    "type": "spot",
+    "first_capture": "2026-03-10T00:00:00.000Z",
+    "internal_id": "spot-TRX-U",
+    "symbol": "TRX",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "trxupusdt",
     "type": "spot",
     "first_capture": "2020-09-10T00:00:00.000Z",
@@ -27050,6 +27363,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "uidr",
+    "type": "spot",
+    "first_capture": "2026-03-10T00:00:00.000Z",
+    "internal_id": "spot-U-IDR",
+    "symbol": "U",
+    "denominator": "IDR",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "umabtc",
     "type": "spot",
     "first_capture": "2020-09-09T00:00:00.000Z",
@@ -27241,6 +27564,16 @@
     "symbol": "UNI",
     "denominator": "TRY",
     "contract_type": "spot"
+  },
+  {
+    "id": "uniu",
+    "type": "spot",
+    "first_capture": "2026-03-17T00:00:00.000Z",
+    "internal_id": "spot-UNI-U",
+    "symbol": "UNI",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "uniupusdt",
@@ -28922,6 +29255,16 @@
     "contract_type": "spot"
   },
   {
+    "id": "wlfiu",
+    "type": "spot",
+    "first_capture": "2026-03-17T00:00:00.000Z",
+    "internal_id": "spot-WLFI-U",
+    "symbol": "WLFI",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
     "id": "wlfiusd1",
     "type": "spot",
     "first_capture": "2025-11-13T00:00:00.000Z",
@@ -29210,6 +29553,56 @@
     "symbol": "XAI",
     "denominator": "USDT",
     "contract_type": "spot"
+  },
+  {
+    "id": "xautbtc",
+    "type": "spot",
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "internal_id": "spot-XAUT-BTC",
+    "symbol": "XAUT",
+    "denominator": "BTC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "xauttry",
+    "type": "spot",
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "internal_id": "spot-XAUT-TRY",
+    "symbol": "XAUT",
+    "denominator": "TRY",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "xautu",
+    "type": "spot",
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "internal_id": "spot-XAUT-U",
+    "symbol": "XAUT",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "xautusdc",
+    "type": "spot",
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "internal_id": "spot-XAUT-USDC",
+    "symbol": "XAUT",
+    "denominator": "USDC",
+    "contract_type": "spot",
+    "contract_size": 1.0
+  },
+  {
+    "id": "xautusdt",
+    "type": "spot",
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "internal_id": "spot-XAUT-USDT",
+    "symbol": "XAUT",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "xecbusd",
@@ -30314,6 +30707,16 @@
     "symbol": "ZEC",
     "denominator": "ETH",
     "contract_type": "spot"
+  },
+  {
+    "id": "zecu",
+    "type": "spot",
+    "first_capture": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-ZEC-U",
+    "symbol": "ZEC",
+    "denominator": "U",
+    "contract_type": "spot",
+    "contract_size": 1.0
   },
   {
     "id": "zecusd1",
