@@ -137,6 +137,8 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> None:
         sd.pop("availableSince", None)
         if "availableTo" in sd:
             sd["end_date"] = sd["availableTo"]
+        else:
+            sd["end_date"] = None
 
 
 def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
@@ -144,6 +146,12 @@ def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
         for key in keys:
             if sd.get(key) is None:
                 sd.pop(key, None)
+
+
+def _drop_end_date_if_none(symbols: list[dict]) -> None:
+    for sd in symbols:
+        if sd.get("end_date") is None:
+            sd.pop("end_date", None)
 
 
 def _merge_missing_rows(
@@ -187,13 +195,16 @@ def update(
             if sd.get("type") in allowed_types
         ]
         _normalize_exchange_symbols(exchange, incoming_symbols)
-        _merge_existing_fields(incoming_symbols, existing_by_id)
         _apply_snapshot_metadata(incoming_symbols)
+        _merge_existing_fields(incoming_symbols, existing_by_id)
         for sd in incoming_symbols:
             _enrich(exchange, sd)
 
         # Never drop existing rows if the source omits them.
-        symbols = _merge_missing_rows(incoming_symbols, existing_rows)
+        if isinstance(source, TardisSymbolSource):
+            symbols = incoming_symbols
+        else:
+            symbols = _merge_missing_rows(incoming_symbols, existing_rows)
         symbols.sort(
             key=lambda sd: (
                 sd.get("id", ""),
@@ -202,6 +213,8 @@ def update(
             )
         )
         _drop_none_fields(symbols, {"margin", "delivery_date"})
+        if not isinstance(source, TardisSymbolSource):
+            _drop_end_date_if_none(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")

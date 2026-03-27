@@ -22,7 +22,7 @@ def test_populate_coingecko_metadata_persists_only_verified_ids(
 
     monkeypatch.setattr(
         "integrations.coingecko_metadata.fetch_spot_symbols",
-        lambda timeout_seconds=30: [
+        lambda **_kwargs: [
             {"symbol": "BTCUSDT", "baseAsset": "BTC", "quoteAsset": "USDT", "status": "TRADING"},
             {"symbol": "ETHUSDT", "baseAsset": "ETH", "quoteAsset": "USDT", "status": "TRADING"},
             {"symbol": "DOGEUSDT", "baseAsset": "DOGE", "quoteAsset": "USDT", "status": "TRADING"},
@@ -30,7 +30,7 @@ def test_populate_coingecko_metadata_persists_only_verified_ids(
     )
     monkeypatch.setattr(
         "integrations.coingecko_metadata.fetch_coin_list",
-        lambda timeout_seconds=30: [
+        lambda **_kwargs: [
             {"id": "bitcoin", "symbol": "btc"},
             {"id": "ethereum", "symbol": "eth"},
             {"id": "dogecoin", "symbol": "doge"},
