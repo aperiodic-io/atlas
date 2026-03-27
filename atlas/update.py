@@ -5,9 +5,10 @@ import re
 import sys
 from pathlib import Path
 
-
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import SkipSymbol, parse_contract
@@ -17,7 +18,6 @@ from atlas.update_sources import (
     SymbolSource,
     TardisSymbolSource,
 )
-from dotenv import load_dotenv
 
 _DATA_DIR = Path(__file__).parent / "data"
 
@@ -82,20 +82,7 @@ def _merge_existing_fields(
         if existing is None:
             continue
         for key, value in existing.items():
-            if ignore_metadata and key in {
-                "availableTo",
-                "end_date",
-                "availableSince",
-                "first_capture",
-            }:
-                continue
-            # handle legacy field name migration
-            effective_key = (
-                "end_date"
-                if key == "availableTo"
-                else "first_capture" if key == "availableSince" else key
-            )
-            sd.setdefault(effective_key, value)
+            sd.setdefault(key, value)
 
 
 def _enrich(exchange: str, sd: dict) -> None:
@@ -120,7 +107,9 @@ def _enrich(exchange: str, sd: dict) -> None:
         sd.update(_NONE)
 
 
-def _normalize_binance_derivative_type(symbol_id: str, current_type: str | None) -> str | None:
+def _normalize_binance_derivative_type(
+    symbol_id: str, current_type: str | None
+) -> str | None:
     sid = symbol_id.upper()
     if "_PERP" in sid or sid.endswith("PERP"):
         return "perpetual"
@@ -265,4 +254,3 @@ if __name__ == "__main__":
         source = HybridSymbolSource()
 
     update(exchanges, source=source)
-
