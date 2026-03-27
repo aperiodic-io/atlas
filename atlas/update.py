@@ -70,7 +70,9 @@ def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
     return rows, {row["id"]: row for row in rows}
 
 
-def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+def _merge_existing_fields(
+    symbols: list[dict], existing_by_id: dict[str, dict], ignore_metadata: bool = False
+) -> None:
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence; existing values fill only missing keys.
@@ -80,7 +82,20 @@ def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict])
         if existing is None:
             continue
         for key, value in existing.items():
-            sd.setdefault(key, value)
+            if ignore_metadata and key in {
+                "availableTo",
+                "end_date",
+                "availableSince",
+                "first_capture",
+            }:
+                continue
+            # handle legacy field name migration
+            effective_key = (
+                "end_date"
+                if key == "availableTo"
+                else "first_capture" if key == "availableSince" else key
+            )
+            sd.setdefault(effective_key, value)
 
 
 def _enrich(exchange: str, sd: dict) -> None:
@@ -130,13 +145,9 @@ def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> None:
 def _apply_snapshot_metadata(symbols: list[dict]) -> None:
     for sd in symbols:
         if "availableSince" in sd:
-            sd["first_capture"] = sd["availableSince"]
-        # Persist the normalized project field name, not raw Tardis key.
-        sd.pop("availableSince", None)
+            sd["first_capture"] = sd.pop("availableSince")
         if "availableTo" in sd:
-            sd["end_date"] = sd["availableTo"]
-        else:
-            sd["end_date"] = None
+            sd["end_date"] = sd.pop("availableTo")
 
 
 def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
@@ -144,12 +155,6 @@ def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
         for key in keys:
             if sd.get(key) is None:
                 sd.pop(key, None)
-
-
-def _drop_end_date_if_none(symbols: list[dict]) -> None:
-    for sd in symbols:
-        if sd.get("end_date") is None:
-            sd.pop("end_date", None)
 
 
 def _merge_missing_rows(
@@ -192,9 +197,14 @@ def update(
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
         ]
+
+        is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
+
         _normalize_exchange_symbols(exchange, incoming_symbols)
         _apply_snapshot_metadata(incoming_symbols)
-        _merge_existing_fields(incoming_symbols, existing_by_id)
+        _merge_existing_fields(
+            incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
+        )
         for sd in incoming_symbols:
             _enrich(exchange, sd)
 
@@ -210,9 +220,7 @@ def update(
                 sd.get("end_date") or "",
             )
         )
-        _drop_none_fields(symbols, {"margin", "delivery_date"})
-        if not isinstance(source, TardisSymbolSource):
-            _drop_end_date_if_none(symbols)
+        _drop_none_fields(symbols, {"margin", "delivery_date", "end_date"})
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")
