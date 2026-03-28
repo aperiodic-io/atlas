@@ -861,6 +861,17 @@
     "delivery_date": "2026-06-26T00:00:00"
   },
   {
+    "id": "bnbusd_260925",
+    "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "internal_id": "future-BNB-USD:BNB-20260925",
+    "symbol": "BNB",
+    "denominator": "USD",
+    "margin": "BNB",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
+  },
+  {
     "id": "bnbusd_perp",
     "type": "perpetual",
     "first_capture": "2020-08-21T00:00:00.000Z",
@@ -1155,6 +1166,17 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00"
+  },
+  {
+    "id": "btcusd_260925",
+    "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20260925",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
   },
   {
     "id": "btcusd_perp",
@@ -1835,6 +1857,17 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00"
+  },
+  {
+    "id": "ethusd_260925",
+    "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20260925",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
   },
   {
     "id": "ethusd_perp",
@@ -2629,6 +2662,17 @@
     "delivery_date": "2026-06-26T00:00:00"
   },
   {
+    "id": "solusd_260925",
+    "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "internal_id": "future-SOL-USD:SOL-20260925",
+    "symbol": "SOL",
+    "denominator": "USD",
+    "margin": "SOL",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
+  },
+  {
     "id": "solusd_perp",
     "type": "perpetual",
     "first_capture": "2021-09-02T00:00:00.000Z",
@@ -3028,6 +3072,17 @@
     "margin": "XRP",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00"
+  },
+  {
+    "id": "xrpusd_260925",
+    "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "internal_id": "future-XRP-USD:XRP-20260925",
+    "symbol": "XRP",
+    "denominator": "USD",
+    "margin": "XRP",
+    "contract_type": "future",
+    "delivery_date": "2026-09-25T00:00:00"
   },
   {
     "id": "xrpusd_perp",
