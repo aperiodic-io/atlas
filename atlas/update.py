@@ -141,11 +141,16 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> None:
             sd["end_date"] = sd.pop("availableTo")
 
 
-def _drop_none_fields(symbols: list[dict], keys: set[str]) -> None:
+def _drop_none_fields(symbols: list[dict], keys: set[str] | None = None) -> None:
     for sd in symbols:
-        for key in keys:
-            if sd.get(key) is None:
-                sd.pop(key, None)
+        if keys is not None:
+            for k in keys:
+                if sd.get(k) is None and k in sd:
+                    sd.pop(k)
+        else:
+            to_remove = [k for k, v in sd.items() if v is None]
+            for k in to_remove:
+                sd.pop(k, None)
 
 
 def _merge_missing_rows(
@@ -211,7 +216,7 @@ def update(
                 sd.get("end_date") or "",
             )
         )
-        _drop_none_fields(symbols, {"margin", "delivery_date", "end_date"})
+        _drop_none_fields(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")
