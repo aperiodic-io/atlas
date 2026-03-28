@@ -77,11 +77,14 @@ def _merge_existing_fields(
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence; existing values fill only missing keys.
     """
+    metadata_keys = {"first_capture", "end_date"}
     for sd in symbols:
         existing = existing_by_id.get(sd.get("id"))
         if existing is None:
             continue
         for key, value in existing.items():
+            if ignore_metadata and key in metadata_keys:
+                continue
             sd.setdefault(key, value)
 
 
