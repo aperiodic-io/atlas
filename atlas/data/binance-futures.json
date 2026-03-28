@@ -186,6 +186,7 @@
     "id": "1000whyusdt",
     "type": "perpetual",
     "first_capture": "2024-11-25T00:00:00.000Z",
+    "end_date": "2026-03-18T00:00:00.000Z",
     "internal_id": "perpetual-1000WHY-USDT:USDT",
     "symbol": "1000WHY",
     "denominator": "USDT",
@@ -268,6 +269,7 @@
     "id": "a2zusdt",
     "type": "perpetual",
     "first_capture": "2025-07-30T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-A2Z-USDT:USDT",
     "symbol": "A2Z",
     "denominator": "USDT",
@@ -1258,6 +1260,7 @@
     "id": "bdxnusdt",
     "type": "perpetual",
     "first_capture": "2025-06-03T00:00:00.000Z",
+    "end_date": "2026-03-18T00:00:00.000Z",
     "internal_id": "perpetual-BDXN-USDT:USDT",
     "symbol": "BDXN",
     "denominator": "USDT",
@@ -1573,6 +1576,7 @@
   {
     "id": "bsbusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-BSB-USDT:USDT",
     "symbol": "BSB",
     "denominator": "USDT",
@@ -1941,6 +1945,7 @@
   {
     "id": "btcusdt_260925",
     "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
     "internal_id": "future-BTC-USDT:USDT-20260925",
     "symbol": "BTC",
     "denominator": "USDT",
@@ -2094,6 +2099,7 @@
   {
     "id": "cfgusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-16T00:00:00.000Z",
     "internal_id": "perpetual-CFG-USDT:USDT",
     "symbol": "CFG",
     "denominator": "USDT",
@@ -2277,6 +2283,7 @@
   {
     "id": "copperusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-06T00:00:00.000Z",
     "internal_id": "perpetual-COPPER-USDT:USDT",
     "symbol": "COPPER",
     "denominator": "USDT",
@@ -2768,6 +2775,7 @@
   {
     "id": "edgeusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-19T00:00:00.000Z",
     "internal_id": "perpetual-EDGE-USDT:USDT",
     "symbol": "EDGE",
     "denominator": "USDT",
@@ -3273,6 +3281,7 @@
   {
     "id": "ethusdt_260925",
     "type": "future",
+    "first_capture": "2026-03-27T00:00:00.000Z",
     "internal_id": "future-ETH-USDT:USDT-20260925",
     "symbol": "ETH",
     "denominator": "USDT",
@@ -3313,6 +3322,7 @@
   {
     "id": "ewjusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-19T00:00:00.000Z",
     "internal_id": "perpetual-EWJ-USDT:USDT",
     "symbol": "EWJ",
     "denominator": "USDT",
@@ -3322,6 +3332,7 @@
   {
     "id": "ewyusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-16T00:00:00.000Z",
     "internal_id": "perpetual-EWY-USDT:USDT",
     "symbol": "EWY",
     "denominator": "USDT",
@@ -3536,6 +3547,7 @@
     "id": "forthusdt",
     "type": "perpetual",
     "first_capture": "2025-04-08T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-FORTH-USDT:USDT",
     "symbol": "FORTH",
     "denominator": "USDT",
@@ -3777,6 +3789,7 @@
   {
     "id": "googlusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-26T00:00:00.000Z",
     "internal_id": "perpetual-GOOGL-USDT:USDT",
     "symbol": "GOOGL",
     "denominator": "USDT",
@@ -4039,6 +4052,7 @@
     "id": "hookusdt",
     "type": "perpetual",
     "first_capture": "2023-01-23T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-HOOK-USDT:USDT",
     "symbol": "HOOK",
     "denominator": "USDT",
@@ -4430,6 +4444,7 @@
   {
     "id": "katusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-02T00:00:00.000Z",
     "internal_id": "perpetual-KAT-USDT:USDT",
     "symbol": "KAT",
     "denominator": "USDT",
@@ -4772,6 +4787,7 @@
     "id": "lrcusdt",
     "type": "perpetual",
     "first_capture": "2020-10-19T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-LRC-USDT:USDT",
     "symbol": "LRC",
     "denominator": "USDT",
@@ -4925,6 +4941,7 @@
   {
     "id": "mantrausdt",
     "type": "perpetual",
+    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "perpetual-MANTRA-USDT:USDT",
     "symbol": "MANTRA",
     "denominator": "USDT",
@@ -5080,6 +5097,7 @@
   {
     "id": "metausdt",
     "type": "perpetual",
+    "first_capture": "2026-03-26T00:00:00.000Z",
     "internal_id": "perpetual-META-USDT:USDT",
     "symbol": "META",
     "denominator": "USDT",
@@ -5486,6 +5504,7 @@
     "id": "ntrnusdt",
     "type": "perpetual",
     "first_capture": "2023-11-14T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-NTRN-USDT:USDT",
     "symbol": "NTRN",
     "denominator": "USDT",
@@ -5517,6 +5536,7 @@
   {
     "id": "nvdausdt",
     "type": "perpetual",
+    "first_capture": "2026-03-26T00:00:00.000Z",
     "internal_id": "perpetual-NVDA-USDT:USDT",
     "symbol": "NVDA",
     "denominator": "USDT",
@@ -5782,6 +5802,7 @@
   {
     "id": "paypusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-23T00:00:00.000Z",
     "internal_id": "perpetual-PAYP-USDT:USDT",
     "symbol": "PAYP",
     "denominator": "USDT",
@@ -6219,6 +6240,7 @@
     "id": "rdntusdt",
     "type": "perpetual",
     "first_capture": "2023-04-05T00:00:00.000Z",
+    "end_date": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-RDNT-USDT:USDT",
     "symbol": "RDNT",
     "denominator": "USDT",
@@ -7675,6 +7697,7 @@
     "id": "vfyusdt",
     "type": "perpetual",
     "first_capture": "2025-09-30T00:00:00.000Z",
+    "end_date": "2026-03-18T00:00:00.000Z",
     "internal_id": "perpetual-VFY-USDT:USDT",
     "symbol": "VFY",
     "denominator": "USDT",
@@ -7928,6 +7951,7 @@
   {
     "id": "xautusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-26T00:00:00.000Z",
     "internal_id": "perpetual-XAUT-USDT:USDT",
     "symbol": "XAUT",
     "denominator": "USDT",
@@ -8333,6 +8357,7 @@
   {
     "id": "\u9f99\u867eusdt",
     "type": "perpetual",
+    "first_capture": "2026-03-11T00:00:00.000Z",
     "internal_id": "perpetual-\u9f99\u867e-USDT:USDT",
     "symbol": "\u9f99\u867e",
     "denominator": "USDT",
