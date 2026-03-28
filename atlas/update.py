@@ -141,11 +141,16 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> None:
             sd["end_date"] = sd.pop("availableTo")
 
 
-def _drop_none_fields(symbols: list[dict]) -> None:
+def _drop_none_fields(symbols: list[dict], keys: set[str] | None = None) -> None:
     for sd in symbols:
-        to_remove = [k for k, v in sd.items() if v is None]
-        for k in to_remove:
-            sd.pop(k, None)
+        if keys is not None:
+            for k in keys:
+                if sd.get(k) is None and k in sd:
+                    sd.pop(k)
+        else:
+            to_remove = [k for k, v in sd.items() if v is None]
+            for k in to_remove:
+                sd.pop(k, None)
 
 
 def _merge_missing_rows(
