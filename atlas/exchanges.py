@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
@@ -64,6 +65,7 @@ class ExchangeDefinition:
     beta: bool
     tardis_id: str
     exchange_fetcher: ExchangeFetcher | None = None
+    symbol_filter: Callable[[dict], bool] | None = None
 
 
 def _is_stable_exchange(exchange: str) -> bool:
@@ -76,13 +78,20 @@ def _define(
     *,
     tardis_id: str | None = None,
     exchange_fetcher: ExchangeFetcher | None = None,
+    symbol_filter: Callable[[dict], bool] | None = None,
 ) -> ExchangeDefinition:
     return ExchangeDefinition(
         parser=parser,
         beta=not _is_stable_exchange(exchange),
         tardis_id=tardis_id or exchange,
         exchange_fetcher=exchange_fetcher,
+        symbol_filter=symbol_filter,
     )
+
+
+def hyperliquid_filter(sd: dict) -> bool:
+    sid = sd.get("id", "")
+    return not re.match(r"^@\d+$", sid)
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
@@ -140,12 +149,14 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_hyperliquid,
         tardis_id="hyperliquid",
         exchange_fetcher=fetch_hyperliquid_spot,
+        symbol_filter=hyperliquid_filter,
     ),
     "hyperliquid-perps": _define(
         "hyperliquid-perps",
         parse_hyperliquid,
         tardis_id="hyperliquid",
         exchange_fetcher=fetch_hyperliquid_perps,
+        symbol_filter=hyperliquid_filter,
     ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),
@@ -191,3 +202,10 @@ def get_exchange_fetcher(exchange: str) -> ExchangeFetcher | None:
     if definition is None:
         return None
     return definition.exchange_fetcher
+
+
+def get_symbol_filter(exchange: str) -> Callable[[dict], bool] | None:
+    definition = get_exchange_definition(exchange)
+    if definition is None:
+        return None
+    return definition.symbol_filter

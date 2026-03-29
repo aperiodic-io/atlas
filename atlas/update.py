@@ -11,6 +11,7 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
+from atlas.exchanges import get_symbol_filter
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -191,10 +192,12 @@ def update(
             continue
 
         allowed_types = {"spot", "perpetual", "future"}
+        symbol_filter = get_symbol_filter(exchange)
         incoming_symbols = [
             sd
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
+            and (symbol_filter(sd) if symbol_filter else True)
         ]
 
         is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
