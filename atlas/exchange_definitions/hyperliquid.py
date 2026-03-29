@@ -7,9 +7,11 @@ from ..parser_interface import SymbolData
 from .common import SkipSymbol, contract_type, make_contract, resolve_margin
 
 
+import re
+
 def parse_hyperliquid(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    if sid.startswith("@"):
+    if re.match(r"^@\d+$", sid):
         raise SkipSymbol(f"{exchange}: internal index symbol {sid!r} skipped")
 
     ctype = contract_type(sd)
