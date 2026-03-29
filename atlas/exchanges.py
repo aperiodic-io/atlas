@@ -24,8 +24,8 @@ from .exchange_definitions.bybit import (
     parse_bybit_spot,
 )
 from .exchange_definitions.coinbase import parse_coinbase
-from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.crypto_com import parse_crypto_com
+from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.deribit import parse_deribit
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
@@ -66,6 +66,7 @@ class ExchangeDefinition:
     tardis_id: str
     exchange_fetcher: ExchangeFetcher | None = None
     symbol_filter: Callable[[dict], bool] | None = None
+    allowed_types: set[str] | None = None
 
 
 def _is_stable_exchange(exchange: str) -> bool:
@@ -79,6 +80,7 @@ def _define(
     tardis_id: str | None = None,
     exchange_fetcher: ExchangeFetcher | None = None,
     symbol_filter: Callable[[dict], bool] | None = None,
+    allowed_types: set[str] | None = None,
 ) -> ExchangeDefinition:
     return ExchangeDefinition(
         parser=parser,
@@ -86,6 +88,7 @@ def _define(
         tardis_id=tardis_id or exchange,
         exchange_fetcher=exchange_fetcher,
         symbol_filter=symbol_filter,
+        allowed_types=allowed_types,
     )
 
 
@@ -97,7 +100,10 @@ def hyperliquid_filter(sd: dict) -> bool:
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "binance": _define("binance", parse_binance, exchange_fetcher=fetch_binance_spot),
     "binance-spot": _define(
-        "binance-spot", parse_binance, tardis_id="binance", exchange_fetcher=fetch_binance_spot
+        "binance-spot",
+        parse_binance,
+        tardis_id="binance",
+        exchange_fetcher=fetch_binance_spot,
     ),
     "binance-futures": _define(
         "binance-futures",
@@ -124,7 +130,10 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_spot,
     ),
     "bybit-perps": _define(
-        "bybit-perps", parse_bybit, tardis_id="bybit", exchange_fetcher=fetch_bybit_perps
+        "bybit-perps",
+        parse_bybit,
+        tardis_id="bybit",
+        exchange_fetcher=fetch_bybit_perps,
     ),
     "bybit-futures": _define(
         "bybit-futures",
@@ -150,6 +159,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         tardis_id="hyperliquid",
         exchange_fetcher=fetch_hyperliquid_spot,
         symbol_filter=hyperliquid_filter,
+        allowed_types={"spot"},
     ),
     "hyperliquid-perps": _define(
         "hyperliquid-perps",
@@ -157,6 +167,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         tardis_id="hyperliquid",
         exchange_fetcher=fetch_hyperliquid_perps,
         symbol_filter=hyperliquid_filter,
+        allowed_types={"perpetual"},
     ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),
@@ -164,10 +175,16 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         "okx-spot", parse_okex, tardis_id="okex", exchange_fetcher=fetch_okx_spot
     ),
     "okx-perps": _define(
-        "okx-perps", parse_okex_swap, tardis_id="okex-swap", exchange_fetcher=fetch_okx_swap
+        "okx-perps",
+        parse_okex_swap,
+        tardis_id="okex-swap",
+        exchange_fetcher=fetch_okx_swap,
     ),
     "okx-futures": _define(
-        "okx-futures", parse_okex_futures, tardis_id="okex-futures", exchange_fetcher=fetch_okx_futures
+        "okx-futures",
+        parse_okex_futures,
+        tardis_id="okex-futures",
+        exchange_fetcher=fetch_okx_futures,
     ),
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),
@@ -209,3 +226,10 @@ def get_symbol_filter(exchange: str) -> Callable[[dict], bool] | None:
     if definition is None:
         return None
     return definition.symbol_filter
+
+
+def get_allowed_types(exchange: str) -> set[str] | None:
+    definition = get_exchange_definition(exchange)
+    if definition is None:
+        return None
+    return definition.allowed_types
