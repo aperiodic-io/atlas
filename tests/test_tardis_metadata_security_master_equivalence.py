@@ -7,6 +7,7 @@ import pytest
 
 from atlas.database import SecurityMaster
 from atlas.exchange_ids import to_tardis_exchange_id
+from atlas.exchanges import get_symbol_filter
 from atlas.utils import _fetch_exchange
 
 _LEGACY_TO_INTERNAL_EXCHANGE = {
@@ -63,10 +64,12 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
             f"(likely generated from direct exchange APIs): {exchange_file}"
         )
 
+    symbol_filter = get_symbol_filter(exchange)
     live_symbols = [
         s
         for s in _fetch_exchange(exchange).get("availableSymbols", [])
         if s.get("type") in {"spot", "perpetual", "future"}
+        and (symbol_filter(s) if symbol_filter else True)
     ]
     local_start_dates = {
         row["id"]: datetime.fromisoformat(_row_first_capture(row).replace("Z", "+00:00")).replace(

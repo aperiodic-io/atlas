@@ -11,7 +11,7 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
-from atlas.exchanges import get_symbol_filter
+from atlas.exchanges import get_allowed_types, get_symbol_filter
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -73,24 +73,29 @@ def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
 
 def _merge_existing_fields(
     symbols: list[dict], existing_by_id: dict[str, dict], ignore_metadata: bool = False
-) -> None:
+) -> list[dict]:
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence; existing values fill only missing keys.
     """
     metadata_keys = {"first_capture", "end_date"}
+    merged_symbols: list[dict] = []
     for sd in symbols:
         existing = existing_by_id.get(sd.get("id"))
         if existing is None:
+            merged_symbols.append(sd.copy())
             continue
-        for key, value in existing.items():
-            if ignore_metadata and key in metadata_keys:
-                continue
-            sd.setdefault(key, value)
+        existing_values = {
+            key: value
+            for key, value in existing.items()
+            if not (ignore_metadata and key in metadata_keys)
+        }
+        merged_symbols.append({**existing_values, **sd})
+    return merged_symbols
 
 
-def _enrich(exchange: str, sd: dict) -> None:
-    """Add pre-computed Contract fields to a symbol dict in-place."""
+def _enrich(exchange: str, sd: dict) -> dict:
+    """Return a symbol dict enriched with pre-computed Contract fields."""
     _NONE = {
         "internal_id": None,
         "symbol": None,
@@ -102,15 +107,18 @@ def _enrich(exchange: str, sd: dict) -> None:
     }
     try:
         c = parse_contract(exchange, sd)
-        sd["internal_id"] = c.internal_id
-        sd["symbol"] = c.symbol
-        sd["denominator"] = c.denominator
-        sd["margin"] = c.margin
-        sd["contract_type"] = c.contract_type.value
-        sd["contract_size"] = c.contract_size
-        sd["delivery_date"] = c.delivery_date.isoformat() if c.delivery_date else None
+        return {
+            **sd,
+            "internal_id": c.internal_id,
+            "symbol": c.symbol,
+            "denominator": c.denominator,
+            "margin": c.margin,
+            "contract_type": c.contract_type.value,
+            "contract_size": c.contract_size,
+            "delivery_date": c.delivery_date.isoformat() if c.delivery_date else None,
+        }
     except SkipSymbol:
-        sd.update(_NONE)
+        return {**sd, **_NONE}
 
 
 def _normalize_binance_derivative_type(
@@ -127,39 +135,57 @@ def _normalize_binance_derivative_type(
     return current_type
 
 
-def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> None:
+def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> list[dict]:
     if exchange not in {"binance-futures", "binance-futures-cm"}:
-        return
+        return [sd.copy() for sd in symbols]
+    normalized_symbols: list[dict] = []
     for sd in symbols:
         sid = sd.get("id")
         if not sid:
+            normalized_symbols.append(sd.copy())
             continue
-        sd["type"] = _normalize_binance_derivative_type(sid, sd.get("type"))
+        normalized_symbols.append(
+            {
+                **sd,
+                "type": _normalize_binance_derivative_type(sid, sd.get("type")),
+            }
+        )
+    return normalized_symbols
 
 
-def _apply_snapshot_metadata(symbols: list[dict]) -> None:
+def _apply_snapshot_metadata(symbols: list[dict]) -> list[dict]:
+    mapped_symbols: list[dict] = []
     for sd in symbols:
+        mapped = {
+            key: value
+            for key, value in sd.items()
+            if key not in {"availableSince", "availableTo"}
+        }
         if "availableSince" in sd:
-            sd["first_capture"] = sd.pop("availableSince")
+            mapped["first_capture"] = sd["availableSince"]
         if "availableTo" in sd:
-            sd["end_date"] = sd.pop("availableTo")
+            mapped["end_date"] = sd["availableTo"]
+        mapped_symbols.append(mapped)
+    return mapped_symbols
 
 
-def _drop_none_fields(symbols: list[dict], keys: set[str] | None = None) -> None:
+def _drop_none_fields(symbols: list[dict], keys: set[str] | None = None) -> list[dict]:
+    filtered_symbols: list[dict] = []
     for sd in symbols:
         if keys is not None:
-            for k in keys:
-                if sd.get(k) is None and k in sd:
-                    sd.pop(k)
+            filtered_symbols.append(
+                {
+                    key: value
+                    for key, value in sd.items()
+                    if key not in keys or value is not None
+                }
+            )
         else:
-            to_remove = [k for k, v in sd.items() if v is None]
-            for k in to_remove:
-                sd.pop(k, None)
+            filtered_symbols.append({key: value for key, value in sd.items() if value is not None})
+    return filtered_symbols
 
 
-def _merge_missing_rows(
-    incoming_symbols: list[dict], existing_rows: list[dict]
-) -> list[dict]:
+def _merge_missing_rows(incoming_symbols: list[dict], existing_rows: list[dict]) -> list[dict]:
     symbols_by_id: dict[str, dict] = {
         sd["id"]: sd for sd in incoming_symbols if isinstance(sd, dict) and "id" in sd
     }
@@ -191,10 +217,10 @@ def update(
             print(f"  ERROR: {e}", file=sys.stderr)
             continue
 
-        allowed_types = {"spot", "perpetual", "future"}
+        allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
         symbol_filter = get_symbol_filter(exchange)
         incoming_symbols = [
-            sd
+            sd.copy()
             for sd in data.get("availableSymbols", [])
             if sd.get("type") in allowed_types
             and (symbol_filter(sd) if symbol_filter else True)
@@ -202,27 +228,27 @@ def update(
 
         is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
 
-        _normalize_exchange_symbols(exchange, incoming_symbols)
-        _apply_snapshot_metadata(incoming_symbols)
-        _merge_existing_fields(
+        incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
+        incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
+        incoming_symbols = _merge_existing_fields(
             incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
         )
-        for sd in incoming_symbols:
-            _enrich(exchange, sd)
+        incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
         # Never drop existing rows if the source omits them.
         if isinstance(source, TardisSymbolSource):
             symbols = incoming_symbols
         else:
             symbols = _merge_missing_rows(incoming_symbols, existing_rows)
-        symbols.sort(
+        symbols = sorted(
+            symbols,
             key=lambda sd: (
                 sd.get("id", ""),
                 sd.get("first_capture") or "",
                 sd.get("end_date") or "",
             )
         )
-        _drop_none_fields(symbols)
+        symbols = _drop_none_fields(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols → {path.name}")
