@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
@@ -58,8 +59,6 @@ from .parser_interface import Parser
 ExchangeFetcher = Callable[[int], list[dict[str, str]]]
 
 
-import re
-
 @dataclass(frozen=True)
 class ExchangeDefinition:
     parser: Parser
@@ -92,9 +91,7 @@ def _define(
 
 def hyperliquid_filter(sd: dict) -> bool:
     sid = sd.get("id", "")
-    if re.match(r"^@\d+$", sid):
-        return False
-    return True
+    return not re.match(r"^@\d+$", sid)
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
