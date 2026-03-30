@@ -2260,493 +2260,493 @@
   {
     "id": "cash:AMZN",
     "type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z",
     "internal_id": "perpetual-CASH:AMZN-USDC:USDC",
     "symbol": "CASH:AMZN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
     "id": "cash:EWY",
     "type": "perpetual",
-    "first_capture": "2026-03-02T00:00:00.000Z",
     "internal_id": "perpetual-CASH:EWY-USDC:USDC",
     "symbol": "CASH:EWY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-02T00:00:00.000Z"
   },
   {
     "id": "cash:GOLD",
     "type": "perpetual",
-    "first_capture": "2026-02-05T00:00:00.000Z",
     "internal_id": "perpetual-CASH:GOLD-USDC:USDC",
     "symbol": "CASH:GOLD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-05T00:00:00.000Z"
   },
   {
     "id": "cash:GOOGL",
     "type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z",
     "internal_id": "perpetual-CASH:GOOGL-USDC:USDC",
     "symbol": "CASH:GOOGL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
     "id": "cash:HOOD",
     "type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-CASH:HOOD-USDC:USDC",
     "symbol": "CASH:HOOD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "cash:INTC",
     "type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-CASH:INTC-USDC:USDC",
     "symbol": "CASH:INTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "cash:KWEB",
     "type": "perpetual",
-    "first_capture": "2026-03-18T00:00:00.000Z",
     "internal_id": "perpetual-CASH:KWEB-USDC:USDC",
     "symbol": "CASH:KWEB",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-18T00:00:00.000Z"
   },
   {
     "id": "cash:META",
     "type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-CASH:META-USDC:USDC",
     "symbol": "CASH:META",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "cash:MSFT",
     "type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-CASH:MSFT-USDC:USDC",
     "symbol": "CASH:MSFT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "cash:NVDA",
     "type": "perpetual",
-    "first_capture": "2026-01-23T00:00:00.000Z",
     "internal_id": "perpetual-CASH:NVDA-USDC:USDC",
     "symbol": "CASH:NVDA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-23T00:00:00.000Z"
   },
   {
     "id": "cash:SILVER",
     "type": "perpetual",
-    "first_capture": "2026-02-06T00:00:00.000Z",
     "internal_id": "perpetual-CASH:SILVER-USDC:USDC",
     "symbol": "CASH:SILVER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-06T00:00:00.000Z"
   },
   {
     "id": "cash:TSLA",
     "type": "perpetual",
-    "first_capture": "2026-01-22T00:00:00.000Z",
     "internal_id": "perpetual-CASH:TSLA-USDC:USDC",
     "symbol": "CASH:TSLA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-22T00:00:00.000Z"
   },
   {
     "id": "cash:USA500",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-CASH:USA500-USDC:USDC",
     "symbol": "CASH:USA500",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "cash:WTI",
     "type": "perpetual",
-    "first_capture": "2026-03-11T00:00:00.000Z",
     "internal_id": "perpetual-CASH:WTI-USDC:USDC",
     "symbol": "CASH:WTI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-11T00:00:00.000Z"
   },
   {
     "id": "flx:COIN",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-FLX:COIN-USDC:USDC",
     "symbol": "FLX:COIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "flx:COPPER",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-FLX:COPPER-USDC:USDC",
     "symbol": "FLX:COPPER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "flx:CRCL",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-FLX:CRCL-USDC:USDC",
     "symbol": "FLX:CRCL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "flx:GOLD",
     "type": "perpetual",
-    "first_capture": "2025-12-04T00:00:00.000Z",
     "internal_id": "perpetual-FLX:GOLD-USDC:USDC",
     "symbol": "FLX:GOLD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "flx:NVDA",
     "type": "perpetual",
-    "first_capture": "2026-01-21T00:00:00.000Z",
     "internal_id": "perpetual-FLX:NVDA-USDC:USDC",
     "symbol": "FLX:NVDA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-21T00:00:00.000Z"
   },
   {
     "id": "flx:OIL",
     "type": "perpetual",
-    "first_capture": "2026-01-09T00:00:00.000Z",
     "internal_id": "perpetual-FLX:OIL-USDC:USDC",
     "symbol": "FLX:OIL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-09T00:00:00.000Z"
   },
   {
     "id": "flx:PALLADIUM",
     "type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-FLX:PALLADIUM-USDC:USDC",
     "symbol": "FLX:PALLADIUM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "flx:PLATINUM",
     "type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z",
     "internal_id": "perpetual-FLX:PLATINUM-USDC:USDC",
     "symbol": "FLX:PLATINUM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
     "id": "flx:SILVER",
     "type": "perpetual",
-    "first_capture": "2025-12-05T00:00:00.000Z",
     "internal_id": "perpetual-FLX:SILVER-USDC:USDC",
     "symbol": "FLX:SILVER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "flx:TSLA",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-FLX:TSLA-USDC:USDC",
     "symbol": "FLX:TSLA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "flx:USA500",
     "type": "perpetual",
-    "first_capture": "2026-03-10T00:00:00.000Z",
     "internal_id": "perpetual-FLX:USA500-USDC:USDC",
     "symbol": "FLX:USA500",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-10T00:00:00.000Z"
   },
   {
     "id": "flx:USDE",
     "type": "perpetual",
-    "first_capture": "2026-02-19T00:00:00.000Z",
     "internal_id": "perpetual-FLX:USDE-USDC:USDC",
     "symbol": "FLX:USDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-19T00:00:00.000Z"
   },
   {
     "id": "flx:XMR",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-FLX:XMR-USDC:USDC",
     "symbol": "FLX:XMR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "hyna:1000PEPE",
     "type": "perpetual",
-    "first_capture": "2026-02-11T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:1000PEPE-USDC:USDC",
     "symbol": "HYNA:1000PEPE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "hyna:ADA",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:ADA-USDC:USDC",
     "symbol": "HYNA:ADA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:BCH",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:BCH-USDC:USDC",
     "symbol": "HYNA:BCH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:BNB",
     "type": "perpetual",
-    "first_capture": "2026-01-07T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:BNB-USDC:USDC",
     "symbol": "HYNA:BNB",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-07T00:00:00.000Z"
   },
   {
     "id": "hyna:BTC",
     "type": "perpetual",
-    "first_capture": "2025-12-03T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:BTC-USDC:USDC",
     "symbol": "HYNA:BTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-03T00:00:00.000Z"
   },
   {
     "id": "hyna:DOGE",
     "type": "perpetual",
-    "first_capture": "2026-01-09T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:DOGE-USDC:USDC",
     "symbol": "HYNA:DOGE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-09T00:00:00.000Z"
   },
   {
     "id": "hyna:ENA",
     "type": "perpetual",
-    "first_capture": "2026-01-19T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:ENA-USDC:USDC",
     "symbol": "HYNA:ENA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-19T00:00:00.000Z"
   },
   {
     "id": "hyna:ETH",
     "type": "perpetual",
-    "first_capture": "2025-12-03T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:ETH-USDC:USDC",
     "symbol": "HYNA:ETH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-03T00:00:00.000Z"
   },
   {
     "id": "hyna:FARTCOIN",
     "type": "perpetual",
-    "first_capture": "2026-01-14T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:FARTCOIN-USDC:USDC",
     "symbol": "HYNA:FARTCOIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "hyna:HYPE",
     "type": "perpetual",
-    "first_capture": "2025-12-03T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:HYPE-USDC:USDC",
     "symbol": "HYNA:HYPE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-03T00:00:00.000Z"
   },
   {
     "id": "hyna:IP",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:IP-USDC:USDC",
     "symbol": "HYNA:IP",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:LIGHTER",
     "type": "perpetual",
-    "first_capture": "2025-12-22T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:LIGHTER-USDC:USDC",
     "symbol": "HYNA:LIGHTER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-22T00:00:00.000Z"
   },
   {
     "id": "hyna:LINK",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:LINK-USDC:USDC",
     "symbol": "HYNA:LINK",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:LIT",
     "type": "perpetual",
-    "first_capture": "2025-12-21T00:00:00.000Z",
-    "end_date": "2025-12-23T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:LIT-USDC:USDC",
     "symbol": "HYNA:LIT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-21T00:00:00.000Z",
+    "end_date": "2025-12-23T00:00:00.000Z"
   },
   {
     "id": "hyna:LTC",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:LTC-USDC:USDC",
     "symbol": "HYNA:LTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:PUMP",
     "type": "perpetual",
-    "first_capture": "2026-01-15T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:PUMP-USDC:USDC",
     "symbol": "HYNA:PUMP",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-15T00:00:00.000Z"
   },
   {
     "id": "hyna:SOL",
     "type": "perpetual",
-    "first_capture": "2025-12-07T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:SOL-USDC:USDC",
     "symbol": "HYNA:SOL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "hyna:SUI",
     "type": "perpetual",
-    "first_capture": "2026-01-12T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:SUI-USDC:USDC",
     "symbol": "HYNA:SUI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-12T00:00:00.000Z"
   },
   {
     "id": "hyna:XMR",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:XMR-USDC:USDC",
     "symbol": "HYNA:XMR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:XPL",
     "type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:XPL-USDC:USDC",
     "symbol": "HYNA:XPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
     "id": "hyna:XRP",
     "type": "perpetual",
-    "first_capture": "2026-01-05T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:XRP-USDC:USDC",
     "symbol": "HYNA:XRP",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-05T00:00:00.000Z"
   },
   {
     "id": "hyna:ZEC",
     "type": "perpetual",
-    "first_capture": "2025-12-15T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:ZEC-USDC:USDC",
     "symbol": "HYNA:ZEC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-15T00:00:00.000Z"
   },
   {
     "id": "kBONK",
@@ -2822,751 +2822,751 @@
   {
     "id": "km:AAPL",
     "type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-KM:AAPL-USDC:USDC",
     "symbol": "KM:AAPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "km:BABA",
     "type": "perpetual",
-    "first_capture": "2026-01-15T00:00:00.000Z",
     "internal_id": "perpetual-KM:BABA-USDC:USDC",
     "symbol": "KM:BABA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-15T00:00:00.000Z"
   },
   {
     "id": "km:BMNR",
     "type": "perpetual",
-    "first_capture": "2026-03-12T00:00:00.000Z",
     "internal_id": "perpetual-KM:BMNR-USDC:USDC",
     "symbol": "KM:BMNR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-12T00:00:00.000Z"
   },
   {
     "id": "km:GLDMINE",
     "type": "perpetual",
-    "first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-KM:GLDMINE-USDC:USDC",
     "symbol": "KM:GLDMINE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "km:GOLD",
     "type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-KM:GOLD-USDC:USDC",
     "symbol": "KM:GOLD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "km:GOOGL",
     "type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-KM:GOOGL-USDC:USDC",
     "symbol": "KM:GOOGL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "km:MU",
     "type": "perpetual",
-    "first_capture": "2026-02-24T00:00:00.000Z",
     "internal_id": "perpetual-KM:MU-USDC:USDC",
     "symbol": "KM:MU",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-24T00:00:00.000Z"
   },
   {
     "id": "km:NVDA",
     "type": "perpetual",
-    "first_capture": "2026-02-11T00:00:00.000Z",
     "internal_id": "perpetual-KM:NVDA-USDC:USDC",
     "symbol": "KM:NVDA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "km:PLTR",
     "type": "perpetual",
-    "first_capture": "2026-02-24T00:00:00.000Z",
     "internal_id": "perpetual-KM:PLTR-USDC:USDC",
     "symbol": "KM:PLTR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-24T00:00:00.000Z"
   },
   {
     "id": "km:RTX",
     "type": "perpetual",
-    "first_capture": "2026-03-10T00:00:00.000Z",
     "internal_id": "perpetual-KM:RTX-USDC:USDC",
     "symbol": "KM:RTX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-10T00:00:00.000Z"
   },
   {
     "id": "km:SEMI",
     "type": "perpetual",
-    "first_capture": "2026-02-26T00:00:00.000Z",
     "internal_id": "perpetual-KM:SEMI-USDC:USDC",
     "symbol": "KM:SEMI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-26T00:00:00.000Z"
   },
   {
     "id": "km:SILVER",
     "type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z",
     "internal_id": "perpetual-KM:SILVER-USDC:USDC",
     "symbol": "KM:SILVER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-28T00:00:00.000Z"
   },
   {
     "id": "km:SMALL2000",
     "type": "perpetual",
-    "first_capture": "2026-01-14T00:00:00.000Z",
     "internal_id": "perpetual-KM:SMALL2000-USDC:USDC",
     "symbol": "KM:SMALL2000",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "km:TSLA",
     "type": "perpetual",
-    "first_capture": "2026-01-16T00:00:00.000Z",
     "internal_id": "perpetual-KM:TSLA-USDC:USDC",
     "symbol": "KM:TSLA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-16T00:00:00.000Z"
   },
   {
     "id": "km:US500",
     "type": "perpetual",
-    "first_capture": "2026-01-12T00:00:00.000Z",
     "internal_id": "perpetual-KM:US500-USDC:USDC",
     "symbol": "KM:US500",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-12T00:00:00.000Z"
   },
   {
     "id": "km:USBOND",
     "type": "perpetual",
-    "first_capture": "2026-01-21T00:00:00.000Z",
     "internal_id": "perpetual-KM:USBOND-USDC:USDC",
     "symbol": "KM:USBOND",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-21T00:00:00.000Z"
   },
   {
     "id": "km:USENERGY",
     "type": "perpetual",
-    "first_capture": "2026-02-04T00:00:00.000Z",
     "internal_id": "perpetual-KM:USENERGY-USDC:USDC",
     "symbol": "KM:USENERGY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-04T00:00:00.000Z"
   },
   {
     "id": "km:USOIL",
     "type": "perpetual",
-    "first_capture": "2026-01-22T00:00:00.000Z",
     "internal_id": "perpetual-KM:USOIL-USDC:USDC",
     "symbol": "KM:USOIL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-22T00:00:00.000Z"
   },
   {
     "id": "km:USTECH",
     "type": "perpetual",
-    "first_capture": "2026-01-13T00:00:00.000Z",
     "internal_id": "perpetual-KM:USTECH-USDC:USDC",
     "symbol": "KM:USTECH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-13T00:00:00.000Z"
   },
   {
     "id": "vntl:ANTHROPIC",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:ANTHROPIC-USDC:USDC",
     "symbol": "VNTL:ANTHROPIC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "vntl:BIOTECH",
     "type": "perpetual",
-    "first_capture": "2026-02-02T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:BIOTECH-USDC:USDC",
     "symbol": "VNTL:BIOTECH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-02T00:00:00.000Z"
   },
   {
     "id": "vntl:DEFENSE",
     "type": "perpetual",
-    "first_capture": "2026-01-30T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:DEFENSE-USDC:USDC",
     "symbol": "VNTL:DEFENSE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-30T00:00:00.000Z"
   },
   {
     "id": "vntl:ENERGY",
     "type": "perpetual",
-    "first_capture": "2026-02-02T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:ENERGY-USDC:USDC",
     "symbol": "VNTL:ENERGY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-02T00:00:00.000Z"
   },
   {
     "id": "vntl:INFOTECH",
     "type": "perpetual",
-    "first_capture": "2026-01-08T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:INFOTECH-USDC:USDC",
     "symbol": "VNTL:INFOTECH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-08T00:00:00.000Z"
   },
   {
     "id": "vntl:MAG7",
     "type": "perpetual",
-    "first_capture": "2025-12-10T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:MAG7-USDC:USDC",
     "symbol": "VNTL:MAG7",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-10T00:00:00.000Z"
   },
   {
     "id": "vntl:NUCLEAR",
     "type": "perpetual",
-    "first_capture": "2026-01-30T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:NUCLEAR-USDC:USDC",
     "symbol": "VNTL:NUCLEAR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-30T00:00:00.000Z"
   },
   {
     "id": "vntl:OPENAI",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:OPENAI-USDC:USDC",
     "symbol": "VNTL:OPENAI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "vntl:ROBOT",
     "type": "perpetual",
-    "first_capture": "2026-01-07T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:ROBOT-USDC:USDC",
     "symbol": "VNTL:ROBOT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-07T00:00:00.000Z"
   },
   {
     "id": "vntl:SEMIS",
     "type": "perpetual",
-    "first_capture": "2026-01-06T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:SEMIS-USDC:USDC",
     "symbol": "VNTL:SEMIS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-06T00:00:00.000Z"
   },
   {
     "id": "vntl:SPACEX",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:SPACEX-USDC:USDC",
     "symbol": "VNTL:SPACEX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:AAPL",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:AAPL-USDC:USDC",
     "symbol": "XYZ:AAPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:AMD",
     "type": "perpetual",
-    "first_capture": "2025-12-04T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:AMD-USDC:USDC",
     "symbol": "XYZ:AMD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "xyz:AMZN",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:AMZN-USDC:USDC",
     "symbol": "XYZ:AMZN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:BABA",
     "type": "perpetual",
-    "first_capture": "2026-01-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BABA-USDC:USDC",
     "symbol": "XYZ:BABA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-15T00:00:00.000Z"
   },
   {
     "id": "xyz:BRENTOIL",
     "type": "perpetual",
-    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BRENTOIL-USDC:USDC",
     "symbol": "XYZ:BRENTOIL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-04T00:00:00.000Z"
   },
   {
     "id": "xyz:CL",
     "type": "perpetual",
-    "first_capture": "2026-01-06T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CL-USDC:USDC",
     "symbol": "XYZ:CL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-06T00:00:00.000Z"
   },
   {
     "id": "xyz:COIN",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:COIN-USDC:USDC",
     "symbol": "XYZ:COIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:COPPER",
     "type": "perpetual",
-    "first_capture": "2026-01-14T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:COPPER-USDC:USDC",
     "symbol": "XYZ:COPPER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "xyz:COST",
     "type": "perpetual",
-    "first_capture": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:COST-USDC:USDC",
     "symbol": "XYZ:COST",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-25T00:00:00.000Z"
   },
   {
     "id": "xyz:CRCL",
     "type": "perpetual",
-    "first_capture": "2025-12-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CRCL-USDC:USDC",
     "symbol": "XYZ:CRCL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-15T00:00:00.000Z"
   },
   {
     "id": "xyz:CRWV",
     "type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CRWV-USDC:USDC",
     "symbol": "XYZ:CRWV",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
     "id": "xyz:DKNG",
     "type": "perpetual",
-    "first_capture": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:DKNG-USDC:USDC",
     "symbol": "XYZ:DKNG",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-25T00:00:00.000Z"
   },
   {
     "id": "xyz:EUR",
     "type": "perpetual",
-    "first_capture": "2025-12-23T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:EUR-USDC:USDC",
     "symbol": "XYZ:EUR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-23T00:00:00.000Z"
   },
   {
     "id": "xyz:EWJ",
     "type": "perpetual",
-    "first_capture": "2026-03-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:EWJ-USDC:USDC",
     "symbol": "XYZ:EWJ",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-02T00:00:00.000Z"
   },
   {
     "id": "xyz:EWY",
     "type": "perpetual",
-    "first_capture": "2026-03-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:EWY-USDC:USDC",
     "symbol": "XYZ:EWY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-02T00:00:00.000Z"
   },
   {
     "id": "xyz:GOLD",
     "type": "perpetual",
-    "first_capture": "2025-12-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:GOLD-USDC:USDC",
     "symbol": "XYZ:GOLD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-22T00:00:00.000Z"
   },
   {
     "id": "xyz:GOOGL",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:GOOGL-USDC:USDC",
     "symbol": "XYZ:GOOGL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:HIMS",
     "type": "perpetual",
-    "first_capture": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:HIMS-USDC:USDC",
     "symbol": "XYZ:HIMS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-25T00:00:00.000Z"
   },
   {
     "id": "xyz:HOOD",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:HOOD-USDC:USDC",
     "symbol": "XYZ:HOOD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:HYUNDAI",
     "type": "perpetual",
-    "first_capture": "2026-02-20T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:HYUNDAI-USDC:USDC",
     "symbol": "XYZ:HYUNDAI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-20T00:00:00.000Z"
   },
   {
     "id": "xyz:INTC",
     "type": "perpetual",
-    "first_capture": "2025-12-03T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:INTC-USDC:USDC",
     "symbol": "XYZ:INTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-03T00:00:00.000Z"
   },
   {
     "id": "xyz:JPY",
     "type": "perpetual",
-    "first_capture": "2025-12-23T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:JPY-USDC:USDC",
     "symbol": "XYZ:JPY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-23T00:00:00.000Z"
   },
   {
     "id": "xyz:LLY",
     "type": "perpetual",
-    "first_capture": "2026-03-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:LLY-USDC:USDC",
     "symbol": "XYZ:LLY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-25T00:00:00.000Z"
   },
   {
     "id": "xyz:META",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:META-USDC:USDC",
     "symbol": "XYZ:META",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:MSFT",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MSFT-USDC:USDC",
     "symbol": "XYZ:MSFT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:MSTR",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MSTR-USDC:USDC",
     "symbol": "XYZ:MSTR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:MU",
     "type": "perpetual",
-    "first_capture": "2025-12-19T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MU-USDC:USDC",
     "symbol": "XYZ:MU",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-19T00:00:00.000Z"
   },
   {
     "id": "xyz:NATGAS",
     "type": "perpetual",
-    "first_capture": "2026-01-21T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NATGAS-USDC:USDC",
     "symbol": "XYZ:NATGAS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-21T00:00:00.000Z"
   },
   {
     "id": "xyz:NFLX",
     "type": "perpetual",
-    "first_capture": "2025-12-08T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NFLX-USDC:USDC",
     "symbol": "XYZ:NFLX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-08T00:00:00.000Z"
   },
   {
     "id": "xyz:NVDA",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NVDA-USDC:USDC",
     "symbol": "XYZ:NVDA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:ORCL",
     "type": "perpetual",
-    "first_capture": "2025-12-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:ORCL-USDC:USDC",
     "symbol": "XYZ:ORCL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "xyz:PALLADIUM",
     "type": "perpetual",
-    "first_capture": "2026-03-04T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:PALLADIUM-USDC:USDC",
     "symbol": "XYZ:PALLADIUM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-04T00:00:00.000Z"
   },
   {
     "id": "xyz:PLATINUM",
     "type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:PLATINUM-USDC:USDC",
     "symbol": "XYZ:PLATINUM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
     "id": "xyz:PLTR",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:PLTR-USDC:USDC",
     "symbol": "XYZ:PLTR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:RIVN",
     "type": "perpetual",
-    "first_capture": "2026-01-14T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:RIVN-USDC:USDC",
     "symbol": "XYZ:RIVN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "xyz:SILVER",
     "type": "perpetual",
-    "first_capture": "2025-12-26T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SILVER-USDC:USDC",
     "symbol": "XYZ:SILVER",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-26T00:00:00.000Z"
   },
   {
     "id": "xyz:SKHX",
     "type": "perpetual",
-    "first_capture": "2026-02-19T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SKHX-USDC:USDC",
     "symbol": "XYZ:SKHX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-19T00:00:00.000Z"
   },
   {
     "id": "xyz:SMSN",
     "type": "perpetual",
-    "first_capture": "2026-02-20T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SMSN-USDC:USDC",
     "symbol": "XYZ:SMSN",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-20T00:00:00.000Z"
   },
   {
     "id": "xyz:SNDK",
     "type": "perpetual",
-    "first_capture": "2026-01-12T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SNDK-USDC:USDC",
     "symbol": "XYZ:SNDK",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-12T00:00:00.000Z"
   },
   {
     "id": "xyz:SP500",
     "type": "perpetual",
-    "first_capture": "2026-03-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SP500-USDC:USDC",
     "symbol": "XYZ:SP500",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-18T00:00:00.000Z"
   },
   {
     "id": "xyz:TSLA",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:TSLA-USDC:USDC",
     "symbol": "XYZ:TSLA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "xyz:TSM",
     "type": "perpetual",
-    "first_capture": "2026-02-03T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:TSM-USDC:USDC",
     "symbol": "XYZ:TSM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-02-03T00:00:00.000Z"
   },
   {
     "id": "xyz:URNM",
     "type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:URNM-USDC:USDC",
     "symbol": "XYZ:URNM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-29T00:00:00.000Z"
   },
   {
     "id": "xyz:USAR",
     "type": "perpetual",
-    "first_capture": "2026-01-26T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:USAR-USDC:USDC",
     "symbol": "XYZ:USAR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-01-26T00:00:00.000Z"
   },
   {
     "id": "xyz:XYZ100",
     "type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:XYZ100-USDC:USDC",
     "symbol": "XYZ:XYZ100",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2025-12-02T00:00:00.000Z"
   }
 ]
