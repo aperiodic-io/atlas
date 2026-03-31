@@ -136,6 +136,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "BASED/USDC",
+    "type": "spot",
+    "internal_id": "spot-BASED-USDC",
+    "symbol": "BASED",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "BAYC/USDC",
     "type": "spot",
     "internal_id": "spot-BAYC-USDC",
@@ -1853,6 +1861,14 @@
     "type": "spot",
     "internal_id": "spot-TSLA-USDC",
     "symbol": "TSLA",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "UAVAX/USDC",
+    "type": "spot",
+    "internal_id": "spot-UAVAX-USDC",
+    "symbol": "UAVAX",
     "denominator": "USDC",
     "contract_type": "spot"
   },
