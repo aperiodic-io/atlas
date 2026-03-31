@@ -620,6 +620,16 @@
     "first_capture": "2025-09-18T00:00:00.000Z"
   },
   {
+    "id": "BASED-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-03-30T00:00:00.000Z",
+    "internal_id": "perpetual-BASED-USDT:USDT",
+    "symbol": "BASED",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "BAT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BAT-USDT:USDT",
