@@ -2276,6 +2276,15 @@
     "first_capture": "2022-10-19T00:00:00.000Z"
   },
   {
+    "id": "aptu",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-APT-U",
+    "symbol": "APT",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
     "id": "aptusdc",
     "type": "spot",
     "internal_id": "spot-APT-USDC",
@@ -9374,6 +9383,15 @@
     "first_capture": "2024-04-02T00:00:00.000Z"
   },
   {
+    "id": "enau",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-ENA-U",
+    "symbol": "ENA",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
     "id": "enausdc",
     "type": "spot",
     "internal_id": "spot-ENA-USDC",
@@ -10689,6 +10707,15 @@
     "denominator": "TRY",
     "contract_type": "spot",
     "first_capture": "2023-01-27T00:00:00.000Z"
+  },
+  {
+    "id": "fetu",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-FET-U",
+    "symbol": "FET",
+    "denominator": "U",
+    "contract_type": "spot"
   },
   {
     "id": "fetusdc",
@@ -18613,6 +18640,15 @@
     "contract_type": "spot",
     "contract_size": 1.0,
     "first_capture": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "nightu",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-NIGHT-U",
+    "symbol": "NIGHT",
+    "denominator": "U",
+    "contract_type": "spot"
   },
   {
     "id": "nightusdc",
@@ -26850,6 +26886,24 @@
     "first_capture": "2025-01-21T00:00:00.000Z"
   },
   {
+    "id": "trumpu",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-TRUMP-U",
+    "symbol": "TRUMP",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
+    "id": "trumpusd1",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-TRUMP-USD1",
+    "symbol": "TRUMP",
+    "denominator": "USD1",
+    "contract_type": "spot"
+  },
+  {
     "id": "trumpusdc",
     "type": "spot",
     "internal_id": "spot-TRUMP-USDC",
@@ -29214,6 +29268,15 @@
     "denominator": "TRY",
     "contract_type": "spot",
     "first_capture": "2023-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "wldu",
+    "type": "spot",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "spot-WLD-U",
+    "symbol": "WLD",
+    "denominator": "U",
+    "contract_type": "spot"
   },
   {
     "id": "wldusdc",

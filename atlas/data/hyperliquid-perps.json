@@ -2428,6 +2428,16 @@
     "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
+    "id": "flx:GAS",
+    "type": "perpetual",
+    "first_capture": "2026-03-31T00:00:00.000Z",
+    "internal_id": "perpetual-FLX:GAS-USDC:USDC",
+    "symbol": "FLX:GAS",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "flx:GOLD",
     "type": "perpetual",
     "internal_id": "perpetual-FLX:GOLD-USDC:USDC",
@@ -2500,12 +2510,12 @@
   {
     "id": "flx:USA100",
     "type": "perpetual",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "perpetual-FLX:USA100-USDC:USDC",
     "symbol": "FLX:USA100",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "flx:USA500",
