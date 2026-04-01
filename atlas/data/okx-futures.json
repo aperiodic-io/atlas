@@ -2388,6 +2388,16 @@
     "end_date": "2023-02-11T00:00:00.000Z"
   },
   {
+    "id": "ADA-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-ADA-USD_UM_XPERP:ADA-20310404",
+    "symbol": "ADA",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ADA",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
+  },
+  {
     "id": "AVAX-USD-220603",
     "type": "future",
     "internal_id": "future-AVAX-USD:AVAX-20220603",
@@ -20578,6 +20588,16 @@
     "delivery_date": "2025-03-07T00:00:00",
     "first_capture": "2024-09-05T00:00:00.000Z",
     "end_date": "2024-09-21T00:00:00.000Z"
+  },
+  {
+    "id": "DOGE-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-DOGE-USD_UM_XPERP:DOGE-20310404",
+    "symbol": "DOGE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "DOGE",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
   },
   {
     "id": "DOGS-USDT-250207",
@@ -45353,6 +45373,16 @@
     "first_capture": "2025-12-12T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-ETH-USD_UM_XPERP:ETH-20310404",
+    "symbol": "ETH",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
+  },
+  {
     "id": "FIL-USD-210416",
     "type": "future",
     "internal_id": "future-FIL-USD:FIL-20210416",
@@ -56800,6 +56830,16 @@
     "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
+    "id": "PEPE-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-PEPE-USD_UM_XPERP:PEPE-20310404",
+    "symbol": "PEPE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "PEPE",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
+  },
+  {
     "id": "PUMP-USDT-260116",
     "type": "future",
     "internal_id": "future-PUMP-USDT:USDT-20260116",
@@ -56810,6 +56850,16 @@
     "delivery_date": "2026-01-16T00:00:00",
     "first_capture": "2025-07-11T00:00:00.000Z",
     "end_date": "2025-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "PUMP-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-PUMP-USD_UM_XPERP:PUMP-20310404",
+    "symbol": "PUMP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "PUMP",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
   },
   {
     "id": "SCR-USDT-250411",
@@ -57194,6 +57244,26 @@
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-10-08T00:00:00.000Z",
     "end_date": "2024-10-09T00:00:00.000Z"
+  },
+  {
+    "id": "SOL-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-SOL-USD_UM_XPERP:SOL-20310404",
+    "symbol": "SOL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SOL",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
+  },
+  {
+    "id": "SUI-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-SUI-USD_UM_XPERP:SUI-20310404",
+    "symbol": "SUI",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SUI",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
   },
   {
     "id": "TRX-USD-190524",
@@ -68158,5 +68228,15 @@
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-14T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z"
+  },
+  {
+    "id": "XRP-USD_UM_XPERP-310404",
+    "type": "future",
+    "internal_id": "future-XRP-USD_UM_XPERP:XRP-20310404",
+    "symbol": "XRP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "XRP",
+    "contract_type": "future",
+    "delivery_date": "2031-04-04T00:00:00"
   }
 ]

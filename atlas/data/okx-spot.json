@@ -1387,11 +1387,11 @@
   {
     "id": "ASP-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-ASP-EUR",
     "symbol": "ASP",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "ASP-USD",
@@ -1405,11 +1405,11 @@
   {
     "id": "ASP-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-ASP-USDC",
     "symbol": "ASP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "ASP-USDT",
@@ -2156,29 +2156,29 @@
   {
     "id": "BASED-TRY",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-BASED-TRY",
     "symbol": "BASED",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "BASED-USD",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-BASED-USD",
     "symbol": "BASED",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "BASED-USDT",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-BASED-USDT",
     "symbol": "BASED",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "BAT-BTC",
@@ -3281,11 +3281,11 @@
   {
     "id": "CC-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-CC-EUR",
     "symbol": "CC",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "CC-TRY",
@@ -3308,11 +3308,11 @@
   {
     "id": "CC-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-CC-USDC",
     "symbol": "CC",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "CC-USDT",
@@ -3712,11 +3712,11 @@
   {
     "id": "CITY-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-CITY-EUR",
     "symbol": "CITY",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "CITY-USD",
@@ -3730,11 +3730,11 @@
   {
     "id": "CITY-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-CITY-USDC",
     "symbol": "CITY",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "CITY-USDT",
@@ -10124,11 +10124,11 @@
   {
     "id": "MENGO-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-MENGO-EUR",
     "symbol": "MENGO",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "MENGO-USD",
@@ -10142,11 +10142,11 @@
   {
     "id": "MENGO-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-MENGO-USDC",
     "symbol": "MENGO",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "MENGO-USDT",
@@ -10900,11 +10900,11 @@
   {
     "id": "NAVX-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-NAVX-EUR",
     "symbol": "NAVX",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "NAVX-USD",
@@ -10918,11 +10918,11 @@
   {
     "id": "NAVX-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-NAVX-USDC",
     "symbol": "NAVX",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "NAVX-USDT",
@@ -11553,11 +11553,11 @@
   {
     "id": "OL-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-OL-EUR",
     "symbol": "OL",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "OL-USD",
@@ -11571,11 +11571,11 @@
   {
     "id": "OL-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-OL-USDC",
     "symbol": "OL",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "OL-USDT",
@@ -12721,11 +12721,11 @@
   {
     "id": "POR-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-POR-EUR",
     "symbol": "POR",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "POR-USD",
@@ -12767,11 +12767,11 @@
   {
     "id": "PRCL-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-PRCL-EUR",
     "symbol": "PRCL",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "PRCL-USD",
@@ -12785,11 +12785,11 @@
   {
     "id": "PRCL-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-PRCL-USDC",
     "symbol": "PRCL",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "PRCL-USDT",
@@ -13796,11 +13796,11 @@
   {
     "id": "S-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-S-EUR",
     "symbol": "S",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "S-USD",
@@ -13814,11 +13814,11 @@
   {
     "id": "S-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-S-USDC",
     "symbol": "S",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "S-USDT",
@@ -14790,11 +14790,11 @@
   {
     "id": "SPACE-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-SPACE-EUR",
     "symbol": "SPACE",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "SPACE-TRY",
@@ -14817,11 +14817,11 @@
   {
     "id": "SPACE-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-SPACE-USDC",
     "symbol": "SPACE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "SPACE-USDT",
@@ -14901,11 +14901,11 @@
   {
     "id": "SPURS-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-SPURS-EUR",
     "symbol": "SPURS",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "SPURS-USD",
@@ -15876,11 +15876,11 @@
   {
     "id": "TRA-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-TRA-EUR",
     "symbol": "TRA",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "TRA-USD",
@@ -18340,11 +18340,11 @@
   {
     "id": "ZAMA-EUR",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-ZAMA-EUR",
     "symbol": "ZAMA",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "ZAMA-TRY",
@@ -18367,11 +18367,11 @@
   {
     "id": "ZAMA-USDC",
     "type": "spot",
-    "first_capture": "2026-03-30T00:00:00.000Z",
     "internal_id": "spot-ZAMA-USDC",
     "symbol": "ZAMA",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
     "id": "ZAMA-USDT",
