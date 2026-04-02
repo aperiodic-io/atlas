@@ -1427,6 +1427,16 @@
     "first_capture": "2025-09-30T00:00:00.000Z"
   },
   {
+    "id": "EDGE-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-EDGE-USDT:USDT",
+    "symbol": "EDGE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "EFI-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-EFI-USDT:USDT",

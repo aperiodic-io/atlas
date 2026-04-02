@@ -2028,6 +2028,16 @@
     "end_date": "2021-12-20T00:00:00.000Z"
   },
   {
+    "id": "bzusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-BZ-USDT:USDT",
+    "symbol": "BZ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "c98usdt",
     "type": "perpetual",
     "internal_id": "perpetual-C98-USDT:USDT",
@@ -2207,6 +2217,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-10-14T00:00:00.000Z"
+  },
+  {
+    "id": "clusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-CL-USDT:USDT",
+    "symbol": "CL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "coaiusdt",
@@ -5360,6 +5380,16 @@
     "first_capture": "2025-07-31T00:00:00.000Z"
   },
   {
+    "id": "natgasusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-NATGAS-USDT:USDT",
+    "symbol": "NATGAS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "nearbusd",
     "type": "perpetual",
     "internal_id": "perpetual-NEAR-BUSD:BUSD",
@@ -6064,6 +6094,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2023-10-27T00:00:00.000Z"
+  },
+  {
+    "id": "prlusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-PRL-USDT:USDT",
+    "symbol": "PRL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "promptusdt",

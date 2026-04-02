@@ -2430,12 +2430,12 @@
   {
     "id": "flx:GAS",
     "type": "perpetual",
-    "first_capture": "2026-03-31T00:00:00.000Z",
     "internal_id": "perpetual-FLX:GAS-USDC:USDC",
     "symbol": "FLX:GAS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-03-31T00:00:00.000Z"
   },
   {
     "id": "flx:GOLD",
@@ -3028,6 +3028,36 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-01-13T00:00:00.000Z"
+  },
+  {
+    "id": "para:BTCD",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:BTCD-USDC:USDC",
+    "symbol": "PARA:BTCD",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "para:OTHERS",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:OTHERS-USDC:USDC",
+    "symbol": "PARA:OTHERS",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
+    "id": "para:TOTAL2",
+    "type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:TOTAL2-USDC:USDC",
+    "symbol": "PARA:TOTAL2",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "vntl:ANTHROPIC",
