@@ -2395,7 +2395,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "ADA",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "AVAX-USD-220603",
@@ -20597,7 +20598,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "DOGE",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "DOGS-USDT-250207",
@@ -45380,7 +45382,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "FIL-USD-210416",
@@ -56837,7 +56840,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "PEPE",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "PUMP-USDT-260116",
@@ -56859,7 +56863,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "PUMP",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "SCR-USDT-250411",
@@ -57253,7 +57258,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "SOL",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "SUI-USD_UM_XPERP-310404",
@@ -57263,7 +57269,8 @@
     "denominator": "USD_UM_XPERP",
     "margin": "SUI",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "TRX-USD-190524",
@@ -68237,6 +68244,7 @@
     "denominator": "USD_UM_XPERP",
     "margin": "XRP",
     "contract_type": "future",
-    "delivery_date": "2031-04-04T00:00:00"
+    "delivery_date": "2031-04-04T00:00:00",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   }
 ]
