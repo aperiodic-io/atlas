@@ -2568,6 +2568,16 @@
     "first_capture": "2026-01-20T00:00:00.000Z"
   },
   {
+    "id": "hyna:BASED",
+    "type": "perpetual",
+    "first_capture": "2026-04-02T00:00:00.000Z",
+    "internal_id": "perpetual-HYNA:BASED-USDC:USDC",
+    "symbol": "HYNA:BASED",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "hyna:BCH",
     "type": "perpetual",
     "internal_id": "perpetual-HYNA:BCH-USDC:USDC",
@@ -3032,32 +3042,32 @@
   {
     "id": "para:BTCD",
     "type": "perpetual",
-    "first_capture": "2026-04-01T00:00:00.000Z",
     "internal_id": "perpetual-PARA:BTCD-USDC:USDC",
     "symbol": "PARA:BTCD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "para:OTHERS",
     "type": "perpetual",
-    "first_capture": "2026-04-01T00:00:00.000Z",
     "internal_id": "perpetual-PARA:OTHERS-USDC:USDC",
     "symbol": "PARA:OTHERS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "para:TOTAL2",
     "type": "perpetual",
-    "first_capture": "2026-04-01T00:00:00.000Z",
     "internal_id": "perpetual-PARA:TOTAL2-USDC:USDC",
     "symbol": "PARA:TOTAL2",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "vntl:ANTHROPIC",
