@@ -984,6 +984,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "LAMA/USDC",
+    "type": "spot",
+    "internal_id": "spot-LAMA-USDC",
+    "symbol": "LAMA",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "LATINA/USDC",
     "type": "spot",
     "internal_id": "spot-LATINA-USDC",

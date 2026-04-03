@@ -858,6 +858,16 @@
     "first_capture": "2025-12-30T00:00:00.000Z"
   },
   {
+    "id": "BSB-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-02T00:00:00.000Z",
+    "internal_id": "perpetual-BSB-USDT:USDT",
+    "symbol": "BSB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "BSV-USD-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BSV-USD:BSV",
@@ -1429,12 +1439,12 @@
   {
     "id": "EDGE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-01T00:00:00.000Z",
     "internal_id": "perpetual-EDGE-USDT:USDT",
     "symbol": "EDGE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
     "id": "EFI-USDT-SWAP",
