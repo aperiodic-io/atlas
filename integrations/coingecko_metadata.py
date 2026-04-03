@@ -187,6 +187,7 @@ def _process_exchange_file(
     verified_by_symbol: dict[str, bool],
     dry_run: bool,
     verification_attempted: int,
+    allow_unverified: bool,
 ) -> tuple[str, dict[str, int]] | None:
     exchange = json_file.stem
     rows = json.loads(json_file.read_text())
@@ -204,7 +205,7 @@ def _process_exchange_file(
             continue
 
         coingecko_id = symbol_to_coingecko.get(symbol.upper())
-        if coingecko_id and verified_by_symbol.get(symbol.upper(), False):
+        if coingecko_id and (allow_unverified or verified_by_symbol.get(symbol.upper(), False)):
             row[COINGECKO_KEY] = coingecko_id
             matched += 1
         elif coingecko_id:
@@ -230,6 +231,7 @@ def populate_coingecko_metadata(
     data_dir: Path,
     exchanges: set[str] | None = None,
     dry_run: bool = False,
+    allow_unverified: bool = False,
     timeout_seconds: int = 30,
     max_verifications: int = 25,
     coingecko_min_interval_seconds: float = 1.2,
@@ -269,6 +271,7 @@ def populate_coingecko_metadata(
             verified_by_symbol,
             dry_run,
             len(symbols_to_verify),
+            allow_unverified,
         )
         if res:
             stats[res[0]] = res[1]
@@ -294,6 +297,11 @@ def main() -> None:
         "--dry-run",
         action="store_true",
         help="Compute and print match stats without writing files.",
+    )
+    parser.add_argument(
+        "--allow-unverified",
+        action="store_true",
+        help="Persist matched coingecko_id values even when price verification was not completed.",
     )
     parser.add_argument(
         "--timeout-seconds",
@@ -325,6 +333,7 @@ def main() -> None:
         data_dir=Path(args.data_dir).expanduser().resolve(),
         exchanges=_parse_exchanges(args.exchanges),
         dry_run=args.dry_run,
+        allow_unverified=args.allow_unverified,
         timeout_seconds=args.timeout_seconds,
         max_verifications=max(args.max_verifications, 0),
         coingecko_min_interval_seconds=max(args.coingecko_min_interval_seconds, 0.0),
