@@ -2570,12 +2570,12 @@
   {
     "id": "hyna:BASED",
     "type": "perpetual",
-    "first_capture": "2026-04-02T00:00:00.000Z",
     "internal_id": "perpetual-HYNA:BASED-USDC:USDC",
     "symbol": "HYNA:BASED",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-02T00:00:00.000Z"
   },
   {
     "id": "hyna:BCH",

@@ -860,12 +860,12 @@
   {
     "id": "BSB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-02T00:00:00.000Z",
     "internal_id": "perpetual-BSB-USDT:USDT",
     "symbol": "BSB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-02T00:00:00.000Z"
   },
   {
     "id": "BSV-USD-SWAP",
