@@ -3180,6 +3180,16 @@
     "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
+    "id": "vntl:WHEAT",
+    "type": "perpetual",
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "internal_id": "perpetual-VNTL:WHEAT-USDC:USDC",
+    "symbol": "VNTL:WHEAT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:AAPL",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:AAPL-USDC:USDC",
