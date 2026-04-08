@@ -279,12 +279,12 @@
   {
     "id": "aaplusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-06T00:00:00.000Z",
     "internal_id": "perpetual-AAPL-USDT:USDT",
     "symbol": "AAPL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-06T00:00:00.000Z"
   },
   {
     "id": "aaveusdc",
@@ -5359,6 +5359,16 @@
     "first_capture": "2025-07-07T00:00:00.000Z"
   },
   {
+    "id": "muusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "internal_id": "perpetual-MU-USDT:USDT",
+    "symbol": "MU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "myrousdt",
     "type": "perpetual",
     "internal_id": "perpetual-MYRO-USDT:USDT",
@@ -6218,12 +6228,12 @@
   {
     "id": "qqqusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-06T00:00:00.000Z",
     "internal_id": "perpetual-QQQ-USDT:USDT",
     "symbol": "QQQ",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-06T00:00:00.000Z"
   },
   {
     "id": "qtumusdt",
@@ -6769,6 +6779,16 @@
     "first_capture": "2023-10-31T00:00:00.000Z"
   },
   {
+    "id": "sndkusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "internal_id": "perpetual-SNDK-USDT:USDT",
+    "symbol": "SNDK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "sntusdt",
     "type": "perpetual",
     "internal_id": "perpetual-SNT-USDT:USDT",
@@ -6923,12 +6943,12 @@
   {
     "id": "spyusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-06T00:00:00.000Z",
     "internal_id": "perpetual-SPY-USDT:USDT",
     "symbol": "SPY",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-06T00:00:00.000Z"
   },
   {
     "id": "sqdusdt",
@@ -7535,12 +7555,12 @@
   {
     "id": "tsmusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-06T00:00:00.000Z",
     "internal_id": "perpetual-TSM-USDT:USDT",
     "symbol": "TSM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-06T00:00:00.000Z"
   },
   {
     "id": "tstusdt",
