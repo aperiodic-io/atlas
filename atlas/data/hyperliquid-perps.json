@@ -3182,12 +3182,12 @@
   {
     "id": "vntl:WHEAT",
     "type": "perpetual",
-    "first_capture": "2026-04-07T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:WHEAT-USDC:USDC",
     "symbol": "VNTL:WHEAT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-07T00:00:00.000Z"
   },
   {
     "id": "xyz:AAPL",
@@ -3398,6 +3398,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2025-12-03T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:JP225",
+    "type": "perpetual",
+    "first_capture": "2026-04-08T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:JP225-USDC:USDC",
+    "symbol": "XYZ:JP225",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:JPY",
