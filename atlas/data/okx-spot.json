@@ -11425,6 +11425,51 @@
     "end_date": "2025-10-24T00:00:00.000Z"
   },
   {
+    "id": "OFC-EUR",
+    "type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "spot-OFC-EUR",
+    "symbol": "OFC",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "OFC-TRY",
+    "type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "spot-OFC-TRY",
+    "symbol": "OFC",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "OFC-USD",
+    "type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "spot-OFC-USD",
+    "symbol": "OFC",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "OFC-USDC",
+    "type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "spot-OFC-USDC",
+    "symbol": "OFC",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "OFC-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "spot-OFC-USDT",
+    "symbol": "OFC",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "OKB-BTC",
     "type": "spot",
     "internal_id": "spot-OKB-BTC",

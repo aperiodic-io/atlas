@@ -2367,8 +2367,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-10-29T00:00:00.000Z",
-    "end_date": "2025-12-09T00:00:00.000Z"
+    "first_capture": "2025-10-29T00:00:00.000Z"
   },
   {
     "id": "KLAY-USDT-SWAP",
@@ -3181,6 +3180,16 @@
     "contract_type": "perpetual",
     "first_capture": "2022-04-21T00:00:00.000Z",
     "end_date": "2022-11-18T00:00:00.000Z"
+  },
+  {
+    "id": "OFC-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-09T00:00:00.000Z",
+    "internal_id": "perpetual-OFC-USDT:USDT",
+    "symbol": "OFC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "OKB-USDT-SWAP",
@@ -4630,12 +4639,12 @@
   {
     "id": "UP-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-08T00:00:00.000Z",
     "internal_id": "perpetual-UP-USDT:USDT",
     "symbol": "UP",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "USDC-USDT-SWAP",
