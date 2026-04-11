@@ -5887,11 +5887,11 @@
   {
     "id": "btcusds",
     "type": "spot",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "spot-BTC-USDS",
     "symbol": "BTC",
     "denominator": "USDS",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "btcusdt",
@@ -10405,11 +10405,11 @@
   {
     "id": "ethusds",
     "type": "spot",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "spot-ETH-USDS",
     "symbol": "ETH",
     "denominator": "USDS",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "ethusdt",
@@ -27873,11 +27873,11 @@
   {
     "id": "usdsusdt",
     "type": "spot",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "spot-USDS-USDT",
     "symbol": "USDS",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "usdtars",

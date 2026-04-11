@@ -2982,12 +2982,12 @@
   {
     "id": "km:TENCENT",
     "type": "perpetual",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "perpetual-KM:TENCENT-USDC:USDC",
     "symbol": "KM:TENCENT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "km:TSLA",
@@ -3052,12 +3052,12 @@
   {
     "id": "km:XIAOMI",
     "type": "perpetual",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "perpetual-KM:XIAOMI-USDC:USDC",
     "symbol": "KM:XIAOMI",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "para:BTCD",
@@ -3442,12 +3442,12 @@
   {
     "id": "xyz:KR200",
     "type": "perpetual",
-    "first_capture": "2026-04-09T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:KR200-USDC:USDC",
     "symbol": "XYZ:KR200",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "xyz:LLY",
