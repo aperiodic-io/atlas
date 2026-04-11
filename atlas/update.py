@@ -51,6 +51,7 @@ EXCHANGES = [
     "hyperliquid-perps",
     "kraken",
     "kucoin",
+    "kucoin-perps",
     "okx-perps",
     "okx-futures",
     "okx-spot",

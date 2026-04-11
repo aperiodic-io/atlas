@@ -152,6 +152,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
+| `kucoin-perps` | **`UNSTABLE (BETA)`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
