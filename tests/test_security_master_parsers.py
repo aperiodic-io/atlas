@@ -240,6 +240,13 @@ class TestKucoin:
         assert c.denominator == "USDT"
         assert c.contract_type == ContractType.spot
 
+    def test_perp_xbt_usdtm(self):
+        c = _parse("kucoin-perps", "XBTUSDTM", "perpetual")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USDT"
+        assert c.margin == "USDT"
+        assert c.contract_type == ContractType.perpetual
+
 
 class TestOkxSpot:
     def test_btc_usdt(self):
