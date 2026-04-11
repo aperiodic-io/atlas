@@ -18,19 +18,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: setup-python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
 
       - name: install-dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install hatch
-          pip install ".[tests]"
+          uv pip install --system hatch
+          uv pip install --system ".[tests]"
       - name: build-package
-        run: hatch build
+        run: uv run hatch build
 
       - name: publish-package
-        run: hatch publish --user __token__ --auth $PYPI_TOKEN
+        run: uv run hatch publish --user __token__ --auth $PYPI_TOKEN
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}

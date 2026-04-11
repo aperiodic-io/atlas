@@ -1,15 +1,13 @@
-name: daily-update
+name: coingecko-binance-ci
 
 on:
-  schedule:
-    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-security-master:
+  populate-coingecko-ids:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,8 +26,9 @@ jobs:
         run: |
           uv pip install --system -e .
 
-      - name: run-update
-        run: uv run python atlas/update.py --source hybrid
+      - name: populate-coingecko-ids
+        run: |
+          uv run python integrations/coingecko_metadata.py --allow-unverified --timeout-seconds 45 --max-verifications 0
 
       - name: commit-updated-jsons
         run: |
@@ -40,5 +39,5 @@ jobs:
             echo "No JSON changes to commit"
             exit 0
           fi
-          git commit -m "chore(data): daily security master update"
+          git commit -m "chore(data): populate coingecko ids from binance/coingecko"
           git push
