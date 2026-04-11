@@ -4,6 +4,7 @@ from datetime import datetime
 
 from atlas.contracts import ContractType
 from atlas.exchange_definitions import is_beta_exchange
+from atlas.exchanges import get_exchange_fetcher
 from atlas.parsers import SkipSymbol, parse_contract
 
 
@@ -38,6 +39,10 @@ class TestHelpers:
         assert is_beta_exchange("binance-spot") is False
         assert is_beta_exchange("okx-spot") is False
         assert is_beta_exchange("coinbase") is True
+
+    def test_kucoin_exchange_sources_present(self):
+        assert callable(get_exchange_fetcher("kucoin"))
+        assert callable(get_exchange_fetcher("kucoin-perps"))
 
 
 # ---------------------------------------------------------------------------
