@@ -42,7 +42,12 @@ from .exchange_definitions.hyperliquid import (
     parse_hyperliquid,
 )
 from .exchange_definitions.kraken import parse_kraken
-from .exchange_definitions.kucoin import parse_kucoin, parse_kucoin_perps
+from .exchange_definitions.kucoin import (
+    fetch_kucoin_perps,
+    fetch_kucoin_spot,
+    parse_kucoin,
+    parse_kucoin_perps,
+)
 from .exchange_definitions.okx import (
     fetch_okx_futures,
     fetch_okx_spot,
@@ -170,11 +175,12 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     "kraken": _define("kraken", parse_kraken),
-    "kucoin": _define("kucoin", parse_kucoin),
+    "kucoin": _define("kucoin", parse_kucoin, exchange_fetcher=fetch_kucoin_spot),
     "kucoin-perps": _define(
         "kucoin-perps",
         parse_kucoin_perps,
         tardis_id="kucoin-futures",
+        exchange_fetcher=fetch_kucoin_perps,
         allowed_types={"perpetual"},
     ),
     "okx-spot": _define(
