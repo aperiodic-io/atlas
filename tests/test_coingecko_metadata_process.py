@@ -68,3 +68,51 @@ def test_populate_coingecko_metadata_persists_only_verified_ids(
 
     assert stats["binance-spot"]["matched"] == 1
     assert stats["binance-spot"]["unverified"] == 2
+
+
+def test_populate_coingecko_metadata_allow_unverified_persists_all_matches(
+    monkeypatch,
+    tmp_path,
+) -> None:
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    target = data_dir / "binance-spot.json"
+    target.write_text(
+        json.dumps(
+            [
+                {"id": "btcusdt", "symbol": "BTC"},
+                {"id": "ethusdt", "symbol": "ETH"},
+                {"id": "dogeusdt", "symbol": "DOGE"},
+            ]
+        )
+    )
+
+    monkeypatch.setattr(
+        "integrations.coingecko_metadata.fetch_spot_symbols",
+        lambda **_kwargs: [
+            {"symbol": "BTCUSDT", "baseAsset": "BTC", "quoteAsset": "USDT", "status": "TRADING"},
+            {"symbol": "ETHUSDT", "baseAsset": "ETH", "quoteAsset": "USDT", "status": "TRADING"},
+            {"symbol": "DOGEUSDT", "baseAsset": "DOGE", "quoteAsset": "USDT", "status": "TRADING"},
+        ],
+    )
+    monkeypatch.setattr(
+        "integrations.coingecko_metadata.fetch_coin_list",
+        lambda **_kwargs: [
+            {"id": "bitcoin", "symbol": "btc"},
+            {"id": "ethereum", "symbol": "eth"},
+            {"id": "dogecoin", "symbol": "doge"},
+        ],
+    )
+    monkeypatch.setattr("integrations.coingecko_metadata.fetch_derivatives_tickers", lambda **_kwargs: [])
+    monkeypatch.setattr("integrations.coingecko_metadata.fetch_historical_klines", lambda **_kwargs: [])
+
+    stats = populate_coingecko_metadata(data_dir=data_dir, dry_run=False, allow_unverified=True)
+    rows = json.loads(target.read_text())
+
+    by_symbol = {row["symbol"]: row for row in rows}
+    assert by_symbol["BTC"]["coingecko_id"] == "bitcoin"
+    assert by_symbol["ETH"]["coingecko_id"] == "ethereum"
+    assert by_symbol["DOGE"]["coingecko_id"] == "dogecoin"
+
+    assert stats["binance-spot"]["matched"] == 3
+    assert stats["binance-spot"]["unverified"] == 0
