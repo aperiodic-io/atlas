@@ -21,13 +21,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
       - name: install-dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -e .
+          uv pip install --system -e .
 
       - name: run-update
-        run: python atlas/update.py --source hybrid
+        run: uv run python atlas/update.py --source hybrid
 
       - name: commit-updated-jsons
         run: |
