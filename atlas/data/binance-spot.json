@@ -1687,7 +1687,8 @@
     "symbol": "ALT",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2024-01-25T00:00:00.000Z"
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "altbtc",
@@ -2395,7 +2396,8 @@
     "symbol": "ARB",
     "denominator": "TUSD",
     "contract_type": "spot",
-    "first_capture": "2023-03-24T00:00:00.000Z"
+    "first_capture": "2023-03-24T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "arbusd",
@@ -4833,7 +4835,8 @@
     "symbol": "BNB",
     "denominator": "ARS",
     "contract_type": "spot",
-    "first_capture": "2025-02-25T00:00:00.000Z"
+    "first_capture": "2025-02-25T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "bnbaud",
@@ -5621,7 +5624,8 @@
     "symbol": "BTC",
     "denominator": "DAI",
     "contract_type": "spot",
-    "first_capture": "2020-08-11T00:00:00.000Z"
+    "first_capture": "2020-08-11T00:00:00.000Z",
+    "end_date": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "btcdownusdt",
@@ -5879,6 +5883,15 @@
     "contract_type": "spot",
     "first_capture": "2021-09-10T00:00:00.000Z",
     "end_date": "2022-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "btcusds",
+    "type": "spot",
+    "internal_id": "spot-BTC-USDS",
+    "symbol": "BTC",
+    "denominator": "USDS",
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "btcusdt",
@@ -7839,7 +7852,8 @@
     "symbol": "DAI",
     "denominator": "JPY",
     "contract_type": "spot",
-    "first_capture": "2025-06-11T00:00:00.000Z"
+    "first_capture": "2025-06-11T00:00:00.000Z",
+    "end_date": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "daiusdt",
@@ -10130,7 +10144,8 @@
     "symbol": "ETH",
     "denominator": "DAI",
     "contract_type": "spot",
-    "first_capture": "2020-08-11T00:00:00.000Z"
+    "first_capture": "2020-08-11T00:00:00.000Z",
+    "end_date": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "ethdownusdt",
@@ -10386,6 +10401,15 @@
     "contract_type": "spot",
     "first_capture": "2021-09-10T00:00:00.000Z",
     "end_date": "2022-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "ethusds",
+    "type": "spot",
+    "internal_id": "spot-ETH-USDS",
+    "symbol": "ETH",
+    "denominator": "USDS",
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "ethusdt",
@@ -11781,7 +11805,8 @@
     "symbol": "GALA",
     "denominator": "ETH",
     "contract_type": "spot",
-    "first_capture": "2021-11-22T00:00:00.000Z"
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "galaeur",
@@ -13902,7 +13927,8 @@
     "symbol": "INJ",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2021-03-04T00:00:00.000Z"
+    "first_capture": "2021-03-04T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "injbtc",
@@ -24553,7 +24579,8 @@
     "symbol": "SOLV",
     "denominator": "FDUSD",
     "contract_type": "spot",
-    "first_capture": "2025-01-17T00:00:00.000Z"
+    "first_capture": "2025-01-17T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "solvtry",
@@ -27844,6 +27871,15 @@
     "first_capture": "2021-09-10T00:00:00.000Z"
   },
   {
+    "id": "usdsusdt",
+    "type": "spot",
+    "internal_id": "spot-USDS-USDT",
+    "symbol": "USDS",
+    "denominator": "USDT",
+    "contract_type": "spot",
+    "first_capture": "2026-04-09T00:00:00.000Z"
+  },
+  {
     "id": "usdtars",
     "type": "spot",
     "internal_id": "spot-USDT-ARS",
@@ -27917,7 +27953,8 @@
     "symbol": "USDT",
     "denominator": "DAI",
     "contract_type": "spot",
-    "first_capture": "2020-08-11T00:00:00.000Z"
+    "first_capture": "2020-08-11T00:00:00.000Z",
+    "end_date": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "usdtgyen",
@@ -30199,7 +30236,8 @@
     "symbol": "XRP",
     "denominator": "TUSD",
     "contract_type": "spot",
-    "first_capture": "2020-11-23T00:00:00.000Z"
+    "first_capture": "2020-11-23T00:00:00.000Z",
+    "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
     "id": "xrpu",

@@ -860,12 +860,12 @@
   {
     "id": "BSB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-02T00:00:00.000Z",
     "internal_id": "perpetual-BSB-USDT:USDT",
     "symbol": "BSB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-02T00:00:00.000Z"
   },
   {
     "id": "BSV-USD-SWAP",
@@ -1202,6 +1202,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2020-09-04T00:00:00.000Z"
+  },
+  {
+    "id": "CRWV-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-10T00:00:00.000Z",
+    "internal_id": "perpetual-CRWV-USDT:USDT",
+    "symbol": "CRWV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "CSPR-USDT-SWAP",
@@ -2245,6 +2255,16 @@
     "first_capture": "2025-02-13T00:00:00.000Z"
   },
   {
+    "id": "IWM-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-10T00:00:00.000Z",
+    "internal_id": "perpetual-IWM-USDT:USDT",
+    "symbol": "IWM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "J-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-J-USDT:USDT",
@@ -2367,8 +2387,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-10-29T00:00:00.000Z",
-    "end_date": "2025-12-09T00:00:00.000Z"
+    "first_capture": "2025-10-29T00:00:00.000Z"
   },
   {
     "id": "KLAY-USDT-SWAP",
@@ -3181,6 +3200,16 @@
     "contract_type": "perpetual",
     "first_capture": "2022-04-21T00:00:00.000Z",
     "end_date": "2022-11-18T00:00:00.000Z"
+  },
+  {
+    "id": "OFC-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-OFC-USDT:USDT",
+    "symbol": "OFC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
     "id": "OKB-USDT-SWAP",
@@ -4626,6 +4655,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2020-09-17T00:00:00.000Z"
+  },
+  {
+    "id": "UP-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-UP-USDT:USDT",
+    "symbol": "UP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-08T00:00:00.000Z"
   },
   {
     "id": "USDC-USDT-SWAP",
