@@ -1206,12 +1206,12 @@
   {
     "id": "CRWV-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-10T00:00:00.000Z",
     "internal_id": "perpetual-CRWV-USDT:USDT",
     "symbol": "CRWV",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
     "id": "CSPR-USDT-SWAP",
@@ -2257,12 +2257,12 @@
   {
     "id": "IWM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-10T00:00:00.000Z",
     "internal_id": "perpetual-IWM-USDT:USDT",
     "symbol": "IWM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
     "id": "J-USDT-SWAP",
