@@ -2770,7 +2770,8 @@
     "denominator": "USD",
     "margin": "WIF",
     "contract_type": "perpetual",
-    "first_capture": "2024-07-23T00:00:00.000Z"
+    "first_capture": "2024-07-23T00:00:00.000Z",
+    "end_date": "2026-04-15T00:00:00.000Z"
   },
   {
     "id": "wldusd_perp",
@@ -2780,7 +2781,8 @@
     "denominator": "USD",
     "margin": "WLD",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-02T00:00:00.000Z"
+    "first_capture": "2024-10-02T00:00:00.000Z",
+    "end_date": "2026-04-15T00:00:00.000Z"
   },
   {
     "id": "xlmusd_perp",
