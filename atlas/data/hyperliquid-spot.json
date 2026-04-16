@@ -1881,6 +1881,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "TRX1/USDC",
+    "type": "spot",
+    "internal_id": "spot-TRX1-USDC",
+    "symbol": "TRX1",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "TSLA/USDC",
     "type": "spot",
     "internal_id": "spot-TSLA-USDC",
