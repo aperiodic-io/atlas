@@ -2179,6 +2179,16 @@
     "first_capture": "2024-11-27T00:00:00.000Z"
   },
   {
+    "id": "chipusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-16T00:00:00.000Z",
+    "internal_id": "perpetual-CHIP-USDT:USDT",
+    "symbol": "CHIP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "chrusdt",
     "type": "perpetual",
     "internal_id": "perpetual-CHR-USDT:USDT",
@@ -3480,7 +3490,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2024-09-20T00:00:00.000Z"
+    "first_capture": "2024-09-20T00:00:00.000Z",
+    "end_date": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "fisusdt",
@@ -3669,7 +3680,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-03-31T00:00:00.000Z"
+    "first_capture": "2025-03-31T00:00:00.000Z",
+    "end_date": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "fusdt",
@@ -3744,6 +3756,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2023-10-25T00:00:00.000Z"
+  },
+  {
+    "id": "geniususdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-16T00:00:00.000Z",
+    "internal_id": "perpetual-GENIUS-USDT:USDT",
+    "symbol": "GENIUS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "ghstusdt",
@@ -5841,7 +5863,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2023-08-11T00:00:00.000Z"
+    "first_capture": "2023-08-11T00:00:00.000Z",
+    "end_date": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "partiusdt",
