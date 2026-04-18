@@ -2181,12 +2181,12 @@
   {
     "id": "chipusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-16T00:00:00.000Z",
     "internal_id": "perpetual-CHIP-USDT:USDT",
     "symbol": "CHIP",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "chrusdt",
@@ -3760,12 +3760,12 @@
   {
     "id": "geniususdt",
     "type": "perpetual",
-    "first_capture": "2026-04-16T00:00:00.000Z",
     "internal_id": "perpetual-GENIUS-USDT:USDT",
     "symbol": "GENIUS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "ghstusdt",
