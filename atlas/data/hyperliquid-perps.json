@@ -3252,12 +3252,12 @@
   {
     "id": "xyz:BIRD",
     "type": "perpetual",
-    "first_capture": "2026-04-16T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BIRD-USDC:USDC",
     "symbol": "XYZ:BIRD",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-16T00:00:00.000Z"
   },
   {
     "id": "xyz:BRENTOIL",
