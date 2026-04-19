@@ -16609,20 +16609,20 @@
   {
     "id": "USDS-USD",
     "type": "spot",
-    "first_capture": "2026-04-17T00:00:00.000Z",
     "internal_id": "spot-USDS-USD",
     "symbol": "USDS",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-17T00:00:00.000Z"
   },
   {
     "id": "USDS-USDT",
     "type": "spot",
-    "first_capture": "2026-04-17T00:00:00.000Z",
     "internal_id": "spot-USDS-USDT",
     "symbol": "USDS",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-17T00:00:00.000Z"
   },
   {
     "id": "USDT-AED",
