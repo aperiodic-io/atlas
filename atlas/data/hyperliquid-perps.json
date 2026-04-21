@@ -3190,6 +3190,16 @@
     "first_capture": "2026-01-06T00:00:00.000Z"
   },
   {
+    "id": "vntl:SOY",
+    "type": "perpetual",
+    "first_capture": "2026-04-20T00:00:00.000Z",
+    "internal_id": "perpetual-VNTL:SOY-USDC:USDC",
+    "symbol": "VNTL:SOY",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "vntl:SPACEX",
     "type": "perpetual",
     "internal_id": "perpetual-VNTL:SPACEX-USDC:USDC",
