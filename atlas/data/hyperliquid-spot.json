@@ -952,6 +952,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "KITE/USDC",
+    "type": "spot",
+    "internal_id": "spot-KITE-USDC",
+    "symbol": "KITE",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "KITTEN/USDC",
     "type": "spot",
     "internal_id": "spot-KITTEN-USDC",

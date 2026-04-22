@@ -477,6 +477,15 @@
     "first_capture": "2024-11-25T00:00:00.000Z"
   },
   {
+    "id": "CHIP",
+    "type": "perpetual",
+    "internal_id": "perpetual-CHIP-USDC:USDC",
+    "symbol": "CHIP",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "COMP",
     "type": "perpetual",
     "internal_id": "perpetual-COMP-USDC:USDC",
@@ -3192,12 +3201,12 @@
   {
     "id": "vntl:SOY",
     "type": "perpetual",
-    "first_capture": "2026-04-20T00:00:00.000Z",
     "internal_id": "perpetual-VNTL:SOY-USDC:USDC",
     "symbol": "VNTL:SOY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-20T00:00:00.000Z"
   },
   {
     "id": "vntl:SPACEX",

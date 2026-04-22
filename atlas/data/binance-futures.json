@@ -1046,12 +1046,12 @@
   {
     "id": "avgousdt",
     "type": "perpetual",
-    "first_capture": "2026-04-20T00:00:00.000Z",
     "internal_id": "perpetual-AVGO-USDT:USDT",
     "symbol": "AVGO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-20T00:00:00.000Z"
   },
   {
     "id": "avntusdt",
@@ -1126,12 +1126,12 @@
   {
     "id": "babausdt",
     "type": "perpetual",
-    "first_capture": "2026-04-20T00:00:00.000Z",
     "internal_id": "perpetual-BABA-USDT:USDT",
     "symbol": "BABA",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-20T00:00:00.000Z"
   },
   {
     "id": "babyusdt",
@@ -5364,12 +5364,12 @@
   {
     "id": "msftusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-20T00:00:00.000Z",
     "internal_id": "perpetual-MSFT-USDT:USDT",
     "symbol": "MSFT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-20T00:00:00.000Z"
   },
   {
     "id": "mstrusdt",
