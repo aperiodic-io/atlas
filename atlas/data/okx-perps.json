@@ -1070,6 +1070,16 @@
     "first_capture": "2021-03-12T00:00:00.000Z"
   },
   {
+    "id": "CHIP-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-21T00:00:00.000Z",
+    "internal_id": "perpetual-CHIP-USDT:USDT",
+    "symbol": "CHIP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CHZ-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CHZ-USDT:USDT",
@@ -4395,6 +4405,15 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "TEST01-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-TEST01-USDT:USDT",
+    "symbol": "TEST01",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "THETA-USD-SWAP",
