@@ -6825,29 +6825,29 @@
   {
     "id": "chiptry",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-CHIP-TRY",
     "symbol": "CHIP",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "chipusdc",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-CHIP-USDC",
     "symbol": "CHIP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "chipusdt",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-CHIP-USDT",
     "symbol": "CHIP",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "chrbnb",
@@ -9539,11 +9539,11 @@
   {
     "id": "enju",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-ENJ-U",
     "symbol": "ENJ",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "enjusdc",
@@ -12106,11 +12106,11 @@
   {
     "id": "giggleu",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-GIGGLE-U",
     "symbol": "GIGGLE",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "giggleusdc",
@@ -20015,11 +20015,11 @@
   {
     "id": "ordiu",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-ORDI-U",
     "symbol": "ORDI",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "ordiusdc",
@@ -31310,20 +31310,20 @@
   {
     "id": "\u5e01\u5b89\u4eba\u751fu",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-\u5e01\u5b89\u4eba\u751f-U",
     "symbol": "\u5e01\u5b89\u4eba\u751f",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "\u5e01\u5b89\u4eba\u751fusd1",
     "type": "spot",
-    "first_capture": "2026-04-21T00:00:00.000Z",
     "internal_id": "spot-\u5e01\u5b89\u4eba\u751f-USD1",
     "symbol": "\u5e01\u5b89\u4eba\u751f",
     "denominator": "USD1",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-21T00:00:00.000Z"
   },
   {
     "id": "\u5e01\u5b89\u4eba\u751fusdc",

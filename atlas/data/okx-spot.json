@@ -1659,6 +1659,60 @@
     "first_capture": "2021-04-07T00:00:00.000Z"
   },
   {
+    "id": "AUDF-AUD",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDF-AUD",
+    "symbol": "AUDF",
+    "denominator": "AUD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AUDF-USD",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDF-USD",
+    "symbol": "AUDF",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AUDF-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDF-USDT",
+    "symbol": "AUDF",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AUDM-AUD",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDM-AUD",
+    "symbol": "AUDM",
+    "denominator": "AUD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AUDM-USD",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDM-USD",
+    "symbol": "AUDM",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "AUDM-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "internal_id": "spot-AUDM-USDT",
+    "symbol": "AUDM",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "AVAX-BTC",
     "type": "spot",
     "internal_id": "spot-AVAX-BTC",
