@@ -3326,6 +3326,16 @@
     "first_capture": "2022-06-01T00:00:00.000Z"
   },
   {
+    "id": "OPG-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-23T00:00:00.000Z",
+    "internal_id": "perpetual-OPG-USDT:USDT",
+    "symbol": "OPG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "OPN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-OPN-USDT:USDT",
