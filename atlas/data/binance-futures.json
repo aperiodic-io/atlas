@@ -5819,12 +5819,12 @@
   {
     "id": "opgusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-22T00:00:00.000Z",
     "internal_id": "perpetual-OPG-USDT:USDT",
     "symbol": "OPG",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-22T00:00:00.000Z"
   },
   {
     "id": "opnusdt",
