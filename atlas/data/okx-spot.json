@@ -3699,6 +3699,51 @@
     "end_date": "2023-10-28T00:00:00.000Z"
   },
   {
+    "id": "CHIP-EUR",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-CHIP-EUR",
+    "symbol": "CHIP",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "CHIP-TRY",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-CHIP-TRY",
+    "symbol": "CHIP",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "CHIP-USD",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-CHIP-USD",
+    "symbol": "CHIP",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "CHIP-USDC",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-CHIP-USDC",
+    "symbol": "CHIP",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "CHIP-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-CHIP-USDT",
+    "symbol": "CHIP",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "CHZ-BTC",
     "type": "spot",
     "internal_id": "spot-CHZ-BTC",
@@ -7208,6 +7253,33 @@
     "contract_type": "spot",
     "first_capture": "2024-02-28T00:00:00.000Z",
     "end_date": "2025-03-21T00:00:00.000Z"
+  },
+  {
+    "id": "GRASS-TRY",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-GRASS-TRY",
+    "symbol": "GRASS",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRASS-USD",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-GRASS-USD",
+    "symbol": "GRASS",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRASS-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "spot-GRASS-USDT",
+    "symbol": "GRASS",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "GRT-BTC",

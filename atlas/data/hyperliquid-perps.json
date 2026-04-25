@@ -2892,12 +2892,13 @@
   {
     "id": "km:EUR",
     "type": "perpetual",
-    "first_capture": "2026-04-23T00:00:00.000Z",
     "internal_id": "perpetual-KM:EUR-USDC:USDC",
     "symbol": "KM:EUR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-23T00:00:00.000Z",
+    "end_date": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "km:GLDMINE",
