@@ -15249,6 +15249,17 @@
     "first_capture": "2026-04-17T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-260508",
+    "type": "future",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20260508",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-05-08T00:00:00"
+  },
+  {
     "id": "BTC-USD-260529",
     "type": "future",
     "internal_id": "future-BTC-USD:BTC-20260529",
@@ -20616,6 +20627,17 @@
     "contract_type": "future",
     "delivery_date": "2026-05-01T00:00:00",
     "first_capture": "2026-04-17T00:00:00.000Z"
+  },
+  {
+    "id": "BTC-USD_UM-260508",
+    "type": "future",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "future-BTC-USD_UM:BTC-20260508",
+    "symbol": "BTC",
+    "denominator": "USD_UM",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-05-08T00:00:00"
   },
   {
     "id": "BTC-USD_UM-260626",
@@ -40266,6 +40288,17 @@
     "contract_type": "future",
     "delivery_date": "2026-05-01T00:00:00",
     "first_capture": "2026-04-17T00:00:00.000Z"
+  },
+  {
+    "id": "ETH-USD-260508",
+    "type": "future",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20260508",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2026-05-08T00:00:00"
   },
   {
     "id": "ETH-USD-260529",
@@ -62153,6 +62186,17 @@
     "contract_type": "future",
     "delivery_date": "2026-05-01T00:00:00",
     "first_capture": "2026-04-17T00:00:00.000Z"
+  },
+  {
+    "id": "XAU-USD_UM-260508",
+    "type": "future",
+    "first_capture": "2026-04-24T00:00:00.000Z",
+    "internal_id": "future-XAU-USD_UM:XAU-20260508",
+    "symbol": "XAU",
+    "denominator": "USD_UM",
+    "margin": "XAU",
+    "contract_type": "future",
+    "delivery_date": "2026-05-08T00:00:00"
   },
   {
     "id": "XAU-USD_UM-260626",
