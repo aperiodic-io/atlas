@@ -161,7 +161,8 @@
     "symbol": "1INCH",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2020-12-28T00:00:00.000Z"
+    "first_capture": "2020-12-28T00:00:00.000Z",
+    "end_date": "2026-04-25T00:00:00.000Z"
   },
   {
     "id": "1inchbusd",
@@ -29169,7 +29170,8 @@
     "symbol": "WIF",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2024-03-05T00:00:00.000Z"
+    "first_capture": "2024-03-05T00:00:00.000Z",
+    "end_date": "2026-04-25T00:00:00.000Z"
   },
   {
     "id": "wifeur",
@@ -30257,7 +30259,8 @@
     "symbol": "XRP",
     "denominator": "MXN",
     "contract_type": "spot",
-    "first_capture": "2024-05-29T00:00:00.000Z"
+    "first_capture": "2024-05-29T00:00:00.000Z",
+    "end_date": "2026-04-25T00:00:00.000Z"
   },
   {
     "id": "xrpngn",

@@ -3701,47 +3701,47 @@
   {
     "id": "CHIP-EUR",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-CHIP-EUR",
     "symbol": "CHIP",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "CHIP-TRY",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-CHIP-TRY",
     "symbol": "CHIP",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "CHIP-USD",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-CHIP-USD",
     "symbol": "CHIP",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "CHIP-USDC",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-CHIP-USDC",
     "symbol": "CHIP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "CHIP-USDT",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-CHIP-USDT",
     "symbol": "CHIP",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "CHZ-BTC",
@@ -7257,29 +7257,29 @@
   {
     "id": "GRASS-TRY",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-GRASS-TRY",
     "symbol": "GRASS",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "GRASS-USD",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-GRASS-USD",
     "symbol": "GRASS",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "GRASS-USDT",
     "type": "spot",
-    "first_capture": "2026-04-24T00:00:00.000Z",
     "internal_id": "spot-GRASS-USDT",
     "symbol": "GRASS",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-04-24T00:00:00.000Z"
   },
   {
     "id": "GRT-BTC",
