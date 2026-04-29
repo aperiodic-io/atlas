@@ -3427,6 +3427,15 @@
     "first_capture": "2025-09-15T00:00:00.000Z"
   },
   {
+    "id": "avntu",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-AVNT-U",
+    "symbol": "AVNT",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
     "id": "avntusdc",
     "type": "spot",
     "internal_id": "spot-AVNT-USDC",
@@ -4659,6 +4668,15 @@
     "denominator": "TRY",
     "contract_type": "spot",
     "first_capture": "2025-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "biou",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-BIO-U",
+    "symbol": "BIO",
+    "denominator": "U",
+    "contract_type": "spot"
   },
   {
     "id": "biousdc",
@@ -6832,6 +6850,24 @@
     "denominator": "TRY",
     "contract_type": "spot",
     "first_capture": "2026-04-21T00:00:00.000Z"
+  },
+  {
+    "id": "chipu",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-CHIP-U",
+    "symbol": "CHIP",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
+    "id": "chipusd1",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-CHIP-USD1",
+    "symbol": "CHIP",
+    "denominator": "USD1",
+    "contract_type": "spot"
   },
   {
     "id": "chipusdc",
@@ -14702,6 +14738,15 @@
     "contract_type": "spot",
     "contract_size": 1.0,
     "first_capture": "2026-03-18T00:00:00.000Z"
+  },
+  {
+    "id": "katu",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-KAT-U",
+    "symbol": "KAT",
+    "denominator": "U",
+    "contract_type": "spot"
   },
   {
     "id": "katusdc",
@@ -27789,6 +27834,15 @@
     "first_capture": "2020-09-17T00:00:00.000Z"
   },
   {
+    "id": "usd1try",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-USD1-TRY",
+    "symbol": "USD1",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "usd1u",
     "type": "spot",
     "internal_id": "spot-USD1-U",
@@ -29784,6 +29838,15 @@
     "contract_type": "spot",
     "contract_size": 1.0,
     "first_capture": "2026-03-26T00:00:00.000Z"
+  },
+  {
+    "id": "xautusd1",
+    "type": "spot",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "spot-XAUT-USD1",
+    "symbol": "XAUT",
+    "denominator": "USD1",
+    "contract_type": "spot"
   },
   {
     "id": "xautusdc",
