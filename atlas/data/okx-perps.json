@@ -770,7 +770,8 @@
     "symbol": "BMNR",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
     "id": "BNB-USDT-SWAP",
@@ -1177,7 +1178,8 @@
     "symbol": "COST",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
     "id": "CQT-USDT-SWAP",
@@ -2105,7 +2107,8 @@
     "symbol": "HIMS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
     "id": "HMSTR-USDT-SWAP",
@@ -2631,7 +2634,8 @@
     "symbol": "LLY",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
     "id": "LON-USDT-SWAP",
@@ -3628,6 +3632,16 @@
     "contract_type": "perpetual",
     "first_capture": "2025-04-10T00:00:00.000Z",
     "end_date": "2026-02-28T00:00:00.000Z"
+  },
+  {
+    "id": "PROS-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "perpetual-PROS-USDT:USDT",
+    "symbol": "PROS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "PROVE-USDT-SWAP",
@@ -4670,6 +4684,16 @@
     "end_date": "2026-01-25T00:00:00.000Z"
   },
   {
+    "id": "UB-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-28T00:00:00.000Z",
+    "internal_id": "perpetual-UB-USDT:USDT",
+    "symbol": "UB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ULTI-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ULTI-USDT:USDT",
@@ -4738,7 +4762,8 @@
     "symbol": "USAR",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
     "id": "USDC-USDT-SWAP",
