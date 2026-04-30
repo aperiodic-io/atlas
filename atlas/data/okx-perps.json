@@ -184,6 +184,16 @@
     "first_capture": "2021-09-07T00:00:00.000Z"
   },
   {
+    "id": "AI-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "perpetual-AI-USDT:USDT",
+    "symbol": "AI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "AI16Z-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AI16Z-USDT:USDT",
@@ -402,6 +412,16 @@
     "first_capture": "2024-11-21T00:00:00.000Z"
   },
   {
+    "id": "ARM-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "perpetual-ARM-USDT:USDT",
+    "symbol": "ARM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ASTER-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ASTER-USDT:USDT",
@@ -514,6 +534,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2020-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "AVGO-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "perpetual-AVGO-USDT:USDT",
+    "symbol": "AVGO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "AVNT-USDT-SWAP",
@@ -730,6 +760,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "BLEND-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "perpetual-BLEND-USDT:USDT",
+    "symbol": "BLEND",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "BLOCK-USDT-SWAP",
@@ -3636,12 +3676,12 @@
   {
     "id": "PROS-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-28T00:00:00.000Z",
     "internal_id": "perpetual-PROS-USDT:USDT",
     "symbol": "PROS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-28T00:00:00.000Z"
   },
   {
     "id": "PROVE-USDT-SWAP",
@@ -4686,12 +4726,12 @@
   {
     "id": "UB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-28T00:00:00.000Z",
     "internal_id": "perpetual-UB-USDT:USDT",
     "symbol": "UB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-28T00:00:00.000Z"
   },
   {
     "id": "ULTI-USDT-SWAP",
