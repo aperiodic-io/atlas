@@ -13659,6 +13659,15 @@
     "end_date": "2026-03-23T00:00:00.000Z"
   },
   {
+    "id": "RLUSD-USDT",
+    "type": "spot",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "spot-RLUSD-USDT",
+    "symbol": "RLUSD",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "RNDR-USDC",
     "type": "spot",
     "internal_id": "spot-RNDR-USDC",

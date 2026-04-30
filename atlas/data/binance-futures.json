@@ -481,6 +481,16 @@
     "first_capture": "2025-09-18T00:00:00.000Z"
   },
   {
+    "id": "aigensynusdt",
+    "type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z",
+    "internal_id": "perpetual-AIGENSYN-USDT:USDT",
+    "symbol": "AIGENSYN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ainusdt",
     "type": "perpetual",
     "internal_id": "perpetual-AIN-USDT:USDT",
@@ -518,7 +528,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2024-01-08T00:00:00.000Z"
+    "first_capture": "2024-01-08T00:00:00.000Z",
+    "end_date": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "aixbtusdt",
@@ -1121,7 +1132,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-02-13T00:00:00.000Z"
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "babausdt",
@@ -1530,7 +1542,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-11-21T00:00:00.000Z"
+    "first_capture": "2025-11-21T00:00:00.000Z",
+    "end_date": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "bomeusdc",
@@ -2583,7 +2596,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2024-11-15T00:00:00.000Z"
+    "first_capture": "2024-11-15T00:00:00.000Z",
+    "end_date": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "degousdt",
@@ -7915,7 +7929,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-01-24T00:00:00.000Z"
+    "first_capture": "2025-01-24T00:00:00.000Z",
+    "end_date": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "virtualusdt",
