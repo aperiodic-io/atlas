@@ -2278,6 +2278,16 @@
     "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
+    "id": "cash:CAR",
+    "type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "perpetual-CASH:CAR-USDC:USDC",
+    "symbol": "CASH:CAR",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "cash:EWY",
     "type": "perpetual",
     "internal_id": "perpetual-CASH:EWY-USDC:USDC",
@@ -2897,8 +2907,7 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-04-23T00:00:00.000Z",
-    "end_date": "2026-04-24T00:00:00.000Z"
+    "first_capture": "2026-04-23T00:00:00.000Z"
   },
   {
     "id": "km:GLDMINE",
@@ -3299,6 +3308,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-03-04T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:CBRS",
+    "type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:CBRS-USDC:USDC",
+    "symbol": "XYZ:CBRS",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:CL",

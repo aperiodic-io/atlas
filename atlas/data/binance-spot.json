@@ -17340,6 +17340,33 @@
     "end_date": "2026-03-21T00:00:00.000Z"
   },
   {
+    "id": "megatry",
+    "type": "spot",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "spot-MEGA-TRY",
+    "symbol": "MEGA",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "megausdc",
+    "type": "spot",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "spot-MEGA-USDC",
+    "symbol": "MEGA",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "megausdt",
+    "type": "spot",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "spot-MEGA-USDT",
+    "symbol": "MEGA",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "memebnb",
     "type": "spot",
     "internal_id": "spot-MEME-BNB",

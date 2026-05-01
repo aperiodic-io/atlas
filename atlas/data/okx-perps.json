@@ -186,12 +186,12 @@
   {
     "id": "AI-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-29T00:00:00.000Z",
     "internal_id": "perpetual-AI-USDT:USDT",
     "symbol": "AI",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "AI16Z-USDT-SWAP",
@@ -414,12 +414,12 @@
   {
     "id": "ARM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-29T00:00:00.000Z",
     "internal_id": "perpetual-ARM-USDT:USDT",
     "symbol": "ARM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "ASTER-USDT-SWAP",
@@ -538,12 +538,12 @@
   {
     "id": "AVGO-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-29T00:00:00.000Z",
     "internal_id": "perpetual-AVGO-USDT:USDT",
     "symbol": "AVGO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "AVNT-USDT-SWAP",
@@ -764,12 +764,12 @@
   {
     "id": "BLEND-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-29T00:00:00.000Z",
     "internal_id": "perpetual-BLEND-USDT:USDT",
     "symbol": "BLEND",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "BLOCK-USDT-SWAP",
@@ -2875,6 +2875,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-12-10T00:00:00.000Z"
+  },
+  {
+    "id": "MEGA-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "internal_id": "perpetual-MEGA-USDT:USDT",
+    "symbol": "MEGA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "MEME-USDT-SWAP",
