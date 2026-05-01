@@ -483,12 +483,12 @@
   {
     "id": "aigensynusdt",
     "type": "perpetual",
-    "first_capture": "2026-04-29T00:00:00.000Z",
     "internal_id": "perpetual-AIGENSYN-USDT:USDT",
     "symbol": "AIGENSYN",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-29T00:00:00.000Z"
   },
   {
     "id": "ainusdt",
@@ -2544,7 +2544,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-08-18T00:00:00.000Z"
+    "first_capture": "2025-08-18T00:00:00.000Z",
+    "end_date": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "darusdt",
@@ -4420,7 +4421,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-12-21T00:00:00.000Z"
+    "first_capture": "2025-12-21T00:00:00.000Z",
+    "end_date": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "irysusdt",
@@ -8468,7 +8470,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-05-13T00:00:00.000Z"
+    "first_capture": "2025-05-13T00:00:00.000Z",
+    "end_date": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "zkpusdt",
