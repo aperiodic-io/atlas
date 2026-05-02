@@ -2879,12 +2879,12 @@
   {
     "id": "MEGA-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-04-30T00:00:00.000Z",
     "internal_id": "perpetual-MEGA-USDT:USDT",
     "symbol": "MEGA",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "MEME-USDT-SWAP",

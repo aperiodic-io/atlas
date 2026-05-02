@@ -2280,12 +2280,12 @@
   {
     "id": "cash:CAR",
     "type": "perpetual",
-    "first_capture": "2026-04-30T00:00:00.000Z",
     "internal_id": "perpetual-CASH:CAR-USDC:USDC",
     "symbol": "CASH:CAR",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "cash:EWY",
@@ -3312,12 +3312,12 @@
   {
     "id": "xyz:CBRS",
     "type": "perpetual",
-    "first_capture": "2026-04-30T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CBRS-USDC:USDC",
     "symbol": "XYZ:CBRS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-04-30T00:00:00.000Z"
   },
   {
     "id": "xyz:CL",
