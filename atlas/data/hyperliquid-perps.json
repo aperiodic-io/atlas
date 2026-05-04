@@ -3420,6 +3420,16 @@
     "first_capture": "2026-03-02T00:00:00.000Z"
   },
   {
+    "id": "xyz:GME",
+    "type": "perpetual",
+    "first_capture": "2026-05-03T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:GME-USDC:USDC",
+    "symbol": "XYZ:GME",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:GOLD",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:GOLD-USDC:USDC",
@@ -3508,6 +3518,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:LITE",
+    "type": "perpetual",
+    "first_capture": "2026-05-03T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:LITE-USDC:USDC",
+    "symbol": "XYZ:LITE",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:LLY",
