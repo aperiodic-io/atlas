@@ -20699,6 +20699,17 @@
     "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
+    "id": "BZ-USD_UM_XPERP-310509",
+    "type": "future",
+    "first_capture": "2026-05-04T00:00:00.000Z",
+    "internal_id": "future-BZ-USD_UM_XPERP:BZ-20310509",
+    "symbol": "BZ",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BZ",
+    "contract_type": "future",
+    "delivery_date": "2031-05-09T00:00:00"
+  },
+  {
     "id": "CATI-USDT-250307",
     "type": "future",
     "internal_id": "future-CATI-USDT:USDT-20250307",
@@ -20709,6 +20720,17 @@
     "delivery_date": "2025-03-07T00:00:00",
     "first_capture": "2024-09-05T00:00:00.000Z",
     "end_date": "2024-09-21T00:00:00.000Z"
+  },
+  {
+    "id": "CL-USD_UM_XPERP-310509",
+    "type": "future",
+    "first_capture": "2026-05-04T00:00:00.000Z",
+    "internal_id": "future-CL-USD_UM_XPERP:CL-20310509",
+    "symbol": "CL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CL",
+    "contract_type": "future",
+    "delivery_date": "2031-05-09T00:00:00"
   },
   {
     "id": "DOGE-USD_UM_XPERP-310404",
@@ -62095,6 +62117,17 @@
     "delivery_date": "2025-04-11T00:00:00",
     "first_capture": "2024-10-11T00:00:00.000Z",
     "end_date": "2024-10-25T00:00:00.000Z"
+  },
+  {
+    "id": "XAG-USD_UM_XPERP-310509",
+    "type": "future",
+    "first_capture": "2026-05-04T00:00:00.000Z",
+    "internal_id": "future-XAG-USD_UM_XPERP:XAG-20310509",
+    "symbol": "XAG",
+    "denominator": "USD_UM_XPERP",
+    "margin": "XAG",
+    "contract_type": "future",
+    "delivery_date": "2031-05-09T00:00:00"
   },
   {
     "id": "XAU-USD_UM-260220",
