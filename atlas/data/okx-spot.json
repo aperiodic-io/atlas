@@ -5252,6 +5252,51 @@
     "end_date": "2023-05-23T00:00:00.000Z"
   },
   {
+    "id": "EDGE-EUR",
+    "type": "spot",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "spot-EDGE-EUR",
+    "symbol": "EDGE",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "EDGE-TRY",
+    "type": "spot",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "spot-EDGE-TRY",
+    "symbol": "EDGE",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "EDGE-USD",
+    "type": "spot",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "spot-EDGE-USD",
+    "symbol": "EDGE",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "EDGE-USDC",
+    "type": "spot",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "spot-EDGE-USDC",
+    "symbol": "EDGE",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "EDGE-USDT",
+    "type": "spot",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "spot-EDGE-USDT",
+    "symbol": "EDGE",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "EFI-USDT",
     "type": "spot",
     "internal_id": "spot-EFI-USDT",

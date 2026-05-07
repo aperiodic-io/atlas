@@ -752,6 +752,16 @@
     "first_capture": "2023-10-12T00:00:00.000Z"
   },
   {
+    "id": "BILL-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-06T00:00:00.000Z",
+    "internal_id": "perpetual-BILL-USDT:USDT",
+    "symbol": "BILL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "BIO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BIO-USDT:USDT",

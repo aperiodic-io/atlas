@@ -1105,7 +1105,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "MAVIA",
@@ -1115,7 +1116,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "ME",
@@ -1185,7 +1187,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "MINA",
@@ -1547,7 +1550,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-04-12T00:00:00.000Z"
+    "first_capture": "2025-04-12T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "PROVE",
@@ -1721,7 +1725,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "SEI",
@@ -2035,7 +2040,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "USUAL",
@@ -2195,7 +2201,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-08-21T00:00:00.000Z"
+    "first_capture": "2025-08-21T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "ZEC",
@@ -2225,7 +2232,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-01-02T00:00:00.000Z"
+    "first_capture": "2025-01-02T00:00:00.000Z",
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "ZETA",
@@ -3412,12 +3420,12 @@
   {
     "id": "xyz:EBAY",
     "type": "perpetual",
-    "first_capture": "2026-05-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:EBAY-USDC:USDC",
     "symbol": "XYZ:EBAY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-05T00:00:00.000Z"
   },
   {
     "id": "xyz:EUR",
@@ -3832,11 +3840,11 @@
   {
     "id": "xyz:ZM",
     "type": "perpetual",
-    "first_capture": "2026-05-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:ZM-USDC:USDC",
     "symbol": "XYZ:ZM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-05T00:00:00.000Z"
   }
 ]
