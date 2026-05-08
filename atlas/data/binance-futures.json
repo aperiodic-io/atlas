@@ -689,12 +689,12 @@
   {
     "id": "amdusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-06T00:00:00.000Z",
     "internal_id": "perpetual-AMD-USDT:USDT",
     "symbol": "AMD",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "amznusdt",
@@ -1399,6 +1399,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2023-10-12T00:00:00.000Z"
+  },
+  {
+    "id": "billusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "internal_id": "perpetual-BILL-USDT:USDT",
+    "symbol": "BILL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "biousdc",
@@ -6312,12 +6322,12 @@
   {
     "id": "qcomusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-06T00:00:00.000Z",
     "internal_id": "perpetual-QCOM-USDT:USDT",
     "symbol": "QCOM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "qntusdt",
@@ -7803,12 +7813,12 @@
   {
     "id": "usarusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-06T00:00:00.000Z",
     "internal_id": "perpetual-USAR-USDT:USDT",
     "symbol": "USAR",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "usdcusdt",
