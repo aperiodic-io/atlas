@@ -331,6 +331,16 @@
     "end_date": "2024-05-24T00:00:00.000Z"
   },
   {
+    "id": "ANTHROPIC-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "internal_id": "perpetual-ANTHROPIC-USDT:USDT",
+    "symbol": "ANTHROPIC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "APE-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-APE-USDT:USDT",
@@ -754,12 +764,12 @@
   {
     "id": "BILL-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-06T00:00:00.000Z",
     "internal_id": "perpetual-BILL-USDT:USDT",
     "symbol": "BILL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "BIO-USDT-SWAP",
@@ -3426,6 +3436,16 @@
     "first_capture": "2022-06-01T00:00:00.000Z"
   },
   {
+    "id": "OPENAI-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "internal_id": "perpetual-OPENAI-USDT:USDT",
+    "symbol": "OPENAI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "OPG-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-OPG-USDT:USDT",
@@ -4251,6 +4271,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-01-23T00:00:00.000Z"
+  },
+  {
+    "id": "SPACEX-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "internal_id": "perpetual-SPACEX-USDT:USDT",
+    "symbol": "SPACEX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SPELL-USDT-SWAP",
