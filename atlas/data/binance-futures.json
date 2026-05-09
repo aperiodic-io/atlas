@@ -1403,12 +1403,12 @@
   {
     "id": "billusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-07T00:00:00.000Z",
     "internal_id": "perpetual-BILL-USDT:USDT",
     "symbol": "BILL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-07T00:00:00.000Z"
   },
   {
     "id": "biousdc",
