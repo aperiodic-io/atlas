@@ -1508,12 +1508,12 @@
   {
     "id": "DRAM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-08T00:00:00.000Z",
     "internal_id": "perpetual-DRAM-USDT:USDT",
     "symbol": "DRAM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-08T00:00:00.000Z"
   },
   {
     "id": "DUCK-USDT-SWAP",
@@ -2027,12 +2027,12 @@
   {
     "id": "GME-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-08T00:00:00.000Z",
     "internal_id": "perpetual-GME-USDT:USDT",
     "symbol": "GME",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-08T00:00:00.000Z"
   },
   {
     "id": "GMT-USDT-SWAP",
@@ -2710,12 +2710,12 @@
   {
     "id": "LITE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-08T00:00:00.000Z",
     "internal_id": "perpetual-LITE-USDT:USDT",
     "symbol": "LITE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-08T00:00:00.000Z"
   },
   {
     "id": "LLY-USDT-SWAP",
