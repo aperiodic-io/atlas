@@ -8645,6 +8645,15 @@
     "end_date": "2024-04-13T00:00:00.000Z"
   },
   {
+    "id": "KAT-EUR",
+    "type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "spot-KAT-EUR",
+    "symbol": "KAT",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
     "id": "KAT-TRY",
     "type": "spot",
     "internal_id": "spot-KAT-TRY",
@@ -8661,6 +8670,15 @@
     "denominator": "USD",
     "contract_type": "spot",
     "first_capture": "2026-03-18T00:00:00.000Z"
+  },
+  {
+    "id": "KAT-USDC",
+    "type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "spot-KAT-USDC",
+    "symbol": "KAT",
+    "denominator": "USDC",
+    "contract_type": "spot"
   },
   {
     "id": "KAT-USDT",
@@ -11761,14 +11779,31 @@
     "end_date": "2024-07-26T00:00:00.000Z"
   },
   {
+    "id": "OKB-EUR",
+    "type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "spot-OKB-EUR",
+    "symbol": "OKB",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "OKB-TRY",
+    "type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "spot-OKB-TRY",
+    "symbol": "OKB",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
     "id": "OKB-USDC",
     "type": "spot",
     "internal_id": "spot-OKB-USDC",
     "symbol": "OKB",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2020-03-26T00:00:00.000Z",
-    "end_date": "2025-08-21T00:00:00.000Z"
+    "first_capture": "2020-03-26T00:00:00.000Z"
   },
   {
     "id": "OKB-USDK",

@@ -4906,6 +4906,16 @@
     "first_capture": "2025-07-25T00:00:00.000Z"
   },
   {
+    "id": "USO-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "perpetual-USO-USDT:USDT",
+    "symbol": "USO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "USTC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-USTC-USDT:USDT",
@@ -5231,6 +5241,16 @@
     "contract_type": "perpetual",
     "first_capture": "2021-04-08T00:00:00.000Z",
     "end_date": "2022-11-25T00:00:00.000Z"
+  },
+  {
+    "id": "XLE-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-11T00:00:00.000Z",
+    "internal_id": "perpetual-XLE-USDT:USDT",
+    "symbol": "XLE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "XLM-USD-SWAP",
