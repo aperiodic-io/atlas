@@ -8647,11 +8647,11 @@
   {
     "id": "KAT-EUR",
     "type": "spot",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "spot-KAT-EUR",
     "symbol": "KAT",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "KAT-TRY",
@@ -8674,11 +8674,11 @@
   {
     "id": "KAT-USDC",
     "type": "spot",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "spot-KAT-USDC",
     "symbol": "KAT",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "KAT-USDT",
@@ -11781,20 +11781,20 @@
   {
     "id": "OKB-EUR",
     "type": "spot",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "spot-OKB-EUR",
     "symbol": "OKB",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "OKB-TRY",
     "type": "spot",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "spot-OKB-TRY",
     "symbol": "OKB",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "OKB-USDC",

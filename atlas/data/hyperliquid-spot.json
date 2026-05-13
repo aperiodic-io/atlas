@@ -112,6 +112,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "AVGO/USDC",
+    "type": "spot",
+    "internal_id": "spot-AVGO-USDC",
+    "symbol": "AVGO",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "AXL/USDH",
     "type": "spot",
     "internal_id": "spot-AXL-USDH",
@@ -1208,6 +1216,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "MU/USDC",
+    "type": "spot",
+    "internal_id": "spot-MU-USDC",
+    "symbol": "MU",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "MUNCH/USDC",
     "type": "spot",
     "internal_id": "spot-MUNCH-USDC",
@@ -1300,6 +1316,14 @@
     "type": "spot",
     "internal_id": "spot-ORA-USDC",
     "symbol": "ORA",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "ORCL/USDC",
+    "type": "spot",
+    "internal_id": "spot-ORCL-USDC",
+    "symbol": "ORCL",
     "denominator": "USDC",
     "contract_type": "spot"
   },

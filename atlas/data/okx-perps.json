@@ -3112,6 +3112,16 @@
     "end_date": "2025-06-06T00:00:00.000Z"
   },
   {
+    "id": "MRVL-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "perpetual-MRVL-USDT:USDT",
+    "symbol": "MRVL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "MSFT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-MSFT-USDT:USDT",
@@ -3952,6 +3962,16 @@
     "end_date": "2026-03-14T00:00:00.000Z"
   },
   {
+    "id": "RKLB-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "perpetual-RKLB-USDT:USDT",
+    "symbol": "RKLB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "RLS-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-RLS-USDT:USDT",
@@ -4146,6 +4166,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2021-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "SHLD-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "perpetual-SHLD-USDT:USDT",
+    "symbol": "SHLD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SIGN-USDT-SWAP",
@@ -4908,12 +4938,12 @@
   {
     "id": "USO-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "perpetual-USO-USDT:USDT",
     "symbol": "USO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "USTC-USDT-SWAP",
@@ -5052,6 +5082,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-04-15T00:00:00.000Z"
+  },
+  {
+    "id": "WDC-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "perpetual-WDC-USDT:USDT",
+    "symbol": "WDC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "WEMIX-USDT-SWAP",
@@ -5245,12 +5285,12 @@
   {
     "id": "XLE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-11T00:00:00.000Z",
     "internal_id": "perpetual-XLE-USDT:USDT",
     "symbol": "XLE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-11T00:00:00.000Z"
   },
   {
     "id": "XLM-USD-SWAP",

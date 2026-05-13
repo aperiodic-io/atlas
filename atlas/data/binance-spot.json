@@ -17359,6 +17359,15 @@
     "first_capture": "2026-04-30T00:00:00.000Z"
   },
   {
+    "id": "megau",
+    "type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "spot-MEGA-U",
+    "symbol": "MEGA",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
     "id": "megausdc",
     "type": "spot",
     "internal_id": "spot-MEGA-USDC",
@@ -26695,8 +26704,7 @@
     "symbol": "TON",
     "denominator": "IDR",
     "contract_type": "spot",
-    "first_capture": "2025-11-29T00:00:00.000Z",
-    "end_date": "2026-04-18T00:00:00.000Z"
+    "first_capture": "2025-11-29T00:00:00.000Z"
   },
   {
     "id": "tontry",
@@ -26706,6 +26714,24 @@
     "denominator": "TRY",
     "contract_type": "spot",
     "first_capture": "2024-08-08T00:00:00.000Z"
+  },
+  {
+    "id": "tonu",
+    "type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "spot-TON-U",
+    "symbol": "TON",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
+    "id": "tonusd1",
+    "type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "internal_id": "spot-TON-USD1",
+    "symbol": "TON",
+    "denominator": "USD1",
+    "contract_type": "spot"
   },
   {
     "id": "tonusdc",
