@@ -1180,6 +1180,16 @@
     "first_capture": "2025-10-15T00:00:00.000Z"
   },
   {
+    "id": "COHR-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "perpetual-COHR-USDT:USDT",
+    "symbol": "COHR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "COIN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-COIN-USDT:USDT",
@@ -3114,12 +3124,12 @@
   {
     "id": "MRVL-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "perpetual-MRVL-USDT:USDT",
     "symbol": "MRVL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "MSFT-USDT-SWAP",
@@ -3964,12 +3974,12 @@
   {
     "id": "RKLB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "perpetual-RKLB-USDT:USDT",
     "symbol": "RKLB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "RLS-USDT-SWAP",
@@ -4170,12 +4180,12 @@
   {
     "id": "SHLD-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "perpetual-SHLD-USDT:USDT",
     "symbol": "SHLD",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "SIGN-USDT-SWAP",
@@ -5086,12 +5096,12 @@
   {
     "id": "WDC-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "perpetual-WDC-USDT:USDT",
     "symbol": "WDC",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "WEMIX-USDT-SWAP",

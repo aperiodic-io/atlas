@@ -17361,11 +17361,11 @@
   {
     "id": "megau",
     "type": "spot",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "spot-MEGA-U",
     "symbol": "MEGA",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "megausdc",
@@ -26718,20 +26718,20 @@
   {
     "id": "tonu",
     "type": "spot",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "spot-TON-U",
     "symbol": "TON",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "tonusd1",
     "type": "spot",
-    "first_capture": "2026-05-12T00:00:00.000Z",
     "internal_id": "spot-TON-USD1",
     "symbol": "TON",
     "denominator": "USD1",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-12T00:00:00.000Z"
   },
   {
     "id": "tonusdc",
