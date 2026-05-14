@@ -13245,6 +13245,51 @@
     "end_date": "2022-06-30T00:00:00.000Z"
   },
   {
+    "id": "PROS-EUR",
+    "type": "spot",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "spot-PROS-EUR",
+    "symbol": "PROS",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "PROS-TRY",
+    "type": "spot",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "spot-PROS-TRY",
+    "symbol": "PROS",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "PROS-USD",
+    "type": "spot",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "spot-PROS-USD",
+    "symbol": "PROS",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "PROS-USDC",
+    "type": "spot",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "spot-PROS-USDC",
+    "symbol": "PROS",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "PROS-USDT",
+    "type": "spot",
+    "first_capture": "2026-05-13T00:00:00.000Z",
+    "internal_id": "spot-PROS-USDT",
+    "symbol": "PROS",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "PROVE-EUR",
     "type": "spot",
     "internal_id": "spot-PROVE-EUR",
