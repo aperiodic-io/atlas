@@ -6026,6 +6026,16 @@
     "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
+    "id": "pharosusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-14T00:00:00.000Z",
+    "internal_id": "perpetual-PHAROS-USDT:USDT",
+    "symbol": "PHAROS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "phausdt",
     "type": "perpetual",
     "internal_id": "perpetual-PHA-USDT:USDT",
@@ -7105,6 +7115,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-11-06T00:00:00.000Z"
+  },
+  {
+    "id": "starusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-14T00:00:00.000Z",
+    "internal_id": "perpetual-STAR-USDT:USDT",
+    "symbol": "STAR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "stblusdt",
