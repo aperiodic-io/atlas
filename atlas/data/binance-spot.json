@@ -1209,6 +1209,33 @@
     "end_date": "2025-12-20T00:00:00.000Z"
   },
   {
+    "id": "aigensyntry",
+    "type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z",
+    "internal_id": "spot-AIGENSYN-TRY",
+    "symbol": "AIGENSYN",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "aigensynusdc",
+    "type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z",
+    "internal_id": "spot-AIGENSYN-USDC",
+    "symbol": "AIGENSYN",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "aigensynusdt",
+    "type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z",
+    "internal_id": "spot-AIGENSYN-USDT",
+    "symbol": "AIGENSYN",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "aionbtc",
     "type": "spot",
     "internal_id": "spot-AION-BTC",
