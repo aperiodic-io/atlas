@@ -1088,6 +1088,16 @@
     "end_date": "2026-01-25T00:00:00.000Z"
   },
   {
+    "id": "CBRS-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-15T00:00:00.000Z",
+    "internal_id": "perpetual-CBRS-USDT:USDT",
+    "symbol": "CBRS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CC-USDT:USDT",

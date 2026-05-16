@@ -1211,29 +1211,29 @@
   {
     "id": "aigensyntry",
     "type": "spot",
-    "first_capture": "2026-05-14T00:00:00.000Z",
     "internal_id": "spot-AIGENSYN-TRY",
     "symbol": "AIGENSYN",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z"
   },
   {
     "id": "aigensynusdc",
     "type": "spot",
-    "first_capture": "2026-05-14T00:00:00.000Z",
     "internal_id": "spot-AIGENSYN-USDC",
     "symbol": "AIGENSYN",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z"
   },
   {
     "id": "aigensynusdt",
     "type": "spot",
-    "first_capture": "2026-05-14T00:00:00.000Z",
     "internal_id": "spot-AIGENSYN-USDT",
     "symbol": "AIGENSYN",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-14T00:00:00.000Z"
   },
   {
     "id": "aionbtc",
