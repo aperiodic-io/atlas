@@ -3710,12 +3710,12 @@
   {
     "id": "xyz:PURRDAT",
     "type": "perpetual",
-    "first_capture": "2026-05-14T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:PURRDAT-USDC:USDC",
     "symbol": "XYZ:PURRDAT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-14T00:00:00.000Z"
   },
   {
     "id": "xyz:RIVN",
