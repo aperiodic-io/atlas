@@ -3788,6 +3788,16 @@
     "first_capture": "2026-03-18T00:00:00.000Z"
   },
   {
+    "id": "xyz:SPCX",
+    "type": "perpetual",
+    "first_capture": "2026-05-17T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SPCX-USDC:USDC",
+    "symbol": "XYZ:SPCX",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:TSLA",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:TSLA-USDC:USDC",
