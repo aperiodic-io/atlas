@@ -3468,6 +3468,16 @@
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
+    "id": "xyz:GBP",
+    "type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:GBP-USDC:USDC",
+    "symbol": "XYZ:GBP",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:GME",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:GME-USDC:USDC",
@@ -3790,12 +3800,12 @@
   {
     "id": "xyz:SPCX",
     "type": "perpetual",
-    "first_capture": "2026-05-17T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SPCX-USDC:USDC",
     "symbol": "XYZ:SPCX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-17T00:00:00.000Z"
   },
   {
     "id": "xyz:TSLA",
