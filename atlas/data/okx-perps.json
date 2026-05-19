@@ -2045,6 +2045,16 @@
     "first_capture": "2024-05-10T00:00:00.000Z"
   },
   {
+    "id": "GLW-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z",
+    "internal_id": "perpetual-GLW-USDT:USDT",
+    "symbol": "GLW",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "GME-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-GME-USDT:USDT",

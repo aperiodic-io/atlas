@@ -800,6 +800,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "HPL/USDC",
+    "type": "spot",
+    "internal_id": "spot-HPL-USDC",
+    "symbol": "HPL",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "HPL/USDH",
     "type": "spot",
     "internal_id": "spot-HPL-USDH",
