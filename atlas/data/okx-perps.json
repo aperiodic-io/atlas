@@ -1324,6 +1324,16 @@
     "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
+    "id": "CSCO-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z",
+    "internal_id": "perpetual-CSCO-USDT:USDT",
+    "symbol": "CSCO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CSPR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CSPR-USDT:USDT",
@@ -2047,12 +2057,12 @@
   {
     "id": "GLW-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-GLW-USDT:USDT",
     "symbol": "GLW",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "GME-USDT-SWAP",
@@ -3203,6 +3213,16 @@
     "first_capture": "2025-06-03T00:00:00.000Z"
   },
   {
+    "id": "NBIS-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z",
+    "internal_id": "perpetual-NBIS-USDT:USDT",
+    "symbol": "NBIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "NC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-NC-USDT:USDT",
@@ -3846,6 +3866,16 @@
     "first_capture": "2023-11-20T00:00:00.000Z"
   },
   {
+    "id": "QCOM-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z",
+    "internal_id": "perpetual-QCOM-USDT:USDT",
+    "symbol": "QCOM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "QQQ-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-QQQ-USDT:USDT",
@@ -4351,6 +4381,16 @@
     "contract_type": "perpetual",
     "first_capture": "2021-12-30T00:00:00.000Z",
     "end_date": "2022-11-16T00:00:00.000Z"
+  },
+  {
+    "id": "SOXL-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z",
+    "internal_id": "perpetual-SOXL-USDT:USDT",
+    "symbol": "SOXL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SPACE-USDT-SWAP",

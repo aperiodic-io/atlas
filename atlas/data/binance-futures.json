@@ -1619,12 +1619,12 @@
   {
     "id": "brkbusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-BRKB-USDT:USDT",
     "symbol": "BRKB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "broccoli714usdt",
@@ -1746,12 +1746,12 @@
   {
     "id": "btcusd1",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USD1:BTC",
     "symbol": "BTC",
     "denominator": "USD1",
     "margin": "BTC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "btcusdc",
@@ -2161,6 +2161,16 @@
     "first_capture": "2024-09-20T00:00:00.000Z"
   },
   {
+    "id": "cbrsusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z",
+    "internal_id": "perpetual-CBRS-USDT:USDT",
+    "symbol": "CBRS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ccusdt",
     "type": "perpetual",
     "internal_id": "perpetual-CC-USDT:USDT",
@@ -2487,12 +2497,12 @@
   {
     "id": "crwvusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-CRWV-USDT:USDT",
     "symbol": "CRWV",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "cscousdt",
@@ -2873,12 +2883,12 @@
   {
     "id": "dramusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-DRAM-USDT:USDT",
     "symbol": "DRAM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "driftusdt",
@@ -3635,12 +3645,12 @@
   {
     "id": "flncusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-FLNC-USDT:USDT",
     "symbol": "FLNC",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "flockusdt",
@@ -4577,12 +4587,12 @@
   {
     "id": "jpmusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-JPM-USDT:USDT",
     "symbol": "JPM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "jstusdt",
@@ -6679,12 +6689,12 @@
   {
     "id": "rklbusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-RKLB-USDT:USDT",
     "symbol": "RKLB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "rlcusdt",
@@ -8178,12 +8188,12 @@
   {
     "id": "vusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-V-USDT:USDT",
     "symbol": "V",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "vvvusdt",
@@ -8320,12 +8330,12 @@
   {
     "id": "wmtusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-WMT-USDT:USDT",
     "symbol": "WMT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "woousdt",
