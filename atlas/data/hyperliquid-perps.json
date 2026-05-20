@@ -3470,12 +3470,12 @@
   {
     "id": "xyz:GBP",
     "type": "perpetual",
-    "first_capture": "2026-05-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:GBP-USDC:USDC",
     "symbol": "XYZ:GBP",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-18T00:00:00.000Z"
   },
   {
     "id": "xyz:GME",
