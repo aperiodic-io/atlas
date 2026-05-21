@@ -939,7 +939,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2021-08-31T00:00:00.000Z"
+    "first_capture": "2021-08-31T00:00:00.000Z",
+    "end_date": "2026-05-20T00:00:00.000Z"
   },
   {
     "id": "athusdt",
@@ -2163,12 +2164,12 @@
   {
     "id": "cbrsusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-19T00:00:00.000Z",
     "internal_id": "perpetual-CBRS-USDT:USDT",
     "symbol": "CBRS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z"
   },
   {
     "id": "ccusdt",
@@ -5437,7 +5438,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2025-03-31T00:00:00.000Z"
+    "first_capture": "2025-03-31T00:00:00.000Z",
+    "end_date": "2026-05-20T00:00:00.000Z"
   },
   {
     "id": "mmtusdt",
@@ -6194,7 +6196,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2023-02-16T00:00:00.000Z"
+    "first_capture": "2023-02-16T00:00:00.000Z",
+    "end_date": "2026-05-20T00:00:00.000Z"
   },
   {
     "id": "pieverseusdt",
@@ -7509,7 +7512,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2024-08-19T00:00:00.000Z"
+    "first_capture": "2024-08-19T00:00:00.000Z",
+    "end_date": "2026-05-20T00:00:00.000Z"
   },
   {
     "id": "tacusdt",

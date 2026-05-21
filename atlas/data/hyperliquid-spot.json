@@ -968,6 +968,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "KHYPE/USDC",
+    "type": "spot",
+    "internal_id": "spot-KHYPE-USDC",
+    "symbol": "KHYPE",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "KHYPE/USDH",
     "type": "spot",
     "internal_id": "spot-KHYPE-USDH",
@@ -996,6 +1004,14 @@
     "type": "spot",
     "internal_id": "spot-KITTY-USDC",
     "symbol": "KITTY",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "KNTQ/USDC",
+    "type": "spot",
+    "internal_id": "spot-KNTQ-USDC",
+    "symbol": "KNTQ",
     "denominator": "USDC",
     "contract_type": "spot"
   },

@@ -1326,12 +1326,12 @@
   {
     "id": "CSCO-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-19T00:00:00.000Z",
     "internal_id": "perpetual-CSCO-USDT:USDT",
     "symbol": "CSCO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z"
   },
   {
     "id": "CSPR-USDT-SWAP",
@@ -3215,12 +3215,12 @@
   {
     "id": "NBIS-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-19T00:00:00.000Z",
     "internal_id": "perpetual-NBIS-USDT:USDT",
     "symbol": "NBIS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z"
   },
   {
     "id": "NC-USDT-SWAP",
@@ -3868,12 +3868,12 @@
   {
     "id": "QCOM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-19T00:00:00.000Z",
     "internal_id": "perpetual-QCOM-USDT:USDT",
     "symbol": "QCOM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z"
   },
   {
     "id": "QQQ-USDT-SWAP",
@@ -4385,12 +4385,12 @@
   {
     "id": "SOXL-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-19T00:00:00.000Z",
     "internal_id": "perpetual-SOXL-USDT:USDT",
     "symbol": "SOXL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-19T00:00:00.000Z"
   },
   {
     "id": "SPACE-USDT-SWAP",
