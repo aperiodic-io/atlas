@@ -3098,6 +3098,16 @@
     "first_capture": "2026-04-09T00:00:00.000Z"
   },
   {
+    "id": "para:AVGO",
+    "type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:AVGO-USDC:USDC",
+    "symbol": "PARA:AVGO",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "para:BTCD",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:BTCD-USDC:USDC",
@@ -3288,6 +3298,16 @@
     "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
+    "id": "xyz:ARM",
+    "type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:ARM-USDC:USDC",
+    "symbol": "XYZ:ARM",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:BABA",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:BABA-USDC:USDC",
@@ -3446,6 +3466,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-03-02T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:EWT",
+    "type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:EWT-USDC:USDC",
+    "symbol": "XYZ:EWT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:EWY",

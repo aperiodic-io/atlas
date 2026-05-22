@@ -7179,6 +7179,16 @@
     "first_capture": "2026-01-23T00:00:00.000Z"
   },
   {
+    "id": "spcxusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "internal_id": "perpetual-SPCX-USDT:USDT",
+    "symbol": "SPCX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "spellusdt",
     "type": "perpetual",
     "internal_id": "perpetual-SPELL-USDT:USDT",
