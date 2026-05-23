@@ -12127,6 +12127,33 @@
     "end_date": "2023-12-30T00:00:00.000Z"
   },
   {
+    "id": "geniustry",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-GENIUS-TRY",
+    "symbol": "GENIUS",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "geniususdc",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-GENIUS-USDC",
+    "symbol": "GENIUS",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "geniususdt",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-GENIUS-USDT",
+    "symbol": "GENIUS",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "gftbusd",
     "type": "spot",
     "internal_id": "spot-GFT-BUSD",
@@ -19972,6 +19999,33 @@
     "contract_type": "spot",
     "first_capture": "2023-11-09T00:00:00.000Z",
     "end_date": "2026-01-17T00:00:00.000Z"
+  },
+  {
+    "id": "opgtry",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-OPG-TRY",
+    "symbol": "OPG",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "opgusdc",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-OPG-USDC",
+    "symbol": "OPG",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "opgusdt",
+    "type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z",
+    "internal_id": "spot-OPG-USDT",
+    "symbol": "OPG",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "opnbnb",
