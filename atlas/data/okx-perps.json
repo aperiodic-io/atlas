@@ -2017,12 +2017,12 @@
   {
     "id": "GEV-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-21T00:00:00.000Z",
     "internal_id": "perpetual-GEV-USDT:USDT",
     "symbol": "GEV",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z"
   },
   {
     "id": "GF-USDT-SWAP",
@@ -4991,12 +4991,12 @@
   {
     "id": "URNM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-21T00:00:00.000Z",
     "internal_id": "perpetual-URNM-USDT:USDT",
     "symbol": "URNM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-21T00:00:00.000Z"
   },
   {
     "id": "USAR-USDT-SWAP",
