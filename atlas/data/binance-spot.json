@@ -3351,7 +3351,8 @@
     "symbol": "AVAX",
     "denominator": "ETH",
     "contract_type": "spot",
-    "first_capture": "2021-11-19T00:00:00.000Z"
+    "first_capture": "2021-11-19T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "avaxeur",
@@ -6999,7 +7000,8 @@
     "symbol": "CHZ",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2020-12-28T00:00:00.000Z"
+    "first_capture": "2020-12-28T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "chzbusd",
@@ -10795,7 +10797,8 @@
     "symbol": "FET",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2021-03-04T00:00:00.000Z"
+    "first_capture": "2021-03-04T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "fetbrl",
@@ -12129,29 +12132,29 @@
   {
     "id": "geniustry",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-GENIUS-TRY",
     "symbol": "GENIUS",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "geniususdc",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-GENIUS-USDC",
     "symbol": "GENIUS",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "geniususdt",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-GENIUS-USDT",
     "symbol": "GENIUS",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "gftbusd",
@@ -14264,7 +14267,8 @@
     "symbol": "IOTA",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2019-03-30T00:00:00.000Z"
+    "first_capture": "2019-03-30T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "iotabusd",
@@ -20003,29 +20007,29 @@
   {
     "id": "opgtry",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-OPG-TRY",
     "symbol": "OPG",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "opgusdc",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-OPG-USDC",
     "symbol": "OPG",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "opgusdt",
     "type": "spot",
-    "first_capture": "2026-05-22T00:00:00.000Z",
     "internal_id": "spot-OPG-USDT",
     "symbol": "OPG",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-05-22T00:00:00.000Z"
   },
   {
     "id": "opnbnb",
@@ -27921,7 +27925,8 @@
     "symbol": "UNI",
     "denominator": "ETH",
     "contract_type": "spot",
-    "first_capture": "2022-01-14T00:00:00.000Z"
+    "first_capture": "2022-01-14T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "unieur",
@@ -27940,7 +27945,8 @@
     "symbol": "UNI",
     "denominator": "FDUSD",
     "contract_type": "spot",
-    "first_capture": "2024-03-05T00:00:00.000Z"
+    "first_capture": "2024-03-05T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "unitry",
@@ -30124,7 +30130,8 @@
     "symbol": "XLM",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2019-03-30T00:00:00.000Z"
+    "first_capture": "2019-03-30T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "xlmbusd",
@@ -30171,7 +30178,8 @@
     "symbol": "XLM",
     "denominator": "FDUSD",
     "contract_type": "spot",
-    "first_capture": "2024-12-04T00:00:00.000Z"
+    "first_capture": "2024-12-04T00:00:00.000Z",
+    "end_date": "2026-05-23T00:00:00.000Z"
   },
   {
     "id": "xlmjpy",
