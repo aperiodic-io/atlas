@@ -882,6 +882,16 @@
     "first_capture": "2023-09-19T00:00:00.000Z"
   },
   {
+    "id": "armusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-ARM-USDT:USDT",
+    "symbol": "ARM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "arpausdt",
     "type": "perpetual",
     "internal_id": "perpetual-ARPA-USDT:USDT",
@@ -1369,6 +1379,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-02-06T00:00:00.000Z"
+  },
+  {
+    "id": "beusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-BE-USDT:USDT",
+    "symbol": "BE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "bicousdt",
@@ -2352,6 +2372,16 @@
     "contract_type": "perpetual",
     "first_capture": "2023-02-21T00:00:00.000Z",
     "end_date": "2023-05-26T00:00:00.000Z"
+  },
+  {
+    "id": "cohrusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-COHR-USDT:USDT",
+    "symbol": "COHR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "coinusdt",
@@ -5623,6 +5653,16 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "nbisusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-NBIS-USDT:USDT",
+    "symbol": "NBIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "nearbusd",
     "type": "perpetual",
     "internal_id": "perpetual-NEAR-BUSD:BUSD",
@@ -5963,6 +6003,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-10-24T00:00:00.000Z"
+  },
+  {
+    "id": "openaiusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-OPENAI-USDT:USDT",
+    "symbol": "OPENAI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "openusdt",
@@ -8270,6 +8320,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-04-15T00:00:00.000Z"
+  },
+  {
+    "id": "wdcusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-WDC-USDT:USDT",
+    "symbol": "WDC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "wetusdt",

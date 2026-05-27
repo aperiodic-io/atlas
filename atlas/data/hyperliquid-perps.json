@@ -320,7 +320,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "BLUR",
@@ -474,7 +475,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-11-25T00:00:00.000Z"
+    "first_capture": "2024-11-25T00:00:00.000Z",
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "CHIP",
@@ -707,7 +709,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "FXS",
@@ -1989,7 +1992,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-02-09T00:00:00.000Z"
+    "first_capture": "2025-02-09T00:00:00.000Z",
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "TURBO",
@@ -3316,6 +3320,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-01-15T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:BB",
+    "type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:BB-USDC:USDC",
+    "symbol": "XYZ:BB",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:BIRD",
