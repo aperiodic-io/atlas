@@ -2723,6 +2723,17 @@
     "end_date": "2022-11-11T00:00:00.000Z"
   },
   {
+    "id": "AVAX-USD_UM_XPERP-310530",
+    "type": "future",
+    "first_capture": "2026-05-27T00:00:00.000Z",
+    "internal_id": "future-AVAX-USD_UM_XPERP:AVAX-20310530",
+    "symbol": "AVAX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AVAX",
+    "contract_type": "future",
+    "delivery_date": "2031-05-30T00:00:00"
+  },
+  {
     "id": "BABY-USDT-251003",
     "type": "future",
     "internal_id": "future-BABY-USDT:USDT-20251003",
@@ -7197,6 +7208,17 @@
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-16T00:00:00.000Z",
     "end_date": "2023-02-11T00:00:00.000Z"
+  },
+  {
+    "id": "BCH-USD_UM_XPERP-310530",
+    "type": "future",
+    "first_capture": "2026-05-27T00:00:00.000Z",
+    "internal_id": "future-BCH-USD_UM_XPERP:BCH-20310530",
+    "symbol": "BCH",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BCH",
+    "contract_type": "future",
+    "delivery_date": "2031-05-30T00:00:00"
   },
   {
     "id": "BNB-USD_UM_XPERP-310523",
@@ -57627,6 +57649,17 @@
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
+    "id": "TON-USD_UM_XPERP-310530",
+    "type": "future",
+    "first_capture": "2026-05-27T00:00:00.000Z",
+    "internal_id": "future-TON-USD_UM_XPERP:TON-20310530",
+    "symbol": "TON",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TON",
+    "contract_type": "future",
+    "delivery_date": "2031-05-30T00:00:00"
+  },
+  {
     "id": "TRX-USD-190524",
     "type": "future",
     "internal_id": "future-TRX-USD:TRX-20190524",
@@ -68729,5 +68762,16 @@
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "ZEC-USD_UM_XPERP-310530",
+    "type": "future",
+    "first_capture": "2026-05-27T00:00:00.000Z",
+    "internal_id": "future-ZEC-USD_UM_XPERP:ZEC-20310530",
+    "symbol": "ZEC",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ZEC",
+    "contract_type": "future",
+    "delivery_date": "2031-05-30T00:00:00"
   }
 ]

@@ -3324,12 +3324,12 @@
   {
     "id": "xyz:BB",
     "type": "perpetual",
-    "first_capture": "2026-05-26T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BB-USDC:USDC",
     "symbol": "XYZ:BB",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "xyz:BIRD",
