@@ -2725,13 +2725,13 @@
   {
     "id": "AVAX-USD_UM_XPERP-310530",
     "type": "future",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "future-AVAX-USD_UM_XPERP:AVAX-20310530",
     "symbol": "AVAX",
     "denominator": "USD_UM_XPERP",
     "margin": "AVAX",
     "contract_type": "future",
-    "delivery_date": "2031-05-30T00:00:00"
+    "delivery_date": "2031-05-30T00:00:00",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "BABY-USDT-251003",
@@ -7212,13 +7212,13 @@
   {
     "id": "BCH-USD_UM_XPERP-310530",
     "type": "future",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "future-BCH-USD_UM_XPERP:BCH-20310530",
     "symbol": "BCH",
     "denominator": "USD_UM_XPERP",
     "margin": "BCH",
     "contract_type": "future",
-    "delivery_date": "2031-05-30T00:00:00"
+    "delivery_date": "2031-05-30T00:00:00",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "BNB-USD_UM_XPERP-310523",
@@ -57651,13 +57651,13 @@
   {
     "id": "TON-USD_UM_XPERP-310530",
     "type": "future",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "future-TON-USD_UM_XPERP:TON-20310530",
     "symbol": "TON",
     "denominator": "USD_UM_XPERP",
     "margin": "TON",
     "contract_type": "future",
-    "delivery_date": "2031-05-30T00:00:00"
+    "delivery_date": "2031-05-30T00:00:00",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "TRX-USD-190524",
@@ -68766,12 +68766,12 @@
   {
     "id": "ZEC-USD_UM_XPERP-310530",
     "type": "future",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "future-ZEC-USD_UM_XPERP:ZEC-20310530",
     "symbol": "ZEC",
     "denominator": "USD_UM_XPERP",
     "margin": "ZEC",
     "contract_type": "future",
-    "delivery_date": "2031-05-30T00:00:00"
+    "delivery_date": "2031-05-30T00:00:00",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   }
 ]

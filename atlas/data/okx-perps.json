@@ -289,6 +289,16 @@
     "end_date": "2025-07-05T00:00:00.000Z"
   },
   {
+    "id": "AMAT-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z",
+    "internal_id": "perpetual-AMAT-USDT:USDT",
+    "symbol": "AMAT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "AMD-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AMD-USDT:USDT",
@@ -723,12 +733,12 @@
   {
     "id": "BE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-BE-USDT:USDT",
     "symbol": "BE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "BEAT-USDT-SWAP",
@@ -1438,6 +1448,16 @@
     "contract_type": "perpetual",
     "first_capture": "2024-11-21T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z"
+  },
+  {
+    "id": "DELL-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z",
+    "internal_id": "perpetual-DELL-USDT:USDT",
+    "symbol": "DELL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "DGB-USDT-SWAP",
@@ -2336,12 +2356,12 @@
   {
     "id": "IBM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-IBM-USDT:USDT",
     "symbol": "IBM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "ICP-USDT-SWAP",
@@ -2479,12 +2499,12 @@
   {
     "id": "IRYS-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-IRYS-USDT:USDT",
     "symbol": "IRYS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "IWM-USDT-SWAP",
@@ -3444,12 +3464,12 @@
   {
     "id": "NOK-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-NOK-USDT:USDT",
     "symbol": "NOK",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
     "id": "NOT-USDT-SWAP",
@@ -5193,6 +5213,16 @@
     "contract_type": "perpetual",
     "first_capture": "2023-10-06T00:00:00.000Z",
     "end_date": "2025-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "VRT-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z",
+    "internal_id": "perpetual-VRT-USDT:USDT",
+    "symbol": "VRT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "W-USDT-SWAP",

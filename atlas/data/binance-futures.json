@@ -2556,6 +2556,16 @@
     "first_capture": "2020-11-19T00:00:00.000Z"
   },
   {
+    "id": "ctrusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z",
+    "internal_id": "perpetual-CTR-USDT:USDT",
+    "symbol": "CTR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ctsiusdt",
     "type": "perpetual",
     "internal_id": "perpetual-CTSI-USDT:USDT",

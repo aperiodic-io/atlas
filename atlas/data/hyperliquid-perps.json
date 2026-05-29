@@ -3772,6 +3772,16 @@
     "first_capture": "2026-05-14T00:00:00.000Z"
   },
   {
+    "id": "xyz:QNT",
+    "type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:QNT-USDC:USDC",
+    "symbol": "XYZ:QNT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:RIVN",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:RIVN-USDC:USDC",
