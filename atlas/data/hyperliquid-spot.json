@@ -2281,6 +2281,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "WARS/USDC",
+    "type": "spot",
+    "internal_id": "spot-WARS-USDC",
+    "symbol": "WARS",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "WASH/USDC",
     "type": "spot",
     "internal_id": "spot-WASH-USDC",
