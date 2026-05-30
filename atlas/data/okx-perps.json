@@ -291,12 +291,12 @@
   {
     "id": "AMAT-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-28T00:00:00.000Z",
     "internal_id": "perpetual-AMAT-USDT:USDT",
     "symbol": "AMAT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
     "id": "AMD-USDT-SWAP",
@@ -1452,12 +1452,12 @@
   {
     "id": "DELL-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-28T00:00:00.000Z",
     "internal_id": "perpetual-DELL-USDT:USDT",
     "symbol": "DELL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
     "id": "DGB-USDT-SWAP",
@@ -5217,12 +5217,12 @@
   {
     "id": "VRT-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-05-28T00:00:00.000Z",
     "internal_id": "perpetual-VRT-USDT:USDT",
     "symbol": "VRT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
     "id": "W-USDT-SWAP",

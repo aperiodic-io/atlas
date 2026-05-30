@@ -2558,12 +2558,12 @@
   {
     "id": "ctrusdt",
     "type": "perpetual",
-    "first_capture": "2026-05-28T00:00:00.000Z",
     "internal_id": "perpetual-CTR-USDT:USDT",
     "symbol": "CTR",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
     "id": "ctsiusdt",
@@ -6541,6 +6541,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2022-10-20T00:00:00.000Z"
+  },
+  {
+    "id": "qntxusdt",
+    "type": "perpetual",
+    "first_capture": "2026-05-29T00:00:00.000Z",
+    "internal_id": "perpetual-QNTX-USDT:USDT",
+    "symbol": "QNTX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "qqqusdt",

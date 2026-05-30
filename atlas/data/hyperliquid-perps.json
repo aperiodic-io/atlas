@@ -3312,6 +3312,16 @@
     "first_capture": "2026-05-21T00:00:00.000Z"
   },
   {
+    "id": "xyz:ASML",
+    "type": "perpetual",
+    "first_capture": "2026-05-29T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:ASML-USDC:USDC",
+    "symbol": "XYZ:ASML",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:BABA",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:BABA-USDC:USDC",
@@ -3774,12 +3784,12 @@
   {
     "id": "xyz:QNT",
     "type": "perpetual",
-    "first_capture": "2026-05-28T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:QNT-USDC:USDC",
     "symbol": "XYZ:QNT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
     "id": "xyz:RIVN",
