@@ -3314,12 +3314,12 @@
   {
     "id": "xyz:ASML",
     "type": "perpetual",
-    "first_capture": "2026-05-29T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:ASML-USDC:USDC",
     "symbol": "XYZ:ASML",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-05-29T00:00:00.000Z"
   },
   {
     "id": "xyz:BABA",
