@@ -4382,6 +4382,15 @@
     "end_date": "2025-10-25T00:00:00.000Z"
   },
   {
+    "id": "SLX-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-SLX-USDT:USDT",
+    "symbol": "SLX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "SNDK-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-SNDK-USDT:USDT",
