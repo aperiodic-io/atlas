@@ -700,6 +700,16 @@
     "first_capture": "2020-08-28T00:00:00.000Z"
   },
   {
+    "id": "BB-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z",
+    "internal_id": "perpetual-BB-USDT:USDT",
+    "symbol": "BB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "BCH-USD-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BCH-USD:BCH",
@@ -2975,6 +2985,16 @@
     "end_date": "2025-09-19T00:00:00.000Z"
   },
   {
+    "id": "LUNR-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z",
+    "internal_id": "perpetual-LUNR-USDT:USDT",
+    "symbol": "LUNR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "MAGIC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-MAGIC-USDT:USDT",
@@ -4051,6 +4071,16 @@
     "end_date": "2025-08-02T00:00:00.000Z"
   },
   {
+    "id": "RDW-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z",
+    "internal_id": "perpetual-RDW-USDT:USDT",
+    "symbol": "RDW",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "RECALL-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-RECALL-USDT:USDT",
@@ -4388,7 +4418,8 @@
     "symbol": "SLX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "SNDK-USDT-SWAP",
