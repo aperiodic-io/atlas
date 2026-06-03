@@ -123,7 +123,6 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 
 | Exchange ID | Stability |
 | --- | --- |
-| `binance` | ✅ **`STABLE`** |
 | `binance-spot` | ✅ **`STABLE`** |
 | `binance-futures` | ✅ **`STABLE`** |
 | `binance-futures-cm` | ✅ **`STABLE`** |
