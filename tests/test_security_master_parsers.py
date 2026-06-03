@@ -26,13 +26,13 @@ class TestHelpers:
             parse_contract("not-an-exchange", _sd("BTCUSDT", "spot"))
 
     def test_unknown_type_gives_unknown_contract_type(self):
-        c = _parse("binance", "BTCUSDT", "mystery")
+        c = _parse("binance-spot", "BTCUSDT", "mystery")
         assert c is not None
         assert c.contract_type == ContractType.unknown
 
     def test_missing_id_key_raises(self):
         with pytest.raises(KeyError):
-            parse_contract("binance", {})
+            parse_contract("binance-spot", {})
 
     def test_beta_exchange_classification(self):
         assert is_beta_exchange("binance-spot") is False
@@ -47,7 +47,7 @@ class TestHelpers:
 
 class TestBinanceSpot:
     def test_btcusdt(self):
-        c = _parse("binance", "BTCUSDT", "spot")
+        c = _parse("binance-spot", "BTCUSDT", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin is None
@@ -55,14 +55,14 @@ class TestBinanceSpot:
         assert c.delivery_date is None
 
     def test_ethbtc(self):
-        c = _parse("binance", "ETHBTC", "spot")
+        c = _parse("binance-spot", "ETHBTC", "spot")
         assert c.symbol == "ETH"
         assert c.denominator == "BTC"
         assert c.margin is None
         assert c.contract_type == ContractType.spot
 
     def test_bnbbusd(self):
-        c = _parse("binance", "BNBBUSD", "spot")
+        c = _parse("binance-spot", "BNBBUSD", "spot")
         assert c.symbol == "BNB"
         assert c.denominator == "BUSD"
 
@@ -103,7 +103,7 @@ class TestBinanceSpot:
 
     def test_unrecognised_quote_raises(self):
         with pytest.raises(SkipSymbol):
-            _parse("binance", "ABCXYZ", "spot")
+            _parse("binance-spot", "ABCXYZ", "spot")
 
     def test_alias_binance_spot(self):
         c = _parse("binance-spot", "BTCUSDT", "spot")
@@ -656,7 +656,7 @@ class TestPhemex:
 class TestContractFields:
     def test_original_id_preserved(self):
         sd = _sd("BTCUSDT", "spot")
-        c = parse_contract("binance", sd)
+        c = parse_contract("binance-spot", sd)
         assert c.original_id == "BTCUSDT"
 
     def test_exchange_preserved(self):
@@ -664,12 +664,12 @@ class TestContractFields:
         assert c.exchange == "coinbase"
 
     def test_default_contract_size(self):
-        c = _parse("binance", "BTCUSDT", "spot")
+        c = _parse("binance-spot", "BTCUSDT", "spot")
         assert c.contract_size is None
 
     def test_contract_size_preserved(self):
         sd = _sd("BTCUSDT", "spot", contract_size=1.0)
-        c = parse_contract("binance", sd)
+        c = parse_contract("binance-spot", sd)
         assert c.contract_size == 1.0
 
     def test_symbols_uppercased(self):
