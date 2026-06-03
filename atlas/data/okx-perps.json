@@ -484,6 +484,16 @@
     "end_date": "2022-11-17T00:00:00.000Z"
   },
   {
+    "id": "ASTS-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-02T00:00:00.000Z",
+    "internal_id": "perpetual-ASTS-USDT:USDT",
+    "symbol": "ASTS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "AT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AT-USDT:USDT",
@@ -702,12 +712,12 @@
   {
     "id": "BB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-01T00:00:00.000Z",
     "internal_id": "perpetual-BB-USDT:USDT",
     "symbol": "BB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "BCH-USD-SWAP",
@@ -2333,6 +2343,16 @@
     "first_capture": "2026-02-25T00:00:00.000Z"
   },
   {
+    "id": "HPE-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-02T00:00:00.000Z",
+    "internal_id": "perpetual-HPE-USDT:USDT",
+    "symbol": "HPE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "HUMA-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-HUMA-USDT:USDT",
@@ -2987,12 +3007,12 @@
   {
     "id": "LUNR-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-01T00:00:00.000Z",
     "internal_id": "perpetual-LUNR-USDT:USDT",
     "symbol": "LUNR",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "MAGIC-USDT-SWAP",
@@ -3500,6 +3520,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "NOW-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-02T00:00:00.000Z",
+    "internal_id": "perpetual-NOW-USDT:USDT",
+    "symbol": "NOW",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "NVDA-USDT-SWAP",
@@ -4073,12 +4103,12 @@
   {
     "id": "RDW-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-01T00:00:00.000Z",
     "internal_id": "perpetual-RDW-USDT:USDT",
     "symbol": "RDW",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "RECALL-USDT-SWAP",
@@ -4554,6 +4584,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "SPCX-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-02T00:00:00.000Z",
+    "internal_id": "perpetual-SPCX-USDT:USDT",
+    "symbol": "SPCX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SPELL-USDT-SWAP",
