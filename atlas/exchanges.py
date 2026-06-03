@@ -98,7 +98,6 @@ def hyperliquid_filter(sd: dict) -> bool:
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
-    "binance": _define("binance", parse_binance, exchange_fetcher=fetch_binance_spot),
     "binance-spot": _define(
         "binance-spot",
         parse_binance,
