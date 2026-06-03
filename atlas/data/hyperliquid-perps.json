@@ -3444,12 +3444,12 @@
   {
     "id": "xyz:DELL",
     "type": "perpetual",
-    "first_capture": "2026-06-01T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:DELL-USDC:USDC",
     "symbol": "XYZ:DELL",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "xyz:DKNG",
@@ -3604,12 +3604,12 @@
   {
     "id": "xyz:IBM",
     "type": "perpetual",
-    "first_capture": "2026-06-01T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:IBM-USDC:USDC",
     "symbol": "XYZ:IBM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
     "id": "xyz:INTC",
