@@ -3322,6 +3322,16 @@
     "first_capture": "2026-05-29T00:00:00.000Z"
   },
   {
+    "id": "xyz:AVGO",
+    "type": "perpetual",
+    "first_capture": "2026-06-03T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:AVGO-USDC:USDC",
+    "symbol": "XYZ:AVGO",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:BABA",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:BABA-USDC:USDC",
