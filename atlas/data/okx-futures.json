@@ -57293,13 +57293,13 @@
   {
     "id": "SLX-USD_UM_XPERP-310606",
     "type": "future",
-    "first_capture": "2026-06-03T00:00:00.000Z",
     "internal_id": "future-SLX-USD_UM_XPERP:SLX-20310606",
     "symbol": "SLX",
     "denominator": "USD_UM_XPERP",
     "margin": "SLX",
     "contract_type": "future",
-    "delivery_date": "2031-06-06T00:00:00"
+    "delivery_date": "2031-06-06T00:00:00",
+    "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
     "id": "SOL-USD-220603",
