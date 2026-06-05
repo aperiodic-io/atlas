@@ -155,12 +155,12 @@
   {
     "id": "ADBE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-03T00:00:00.000Z",
     "internal_id": "perpetual-ADBE-USDT:USDT",
     "symbol": "ADBE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
     "id": "AERO-USDT-SWAP",
@@ -464,12 +464,12 @@
   {
     "id": "ASML-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-03T00:00:00.000Z",
     "internal_id": "perpetual-ASML-USDT:USDT",
     "symbol": "ASML",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
     "id": "ASTER-USDT-SWAP",
@@ -1886,12 +1886,12 @@
   {
     "id": "EWT-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-03T00:00:00.000Z",
     "internal_id": "perpetual-EWT-USDT:USDT",
     "symbol": "EWT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
     "id": "EWY-USDT-SWAP",
