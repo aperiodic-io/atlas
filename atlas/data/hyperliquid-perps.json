@@ -3754,12 +3754,12 @@
   {
     "id": "xyz:NOW",
     "type": "perpetual",
-    "first_capture": "2026-06-04T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NOW-USDC:USDC",
     "symbol": "XYZ:NOW",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-04T00:00:00.000Z"
   },
   {
     "id": "xyz:NVDA",
