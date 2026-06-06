@@ -2133,12 +2133,12 @@
   {
     "id": "btwusdt",
     "type": "perpetual",
-    "first_capture": "2026-06-04T00:00:00.000Z",
     "internal_id": "perpetual-BTW-USDT:USDT",
     "symbol": "BTW",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-04T00:00:00.000Z"
   },
   {
     "id": "bullausdt",
@@ -8949,12 +8949,12 @@
   {
     "id": "zestusdt",
     "type": "perpetual",
-    "first_capture": "2026-06-04T00:00:00.000Z",
     "internal_id": "perpetual-ZEST-USDT:USDT",
     "symbol": "ZEST",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-04T00:00:00.000Z"
   },
   {
     "id": "zetausdt",
