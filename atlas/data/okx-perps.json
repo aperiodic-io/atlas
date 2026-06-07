@@ -4060,12 +4060,12 @@
   {
     "id": "QNT-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-05T00:00:00.000Z",
     "internal_id": "perpetual-QNT-USDT:USDT",
     "symbol": "QNT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-05T00:00:00.000Z"
   },
   {
     "id": "QQQ-USDT-SWAP",
