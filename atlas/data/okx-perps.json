@@ -2557,6 +2557,16 @@
     "first_capture": "2025-02-13T00:00:00.000Z"
   },
   {
+    "id": "IREN-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-08T00:00:00.000Z",
+    "internal_id": "perpetual-IREN-USDT:USDT",
+    "symbol": "IREN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "IRYS-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-IRYS-USDT:USDT",
@@ -3777,6 +3787,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2023-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "PANW-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-08T00:00:00.000Z",
+    "internal_id": "perpetual-PANW-USDT:USDT",
+    "symbol": "PANW",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "PARTI-USDT-SWAP",
