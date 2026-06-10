@@ -1,5 +1,16 @@
 [
   {
+    "id": "AAPL-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-AAPL-USD_UM_XPERP:AAPL-20310613",
+    "symbol": "AAPL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AAPL",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
     "id": "ABCD-USDT-250124",
     "type": "future",
     "internal_id": "future-ABCD-USDT:USDT-20250124",
@@ -2397,6 +2408,17 @@
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "AMZN-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-AMZN-USD_UM_XPERP:AMZN-20310613",
+    "symbol": "AMZN",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AMZN",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "AVAX-USD-220603",
@@ -47973,6 +47995,17 @@
     "end_date": "2022-12-30T00:00:00.000Z"
   },
   {
+    "id": "GOOGL-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-GOOGL-USD_UM_XPERP:GOOGL-20310613",
+    "symbol": "GOOGL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "GOOGL",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
     "id": "GRASS-USDT-250418",
     "type": "future",
     "internal_id": "future-GRASS-USDT:USDT-20250418",
@@ -57281,6 +57314,39 @@
     "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
+    "id": "META-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-META-USD_UM_XPERP:META-20310613",
+    "symbol": "META",
+    "denominator": "USD_UM_XPERP",
+    "margin": "META",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
+    "id": "MSFT-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-MSFT-USD_UM_XPERP:MSFT-20310613",
+    "symbol": "MSFT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "MSFT",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
+    "id": "NVDA-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-NVDA-USD_UM_XPERP:NVDA-20310613",
+    "symbol": "NVDA",
+    "denominator": "USD_UM_XPERP",
+    "margin": "NVDA",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
     "id": "PEPE-USD_UM_XPERP-310404",
     "type": "future",
     "internal_id": "future-PEPE-USD_UM_XPERP:PEPE-20310404",
@@ -57313,6 +57379,17 @@
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "QQQ-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-QQQ-USD_UM_XPERP:QQQ-20310613",
+    "symbol": "QQQ",
+    "denominator": "USD_UM_XPERP",
+    "margin": "QQQ",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "SCR-USDT-250411",
@@ -57719,6 +57796,17 @@
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "SPY-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-SPY-USD_UM_XPERP:SPY-20310613",
+    "symbol": "SPY",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SPY",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "SUI-USD_UM_XPERP-310404",
@@ -62395,6 +62483,17 @@
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
     "first_capture": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "TSLA-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-09T00:00:00.000Z",
+    "internal_id": "future-TSLA-USD_UM_XPERP:TSLA-20310613",
+    "symbol": "TSLA",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TSLA",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "X-USDT-250411",
