@@ -3744,12 +3744,12 @@
   {
     "id": "xyz:NBIS",
     "type": "perpetual",
-    "first_capture": "2026-06-09T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NBIS-USDC:USDC",
     "symbol": "XYZ:NBIS",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
     "id": "xyz:NFLX",
@@ -3964,12 +3964,12 @@
   {
     "id": "xyz:WDC",
     "type": "perpetual",
-    "first_capture": "2026-06-09T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:WDC-USDC:USDC",
     "symbol": "XYZ:WDC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
     "id": "xyz:XLE",
