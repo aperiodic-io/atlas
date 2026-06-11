@@ -1208,6 +1208,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "MGW/USDC",
+    "type": "spot",
+    "internal_id": "spot-MGW-USDC",
+    "symbol": "MGW",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "MMOVE/USDC",
     "type": "spot",
     "internal_id": "spot-MMOVE-USDC",
@@ -1340,6 +1348,14 @@
     "type": "spot",
     "internal_id": "spot-OMNIX-USDC",
     "symbol": "OMNIX",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "ONEAR/USDC",
+    "type": "spot",
+    "internal_id": "spot-ONEAR-USDC",
+    "symbol": "ONEAR",
     "denominator": "USDC",
     "contract_type": "spot"
   },
