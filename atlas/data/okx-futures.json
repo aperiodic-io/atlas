@@ -24063,6 +24063,17 @@
     "end_date": "2024-10-02T00:00:00.000Z"
   },
   {
+    "id": "ENA-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "future-ENA-USD_UM_XPERP:ENA-20310613",
+    "symbol": "ENA",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ENA",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
     "id": "EOS-USD-190405",
     "type": "future",
     "internal_id": "future-EOS-USD:EOS-20190405",
@@ -57336,6 +57347,17 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "NEAR-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "future-NEAR-USD_UM_XPERP:NEAR-20310613",
+    "symbol": "NEAR",
+    "denominator": "USD_UM_XPERP",
+    "margin": "NEAR",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
+  },
+  {
     "id": "NVDA-USD_UM_XPERP-310613",
     "type": "future",
     "internal_id": "future-NVDA-USD_UM_XPERP:NVDA-20310613",
@@ -62494,6 +62516,17 @@
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "WLD-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "future-WLD-USD_UM_XPERP:WLD-20310613",
+    "symbol": "WLD",
+    "denominator": "USD_UM_XPERP",
+    "margin": "WLD",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "X-USDT-250411",

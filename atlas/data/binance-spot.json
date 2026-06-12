@@ -7526,6 +7526,15 @@
     "first_capture": "2024-11-06T00:00:00.000Z"
   },
   {
+    "id": "crclbusdt",
+    "type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "spot-CRCLB-USDT",
+    "symbol": "CRCLB",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "creambnb",
     "type": "spot",
     "internal_id": "spot-CREAM-BNB",
@@ -18264,6 +18273,15 @@
     "first_capture": "2025-03-27T00:00:00.000Z"
   },
   {
+    "id": "mubusdt",
+    "type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "spot-MUB-USDT",
+    "symbol": "MUB",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "multibtc",
     "type": "spot",
     "internal_id": "spot-MULTI-BTC",
@@ -19318,6 +19336,15 @@
     "contract_type": "spot",
     "first_capture": "2021-06-04T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z"
+  },
+  {
+    "id": "nvdabusdt",
+    "type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "spot-NVDAB-USDT",
+    "symbol": "NVDAB",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "nxpcbnb",
@@ -24502,6 +24529,15 @@
     "first_capture": "2021-04-30T00:00:00.000Z"
   },
   {
+    "id": "sndkbusdt",
+    "type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "spot-SNDKB-USDT",
+    "symbol": "SNDKB",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "snglsbtc",
     "type": "spot",
     "internal_id": "spot-SNGLS-BTC",
@@ -27479,6 +27515,15 @@
     "denominator": "XRP",
     "contract_type": "spot",
     "first_capture": "2020-11-23T00:00:00.000Z"
+  },
+  {
+    "id": "tslabusdt",
+    "type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z",
+    "internal_id": "spot-TSLAB-USDT",
+    "symbol": "TSLAB",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "tstfdusd",
