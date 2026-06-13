@@ -1116,6 +1116,16 @@
     "end_date": "2025-05-22T00:00:00.000Z"
   },
   {
+    "id": "BX-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "perpetual-BX-USDT:USDT",
+    "symbol": "BX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "BZ-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BZ-USDT:USDT",
@@ -1221,6 +1231,16 @@
     "first_capture": "2021-03-12T00:00:00.000Z"
   },
   {
+    "id": "CGNX-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "perpetual-CGNX-USDT:USDT",
+    "symbol": "CGNX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CHIP-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CHIP-USDT:USDT",
@@ -1243,12 +1263,12 @@
   {
     "id": "CIEN-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "perpetual-CIEN-USDT:USDT",
     "symbol": "CIEN",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "CL-USDT-SWAP",
@@ -1366,12 +1386,12 @@
   {
     "id": "CRDO-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "perpetual-CRDO-USDT:USDT",
     "symbol": "CRDO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "CRO-USDT-SWAP",
@@ -2010,12 +2030,12 @@
   {
     "id": "FLNC-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "perpetual-FLNC-USDT:USDT",
     "symbol": "FLNC",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "FLOKI-USDT-SWAP",
@@ -2619,12 +2639,12 @@
   {
     "id": "ISRG-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "perpetual-ISRG-USDT:USDT",
     "symbol": "ISRG",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "IWM-USDT-SWAP",
@@ -4335,6 +4355,16 @@
     "first_capture": "2026-02-27T00:00:00.000Z"
   },
   {
+    "id": "ROK-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "perpetual-ROK-USDT:USDT",
+    "symbol": "ROK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "RON-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-RON-USDT:USDT",
@@ -5216,6 +5246,16 @@
     "contract_type": "perpetual",
     "first_capture": "2025-10-24T00:00:00.000Z",
     "end_date": "2026-01-25T00:00:00.000Z"
+  },
+  {
+    "id": "TWLO-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "perpetual-TWLO-USDT:USDT",
+    "symbol": "TWLO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "UB-USDT-SWAP",

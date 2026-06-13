@@ -7528,11 +7528,11 @@
   {
     "id": "crclbusdt",
     "type": "spot",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "spot-CRCLB-USDT",
     "symbol": "CRCLB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "creambnb",
@@ -18275,11 +18275,11 @@
   {
     "id": "mubusdt",
     "type": "spot",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "spot-MUB-USDT",
     "symbol": "MUB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "multibtc",
@@ -19340,11 +19340,11 @@
   {
     "id": "nvdabusdt",
     "type": "spot",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "spot-NVDAB-USDT",
     "symbol": "NVDAB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "nxpcbnb",
@@ -24531,11 +24531,11 @@
   {
     "id": "sndkbusdt",
     "type": "spot",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "spot-SNDKB-USDT",
     "symbol": "SNDKB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "snglsbtc",
@@ -25030,6 +25030,15 @@
     "contract_type": "spot",
     "first_capture": "2021-03-04T00:00:00.000Z",
     "end_date": "2022-08-12T00:00:00.000Z"
+  },
+  {
+    "id": "spcxbusdt",
+    "type": "spot",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "spot-SPCXB-USDT",
+    "symbol": "SPCXB",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "spellbnb",
@@ -27519,11 +27528,11 @@
   {
     "id": "tslabusdt",
     "type": "spot",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "spot-TSLAB-USDT",
     "symbol": "TSLAB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "tstfdusd",

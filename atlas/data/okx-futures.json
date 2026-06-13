@@ -15410,6 +15410,17 @@
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-260828",
+    "type": "future",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20260828",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-08-28T00:00:00"
+  },
+  {
     "id": "BTC-USD-260925",
     "type": "future",
     "internal_id": "future-BTC-USD:BTC-20260925",
@@ -20863,6 +20874,17 @@
     "first_capture": "2026-03-13T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD_UM-261225",
+    "type": "future",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "future-BTC-USD_UM:BTC-20261225",
+    "symbol": "BTC",
+    "denominator": "USD_UM",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-12-25T00:00:00"
+  },
+  {
     "id": "BTC-USD_UM_XPERP-310404",
     "type": "future",
     "internal_id": "future-BTC-USD_UM_XPERP:BTC-20310404",
@@ -24065,13 +24087,13 @@
   {
     "id": "ENA-USD_UM_XPERP-310613",
     "type": "future",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "future-ENA-USD_UM_XPERP:ENA-20310613",
     "symbol": "ENA",
     "denominator": "USD_UM_XPERP",
     "margin": "ENA",
     "contract_type": "future",
-    "delivery_date": "2031-06-13T00:00:00"
+    "delivery_date": "2031-06-13T00:00:00",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "EOS-USD-190405",
@@ -40628,6 +40650,17 @@
     "contract_type": "future",
     "delivery_date": "2026-07-31T00:00:00",
     "first_capture": "2026-05-15T00:00:00.000Z"
+  },
+  {
+    "id": "ETH-USD-260828",
+    "type": "future",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20260828",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2026-08-28T00:00:00"
   },
   {
     "id": "ETH-USD-260925",
@@ -57349,13 +57382,13 @@
   {
     "id": "NEAR-USD_UM_XPERP-310613",
     "type": "future",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "future-NEAR-USD_UM_XPERP:NEAR-20310613",
     "symbol": "NEAR",
     "denominator": "USD_UM_XPERP",
     "margin": "NEAR",
     "contract_type": "future",
-    "delivery_date": "2031-06-13T00:00:00"
+    "delivery_date": "2031-06-13T00:00:00",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "NVDA-USD_UM_XPERP-310613",
@@ -57818,6 +57851,17 @@
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "SPCX-USD_UM_XPERP-310613",
+    "type": "future",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "future-SPCX-USD_UM_XPERP:SPCX-20310613",
+    "symbol": "SPCX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SPCX",
+    "contract_type": "future",
+    "delivery_date": "2031-06-13T00:00:00"
   },
   {
     "id": "SPY-USD_UM_XPERP-310613",
@@ -62520,13 +62564,13 @@
   {
     "id": "WLD-USD_UM_XPERP-310613",
     "type": "future",
-    "first_capture": "2026-06-11T00:00:00.000Z",
     "internal_id": "future-WLD-USD_UM_XPERP:WLD-20310613",
     "symbol": "WLD",
     "denominator": "USD_UM_XPERP",
     "margin": "WLD",
     "contract_type": "future",
-    "delivery_date": "2031-06-13T00:00:00"
+    "delivery_date": "2031-06-13T00:00:00",
+    "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
     "id": "X-USDT-250411",
@@ -62786,6 +62830,17 @@
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "first_capture": "2026-03-13T00:00:00.000Z"
+  },
+  {
+    "id": "XAU-USD_UM-261225",
+    "type": "future",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "future-XAU-USD_UM:XAU-20261225",
+    "symbol": "XAU",
+    "denominator": "USD_UM",
+    "margin": "XAU",
+    "contract_type": "future",
+    "delivery_date": "2026-12-25T00:00:00"
   },
   {
     "id": "XAU-USD_UM_XPERP-310502",
