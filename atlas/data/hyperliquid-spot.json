@@ -1176,6 +1176,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "MAX/USDC",
+    "type": "spot",
+    "internal_id": "spot-MAX-USDC",
+    "symbol": "MAX",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "MAXI/USDC",
     "type": "spot",
     "internal_id": "spot-MAXI-USDC",
@@ -1789,6 +1797,14 @@
     "type": "spot",
     "internal_id": "spot-SOVRN-USDC",
     "symbol": "SOVRN",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "SPCX/USDC",
+    "type": "spot",
+    "internal_id": "spot-SPCX-USDC",
+    "symbol": "SPCX",
     "denominator": "USDC",
     "contract_type": "spot"
   },

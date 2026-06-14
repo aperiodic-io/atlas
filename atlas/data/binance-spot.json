@@ -755,7 +755,8 @@
     "symbol": "ADA",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2020-11-23T00:00:00.000Z"
+    "first_capture": "2020-11-23T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "adabrl",
@@ -9017,7 +9018,8 @@
     "symbol": "DUSK",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2021-03-04T00:00:00.000Z"
+    "first_capture": "2021-03-04T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "duskbusd",
@@ -9324,7 +9326,8 @@
     "symbol": "EGLD",
     "denominator": "ETH",
     "contract_type": "spot",
-    "first_capture": "2022-01-05T00:00:00.000Z"
+    "first_capture": "2022-01-05T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "egldeur",
@@ -9706,7 +9709,8 @@
     "symbol": "ENSO",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2025-10-14T00:00:00.000Z"
+    "first_capture": "2025-10-14T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "ensofdusd",
@@ -16276,7 +16280,8 @@
     "symbol": "LSK",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2025-11-18T00:00:00.000Z"
+    "first_capture": "2025-11-18T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "lskusdt",
@@ -18909,7 +18914,8 @@
     "denominator": "BNB",
     "contract_type": "spot",
     "contract_size": 1.0,
-    "first_capture": "2026-03-11T00:00:00.000Z"
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "nighttry",
@@ -23803,7 +23809,8 @@
     "symbol": "S",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2025-01-16T00:00:00.000Z"
+    "first_capture": "2025-01-16T00:00:00.000Z",
+    "end_date": "2026-06-13T00:00:00.000Z"
   },
   {
     "id": "sbtc",
@@ -25034,11 +25041,11 @@
   {
     "id": "spcxbusdt",
     "type": "spot",
-    "first_capture": "2026-06-12T00:00:00.000Z",
     "internal_id": "spot-SPCXB-USDT",
     "symbol": "SPCXB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
     "id": "spellbnb",

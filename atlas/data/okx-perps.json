@@ -1118,12 +1118,12 @@
   {
     "id": "BX-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-12T00:00:00.000Z",
     "internal_id": "perpetual-BX-USDT:USDT",
     "symbol": "BX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
     "id": "BZ-USDT-SWAP",
@@ -1233,12 +1233,12 @@
   {
     "id": "CGNX-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-12T00:00:00.000Z",
     "internal_id": "perpetual-CGNX-USDT:USDT",
     "symbol": "CGNX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
     "id": "CHIP-USDT-SWAP",
@@ -4357,12 +4357,12 @@
   {
     "id": "ROK-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-12T00:00:00.000Z",
     "internal_id": "perpetual-ROK-USDT:USDT",
     "symbol": "ROK",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
     "id": "RON-USDT-SWAP",
@@ -5250,12 +5250,12 @@
   {
     "id": "TWLO-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-12T00:00:00.000Z",
     "internal_id": "perpetual-TWLO-USDT:USDT",
     "symbol": "TWLO",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
     "id": "UB-USDT-SWAP",
