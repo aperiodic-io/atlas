@@ -3775,6 +3775,16 @@
     "first_capture": "2025-12-08T00:00:00.000Z"
   },
   {
+    "id": "xyz:NOK",
+    "type": "perpetual",
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:NOK-USDC:USDC",
+    "symbol": "XYZ:NOK",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:NOW",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:NOW-USDC:USDC",
@@ -3893,6 +3903,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-02-19T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:SMH",
+    "type": "perpetual",
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SMH-USDC:USDC",
+    "symbol": "XYZ:SMH",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:SMSN",
