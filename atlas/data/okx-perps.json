@@ -246,6 +246,16 @@
     "first_capture": "2025-01-03T00:00:00.000Z"
   },
   {
+    "id": "ALAB-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z",
+    "internal_id": "perpetual-ALAB-USDT:USDT",
+    "symbol": "ALAB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ALCH-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ALCH-USDT:USDT",
@@ -635,6 +645,16 @@
     "contract_type": "perpetual",
     "first_capture": "2026-02-27T00:00:00.000Z",
     "end_date": "2026-03-14T00:00:00.000Z"
+  },
+  {
+    "id": "AXTI-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z",
+    "internal_id": "perpetual-AXTI-USDT:USDT",
+    "symbol": "AXTI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "AZTEC-USDT-SWAP",
@@ -3736,6 +3756,16 @@
     "first_capture": "2024-08-06T00:00:00.000Z"
   },
   {
+    "id": "ONDS-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z",
+    "internal_id": "perpetual-ONDS-USDT:USDT",
+    "symbol": "ONDS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ONE-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ONE-USDT:USDT",
@@ -4032,6 +4062,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-11-12T00:00:00.000Z"
+  },
+  {
+    "id": "POET-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z",
+    "internal_id": "perpetual-POET-USDT:USDT",
+    "symbol": "POET",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "POL-USDT-SWAP",
@@ -5029,6 +5069,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "TER-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z",
+    "internal_id": "perpetual-TER-USDT:USDT",
+    "symbol": "TER",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "TEST01-USDT-SWAP",

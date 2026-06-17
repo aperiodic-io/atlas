@@ -1952,7 +1952,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "TRB",
@@ -3161,7 +3162,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z"
+    "first_capture": "2025-12-02T00:00:00.000Z",
+    "end_date": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "vntl:BIOTECH",
@@ -3231,7 +3233,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-12-02T00:00:00.000Z"
+    "first_capture": "2025-12-02T00:00:00.000Z",
+    "end_date": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "vntl:ROBOT",
@@ -3777,12 +3780,12 @@
   {
     "id": "xyz:NOK",
     "type": "perpetual",
-    "first_capture": "2026-06-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NOK-USDC:USDC",
     "symbol": "XYZ:NOK",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
     "id": "xyz:NOW",
@@ -3907,12 +3910,12 @@
   {
     "id": "xyz:SMH",
     "type": "perpetual",
-    "first_capture": "2026-06-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SMH-USDC:USDC",
     "symbol": "XYZ:SMH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
     "id": "xyz:SMSN",
