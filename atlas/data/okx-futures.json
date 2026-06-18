@@ -7243,6 +7243,17 @@
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
+    "id": "BEAT-USD_UM_XPERP-310620",
+    "type": "future",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "future-BEAT-USD_UM_XPERP:BEAT-20310620",
+    "symbol": "BEAT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BEAT",
+    "contract_type": "future",
+    "delivery_date": "2031-06-20T00:00:00"
+  },
+  {
     "id": "BNB-USD_UM_XPERP-310523",
     "type": "future",
     "internal_id": "future-BNB-USD_UM_XPERP:BNB-20310523",
@@ -48097,6 +48108,17 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "GRAM-USD_UM_XPERP-310620",
+    "type": "future",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "future-GRAM-USD_UM_XPERP:GRAM-20310620",
+    "symbol": "GRAM",
+    "denominator": "USD_UM_XPERP",
+    "margin": "GRAM",
+    "contract_type": "future",
+    "delivery_date": "2031-06-20T00:00:00"
+  },
+  {
     "id": "GRASS-USDT-250418",
     "type": "future",
     "internal_id": "future-GRASS-USDT:USDT-20250418",
@@ -57449,6 +57471,17 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "ONDO-USD_UM_XPERP-310620",
+    "type": "future",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "future-ONDO-USD_UM_XPERP:ONDO-20310620",
+    "symbol": "ONDO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ONDO",
+    "contract_type": "future",
+    "delivery_date": "2031-06-20T00:00:00"
+  },
+  {
     "id": "PEPE-USD_UM_XPERP-310404",
     "type": "future",
     "internal_id": "future-PEPE-USD_UM_XPERP:PEPE-20310404",
@@ -57996,7 +58029,8 @@
     "margin": "TON",
     "contract_type": "future",
     "delivery_date": "2031-05-30T00:00:00",
-    "first_capture": "2026-05-27T00:00:00.000Z"
+    "first_capture": "2026-05-27T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TRX-USD-190524",

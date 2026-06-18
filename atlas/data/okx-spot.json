@@ -7380,6 +7380,51 @@
     "end_date": "2025-03-21T00:00:00.000Z"
   },
   {
+    "id": "GRAM-EUR",
+    "type": "spot",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "spot-GRAM-EUR",
+    "symbol": "GRAM",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRAM-TRY",
+    "type": "spot",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "spot-GRAM-TRY",
+    "symbol": "GRAM",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRAM-USD",
+    "type": "spot",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USD",
+    "symbol": "GRAM",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRAM-USDC",
+    "type": "spot",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USDC",
+    "symbol": "GRAM",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "GRAM-USDT",
+    "type": "spot",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USDT",
+    "symbol": "GRAM",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "GRASS-EUR",
     "type": "spot",
     "internal_id": "spot-GRASS-EUR",
@@ -16283,7 +16328,8 @@
     "symbol": "TON",
     "denominator": "EUR",
     "contract_type": "spot",
-    "first_capture": "2024-03-14T00:00:00.000Z"
+    "first_capture": "2024-03-14T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TON-TRY",
@@ -16292,7 +16338,8 @@
     "symbol": "TON",
     "denominator": "TRY",
     "contract_type": "spot",
-    "first_capture": "2026-02-27T00:00:00.000Z"
+    "first_capture": "2026-02-27T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TON-USD",
@@ -16301,7 +16348,8 @@
     "symbol": "TON",
     "denominator": "USD",
     "contract_type": "spot",
-    "first_capture": "2025-04-08T00:00:00.000Z"
+    "first_capture": "2025-04-08T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TON-USDC",
@@ -16310,7 +16358,8 @@
     "symbol": "TON",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2022-06-28T00:00:00.000Z"
+    "first_capture": "2022-06-28T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TON-USDT",
@@ -16319,7 +16368,8 @@
     "symbol": "TON",
     "denominator": "USDT",
     "contract_type": "spot",
-    "first_capture": "2022-04-29T00:00:00.000Z"
+    "first_capture": "2022-04-29T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TONCOIN-USDT",

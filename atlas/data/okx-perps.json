@@ -248,12 +248,12 @@
   {
     "id": "ALAB-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-16T00:00:00.000Z",
     "internal_id": "perpetual-ALAB-USDT:USDT",
     "symbol": "ALAB",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "ALCH-USDT-SWAP",
@@ -649,12 +649,12 @@
   {
     "id": "AXTI-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-16T00:00:00.000Z",
     "internal_id": "perpetual-AXTI-USDT:USDT",
     "symbol": "AXTI",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "AZTEC-USDT-SWAP",
@@ -2330,6 +2330,16 @@
     "end_date": "2024-10-16T00:00:00.000Z"
   },
   {
+    "id": "GRAM-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "perpetual-GRAM-USDT:USDT",
+    "symbol": "GRAM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "GRASS-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-GRASS-USDT:USDT",
@@ -3694,6 +3704,16 @@
     "end_date": "2022-11-18T00:00:00.000Z"
   },
   {
+    "id": "O-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "perpetual-O-USDT:USDT",
+    "symbol": "O",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "OFC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-OFC-USDT:USDT",
@@ -3758,12 +3778,12 @@
   {
     "id": "ONDS-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-16T00:00:00.000Z",
     "internal_id": "perpetual-ONDS-USDT:USDT",
     "symbol": "ONDS",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "ONE-USDT-SWAP",
@@ -4066,12 +4086,12 @@
   {
     "id": "POET-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-16T00:00:00.000Z",
     "internal_id": "perpetual-POET-USDT:USDT",
     "symbol": "POET",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "POL-USDT-SWAP",
@@ -4279,6 +4299,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "RE-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z",
+    "internal_id": "perpetual-RE-USDT:USDT",
+    "symbol": "RE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "RECALL-USDT-SWAP",
@@ -5073,12 +5103,12 @@
   {
     "id": "TER-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-16T00:00:00.000Z",
     "internal_id": "perpetual-TER-USDT:USDT",
     "symbol": "TER",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "TEST01-USDT-SWAP",
@@ -5150,7 +5180,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2022-12-28T00:00:00.000Z"
+    "first_capture": "2022-12-28T00:00:00.000Z",
+    "end_date": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "TONCOIN-USDT-SWAP",
