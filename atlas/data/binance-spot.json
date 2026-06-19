@@ -22831,6 +22831,33 @@
     "first_capture": "2025-06-11T00:00:00.000Z"
   },
   {
+    "id": "retry",
+    "type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "spot-RE-TRY",
+    "symbol": "RE",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "reusdc",
+    "type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "spot-RE-USDC",
+    "symbol": "RE",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "reusdt",
+    "type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "spot-RE-USDT",
+    "symbol": "RE",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "rezbnb",
     "type": "spot",
     "internal_id": "spot-REZ-BNB",

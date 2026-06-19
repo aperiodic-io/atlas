@@ -1571,6 +1571,16 @@
     "end_date": "2025-09-13T00:00:00.000Z"
   },
   {
+    "id": "DKNG-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-DKNG-USDT:USDT",
+    "symbol": "DKNG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "DMAIL-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-DMAIL-USDT:USDT",
@@ -1964,6 +1974,16 @@
     "first_capture": "2026-03-11T00:00:00.000Z"
   },
   {
+    "id": "EWZ-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-EWZ-USDT:USDT",
+    "symbol": "EWZ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "F-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-F-USDT:USDT",
@@ -2332,12 +2352,12 @@
   {
     "id": "GRAM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-17T00:00:00.000Z",
     "internal_id": "perpetual-GRAM-USDT:USDT",
     "symbol": "GRAM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "GRASS-USDT-SWAP",
@@ -3706,12 +3726,12 @@
   {
     "id": "O-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-17T00:00:00.000Z",
     "internal_id": "perpetual-O-USDT:USDT",
     "symbol": "O",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "OFC-USDT-SWAP",
@@ -4280,6 +4300,16 @@
     "first_capture": "2024-03-12T00:00:00.000Z"
   },
   {
+    "id": "RDDT-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-RDDT-USDT:USDT",
+    "symbol": "RDDT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "RDNT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-RDNT-USDT:USDT",
@@ -4303,12 +4333,12 @@
   {
     "id": "RE-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-17T00:00:00.000Z",
     "internal_id": "perpetual-RE-USDT:USDT",
     "symbol": "RE",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
     "id": "RECALL-USDT-SWAP",
@@ -4382,6 +4412,16 @@
     "contract_type": "perpetual",
     "first_capture": "2026-02-27T00:00:00.000Z",
     "end_date": "2026-03-14T00:00:00.000Z"
+  },
+  {
+    "id": "RIVN-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-RIVN-USDT:USDT",
+    "symbol": "RIVN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "RKLB-USDT-SWAP",
@@ -4680,6 +4720,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "SMH-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-SMH-USDT:USDT",
+    "symbol": "SMH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SNDK-USDT-SWAP",

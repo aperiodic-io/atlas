@@ -3033,7 +3033,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-14T00:00:00.000Z"
+    "first_capture": "2026-01-14T00:00:00.000Z",
+    "end_date": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "km:TENCENT",
@@ -3065,7 +3066,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-12T00:00:00.000Z"
+    "first_capture": "2026-01-12T00:00:00.000Z",
+    "end_date": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "km:USBOND",
@@ -3097,7 +3099,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-22T00:00:00.000Z"
+    "first_capture": "2026-01-22T00:00:00.000Z",
+    "end_date": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "km:USTECH",
@@ -3107,7 +3110,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-13T00:00:00.000Z"
+    "first_capture": "2026-01-13T00:00:00.000Z",
+    "end_date": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "km:XIAOMI",
@@ -3712,6 +3716,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2025-12-02T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:MINIMAX",
+    "type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:MINIMAX-USDC:USDC",
+    "symbol": "XYZ:MINIMAX",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:MRVL",
