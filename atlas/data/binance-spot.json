@@ -22833,29 +22833,29 @@
   {
     "id": "retry",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-TRY",
     "symbol": "RE",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "reusdc",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-USDC",
     "symbol": "RE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "reusdt",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-USDT",
     "symbol": "RE",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "rezbnb",
