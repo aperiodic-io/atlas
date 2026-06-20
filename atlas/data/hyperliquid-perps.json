@@ -3720,12 +3720,12 @@
   {
     "id": "xyz:MINIMAX",
     "type": "perpetual",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MINIMAX-USDC:USDC",
     "symbol": "XYZ:MINIMAX",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "xyz:MRVL",

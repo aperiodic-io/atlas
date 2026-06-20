@@ -13851,25 +13851,26 @@
     "internal_id": "spot-RE-EUR",
     "symbol": "RE",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "RE-TRY",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-TRY",
     "symbol": "RE",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "RE-USD",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-USD",
     "symbol": "RE",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "RE-USDC",
@@ -13877,16 +13878,17 @@
     "internal_id": "spot-RE-USDC",
     "symbol": "RE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "RE-USDT",
     "type": "spot",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "spot-RE-USDT",
     "symbol": "RE",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "REN-BTC",

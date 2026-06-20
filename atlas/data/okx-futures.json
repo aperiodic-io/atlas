@@ -15411,6 +15411,16 @@
     "first_capture": "2025-07-11T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-260703",
+    "type": "future",
+    "internal_id": "future-BTC-USD:BTC-20260703",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
+  },
+  {
     "id": "BTC-USD-260731",
     "type": "future",
     "internal_id": "future-BTC-USD:BTC-20260731",
@@ -20874,6 +20884,16 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2026-02-16T00:00:00.000Z"
+  },
+  {
+    "id": "BTC-USD_UM-260703",
+    "type": "future",
+    "internal_id": "future-BTC-USD_UM:BTC-20260703",
+    "symbol": "BTC",
+    "denominator": "USD_UM",
+    "margin": "BTC",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
   },
   {
     "id": "BTC-USD_UM-260925",
@@ -40655,6 +40675,16 @@
     "first_capture": "2025-10-17T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD-260703",
+    "type": "future",
+    "internal_id": "future-ETH-USD:ETH-20260703",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
+  },
+  {
     "id": "ETH-USD-260731",
     "type": "future",
     "internal_id": "future-ETH-USD:ETH-20260731",
@@ -45890,6 +45920,16 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "id": "ETH-USD_UM-260703",
+    "type": "future",
+    "internal_id": "future-ETH-USD_UM:ETH-20260703",
+    "symbol": "ETH",
+    "denominator": "USD_UM",
+    "margin": "ETH",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
   },
   {
     "id": "ETH-USD_UM-260925",
@@ -57473,13 +57513,13 @@
   {
     "id": "O-USD_UM_XPERP-310620",
     "type": "future",
-    "first_capture": "2026-06-18T00:00:00.000Z",
     "internal_id": "future-O-USD_UM_XPERP:O-20310620",
     "symbol": "O",
     "denominator": "USD_UM_XPERP",
     "margin": "O",
     "contract_type": "future",
-    "delivery_date": "2031-06-20T00:00:00"
+    "delivery_date": "2031-06-20T00:00:00",
+    "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
     "id": "ONDO-USD_UM_XPERP-310620",
@@ -57963,6 +58003,16 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "id": "SOL-USD_UM-260703",
+    "type": "future",
+    "internal_id": "future-SOL-USD_UM:SOL-20260703",
+    "symbol": "SOL",
+    "denominator": "USD_UM",
+    "margin": "SOL",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
   },
   {
     "id": "SOL-USD_UM-260925",
@@ -62966,6 +63016,16 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2026-02-16T00:00:00.000Z"
+  },
+  {
+    "id": "XAU-USD_UM-260703",
+    "type": "future",
+    "internal_id": "future-XAU-USD_UM:XAU-20260703",
+    "symbol": "XAU",
+    "denominator": "USD_UM",
+    "margin": "XAU",
+    "contract_type": "future",
+    "delivery_date": "2026-07-03T00:00:00"
   },
   {
     "id": "XAU-USD_UM-260925",
