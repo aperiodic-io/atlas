@@ -593,6 +593,16 @@
     "first_capture": "2024-11-18T00:00:00.000Z"
   },
   {
+    "id": "alabusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-ALAB-USDT:USDT",
+    "symbol": "ALAB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "alchusdt",
     "type": "perpetual",
     "internal_id": "perpetual-ALCH-USDT:USDT",
@@ -2421,6 +2431,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2021-01-21T00:00:00.000Z"
+  },
+  {
+    "id": "cienusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-CIEN-USDT:USDT",
+    "symbol": "CIEN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "ckbusdt",
@@ -5072,6 +5092,16 @@
     "first_capture": "2025-10-29T00:00:00.000Z"
   },
   {
+    "id": "klacusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-KLAC-USDT:USDT",
+    "symbol": "KLAC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "klayusdt",
     "type": "perpetual",
     "internal_id": "perpetual-KLAY-USDT:USDT",
@@ -5111,6 +5141,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-12-10T00:00:00.000Z"
+  },
+  {
+    "id": "koruusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-KORU-USDT:USDT",
+    "symbol": "KORU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "ksmusdt",
@@ -5360,6 +5400,16 @@
     "contract_type": "perpetual",
     "first_capture": "2020-10-19T00:00:00.000Z",
     "end_date": "2026-03-25T00:00:00.000Z"
+  },
+  {
+    "id": "lrcxusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-LRCX-USDT:USDT",
+    "symbol": "LRCX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "lskusdt",
@@ -7511,6 +7561,16 @@
     "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
+    "id": "smciusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-SMCI-USDT:USDT",
+    "symbol": "SMCI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "sndkusdt",
     "type": "perpetual",
     "internal_id": "perpetual-SNDK-USDT:USDT",
@@ -7601,6 +7661,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2025-01-08T00:00:00.000Z"
+  },
+  {
+    "id": "sonyusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "internal_id": "perpetual-SONY-USDT:USDT",
+    "symbol": "SONY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "soonusdt",
