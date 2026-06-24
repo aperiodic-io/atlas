@@ -474,12 +474,12 @@
   {
     "id": "ARX-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-22T00:00:00.000Z",
     "internal_id": "perpetual-ARX-USDT:USDT",
     "symbol": "ARX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
     "id": "ASML-USDT-SWAP",
@@ -2842,6 +2842,16 @@
     "first_capture": "2025-10-29T00:00:00.000Z"
   },
   {
+    "id": "KLAC-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-23T00:00:00.000Z",
+    "internal_id": "perpetual-KLAC-USDT:USDT",
+    "symbol": "KLAC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "KLAY-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-KLAY-USDT:USDT",
@@ -3110,6 +3120,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2020-09-09T00:00:00.000Z"
+  },
+  {
+    "id": "LRCX-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-23T00:00:00.000Z",
+    "internal_id": "perpetual-LRCX-USDT:USDT",
+    "symbol": "LRCX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "LSK-USDT-SWAP",
@@ -5366,6 +5386,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "TTMI-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-23T00:00:00.000Z",
+    "internal_id": "perpetual-TTMI-USDT:USDT",
+    "symbol": "TTMI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "TURBO-USDT-SWAP",

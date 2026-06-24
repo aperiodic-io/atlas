@@ -3405,12 +3405,12 @@
   {
     "id": "xyz:BE",
     "type": "perpetual",
-    "first_capture": "2026-06-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BE-USDC:USDC",
     "symbol": "XYZ:BE",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
     "id": "xyz:BIRD",
@@ -3915,12 +3915,12 @@
   {
     "id": "xyz:QCOM",
     "type": "perpetual",
-    "first_capture": "2026-06-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:QCOM-USDC:USDC",
     "symbol": "XYZ:QCOM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
     "id": "xyz:QNT",
@@ -4025,12 +4025,12 @@
   {
     "id": "xyz:STRC",
     "type": "perpetual",
-    "first_capture": "2026-06-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:STRC-USDC:USDC",
     "symbol": "XYZ:STRC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
     "id": "xyz:TSLA",
@@ -4105,12 +4105,12 @@
   {
     "id": "xyz:ZHIPU",
     "type": "perpetual",
-    "first_capture": "2026-06-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:ZHIPU-USDC:USDC",
     "symbol": "XYZ:ZHIPU",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
     "id": "xyz:ZM",
