@@ -964,12 +964,12 @@
   {
     "id": "arxusdt",
     "type": "perpetual",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "perpetual-ARX-USDT:USDT",
     "symbol": "ARX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "asmlusdt",
@@ -6530,6 +6530,16 @@
     "first_capture": "2023-11-07T00:00:00.000Z"
   },
   {
+    "id": "ousdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z",
+    "internal_id": "perpetual-O-USDT:USDT",
+    "symbol": "O",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "oxtusdt",
     "type": "perpetual",
     "internal_id": "perpetual-OXT-USDT:USDT",
@@ -8251,7 +8261,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2024-03-01T00:00:00.000Z"
+    "first_capture": "2024-03-01T00:00:00.000Z",
+    "end_date": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "toshiusdt",

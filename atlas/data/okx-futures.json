@@ -2421,6 +2421,17 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "ARX-USD_UM_XPERP-310627",
+    "type": "future",
+    "first_capture": "2026-06-24T00:00:00.000Z",
+    "internal_id": "future-ARX-USD_UM_XPERP:ARX-20310627",
+    "symbol": "ARX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ARX",
+    "contract_type": "future",
+    "delivery_date": "2031-06-27T00:00:00"
+  },
+  {
     "id": "AVAX-USD-220603",
     "type": "future",
     "internal_id": "future-AVAX-USD:AVAX-20220603",
@@ -48216,13 +48227,13 @@
   {
     "id": "INTC-USD_UM_XPERP-310627",
     "type": "future",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "future-INTC-USD_UM_XPERP:INTC-20310627",
     "symbol": "INTC",
     "denominator": "USD_UM_XPERP",
     "margin": "INTC",
     "contract_type": "future",
-    "delivery_date": "2031-06-27T00:00:00"
+    "delivery_date": "2031-06-27T00:00:00",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "IRYS-USD_UM_XPERP-310530",
@@ -57499,13 +57510,13 @@
   {
     "id": "MRVL-USD_UM_XPERP-310627",
     "type": "future",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "future-MRVL-USD_UM_XPERP:MRVL-20310627",
     "symbol": "MRVL",
     "denominator": "USD_UM_XPERP",
     "margin": "MRVL",
     "contract_type": "future",
-    "delivery_date": "2031-06-27T00:00:00"
+    "delivery_date": "2031-06-27T00:00:00",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "MSFT-USD_UM_XPERP-310613",
@@ -57521,13 +57532,13 @@
   {
     "id": "MU-USD_UM_XPERP-310627",
     "type": "future",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "future-MU-USD_UM_XPERP:MU-20310627",
     "symbol": "MU",
     "denominator": "USD_UM_XPERP",
     "margin": "MU",
     "contract_type": "future",
-    "delivery_date": "2031-06-27T00:00:00"
+    "delivery_date": "2031-06-27T00:00:00",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "NEAR-USD_UM_XPERP-310613",
@@ -57539,6 +57550,17 @@
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
     "first_capture": "2026-06-11T00:00:00.000Z"
+  },
+  {
+    "id": "NES-USD_UM_XPERP-310627",
+    "type": "future",
+    "first_capture": "2026-06-24T00:00:00.000Z",
+    "internal_id": "future-NES-USD_UM_XPERP:NES-20310627",
+    "symbol": "NES",
+    "denominator": "USD_UM_XPERP",
+    "margin": "NES",
+    "contract_type": "future",
+    "delivery_date": "2031-06-27T00:00:00"
   },
   {
     "id": "NVDA-USD_UM_XPERP-310613",
@@ -57655,13 +57677,13 @@
   {
     "id": "SNDK-USD_UM_XPERP-310627",
     "type": "future",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "future-SNDK-USD_UM_XPERP:SNDK-20310627",
     "symbol": "SNDK",
     "denominator": "USD_UM_XPERP",
     "margin": "SNDK",
     "contract_type": "future",
-    "delivery_date": "2031-06-27T00:00:00"
+    "delivery_date": "2031-06-27T00:00:00",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "SOL-USD-220603",
@@ -58105,13 +58127,13 @@
   {
     "id": "SOXL-USD_UM_XPERP-310627",
     "type": "future",
-    "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "future-SOXL-USD_UM_XPERP:SOXL-20310627",
     "symbol": "SOXL",
     "denominator": "USD_UM_XPERP",
     "margin": "SOXL",
     "contract_type": "future",
-    "delivery_date": "2031-06-27T00:00:00"
+    "delivery_date": "2031-06-27T00:00:00",
+    "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
     "id": "SPCX-USD_UM_XPERP-310613",
@@ -62822,6 +62844,17 @@
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "UB-USD_UM_XPERP-310627",
+    "type": "future",
+    "first_capture": "2026-06-24T00:00:00.000Z",
+    "internal_id": "future-UB-USD_UM_XPERP:UB-20310627",
+    "symbol": "UB",
+    "denominator": "USD_UM_XPERP",
+    "margin": "UB",
+    "contract_type": "future",
+    "delivery_date": "2031-06-27T00:00:00"
   },
   {
     "id": "WLD-USD_UM_XPERP-310613",
