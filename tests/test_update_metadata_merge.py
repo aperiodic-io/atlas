@@ -87,10 +87,11 @@ def test_drop_none_fields_removes_only_requested_none_fields() -> None:
     assert cleaned[1]["delivery_date"] == "2026-01-01T00:00:00"
 
 
-def test_append_contract_size_change_creates_history_when_none_exists() -> None:
+def test_append_contract_size_change_no_history_field_when_first_value_seen() -> None:
+    # A brand-new instrument with one size is constant by definition — no history needed
     sd = {"id": "BTC-USDT-SWAP"}
     result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
-    assert result["contract_size_history"] == [{"effective_from": "2026-01-01T00:00:00Z", "value": 0.001}]
+    assert "contract_size_history" not in result
 
 
 def test_append_contract_size_change_appends_when_value_differs() -> None:
@@ -105,13 +106,14 @@ def test_append_contract_size_change_appends_when_value_differs() -> None:
     ]
 
 
-def test_append_contract_size_change_does_not_append_when_value_same() -> None:
+def test_append_contract_size_change_drops_history_when_value_unchanged() -> None:
+    # Previously had a single recorded value; daily update sees same value → stays constant
     sd = {
         "id": "BTC-USDT-SWAP",
         "contract_size_history": [{"effective_from": "2019-12-04T00:00:00Z", "value": 0.001}],
     }
     result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
-    assert len(result["contract_size_history"]) == 1
+    assert "contract_size_history" not in result
 
 
 def test_append_contract_size_change_does_not_mutate_input() -> None:
@@ -119,3 +121,19 @@ def test_append_contract_size_change_does_not_mutate_input() -> None:
     sd = {"id": "BTC-USDT-SWAP", "contract_size_history": original_history}
     _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
     assert len(original_history) == 1
+
+
+def test_append_contract_size_change_omits_history_field_when_value_is_constant() -> None:
+    # Single-entry history (never changed) is redundant — contract_size scalar already carries it
+    sd = {"id": "BTC-USDT-SWAP"}
+    result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
+    assert "contract_size_history" not in result
+
+
+def test_append_contract_size_change_omits_history_field_when_unchanged_from_existing() -> None:
+    sd = {
+        "id": "BTC-USDT-SWAP",
+        "contract_size_history": [{"effective_from": "2019-12-04T00:00:00Z", "value": 0.001}],
+    }
+    result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
+    assert "contract_size_history" not in result

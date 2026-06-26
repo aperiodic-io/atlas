@@ -50,8 +50,11 @@ def main() -> None:
         iid = entry.get("internal_id", "")
         if iid in histories:
             history = histories[iid]
-            entry["contract_size_history"] = history
             entry["contract_size"] = history[-1]["value"]
+            if len(history) > 1:
+                entry["contract_size_history"] = history
+            else:
+                entry.pop("contract_size_history", None)
             matched += 1
 
     METADATA.write_text(json.dumps(entries, indent=2))
