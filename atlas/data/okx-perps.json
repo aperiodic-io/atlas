@@ -2821,6 +2821,15 @@
     "first_capture": "2025-10-18T00:00:00.000Z"
   },
   {
+    "id": "KIOXIA-USDT-SWAP",
+    "type": "perpetual",
+    "internal_id": "perpetual-KIOXIA-USDT:USDT",
+    "symbol": "KIOXIA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "KISHU-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-KISHU-USDT:USDT",
@@ -2897,12 +2906,12 @@
   {
     "id": "KORU-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-KORU-USDT:USDT",
     "symbol": "KORU",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "KSM-USD-SWAP",
@@ -3392,12 +3401,12 @@
   {
     "id": "MINIMAX-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-MINIMAX-USDT:USDT",
     "symbol": "MINIMAX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "MIR-USDT-SWAP",
@@ -3630,12 +3639,12 @@
   {
     "id": "NES-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-NES-USDT:USDT",
     "symbol": "NES",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "NEWT-USDT-SWAP",
@@ -3996,7 +4005,8 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2026-06-08T00:00:00.000Z"
+    "first_capture": "2026-06-08T00:00:00.000Z",
+    "end_date": "2026-06-25T00:00:00.000Z"
   },
   {
     "id": "PARTI-USDT-SWAP",
@@ -4784,12 +4794,12 @@
   {
     "id": "SMCI-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-SMCI-USDT:USDT",
     "symbol": "SMCI",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "SMH-USDT-SWAP",
@@ -4877,12 +4887,12 @@
   {
     "id": "SONY-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-SONY-USDT:USDT",
     "symbol": "SONY",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "SOON-USDT-SWAP",
@@ -5418,6 +5428,16 @@
     "first_capture": "2019-12-31T00:00:00.000Z"
   },
   {
+    "id": "TSEM-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z",
+    "internal_id": "perpetual-TSEM-USDT:USDT",
+    "symbol": "TSEM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "TSLA-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-TSLA-USDT:USDT",
@@ -5614,12 +5634,12 @@
   {
     "id": "UVXY-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-UVXY-USDT:USDT",
     "symbol": "UVXY",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "UXLINK-USDT-SWAP",
@@ -5778,6 +5798,16 @@
     "contract_type": "perpetual",
     "first_capture": "2022-11-08T00:00:00.000Z",
     "end_date": "2022-12-09T00:00:00.000Z"
+  },
+  {
+    "id": "WEN-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z",
+    "internal_id": "perpetual-WEN-USDT:USDT",
+    "symbol": "WEN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "WET-USDT-SWAP",
@@ -6297,12 +6327,12 @@
   {
     "id": "ZHIPU-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-ZHIPU-USDT:USDT",
     "symbol": "ZHIPU",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "ZIL-USDT-SWAP",

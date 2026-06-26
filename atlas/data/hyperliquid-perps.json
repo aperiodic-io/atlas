@@ -3713,6 +3713,16 @@
     "first_capture": "2025-12-23T00:00:00.000Z"
   },
   {
+    "id": "xyz:KIOXIA",
+    "type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:KIOXIA-USDC:USDC",
+    "symbol": "XYZ:KIOXIA",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:KR200",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:KR200-USDC:USDC",
@@ -4001,6 +4011,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-01-12T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:SOFTBANK",
+    "type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SOFTBANK-USDC:USDC",
+    "symbol": "XYZ:SOFTBANK",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:SP500",

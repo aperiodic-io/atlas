@@ -6532,12 +6532,12 @@
   {
     "id": "ousdt",
     "type": "perpetual",
-    "first_capture": "2026-06-24T00:00:00.000Z",
     "internal_id": "perpetual-O-USDT:USDT",
     "symbol": "O",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
     "id": "oxtusdt",
