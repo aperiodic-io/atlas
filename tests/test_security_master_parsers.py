@@ -1,5 +1,6 @@
 import pytest
 from datetime import datetime
+from unittest.mock import MagicMock, patch
 
 
 from atlas.contracts import ContractType
@@ -676,3 +677,24 @@ class TestContractFields:
         c = _parse("bitstamp", "btcusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
+
+
+class TestFetchOkxSwap:
+    def _mock_get(self, data: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"data": data}
+        return resp
+
+    def test_contract_size_populated_from_ctval(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+        item = {"instId": "BTC-USDT-SWAP", "state": "live", "ctVal": "0.01"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 0.01
+
+    def test_contract_size_absent_when_ctval_missing(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+        item = {"instId": "BTC-USDT-SWAP", "state": "live"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]

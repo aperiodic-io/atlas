@@ -44,8 +44,11 @@ def parse_okex_futures(exchange: str, sd: SymbolData) -> Contract:
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
 
-def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
-    return {"id": id_value, "type": type_value}
+def _to_symbol(item: dict, type_value: str) -> dict:
+    result: dict = {"id": item["instId"], "type": type_value}
+    if ct_val := item.get("ctVal"):
+        result["contract_size"] = float(ct_val)
+    return result
 
 
 def fetch_okx_spot(timeout_seconds: int) -> list[dict[str, str]]:
@@ -54,7 +57,7 @@ def fetch_okx_spot(timeout_seconds: int) -> list[dict[str, str]]:
         timeout=timeout_seconds,
     ).json()
     return [
-        _to_symbol(item["instId"], "spot")
+        _to_symbol(item, "spot")
         for item in payload.get("data", [])
         if item.get("state") == "live"
     ]
@@ -66,7 +69,7 @@ def fetch_okx_swap(timeout_seconds: int) -> list[dict[str, str]]:
         timeout=timeout_seconds,
     ).json()
     return [
-        _to_symbol(item["instId"], "perpetual")
+        _to_symbol(item, "perpetual")
         for item in payload.get("data", [])
         if item.get("state") == "live"
     ]
@@ -78,7 +81,7 @@ def fetch_okx_futures(timeout_seconds: int) -> list[dict[str, str]]:
         timeout=timeout_seconds,
     ).json()
     return [
-        _to_symbol(item["instId"], "future")
+        _to_symbol(item, "future")
         for item in payload.get("data", [])
         if item.get("state") == "live"
     ]
