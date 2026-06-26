@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -120,7 +120,7 @@ def _enrich(exchange: str, sd: dict) -> dict:
         c = parse_contract(exchange, sd)
         existing_contract_size = sd.get("contract_size")
         if c.contract_size is not None:
-            now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
             sd = _append_contract_size_change(sd, new_size=c.contract_size, effective_from=now)
         history = sd.get("contract_size_history")
         contract_size = c.contract_size if c.contract_size is not None else (
