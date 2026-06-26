@@ -107,6 +107,10 @@ def _enrich(exchange: str, sd: dict) -> dict:
     }
     try:
         c = parse_contract(exchange, sd)
+        history = sd.get("contract_size_history")
+        contract_size = c.contract_size
+        if contract_size is None and history:
+            contract_size = history[-1]["value"]
         return {
             **sd,
             "internal_id": c.internal_id,
@@ -114,7 +118,7 @@ def _enrich(exchange: str, sd: dict) -> dict:
             "denominator": c.denominator,
             "margin": c.margin,
             "contract_type": c.contract_type.value,
-            "contract_size": c.contract_size,
+            "contract_size": contract_size,
             "delivery_date": c.delivery_date.isoformat() if c.delivery_date else None,
         }
     except SkipSymbol:
