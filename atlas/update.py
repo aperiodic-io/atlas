@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -60,6 +61,13 @@ EXCHANGES = [
 ]
 
 
+def _append_contract_size_change(sd: dict, new_size: float, effective_from: str) -> dict:
+    history = list(sd.get("contract_size_history") or [])
+    if not history or history[-1]["value"] != new_size:
+        history.append({"effective_from": effective_from, "value": new_size})
+    return {**sd, "contract_size_history": history}
+
+
 def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
     if not path.exists():
         return [], {}
@@ -107,10 +115,13 @@ def _enrich(exchange: str, sd: dict) -> dict:
     }
     try:
         c = parse_contract(exchange, sd)
+        if c.contract_size is not None:
+            now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            sd = _append_contract_size_change(sd, new_size=c.contract_size, effective_from=now)
         history = sd.get("contract_size_history")
-        contract_size = c.contract_size
-        if contract_size is None and history:
-            contract_size = history[-1]["value"]
+        contract_size = c.contract_size if c.contract_size is not None else (
+            history[-1]["value"] if history else None
+        )
         return {
             **sd,
             "internal_id": c.internal_id,
