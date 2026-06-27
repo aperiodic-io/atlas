@@ -1177,6 +1177,16 @@
     "end_date": "2022-08-24T00:00:00.000Z"
   },
   {
+    "id": "CAP-USDT-SWAP",
+    "type": "perpetual",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "perpetual-CAP-USDT:USDT",
+    "symbol": "CAP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CAT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CAT-USDT:USDT",
@@ -2827,7 +2837,8 @@
     "symbol": "KIOXIA",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "KISHU-USDT-SWAP",
@@ -5430,12 +5441,12 @@
   {
     "id": "TSEM-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-25T00:00:00.000Z",
     "internal_id": "perpetual-TSEM-USDT:USDT",
     "symbol": "TSEM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
     "id": "TSLA-USDT-SWAP",
@@ -5802,12 +5813,12 @@
   {
     "id": "WEN-USDT-SWAP",
     "type": "perpetual",
-    "first_capture": "2026-06-25T00:00:00.000Z",
     "internal_id": "perpetual-WEN-USDT:USDT",
     "symbol": "WEN",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
     "id": "WET-USDT-SWAP",

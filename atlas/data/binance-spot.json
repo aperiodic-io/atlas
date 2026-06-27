@@ -12254,6 +12254,15 @@
     "end_date": "2026-02-14T00:00:00.000Z"
   },
   {
+    "id": "gigglejpy",
+    "type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "spot-GIGGLE-JPY",
+    "symbol": "GIGGLE",
+    "denominator": "JPY",
+    "contract_type": "spot"
+  },
+  {
     "id": "giggletry",
     "type": "spot",
     "internal_id": "spot-GIGGLE-TRY",
@@ -17540,6 +17549,15 @@
     "contract_type": "spot",
     "first_capture": "2023-11-03T00:00:00.000Z",
     "end_date": "2026-01-14T00:00:00.000Z"
+  },
+  {
+    "id": "memejpy",
+    "type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "spot-MEME-JPY",
+    "symbol": "MEME",
+    "denominator": "JPY",
+    "contract_type": "spot"
   },
   {
     "id": "memetry",
@@ -27119,6 +27137,15 @@
     "contract_type": "spot",
     "first_capture": "2024-05-23T00:00:00.000Z",
     "end_date": "2024-10-05T00:00:00.000Z"
+  },
+  {
+    "id": "trbjpy",
+    "type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "spot-TRB-JPY",
+    "symbol": "TRB",
+    "denominator": "JPY",
+    "contract_type": "spot"
   },
   {
     "id": "trbtry",

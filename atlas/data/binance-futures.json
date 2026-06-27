@@ -2179,6 +2179,17 @@
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
+    "id": "btcusdt_261225",
+    "type": "future",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "future-BTC-USDT:USDT-20261225",
+    "symbol": "BTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "future",
+    "delivery_date": "2026-12-25T00:00:00"
+  },
+  {
     "id": "btrusdt",
     "type": "perpetual",
     "internal_id": "perpetual-BTR-USDT:USDT",
@@ -3720,6 +3731,17 @@
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "first_capture": "2026-03-27T00:00:00.000Z"
+  },
+  {
+    "id": "ethusdt_261225",
+    "type": "future",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "future-ETH-USDT:USDT-20261225",
+    "symbol": "ETH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "future",
+    "delivery_date": "2026-12-25T00:00:00"
   },
   {
     "id": "ethwusdt",
