@@ -758,16 +758,9 @@ class TestFetchHyperliquidPerps:
         resp.json.return_value = {"universe": universe}
         return resp
 
-    def test_contract_size_derived_from_sz_decimals(self):
+    def test_contract_size_is_one_unit_of_underlying(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
         item = {"name": "BTC", "szDecimals": 5, "maxLeverage": 40}
         with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
             symbols = fetch_hyperliquid_perps(timeout_seconds=5)
-        assert symbols[0]["contract_size"] == pytest.approx(1e-5)
-
-    def test_contract_size_absent_when_sz_decimals_missing(self):
-        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
-        item = {"name": "BTC", "maxLeverage": 40}
-        with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
-            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
-        assert "contract_size" not in symbols[0]
+        assert symbols[0]["contract_size"] == 1.0
