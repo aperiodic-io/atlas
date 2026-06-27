@@ -85,13 +85,6 @@ def _normalize_binance_contract_type(contract_type: str | None) -> str:
     return "perpetual" if contract_type == "PERPETUAL" else "future"
 
 
-def _lot_size_step(item: dict) -> float | None:
-    for f in item.get("filters", []):
-        if f.get("filterType") == "LOT_SIZE":
-            return float(f["stepSize"])
-    return None
-
-
 def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
     payload = requests.get(
         "https://fapi.binance.com/fapi/v1/exchangeInfo", timeout=timeout_seconds
@@ -104,8 +97,7 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
             item["symbol"].lower(),
             _normalize_binance_contract_type(item.get("contractType")),
         )
-        if (step := _lot_size_step(item)) is not None:
-            sd["contract_size"] = step
+        sd["contract_size"] = 1.0
         symbols.append(sd)
     return symbols
 
