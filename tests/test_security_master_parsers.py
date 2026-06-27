@@ -1,5 +1,6 @@
 import pytest
 from datetime import datetime
+from unittest.mock import MagicMock, patch
 
 
 from atlas.contracts import ContractType
@@ -676,3 +677,90 @@ class TestContractFields:
         c = _parse("bitstamp", "btcusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
+
+
+class TestFetchOkxSwap:
+    def _mock_get(self, data: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"data": data}
+        return resp
+
+    def test_contract_size_populated_from_ctval(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+        item = {"instId": "BTC-USDT-SWAP", "state": "live", "ctVal": "0.01"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 0.01
+
+    def test_contract_size_absent_when_ctval_missing(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+        item = {"instId": "BTC-USDT-SWAP", "state": "live"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]
+
+
+class TestFetchBinanceFuturesUsdM:
+    def _mock_get(self, symbols: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"symbols": symbols}
+        return resp
+
+    def _item(self, symbol: str, step_size: str) -> dict:
+        return {
+            "symbol": symbol,
+            "contractType": "PERPETUAL",
+            "status": "TRADING",
+            "filters": [
+                {"filterType": "PRICE_FILTER", "minPrice": "0.01"},
+                {"filterType": "LOT_SIZE", "minQty": step_size, "stepSize": step_size},
+            ],
+        }
+
+    def test_contract_size_from_lot_size_step_size(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([self._item("BTCUSDT", "0.001")])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 0.001
+
+    def test_contract_size_absent_when_lot_size_filter_missing(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+        item = {"symbol": "BTCUSDT", "contractType": "PERPETUAL", "status": "TRADING", "filters": []}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]
+
+
+class TestFetchBinanceFuturesCoinM:
+    def _mock_get(self, symbols: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"symbols": symbols}
+        return resp
+
+    def test_contract_size_populated_from_api_field(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING", "contractSize": 100}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 100.0
+
+    def test_contract_size_absent_when_field_missing(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING"}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]
+
+
+class TestFetchHyperliquidPerps:
+    def _mock_post(self, universe: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"universe": universe}
+        return resp
+
+    def test_contract_size_is_one_unit_of_underlying(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+        item = {"name": "BTC", "szDecimals": 5, "maxLeverage": 40}
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 1.0

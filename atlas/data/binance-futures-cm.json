@@ -7,6 +7,7 @@
     "denominator": "USD",
     "margin": "AAVE",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-12-29T00:00:00.000Z"
   },
   {
@@ -269,6 +270,7 @@
     "denominator": "USD",
     "margin": "ADA",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-08-26T00:00:00.000Z"
   },
   {
@@ -323,6 +325,7 @@
     "denominator": "USD",
     "margin": "AVAX",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-11-24T00:00:00.000Z"
   },
   {
@@ -584,6 +587,7 @@
     "denominator": "USD",
     "margin": "BCH",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -870,18 +874,20 @@
     "margin": "BNB",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "bnbusd_261225",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-BNB-USD:BNB-20261225",
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00"
+    "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "bnbusd_perp",
@@ -891,6 +897,7 @@
     "denominator": "USD",
     "margin": "BNB",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
@@ -1189,18 +1196,20 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "btcusd_261225",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20261225",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00"
+    "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 100.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "btcusd_perp",
@@ -1210,6 +1219,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "perpetual",
+    "contract_size": 100.0,
     "first_capture": "2020-08-11T00:00:00.000Z"
   },
   {
@@ -1242,6 +1252,7 @@
     "denominator": "USD",
     "margin": "DOGE",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-02-02T00:00:00.000Z"
   },
   {
@@ -1503,6 +1514,7 @@
     "denominator": "USD",
     "margin": "DOT",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-08-25T00:00:00.000Z"
   },
   {
@@ -1594,6 +1606,7 @@
     "denominator": "USD",
     "margin": "ETC",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
@@ -1892,18 +1905,20 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "ethusd_261225",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20261225",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00"
+    "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "ethusd_perp",
@@ -1913,6 +1928,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-08-18T00:00:00.000Z"
   },
   {
@@ -1947,6 +1963,7 @@
     "denominator": "USD",
     "margin": "FIL",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-10-23T00:00:00.000Z"
   },
   {
@@ -2264,6 +2281,7 @@
     "denominator": "USD",
     "margin": "LINK",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-08-19T00:00:00.000Z"
   },
   {
@@ -2514,6 +2532,7 @@
     "denominator": "USD",
     "margin": "LTC",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -2557,6 +2576,7 @@
     "denominator": "USD",
     "margin": "NEAR",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-12-15T00:00:00.000Z"
   },
   {
@@ -2707,18 +2727,20 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "solusd_261225",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-SOL-USD:SOL-20261225",
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00"
+    "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "solusd_perp",
@@ -2728,6 +2750,7 @@
     "denominator": "USD",
     "margin": "SOL",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-09-02T00:00:00.000Z"
   },
   {
@@ -2738,6 +2761,7 @@
     "denominator": "USD",
     "margin": "SUI",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2024-09-18T00:00:00.000Z"
   },
   {
@@ -2783,6 +2807,7 @@
     "denominator": "USD",
     "margin": "TRX",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-09-07T00:00:00.000Z"
   },
   {
@@ -2793,6 +2818,7 @@
     "denominator": "USD",
     "margin": "UNI",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-04-13T00:00:00.000Z"
   },
   {
@@ -2836,6 +2862,7 @@
     "denominator": "USD",
     "margin": "XLM",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2021-04-16T00:00:00.000Z"
   },
   {
@@ -3133,18 +3160,20 @@
     "margin": "XRP",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "xrpusd_261225",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-XRP-USD:XRP-20261225",
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00"
+    "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "xrpusd_perp",
@@ -3154,6 +3183,7 @@
     "denominator": "USD",
     "margin": "XRP",
     "contract_type": "perpetual",
+    "contract_size": 10.0,
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
