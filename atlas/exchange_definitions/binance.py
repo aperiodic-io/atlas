@@ -99,15 +99,19 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict[str, str]]:
     ]
 
 
-def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict[str, str]]:
+def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
     payload = requests.get(
         "https://dapi.binance.com/dapi/v1/exchangeInfo", timeout=timeout_seconds
     ).json()
-    return [
-        _to_symbol(
+    symbols = []
+    for item in payload.get("symbols", []):
+        if item.get("contractStatus") != "TRADING":
+            continue
+        sd = _to_symbol(
             item["symbol"].lower(),
             _normalize_binance_contract_type(item.get("contractType")),
         )
-        for item in payload.get("symbols", [])
-        if item.get("status") == "TRADING"
-    ]
+        if (cs := item.get("contractSize")) is not None:
+            sd["contract_size"] = float(cs)
+        symbols.append(sd)
+    return symbols

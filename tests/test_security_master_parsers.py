@@ -698,3 +698,45 @@ class TestFetchOkxSwap:
         with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
             symbols = fetch_okx_swap(timeout_seconds=5)
         assert "contract_size" not in symbols[0]
+
+
+class TestFetchBinanceFuturesCoinM:
+    def _mock_get(self, symbols: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"symbols": symbols}
+        return resp
+
+    def test_contract_size_populated_from_api_field(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING", "contractSize": 100}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 100.0
+
+    def test_contract_size_absent_when_field_missing(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING"}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]
+
+
+class TestFetchHyperliquidPerps:
+    def _mock_post(self, universe: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"universe": universe}
+        return resp
+
+    def test_contract_size_derived_from_sz_decimals(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+        item = {"name": "BTC", "szDecimals": 5, "maxLeverage": 40}
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == pytest.approx(1e-5)
+
+    def test_contract_size_absent_when_sz_decimals_missing(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+        item = {"name": "BTC", "maxLeverage": 40}
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]

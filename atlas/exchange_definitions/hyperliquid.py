@@ -52,10 +52,15 @@ def fetch_hyperliquid_spot(timeout_seconds: int) -> list[dict[str, str]]:
     return symbols
 
 
-def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict[str, str]]:
+def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
     url = "https://api.hyperliquid.xyz/info"
     payload = {"type": "meta"}
     response = requests.post(url, json=payload, timeout=timeout_seconds).json()
 
-    universe = response.get("universe", [])
-    return [_to_symbol(item["name"], "perpetual") for item in universe]
+    symbols = []
+    for item in response.get("universe", []):
+        sd = _to_symbol(item["name"], "perpetual")
+        if (sz := item.get("szDecimals")) is not None:
+            sd["contract_size"] = 10 ** (-sz)
+        symbols.append(sd)
+    return symbols
