@@ -700,6 +700,37 @@ class TestFetchOkxSwap:
         assert "contract_size" not in symbols[0]
 
 
+class TestFetchBinanceFuturesUsdM:
+    def _mock_get(self, symbols: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"symbols": symbols}
+        return resp
+
+    def _item(self, symbol: str, step_size: str) -> dict:
+        return {
+            "symbol": symbol,
+            "contractType": "PERPETUAL",
+            "status": "TRADING",
+            "filters": [
+                {"filterType": "PRICE_FILTER", "minPrice": "0.01"},
+                {"filterType": "LOT_SIZE", "minQty": step_size, "stepSize": step_size},
+            ],
+        }
+
+    def test_contract_size_from_lot_size_step_size(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([self._item("BTCUSDT", "0.001")])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["contract_size"] == 0.001
+
+    def test_contract_size_absent_when_lot_size_filter_missing(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+        item = {"symbol": "BTCUSDT", "contractType": "PERPETUAL", "status": "TRADING", "filters": []}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert "contract_size" not in symbols[0]
+
+
 class TestFetchBinanceFuturesCoinM:
     def _mock_get(self, symbols: list[dict]) -> MagicMock:
         resp = MagicMock()
