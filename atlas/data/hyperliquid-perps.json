@@ -179,7 +179,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "end_date": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "ASTER",
@@ -547,7 +548,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2025-05-09T00:00:00.000Z"
+    "first_capture": "2025-05-09T00:00:00.000Z",
+    "end_date": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "DOT",
@@ -3140,6 +3142,16 @@
     "end_date": "2026-06-11T00:00:00.000Z"
   },
   {
+    "id": "mkts:US500",
+    "type": "perpetual",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "perpetual-MKTS:US500-USDC:USDC",
+    "symbol": "MKTS:US500",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "para:AVGO",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:AVGO-USDC:USDC",
@@ -3421,6 +3433,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2026-04-16T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:BOT",
+    "type": "perpetual",
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:BOT-USDC:USDC",
+    "symbol": "XYZ:BOT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:BRENTOIL",
@@ -3715,12 +3737,12 @@
   {
     "id": "xyz:KIOXIA",
     "type": "perpetual",
-    "first_capture": "2026-06-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:KIOXIA-USDC:USDC",
     "symbol": "XYZ:KIOXIA",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
     "id": "xyz:KR200",
@@ -4015,12 +4037,12 @@
   {
     "id": "xyz:SOFTBANK",
     "type": "perpetual",
-    "first_capture": "2026-06-25T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SOFTBANK-USDC:USDC",
     "symbol": "XYZ:SOFTBANK",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
     "id": "xyz:SP500",
