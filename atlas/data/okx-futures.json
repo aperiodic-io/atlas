@@ -8,6 +8,7 @@
     "margin": "AAPL",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -2407,6 +2408,7 @@
     "margin": "ADA",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -2418,6 +2420,7 @@
     "margin": "AMZN",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -2429,6 +2432,7 @@
     "margin": "ARX",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -2764,6 +2768,7 @@
     "margin": "AVAX",
     "contract_type": "future",
     "delivery_date": "2031-05-30T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
@@ -7251,6 +7256,7 @@
     "margin": "BCH",
     "contract_type": "future",
     "delivery_date": "2031-05-30T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
@@ -7262,6 +7268,7 @@
     "margin": "BEAT",
     "contract_type": "future",
     "delivery_date": "2031-06-20T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -7273,6 +7280,7 @@
     "margin": "BNB",
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -15420,7 +15428,8 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-07-11T00:00:00.000Z"
+    "first_capture": "2025-07-11T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260703",
@@ -15431,18 +15440,20 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20260710",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 100.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260731",
@@ -15453,6 +15464,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-07-31T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
@@ -15464,6 +15476,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-08-28T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -15475,6 +15488,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-01-16T00:00:00.000Z"
   },
   {
@@ -15486,6 +15500,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
@@ -20681,7 +20696,8 @@
     "margin": "USDT",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-10-17T00:00:00.000Z"
+    "first_capture": "2025-10-17T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-260220",
@@ -20908,7 +20924,8 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2026-02-16T00:00:00.000Z"
+    "first_capture": "2026-02-16T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-260703",
@@ -20919,18 +20936,20 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-BTC-USD_UM:BTC-20260710",
     "symbol": "BTC",
     "denominator": "USD_UM",
     "margin": "BTC",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 0.01,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-260925",
@@ -20941,6 +20960,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-03-13T00:00:00.000Z"
   },
   {
@@ -20952,6 +20972,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -20963,6 +20984,7 @@
     "margin": "BTC",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 0.0001,
     "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
@@ -20974,6 +20996,7 @@
     "margin": "BZ",
     "contract_type": "future",
     "delivery_date": "2031-05-09T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -20997,6 +21020,7 @@
     "margin": "CL",
     "contract_type": "future",
     "delivery_date": "2031-05-09T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -21008,6 +21032,7 @@
     "margin": "DOGE",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -24151,6 +24176,7 @@
     "margin": "DRAM",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
@@ -24174,6 +24200,7 @@
     "margin": "ENA",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -40721,7 +40748,8 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-10-17T00:00:00.000Z"
+    "first_capture": "2025-10-17T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260703",
@@ -40732,18 +40760,20 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20260710",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260731",
@@ -40754,6 +40784,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-07-31T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
@@ -40765,6 +40796,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-08-28T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -40776,6 +40808,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-01-16T00:00:00.000Z"
   },
   {
@@ -40787,6 +40820,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
@@ -45958,7 +45992,8 @@
     "margin": "USDT",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-12-12T00:00:00.000Z"
+    "first_capture": "2025-12-12T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-260619",
@@ -45981,7 +46016,8 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2026-06-15T00:00:00.000Z"
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-260703",
@@ -45992,18 +46028,20 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-ETH-USD_UM:ETH-20260710",
     "symbol": "ETH",
     "denominator": "USD_UM",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 0.001,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-260925",
@@ -46014,6 +46052,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -46025,6 +46064,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -46036,6 +46076,7 @@
     "margin": "ETH",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -48219,6 +48260,7 @@
     "margin": "GOOGL",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -48230,6 +48272,7 @@
     "margin": "GRAM",
     "contract_type": "future",
     "delivery_date": "2031-06-20T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -48277,6 +48320,7 @@
     "margin": "HYPE",
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -48288,6 +48332,7 @@
     "margin": "INTC",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -48299,6 +48344,7 @@
     "margin": "IRYS",
     "contract_type": "future",
     "delivery_date": "2031-05-30T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-05-29T00:00:00.000Z"
   },
   {
@@ -51298,6 +51344,7 @@
     "margin": "LINK",
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -57513,6 +57560,7 @@
     "margin": "LTC",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
@@ -57560,6 +57608,7 @@
     "margin": "META",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -57571,6 +57620,7 @@
     "margin": "MRVL",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -57582,6 +57632,7 @@
     "margin": "MSFT",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -57593,6 +57644,7 @@
     "margin": "MU",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -57604,6 +57656,7 @@
     "margin": "NEAR",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -57615,6 +57668,7 @@
     "margin": "NES",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -57626,6 +57680,7 @@
     "margin": "NVDA",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -57637,6 +57692,7 @@
     "margin": "O",
     "contract_type": "future",
     "delivery_date": "2031-06-20T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
@@ -57648,6 +57704,7 @@
     "margin": "ONDO",
     "contract_type": "future",
     "delivery_date": "2031-06-20T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -57659,6 +57716,7 @@
     "margin": "PEPE",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 1000000.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -57682,6 +57740,7 @@
     "margin": "PUMP",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 1000.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -57693,6 +57752,7 @@
     "margin": "QQQ",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -57704,6 +57764,7 @@
     "margin": "RE",
     "contract_type": "future",
     "delivery_date": "2031-06-20T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
@@ -57727,6 +57788,7 @@
     "margin": "SLX",
     "contract_type": "future",
     "delivery_date": "2031-06-06T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
@@ -57738,6 +57800,7 @@
     "margin": "SNDK",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -58133,7 +58196,8 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2026-06-15T00:00:00.000Z"
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-260703",
@@ -58144,18 +58208,20 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-SOL-USD_UM:SOL-20260710",
     "symbol": "SOL",
     "denominator": "USD_UM",
     "margin": "SOL",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 0.1,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-260925",
@@ -58166,6 +58232,7 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -58177,6 +58244,7 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 0.1,
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -58188,6 +58256,7 @@
     "margin": "SOL",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -58199,6 +58268,7 @@
     "margin": "SOXL",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -58210,6 +58280,7 @@
     "margin": "SPCX",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -58221,6 +58292,7 @@
     "margin": "SPY",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -58232,6 +58304,7 @@
     "margin": "SUI",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -58243,6 +58316,7 @@
     "margin": "TAO",
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -62898,6 +62972,7 @@
     "margin": "TRX",
     "contract_type": "future",
     "delivery_date": "2031-05-23T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -62909,6 +62984,7 @@
     "margin": "TSLA",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -62920,6 +62996,7 @@
     "margin": "UB",
     "contract_type": "future",
     "delivery_date": "2031-06-27T00:00:00",
+    "contract_size": 100.0,
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -62931,6 +63008,7 @@
     "margin": "WLD",
     "contract_type": "future",
     "delivery_date": "2031-06-13T00:00:00",
+    "contract_size": 10.0,
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -62954,6 +63032,7 @@
     "margin": "XAG",
     "contract_type": "future",
     "delivery_date": "2031-05-09T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -63181,7 +63260,8 @@
     "margin": "XAU",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2026-02-16T00:00:00.000Z"
+    "first_capture": "2026-02-16T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-260703",
@@ -63192,18 +63272,20 @@
     "margin": "XAU",
     "contract_type": "future",
     "delivery_date": "2026-07-03T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-260710",
     "type": "future",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "future-XAU-USD_UM:XAU-20260710",
     "symbol": "XAU",
     "denominator": "USD_UM",
     "margin": "XAU",
     "contract_type": "future",
-    "delivery_date": "2026-07-10T00:00:00"
+    "delivery_date": "2026-07-10T00:00:00",
+    "contract_size": 0.001,
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-260925",
@@ -63214,6 +63296,7 @@
     "margin": "XAU",
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-03-13T00:00:00.000Z"
   },
   {
@@ -63225,6 +63308,7 @@
     "margin": "XAU",
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -63236,6 +63320,7 @@
     "margin": "XAU",
     "contract_type": "future",
     "delivery_date": "2031-05-02T00:00:00",
+    "contract_size": 0.001,
     "first_capture": "2026-04-28T00:00:00.000Z"
   },
   {
@@ -69451,6 +69536,7 @@
     "margin": "XRP",
     "contract_type": "future",
     "delivery_date": "2031-04-04T00:00:00",
+    "contract_size": 1.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -69462,6 +69548,7 @@
     "margin": "ZEC",
     "contract_type": "future",
     "delivery_date": "2031-05-30T00:00:00",
+    "contract_size": 0.01,
     "first_capture": "2026-05-27T00:00:00.000Z"
   }
 ]
