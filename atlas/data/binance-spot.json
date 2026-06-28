@@ -12256,11 +12256,11 @@
   {
     "id": "gigglejpy",
     "type": "spot",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "spot-GIGGLE-JPY",
     "symbol": "GIGGLE",
     "denominator": "JPY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "giggletry",
@@ -17553,11 +17553,11 @@
   {
     "id": "memejpy",
     "type": "spot",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "spot-MEME-JPY",
     "symbol": "MEME",
     "denominator": "JPY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "memetry",
@@ -17677,7 +17677,8 @@
     "symbol": "ME",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2025-09-30T00:00:00.000Z"
+    "first_capture": "2025-09-30T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "meusdt",
@@ -19230,7 +19231,8 @@
     "symbol": "NOT",
     "denominator": "FDUSD",
     "contract_type": "spot",
-    "first_capture": "2024-05-16T00:00:00.000Z"
+    "first_capture": "2024-05-16T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "nottry",
@@ -20467,7 +20469,8 @@
     "symbol": "PARTI",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2025-03-25T00:00:00.000Z"
+    "first_capture": "2025-03-25T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "partifdusd",
@@ -25948,7 +25951,8 @@
     "symbol": "SUPER",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2021-03-25T00:00:00.000Z"
+    "first_capture": "2021-03-25T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "superbusd",
@@ -27141,11 +27145,11 @@
   {
     "id": "trbjpy",
     "type": "spot",
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "spot-TRB-JPY",
     "symbol": "TRB",
     "denominator": "JPY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "trbtry",

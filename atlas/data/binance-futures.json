@@ -2308,7 +2308,8 @@
     "margin": "USDT",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-12-26T00:00:00.000Z"
+    "first_capture": "2025-12-26T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "btcusdt_260925",
@@ -2454,6 +2455,16 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2023-11-02T00:00:00.000Z"
+  },
+  {
+    "id": "capusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-27T00:00:00.000Z",
+    "internal_id": "perpetual-CAP-USDT:USDT",
+    "symbol": "CAP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "carvusdt",
@@ -3959,7 +3970,8 @@
     "margin": "USDT",
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-12-26T00:00:00.000Z"
+    "first_capture": "2025-12-26T00:00:00.000Z",
+    "end_date": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "ethusdt_260925",

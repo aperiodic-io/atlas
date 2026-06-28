@@ -1329,12 +1329,12 @@
     "id": "CAP-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 100.0,
-    "first_capture": "2026-06-26T00:00:00.000Z",
     "internal_id": "perpetual-CAP-USDT:USDT",
     "symbol": "CAP",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "CAT-USDT-SWAP",
