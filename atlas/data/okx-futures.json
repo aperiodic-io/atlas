@@ -7272,6 +7272,18 @@
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
+    "id": "BICO-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-BICO-USD_UM_XPERP:BICO-20310704",
+    "symbol": "BICO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BICO",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "BNB-USD_UM_XPERP-310523",
     "type": "future",
     "internal_id": "future-BNB-USD_UM_XPERP:BNB-20310523",
@@ -46080,6 +46092,18 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "EWY-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-EWY-USD_UM_XPERP:EWY-20310704",
+    "symbol": "EWY",
+    "denominator": "USD_UM_XPERP",
+    "margin": "EWY",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "FIL-USD-210416",
     "type": "future",
     "internal_id": "future-FIL-USD:FIL-20210416",
@@ -51346,6 +51370,18 @@
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "LIT-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-LIT-USD_UM_XPERP:LIT-20310704",
+    "symbol": "LIT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "LIT",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "LTC-USD-190405",
@@ -57636,6 +57672,18 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "MSTR-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-MSTR-USD_UM_XPERP:MSTR-20310704",
+    "symbol": "MSTR",
+    "denominator": "USD_UM_XPERP",
+    "margin": "MSTR",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "MU-USD_UM_XPERP-310627",
     "type": "future",
     "internal_id": "future-MU-USD_UM_XPERP:MU-20310627",
@@ -57768,6 +57816,30 @@
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
+    "id": "RESOLV-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-RESOLV-USD_UM_XPERP:RESOLV-20310704",
+    "symbol": "RESOLV",
+    "denominator": "USD_UM_XPERP",
+    "margin": "RESOLV",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
+    "id": "SAMSUNG-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-SAMSUNG-USD_UM_XPERP:SAMSUNG-20310704",
+    "symbol": "SAMSUNG",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SAMSUNG",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "SCR-USDT-250411",
     "type": "future",
     "internal_id": "future-SCR-USDT:USDT-20250411",
@@ -57778,6 +57850,18 @@
     "delivery_date": "2025-04-11T00:00:00",
     "first_capture": "2024-10-09T00:00:00.000Z",
     "end_date": "2024-10-23T00:00:00.000Z"
+  },
+  {
+    "id": "SKHYNIX-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-SKHYNIX-USD_UM_XPERP:SKHYNIX-20310704",
+    "symbol": "SKHYNIX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SKHYNIX",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "SLX-USD_UM_XPERP-310606",
@@ -58330,6 +58414,18 @@
     "delivery_date": "2031-05-30T00:00:00",
     "first_capture": "2026-05-27T00:00:00.000Z",
     "end_date": "2026-06-17T00:00:00.000Z"
+  },
+  {
+    "id": "TRUMP-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 0.1,
+    "first_capture": "2026-06-28T00:00:00.000Z",
+    "internal_id": "future-TRUMP-USD_UM_XPERP:TRUMP-20310704",
+    "symbol": "TRUMP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TRUMP",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "TRX-USD-190524",

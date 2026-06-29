@@ -2459,12 +2459,12 @@
   {
     "id": "capusdt",
     "type": "perpetual",
-    "first_capture": "2026-06-27T00:00:00.000Z",
     "internal_id": "perpetual-CAP-USDT:USDT",
     "symbol": "CAP",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-27T00:00:00.000Z"
   },
   {
     "id": "carvusdt",
