@@ -60,3 +60,13 @@ def test_exchanges_for_contract_matches_symbol_denominator_margin(tmp_path: Path
         "binance-spot",
         "okx-spot",
     ]
+
+
+def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
+    rows = json.loads(
+        (Path(__file__).resolve().parents[1] / "atlas" / "data" / "okx-perps.json").read_text()
+    )
+    by_id = {row["id"]: row for row in rows}
+
+    assert by_id["BTC-USDC-SWAP"]["contract_size"] == 0.01
+    assert by_id["ETH-USDC-SWAP"]["contract_size"] == 0.1
