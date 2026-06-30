@@ -78,5 +78,5 @@ def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
         {"effective_from": "2019-12-04T00:00:00Z", "value": 0.001},
         {"effective_from": "2020-03-19T08:00:00Z", "value": 0.1},
     ]
-    assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-11T08:00:00.000Z"
-    assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-11T08:00:00.000Z"
+    assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
+    assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
