@@ -5588,6 +5588,17 @@
     "end_date": "2025-10-31T00:00:00.000Z"
   },
   {
+    "id": "STRC-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-29T00:00:00.000Z",
+    "internal_id": "perpetual-STRC-USDT:USDT",
+    "symbol": "STRC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "STRK-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-STRK-USDT:USDT",
