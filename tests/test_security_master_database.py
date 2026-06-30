@@ -60,3 +60,23 @@ def test_exchanges_for_contract_matches_symbol_denominator_margin(tmp_path: Path
         "binance-spot",
         "okx-spot",
     ]
+
+
+def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
+    rows = json.loads(
+        (Path(__file__).resolve().parents[1] / "atlas" / "data" / "okx-perps.json").read_text()
+    )
+    by_id = {row["id"]: row for row in rows}
+
+    assert by_id["BTC-USDC-SWAP"]["contract_size"] == 0.01
+    assert by_id["BTC-USDC-SWAP"]["contract_size_history"] == [
+        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.0001},
+        {"effective_from": "2020-03-20T08:00:00Z", "value": 0.01},
+    ]
+    assert by_id["ETH-USDC-SWAP"]["contract_size"] == 0.1
+    assert by_id["ETH-USDC-SWAP"]["contract_size_history"] == [
+        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.001},
+        {"effective_from": "2020-03-19T08:00:00Z", "value": 0.1},
+    ]
+    assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-11T08:00:00.000Z"
+    assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-11T08:00:00.000Z"
