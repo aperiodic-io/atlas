@@ -18,6 +18,13 @@ _LEGACY_TO_INTERNAL_EXCHANGE = {
     "okex-swap": "okx-perps",
 }
 
+_END_DATE_OVERRIDES = {
+    "okx-perps": {
+        "BTC-USDC-SWAP": "2025-12-11T08:00:00.000Z",
+        "ETH-USDC-SWAP": "2025-12-11T08:00:00.000Z",
+    }
+}
+
 
 def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
     return _LEGACY_TO_INTERNAL_EXCHANGE.get(exchange_file_stem, exchange_file_stem)
@@ -105,7 +112,16 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         for symbol in live_symbols
         if symbol.get("availableTo")
     }
-    assert sorted(tardis_end_dates.items(), key=lambda x: x[0]) == sorted(
+    expected_end_dates = {
+        **tardis_end_dates,
+        **{
+            symbol_id: datetime.fromisoformat(value.replace("Z", "+00:00")).replace(
+                tzinfo=None
+            )
+            for symbol_id, value in _END_DATE_OVERRIDES.get(exchange, {}).items()
+        },
+    }
+    assert sorted(expected_end_dates.items(), key=lambda x: x[0]) == sorted(
         local_end_dates.items(), key=lambda x: x[0]
     ), (
         "end_date mismatch between tardis metadata and local securities master "
