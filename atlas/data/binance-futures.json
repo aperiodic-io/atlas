@@ -5205,7 +5205,8 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-03-05T00:00:00.000Z"
+    "first_capture": "2025-03-05T00:00:00.000Z",
+    "end_date": "2026-06-29T00:00:00.000Z"
   },
   {
     "id": "ipusdt",
@@ -5216,7 +5217,8 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-13T00:00:00.000Z"
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-06-29T00:00:00.000Z"
   },
   {
     "id": "irenusdt",
@@ -6416,6 +6418,16 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "mvllusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z",
+    "internal_id": "perpetual-MVLL-USDT:USDT",
+    "symbol": "MVLL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "myrousdt",
@@ -8387,6 +8399,16 @@
     "first_capture": "2025-06-11T00:00:00.000Z"
   },
   {
+    "id": "sqqqusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z",
+    "internal_id": "perpetual-SQQQ-USDT:USDT",
+    "symbol": "SQQQ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "srmusdt",
     "type": "perpetual",
     "internal_id": "perpetual-SRM-USDT:USDT",
@@ -8902,6 +8924,16 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2025-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "tqqqusdt",
+    "type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z",
+    "internal_id": "perpetual-TQQQ-USDT:USDT",
+    "symbol": "TQQQ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "tradoorusdt",

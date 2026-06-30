@@ -3379,8 +3379,7 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-06-26T00:00:00.000Z",
-    "end_date": "2026-06-28T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "para:AVGO",
@@ -3574,6 +3573,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "first_capture": "2025-12-02T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:AMAT",
+    "type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:AMAT-USDC:USDC",
+    "symbol": "XYZ:AMAT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "xyz:AMD",
