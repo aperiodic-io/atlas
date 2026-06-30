@@ -69,4 +69,12 @@ def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
     by_id = {row["id"]: row for row in rows}
 
     assert by_id["BTC-USDC-SWAP"]["contract_size"] == 0.01
+    assert by_id["BTC-USDC-SWAP"]["contract_size_history"] == [
+        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.0001},
+        {"effective_from": "2020-03-20T08:00:00Z", "value": 0.01},
+    ]
     assert by_id["ETH-USDC-SWAP"]["contract_size"] == 0.1
+    assert by_id["ETH-USDC-SWAP"]["contract_size_history"] == [
+        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.001},
+        {"effective_from": "2020-03-19T08:00:00Z", "value": 0.1},
+    ]

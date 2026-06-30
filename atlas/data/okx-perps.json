@@ -1210,6 +1210,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 0.01,
+    "contract_size_history": [
+      {
+        "effective_from": "2019-12-04T00:00:00Z",
+        "value": 0.0001
+      },
+      {
+        "effective_from": "2020-03-20T08:00:00Z",
+        "value": 0.01
+      }
+    ],
     "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z"
   },
@@ -2147,6 +2157,16 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 0.1,
+    "contract_size_history": [
+      {
+        "effective_from": "2019-12-04T00:00:00Z",
+        "value": 0.001
+      },
+      {
+        "effective_from": "2020-03-19T08:00:00Z",
+        "value": 0.1
+      }
+    ],
     "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z"
   },
