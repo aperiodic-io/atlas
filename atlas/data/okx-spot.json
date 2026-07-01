@@ -16253,6 +16253,51 @@
     "end_date": "2024-08-31T00:00:00.000Z"
   },
   {
+    "id": "TAO-EUR",
+    "type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "spot-TAO-EUR",
+    "symbol": "TAO",
+    "denominator": "EUR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "TAO-TRY",
+    "type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "spot-TAO-TRY",
+    "symbol": "TAO",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "TAO-USD",
+    "type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "spot-TAO-USD",
+    "symbol": "TAO",
+    "denominator": "USD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "TAO-USDC",
+    "type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "spot-TAO-USDC",
+    "symbol": "TAO",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "TAO-USDT",
+    "type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "spot-TAO-USDT",
+    "symbol": "TAO",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "TCT-BTC",
     "type": "spot",
     "internal_id": "spot-TCT-BTC",

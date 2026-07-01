@@ -12,6 +12,18 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "AAVE-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 0.1,
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "future-AAVE-USD_UM_XPERP:AAVE-20310704",
+    "symbol": "AAVE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AAVE",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "ABCD-USDT-250124",
     "type": "future",
     "internal_id": "future-ABCD-USDT:USDT-20250124",
@@ -46,6 +58,18 @@
     "delivery_date": "2025-01-24T00:00:00",
     "first_capture": "2024-07-22T00:00:00.000Z",
     "end_date": "2024-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "ACT-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "future-ACT-USD_UM_XPERP:ACT-20310704",
+    "symbol": "ACT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ACT",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "ADA-USD-210416",
@@ -21010,6 +21034,18 @@
     "delivery_date": "2031-05-09T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-04T00:00:00.000Z"
+  },
+  {
+    "id": "CAP-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-06-30T00:00:00.000Z",
+    "internal_id": "future-CAP-USD_UM_XPERP:CAP-20310704",
+    "symbol": "CAP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CAP",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "CATI-USDT-250307",

@@ -1210,6 +1210,8 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 0.01,
+    "first_capture": "2022-10-18T00:00:00.000Z",
+    "end_date": "2025-12-12T00:00:00.000Z",
     "contract_size_history": [
       {
         "effective_from": "2019-12-04T00:00:00Z",
@@ -1219,9 +1221,7 @@
         "effective_from": "2020-03-20T08:00:00Z",
         "value": 0.01
       }
-    ],
-    "first_capture": "2022-10-18T00:00:00.000Z",
-    "end_date": "2025-12-12T00:00:00.000Z"
+    ]
   },
   {
     "id": "BTC-USDT-SWAP",
@@ -2157,6 +2157,8 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 0.1,
+    "first_capture": "2022-10-18T00:00:00.000Z",
+    "end_date": "2025-12-12T00:00:00.000Z",
     "contract_size_history": [
       {
         "effective_from": "2019-12-04T00:00:00Z",
@@ -2166,9 +2168,7 @@
         "effective_from": "2020-03-19T08:00:00Z",
         "value": 0.1
       }
-    ],
-    "first_capture": "2022-10-18T00:00:00.000Z",
-    "end_date": "2025-12-12T00:00:00.000Z"
+    ]
   },
   {
     "id": "ETH-USDT-SWAP",
@@ -5613,12 +5613,12 @@
     "id": "STRC-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-06-29T00:00:00.000Z",
     "internal_id": "perpetual-STRC-USDT:USDT",
     "symbol": "STRC",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z"
   },
   {
     "id": "STRK-USDT-SWAP",
