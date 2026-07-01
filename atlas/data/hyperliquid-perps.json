@@ -1027,7 +1027,8 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-13T00:00:00.000Z"
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "JELLY",
@@ -3379,7 +3380,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "end_date": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "para:AVGO",
@@ -3577,12 +3579,12 @@
   {
     "id": "xyz:AMAT",
     "type": "perpetual",
-    "first_capture": "2026-06-29T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:AMAT-USDC:USDC",
     "symbol": "XYZ:AMAT",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-06-29T00:00:00.000Z"
   },
   {
     "id": "xyz:AMD",
