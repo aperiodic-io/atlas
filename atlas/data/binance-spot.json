@@ -16028,11 +16028,11 @@
   {
     "id": "litebusdt",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-LITEB-USDT",
     "symbol": "LITEB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "liteth",
@@ -17608,11 +17608,11 @@
   {
     "id": "metabusdt",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-METAB-USDT",
     "symbol": "METAB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "metisbtc",
@@ -18270,11 +18270,11 @@
   {
     "id": "msftbusdt",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-MSFTB-USDT",
     "symbol": "MSFTB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "mstrbusdt",
@@ -21207,11 +21207,11 @@
   {
     "id": "pltrbusdt",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-PLTRB-USDT",
     "symbol": "PLTRB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "plumebnb",
@@ -22183,11 +22183,11 @@
   {
     "id": "qqqbusdt",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-QQQB-USDT",
     "symbol": "QQQB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "qspbtc",
@@ -22956,20 +22956,20 @@
   {
     "id": "reu",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-RE-U",
     "symbol": "RE",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "reusd1",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-RE-USD1",
     "symbol": "RE",
     "denominator": "USD1",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "reusdc",
@@ -27022,7 +27022,8 @@
     "symbol": "TON",
     "denominator": "FDUSD",
     "contract_type": "spot",
-    "first_capture": "2024-08-08T00:00:00.000Z"
+    "first_capture": "2024-08-08T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tonidr",
@@ -27031,7 +27032,8 @@
     "symbol": "TON",
     "denominator": "IDR",
     "contract_type": "spot",
-    "first_capture": "2025-11-29T00:00:00.000Z"
+    "first_capture": "2025-11-29T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tontry",
@@ -27040,7 +27042,8 @@
     "symbol": "TON",
     "denominator": "TRY",
     "contract_type": "spot",
-    "first_capture": "2024-08-08T00:00:00.000Z"
+    "first_capture": "2024-08-08T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tonu",
@@ -27049,7 +27052,8 @@
     "symbol": "TON",
     "denominator": "U",
     "contract_type": "spot",
-    "first_capture": "2026-05-12T00:00:00.000Z"
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tonusd1",
@@ -27058,7 +27062,8 @@
     "symbol": "TON",
     "denominator": "USD1",
     "contract_type": "spot",
-    "first_capture": "2026-05-12T00:00:00.000Z"
+    "first_capture": "2026-05-12T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tonusdc",
@@ -27067,7 +27072,8 @@
     "symbol": "TON",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2024-08-22T00:00:00.000Z"
+    "first_capture": "2024-08-22T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tonusdt",
@@ -27076,7 +27082,8 @@
     "symbol": "TON",
     "denominator": "USDT",
     "contract_type": "spot",
-    "first_capture": "2024-08-08T00:00:00.000Z"
+    "first_capture": "2024-08-08T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "tornbnb",
@@ -30624,20 +30631,20 @@
   {
     "id": "xplu",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-XPL-U",
     "symbol": "XPL",
     "denominator": "U",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "xplusd1",
     "type": "spot",
-    "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-XPL-USD1",
     "symbol": "XPL",
     "denominator": "USD1",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
     "id": "xplusdc",

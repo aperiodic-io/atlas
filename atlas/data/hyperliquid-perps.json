@@ -2524,7 +2524,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-04-30T00:00:00.000Z"
+    "first_capture": "2026-04-30T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:EWY",
@@ -2534,7 +2535,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-03-02T00:00:00.000Z"
+    "first_capture": "2026-03-02T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:GOLD",
@@ -2574,7 +2576,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z"
+    "first_capture": "2026-01-29T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:KWEB",
@@ -2584,7 +2587,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-03-18T00:00:00.000Z"
+    "first_capture": "2026-03-18T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:META",
@@ -2604,7 +2608,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-29T00:00:00.000Z"
+    "first_capture": "2026-01-29T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:NVDA",
@@ -2624,7 +2629,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-02-06T00:00:00.000Z"
+    "first_capture": "2026-02-06T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "cash:TSLA",
@@ -2654,7 +2660,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-03-11T00:00:00.000Z"
+    "first_capture": "2026-03-11T00:00:00.000Z",
+    "end_date": "2026-07-01T00:00:00.000Z"
   },
   {
     "id": "flx:COIN",
@@ -3380,8 +3387,17 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-06-26T00:00:00.000Z",
-    "end_date": "2026-06-30T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "mkts:USTECH",
+    "type": "perpetual",
+    "first_capture": "2026-07-01T00:00:00.000Z",
+    "internal_id": "perpetual-MKTS:USTECH-USDC:USDC",
+    "symbol": "MKTS:USTECH",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
   },
   {
     "id": "para:AVGO",

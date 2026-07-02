@@ -2015,6 +2015,16 @@
     "end_date": "2021-03-13T00:00:00.000Z"
   },
   {
+    "id": "btcu",
+    "type": "perpetual",
+    "first_capture": "2026-07-01T00:00:00.000Z",
+    "internal_id": "perpetual-BTC-U:BTC",
+    "symbol": "BTC",
+    "denominator": "U",
+    "margin": "BTC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "btcusd1",
     "type": "perpetual",
     "internal_id": "perpetual-BTC-USD1:BTC",
@@ -3686,6 +3696,16 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-03-18T00:00:00.000Z"
+  },
+  {
+    "id": "ethu",
+    "type": "perpetual",
+    "first_capture": "2026-07-01T00:00:00.000Z",
+    "internal_id": "perpetual-ETH-U:ETH",
+    "symbol": "ETH",
+    "denominator": "U",
+    "margin": "ETH",
+    "contract_type": "perpetual"
   },
   {
     "id": "ethusdc",
