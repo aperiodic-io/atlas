@@ -5360,6 +5360,16 @@
     "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
+    "id": "SOFTBANK-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-SOFTBANK-USDT:USDT",
+    "symbol": "SOFTBANK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "SOL-USD-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-SOL-USD:SOL",
