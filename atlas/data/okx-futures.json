@@ -2436,6 +2436,18 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "AI-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "future-AI-USD_UM_XPERP:AI-20310704",
+    "symbol": "AI",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AI",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "AMZN-USD_UM_XPERP-310613",
     "type": "future",
     "internal_id": "future-AMZN-USD_UM_XPERP:AMZN-20310613",
@@ -21060,6 +21072,18 @@
     "end_date": "2024-09-21T00:00:00.000Z"
   },
   {
+    "id": "CBRS-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "future-CBRS-USD_UM_XPERP:CBRS-20310704",
+    "symbol": "CBRS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CBRS",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
+  },
+  {
     "id": "CL-USD_UM_XPERP-310509",
     "type": "future",
     "internal_id": "future-CL-USD_UM_XPERP:CL-20310509",
@@ -21070,6 +21094,18 @@
     "delivery_date": "2031-05-09T00:00:00",
     "contract_size": 0.1,
     "first_capture": "2026-05-04T00:00:00.000Z"
+  },
+  {
+    "id": "CRCL-USD_UM_XPERP-310704",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "future-CRCL-USD_UM_XPERP:CRCL-20310704",
+    "symbol": "CRCL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CRCL",
+    "contract_type": "future",
+    "delivery_date": "2031-07-04T00:00:00"
   },
   {
     "id": "DOGE-USD_UM_XPERP-310404",

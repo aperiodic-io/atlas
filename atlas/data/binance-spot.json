@@ -4678,7 +4678,8 @@
     "symbol": "BIGTIME",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2025-04-11T00:00:00.000Z"
+    "first_capture": "2025-04-11T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "bigtimeusdt",
@@ -5726,7 +5727,8 @@
     "symbol": "BTC",
     "denominator": "EURI",
     "contract_type": "spot",
-    "first_capture": "2024-09-25T00:00:00.000Z"
+    "first_capture": "2024-09-25T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "btcfdusd",
@@ -5821,7 +5823,8 @@
     "symbol": "BTC",
     "denominator": "PLN",
     "contract_type": "spot",
-    "first_capture": "2022-10-19T00:00:00.000Z"
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "btcron",
@@ -7652,7 +7655,8 @@
     "symbol": "CTK",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2020-11-23T00:00:00.000Z"
+    "first_capture": "2020-11-23T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "ctkbtc",
@@ -7661,7 +7665,8 @@
     "symbol": "CTK",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2020-11-23T00:00:00.000Z"
+    "first_capture": "2020-11-23T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "ctkbusd",
@@ -10330,7 +10335,8 @@
     "symbol": "ETH",
     "denominator": "EURI",
     "contract_type": "spot",
-    "first_capture": "2024-11-20T00:00:00.000Z"
+    "first_capture": "2024-11-20T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "ethfdusd",
@@ -10462,7 +10468,8 @@
     "symbol": "ETH",
     "denominator": "PLN",
     "contract_type": "spot",
-    "first_capture": "2022-10-19T00:00:00.000Z"
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "ethrub",
@@ -12656,6 +12663,69 @@
     "first_capture": "2025-03-04T00:00:00.000Z"
   },
   {
+    "id": "gramfdusd",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-FDUSD",
+    "symbol": "GRAM",
+    "denominator": "FDUSD",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramidr",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-IDR",
+    "symbol": "GRAM",
+    "denominator": "IDR",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramtry",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-TRY",
+    "symbol": "GRAM",
+    "denominator": "TRY",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramu",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-U",
+    "symbol": "GRAM",
+    "denominator": "U",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramusd1",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USD1",
+    "symbol": "GRAM",
+    "denominator": "USD1",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramusdc",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USDC",
+    "symbol": "GRAM",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
+    "id": "gramusdt",
+    "type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z",
+    "internal_id": "spot-GRAM-USDT",
+    "symbol": "GRAM",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "grsbtc",
     "type": "spot",
     "internal_id": "spot-GRS-BTC",
@@ -12827,7 +12897,8 @@
     "symbol": "GUN",
     "denominator": "BNB",
     "contract_type": "spot",
-    "first_capture": "2025-03-31T00:00:00.000Z"
+    "first_capture": "2025-03-31T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "gunfdusd",
@@ -14642,7 +14713,8 @@
     "symbol": "JST",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2021-01-23T00:00:00.000Z"
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "jstbusd",
@@ -28352,7 +28424,8 @@
     "symbol": "USDC",
     "denominator": "PLN",
     "contract_type": "spot",
-    "first_capture": "2025-01-10T00:00:00.000Z"
+    "first_capture": "2025-01-10T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "usdcron",
@@ -28579,7 +28652,8 @@
     "symbol": "USDT",
     "denominator": "PLN",
     "contract_type": "spot",
-    "first_capture": "2023-04-14T00:00:00.000Z"
+    "first_capture": "2023-04-14T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "usdtron",
@@ -31511,7 +31585,8 @@
     "symbol": "ZEN",
     "denominator": "BTC",
     "contract_type": "spot",
-    "first_capture": "2020-05-19T00:00:00.000Z"
+    "first_capture": "2020-05-19T00:00:00.000Z",
+    "end_date": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "zenbusd",
