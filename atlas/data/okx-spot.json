@@ -4699,47 +4699,47 @@
   {
     "id": "DATA-EUR",
     "type": "spot",
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "spot-DATA-EUR",
     "symbol": "DATA",
     "denominator": "EUR",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DATA-TRY",
     "type": "spot",
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "spot-DATA-TRY",
     "symbol": "DATA",
     "denominator": "TRY",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DATA-USD",
     "type": "spot",
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "spot-DATA-USD",
     "symbol": "DATA",
     "denominator": "USD",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DATA-USDC",
     "type": "spot",
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "spot-DATA-USDC",
     "symbol": "DATA",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DATA-USDT",
     "type": "spot",
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "spot-DATA-USDT",
     "symbol": "DATA",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DCR-BTC",
@@ -8411,7 +8411,8 @@
     "symbol": "IP",
     "denominator": "EUR",
     "contract_type": "spot",
-    "first_capture": "2026-02-23T00:00:00.000Z"
+    "first_capture": "2026-02-23T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IP-TRY",
@@ -8420,7 +8421,8 @@
     "symbol": "IP",
     "denominator": "TRY",
     "contract_type": "spot",
-    "first_capture": "2026-02-11T00:00:00.000Z"
+    "first_capture": "2026-02-11T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IP-USD",
@@ -8429,7 +8431,8 @@
     "symbol": "IP",
     "denominator": "USD",
     "contract_type": "spot",
-    "first_capture": "2025-02-20T00:00:00.000Z"
+    "first_capture": "2025-02-20T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IP-USDC",
@@ -8438,7 +8441,8 @@
     "symbol": "IP",
     "denominator": "USDC",
     "contract_type": "spot",
-    "first_capture": "2025-10-09T00:00:00.000Z"
+    "first_capture": "2025-10-09T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IP-USDT",
@@ -8447,7 +8451,8 @@
     "symbol": "IP",
     "denominator": "USDT",
     "contract_type": "spot",
-    "first_capture": "2025-02-13T00:00:00.000Z"
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IQ-USD",

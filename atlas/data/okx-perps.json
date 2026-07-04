@@ -1126,12 +1126,12 @@
     "id": "BOT-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-BOT-USDT:USDT",
     "symbol": "BOT",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "BR-USDT-SWAP",
@@ -1768,12 +1768,12 @@
     "id": "DATA-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-DATA-USDT:USDT",
     "symbol": "DATA",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "DEGEN-USDT-SWAP",
@@ -3031,7 +3031,8 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-13T00:00:00.000Z"
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "IREN-USDT-SWAP",
@@ -4006,23 +4007,23 @@
     "id": "MUU-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-MUU-USDT:USDT",
     "symbol": "MUU",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "MVLL-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-MVLL-USDT:USDT",
     "symbol": "MVLL",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "NBIS-USDT-SWAP",
@@ -4881,12 +4882,12 @@
     "id": "RAM-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-RAM-USDT:USDT",
     "symbol": "RAM",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "RAVE-USDT-SWAP",
@@ -5996,12 +5997,12 @@
     "id": "TQQQ-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-TQQQ-USDT:USDT",
     "symbol": "TQQQ",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "TRB-USDT-SWAP",
@@ -6419,6 +6420,17 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "VVV-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 0.1,
+    "first_capture": "2026-07-03T00:00:00.000Z",
+    "internal_id": "perpetual-VVV-USDT:USDT",
+    "symbol": "VVV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "W-USDT-SWAP",

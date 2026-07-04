@@ -855,12 +855,12 @@
     "id": "GRAM",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-02T00:00:00.000Z",
     "internal_id": "perpetual-GRAM-USDC:USDC",
     "symbol": "GRAM",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "GRASS",
@@ -2569,7 +2569,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-27T00:00:00.000Z"
+    "first_capture": "2026-01-27T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "cash:HOOD",
@@ -2579,7 +2580,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-28T00:00:00.000Z"
+    "first_capture": "2026-01-28T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "cash:INTC",
@@ -2655,7 +2657,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-22T00:00:00.000Z"
+    "first_capture": "2026-01-22T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "cash:USA500",
@@ -2665,7 +2668,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-01-20T00:00:00.000Z"
+    "first_capture": "2026-01-20T00:00:00.000Z",
+    "end_date": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "cash:WTI",
