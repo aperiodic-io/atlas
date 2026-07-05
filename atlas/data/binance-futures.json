@@ -3115,22 +3115,22 @@
   {
     "id": "dataipusdc",
     "type": "perpetual",
-    "first_capture": "2026-07-03T00:00:00.000Z",
     "internal_id": "perpetual-DATAIP-USDC:USDC",
     "symbol": "DATAIP",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "dataipusdt",
     "type": "perpetual",
-    "first_capture": "2026-07-03T00:00:00.000Z",
     "internal_id": "perpetual-DATAIP-USDT:USDT",
     "symbol": "DATAIP",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "deepusdt",
@@ -3750,12 +3750,12 @@
   {
     "id": "ethusd1",
     "type": "perpetual",
-    "first_capture": "2026-07-03T00:00:00.000Z",
     "internal_id": "perpetual-ETH-USD1:ETH",
     "symbol": "ETH",
     "denominator": "USD1",
     "margin": "ETH",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "ethusdc",
