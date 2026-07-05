@@ -6425,12 +6425,12 @@
     "id": "VVV-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 0.1,
-    "first_capture": "2026-07-03T00:00:00.000Z",
     "internal_id": "perpetual-VVV-USDT:USDT",
     "symbol": "VVV",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
     "id": "W-USDT-SWAP",
