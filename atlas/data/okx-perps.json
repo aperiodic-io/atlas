@@ -475,6 +475,17 @@
     "first_capture": "2022-03-03T00:00:00.000Z"
   },
   {
+    "id": "APLD-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-APLD-USDT:USDT",
+    "symbol": "APLD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "APR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-APR-USDT:USDT",
@@ -1177,6 +1188,17 @@
     "contract_type": "perpetual",
     "contract_size": 10.0,
     "first_capture": "2026-04-02T00:00:00.000Z"
+  },
+  {
+    "id": "BSP-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-BSP-USDT:USDT",
+    "symbol": "BSP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "BSV-USD-SWAP",
@@ -2846,6 +2868,17 @@
     "first_capture": "2025-05-26T00:00:00.000Z"
   },
   {
+    "id": "HYPE-USD-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-HYPE-USD:HYPE",
+    "symbol": "HYPE",
+    "denominator": "USD",
+    "margin": "HYPE",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "HYPE-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-HYPE-USDT:USDT",
@@ -4343,6 +4376,17 @@
     "end_date": "2024-07-16T00:00:00.000Z"
   },
   {
+    "id": "ON-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-ON-USDT:USDT",
+    "symbol": "ON",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "ONDO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ONDO-USDT:USDT",
@@ -4496,6 +4540,17 @@
     "contract_type": "perpetual",
     "contract_size": 0.1,
     "first_capture": "2023-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "OSCR-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-OSCR-USDT:USDT",
+    "symbol": "OSCR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "PANW-USDT-SWAP",
@@ -5313,6 +5368,17 @@
     "contract_type": "perpetual",
     "contract_size": 100.0,
     "first_capture": "2025-04-28T00:00:00.000Z"
+  },
+  {
+    "id": "SIMO-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-SIMO-USDT:USDT",
+    "symbol": "SIMO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "SKHYNIX-USDT-SWAP",
@@ -6138,6 +6204,17 @@
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
+    "id": "TTWO-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-TTWO-USDT:USDT",
+    "symbol": "TTWO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "TURBO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-TURBO-USDT:USDT",
@@ -6216,6 +6293,17 @@
     "contract_size": 10.0,
     "first_capture": "2022-02-24T00:00:00.000Z",
     "end_date": "2022-11-26T00:00:00.000Z"
+  },
+  {
+    "id": "UNH-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-UNH-USDT:USDT",
+    "symbol": "UNH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "UNI-USD-SWAP",
