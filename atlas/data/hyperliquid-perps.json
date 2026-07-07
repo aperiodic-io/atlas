@@ -4263,6 +4263,16 @@
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
+    "id": "xyz:SHAZ",
+    "type": "perpetual",
+    "first_capture": "2026-07-06T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SHAZ-USDC:USDC",
+    "symbol": "XYZ:SHAZ",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:SILVER",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SILVER-USDC:USDC",
