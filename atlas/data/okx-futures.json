@@ -1,5 +1,17 @@
 [
   {
+    "id": "AAOI-USD_UM_XPERP-310711",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "internal_id": "future-AAOI-USD_UM_XPERP:AAOI-20310711",
+    "symbol": "AAOI",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AAOI",
+    "contract_type": "future",
+    "delivery_date": "2031-07-11T00:00:00"
+  },
+  {
     "id": "AAPL-USD_UM_XPERP-310613",
     "type": "future",
     "internal_id": "future-AAPL-USD_UM_XPERP:AAPL-20310613",
@@ -2446,6 +2458,18 @@
     "contract_type": "future",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "id": "ALGO-USD_UM_XPERP-310711",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "internal_id": "future-ALGO-USD_UM_XPERP:ALGO-20310711",
+    "symbol": "ALGO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ALGO",
+    "contract_type": "future",
+    "delivery_date": "2031-07-11T00:00:00"
   },
   {
     "id": "AMZN-USD_UM_XPERP-310613",
@@ -48487,25 +48511,25 @@
     "id": "ICP-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-07-08T00:00:00.000Z",
     "internal_id": "future-ICP-USD_UM_XPERP:ICP-20310711",
     "symbol": "ICP",
     "denominator": "USD_UM_XPERP",
     "margin": "ICP",
     "contract_type": "future",
-    "delivery_date": "2031-07-11T00:00:00"
+    "delivery_date": "2031-07-11T00:00:00",
+    "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
     "id": "INJ-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 0.1,
-    "first_capture": "2026-07-08T00:00:00.000Z",
     "internal_id": "future-INJ-USD_UM_XPERP:INJ-20310711",
     "symbol": "INJ",
     "denominator": "USD_UM_XPERP",
     "margin": "INJ",
     "contract_type": "future",
-    "delivery_date": "2031-07-11T00:00:00"
+    "delivery_date": "2031-07-11T00:00:00",
+    "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
     "id": "INTC-USD_UM_XPERP-310627",
@@ -57868,6 +57892,18 @@
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
+    "id": "NBIS-USD_UM_XPERP-310711",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "internal_id": "future-NBIS-USD_UM_XPERP:NBIS-20310711",
+    "symbol": "NBIS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "NBIS",
+    "contract_type": "future",
+    "delivery_date": "2031-07-11T00:00:00"
+  },
+  {
     "id": "NEAR-USD_UM_XPERP-310613",
     "type": "future",
     "internal_id": "future-NEAR-USD_UM_XPERP:NEAR-20310613",
@@ -57991,13 +58027,13 @@
     "id": "RENDER-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-07-08T00:00:00.000Z",
     "internal_id": "future-RENDER-USD_UM_XPERP:RENDER-20310711",
     "symbol": "RENDER",
     "denominator": "USD_UM_XPERP",
     "margin": "RENDER",
     "contract_type": "future",
-    "delivery_date": "2031-07-11T00:00:00"
+    "delivery_date": "2031-07-11T00:00:00",
+    "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
     "id": "RESOLV-USD_UM_XPERP-310704",
@@ -63664,6 +63700,18 @@
     "contract_type": "future",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-07-03T00:00:00.000Z"
+  },
+  {
+    "id": "XPL-USD_UM_XPERP-310711",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "internal_id": "future-XPL-USD_UM_XPERP:XPL-20310711",
+    "symbol": "XPL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "XPL",
+    "contract_type": "future",
+    "delivery_date": "2031-07-11T00:00:00"
   },
   {
     "id": "XRP-USD-190405",

@@ -4293,6 +4293,16 @@
     "first_capture": "2026-02-19T00:00:00.000Z"
   },
   {
+    "id": "xyz:SKHY",
+    "type": "perpetual",
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SKHY-USDC:USDC",
+    "symbol": "XYZ:SKHY",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:SMH",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SMH-USDC:USDC",
