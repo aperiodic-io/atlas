@@ -2017,6 +2017,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "UANSEM/USDC",
+    "type": "spot",
+    "internal_id": "spot-UANSEM-USDC",
+    "symbol": "UANSEM",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "UAVAX/USDC",
     "type": "spot",
     "internal_id": "spot-UAVAX-USDC",
