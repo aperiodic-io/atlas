@@ -440,6 +440,14 @@
     "contract_type": "spot"
   },
   {
+    "id": "DRV/USDC",
+    "type": "spot",
+    "internal_id": "spot-DRV-USDC",
+    "symbol": "DRV",
+    "denominator": "USDC",
+    "contract_type": "spot"
+  },
+  {
     "id": "EARTH/USDC",
     "type": "spot",
     "internal_id": "spot-EARTH-USDC",
