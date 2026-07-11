@@ -470,6 +470,16 @@
     "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
+    "id": "CASHCAT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-CASHCAT-USDC:USDC",
+    "symbol": "CASHCAT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "CATI",
     "type": "perpetual",
     "internal_id": "perpetual-CATI-USDC:USDC",
@@ -4295,12 +4305,12 @@
   {
     "id": "xyz:SKHY",
     "type": "perpetual",
-    "first_capture": "2026-07-09T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SKHY-USDC:USDC",
     "symbol": "XYZ:SKHY",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
     "id": "xyz:SMH",
