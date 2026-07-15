@@ -24659,11 +24659,11 @@
   {
     "id": "skhybusdt",
     "type": "spot",
-    "first_capture": "2026-07-13T00:00:00.000Z",
     "internal_id": "spot-SKHYB-USDT",
     "symbol": "SKHYB",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-13T00:00:00.000Z"
   },
   {
     "id": "sklbtc",

@@ -2472,6 +2472,18 @@
     "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
+    "id": "ALLO-USD_UM_XPERP-310718",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-14T00:00:00.000Z",
+    "internal_id": "future-ALLO-USD_UM_XPERP:ALLO-20310718",
+    "symbol": "ALLO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ALLO",
+    "contract_type": "future",
+    "delivery_date": "2031-07-18T00:00:00"
+  },
+  {
     "id": "AMD-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
@@ -48503,13 +48515,13 @@
     "id": "FIL-USD_UM_XPERP-310718",
     "type": "future",
     "contract_size": 0.1,
-    "first_capture": "2026-07-13T00:00:00.000Z",
     "internal_id": "future-FIL-USD_UM_XPERP:FIL-20310718",
     "symbol": "FIL",
     "denominator": "USD_UM_XPERP",
     "margin": "FIL",
     "contract_type": "future",
-    "delivery_date": "2031-07-18T00:00:00"
+    "delivery_date": "2031-07-18T00:00:00",
+    "first_capture": "2026-07-13T00:00:00.000Z"
   },
   {
     "id": "GOOGL-USD_UM_XPERP-310613",
@@ -63445,13 +63457,13 @@
     "id": "UNI-USD_UM_XPERP-310718",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-07-13T00:00:00.000Z",
     "internal_id": "future-UNI-USD_UM_XPERP:UNI-20310718",
     "symbol": "UNI",
     "denominator": "USD_UM_XPERP",
     "margin": "UNI",
     "contract_type": "future",
-    "delivery_date": "2031-07-18T00:00:00"
+    "delivery_date": "2031-07-18T00:00:00",
+    "first_capture": "2026-07-13T00:00:00.000Z"
   },
   {
     "id": "VVV-USD_UM_XPERP-310704",
