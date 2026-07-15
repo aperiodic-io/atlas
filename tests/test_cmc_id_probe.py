@@ -9,6 +9,7 @@ from integrations.cmc_id_probe import (
     fetch_binance_spot_prices,
     fetch_cmc_catalogue,
     normalize_cmc_lookup_symbol,
+    price_observations_from_binance_tickers,
 )
 
 
@@ -131,6 +132,22 @@ def test_bulk_binance_prices_select_requested_usdt_spot_pairs() -> None:
 
     assert set(observations) == {"BTC"}
     assert observations["BTC"].instrument_id == "BTCUSDT"
+
+
+def test_ticker_observations_can_be_labeled_as_futures() -> None:
+    observations = price_observations_from_binance_tickers(
+        [
+            {
+                "symbol": "BTCUSDT",
+                "lastPrice": "100",
+                "closeTime": 1_784_091_600_000,
+            }
+        ],
+        ["BTC"],
+        venue="binance-futures",
+    )
+
+    assert observations["BTC"].venue == "binance-futures"
 
 
 def test_normalize_cmc_lookup_symbol_drops_known_contract_multipliers() -> None:

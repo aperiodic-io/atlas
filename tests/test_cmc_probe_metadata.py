@@ -31,14 +31,29 @@ def test_populate_cmc_probe_metadata_writes_only_probe_evidence(tmp_path) -> Non
         ),
         diagnostics=CatalogueDiagnostics(3, 3, 3, (), 0, False),
     )
-    observations = {
-        "BTC": PriceObservation(100, "USDT", observed_at, "binance-spot", "BTCUSDT"),
-        "1000CHEEMS": PriceObservation(
-            50, "USDT", observed_at, "binance-spot", "1000CHEEMSUSDT"
-        ),
+    observations_by_exchange = {
+        "binance-futures": {
+            "BTC": PriceObservation(100, "USDT", observed_at, "binance-futures", "BTCUSDT"),
+            "1000CHEEMS": PriceObservation(
+                50, "USDT", observed_at, "binance-futures", "1000CHEEMSUSDT"
+            ),
+        }
     }
 
-    stats = populate_cmc_probe_metadata(data_dir, catalogue, observations)
+    stats = populate_cmc_probe_metadata(
+        data_dir,
+        catalogue,
+        observations_by_exchange,
+        {
+            "BTC": {
+                "assetCode": "BTC",
+                "assetName": "Bitcoin",
+                "delisted": False,
+                "enLink": "https://binance.example/BTC",
+                "commissionRate": 0,
+            }
+        },
+    )
 
     rows = json.loads(target.read_text())
     assert rows[0]["cmc_id"] == 1
@@ -47,6 +62,13 @@ def test_populate_cmc_probe_metadata_writes_only_probe_evidence(tmp_path) -> Non
     assert "cmc_probe" not in rows[1]
     probe_rows = json.loads((data_dir / "cmc_probe" / "binance-futures.json").read_text())
     assert probe_rows[0]["cmc_probe"]["status"] == "price_compatible"
+    assert probe_rows[0]["binance_public_asset"] == {
+        "source": "binance-public-asset-endpoint",
+        "assetCode": "BTC",
+        "assetName": "Bitcoin",
+        "enLink": "https://binance.example/BTC",
+        "delisted": False,
+    }
     assert probe_rows[1]["cmc_lookup_symbol"] == "CHEEMS"
     assert stats["binance-futures"]["price_compatible"] == 2
 

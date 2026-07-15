@@ -221,13 +221,22 @@ def fetch_binance_spot_prices(
     session: JsonSession, base_symbols: Iterable[str]
 ) -> dict[str, PriceObservation]:
     """Fetch one timestamped USDT spot observation for each requested base symbol."""
-    requested_symbols = {symbol.upper() for symbol in base_symbols if symbol}
     payload = _get_json(session, BINANCE_SPOT_TICKER_URL, {}, max_attempts=3)
     if not isinstance(payload, list):
         raise CmcProbeError("Binance spot ticker response is not a list")
+    return price_observations_from_binance_tickers(
+        payload, base_symbols, venue="binance-spot"
+    )
+
+
+def price_observations_from_binance_tickers(
+    tickers_payload: Iterable[object], base_symbols: Iterable[str], venue: str
+) -> dict[str, PriceObservation]:
+    """Select timestamped USDT prices from Binance spot or futures tickers."""
+    requested_symbols = {symbol.upper() for symbol in base_symbols if symbol}
     tickers = {
         ticker.get("symbol"): ticker
-        for ticker in payload
+        for ticker in tickers_payload
         if isinstance(ticker, dict) and isinstance(ticker.get("symbol"), str)
     }
     observations: dict[str, PriceObservation] = {}
@@ -246,7 +255,7 @@ def fetch_binance_spot_prices(
             price=price,
             quote_currency="USDT",
             observed_at=datetime.fromtimestamp(close_time_ms / 1000, tz=UTC),
-            venue="binance-spot",
+            venue=venue,
             instrument_id=f"{base_symbol}USDT",
         )
     return observations

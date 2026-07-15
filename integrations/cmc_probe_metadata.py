@@ -15,6 +15,11 @@ from pathlib import Path
 
 import requests
 
+from integrations.binance import (
+    fetch_futures_prices,
+    fetch_public_assets,
+    fetch_spot_prices,
+)
 from integrations.cmc_id_probe import (
     CmcCatalogue,
     CmcProbeError,
@@ -23,9 +28,9 @@ from integrations.cmc_id_probe import (
     candidates_for_symbol,
     classify_price_candidates,
     contract_multiplier_for_cmc_lookup,
-    fetch_binance_spot_prices,
     fetch_cmc_catalogue,
     normalize_cmc_lookup_symbol,
+    price_observations_from_binance_tickers,
 )
 
 
@@ -36,7 +41,8 @@ BINANCE_EXCHANGES = frozenset({"binance-spot", "binance-futures", "binance-futur
 def populate_cmc_probe_metadata(
     data_dir: Path,
     catalogue: CmcCatalogue,
-    observations: dict[str, PriceObservation],
+    observations_by_exchange: dict[str, dict[str, PriceObservation]],
+    public_assets_by_symbol: dict[str, dict[str, object]] | None = None,
     max_relative_difference: float = 0.05,
     max_timestamp_skew: timedelta = timedelta(minutes=3),
     dry_run: bool = False,
@@ -50,6 +56,7 @@ def populate_cmc_probe_metadata(
         for symbol in cmc_symbols
     }
     probe_dir = probe_dir or data_dir / "cmc_probe"
+    public_assets_by_symbol = public_assets_by_symbol or {}
     stats: dict[str, dict[str, int]] = {}
     for json_file in sorted(data_dir.glob("*.json")):
         if json_file.stem not in exchanges:
@@ -66,6 +73,7 @@ def populate_cmc_probe_metadata(
             if not isinstance(symbol, str):
                 continue
             lookup_symbol = normalize_cmc_lookup_symbol(symbol, cmc_symbols)
+            observations = observations_by_exchange.get(json_file.stem, {})
             observation = observations.get(symbol.upper()) or observations.get(
                 lookup_symbol
             )
@@ -73,7 +81,14 @@ def populate_cmc_probe_metadata(
                 counts["no_binance_spot_price"] += 1
                 row.pop("cmc_probe", None)
                 row.pop("cmc_id", None)
-                probe_rows.append(_probe_row(row, lookup_symbol, _missing_price_record()))
+                probe_rows.append(
+                    _probe_row(
+                        row,
+                        lookup_symbol,
+                        _missing_price_record(),
+                        public_assets_by_symbol.get(lookup_symbol),
+                    )
+                )
                 continue
             observation = replace(
                 observation,
@@ -96,7 +111,14 @@ def populate_cmc_probe_metadata(
                 row["cmc_id"] = result.match.asset.cmc_id
             else:
                 row.pop("cmc_id", None)
-            probe_rows.append(_probe_row(row, lookup_symbol, record))
+            probe_rows.append(
+                _probe_row(
+                    row,
+                    lookup_symbol,
+                    record,
+                    public_assets_by_symbol.get(lookup_symbol),
+                )
+            )
             counts[result.status.value] += 1
         if not dry_run:
             json_file.write_text(json.dumps(rows, indent=2) + "\n")
@@ -165,7 +187,10 @@ def _missing_price_record() -> dict[str, object]:
 
 
 def _probe_row(
-    row: dict, lookup_symbol: str, record: dict[str, object]
+    row: dict,
+    lookup_symbol: str,
+    record: dict[str, object],
+    public_asset: dict[str, object] | None,
 ) -> dict[str, object]:
     probe_row: dict[str, object] = {
         "id": row.get("id"),
@@ -175,17 +200,46 @@ def _probe_row(
     }
     if "first_capture" in row:
         probe_row["first_capture"] = row["first_capture"]
+    if public_asset is not None:
+        probe_row["binance_public_asset"] = _public_asset_evidence(public_asset)
     return probe_row
 
 
-def _all_snapshot_symbols(
+def _public_asset_evidence(public_asset: dict[str, object]) -> dict[str, object]:
+    """Keep identity and lifecycle fields useful for later mapping review."""
+    fields = (
+        "assetCode",
+        "assetName",
+        "assetDisplayName",
+        "enLink",
+        "logoUrl",
+        "tags",
+        "trading",
+        "delisted",
+        "preDelist",
+        "pdTradeDeadline",
+        "pdDepositDeadline",
+        "pdAnnounceUrl",
+        "oldAssetCode",
+        "newAssetCode",
+        "swapTag",
+        "swapAnnounceUrl",
+    )
+    return {
+        "source": "binance-public-asset-endpoint",
+        **{field: public_asset[field] for field in fields if field in public_asset},
+    }
+
+
+def _snapshot_symbols_by_exchange(
     data_dir: Path, exchanges: frozenset[str], catalogue: CmcCatalogue
-) -> set[str]:
-    symbols: set[str] = set()
+) -> dict[str, set[str]]:
+    symbols_by_exchange: dict[str, set[str]] = {}
     cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
     for json_file in data_dir.glob("*.json"):
         if json_file.stem not in exchanges:
             continue
+        symbols = symbols_by_exchange.setdefault(json_file.stem, set())
         rows = json.loads(json_file.read_text())
         if isinstance(rows, list):
             for row in rows:
@@ -193,7 +247,7 @@ def _all_snapshot_symbols(
                     continue
                 symbols.add(row["symbol"].upper())
                 symbols.add(normalize_cmc_lookup_symbol(row["symbol"], cmc_symbols))
-    return symbols
+    return symbols_by_exchange
 
 
 def main() -> int:
@@ -206,10 +260,33 @@ def main() -> int:
     try:
         with requests.Session() as session:
             catalogue = fetch_cmc_catalogue(session)
-            observations = fetch_binance_spot_prices(
-                session,
-                _all_snapshot_symbols(args.data_dir, BINANCE_EXCHANGES, catalogue),
-            )
+        symbols_by_exchange = _snapshot_symbols_by_exchange(
+            args.data_dir, BINANCE_EXCHANGES, catalogue
+        )
+        spot_tickers = fetch_spot_prices()
+        futures_tickers = fetch_futures_prices()
+        public_assets_by_symbol = {
+            asset["assetCode"].upper(): asset
+            for asset in fetch_public_assets()
+            if isinstance(asset.get("assetCode"), str)
+        }
+        observations_by_exchange = {
+            "binance-spot": price_observations_from_binance_tickers(
+                spot_tickers,
+                symbols_by_exchange["binance-spot"],
+                venue="binance-spot",
+            ),
+            "binance-futures": price_observations_from_binance_tickers(
+                futures_tickers,
+                symbols_by_exchange["binance-futures"],
+                venue="binance-futures",
+            ),
+            "binance-futures-cm": price_observations_from_binance_tickers(
+                futures_tickers,
+                symbols_by_exchange["binance-futures-cm"],
+                venue="binance-futures",
+            ),
+        }
         if args.dry_run:
             removed = {}
         else:
@@ -220,7 +297,8 @@ def main() -> int:
         stats = populate_cmc_probe_metadata(
             args.data_dir,
             catalogue,
-            observations,
+            observations_by_exchange,
+            public_assets_by_symbol,
             max_relative_difference=args.max_relative_difference,
             max_timestamp_skew=timedelta(seconds=args.max_timestamp_skew_seconds),
             dry_run=args.dry_run,
