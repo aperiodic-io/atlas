@@ -8,22 +8,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "0GUSDT",
-      "exchange_price": 0.197,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.523000Z",
-      "cmc_id": 38337,
-      "cmc_slug": "zero-gravity",
-      "cmc_price_usd": 0.19686657014195844,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.000677308924068897,
-      "timestamp_skew_seconds": 200.523
-    }
+    "first_capture": "2025-09-22T00:00:00.000Z"
   },
   {
     "id": "2Z",
@@ -34,22 +19,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-10-02T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "2ZUSDT",
-      "exchange_price": 0.07316,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:10.357000Z",
-      "cmc_id": 38515,
-      "cmc_slug": "doublezero",
-      "cmc_price_usd": 0.07287819324202886,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.003851923974455163,
-      "timestamp_skew_seconds": 250.357
-    }
+    "first_capture": "2025-10-02T00:00:00.000Z"
   },
   {
     "id": "AAVE",
@@ -60,22 +30,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AAVEUSDT",
-      "exchange_price": 97.61,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.074000Z",
-      "cmc_id": 7278,
-      "cmc_slug": "aave",
-      "cmc_price_usd": 97.6114330174455,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 1.4681051588022073e-05,
-      "timestamp_skew_seconds": 258.074
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ACE",
@@ -86,22 +41,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ACEUSDT",
-      "exchange_price": 0.0716,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.022000Z",
-      "cmc_id": 28674,
-      "cmc_slug": "fusionist",
-      "cmc_price_usd": 0.07146667607239708,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0018620660279736842,
-      "timestamp_skew_seconds": 260.022
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ADA",
@@ -112,22 +52,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ADAUSDT",
-      "exchange_price": 0.1662,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.851000Z",
-      "cmc_id": 2010,
-      "cmc_slug": "cardano",
-      "cmc_price_usd": 0.16588491362689153,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0018958265529991157,
-      "timestamp_skew_seconds": 200.851
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "AERO",
@@ -150,22 +75,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AIUSDT",
-      "exchange_price": 0.0202,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.028000Z",
-      "cmc_id": 28846,
-      "cmc_slug": "sleepless-ai",
-      "cmc_price_usd": 0.02028460924107644,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004188576290912844,
-      "timestamp_skew_seconds": 260.028
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "AI16Z",
@@ -188,22 +98,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-01T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AIXBTUSDT",
-      "exchange_price": 0.01937,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.632000Z",
-      "cmc_id": 34103,
-      "cmc_slug": "aixbt",
-      "cmc_price_usd": 0.019347599417997532,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.001156457511743204,
-      "timestamp_skew_seconds": 199.632
-    }
+    "first_capture": "2025-01-01T00:00:00.000Z"
   },
   {
     "id": "ALGO",
@@ -214,22 +109,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-04T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ALGOUSDT",
-      "exchange_price": 0.0854,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:01.481000Z",
-      "cmc_id": 4030,
-      "cmc_slug": "algorand",
-      "cmc_price_usd": 0.08534305881783,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0006667585734192751,
-      "timestamp_skew_seconds": 181.481
-    }
+    "first_capture": "2024-12-04T00:00:00.000Z"
   },
   {
     "id": "ALT",
@@ -240,16 +120,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ALTUSDT",
-      "exchange_price": 0.00645,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.084000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ANIME",
@@ -260,22 +131,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-21T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ANIMEUSDT",
-      "exchange_price": 0.0028,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.438000Z",
-      "cmc_id": 35319,
-      "cmc_slug": "anime",
-      "cmc_price_usd": 0.0027979116614773093,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0007458351866752494,
-      "timestamp_skew_seconds": 200.438
-    }
+    "first_capture": "2025-01-21T00:00:00.000Z"
   },
   {
     "id": "APE",
@@ -286,16 +142,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "APEUSDT",
-      "exchange_price": 0.1495,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.333000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "APEX",
@@ -317,22 +164,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "APTUSDT",
-      "exchange_price": 0.628,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.079000Z",
-      "cmc_id": 21794,
-      "cmc_slug": "aptos",
-      "cmc_price_usd": 0.6270832282949244,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0014598275558529417,
-      "timestamp_skew_seconds": 201.079
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "AR",
@@ -343,22 +175,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ARUSDT",
-      "exchange_price": 2.002,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.297000Z",
-      "cmc_id": 5632,
-      "cmc_slug": "arweave",
-      "cmc_price_usd": 2.0011444426895926,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0004273513038997037,
-      "timestamp_skew_seconds": 260.297
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ARB",
@@ -369,22 +186,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ARBUSDT",
-      "exchange_price": 0.0894,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.185000Z",
-      "cmc_id": 11841,
-      "cmc_slug": "arbitrum",
-      "cmc_price_usd": 0.08926475576610038,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0015127990369084407,
-      "timestamp_skew_seconds": 260.185
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ARK",
@@ -396,22 +198,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-06-26T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ARKUSDT",
-      "exchange_price": 0.107,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.317000Z",
-      "cmc_id": 1586,
-      "cmc_slug": "ark",
-      "cmc_price_usd": 0.10653367040037942,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004358220557201653,
-      "timestamp_skew_seconds": 257.317
-    }
+    "end_date": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "ASTER",
@@ -422,22 +209,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-19T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ASTERUSDT",
-      "exchange_price": 0.634,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.266000Z",
-      "cmc_id": 36341,
-      "cmc_slug": "aster",
-      "cmc_price_usd": 0.632893258928488,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0017456483777791565,
-      "timestamp_skew_seconds": 258.266
-    }
+    "first_capture": "2025-09-19T00:00:00.000Z"
   },
   {
     "id": "ATOM",
@@ -448,22 +220,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ATOMUSDT",
-      "exchange_price": 1.58,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:13.468000Z",
-      "cmc_id": 3794,
-      "cmc_slug": "cosmos",
-      "cmc_price_usd": 1.5763017815360714,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0023406445974232305,
-      "timestamp_skew_seconds": 253.468
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "AVAX",
@@ -474,22 +231,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AVAXUSDT",
-      "exchange_price": 6.691,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.689000Z",
-      "cmc_id": 5805,
-      "cmc_slug": "avalanche",
-      "cmc_price_usd": 6.684628913084989,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009521875526843328,
-      "timestamp_skew_seconds": 259.689
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "AVNT",
@@ -500,22 +242,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-21T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AVNTUSDT",
-      "exchange_price": 0.097,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:13.896000Z",
-      "cmc_id": 38299,
-      "cmc_slug": "avantis",
-      "cmc_price_usd": 0.0964471703697359,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.005699274538805252,
-      "timestamp_skew_seconds": 253.896
-    }
+    "first_capture": "2025-09-21T00:00:00.000Z"
   },
   {
     "id": "AXS",
@@ -526,22 +253,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-01-18T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "AXSUSDT",
-      "exchange_price": 0.993,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.023000Z",
-      "cmc_id": 6783,
-      "cmc_slug": "axie-infinity",
-      "cmc_price_usd": 0.9921541770573526,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0008517854407324724,
-      "timestamp_skew_seconds": 252.023
-    }
+    "first_capture": "2026-01-18T00:00:00.000Z"
   },
   {
     "id": "AZTEC",
@@ -563,22 +275,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-04-12T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BABYUSDT",
-      "exchange_price": 0.01352,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:05.038000Z",
-      "cmc_id": 32198,
-      "cmc_slug": "babylon",
-      "cmc_price_usd": 0.013494815635333156,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0018627488658908733,
-      "timestamp_skew_seconds": 245.038
-    }
+    "first_capture": "2025-04-12T00:00:00.000Z"
   },
   {
     "id": "BADGER",
@@ -590,16 +287,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BADGERUSDT",
-      "exchange_price": 0.762,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "BANANA",
@@ -610,22 +298,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BANANAUSDT",
-      "exchange_price": 3.394,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:48:49.698000Z",
-      "cmc_id": 28066,
-      "cmc_slug": "banana-gun",
-      "cmc_price_usd": 3.3943890997082398,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00011464340254556201,
-      "timestamp_skew_seconds": 229.698
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BCH",
@@ -636,22 +309,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BCHUSDT",
-      "exchange_price": 234.6,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.794000Z",
-      "cmc_id": 1831,
-      "cmc_slug": "bitcoin-cash",
-      "cmc_price_usd": 234.60010944882765,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 4.665337922329205e-07,
-      "timestamp_skew_seconds": 259.794
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BERA",
@@ -662,22 +320,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BERAUSDT",
-      "exchange_price": 0.193,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.361000Z",
-      "cmc_id": 24647,
-      "cmc_slug": "berachain",
-      "cmc_price_usd": 0.1925014395511853,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0025832147606980136,
-      "timestamp_skew_seconds": 260.361
-    }
+    "first_capture": "2025-02-06T00:00:00.000Z"
   },
   {
     "id": "BIGTIME",
@@ -688,22 +331,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BIGTIMEUSDT",
-      "exchange_price": 0.00702,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.772000Z",
-      "cmc_id": 28230,
-      "cmc_slug": "big-time",
-      "cmc_price_usd": 0.00702162745512812,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00023183121483187925,
-      "timestamp_skew_seconds": 252.772
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BIO",
@@ -714,22 +342,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-03T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BIOUSDT",
-      "exchange_price": 0.02805,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.620000Z",
-      "cmc_id": 34812,
-      "cmc_slug": "bio",
-      "cmc_price_usd": 0.02801086850964385,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0013950620447825072,
-      "timestamp_skew_seconds": 199.62
-    }
+    "first_capture": "2025-01-03T00:00:00.000Z"
   },
   {
     "id": "BLAST",
@@ -752,22 +365,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BLURUSDT",
-      "exchange_price": 0.01606,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:04.375000Z",
-      "cmc_id": 23121,
-      "cmc_slug": "blur-token",
-      "cmc_price_usd": 0.016056299351328598,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00023042644280221841,
-      "timestamp_skew_seconds": 244.375
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BLZ",
@@ -779,16 +377,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BLZUSDT",
-      "exchange_price": 0.0582,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "BNB",
@@ -799,22 +388,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BNBUSDT",
-      "exchange_price": 581.16,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.096000Z",
-      "cmc_id": 1839,
-      "cmc_slug": "bnb",
-      "cmc_price_usd": 580.6881492174239,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0008119120080117318,
-      "timestamp_skew_seconds": 200.096
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BNT",
@@ -826,22 +400,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BNTUSDT",
-      "exchange_price": 0.2811,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:15.187000Z",
-      "cmc_id": 1727,
-      "cmc_slug": "bancor",
-      "cmc_price_usd": 0.2809586539547639,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0005028318934049619,
-      "timestamp_skew_seconds": 255.187
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "BOME",
@@ -852,22 +411,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BOMEUSDT",
-      "exchange_price": 0.0004229,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.566000Z",
-      "cmc_id": 29870,
-      "cmc_slug": "book-of-meme",
-      "cmc_price_usd": 0.00042207957550655713,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0019399964375569807,
-      "timestamp_skew_seconds": 251.566
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "BRETT",
@@ -900,22 +444,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CAKE",
@@ -926,22 +455,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CAKEUSDT",
-      "exchange_price": 1.425,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:14.380000Z",
-      "cmc_id": 7186,
-      "cmc_slug": "pancakeswap",
-      "cmc_price_usd": 1.4231083598492356,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0013274667724663047,
-      "timestamp_skew_seconds": 194.38
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CANTO",
@@ -976,22 +490,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CATIUSDT",
-      "exchange_price": 0.03909,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:02.850000Z",
-      "cmc_id": 32966,
-      "cmc_slug": "catizen",
-      "cmc_price_usd": 0.039065516752389694,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0006263302023613715,
-      "timestamp_skew_seconds": 182.85
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "CC",
@@ -1013,22 +512,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CELOUSDT",
-      "exchange_price": 0.06829,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.611000Z",
-      "cmc_id": 5567,
-      "cmc_slug": "celo",
-      "cmc_price_usd": 0.06826094628789069,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0004254460698391721,
-      "timestamp_skew_seconds": 259.611
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CFX",
@@ -1039,22 +523,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CFXUSDT",
-      "exchange_price": 0.04481,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.536000Z",
-      "cmc_id": 7334,
-      "cmc_slug": "conflux-network",
-      "cmc_price_usd": 0.04476698158133127,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009600182697775153,
-      "timestamp_skew_seconds": 256.536
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CHILLGUY",
@@ -1077,22 +546,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CHIPUSDT",
-      "exchange_price": 0.03162,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.997000Z",
-      "cmc_id": 39870,
-      "cmc_slug": "usd-ai",
-      "cmc_price_usd": 0.03146586252522347,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.004874682946759305,
-      "timestamp_skew_seconds": 198.997
-    }
+    "first_capture": "2026-04-22T00:00:00.000Z"
   },
   {
     "id": "COMP",
@@ -1103,22 +557,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "COMPUSDT",
-      "exchange_price": 16.97,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.340000Z",
-      "cmc_id": 5692,
-      "cmc_slug": "compound",
-      "cmc_price_usd": 17.00805671139293,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0022425875894478225,
-      "timestamp_skew_seconds": 257.34
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CRV",
@@ -1129,22 +568,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CRVUSDT",
-      "exchange_price": 0.2178,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.839000Z",
-      "cmc_id": 6538,
-      "cmc_slug": "curve-dao-token",
-      "cmc_price_usd": 0.2185305772465551,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0033543491577370053,
-      "timestamp_skew_seconds": 257.839
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "CYBER",
@@ -1156,22 +580,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "CYBERUSDT",
-      "exchange_price": 0.345,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.293000Z",
-      "cmc_id": 24781,
-      "cmc_slug": "cyberconnect",
-      "cmc_price_usd": 0.3448785974656378,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000351891403948285,
-      "timestamp_skew_seconds": 259.293
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "DASH",
@@ -1182,22 +591,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-01-18T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DASHUSDT",
-      "exchange_price": 34.98,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.492000Z",
-      "cmc_id": 131,
-      "cmc_slug": "dash",
-      "cmc_price_usd": 34.865189793564284,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0032821671365269663,
-      "timestamp_skew_seconds": 257.492
-    }
+    "first_capture": "2026-01-18T00:00:00.000Z"
   },
   {
     "id": "DOGE",
@@ -1208,22 +602,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOGEUSDT",
-      "exchange_price": 0.07478,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.160000Z",
-      "cmc_id": 74,
-      "cmc_slug": "dogecoin",
-      "cmc_price_usd": 0.07475031678077797,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003969406154323614,
-      "timestamp_skew_seconds": 260.16
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "DOOD",
@@ -1246,22 +625,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOTUSDT",
-      "exchange_price": 0.858,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.591000Z",
-      "cmc_id": 6636,
-      "cmc_slug": "polkadot-new",
-      "cmc_price_usd": 0.8578543089174764,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00016980312648438509,
-      "timestamp_skew_seconds": 260.591
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "DYDX",
@@ -1272,22 +636,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DYDXUSDT",
-      "exchange_price": 0.12047,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.165000Z",
-      "cmc_id": 28324,
-      "cmc_slug": "dydx-chain",
-      "cmc_price_usd": 0.12010919042783037,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.002995015955587456,
-      "timestamp_skew_seconds": 259.165
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "DYM",
@@ -1298,22 +647,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DYMUSDT",
-      "exchange_price": 0.01563,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.008000Z",
-      "cmc_id": 28932,
-      "cmc_slug": "dymension",
-      "cmc_price_usd": 0.01560867727482315,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.001364217861602787,
-      "timestamp_skew_seconds": 257.008
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "EIGEN",
@@ -1324,22 +658,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "EIGENUSDT",
-      "exchange_price": 0.2364,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.763000Z",
-      "cmc_id": 30494,
-      "cmc_slug": "eigencloud",
-      "cmc_price_usd": 0.23566455517012525,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0031110187388948985,
-      "timestamp_skew_seconds": 200.763
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ENA",
@@ -1350,22 +669,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ENAUSDT",
-      "exchange_price": 0.0841,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.801000Z",
-      "cmc_id": 30171,
-      "cmc_slug": "ethena",
-      "cmc_price_usd": 0.0841479690328235,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0005703808896968221,
-      "timestamp_skew_seconds": 259.801
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ENS",
@@ -1376,22 +680,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ENSUSDT",
-      "exchange_price": 4.39,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.689000Z",
-      "cmc_id": 13855,
-      "cmc_slug": "ethereum-name-service",
-      "cmc_price_usd": 4.390026366922124,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 6.00613260224992e-06,
-      "timestamp_skew_seconds": 258.689
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ETC",
@@ -1402,22 +691,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETCUSDT",
-      "exchange_price": 7.13,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.871000Z",
-      "cmc_id": 1321,
-      "cmc_slug": "ethereum-classic",
-      "cmc_price_usd": 7.12507805005972,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0006903155596465251,
-      "timestamp_skew_seconds": 258.871
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ETH",
@@ -1428,16 +702,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ETHFI",
@@ -1448,22 +713,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHFIUSDT",
-      "exchange_price": 0.427,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.610000Z",
-      "cmc_id": 29814,
-      "cmc_slug": "ether-fi-ethfi",
-      "cmc_price_usd": 0.4282910579111153,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0030235548269679957,
-      "timestamp_skew_seconds": 257.61
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "FARTCOIN",
@@ -1485,22 +735,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FETUSDT",
-      "exchange_price": 0.1629,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.265000Z",
-      "cmc_id": 3773,
-      "cmc_slug": "artificial-superintelligence-alliance",
-      "cmc_price_usd": 0.16219586166222588,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004322518955028283,
-      "timestamp_skew_seconds": 259.265
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "FIL",
@@ -1511,22 +746,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FILUSDT",
-      "exchange_price": 0.795,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.836000Z",
-      "cmc_id": 2280,
-      "cmc_slug": "filecoin",
-      "cmc_price_usd": 0.7932805252437748,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.002162861328585217,
-      "timestamp_skew_seconds": 256.836
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "FOGO",
@@ -1537,22 +757,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-12-11T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FOGOUSDT",
-      "exchange_price": 0.00956,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.312000Z",
-      "cmc_id": 38356,
-      "cmc_slug": "fogo",
-      "cmc_price_usd": 0.009572639577844062,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.001322131573646532,
-      "timestamp_skew_seconds": 256.312
-    }
+    "first_capture": "2025-12-11T00:00:00.000Z"
   },
   {
     "id": "FRIEND",
@@ -1576,16 +781,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "no_ticker_candidate",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FTMUSDT",
-      "exchange_price": 0.6994,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "FTT",
@@ -1597,22 +793,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-05-26T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FTTUSDT",
-      "exchange_price": 0.2139,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:48:34.622000Z",
-      "cmc_id": 4195,
-      "cmc_slug": "ftx-token",
-      "cmc_price_usd": 0.2148097896387485,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004253340994616609,
-      "timestamp_skew_seconds": 214.622
-    }
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "FXS",
@@ -1624,16 +805,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-01-07T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "no_ticker_candidate",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "FXSUSDT",
-      "exchange_price": 0.812,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2026-01-07T00:00:00.000Z"
   },
   {
     "id": "GALA",
@@ -1644,22 +816,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "GALAUSDT",
-      "exchange_price": 0.00203,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.080000Z",
-      "cmc_id": 7080,
-      "cmc_slug": "gala",
-      "cmc_price_usd": 0.0020250866896908675,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0024203499059766544,
-      "timestamp_skew_seconds": 200.08
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "GAS",
@@ -1670,22 +827,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "GASUSDT",
-      "exchange_price": 1.054,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.625000Z",
-      "cmc_id": 1785,
-      "cmc_slug": "gas",
-      "cmc_price_usd": 1.0552510566281483,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0011869607477687702,
-      "timestamp_skew_seconds": 191.625
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "GMT",
@@ -1696,22 +838,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "GMTUSDT",
-      "exchange_price": 0.00772,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.678000Z",
-      "cmc_id": 18069,
-      "cmc_slug": "green-metaverse-token",
-      "cmc_price_usd": 0.007726715036650655,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0008698234003438798,
-      "timestamp_skew_seconds": 252.678
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "GMX",
@@ -1722,22 +849,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "GMXUSDT",
-      "exchange_price": 5.97,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.775000Z",
-      "cmc_id": 11857,
-      "cmc_slug": "gmx",
-      "cmc_price_usd": 5.959953227095323,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0016828765334467586,
-      "timestamp_skew_seconds": 252.775
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "GOAT",
@@ -1759,22 +871,7 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_type": "perpetual",
-    "first_capture": "2026-07-02T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "GRAMUSDT",
-      "exchange_price": 1.598,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.861000Z",
-      "cmc_id": 11419,
-      "cmc_slug": "gram",
-      "cmc_price_usd": 1.598235403588401,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00014731138197803908,
-      "timestamp_skew_seconds": 251.861
-    }
+    "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
     "id": "GRASS",
@@ -1807,22 +904,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "HBARUSDT",
-      "exchange_price": 0.06815,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.601000Z",
-      "cmc_id": 4642,
-      "cmc_slug": "hedera",
-      "cmc_price_usd": 0.06813178810001434,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00026723257499133575,
-      "timestamp_skew_seconds": 258.601
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "HEMI",
@@ -1833,22 +915,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-24T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "HEMIUSDT",
-      "exchange_price": 0.00451,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.151000Z",
-      "cmc_id": 38159,
-      "cmc_slug": "hemi",
-      "cmc_price_usd": 0.00450251390802132,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.001659887356691797,
-      "timestamp_skew_seconds": 260.151
-    }
+    "first_capture": "2025-09-24T00:00:00.000Z"
   },
   {
     "id": "HMSTR",
@@ -1859,22 +926,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "HMSTRUSDT",
-      "exchange_price": 0.0001917,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:10.649000Z",
-      "cmc_id": 32195,
-      "cmc_slug": "hamster-kombat",
-      "cmc_price_usd": 0.00019154671919637675,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0007995868733606847,
-      "timestamp_skew_seconds": 250.649
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "HPOS",
@@ -1908,22 +960,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-04-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "HYPERUSDT",
-      "exchange_price": 0.0706,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.172000Z",
-      "cmc_id": 36281,
-      "cmc_slug": "hyperlane",
-      "cmc_price_usd": 0.07124074928121776,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.009075768855775742,
-      "timestamp_skew_seconds": 259.172
-    }
+    "first_capture": "2025-04-22T00:00:00.000Z"
   },
   {
     "id": "ICP",
@@ -1934,22 +971,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-11-08T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ICPUSDT",
-      "exchange_price": 2.21,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.651000Z",
-      "cmc_id": 8916,
-      "cmc_slug": "internet-computer",
-      "cmc_price_usd": 2.208068805202506,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.000873843799771059,
-      "timestamp_skew_seconds": 199.651
-    }
+    "first_capture": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "ILV",
@@ -1961,22 +983,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ILVUSDT",
-      "exchange_price": 3.11,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:00.462000Z",
-      "cmc_id": 8719,
-      "cmc_slug": "illuvium",
-      "cmc_price_usd": 3.107658448267033,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0007529105250697093,
-      "timestamp_skew_seconds": 240.462
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "IMX",
@@ -1987,22 +994,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "IMXUSDT",
-      "exchange_price": 0.1314,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.079000Z",
-      "cmc_id": 10603,
-      "cmc_slug": "immutable-x",
-      "cmc_price_usd": 0.13123031317633566,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012913761313876212,
-      "timestamp_skew_seconds": 252.079
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "INIT",
@@ -2013,22 +1005,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-04-24T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "INITUSDT",
-      "exchange_price": 0.0549,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:15.001000Z",
-      "cmc_id": 33120,
-      "cmc_slug": "initia",
-      "cmc_price_usd": 0.054824295039599485,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0013789610273317295,
-      "timestamp_skew_seconds": 195.001
-    }
+    "first_capture": "2025-04-24T00:00:00.000Z"
   },
   {
     "id": "INJ",
@@ -2039,22 +1016,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "INJUSDT",
-      "exchange_price": 5.135,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.961000Z",
-      "cmc_id": 7226,
-      "cmc_slug": "injective",
-      "cmc_price_usd": 5.11174315627512,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004529083490726412,
-      "timestamp_skew_seconds": 252.961
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "IO",
@@ -2065,22 +1027,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "IOUSDT",
-      "exchange_price": 0.1599,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.125000Z",
-      "cmc_id": 29835,
-      "cmc_slug": "io-net",
-      "cmc_price_usd": 0.15993215961013724,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00020112326539868737,
-      "timestamp_skew_seconds": 258.125
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "IOTA",
@@ -2091,22 +1038,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-04T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "IOTAUSDT",
-      "exchange_price": 0.0373,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.438000Z",
-      "cmc_id": 1720,
-      "cmc_slug": "iota",
-      "cmc_price_usd": 0.037269586196822656,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0008153834631995723,
-      "timestamp_skew_seconds": 260.438
-    }
+    "first_capture": "2024-12-04T00:00:00.000Z"
   },
   {
     "id": "IP",
@@ -2141,22 +1073,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "JTOUSDT",
-      "exchange_price": 0.6284,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.391000Z",
-      "cmc_id": 28541,
-      "cmc_slug": "jito",
-      "cmc_price_usd": 0.6261346383747809,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0036049675767330755,
-      "timestamp_skew_seconds": 259.391
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "JUP",
@@ -2167,22 +1084,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "JUPUSDT",
-      "exchange_price": 0.2106,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.768000Z",
-      "cmc_id": 29210,
-      "cmc_slug": "jupiter-ag",
-      "cmc_price_usd": 0.21005542554471215,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0025858236243487894,
-      "timestamp_skew_seconds": 259.768
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "KAITO",
@@ -2193,22 +1095,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-20T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "KAITOUSDT",
-      "exchange_price": 0.725,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.981000Z",
-      "cmc_id": 35763,
-      "cmc_slug": "kaito",
-      "cmc_price_usd": 0.7222708826158188,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0037642998402498407,
-      "timestamp_skew_seconds": 200.981
-    }
+    "first_capture": "2025-02-20T00:00:00.000Z"
   },
   {
     "id": "KAS",
@@ -2242,22 +1129,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-02-11T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LAYERUSDT",
-      "exchange_price": 0.0662,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.645000Z",
-      "cmc_id": 35429,
-      "cmc_slug": "solayer",
-      "cmc_price_usd": 0.06610326019066573,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0014613264249888935,
-      "timestamp_skew_seconds": 259.645
-    }
+    "first_capture": "2025-02-11T00:00:00.000Z"
   },
   {
     "id": "LDO",
@@ -2268,22 +1140,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LDOUSDT",
-      "exchange_price": 0.3278,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.745000Z",
-      "cmc_id": 8000,
-      "cmc_slug": "lido-dao",
-      "cmc_price_usd": 0.32760639098511246,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0005906315280278193,
-      "timestamp_skew_seconds": 258.745
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "LINEA",
@@ -2294,22 +1151,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-01T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LINEAUSDT",
-      "exchange_price": 0.002499,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.482000Z",
-      "cmc_id": 27657,
-      "cmc_slug": "linea",
-      "cmc_price_usd": 0.0024996914380631527,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000276685899620944,
-      "timestamp_skew_seconds": 252.482
-    }
+    "first_capture": "2025-09-01T00:00:00.000Z"
   },
   {
     "id": "LINK",
@@ -2320,22 +1162,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LINKUSDT",
-      "exchange_price": 8.54,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.424000Z",
-      "cmc_id": 1975,
-      "cmc_slug": "chainlink",
-      "cmc_price_usd": 8.526856011201563,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015391087585991065,
-      "timestamp_skew_seconds": 200.424
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "LISTA",
@@ -2347,22 +1174,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LISTAUSDT",
-      "exchange_price": 0.0487,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:06.461000Z",
-      "cmc_id": 21533,
-      "cmc_slug": "lista-dao",
-      "cmc_price_usd": 0.04876090379848514,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012505913446640689,
-      "timestamp_skew_seconds": 246.461
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "LIT",
@@ -2373,16 +1185,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-12-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LITUSDT",
-      "exchange_price": 0.743,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "first_capture": "2025-12-22T00:00:00.000Z"
   },
   {
     "id": "LOOM",
@@ -2394,16 +1197,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LOOMUSDT",
-      "exchange_price": 0.04831,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "LTC",
@@ -2414,22 +1208,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "LTCUSDT",
-      "exchange_price": 45.58,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.060000Z",
-      "cmc_id": 2,
-      "cmc_slug": "litecoin",
-      "cmc_price_usd": 45.597434465848316,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00038250254164804456,
-      "timestamp_skew_seconds": 261.06
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "MANTA",
@@ -2440,22 +1219,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MANTAUSDT",
-      "exchange_price": 0.06042,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:13.494000Z",
-      "cmc_id": 13631,
-      "cmc_slug": "manta-network",
-      "cmc_price_usd": 0.06020048615428414,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0036331321700738654,
-      "timestamp_skew_seconds": 253.494
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "MATIC",
@@ -2467,16 +1231,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "no_ticker_candidate",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MATICUSDT",
-      "exchange_price": 0.3794,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "MAV",
@@ -2488,16 +1243,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-05-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MAVUSDT",
-      "exchange_price": 0.00942,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.270000Z"
-    }
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "MAVIA",
@@ -2520,22 +1266,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-10T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MEUSDT",
-      "exchange_price": 0.06826,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.613000Z",
-      "cmc_id": 32197,
-      "cmc_slug": "magiceden",
-      "cmc_price_usd": 0.06844754513741079,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0027475115354642305,
-      "timestamp_skew_seconds": 259.613
-    }
+    "first_capture": "2024-12-10T00:00:00.000Z"
   },
   {
     "id": "MEGA",
@@ -2546,22 +1277,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-10-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MEGAUSDT",
-      "exchange_price": 0.04834,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.806000Z",
-      "cmc_id": 38770,
-      "cmc_slug": "megaeth",
-      "cmc_price_usd": 0.0482906442924633,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0010210117405193165,
-      "timestamp_skew_seconds": 199.806
-    }
+    "first_capture": "2025-10-22T00:00:00.000Z"
   },
   {
     "id": "MELANIA",
@@ -2583,16 +1299,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MEMEUSDT",
-      "exchange_price": 0.000547,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:10.112000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "MERL",
@@ -2614,22 +1321,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-10-10T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "METUSDT",
-      "exchange_price": 0.1618,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:10.127000Z",
-      "cmc_id": 38353,
-      "cmc_slug": "meteora",
-      "cmc_price_usd": 0.1615838565695511,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.001335867926136593,
-      "timestamp_skew_seconds": 250.127
-    }
+    "first_capture": "2025-10-10T00:00:00.000Z"
   },
   {
     "id": "MEW",
@@ -2652,22 +1344,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MINAUSDT",
-      "exchange_price": 0.0445,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.304000Z",
-      "cmc_id": 8646,
-      "cmc_slug": "mina",
-      "cmc_price_usd": 0.04445781700474858,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009479324775599488,
-      "timestamp_skew_seconds": 257.304
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "MKR",
@@ -2679,16 +1356,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-09-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MKRUSDT",
-      "exchange_price": 1813.7,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-09-06T00:00:00.000Z"
   },
   {
     "id": "MNT",
@@ -2732,22 +1400,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-17T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MORPHOUSDT",
-      "exchange_price": 2.045,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.700000Z",
-      "cmc_id": 34104,
-      "cmc_slug": "morpho",
-      "cmc_price_usd": 2.044165382762767,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00040812578837804596,
-      "timestamp_skew_seconds": 256.7
-    }
+    "first_capture": "2025-01-17T00:00:00.000Z"
   },
   {
     "id": "MOVE",
@@ -2758,22 +1411,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-11T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "MOVEUSDT",
-      "exchange_price": 0.0109,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.784000Z",
-      "cmc_id": 32452,
-      "cmc_slug": "movement",
-      "cmc_price_usd": 0.010972103384823115,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.006614989433313284,
-      "timestamp_skew_seconds": 200.784
-    }
+    "first_capture": "2024-12-11T00:00:00.000Z"
   },
   {
     "id": "MYRO",
@@ -2796,22 +1434,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NEARUSDT",
-      "exchange_price": 2.069,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.017000Z",
-      "cmc_id": 6535,
-      "cmc_slug": "near-protocol",
-      "cmc_price_usd": 2.0651827620085035,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0018449676130964086,
-      "timestamp_skew_seconds": 260.017
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "NEIROETH",
@@ -2834,22 +1457,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NEOUSDT",
-      "exchange_price": 1.984,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:09.875000Z",
-      "cmc_id": 1376,
-      "cmc_slug": "neo",
-      "cmc_price_usd": 1.9819617424951887,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0010273475326669538,
-      "timestamp_skew_seconds": 189.875
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "NFTI",
@@ -2872,22 +1480,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-03-24T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NILUSDT",
-      "exchange_price": 0.035,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.297000Z",
-      "cmc_id": 35702,
-      "cmc_slug": "nillion",
-      "cmc_price_usd": 0.03486551082736101,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.003842547789685568,
-      "timestamp_skew_seconds": 259.297
-    }
+    "first_capture": "2025-03-24T00:00:00.000Z"
   },
   {
     "id": "NOT",
@@ -2898,22 +1491,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NOTUSDT",
-      "exchange_price": 0.000379,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.310000Z",
-      "cmc_id": 28850,
-      "cmc_slug": "notcoin",
-      "cmc_price_usd": 0.0003790365939921081,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 9.655406888688351e-05,
-      "timestamp_skew_seconds": 257.31
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "NTRN",
@@ -2925,16 +1503,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NTRNUSDT",
-      "exchange_price": 0.0016,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "NXPC",
@@ -2945,22 +1514,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-05-15T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "NXPCUSDT",
-      "exchange_price": 0.2595,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.104000Z",
-      "cmc_id": 36044,
-      "cmc_slug": "maplestory-universe",
-      "cmc_price_usd": 0.25983032646732285,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012729343634791483,
-      "timestamp_skew_seconds": 261.104
-    }
+    "first_capture": "2025-05-15T00:00:00.000Z"
   },
   {
     "id": "OGN",
@@ -2972,22 +1526,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-08-05T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "OGNUSDT",
-      "exchange_price": 0.01704,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:04.197000Z",
-      "cmc_id": 5117,
-      "cmc_slug": "origin-protocol",
-      "cmc_price_usd": 0.016989498451346032,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0029637059069229704,
-      "timestamp_skew_seconds": 184.197
-    }
+    "end_date": "2025-08-05T00:00:00.000Z"
   },
   {
     "id": "OM",
@@ -2999,16 +1538,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2025-02-16T00:00:00.000Z",
-    "end_date": "2026-02-24T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "OMUSDT",
-      "exchange_price": 0.0669,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2026-02-24T00:00:00.000Z"
   },
   {
     "id": "OMNI",
@@ -3020,16 +1550,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-09-26T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "OMNIUSDT",
-      "exchange_price": 3.88,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-09-26T00:00:00.000Z"
   },
   {
     "id": "ONDO",
@@ -3040,22 +1561,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ONDOUSDT",
-      "exchange_price": 0.3342,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.754000Z",
-      "cmc_id": 21159,
-      "cmc_slug": "ondo-finance",
-      "cmc_price_usd": 0.3334998230365302,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0020950836728599663,
-      "timestamp_skew_seconds": 199.754
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "OP",
@@ -3066,22 +1572,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "OPUSDT",
-      "exchange_price": 0.1029,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.032000Z",
-      "cmc_id": 11840,
-      "cmc_slug": "optimism-ethereum",
-      "cmc_price_usd": 0.1028508197352356,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00047794232035374865,
-      "timestamp_skew_seconds": 256.032
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ORBS",
@@ -3104,22 +1595,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ORDIUSDT",
-      "exchange_price": 3.556,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.119000Z",
-      "cmc_id": 25028,
-      "cmc_slug": "ordi",
-      "cmc_price_usd": 3.534143993633292,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.006146233511447735,
-      "timestamp_skew_seconds": 261.119
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "OX",
@@ -3154,22 +1630,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-04-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PAXGUSDT",
-      "exchange_price": 4050.05,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.959000Z",
-      "cmc_id": 4705,
-      "cmc_slug": "pax-gold",
-      "cmc_price_usd": 4051.6375010352813,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000391970725122182,
-      "timestamp_skew_seconds": 260.959
-    }
+    "first_capture": "2025-04-06T00:00:00.000Z"
   },
   {
     "id": "PENDLE",
@@ -3180,22 +1641,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PENDLEUSDT",
-      "exchange_price": 1.602,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.192000Z",
-      "cmc_id": 9481,
-      "cmc_slug": "pendle",
-      "cmc_price_usd": 1.6026506053273897,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00040612067877002884,
-      "timestamp_skew_seconds": 257.192
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "PENGU",
@@ -3206,22 +1652,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-17T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PENGUUSDT",
-      "exchange_price": 0.006265,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.609000Z",
-      "cmc_id": 34466,
-      "cmc_slug": "pudgy-penguins",
-      "cmc_price_usd": 0.006259832402871241,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0008248359343589995,
-      "timestamp_skew_seconds": 260.609
-    }
+    "first_capture": "2024-12-17T00:00:00.000Z"
   },
   {
     "id": "PEOPLE",
@@ -3232,16 +1663,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PEOPLEUSDT",
-      "exchange_price": 0.00556,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.728000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "PIXEL",
@@ -3253,22 +1675,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PIXELUSDT",
-      "exchange_price": 0.00475,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.060000Z",
-      "cmc_id": 29335,
-      "cmc_slug": "pixels",
-      "cmc_price_usd": 0.0047440527633889115,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012520498128607224,
-      "timestamp_skew_seconds": 258.06
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "PNUT",
@@ -3279,22 +1686,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-11-14T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PNUTUSDT",
-      "exchange_price": 0.0436,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:14.713000Z",
-      "cmc_id": 33788,
-      "cmc_slug": "peanut-the-squirrel",
-      "cmc_price_usd": 0.04354863363834504,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0011781275608935794,
-      "timestamp_skew_seconds": 194.713
-    }
+    "first_capture": "2024-11-14T00:00:00.000Z"
   },
   {
     "id": "POL",
@@ -3305,22 +1697,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "POLUSDT",
-      "exchange_price": 0.0838,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:06.618000Z",
-      "cmc_id": 28321,
-      "cmc_slug": "polygon-ecosystem-token",
-      "cmc_price_usd": 0.0836960416662418,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0012405529088091033,
-      "timestamp_skew_seconds": 186.618
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "POLYX",
@@ -3331,22 +1708,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "POLYXUSDT",
-      "exchange_price": 0.0364,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.094000Z",
-      "cmc_id": 20362,
-      "cmc_slug": "polymesh",
-      "cmc_price_usd": 0.03637019968878445,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0008186898685590611,
-      "timestamp_skew_seconds": 196.094
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "POPCAT",
@@ -3380,22 +1742,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-08-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PROVEUSDT",
-      "exchange_price": 0.2024,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.244000Z",
-      "cmc_id": 37593,
-      "cmc_slug": "succinct",
-      "cmc_price_usd": 0.2023735150161606,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0001308546632381034,
-      "timestamp_skew_seconds": 200.244
-    }
+    "first_capture": "2025-08-06T00:00:00.000Z"
   },
   {
     "id": "PUMP",
@@ -3406,22 +1753,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-07-10T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PUMPUSDT",
-      "exchange_price": 0.001636,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.136000Z",
-      "cmc_id": 36507,
-      "cmc_slug": "pump-fun",
-      "cmc_price_usd": 0.0016297020901149002,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0038495781693764874,
-      "timestamp_skew_seconds": 261.136
-    }
+    "first_capture": "2025-07-10T00:00:00.000Z"
   },
   {
     "id": "PURR",
@@ -3443,22 +1775,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "PYTHUSDT",
-      "exchange_price": 0.04689,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.448000Z",
-      "cmc_id": 28177,
-      "cmc_slug": "pyth-network",
-      "cmc_price_usd": 0.0468752989348083,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003135223969225458,
-      "timestamp_skew_seconds": 251.448
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "RDNT",
@@ -3470,16 +1787,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RDNTUSDT",
-      "exchange_price": 0.00328,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "RENDER",
@@ -3490,22 +1798,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RENDERUSDT",
-      "exchange_price": 1.537,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.452000Z",
-      "cmc_id": 5690,
-      "cmc_slug": "render",
-      "cmc_price_usd": 1.5356894972399595,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000852636798985303,
-      "timestamp_skew_seconds": 259.452
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "REQ",
@@ -3517,22 +1810,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-08-05T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "REQUSDT",
-      "exchange_price": 0.0551,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:03.240000Z",
-      "cmc_id": 2071,
-      "cmc_slug": "request",
-      "cmc_price_usd": 0.054700174136411324,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.007256367760230112,
-      "timestamp_skew_seconds": 183.24
-    }
+    "end_date": "2025-08-05T00:00:00.000Z"
   },
   {
     "id": "RESOLV",
@@ -3543,22 +1821,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-06-10T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RESOLVUSDT",
-      "exchange_price": 0.0199,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:04.844000Z",
-      "cmc_id": 36713,
-      "cmc_slug": "resolv",
-      "cmc_price_usd": 0.019897033559514023,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00014906736110440372,
-      "timestamp_skew_seconds": 244.844
-    }
+    "first_capture": "2025-06-10T00:00:00.000Z"
   },
   {
     "id": "REZ",
@@ -3569,22 +1832,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "REZUSDT",
-      "exchange_price": 0.002486,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:09.668000Z",
-      "cmc_id": 30843,
-      "cmc_slug": "renzo",
-      "cmc_price_usd": 0.0024849601997711246,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0004182623607704502,
-      "timestamp_skew_seconds": 189.668
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "RLB",
@@ -3608,16 +1856,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "no_ticker_candidate",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RNDRUSDT",
-      "exchange_price": 7.03,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "RSR",
@@ -3628,22 +1867,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RSRUSDT",
-      "exchange_price": 0.001244,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.319000Z",
-      "cmc_id": 3964,
-      "cmc_slug": "reserve-rights",
-      "cmc_price_usd": 0.0012431106221381589,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0007149339725411737,
-      "timestamp_skew_seconds": 257.319
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "RUNE",
@@ -3654,22 +1878,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "RUNEUSDT",
-      "exchange_price": 0.424,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:48:49.846000Z",
-      "cmc_id": 4157,
-      "cmc_slug": "thorchain",
-      "cmc_price_usd": 0.42458267699924324,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0013742382057623773,
-      "timestamp_skew_seconds": 229.846
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "S",
@@ -3680,22 +1889,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-17T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SUSDT",
-      "exchange_price": 0.02571,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:12.973000Z",
-      "cmc_id": 32684,
-      "cmc_slug": "sonic",
-      "cmc_price_usd": 0.025707116680726214,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.00011214777416517415,
-      "timestamp_skew_seconds": 192.973
-    }
+    "first_capture": "2025-01-17T00:00:00.000Z"
   },
   {
     "id": "SAGA",
@@ -3706,22 +1900,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SAGAUSDT",
-      "exchange_price": 0.01275,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.263000Z",
-      "cmc_id": 30372,
-      "cmc_slug": "saga",
-      "cmc_price_usd": 0.012734612215365468,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012068850693750077,
-      "timestamp_skew_seconds": 260.263
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SAND",
@@ -3732,22 +1911,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-04T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SANDUSDT",
-      "exchange_price": 0.04911,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.943000Z",
-      "cmc_id": 6210,
-      "cmc_slug": "the-sandbox",
-      "cmc_price_usd": 0.049066286287455504,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0008901183576562086,
-      "timestamp_skew_seconds": 259.943
-    }
+    "first_capture": "2024-12-04T00:00:00.000Z"
   },
   {
     "id": "SCR",
@@ -3759,22 +1923,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-05-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SCRUSDT",
-      "exchange_price": 0.02557,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.681000Z",
-      "cmc_id": 26998,
-      "cmc_slug": "scroll",
-      "cmc_price_usd": 0.025676289240217004,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004156794689753813,
-      "timestamp_skew_seconds": 260.681
-    }
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "SEI",
@@ -3785,22 +1934,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SEIUSDT",
-      "exchange_price": 0.04876,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.184000Z",
-      "cmc_id": 23149,
-      "cmc_slug": "sei",
-      "cmc_price_usd": 0.04867353515364163,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0017732741254792188,
-      "timestamp_skew_seconds": 257.184
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SHIA",
@@ -3834,22 +1968,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-17T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SKYUSDT",
-      "exchange_price": 0.06221,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.062000Z",
-      "cmc_id": 33038,
-      "cmc_slug": "sky",
-      "cmc_price_usd": 0.062261200088977994,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0008230202375501187,
-      "timestamp_skew_seconds": 196.062
-    }
+    "first_capture": "2025-09-17T00:00:00.000Z"
   },
   {
     "id": "SNX",
@@ -3860,22 +1979,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SNXUSDT",
-      "exchange_price": 0.229,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.453000Z",
-      "cmc_id": 2586,
-      "cmc_slug": "synthetix",
-      "cmc_price_usd": 0.22878293449632642,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009478842955178661,
-      "timestamp_skew_seconds": 257.453
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SOL",
@@ -3886,16 +1990,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOLUSDT",
-      "exchange_price": 78.12,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.621000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SOPH",
@@ -3906,22 +2001,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-05-28T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOPHUSDT",
-      "exchange_price": 0.00471,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.572000Z",
-      "cmc_id": 32087,
-      "cmc_slug": "sophon",
-      "cmc_price_usd": 0.004699283947089603,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.002275170469298636,
-      "timestamp_skew_seconds": 258.572
-    }
+    "first_capture": "2025-05-28T00:00:00.000Z"
   },
   {
     "id": "SPX",
@@ -3966,22 +2046,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-08-05T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "STGUSDT",
-      "exchange_price": 0.1401,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:48:40.282000Z",
-      "cmc_id": 18934,
-      "cmc_slug": "stargate-finance",
-      "cmc_price_usd": 0.14037723235791957,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0019788176867920858,
-      "timestamp_skew_seconds": 220.282
-    }
+    "end_date": "2025-08-05T00:00:00.000Z"
   },
   {
     "id": "STRAX",
@@ -3993,16 +2058,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2025-06-27T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "STRAXUSDT",
-      "exchange_price": 0.00952,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:15.992000Z"
-    }
+    "end_date": "2025-06-27T00:00:00.000Z"
   },
   {
     "id": "STRK",
@@ -4013,16 +2069,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "STRKUSDT",
-      "exchange_price": 0.0292,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.490000Z"
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "STX",
@@ -4033,22 +2080,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "STXUSDT",
-      "exchange_price": 0.1704,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:18.947000Z",
-      "cmc_id": 4847,
-      "cmc_slug": "stacks",
-      "cmc_price_usd": 0.16980185711356027,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.003510228206805887,
-      "timestamp_skew_seconds": 258.947
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SUI",
@@ -4059,22 +2091,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SUIUSDT",
-      "exchange_price": 0.7594,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.095000Z",
-      "cmc_id": 20947,
-      "cmc_slug": "sui",
-      "cmc_price_usd": 0.7590481078608555,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0004633818002955472,
-      "timestamp_skew_seconds": 261.095
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SUPER",
@@ -4085,22 +2102,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SUPERUSDT",
-      "exchange_price": 0.0866,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.229000Z",
-      "cmc_id": 8290,
-      "cmc_slug": "superverse",
-      "cmc_price_usd": 0.08665297570412625,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0006117286850606706,
-      "timestamp_skew_seconds": 197.229
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SUSHI",
@@ -4111,22 +2113,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SUSHIUSDT",
-      "exchange_price": 0.1657,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.816000Z",
-      "cmc_id": 6758,
-      "cmc_slug": "sushiswap",
-      "cmc_price_usd": 0.16589808135383743,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.001195421568119784,
-      "timestamp_skew_seconds": 260.816
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "SYRUP",
@@ -4137,22 +2124,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-06-26T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SYRUPUSDT",
-      "exchange_price": 0.1901,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.749000Z",
-      "cmc_id": 33824,
-      "cmc_slug": "maple-finance",
-      "cmc_price_usd": 0.18917756291801452,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004852378127224998,
-      "timestamp_skew_seconds": 251.749
-    }
+    "first_capture": "2025-06-26T00:00:00.000Z"
   },
   {
     "id": "TAO",
@@ -4163,22 +2135,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TAOUSDT",
-      "exchange_price": 199.7,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.434000Z",
-      "cmc_id": 22974,
-      "cmc_slug": "bittensor",
-      "cmc_price_usd": 199.18147567465127,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.002596516401345626,
-      "timestamp_skew_seconds": 200.434
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "TIA",
@@ -4189,22 +2146,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TIAUSDT",
-      "exchange_price": 0.4136,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.997000Z",
-      "cmc_id": 22861,
-      "cmc_slug": "celestia",
-      "cmc_price_usd": 0.41422592269659614,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0015133527480563711,
-      "timestamp_skew_seconds": 257.997
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "TNSR",
@@ -4215,22 +2157,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TNSRUSDT",
-      "exchange_price": 0.0329,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.553000Z",
-      "cmc_id": 30449,
-      "cmc_slug": "tensor",
-      "cmc_price_usd": 0.03281780683896918,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0024982723717575034,
-      "timestamp_skew_seconds": 259.553
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "TON",
@@ -4242,16 +2169,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-06-16T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TONUSDT",
-      "exchange_price": 1.6,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "end_date": "2026-06-16T00:00:00.000Z"
   },
   {
     "id": "TRB",
@@ -4262,22 +2180,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TRBUSDT",
-      "exchange_price": 14.94,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.172000Z",
-      "cmc_id": 4944,
-      "cmc_slug": "tellor",
-      "cmc_price_usd": 14.964166560638095,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0016175743398992766,
-      "timestamp_skew_seconds": 257.172
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "TRUMP",
@@ -4288,22 +2191,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-18T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TRUMPUSDT",
-      "exchange_price": 1.574,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.248000Z",
-      "cmc_id": 35336,
-      "cmc_slug": "official-trump",
-      "cmc_price_usd": 1.5721847849828583,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0011532496932285699,
-      "timestamp_skew_seconds": 200.248
-    }
+    "first_capture": "2025-01-18T00:00:00.000Z"
   },
   {
     "id": "TRX",
@@ -4314,22 +2202,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TRXUSDT",
-      "exchange_price": 0.3275,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.172000Z",
-      "cmc_id": 1958,
-      "cmc_slug": "tron",
-      "cmc_price_usd": 0.3272772884736112,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0006800351950803297,
-      "timestamp_skew_seconds": 201.172
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "TST",
@@ -4341,22 +2214,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2025-02-09T00:00:00.000Z",
-    "end_date": "2026-05-26T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TSTUSDT",
-      "exchange_price": 0.01102,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:08.557000Z",
-      "cmc_id": 35647,
-      "cmc_slug": "test-token-bsc",
-      "cmc_price_usd": 0.011013696301518924,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0005720234556330279,
-      "timestamp_skew_seconds": 248.557
-    }
+    "end_date": "2026-05-26T00:00:00.000Z"
   },
   {
     "id": "TURBO",
@@ -4367,22 +2225,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "TURBOUSDT",
-      "exchange_price": 0.000854,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.551000Z",
-      "cmc_id": 24911,
-      "cmc_slug": "turbo",
-      "cmc_price_usd": 0.0008544145057478663,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000485369728180602,
-      "timestamp_skew_seconds": 260.551
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "UMA",
@@ -4393,22 +2236,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "UMAUSDT",
-      "exchange_price": 0.37,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:16.662000Z",
-      "cmc_id": 5617,
-      "cmc_slug": "uma",
-      "cmc_price_usd": 0.3701602013618512,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0004329766536518557,
-      "timestamp_skew_seconds": 256.662
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "UNI",
@@ -4419,22 +2247,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "UNIUSDT",
-      "exchange_price": 3.632,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.028000Z",
-      "cmc_id": 7083,
-      "cmc_slug": "uniswap",
-      "cmc_price_usd": 3.63549819497914,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0009631594105561524,
-      "timestamp_skew_seconds": 201.028
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "UNIBOT",
@@ -4458,16 +2271,7 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "end_date": "2026-05-06T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "USTCUSDT",
-      "exchange_price": 0.00555,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.785000Z"
-    }
+    "end_date": "2026-05-06T00:00:00.000Z"
   },
   {
     "id": "USUAL",
@@ -4478,22 +2282,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-18T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "USUALUSDT",
-      "exchange_price": 0.00886,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:48:44.776000Z",
-      "cmc_id": 33979,
-      "cmc_slug": "usual",
-      "cmc_price_usd": 0.0088485632159171,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0012908334179344682,
-      "timestamp_skew_seconds": 224.776
-    }
+    "first_capture": "2024-12-18T00:00:00.000Z"
   },
   {
     "id": "VINE",
@@ -4515,22 +2304,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-12-16T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "VIRTUALUSDT",
-      "exchange_price": 0.6106,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.678000Z",
-      "cmc_id": 29420,
-      "cmc_slug": "virtual-protocol",
-      "cmc_price_usd": 0.6099999612343752,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.000982703513961458,
-      "timestamp_skew_seconds": 259.678
-    }
+    "first_capture": "2024-12-16T00:00:00.000Z"
   },
   {
     "id": "VVV",
@@ -4552,22 +2326,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "WUSDT",
-      "exchange_price": 0.00975,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.280000Z",
-      "cmc_id": 29587,
-      "cmc_slug": "wormhole",
-      "cmc_price_usd": 0.009749542569721466,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 4.691592600347398e-05,
-      "timestamp_skew_seconds": 197.28
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "WCT",
@@ -4578,22 +2337,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-04-15T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "WCTUSDT",
-      "exchange_price": 0.04366,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.304000Z",
-      "cmc_id": 33152,
-      "cmc_slug": "walletconnect-token",
-      "cmc_price_usd": 0.04362693852958021,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0007572485208380063,
-      "timestamp_skew_seconds": 257.304
-    }
+    "first_capture": "2025-04-15T00:00:00.000Z"
   },
   {
     "id": "WIF",
@@ -4604,22 +2348,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "WIFUSDT",
-      "exchange_price": 0.1558,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.243000Z",
-      "cmc_id": 28752,
-      "cmc_slug": "dogwifhat",
-      "cmc_price_usd": 0.15552059374818275,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0017933649025497018,
-      "timestamp_skew_seconds": 200.243
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "WLD",
@@ -4630,22 +2359,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "WLDUSDT",
-      "exchange_price": 0.4114,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.009000Z",
-      "cmc_id": 13502,
-      "cmc_slug": "worldcoin-org",
-      "cmc_price_usd": 0.4109970912169691,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009793601921023274,
-      "timestamp_skew_seconds": 261.009
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "WLFI",
@@ -4656,22 +2370,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-08-23T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "WLFIUSDT",
-      "exchange_price": 0.0572,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.014000Z",
-      "cmc_id": 33251,
-      "cmc_slug": "world-liberty-financial-wlfi",
-      "cmc_price_usd": 0.057006079880986917,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.003390211870858117,
-      "timestamp_skew_seconds": 259.014
-    }
+    "first_capture": "2025-08-23T00:00:00.000Z"
   },
   {
     "id": "XAI",
@@ -4682,22 +2381,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "XAIUSDT",
-      "exchange_price": 0.00707,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:11.597000Z",
-      "cmc_id": 28933,
-      "cmc_slug": "xai-games",
-      "cmc_price_usd": 0.007090969760646481,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0029660198934201867,
-      "timestamp_skew_seconds": 251.597
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "XLM",
@@ -4708,22 +2392,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-11-23T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "XLMUSDT",
-      "exchange_price": 0.1883,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.282000Z",
-      "cmc_id": 512,
-      "cmc_slug": "stellar",
-      "cmc_price_usd": 0.18824515832966687,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00029124625774361264,
-      "timestamp_skew_seconds": 261.282
-    }
+    "first_capture": "2024-11-23T00:00:00.000Z"
   },
   {
     "id": "XMR",
@@ -4734,16 +2403,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-01-15T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "stale_price",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "XMRUSDT",
-      "exchange_price": 118.7,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
-    }
+    "first_capture": "2026-01-15T00:00:00.000Z"
   },
   {
     "id": "XPL",
@@ -4754,22 +2414,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-08-22T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "XPLUSDT",
-      "exchange_price": 0.09295,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.150000Z",
-      "cmc_id": 36645,
-      "cmc_slug": "plasma-xpl",
-      "cmc_price_usd": 0.09255020398626983,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.004301194338140695,
-      "timestamp_skew_seconds": 261.15
-    }
+    "first_capture": "2025-08-22T00:00:00.000Z"
   },
   {
     "id": "XRP",
@@ -4780,22 +2425,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "XRPUSDT",
-      "exchange_price": 1.1253,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.286000Z",
-      "cmc_id": 52,
-      "cmc_slug": "xrp",
-      "cmc_price_usd": 1.1242453798628105,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0009371902045583294,
-      "timestamp_skew_seconds": 261.286
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "YGG",
@@ -4806,22 +2436,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "YGGUSDT",
-      "exchange_price": 0.02224,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.438000Z",
-      "cmc_id": 10688,
-      "cmc_slug": "yield-guild-games",
-      "cmc_price_usd": 0.022244978592343527,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00022385756940322064,
-      "timestamp_skew_seconds": 260.438
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "YZY",
@@ -4844,22 +2459,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-10-02T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ZECUSDT",
-      "exchange_price": 575.82,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.491000Z",
-      "cmc_id": 1437,
-      "cmc_slug": "zcash",
-      "cmc_price_usd": 578.1196332678516,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00399366688870047,
-      "timestamp_skew_seconds": 260.491
-    }
+    "first_capture": "2025-10-02T00:00:00.000Z"
   },
   {
     "id": "ZEN",
@@ -4870,22 +2470,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ZENUSDT",
-      "exchange_price": 4.388,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.728000Z",
-      "cmc_id": 1698,
-      "cmc_slug": "horizen",
-      "cmc_price_usd": 4.390194506880727,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0005001155152066947,
-      "timestamp_skew_seconds": 257.728
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ZEREBRO",
@@ -4919,22 +2504,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ZKUSDT",
-      "exchange_price": 0.01028,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:17.674000Z",
-      "cmc_id": 24091,
-      "cmc_slug": "zksync",
-      "cmc_price_usd": 0.01027512159075522,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.00047455342848040053,
-      "timestamp_skew_seconds": 257.674
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "ZORA",
@@ -4956,22 +2526,7 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-10-29T00:00:00.000Z",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ZROUSDT",
-      "exchange_price": 0.851,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:19.708000Z",
-      "cmc_id": 26997,
-      "cmc_slug": "layerzero",
-      "cmc_price_usd": 0.8525010520717886,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0017638684744872308,
-      "timestamp_skew_seconds": 259.708
-    }
+    "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "cash:AMZN",

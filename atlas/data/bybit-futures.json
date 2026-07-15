@@ -7,22 +7,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "future",
-    "delivery_date": "2026-03-01T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-03-01T00:00:00"
   },
   {
     "id": "BTCUSDM26",
@@ -32,22 +17,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "contract_type": "future",
-    "delivery_date": "2026-06-01T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-06-01T00:00:00"
   },
   {
     "id": "BTCUSDT-06MAR26",
@@ -57,22 +27,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-06T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-03-06T00:00:00"
   },
   {
     "id": "BTCUSDT-13MAR26",
@@ -82,22 +37,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-13T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-03-13T00:00:00"
   },
   {
     "id": "BTCUSDT-20MAR26",
@@ -107,22 +47,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-20T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-03-20T00:00:00"
   },
   {
     "id": "BTCUSDT-24APR26",
@@ -132,22 +57,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-04-24T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-04-24T00:00:00"
   },
   {
     "id": "BTCUSDT-25DEC26",
@@ -157,22 +67,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-12-25T00:00:00"
   },
   {
     "id": "BTCUSDT-25SEP26",
@@ -182,22 +77,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-09-25T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-09-25T00:00:00"
   },
   {
     "id": "BTCUSDT-26JUN26",
@@ -207,22 +87,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-06-26T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-06-26T00:00:00"
   },
   {
     "id": "BTCUSDT-27MAR26",
@@ -232,22 +97,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-27T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "BTCUSDT",
-      "exchange_price": 65404.0,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:21.002000Z",
-      "cmc_id": 1,
-      "cmc_slug": "bitcoin",
-      "cmc_price_usd": 65300.01883530528,
-      "cmc_last_updated": "2026-07-15T14:46:00Z",
-      "relative_difference": 0.0015898288284312897,
-      "timestamp_skew_seconds": 201.002
-    }
+    "delivery_date": "2026-03-27T00:00:00"
   },
   {
     "id": "DOGEUSDT-06MAR26",
@@ -257,22 +107,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-06T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOGEUSDT",
-      "exchange_price": 0.07478,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.160000Z",
-      "cmc_id": 74,
-      "cmc_slug": "dogecoin",
-      "cmc_price_usd": 0.07475031678077797,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003969406154323614,
-      "timestamp_skew_seconds": 260.16
-    }
+    "delivery_date": "2026-03-06T00:00:00"
   },
   {
     "id": "DOGEUSDT-13MAR26",
@@ -282,22 +117,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-13T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOGEUSDT",
-      "exchange_price": 0.07478,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.160000Z",
-      "cmc_id": 74,
-      "cmc_slug": "dogecoin",
-      "cmc_price_usd": 0.07475031678077797,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003969406154323614,
-      "timestamp_skew_seconds": 260.16
-    }
+    "delivery_date": "2026-03-13T00:00:00"
   },
   {
     "id": "DOGEUSDT-20MAR26",
@@ -307,22 +127,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-20T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOGEUSDT",
-      "exchange_price": 0.07478,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.160000Z",
-      "cmc_id": 74,
-      "cmc_slug": "dogecoin",
-      "cmc_price_usd": 0.07475031678077797,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003969406154323614,
-      "timestamp_skew_seconds": 260.16
-    }
+    "delivery_date": "2026-03-20T00:00:00"
   },
   {
     "id": "DOGEUSDT-27MAR26",
@@ -332,22 +137,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-27T00:00:00",
-    "cmc_probe": {
-      "status": "price_compatible",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "DOGEUSDT",
-      "exchange_price": 0.07478,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.160000Z",
-      "cmc_id": 74,
-      "cmc_slug": "dogecoin",
-      "cmc_price_usd": 0.07475031678077797,
-      "cmc_last_updated": "2026-07-15T14:45:00Z",
-      "relative_difference": 0.0003969406154323614,
-      "timestamp_skew_seconds": 260.16
-    }
+    "delivery_date": "2026-03-27T00:00:00"
   },
   {
     "id": "ETHUSDH26",
@@ -357,16 +147,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2026-03-01T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-03-01T00:00:00"
   },
   {
     "id": "ETHUSDM26",
@@ -376,16 +157,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "contract_type": "future",
-    "delivery_date": "2026-06-01T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-06-01T00:00:00"
   },
   {
     "id": "ETHUSDT-06MAR26",
@@ -395,16 +167,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-06T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-03-06T00:00:00"
   },
   {
     "id": "ETHUSDT-13MAR26",
@@ -414,16 +177,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-13T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-03-13T00:00:00"
   },
   {
     "id": "ETHUSDT-20MAR26",
@@ -433,16 +187,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-20T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-03-20T00:00:00"
   },
   {
     "id": "ETHUSDT-24APR26",
@@ -452,16 +197,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-04-24T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-04-24T00:00:00"
   },
   {
     "id": "ETHUSDT-25DEC26",
@@ -471,16 +207,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-12-25T00:00:00"
   },
   {
     "id": "ETHUSDT-25SEP26",
@@ -490,16 +217,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-09-25T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-09-25T00:00:00"
   },
   {
     "id": "ETHUSDT-26JUN26",
@@ -509,16 +227,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-06-26T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-06-26T00:00:00"
   },
   {
     "id": "ETHUSDT-27MAR26",
@@ -528,16 +237,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-27T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "ETHUSDT",
-      "exchange_price": 1928.06,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.995000Z"
-    }
+    "delivery_date": "2026-03-27T00:00:00"
   },
   {
     "id": "MNTUSDT-06MAR26",
@@ -587,16 +287,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-06T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOLUSDT",
-      "exchange_price": 78.12,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.621000Z"
-    }
+    "delivery_date": "2026-03-06T00:00:00"
   },
   {
     "id": "SOLUSDT-13MAR26",
@@ -606,16 +297,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-13T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOLUSDT",
-      "exchange_price": 78.12,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.621000Z"
-    }
+    "delivery_date": "2026-03-13T00:00:00"
   },
   {
     "id": "SOLUSDT-20MAR26",
@@ -625,16 +307,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-20T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOLUSDT",
-      "exchange_price": 78.12,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.621000Z"
-    }
+    "delivery_date": "2026-03-20T00:00:00"
   },
   {
     "id": "SOLUSDT-27MAR26",
@@ -644,15 +317,6 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "future",
-    "delivery_date": "2026-03-27T00:00:00",
-    "cmc_probe": {
-      "status": "multiple_price_matches",
-      "source": "coinmarketcap-website-probe",
-      "exchange_venue": "binance-spot",
-      "exchange_instrument_id": "SOLUSDT",
-      "exchange_price": 78.12,
-      "exchange_quote_currency": "USDT",
-      "exchange_observed_at": "2026-07-15T14:49:20.621000Z"
-    }
+    "delivery_date": "2026-03-27T00:00:00"
   }
 ]

@@ -27,6 +27,7 @@ from integrations.cmc_id_probe import (
 
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
+BINANCE_EXCHANGES = frozenset({"binance-spot", "binance-futures", "binance-futures-cm"})
 
 
 def populate_cmc_probe_metadata(
@@ -36,8 +37,9 @@ def populate_cmc_probe_metadata(
     max_relative_difference: float = 0.05,
     max_timestamp_skew: timedelta = timedelta(minutes=3),
     dry_run: bool = False,
+    exchanges: frozenset[str] = BINANCE_EXCHANGES,
 ) -> dict[str, dict[str, int]]:
-    """Attach non-authoritative CMC price evidence to every eligible snapshot row."""
+    """Attach non-authoritative CMC price evidence to selected snapshot rows."""
     results = {
         symbol: classify_price_candidates(
             candidates_for_symbol(catalogue.assets, symbol),
@@ -49,6 +51,8 @@ def populate_cmc_probe_metadata(
     }
     stats: dict[str, dict[str, int]] = {}
     for json_file in sorted(data_dir.glob("*.json")):
+        if json_file.stem not in exchanges:
+            continue
         rows = json.loads(json_file.read_text())
         if not isinstance(rows, list):
             continue
@@ -69,6 +73,26 @@ def populate_cmc_probe_metadata(
             json_file.write_text(json.dumps(rows, indent=2) + "\n")
         stats[json_file.stem] = dict(counts)
     return stats
+
+
+def remove_cmc_probe_metadata(data_dir: Path, exchanges: set[str]) -> dict[str, int]:
+    """Remove probe evidence from exchanges outside the supported Binance scope."""
+    removed: dict[str, int] = {}
+    for json_file in sorted(data_dir.glob("*.json")):
+        if json_file.stem not in exchanges:
+            continue
+        rows = json.loads(json_file.read_text())
+        if not isinstance(rows, list):
+            continue
+        count = 0
+        for row in rows:
+            if isinstance(row, dict) and "cmc_probe" in row:
+                row.pop("cmc_probe")
+                count += 1
+        if count:
+            json_file.write_text(json.dumps(rows, indent=2) + "\n")
+            removed[json_file.stem] = count
+    return removed
 
 
 def _probe_record(
@@ -101,9 +125,11 @@ def _probe_record(
     return record
 
 
-def _all_snapshot_symbols(data_dir: Path) -> set[str]:
+def _all_snapshot_symbols(data_dir: Path, exchanges: frozenset[str]) -> set[str]:
     symbols: set[str] = set()
     for json_file in data_dir.glob("*.json"):
+        if json_file.stem not in exchanges:
+            continue
         rows = json.loads(json_file.read_text())
         if isinstance(rows, list):
             symbols.update(
@@ -125,7 +151,14 @@ def main() -> int:
         with requests.Session() as session:
             catalogue = fetch_cmc_catalogue(session)
             observations = fetch_binance_spot_prices(
-                session, _all_snapshot_symbols(args.data_dir)
+                session, _all_snapshot_symbols(args.data_dir, BINANCE_EXCHANGES)
+            )
+        if args.dry_run:
+            removed = {}
+        else:
+            all_exchanges = {path.stem for path in args.data_dir.glob("*.json")}
+            removed = remove_cmc_probe_metadata(
+                args.data_dir, all_exchanges - BINANCE_EXCHANGES
             )
         stats = populate_cmc_probe_metadata(
             args.data_dir,
@@ -134,6 +167,7 @@ def main() -> int:
             max_relative_difference=args.max_relative_difference,
             max_timestamp_skew=timedelta(seconds=args.max_timestamp_skew_seconds),
             dry_run=args.dry_run,
+            exchanges=BINANCE_EXCHANGES,
         )
     except (CmcProbeError, OSError, ValueError, json.JSONDecodeError) as error:
         print(f"CMC probe metadata update failed: {error}")
@@ -141,6 +175,8 @@ def main() -> int:
 
     for exchange, counts in sorted(stats.items()):
         print(f"{exchange}: {dict(sorted(counts.items()))}")
+    if removed:
+        print(f"removed unsupported probe metadata: {dict(sorted(removed.items()))}")
     return 0
 
 

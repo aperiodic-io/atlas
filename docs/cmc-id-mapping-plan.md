@@ -28,7 +28,7 @@ not identity verification. For example, a wrapped asset can share both a ticker
 and price with the native asset; it must remain ambiguous unless stronger
 identity evidence is available.
 
-To attach this non-authoritative evidence to every bundled exchange row, run:
+To attach this non-authoritative evidence to bundled Binance rows only, run:
 
 ```bash
 python -m integrations.cmc_probe_metadata
@@ -37,7 +37,9 @@ python -m integrations.cmc_probe_metadata
 The updater writes a `cmc_probe` object containing the status, reference
 Binance spot observation, and CMC evidence when price-compatible. It never
 writes an approved `cmc_id`; use `--dry-run` to inspect the per-exchange status
-counts without changing snapshots.
+counts without changing snapshots. It supports only `binance-spot`,
+`binance-futures`, and `binance-futures-cm`, and removes accidental probe
+metadata from other bundled exchanges.
 
 ## Production implementation
 
