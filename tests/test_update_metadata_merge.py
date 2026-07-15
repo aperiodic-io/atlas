@@ -1,4 +1,27 @@
 from atlas.update import _append_contract_size_change, _drop_none_fields, _merge_existing_fields
+from atlas.update import _apply_snapshot_metadata
+
+
+def test_apply_snapshot_metadata_preserves_existing_lifecycle_fields() -> None:
+    symbols = [
+        {
+            "id": "OLDUSDT",
+            "availableSince": "2024-01-01T00:00:00.000Z",
+            "availableTo": "2025-01-01T00:00:00.000Z",
+        }
+    ]
+
+    mapped = _apply_snapshot_metadata(symbols)
+
+    assert mapped == [
+        {
+            "id": "OLDUSDT",
+            "first_capture": "2024-01-01T00:00:00.000Z",
+            "end_date": "2025-01-01T00:00:00.000Z",
+            "end_date_source": "tardis",
+            "end_date_confidence": "authoritative",
+        }
+    ]
 
 
 def test_merge_existing_fields_keeps_metadata_when_source_missing() -> None:
