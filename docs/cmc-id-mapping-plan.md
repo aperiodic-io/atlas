@@ -35,11 +35,15 @@ python -m integrations.cmc_probe_metadata
 ```
 
 The updater writes a `cmc_probe` object containing the status, reference
-Binance spot observation, and CMC evidence when price-compatible. It never
-writes an approved `cmc_id`; use `--dry-run` to inspect the per-exchange status
-counts without changing snapshots. It supports only `binance-spot`,
-`binance-futures`, and `binance-futures-cm`, and removes accidental probe
-metadata from other bundled exchanges.
+Binance spot observation, and CMC evidence to
+`atlas/data/cmc_probe/<exchange>.json`. For a price-compatible result, it
+writes only the integer `cmc_id` to the corresponding main exchange row; all
+other results have no `cmc_id`. It first prefers an exact CMC ticker and then
+removes known contract multipliers for lookup (for example,
+`1000CHEEMSUSDT` becomes `CHEEMS`). Use `--dry-run` to inspect the
+per-exchange status counts without changing snapshots. It supports only
+`binance-spot`, `binance-futures`, and `binance-futures-cm`, and removes
+accidental probe metadata from other bundled exchanges.
 
 ## Production implementation
 

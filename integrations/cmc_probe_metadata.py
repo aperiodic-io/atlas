@@ -1,7 +1,7 @@
-"""Write keyless CMC probe evidence to Atlas exchange snapshot rows.
+"""Write keyless CMC probe evidence and price-verified IDs for Binance.
 
-The resulting ``cmc_probe`` field is explicitly non-authoritative. It contains
-price compatibility evidence only and never writes an approved ``cmc_id``.
+Probe evidence is stored separately under ``data/cmc_probe``. Main exchange
+snapshots receive only a ``cmc_id`` when the CMC and Binance prices match.
 """
 
 from __future__ import annotations
@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter
+from dataclasses import replace
 from datetime import timedelta
 from pathlib import Path
 
@@ -21,8 +22,10 @@ from integrations.cmc_id_probe import (
     ProbeResult,
     candidates_for_symbol,
     classify_price_candidates,
+    contract_multiplier_for_cmc_lookup,
     fetch_binance_spot_prices,
     fetch_cmc_catalogue,
+    normalize_cmc_lookup_symbol,
 )
 
 
@@ -38,17 +41,15 @@ def populate_cmc_probe_metadata(
     max_timestamp_skew: timedelta = timedelta(minutes=3),
     dry_run: bool = False,
     exchanges: frozenset[str] = BINANCE_EXCHANGES,
+    probe_dir: Path | None = None,
 ) -> dict[str, dict[str, int]]:
-    """Attach non-authoritative CMC price evidence to selected snapshot rows."""
-    results = {
-        symbol: classify_price_candidates(
-            candidates_for_symbol(catalogue.assets, symbol),
-            observation,
-            max_relative_difference,
-            max_timestamp_skew,
-        )
-        for symbol, observation in observations.items()
+    """Write probe evidence separately and retain CMC IDs on price-matched rows."""
+    cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
+    candidates_by_symbol = {
+        symbol: candidates_for_symbol(catalogue.assets, symbol)
+        for symbol in cmc_symbols
     }
+    probe_dir = probe_dir or data_dir / "cmc_probe"
     stats: dict[str, dict[str, int]] = {}
     for json_file in sorted(data_dir.glob("*.json")):
         if json_file.stem not in exchanges:
@@ -57,20 +58,50 @@ def populate_cmc_probe_metadata(
         if not isinstance(rows, list):
             continue
         counts: Counter[str] = Counter()
+        probe_rows: list[dict[str, object]] = []
         for row in rows:
             if not isinstance(row, dict):
                 continue
             symbol = row.get("symbol")
             if not isinstance(symbol, str):
                 continue
-            result = results.get(symbol.upper())
-            if result is None:
+            lookup_symbol = normalize_cmc_lookup_symbol(symbol, cmc_symbols)
+            observation = observations.get(symbol.upper()) or observations.get(
+                lookup_symbol
+            )
+            if observation is None:
                 counts["no_binance_spot_price"] += 1
+                row.pop("cmc_probe", None)
+                row.pop("cmc_id", None)
+                probe_rows.append(_probe_row(row, lookup_symbol, _missing_price_record()))
                 continue
-            row["cmc_probe"] = _probe_record(result, observations[symbol.upper()])
+            observation = replace(
+                observation,
+                base_units_per_contract=(
+                    observation.base_units_per_contract
+                    * contract_multiplier_for_cmc_lookup(
+                        symbol, lookup_symbol, cmc_symbols
+                    )
+                ),
+            )
+            result = classify_price_candidates(
+                candidates_by_symbol.get(lookup_symbol, ()),
+                observation,
+                max_relative_difference,
+                max_timestamp_skew,
+            )
+            record = _probe_record(result, observation)
+            row.pop("cmc_probe", None)
+            if result.match is not None:
+                row["cmc_id"] = result.match.asset.cmc_id
+            else:
+                row.pop("cmc_id", None)
+            probe_rows.append(_probe_row(row, lookup_symbol, record))
             counts[result.status.value] += 1
         if not dry_run:
             json_file.write_text(json.dumps(rows, indent=2) + "\n")
+            probe_dir.mkdir(parents=True, exist_ok=True)
+            (probe_dir / json_file.name).write_text(json.dumps(probe_rows, indent=2) + "\n")
         stats[json_file.stem] = dict(counts)
     return stats
 
@@ -104,6 +135,7 @@ def _probe_record(
         "exchange_venue": observation.venue,
         "exchange_instrument_id": observation.instrument_id,
         "exchange_price": observation.normalized_price,
+        "exchange_base_units_per_contract": observation.base_units_per_contract,
         "exchange_quote_currency": observation.quote_currency,
         "exchange_observed_at": observation.observed_at.isoformat().replace(
             "+00:00", "Z"
@@ -125,18 +157,42 @@ def _probe_record(
     return record
 
 
-def _all_snapshot_symbols(data_dir: Path, exchanges: frozenset[str]) -> set[str]:
+def _missing_price_record() -> dict[str, object]:
+    return {
+        "status": "no_binance_spot_price",
+        "source": "coinmarketcap-website-probe",
+    }
+
+
+def _probe_row(
+    row: dict, lookup_symbol: str, record: dict[str, object]
+) -> dict[str, object]:
+    probe_row: dict[str, object] = {
+        "id": row.get("id"),
+        "symbol": row.get("symbol"),
+        "cmc_lookup_symbol": lookup_symbol,
+        "cmc_probe": record,
+    }
+    if "first_capture" in row:
+        probe_row["first_capture"] = row["first_capture"]
+    return probe_row
+
+
+def _all_snapshot_symbols(
+    data_dir: Path, exchanges: frozenset[str], catalogue: CmcCatalogue
+) -> set[str]:
     symbols: set[str] = set()
+    cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
     for json_file in data_dir.glob("*.json"):
         if json_file.stem not in exchanges:
             continue
         rows = json.loads(json_file.read_text())
         if isinstance(rows, list):
-            symbols.update(
-                row["symbol"].upper()
-                for row in rows
-                if isinstance(row, dict) and isinstance(row.get("symbol"), str)
-            )
+            for row in rows:
+                if not isinstance(row, dict) or not isinstance(row.get("symbol"), str):
+                    continue
+                symbols.add(row["symbol"].upper())
+                symbols.add(normalize_cmc_lookup_symbol(row["symbol"], cmc_symbols))
     return symbols
 
 
@@ -151,7 +207,8 @@ def main() -> int:
         with requests.Session() as session:
             catalogue = fetch_cmc_catalogue(session)
             observations = fetch_binance_spot_prices(
-                session, _all_snapshot_symbols(args.data_dir, BINANCE_EXCHANGES)
+                session,
+                _all_snapshot_symbols(args.data_dir, BINANCE_EXCHANGES, catalogue),
             )
         if args.dry_run:
             removed = {}

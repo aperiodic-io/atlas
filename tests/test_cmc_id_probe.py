@@ -5,8 +5,10 @@ from integrations.cmc_id_probe import (
     PriceObservation,
     ProbeStatus,
     classify_price_candidates,
+    contract_multiplier_for_cmc_lookup,
     fetch_binance_spot_prices,
     fetch_cmc_catalogue,
+    normalize_cmc_lookup_symbol,
 )
 
 
@@ -129,6 +131,18 @@ def test_bulk_binance_prices_select_requested_usdt_spot_pairs() -> None:
 
     assert set(observations) == {"BTC"}
     assert observations["BTC"].instrument_id == "BTCUSDT"
+
+
+def test_normalize_cmc_lookup_symbol_drops_known_contract_multipliers() -> None:
+    cmc_symbols = {"CHEEMS", "1000SATS", "0G"}
+
+    assert normalize_cmc_lookup_symbol("1000cheemsusdt", cmc_symbols) == "CHEEMS"
+    assert normalize_cmc_lookup_symbol("1000SATS", cmc_symbols) == "1000SATS"
+    assert normalize_cmc_lookup_symbol("0G", cmc_symbols) == "0G"
+    assert contract_multiplier_for_cmc_lookup(
+        "1000cheemsusdt", "CHEEMS", cmc_symbols
+    ) == 1000
+    assert contract_multiplier_for_cmc_lookup("1000SATS", "1000SATS", cmc_symbols) == 1
 
 
 def test_price_compatible_requires_timestamp_alignment() -> None:

@@ -19,7 +19,7 @@ def test_populate_cmc_probe_metadata_writes_only_probe_evidence(tmp_path) -> Non
         json.dumps(
             [
                 {"id": "btcusdt", "symbol": "BTC"},
-                {"id": "ethusdt", "symbol": "ETH"},
+                {"id": "1000cheemsusdt", "symbol": "1000CHEEMS"},
             ]
         )
     )
@@ -27,26 +27,28 @@ def test_populate_cmc_probe_metadata_writes_only_probe_evidence(tmp_path) -> Non
     catalogue = CmcCatalogue(
         assets=(
             CmcAsset(1, "BTC", "bitcoin", 100, observed_at, True),
-            CmcAsset(2, "ETH", "ethereum", 50, observed_at, True),
-            CmcAsset(3, "ETH", "wrapped-ethereum", 50.1, observed_at, True),
+            CmcAsset(2, "CHEEMS", "cheems", 0.05, observed_at, True),
         ),
         diagnostics=CatalogueDiagnostics(3, 3, 3, (), 0, False),
     )
     observations = {
         "BTC": PriceObservation(100, "USDT", observed_at, "binance-spot", "BTCUSDT"),
-        "ETH": PriceObservation(50, "USDT", observed_at, "binance-spot", "ETHUSDT"),
+        "1000CHEEMS": PriceObservation(
+            50, "USDT", observed_at, "binance-spot", "1000CHEEMSUSDT"
+        ),
     }
 
     stats = populate_cmc_probe_metadata(data_dir, catalogue, observations)
 
     rows = json.loads(target.read_text())
-    assert rows[0]["cmc_probe"]["status"] == "price_compatible"
-    assert rows[0]["cmc_probe"]["cmc_id"] == 1
-    assert "cmc_id" not in rows[0]
-    assert rows[1]["cmc_probe"]["status"] == "multiple_price_matches"
-    assert "cmc_id" not in rows[1]["cmc_probe"]
-    assert stats["binance-futures"]["price_compatible"] == 1
-    assert stats["binance-futures"]["multiple_price_matches"] == 1
+    assert rows[0]["cmc_id"] == 1
+    assert rows[1]["cmc_id"] == 2
+    assert "cmc_probe" not in rows[0]
+    assert "cmc_probe" not in rows[1]
+    probe_rows = json.loads((data_dir / "cmc_probe" / "binance-futures.json").read_text())
+    assert probe_rows[0]["cmc_probe"]["status"] == "price_compatible"
+    assert probe_rows[1]["cmc_lookup_symbol"] == "CHEEMS"
+    assert stats["binance-futures"]["price_compatible"] == 2
 
 
 def test_remove_cmc_probe_metadata_is_scoped_to_requested_exchanges(tmp_path) -> None:

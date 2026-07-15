@@ -24,6 +24,8 @@ CMC_LISTING_URL = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/list
 BINANCE_SPOT_TICKER_URL = "https://api.binance.com/api/v3/ticker/24hr"
 DEFAULT_PAGE_SIZE = 5000
 REQUEST_TIMEOUT_SECONDS = 20
+CONTRACT_MULTIPLIERS = ("1000000", "100000", "10000", "1000")
+COMMON_QUOTE_SUFFIXES = ("USDT", "USDC", "BUSD", "FDUSD", "USD", "BTC", "ETH")
 
 
 class JsonResponse(Protocol):
@@ -252,6 +254,44 @@ def fetch_binance_spot_prices(
 
 def candidates_for_symbol(assets: Iterable[CmcAsset], symbol: str) -> list[CmcAsset]:
     return [asset for asset in assets if asset.symbol.upper() == symbol.upper()]
+
+
+def normalize_cmc_lookup_symbol(symbol: str, cmc_symbols: set[str]) -> str:
+    """Prefer an exact CMC ticker, then remove known contract multipliers."""
+    upper_symbol = symbol.upper()
+    candidates = [upper_symbol]
+    for quote in COMMON_QUOTE_SUFFIXES:
+        if upper_symbol.endswith(quote) and len(upper_symbol) > len(quote):
+            candidates.append(upper_symbol[: -len(quote)])
+            break
+    for candidate in candidates:
+        if candidate in cmc_symbols:
+            return candidate
+    for candidate in candidates:
+        for multiplier in CONTRACT_MULTIPLIERS:
+            if candidate.startswith(multiplier):
+                unmultiplied = candidate[len(multiplier) :]
+                if unmultiplied in cmc_symbols:
+                    return unmultiplied
+    return upper_symbol
+
+
+def contract_multiplier_for_cmc_lookup(
+    symbol: str, lookup_symbol: str, cmc_symbols: set[str]
+) -> float:
+    """Return base units represented by a multiplied Binance ticker."""
+    upper_symbol = symbol.upper()
+    base_symbol = upper_symbol
+    for quote in COMMON_QUOTE_SUFFIXES:
+        if upper_symbol.endswith(quote) and len(upper_symbol) > len(quote):
+            base_symbol = upper_symbol[: -len(quote)]
+            break
+    if base_symbol == lookup_symbol or base_symbol in cmc_symbols:
+        return 1.0
+    for multiplier in CONTRACT_MULTIPLIERS:
+        if base_symbol == f"{multiplier}{lookup_symbol}":
+            return float(multiplier)
+    return 1.0
 
 
 def classify_price_candidates(
