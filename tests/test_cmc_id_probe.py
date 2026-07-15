@@ -5,6 +5,7 @@ from integrations.cmc_id_probe import (
     PriceObservation,
     ProbeStatus,
     classify_price_candidates,
+    fetch_binance_spot_prices,
     fetch_cmc_catalogue,
 )
 
@@ -84,6 +85,50 @@ def test_catalogue_reports_duplicate_ids_and_skips_malformed_rows() -> None:
     assert catalogue.diagnostics.malformed_rows == 1
     assert not catalogue.diagnostics.is_complete
     assert [call["params"]["start"] for call in session.calls] == [1, 3, 5]
+
+
+def test_catalogue_reports_total_count_changes_without_aborting() -> None:
+    session = FakeSession(
+        [
+            {
+                "data": {
+                    "totalCount": "2",
+                    "cryptoCurrencyList": [_asset(1, "BTC", 100)],
+                }
+            },
+            {"data": {"totalCount": "3", "cryptoCurrencyList": []}},
+        ]
+    )
+
+    catalogue = fetch_cmc_catalogue(session, page_size=1, max_attempts=1)
+
+    assert catalogue.diagnostics.reported_total == 2
+    assert catalogue.diagnostics.total_count_changed
+    assert not catalogue.diagnostics.is_complete
+
+
+def test_bulk_binance_prices_select_requested_usdt_spot_pairs() -> None:
+    session = FakeSession(
+        [
+            [
+                {
+                    "symbol": "BTCUSDT",
+                    "lastPrice": "100",
+                    "closeTime": 1_784_091_600_000,
+                },
+                {
+                    "symbol": "ETHUSDC",
+                    "lastPrice": "50",
+                    "closeTime": 1_784_091_600_000,
+                },
+            ]
+        ]
+    )
+
+    observations = fetch_binance_spot_prices(session, ["BTC", "ETH"])
+
+    assert set(observations) == {"BTC"}
+    assert observations["BTC"].instrument_id == "BTCUSDT"
 
 
 def test_price_compatible_requires_timestamp_alignment() -> None:

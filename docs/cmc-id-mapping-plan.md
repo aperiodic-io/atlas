@@ -28,6 +28,17 @@ not identity verification. For example, a wrapped asset can share both a ticker
 and price with the native asset; it must remain ambiguous unless stronger
 identity evidence is available.
 
+To attach this non-authoritative evidence to every bundled exchange row, run:
+
+```bash
+python -m integrations.cmc_probe_metadata
+```
+
+The updater writes a `cmc_probe` object containing the status, reference
+Binance spot observation, and CMC evidence when price-compatible. It never
+writes an approved `cmc_id`; use `--dry-run` to inspect the per-exchange status
+counts without changing snapshots.
+
 ## Production implementation
 
 1. Add a `CoinMarketCapClient` configured with `CMC_PRO_API_KEY`; fail the

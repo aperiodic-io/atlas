@@ -53,7 +53,16 @@
     "internal_id": "spot-ANT-USDC",
     "symbol": "ANT",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "ANTUSDT",
+      "exchange_price": 7.407,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "ANZ/USDC",
@@ -125,7 +134,22 @@
     "internal_id": "spot-AXL-USDH",
     "symbol": "AXL",
     "denominator": "USDH",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "AXLUSDT",
+      "exchange_price": 0.0425,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:20.381000Z",
+      "cmc_id": 17799,
+      "cmc_slug": "axelar",
+      "cmc_price_usd": 0.04237772874487082,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.002876970708921926,
+      "timestamp_skew_seconds": 260.381
+    }
   },
   {
     "id": "AZTEC/USDC",
@@ -173,7 +197,22 @@
     "internal_id": "spot-BERA-USDC",
     "symbol": "BERA",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "BERAUSDT",
+      "exchange_price": 0.193,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:20.361000Z",
+      "cmc_id": 24647,
+      "cmc_slug": "berachain",
+      "cmc_price_usd": 0.1925014395511853,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.0025832147606980136,
+      "timestamp_skew_seconds": 260.361
+    }
   },
   {
     "id": "BID/USDC",
@@ -381,7 +420,16 @@
     "internal_id": "spot-CREAM-USDC",
     "symbol": "CREAM",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "CREAMUSDT",
+      "exchange_price": 2.1,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "CZ/USDC",
@@ -469,7 +517,16 @@
     "internal_id": "spot-FARM-USDC",
     "symbol": "FARM",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "FARMUSDT",
+      "exchange_price": 5.8,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "FARMED/USDC",
@@ -581,7 +638,16 @@
     "internal_id": "spot-FUN-USDC",
     "symbol": "FUN",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "FUNUSDT",
+      "exchange_price": 0.000342,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "FUND/USDC",
@@ -613,7 +679,22 @@
     "internal_id": "spot-G-USDC",
     "symbol": "G",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "GUSDT",
+      "exchange_price": 0.00356,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:18.572000Z",
+      "cmc_id": 32120,
+      "cmc_slug": "gravity-token",
+      "cmc_price_usd": 0.003553180398466408,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.0019156184083123475,
+      "timestamp_skew_seconds": 258.572
+    }
   },
   {
     "id": "GENESY/USDC",
@@ -1013,7 +1094,22 @@
     "internal_id": "spot-KITE-USDC",
     "symbol": "KITE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "KITEUSDT",
+      "exchange_price": 0.1237,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:13.240000Z",
+      "cmc_id": 38828,
+      "cmc_slug": "kite",
+      "cmc_price_usd": 0.12376005586054246,
+      "cmc_last_updated": "2026-07-15T14:46:00Z",
+      "relative_difference": 0.00048549604318884424,
+      "timestamp_skew_seconds": 193.24
+    }
   },
   {
     "id": "KITTEN/USDC",
@@ -1309,7 +1405,16 @@
     "internal_id": "spot-NBT-USDC",
     "symbol": "NBT",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "NBTUSDT",
+      "exchange_price": 0.00252,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "NEIRO/USDC",
@@ -1317,7 +1422,16 @@
     "internal_id": "spot-NEIRO-USDC",
     "symbol": "NEIRO",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "NEIROUSDT",
+      "exchange_price": 6.248e-05,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:17.173000Z"
+    }
   },
   {
     "id": "NEKO/USDC",
@@ -1453,7 +1567,16 @@
     "internal_id": "spot-PEPE-USDC",
     "symbol": "PEPE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "PEPEUSDT",
+      "exchange_price": 2.88e-06,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:21.220000Z"
+    }
   },
   {
     "id": "PERP/USDC",
@@ -1461,7 +1584,16 @@
     "internal_id": "spot-PERP-USDC",
     "symbol": "PERP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "PERPUSDT",
+      "exchange_price": 0.125,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "PICKL/USDC",
@@ -1517,7 +1649,22 @@
     "internal_id": "spot-PUMP-USDC",
     "symbol": "PUMP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "PUMPUSDT",
+      "exchange_price": 0.001636,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:21.136000Z",
+      "cmc_id": 36507,
+      "cmc_slug": "pump-fun",
+      "cmc_price_usd": 0.0016297020901149002,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.0038495781693764874,
+      "timestamp_skew_seconds": 261.136
+    }
   },
   {
     "id": "PUP/USDC",
@@ -1622,7 +1769,16 @@
     "internal_id": "spot-REI-USDC",
     "symbol": "REI",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "stale_price",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "REIUSDT",
+      "exchange_price": 0.00401,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-07T07:11:58.332000Z"
+    }
   },
   {
     "id": "RETARD/USDC",
@@ -1742,7 +1898,22 @@
     "internal_id": "spot-SENT-USDC",
     "symbol": "SENT",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "SENTUSDT",
+      "exchange_price": 0.01344,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:19.110000Z",
+      "cmc_id": 38868,
+      "cmc_slug": "sentient",
+      "cmc_price_usd": 0.013436779582625454,
+      "cmc_last_updated": "2026-07-15T14:46:00Z",
+      "relative_difference": 0.000239614387987079,
+      "timestamp_skew_seconds": 199.11
+    }
   },
   {
     "id": "SHEEP/USDC",
@@ -1774,7 +1945,22 @@
     "internal_id": "spot-SIGN-USDC",
     "symbol": "SIGN",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "SIGNUSDT",
+      "exchange_price": 0.00876,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:18.977000Z",
+      "cmc_id": 35600,
+      "cmc_slug": "sign",
+      "cmc_price_usd": 0.008729929642813081,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.00343268917658893,
+      "timestamp_skew_seconds": 258.977
+    }
   },
   {
     "id": "SIX/USDC",
@@ -1806,7 +1992,22 @@
     "internal_id": "spot-SOLV-USDC",
     "symbol": "SOLV",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "SOLVUSDT",
+      "exchange_price": 0.00267,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:13.592000Z",
+      "cmc_id": 12165,
+      "cmc_slug": "solv-protocol",
+      "cmc_price_usd": 0.002684998540879458,
+      "cmc_last_updated": "2026-07-15T14:46:00Z",
+      "relative_difference": 0.0056174310409954995,
+      "timestamp_skew_seconds": 193.592
+    }
   },
   {
     "id": "SOON/USDC",
@@ -2014,7 +2215,22 @@
     "internal_id": "spot-TRUMP-USDC",
     "symbol": "TRUMP",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "TRUMPUSDT",
+      "exchange_price": 1.574,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:20.248000Z",
+      "cmc_id": 35336,
+      "cmc_slug": "official-trump",
+      "cmc_price_usd": 1.5721847849828583,
+      "cmc_last_updated": "2026-07-15T14:46:00Z",
+      "relative_difference": 0.0011532496932285699,
+      "timestamp_skew_seconds": 200.248
+    }
   },
   {
     "id": "TRX1/USDC",
@@ -2166,7 +2382,22 @@
     "internal_id": "spot-USDE-USDC",
     "symbol": "USDE",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "USDEUSDT",
+      "exchange_price": 1.0006,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:07.544000Z",
+      "cmc_id": 29470,
+      "cmc_slug": "ethena-usde",
+      "cmc_price_usd": 0.999729151457171,
+      "cmc_last_updated": "2026-07-15T14:46:00Z",
+      "relative_difference": 0.0008703263470207157,
+      "timestamp_skew_seconds": 187.544
+    }
   },
   {
     "id": "USDH/USDC",
@@ -2494,6 +2725,21 @@
     "internal_id": "spot-ZAMA-USDC",
     "symbol": "ZAMA",
     "denominator": "USDC",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "cmc_probe": {
+      "status": "price_compatible",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-spot",
+      "exchange_instrument_id": "ZAMAUSDT",
+      "exchange_price": 0.03375,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T14:49:15.041000Z",
+      "cmc_id": 39332,
+      "cmc_slug": "zama",
+      "cmc_price_usd": 0.03364483184161771,
+      "cmc_last_updated": "2026-07-15T14:45:00Z",
+      "relative_difference": 0.003116093581697456,
+      "timestamp_skew_seconds": 255.041
+    }
   }
 ]

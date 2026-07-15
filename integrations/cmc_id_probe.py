@@ -29,7 +29,7 @@ REQUEST_TIMEOUT_SECONDS = 20
 class JsonResponse(Protocol):
     def raise_for_status(self) -> None: ...
 
-    def json(self) -> dict[str, Any]: ...
+    def json(self) -> Any: ...
 
 
 class JsonSession(Protocol):
@@ -94,6 +94,7 @@ class CatalogueDiagnostics:
     unique_ids: int
     duplicate_ids: tuple[int, ...]
     malformed_rows: int
+    total_count_changed: bool
 
     @property
     def is_complete(self) -> bool:
@@ -101,6 +102,7 @@ class CatalogueDiagnostics:
             self.reported_total == self.unique_ids
             and not self.duplicate_ids
             and self.malformed_rows == 0
+            and not self.total_count_changed
         )
 
 
@@ -110,7 +112,7 @@ class CmcCatalogue:
     diagnostics: CatalogueDiagnostics
 
 
-def fetch_cmc_catalogue(
+def fetch_cmc_catalogue(  # noqa: PLR0912 - pagination diagnostics are intentionally explicit
     session: JsonSession,
     page_size: int = DEFAULT_PAGE_SIZE,
     max_attempts: int = 3,
@@ -126,6 +128,7 @@ def fetch_cmc_catalogue(
     malformed_rows = 0
     returned_rows = 0
     reported_total: int | None = None
+    total_count_changed = False
     start = 1
 
     while True:
@@ -135,6 +138,8 @@ def fetch_cmc_catalogue(
             {"start": start, "limit": page_size, "convert": "USD"},
             max_attempts,
         )
+        if not isinstance(payload, dict):
+            raise CmcProbeError("CMC response is not a JSON object")
         try:
             data = payload["data"]
             page = data["cryptoCurrencyList"]
@@ -151,7 +156,7 @@ def fetch_cmc_catalogue(
         if reported_total is None:
             reported_total = parsed_total
         elif parsed_total != reported_total:
-            raise CmcProbeError("CMC totalCount changed during pagination")
+            total_count_changed = True
 
         returned_rows += len(page)
         for item in page:
@@ -177,6 +182,7 @@ def fetch_cmc_catalogue(
         unique_ids=len(assets_by_id),
         duplicate_ids=tuple(sorted(duplicate_ids)),
         malformed_rows=malformed_rows,
+        total_count_changed=total_count_changed,
     )
     return CmcCatalogue(tuple(assets_by_id.values()), diagnostics)
 
@@ -191,6 +197,8 @@ def fetch_binance_spot_price(
         {"symbol": f"{base_symbol.upper()}USDT"},
         max_attempts=3,
     )
+    if not isinstance(payload, dict):
+        raise CmcProbeError(f"invalid Binance spot ticker for {base_symbol}")
     try:
         price = float(payload["lastPrice"])
         close_time_ms = int(payload["closeTime"])
@@ -205,6 +213,41 @@ def fetch_binance_spot_price(
         venue="binance-spot",
         instrument_id=f"{base_symbol.upper()}USDT",
     )
+
+
+def fetch_binance_spot_prices(
+    session: JsonSession, base_symbols: Iterable[str]
+) -> dict[str, PriceObservation]:
+    """Fetch one timestamped USDT spot observation for each requested base symbol."""
+    requested_symbols = {symbol.upper() for symbol in base_symbols if symbol}
+    payload = _get_json(session, BINANCE_SPOT_TICKER_URL, {}, max_attempts=3)
+    if not isinstance(payload, list):
+        raise CmcProbeError("Binance spot ticker response is not a list")
+    tickers = {
+        ticker.get("symbol"): ticker
+        for ticker in payload
+        if isinstance(ticker, dict) and isinstance(ticker.get("symbol"), str)
+    }
+    observations: dict[str, PriceObservation] = {}
+    for base_symbol in requested_symbols:
+        ticker = tickers.get(f"{base_symbol}USDT")
+        if ticker is None:
+            continue
+        try:
+            price = float(ticker["lastPrice"])
+            close_time_ms = int(ticker["closeTime"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if not math.isfinite(price) or price <= 0:
+            continue
+        observations[base_symbol] = PriceObservation(
+            price=price,
+            quote_currency="USDT",
+            observed_at=datetime.fromtimestamp(close_time_ms / 1000, tz=UTC),
+            venue="binance-spot",
+            instrument_id=f"{base_symbol}USDT",
+        )
+    return observations
 
 
 def candidates_for_symbol(assets: Iterable[CmcAsset], symbol: str) -> list[CmcAsset]:
@@ -269,7 +312,7 @@ def _get_json(
     url: str,
     params: dict[str, Any],
     max_attempts: int,
-) -> dict[str, Any]:
+) -> Any:
     error: Exception | None = None
     for attempt in range(max_attempts):
         try:
@@ -283,10 +326,7 @@ def _get_json(
                 },
             )
             response.raise_for_status()
-            payload = response.json()
-            if not isinstance(payload, dict):
-                raise CmcProbeError("API response is not a JSON object")
-            return payload
+            return response.json()
         except (CmcProbeError, requests.RequestException, ValueError) as exc:
             error = exc
             if attempt + 1 < max_attempts:
@@ -352,6 +392,7 @@ def main() -> int:
                 f"unique_ids={diagnostics.unique_ids} "
                 f"duplicate_ids={len(diagnostics.duplicate_ids)} "
                 f"malformed_rows={diagnostics.malformed_rows} "
+                f"total_count_changed={diagnostics.total_count_changed} "
                 f"complete={diagnostics.is_complete}",
                 file=sys.stderr,
             )
