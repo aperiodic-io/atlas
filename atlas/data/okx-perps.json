@@ -5530,12 +5530,12 @@
     "id": "SNXX-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-14T00:00:00.000Z",
     "internal_id": "perpetual-SNXX-USDT:USDT",
     "symbol": "SNXX",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-14T00:00:00.000Z"
   },
   {
     "id": "SOFTBANK-USDT-SWAP",
@@ -5744,12 +5744,12 @@
     "id": "SQQQ-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-14T00:00:00.000Z",
     "internal_id": "perpetual-SQQQ-USDT:USDT",
     "symbol": "SQQQ",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-14T00:00:00.000Z"
   },
   {
     "id": "SRM-USDT-SWAP",
@@ -6842,12 +6842,12 @@
     "id": "XBI-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-14T00:00:00.000Z",
     "internal_id": "perpetual-XBI-USDT:USDT",
     "symbol": "XBI",
     "denominator": "USDT",
     "margin": "USDT",
-    "contract_type": "perpetual"
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-14T00:00:00.000Z"
   },
   {
     "id": "XCH-USDT-SWAP",

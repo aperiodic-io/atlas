@@ -3824,6 +3824,16 @@
     "first_capture": "2026-01-27T00:00:00.000Z"
   },
   {
+    "id": "xyz:CXMT",
+    "type": "perpetual",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:CXMT-USDC:USDC",
+    "symbol": "XYZ:CXMT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "xyz:DELL",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:DELL-USDC:USDC",
