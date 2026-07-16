@@ -8,7 +8,48 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-03-07T00:00:00.000Z"
+    "first_capture": "2024-03-07T00:00:00.000Z",
+    "cmc_lookup_symbol": "PEPE",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "1000PEPEUSDT",
+      "exchange_price": 2.7861000000000003e-06,
+      "exchange_base_units_per_contract": 1000.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.597000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 22454,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepepad-vip",
+        "cmc_price_usd": 2.79044841e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 24478,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepe",
+        "cmc_price_usd": 2.7853318e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 24549,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "arbi-pepe",
+        "cmc_price_usd": 2.78180937e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 32527,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepe-of-solana",
+        "cmc_price_usd": 4.33244961e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "1000pepeusdt",
@@ -19,7 +60,48 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2023-05-05T00:00:00.000Z"
+    "first_capture": "2023-05-05T00:00:00.000Z",
+    "cmc_lookup_symbol": "PEPE",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "1000PEPEUSDT",
+      "exchange_price": 2.7861000000000003e-06,
+      "exchange_base_units_per_contract": 1000.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.597000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 22454,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepepad-vip",
+        "cmc_price_usd": 2.79044841e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 24478,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepe",
+        "cmc_price_usd": 2.7853318e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 24549,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "arbi-pepe",
+        "cmc_price_usd": 2.78180937e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 32527,
+        "cmc_symbol": "PEPE",
+        "cmc_slug": "pepe-of-solana",
+        "cmc_price_usd": 4.33244961e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "1000shibbusd",
@@ -30,7 +112,34 @@
     "margin": "BUSD",
     "contract_type": "perpetual",
     "first_capture": "2022-07-20T00:00:00.000Z",
-    "end_date": "2023-06-02T00:00:00.000Z"
+    "end_date": "2023-06-02T00:00:00.000Z",
+    "cmc_lookup_symbol": "SHIB",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "1000SHIBUSDT",
+      "exchange_price": 4.214e-06,
+      "exchange_base_units_per_contract": 1000.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.330000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5994,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shiba-inu",
+        "cmc_price_usd": 4.23303104e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 31501,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shib-on-solana",
+        "cmc_price_usd": 4.22981012e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "1000shibusdc",
@@ -41,7 +150,34 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-03-28T00:00:00.000Z"
+    "first_capture": "2024-03-28T00:00:00.000Z",
+    "cmc_lookup_symbol": "SHIB",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "1000SHIBUSDT",
+      "exchange_price": 4.214e-06,
+      "exchange_base_units_per_contract": 1000.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.330000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5994,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shiba-inu",
+        "cmc_price_usd": 4.23303104e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 31501,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shib-on-solana",
+        "cmc_price_usd": 4.22981012e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "1000shibusdt",
@@ -52,7 +188,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2021-05-10T00:00:00.000Z"
+    "first_capture": "2021-05-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "SHIB",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "1000SHIBUSDT",
+      "exchange_price": 4.214e-06,
+      "exchange_base_units_per_contract": 1000.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.330000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5994,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shiba-inu",
+        "cmc_price_usd": 4.23303104e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 31501,
+        "cmc_symbol": "SHIB",
+        "cmc_slug": "shib-on-solana",
+        "cmc_price_usd": 4.22981012e-06,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "aaplusdt",
@@ -63,7 +226,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-06T00:00:00.000Z"
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "AAPL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "AAPLUSDT",
+      "exchange_price": 327.37,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.452000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39491,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-inc-derivatives",
+        "cmc_price_usd": 327.4654846191,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39624,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 323.5703656346,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40703,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
   },
   {
     "id": "altusdt",
@@ -74,7 +271,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-01-25T00:00:00.000Z"
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "cmc_lookup_symbol": "ALT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ALTUSDT",
+      "exchange_price": 0.006532,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:06.104000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 10897,
+        "cmc_symbol": "ALT",
+        "cmc_slug": "alitas",
+        "cmc_price_usd": 0.00654074346415,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 29073,
+        "cmc_symbol": "ALT",
+        "cmc_slug": "altlayer",
+        "cmc_price_usd": 0.00649506785936,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "amznusdt",
@@ -85,7 +309,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-02-09T00:00:00.000Z"
+    "first_capture": "2026-02-09T00:00:00.000Z",
+    "cmc_lookup_symbol": "AMZN",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "AMZNUSDT",
+      "exchange_price": 254.64,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.222000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39471,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-com-inc-derivatives",
+        "cmc_price_usd": 255.2824746249,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39619,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 256.4448114735,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40718,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
   },
   {
     "id": "apebusd",
@@ -96,7 +354,34 @@
     "margin": "BUSD",
     "contract_type": "perpetual",
     "first_capture": "2022-05-19T00:00:00.000Z",
-    "end_date": "2023-05-17T00:00:00.000Z"
+    "end_date": "2023-05-17T00:00:00.000Z",
+    "cmc_lookup_symbol": "APE",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "APEUSDT",
+      "exchange_price": 0.1549,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:22.900000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 7257,
+        "cmc_symbol": "APE",
+        "cmc_slug": "apecoin",
+        "cmc_price_usd": 0.1529918564,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 18876,
+        "cmc_symbol": "APE",
+        "cmc_slug": "apecoin-ape",
+        "cmc_price_usd": 0.1529645089,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "apeusdt",
@@ -107,7 +392,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2022-03-17T00:00:00.000Z"
+    "first_capture": "2022-03-17T00:00:00.000Z",
+    "cmc_lookup_symbol": "APE",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "APEUSDT",
+      "exchange_price": 0.1549,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:22.900000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 7257,
+        "cmc_symbol": "APE",
+        "cmc_slug": "apecoin",
+        "cmc_price_usd": 0.1529918564,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 18876,
+        "cmc_symbol": "APE",
+        "cmc_slug": "apecoin-ape",
+        "cmc_price_usd": 0.1529645089,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "arcusdt",
@@ -118,7 +430,19 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-01-17T00:00:00.000Z"
+    "first_capture": "2025-01-17T00:00:00.000Z",
+    "cmc_lookup_symbol": "ARC",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ARCUSDT",
+      "exchange_price": 0.07698,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:28.413000Z"
+    },
+    "cmc_candidates": []
   },
   {
     "id": "botusdt",
@@ -128,349 +452,34 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2026-07-09T00:00:00.000Z"
-  },
-  {
-    "id": "btcbusd",
-    "type": "perpetual",
-    "internal_id": "perpetual-BTC-BUSD:BUSD",
-    "symbol": "BTC",
-    "denominator": "BUSD",
-    "margin": "BUSD",
-    "contract_type": "perpetual",
-    "first_capture": "2021-01-12T00:00:00.000Z",
-    "end_date": "2023-12-12T00:00:00.000Z"
-  },
-  {
-    "id": "btcu",
-    "type": "perpetual",
-    "internal_id": "perpetual-BTC-U:BTC",
-    "symbol": "BTC",
-    "denominator": "U",
-    "margin": "BTC",
-    "contract_type": "perpetual",
-    "first_capture": "2026-07-01T00:00:00.000Z"
-  },
-  {
-    "id": "btcusd1",
-    "type": "perpetual",
-    "internal_id": "perpetual-BTC-USD1:BTC",
-    "symbol": "BTC",
-    "denominator": "USD1",
-    "margin": "BTC",
-    "contract_type": "perpetual",
-    "contract_size": 1.0,
-    "first_capture": "2026-05-18T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdc",
-    "type": "perpetual",
-    "internal_id": "perpetual-BTC-USDC:USDC",
-    "symbol": "BTC",
-    "denominator": "USDC",
-    "margin": "USDC",
-    "contract_type": "perpetual",
-    "contract_size": 1.0,
-    "first_capture": "2024-01-04T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt",
-    "type": "perpetual",
-    "internal_id": "perpetual-BTC-USDT:USDT",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "perpetual",
-    "contract_size": 1.0,
-    "first_capture": "2019-11-17T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_210326",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20210326",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2021-03-26T00:00:00",
-    "first_capture": "2021-02-03T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_210625",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20210625",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2021-06-25T00:00:00",
-    "first_capture": "2021-03-16T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_210924",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20210924",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2021-09-24T00:00:00",
-    "first_capture": "2021-06-18T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_211231",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20211231",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2021-12-31T00:00:00",
-    "first_capture": "2021-09-22T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_220325",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20220325",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2022-03-25T00:00:00",
-    "first_capture": "2021-12-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_220624",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20220624",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2022-06-24T00:00:00",
-    "first_capture": "2022-03-22T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_220930",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20220930",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2022-09-30T00:00:00",
-    "first_capture": "2022-06-20T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_221230",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20221230",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2022-12-30T00:00:00",
-    "first_capture": "2022-09-23T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_230331",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20230331",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2023-03-31T00:00:00",
-    "first_capture": "2022-12-23T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_230630",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20230630",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2023-06-30T00:00:00",
-    "first_capture": "2023-03-27T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_230929",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20230929",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2023-09-29T00:00:00",
-    "first_capture": "2023-06-25T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_231229",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20231229",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2023-12-29T00:00:00",
-    "first_capture": "2023-08-18T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_240329",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20240329",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2024-03-29T00:00:00",
-    "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_240628",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20240628",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2024-06-28T00:00:00",
-    "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_240927",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20240927",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2024-09-27T00:00:00",
-    "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_241227",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20241227",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2024-12-27T00:00:00",
-    "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_250328",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20250328",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2025-03-28T00:00:00",
-    "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_250627",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20250627",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2025-06-27T00:00:00",
-    "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_250926",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20250926",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2025-09-26T00:00:00",
-    "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_251226",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20251226",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2025-12-26T00:00:00",
-    "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_260327",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20260327",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2026-03-27T00:00:00",
-    "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_260626",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20260626",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2026-06-26T00:00:00",
-    "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_260925",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20260925",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2026-09-25T00:00:00",
-    "contract_size": 1.0,
-    "first_capture": "2026-03-27T00:00:00.000Z"
-  },
-  {
-    "id": "btcusdt_261225",
-    "type": "future",
-    "internal_id": "future-BTC-USDT:USDT-20261225",
-    "symbol": "BTC",
-    "denominator": "USDT",
-    "margin": "USDT",
-    "contract_type": "future",
-    "delivery_date": "2026-12-25T00:00:00",
-    "contract_size": 1.0,
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "cmc_lookup_symbol": "BOT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "BOTUSDT",
+      "exchange_price": 31.54,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:20.012000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 40584,
+        "cmc_symbol": "BOT",
+        "cmc_slug": "robostrategy-inc-derivatives",
+        "cmc_price_usd": 32.8561788891,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40816,
+        "cmc_symbol": "BOT",
+        "cmc_slug": "robostrategy-inc-tokenized-stock-backpack",
+        "cmc_price_usd": 32.648682344,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethbtc",
@@ -481,7 +490,34 @@
     "margin": "ETH",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2023-04-26T00:00:00.000Z"
+    "first_capture": "2023-04-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethbusd",
@@ -492,7 +528,34 @@
     "margin": "BUSD",
     "contract_type": "perpetual",
     "first_capture": "2021-06-16T00:00:00.000Z",
-    "end_date": "2023-12-12T00:00:00.000Z"
+    "end_date": "2023-12-12T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethu",
@@ -502,7 +565,34 @@
     "denominator": "U",
     "margin": "ETH",
     "contract_type": "perpetual",
-    "first_capture": "2026-07-01T00:00:00.000Z"
+    "first_capture": "2026-07-01T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusd1",
@@ -512,7 +602,34 @@
     "denominator": "USD1",
     "margin": "ETH",
     "contract_type": "perpetual",
-    "first_capture": "2026-07-03T00:00:00.000Z"
+    "first_capture": "2026-07-03T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdc",
@@ -523,7 +640,34 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-01-04T00:00:00.000Z"
+    "first_capture": "2024-01-04T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt",
@@ -534,7 +678,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2019-11-27T00:00:00.000Z"
+    "first_capture": "2019-11-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_210326",
@@ -546,7 +717,34 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2021-02-04T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_210625",
@@ -558,7 +756,34 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2021-03-16T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_210924",
@@ -570,7 +795,34 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-06-21T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_211231",
@@ -582,7 +834,34 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-09-22T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_220325",
@@ -594,7 +873,34 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-12-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_220624",
@@ -606,7 +912,34 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2022-03-22T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_220930",
@@ -618,7 +951,34 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-06-20T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_221230",
@@ -630,7 +990,34 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-09-23T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_230331",
@@ -642,7 +1029,34 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-12-23T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_230630",
@@ -654,7 +1068,34 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2023-03-27T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_230929",
@@ -666,7 +1107,34 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-06-25T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_231229",
@@ -678,7 +1146,34 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-08-18T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_240329",
@@ -690,7 +1185,34 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_240628",
@@ -702,7 +1224,34 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_240927",
@@ -714,7 +1263,34 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_241227",
@@ -726,7 +1302,34 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_250328",
@@ -738,7 +1341,34 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_250627",
@@ -750,7 +1380,34 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_250926",
@@ -762,7 +1419,34 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_251226",
@@ -774,7 +1458,34 @@
     "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_260327",
@@ -786,7 +1497,34 @@
     "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_260626",
@@ -798,7 +1536,34 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_260925",
@@ -810,7 +1575,34 @@
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 1.0,
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ethusdt_261225",
@@ -822,7 +1614,34 @@
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 1.0,
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "ETH",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ETHUSDT",
+      "exchange_price": 1921.95,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.237000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1027,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "ethereum",
+        "cmc_price_usd": 1916.9437417236,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39555,
+        "cmc_symbol": "ETH",
+        "cmc_slug": "bridged-eth-near-intents",
+        "cmc_price_usd": 1913.0726107159,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "googlusdt",
@@ -833,7 +1652,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-03-26T00:00:00.000Z"
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "GOOGL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "GOOGLUSDT",
+      "exchange_price": 370.77,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.701000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39470,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-inc-derivatives",
+        "cmc_price_usd": 371.9130702266,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39622,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 370.160339181,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40757,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-class-a-tokenized-stock-robinhood",
+        "cmc_price_usd": 357.5070955071,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "homeusdt",
@@ -844,7 +1697,19 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-06-10T00:00:00.000Z"
+    "first_capture": "2025-06-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "HOME",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "HOMEUSDT",
+      "exchange_price": 0.01355,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.880000Z"
+    },
+    "cmc_candidates": []
   },
   {
     "id": "hoodusdt",
@@ -855,7 +1720,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-02-02T00:00:00.000Z"
+    "first_capture": "2026-02-02T00:00:00.000Z",
+    "cmc_lookup_symbol": "HOOD",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "HOODUSDT",
+      "exchange_price": 115.17,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.611000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39478,
+        "cmc_symbol": "HOOD",
+        "cmc_slug": "robinhood-markets-derivatives",
+        "cmc_price_usd": 115.5210359309,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39625,
+        "cmc_symbol": "HOOD",
+        "cmc_slug": "robinhood-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 113.7955104948,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "hotusdt",
@@ -866,7 +1758,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2021-03-30T00:00:00.000Z"
+    "first_capture": "2021-03-30T00:00:00.000Z",
+    "cmc_lookup_symbol": "HOT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "HOTUSDT",
+      "exchange_price": 0.0003563,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:17:55.796000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 2430,
+        "cmc_symbol": "HOT",
+        "cmc_slug": "hydro-protocol",
+        "cmc_price_usd": 0.00035843781989,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 2682,
+        "cmc_symbol": "HOT",
+        "cmc_slug": "holo",
+        "cmc_price_usd": 0.00035895184878,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "lightusdt",
@@ -877,7 +1796,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-09-27T00:00:00.000Z"
+    "first_capture": "2025-09-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "LIGHT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "LIGHTUSDT",
+      "exchange_price": 0.1266,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:26.939000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 37986,
+        "cmc_symbol": "LIGHT",
+        "cmc_slug": "light",
+        "cmc_price_usd": 0.1261385605,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 38506,
+        "cmc_symbol": "LIGHT",
+        "cmc_slug": "bitlight",
+        "cmc_price_usd": 0.1268399993,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "mavusdt",
@@ -888,7 +1834,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2023-06-29T00:00:00.000Z"
+    "first_capture": "2023-06-29T00:00:00.000Z",
+    "cmc_lookup_symbol": "MAV",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MAVUSDT",
+      "exchange_price": 0.00944,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:10.767000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 18037,
+        "cmc_symbol": "MAV",
+        "cmc_slug": "maverick-protocol",
+        "cmc_price_usd": 0.0093425776954,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 19642,
+        "cmc_symbol": "MAV",
+        "cmc_slug": "massive-protocol",
+        "cmc_price_usd": 0.00929320246713,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "memeusdt",
@@ -899,7 +1872,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2023-11-03T00:00:00.000Z"
+    "first_capture": "2023-11-03T00:00:00.000Z",
+    "cmc_lookup_symbol": "MEME",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MEMEUSDT",
+      "exchange_price": 0.0005399,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:22.360000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 1191,
+        "cmc_symbol": "MEME",
+        "cmc_slug": "memetic",
+        "cmc_price_usd": 0.00054008507345,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 18938,
+        "cmc_symbol": "MEME",
+        "cmc_slug": "memeverse",
+        "cmc_price_usd": 0.00054298067245,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 28301,
+        "cmc_symbol": "MEME",
+        "cmc_slug": "meme",
+        "cmc_price_usd": 0.00054256138672,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "metausdt",
@@ -910,7 +1917,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-03-26T00:00:00.000Z"
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "META",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "METAUSDT",
+      "exchange_price": 676.78,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.403000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39513,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-inc-derivatives",
+        "cmc_price_usd": 679.7791784303,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39615,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 679.7837062969,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40780,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
   },
   {
     "id": "monusdt",
@@ -921,7 +1962,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-10-10T00:00:00.000Z"
+    "first_capture": "2025-10-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "MON",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MONUSDT",
+      "exchange_price": 0.02217,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:07.003000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5066,
+        "cmc_symbol": "MON",
+        "cmc_slug": "moneybyte",
+        "cmc_price_usd": 0.0223283724,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 30495,
+        "cmc_symbol": "MON",
+        "cmc_slug": "monad",
+        "cmc_price_usd": 0.0222826558,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "msftusdt",
@@ -932,7 +2000,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-20T00:00:00.000Z"
+    "first_capture": "2026-04-20T00:00:00.000Z",
+    "cmc_lookup_symbol": "MSFT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MSFTUSDT",
+      "exchange_price": 395.5,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.543000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39495,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-corporation-derivatives",
+        "cmc_price_usd": 397.0751138368,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39616,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 399.3540565105,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40695,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-tokenized-stock-robinhood",
+        "cmc_price_usd": 396.668062307,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "muusdt",
@@ -943,7 +2045,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-07T00:00:00.000Z"
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "cmc_lookup_symbol": "MU",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MUUSDT",
+      "exchange_price": 900.45,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.611000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39469,
+        "cmc_symbol": "MU",
+        "cmc_slug": "micron-technology-inc-derivatives",
+        "cmc_price_usd": 897.1255432954,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40817,
+        "cmc_symbol": "MU",
+        "cmc_slug": "micron-technology-inc-tokenized-stock-backpack",
+        "cmc_price_usd": 897.1573291163,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "neiroethusdt",
@@ -954,7 +2083,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2024-09-06T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "NEIRO",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "NEIROUSDT",
+      "exchange_price": 6.198e-05,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:06.228000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 32521,
+        "cmc_symbol": "NEIRO",
+        "cmc_slug": "neiro",
+        "cmc_price_usd": 6.207891539e-05,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 32985,
+        "cmc_symbol": "NEIRO",
+        "cmc_slug": "neiro-trxneiro-com",
+        "cmc_price_usd": 6.492857737e-05,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "neirousdt",
@@ -965,7 +2121,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-09-16T00:00:00.000Z"
+    "first_capture": "2024-09-16T00:00:00.000Z",
+    "cmc_lookup_symbol": "NEIRO",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "NEIROUSDT",
+      "exchange_price": 6.198e-05,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:06.228000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 32521,
+        "cmc_symbol": "NEIRO",
+        "cmc_slug": "neiro",
+        "cmc_price_usd": 6.207891539e-05,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 32985,
+        "cmc_symbol": "NEIRO",
+        "cmc_slug": "neiro-trxneiro-com",
+        "cmc_price_usd": 6.492857737e-05,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "nightusdt",
@@ -976,7 +2159,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-12-10T00:00:00.000Z"
+    "first_capture": "2025-12-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "NIGHT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "NIGHTUSDT",
+      "exchange_price": 0.02904,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:26.413000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 31374,
+        "cmc_symbol": "NIGHT",
+        "cmc_slug": "midnight-vip",
+        "cmc_price_usd": 0.0293494195,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39064,
+        "cmc_symbol": "NIGHT",
+        "cmc_slug": "midnight-network",
+        "cmc_price_usd": 0.0293860302,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "nvdausdt",
@@ -987,7 +2197,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-03-26T00:00:00.000Z"
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "NVDA",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "NVDAUSDT",
+      "exchange_price": 211.41,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.447000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 38153,
+        "cmc_symbol": "NVDA",
+        "cmc_slug": "nvidia-derivatives",
+        "cmc_price_usd": 211.1377758022,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40685,
+        "cmc_symbol": "NVDA",
+        "cmc_slug": "nvidia-tokenized-stock-robinhood",
+        "cmc_price_usd": 211.0336513524,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "peopleusdt",
@@ -998,7 +2235,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2021-12-24T00:00:00.000Z"
+    "first_capture": "2021-12-24T00:00:00.000Z",
+    "cmc_lookup_symbol": "PEOPLE",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "PEOPLEUSDT",
+      "exchange_price": 0.005728,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.896000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 14806,
+        "cmc_symbol": "PEOPLE",
+        "cmc_slug": "constitutiondao",
+        "cmc_price_usd": 0.00574518407774,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 32079,
+        "cmc_symbol": "PEOPLE",
+        "cmc_slug": "maga-peopletoken",
+        "cmc_price_usd": 0.00574400531958,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "qqqusdt",
@@ -1009,7 +2273,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-06T00:00:00.000Z"
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "QQQ",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "QQQUSDT",
+      "exchange_price": 716.18,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:24.573000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39517,
+        "cmc_symbol": "QQQ",
+        "cmc_slug": "ustech-derivatives",
+        "cmc_price_usd": 717.2222337037,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39623,
+        "cmc_symbol": "QQQ",
+        "cmc_slug": "invesco-qqq-trust-tokenized-etf-hyperliquid",
+        "cmc_price_usd": 716.0159089004,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "skhyusdt",
@@ -1019,7 +2310,19 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_type": "perpetual",
-    "first_capture": "2026-07-10T00:00:00.000Z"
+    "first_capture": "2026-07-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "SKHY",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SKHYUSDT",
+      "exchange_price": 173.76,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:35.230000Z"
+    },
+    "cmc_candidates": []
   },
   {
     "id": "sndkusdt",
@@ -1030,7 +2333,19 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-07T00:00:00.000Z"
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "cmc_lookup_symbol": "SNDK",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SNDKUSDT",
+      "exchange_price": 1619.31,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.570000Z"
+    },
+    "cmc_candidates": []
   },
   {
     "id": "solbusd",
@@ -1041,7 +2356,34 @@
     "margin": "BUSD",
     "contract_type": "perpetual",
     "first_capture": "2021-09-03T00:00:00.000Z",
-    "end_date": "2023-08-29T00:00:00.000Z"
+    "end_date": "2023-08-29T00:00:00.000Z",
+    "cmc_lookup_symbol": "SOL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SOLUSDT",
+      "exchange_price": 77.36,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.306000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5426,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "solana",
+        "cmc_price_usd": 77.2640646027,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 16116,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "wrapped-solana",
+        "cmc_price_usd": 77.331370482,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "solusdc",
@@ -1052,7 +2394,34 @@
     "margin": "USDC",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-01-04T00:00:00.000Z"
+    "first_capture": "2024-01-04T00:00:00.000Z",
+    "cmc_lookup_symbol": "SOL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SOLUSDT",
+      "exchange_price": 77.36,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.306000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5426,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "solana",
+        "cmc_price_usd": 77.2640646027,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 16116,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "wrapped-solana",
+        "cmc_price_usd": 77.331370482,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "solusdt",
@@ -1063,7 +2432,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2020-09-14T00:00:00.000Z"
+    "first_capture": "2020-09-14T00:00:00.000Z",
+    "cmc_lookup_symbol": "SOL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SOLUSDT",
+      "exchange_price": 77.36,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.306000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5426,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "solana",
+        "cmc_price_usd": 77.2640646027,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 16116,
+        "cmc_symbol": "SOL",
+        "cmc_slug": "wrapped-solana",
+        "cmc_price_usd": 77.331370482,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "spcxusdt",
@@ -1074,7 +2470,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-05-21T00:00:00.000Z"
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "cmc_lookup_symbol": "SPCX",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SPCXUSDT",
+      "exchange_price": 134.26,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:31.290000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39501,
+        "cmc_symbol": "SPCX",
+        "cmc_slug": "spacex-derivatives",
+        "cmc_price_usd": 135.8624748996,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40238,
+        "cmc_symbol": "SPCX",
+        "cmc_slug": "spacex-tokenized-stock-backpack",
+        "cmc_price_usd": 136.1465342855,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "spyusdt",
@@ -1085,7 +2508,41 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-04-06T00:00:00.000Z"
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "SPY",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SPYUSDT",
+      "exchange_price": 753.99,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:07.915000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39621,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "spdr-sp-500-etf-trust-tokenized-etf-hyperliquid",
+        "cmc_price_usd": 750.6084643662,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39732,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "state-street-spdr-sp-500-etf-trust-derivatives",
+        "cmc_price_usd": 754.5510548902,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40694,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "spdr-sp-500-trust-tokenized-etf-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
   },
   {
     "id": "strkusdt",
@@ -1096,7 +2553,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2024-02-20T00:00:00.000Z"
+    "first_capture": "2024-02-20T00:00:00.000Z",
+    "cmc_lookup_symbol": "STRK",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "STRKUSDT",
+      "exchange_price": 0.02884,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.441000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 8911,
+        "cmc_symbol": "STRK",
+        "cmc_slug": "strike",
+        "cmc_price_usd": 0.0290807292,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 22691,
+        "cmc_symbol": "STRK",
+        "cmc_slug": "starknet-token",
+        "cmc_price_usd": 0.0288370193,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "tutusdt",
@@ -1107,7 +2591,34 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2025-03-20T00:00:00.000Z"
+    "first_capture": "2025-03-20T00:00:00.000Z",
+    "cmc_lookup_symbol": "TUT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "TUTUSDT",
+      "exchange_price": 0.01284,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:00.484000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 14349,
+        "cmc_symbol": "TUT",
+        "cmc_slug": "tutellus",
+        "cmc_price_usd": 0.0129684438,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 35892,
+        "cmc_symbol": "TUT",
+        "cmc_slug": "tutorial",
+        "cmc_price_usd": 0.0129342238,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   },
   {
     "id": "ustcusdt",
@@ -1118,6 +2629,33 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2023-11-27T00:00:00.000Z"
+    "first_capture": "2023-11-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "USTC",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "USTCUSDT",
+      "exchange_price": 0.005625,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:12.054000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 7129,
+        "cmc_symbol": "USTC",
+        "cmc_slug": "terrausd",
+        "cmc_price_usd": 0.00554250889734,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 15610,
+        "cmc_symbol": "USTC",
+        "cmc_slug": "terrausd-wormhole",
+        "cmc_price_usd": 0.00555305426273,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
   }
 ]

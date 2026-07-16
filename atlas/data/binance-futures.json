@@ -2137,7 +2137,8 @@
     "margin": "BUSD",
     "contract_type": "perpetual",
     "first_capture": "2021-01-12T00:00:00.000Z",
-    "end_date": "2023-12-12T00:00:00.000Z"
+    "end_date": "2023-12-12T00:00:00.000Z",
+    "cmc_id": 1
   },
   {
     "id": "btcbusd_210129",
@@ -2195,6 +2196,8 @@
     "margin": "BTC",
     "contract_type": "perpetual",
     "first_capture": "2026-07-01T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusd1",
@@ -2206,6 +2209,8 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2026-05-18T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdc",
@@ -2217,6 +2222,8 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2024-01-04T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt",
@@ -2228,6 +2235,8 @@
     "contract_type": "perpetual",
     "contract_size": 1.0,
     "first_capture": "2019-11-17T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_210326",
@@ -2240,6 +2249,8 @@
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2021-02-03T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_210625",
@@ -2252,6 +2263,8 @@
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2021-03-16T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_210924",
@@ -2264,6 +2277,8 @@
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-06-18T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_211231",
@@ -2276,6 +2291,8 @@
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-09-22T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_220325",
@@ -2288,6 +2305,8 @@
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-12-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_220624",
@@ -2300,6 +2319,8 @@
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2022-03-22T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_220930",
@@ -2312,6 +2333,8 @@
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-06-20T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_221230",
@@ -2324,6 +2347,8 @@
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-09-23T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_230331",
@@ -2336,6 +2361,8 @@
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-12-23T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_230630",
@@ -2348,6 +2375,8 @@
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2023-03-27T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_230929",
@@ -2360,6 +2389,8 @@
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-06-25T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_231229",
@@ -2372,6 +2403,8 @@
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-08-18T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_240329",
@@ -2384,6 +2417,8 @@
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_240628",
@@ -2396,6 +2431,8 @@
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_240927",
@@ -2408,6 +2445,8 @@
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_241227",
@@ -2420,6 +2459,8 @@
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_250328",
@@ -2432,6 +2473,8 @@
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_250627",
@@ -2444,6 +2487,8 @@
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_250926",
@@ -2456,6 +2501,8 @@
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_251226",
@@ -2468,6 +2515,8 @@
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_260327",
@@ -2480,6 +2529,8 @@
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
     "end_date": "2026-03-28T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_260626",
@@ -2492,6 +2543,8 @@
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
     "end_date": "2026-06-27T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_260925",
@@ -2504,6 +2557,8 @@
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-03-27T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btcusdt_261225",
@@ -2516,6 +2571,8 @@
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-06-26T00:00:00.000Z"
+,
+    "cmc_id": 1
   },
   {
     "id": "btrusdt",
