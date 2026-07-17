@@ -6580,6 +6580,16 @@
     "first_capture": "2026-04-07T00:00:00.000Z"
   },
   {
+    "id": "muuusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "perpetual-MUU-USDT:USDT",
+    "symbol": "MUU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "mvllusdt",
     "type": "perpetual",
     "internal_id": "perpetual-MVLL-USDT:USDT",
@@ -8502,6 +8512,16 @@
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
+    "id": "soxsusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "perpetual-SOXS-USDT:USDT",
+    "symbol": "SOXS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
+  },
+  {
     "id": "spaceusdt",
     "type": "perpetual",
     "internal_id": "perpetual-SPACE-USDT:USDT",
@@ -9385,6 +9405,16 @@
     "margin": "USDT",
     "contract_type": "perpetual",
     "first_capture": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "id": "tzausdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "perpetual-TZA-USDT:USDT",
+    "symbol": "TZA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual"
   },
   {
     "id": "uaiusdt",

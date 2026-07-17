@@ -17354,6 +17354,14 @@
     "first_capture": "2024-12-20T00:00:00.000Z"
   },
   {
+    "id": "USDC-TEV",
+    "type": "spot",
+    "internal_id": "spot-USDC-TEV",
+    "symbol": "USDC",
+    "denominator": "TEV",
+    "contract_type": "spot"
+  },
+  {
     "id": "USDC-TRY",
     "type": "spot",
     "internal_id": "spot-USDC-TRY",
@@ -18507,6 +18515,33 @@
     "end_date": "2025-07-08T00:00:00.000Z"
   },
   {
+    "id": "XAAPL-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XAAPL-USDT",
+    "symbol": "XAAPL",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XAMD-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XAMD-USDT",
+    "symbol": "XAMD",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XAMZN-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XAMZN-USDT",
+    "symbol": "XAMZN",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "XAUT-TRY",
     "type": "spot",
     "internal_id": "spot-XAUT-TRY",
@@ -18523,6 +18558,15 @@
     "denominator": "USDT",
     "contract_type": "spot",
     "first_capture": "2022-07-19T00:00:00.000Z"
+  },
+  {
+    "id": "XAVGO-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XAVGO-USDT",
+    "symbol": "XAVGO",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XCH-BTC",
@@ -18569,6 +18613,15 @@
     "denominator": "USDT",
     "contract_type": "spot",
     "first_capture": "2021-05-03T00:00:00.000Z"
+  },
+  {
+    "id": "XCRCL-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XCRCL-USDT",
+    "symbol": "XCRCL",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XEC-USDT",
@@ -18629,6 +18682,51 @@
     "contract_type": "spot",
     "first_capture": "2022-07-20T00:00:00.000Z",
     "end_date": "2024-04-13T00:00:00.000Z"
+  },
+  {
+    "id": "XEWY-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XEWY-USDT",
+    "symbol": "XEWY",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XGOOGL-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XGOOGL-USDT",
+    "symbol": "XGOOGL",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XINTC-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XINTC-USDT",
+    "symbol": "XINTC",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XIWM-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XIWM-USDT",
+    "symbol": "XIWM",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XLITE-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XLITE-USDT",
+    "symbol": "XLITE",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XLM-BTC",
@@ -18696,6 +18794,15 @@
     "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
+    "id": "XMETA-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XMETA-USDT",
+    "symbol": "XMETA",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "XMR-BTC",
     "type": "spot",
     "internal_id": "spot-XMR-BTC",
@@ -18736,13 +18843,40 @@
     "end_date": "2024-01-06T00:00:00.000Z"
   },
   {
-    "id": "XMU-USDT",
+    "id": "XMRVL-USDT",
     "type": "spot",
     "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XMRVL-USDT",
+    "symbol": "XMRVL",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XMSFT-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XMSFT-USDT",
+    "symbol": "XMSFT",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XMSTR-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XMSTR-USDT",
+    "symbol": "XMSTR",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XMU-USDT",
+    "type": "spot",
     "internal_id": "spot-XMU-USDT",
     "symbol": "XMU",
     "denominator": "USDT",
-    "contract_type": "spot"
+    "contract_type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
     "id": "XNO-USD",
@@ -18773,6 +18907,15 @@
     "contract_type": "spot",
     "first_capture": "2022-06-09T00:00:00.000Z",
     "end_date": "2025-06-21T00:00:00.000Z"
+  },
+  {
+    "id": "XNVDA-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XNVDA-USDT",
+    "symbol": "XNVDA",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XPL-EUR",
@@ -18838,6 +18981,15 @@
     "contract_type": "spot",
     "first_capture": "2021-03-10T00:00:00.000Z",
     "end_date": "2024-08-31T00:00:00.000Z"
+  },
+  {
+    "id": "XQQQ-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XQQQ-USDT",
+    "symbol": "XQQQ",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XR-USD",
@@ -18972,6 +19124,51 @@
     "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
+    "id": "XSKHY-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XSKHY-USDT",
+    "symbol": "XSKHY",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XSNDK-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XSNDK-USDT",
+    "symbol": "XSNDK",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XSOXL-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-15T00:00:00.000Z",
+    "internal_id": "spot-XSOXL-USDT",
+    "symbol": "XSOXL",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XSPCX-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XSPCX-USDT",
+    "symbol": "XSPCX",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XSPY-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XSPY-USDT",
+    "symbol": "XSPY",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
     "id": "XSR-USDT",
     "type": "spot",
     "internal_id": "spot-XSR-USDT",
@@ -18980,6 +19177,24 @@
     "contract_type": "spot",
     "first_capture": "2021-03-10T00:00:00.000Z",
     "end_date": "2022-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "XTSLA-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XTSLA-USDT",
+    "symbol": "XTSLA",
+    "denominator": "USDT",
+    "contract_type": "spot"
+  },
+  {
+    "id": "XTSM-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "spot-XTSM-USDT",
+    "symbol": "XTSM",
+    "denominator": "USDT",
+    "contract_type": "spot"
   },
   {
     "id": "XTZ-BTC",
