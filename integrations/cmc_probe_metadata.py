@@ -1,7 +1,8 @@
 """Write keyless CMC probe evidence and price-verified IDs for Binance.
 
 Probe evidence is stored separately under ``data/cmc_probe``. Main exchange
-snapshots receive only a ``cmc_id`` when the CMC and Binance prices match.
+snapshots may receive a new ``cmc_id`` when the CMC and Binance prices match,
+but an existing ID is never replaced or removed.
 """
 
 from __future__ import annotations
@@ -49,7 +50,7 @@ def populate_cmc_probe_metadata(
     exchanges: frozenset[str] = BINANCE_EXCHANGES,
     probe_dir: Path | None = None,
 ) -> dict[str, dict[str, int]]:
-    """Write probe evidence separately and retain CMC IDs on price-matched rows."""
+    """Write probe evidence and add, but never replace or remove, CMC IDs."""
     cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
     candidates_by_symbol = {
         symbol: candidates_for_symbol(catalogue.assets, symbol)
@@ -80,7 +81,6 @@ def populate_cmc_probe_metadata(
             if observation is None:
                 counts["no_binance_spot_price"] += 1
                 row.pop("cmc_probe", None)
-                row.pop("cmc_id", None)
                 probe_rows.append(
                     _probe_row(
                         row,
@@ -107,10 +107,8 @@ def populate_cmc_probe_metadata(
             )
             record = _probe_record(result, observation)
             row.pop("cmc_probe", None)
-            if result.match is not None:
+            if result.match is not None and row.get("cmc_id") is None:
                 row["cmc_id"] = result.match.asset.cmc_id
-            else:
-                row.pop("cmc_id", None)
             probe_rows.append(
                 _probe_row(
                     row,

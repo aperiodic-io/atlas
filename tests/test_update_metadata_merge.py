@@ -60,6 +60,22 @@ def test_merge_existing_fields_does_not_override_source_values() -> None:
     assert merged[0]["first_capture"] == "2024-01-01T00:00:00.000Z"
 
 
+def test_merge_existing_fields_preserves_existing_cmc_id() -> None:
+    symbols = [
+        {"id": "BTCUSDT", "type": "spot", "cmc_id": None},
+        {"id": "ETHUSDT", "type": "spot", "cmc_id": 999999},
+    ]
+    existing_by_id = {
+        "BTCUSDT": {"id": "BTCUSDT", "type": "spot", "cmc_id": 1},
+        "ETHUSDT": {"id": "ETHUSDT", "type": "spot", "cmc_id": 1027},
+    }
+
+    merged = _merge_existing_fields(symbols, existing_by_id)
+
+    assert merged[0]["cmc_id"] == 1
+    assert merged[1]["cmc_id"] == 1027
+
+
 def test_merge_existing_fields_can_skip_existing_metadata() -> None:
     symbols = [{"id": "BTCUSDT", "type": "spot"}]
     existing_by_id = {

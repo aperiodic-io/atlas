@@ -73,6 +73,38 @@ def test_populate_cmc_probe_metadata_writes_only_probe_evidence(tmp_path) -> Non
     assert stats["binance-futures"]["price_compatible"] == 2
 
 
+def test_populate_cmc_probe_metadata_preserves_existing_cmc_ids(tmp_path) -> None:
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    target = data_dir / "binance-futures.json"
+    target.write_text(
+        json.dumps(
+            [
+                {"id": "btcusdt", "symbol": "BTC", "cmc_id": 999},
+                {"id": "missingusdt", "symbol": "MISSING", "cmc_id": 998},
+            ]
+        )
+    )
+    observed_at = datetime(2026, 7, 15, 14, 0, tzinfo=UTC)
+    catalogue = CmcCatalogue(
+        assets=(CmcAsset(1, "BTC", "bitcoin", 100, observed_at, True),),
+        diagnostics=CatalogueDiagnostics(1, 1, 1, (), 0, False),
+    )
+    observations_by_exchange = {
+        "binance-futures": {
+            "BTC": PriceObservation(
+                100, "USDT", observed_at, "binance-futures", "BTCUSDT"
+            )
+        }
+    }
+
+    populate_cmc_probe_metadata(data_dir, catalogue, observations_by_exchange)
+
+    rows = {row["id"]: row for row in json.loads(target.read_text())}
+    assert rows["btcusdt"]["cmc_id"] == 999
+    assert rows["missingusdt"]["cmc_id"] == 998
+
+
 def test_remove_cmc_probe_metadata_is_scoped_to_requested_exchanges(tmp_path) -> None:
     data_dir = tmp_path / "data"
     data_dir.mkdir()
