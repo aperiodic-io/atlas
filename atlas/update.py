@@ -198,8 +198,6 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> list[dict]:
             mapped["first_capture"] = sd["availableSince"]
         if "availableTo" in sd:
             mapped["end_date"] = sd["availableTo"]
-            mapped["end_date_source"] = "tardis"
-            mapped["end_date_confidence"] = "authoritative"
         mapped_symbols.append(mapped)
     return mapped_symbols
 

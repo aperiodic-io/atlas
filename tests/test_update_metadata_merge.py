@@ -23,8 +23,6 @@ def test_apply_snapshot_metadata_preserves_existing_lifecycle_fields() -> None:
             "id": "OLDUSDT",
             "first_capture": "2024-01-01T00:00:00.000Z",
             "end_date": "2025-01-01T00:00:00.000Z",
-            "end_date_source": "tardis",
-            "end_date_confidence": "authoritative",
         }
     ]
 
