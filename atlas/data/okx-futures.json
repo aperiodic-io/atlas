@@ -7383,13 +7383,13 @@
     "id": "BILL-USD_UM_XPERP-310718",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-07-15T00:00:00.000Z",
     "internal_id": "future-BILL-USD_UM_XPERP:BILL-20310718",
     "symbol": "BILL",
     "denominator": "USD_UM_XPERP",
     "margin": "BILL",
     "contract_type": "future",
-    "delivery_date": "2031-07-18T00:00:00"
+    "delivery_date": "2031-07-18T00:00:00",
+    "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
     "id": "BNB-USD_UM_XPERP-310523",
@@ -7402,6 +7402,18 @@
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "BSB-USD_UM_XPERP-310718",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-16T00:00:00.000Z",
+    "internal_id": "future-BSB-USD_UM_XPERP:BSB-20310718",
+    "symbol": "BSB",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BSB",
+    "contract_type": "future",
+    "delivery_date": "2031-07-18T00:00:00"
   },
   {
     "id": "BSV-USD-190405",
