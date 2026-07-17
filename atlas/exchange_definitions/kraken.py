@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, resolve_margin, split_concat
+from .common import SkipSymbol, instrument_type, make_contract, resolve_margin, split_concat
 
 KRAKEN_ASSET_MAP = {
     "XXBT": "BTC",
@@ -32,7 +32,7 @@ def _norm_kraken(asset: str) -> str:
 
 def parse_kraken(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "/" in sid:
         symbol = _norm_kraken(sid.split("/", 1)[0])

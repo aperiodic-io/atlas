@@ -1,4 +1,9 @@
-from atlas.update import _append_contract_size_change, _drop_none_fields, _merge_existing_fields
+from atlas.update import (
+    _append_contract_size_change,
+    _drop_none_fields,
+    _merge_existing_fields,
+    _merge_symbol,
+)
 from atlas.update import _apply_snapshot_metadata
 
 
@@ -18,8 +23,6 @@ def test_apply_snapshot_metadata_preserves_existing_lifecycle_fields() -> None:
             "id": "OLDUSDT",
             "first_capture": "2024-01-01T00:00:00.000Z",
             "end_date": "2025-01-01T00:00:00.000Z",
-            "end_date_source": "tardis",
-            "end_date_confidence": "authoritative",
         }
     ]
 
@@ -76,6 +79,36 @@ def test_merge_existing_fields_preserves_existing_cmc_id() -> None:
     assert merged[1]["cmc_id"] == 1027
 
 
+def test_merge_symbol_preserves_locally_owned_fields() -> None:
+    existing = {
+        "id": "BTCUSDT",
+        "cmc_id": 1,
+        "contract_size_history": [{"effective_from": "2025-01-01", "value": 1.0}],
+    }
+    incoming = {
+        "id": "BTCUSDT",
+        "cmc_id": 999999,
+        "contract_size_history": [],
+        "type": "perpetual",
+    }
+
+    merged = _merge_symbol(existing, incoming)
+
+    assert merged["cmc_id"] == 1
+    assert merged["contract_size_history"] == existing["contract_size_history"]
+    assert merged["type"] == "perpetual"
+
+
+def test_merge_symbol_supports_other_protected_fields() -> None:
+    merged = _merge_symbol(
+        {"id": "BTCUSDT", "review_status": "approved"},
+        {"id": "BTCUSDT", "review_status": "pending"},
+        protected_fields=frozenset({"review_status"}),
+    )
+
+    assert merged["review_status"] == "approved"
+
+
 def test_merge_existing_fields_can_skip_existing_metadata() -> None:
     symbols = [{"id": "BTCUSDT", "type": "spot"}]
     existing_by_id = {
@@ -105,13 +138,11 @@ def test_drop_none_fields_removes_only_requested_none_fields() -> None:
             "margin": None,
             "delivery_date": None,
             "first_capture": None,
-            "contract_type": "spot",
         },
         {
             "id": "ETHUSDT",
             "margin": "USDT",
             "delivery_date": "2026-01-01T00:00:00",
-            "contract_type": "perpetual",
         },
     ]
 

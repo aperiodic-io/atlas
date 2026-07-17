@@ -4,7 +4,7 @@ from ..contracts import Contract
 from ..parser_interface import SymbolData
 from .common import (
     SkipSymbol,
-    contract_type,
+    instrument_type,
     make_contract,
     parse_underscore_spot,
     parse_yyyymmdd,
@@ -19,7 +19,7 @@ def parse_gate_io(exchange: str, sd: SymbolData) -> Contract:
 def parse_gate_io_futures(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
     parts = sid.split("_")
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if len(parts) == 2:
         symbol, denominator = parts

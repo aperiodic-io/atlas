@@ -5,12 +5,12 @@ from datetime import datetime
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, resolve_margin
+from .common import SkipSymbol, instrument_type, make_contract, resolve_margin
 
 
 def parse_ftx(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "/" in sid:
         symbol, denominator = sid.split("/", 1)

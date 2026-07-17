@@ -13,10 +13,10 @@ def test_candidate_keys_normalizes_case_and_separators() -> None:
 
 
 def test_bucket_mapping() -> None:
-    assert _atlas_bucket({"contract_type": "spot"}) == "spot"
+    assert _atlas_bucket({"type": "spot"}) == "spot"
     assert _atlas_bucket({"type": "perpetual"}) == "perpetual"
-    assert _atlas_bucket({"contract_type": "future"}) == "future"
-    assert _atlas_bucket({"contract_type": "option"}) is None
+    assert _atlas_bucket({"type": "future"}) == "future"
+    assert _atlas_bucket({"type": "option"}) is None
 
     assert _instrument_bucket({"instrumentType": "spot"}) == "spot"
     assert _instrument_bucket({"instrumentType": "futures", "contractType": "perpetual"}) == "perpetual"
@@ -24,7 +24,7 @@ def test_bucket_mapping() -> None:
 
 
 def test_pick_best_match_prefers_exact_id_and_bucket() -> None:
-    row = {"id": "BTC-USDT-SWAP", "contract_type": "perpetual"}
+    row = {"id": "BTC-USDT-SWAP", "type": "perpetual"}
     candidates = [
         {
             "nativeInstrument": "BTC-USDT-SWAP",
@@ -50,7 +50,7 @@ def test_pick_best_match_prefers_exact_id_and_bucket() -> None:
 
 
 def test_pick_best_match_flags_ambiguous_tie() -> None:
-    row = {"id": "FOOBAR", "contract_type": "spot"}
+    row = {"id": "FOOBAR", "type": "spot"}
     candidates = [
         {
             "nativeInstrument": "FOOBAR",

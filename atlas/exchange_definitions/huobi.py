@@ -6,7 +6,7 @@ from ..contracts import Contract
 from ..parser_interface import SymbolData
 from .common import (
     SkipSymbol,
-    contract_type,
+    instrument_type,
     make_contract,
     parse_dash,
     parse_yymmdd,
@@ -21,7 +21,7 @@ def parse_huobi(exchange: str, sd: SymbolData) -> Contract:
     pair = split_concat(sd["id"].upper())
     if pair:
         symbol, denominator = pair
-        ctype = contract_type(sd)
+        ctype = instrument_type(sd)
         margin = resolve_margin(symbol, denominator, ctype)
         return make_contract(exchange, sd, symbol, denominator, margin, ctype)
     raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r}")
@@ -29,7 +29,7 @@ def parse_huobi(exchange: str, sd: SymbolData) -> Contract:
 
 def parse_huobi_dm(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "_" in sid:
         symbol, suffix = sid.split("_", 1)

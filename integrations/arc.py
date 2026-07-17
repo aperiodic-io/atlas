@@ -47,14 +47,14 @@ def _instrument_bucket(record: dict) -> str | None:
         return "spot"
     if instrument_type != "futures":
         return None
-    contract_type = str(record.get("contractType", "")).lower()
-    if contract_type == "perpetual":
+    source_contract_kind = str(record.get("contractType", "")).lower()
+    if source_contract_kind == "perpetual":
         return "perpetual"
     return "future"
 
 
 def _atlas_bucket(row: dict) -> str | None:
-    value = str(row.get("contract_type") or row.get("type") or "").lower()
+    value = str(row.get("type") or "").lower()
     if value in {"spot", "perpetual", "future"}:
         return value
     return None

@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, parse_ddmmmyy
+from .common import SkipSymbol, instrument_type, make_contract, parse_ddmmmyy
 
 
 def parse_deribit(exchange: str, sd: SymbolData) -> Contract:
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
     if ctype == ContractType.unknown:
         raise SkipSymbol(
             f"{exchange}: unsupported contract type {sd.get('type')!r} for {sd['id']!r}"

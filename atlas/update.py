@@ -23,6 +23,10 @@ from atlas.update_sources import (
 
 _DATA_DIR = Path(__file__).parent / "data"
 
+# These fields are maintained locally and must not be replaced or removed by
+# exchange or Tardis payloads during a snapshot refresh.
+LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
+
 EXCHANGES = [
     "binance-futures",
     "binance-futures-cm",
@@ -82,31 +86,39 @@ def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
     return rows, {row["id"]: row for row in rows}
 
 
+def _merge_symbol(
+    existing: dict | None,
+    incoming: dict,
+    protected_fields: frozenset[str] = LOCALLY_OWNED_FIELDS,
+) -> dict:
+    """Merge one source record while retaining non-null locally owned fields."""
+    if existing is None:
+        return incoming.copy()
+
+    merged = {**existing, **incoming}
+    for key in protected_fields:
+        if existing.get(key) is not None:
+            merged[key] = existing[key]
+    return merged
+
+
 def _merge_existing_fields(
     symbols: list[dict], existing_by_id: dict[str, dict], ignore_metadata: bool = False
 ) -> list[dict]:
     """
     Keep existing metadata for symbols when the current source does not provide it.
-    Source payload values take precedence; existing values fill only missing keys.
-    ``cmc_id`` is locally curated identity metadata and is never replaced or
-    removed by an exchange-source refresh.
+    Source payload values take precedence except for locally owned fields.
     """
     metadata_keys = {"first_capture", "end_date"}
     merged_symbols: list[dict] = []
     for sd in symbols:
         existing = existing_by_id.get(sd.get("id"))
-        if existing is None:
-            merged_symbols.append(sd.copy())
-            continue
-        existing_values = {
+        existing_values = None if existing is None else {
             key: value
             for key, value in existing.items()
             if not (ignore_metadata and key in metadata_keys)
         }
-        source_values = sd.copy()
-        if existing.get("cmc_id") is not None:
-            source_values.pop("cmc_id", None)
-        merged_symbols.append({**existing_values, **source_values})
+        merged_symbols.append(_merge_symbol(existing_values, sd))
     return merged_symbols
 
 
@@ -117,7 +129,6 @@ def _enrich(exchange: str, sd: dict) -> dict:
         "symbol": None,
         "denominator": None,
         "margin": None,
-        "contract_type": None,
         "contract_size": None,
         "delivery_date": None,
     }
@@ -137,7 +148,6 @@ def _enrich(exchange: str, sd: dict) -> dict:
             "symbol": c.symbol,
             "denominator": c.denominator,
             "margin": c.margin,
-            "contract_type": c.contract_type.value,
             "contract_size": contract_size,
             "delivery_date": c.delivery_date.isoformat() if c.delivery_date else None,
         }
@@ -189,8 +199,6 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> list[dict]:
             mapped["first_capture"] = sd["availableSince"]
         if "availableTo" in sd:
             mapped["end_date"] = sd["availableTo"]
-            mapped["end_date_source"] = "tardis"
-            mapped["end_date_confidence"] = "authoritative"
         mapped_symbols.append(mapped)
     return mapped_symbols
 

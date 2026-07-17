@@ -109,8 +109,7 @@ published `atlas` package.
 [`atlas/update.py`](../atlas/update.py#L175) and
 [`atlas/database.py`](../atlas/database.py#L49) already use `first_capture` and
 `end_date` for availability. Avoid parallel `listed_at` and `delisted_at`
-fields. Add only `last_seen_at`, `end_date_source`, and
-`end_date_confidence` where necessary.
+fields. Add `last_seen_at` only where necessary.
 
 ### 9. CI is red for unrelated live-data drift
 
@@ -163,9 +162,8 @@ tolerance, and relative difference.
 ### Delisted, inactive, and relisted assets
 
 Keep every historical Atlas contract row. `first_capture` and `end_date` remain
-authoritative availability bounds; Tardis `availableTo` can supply
-`end_date_source=tardis` and `end_date_confidence=authoritative`. Absence from
-a failed or partial fetch must never mean delisting.
+the availability bounds; Tardis `availableTo` can supply `end_date`. Absence
+from a failed or partial fetch must never mean delisting.
 
 Mark an unseen instrument `suspected_delisted` only after successful snapshots;
 confirm after a configurable threshold or explicit exchange status. Keep CMC

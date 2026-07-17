@@ -4,7 +4,7 @@ from ..contracts import Contract
 from ..parser_interface import SymbolData
 from .common import (
     SkipSymbol,
-    contract_type,
+    instrument_type,
     make_contract,
     parse_yymmdd,
     resolve_margin,
@@ -26,7 +26,7 @@ def parse_cryptofacilities(exchange: str, sd: SymbolData) -> Contract:
 
     symbol, denominator = pair
     symbol = CF_ASSET.get(symbol, symbol)
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
     margin = resolve_margin(symbol, denominator, ctype)
     delivery = parse_yymmdd(parts[2]) if len(parts) >= 3 else None
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
