@@ -1,0 +1,643 @@
+[
+  {
+    "id": "aaplusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-AAPL-USDT:USDT",
+    "symbol": "AAPL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "AAPL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "AAPLUSDT",
+      "exchange_price": 327.37,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.452000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39491,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-inc-derivatives",
+        "cmc_price_usd": 327.4654846191,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39624,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 323.5703656346,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40703,
+        "cmc_symbol": "AAPL",
+        "cmc_slug": "apple-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
+  },
+  {
+    "id": "amznusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-AMZN-USDT:USDT",
+    "symbol": "AMZN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-02-09T00:00:00.000Z",
+    "cmc_lookup_symbol": "AMZN",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "AMZNUSDT",
+      "exchange_price": 254.64,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.222000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39471,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-com-inc-derivatives",
+        "cmc_price_usd": 255.2824746249,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39619,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 256.4448114735,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40718,
+        "cmc_symbol": "AMZN",
+        "cmc_slug": "amazon-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
+  },
+  {
+    "id": "arcusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-ARC-USDT:USDT",
+    "symbol": "ARC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2025-01-17T00:00:00.000Z",
+    "cmc_lookup_symbol": "ARC",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "ARCUSDT",
+      "exchange_price": 0.07698,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:28.413000Z"
+    },
+    "cmc_candidates": []
+  },
+  {
+    "id": "botusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-BOT-USDT:USDT",
+    "symbol": "BOT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-09T00:00:00.000Z",
+    "cmc_lookup_symbol": "BOT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "BOTUSDT",
+      "exchange_price": 31.54,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:20.012000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 40584,
+        "cmc_symbol": "BOT",
+        "cmc_slug": "robostrategy-inc-derivatives",
+        "cmc_price_usd": 32.8561788891,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40816,
+        "cmc_symbol": "BOT",
+        "cmc_slug": "robostrategy-inc-tokenized-stock-backpack",
+        "cmc_price_usd": 32.648682344,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "googlusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-GOOGL-USDT:USDT",
+    "symbol": "GOOGL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "GOOGL",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "GOOGLUSDT",
+      "exchange_price": 370.77,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:29.701000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39470,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-inc-derivatives",
+        "cmc_price_usd": 371.9130702266,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39622,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 370.160339181,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40757,
+        "cmc_symbol": "GOOGL",
+        "cmc_slug": "alphabet-class-a-tokenized-stock-robinhood",
+        "cmc_price_usd": 357.5070955071,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "hoodusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-HOOD-USDT:USDT",
+    "symbol": "HOOD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-02-02T00:00:00.000Z",
+    "cmc_lookup_symbol": "HOOD",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "HOODUSDT",
+      "exchange_price": 115.17,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.611000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39478,
+        "cmc_symbol": "HOOD",
+        "cmc_slug": "robinhood-markets-derivatives",
+        "cmc_price_usd": 115.5210359309,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39625,
+        "cmc_symbol": "HOOD",
+        "cmc_slug": "robinhood-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 113.7955104948,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "lightusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-LIGHT-USDT:USDT",
+    "symbol": "LIGHT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2025-09-27T00:00:00.000Z",
+    "cmc_lookup_symbol": "LIGHT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "LIGHTUSDT",
+      "exchange_price": 0.1266,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:26.939000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 37986,
+        "cmc_symbol": "LIGHT",
+        "cmc_slug": "light",
+        "cmc_price_usd": 0.1261385605,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 38506,
+        "cmc_symbol": "LIGHT",
+        "cmc_slug": "bitlight",
+        "cmc_price_usd": 0.1268399993,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "metausdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-META-USDT:USDT",
+    "symbol": "META",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "META",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "METAUSDT",
+      "exchange_price": 676.78,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.403000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39513,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-inc-derivatives",
+        "cmc_price_usd": 679.7791784303,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39615,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 679.7837062969,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40780,
+        "cmc_symbol": "META",
+        "cmc_slug": "meta-platforms-tokenized-stock-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
+  },
+  {
+    "id": "monusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-MON-USDT:USDT",
+    "symbol": "MON",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2025-10-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "MON",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MONUSDT",
+      "exchange_price": 0.02217,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:07.003000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 5066,
+        "cmc_symbol": "MON",
+        "cmc_slug": "moneybyte",
+        "cmc_price_usd": 0.0223283724,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 30495,
+        "cmc_symbol": "MON",
+        "cmc_slug": "monad",
+        "cmc_price_usd": 0.0222826558,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "msftusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-MSFT-USDT:USDT",
+    "symbol": "MSFT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-20T00:00:00.000Z",
+    "cmc_lookup_symbol": "MSFT",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MSFTUSDT",
+      "exchange_price": 395.5,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:33.543000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39495,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-corporation-derivatives",
+        "cmc_price_usd": 397.0751138368,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39616,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-tokenized-stock-hyperliquid",
+        "cmc_price_usd": 399.3540565105,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40695,
+        "cmc_symbol": "MSFT",
+        "cmc_slug": "microsoft-tokenized-stock-robinhood",
+        "cmc_price_usd": 396.668062307,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "muusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-MU-USDT:USDT",
+    "symbol": "MU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "cmc_lookup_symbol": "MU",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "MUUSDT",
+      "exchange_price": 900.45,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:30.611000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39469,
+        "cmc_symbol": "MU",
+        "cmc_slug": "micron-technology-inc-derivatives",
+        "cmc_price_usd": 897.1255432954,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40817,
+        "cmc_symbol": "MU",
+        "cmc_slug": "micron-technology-inc-tokenized-stock-backpack",
+        "cmc_price_usd": 897.1573291163,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "nvdausdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-NVDA-USDT:USDT",
+    "symbol": "NVDA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-03-26T00:00:00.000Z",
+    "cmc_lookup_symbol": "NVDA",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "NVDAUSDT",
+      "exchange_price": 211.41,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:32.447000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 38153,
+        "cmc_symbol": "NVDA",
+        "cmc_slug": "nvidia-derivatives",
+        "cmc_price_usd": 211.1377758022,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40685,
+        "cmc_symbol": "NVDA",
+        "cmc_slug": "nvidia-tokenized-stock-robinhood",
+        "cmc_price_usd": 211.0336513524,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "qqqusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-QQQ-USDT:USDT",
+    "symbol": "QQQ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "QQQ",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "QQQUSDT",
+      "exchange_price": 716.18,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:24.573000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39517,
+        "cmc_symbol": "QQQ",
+        "cmc_slug": "ustech-derivatives",
+        "cmc_price_usd": 717.2222337037,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39623,
+        "cmc_symbol": "QQQ",
+        "cmc_slug": "invesco-qqq-trust-tokenized-etf-hyperliquid",
+        "cmc_price_usd": 716.0159089004,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "skhyusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-SKHY-USDT:USDT",
+    "symbol": "SKHY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "first_capture": "2026-07-10T00:00:00.000Z",
+    "cmc_lookup_symbol": "SKHY",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SKHYUSDT",
+      "exchange_price": 173.76,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:35.230000Z"
+    },
+    "cmc_candidates": []
+  },
+  {
+    "id": "sndkusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-SNDK-USDT:USDT",
+    "symbol": "SNDK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-07T00:00:00.000Z",
+    "cmc_lookup_symbol": "SNDK",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SNDKUSDT",
+      "exchange_price": 1619.31,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:34.570000Z"
+    },
+    "cmc_candidates": []
+  },
+  {
+    "id": "spcxusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-SPCX-USDT:USDT",
+    "symbol": "SPCX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-05-21T00:00:00.000Z",
+    "cmc_lookup_symbol": "SPCX",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SPCXUSDT",
+      "exchange_price": 134.26,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:31.290000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39501,
+        "cmc_symbol": "SPCX",
+        "cmc_slug": "spacex-derivatives",
+        "cmc_price_usd": 135.8624748996,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40238,
+        "cmc_symbol": "SPCX",
+        "cmc_slug": "spacex-tokenized-stock-backpack",
+        "cmc_price_usd": 136.1465342855,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "id": "spyusdt",
+    "type": "perpetual",
+    "internal_id": "perpetual-SPY-USDT:USDT",
+    "symbol": "SPY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "contract_type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-04-06T00:00:00.000Z",
+    "cmc_lookup_symbol": "SPY",
+    "cmc_probe": {
+      "status": "multiple_price_matches",
+      "source": "coinmarketcap-website-probe",
+      "exchange_venue": "binance-futures",
+      "exchange_instrument_id": "SPYUSDT",
+      "exchange_price": 753.99,
+      "exchange_base_units_per_contract": 1.0,
+      "exchange_quote_currency": "USDT",
+      "exchange_observed_at": "2026-07-15T19:18:07.915000Z"
+    },
+    "cmc_candidates": [
+      {
+        "cmc_id": 39621,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "spdr-sp-500-etf-trust-tokenized-etf-hyperliquid",
+        "cmc_price_usd": 750.6084643662,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 39732,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "state-street-spdr-sp-500-etf-trust-derivatives",
+        "cmc_price_usd": 754.5510548902,
+        "cmc_price_timestamp": "2026-07-15T00:00:00"
+      },
+      {
+        "cmc_id": 40694,
+        "cmc_symbol": "SPY",
+        "cmc_slug": "spdr-sp-500-trust-tokenized-etf-robinhood",
+        "cmc_price_usd": null,
+        "cmc_price_timestamp": null
+      }
+    ]
+  }
+]

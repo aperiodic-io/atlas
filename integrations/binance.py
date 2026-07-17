@@ -7,12 +7,19 @@ from urllib.request import Request, urlopen
 
 
 BINANCE_API_BASE = "https://api.binance.com"
+BINANCE_FUTURES_API_BASE = "https://fapi.binance.com"
+BINANCE_WEBSITE_API_BASE = "https://www.binance.com"
 
 
-def _get_json(path: str, params: dict[str, Any] | None = None, timeout_seconds: int = 30) -> Any:
+def _get_json(
+    path: str,
+    params: dict[str, Any] | None = None,
+    timeout_seconds: int = 30,
+    api_base: str = BINANCE_API_BASE,
+) -> Any:
     query = f"?{urlencode(params)}" if params else ""
     request = Request(
-        url=f"{BINANCE_API_BASE}{path}{query}",
+        url=f"{api_base}{path}{query}",
         headers={"Accept": "application/json", "User-Agent": "atlas-integrations/1.0"},
     )
     with urlopen(request, timeout=timeout_seconds) as response:
@@ -31,6 +38,37 @@ def fetch_spot_symbols(timeout_seconds: int = 30) -> list[dict]:
         and s.get("baseAsset")
         and s.get("quoteAsset")
     ]
+
+
+def fetch_spot_prices(timeout_seconds: int = 30) -> list[dict]:
+    """Fetch Binance spot 24-hour tickers, including last-price timestamps."""
+    payload = _get_json("/api/v3/ticker/24hr", timeout_seconds=timeout_seconds)
+    return [ticker for ticker in payload if isinstance(ticker, dict)] if isinstance(payload, list) else []
+
+
+def fetch_futures_prices(timeout_seconds: int = 30) -> list[dict]:
+    """Fetch Binance USD-M futures 24-hour tickers, including last prices."""
+    payload = _get_json(
+        "/fapi/v1/ticker/24hr",
+        timeout_seconds=timeout_seconds,
+        api_base=BINANCE_FUTURES_API_BASE,
+    )
+    return [ticker for ticker in payload if isinstance(ticker, dict)] if isinstance(payload, list) else []
+
+
+def fetch_public_assets(timeout_seconds: int = 30) -> list[dict]:
+    """Fetch Binance website asset metadata, including delisting and rename state.
+
+    This website endpoint is not part of Binance's documented trading API; callers
+    should persist it as non-authoritative enrichment evidence.
+    """
+    payload = _get_json(
+        "/bapi/asset/v2/public/asset/asset/get-all-asset",
+        timeout_seconds=timeout_seconds,
+        api_base=BINANCE_WEBSITE_API_BASE,
+    )
+    assets = payload.get("data", []) if isinstance(payload, dict) else []
+    return [asset for asset in assets if isinstance(asset, dict) and asset.get("assetCode")]
 
 
 def fetch_historical_klines(
