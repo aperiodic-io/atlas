@@ -2,7 +2,7 @@ from atlas.update import (
     _append_contract_size_change,
     _drop_none_fields,
     _merge_existing_fields,
-    _preserve_existing_cmc_ids,
+    _merge_symbol,
 )
 from atlas.update import _apply_snapshot_metadata
 
@@ -79,22 +79,34 @@ def test_merge_existing_fields_preserves_existing_cmc_id() -> None:
     assert merged[1]["cmc_id"] == 1027
 
 
-def test_preserve_existing_cmc_ids_overrides_later_source_values() -> None:
-    symbols = [
-        {"id": "BTCUSDT", "type": "spot", "cmc_id": None},
-        {"id": "ETHUSDT", "type": "spot", "cmc_id": 999999},
-        {"id": "SOLUSDT", "type": "spot"},
-    ]
-    existing_by_id = {
-        "BTCUSDT": {"id": "BTCUSDT", "cmc_id": 1},
-        "ETHUSDT": {"id": "ETHUSDT", "cmc_id": 1027},
+def test_merge_symbol_preserves_locally_owned_fields() -> None:
+    existing = {
+        "id": "BTCUSDT",
+        "cmc_id": 1,
+        "contract_size_history": [{"effective_from": "2025-01-01", "value": 1.0}],
+    }
+    incoming = {
+        "id": "BTCUSDT",
+        "cmc_id": 999999,
+        "contract_size_history": [],
+        "type": "perpetual",
     }
 
-    preserved = _preserve_existing_cmc_ids(symbols, existing_by_id)
+    merged = _merge_symbol(existing, incoming)
 
-    assert preserved[0]["cmc_id"] == 1
-    assert preserved[1]["cmc_id"] == 1027
-    assert "cmc_id" not in preserved[2]
+    assert merged["cmc_id"] == 1
+    assert merged["contract_size_history"] == existing["contract_size_history"]
+    assert merged["type"] == "perpetual"
+
+
+def test_merge_symbol_supports_other_protected_fields() -> None:
+    merged = _merge_symbol(
+        {"id": "BTCUSDT", "review_status": "approved"},
+        {"id": "BTCUSDT", "review_status": "pending"},
+        protected_fields=frozenset({"review_status"}),
+    )
+
+    assert merged["review_status"] == "approved"
 
 
 def test_merge_existing_fields_can_skip_existing_metadata() -> None:
