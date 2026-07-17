@@ -28363,10 +28363,13 @@
       "exchange_observed_at": "2024-03-16T00:00:00Z",
       "exchange_price_source": "integrations/delisted_assets_last_prices.csv",
       "cmc_history_date": "2024-03-16",
-      "cmc_candidate_ids": [
-        1343
-      ],
-      "cmc_historical_price": 1.469436009,
+    "cmc_candidate_ids": [
+      1343
+    ],
+    "cmc_identity_id": 30168,
+    "cmc_identity_slug": "stratis-new",
+    "cmc_identity_resolution": "current_binance_asset_identity",
+    "cmc_historical_price": 1.469436009,
       "cmc_historical_price_timestamp": "2024-03-16T00:00:00Z",
       "cmc_historical_price_source": "binance-ambiguous-cmc-candidates-history.parquet",
       "status": "historical_price_mismatch"
