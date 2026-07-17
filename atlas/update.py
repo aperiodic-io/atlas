@@ -110,6 +110,17 @@ def _merge_existing_fields(
     return merged_symbols
 
 
+def _preserve_existing_cmc_ids(
+    symbols: list[dict], existing_by_id: dict[str, dict]
+) -> list[dict]:
+    """Restore locally curated CMC IDs after all source and enrichment steps."""
+    preserved: list[dict] = []
+    for sd in symbols:
+        cmc_id = existing_by_id.get(sd.get("id"), {}).get("cmc_id")
+        preserved.append({**sd, "cmc_id": cmc_id} if cmc_id is not None else sd)
+    return preserved
+
+
 def _enrich(exchange: str, sd: dict) -> dict:
     """Return a symbol dict enriched with pre-computed Contract fields."""
     _NONE = {
@@ -117,7 +128,6 @@ def _enrich(exchange: str, sd: dict) -> dict:
         "symbol": None,
         "denominator": None,
         "margin": None,
-        "contract_type": None,
         "contract_size": None,
         "delivery_date": None,
     }
@@ -137,7 +147,6 @@ def _enrich(exchange: str, sd: dict) -> dict:
             "symbol": c.symbol,
             "denominator": c.denominator,
             "margin": c.margin,
-            "contract_type": c.contract_type.value,
             "contract_size": contract_size,
             "delivery_date": c.delivery_date.isoformat() if c.delivery_date else None,
         }
@@ -266,6 +275,7 @@ def update(
             symbols = incoming_symbols
         else:
             symbols = _merge_missing_rows(incoming_symbols, existing_rows)
+        symbols = _preserve_existing_cmc_ids(symbols, existing_by_id)
         symbols = sorted(
             symbols,
             key=lambda sd: (

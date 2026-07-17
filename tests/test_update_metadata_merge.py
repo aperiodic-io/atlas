@@ -1,4 +1,9 @@
-from atlas.update import _append_contract_size_change, _drop_none_fields, _merge_existing_fields
+from atlas.update import (
+    _append_contract_size_change,
+    _drop_none_fields,
+    _merge_existing_fields,
+    _preserve_existing_cmc_ids,
+)
 from atlas.update import _apply_snapshot_metadata
 
 
@@ -76,6 +81,24 @@ def test_merge_existing_fields_preserves_existing_cmc_id() -> None:
     assert merged[1]["cmc_id"] == 1027
 
 
+def test_preserve_existing_cmc_ids_overrides_later_source_values() -> None:
+    symbols = [
+        {"id": "BTCUSDT", "type": "spot", "cmc_id": None},
+        {"id": "ETHUSDT", "type": "spot", "cmc_id": 999999},
+        {"id": "SOLUSDT", "type": "spot"},
+    ]
+    existing_by_id = {
+        "BTCUSDT": {"id": "BTCUSDT", "cmc_id": 1},
+        "ETHUSDT": {"id": "ETHUSDT", "cmc_id": 1027},
+    }
+
+    preserved = _preserve_existing_cmc_ids(symbols, existing_by_id)
+
+    assert preserved[0]["cmc_id"] == 1
+    assert preserved[1]["cmc_id"] == 1027
+    assert "cmc_id" not in preserved[2]
+
+
 def test_merge_existing_fields_can_skip_existing_metadata() -> None:
     symbols = [{"id": "BTCUSDT", "type": "spot"}]
     existing_by_id = {
@@ -105,13 +128,11 @@ def test_drop_none_fields_removes_only_requested_none_fields() -> None:
             "margin": None,
             "delivery_date": None,
             "first_capture": None,
-            "contract_type": "spot",
         },
         {
             "id": "ETHUSDT",
             "margin": "USDT",
             "delivery_date": "2026-01-01T00:00:00",
-            "contract_type": "perpetual",
         },
     ]
 

@@ -87,7 +87,7 @@ TYPE_MAP: dict[str, ContractType] = {
 }
 
 
-def contract_type(sd: SymbolData) -> ContractType:
+def instrument_type(sd: SymbolData) -> ContractType:
     return TYPE_MAP.get(sd.get("type", ""), ContractType.unknown)
 
 
@@ -173,7 +173,7 @@ def make_contract(
         denominator=denominator.upper(),
         margin=margin.upper() if margin is not None else None,
         delivery_date=delivery_date,
-        contract_type=ctype,
+        instrument_type=ctype,
         contract_size=float(sd["contract_size"])
         if "contract_size" in sd and sd["contract_size"] is not None
         else None,
@@ -187,17 +187,17 @@ def parse_concat(
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
     symbol, denominator = pair
-    margin = resolve_margin(symbol, denominator, contract_type(sd))
-    return make_contract(exchange, sd, symbol, denominator, margin, contract_type(sd))
+    margin = resolve_margin(symbol, denominator, instrument_type(sd))
+    return make_contract(exchange, sd, symbol, denominator, margin, instrument_type(sd))
 
 
 def parse_dash(exchange: str, sd: SymbolData) -> Contract:
     parts = sd["id"].split("-")
     if len(parts) == 2:
         symbol, denominator = parts
-        margin = resolve_margin(symbol, denominator, contract_type(sd))
+        margin = resolve_margin(symbol, denominator, instrument_type(sd))
         return make_contract(
-            exchange, sd, symbol, denominator, margin, contract_type(sd)
+            exchange, sd, symbol, denominator, margin, instrument_type(sd)
         )
     raise SkipSymbol(f"{exchange}: expected 2 dash-separated parts in {sd['id']!r}")
 

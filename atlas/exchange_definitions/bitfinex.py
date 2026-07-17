@@ -4,7 +4,7 @@ import re
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, resolve_margin, split_concat
+from .common import SkipSymbol, instrument_type, make_contract, resolve_margin, split_concat
 
 
 def parse_bitfinex(exchange: str, sd: SymbolData) -> Contract:
@@ -15,7 +15,7 @@ def parse_bitfinex(exchange: str, sd: SymbolData) -> Contract:
         raise SkipSymbol(f"{exchange}: expected 't' prefix in {sid!r}")
 
     pair_str = sid[1:]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if ":" in pair_str:
         symbol, denominator = pair_str.split(":", 1)
@@ -57,6 +57,6 @@ def parse_bitfinex_derivatives(exchange: str, sd: SymbolData) -> Contract:
             symbol,
             denominator,
             denominator,
-            contract_type(sd),
+            instrument_type(sd),
         )
     raise SkipSymbol(f"{exchange}: cannot parse derivative {sd['id']!r}")

@@ -6,8 +6,9 @@ import requests
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
+from ..types import UnderlyingType
 from .common import (
-    contract_type,
+    instrument_type,
     make_contract,
     parse_concat,
     parse_yymmdd,
@@ -23,7 +24,7 @@ def parse_binance(exchange: str, sd: SymbolData) -> Contract:
 
 def parse_binance_futures(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"].upper()
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "_" in sid:
         base_str, suffix = sid.rsplit("_", 1)
@@ -60,7 +61,7 @@ def parse_binance_delivery(exchange: str, sd: SymbolData) -> Contract:
     base_str, suffix = sid.rsplit("_", 1)
     pair = split_concat(base_str, ["USD", "BUSD", "USDT"])
     symbol, denominator = pair if pair else (base_str, "USD")
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
     margin = resolve_margin(symbol, denominator, ctype)
     delivery = None if suffix == "PERP" else parse_yymmdd(suffix)
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
@@ -81,8 +82,23 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
     ]
 
 
-def _normalize_binance_contract_type(contract_type: str | None) -> str:
-    return "perpetual" if contract_type == "PERPETUAL" else "future"
+def _normalize_binance_instrument_type(raw_type: str | None) -> str:
+    return "perpetual" if raw_type == "PERPETUAL" else "future"
+
+
+_BINANCE_UNDERLYING_TYPE_MAP = {
+    "COIN": UnderlyingType.crypto,
+    "COMMODITY": UnderlyingType.commodity,
+    "EQUITY": UnderlyingType.equity,
+    "HK_EQUITY": UnderlyingType.equity,
+    "INDEX": UnderlyingType.index,
+    "KR_EQUITY": UnderlyingType.equity,
+    "PREMARKET": UnderlyingType.pre_market,
+}
+
+
+def _normalize_binance_underlying_type(raw_type: str | None) -> UnderlyingType:
+    return _BINANCE_UNDERLYING_TYPE_MAP.get(raw_type or "", UnderlyingType.unknown)
 
 
 def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
@@ -95,9 +111,12 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
             continue
         sd = _to_symbol(
             item["symbol"].lower(),
-            _normalize_binance_contract_type(item.get("contractType")),
+            _normalize_binance_instrument_type(item.get("contractType")),
         )
         sd["contract_size"] = 1.0
+        sd["underlying"] = _normalize_binance_underlying_type(
+            item.get("underlyingType")
+        ).value
         symbols.append(sd)
     return symbols
 
@@ -112,9 +131,12 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
             continue
         sd = _to_symbol(
             item["symbol"].lower(),
-            _normalize_binance_contract_type(item.get("contractType")),
+            _normalize_binance_instrument_type(item.get("contractType")),
         )
         if (cs := item.get("contractSize")) is not None:
             sd["contract_size"] = float(cs)
+        sd["underlying"] = _normalize_binance_underlying_type(
+            item.get("underlyingType")
+        ).value
         symbols.append(sd)
     return symbols

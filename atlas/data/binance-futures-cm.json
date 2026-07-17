@@ -6,10 +6,10 @@
     "symbol": "AAVE",
     "denominator": "USD",
     "margin": "AAVE",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-12-29T00:00:00.000Z",
-    "cmc_id": 7278
+    "cmc_id": 7278,
+    "underlying": "crypto",
+    "first_capture": "2021-12-29T00:00:00.000Z"
   },
   {
     "id": "adausd_200925",
@@ -18,11 +18,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2020-07-20T00:00:00.000Z",
     "end_date": "2020-09-26T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_201225",
@@ -31,11 +32,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2020-09-06T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_210326",
@@ -44,11 +46,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2020-09-25T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_210625",
@@ -57,11 +60,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_210924",
@@ -70,11 +74,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_211231",
@@ -83,11 +88,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_220325",
@@ -96,11 +102,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_220624",
@@ -109,11 +116,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_220930",
@@ -122,11 +130,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_221230",
@@ -135,11 +144,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_230331",
@@ -148,11 +158,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_230630",
@@ -161,11 +172,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_230929",
@@ -174,11 +186,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_231229",
@@ -187,11 +200,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_240329",
@@ -200,11 +214,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_240628",
@@ -213,11 +228,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_240927",
@@ -226,11 +242,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_241227",
@@ -239,11 +256,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_250328",
@@ -252,11 +270,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_250627",
@@ -265,11 +284,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_250926",
@@ -278,11 +298,12 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 2010,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 2010
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "adausd_perp",
@@ -291,10 +312,10 @@
     "symbol": "ADA",
     "denominator": "USD",
     "margin": "ADA",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-26T00:00:00.000Z",
-    "cmc_id": 2010
+    "cmc_id": 2010,
+    "underlying": "crypto",
+    "first_capture": "2020-08-26T00:00:00.000Z"
   },
   {
     "id": "algousd_perp",
@@ -303,10 +324,11 @@
     "symbol": "ALGO",
     "denominator": "USD",
     "margin": "ALGO",
-    "contract_type": "perpetual",
+    "cmc_id": 4030,
     "first_capture": "2022-03-15T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 4030
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "apeusd_perp",
@@ -315,9 +337,10 @@
     "symbol": "APE",
     "denominator": "USD",
     "margin": "APE",
-    "contract_type": "perpetual",
     "first_capture": "2022-03-28T00:00:00.000Z",
-    "end_date": "2024-05-25T00:00:00.000Z"
+    "end_date": "2024-05-25T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "aptusd_perp",
@@ -326,10 +349,11 @@
     "symbol": "APT",
     "denominator": "USD",
     "margin": "APT",
-    "contract_type": "perpetual",
+    "cmc_id": 21794,
     "first_capture": "2022-10-25T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 21794
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "atomusd_perp",
@@ -338,10 +362,11 @@
     "symbol": "ATOM",
     "denominator": "USD",
     "margin": "ATOM",
-    "contract_type": "perpetual",
+    "cmc_id": 3794,
     "first_capture": "2021-12-23T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 3794
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "avaxusd_perp",
@@ -350,10 +375,10 @@
     "symbol": "AVAX",
     "denominator": "USD",
     "margin": "AVAX",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-11-24T00:00:00.000Z",
-    "cmc_id": 5805
+    "cmc_id": 5805,
+    "underlying": "crypto",
+    "first_capture": "2021-11-24T00:00:00.000Z"
   },
   {
     "id": "axsusd_perp",
@@ -362,10 +387,11 @@
     "symbol": "AXS",
     "denominator": "USD",
     "margin": "AXS",
-    "contract_type": "perpetual",
+    "cmc_id": 6783,
     "first_capture": "2022-01-12T00:00:00.000Z",
     "end_date": "2025-11-11T00:00:00.000Z",
-    "cmc_id": 6783
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_201225",
@@ -374,11 +400,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2020-12-03T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_210326",
@@ -387,11 +414,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2020-12-03T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_210625",
@@ -400,11 +428,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_210924",
@@ -413,11 +442,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_211231",
@@ -426,11 +456,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_220325",
@@ -439,11 +470,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_220624",
@@ -452,11 +484,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_220930",
@@ -465,11 +498,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_221230",
@@ -478,11 +512,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_230331",
@@ -491,11 +526,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_230630",
@@ -504,11 +540,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_230929",
@@ -517,11 +554,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_231229",
@@ -530,11 +568,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_240329",
@@ -543,11 +582,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_240628",
@@ -556,11 +596,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_240927",
@@ -569,11 +610,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_241227",
@@ -582,11 +624,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_250328",
@@ -595,11 +638,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_250627",
@@ -608,11 +652,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_250926",
@@ -621,11 +666,12 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 1831,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 1831
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bchusd_perp",
@@ -634,10 +680,10 @@
     "symbol": "BCH",
     "denominator": "USD",
     "margin": "BCH",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-08T00:00:00.000Z",
-    "cmc_id": 1831
+    "cmc_id": 1831,
+    "underlying": "crypto",
+    "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
     "id": "bnbusd_201225",
@@ -646,11 +692,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2020-11-04T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_210326",
@@ -659,11 +706,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2020-11-04T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_210625",
@@ -672,11 +720,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_210924",
@@ -685,11 +734,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_211231",
@@ -698,11 +748,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2021-06-29T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_220325",
@@ -711,11 +762,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_220624",
@@ -724,11 +776,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_220930",
@@ -737,11 +790,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_221230",
@@ -750,11 +804,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_230331",
@@ -763,11 +818,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_230630",
@@ -776,11 +832,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_230929",
@@ -789,11 +846,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_231229",
@@ -802,11 +860,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_240329",
@@ -815,11 +874,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_240628",
@@ -828,11 +888,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_240927",
@@ -841,11 +902,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_241227",
@@ -854,11 +916,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_250328",
@@ -867,11 +930,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_250627",
@@ -880,11 +944,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_250926",
@@ -893,11 +958,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_251226",
@@ -906,11 +972,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2025-06-27T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_260327",
@@ -919,11 +986,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2025-09-26T00:00:00.000Z",
     "end_date": "2026-03-28T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_260626",
@@ -932,11 +1000,12 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
+    "cmc_id": 1839,
     "first_capture": "2025-12-26T00:00:00.000Z",
     "end_date": "2026-06-27T00:00:00.000Z",
-    "cmc_id": 1839
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "bnbusd_260925",
@@ -945,11 +1014,11 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-03-27T00:00:00.000Z",
-    "cmc_id": 1839
+    "cmc_id": 1839,
+    "underlying": "crypto",
+    "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "bnbusd_261225",
@@ -958,11 +1027,11 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-06-26T00:00:00.000Z",
-    "cmc_id": 1839
+    "cmc_id": 1839,
+    "underlying": "crypto",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "bnbusd_perp",
@@ -971,10 +1040,10 @@
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-21T00:00:00.000Z",
-    "cmc_id": 1839
+    "cmc_id": 1839,
+    "underlying": "crypto",
+    "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
     "id": "btcusd_200925",
@@ -983,10 +1052,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-06-16T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_201225",
@@ -995,10 +1065,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-07-01T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_210326",
@@ -1007,10 +1078,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_210625",
@@ -1019,10 +1091,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_210924",
@@ -1031,10 +1104,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_211231",
@@ -1043,10 +1117,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_220325",
@@ -1055,10 +1130,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_220624",
@@ -1067,10 +1143,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_220930",
@@ -1079,10 +1156,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_221230",
@@ -1091,10 +1169,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_230331",
@@ -1103,10 +1182,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_230630",
@@ -1115,10 +1195,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_230929",
@@ -1127,10 +1208,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_231229",
@@ -1139,10 +1221,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_240329",
@@ -1151,10 +1234,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_240628",
@@ -1163,10 +1247,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_240927",
@@ -1175,10 +1260,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_241227",
@@ -1187,10 +1273,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_250328",
@@ -1199,10 +1286,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_250627",
@@ -1211,10 +1299,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_250926",
@@ -1223,10 +1312,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_251226",
@@ -1235,10 +1325,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_260327",
@@ -1247,10 +1338,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_260626",
@@ -1259,10 +1351,11 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "btcusd_260925",
@@ -1271,9 +1364,9 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -1283,9 +1376,9 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -1295,8 +1388,8 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "contract_type": "perpetual",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2020-08-11T00:00:00.000Z"
   },
   {
@@ -1306,10 +1399,11 @@
     "symbol": "CHZ",
     "denominator": "USD",
     "margin": "CHZ",
-    "contract_type": "perpetual",
+    "cmc_id": 4066,
     "first_capture": "2022-08-18T00:00:00.000Z",
     "end_date": "2025-10-22T00:00:00.000Z",
-    "cmc_id": 4066
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "crvusd_perp",
@@ -1318,10 +1412,11 @@
     "symbol": "CRV",
     "denominator": "USD",
     "margin": "CRV",
-    "contract_type": "perpetual",
+    "cmc_id": 6538,
     "first_capture": "2022-01-06T00:00:00.000Z",
     "end_date": "2022-07-01T00:00:00.000Z",
-    "cmc_id": 6538
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dogeusd_perp",
@@ -1330,10 +1425,10 @@
     "symbol": "DOGE",
     "denominator": "USD",
     "margin": "DOGE",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-02-02T00:00:00.000Z",
-    "cmc_id": 74
+    "cmc_id": 74,
+    "underlying": "crypto",
+    "first_capture": "2021-02-02T00:00:00.000Z"
   },
   {
     "id": "dogsusd_perp",
@@ -1342,10 +1437,11 @@
     "symbol": "DOGS",
     "denominator": "USD",
     "margin": "DOGS",
-    "contract_type": "perpetual",
+    "cmc_id": 32698,
     "first_capture": "2024-09-10T00:00:00.000Z",
     "end_date": "2025-10-29T00:00:00.000Z",
-    "cmc_id": 32698
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_201225",
@@ -1354,11 +1450,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2020-11-04T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_210326",
@@ -1367,11 +1464,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2020-11-04T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_210625",
@@ -1380,11 +1478,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2020-12-26T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_210924",
@@ -1393,11 +1492,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_211231",
@@ -1406,11 +1506,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_220325",
@@ -1419,11 +1520,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_220624",
@@ -1432,11 +1534,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_220930",
@@ -1445,11 +1548,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_221230",
@@ -1458,11 +1562,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_230331",
@@ -1471,11 +1576,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_230630",
@@ -1484,11 +1590,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_230929",
@@ -1497,11 +1604,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_231229",
@@ -1510,11 +1618,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_240329",
@@ -1523,11 +1632,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_240628",
@@ -1536,11 +1646,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_240927",
@@ -1549,11 +1660,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_241227",
@@ -1562,11 +1674,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_250328",
@@ -1575,11 +1688,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_250627",
@@ -1588,11 +1702,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_250926",
@@ -1601,11 +1716,12 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 6636,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 6636
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "dotusd_perp",
@@ -1614,10 +1730,10 @@
     "symbol": "DOT",
     "denominator": "USD",
     "margin": "DOT",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-25T00:00:00.000Z",
-    "cmc_id": 6636
+    "cmc_id": 6636,
+    "underlying": "crypto",
+    "first_capture": "2020-08-25T00:00:00.000Z"
   },
   {
     "id": "egldusd_perp",
@@ -1626,10 +1742,11 @@
     "symbol": "EGLD",
     "denominator": "USD",
     "margin": "EGLD",
-    "contract_type": "perpetual",
+    "cmc_id": 6892,
     "first_capture": "2020-12-21T00:00:00.000Z",
     "end_date": "2025-11-14T00:00:00.000Z",
-    "cmc_id": 6892
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ensusd_perp",
@@ -1638,10 +1755,11 @@
     "symbol": "ENS",
     "denominator": "USD",
     "margin": "ENS",
-    "contract_type": "perpetual",
+    "cmc_id": 13855,
     "first_capture": "2022-08-02T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 13855
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "eosusd_201225",
@@ -1650,10 +1768,11 @@
     "symbol": "EOS",
     "denominator": "USD",
     "margin": "EOS",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-02T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "eosusd_210326",
@@ -1662,10 +1781,11 @@
     "symbol": "EOS",
     "denominator": "USD",
     "margin": "EOS",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-02T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "eosusd_perp",
@@ -1674,9 +1794,10 @@
     "symbol": "EOS",
     "denominator": "USD",
     "margin": "EOS",
-    "contract_type": "perpetual",
     "first_capture": "2020-09-07T00:00:00.000Z",
-    "end_date": "2025-05-23T00:00:00.000Z"
+    "end_date": "2025-05-23T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "etcusd_201225",
@@ -1685,11 +1806,12 @@
     "symbol": "ETC",
     "denominator": "USD",
     "margin": "ETC",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 1321,
     "first_capture": "2020-12-08T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 1321
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "etcusd_210326",
@@ -1698,11 +1820,12 @@
     "symbol": "ETC",
     "denominator": "USD",
     "margin": "ETC",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 1321,
     "first_capture": "2020-12-08T00:00:00.000Z",
     "end_date": "2021-01-12T00:00:00.000Z",
-    "cmc_id": 1321
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "etcusd_perp",
@@ -1711,10 +1834,10 @@
     "symbol": "ETC",
     "denominator": "USD",
     "margin": "ETC",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-09T00:00:00.000Z",
-    "cmc_id": 1321
+    "cmc_id": 1321,
+    "underlying": "crypto",
+    "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
     "id": "ethusd_200925",
@@ -1723,10 +1846,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-07-24T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_201225",
@@ -1735,10 +1859,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-08-05T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_210326",
@@ -1747,10 +1872,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_210625",
@@ -1759,10 +1885,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_210924",
@@ -1771,10 +1898,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_211231",
@@ -1783,10 +1911,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_220325",
@@ -1795,10 +1924,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_220624",
@@ -1807,10 +1937,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_220930",
@@ -1819,10 +1950,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_221230",
@@ -1831,10 +1963,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_230331",
@@ -1843,10 +1976,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_230630",
@@ -1855,10 +1989,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_230929",
@@ -1867,10 +2002,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_231229",
@@ -1879,10 +2015,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_240329",
@@ -1891,10 +2028,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_240628",
@@ -1903,10 +2041,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_240927",
@@ -1915,10 +2054,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_241227",
@@ -1927,10 +2067,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_250328",
@@ -1939,10 +2080,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_250627",
@@ -1951,10 +2093,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_250926",
@@ -1963,10 +2106,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_251226",
@@ -1975,10 +2119,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_260327",
@@ -1987,10 +2132,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_260626",
@@ -1999,10 +2145,11 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ethusd_260925",
@@ -2011,9 +2158,9 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -2023,9 +2170,9 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -2035,8 +2182,8 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2020-08-18T00:00:00.000Z"
   },
   {
@@ -2046,11 +2193,12 @@
     "symbol": "FIL",
     "denominator": "USD",
     "margin": "FIL",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 2280,
     "first_capture": "2020-12-09T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 2280
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "filusd_210326",
@@ -2059,11 +2207,12 @@
     "symbol": "FIL",
     "denominator": "USD",
     "margin": "FIL",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 2280,
     "first_capture": "2020-12-10T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 2280
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "filusd_perp",
@@ -2072,10 +2221,10 @@
     "symbol": "FIL",
     "denominator": "USD",
     "margin": "FIL",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-10-23T00:00:00.000Z",
-    "cmc_id": 2280
+    "cmc_id": 2280,
+    "underlying": "crypto",
+    "first_capture": "2020-10-23T00:00:00.000Z"
   },
   {
     "id": "ftmusd_perp",
@@ -2084,9 +2233,10 @@
     "symbol": "FTM",
     "denominator": "USD",
     "margin": "FTM",
-    "contract_type": "perpetual",
     "first_capture": "2021-11-04T00:00:00.000Z",
-    "end_date": "2025-01-19T00:00:00.000Z"
+    "end_date": "2025-01-19T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "galausd_perp",
@@ -2095,10 +2245,11 @@
     "symbol": "GALA",
     "denominator": "USD",
     "margin": "GALA",
-    "contract_type": "perpetual",
+    "cmc_id": 7080,
     "first_capture": "2021-12-02T00:00:00.000Z",
     "end_date": "2022-12-27T00:00:00.000Z",
-    "cmc_id": 7080
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "gmtusd_perp",
@@ -2107,10 +2258,11 @@
     "symbol": "GMT",
     "denominator": "USD",
     "margin": "GMT",
-    "contract_type": "perpetual",
+    "cmc_id": 18069,
     "first_capture": "2022-04-27T00:00:00.000Z",
     "end_date": "2025-10-29T00:00:00.000Z",
-    "cmc_id": 18069
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "icxusd_perp",
@@ -2119,10 +2271,11 @@
     "symbol": "ICX",
     "denominator": "USD",
     "margin": "ICX",
-    "contract_type": "perpetual",
+    "cmc_id": 2099,
     "first_capture": "2022-03-14T00:00:00.000Z",
     "end_date": "2024-05-21T00:00:00.000Z",
-    "cmc_id": 2099
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "kncusd_perp",
@@ -2131,10 +2284,11 @@
     "symbol": "KNC",
     "denominator": "USD",
     "margin": "KNC",
-    "contract_type": "perpetual",
+    "cmc_id": 9444,
     "first_capture": "2022-04-14T00:00:00.000Z",
     "end_date": "2024-05-21T00:00:00.000Z",
-    "cmc_id": 9444
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_200925",
@@ -2143,11 +2297,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2020-07-22T00:00:00.000Z",
     "end_date": "2020-09-26T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_201225",
@@ -2156,11 +2311,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2020-09-06T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_210326",
@@ -2169,11 +2325,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2020-09-25T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_210625",
@@ -2182,11 +2339,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_210924",
@@ -2195,11 +2353,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_211231",
@@ -2208,11 +2367,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_220325",
@@ -2221,11 +2381,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_220624",
@@ -2234,11 +2395,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_220930",
@@ -2247,11 +2409,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_221230",
@@ -2260,11 +2423,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_230331",
@@ -2273,11 +2437,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_230630",
@@ -2286,11 +2451,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_230929",
@@ -2299,11 +2465,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_231229",
@@ -2312,11 +2479,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_240329",
@@ -2325,11 +2493,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_240628",
@@ -2338,11 +2507,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_240927",
@@ -2351,11 +2521,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_241227",
@@ -2364,11 +2535,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_250328",
@@ -2377,11 +2549,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_250627",
@@ -2390,11 +2563,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_250926",
@@ -2403,11 +2577,12 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 1975,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 1975
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "linkusd_perp",
@@ -2416,10 +2591,10 @@
     "symbol": "LINK",
     "denominator": "USD",
     "margin": "LINK",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-19T00:00:00.000Z",
-    "cmc_id": 1975
+    "cmc_id": 1975,
+    "underlying": "crypto",
+    "first_capture": "2020-08-19T00:00:00.000Z"
   },
   {
     "id": "ltcusd_201225",
@@ -2428,11 +2603,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2020-12-01T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_210326",
@@ -2441,11 +2617,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2020-12-01T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_210625",
@@ -2454,11 +2631,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_210924",
@@ -2467,11 +2645,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_211231",
@@ -2480,11 +2659,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_220325",
@@ -2493,11 +2673,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_220624",
@@ -2506,11 +2687,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_220930",
@@ -2519,11 +2701,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_221230",
@@ -2532,11 +2715,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_230331",
@@ -2545,11 +2729,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_230630",
@@ -2558,11 +2743,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_230929",
@@ -2571,11 +2757,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_231229",
@@ -2584,11 +2771,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_240329",
@@ -2597,11 +2785,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_240628",
@@ -2610,11 +2799,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_240927",
@@ -2623,11 +2813,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_241227",
@@ -2636,11 +2827,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_250328",
@@ -2649,11 +2841,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_250627",
@@ -2662,11 +2855,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_250926",
@@ -2675,11 +2869,12 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 2,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 2
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "ltcusd_perp",
@@ -2688,10 +2883,10 @@
     "symbol": "LTC",
     "denominator": "USD",
     "margin": "LTC",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-08T00:00:00.000Z",
-    "cmc_id": 2
+    "cmc_id": 2,
+    "underlying": "crypto",
+    "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
     "id": "lunausd_perp",
@@ -2700,9 +2895,10 @@
     "symbol": "LUNA",
     "denominator": "USD",
     "margin": "LUNA",
-    "contract_type": "perpetual",
     "first_capture": "2021-09-03T00:00:00.000Z",
-    "end_date": "2022-05-13T00:00:00.000Z"
+    "end_date": "2022-05-13T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "manausd_perp",
@@ -2711,10 +2907,11 @@
     "symbol": "MANA",
     "denominator": "USD",
     "margin": "MANA",
-    "contract_type": "perpetual",
+    "cmc_id": 1966,
     "first_capture": "2021-11-17T00:00:00.000Z",
     "end_date": "2025-11-14T00:00:00.000Z",
-    "cmc_id": 1966
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "maticusd_perp",
@@ -2723,9 +2920,10 @@
     "symbol": "MATIC",
     "denominator": "USD",
     "margin": "MATIC",
-    "contract_type": "perpetual",
     "first_capture": "2021-12-08T00:00:00.000Z",
-    "end_date": "2024-09-06T00:00:00.000Z"
+    "end_date": "2024-09-06T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "nearusd_perp",
@@ -2734,10 +2932,10 @@
     "symbol": "NEAR",
     "denominator": "USD",
     "margin": "NEAR",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-12-15T00:00:00.000Z",
-    "cmc_id": 6535
+    "cmc_id": 6535,
+    "underlying": "crypto",
+    "first_capture": "2021-12-15T00:00:00.000Z"
   },
   {
     "id": "opusd_perp",
@@ -2746,10 +2944,11 @@
     "symbol": "OP",
     "denominator": "USD",
     "margin": "OP",
-    "contract_type": "perpetual",
+    "cmc_id": 11840,
     "first_capture": "2022-07-29T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 11840
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "roseusd_perp",
@@ -2758,10 +2957,11 @@
     "symbol": "ROSE",
     "denominator": "USD",
     "margin": "ROSE",
-    "contract_type": "perpetual",
+    "cmc_id": 7653,
     "first_capture": "2022-01-18T00:00:00.000Z",
     "end_date": "2024-05-25T00:00:00.000Z",
-    "cmc_id": 7653
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "runeusd_perp",
@@ -2770,10 +2970,11 @@
     "symbol": "RUNE",
     "denominator": "USD",
     "margin": "RUNE",
-    "contract_type": "perpetual",
+    "cmc_id": 4157,
     "first_capture": "2022-03-23T00:00:00.000Z",
     "end_date": "2025-11-21T00:00:00.000Z",
-    "cmc_id": 4157
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "sandusd_perp",
@@ -2782,10 +2983,11 @@
     "symbol": "SAND",
     "denominator": "USD",
     "margin": "SAND",
-    "contract_type": "perpetual",
+    "cmc_id": 6210,
     "first_capture": "2021-11-10T00:00:00.000Z",
     "end_date": "2026-03-26T00:00:00.000Z",
-    "cmc_id": 6210
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_240927",
@@ -2794,10 +2996,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-08-14T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_241227",
@@ -2806,10 +3009,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-08-14T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_250328",
@@ -2818,10 +3022,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_250627",
@@ -2830,10 +3035,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_250926",
@@ -2842,10 +3048,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_251226",
@@ -2854,10 +3061,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_260327",
@@ -2866,10 +3074,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_260626",
@@ -2878,10 +3087,11 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "solusd_260925",
@@ -2890,9 +3100,9 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -2902,9 +3112,9 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -2914,8 +3124,8 @@
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2021-09-02T00:00:00.000Z"
   },
   {
@@ -2925,10 +3135,10 @@
     "symbol": "SUI",
     "denominator": "USD",
     "margin": "SUI",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2024-09-18T00:00:00.000Z",
-    "cmc_id": 20947
+    "cmc_id": 20947,
+    "underlying": "crypto",
+    "first_capture": "2024-09-18T00:00:00.000Z"
   },
   {
     "id": "thetausd_perp",
@@ -2937,10 +3147,11 @@
     "symbol": "THETA",
     "denominator": "USD",
     "margin": "THETA",
-    "contract_type": "perpetual",
+    "cmc_id": 2416,
     "first_capture": "2021-04-14T00:00:00.000Z",
     "end_date": "2025-11-11T00:00:00.000Z",
-    "cmc_id": 2416
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "trxusd_201225",
@@ -2949,11 +3160,12 @@
     "symbol": "TRX",
     "denominator": "USD",
     "margin": "TRX",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 1958,
     "first_capture": "2020-12-07T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 1958
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "trxusd_210326",
@@ -2962,11 +3174,12 @@
     "symbol": "TRX",
     "denominator": "USD",
     "margin": "TRX",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 1958,
     "first_capture": "2020-12-07T00:00:00.000Z",
     "end_date": "2021-01-12T00:00:00.000Z",
-    "cmc_id": 1958
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "trxusd_perp",
@@ -2975,10 +3188,10 @@
     "symbol": "TRX",
     "denominator": "USD",
     "margin": "TRX",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-07T00:00:00.000Z",
-    "cmc_id": 1958
+    "cmc_id": 1958,
+    "underlying": "crypto",
+    "first_capture": "2020-09-07T00:00:00.000Z"
   },
   {
     "id": "uniusd_perp",
@@ -2987,10 +3200,10 @@
     "symbol": "UNI",
     "denominator": "USD",
     "margin": "UNI",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-04-13T00:00:00.000Z",
-    "cmc_id": 7083
+    "cmc_id": 7083,
+    "underlying": "crypto",
+    "first_capture": "2021-04-13T00:00:00.000Z"
   },
   {
     "id": "vetusd_perp",
@@ -2999,10 +3212,11 @@
     "symbol": "VET",
     "denominator": "USD",
     "margin": "VET",
-    "contract_type": "perpetual",
+    "cmc_id": 3077,
     "first_capture": "2022-03-30T00:00:00.000Z",
     "end_date": "2022-12-27T00:00:00.000Z",
-    "cmc_id": 3077
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "wifusd_perp",
@@ -3011,10 +3225,11 @@
     "symbol": "WIF",
     "denominator": "USD",
     "margin": "WIF",
-    "contract_type": "perpetual",
+    "cmc_id": 28752,
     "first_capture": "2024-07-23T00:00:00.000Z",
     "end_date": "2026-04-15T00:00:00.000Z",
-    "cmc_id": 28752
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "wldusd_perp",
@@ -3023,10 +3238,11 @@
     "symbol": "WLD",
     "denominator": "USD",
     "margin": "WLD",
-    "contract_type": "perpetual",
+    "cmc_id": 13502,
     "first_capture": "2024-10-02T00:00:00.000Z",
     "end_date": "2026-04-15T00:00:00.000Z",
-    "cmc_id": 13502
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xlmusd_perp",
@@ -3035,10 +3251,10 @@
     "symbol": "XLM",
     "denominator": "USD",
     "margin": "XLM",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-04-16T00:00:00.000Z",
-    "cmc_id": 512
+    "cmc_id": 512,
+    "underlying": "crypto",
+    "first_capture": "2021-04-16T00:00:00.000Z"
   },
   {
     "id": "xmrusd_perp",
@@ -3047,10 +3263,11 @@
     "symbol": "XMR",
     "denominator": "USD",
     "margin": "XMR",
-    "contract_type": "perpetual",
+    "cmc_id": 328,
     "first_capture": "2022-04-21T00:00:00.000Z",
     "end_date": "2024-02-16T00:00:00.000Z",
-    "cmc_id": 328
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_201225",
@@ -3059,11 +3276,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2020-11-30T00:00:00.000Z",
     "end_date": "2020-12-26T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_210326",
@@ -3072,11 +3290,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2020-11-30T00:00:00.000Z",
     "end_date": "2021-03-27T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_210625",
@@ -3085,11 +3304,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2020-12-25T00:00:00.000Z",
     "end_date": "2021-06-26T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_210924",
@@ -3098,11 +3318,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2021-03-26T00:00:00.000Z",
     "end_date": "2021-09-25T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_211231",
@@ -3111,11 +3332,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2021-06-25T00:00:00.000Z",
     "end_date": "2022-01-01T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_220325",
@@ -3124,11 +3346,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2022-03-26T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_220624",
@@ -3137,11 +3360,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2021-12-31T00:00:00.000Z",
     "end_date": "2022-06-25T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_220930",
@@ -3150,11 +3374,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2022-03-25T00:00:00.000Z",
     "end_date": "2022-10-01T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_221230",
@@ -3163,11 +3388,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2022-06-24T00:00:00.000Z",
     "end_date": "2022-12-31T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_230331",
@@ -3176,11 +3402,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2022-09-30T00:00:00.000Z",
     "end_date": "2023-04-01T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_230630",
@@ -3189,11 +3416,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2022-12-30T00:00:00.000Z",
     "end_date": "2023-07-01T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_230929",
@@ -3202,11 +3430,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2023-03-31T00:00:00.000Z",
     "end_date": "2023-09-30T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_231229",
@@ -3215,11 +3444,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2023-12-30T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_240329",
@@ -3228,11 +3458,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2023-09-29T00:00:00.000Z",
     "end_date": "2024-03-30T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_240628",
@@ -3241,11 +3472,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2023-12-29T00:00:00.000Z",
     "end_date": "2024-06-29T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_240927",
@@ -3254,11 +3486,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2024-03-29T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_241227",
@@ -3267,11 +3500,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2024-06-28T00:00:00.000Z",
     "end_date": "2024-12-28T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_250328",
@@ -3280,11 +3514,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2024-09-27T00:00:00.000Z",
     "end_date": "2025-03-29T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_250627",
@@ -3293,11 +3528,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-06-28T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_250926",
@@ -3306,11 +3542,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2025-03-28T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_251226",
@@ -3319,11 +3556,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2025-06-27T00:00:00.000Z",
     "end_date": "2025-12-27T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_260327",
@@ -3332,11 +3570,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2025-09-26T00:00:00.000Z",
     "end_date": "2026-03-28T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_260626",
@@ -3345,11 +3584,12 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
+    "cmc_id": 52,
     "first_capture": "2025-12-26T00:00:00.000Z",
     "end_date": "2026-06-27T00:00:00.000Z",
-    "cmc_id": 52
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "xrpusd_260925",
@@ -3358,11 +3598,11 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-03-27T00:00:00.000Z",
-    "cmc_id": 52
+    "cmc_id": 52,
+    "underlying": "crypto",
+    "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
     "id": "xrpusd_261225",
@@ -3371,11 +3611,11 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-06-26T00:00:00.000Z",
-    "cmc_id": 52
+    "cmc_id": 52,
+    "underlying": "crypto",
+    "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
     "id": "xrpusd_perp",
@@ -3384,10 +3624,10 @@
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-09T00:00:00.000Z",
-    "cmc_id": 52
+    "cmc_id": 52,
+    "underlying": "crypto",
+    "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
     "id": "xtzusd_perp",
@@ -3396,10 +3636,11 @@
     "symbol": "XTZ",
     "denominator": "USD",
     "margin": "XTZ",
-    "contract_type": "perpetual",
+    "cmc_id": 2011,
     "first_capture": "2022-02-14T00:00:00.000Z",
     "end_date": "2024-05-21T00:00:00.000Z",
-    "cmc_id": 2011
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   },
   {
     "id": "zilusd_perp",
@@ -3408,9 +3649,10 @@
     "symbol": "ZIL",
     "denominator": "USD",
     "margin": "ZIL",
-    "contract_type": "perpetual",
+    "cmc_id": 2469,
     "first_capture": "2022-04-07T00:00:00.000Z",
     "end_date": "2022-12-27T00:00:00.000Z",
-    "cmc_id": 2469
+    "end_date_source": "tardis",
+    "end_date_confidence": "authoritative"
   }
 ]

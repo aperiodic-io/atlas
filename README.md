@@ -25,7 +25,8 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - `symbol` (base)
   - `denominator` (quote / settlement)
   - `margin` (for derivatives)
-  - `contract_type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
+  - `type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
+  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `pre_market`, `unknown`), when supplied by the venue
   - `contract_size` (when available from source metadata)
   - `delivery_date` (for dated contracts)
   - `internal_id` string
@@ -41,7 +42,7 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
 
 Atlas uses a normalized `internal_id` format:
 
-`<contract_type>-<symbol>-<denominator>[:<margin>][-<delivery_yyyymmdd>]`
+`<type>-<symbol>-<denominator>[:<margin>][-<delivery_yyyymmdd>]`
 
 - Spot omits margin and delivery date.
 - Perpetual includes margin, but no delivery date.

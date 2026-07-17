@@ -6,7 +6,7 @@ from ..contracts import Contract
 from ..parser_interface import SymbolData
 from .common import (
     SkipSymbol,
-    contract_type,
+    instrument_type,
     make_contract,
     parse_cme_month_year,
     resolve_margin,
@@ -22,7 +22,7 @@ def _norm_bitmex(asset: str) -> str:
 
 def parse_bitmex(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "_" in sid:
         parts = sid.split("_", 1)

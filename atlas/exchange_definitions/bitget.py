@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, parse_concat, resolve_margin, split_concat
+from .common import SkipSymbol, instrument_type, make_contract, parse_concat, resolve_margin, split_concat
 
 
 def parse_bitget(exchange: str, sd: SymbolData) -> Contract:
@@ -27,7 +27,7 @@ def parse_bitget_futures(exchange: str, sd: SymbolData) -> Contract:
         pair = split_concat(base_str, quotes)
         if pair:
             symbol, denominator = pair
-            ctype = contract_type(sd)
+            ctype = instrument_type(sd)
             margin = resolve_margin(symbol, denominator, ctype)
             return make_contract(exchange, sd, symbol, denominator, margin, ctype)
         raise SkipSymbol(f"{exchange}: cannot split {base_str!r} with suffix {suffix!r}")

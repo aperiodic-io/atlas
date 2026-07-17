@@ -8,7 +8,7 @@ from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from .common import (
     SkipSymbol,
-    contract_type,
+    instrument_type,
     make_contract,
     parse_cme_month_year,
     parse_concat,
@@ -20,7 +20,7 @@ from .common import (
 
 def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
-    ctype = contract_type(sd)
+    ctype = instrument_type(sd)
 
     if "-" in sid:
         parts = sid.split("-")

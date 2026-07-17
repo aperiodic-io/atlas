@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, contract_type, make_contract, resolve_margin, split_concat
+from .common import SkipSymbol, instrument_type, make_contract, resolve_margin, split_concat
 
 
 def parse_bitstamp(exchange: str, sd: SymbolData) -> Contract:
@@ -11,7 +11,7 @@ def parse_bitstamp(exchange: str, sd: SymbolData) -> Contract:
     pair = split_concat(sid, quotes)
     if pair:
         symbol, denominator = pair
-        ctype = contract_type(sd)
+        ctype = instrument_type(sd)
         return make_contract(
             exchange,
             sd,

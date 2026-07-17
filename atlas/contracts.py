@@ -20,15 +20,15 @@ class Contract:
     symbol: str  # e.g. BTC
     denominator: str  # e.g. USDT (quote / settlement currency)
     margin: str | None  # e.g. USDT for linear, BTC for inverse (coin-margined)
-    contract_type: ContractType
+    instrument_type: ContractType
     contract_size: float | None = None
     contract_size_history: list[dict] | None = None
     delivery_date: datetime | None = None
 
     def __str__(self) -> str:
-        core = f"{self.contract_type.value}-{self.symbol}-{self.denominator}"
+        core = f"{self.instrument_type.value}-{self.symbol}-{self.denominator}"
         # Spot instruments are not margined.
-        if self.contract_type != ContractType.spot and self.margin is not None:
+        if self.instrument_type != ContractType.spot and self.margin is not None:
             core = f"{core}:{self.margin}"
         return core + (
             f"-{self.delivery_date.strftime('%Y%m%d')}" if self.delivery_date else ""
