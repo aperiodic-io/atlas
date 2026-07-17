@@ -88,6 +88,8 @@ def _merge_existing_fields(
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence; existing values fill only missing keys.
+    ``cmc_id`` is locally curated identity metadata and is never replaced or
+    removed by an exchange-source refresh.
     """
     metadata_keys = {"first_capture", "end_date"}
     merged_symbols: list[dict] = []
@@ -101,7 +103,10 @@ def _merge_existing_fields(
             for key, value in existing.items()
             if not (ignore_metadata and key in metadata_keys)
         }
-        merged_symbols.append({**existing_values, **sd})
+        source_values = sd.copy()
+        if existing.get("cmc_id") is not None:
+            source_values.pop("cmc_id", None)
+        merged_symbols.append({**existing_values, **source_values})
     return merged_symbols
 
 
@@ -184,6 +189,8 @@ def _apply_snapshot_metadata(symbols: list[dict]) -> list[dict]:
             mapped["first_capture"] = sd["availableSince"]
         if "availableTo" in sd:
             mapped["end_date"] = sd["availableTo"]
+            mapped["end_date_source"] = "tardis"
+            mapped["end_date_confidence"] = "authoritative"
         mapped_symbols.append(mapped)
     return mapped_symbols
 

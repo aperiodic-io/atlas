@@ -8,7 +8,8 @@
     "margin": "AAVE",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-12-29T00:00:00.000Z"
+    "first_capture": "2021-12-29T00:00:00.000Z",
+    "cmc_id": 7278
   },
   {
     "id": "adausd_200925",
@@ -20,7 +21,8 @@
     "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-07-20T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_201225",
@@ -32,7 +34,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-09-06T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_210326",
@@ -44,7 +47,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_210625",
@@ -56,7 +60,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_210924",
@@ -68,7 +73,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_211231",
@@ -80,7 +86,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_220325",
@@ -92,7 +99,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_220624",
@@ -104,7 +112,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_220930",
@@ -116,7 +125,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_221230",
@@ -128,7 +138,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_230331",
@@ -140,7 +151,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_230630",
@@ -152,7 +164,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_230929",
@@ -164,7 +177,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_231229",
@@ -176,7 +190,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_240329",
@@ -188,7 +203,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_240628",
@@ -200,7 +216,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_240927",
@@ -212,7 +229,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_241227",
@@ -224,7 +242,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_250328",
@@ -236,7 +255,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_250627",
@@ -248,7 +268,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_250926",
@@ -260,7 +281,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "adausd_perp",
@@ -271,7 +293,8 @@
     "margin": "ADA",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-26T00:00:00.000Z"
+    "first_capture": "2020-08-26T00:00:00.000Z",
+    "cmc_id": 2010
   },
   {
     "id": "algousd_perp",
@@ -282,7 +305,8 @@
     "margin": "ALGO",
     "contract_type": "perpetual",
     "first_capture": "2022-03-15T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 4030
   },
   {
     "id": "apeusd_perp",
@@ -304,7 +328,8 @@
     "margin": "APT",
     "contract_type": "perpetual",
     "first_capture": "2022-10-25T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 21794
   },
   {
     "id": "atomusd_perp",
@@ -315,7 +340,8 @@
     "margin": "ATOM",
     "contract_type": "perpetual",
     "first_capture": "2021-12-23T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 3794
   },
   {
     "id": "avaxusd_perp",
@@ -326,7 +352,8 @@
     "margin": "AVAX",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-11-24T00:00:00.000Z"
+    "first_capture": "2021-11-24T00:00:00.000Z",
+    "cmc_id": 5805
   },
   {
     "id": "axsusd_perp",
@@ -337,7 +364,8 @@
     "margin": "AXS",
     "contract_type": "perpetual",
     "first_capture": "2022-01-12T00:00:00.000Z",
-    "end_date": "2025-11-11T00:00:00.000Z"
+    "end_date": "2025-11-11T00:00:00.000Z",
+    "cmc_id": 6783
   },
   {
     "id": "bchusd_201225",
@@ -349,7 +377,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-03T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_210326",
@@ -361,7 +390,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-03T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_210625",
@@ -373,7 +403,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_210924",
@@ -385,7 +416,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_211231",
@@ -397,7 +429,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_220325",
@@ -409,7 +442,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_220624",
@@ -421,7 +455,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_220930",
@@ -433,7 +468,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_221230",
@@ -445,7 +481,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_230331",
@@ -457,7 +494,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_230630",
@@ -469,7 +507,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_230929",
@@ -481,7 +520,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_231229",
@@ -493,7 +533,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_240329",
@@ -505,7 +546,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_240628",
@@ -517,7 +559,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_240927",
@@ -529,7 +572,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_241227",
@@ -541,7 +585,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_250328",
@@ -553,7 +598,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_250627",
@@ -565,7 +611,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_250926",
@@ -577,7 +624,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bchusd_perp",
@@ -588,7 +636,8 @@
     "margin": "BCH",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-08T00:00:00.000Z"
+    "first_capture": "2020-09-08T00:00:00.000Z",
+    "cmc_id": 1831
   },
   {
     "id": "bnbusd_201225",
@@ -600,7 +649,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_210326",
@@ -612,7 +662,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_210625",
@@ -624,7 +675,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_210924",
@@ -636,7 +688,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_211231",
@@ -648,7 +701,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-29T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_220325",
@@ -660,7 +714,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_220624",
@@ -672,7 +727,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_220930",
@@ -684,7 +740,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_221230",
@@ -696,7 +753,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_230331",
@@ -708,7 +766,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_230630",
@@ -720,7 +779,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_230929",
@@ -732,7 +792,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_231229",
@@ -744,7 +805,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_240329",
@@ -756,7 +818,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_240628",
@@ -768,7 +831,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_240927",
@@ -780,7 +844,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_241227",
@@ -792,7 +857,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_250328",
@@ -804,7 +870,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_250627",
@@ -816,7 +883,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_250926",
@@ -828,7 +896,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_251226",
@@ -840,7 +909,8 @@
     "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_260327",
@@ -852,7 +922,8 @@
     "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_260626",
@@ -864,7 +935,8 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_260925",
@@ -876,7 +948,8 @@
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_261225",
@@ -888,7 +961,8 @@
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "bnbusd_perp",
@@ -899,7 +973,8 @@
     "margin": "BNB",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-21T00:00:00.000Z"
+    "first_capture": "2020-08-21T00:00:00.000Z",
+    "cmc_id": 1839
   },
   {
     "id": "btcusd_200925",
@@ -1233,7 +1308,8 @@
     "margin": "CHZ",
     "contract_type": "perpetual",
     "first_capture": "2022-08-18T00:00:00.000Z",
-    "end_date": "2025-10-22T00:00:00.000Z"
+    "end_date": "2025-10-22T00:00:00.000Z",
+    "cmc_id": 4066
   },
   {
     "id": "crvusd_perp",
@@ -1244,7 +1320,8 @@
     "margin": "CRV",
     "contract_type": "perpetual",
     "first_capture": "2022-01-06T00:00:00.000Z",
-    "end_date": "2022-07-01T00:00:00.000Z"
+    "end_date": "2022-07-01T00:00:00.000Z",
+    "cmc_id": 6538
   },
   {
     "id": "dogeusd_perp",
@@ -1255,7 +1332,8 @@
     "margin": "DOGE",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-02-02T00:00:00.000Z"
+    "first_capture": "2021-02-02T00:00:00.000Z",
+    "cmc_id": 74
   },
   {
     "id": "dogsusd_perp",
@@ -1266,7 +1344,8 @@
     "margin": "DOGS",
     "contract_type": "perpetual",
     "first_capture": "2024-09-10T00:00:00.000Z",
-    "end_date": "2025-10-29T00:00:00.000Z"
+    "end_date": "2025-10-29T00:00:00.000Z",
+    "cmc_id": 32698
   },
   {
     "id": "dotusd_201225",
@@ -1278,7 +1357,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_210326",
@@ -1290,7 +1370,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_210625",
@@ -1302,7 +1383,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-26T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_210924",
@@ -1314,7 +1396,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_211231",
@@ -1326,7 +1409,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_220325",
@@ -1338,7 +1422,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_220624",
@@ -1350,7 +1435,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_220930",
@@ -1362,7 +1448,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_221230",
@@ -1374,7 +1461,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_230331",
@@ -1386,7 +1474,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_230630",
@@ -1398,7 +1487,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_230929",
@@ -1410,7 +1500,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_231229",
@@ -1422,7 +1513,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_240329",
@@ -1434,7 +1526,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_240628",
@@ -1446,7 +1539,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_240927",
@@ -1458,7 +1552,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_241227",
@@ -1470,7 +1565,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_250328",
@@ -1482,7 +1578,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_250627",
@@ -1494,7 +1591,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_250926",
@@ -1506,7 +1604,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "dotusd_perp",
@@ -1517,7 +1616,8 @@
     "margin": "DOT",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-25T00:00:00.000Z"
+    "first_capture": "2020-08-25T00:00:00.000Z",
+    "cmc_id": 6636
   },
   {
     "id": "egldusd_perp",
@@ -1528,7 +1628,8 @@
     "margin": "EGLD",
     "contract_type": "perpetual",
     "first_capture": "2020-12-21T00:00:00.000Z",
-    "end_date": "2025-11-14T00:00:00.000Z"
+    "end_date": "2025-11-14T00:00:00.000Z",
+    "cmc_id": 6892
   },
   {
     "id": "ensusd_perp",
@@ -1539,7 +1640,8 @@
     "margin": "ENS",
     "contract_type": "perpetual",
     "first_capture": "2022-08-02T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 13855
   },
   {
     "id": "eosusd_201225",
@@ -1586,7 +1688,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-08T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 1321
   },
   {
     "id": "etcusd_210326",
@@ -1598,7 +1701,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-08T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "cmc_id": 1321
   },
   {
     "id": "etcusd_perp",
@@ -1609,7 +1713,8 @@
     "margin": "ETC",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-09T00:00:00.000Z"
+    "first_capture": "2020-09-09T00:00:00.000Z",
+    "cmc_id": 1321
   },
   {
     "id": "ethusd_200925",
@@ -1944,7 +2049,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-09T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 2280
   },
   {
     "id": "filusd_210326",
@@ -1956,7 +2062,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-10T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 2280
   },
   {
     "id": "filusd_perp",
@@ -1967,7 +2074,8 @@
     "margin": "FIL",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-10-23T00:00:00.000Z"
+    "first_capture": "2020-10-23T00:00:00.000Z",
+    "cmc_id": 2280
   },
   {
     "id": "ftmusd_perp",
@@ -1989,7 +2097,8 @@
     "margin": "GALA",
     "contract_type": "perpetual",
     "first_capture": "2021-12-02T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "cmc_id": 7080
   },
   {
     "id": "gmtusd_perp",
@@ -2000,7 +2109,8 @@
     "margin": "GMT",
     "contract_type": "perpetual",
     "first_capture": "2022-04-27T00:00:00.000Z",
-    "end_date": "2025-10-29T00:00:00.000Z"
+    "end_date": "2025-10-29T00:00:00.000Z",
+    "cmc_id": 18069
   },
   {
     "id": "icxusd_perp",
@@ -2011,7 +2121,8 @@
     "margin": "ICX",
     "contract_type": "perpetual",
     "first_capture": "2022-03-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "cmc_id": 2099
   },
   {
     "id": "kncusd_perp",
@@ -2022,7 +2133,8 @@
     "margin": "KNC",
     "contract_type": "perpetual",
     "first_capture": "2022-04-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "cmc_id": 9444
   },
   {
     "id": "linkusd_200925",
@@ -2034,7 +2146,8 @@
     "contract_type": "future",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-07-22T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_201225",
@@ -2046,7 +2159,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-09-06T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_210326",
@@ -2058,7 +2172,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_210625",
@@ -2070,7 +2185,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_210924",
@@ -2082,7 +2198,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_211231",
@@ -2094,7 +2211,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_220325",
@@ -2106,7 +2224,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_220624",
@@ -2118,7 +2237,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_220930",
@@ -2130,7 +2250,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_221230",
@@ -2142,7 +2263,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_230331",
@@ -2154,7 +2276,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_230630",
@@ -2166,7 +2289,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_230929",
@@ -2178,7 +2302,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_231229",
@@ -2190,7 +2315,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_240329",
@@ -2202,7 +2328,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_240628",
@@ -2214,7 +2341,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_240927",
@@ -2226,7 +2354,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_241227",
@@ -2238,7 +2367,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_250328",
@@ -2250,7 +2380,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_250627",
@@ -2262,7 +2393,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_250926",
@@ -2274,7 +2406,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "linkusd_perp",
@@ -2285,7 +2418,8 @@
     "margin": "LINK",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-08-19T00:00:00.000Z"
+    "first_capture": "2020-08-19T00:00:00.000Z",
+    "cmc_id": 1975
   },
   {
     "id": "ltcusd_201225",
@@ -2297,7 +2431,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-01T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_210326",
@@ -2309,7 +2444,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-01T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_210625",
@@ -2321,7 +2457,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_210924",
@@ -2333,7 +2470,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_211231",
@@ -2345,7 +2483,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_220325",
@@ -2357,7 +2496,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_220624",
@@ -2369,7 +2509,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_220930",
@@ -2381,7 +2522,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_221230",
@@ -2393,7 +2535,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_230331",
@@ -2405,7 +2548,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_230630",
@@ -2417,7 +2561,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_230929",
@@ -2429,7 +2574,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_231229",
@@ -2441,7 +2587,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_240329",
@@ -2453,7 +2600,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_240628",
@@ -2465,7 +2613,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_240927",
@@ -2477,7 +2626,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_241227",
@@ -2489,7 +2639,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_250328",
@@ -2501,7 +2652,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_250627",
@@ -2513,7 +2665,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_250926",
@@ -2525,7 +2678,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "ltcusd_perp",
@@ -2536,7 +2690,8 @@
     "margin": "LTC",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-08T00:00:00.000Z"
+    "first_capture": "2020-09-08T00:00:00.000Z",
+    "cmc_id": 2
   },
   {
     "id": "lunausd_perp",
@@ -2558,7 +2713,8 @@
     "margin": "MANA",
     "contract_type": "perpetual",
     "first_capture": "2021-11-17T00:00:00.000Z",
-    "end_date": "2025-11-14T00:00:00.000Z"
+    "end_date": "2025-11-14T00:00:00.000Z",
+    "cmc_id": 1966
   },
   {
     "id": "maticusd_perp",
@@ -2580,7 +2736,8 @@
     "margin": "NEAR",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-12-15T00:00:00.000Z"
+    "first_capture": "2021-12-15T00:00:00.000Z",
+    "cmc_id": 6535
   },
   {
     "id": "opusd_perp",
@@ -2591,7 +2748,8 @@
     "margin": "OP",
     "contract_type": "perpetual",
     "first_capture": "2022-07-29T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 11840
   },
   {
     "id": "roseusd_perp",
@@ -2602,7 +2760,8 @@
     "margin": "ROSE",
     "contract_type": "perpetual",
     "first_capture": "2022-01-18T00:00:00.000Z",
-    "end_date": "2024-05-25T00:00:00.000Z"
+    "end_date": "2024-05-25T00:00:00.000Z",
+    "cmc_id": 7653
   },
   {
     "id": "runeusd_perp",
@@ -2613,7 +2772,8 @@
     "margin": "RUNE",
     "contract_type": "perpetual",
     "first_capture": "2022-03-23T00:00:00.000Z",
-    "end_date": "2025-11-21T00:00:00.000Z"
+    "end_date": "2025-11-21T00:00:00.000Z",
+    "cmc_id": 4157
   },
   {
     "id": "sandusd_perp",
@@ -2624,7 +2784,8 @@
     "margin": "SAND",
     "contract_type": "perpetual",
     "first_capture": "2021-11-10T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "cmc_id": 6210
   },
   {
     "id": "solusd_240927",
@@ -2766,7 +2927,8 @@
     "margin": "SUI",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2024-09-18T00:00:00.000Z"
+    "first_capture": "2024-09-18T00:00:00.000Z",
+    "cmc_id": 20947
   },
   {
     "id": "thetausd_perp",
@@ -2777,7 +2939,8 @@
     "margin": "THETA",
     "contract_type": "perpetual",
     "first_capture": "2021-04-14T00:00:00.000Z",
-    "end_date": "2025-11-11T00:00:00.000Z"
+    "end_date": "2025-11-11T00:00:00.000Z",
+    "cmc_id": 2416
   },
   {
     "id": "trxusd_201225",
@@ -2789,7 +2952,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-07T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 1958
   },
   {
     "id": "trxusd_210326",
@@ -2801,7 +2965,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-07T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "cmc_id": 1958
   },
   {
     "id": "trxusd_perp",
@@ -2812,7 +2977,8 @@
     "margin": "TRX",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-07T00:00:00.000Z"
+    "first_capture": "2020-09-07T00:00:00.000Z",
+    "cmc_id": 1958
   },
   {
     "id": "uniusd_perp",
@@ -2823,7 +2989,8 @@
     "margin": "UNI",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-04-13T00:00:00.000Z"
+    "first_capture": "2021-04-13T00:00:00.000Z",
+    "cmc_id": 7083
   },
   {
     "id": "vetusd_perp",
@@ -2834,7 +3001,8 @@
     "margin": "VET",
     "contract_type": "perpetual",
     "first_capture": "2022-03-30T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "cmc_id": 3077
   },
   {
     "id": "wifusd_perp",
@@ -2845,7 +3013,8 @@
     "margin": "WIF",
     "contract_type": "perpetual",
     "first_capture": "2024-07-23T00:00:00.000Z",
-    "end_date": "2026-04-15T00:00:00.000Z"
+    "end_date": "2026-04-15T00:00:00.000Z",
+    "cmc_id": 28752
   },
   {
     "id": "wldusd_perp",
@@ -2856,7 +3025,8 @@
     "margin": "WLD",
     "contract_type": "perpetual",
     "first_capture": "2024-10-02T00:00:00.000Z",
-    "end_date": "2026-04-15T00:00:00.000Z"
+    "end_date": "2026-04-15T00:00:00.000Z",
+    "cmc_id": 13502
   },
   {
     "id": "xlmusd_perp",
@@ -2867,7 +3037,8 @@
     "margin": "XLM",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2021-04-16T00:00:00.000Z"
+    "first_capture": "2021-04-16T00:00:00.000Z",
+    "cmc_id": 512
   },
   {
     "id": "xmrusd_perp",
@@ -2878,7 +3049,8 @@
     "margin": "XMR",
     "contract_type": "perpetual",
     "first_capture": "2022-04-21T00:00:00.000Z",
-    "end_date": "2024-02-16T00:00:00.000Z"
+    "end_date": "2024-02-16T00:00:00.000Z",
+    "cmc_id": 328
   },
   {
     "id": "xrpusd_201225",
@@ -2890,7 +3062,8 @@
     "contract_type": "future",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-11-30T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_210326",
@@ -2902,7 +3075,8 @@
     "contract_type": "future",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-11-30T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_210625",
@@ -2914,7 +3088,8 @@
     "contract_type": "future",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_210924",
@@ -2926,7 +3101,8 @@
     "contract_type": "future",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_211231",
@@ -2938,7 +3114,8 @@
     "contract_type": "future",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_220325",
@@ -2950,7 +3127,8 @@
     "contract_type": "future",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_220624",
@@ -2962,7 +3140,8 @@
     "contract_type": "future",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_220930",
@@ -2974,7 +3153,8 @@
     "contract_type": "future",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_221230",
@@ -2986,7 +3166,8 @@
     "contract_type": "future",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_230331",
@@ -2998,7 +3179,8 @@
     "contract_type": "future",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_230630",
@@ -3010,7 +3192,8 @@
     "contract_type": "future",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_230929",
@@ -3022,7 +3205,8 @@
     "contract_type": "future",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_231229",
@@ -3034,7 +3218,8 @@
     "contract_type": "future",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_240329",
@@ -3046,7 +3231,8 @@
     "contract_type": "future",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_240628",
@@ -3058,7 +3244,8 @@
     "contract_type": "future",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_240927",
@@ -3070,7 +3257,8 @@
     "contract_type": "future",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_241227",
@@ -3082,7 +3270,8 @@
     "contract_type": "future",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_250328",
@@ -3094,7 +3283,8 @@
     "contract_type": "future",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_250627",
@@ -3106,7 +3296,8 @@
     "contract_type": "future",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_250926",
@@ -3118,7 +3309,8 @@
     "contract_type": "future",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_251226",
@@ -3130,7 +3322,8 @@
     "contract_type": "future",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_260327",
@@ -3142,7 +3335,8 @@
     "contract_type": "future",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_260626",
@@ -3154,7 +3348,8 @@
     "contract_type": "future",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_260925",
@@ -3166,7 +3361,8 @@
     "contract_type": "future",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_261225",
@@ -3178,7 +3374,8 @@
     "contract_type": "future",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xrpusd_perp",
@@ -3189,7 +3386,8 @@
     "margin": "XRP",
     "contract_type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2020-09-09T00:00:00.000Z"
+    "first_capture": "2020-09-09T00:00:00.000Z",
+    "cmc_id": 52
   },
   {
     "id": "xtzusd_perp",
@@ -3200,7 +3398,8 @@
     "margin": "XTZ",
     "contract_type": "perpetual",
     "first_capture": "2022-02-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "cmc_id": 2011
   },
   {
     "id": "zilusd_perp",
@@ -3211,6 +3410,7 @@
     "margin": "ZIL",
     "contract_type": "perpetual",
     "first_capture": "2022-04-07T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "cmc_id": 2469
   }
 ]
