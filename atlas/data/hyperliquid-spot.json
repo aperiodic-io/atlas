@@ -1625,6 +1625,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "SPYX/USDC",
+    "type": "spot",
+    "internal_id": "spot-SPYX-USDC",
+    "symbol": "SPYX",
+    "denominator": "USDC"
+  },
+  {
     "id": "STABLE/USDC",
     "type": "spot",
     "internal_id": "spot-STABLE-USDC",
