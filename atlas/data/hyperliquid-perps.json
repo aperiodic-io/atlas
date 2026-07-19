@@ -3145,29 +3145,29 @@
   {
     "id": "para:COHR",
     "type": "perpetual",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-PARA:COHR-USDC:USDC",
     "symbol": "PARA:COHR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "para:CRDO",
     "type": "perpetual",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-PARA:CRDO-USDC:USDC",
     "symbol": "PARA:CRDO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "para:GLW",
     "type": "perpetual",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-PARA:GLW-USDC:USDC",
     "symbol": "PARA:GLW",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "para:OTHERS",

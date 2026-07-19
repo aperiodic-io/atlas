@@ -449,11 +449,11 @@
     "id": "APP-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-APP-USDT:USDT",
     "symbol": "APP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "APR-USDT-SWAP",
@@ -5046,11 +5046,11 @@
     "id": "SNOW-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-SNOW-USDT:USDT",
     "symbol": "SNOW",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "SNX-USDT-SWAP",
@@ -5189,11 +5189,11 @@
     "id": "SOXS-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-SOXS-USDT:USDT",
     "symbol": "SOXS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "SPACE-USDT-SWAP",
@@ -6692,11 +6692,11 @@
     "id": "ZM-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "perpetual-ZM-USDT:USDT",
     "symbol": "ZM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "ZORA-USDT-SWAP",

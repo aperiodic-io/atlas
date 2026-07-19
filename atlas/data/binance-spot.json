@@ -985,26 +985,26 @@
   {
     "id": "aerotry",
     "type": "spot",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "spot-AERO-TRY",
     "symbol": "AERO",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "aerousdc",
     "type": "spot",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "spot-AERO-USDC",
     "symbol": "AERO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "aerousdt",
     "type": "spot",
-    "first_capture": "2026-07-17T00:00:00.000Z",
     "internal_id": "spot-AERO-USDT",
     "symbol": "AERO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
     "id": "aeth",
@@ -11933,7 +11933,8 @@
     "symbol": "GLM",
     "denominator": "BTC",
     "cmc_id": 1455,
-    "first_capture": "2021-03-04T00:00:00.000Z"
+    "first_capture": "2021-03-04T00:00:00.000Z",
+    "end_date": "2026-07-18T00:00:00.000Z"
   },
   {
     "id": "glmbusd",
@@ -14923,7 +14924,8 @@
     "symbol": "KNC",
     "denominator": "BTC",
     "cmc_id": 9444,
-    "first_capture": "2019-11-13T00:00:00.000Z"
+    "first_capture": "2019-11-13T00:00:00.000Z",
+    "end_date": "2026-07-18T00:00:00.000Z"
   },
   {
     "id": "kncbusd",
@@ -19442,7 +19444,8 @@
     "symbol": "ONT",
     "denominator": "BTC",
     "cmc_id": 2566,
-    "first_capture": "2019-11-07T00:00:00.000Z"
+    "first_capture": "2019-11-07T00:00:00.000Z",
+    "end_date": "2026-07-18T00:00:00.000Z"
   },
   {
     "id": "ontbusd",
@@ -29450,7 +29453,8 @@
     "symbol": "XAI",
     "denominator": "USDC",
     "cmc_id": 28933,
-    "first_capture": "2025-07-15T00:00:00.000Z"
+    "first_capture": "2025-07-15T00:00:00.000Z",
+    "end_date": "2026-07-18T00:00:00.000Z"
   },
   {
     "id": "xaiusdt",
