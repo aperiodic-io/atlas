@@ -1,10 +1,12 @@
-"""Populate CMC categories for snapshot rows with a CoinMarketCap ID."""
+"""Populate selected CMC CATEGORY tags for snapshot rows with a CoinMarketCap ID."""
 
 from __future__ import annotations
 
 import argparse
 import json
 import time
+from email.utils import parsedate_to_datetime
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -14,7 +16,29 @@ import requests
 CMC_DETAIL_URL = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail"
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
 REQUEST_TIMEOUT_SECONDS = 20
-DEFAULT_MAX_ATTEMPTS = 3
+DEFAULT_MAX_ATTEMPTS = 5
+DEFAULT_MIN_INTERVAL_SECONDS = 0.25
+MAX_RETRY_DELAY_SECONDS = 120
+INCLUDED_CATEGORY_TAGS = (
+    "DeFi",
+    "Layer 1",
+    "Layer 2",
+    "Tokenized Stock",
+    "Real World Assets Protocols",
+    "Staking",
+    "Play To Earn",
+    "Generative AI",
+    "Smart Contracts",
+    "DApp",
+    "Collectibles & NFTs",
+    "Lending & Borrowing",
+    "DAO",
+    "Metaverse",
+    "Privacy",
+    "AI Agents",
+    "AI Applications",
+    "Interoperability",
+)
 
 
 class JsonResponse(Protocol):
@@ -36,18 +60,22 @@ def fetch_cmc_categories(
     cmc_ids: set[int],
     timeout_seconds: int = REQUEST_TIMEOUT_SECONDS,
     max_attempts: int = DEFAULT_MAX_ATTEMPTS,
-    min_interval_seconds: float = 0.0,
-) -> dict[int, str]:
-    """Fetch categories by stable CMC ID from the CMC detail endpoint."""
+    min_interval_seconds: float = DEFAULT_MIN_INTERVAL_SECONDS,
+) -> dict[int, list[str]]:
+    """Fetch selected CATEGORY tags by stable CMC ID from the CMC detail endpoint."""
     if timeout_seconds <= 0 or max_attempts <= 0 or min_interval_seconds < 0:
         raise ValueError("invalid CMC category request settings")
 
-    categories: dict[int, str] = {}
+    categories: dict[int, list[str]] = {}
+    next_request_at = 0.0
     for cmc_id in sorted(cmc_ids):
         if cmc_id <= 0:
             raise ValueError(f"invalid CMC ID: {cmc_id}")
         last_error: Exception | None = None
         for attempt in range(max_attempts):
+            delay = next_request_at - time.monotonic()
+            if delay > 0:
+                time.sleep(delay)
             try:
                 response = session.get(
                     CMC_DETAIL_URL,
@@ -57,19 +85,18 @@ def fetch_cmc_categories(
                 )
                 response.raise_for_status()
                 payload = response.json()
-                category = _parse_category(payload, cmc_id)
+                category = _parse_categories(payload, cmc_id)
                 categories[cmc_id] = category
+                next_request_at = time.monotonic() + min_interval_seconds
                 break
             except (CmcCategoryError, requests.RequestException, ValueError) as error:
                 last_error = error
                 if attempt + 1 < max_attempts:
-                    time.sleep(min(2**attempt, 8))
+                    next_request_at = time.monotonic() + _retry_delay(error, attempt)
         else:
             raise CmcCategoryError(
                 f"failed to fetch category for CMC ID {cmc_id}: {last_error}"
             ) from last_error
-        if min_interval_seconds:
-            time.sleep(min_interval_seconds)
     return categories
 
 
@@ -78,9 +105,9 @@ def populate_cmc_categories(
     dry_run: bool = False,
     timeout_seconds: int = REQUEST_TIMEOUT_SECONDS,
     max_attempts: int = DEFAULT_MAX_ATTEMPTS,
-    min_interval_seconds: float = 0.0,
+    min_interval_seconds: float = DEFAULT_MIN_INTERVAL_SECONDS,
 ) -> dict[str, int]:
-    """Add ``cmc_category`` to every row that has a CMC ID."""
+    """Replace ``cmc_category`` with selected CMC tags in ``category``."""
     files = sorted(data_dir.glob("*.json"))
     rows_by_file: dict[Path, list[dict[str, object]]] = {}
     cmc_ids: set[int] = set()
@@ -117,8 +144,9 @@ def populate_cmc_categories(
                 stats["missing"] += 1
                 continue
             stats["rows"] += 1
-            if row.get("cmc_category") != category:
-                row["cmc_category"] = category
+            if row.get("category") != category or "cmc_category" in row:
+                row["category"] = category
+                row.pop("cmc_category", None)
                 stats["updated"] += 1
                 changed = True
         if changed:
@@ -128,14 +156,43 @@ def populate_cmc_categories(
     return stats
 
 
-def _parse_category(payload: object, cmc_id: int) -> str:
+def _parse_categories(payload: object, cmc_id: int) -> list[str]:
     try:
-        category = payload["data"]["category"]  # type: ignore[index]
+        tags = payload["data"]["tags"]  # type: ignore[index]
     except (KeyError, TypeError):
-        raise CmcCategoryError(f"CMC response has no category for ID {cmc_id}") from None
-    if not isinstance(category, str) or not category:
-        raise CmcCategoryError(f"CMC category is invalid for ID {cmc_id}")
-    return category
+        raise CmcCategoryError(f"CMC response has no tags for ID {cmc_id}") from None
+    if not isinstance(tags, list):
+        raise CmcCategoryError(f"CMC tags are invalid for ID {cmc_id}")
+
+    names = {
+        tag.get("name")
+        for tag in tags
+        if isinstance(tag, dict) and tag.get("category") == "CATEGORY"
+    }
+    return [name for name in INCLUDED_CATEGORY_TAGS if name in names]
+
+
+def _retry_delay(error: Exception, attempt: int) -> float:
+    """Return a bounded CMC cooldown, preferring its Retry-After instruction."""
+    response = getattr(error, "response", None)
+    retry_after = getattr(response, "headers", {}).get("Retry-After")
+    try:
+        requested_delay = float(retry_after)
+    except (TypeError, ValueError):
+        requested_delay = _http_date_delay(retry_after)
+    return min(max(requested_delay, 2**attempt), MAX_RETRY_DELAY_SECONDS)
+
+
+def _http_date_delay(retry_after: object) -> float:
+    if not isinstance(retry_after, str):
+        return 0
+    try:
+        retry_at = parsedate_to_datetime(retry_after)
+    except (TypeError, ValueError, IndexError):
+        return 0
+    if retry_at.tzinfo is None:
+        retry_at = retry_at.replace(tzinfo=UTC)
+    return max((retry_at - datetime.now(UTC)).total_seconds(), 0)
 
 
 def main() -> int:
@@ -144,7 +201,12 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--timeout-seconds", type=int, default=REQUEST_TIMEOUT_SECONDS)
     parser.add_argument("--max-attempts", type=int, default=DEFAULT_MAX_ATTEMPTS)
-    parser.add_argument("--min-interval-seconds", type=float, default=0.0)
+    parser.add_argument(
+        "--min-interval-seconds",
+        type=float,
+        default=DEFAULT_MIN_INTERVAL_SECONDS,
+        help="minimum delay between CMC requests (default: %(default)s)",
+    )
     args = parser.parse_args()
     try:
         stats = populate_cmc_categories(
