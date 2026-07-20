@@ -107,8 +107,6 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
     ).json()
     symbols = []
     for item in payload.get("symbols", []):
-        if item.get("status") != "TRADING":
-            continue
         sd = _to_symbol(
             item["symbol"].lower(),
             _normalize_binance_instrument_type(item.get("contractType")),
