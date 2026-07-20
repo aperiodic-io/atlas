@@ -752,6 +752,21 @@ class TestFetchBinanceFuturesUsdM:
             symbols = fetch_binance_futures_usdm(timeout_seconds=5)
         assert symbols[0]["underlying"] == UnderlyingType.unknown.value
 
+    def test_delisted_symbol_includes_underlying_type(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("OMGUSDT") | {"status": "SETTLING"}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols == [
+            {
+                "id": "omgusdt",
+                "type": "perpetual",
+                "contract_size": 1.0,
+                "underlying": UnderlyingType.crypto.value,
+            }
+        ]
+
 
 class TestFetchBinanceFuturesCoinM:
     def _mock_get(self, symbols: list[dict]) -> MagicMock:
