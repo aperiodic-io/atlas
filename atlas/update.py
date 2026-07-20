@@ -233,11 +233,12 @@ def _merge_missing_rows(incoming_symbols: list[dict], existing_rows: list[dict])
 def update(
     exchanges: list[str] = EXCHANGES,
     source: SymbolSource | None = None,
-) -> None:
+) -> list[str]:
     if source is None:
         source = HybridSymbolSource()
     _DATA_DIR.mkdir(exist_ok=True)
     total = 0
+    failed_exchanges: list[str] = []
     for exchange in exchanges:
         path = _DATA_DIR / f"{exchange}.json"
         existing_rows, existing_by_id = _load_existing_symbols(path)
@@ -249,6 +250,7 @@ def update(
             data = source.fetch_exchange(exchange)
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
+            failed_exchanges.append(exchange)
             continue
 
         allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
@@ -288,6 +290,13 @@ def update(
         print(f"  {len(symbols)} symbols → {path.name}")
 
     print(f"\nTotal: {total} symbols across {len(exchanges)} exchanges")
+    if failed_exchanges:
+        print(
+            f"\nFailed to fetch {len(failed_exchanges)} exchange(s): "
+            f"{', '.join(failed_exchanges)}",
+            file=sys.stderr,
+        )
+    return failed_exchanges
 
 
 if __name__ == "__main__":
@@ -326,4 +335,6 @@ if __name__ == "__main__":
     else:
         source = HybridSymbolSource()
 
-    update(exchanges, source=source)
+    failed_exchanges = update(exchanges, source=source)
+    if failed_exchanges:
+        sys.exit(1)

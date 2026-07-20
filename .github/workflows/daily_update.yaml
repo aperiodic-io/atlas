@@ -32,6 +32,7 @@ jobs:
         run: uv run python atlas/update.py --source hybrid
 
       - name: commit-updated-jsons
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -42,3 +43,13 @@ jobs:
           fi
           git commit -m "chore(data): daily security master update"
           git push
+
+      - name: notify-slack-on-failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sf -X POST -H 'Content-type: application/json' \
+            --data "{\"text\": \":x: daily-update workflow failed — <${RUN_URL}|view run>\"}" \
+            "$SLACK_WEBHOOK_URL"
