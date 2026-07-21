@@ -701,6 +701,28 @@ class TestFetchOkxSwap:
         assert "contract_size" not in symbols[0]
 
 
+class TestFetchBybit:
+    def test_retries_malformed_response(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_spot
+
+        malformed = MagicMock()
+        malformed.raise_for_status.return_value = None
+        malformed.json.side_effect = ValueError("invalid JSON")
+        valid = MagicMock()
+        valid.raise_for_status.return_value = None
+        valid.json.return_value = {
+            "result": {"list": [{"symbol": "BTCUSDT", "status": "Trading"}]}
+        }
+
+        with patch(
+            "atlas.exchange_definitions.bybit.requests.get",
+            side_effect=[malformed, valid],
+        ) as get:
+            assert fetch_bybit_spot(timeout_seconds=5) == [{"id": "BTCUSDT", "type": "spot"}]
+
+        assert get.call_count == 2
+
+
 class TestFetchBinanceFuturesUsdM:
     def _mock_get(self, symbols: list[dict]) -> MagicMock:
         resp = MagicMock()
