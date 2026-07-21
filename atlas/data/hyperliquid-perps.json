@@ -3170,6 +3170,15 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "para:LRCX",
+    "type": "perpetual",
+    "first_capture": "2026-07-20T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:LRCX-USDC:USDC",
+    "symbol": "PARA:LRCX",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:OTHERS",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:OTHERS-USDC:USDC",
