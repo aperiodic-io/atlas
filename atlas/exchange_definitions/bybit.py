@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import requests
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 import re
 
@@ -87,11 +88,24 @@ def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
     return {"id": id_value, "type": type_value}
 
 
-def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
-    payload = requests.get(
-        "https://api.bybit.com/v5/market/instruments-info?category=spot",
+@retry(
+    retry=retry_if_exception_type((requests.RequestException, ValueError)),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=1, max=4),
+    reraise=True,
+)
+def _fetch_bybit_payload(category: str, timeout_seconds: int) -> dict:
+    """Fetch a Bybit instruments payload, retrying transient invalid responses."""
+    response = requests.get(
+        f"https://api.bybit.com/v5/market/instruments-info?category={category}",
         timeout=timeout_seconds,
-    ).json()
+    )
+    response.raise_for_status()
+    return response.json()
+
+
+def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
+    payload = _fetch_bybit_payload("spot", timeout_seconds)
     return [
         _to_symbol(item["symbol"], "spot")
         for item in payload.get("result", {}).get("list", [])
@@ -102,10 +116,7 @@ def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
 def _fetch_bybit_derivatives(
     category: str, timeout_seconds: int
 ) -> list[dict[str, str]]:
-    payload = requests.get(
-        f"https://api.bybit.com/v5/market/instruments-info?category={category}",
-        timeout=timeout_seconds,
-    ).json()
+    payload = _fetch_bybit_payload(category, timeout_seconds)
     symbols = []
     for item in payload.get("result", {}).get("list", []):
         if item.get("status") != "Trading":
