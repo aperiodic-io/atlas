@@ -14369,6 +14369,26 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-270625",
+    "type": "future",
+    "contract_size": 100.0,
+    "internal_id": "future-BTC-USD:BTC-20270625",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2027-06-25T00:00:00"
+  },
+  {
+    "id": "BTC-USD-270924",
+    "type": "future",
+    "contract_size": 100.0,
+    "internal_id": "future-BTC-USD:BTC-20270924",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2027-09-24T00:00:00"
+  },
+  {
     "id": "BTC-USDC-230224",
     "type": "future",
     "internal_id": "future-BTC-USDC:USDC-20230224",
@@ -37684,6 +37704,26 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD-270625",
+    "type": "future",
+    "contract_size": 10.0,
+    "internal_id": "future-ETH-USD:ETH-20270625",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2027-06-25T00:00:00"
+  },
+  {
+    "id": "ETH-USD-270924",
+    "type": "future",
+    "contract_size": 10.0,
+    "internal_id": "future-ETH-USD:ETH-20270924",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2027-09-24T00:00:00"
+  },
+  {
     "id": "ETH-USDC-230224",
     "type": "future",
     "internal_id": "future-ETH-USDC:USDC-20230224",
@@ -44664,12 +44704,12 @@
     "id": "KAITO-USD_UM_XPERP-310725",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-07-20T00:00:00.000Z",
     "internal_id": "future-KAITO-USD_UM_XPERP:KAITO-20310725",
     "symbol": "KAITO",
     "denominator": "USD_UM_XPERP",
     "margin": "KAITO",
-    "delivery_date": "2031-07-25T00:00:00"
+    "delivery_date": "2031-07-25T00:00:00",
+    "first_capture": "2026-07-20T00:00:00.000Z"
   },
   {
     "id": "LINK-USD-200821",

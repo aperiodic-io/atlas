@@ -3172,11 +3172,11 @@
   {
     "id": "para:LRCX",
     "type": "perpetual",
-    "first_capture": "2026-07-20T00:00:00.000Z",
     "internal_id": "perpetual-PARA:LRCX-USDC:USDC",
     "symbol": "PARA:LRCX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-20T00:00:00.000Z"
   },
   {
     "id": "para:OTHERS",
