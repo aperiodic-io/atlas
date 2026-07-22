@@ -6787,6 +6787,16 @@
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
+    "id": "BONK-USD_UM_XPERP-310725",
+    "type": "future",
+    "contract_size": 100000.0,
+    "internal_id": "future-BONK-USD_UM_XPERP:BONK-20310725",
+    "symbol": "BONK",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BONK",
+    "delivery_date": "2031-07-25T00:00:00"
+  },
+  {
     "id": "BSB-USD_UM_XPERP-310718",
     "type": "future",
     "contract_size": 10.0,
@@ -44699,6 +44709,16 @@
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 100.0,
     "first_capture": "2026-05-29T00:00:00.000Z"
+  },
+  {
+    "id": "JTO-USD_UM_XPERP-310725",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-JTO-USD_UM_XPERP:JTO-20310725",
+    "symbol": "JTO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "JTO",
+    "delivery_date": "2031-07-25T00:00:00"
   },
   {
     "id": "KAITO-USD_UM_XPERP-310725",
