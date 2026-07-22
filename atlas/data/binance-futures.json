@@ -9819,11 +9819,13 @@
   {
     "id": "panwusdt",
     "type": "perpetual",
-    "first_capture": "2026-07-21T00:00:00.000Z",
     "internal_id": "perpetual-PANW-USDT:USDT",
     "symbol": "PANW",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "partiusdt",
@@ -9892,11 +9894,13 @@
   {
     "id": "pengusdt",
     "type": "perpetual",
-    "first_capture": "2026-07-21T00:00:00.000Z",
     "internal_id": "perpetual-PENG-USDT:USDT",
     "symbol": "PENG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "penguusdc",
@@ -11168,11 +11172,13 @@
   {
     "id": "shazusdt",
     "type": "perpetual",
-    "first_capture": "2026-07-21T00:00:00.000Z",
     "internal_id": "perpetual-SHAZ-USDT:USDT",
     "symbol": "SHAZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "shellusdt",
@@ -11455,11 +11461,13 @@
   {
     "id": "sofiusdt",
     "type": "perpetual",
-    "first_capture": "2026-07-21T00:00:00.000Z",
     "internal_id": "perpetual-SOFI-USDT:USDT",
     "symbol": "SOFI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "solbusd",
