@@ -9817,6 +9817,15 @@
     "end_date": "2026-04-16T00:00:00.000Z"
   },
   {
+    "id": "panwusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-21T00:00:00.000Z",
+    "internal_id": "perpetual-PANW-USDT:USDT",
+    "symbol": "PANW",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "partiusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -9879,6 +9888,15 @@
       "Real World Assets Protocols"
     ],
     "first_capture": "2023-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "pengusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-21T00:00:00.000Z",
+    "internal_id": "perpetual-PENG-USDT:USDT",
+    "symbol": "PENG",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "penguusdc",
@@ -11148,6 +11166,15 @@
     "first_capture": "2021-02-24T00:00:00.000Z"
   },
   {
+    "id": "shazusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-21T00:00:00.000Z",
+    "internal_id": "perpetual-SHAZ-USDT:USDT",
+    "symbol": "SHAZ",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "shellusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -11424,6 +11451,15 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-07-09T00:00:00.000Z"
+  },
+  {
+    "id": "sofiusdt",
+    "type": "perpetual",
+    "first_capture": "2026-07-21T00:00:00.000Z",
+    "internal_id": "perpetual-SOFI-USDT:USDT",
+    "symbol": "SOFI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "solbusd",
