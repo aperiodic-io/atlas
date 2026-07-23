@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
 import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
@@ -7,6 +9,7 @@ import re
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
+from ..types import UnderlyingType
 from .common import (
     SkipSymbol,
     instrument_type,
@@ -17,6 +20,23 @@ from .common import (
     resolve_margin,
     split_concat,
 )
+
+
+_BYBIT_UNDERLYING_TYPE_MAP = {
+    "stock": UnderlyingType.equity,
+    "commodity": UnderlyingType.commodity,
+}
+
+
+def _metadata_delivery_date(sd: SymbolData) -> datetime | None:
+    """Parse an API-provided delivery timestamp retained in the symbol record."""
+    raw_delivery_date = sd.get("delivery_date")
+    if not isinstance(raw_delivery_date, str):
+        return None
+    try:
+        return datetime.fromisoformat(raw_delivery_date.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
@@ -30,6 +50,7 @@ def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
     quote_coin = sd.get("quote_coin")
     settle_coin = sd.get("settle_coin")
     if base_coin and quote_coin:
+        delivery = _metadata_delivery_date(sd) if ctype == ContractType.future else None
         return make_contract(
             exchange,
             sd,
@@ -37,6 +58,7 @@ def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
             str(quote_coin),
             str(settle_coin) if settle_coin else resolve_margin(str(base_coin), str(quote_coin), ctype),
             ctype,
+            delivery,
         )
 
     if "-" in sid:
@@ -128,7 +150,20 @@ def _to_symbol(
         "settle_coin": item.get("settleCoin"),
         "quantity_unit": quantity_unit,
         "contract_size": 1.0,
+        "underlying": _BYBIT_UNDERLYING_TYPE_MAP.get(
+            item.get("symbolType"), UnderlyingType.crypto
+        ).value,
     }
+    if type_value == "future":
+        delivery_time = item.get("deliveryTime")
+        try:
+            delivery_timestamp = int(delivery_time) if delivery_time is not None else 0
+        except (TypeError, ValueError):
+            delivery_timestamp = 0
+        if delivery_timestamp > 0:
+            symbol["delivery_date"] = datetime.fromtimestamp(
+                delivery_timestamp / 1000, tz=UTC
+            ).isoformat()
     return {key: value for key, value in symbol.items() if value is not None}
 
 

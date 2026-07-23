@@ -555,6 +555,23 @@ class TestBybitFutures:
         assert c.margin == "BTC"
         assert c.delivery_date == datetime(2026, 3, 1)
 
+    def test_api_metadata_keeps_exact_delivery_date(self):
+        c = parse_contract(
+            "bybit-futures",
+            _sd(
+                "BTCUSDT-24JUL26",
+                "future",
+                base_coin="BTC",
+                quote_coin="USDT",
+                settle_coin="USDT",
+                quantity_unit="base",
+                delivery_date="2026-07-24T08:00:00+00:00",
+            ),
+        )
+        assert c.internal_id == "future-BTC-USDT:USDT-20260724"
+        assert c.delivery_date is not None
+        assert c.delivery_date.date() == datetime(2026, 7, 24).date()
+
 
 class TestDeribit:
     def test_perpetual(self):
@@ -806,6 +823,7 @@ class TestFetchBybit:
                     "settle_coin": "USDT",
                     "quantity_unit": "base",
                     "contract_size": 1.0,
+                    "underlying": "crypto",
                 },
                 {
                     "id": "BTCPERP",
@@ -815,10 +833,44 @@ class TestFetchBybit:
                     "settle_coin": "USDC",
                     "quantity_unit": "base",
                     "contract_size": 1.0,
+                    "underlying": "crypto",
                 },
             ]
 
         assert get.call_args_list[1].kwargs["params"]["cursor"] == "next-page"
+
+    @pytest.mark.parametrize(
+        ("symbol_type", "expected_underlying"),
+        [
+            ("", UnderlyingType.crypto.value),
+            ("innovation", UnderlyingType.crypto.value),
+            ("stock", UnderlyingType.equity.value),
+            ("commodity", UnderlyingType.commodity.value),
+        ],
+    )
+    def test_derivative_underlying_is_normalized(
+        self, symbol_type: str, expected_underlying: str
+    ):
+        from atlas.exchange_definitions.bybit import _to_symbol
+
+        symbol = _to_symbol(
+            {"symbol": "AAPLUSDT", "symbolType": symbol_type},
+            "perpetual",
+            "base",
+        )
+
+        assert symbol["underlying"] == expected_underlying
+
+    def test_derivative_fetch_converts_delivery_time_to_delivery_date(self):
+        from atlas.exchange_definitions.bybit import _to_symbol
+
+        symbol = _to_symbol(
+            {"symbol": "BTCUSDT-24JUL26", "deliveryTime": "1784880000000"},
+            "future",
+            "base",
+        )
+
+        assert symbol["delivery_date"] == "2026-07-24T08:00:00+00:00"
 
 
 class TestFetchBinanceFuturesUsdM:
