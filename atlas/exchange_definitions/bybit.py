@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
 import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
@@ -7,6 +9,7 @@ import re
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
+from ..types import UnderlyingType
 from .common import (
     SkipSymbol,
     instrument_type,
@@ -19,9 +22,44 @@ from .common import (
 )
 
 
+_BYBIT_UNDERLYING_TYPE_MAP = {
+    "stock": UnderlyingType.equity,
+    "commodity": UnderlyingType.commodity,
+}
+
+
+def _metadata_delivery_date(sd: SymbolData) -> datetime | None:
+    """Parse an API-provided delivery timestamp retained in the symbol record."""
+    raw_delivery_date = sd.get("delivery_date")
+    if not isinstance(raw_delivery_date, str):
+        return None
+    try:
+        return datetime.fromisoformat(raw_delivery_date.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
     ctype = instrument_type(sd)
+
+    # Bybit's API exposes the exact base, quote, and settlement currencies.
+    # Prefer those fields over raw-symbol heuristics: `BTCPERP`, for example,
+    # is a USDC-linear perpetual rather than an inverse BTC/USD contract.
+    base_coin = sd.get("base_coin")
+    quote_coin = sd.get("quote_coin")
+    settle_coin = sd.get("settle_coin")
+    if base_coin and quote_coin:
+        delivery = _metadata_delivery_date(sd) if ctype == ContractType.future else None
+        return make_contract(
+            exchange,
+            sd,
+            str(base_coin),
+            str(quote_coin),
+            str(settle_coin) if settle_coin else resolve_margin(str(base_coin), str(quote_coin), ctype),
+            ctype,
+            delivery,
+        )
 
     if "-" in sid:
         parts = sid.split("-")
@@ -59,23 +97,38 @@ def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
                 exchange, sd, symbol, denominator, margin, ctype, delivery
             )
 
-    # Handle PERP suffix
+    # Bybit's historical `*PERP` symbols are USDC-linear perpetuals. Current
+    # API metadata above remains authoritative when it is available.
+    if sid.endswith("PERP") and ctype == ContractType.perpetual:
+        return make_contract(
+            exchange, sd, sid[:-4], "USDC", "USDC", ctype, quantity_unit="base"
+        )
+
+    # Handle remaining symbol suffixes.
     clean_sid = sid
-    if sid.endswith("PERP"):
-        clean_sid = sid[:-4]
 
     pair = split_concat(clean_sid, ["USDT", "USDC", "USD", "BTC", "ETH"])
     if pair:
         symbol, denominator = pair
         margin = resolve_margin(symbol, denominator, ctype)
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
+        return make_contract(
+            exchange,
+            sd,
+            symbol,
+            denominator,
+            margin,
+            ctype,
+            quantity_unit="quote" if denominator == "USD" else "base",
+        )
 
-    # If it's a perpetual and split_concat failed, it's likely an inverse perpetual (e.g. BTCPERP)
+    # If it's a perpetual and split_concat failed, it is an inverse perpetual.
     if ctype == ContractType.perpetual:
         symbol = clean_sid
         denominator = "USD"
         margin = symbol
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
+        return make_contract(
+            exchange, sd, symbol, denominator, margin, ctype, quantity_unit="quote"
+        )
 
     raise SkipSymbol(f"{exchange}: cannot parse {sid!r}")
 
@@ -84,8 +137,34 @@ def parse_bybit_spot(exchange: str, sd: SymbolData) -> Contract:
     return parse_concat(exchange, sd)
 
 
-def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
-    return {"id": id_value, "type": type_value}
+def _to_symbol(
+    item: dict, type_value: str, quantity_unit: str, *, derivative: bool = True
+) -> dict[str, str | float]:
+    if not derivative:
+        return {"id": item["symbol"], "type": type_value}
+    symbol = {
+        "id": item["symbol"],
+        "type": type_value,
+        "base_coin": item.get("baseCoin"),
+        "quote_coin": item.get("quoteCoin"),
+        "settle_coin": item.get("settleCoin"),
+        "quantity_unit": quantity_unit,
+        "contract_size": 1.0,
+        "underlying": _BYBIT_UNDERLYING_TYPE_MAP.get(
+            item.get("symbolType"), UnderlyingType.crypto
+        ).value,
+    }
+    if type_value == "future":
+        delivery_time = item.get("deliveryTime")
+        try:
+            delivery_timestamp = int(delivery_time) if delivery_time is not None else 0
+        except (TypeError, ValueError):
+            delivery_timestamp = 0
+        if delivery_timestamp > 0:
+            symbol["delivery_date"] = datetime.fromtimestamp(
+                delivery_timestamp / 1000, tz=UTC
+            ).isoformat()
+    return {key: value for key, value in symbol.items() if value is not None}
 
 
 @retry(
@@ -94,10 +173,16 @@ def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
     wait=wait_exponential(multiplier=1, min=1, max=4),
     reraise=True,
 )
-def _fetch_bybit_payload(category: str, timeout_seconds: int) -> dict:
+def _fetch_bybit_payload(
+    category: str, timeout_seconds: int, cursor: str | None = None
+) -> dict:
     """Fetch a Bybit instruments payload, retrying transient invalid responses."""
+    params = {"category": category, "limit": 1000}
+    if cursor:
+        params["cursor"] = cursor
     response = requests.get(
-        f"https://api.bybit.com/v5/market/instruments-info?category={category}",
+        "https://api.bybit.com/v5/market/instruments-info",
+        params=params,
         timeout=timeout_seconds,
     )
     response.raise_for_status()
@@ -107,7 +192,7 @@ def _fetch_bybit_payload(category: str, timeout_seconds: int) -> dict:
 def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
     payload = _fetch_bybit_payload("spot", timeout_seconds)
     return [
-        _to_symbol(item["symbol"], "spot")
+        _to_symbol(item, "spot", "base", derivative=False)
         for item in payload.get("result", {}).get("list", [])
         if item.get("status") == "Trading"
     ]
@@ -116,18 +201,31 @@ def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
 def _fetch_bybit_derivatives(
     category: str, timeout_seconds: int
 ) -> list[dict[str, str]]:
-    payload = _fetch_bybit_payload(category, timeout_seconds)
-    symbols = []
-    for item in payload.get("result", {}).get("list", []):
-        if item.get("status") != "Trading":
-            continue
+    symbols: dict[str, dict[str, str | float]] = {}
+    cursor: str | None = None
+    while True:
+        payload = _fetch_bybit_payload(category, timeout_seconds, cursor)
+        for item in payload.get("result", {}).get("list", []):
+            if item.get("status") != "Trading":
+                continue
 
-        ctype = item.get("contractType", "")
-        if "Perpetual" in ctype:
-            symbols.append(_to_symbol(item["symbol"], "perpetual"))
-        elif "Futures" in ctype:
-            symbols.append(_to_symbol(item["symbol"], "future"))
-    return symbols
+            ctype = item.get("contractType", "")
+            if "Perpetual" in ctype:
+                type_value = "perpetual"
+            elif "Futures" in ctype:
+                type_value = "future"
+            else:
+                continue
+            symbol = _to_symbol(
+                item,
+                type_value,
+                "base" if category == "linear" else "quote",
+            )
+            symbols[str(symbol["id"])] = symbol
+        cursor = payload.get("result", {}).get("nextPageCursor") or None
+        if cursor is None:
+            break
+    return list(symbols.values())
 
 
 def fetch_bybit_perps(timeout_seconds: int) -> list[dict[str, str]]:

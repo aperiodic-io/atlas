@@ -3,6 +3,8 @@ from atlas.update import (
     _drop_none_fields,
     _merge_existing_fields,
     _merge_symbol,
+    _merge_missing_rows,
+    _matches_exchange_constraints,
 )
 from atlas.update import _apply_snapshot_metadata
 
@@ -129,6 +131,24 @@ def test_merge_existing_fields_can_skip_existing_metadata() -> None:
     assert "first_capture" not in merged[0]
     assert "end_date" not in merged[0]
     assert merged[0]["custom_metadata"] == "from-tardis"
+
+
+def test_product_constraints_remove_stale_cross_product_rows() -> None:
+    merged = _merge_missing_rows(
+        [{"id": "BTCUSDT", "type": "perpetual"}],
+        [
+            {"id": "BTCUSDT", "type": "perpetual"},
+            {"id": "BTCUSDT-27MAR26", "type": "future"},
+        ],
+    )
+
+    filtered = [
+        row
+        for row in merged
+        if _matches_exchange_constraints(row, {"perpetual"}, None)
+    ]
+
+    assert filtered == [{"id": "BTCUSDT", "type": "perpetual"}]
 
 
 def test_drop_none_fields_removes_only_requested_none_fields() -> None:

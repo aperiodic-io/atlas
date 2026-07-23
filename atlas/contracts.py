@@ -24,6 +24,10 @@ class Contract:
     contract_size: float | None = None
     contract_size_history: list[dict] | None = None
     delivery_date: datetime | None = None
+    # Unit in which exchange-reported sizes/open interest are expressed.
+    # Most venues report base-asset quantities; inverse derivatives can be
+    # quote-denominated (for example, Bybit inverse open interest is USD).
+    quantity_unit: str | None = None
 
     def __str__(self) -> str:
         core = f"{self.instrument_type.value}-{self.symbol}-{self.denominator}"

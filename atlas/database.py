@@ -20,10 +20,12 @@ class SecurityMaster:
         internal_id_map: dict[tuple[str, str], str],
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]],
         contract_index: dict[tuple[str, str, str | None], set[str]],
+        metadata_map: dict[tuple[str, str], dict],
     ) -> None:
         self._internal_id_map = internal_id_map
         self._symbol_windows = symbol_windows
         self._contract_index = contract_index
+        self._metadata_map = metadata_map
 
     @classmethod
     def load(
@@ -39,6 +41,7 @@ class SecurityMaster:
         internal_id_map: dict[tuple[str, str], str] = {}
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]] = {}
         contract_index: dict[tuple[str, str, str | None], set[str]] = {}
+        metadata_map: dict[tuple[str, str], dict] = {}
         for json_file in sorted(data_dir.glob("*.json")):
             exchange = json_file.stem
             if exchanges is not None and exchange not in exchanges:
@@ -46,6 +49,8 @@ class SecurityMaster:
             rows = json.loads(json_file.read_text())
             windows: list[tuple[str, datetime, datetime | None]] = []
             for sd in rows:
+                if isinstance(sd.get("id"), str):
+                    metadata_map[(exchange, sd["id"])] = sd.copy()
                 start_dt = _parse_iso_timestamp(sd.get("first_capture"))
                 if start_dt is None:
                     continue
@@ -64,13 +69,18 @@ class SecurityMaster:
                     )
                     contract_index.setdefault(key, set()).add(exchange)
             symbol_windows[exchange] = windows
-        return cls(internal_id_map, symbol_windows, contract_index)
+        return cls(internal_id_map, symbol_windows, contract_index, metadata_map)
 
     def by_exchange_and_original_id(
         self, exchange: str, original_id: str
     ) -> str | None:
         """Return the pre-computed internal_id for a given exchange + raw symbol id."""
         return self._internal_id_map.get((exchange, original_id))
+
+    def instrument_metadata(self, exchange: str, original_id: str) -> dict | None:
+        """Return a copy of the security-master record for one raw instrument."""
+        metadata = self._metadata_map.get((exchange, original_id))
+        return metadata.copy() if metadata is not None else None
 
     def exchanges_for_original_id(self, original_id: str) -> list[str]:
         """Return all exchanges that contain the given raw symbol id."""
