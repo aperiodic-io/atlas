@@ -80,3 +80,30 @@ def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
     ]
     assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
     assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
+
+
+def test_security_master_returns_instrument_metadata(tmp_path) -> None:
+    data = [
+        {
+            "id": "BTCUSD",
+            "type": "perpetual",
+            "first_capture": "2020-01-01T00:00:00.000Z",
+            "internal_id": "perpetual-BTC-USD:BTC",
+            "contract_size": 1.0,
+            "quantity_unit": "quote",
+        }
+    ]
+    (tmp_path / "bybit-perps.json").write_text(json.dumps(data))
+
+    metadata = SecurityMaster.load(data_dir=tmp_path).instrument_metadata(
+        "bybit-perps", "BTCUSD"
+    )
+
+    assert metadata is not None
+    assert metadata["quantity_unit"] == "quote"
+    metadata["quantity_unit"] = "base"
+    assert (
+        SecurityMaster.load(data_dir=tmp_path)
+        .instrument_metadata("bybit-perps", "BTCUSD")["quantity_unit"]
+        == "quote"
+    )

@@ -165,6 +165,7 @@ def make_contract(
     margin: str | None,
     ctype: ContractType,
     delivery_date: datetime | None = None,
+    quantity_unit: str | None = None,
 ) -> Contract:
     return Contract(
         exchange=exchange,
@@ -177,6 +178,12 @@ def make_contract(
         contract_size=float(sd["contract_size"])
         if "contract_size" in sd and sd["contract_size"] is not None
         else None,
+        quantity_unit=quantity_unit
+        or (
+            str(sd["quantity_unit"])
+            if "quantity_unit" in sd and sd["quantity_unit"] is not None
+            else None
+        ),
     )
 
 
