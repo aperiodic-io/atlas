@@ -6741,7 +6741,8 @@
     "internal_id": "perpetual-HK0700-USDT:USDT",
     "symbol": "HK0700",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
     "id": "hk1810usdt",
@@ -6751,7 +6752,8 @@
     "internal_id": "perpetual-HK1810-USDT:USDT",
     "symbol": "HK1810",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
     "id": "hmstrusdt",
@@ -10197,6 +10199,16 @@
     "first_capture": "2024-08-22T00:00:00.000Z"
   },
   {
+    "id": "popmartusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-POPMART-USDT:USDT",
+    "symbol": "POPMART",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "port3usdt",
     "type": "perpetual",
     "internal_id": "perpetual-PORT3-USDT:USDT",
@@ -12310,7 +12322,8 @@
     "internal_id": "perpetual-TENCENT-USDT:USDT",
     "symbol": "TENCENT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
     "id": "terusdt",
