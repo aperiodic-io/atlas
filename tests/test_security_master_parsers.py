@@ -346,11 +346,41 @@ class TestBybitPerps:
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.perpetual
 
-    def test_inverse_perp_with_suffix(self):
+    def test_usdc_linear_perp_with_suffix(self):
         c = _parse("bybit-perps", "BTCPERP", "perpetual")
         assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin == "BTC"
+        assert c.denominator == "USDC"
+        assert c.margin == "USDC"
+
+    def test_api_metadata_overrides_symbol_heuristic(self):
+        c = parse_contract(
+            "bybit-perps",
+            _sd(
+                "BTCPERP",
+                "perpetual",
+                base_coin="BTC",
+                quote_coin="USDC",
+                settle_coin="USDC",
+                quantity_unit="base",
+            ),
+        )
+        assert c.internal_id == "perpetual-BTC-USDC:USDC"
+        assert c.quantity_unit == "base"
+
+    def test_inverse_quantity_is_quote_denomination(self):
+        c = parse_contract(
+            "bybit-perps",
+            _sd(
+                "BTCUSD",
+                "perpetual",
+                base_coin="BTC",
+                quote_coin="USD",
+                settle_coin="BTC",
+                quantity_unit="quote",
+            ),
+        )
+        assert c.internal_id == "perpetual-BTC-USD:BTC"
+        assert c.quantity_unit == "quote"
 
     def test_linear_perp(self):
         c = _parse("bybit-perps", "BTCUSDT", "perpetual")
@@ -721,6 +751,74 @@ class TestFetchBybit:
             assert fetch_bybit_spot(timeout_seconds=5) == [{"id": "BTCUSDT", "type": "spot"}]
 
         assert get.call_count == 2
+
+    def test_derivative_fetch_preserves_mapping_metadata_and_paginates(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_perps
+
+        first = MagicMock()
+        first.raise_for_status.return_value = None
+        first.json.return_value = {
+            "result": {
+                "list": [
+                    {
+                        "symbol": "BTCUSDT",
+                        "status": "Trading",
+                        "contractType": "LinearPerpetual",
+                        "baseCoin": "BTC",
+                        "quoteCoin": "USDT",
+                        "settleCoin": "USDT",
+                    }
+                ],
+                "nextPageCursor": "next-page",
+            }
+        }
+        second = MagicMock()
+        second.raise_for_status.return_value = None
+        second.json.return_value = {
+            "result": {
+                "list": [
+                    {
+                        "symbol": "BTCPERP",
+                        "status": "Trading",
+                        "contractType": "LinearPerpetual",
+                        "baseCoin": "BTC",
+                        "quoteCoin": "USDC",
+                        "settleCoin": "USDC",
+                    }
+                ],
+                "nextPageCursor": "",
+            }
+        }
+        inverse = MagicMock()
+        inverse.raise_for_status.return_value = None
+        inverse.json.return_value = {"result": {"list": [], "nextPageCursor": ""}}
+
+        with patch(
+            "atlas.exchange_definitions.bybit.requests.get",
+            side_effect=[first, second, inverse],
+        ) as get:
+            assert fetch_bybit_perps(timeout_seconds=5) == [
+                {
+                    "id": "BTCUSDT",
+                    "type": "perpetual",
+                    "base_coin": "BTC",
+                    "quote_coin": "USDT",
+                    "settle_coin": "USDT",
+                    "quantity_unit": "base",
+                    "contract_size": 1.0,
+                },
+                {
+                    "id": "BTCPERP",
+                    "type": "perpetual",
+                    "base_coin": "BTC",
+                    "quote_coin": "USDC",
+                    "settle_coin": "USDC",
+                    "quantity_unit": "base",
+                    "contract_size": 1.0,
+                },
+            ]
+
+        assert get.call_args_list[1].kwargs["params"]["cursor"] == "next-page"
 
 
 class TestFetchBinanceFuturesUsdM:

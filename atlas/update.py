@@ -130,6 +130,7 @@ def _enrich(exchange: str, sd: dict) -> dict:
         "denominator": None,
         "margin": None,
         "contract_size": None,
+        "quantity_unit": None,
         "delivery_date": None,
     }
     try:
@@ -149,6 +150,7 @@ def _enrich(exchange: str, sd: dict) -> dict:
             "denominator": c.denominator,
             "margin": c.margin,
             "contract_size": contract_size,
+            "quantity_unit": c.quantity_unit,
             "delivery_date": c.delivery_date.isoformat() if c.delivery_date else None,
         }
     except SkipSymbol:
@@ -230,6 +232,16 @@ def _merge_missing_rows(incoming_symbols: list[dict], existing_rows: list[dict])
     return list(symbols_by_id.values())
 
 
+def _matches_exchange_constraints(
+    symbol: dict,
+    allowed_types: set[str],
+    symbol_filter,
+) -> bool:
+    return symbol.get("type") in allowed_types and (
+        symbol_filter(symbol) if symbol_filter else True
+    )
+
+
 def update(
     exchanges: list[str] = EXCHANGES,
     source: SymbolSource | None = None,
@@ -258,8 +270,7 @@ def update(
         incoming_symbols = [
             sd.copy()
             for sd in data.get("availableSymbols", [])
-            if sd.get("type") in allowed_types
-            and (symbol_filter(sd) if symbol_filter else True)
+            if _matches_exchange_constraints(sd, allowed_types, symbol_filter)
         ]
 
         is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
@@ -276,6 +287,14 @@ def update(
             symbols = incoming_symbols
         else:
             symbols = _merge_missing_rows(incoming_symbols, existing_rows)
+        # Existing rows are retained for historical coverage, but only if they
+        # belong to this virtual exchange's product universe. This prevents
+        # shared Tardis feeds from leaking spot/futures into Bybit perpetuals.
+        symbols = [
+            sd
+            for sd in symbols
+            if _matches_exchange_constraints(sd, allowed_types, symbol_filter)
+        ]
         symbols = sorted(
             symbols,
             key=lambda sd: (
