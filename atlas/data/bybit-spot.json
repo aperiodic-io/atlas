@@ -18,11 +18,11 @@
   {
     "id": "1SOLUSDT",
     "type": "spot",
-    "first_capture": "2021-12-15T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-1SOL-USDT",
     "symbol": "1SOL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-15T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "2ZUSDC",
@@ -43,20 +43,20 @@
   {
     "id": "3PUSDT",
     "type": "spot",
-    "first_capture": "2023-01-19T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-3P-USDT",
     "symbol": "3P",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-01-19T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "5IREUSDT",
     "type": "spot",
-    "first_capture": "2023-12-05T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-5IRE-USDT",
     "symbol": "5IRE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-05T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "A8USDT",
@@ -77,11 +77,11 @@
   {
     "id": "AARKUSDT",
     "type": "spot",
-    "first_capture": "2024-06-10T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-AARK-USDT",
     "symbol": "AARK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-10T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "AAVEUSDC",
@@ -102,11 +102,11 @@
   {
     "id": "ACAUSDT",
     "type": "spot",
-    "first_capture": "2022-01-25T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-ACA-USDT",
     "symbol": "ACA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-25T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "ACHUSDT",
@@ -119,11 +119,11 @@
   {
     "id": "ACMUSDT",
     "type": "spot",
-    "first_capture": "2022-08-17T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-ACM-USDT",
     "symbol": "ACM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-17T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "ACSUSDT",
@@ -136,20 +136,20 @@
   {
     "id": "ADA2LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-16T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-ADA2L-USDT",
     "symbol": "ADA2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-16T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "ADA2SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-16T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-ADA2S-USDT",
     "symbol": "ADA2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-16T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "ADAEUR",
@@ -202,11 +202,11 @@
   {
     "id": "AEGUSDT",
     "type": "spot",
-    "first_capture": "2024-03-07T00:00:00.000Z",
-    "end_date": "2025-08-09T00:00:00.000Z",
     "internal_id": "spot-AEG-USDT",
     "symbol": "AEG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-07T00:00:00.000Z",
+    "end_date": "2025-08-09T00:00:00.000Z"
   },
   {
     "id": "AEROUSDT",
@@ -235,11 +235,11 @@
   {
     "id": "AFGUSDT",
     "type": "spot",
-    "first_capture": "2024-01-30T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-AFG-USDT",
     "symbol": "AFG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-30T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "AGIUSDT",
@@ -261,11 +261,11 @@
   {
     "id": "AGLAUSDT",
     "type": "spot",
-    "first_capture": "2022-09-28T00:00:00.000Z",
-    "end_date": "2025-10-08T00:00:00.000Z",
     "internal_id": "spot-AGLA-USDT",
     "symbol": "AGLA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-28T00:00:00.000Z",
+    "end_date": "2025-10-08T00:00:00.000Z"
   },
   {
     "id": "AGLDUSDT",
@@ -311,11 +311,11 @@
   {
     "id": "AKIUSDT",
     "type": "spot",
-    "first_capture": "2023-12-22T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-AKI-USDT",
     "symbol": "AKI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-22T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "ALCHUSDT",
@@ -379,11 +379,11 @@
   {
     "id": "AMPUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2022-08-19T00:00:00.000Z",
     "internal_id": "spot-AMP-USDT",
     "symbol": "AMP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2022-08-19T00:00:00.000Z"
   },
   {
     "id": "AMZNXUSDT",
@@ -420,20 +420,20 @@
   {
     "id": "APE2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-10T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-APE2L-USDT",
     "symbol": "APE2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-10T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "APE2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-10T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-APE2S-USDT",
     "symbol": "APE2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-10T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "APEUSDC",
@@ -478,29 +478,29 @@
   {
     "id": "APPUSDT",
     "type": "spot",
-    "first_capture": "2024-01-12T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-APP-USDT",
     "symbol": "APP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-12T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "APRSUSDT",
     "type": "spot",
-    "first_capture": "2024-03-26T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-APRS-USDT",
     "symbol": "APRS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-26T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "APTRUSDT",
     "type": "spot",
-    "first_capture": "2024-05-31T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-APTR-USDT",
     "symbol": "APTR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-31T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "APTUSDC",
@@ -545,11 +545,11 @@
   {
     "id": "ARTUSDT",
     "type": "spot",
-    "first_capture": "2025-09-09T00:00:00.000Z",
-    "end_date": "2026-01-22T00:00:00.000Z",
     "internal_id": "spot-ART-USDT",
     "symbol": "ART",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-09-09T00:00:00.000Z",
+    "end_date": "2026-01-22T00:00:00.000Z"
   },
   {
     "id": "ARTYUSDT",
@@ -587,11 +587,11 @@
   {
     "id": "ASRRUSDT",
     "type": "spot",
-    "first_capture": "2025-05-30T00:00:00.000Z",
-    "end_date": "2025-12-10T00:00:00.000Z",
     "internal_id": "spot-ASRR-USDT",
     "symbol": "ASRR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-05-30T00:00:00.000Z",
+    "end_date": "2025-12-10T00:00:00.000Z"
   },
   {
     "id": "ASTERUSDT",
@@ -612,20 +612,20 @@
   {
     "id": "ATOM2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-25T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-ATOM2L-USDT",
     "symbol": "ATOM2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-25T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "ATOM2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-25T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-ATOM2S-USDT",
     "symbol": "ATOM2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-25T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "ATOMUSDC",
@@ -654,11 +654,11 @@
   {
     "id": "AURYUSDT",
     "type": "spot",
-    "first_capture": "2024-03-19T00:00:00.000Z",
-    "end_date": "2025-03-15T00:00:00.000Z",
     "internal_id": "spot-AURY-USDT",
     "symbol": "AURY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-19T00:00:00.000Z",
+    "end_date": "2025-03-15T00:00:00.000Z"
   },
   {
     "id": "AUSDT",
@@ -687,20 +687,20 @@
   {
     "id": "AVAX2LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-16T00:00:00.000Z",
-    "end_date": "2024-04-19T00:00:00.000Z",
     "internal_id": "spot-AVAX2L-USDT",
     "symbol": "AVAX2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-16T00:00:00.000Z",
+    "end_date": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "AVAX2SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-16T00:00:00.000Z",
-    "end_date": "2024-04-19T00:00:00.000Z",
     "internal_id": "spot-AVAX2S-USDT",
     "symbol": "AVAX2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-16T00:00:00.000Z",
+    "end_date": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "AVAXEUR",
@@ -769,29 +769,29 @@
   {
     "id": "AZYUSDT",
     "type": "spot",
-    "first_capture": "2022-07-22T00:00:00.000Z",
-    "end_date": "2024-12-07T00:00:00.000Z",
     "internal_id": "spot-AZY-USDT",
     "symbol": "AZY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-22T00:00:00.000Z",
+    "end_date": "2024-12-07T00:00:00.000Z"
   },
   {
     "id": "B3TRUSDC",
     "type": "spot",
-    "first_capture": "2025-03-27T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-B3TR-USDC",
     "symbol": "B3TR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2025-03-27T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "B3TRUSDT",
     "type": "spot",
-    "first_capture": "2025-03-27T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-B3TR-USDT",
     "symbol": "B3TR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-03-27T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "B3USDT",
@@ -836,11 +836,11 @@
   {
     "id": "BARUSDT",
     "type": "spot",
-    "first_capture": "2022-08-16T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-BAR-USDT",
     "symbol": "BAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-16T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "BASEDUSDT",
@@ -861,20 +861,20 @@
   {
     "id": "BBLUSDT",
     "type": "spot",
-    "first_capture": "2024-02-28T00:00:00.000Z",
-    "end_date": "2025-05-10T00:00:00.000Z",
     "internal_id": "spot-BBL-USDT",
     "symbol": "BBL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-28T00:00:00.000Z",
+    "end_date": "2025-05-10T00:00:00.000Z"
   },
   {
     "id": "BBQUSDT",
     "type": "spot",
-    "first_capture": "2024-11-04T00:00:00.000Z",
-    "end_date": "2025-10-18T00:00:00.000Z",
     "internal_id": "spot-BBQ-USDT",
     "symbol": "BBQ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-11-04T00:00:00.000Z",
+    "end_date": "2025-10-18T00:00:00.000Z"
   },
   {
     "id": "BBSOLMNT",
@@ -935,11 +935,11 @@
   {
     "id": "BCUTUSDT",
     "type": "spot",
-    "first_capture": "2024-02-20T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-BCUT-USDT",
     "symbol": "BCUT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-20T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "BDXNUSDT",
@@ -1010,29 +1010,29 @@
   {
     "id": "BITBTC",
     "type": "spot",
-    "first_capture": "2021-12-09T00:00:00.000Z",
-    "end_date": "2023-07-18T00:00:00.000Z",
     "internal_id": "spot-BIT-BTC",
     "symbol": "BIT",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "first_capture": "2021-12-09T00:00:00.000Z",
+    "end_date": "2023-07-18T00:00:00.000Z"
   },
   {
     "id": "BITDAI",
     "type": "spot",
-    "first_capture": "2022-04-25T00:00:00.000Z",
-    "end_date": "2023-07-18T00:00:00.000Z",
     "internal_id": "spot-BIT-DAI",
     "symbol": "BIT",
-    "denominator": "DAI"
+    "denominator": "DAI",
+    "first_capture": "2022-04-25T00:00:00.000Z",
+    "end_date": "2023-07-18T00:00:00.000Z"
   },
   {
     "id": "BITUSDC",
     "type": "spot",
-    "first_capture": "2021-12-09T00:00:00.000Z",
-    "end_date": "2023-07-18T00:00:00.000Z",
     "internal_id": "spot-BIT-USDC",
     "symbol": "BIT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2021-12-09T00:00:00.000Z",
+    "end_date": "2023-07-18T00:00:00.000Z"
   },
   {
     "id": "BITUSDT",
@@ -1062,11 +1062,11 @@
   {
     "id": "BLOCKUSDT",
     "type": "spot",
-    "first_capture": "2024-04-11T00:00:00.000Z",
-    "end_date": "2025-03-15T00:00:00.000Z",
     "internal_id": "spot-BLOCK-USDT",
     "symbol": "BLOCK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-11T00:00:00.000Z",
+    "end_date": "2025-03-15T00:00:00.000Z"
   },
   {
     "id": "BLURUSDT",
@@ -1120,20 +1120,20 @@
   {
     "id": "BOBUSDT",
     "type": "spot",
-    "first_capture": "2023-05-15T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-BOB-USDT",
     "symbol": "BOB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-15T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "BOMBUSDT",
     "type": "spot",
-    "first_capture": "2025-06-17T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-BOMB-USDT",
     "symbol": "BOMB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-06-17T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "BOMEUSDT",
@@ -1162,20 +1162,20 @@
   {
     "id": "BONUSUSDT",
     "type": "spot",
-    "first_capture": "2024-04-02T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-BONUS-USDT",
     "symbol": "BONUS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-02T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "BRAWLUSDT",
     "type": "spot",
-    "first_capture": "2024-03-28T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-BRAWL-USDT",
     "symbol": "BRAWL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-28T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "BRETTUSDC",
@@ -1220,20 +1220,20 @@
   {
     "id": "BTC3LUSDT",
     "type": "spot",
-    "first_capture": "2022-04-20T00:00:00.000Z",
-    "end_date": "2025-07-02T00:00:00.000Z",
     "internal_id": "spot-BTC3L-USDT",
     "symbol": "BTC3L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-20T00:00:00.000Z",
+    "end_date": "2025-07-02T00:00:00.000Z"
   },
   {
     "id": "BTC3SUSDT",
     "type": "spot",
-    "first_capture": "2022-04-20T00:00:00.000Z",
-    "end_date": "2025-07-01T00:00:00.000Z",
     "internal_id": "spot-BTC3S-USDT",
     "symbol": "BTC3S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-20T00:00:00.000Z",
+    "end_date": "2025-07-01T00:00:00.000Z"
   },
   {
     "id": "BTCAED",
@@ -1358,11 +1358,11 @@
   {
     "id": "BTCUST",
     "type": "spot",
-    "first_capture": "2022-04-07T00:00:00.000Z",
-    "end_date": "2022-05-14T00:00:00.000Z",
     "internal_id": "spot-BTC-UST",
     "symbol": "BTC",
-    "denominator": "UST"
+    "denominator": "UST",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2022-05-14T00:00:00.000Z"
   },
   {
     "id": "BTCXUSD",
@@ -1375,11 +1375,11 @@
   {
     "id": "BTGUSDT",
     "type": "spot",
-    "first_capture": "2021-12-30T00:00:00.000Z",
-    "end_date": "2025-01-25T00:00:00.000Z",
     "internal_id": "spot-BTG-USDT",
     "symbol": "BTG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-30T00:00:00.000Z",
+    "end_date": "2025-01-25T00:00:00.000Z"
   },
   {
     "id": "BTTUSDT",
@@ -1392,11 +1392,11 @@
   {
     "id": "BUBBLEUSDT",
     "type": "spot",
-    "first_capture": "2024-05-14T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-BUBBLE-USDT",
     "symbol": "BUBBLE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-14T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "BUSDUSDT",
@@ -1434,29 +1434,29 @@
   {
     "id": "CANDYUSDT",
     "type": "spot",
-    "first_capture": "2023-06-13T00:00:00.000Z",
-    "end_date": "2024-11-29T00:00:00.000Z",
     "internal_id": "spot-CANDY-USDT",
     "symbol": "CANDY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-13T00:00:00.000Z",
+    "end_date": "2024-11-29T00:00:00.000Z"
   },
   {
     "id": "CAPOUSDT",
     "type": "spot",
-    "first_capture": "2023-05-22T00:00:00.000Z",
-    "end_date": "2024-07-19T00:00:00.000Z",
     "internal_id": "spot-CAPO-USDT",
     "symbol": "CAPO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-22T00:00:00.000Z",
+    "end_date": "2024-07-19T00:00:00.000Z"
   },
   {
     "id": "CAPSUSDT",
     "type": "spot",
-    "first_capture": "2022-03-30T00:00:00.000Z",
-    "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "spot-CAPS-USDT",
     "symbol": "CAPS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-30T00:00:00.000Z",
+    "end_date": "2025-08-16T00:00:00.000Z"
   },
   {
     "id": "CAPUSDT",
@@ -1477,11 +1477,11 @@
   {
     "id": "CATBNBUSDT",
     "type": "spot",
-    "first_capture": "2024-12-17T00:00:00.000Z",
-    "end_date": "2025-07-23T00:00:00.000Z",
     "internal_id": "spot-CATBNB-USDT",
     "symbol": "CATBNB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-12-17T00:00:00.000Z",
+    "end_date": "2025-07-23T00:00:00.000Z"
   },
   {
     "id": "CATIEUR",
@@ -1510,11 +1510,11 @@
   {
     "id": "CATSUSDT",
     "type": "spot",
-    "first_capture": "2024-10-08T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-CATS-USDT",
     "symbol": "CATS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-10-08T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "CATUSDT",
@@ -1535,11 +1535,11 @@
   {
     "id": "CBXUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-02-19T00:00:00.000Z",
     "internal_id": "spot-CBX-USDT",
     "symbol": "CBX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-02-19T00:00:00.000Z"
   },
   {
     "id": "CCUSDC",
@@ -1568,11 +1568,11 @@
   {
     "id": "CELUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-CEL-USDT",
     "symbol": "CEL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "CFGUSDT",
@@ -1609,11 +1609,11 @@
   {
     "id": "CHRPUSDT",
     "type": "spot",
-    "first_capture": "2022-09-07T00:00:00.000Z",
-    "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "spot-CHRP-USDT",
     "symbol": "CHRP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-07T00:00:00.000Z",
+    "end_date": "2025-08-16T00:00:00.000Z"
   },
   {
     "id": "CHZUSDC",
@@ -1659,20 +1659,20 @@
   {
     "id": "CMPUSDT",
     "type": "spot",
-    "first_capture": "2022-07-25T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-CMP-USDT",
     "symbol": "CMP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-25T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "COAUSDT",
     "type": "spot",
-    "first_capture": "2025-07-23T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-COA-USDT",
     "symbol": "COA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-07-23T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "COINXUSDT",
@@ -1702,11 +1702,11 @@
   {
     "id": "COMUSDT",
     "type": "spot",
-    "first_capture": "2024-01-09T00:00:00.000Z",
-    "end_date": "2024-12-14T00:00:00.000Z",
     "internal_id": "spot-COM-USDT",
     "symbol": "COM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-09T00:00:00.000Z",
+    "end_date": "2024-12-14T00:00:00.000Z"
   },
   {
     "id": "COOKIEUSDT",
@@ -1727,11 +1727,11 @@
   {
     "id": "COQUSDT",
     "type": "spot",
-    "first_capture": "2023-12-26T00:00:00.000Z",
-    "end_date": "2026-02-19T00:00:00.000Z",
     "internal_id": "spot-COQ-USDT",
     "symbol": "COQ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-26T00:00:00.000Z",
+    "end_date": "2026-02-19T00:00:00.000Z"
   },
   {
     "id": "COREUSDT",
@@ -1752,20 +1752,20 @@
   {
     "id": "COTUSDT",
     "type": "spot",
-    "first_capture": "2022-05-09T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-COT-USDT",
     "symbol": "COT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-09T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "COUSDT",
     "type": "spot",
-    "first_capture": "2022-09-28T00:00:00.000Z",
-    "end_date": "2024-11-23T00:00:00.000Z",
     "internal_id": "spot-CO-USDT",
     "symbol": "CO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-28T00:00:00.000Z",
+    "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
     "id": "CPOOLUSDT",
@@ -1778,11 +1778,11 @@
   {
     "id": "CRAFTUSDT",
     "type": "spot",
-    "first_capture": "2021-12-13T00:00:00.000Z",
-    "end_date": "2023-09-16T00:00:00.000Z",
     "internal_id": "spot-CRAFT-USDT",
     "symbol": "CRAFT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-13T00:00:00.000Z",
+    "end_date": "2023-09-16T00:00:00.000Z"
   },
   {
     "id": "CRCLXUSDT",
@@ -1795,11 +1795,11 @@
   {
     "id": "CRDSUSDT",
     "type": "spot",
-    "first_capture": "2023-11-22T00:00:00.000Z",
-    "end_date": "2024-11-29T00:00:00.000Z",
     "internal_id": "spot-CRDS-USDT",
     "symbol": "CRDS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-22T00:00:00.000Z",
+    "end_date": "2024-11-29T00:00:00.000Z"
   },
   {
     "id": "CRVUSDC",
@@ -1845,11 +1845,11 @@
   {
     "id": "CTTUSDT",
     "type": "spot",
-    "first_capture": "2023-09-05T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-CTT-USDT",
     "symbol": "CTT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-09-05T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "CUDISUSDT",
@@ -1862,29 +1862,29 @@
   {
     "id": "CULTUSDT",
     "type": "spot",
-    "first_capture": "2022-07-08T00:00:00.000Z",
-    "end_date": "2024-07-17T00:00:00.000Z",
     "internal_id": "spot-CULT-USDT",
     "symbol": "CULT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-08T00:00:00.000Z",
+    "end_date": "2024-07-17T00:00:00.000Z"
   },
   {
     "id": "CUSDUSDT",
     "type": "spot",
-    "first_capture": "2022-07-15T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-CUSD-USDT",
     "symbol": "CUSD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-15T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "CWARUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-08-01T00:00:00.000Z",
     "internal_id": "spot-CWAR-USDT",
     "symbol": "CWAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-08-01T00:00:00.000Z"
   },
   {
     "id": "CYBERUSDT",
@@ -1906,11 +1906,11 @@
   {
     "id": "DAPPUSDT",
     "type": "spot",
-    "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-02-22T00:00:00.000Z",
     "internal_id": "spot-DAPP-USDT",
     "symbol": "DAPP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-09-27T00:00:00.000Z",
+    "end_date": "2025-02-22T00:00:00.000Z"
   },
   {
     "id": "DASHUSDT",
@@ -1940,20 +1940,20 @@
   {
     "id": "DCRUSDT",
     "type": "spot",
-    "first_capture": "2021-12-16T00:00:00.000Z",
-    "end_date": "2024-11-23T00:00:00.000Z",
     "internal_id": "spot-DCR-USDT",
     "symbol": "DCR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
     "id": "DECHATUSDT",
     "type": "spot",
-    "first_capture": "2024-02-26T00:00:00.000Z",
-    "end_date": "2024-12-14T00:00:00.000Z",
     "internal_id": "spot-DECHAT-USDT",
     "symbol": "DECHAT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-26T00:00:00.000Z",
+    "end_date": "2024-12-14T00:00:00.000Z"
   },
   {
     "id": "DEEPUSDT",
@@ -1966,20 +1966,20 @@
   {
     "id": "DEFIUSDT",
     "type": "spot",
-    "first_capture": "2024-01-31T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-DEFI-USDT",
     "symbol": "DEFI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-31T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "DEFYUSDT",
     "type": "spot",
-    "first_capture": "2022-08-15T00:00:00.000Z",
-    "end_date": "2024-08-23T00:00:00.000Z",
     "internal_id": "spot-DEFY-USDT",
     "symbol": "DEFY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-15T00:00:00.000Z",
+    "end_date": "2024-08-23T00:00:00.000Z"
   },
   {
     "id": "DEGENUSDT",
@@ -1992,29 +1992,29 @@
   {
     "id": "DEVTUSDT",
     "type": "spot",
-    "first_capture": "2021-12-10T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-DEVT-USDT",
     "symbol": "DEVT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-10T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "DFIUSDT",
     "type": "spot",
-    "first_capture": "2022-06-02T00:00:00.000Z",
-    "end_date": "2024-12-05T00:00:00.000Z",
     "internal_id": "spot-DFI-USDT",
     "symbol": "DFI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-02T00:00:00.000Z",
+    "end_date": "2024-12-05T00:00:00.000Z"
   },
   {
     "id": "DFLUSDT",
     "type": "spot",
-    "first_capture": "2021-12-30T00:00:00.000Z",
-    "end_date": "2023-03-11T00:00:00.000Z",
     "internal_id": "spot-DFL-USDT",
     "symbol": "DFL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-30T00:00:00.000Z",
+    "end_date": "2023-03-11T00:00:00.000Z"
   },
   {
     "id": "DGBUSDT",
@@ -2036,47 +2036,47 @@
   {
     "id": "DICEUSDT",
     "type": "spot",
-    "first_capture": "2022-08-04T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-DICE-USDT",
     "symbol": "DICE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-04T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "DLCUSDT",
     "type": "spot",
-    "first_capture": "2022-09-15T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-DLC-USDT",
     "symbol": "DLC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-15T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "DMAILUSDT",
     "type": "spot",
-    "first_capture": "2024-01-30T00:00:00.000Z",
-    "end_date": "2026-01-08T00:00:00.000Z",
     "internal_id": "spot-DMAIL-USDT",
     "symbol": "DMAIL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-30T00:00:00.000Z",
+    "end_date": "2026-01-08T00:00:00.000Z"
   },
   {
     "id": "DOGE2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-25T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-DOGE2L-USDT",
     "symbol": "DOGE2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-25T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "DOGE2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-25T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-DOGE2S-USDT",
     "symbol": "DOGE2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-25T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "DOGEEUR",
@@ -2146,11 +2146,11 @@
   {
     "id": "DOMEUSDT",
     "type": "spot",
-    "first_capture": "2022-03-04T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-DOME-USDT",
     "symbol": "DOME",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-04T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "DOODUSDT",
@@ -2172,20 +2172,20 @@
   {
     "id": "DOT3LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-08T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-DOT3L-USDT",
     "symbol": "DOT3L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-08T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "DOT3SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-08T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-DOT3S-USDT",
     "symbol": "DOT3S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-08T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "DOTBTC",
@@ -2215,11 +2215,11 @@
   {
     "id": "DPXUSDT",
     "type": "spot",
-    "first_capture": "2023-02-28T00:00:00.000Z",
-    "end_date": "2025-01-25T00:00:00.000Z",
     "internal_id": "spot-DPX-USDT",
     "symbol": "DPX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-02-28T00:00:00.000Z",
+    "end_date": "2025-01-25T00:00:00.000Z"
   },
   {
     "id": "DRIFTUSDT",
@@ -2232,29 +2232,29 @@
   {
     "id": "DRIVUSDT",
     "type": "spot",
-    "first_capture": "2022-08-01T00:00:00.000Z",
-    "end_date": "2023-03-11T00:00:00.000Z",
     "internal_id": "spot-DRIV-USDT",
     "symbol": "DRIV",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-01T00:00:00.000Z",
+    "end_date": "2023-03-11T00:00:00.000Z"
   },
   {
     "id": "DSRUNUSDT",
     "type": "spot",
-    "first_capture": "2023-08-03T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-DSRUN-USDT",
     "symbol": "DSRUN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-08-03T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "DUELUSDT",
     "type": "spot",
-    "first_capture": "2024-01-12T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-DUEL-USDT",
     "symbol": "DUEL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-12T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "DYDXUSDC",
@@ -2283,11 +2283,11 @@
   {
     "id": "DZOOUSDT",
     "type": "spot",
-    "first_capture": "2023-03-16T00:00:00.000Z",
-    "end_date": "2025-01-25T00:00:00.000Z",
     "internal_id": "spot-DZOO-USDT",
     "symbol": "DZOO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-03-16T00:00:00.000Z",
+    "end_date": "2025-01-25T00:00:00.000Z"
   },
   {
     "id": "EATUSDT",
@@ -2301,11 +2301,11 @@
   {
     "id": "ECOXUSDT",
     "type": "spot",
-    "first_capture": "2022-11-07T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-ECOX-USDT",
     "symbol": "ECOX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-11-07T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "EDGEUSDT",
@@ -2326,20 +2326,20 @@
   {
     "id": "EGOUSDT",
     "type": "spot",
-    "first_capture": "2023-07-06T00:00:00.000Z",
-    "end_date": "2025-08-09T00:00:00.000Z",
     "internal_id": "spot-EGO-USDT",
     "symbol": "EGO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-07-06T00:00:00.000Z",
+    "end_date": "2025-08-09T00:00:00.000Z"
   },
   {
     "id": "EGP1USDT",
     "type": "spot",
-    "first_capture": "2024-09-25T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-EGP1-USDT",
     "symbol": "EGP1",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-09-25T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "EIGENUSDC",
@@ -2360,29 +2360,29 @@
   {
     "id": "ELDAUSDT",
     "type": "spot",
-    "first_capture": "2023-05-30T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-ELDA-USDT",
     "symbol": "ELDA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-30T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "ELDEUSDT",
     "type": "spot",
-    "first_capture": "2025-05-27T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-ELDE-USDT",
     "symbol": "ELDE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-05-27T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "ELIXUSDT",
     "type": "spot",
-    "first_capture": "2024-05-30T00:00:00.000Z",
-    "end_date": "2025-10-08T00:00:00.000Z",
     "internal_id": "spot-ELIX-USDT",
     "symbol": "ELIX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-30T00:00:00.000Z",
+    "end_date": "2025-10-08T00:00:00.000Z"
   },
   {
     "id": "ELIZAOSUSDT",
@@ -2412,11 +2412,11 @@
   {
     "id": "ELTUSDT",
     "type": "spot",
-    "first_capture": "2022-04-20T00:00:00.000Z",
-    "end_date": "2024-08-01T00:00:00.000Z",
     "internal_id": "spot-ELT-USDT",
     "symbol": "ELT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-20T00:00:00.000Z",
+    "end_date": "2024-08-01T00:00:00.000Z"
   },
   {
     "id": "ELXUSDT",
@@ -2494,29 +2494,29 @@
   {
     "id": "EOS2LUSDT",
     "type": "spot",
-    "first_capture": "2022-09-07T00:00:00.000Z",
-    "end_date": "2024-03-26T00:00:00.000Z",
     "internal_id": "spot-EOS2L-USDT",
     "symbol": "EOS2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-07T00:00:00.000Z",
+    "end_date": "2024-03-26T00:00:00.000Z"
   },
   {
     "id": "EOS2SUSDT",
     "type": "spot",
-    "first_capture": "2022-09-07T00:00:00.000Z",
-    "end_date": "2024-03-26T00:00:00.000Z",
     "internal_id": "spot-EOS2S-USDT",
     "symbol": "EOS2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-07T00:00:00.000Z",
+    "end_date": "2024-03-26T00:00:00.000Z"
   },
   {
     "id": "EOSUSDC",
     "type": "spot",
-    "first_capture": "2022-07-08T00:00:00.000Z",
-    "end_date": "2025-05-27T00:00:00.000Z",
     "internal_id": "spot-EOS-USDC",
     "symbol": "EOS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2022-07-08T00:00:00.000Z",
+    "end_date": "2025-05-27T00:00:00.000Z"
   },
   {
     "id": "EOSUSDT",
@@ -2539,11 +2539,11 @@
   {
     "id": "ERAMNT",
     "type": "spot",
-    "first_capture": "2025-09-10T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-ERA-MNT",
     "symbol": "ERA",
-    "denominator": "MNT"
+    "denominator": "MNT",
+    "first_capture": "2025-09-10T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "ERAUSDT",
@@ -2556,11 +2556,11 @@
   {
     "id": "ERTHAUSDT",
     "type": "spot",
-    "first_capture": "2022-02-25T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-ERTHA-USDT",
     "symbol": "ERTHA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-02-25T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "ESEUSDT",
@@ -2573,11 +2573,11 @@
   {
     "id": "ESNCUSDT",
     "type": "spot",
-    "first_capture": "2022-10-21T00:00:00.000Z",
-    "end_date": "2023-02-18T00:00:00.000Z",
     "internal_id": "spot-ESNC-USDT",
     "symbol": "ESNC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-10-21T00:00:00.000Z",
+    "end_date": "2023-02-18T00:00:00.000Z"
   },
   {
     "id": "ESUSDT",
@@ -2590,20 +2590,20 @@
   {
     "id": "ETC2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-04T00:00:00.000Z",
-    "end_date": "2024-04-19T00:00:00.000Z",
     "internal_id": "spot-ETC2L-USDT",
     "symbol": "ETC2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-04T00:00:00.000Z",
+    "end_date": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "ETC2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-04T00:00:00.000Z",
-    "end_date": "2024-04-20T00:00:00.000Z",
     "internal_id": "spot-ETC2S-USDT",
     "symbol": "ETC2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-04T00:00:00.000Z",
+    "end_date": "2024-04-20T00:00:00.000Z"
   },
   {
     "id": "ETCUSDT",
@@ -2616,20 +2616,20 @@
   {
     "id": "ETH3LUSDT",
     "type": "spot",
-    "first_capture": "2022-05-17T00:00:00.000Z",
-    "end_date": "2025-07-02T00:00:00.000Z",
     "internal_id": "spot-ETH3L-USDT",
     "symbol": "ETH3L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-17T00:00:00.000Z",
+    "end_date": "2025-07-02T00:00:00.000Z"
   },
   {
     "id": "ETH3SUSDT",
     "type": "spot",
-    "first_capture": "2022-05-17T00:00:00.000Z",
-    "end_date": "2025-07-01T00:00:00.000Z",
     "internal_id": "spot-ETH3S-USDT",
     "symbol": "ETH3S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-17T00:00:00.000Z",
+    "end_date": "2025-07-01T00:00:00.000Z"
   },
   {
     "id": "ETHAED",
@@ -2760,11 +2760,11 @@
   {
     "id": "ETHUST",
     "type": "spot",
-    "first_capture": "2022-04-07T00:00:00.000Z",
-    "end_date": "2022-05-14T00:00:00.000Z",
     "internal_id": "spot-ETH-UST",
     "symbol": "ETH",
-    "denominator": "UST"
+    "denominator": "UST",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2022-05-14T00:00:00.000Z"
   },
   {
     "id": "ETHWUSDT",
@@ -2777,47 +2777,47 @@
   {
     "id": "EVERUSDT",
     "type": "spot",
-    "first_capture": "2023-03-03T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-EVER-USDT",
     "symbol": "EVER",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-03-03T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "EVERYUSDT",
     "type": "spot",
-    "first_capture": "2024-04-05T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-EVERY-USDT",
     "symbol": "EVERY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-05T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "EXVGUSDT",
     "type": "spot",
-    "first_capture": "2024-04-24T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-EXVG-USDT",
     "symbol": "EXVG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-24T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "FAMEUSDT",
     "type": "spot",
-    "first_capture": "2022-05-24T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-FAME-USDT",
     "symbol": "FAME",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-24T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "FARUSDT",
     "type": "spot",
-    "first_capture": "2024-01-23T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-FAR-USDT",
     "symbol": "FAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-23T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "FBUSDT",
@@ -2831,11 +2831,11 @@
   {
     "id": "FCDUSDT",
     "type": "spot",
-    "first_capture": "2022-05-12T00:00:00.000Z",
-    "end_date": "2023-01-28T00:00:00.000Z",
     "internal_id": "spot-FCD-USDT",
     "symbol": "FCD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-12T00:00:00.000Z",
+    "end_date": "2023-01-28T00:00:00.000Z"
   },
   {
     "id": "FETUSDC",
@@ -2922,11 +2922,11 @@
   {
     "id": "FIUUSDT",
     "type": "spot",
-    "first_capture": "2022-07-18T00:00:00.000Z",
-    "end_date": "2023-03-11T00:00:00.000Z",
     "internal_id": "spot-FIU-USDT",
     "symbol": "FIU",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-18T00:00:00.000Z",
+    "end_date": "2023-03-11T00:00:00.000Z"
   },
   {
     "id": "FLIPUSDT",
@@ -2979,11 +2979,11 @@
   {
     "id": "FLTUSDT",
     "type": "spot",
-    "first_capture": "2024-03-20T00:00:00.000Z",
-    "end_date": "2025-04-30T00:00:00.000Z",
     "internal_id": "spot-FLT-USDT",
     "symbol": "FLT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-20T00:00:00.000Z",
+    "end_date": "2025-04-30T00:00:00.000Z"
   },
   {
     "id": "FLUIDUSDT",
@@ -2996,20 +2996,20 @@
   {
     "id": "FMBUSDT",
     "type": "spot",
-    "first_capture": "2023-05-22T00:00:00.000Z",
-    "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "spot-FMB-USDT",
     "symbol": "FMB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-22T00:00:00.000Z",
+    "end_date": "2025-08-16T00:00:00.000Z"
   },
   {
     "id": "FMCUSDT",
     "type": "spot",
-    "first_capture": "2023-12-13T00:00:00.000Z",
-    "end_date": "2025-08-16T00:00:00.000Z",
     "internal_id": "spot-FMC-USDT",
     "symbol": "FMC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-13T00:00:00.000Z",
+    "end_date": "2025-08-16T00:00:00.000Z"
   },
   {
     "id": "FOGOUSDT",
@@ -3022,11 +3022,11 @@
   {
     "id": "FONUSDT",
     "type": "spot",
-    "first_capture": "2023-06-12T00:00:00.000Z",
-    "end_date": "2024-11-08T00:00:00.000Z",
     "internal_id": "spot-FON-USDT",
     "symbol": "FON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-12T00:00:00.000Z",
+    "end_date": "2024-11-08T00:00:00.000Z"
   },
   {
     "id": "FORTUSDT",
@@ -3065,38 +3065,38 @@
   {
     "id": "FTM2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-16T00:00:00.000Z",
-    "end_date": "2024-04-20T00:00:00.000Z",
     "internal_id": "spot-FTM2L-USDT",
     "symbol": "FTM2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-16T00:00:00.000Z",
+    "end_date": "2024-04-20T00:00:00.000Z"
   },
   {
     "id": "FTM2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-16T00:00:00.000Z",
-    "end_date": "2024-04-20T00:00:00.000Z",
     "internal_id": "spot-FTM2S-USDT",
     "symbol": "FTM2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-16T00:00:00.000Z",
+    "end_date": "2024-04-20T00:00:00.000Z"
   },
   {
     "id": "FTMEUR",
     "type": "spot",
-    "first_capture": "2024-07-10T00:00:00.000Z",
-    "end_date": "2025-01-14T00:00:00.000Z",
     "internal_id": "spot-FTM-EUR",
     "symbol": "FTM",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2024-07-10T00:00:00.000Z",
+    "end_date": "2025-01-14T00:00:00.000Z"
   },
   {
     "id": "FTMUSDC",
     "type": "spot",
-    "first_capture": "2024-08-29T00:00:00.000Z",
-    "end_date": "2025-01-14T00:00:00.000Z",
     "internal_id": "spot-FTM-USDC",
     "symbol": "FTM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2024-08-29T00:00:00.000Z",
+    "end_date": "2025-01-14T00:00:00.000Z"
   },
   {
     "id": "FTMUSDT",
@@ -3143,20 +3143,20 @@
   {
     "id": "G3USDT",
     "type": "spot",
-    "first_capture": "2024-04-09T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-G3-USDT",
     "symbol": "G3",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-09T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "G7USDT",
     "type": "spot",
-    "first_capture": "2025-02-12T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-G7-USDT",
     "symbol": "G7",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-02-12T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "GAIBUSDT",
@@ -3169,11 +3169,11 @@
   {
     "id": "GALAUSDC",
     "type": "spot",
-    "first_capture": "2025-06-24T00:00:00.000Z",
-    "end_date": "2025-12-31T00:00:00.000Z",
     "internal_id": "spot-GALA-USDC",
     "symbol": "GALA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2025-06-24T00:00:00.000Z",
+    "end_date": "2025-12-31T00:00:00.000Z"
   },
   {
     "id": "GALAUSDT",
@@ -3186,20 +3186,20 @@
   {
     "id": "GALAXISUSDT",
     "type": "spot",
-    "first_capture": "2024-05-10T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-GALAXIS-USDT",
     "symbol": "GALAXIS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-10T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "GALFTUSDT",
     "type": "spot",
-    "first_capture": "2022-05-05T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-GALFT-USDT",
     "symbol": "GALFT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-05T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "GALUSDT",
@@ -3231,38 +3231,38 @@
   {
     "id": "GCAKEUSDT",
     "type": "spot",
-    "first_capture": "2022-10-14T00:00:00.000Z",
-    "end_date": "2025-02-22T00:00:00.000Z",
     "internal_id": "spot-GCAKE-USDT",
     "symbol": "GCAKE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-10-14T00:00:00.000Z",
+    "end_date": "2025-02-22T00:00:00.000Z"
   },
   {
     "id": "GENEUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-GENE-USDT",
     "symbol": "GENE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "GGMUSDT",
     "type": "spot",
-    "first_capture": "2022-01-18T00:00:00.000Z",
-    "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "spot-GGM-USDT",
     "symbol": "GGM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-18T00:00:00.000Z",
+    "end_date": "2024-07-16T00:00:00.000Z"
   },
   {
     "id": "GGUSDT",
     "type": "spot",
-    "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-GG-USDT",
     "symbol": "GG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-29T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "GLMRUSDT",
@@ -3275,29 +3275,29 @@
   {
     "id": "GMRXUSDT",
     "type": "spot",
-    "first_capture": "2024-03-26T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-GMRX-USDT",
     "symbol": "GMRX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-26T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "GMT2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-10T00:00:00.000Z",
-    "end_date": "2024-04-20T00:00:00.000Z",
     "internal_id": "spot-GMT2L-USDT",
     "symbol": "GMT2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-10T00:00:00.000Z",
+    "end_date": "2024-04-20T00:00:00.000Z"
   },
   {
     "id": "GMT2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-10T00:00:00.000Z",
-    "end_date": "2024-04-20T00:00:00.000Z",
     "internal_id": "spot-GMT2S-USDT",
     "symbol": "GMT2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-10T00:00:00.000Z",
+    "end_date": "2024-04-20T00:00:00.000Z"
   },
   {
     "id": "GMTUSDC",
@@ -3318,11 +3318,11 @@
   {
     "id": "GMUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-GM-USDT",
     "symbol": "GM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "GMXUSDT",
@@ -3335,11 +3335,11 @@
   {
     "id": "GNSUSDT",
     "type": "spot",
-    "first_capture": "2023-02-17T00:00:00.000Z",
-    "end_date": "2024-11-29T00:00:00.000Z",
     "internal_id": "spot-GNS-USDT",
     "symbol": "GNS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-02-17T00:00:00.000Z",
+    "end_date": "2024-11-29T00:00:00.000Z"
   },
   {
     "id": "GOATUSDT",
@@ -3409,11 +3409,11 @@
   {
     "id": "GRAPEUSDT",
     "type": "spot",
-    "first_capture": "2023-12-21T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-GRAPE-USDT",
     "symbol": "GRAPE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-21T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "GRASSUSDT",
@@ -3442,11 +3442,11 @@
   {
     "id": "GSTSUSDT",
     "type": "spot",
-    "first_capture": "2022-07-20T00:00:00.000Z",
-    "end_date": "2025-06-07T00:00:00.000Z",
     "internal_id": "spot-GSTS-USDT",
     "symbol": "GSTS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-20T00:00:00.000Z",
+    "end_date": "2025-06-07T00:00:00.000Z"
   },
   {
     "id": "GSTUSDT",
@@ -3460,11 +3460,11 @@
   {
     "id": "GSWIFTUSDT",
     "type": "spot",
-    "first_capture": "2023-07-21T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-GSWIFT-USDT",
     "symbol": "GSWIFT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-07-21T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "GTAIUSDT",
@@ -3478,11 +3478,11 @@
   {
     "id": "GUMMYUSDT",
     "type": "spot",
-    "first_capture": "2024-04-29T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-GUMMY-USDT",
     "symbol": "GUMMY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-29T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "GUSDT",
@@ -3503,11 +3503,11 @@
   {
     "id": "HATUSDT",
     "type": "spot",
-    "first_capture": "2025-01-17T00:00:00.000Z",
-    "end_date": "2025-06-21T00:00:00.000Z",
     "internal_id": "spot-HAT-USDT",
     "symbol": "HAT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-01-17T00:00:00.000Z",
+    "end_date": "2025-06-21T00:00:00.000Z"
   },
   {
     "id": "HBARMNT",
@@ -3536,11 +3536,11 @@
   {
     "id": "HEROUSDT",
     "type": "spot",
-    "first_capture": "2022-03-07T00:00:00.000Z",
-    "end_date": "2024-12-07T00:00:00.000Z",
     "internal_id": "spot-HERO-USDT",
     "symbol": "HERO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-07T00:00:00.000Z",
+    "end_date": "2024-12-07T00:00:00.000Z"
   },
   {
     "id": "HFTUSDC",
@@ -3561,11 +3561,11 @@
   {
     "id": "HLGUSDT",
     "type": "spot",
-    "first_capture": "2024-05-23T00:00:00.000Z",
-    "end_date": "2025-07-05T00:00:00.000Z",
     "internal_id": "spot-HLG-USDT",
     "symbol": "HLG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-23T00:00:00.000Z",
+    "end_date": "2025-07-05T00:00:00.000Z"
   },
   {
     "id": "HMNT",
@@ -3579,11 +3579,11 @@
   {
     "id": "HMSTREUR",
     "type": "spot",
-    "first_capture": "2024-09-26T00:00:00.000Z",
-    "end_date": "2025-01-25T00:00:00.000Z",
     "internal_id": "spot-HMSTR-EUR",
     "symbol": "HMSTR",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2024-09-26T00:00:00.000Z",
+    "end_date": "2025-01-25T00:00:00.000Z"
   },
   {
     "id": "HMSTRUSDC",
@@ -3628,11 +3628,11 @@
   {
     "id": "HONUSDT",
     "type": "spot",
-    "first_capture": "2024-01-17T00:00:00.000Z",
-    "end_date": "2024-08-23T00:00:00.000Z",
     "internal_id": "spot-HON-USDT",
     "symbol": "HON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-17T00:00:00.000Z",
+    "end_date": "2024-08-23T00:00:00.000Z"
   },
   {
     "id": "HOODXUSDT",
@@ -3704,11 +3704,11 @@
   {
     "id": "HVHUSDT",
     "type": "spot",
-    "first_capture": "2023-02-21T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-HVH-USDT",
     "symbol": "HVH",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-02-21T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "HYPERUSDT",
@@ -3778,11 +3778,11 @@
   {
     "id": "IMEUSDT",
     "type": "spot",
-    "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2023-09-16T00:00:00.000Z",
     "internal_id": "spot-IME-USDT",
     "symbol": "IME",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-25T00:00:00.000Z",
+    "end_date": "2023-09-16T00:00:00.000Z"
   },
   {
     "id": "IMUUSDT",
@@ -3837,11 +3837,11 @@
   {
     "id": "INSURUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2023-09-16T00:00:00.000Z",
     "internal_id": "spot-INSUR-USDT",
     "symbol": "INSUR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2023-09-16T00:00:00.000Z"
   },
   {
     "id": "INTERUSDT",
@@ -3854,11 +3854,11 @@
   {
     "id": "INTXUSDT",
     "type": "spot",
-    "first_capture": "2024-05-31T00:00:00.000Z",
-    "end_date": "2024-11-29T00:00:00.000Z",
     "internal_id": "spot-INTX-USDT",
     "symbol": "INTX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-31T00:00:00.000Z",
+    "end_date": "2024-11-29T00:00:00.000Z"
   },
   {
     "id": "IOUSDT",
@@ -3880,11 +3880,11 @@
   {
     "id": "IRLUSDT",
     "type": "spot",
-    "first_capture": "2023-12-19T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-IRL-USDT",
     "symbol": "IRL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-19T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "IZIUSDT",
@@ -3914,11 +3914,11 @@
   {
     "id": "JEFFUSDT",
     "type": "spot",
-    "first_capture": "2023-10-19T00:00:00.000Z",
-    "end_date": "2025-12-10T00:00:00.000Z",
     "internal_id": "spot-JEFF-USDT",
     "symbol": "JEFF",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-10-19T00:00:00.000Z",
+    "end_date": "2025-12-10T00:00:00.000Z"
   },
   {
     "id": "JSTUSDT",
@@ -3988,20 +3988,20 @@
   {
     "id": "KARATEUSDT",
     "type": "spot",
-    "first_capture": "2023-05-12T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-KARATE-USDT",
     "symbol": "KARATE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-12T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "KASTAUSDT",
     "type": "spot",
-    "first_capture": "2022-01-04T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-KASTA-USDT",
     "symbol": "KASTA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-04T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "KASUSDC",
@@ -4030,11 +4030,11 @@
   {
     "id": "KCALUSDT",
     "type": "spot",
-    "first_capture": "2022-11-11T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-KCAL-USDT",
     "symbol": "KCAL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-11-11T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "KCSUSDT",
@@ -4074,11 +4074,11 @@
   {
     "id": "KMAUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2022-07-16T00:00:00.000Z",
     "internal_id": "spot-KMA-USDT",
     "symbol": "KMA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2022-07-16T00:00:00.000Z"
   },
   {
     "id": "KMNOUSDT",
@@ -4091,47 +4091,47 @@
   {
     "id": "KMONUSDT",
     "type": "spot",
-    "first_capture": "2022-05-06T00:00:00.000Z",
-    "end_date": "2025-03-15T00:00:00.000Z",
     "internal_id": "spot-KMON-USDT",
     "symbol": "KMON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-06T00:00:00.000Z",
+    "end_date": "2025-03-15T00:00:00.000Z"
   },
   {
     "id": "KOKUSDT",
     "type": "spot",
-    "first_capture": "2022-05-20T00:00:00.000Z",
-    "end_date": "2024-11-29T00:00:00.000Z",
     "internal_id": "spot-KOK-USDT",
     "symbol": "KOK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-20T00:00:00.000Z",
+    "end_date": "2024-11-29T00:00:00.000Z"
   },
   {
     "id": "KONUSDT",
     "type": "spot",
-    "first_capture": "2022-06-22T00:00:00.000Z",
-    "end_date": "2025-04-11T00:00:00.000Z",
     "internal_id": "spot-KON-USDT",
     "symbol": "KON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-22T00:00:00.000Z",
+    "end_date": "2025-04-11T00:00:00.000Z"
   },
   {
     "id": "KRLUSDT",
     "type": "spot",
-    "first_capture": "2021-12-06T00:00:00.000Z",
-    "end_date": "2024-08-01T00:00:00.000Z",
     "internal_id": "spot-KRL-USDT",
     "symbol": "KRL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-06T00:00:00.000Z",
+    "end_date": "2024-08-01T00:00:00.000Z"
   },
   {
     "id": "KROUSDT",
     "type": "spot",
-    "first_capture": "2024-10-30T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-KRO-USDT",
     "symbol": "KRO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-10-30T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "KSMUSDT",
@@ -4152,11 +4152,11 @@
   {
     "id": "KUNCIUSDT",
     "type": "spot",
-    "first_capture": "2022-07-21T00:00:00.000Z",
-    "end_date": "2024-08-23T00:00:00.000Z",
     "internal_id": "spot-KUNCI-USDT",
     "symbol": "KUNCI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-21T00:00:00.000Z",
+    "end_date": "2024-08-23T00:00:00.000Z"
   },
   {
     "id": "KUSDT",
@@ -4178,11 +4178,11 @@
   {
     "id": "LADYSUSDT",
     "type": "spot",
-    "first_capture": "2023-05-11T00:00:00.000Z",
-    "end_date": "2025-12-31T00:00:00.000Z",
     "internal_id": "spot-LADYS-USDT",
     "symbol": "LADYS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-11T00:00:00.000Z",
+    "end_date": "2025-12-31T00:00:00.000Z"
   },
   {
     "id": "LAIUSDT",
@@ -4196,11 +4196,11 @@
   {
     "id": "LAMNT",
     "type": "spot",
-    "first_capture": "2025-09-10T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-LA-MNT",
     "symbol": "LA",
-    "denominator": "MNT"
+    "denominator": "MNT",
+    "first_capture": "2025-09-10T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "LAUSDT",
@@ -4254,11 +4254,11 @@
   {
     "id": "LENDSUSDT",
     "type": "spot",
-    "first_capture": "2024-02-08T00:00:00.000Z",
-    "end_date": "2024-12-07T00:00:00.000Z",
     "internal_id": "spot-LENDS-USDT",
     "symbol": "LENDS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-08T00:00:00.000Z",
+    "end_date": "2024-12-07T00:00:00.000Z"
   },
   {
     "id": "LEVERUSDT",
@@ -4281,20 +4281,20 @@
   {
     "id": "LFWUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-09-27T00:00:00.000Z",
     "internal_id": "spot-LFW-USDT",
     "symbol": "LFW",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-09-27T00:00:00.000Z"
   },
   {
     "id": "LGXUSDT",
     "type": "spot",
-    "first_capture": "2022-04-20T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-LGX-USDT",
     "symbol": "LGX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-20T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "LINEAUSDT",
@@ -4307,29 +4307,29 @@
   {
     "id": "LINGUSDT",
     "type": "spot",
-    "first_capture": "2022-09-13T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-LING-USDT",
     "symbol": "LING",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-13T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "LINK2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-16T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-LINK2L-USDT",
     "symbol": "LINK2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-16T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "LINK2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-16T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-LINK2S-USDT",
     "symbol": "LINK2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-16T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "LINKEUR",
@@ -4358,11 +4358,11 @@
   {
     "id": "LISUSDT",
     "type": "spot",
-    "first_capture": "2023-02-13T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-LIS-USDT",
     "symbol": "LIS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-02-13T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "LITKEYUSDT",
@@ -4384,20 +4384,20 @@
   {
     "id": "LLUSDT",
     "type": "spot",
-    "first_capture": "2024-04-24T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-LL-USDT",
     "symbol": "LL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-24T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "LMRUSDT",
     "type": "spot",
-    "first_capture": "2022-03-29T00:00:00.000Z",
-    "end_date": "2022-07-16T00:00:00.000Z",
     "internal_id": "spot-LMR-USDT",
     "symbol": "LMR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-29T00:00:00.000Z",
+    "end_date": "2022-07-16T00:00:00.000Z"
   },
   {
     "id": "LMWRUSDT",
@@ -4427,20 +4427,20 @@
   {
     "id": "LTC2LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-22T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-LTC2L-USDT",
     "symbol": "LTC2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-22T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "LTC2SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-22T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-LTC2S-USDT",
     "symbol": "LTC2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-22T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "LTCBTC",
@@ -4494,11 +4494,11 @@
   {
     "id": "LUNABTC",
     "type": "spot",
-    "first_capture": "2022-02-09T00:00:00.000Z",
-    "end_date": "2022-05-13T00:00:00.000Z",
     "internal_id": "spot-LUNA-BTC",
     "symbol": "LUNA",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "first_capture": "2022-02-09T00:00:00.000Z",
+    "end_date": "2022-05-13T00:00:00.000Z"
   },
   {
     "id": "LUNAIUSDT",
@@ -4512,11 +4512,11 @@
   {
     "id": "LUNAUSDC",
     "type": "spot",
-    "first_capture": "2022-02-10T00:00:00.000Z",
-    "end_date": "2022-05-26T00:00:00.000Z",
     "internal_id": "spot-LUNA-USDC",
     "symbol": "LUNA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2022-05-26T00:00:00.000Z"
   },
   {
     "id": "LUNAUSDT",
@@ -4561,20 +4561,20 @@
   {
     "id": "MAKUSDT",
     "type": "spot",
-    "first_capture": "2024-09-05T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-MAK-USDT",
     "symbol": "MAK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-09-05T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "MANABTC",
     "type": "spot",
-    "first_capture": "2022-02-09T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-MANA-BTC",
     "symbol": "MANA",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "first_capture": "2022-02-09T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "MANAUSDC",
@@ -4628,38 +4628,38 @@
   {
     "id": "MATIC2LUSDT",
     "type": "spot",
-    "first_capture": "2022-08-04T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-MATIC2L-USDT",
     "symbol": "MATIC2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-04T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "MATIC2SUSDT",
     "type": "spot",
-    "first_capture": "2022-08-04T00:00:00.000Z",
-    "end_date": "2024-05-11T00:00:00.000Z",
     "internal_id": "spot-MATIC2S-USDT",
     "symbol": "MATIC2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-08-04T00:00:00.000Z",
+    "end_date": "2024-05-11T00:00:00.000Z"
   },
   {
     "id": "MATICBTC",
     "type": "spot",
-    "first_capture": "2022-02-09T00:00:00.000Z",
-    "end_date": "2024-09-11T00:00:00.000Z",
     "internal_id": "spot-MATIC-BTC",
     "symbol": "MATIC",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "first_capture": "2022-02-09T00:00:00.000Z",
+    "end_date": "2024-09-11T00:00:00.000Z"
   },
   {
     "id": "MATICUSDC",
     "type": "spot",
-    "first_capture": "2022-02-10T00:00:00.000Z",
-    "end_date": "2024-09-11T00:00:00.000Z",
     "internal_id": "spot-MATIC-USDC",
     "symbol": "MATIC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2024-09-11T00:00:00.000Z"
   },
   {
     "id": "MATICUSDT",
@@ -4690,11 +4690,11 @@
   {
     "id": "MBSUSDT",
     "type": "spot",
-    "first_capture": "2022-01-21T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-MBS-USDT",
     "symbol": "MBS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-21T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "MBXUSDT",
@@ -4715,11 +4715,11 @@
   {
     "id": "MCGUSDT",
     "type": "spot",
-    "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2025-02-19T00:00:00.000Z",
     "internal_id": "spot-MCG-USDT",
     "symbol": "MCG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-28T00:00:00.000Z",
+    "end_date": "2025-02-19T00:00:00.000Z"
   },
   {
     "id": "MCRTUSDT",
@@ -4732,20 +4732,20 @@
   {
     "id": "MCTUSDT",
     "type": "spot",
-    "first_capture": "2022-12-07T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-MCT-USDT",
     "symbol": "MCT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-12-07T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "MDAOUSDT",
     "type": "spot",
-    "first_capture": "2023-02-10T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-MDAO-USDT",
     "symbol": "MDAO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-02-10T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "MEEUSDT",
@@ -4766,11 +4766,11 @@
   {
     "id": "MELOSUSDT",
     "type": "spot",
-    "first_capture": "2022-04-08T00:00:00.000Z",
-    "end_date": "2025-02-22T00:00:00.000Z",
     "internal_id": "spot-MELOS-USDT",
     "symbol": "MELOS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-08T00:00:00.000Z",
+    "end_date": "2025-02-22T00:00:00.000Z"
   },
   {
     "id": "MEMEFIUSDT",
@@ -4864,20 +4864,20 @@
   {
     "id": "MFERUSDT",
     "type": "spot",
-    "first_capture": "2024-03-31T00:00:00.000Z",
-    "end_date": "2025-03-15T00:00:00.000Z",
     "internal_id": "spot-MFER-USDT",
     "symbol": "MFER",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-31T00:00:00.000Z",
+    "end_date": "2025-03-15T00:00:00.000Z"
   },
   {
     "id": "MIBRUSDT",
     "type": "spot",
-    "first_capture": "2022-09-27T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z",
     "internal_id": "spot-MIBR-USDT",
     "symbol": "MIBR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-27T00:00:00.000Z",
+    "end_date": "2024-05-21T00:00:00.000Z"
   },
   {
     "id": "MILKUSDT",
@@ -4899,20 +4899,20 @@
   {
     "id": "MINUUSDT",
     "type": "spot",
-    "first_capture": "2024-02-07T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-MINU-USDT",
     "symbol": "MINU",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-07T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "MIXUSDT",
     "type": "spot",
-    "first_capture": "2022-01-26T00:00:00.000Z",
-    "end_date": "2025-10-18T00:00:00.000Z",
     "internal_id": "spot-MIX-USDT",
     "symbol": "MIX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-26T00:00:00.000Z",
+    "end_date": "2025-10-18T00:00:00.000Z"
   },
   {
     "id": "MKRUSDT",
@@ -4926,20 +4926,20 @@
   {
     "id": "MLKUSDT",
     "type": "spot",
-    "first_capture": "2023-12-04T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-MLK-USDT",
     "symbol": "MLK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-04T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "MMCUSDT",
     "type": "spot",
-    "first_capture": "2022-07-28T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-MMC-USDT",
     "symbol": "MMC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-28T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "MMTUSDT",
@@ -4952,11 +4952,11 @@
   {
     "id": "MNRYUSDT",
     "type": "spot",
-    "first_capture": "2024-12-18T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-MNRY-USDT",
     "symbol": "MNRY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-12-18T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "MNTBTC",
@@ -5009,11 +5009,11 @@
   {
     "id": "MNZUSDT",
     "type": "spot",
-    "first_capture": "2022-07-06T00:00:00.000Z",
-    "end_date": "2024-08-01T00:00:00.000Z",
     "internal_id": "spot-MNZ-USDT",
     "symbol": "MNZ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-06T00:00:00.000Z",
+    "end_date": "2024-08-01T00:00:00.000Z"
   },
   {
     "id": "MOCAUSDT",
@@ -5026,11 +5026,11 @@
   {
     "id": "MODEUSDT",
     "type": "spot",
-    "first_capture": "2024-05-07T00:00:00.000Z",
-    "end_date": "2026-02-11T00:00:00.000Z",
     "internal_id": "spot-MODE-USDT",
     "symbol": "MODE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-07T00:00:00.000Z",
+    "end_date": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "MOGUSDT",
@@ -5043,11 +5043,11 @@
   {
     "id": "MOJOUSDT",
     "type": "spot",
-    "first_capture": "2024-04-08T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-MOJO-USDT",
     "symbol": "MOJO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-08T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "MONPROUSDT",
@@ -5093,11 +5093,11 @@
   {
     "id": "MOVEZUSDT",
     "type": "spot",
-    "first_capture": "2022-06-10T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-MOVEZ-USDT",
     "symbol": "MOVEZ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-10T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "MOVRUSDT",
@@ -5110,11 +5110,11 @@
   {
     "id": "MOZUSDT",
     "type": "spot",
-    "first_capture": "2024-12-10T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-MOZ-USDT",
     "symbol": "MOZ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-12-10T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "MPLXUSDT",
@@ -5127,38 +5127,38 @@
   {
     "id": "MSTARUSDT",
     "type": "spot",
-    "first_capture": "2024-04-17T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-MSTAR-USDT",
     "symbol": "MSTAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-17T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "MTCUSDT",
     "type": "spot",
-    "first_capture": "2023-06-26T00:00:00.000Z",
-    "end_date": "2024-02-22T00:00:00.000Z",
     "internal_id": "spot-MTC-USDT",
     "symbol": "MTC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-26T00:00:00.000Z",
+    "end_date": "2024-02-22T00:00:00.000Z"
   },
   {
     "id": "MTKUSDT",
     "type": "spot",
-    "first_capture": "2022-10-31T00:00:00.000Z",
-    "end_date": "2024-04-24T00:00:00.000Z",
     "internal_id": "spot-MTK-USDT",
     "symbol": "MTK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-10-31T00:00:00.000Z",
+    "end_date": "2024-04-24T00:00:00.000Z"
   },
   {
     "id": "MUSDUSDT",
     "type": "spot",
-    "first_capture": "2024-01-18T00:00:00.000Z",
-    "end_date": "2024-06-11T00:00:00.000Z",
     "internal_id": "spot-MUSD-USDT",
     "symbol": "MUSD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-18T00:00:00.000Z",
+    "end_date": "2024-06-11T00:00:00.000Z"
   },
   {
     "id": "MVLUSDT",
@@ -5172,20 +5172,20 @@
   {
     "id": "MVUSDT",
     "type": "spot",
-    "first_capture": "2022-01-27T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-MV-USDT",
     "symbol": "MV",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-27T00:00:00.000Z",
+    "end_date": "2025-11-19T00:00:00.000Z"
   },
   {
     "id": "MXMUSDT",
     "type": "spot",
-    "first_capture": "2024-02-01T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-MXM-USDT",
     "symbol": "MXM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-01T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "MXUSDT",
@@ -5216,11 +5216,11 @@
   {
     "id": "N3USDT",
     "type": "spot",
-    "first_capture": "2025-01-22T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-N3-USDT",
     "symbol": "N3",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-01-22T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "NAKAUSDT",
@@ -5275,11 +5275,11 @@
   {
     "id": "NEIROUSDT",
     "type": "spot",
-    "first_capture": "2024-08-21T00:00:00.000Z",
-    "end_date": "2025-10-11T00:00:00.000Z",
     "internal_id": "spot-NEIRO-USDT",
     "symbol": "NEIRO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-08-21T00:00:00.000Z",
+    "end_date": "2025-10-11T00:00:00.000Z"
   },
   {
     "id": "NEONUSDT",
@@ -5292,11 +5292,11 @@
   {
     "id": "NESSUSDT",
     "type": "spot",
-    "first_capture": "2023-09-19T00:00:00.000Z",
-    "end_date": "2025-05-10T00:00:00.000Z",
     "internal_id": "spot-NESS-USDT",
     "symbol": "NESS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-09-19T00:00:00.000Z",
+    "end_date": "2025-05-10T00:00:00.000Z"
   },
   {
     "id": "NEWTUSDT",
@@ -5317,11 +5317,11 @@
   {
     "id": "NEXTUSDT",
     "type": "spot",
-    "first_capture": "2023-09-05T00:00:00.000Z",
-    "end_date": "2025-01-29T00:00:00.000Z",
     "internal_id": "spot-NEXT-USDT",
     "symbol": "NEXT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-09-05T00:00:00.000Z",
+    "end_date": "2025-01-29T00:00:00.000Z"
   },
   {
     "id": "NFTUSDT",
@@ -5334,11 +5334,11 @@
   {
     "id": "NGLUSDT",
     "type": "spot",
-    "first_capture": "2024-03-13T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-NGL-USDT",
     "symbol": "NGL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-13T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "NIBIUSDT",
@@ -5360,11 +5360,11 @@
   {
     "id": "NLKUSDT",
     "type": "spot",
-    "first_capture": "2024-05-16T00:00:00.000Z",
-    "end_date": "2025-08-23T00:00:00.000Z",
     "internal_id": "spot-NLK-USDT",
     "symbol": "NLK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-16T00:00:00.000Z",
+    "end_date": "2025-08-23T00:00:00.000Z"
   },
   {
     "id": "NOMUSDT",
@@ -5410,20 +5410,20 @@
   {
     "id": "NUTSUSDT",
     "type": "spot",
-    "first_capture": "2024-05-20T00:00:00.000Z",
-    "end_date": "2025-09-11T00:00:00.000Z",
     "internal_id": "spot-NUTS-USDT",
     "symbol": "NUTS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-20T00:00:00.000Z",
+    "end_date": "2025-09-11T00:00:00.000Z"
   },
   {
     "id": "NUUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2022-02-17T00:00:00.000Z",
     "internal_id": "spot-NU-USDT",
     "symbol": "NU",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2022-02-17T00:00:00.000Z"
   },
   {
     "id": "NVDAXUSDT",
@@ -5436,11 +5436,11 @@
   {
     "id": "NXDUSDT",
     "type": "spot",
-    "first_capture": "2022-07-12T00:00:00.000Z",
-    "end_date": "2023-03-11T00:00:00.000Z",
     "internal_id": "spot-NXD-USDT",
     "symbol": "NXD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-12T00:00:00.000Z",
+    "end_date": "2023-03-11T00:00:00.000Z"
   },
   {
     "id": "NXPCMNT",
@@ -5504,56 +5504,56 @@
   {
     "id": "OBXUSDT",
     "type": "spot",
-    "first_capture": "2022-06-30T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-OBX-USDT",
     "symbol": "OBX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-30T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "ODOSUSDT",
     "type": "spot",
-    "first_capture": "2024-12-20T00:00:00.000Z",
-    "end_date": "2026-01-08T00:00:00.000Z",
     "internal_id": "spot-ODOS-USDT",
     "symbol": "ODOS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-12-20T00:00:00.000Z",
+    "end_date": "2026-01-08T00:00:00.000Z"
   },
   {
     "id": "OIKUSDT",
     "type": "spot",
-    "first_capture": "2025-03-12T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-OIK-USDT",
     "symbol": "OIK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-03-12T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "OKGUSDT",
     "type": "spot",
-    "first_capture": "2022-09-14T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-OKG-USDT",
     "symbol": "OKG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-14T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "OKSEUSDC",
     "type": "spot",
-    "first_capture": "2022-09-05T00:00:00.000Z",
-    "end_date": "2023-03-02T00:00:00.000Z",
     "internal_id": "spot-OKSE-USDC",
     "symbol": "OKSE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2022-09-05T00:00:00.000Z",
+    "end_date": "2023-03-02T00:00:00.000Z"
   },
   {
     "id": "OKSEUSDT",
     "type": "spot",
-    "first_capture": "2022-09-05T00:00:00.000Z",
-    "end_date": "2023-09-16T00:00:00.000Z",
     "internal_id": "spot-OKSE-USDT",
     "symbol": "OKSE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-05T00:00:00.000Z",
+    "end_date": "2023-09-16T00:00:00.000Z"
   },
   {
     "id": "OLUSDT",
@@ -5575,11 +5575,11 @@
   {
     "id": "OMNICATUSDT",
     "type": "spot",
-    "first_capture": "2024-04-18T00:00:00.000Z",
-    "end_date": "2024-11-23T00:00:00.000Z",
     "internal_id": "spot-OMNICAT-USDT",
     "symbol": "OMNICAT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-18T00:00:00.000Z",
+    "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
     "id": "OMNIUSDT",
@@ -5593,11 +5593,11 @@
   {
     "id": "OMNUSDT",
     "type": "spot",
-    "first_capture": "2023-06-16T00:00:00.000Z",
-    "end_date": "2024-08-01T00:00:00.000Z",
     "internal_id": "spot-OMN-USDT",
     "symbol": "OMN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-16T00:00:00.000Z",
+    "end_date": "2024-08-01T00:00:00.000Z"
   },
   {
     "id": "OMUSDT",
@@ -5708,11 +5708,11 @@
   {
     "id": "ORTUSDT",
     "type": "spot",
-    "first_capture": "2022-11-25T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-ORT-USDT",
     "symbol": "ORT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-11-25T00:00:00.000Z",
+    "end_date": "2025-11-19T00:00:00.000Z"
   },
   {
     "id": "PAALUSDT",
@@ -5725,11 +5725,11 @@
   {
     "id": "PARAMUSDT",
     "type": "spot",
-    "first_capture": "2024-05-29T00:00:00.000Z",
-    "end_date": "2025-02-22T00:00:00.000Z",
     "internal_id": "spot-PARAM-USDT",
     "symbol": "PARAM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-29T00:00:00.000Z",
+    "end_date": "2025-02-22T00:00:00.000Z"
   },
   {
     "id": "PARTIUSDT",
@@ -5742,11 +5742,11 @@
   {
     "id": "PAWSUSDT",
     "type": "spot",
-    "first_capture": "2025-04-16T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-PAWS-USDT",
     "symbol": "PAWS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-04-16T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "PAXGUSDT",
@@ -5760,29 +5760,29 @@
   {
     "id": "PBUXUSDT",
     "type": "spot",
-    "first_capture": "2024-04-23T00:00:00.000Z",
-    "end_date": "2025-10-08T00:00:00.000Z",
     "internal_id": "spot-PBUX-USDT",
     "symbol": "PBUX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-23T00:00:00.000Z",
+    "end_date": "2025-10-08T00:00:00.000Z"
   },
   {
     "id": "PELLUSDT",
     "type": "spot",
-    "first_capture": "2025-03-13T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-PELL-USDT",
     "symbol": "PELL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-03-13T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "PENDLEUSDC",
     "type": "spot",
-    "first_capture": "2025-07-02T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-PENDLE-USDC",
     "symbol": "PENDLE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2025-07-02T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "PENDLEUSDT",
@@ -5820,11 +5820,11 @@
   {
     "id": "PEPE2USDT",
     "type": "spot",
-    "first_capture": "2023-07-06T00:00:00.000Z",
-    "end_date": "2024-02-10T00:00:00.000Z",
     "internal_id": "spot-PEPE2-USDT",
     "symbol": "PEPE2",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-07-06T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z"
   },
   {
     "id": "PEPEEUR",
@@ -5870,11 +5870,11 @@
   {
     "id": "PFVSUSDT",
     "type": "spot",
-    "first_capture": "2025-05-27T00:00:00.000Z",
-    "end_date": "2025-10-18T00:00:00.000Z",
     "internal_id": "spot-PFVS-USDT",
     "symbol": "PFVS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-05-27T00:00:00.000Z",
+    "end_date": "2025-10-18T00:00:00.000Z"
   },
   {
     "id": "PIEVERSEUSDT",
@@ -5887,20 +5887,20 @@
   {
     "id": "PINEYEUSDT",
     "type": "spot",
-    "first_capture": "2025-01-27T00:00:00.000Z",
-    "end_date": "2025-12-31T00:00:00.000Z",
     "internal_id": "spot-PINEYE-USDT",
     "symbol": "PINEYE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-01-27T00:00:00.000Z",
+    "end_date": "2025-12-31T00:00:00.000Z"
   },
   {
     "id": "PIPUSDT",
     "type": "spot",
-    "first_capture": "2023-03-02T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-PIP-USDT",
     "symbol": "PIP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-03-02T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "PIRATEUSDT",
@@ -5922,29 +5922,29 @@
   {
     "id": "PLANETUSDT",
     "type": "spot",
-    "first_capture": "2023-07-31T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-PLANET-USDT",
     "symbol": "PLANET",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-07-31T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "PLAYUSDT",
     "type": "spot",
-    "first_capture": "2023-04-13T00:00:00.000Z",
-    "end_date": "2024-05-25T00:00:00.000Z",
     "internal_id": "spot-PLAY-USDT",
     "symbol": "PLAY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-04-13T00:00:00.000Z",
+    "end_date": "2024-05-25T00:00:00.000Z"
   },
   {
     "id": "PLTUSDT",
     "type": "spot",
-    "first_capture": "2021-12-28T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-PLT-USDT",
     "symbol": "PLT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-28T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "PLUMEUSDT",
@@ -5957,11 +5957,11 @@
   {
     "id": "PLYUSDT",
     "type": "spot",
-    "first_capture": "2022-05-05T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-PLY-USDT",
     "symbol": "PLY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-05T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "PNUTUSDT",
@@ -5974,11 +5974,11 @@
   {
     "id": "POKTUSDT",
     "type": "spot",
-    "first_capture": "2022-03-07T00:00:00.000Z",
-    "end_date": "2025-05-31T00:00:00.000Z",
     "internal_id": "spot-POKT-USDT",
     "symbol": "POKT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-07T00:00:00.000Z",
+    "end_date": "2025-05-31T00:00:00.000Z"
   },
   {
     "id": "POLUSDC",
@@ -6015,11 +6015,11 @@
   {
     "id": "PORT3USDT",
     "type": "spot",
-    "first_capture": "2024-01-08T00:00:00.000Z",
-    "end_date": "2026-02-11T00:00:00.000Z",
     "internal_id": "spot-PORT3-USDT",
     "symbol": "PORT3",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-08T00:00:00.000Z",
+    "end_date": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "PORTALSUSDT",
@@ -6041,20 +6041,20 @@
   {
     "id": "POSIUSDT",
     "type": "spot",
-    "first_capture": "2022-02-18T00:00:00.000Z",
-    "end_date": "2023-03-11T00:00:00.000Z",
     "internal_id": "spot-POSI-USDT",
     "symbol": "POSI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-02-18T00:00:00.000Z",
+    "end_date": "2023-03-11T00:00:00.000Z"
   },
   {
     "id": "PPTUSDT",
     "type": "spot",
-    "first_capture": "2023-10-24T00:00:00.000Z",
-    "end_date": "2025-07-10T00:00:00.000Z",
     "internal_id": "spot-PPT-USDT",
     "symbol": "PPT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-10-24T00:00:00.000Z",
+    "end_date": "2025-07-10T00:00:00.000Z"
   },
   {
     "id": "PRCLUSDT",
@@ -6067,11 +6067,11 @@
   {
     "id": "PRIMALUSDT",
     "type": "spot",
-    "first_capture": "2022-12-08T00:00:00.000Z",
-    "end_date": "2024-12-05T00:00:00.000Z",
     "internal_id": "spot-PRIMAL-USDT",
     "symbol": "PRIMAL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-12-08T00:00:00.000Z",
+    "end_date": "2024-12-05T00:00:00.000Z"
   },
   {
     "id": "PRIMEUSDT",
@@ -6100,38 +6100,38 @@
   {
     "id": "PSPUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-12-05T00:00:00.000Z",
     "internal_id": "spot-PSP-USDT",
     "symbol": "PSP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-12-05T00:00:00.000Z"
   },
   {
     "id": "PSTAKEUSDT",
     "type": "spot",
-    "first_capture": "2022-02-28T00:00:00.000Z",
-    "end_date": "2026-02-04T00:00:00.000Z",
     "internal_id": "spot-PSTAKE-USDT",
     "symbol": "PSTAKE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-02-28T00:00:00.000Z",
+    "end_date": "2026-02-04T00:00:00.000Z"
   },
   {
     "id": "PTCUSDT",
     "type": "spot",
-    "first_capture": "2024-07-02T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-PTC-USDT",
     "symbol": "PTC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-07-02T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "PTUUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-PTU-USDT",
     "symbol": "PTU",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "PUFFERUSDT",
@@ -6153,11 +6153,11 @@
   {
     "id": "PUMLXUSDT",
     "type": "spot",
-    "first_capture": "2022-10-07T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-PUMLX-USDT",
     "symbol": "PUMLX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-10-07T00:00:00.000Z",
+    "end_date": "2025-03-29T00:00:00.000Z"
   },
   {
     "id": "PUMPBTCUSDT",
@@ -6194,11 +6194,11 @@
   {
     "id": "PURSEUSDT",
     "type": "spot",
-    "first_capture": "2024-02-06T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-PURSE-USDT",
     "symbol": "PURSE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-06T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "PYBOBOUSDT",
@@ -6235,11 +6235,11 @@
   {
     "id": "QMALLUSDT",
     "type": "spot",
-    "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2025-02-22T00:00:00.000Z",
     "internal_id": "spot-QMALL-USDT",
     "symbol": "QMALL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-30T00:00:00.000Z",
+    "end_date": "2025-02-22T00:00:00.000Z"
   },
   {
     "id": "QNTUSDT",
@@ -6269,20 +6269,20 @@
   {
     "id": "RACAUSDT",
     "type": "spot",
-    "first_capture": "2022-03-29T00:00:00.000Z",
-    "end_date": "2026-01-22T00:00:00.000Z",
     "internal_id": "spot-RACA-USDT",
     "symbol": "RACA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-29T00:00:00.000Z",
+    "end_date": "2026-01-22T00:00:00.000Z"
   },
   {
     "id": "RAINUSDT",
     "type": "spot",
-    "first_capture": "2022-01-05T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-RAIN-USDT",
     "symbol": "RAIN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-05T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "RATSUSDT",
@@ -6304,11 +6304,11 @@
   {
     "id": "REALUSDT",
     "type": "spot",
-    "first_capture": "2021-12-10T00:00:00.000Z",
-    "end_date": "2025-04-30T00:00:00.000Z",
     "internal_id": "spot-REAL-USDT",
     "symbol": "REAL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-10T00:00:00.000Z",
+    "end_date": "2025-04-30T00:00:00.000Z"
   },
   {
     "id": "RECALLUSDT",
@@ -6362,11 +6362,11 @@
   {
     "id": "RLTMUSDT",
     "type": "spot",
-    "first_capture": "2023-04-11T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z",
     "internal_id": "spot-RLTM-USDT",
     "symbol": "RLTM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-04-11T00:00:00.000Z",
+    "end_date": "2024-05-21T00:00:00.000Z"
   },
   {
     "id": "RLUSDUSDT",
@@ -6404,20 +6404,20 @@
   {
     "id": "RONDUSDT",
     "type": "spot",
-    "first_capture": "2022-09-29T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-ROND-USDT",
     "symbol": "ROND",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-29T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "ROOTUSDT",
     "type": "spot",
-    "first_capture": "2023-11-21T00:00:00.000Z",
-    "end_date": "2026-02-11T00:00:00.000Z",
     "internal_id": "spot-ROOT-USDT",
     "symbol": "ROOT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-21T00:00:00.000Z",
+    "end_date": "2026-02-11T00:00:00.000Z"
   },
   {
     "id": "ROSEUSDT",
@@ -6430,20 +6430,20 @@
   {
     "id": "ROUTEUSDT",
     "type": "spot",
-    "first_capture": "2024-02-09T00:00:00.000Z",
-    "end_date": "2024-10-24T00:00:00.000Z",
     "internal_id": "spot-ROUTE-USDT",
     "symbol": "ROUTE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-09T00:00:00.000Z",
+    "end_date": "2024-10-24T00:00:00.000Z"
   },
   {
     "id": "RPKUSDT",
     "type": "spot",
-    "first_capture": "2023-11-14T00:00:00.000Z",
-    "end_date": "2025-08-09T00:00:00.000Z",
     "internal_id": "spot-RPK-USDT",
     "symbol": "RPK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-14T00:00:00.000Z",
+    "end_date": "2025-08-09T00:00:00.000Z"
   },
   {
     "id": "RPLUSDT",
@@ -6465,11 +6465,11 @@
   {
     "id": "RUBYUSDT",
     "type": "spot",
-    "first_capture": "2024-06-03T00:00:00.000Z",
-    "end_date": "2024-12-07T00:00:00.000Z",
     "internal_id": "spot-RUBY-USDT",
     "symbol": "RUBY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-03T00:00:00.000Z",
+    "end_date": "2024-12-07T00:00:00.000Z"
   },
   {
     "id": "RUNEUSDT",
@@ -6482,11 +6482,11 @@
   {
     "id": "RUNUSDT",
     "type": "spot",
-    "first_capture": "2021-12-23T00:00:00.000Z",
-    "end_date": "2022-07-16T00:00:00.000Z",
     "internal_id": "spot-RUN-USDT",
     "symbol": "RUN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-23T00:00:00.000Z",
+    "end_date": "2022-07-16T00:00:00.000Z"
   },
   {
     "id": "RVNUSDT",
@@ -6515,56 +6515,56 @@
   {
     "id": "SAILUSDT",
     "type": "spot",
-    "first_capture": "2023-08-22T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-SAIL-USDT",
     "symbol": "SAIL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-08-22T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "SAITAMAUSDT",
     "type": "spot",
-    "first_capture": "2022-07-29T00:00:00.000Z",
-    "end_date": "2024-01-12T00:00:00.000Z",
     "internal_id": "spot-SAITAMA-USDT",
     "symbol": "SAITAMA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-29T00:00:00.000Z",
+    "end_date": "2024-01-12T00:00:00.000Z"
   },
   {
     "id": "SALDUSDT",
     "type": "spot",
-    "first_capture": "2023-07-19T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-SALD-USDT",
     "symbol": "SALD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-07-19T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "SAND2LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-23T00:00:00.000Z",
-    "end_date": "2024-04-19T00:00:00.000Z",
     "internal_id": "spot-SAND2L-USDT",
     "symbol": "SAND2L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-23T00:00:00.000Z",
+    "end_date": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "SAND2SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-23T00:00:00.000Z",
-    "end_date": "2024-04-19T00:00:00.000Z",
     "internal_id": "spot-SAND2S-USDT",
     "symbol": "SAND2S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-23T00:00:00.000Z",
+    "end_date": "2024-04-19T00:00:00.000Z"
   },
   {
     "id": "SANDBTC",
     "type": "spot",
-    "first_capture": "2022-02-10T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-SAND-BTC",
     "symbol": "SAND",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "SANDUSDC",
@@ -6649,11 +6649,11 @@
   {
     "id": "SEILORUSDT",
     "type": "spot",
-    "first_capture": "2023-08-14T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-SEILOR-USDT",
     "symbol": "SEILOR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-08-14T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "SEIUSDC",
@@ -6691,11 +6691,11 @@
   {
     "id": "SEORUSDT",
     "type": "spot",
-    "first_capture": "2022-07-07T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-SEOR-USDT",
     "symbol": "SEOR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "SERAPHUSDT",
@@ -6718,20 +6718,20 @@
   {
     "id": "SHARDSUSDT",
     "type": "spot",
-    "first_capture": "2025-09-05T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-SHARDS-USDT",
     "symbol": "SHARDS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-09-05T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "SHARKUSDT",
     "type": "spot",
-    "first_capture": "2024-04-16T00:00:00.000Z",
-    "end_date": "2024-12-26T00:00:00.000Z",
     "internal_id": "spot-SHARK-USDT",
     "symbol": "SHARK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-16T00:00:00.000Z",
+    "end_date": "2024-12-26T00:00:00.000Z"
   },
   {
     "id": "SHIBEUR",
@@ -6760,29 +6760,29 @@
   {
     "id": "SHILLUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-11-21T00:00:00.000Z",
     "internal_id": "spot-SHILL-USDT",
     "symbol": "SHILL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-11-21T00:00:00.000Z"
   },
   {
     "id": "SHRAPUSDT",
     "type": "spot",
-    "first_capture": "2023-11-08T00:00:00.000Z",
-    "end_date": "2025-12-02T00:00:00.000Z",
     "internal_id": "spot-SHRAP-USDT",
     "symbol": "SHRAP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-08T00:00:00.000Z",
+    "end_date": "2025-12-02T00:00:00.000Z"
   },
   {
     "id": "SIDUSUSDT",
     "type": "spot",
-    "first_capture": "2022-01-10T00:00:00.000Z",
-    "end_date": "2025-12-31T00:00:00.000Z",
     "internal_id": "spot-SIDUS-USDT",
     "symbol": "SIDUS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-10T00:00:00.000Z",
+    "end_date": "2025-12-31T00:00:00.000Z"
   },
   {
     "id": "SIGNUSDT",
@@ -6829,20 +6829,20 @@
   {
     "id": "SLGUSDC",
     "type": "spot",
-    "first_capture": "2022-08-05T00:00:00.000Z",
-    "end_date": "2024-06-20T00:00:00.000Z",
     "internal_id": "spot-SLG-USDC",
     "symbol": "SLG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2022-08-05T00:00:00.000Z",
+    "end_date": "2024-06-20T00:00:00.000Z"
   },
   {
     "id": "SLGUSDT",
     "type": "spot",
-    "first_capture": "2022-07-19T00:00:00.000Z",
-    "end_date": "2024-06-18T00:00:00.000Z",
     "internal_id": "spot-SLG-USDT",
     "symbol": "SLG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-19T00:00:00.000Z",
+    "end_date": "2024-06-18T00:00:00.000Z"
   },
   {
     "id": "SLPUSDT",
@@ -6864,11 +6864,11 @@
   {
     "id": "SMILEUSDT",
     "type": "spot",
-    "first_capture": "2024-11-06T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-SMILE-USDT",
     "symbol": "SMILE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-11-06T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "SNXUSDT",
@@ -6881,29 +6881,29 @@
   {
     "id": "SOCIALUSDT",
     "type": "spot",
-    "first_capture": "2024-09-24T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-SOCIAL-USDT",
     "symbol": "SOCIAL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-09-24T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "SOL3LUSDT",
     "type": "spot",
-    "first_capture": "2022-06-01T00:00:00.000Z",
-    "end_date": "2022-11-11T00:00:00.000Z",
     "internal_id": "spot-SOL3L-USDT",
     "symbol": "SOL3L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-01T00:00:00.000Z",
+    "end_date": "2022-11-11T00:00:00.000Z"
   },
   {
     "id": "SOL3SUSDT",
     "type": "spot",
-    "first_capture": "2022-06-01T00:00:00.000Z",
-    "end_date": "2022-11-11T00:00:00.000Z",
     "internal_id": "spot-SOL3S-USDT",
     "symbol": "SOL3S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-01T00:00:00.000Z",
+    "end_date": "2022-11-11T00:00:00.000Z"
   },
   {
     "id": "SOLAED",
@@ -7010,11 +7010,11 @@
   {
     "id": "SONUSDT",
     "type": "spot",
-    "first_capture": "2022-03-14T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-SON-USDT",
     "symbol": "SON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-03-14T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "SOSOUSDT",
@@ -7027,20 +7027,20 @@
   {
     "id": "SOSUSDT",
     "type": "spot",
-    "first_capture": "2021-12-25T00:00:00.000Z",
-    "end_date": "2024-08-16T00:00:00.000Z",
     "internal_id": "spot-SOS-USDT",
     "symbol": "SOS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-25T00:00:00.000Z",
+    "end_date": "2024-08-16T00:00:00.000Z"
   },
   {
     "id": "SPARTAUSDT",
     "type": "spot",
-    "first_capture": "2023-08-10T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-SPARTA-USDT",
     "symbol": "SPARTA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-08-10T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "SPCXXUSDT",
@@ -7103,20 +7103,20 @@
   {
     "id": "SQRUSDT",
     "type": "spot",
-    "first_capture": "2024-01-11T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-SQR-USDT",
     "symbol": "SQR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-11T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "SQTUSDT",
     "type": "spot",
-    "first_capture": "2024-02-23T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-SQT-USDT",
     "symbol": "SQT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-02-23T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "SRMUSDT",
@@ -7146,20 +7146,20 @@
   {
     "id": "STARUSDT",
     "type": "spot",
-    "first_capture": "2024-03-12T00:00:00.000Z",
-    "end_date": "2025-08-30T00:00:00.000Z",
     "internal_id": "spot-STAR-USDT",
     "symbol": "STAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-12T00:00:00.000Z",
+    "end_date": "2025-08-30T00:00:00.000Z"
   },
   {
     "id": "STATUSDT",
     "type": "spot",
-    "first_capture": "2022-07-27T00:00:00.000Z",
-    "end_date": "2025-05-24T00:00:00.000Z",
     "internal_id": "spot-STAT-USDT",
     "symbol": "STAT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-27T00:00:00.000Z",
+    "end_date": "2025-05-24T00:00:00.000Z"
   },
   {
     "id": "STETHEUR",
@@ -7189,11 +7189,11 @@
   {
     "id": "STOPUSDT",
     "type": "spot",
-    "first_capture": "2024-11-18T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-STOP-USDT",
     "symbol": "STOP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-11-18T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "STREAMUSDT",
@@ -7222,11 +7222,11 @@
   {
     "id": "STRMUSDT",
     "type": "spot",
-    "first_capture": "2022-05-06T00:00:00.000Z",
-    "end_date": "2024-11-23T00:00:00.000Z",
     "internal_id": "spot-STRM-USDT",
     "symbol": "STRM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-06T00:00:00.000Z",
+    "end_date": "2024-11-23T00:00:00.000Z"
   },
   {
     "id": "STXUSDC",
@@ -7247,11 +7247,11 @@
   {
     "id": "SUIAUSDT",
     "type": "spot",
-    "first_capture": "2023-05-16T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-SUIA-USDT",
     "symbol": "SUIA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-16T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "SUIMNT",
@@ -7378,11 +7378,11 @@
   {
     "id": "SYNRUSDT",
     "type": "spot",
-    "first_capture": "2022-02-23T00:00:00.000Z",
-    "end_date": "2024-07-03T00:00:00.000Z",
     "internal_id": "spot-SYNR-USDT",
     "symbol": "SYNR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-02-23T00:00:00.000Z",
+    "end_date": "2024-07-03T00:00:00.000Z"
   },
   {
     "id": "TACUSDT",
@@ -7411,20 +7411,20 @@
   {
     "id": "TAMAUSDT",
     "type": "spot",
-    "first_capture": "2023-04-27T00:00:00.000Z",
-    "end_date": "2024-09-07T00:00:00.000Z",
     "internal_id": "spot-TAMA-USDT",
     "symbol": "TAMA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-04-27T00:00:00.000Z",
+    "end_date": "2024-09-07T00:00:00.000Z"
   },
   {
     "id": "TAPUSDT",
     "type": "spot",
-    "first_capture": "2022-02-22T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-TAP-USDT",
     "symbol": "TAP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-02-22T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "TAUSDT",
@@ -7437,11 +7437,11 @@
   {
     "id": "TAVAUSDT",
     "type": "spot",
-    "first_capture": "2023-08-11T00:00:00.000Z",
-    "end_date": "2025-03-22T00:00:00.000Z",
     "internal_id": "spot-TAVA-USDT",
     "symbol": "TAVA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-08-11T00:00:00.000Z",
+    "end_date": "2025-03-22T00:00:00.000Z"
   },
   {
     "id": "TELUSDT",
@@ -7454,20 +7454,20 @@
   {
     "id": "TENETUSDT",
     "type": "spot",
-    "first_capture": "2023-05-25T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-TENET-USDT",
     "symbol": "TENET",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-25T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "TGTUSDT",
     "type": "spot",
-    "first_capture": "2025-05-21T00:00:00.000Z",
-    "end_date": "2025-08-23T00:00:00.000Z",
     "internal_id": "spot-TGT-USDT",
     "symbol": "TGT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-05-21T00:00:00.000Z",
+    "end_date": "2025-08-23T00:00:00.000Z"
   },
   {
     "id": "THETAUSDT",
@@ -7480,20 +7480,20 @@
   {
     "id": "THNUSDT",
     "type": "spot",
-    "first_capture": "2022-06-09T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-THN-USDT",
     "symbol": "THN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-09T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "THRUSTUSDT",
     "type": "spot",
-    "first_capture": "2024-11-27T00:00:00.000Z",
-    "end_date": "2025-04-19T00:00:00.000Z",
     "internal_id": "spot-THRUST-USDT",
     "symbol": "THRUST",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-11-27T00:00:00.000Z",
+    "end_date": "2025-04-19T00:00:00.000Z"
   },
   {
     "id": "TIAUSDC",
@@ -7548,11 +7548,11 @@
   {
     "id": "TOMSUSDT",
     "type": "spot",
-    "first_capture": "2023-06-21T00:00:00.000Z",
-    "end_date": "2024-05-14T00:00:00.000Z",
     "internal_id": "spot-TOMS-USDT",
     "symbol": "TOMS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-21T00:00:00.000Z",
+    "end_date": "2024-05-14T00:00:00.000Z"
   },
   {
     "id": "TONEUR",
@@ -7608,11 +7608,11 @@
   {
     "id": "TRCUSDT",
     "type": "spot",
-    "first_capture": "2023-12-22T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-TRC-USDT",
     "symbol": "TRC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-12-22T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "TREEUSDT",
@@ -7633,11 +7633,11 @@
   {
     "id": "TRIBEUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2024-08-08T00:00:00.000Z",
     "internal_id": "spot-TRIBE-USDT",
     "symbol": "TRIBE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2024-08-08T00:00:00.000Z"
   },
   {
     "id": "TRUMPMNT",
@@ -7666,11 +7666,11 @@
   {
     "id": "TRVLUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-TRVL-USDT",
     "symbol": "TRVL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "TRXUSDC",
@@ -7699,11 +7699,11 @@
   {
     "id": "TSTUSDT",
     "type": "spot",
-    "first_capture": "2024-06-27T00:00:00.000Z",
-    "end_date": "2025-07-26T00:00:00.000Z",
     "internal_id": "spot-TST-USDT",
     "symbol": "TST",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-27T00:00:00.000Z",
+    "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
     "id": "TUNAUSDT",
@@ -7717,11 +7717,11 @@
   {
     "id": "TURBOSUSDT",
     "type": "spot",
-    "first_capture": "2023-05-15T00:00:00.000Z",
-    "end_date": "2025-12-31T00:00:00.000Z",
     "internal_id": "spot-TURBOS-USDT",
     "symbol": "TURBOS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-05-15T00:00:00.000Z",
+    "end_date": "2025-12-31T00:00:00.000Z"
   },
   {
     "id": "TUSDT",
@@ -7743,11 +7743,11 @@
   {
     "id": "TVKUSDT",
     "type": "spot",
-    "first_capture": "2023-11-24T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-TVK-USDT",
     "symbol": "TVK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-24T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "TWTUSDT",
@@ -7760,11 +7760,11 @@
   {
     "id": "ULTIUSDT",
     "type": "spot",
-    "first_capture": "2024-06-06T00:00:00.000Z",
-    "end_date": "2025-12-24T00:00:00.000Z",
     "internal_id": "spot-ULTI-USDT",
     "symbol": "ULTI",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-06T00:00:00.000Z",
+    "end_date": "2025-12-24T00:00:00.000Z"
   },
   {
     "id": "UMAUSDT",
@@ -7874,20 +7874,20 @@
   {
     "id": "USDQUSDT",
     "type": "spot",
-    "first_capture": "2025-03-24T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-USDQ-USDT",
     "symbol": "USDQ",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-03-24T00:00:00.000Z",
+    "end_date": "2025-11-19T00:00:00.000Z"
   },
   {
     "id": "USDRUSDT",
     "type": "spot",
-    "first_capture": "2025-04-03T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-USDR-USDT",
     "symbol": "USDR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-04-03T00:00:00.000Z",
+    "end_date": "2025-11-19T00:00:00.000Z"
   },
   {
     "id": "USDSUSDT",
@@ -8026,29 +8026,29 @@
   {
     "id": "VEGAUSDT",
     "type": "spot",
-    "first_capture": "2023-10-13T00:00:00.000Z",
-    "end_date": "2024-10-12T00:00:00.000Z",
     "internal_id": "spot-VEGA-USDT",
     "symbol": "VEGA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-10-13T00:00:00.000Z",
+    "end_date": "2024-10-12T00:00:00.000Z"
   },
   {
     "id": "VELARUSDT",
     "type": "spot",
-    "first_capture": "2024-04-03T00:00:00.000Z",
-    "end_date": "2025-10-08T00:00:00.000Z",
     "internal_id": "spot-VELAR-USDT",
     "symbol": "VELAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-03T00:00:00.000Z",
+    "end_date": "2025-10-08T00:00:00.000Z"
   },
   {
     "id": "VELAUSDT",
     "type": "spot",
-    "first_capture": "2023-06-28T00:00:00.000Z",
-    "end_date": "2025-02-19T00:00:00.000Z",
     "internal_id": "spot-VELA-USDT",
     "symbol": "VELA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-06-28T00:00:00.000Z",
+    "end_date": "2025-02-19T00:00:00.000Z"
   },
   {
     "id": "VELOUSDT",
@@ -8086,11 +8086,11 @@
   {
     "id": "VEXTUSDT",
     "type": "spot",
-    "first_capture": "2023-09-04T00:00:00.000Z",
-    "end_date": "2025-04-05T00:00:00.000Z",
     "internal_id": "spot-VEXT-USDT",
     "symbol": "VEXT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-09-04T00:00:00.000Z",
+    "end_date": "2025-04-05T00:00:00.000Z"
   },
   {
     "id": "VICUSDT",
@@ -8144,20 +8144,20 @@
   {
     "id": "VPADUSDT",
     "type": "spot",
-    "first_capture": "2022-01-10T00:00:00.000Z",
-    "end_date": "2025-07-10T00:00:00.000Z",
     "internal_id": "spot-VPAD-USDT",
     "symbol": "VPAD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-01-10T00:00:00.000Z",
+    "end_date": "2025-07-10T00:00:00.000Z"
   },
   {
     "id": "VPRUSDT",
     "type": "spot",
-    "first_capture": "2024-01-04T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-VPR-USDT",
     "symbol": "VPR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-01-04T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "VRAUSDT",
@@ -8171,11 +8171,11 @@
   {
     "id": "VRTXUSDT",
     "type": "spot",
-    "first_capture": "2023-11-21T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-VRTX-USDT",
     "symbol": "VRTX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-11-21T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "VTHOUSDT",
@@ -8188,11 +8188,11 @@
   {
     "id": "VVUSDT",
     "type": "spot",
-    "first_capture": "2023-09-12T00:00:00.000Z",
-    "end_date": "2024-10-29T00:00:00.000Z",
     "internal_id": "spot-VV-USDT",
     "symbol": "VV",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-09-12T00:00:00.000Z",
+    "end_date": "2024-10-29T00:00:00.000Z"
   },
   {
     "id": "VVVUSDT",
@@ -8262,11 +8262,11 @@
   {
     "id": "WELLUSDT",
     "type": "spot",
-    "first_capture": "2024-07-03T00:00:00.000Z",
-    "end_date": "2025-05-10T00:00:00.000Z",
     "internal_id": "spot-WELL-USDT",
     "symbol": "WELL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-07-03T00:00:00.000Z",
+    "end_date": "2025-05-10T00:00:00.000Z"
   },
   {
     "id": "WEMIXUSDT",
@@ -8279,11 +8279,11 @@
   {
     "id": "WENUSDT",
     "type": "spot",
-    "first_capture": "2024-03-27T00:00:00.000Z",
-    "end_date": "2026-02-27T00:00:00.000Z",
     "internal_id": "spot-WEN-USDT",
     "symbol": "WEN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-27T00:00:00.000Z",
+    "end_date": "2026-02-27T00:00:00.000Z"
   },
   {
     "id": "WETUSDT",
@@ -8362,11 +8362,11 @@
   {
     "id": "WLKNUSDT",
     "type": "spot",
-    "first_capture": "2022-06-21T00:00:00.000Z",
-    "end_date": "2025-04-17T00:00:00.000Z",
     "internal_id": "spot-WLKN-USDT",
     "symbol": "WLKN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-06-21T00:00:00.000Z",
+    "end_date": "2025-04-17T00:00:00.000Z"
   },
   {
     "id": "WOOUSDT",
@@ -8379,11 +8379,11 @@
   {
     "id": "WUSDC",
     "type": "spot",
-    "first_capture": "2025-07-15T00:00:00.000Z",
-    "end_date": "2025-11-22T00:00:00.000Z",
     "internal_id": "spot-W-USDC",
     "symbol": "W",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2025-07-15T00:00:00.000Z",
+    "end_date": "2025-11-22T00:00:00.000Z"
   },
   {
     "id": "WUSDT",
@@ -8396,11 +8396,11 @@
   {
     "id": "WWYUSDT",
     "type": "spot",
-    "first_capture": "2022-09-09T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-WWY-USDT",
     "symbol": "WWY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-09-09T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "XAIUSDT",
@@ -8421,11 +8421,11 @@
   {
     "id": "XARUSDT",
     "type": "spot",
-    "first_capture": "2024-04-03T00:00:00.000Z",
-    "end_date": "2025-09-11T00:00:00.000Z",
     "internal_id": "spot-XAR-USDT",
     "symbol": "XAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-04-03T00:00:00.000Z",
+    "end_date": "2025-09-11T00:00:00.000Z"
   },
   {
     "id": "XAUTUSDT",
@@ -8446,11 +8446,11 @@
   {
     "id": "XCADUSDT",
     "type": "spot",
-    "first_capture": "2023-03-28T00:00:00.000Z",
-    "end_date": "2026-01-22T00:00:00.000Z",
     "internal_id": "spot-XCAD-USDT",
     "symbol": "XCAD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-03-28T00:00:00.000Z",
+    "end_date": "2026-01-22T00:00:00.000Z"
   },
   {
     "id": "XDCUSDT",
@@ -8463,11 +8463,11 @@
   {
     "id": "XECUSDT",
     "type": "spot",
-    "first_capture": "2021-12-29T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-XEC-USDT",
     "symbol": "XEC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-29T00:00:00.000Z",
+    "end_date": "2025-11-19T00:00:00.000Z"
   },
   {
     "id": "XEMUSDT",
@@ -8481,11 +8481,11 @@
   {
     "id": "XETAUSDT",
     "type": "spot",
-    "first_capture": "2022-07-20T00:00:00.000Z",
-    "end_date": "2025-07-17T00:00:00.000Z",
     "internal_id": "spot-XETA-USDT",
     "symbol": "XETA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-07-20T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z"
   },
   {
     "id": "XIONUSDT",
@@ -8523,11 +8523,11 @@
   {
     "id": "XOUSDT",
     "type": "spot",
-    "first_capture": "2025-06-26T00:00:00.000Z",
-    "end_date": "2026-02-04T00:00:00.000Z",
     "internal_id": "spot-XO-USDT",
     "symbol": "XO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2025-06-26T00:00:00.000Z",
+    "end_date": "2026-02-04T00:00:00.000Z"
   },
   {
     "id": "XPLUSDT",
@@ -8540,20 +8540,20 @@
   {
     "id": "XRP3LUSDT",
     "type": "spot",
-    "first_capture": "2022-05-27T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-XRP3L-USDT",
     "symbol": "XRP3L",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-27T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "XRP3SUSDT",
     "type": "spot",
-    "first_capture": "2022-05-27T00:00:00.000Z",
-    "end_date": "2024-06-13T00:00:00.000Z",
     "internal_id": "spot-XRP3S-USDT",
     "symbol": "XRP3S",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-27T00:00:00.000Z",
+    "end_date": "2024-06-13T00:00:00.000Z"
   },
   {
     "id": "XRPBTC",
@@ -8639,29 +8639,29 @@
   {
     "id": "XWGUSDT",
     "type": "spot",
-    "first_capture": "2022-05-09T00:00:00.000Z",
-    "end_date": "2024-08-09T00:00:00.000Z",
     "internal_id": "spot-XWG-USDT",
     "symbol": "XWG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-05-09T00:00:00.000Z",
+    "end_date": "2024-08-09T00:00:00.000Z"
   },
   {
     "id": "XYMUSDT",
     "type": "spot",
-    "first_capture": "2021-12-04T00:00:00.000Z",
-    "end_date": "2025-04-11T00:00:00.000Z",
     "internal_id": "spot-XYM-USDT",
     "symbol": "XYM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2021-12-04T00:00:00.000Z",
+    "end_date": "2025-04-11T00:00:00.000Z"
   },
   {
     "id": "XZKUSDT",
     "type": "spot",
-    "first_capture": "2024-06-18T00:00:00.000Z",
-    "end_date": "2025-10-08T00:00:00.000Z",
     "internal_id": "spot-XZK-USDT",
     "symbol": "XZK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-06-18T00:00:00.000Z",
+    "end_date": "2025-10-08T00:00:00.000Z"
   },
   {
     "id": "YBUSDT",
@@ -8690,20 +8690,20 @@
   {
     "id": "ZAMUSDT",
     "type": "spot",
-    "first_capture": "2022-04-14T00:00:00.000Z",
-    "end_date": "2024-12-05T00:00:00.000Z",
     "internal_id": "spot-ZAM-USDT",
     "symbol": "ZAM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2022-04-14T00:00:00.000Z",
+    "end_date": "2024-12-05T00:00:00.000Z"
   },
   {
     "id": "ZAPUSDT",
     "type": "spot",
-    "first_capture": "2024-10-09T00:00:00.000Z",
-    "end_date": "2025-03-15T00:00:00.000Z",
     "internal_id": "spot-ZAP-USDT",
     "symbol": "ZAP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-10-09T00:00:00.000Z",
+    "end_date": "2025-03-15T00:00:00.000Z"
   },
   {
     "id": "ZBCUSDT",
@@ -8734,11 +8734,11 @@
   {
     "id": "ZENDUSDT",
     "type": "spot",
-    "first_capture": "2024-03-14T00:00:00.000Z",
-    "end_date": "2025-04-02T00:00:00.000Z",
     "internal_id": "spot-ZEND-USDT",
     "symbol": "ZEND",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-03-14T00:00:00.000Z",
+    "end_date": "2025-04-02T00:00:00.000Z"
   },
   {
     "id": "ZENTUSDT",
@@ -8767,11 +8767,11 @@
   {
     "id": "ZEROUSDT",
     "type": "spot",
-    "first_capture": "2024-05-06T00:00:00.000Z",
-    "end_date": "2025-11-08T00:00:00.000Z",
     "internal_id": "spot-ZERO-USDT",
     "symbol": "ZERO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-05-06T00:00:00.000Z",
+    "end_date": "2025-11-08T00:00:00.000Z"
   },
   {
     "id": "ZETAUSDT",
@@ -8834,11 +8834,11 @@
   {
     "id": "ZKLUSDT",
     "type": "spot",
-    "first_capture": "2024-07-22T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-ZKL-USDT",
     "symbol": "ZKL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2024-07-22T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   },
   {
     "id": "ZKPUSDT",
@@ -8908,10 +8908,10 @@
   {
     "id": "ZTXUSDT",
     "type": "spot",
-    "first_capture": "2023-10-16T00:00:00.000Z",
-    "end_date": "2026-01-14T00:00:00.000Z",
     "internal_id": "spot-ZTX-USDT",
     "symbol": "ZTX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2023-10-16T00:00:00.000Z",
+    "end_date": "2026-01-14T00:00:00.000Z"
   }
 ]
