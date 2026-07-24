@@ -3170,6 +3170,15 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "para:IREN",
+    "type": "perpetual",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:IREN-USDC:USDC",
+    "symbol": "PARA:IREN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:LRCX",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:LRCX-USDC:USDC",
@@ -3186,6 +3195,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "para:STX",
+    "type": "perpetual",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:STX-USDC:USDC",
+    "symbol": "PARA:STX",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "para:TOTAL2",
@@ -3617,11 +3635,11 @@
   {
     "id": "xyz:GIGADEV",
     "type": "perpetual",
-    "first_capture": "2026-07-22T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:GIGADEV-USDC:USDC",
     "symbol": "XYZ:GIGADEV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
     "id": "xyz:GME",

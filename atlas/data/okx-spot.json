@@ -15532,10 +15532,10 @@
   {
     "id": "USDG-BRL",
     "type": "spot",
-    "first_capture": "2026-07-22T00:00:00.000Z",
     "internal_id": "spot-USDG-BRL",
     "symbol": "USDG",
-    "denominator": "BRL"
+    "denominator": "BRL",
+    "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
     "id": "USDG-EUR",
@@ -16642,12 +16642,26 @@
     "first_capture": "2021-05-03T00:00:00.000Z"
   },
   {
+    "id": "XCOIN-USDT",
+    "type": "spot",
+    "internal_id": "spot-XCOIN-USDT",
+    "symbol": "XCOIN",
+    "denominator": "USDT"
+  },
+  {
     "id": "XCRCL-USDT",
     "type": "spot",
     "internal_id": "spot-XCRCL-USDT",
     "symbol": "XCRCL",
     "denominator": "USDT",
     "first_capture": "2026-07-15T00:00:00.000Z"
+  },
+  {
+    "id": "XDELL-USDT",
+    "type": "spot",
+    "internal_id": "spot-XDELL-USDT",
+    "symbol": "XDELL",
+    "denominator": "USDT"
   },
   {
     "id": "XEC-USDT",
@@ -16720,12 +16734,35 @@
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
+    "id": "XHOOD-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "spot-XHOOD-USDT",
+    "symbol": "XHOOD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XIBM-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "spot-XIBM-USDT",
+    "symbol": "XIBM",
+    "denominator": "USDT"
+  },
+  {
     "id": "XINTC-USDT",
     "type": "spot",
     "internal_id": "spot-XINTC-USDT",
     "symbol": "XINTC",
     "denominator": "USDT",
     "first_capture": "2026-07-15T00:00:00.000Z"
+  },
+  {
+    "id": "XIREN-USDT",
+    "type": "spot",
+    "internal_id": "spot-XIREN-USDT",
+    "symbol": "XIREN",
+    "denominator": "USDT"
   },
   {
     "id": "XIWM-USDT",
@@ -16742,6 +16779,13 @@
     "symbol": "XLITE",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XLLY-USDT",
+    "type": "spot",
+    "internal_id": "spot-XLLY-USDT",
+    "symbol": "XLLY",
+    "denominator": "USDT"
   },
   {
     "id": "XLM-BTC",
@@ -16911,6 +16955,14 @@
     "symbol": "XNVDA",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XORCL-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "spot-XORCL-USDT",
+    "symbol": "XORCL",
+    "denominator": "USDT"
   },
   {
     "id": "XPL-EUR",
@@ -17210,6 +17262,14 @@
     "denominator": "USDT",
     "first_capture": "2021-03-10T00:00:00.000Z",
     "end_date": "2022-06-30T00:00:00.000Z"
+  },
+  {
+    "id": "XUSAR-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-23T00:00:00.000Z",
+    "internal_id": "spot-XUSAR-USDT",
+    "symbol": "XUSAR",
+    "denominator": "USDT"
   },
   {
     "id": "YB-EUR",
