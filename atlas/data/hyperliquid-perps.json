@@ -3172,11 +3172,11 @@
   {
     "id": "para:IREN",
     "type": "perpetual",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "perpetual-PARA:IREN-USDC:USDC",
     "symbol": "PARA:IREN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "para:LRCX",
@@ -3199,11 +3199,11 @@
   {
     "id": "para:STX",
     "type": "perpetual",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "perpetual-PARA:STX-USDC:USDC",
     "symbol": "PARA:STX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "para:TOTAL2",
