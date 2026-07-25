@@ -16577,6 +16577,14 @@
     "first_capture": "2026-07-16T00:00:00.000Z"
   },
   {
+    "id": "XASTS-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-24T00:00:00.000Z",
+    "internal_id": "spot-XASTS-USDT",
+    "symbol": "XASTS",
+    "denominator": "USDT"
+  },
+  {
     "id": "XAUT-TRY",
     "type": "spot",
     "internal_id": "spot-XAUT-TRY",
@@ -16599,6 +16607,14 @@
     "symbol": "XAVGO",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XBMNR-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-24T00:00:00.000Z",
+    "internal_id": "spot-XBMNR-USDT",
+    "symbol": "XBMNR",
+    "denominator": "USDT"
   },
   {
     "id": "XCH-BTC",
@@ -16646,7 +16662,8 @@
     "type": "spot",
     "internal_id": "spot-XCOIN-USDT",
     "symbol": "XCOIN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XCRCL-USDT",
@@ -16661,7 +16678,8 @@
     "type": "spot",
     "internal_id": "spot-XDELL-USDT",
     "symbol": "XDELL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XEC-USDT",
@@ -16736,18 +16754,18 @@
   {
     "id": "XHOOD-USDT",
     "type": "spot",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "spot-XHOOD-USDT",
     "symbol": "XHOOD",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "XIBM-USDT",
     "type": "spot",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "spot-XIBM-USDT",
     "symbol": "XIBM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "XINTC-USDT",
@@ -16762,7 +16780,8 @@
     "type": "spot",
     "internal_id": "spot-XIREN-USDT",
     "symbol": "XIREN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XIWM-USDT",
@@ -16785,7 +16804,8 @@
     "type": "spot",
     "internal_id": "spot-XLLY-USDT",
     "symbol": "XLLY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XLM-BTC",
@@ -16922,6 +16942,14 @@
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
+    "id": "XNFLX-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-24T00:00:00.000Z",
+    "internal_id": "spot-XNFLX-USDT",
+    "symbol": "XNFLX",
+    "denominator": "USDT"
+  },
+  {
     "id": "XNO-USD",
     "type": "spot",
     "internal_id": "spot-XNO-USD",
@@ -16959,10 +16987,10 @@
   {
     "id": "XORCL-USDT",
     "type": "spot",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "spot-XORCL-USDT",
     "symbol": "XORCL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "XPL-EUR",
@@ -17003,6 +17031,14 @@
     "symbol": "XPL",
     "denominator": "USDT",
     "first_capture": "2025-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "XPLTR-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-24T00:00:00.000Z",
+    "internal_id": "spot-XPLTR-USDT",
+    "symbol": "XPLTR",
+    "denominator": "USDT"
   },
   {
     "id": "XPO-USDT",
@@ -17266,10 +17302,10 @@
   {
     "id": "XUSAR-USDT",
     "type": "spot",
-    "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "spot-XUSAR-USDT",
     "symbol": "XUSAR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
     "id": "YB-EUR",
