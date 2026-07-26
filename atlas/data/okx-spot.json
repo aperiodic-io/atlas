@@ -422,7 +422,8 @@
     "internal_id": "spot-AERGO-EUR",
     "symbol": "AERGO",
     "denominator": "EUR",
-    "first_capture": "2026-03-23T00:00:00.000Z"
+    "first_capture": "2026-03-23T00:00:00.000Z",
+    "end_date": "2026-07-25T00:00:00.000Z"
   },
   {
     "id": "AERGO-USD",
@@ -430,7 +431,8 @@
     "internal_id": "spot-AERGO-USD",
     "symbol": "AERGO",
     "denominator": "USD",
-    "first_capture": "2025-03-18T00:00:00.000Z"
+    "first_capture": "2025-03-18T00:00:00.000Z",
+    "end_date": "2026-07-25T00:00:00.000Z"
   },
   {
     "id": "AERGO-USDC",
@@ -438,7 +440,8 @@
     "internal_id": "spot-AERGO-USDC",
     "symbol": "AERGO",
     "denominator": "USDC",
-    "first_capture": "2024-10-03T00:00:00.000Z"
+    "first_capture": "2024-10-03T00:00:00.000Z",
+    "end_date": "2026-07-25T00:00:00.000Z"
   },
   {
     "id": "AERGO-USDT",
@@ -16579,10 +16582,10 @@
   {
     "id": "XASTS-USDT",
     "type": "spot",
-    "first_capture": "2026-07-24T00:00:00.000Z",
     "internal_id": "spot-XASTS-USDT",
     "symbol": "XASTS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XAUT-TRY",
@@ -16611,10 +16614,10 @@
   {
     "id": "XBMNR-USDT",
     "type": "spot",
-    "first_capture": "2026-07-24T00:00:00.000Z",
     "internal_id": "spot-XBMNR-USDT",
     "symbol": "XBMNR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XCH-BTC",
@@ -16944,10 +16947,10 @@
   {
     "id": "XNFLX-USDT",
     "type": "spot",
-    "first_capture": "2026-07-24T00:00:00.000Z",
     "internal_id": "spot-XNFLX-USDT",
     "symbol": "XNFLX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XNO-USD",
@@ -17035,10 +17038,10 @@
   {
     "id": "XPLTR-USDT",
     "type": "spot",
-    "first_capture": "2026-07-24T00:00:00.000Z",
     "internal_id": "spot-XPLTR-USDT",
     "symbol": "XPLTR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
     "id": "XPO-USDT",
