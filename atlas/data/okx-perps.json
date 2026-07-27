@@ -3061,6 +3061,15 @@
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
+    "id": "KR200-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-KR200-USDT:USDT",
+    "symbol": "KR200",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KSM-USD-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-KSM-USD:KSM",
