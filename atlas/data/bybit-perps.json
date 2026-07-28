@@ -1256,6 +1256,21 @@
     "end_date": "2025-02-25T00:00:00.000Z"
   },
   {
+    "id": "AMCUSDT",
+    "type": "perpetual",
+    "base_coin": "AMC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-AMC-USDT:USDT",
+    "symbol": "AMC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AMDSTOCKUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AMDSTOCK-USDT:USDT",
@@ -2550,6 +2565,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2026-01-28T00:00:00.000Z"
+  },
+  {
+    "id": "BITOUSDT",
+    "type": "perpetual",
+    "base_coin": "BITO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-BITO-USDT:USDT",
+    "symbol": "BITO",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "BITUSD",
@@ -4019,6 +4049,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2022-04-20T00:00:00.000Z"
+  },
+  {
+    "id": "CXMTUSDT",
+    "type": "perpetual",
+    "base_coin": "CXMT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-CXMT-USDT:USDT",
+    "symbol": "CXMT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "CYBERUSDT",
@@ -5627,6 +5672,21 @@
     "first_capture": "2023-10-23T00:00:00.000Z"
   },
   {
+    "id": "GDXUSDT",
+    "type": "perpetual",
+    "base_coin": "GDX",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-GDX-USDT:USDT",
+    "symbol": "GDX",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GEMSUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-GEMS-USDT:USDT",
@@ -5748,6 +5808,21 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "id": "GMESTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "GMESTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-GMESTOCK-USDT:USDT",
+    "symbol": "GMESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "GMEUSDT",
@@ -13544,6 +13619,21 @@
     "quantity_unit": "base",
     "first_capture": "2024-02-19T00:00:00.000Z",
     "end_date": "2025-10-11T00:00:00.000Z"
+  },
+  {
+    "id": "VUSDT",
+    "type": "perpetual",
+    "base_coin": "V",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-V-USDT:USDT",
+    "symbol": "V",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "VVVUSDT",

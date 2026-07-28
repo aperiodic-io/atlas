@@ -408,6 +408,30 @@
     "end_date": "2022-07-22T00:00:00.000Z"
   },
   {
+    "id": "AEON-TRY",
+    "type": "spot",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "spot-AEON-TRY",
+    "symbol": "AEON",
+    "denominator": "TRY"
+  },
+  {
+    "id": "AEON-USD",
+    "type": "spot",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "spot-AEON-USD",
+    "symbol": "AEON",
+    "denominator": "USD"
+  },
+  {
+    "id": "AEON-USDT",
+    "type": "spot",
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "spot-AEON-USDT",
+    "symbol": "AEON",
+    "denominator": "USDT"
+  },
+  {
     "id": "AERGO-BTC",
     "type": "spot",
     "internal_id": "spot-AERGO-BTC",
