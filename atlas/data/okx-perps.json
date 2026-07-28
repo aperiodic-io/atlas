@@ -161,6 +161,26 @@
     "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
+    "id": "AEHR-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-AEHR-USDT:USDT",
+    "symbol": "AEHR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "AEON-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-AEON-USDT:USDT",
+    "symbol": "AEON",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AERO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AERO-USDT:USDT",
@@ -2250,6 +2270,16 @@
     "end_date": "2024-10-16T00:00:00.000Z"
   },
   {
+    "id": "FLY-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-FLY-USDT:USDT",
+    "symbol": "FLY",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FOGO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-FOGO-USDT:USDT",
@@ -2302,6 +2332,16 @@
     "contract_size": 10.0,
     "first_capture": "2026-01-17T00:00:00.000Z",
     "end_date": "2026-02-28T00:00:00.000Z"
+  },
+  {
+    "id": "FWDI-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-27T00:00:00.000Z",
+    "internal_id": "perpetual-FWDI-USDT:USDT",
+    "symbol": "FWDI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FXS-USDT-SWAP",
@@ -3067,7 +3107,8 @@
     "internal_id": "perpetual-KR200-USDT:USDT",
     "symbol": "KR200",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "KSM-USD-SWAP",
