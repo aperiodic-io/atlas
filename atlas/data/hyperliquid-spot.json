@@ -455,6 +455,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "FLOCK/USDC",
+    "type": "spot",
+    "internal_id": "spot-FLOCK-USDC",
+    "symbol": "FLOCK",
+    "denominator": "USDC"
+  },
+  {
     "id": "FLR/USDC",
     "type": "spot",
     "internal_id": "spot-FLR-USDC",
@@ -515,6 +522,13 @@
     "type": "spot",
     "internal_id": "spot-FUND-USDC",
     "symbol": "FUND",
+    "denominator": "USDC"
+  },
+  {
+    "id": "FXMR/USDC",
+    "type": "spot",
+    "internal_id": "spot-FXMR-USDC",
+    "symbol": "FXMR",
     "denominator": "USDC"
   },
   {
