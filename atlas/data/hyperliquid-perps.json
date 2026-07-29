@@ -3208,11 +3208,11 @@
   {
     "id": "para:TER",
     "type": "perpetual",
-    "first_capture": "2026-07-27T00:00:00.000Z",
     "internal_id": "perpetual-PARA:TER-USDC:USDC",
     "symbol": "PARA:TER",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "para:TOTAL2",

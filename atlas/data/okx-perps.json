@@ -164,21 +164,21 @@
     "id": "AEHR-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-27T00:00:00.000Z",
     "internal_id": "perpetual-AEHR-USDT:USDT",
     "symbol": "AEHR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "AEON-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-07-27T00:00:00.000Z",
     "internal_id": "perpetual-AEON-USDT:USDT",
     "symbol": "AEON",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "AERO-USDT-SWAP",
@@ -2273,11 +2273,11 @@
     "id": "FLY-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-27T00:00:00.000Z",
     "internal_id": "perpetual-FLY-USDT:USDT",
     "symbol": "FLY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "FOGO-USDT-SWAP",
@@ -2337,11 +2337,11 @@
     "id": "FWDI-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-27T00:00:00.000Z",
     "internal_id": "perpetual-FWDI-USDT:USDT",
     "symbol": "FWDI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
     "id": "FXS-USDT-SWAP",
