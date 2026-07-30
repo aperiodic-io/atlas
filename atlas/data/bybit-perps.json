@@ -5748,11 +5748,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-28T00:00:00.000Z",
     "internal_id": "perpetual-GIGADEVICE-USDT:USDT",
     "symbol": "GIGADEVICE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
     "id": "GIGAUSDT",
@@ -8325,11 +8325,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-28T00:00:00.000Z",
     "internal_id": "perpetual-MINIMAX-USDT:USDT",
     "symbol": "MINIMAX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
     "id": "MIRAUSDT",
@@ -10118,11 +10118,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-28T00:00:00.000Z",
     "internal_id": "perpetual-POPMART-USDT:USDT",
     "symbol": "POPMART",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
     "id": "PORTALUSDT",
@@ -12091,6 +12091,21 @@
     "end_date": "2022-11-16T00:00:00.000Z"
   },
   {
+    "id": "SSPCUSDT",
+    "type": "perpetual",
+    "base_coin": "SSPC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "perpetual-SSPC-USDT:USDT",
+    "symbol": "SSPC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SSVUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-SSV-USDT:USDT",
@@ -12609,6 +12624,21 @@
     "first_capture": "2025-07-21T00:00:00.000Z"
   },
   {
+    "id": "TBTUSDT",
+    "type": "perpetual",
+    "base_coin": "TBT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "perpetual-TBT-USDT:USDT",
+    "symbol": "TBT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TENCENTUSDT",
     "type": "perpetual",
     "base_coin": "TENCENT",
@@ -12617,11 +12647,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-28T00:00:00.000Z",
     "internal_id": "perpetual-TENCENT-USDT:USDT",
     "symbol": "TENCENT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
     "id": "TERUSDT",
@@ -12712,6 +12742,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-11-22T00:00:00.000Z"
+  },
+  {
+    "id": "TMFUSDT",
+    "type": "perpetual",
+    "base_coin": "TMF",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "perpetual-TMF-USDT:USDT",
+    "symbol": "TMF",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "TNSRUSDT",
@@ -14709,11 +14754,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-28T00:00:00.000Z",
     "internal_id": "perpetual-ZHIPU-USDT:USDT",
     "symbol": "ZHIPU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
     "id": "ZILUSDT",

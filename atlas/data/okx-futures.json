@@ -53630,6 +53630,17 @@
     "end_date": "2024-10-23T00:00:00.000Z"
   },
   {
+    "id": "SHIB-USD_UM_XPERP-310801",
+    "type": "future",
+    "contract_size": 1000000.0,
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "future-SHIB-USD_UM_XPERP:SHIB-20310801",
+    "symbol": "SHIB",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SHIB",
+    "delivery_date": "2031-08-01T00:00:00"
+  },
+  {
     "id": "SKHYNIX-USD_UM_XPERP-310704",
     "type": "future",
     "contract_size": 1.0,
@@ -64658,5 +64669,16 @@
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "ZIL-USD_UM_XPERP-310801",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "future-ZIL-USD_UM_XPERP:ZIL-20310801",
+    "symbol": "ZIL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ZIL",
+    "delivery_date": "2031-08-01T00:00:00"
   }
 ]

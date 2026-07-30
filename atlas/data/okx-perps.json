@@ -5617,6 +5617,16 @@
     "first_capture": "2023-10-31T00:00:00.000Z"
   },
   {
+    "id": "TMF-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-29T00:00:00.000Z",
+    "internal_id": "perpetual-TMF-USDT:USDT",
+    "symbol": "TMF",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TNSR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-TNSR-USDT:USDT",
