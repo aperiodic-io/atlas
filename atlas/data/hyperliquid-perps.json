@@ -3125,6 +3125,15 @@
     "first_capture": "2026-07-01T00:00:00.000Z"
   },
   {
+    "id": "para:AAOI",
+    "type": "perpetual",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:AAOI-USDC:USDC",
+    "symbol": "PARA:AAOI",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:AVGO",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:AVGO-USDC:USDC",

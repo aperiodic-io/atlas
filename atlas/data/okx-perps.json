@@ -1541,6 +1541,16 @@
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
+    "id": "CRM-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-CRM-USDT:USDT",
+    "symbol": "CRM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CRO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CRO-USDT:USDT",
@@ -2582,6 +2592,16 @@
     "first_capture": "2020-12-20T00:00:00.000Z"
   },
   {
+    "id": "GRVT-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-GRVT-USDT:USDT",
+    "symbol": "GRVT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GUN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-GUN-USDT:USDT",
@@ -2801,6 +2821,16 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-02-26T00:00:00.000Z"
+  },
+  {
+    "id": "INTW-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-INTW-USDT:USDT",
+    "symbol": "INTW",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "IOST-USD-SWAP",
@@ -4033,6 +4063,16 @@
     "margin": "USDT",
     "contract_size": 0.01,
     "first_capture": "2025-09-04T00:00:00.000Z"
+  },
+  {
+    "id": "OKTA-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-OKTA-USDT:USDT",
+    "symbol": "OKTA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "OL-USDT-SWAP",
@@ -5620,11 +5660,11 @@
     "id": "TMF-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-TMF-USDT:USDT",
     "symbol": "TMF",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "TNSR-USDT-SWAP",

@@ -2914,6 +2914,21 @@
     "first_capture": "2026-01-06T00:00:00.000Z"
   },
   {
+    "id": "BRKBUSDT",
+    "type": "perpetual",
+    "base_coin": "BRKB",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-BRKB-USDT:USDT",
+    "symbol": "BRKB",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BROCCOLIUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-BROCCOLI-USDT:USDT",
@@ -7320,6 +7335,21 @@
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
+    "id": "KOUSDT",
+    "type": "perpetual",
+    "base_coin": "KO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-KO-USDT:USDT",
+    "symbol": "KO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KSMUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-KSM-USDT:USDT",
@@ -8032,6 +8062,21 @@
     "quantity_unit": "base",
     "first_capture": "2021-06-29T00:00:00.000Z",
     "end_date": "2024-09-07T00:00:00.000Z"
+  },
+  {
+    "id": "MAUSDT",
+    "type": "perpetual",
+    "base_coin": "MA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-MA-USDT:USDT",
+    "symbol": "MA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MAVIAUSDT",
@@ -9804,6 +9849,21 @@
     "first_capture": "2021-12-29T00:00:00.000Z"
   },
   {
+    "id": "PEPUSDT",
+    "type": "perpetual",
+    "base_coin": "PEP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-PEP-USDT:USDT",
+    "symbol": "PEP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "PERPUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-PERP-USDT:USDT",
@@ -10391,6 +10451,21 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "id": "PYPLUSDT",
+    "type": "perpetual",
+    "base_coin": "PYPL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-PYPL-USDT:USDT",
+    "symbol": "PYPL",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "PYRUSDT",
@@ -12099,11 +12174,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-SSPC-USDT:USDT",
     "symbol": "SSPC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "SSVUSDT",
@@ -12632,11 +12707,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-TBT-USDT:USDT",
     "symbol": "TBT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "TENCENTUSDT",
@@ -12752,11 +12827,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-TMF-USDT:USDT",
     "symbol": "TMF",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "TNSRUSDT",
@@ -13975,6 +14050,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "WMTUSDT",
+    "type": "perpetual",
+    "base_coin": "WMT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "perpetual-WMT-USDT:USDT",
+    "symbol": "WMT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "WOOUSDT",
