@@ -6473,11 +6473,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-GS-USDT:USDT",
     "symbol": "GS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "gtcusdt",
@@ -10421,11 +10421,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-PYPL-USDT:USDT",
     "symbol": "PYPL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "pythusdt",
@@ -11433,11 +11433,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "perpetual-SMH-USDT:USDT",
     "symbol": "SMH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "sndkusdt",

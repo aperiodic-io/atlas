@@ -372,10 +372,10 @@
   {
     "id": "aaplbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-AAPLB-USDT",
     "symbol": "AAPLB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "aavebkrw",
@@ -2191,10 +2191,10 @@
   {
     "id": "amatbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-AMATB-USDT",
     "symbol": "AMATB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "ambbtc",
@@ -2292,10 +2292,10 @@
   {
     "id": "amznbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-AMZNB-USDT",
     "symbol": "AMZNB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "ancbnb",
@@ -5527,10 +5527,10 @@
   {
     "id": "bebusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-BEB-USDT",
     "symbol": "BEB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "belbnb",
@@ -10055,10 +10055,10 @@
   {
     "id": "dellbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-DELLB-USDT",
     "symbol": "DELLB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "dentbusd",
@@ -13636,10 +13636,10 @@
   {
     "id": "flncbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-FLNCB-USDT",
     "symbol": "FLNCB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "flokifdusd",
@@ -15467,10 +15467,10 @@
   {
     "id": "gsbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-GSB-USDT",
     "symbol": "GSB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "gtcbnb",
@@ -26545,10 +26545,10 @@
   {
     "id": "pyplbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-PYPLB-USDT",
     "symbol": "PYPLB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "pyrbtc",
@@ -30029,10 +30029,10 @@
   {
     "id": "smhbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-SMHB-USDT",
     "symbol": "SMHB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "sndkbusdt",
@@ -30586,10 +30586,10 @@
   {
     "id": "soxsbusdt",
     "type": "spot",
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "spot-SOXSB-USDT",
     "symbol": "SOXSB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "spartabnb",
@@ -34852,6 +34852,14 @@
     "cmc_id": 39120,
     "category": [],
     "first_capture": "2026-01-20T00:00:00.000Z"
+  },
+  {
+    "id": "uusd",
+    "type": "spot",
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "spot-U-USD",
+    "symbol": "U",
+    "denominator": "USD"
   },
   {
     "id": "uusdc",

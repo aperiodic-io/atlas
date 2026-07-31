@@ -44753,6 +44753,17 @@
     "end_date": "2024-10-29T00:00:00.000Z"
   },
   {
+    "id": "GRVT-USD_UM_XPERP-310801",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "future-GRVT-USD_UM_XPERP:GRVT-20310801",
+    "symbol": "GRVT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "GRVT",
+    "delivery_date": "2031-08-01T00:00:00"
+  },
+  {
     "id": "HMSTR-USDT-250207",
     "type": "future",
     "internal_id": "future-HMSTR-USDT:USDT-20250207",
@@ -53531,6 +53542,17 @@
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
+    "id": "PROS-USD_UM_XPERP-310801",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-07-30T00:00:00.000Z",
+    "internal_id": "future-PROS-USD_UM_XPERP:PROS-20310801",
+    "symbol": "PROS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "PROS",
+    "delivery_date": "2031-08-01T00:00:00"
+  },
+  {
     "id": "PUMP-USDT-260116",
     "type": "future",
     "internal_id": "future-PUMP-USDT:USDT-20260116",
@@ -53633,12 +53655,12 @@
     "id": "SHIB-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 1000000.0,
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "future-SHIB-USD_UM_XPERP:SHIB-20310801",
     "symbol": "SHIB",
     "denominator": "USD_UM_XPERP",
     "margin": "SHIB",
-    "delivery_date": "2031-08-01T00:00:00"
+    "delivery_date": "2031-08-01T00:00:00",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
     "id": "SKHYNIX-USD_UM_XPERP-310704",
@@ -64674,11 +64696,11 @@
     "id": "ZIL-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-07-29T00:00:00.000Z",
     "internal_id": "future-ZIL-USD_UM_XPERP:ZIL-20310801",
     "symbol": "ZIL",
     "denominator": "USD_UM_XPERP",
     "margin": "ZIL",
-    "delivery_date": "2031-08-01T00:00:00"
+    "delivery_date": "2031-08-01T00:00:00",
+    "first_capture": "2026-07-29T00:00:00.000Z"
   }
 ]
