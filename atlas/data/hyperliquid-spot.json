@@ -1653,6 +1653,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "SPCXX/USDC",
+    "type": "spot",
+    "internal_id": "spot-SPCXX-USDC",
+    "symbol": "SPCXX",
+    "denominator": "USDC"
+  },
+  {
     "id": "SPH/USDC",
     "type": "spot",
     "internal_id": "spot-SPH-USDC",

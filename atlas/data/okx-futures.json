@@ -14359,6 +14359,17 @@
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-260814",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20260814",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2026-08-14T00:00:00"
+  },
+  {
     "id": "BTC-USD-260828",
     "type": "future",
     "internal_id": "future-BTC-USD:BTC-20260828",
@@ -19465,6 +19476,17 @@
     "margin": "BTC",
     "delivery_date": "2026-08-07T00:00:00",
     "first_capture": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "BTC-USD_UM-260814",
+    "type": "future",
+    "contract_size": 0.01,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-BTC-USD_UM:BTC-20260814",
+    "symbol": "BTC",
+    "denominator": "USD_UM",
+    "margin": "BTC",
+    "delivery_date": "2026-08-14T00:00:00"
   },
   {
     "id": "BTC-USD_UM-260828",
@@ -28034,6 +28056,17 @@
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-15T00:00:00.000Z",
     "end_date": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "ESP-USD_UM_XPERP-310801",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-ESP-USD_UM_XPERP:ESP-20310801",
+    "symbol": "ESP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ESP",
+    "delivery_date": "2031-08-01T00:00:00"
   },
   {
     "id": "ETC-USD-190405",
@@ -37753,6 +37786,17 @@
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD-260814",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20260814",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2026-08-14T00:00:00"
+  },
+  {
     "id": "ETH-USD-260828",
     "type": "future",
     "internal_id": "future-ETH-USD:ETH-20260828",
@@ -42652,6 +42696,17 @@
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD_UM-260814",
+    "type": "future",
+    "contract_size": 0.001,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-ETH-USD_UM:ETH-20260814",
+    "symbol": "ETH",
+    "denominator": "USD_UM",
+    "margin": "ETH",
+    "delivery_date": "2026-08-14T00:00:00"
+  },
+  {
     "id": "ETH-USD_UM-260828",
     "type": "future",
     "contract_size": 0.001,
@@ -44756,12 +44811,12 @@
     "id": "GRVT-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "future-GRVT-USD_UM_XPERP:GRVT-20310801",
     "symbol": "GRVT",
     "denominator": "USD_UM_XPERP",
     "margin": "GRVT",
-    "delivery_date": "2031-08-01T00:00:00"
+    "delivery_date": "2031-08-01T00:00:00",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "HMSTR-USDT-250207",
@@ -53545,12 +53600,12 @@
     "id": "PROS-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "future-PROS-USD_UM_XPERP:PROS-20310801",
     "symbol": "PROS",
     "denominator": "USD_UM_XPERP",
     "margin": "PROS",
-    "delivery_date": "2031-08-01T00:00:00"
+    "delivery_date": "2031-08-01T00:00:00",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "PUMP-USDT-260116",
@@ -54138,6 +54193,17 @@
     "margin": "SOL",
     "delivery_date": "2026-08-07T00:00:00",
     "first_capture": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "SOL-USD_UM-260814",
+    "type": "future",
+    "contract_size": 0.1,
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "future-SOL-USD_UM:SOL-20260814",
+    "symbol": "SOL",
+    "denominator": "USD_UM",
+    "margin": "SOL",
+    "delivery_date": "2026-08-14T00:00:00"
   },
   {
     "id": "SOL-USD_UM-260828",

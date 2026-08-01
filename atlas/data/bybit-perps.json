@@ -1286,6 +1286,21 @@
     "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
+    "id": "AMGNUSDT",
+    "type": "perpetual",
+    "base_coin": "AMGN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-AMGN-USDT:USDT",
+    "symbol": "AMGN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AMZNUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AMZN-USDT:USDT",
@@ -2922,11 +2937,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-BRKB-USDT:USDT",
     "symbol": "BRKB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "BROCCOLIUSDT",
@@ -5729,6 +5744,21 @@
     "first_capture": "2026-04-16T00:00:00.000Z"
   },
   {
+    "id": "GEUSDT",
+    "type": "perpetual",
+    "base_coin": "GE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-GE-USDT:USDT",
+    "symbol": "GE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GEVUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-GEV-USDT:USDT",
@@ -5799,6 +5829,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-10-09T00:00:00.000Z"
+  },
+  {
+    "id": "GILDUSDT",
+    "type": "perpetual",
+    "base_coin": "GILD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-GILD-USDT:USDT",
+    "symbol": "GILD",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "GLMRUSDT",
@@ -6067,6 +6112,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-12-06T00:00:00.000Z"
+  },
+  {
+    "id": "GRVTUSDT",
+    "type": "perpetual",
+    "base_coin": "GRVT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-GRVT-USDT:USDT",
+    "symbol": "GRVT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "GSTUSDT",
@@ -7029,6 +7089,21 @@
     "end_date": "2025-11-15T00:00:00.000Z"
   },
   {
+    "id": "JPMUSDT",
+    "type": "perpetual",
+    "base_coin": "JPM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-JPM-USDT:USDT",
+    "symbol": "JPM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JSTUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-JST-USDT:USDT",
@@ -7343,11 +7418,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-KO-USDT:USDT",
     "symbol": "KO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "KSMUSDT",
@@ -8072,11 +8147,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-MA-USDT:USDT",
     "symbol": "MA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "MAVIAUSDT",
@@ -9857,11 +9932,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-PEP-USDT:USDT",
     "symbol": "PEP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "PERPUSDT",
@@ -10461,11 +10536,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-PYPL-USDT:USDT",
     "symbol": "PYPL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "PYRUSDT",
@@ -10738,6 +10813,21 @@
     "quantity_unit": "base",
     "first_capture": "2022-02-15T00:00:00.000Z",
     "end_date": "2025-01-23T00:00:00.000Z"
+  },
+  {
+    "id": "REGNUSDT",
+    "type": "perpetual",
+    "base_coin": "REGN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-REGN-USDT:USDT",
+    "symbol": "REGN",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "RENDERUSDT",
@@ -13354,6 +13444,21 @@
     "end_date": "2024-11-05T00:00:00.000Z"
   },
   {
+    "id": "UNHUSDT",
+    "type": "perpetual",
+    "base_coin": "UNH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-UNH-USDT:USDT",
+    "symbol": "UNH",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "UNIPERP",
     "type": "perpetual",
     "internal_id": "perpetual-UNI-USDC:USDC",
@@ -14060,11 +14165,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-WMT-USDT:USDT",
     "symbol": "WMT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "WOOUSDT",
