@@ -1544,11 +1544,11 @@
     "id": "CRM-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-CRM-USDT:USDT",
     "symbol": "CRM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "CRO-USDT-SWAP",
@@ -2595,11 +2595,11 @@
     "id": "GRVT-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-GRVT-USDT:USDT",
     "symbol": "GRVT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "GUN-USDT-SWAP",
@@ -2826,11 +2826,11 @@
     "id": "INTW-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-INTW-USDT:USDT",
     "symbol": "INTW",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "IOST-USD-SWAP",
@@ -4068,11 +4068,11 @@
     "id": "OKTA-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "perpetual-OKTA-USDT:USDT",
     "symbol": "OKTA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "OL-USDT-SWAP",

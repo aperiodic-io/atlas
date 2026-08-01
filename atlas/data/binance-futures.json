@@ -6469,6 +6469,17 @@
     "first_capture": "2020-12-19T00:00:00.000Z"
   },
   {
+    "id": "grvtusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "internal_id": "perpetual-GRVT-USDT:USDT",
+    "symbol": "GRVT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "gsusdt",
     "type": "perpetual",
     "contract_size": 1.0,

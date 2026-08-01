@@ -6819,26 +6819,26 @@
   {
     "id": "GRVT-TRY",
     "type": "spot",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "spot-GRVT-TRY",
     "symbol": "GRVT",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "GRVT-USD",
     "type": "spot",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "spot-GRVT-USD",
     "symbol": "GRVT",
-    "denominator": "USD"
+    "denominator": "USD",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "GRVT-USDT",
     "type": "spot",
-    "first_capture": "2026-07-30T00:00:00.000Z",
     "internal_id": "spot-GRVT-USDT",
     "symbol": "GRVT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
     "id": "GTO-BTC",
