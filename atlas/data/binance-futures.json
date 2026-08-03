@@ -6260,6 +6260,16 @@
     "end_date": "2026-02-07T00:00:00.000Z"
   },
   {
+    "id": "gigadevusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-GIGADEV-USDT:USDT",
+    "symbol": "GIGADEV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "giggleusdt",
     "type": "perpetual",
     "contract_size": 1.0,
