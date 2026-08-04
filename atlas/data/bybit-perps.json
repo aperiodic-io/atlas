@@ -7078,6 +7078,21 @@
     "first_capture": "2025-01-30T00:00:00.000Z"
   },
   {
+    "id": "JNJUSDT",
+    "type": "perpetual",
+    "base_coin": "JNJ",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "perpetual-JNJ-USDT:USDT",
+    "symbol": "JNJ",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JOEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-JOE-USDT:USDT",
@@ -12170,6 +12185,21 @@
     "first_capture": "2026-01-19T00:00:00.000Z"
   },
   {
+    "id": "SPOTUSDT",
+    "type": "perpetual",
+    "base_coin": "SPOT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "perpetual-SPOT-USDT:USDT",
+    "symbol": "SPOT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SPXPERP",
     "type": "perpetual",
     "internal_id": "perpetual-SPX-USDC:USDC",
@@ -13474,6 +13504,16 @@
     "first_capture": "2025-04-30T00:00:00.000Z"
   },
   {
+    "id": "UNITREEUSDT",
+    "type": "perpetual",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "perpetual-UNITREE-USDT:USDT",
+    "symbol": "UNITREE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quantity_unit": "base"
+  },
+  {
     "id": "UNIUSD",
     "type": "perpetual",
     "internal_id": "perpetual-UNI-USD:UNI",
@@ -14540,6 +14580,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "XOMUSDT",
+    "type": "perpetual",
+    "base_coin": "XOM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "perpetual-XOM-USDT:USDT",
+    "symbol": "XOM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "XPINUSDT",
