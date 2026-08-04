@@ -4168,6 +4168,38 @@
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "HYPEUSDT-07AUG26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-08-07T08:00:00+00:00",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "future-HYPE-USDT:USDT-20260807",
+    "symbol": "HYPE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "HYPEUSDT-14AUG26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-08-14T08:00:00+00:00",
+    "first_capture": "2026-08-03T00:00:00.000Z",
+    "internal_id": "future-HYPE-USDT:USDT-20260814",
+    "symbol": "HYPE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MNTUSDT-01MAY26",
     "type": "future",
     "internal_id": "future-MNT-USDT:USDT-20260501",
