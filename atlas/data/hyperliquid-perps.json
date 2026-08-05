@@ -3233,6 +3233,24 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "para:UNITREE",
+    "type": "perpetual",
+    "first_capture": "2026-08-04T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:UNITREE-USDC:USDC",
+    "symbol": "PARA:UNITREE",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "para:VST",
+    "type": "perpetual",
+    "first_capture": "2026-08-04T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:VST-USDC:USDC",
+    "symbol": "PARA:VST",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "vntl:ANTHROPIC",
     "type": "perpetual",
     "internal_id": "perpetual-VNTL:ANTHROPIC-USDC:USDC",
