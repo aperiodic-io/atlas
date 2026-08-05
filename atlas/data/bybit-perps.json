@@ -2171,6 +2171,21 @@
     "first_capture": "2025-04-10T00:00:00.000Z"
   },
   {
+    "id": "BACUSDT",
+    "type": "perpetual",
+    "base_coin": "BAC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-04T00:00:00.000Z",
+    "internal_id": "perpetual-BAC-USDT:USDT",
+    "symbol": "BAC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BADGERUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-BADGER-USDT:USDT",
@@ -3584,6 +3599,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-10-17T00:00:00.000Z"
+  },
+  {
+    "id": "CLSKUSDT",
+    "type": "perpetual",
+    "base_coin": "CLSK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-04T00:00:00.000Z",
+    "internal_id": "perpetual-CLSK-USDT:USDT",
+    "symbol": "CLSK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "CLUSDT",
@@ -7086,11 +7116,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-03T00:00:00.000Z",
     "internal_id": "perpetual-JNJ-USDT:USDT",
     "symbol": "JNJ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-03T00:00:00.000Z"
   },
   {
     "id": "JOEUSDT",
@@ -10763,6 +10793,21 @@
     "end_date": "2022-11-16T00:00:00.000Z"
   },
   {
+    "id": "RDDTUSDT",
+    "type": "perpetual",
+    "base_coin": "RDDT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-04T00:00:00.000Z",
+    "internal_id": "perpetual-RDDT-USDT:USDT",
+    "symbol": "RDDT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RDNTUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-RDNT-USDT:USDT",
@@ -12193,11 +12238,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-03T00:00:00.000Z",
     "internal_id": "perpetual-SPOT-USDT:USDT",
     "symbol": "SPOT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-03T00:00:00.000Z"
   },
   {
     "id": "SPXPERP",
@@ -13506,12 +13551,12 @@
   {
     "id": "UNITREEUSDT",
     "type": "perpetual",
-    "first_capture": "2026-08-03T00:00:00.000Z",
     "internal_id": "perpetual-UNITREE-USDT:USDT",
     "symbol": "UNITREE",
     "denominator": "USDT",
     "margin": "USDT",
-    "quantity_unit": "base"
+    "quantity_unit": "base",
+    "first_capture": "2026-08-03T00:00:00.000Z"
   },
   {
     "id": "UNIUSD",
@@ -14590,11 +14635,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-03T00:00:00.000Z",
     "internal_id": "perpetual-XOM-USDT:USDT",
     "symbol": "XOM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-03T00:00:00.000Z"
   },
   {
     "id": "XPINUSDT",
