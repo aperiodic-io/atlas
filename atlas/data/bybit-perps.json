@@ -2179,11 +2179,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-04T00:00:00.000Z",
     "internal_id": "perpetual-BAC-USDT:USDT",
     "symbol": "BAC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-04T00:00:00.000Z"
   },
   {
     "id": "BADGERUSDT",
@@ -2539,6 +2539,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2023-10-12T00:00:00.000Z"
+  },
+  {
+    "id": "BIIBUSDT",
+    "type": "perpetual",
+    "base_coin": "BIIB",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "perpetual-BIIB-USDT:USDT",
+    "symbol": "BIIB",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "BILLUSDT",
@@ -3291,6 +3306,21 @@
     "first_capture": "2024-10-16T00:00:00.000Z"
   },
   {
+    "id": "CASHCATUSDT",
+    "type": "perpetual",
+    "base_coin": "CASHCAT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "perpetual-CASHCAT-USDT:USDT",
+    "symbol": "CASHCAT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CATIUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-CATI-USDT:USDT",
@@ -3609,11 +3639,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-04T00:00:00.000Z",
     "internal_id": "perpetual-CLSK-USDT:USDT",
     "symbol": "CLSK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-04T00:00:00.000Z"
   },
   {
     "id": "CLUSDT",
@@ -10801,11 +10831,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-04T00:00:00.000Z",
     "internal_id": "perpetual-RDDT-USDT:USDT",
     "symbol": "RDDT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-04T00:00:00.000Z"
   },
   {
     "id": "RDNTUSDT",
@@ -11604,6 +11634,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-10-20T00:00:00.000Z"
+  },
+  {
+    "id": "SHOPUSDT",
+    "type": "perpetual",
+    "base_coin": "SHOP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "perpetual-SHOP-USDT:USDT",
+    "symbol": "SHOP",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SIGNUSDT",
@@ -13971,6 +14016,21 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "id": "VRTXSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "VRTXSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "perpetual-VRTXSTOCK-USDT:USDT",
+    "symbol": "VRTXSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "VRUSDT",
