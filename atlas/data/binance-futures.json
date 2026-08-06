@@ -7778,6 +7778,16 @@
     "first_capture": "2026-06-22T00:00:00.000Z"
   },
   {
+    "id": "kousdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-KO-USDT:USDT",
+    "symbol": "KO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ksmusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10643,6 +10653,16 @@
     ],
     "first_capture": "2021-08-20T00:00:00.000Z",
     "end_date": "2022-11-16T00:00:00.000Z"
+  },
+  {
+    "id": "rddtusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-RDDT-USDT:USDT",
+    "symbol": "RDDT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "rdntusdt",

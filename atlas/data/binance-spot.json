@@ -1682,6 +1682,14 @@
     "end_date": "2024-12-26T00:00:00.000Z"
   },
   {
+    "id": "alabbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-ALABB-USDT",
+    "symbol": "ALABB",
+    "denominator": "USDT"
+  },
+  {
     "id": "alcxbtc",
     "type": "spot",
     "internal_id": "spot-ALCX-BTC",
@@ -3346,6 +3354,14 @@
     "first_capture": "2021-05-14T00:00:00.000Z"
   },
   {
+    "id": "asmlbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-ASMLB-USDT",
+    "symbol": "ASMLB",
+    "denominator": "USDT"
+  },
+  {
     "id": "asrbtc",
     "type": "spot",
     "internal_id": "spot-ASR-BTC",
@@ -3530,6 +3546,14 @@
       "DApp"
     ],
     "first_capture": "2022-02-28T00:00:00.000Z"
+  },
+  {
+    "id": "astsbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-ASTSB-USDT",
+    "symbol": "ASTSB",
+    "denominator": "USDT"
   },
   {
     "id": "astusdt",
@@ -6062,6 +6086,14 @@
     "denominator": "USDT",
     "first_capture": "2020-09-17T00:00:00.000Z",
     "end_date": "2024-12-26T00:00:00.000Z"
+  },
+  {
+    "id": "bmnrbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-BMNRB-USDT",
+    "symbol": "BMNRB",
+    "denominator": "USDT"
   },
   {
     "id": "bmtbnb",
@@ -8834,6 +8866,14 @@
     "end_date": "2023-05-30T00:00:00.000Z"
   },
   {
+    "id": "cohrbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-COHRB-USDT",
+    "symbol": "COHRB",
+    "denominator": "USDT"
+  },
+  {
     "id": "coinbusdt",
     "type": "spot",
     "internal_id": "spot-COINB-USDT",
@@ -9197,6 +9237,14 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-06-11T00:00:00.000Z"
+  },
+  {
+    "id": "crdobusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-CRDOB-USDT",
+    "symbol": "CRDOB",
+    "denominator": "USDT"
   },
   {
     "id": "creambnb",
@@ -17678,6 +17726,14 @@
     "first_capture": "2023-09-22T00:00:00.000Z"
   },
   {
+    "id": "irenbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-IRENB-USDT",
+    "symbol": "IRENB",
+    "denominator": "USDT"
+  },
+  {
     "id": "irisbtc",
     "type": "spot",
     "internal_id": "spot-IRIS-BTC",
@@ -23061,6 +23117,14 @@
     "cmc_id": 2694,
     "category": [],
     "first_capture": "2022-04-29T00:00:00.000Z"
+  },
+  {
+    "id": "nflxbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-NFLXB-USDT",
+    "symbol": "NFLXB",
+    "denominator": "USDT"
   },
   {
     "id": "nfpbnb",
@@ -30034,6 +30098,14 @@
     "first_capture": "2021-04-30T00:00:00.000Z"
   },
   {
+    "id": "smcibusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-SMCIB-USDT",
+    "symbol": "SMCIB",
+    "denominator": "USDT"
+  },
+  {
     "id": "smhbusdt",
     "type": "spot",
     "internal_id": "spot-SMHB-USDT",
@@ -34320,6 +34392,14 @@
       "DAO"
     ],
     "first_capture": "2020-09-17T00:00:00.000Z"
+  },
+  {
+    "id": "usarbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-05T00:00:00.000Z",
+    "internal_id": "spot-USARB-USDT",
+    "symbol": "USARB",
+    "denominator": "USDT"
   },
   {
     "id": "usd1try",
