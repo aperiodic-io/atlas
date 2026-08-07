@@ -3199,11 +3199,11 @@
   {
     "id": "para:NET",
     "type": "perpetual",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "perpetual-PARA:NET-USDC:USDC",
     "symbol": "PARA:NET",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "para:OTHERS",
@@ -3217,11 +3217,11 @@
   {
     "id": "para:RDDT",
     "type": "perpetual",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "perpetual-PARA:RDDT-USDC:USDC",
     "symbol": "PARA:RDDT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "para:STX",
@@ -3689,11 +3689,11 @@
   {
     "id": "xyz:GEV",
     "type": "perpetual",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:GEV-USDC:USDC",
     "symbol": "XYZ:GEV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "xyz:GIGADEV",
@@ -3806,11 +3806,11 @@
   {
     "id": "xyz:KORU",
     "type": "perpetual",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:KORU-USDC:USDC",
     "symbol": "XYZ:KORU",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "xyz:KR200",
@@ -3838,6 +3838,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-03-25T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:LYTE",
+    "type": "perpetual",
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:LYTE-USDC:USDC",
+    "symbol": "XYZ:LYTE",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:META",
@@ -3910,6 +3919,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:NCLD",
+    "type": "perpetual",
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:NCLD-USDC:USDC",
+    "symbol": "XYZ:NCLD",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:NFLX",
@@ -4101,6 +4119,15 @@
     "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
+    "id": "xyz:SOXL",
+    "type": "perpetual",
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SOXL-USDC:USDC",
+    "symbol": "XYZ:SOXL",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:SP500",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SP500-USDC:USDC",
@@ -4148,11 +4175,11 @@
   {
     "id": "xyz:UNITREE",
     "type": "perpetual",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:UNITREE-USDC:USDC",
     "symbol": "XYZ:UNITREE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "xyz:URNM",
