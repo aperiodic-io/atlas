@@ -6787,6 +6787,17 @@
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
+    "id": "BIO-USD_UM_XPERP-310808",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "future-BIO-USD_UM_XPERP:BIO-20310808",
+    "symbol": "BIO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BIO",
+    "delivery_date": "2031-08-08T00:00:00"
+  },
+  {
     "id": "BNB-USD_UM_XPERP-310523",
     "type": "future",
     "internal_id": "future-BNB-USD_UM_XPERP:BNB-20310523",
@@ -44832,6 +44843,17 @@
     "delivery_date": "2025-02-07T00:00:00",
     "first_capture": "2024-08-01T00:00:00.000Z",
     "end_date": "2024-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "HOME-USD_UM_XPERP-310808",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "future-HOME-USD_UM_XPERP:HOME-20310808",
+    "symbol": "HOME",
+    "denominator": "USD_UM_XPERP",
+    "margin": "HOME",
+    "delivery_date": "2031-08-08T00:00:00"
   },
   {
     "id": "HOOD-USD_UM_XPERP-310801",

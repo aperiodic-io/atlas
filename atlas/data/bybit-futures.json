@@ -4209,11 +4209,11 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "delivery_date": "2026-08-21T08:00:00+00:00",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "future-HYPE-USDT:USDT-20260821",
     "symbol": "HYPE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "HYPEUSDT-28AUG26",
@@ -4225,11 +4225,11 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "delivery_date": "2026-08-28T08:00:00+00:00",
-    "first_capture": "2026-08-05T00:00:00.000Z",
     "internal_id": "future-HYPE-USDT:USDT-20260828",
     "symbol": "HYPE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-05T00:00:00.000Z"
   },
   {
     "id": "MNTUSDT-01MAY26",

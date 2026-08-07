@@ -1108,6 +1108,16 @@
     "first_capture": "2025-12-30T00:00:00.000Z"
   },
   {
+    "id": "BRKB-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "perpetual-BRKB-USDT:USDT",
+    "symbol": "BRKB",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BSB-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BSB-USDT:USDT",
@@ -5020,6 +5030,16 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-05-12T00:00:00.000Z"
+  },
+  {
+    "id": "SHOP-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-06T00:00:00.000Z",
+    "internal_id": "perpetual-SHOP-USDT:USDT",
+    "symbol": "SHOP",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SIGN-USDT-SWAP",
