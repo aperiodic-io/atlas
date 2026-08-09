@@ -3154,11 +3154,11 @@
   {
     "id": "para:CIEN",
     "type": "perpetual",
-    "first_capture": "2026-08-07T00:00:00.000Z",
     "internal_id": "perpetual-PARA:CIEN-USDC:USDC",
     "symbol": "PARA:CIEN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
     "id": "para:COHR",

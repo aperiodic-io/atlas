@@ -3583,11 +3583,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-07T00:00:00.000Z",
     "internal_id": "perpetual-CIFR-USDT:USDT",
     "symbol": "CIFR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
     "id": "CKBUSDT",
@@ -4679,11 +4679,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-07T00:00:00.000Z",
     "internal_id": "perpetual-EBAY-USDT:USDT",
     "symbol": "EBAY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
     "id": "EDENUSDT",
@@ -8753,12 +8753,12 @@
   {
     "id": "MOONSHOTUSDT",
     "type": "perpetual",
-    "first_capture": "2026-08-07T00:00:00.000Z",
     "internal_id": "perpetual-MOONSHOT-USDT:USDT",
     "symbol": "MOONSHOT",
     "denominator": "USDT",
     "margin": "USDT",
-    "quantity_unit": "base"
+    "quantity_unit": "base",
+    "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
     "id": "MORPHOUSDT",
@@ -8795,11 +8795,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-07T00:00:00.000Z",
     "internal_id": "perpetual-MO-USDT:USDT",
     "symbol": "MO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
     "id": "MOVEUSDT",
