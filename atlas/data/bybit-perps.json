@@ -9897,6 +9897,21 @@
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
+    "id": "OUSTUSDT",
+    "type": "perpetual",
+    "base_coin": "OUST",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "perpetual-OUST-USDT:USDT",
+    "symbol": "OUST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "OXTUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-OXT-USDT:USDT",
@@ -11788,6 +11803,21 @@
     "end_date": "2025-10-23T00:00:00.000Z"
   },
   {
+    "id": "SKDDUSDT",
+    "type": "perpetual",
+    "base_coin": "SKDD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "perpetual-SKDD-USDT:USDT",
+    "symbol": "SKDD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SKHYNIXUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-SKHYNIX-USDT:USDT",
@@ -11846,6 +11876,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2026-01-21T00:00:00.000Z"
+  },
+  {
+    "id": "SKUUUSDT",
+    "type": "perpetual",
+    "base_coin": "SKUU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "perpetual-SKUU-USDT:USDT",
+    "symbol": "SKUU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SKYAI1USDT",
