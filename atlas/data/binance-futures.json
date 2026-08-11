@@ -4036,6 +4036,26 @@
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
+    "id": "csopsamsung2lusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-CSOPSAMSUNG2L-USDT:USDT",
+    "symbol": "CSOPSAMSUNG2L",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "csopskhynix2lusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-CSOPSKHYNIX2L-USDT:USDT",
+    "symbol": "CSOPSKHYNIX2L",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ctkusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -7819,6 +7839,16 @@
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
+    "id": "kuaishouusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-KUAISHOU-USDT:USDT",
+    "symbol": "KUAISHOU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "labusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -8575,6 +8605,16 @@
       "Layer 2"
     ],
     "first_capture": "2026-01-30T00:00:00.000Z"
+  },
+  {
+    "id": "meituanusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-MEITUAN-USDT:USDT",
+    "symbol": "MEITUAN",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "melaniausdt",

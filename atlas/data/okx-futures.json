@@ -19647,6 +19647,17 @@
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
+    "id": "CRV-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "future-CRV-USD_UM_XPERP:CRV-20310815",
+    "symbol": "CRV",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CRV",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
     "id": "DOGE-USD_UM_XPERP-310404",
     "type": "future",
     "internal_id": "future-DOGE-USD_UM_XPERP:DOGE-20310404",
@@ -53517,6 +53528,17 @@
     "first_capture": "2026-07-07T00:00:00.000Z"
   },
   {
+    "id": "MOODENG-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "future-MOODENG-USD_UM_XPERP:MOODENG-20310815",
+    "symbol": "MOODENG",
+    "denominator": "USD_UM_XPERP",
+    "margin": "MOODENG",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
     "id": "MRVL-USD_UM_XPERP-310627",
     "type": "future",
     "internal_id": "future-MRVL-USD_UM_XPERP:MRVL-20310627",
@@ -53638,6 +53660,17 @@
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
+    "id": "ORDI-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 0.1,
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "future-ORDI-USD_UM_XPERP:ORDI-20310815",
+    "symbol": "ORDI",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ORDI",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
     "id": "PENGU-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 100.0,
@@ -53724,6 +53757,17 @@
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "RAVE-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-10T00:00:00.000Z",
+    "internal_id": "future-RAVE-USD_UM_XPERP:RAVE-20310815",
+    "symbol": "RAVE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "RAVE",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "RE-USD_UM_XPERP-310620",
@@ -54390,6 +54434,16 @@
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "TEST01-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-TEST01-USD_UM_XPERP:TEST01-20310815",
+    "symbol": "TEST01",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TEST01",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "TON-USD_UM_XPERP-310530",
