@@ -1834,11 +1834,11 @@
     "id": "DOS-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-08-10T00:00:00.000Z",
     "internal_id": "perpetual-DOS-USDT:USDT",
     "symbol": "DOS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
     "id": "DOT-USD-SWAP",
@@ -3144,11 +3144,11 @@
     "id": "KO-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-10T00:00:00.000Z",
     "internal_id": "perpetual-KO-USDT:USDT",
     "symbol": "KO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
     "id": "KORU-USDT-SWAP",
@@ -5085,11 +5085,11 @@
     "id": "SKDD-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-10T00:00:00.000Z",
     "internal_id": "perpetual-SKDD-USDT:USDT",
     "symbol": "SKDD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
     "id": "SKHY-USDT-SWAP",
@@ -5115,11 +5115,11 @@
     "id": "SKUU-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-10T00:00:00.000Z",
     "internal_id": "perpetual-SKUU-USDT:USDT",
     "symbol": "SKUU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
     "id": "SKY-USDT-SWAP",
