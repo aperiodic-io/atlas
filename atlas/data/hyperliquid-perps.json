@@ -3181,11 +3181,11 @@
   {
     "id": "para:CRWD",
     "type": "perpetual",
-    "first_capture": "2026-08-10T00:00:00.000Z",
     "internal_id": "perpetual-PARA:CRWD-USDC:USDC",
     "symbol": "PARA:CRWD",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
     "id": "para:GLW",
