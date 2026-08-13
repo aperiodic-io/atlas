@@ -4608,11 +4608,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-11T00:00:00.000Z",
     "internal_id": "perpetual-DOS-USDT:USDT",
     "symbol": "DOS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
     "id": "dotbusd",

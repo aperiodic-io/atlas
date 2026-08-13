@@ -17374,6 +17374,14 @@
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
+    "id": "XTESTA-USDC",
+    "type": "spot",
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "spot-XTESTA-USDC",
+    "symbol": "XTESTA",
+    "denominator": "USDC"
+  },
+  {
     "id": "XTESTA-USDT",
     "type": "spot",
     "internal_id": "spot-XTESTA-USDT",

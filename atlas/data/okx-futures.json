@@ -2310,15 +2310,26 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "APT-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "future-APT-USD_UM_XPERP:APT-20310815",
+    "symbol": "APT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "APT",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
     "id": "ARB-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-11T00:00:00.000Z",
     "internal_id": "future-ARB-USD_UM_XPERP:ARB-20310815",
     "symbol": "ARB",
     "denominator": "USD_UM_XPERP",
     "margin": "ARB",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
     "id": "ARX-USD_UM_XPERP-310627",
@@ -19689,6 +19700,17 @@
     "delivery_date": "2025-02-07T00:00:00",
     "first_capture": "2024-08-05T00:00:00.000Z",
     "end_date": "2024-08-27T00:00:00.000Z"
+  },
+  {
+    "id": "DOS-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "future-DOS-USD_UM_XPERP:DOS-20310815",
+    "symbol": "DOS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "DOS",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "DOT-USD-200904",
@@ -44904,6 +44926,17 @@
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
+    "id": "H-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "future-H-USD_UM_XPERP:H-20310815",
+    "symbol": "H",
+    "denominator": "USD_UM_XPERP",
+    "margin": "H",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
     "id": "HMSTR-USDT-250207",
     "type": "future",
     "internal_id": "future-HMSTR-USDT:USDT-20250207",
@@ -47784,6 +47817,17 @@
     "margin": "LIT",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-06-28T00:00:00.000Z"
+  },
+  {
+    "id": "LITE-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "future-LITE-USD_UM_XPERP:LITE-20310815",
+    "symbol": "LITE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "LITE",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "LTC-USD-190405",
@@ -53674,12 +53718,12 @@
     "id": "OP-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-11T00:00:00.000Z",
     "internal_id": "future-OP-USD_UM_XPERP:OP-20310815",
     "symbol": "OP",
     "denominator": "USD_UM_XPERP",
     "margin": "OP",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
     "id": "ORDI-USD_UM_XPERP-310815",
@@ -53828,12 +53872,12 @@
     "id": "ROBO-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-08-11T00:00:00.000Z",
     "internal_id": "future-ROBO-USD_UM_XPERP:ROBO-20310815",
     "symbol": "ROBO",
     "denominator": "USD_UM_XPERP",
     "margin": "ROBO",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
     "id": "SAMSUNG-USD_UM_XPERP-310704",
@@ -54486,6 +54530,16 @@
     "symbol": "TEST011",
     "denominator": "USD_UM_XPERP",
     "margin": "TEST011",
+    "delivery_date": "2031-08-15T00:00:00"
+  },
+  {
+    "id": "TEST012-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-TEST012-USD_UM_XPERP:TEST012-20310815",
+    "symbol": "TEST012",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TEST012",
     "delivery_date": "2031-08-15T00:00:00"
   },
   {
@@ -58810,6 +58864,17 @@
     "margin": "VVV",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-07-03T00:00:00.000Z"
+  },
+  {
+    "id": "WIF-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "future-WIF-USD_UM_XPERP:WIF-20310815",
+    "symbol": "WIF",
+    "denominator": "USD_UM_XPERP",
+    "margin": "WIF",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "WLD-USD_UM_XPERP-310613",
