@@ -14962,6 +14962,14 @@
     "first_capture": "2026-07-07T00:00:00.000Z"
   },
   {
+    "id": "gmebusdt",
+    "type": "spot",
+    "first_capture": "2026-08-12T00:00:00.000Z",
+    "internal_id": "spot-GMEB-USDT",
+    "symbol": "GMEB",
+    "denominator": "USDT"
+  },
+  {
     "id": "gmtaud",
     "type": "spot",
     "internal_id": "spot-GMT-AUD",
