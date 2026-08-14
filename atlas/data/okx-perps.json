@@ -3923,11 +3923,11 @@
     "id": "NET-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-NET-USDT:USDT",
     "symbol": "NET",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "NEWT-USDT-SWAP",
@@ -4524,11 +4524,11 @@
     "id": "POPMART-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-POPMART-USDT:USDT",
     "symbol": "POPMART",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "PRCL-USDT-SWAP",
@@ -4800,11 +4800,11 @@
     "id": "RIOT-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-RIOT-USDT:USDT",
     "symbol": "RIOT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "RIVER-USDT-SWAP",
@@ -6505,11 +6505,11 @@
     "id": "XIAOMI-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-XIAOMI-USDT:USDT",
     "symbol": "XIAOMI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "XLE-USDT-SWAP",

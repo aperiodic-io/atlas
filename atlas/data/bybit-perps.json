@@ -812,6 +812,21 @@
     "first_capture": "2026-07-16T00:00:00.000Z"
   },
   {
+    "id": "AEONUSDT",
+    "type": "perpetual",
+    "base_coin": "AEON",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-13T00:00:00.000Z",
+    "internal_id": "perpetual-AEON-USDT:USDT",
+    "symbol": "AEON",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AERGOUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AERGO-USDT:USDT",
@@ -4578,11 +4593,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-DOS-USDT:USDT",
     "symbol": "DOS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "DOTPERP",
@@ -8137,6 +8152,21 @@
     "first_capture": "2025-10-06T00:00:00.000Z"
   },
   {
+    "id": "LYTEUSDT",
+    "type": "perpetual",
+    "base_coin": "LYTE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-13T00:00:00.000Z",
+    "internal_id": "perpetual-LYTE-USDT:USDT",
+    "symbol": "LYTE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MAGICUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-MAGIC-USDT:USDT",
@@ -9131,6 +9161,21 @@
     "first_capture": "2026-05-26T00:00:00.000Z"
   },
   {
+    "id": "NCLDUSDT",
+    "type": "perpetual",
+    "base_coin": "NCLD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-13T00:00:00.000Z",
+    "internal_id": "perpetual-NCLD-USDT:USDT",
+    "symbol": "NCLD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NCUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-NC-USDT:USDT",
@@ -9207,6 +9252,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2022-01-30T00:00:00.000Z"
+  },
+  {
+    "id": "NESAUSDT",
+    "type": "perpetual",
+    "base_coin": "NESA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-13T00:00:00.000Z",
+    "internal_id": "perpetual-NESA-USDT:USDT",
+    "symbol": "NESA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "NETUSDT",
@@ -11255,11 +11315,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-RIOT-USDT:USDT",
     "symbol": "RIOT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "RIVERUSDT",
@@ -12114,11 +12174,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-SMIC-USDT:USDT",
     "symbol": "SMIC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "SNDKUSDT",
@@ -14079,7 +14139,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2024-03-14T00:00:00.000Z"
+    "first_capture": "2024-03-14T00:00:00.000Z",
+    "end_date": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "VELODROMEUSDT",
@@ -14292,6 +14353,21 @@
     "quantity_unit": "base",
     "first_capture": "2025-01-16T00:00:00.000Z",
     "end_date": "2025-10-18T00:00:00.000Z"
+  },
+  {
+    "id": "VSTUSDT",
+    "type": "perpetual",
+    "base_coin": "VST",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-13T00:00:00.000Z",
+    "internal_id": "perpetual-VST-USDT:USDT",
+    "symbol": "VST",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "VTHOUSDT",
@@ -14773,11 +14849,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-12T00:00:00.000Z",
     "internal_id": "perpetual-XIAOMI-USDT:USDT",
     "symbol": "XIAOMI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
     "id": "XIONUSDT",
