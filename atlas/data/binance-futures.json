@@ -6635,6 +6635,16 @@
     "first_capture": "2025-09-26T00:00:00.000Z"
   },
   {
+    "id": "hanmiusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-HANMI-USDT:USDT",
+    "symbol": "HANMI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "hbarusdc",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -7784,6 +7794,16 @@
     "first_capture": "2020-06-22T00:00:00.000Z"
   },
   {
+    "id": "kodex200usdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-KODEX200-USDT:USDT",
+    "symbol": "KODEX200",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "komausdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -7981,6 +8001,16 @@
     ],
     "first_capture": "2023-03-30T00:00:00.000Z",
     "end_date": "2025-09-04T00:00:00.000Z"
+  },
+  {
+    "id": "lgelectronicsusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-LGELECTRONICS-USDT:USDT",
+    "symbol": "LGELECTRONICS",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "lightusdt",
@@ -9149,6 +9179,16 @@
       "DeFi"
     ],
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "naverusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-NAVER-USDT:USDT",
+    "symbol": "NAVER",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "nbisusdt",
@@ -11159,6 +11199,16 @@
       "Layer 1"
     ],
     "first_capture": "2025-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "samsungemusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-SAMSUNGEM-USDT:USDT",
+    "symbol": "SAMSUNGEM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "samsungusdt",
@@ -14324,6 +14374,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-17T00:00:00.000Z"
+  },
+  {
+    "id": "zhongjiusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-ZHONGJI-USDT:USDT",
+    "symbol": "ZHONGJI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "zilusdt",
