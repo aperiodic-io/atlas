@@ -2313,12 +2313,12 @@
     "id": "APR-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "future-APR-USD_UM_XPERP:APR-20310815",
     "symbol": "APR",
     "denominator": "USD_UM_XPERP",
     "margin": "APR",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "APT-USD_UM_XPERP-310815",
@@ -2660,6 +2660,17 @@
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 10.0,
     "first_capture": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "AVNT-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-AVNT-USD_UM_XPERP:AVNT-20310815",
+    "symbol": "AVNT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AVNT",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "BABY-USDT-251003",
@@ -14447,6 +14458,17 @@
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 100.0,
     "first_capture": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "BTC-USD-261030",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20261030",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2026-10-30T00:00:00"
   },
   {
     "id": "BTC-USD-261225",
@@ -37935,6 +37957,17 @@
     "first_capture": "2026-01-16T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD-261030",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20261030",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2026-10-30T00:00:00"
+  },
+  {
     "id": "ETH-USD-261225",
     "type": "future",
     "internal_id": "future-ETH-USD:ETH-20261225",
@@ -44946,6 +44979,17 @@
     "margin": "H",
     "delivery_date": "2031-08-15T00:00:00",
     "first_capture": "2026-08-12T00:00:00.000Z"
+  },
+  {
+    "id": "HBAR-USD_UM_XPERP-310815",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-HBAR-USD_UM_XPERP:HBAR-20310815",
+    "symbol": "HBAR",
+    "denominator": "USD_UM_XPERP",
+    "margin": "HBAR",
+    "delivery_date": "2031-08-15T00:00:00"
   },
   {
     "id": "HMSTR-USDT-250207",
@@ -54568,12 +54612,12 @@
     "id": "TRB-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 0.1,
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "future-TRB-USD_UM_XPERP:TRB-20310815",
     "symbol": "TRB",
     "denominator": "USD_UM_XPERP",
     "margin": "TRB",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "TRUMP-USD_UM_XPERP-310704",
@@ -58880,12 +58924,12 @@
     "id": "VIRTUAL-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "future-VIRTUAL-USD_UM_XPERP:VIRTUAL-20310815",
     "symbol": "VIRTUAL",
     "denominator": "USD_UM_XPERP",
     "margin": "VIRTUAL",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "VVV-USD_UM_XPERP-310704",

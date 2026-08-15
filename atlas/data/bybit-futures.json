@@ -862,6 +862,22 @@
     "end_date": "2025-07-05T00:00:00.000Z"
   },
   {
+    "id": "BTCUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-BTC-USDT:USDT-20260904",
+    "symbol": "BTC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BTCUSDT-05DEC25",
     "type": "future",
     "internal_id": "future-BTC-USDT:USDT-20251205",
@@ -1885,6 +1901,22 @@
     "delivery_date": "2026-07-03T00:00:00",
     "first_capture": "2026-06-12T00:00:00.000Z",
     "end_date": "2026-07-04T00:00:00.000Z"
+  },
+  {
+    "id": "DOGEUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "DOGE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-DOGE-USDT:USDT-20260904",
+    "symbol": "DOGE",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DOGEUSDT-05DEC25",
@@ -3238,6 +3270,22 @@
     "end_date": "2025-07-05T00:00:00.000Z"
   },
   {
+    "id": "ETHUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-ETH-USDT:USDT-20260904",
+    "symbol": "ETH",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ETHUSDT-05DEC25",
     "type": "future",
     "internal_id": "future-ETH-USDT:USDT-20251205",
@@ -4219,6 +4267,22 @@
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "HYPEUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-HYPE-USDT:USDT-20260904",
+    "symbol": "HYPE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HYPEUSDT-07AUG26",
     "type": "future",
     "base_coin": "HYPE",
@@ -4342,6 +4406,22 @@
     "delivery_date": "2026-07-03T00:00:00",
     "first_capture": "2026-06-12T00:00:00.000Z",
     "end_date": "2026-07-04T00:00:00.000Z"
+  },
+  {
+    "id": "MNTUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "MNT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-MNT-USDT:USDT-20260904",
+    "symbol": "MNT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MNTUSDT-05DEC25",
@@ -5178,6 +5258,22 @@
     "end_date": "2025-07-05T00:00:00.000Z"
   },
   {
+    "id": "SOLUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "SOL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-SOL-USDT:USDT-20260904",
+    "symbol": "SOL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SOLUSDT-05DEC25",
     "type": "future",
     "internal_id": "future-SOL-USDT:USDT-20251205",
@@ -5986,6 +6082,22 @@
     "end_date": "2026-07-04T00:00:00.000Z"
   },
   {
+    "id": "XAUTUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "XAUT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-XAUT-USDT:USDT-20260904",
+    "symbol": "XAUT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "XAUTUSDT-05JUN26",
     "type": "future",
     "internal_id": "future-XAUT-USDT:USDT-20260605",
@@ -6286,6 +6398,22 @@
     "delivery_date": "2026-07-03T00:00:00",
     "first_capture": "2026-06-12T00:00:00.000Z",
     "end_date": "2026-07-04T00:00:00.000Z"
+  },
+  {
+    "id": "XRPUSDT-04SEP26",
+    "type": "future",
+    "base_coin": "XRP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "delivery_date": "2026-09-04T08:00:00+00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "future-XRP-USDT:USDT-20260904",
+    "symbol": "XRP",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "XRPUSDT-05DEC25",
