@@ -820,11 +820,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "perpetual-AEON-USDT:USDT",
     "symbol": "AEON",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "AERGOUSDT",
@@ -6387,6 +6387,21 @@
     "first_capture": "2025-10-17T00:00:00.000Z"
   },
   {
+    "id": "HANMIUSDT",
+    "type": "perpetual",
+    "base_coin": "HANMI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-HANMI-USDT:USDT",
+    "symbol": "HANMI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HBARPERP",
     "type": "perpetual",
     "internal_id": "perpetual-HBAR-USDC:USDC",
@@ -7549,6 +7564,21 @@
     "first_capture": "2022-01-10T00:00:00.000Z"
   },
   {
+    "id": "KODEX200USDT",
+    "type": "perpetual",
+    "base_coin": "KODEX200",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-KODEX200-USDT:USDT",
+    "symbol": "KODEX200",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KOMAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-KOMA-USDT:USDT",
@@ -7755,6 +7785,21 @@
     "quantity_unit": "base",
     "first_capture": "2024-05-16T00:00:00.000Z",
     "end_date": "2024-07-09T00:00:00.000Z"
+  },
+  {
+    "id": "LGELECTRONICSUSDT",
+    "type": "perpetual",
+    "base_coin": "LGELECTRONICS",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-LGELECTRONICS-USDT:USDT",
+    "symbol": "LGELECTRONICS",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "LIGHTUSDT",
@@ -8160,11 +8205,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "perpetual-LYTE-USDT:USDT",
     "symbol": "LYTE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "MAGICUSDT",
@@ -9146,6 +9191,21 @@
     "first_capture": "2025-07-31T00:00:00.000Z"
   },
   {
+    "id": "NAVERUSDT",
+    "type": "perpetual",
+    "base_coin": "NAVER",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-NAVER-USDT:USDT",
+    "symbol": "NAVER",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NBISUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-NBIS-USDT:USDT",
@@ -9169,11 +9229,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "perpetual-NCLD-USDT:USDT",
     "symbol": "NCLD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "NCUSDT",
@@ -9262,11 +9322,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "perpetual-NESA-USDT:USDT",
     "symbol": "NESA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "NETUSDT",
@@ -11620,6 +11680,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "SAMSUNGEMUSDT",
+    "type": "perpetual",
+    "base_coin": "SAMSUNGEM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-SAMSUNGEM-USDT:USDT",
+    "symbol": "SAMSUNGEM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SAMSUNGUSDT",
@@ -14363,11 +14438,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-13T00:00:00.000Z",
     "internal_id": "perpetual-VST-USDT:USDT",
     "symbol": "VST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
     "id": "VTHOUSDT",
@@ -15455,6 +15530,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "ZHONGJIUSDT",
+    "type": "perpetual",
+    "base_coin": "ZHONGJI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-14T00:00:00.000Z",
+    "internal_id": "perpetual-ZHONGJI-USDT:USDT",
+    "symbol": "ZHONGJI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "ZILUSDT",
