@@ -2665,12 +2665,12 @@
     "id": "AVNT-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-14T00:00:00.000Z",
     "internal_id": "future-AVNT-USD_UM_XPERP:AVNT-20310815",
     "symbol": "AVNT",
     "denominator": "USD_UM_XPERP",
     "margin": "AVNT",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
     "id": "BABY-USDT-251003",
@@ -14424,7 +14424,8 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-08-14T00:00:00",
-    "first_capture": "2026-07-31T00:00:00.000Z"
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "end_date": "2026-08-15T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260821",
@@ -14463,12 +14464,12 @@
     "id": "BTC-USD-261030",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-08-14T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20261030",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "delivery_date": "2026-10-30T00:00:00"
+    "delivery_date": "2026-10-30T00:00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-261225",
@@ -19567,7 +19568,8 @@
     "denominator": "USD_UM",
     "margin": "BTC",
     "delivery_date": "2026-08-14T00:00:00",
-    "first_capture": "2026-07-31T00:00:00.000Z"
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "end_date": "2026-08-15T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-260828",
@@ -37921,7 +37923,8 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-08-14T00:00:00",
-    "first_capture": "2026-07-31T00:00:00.000Z"
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "end_date": "2026-08-15T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260821",
@@ -37960,12 +37963,12 @@
     "id": "ETH-USD-261030",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-14T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20261030",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "delivery_date": "2026-10-30T00:00:00"
+    "delivery_date": "2026-10-30T00:00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-261225",
@@ -42855,7 +42858,8 @@
     "denominator": "USD_UM",
     "margin": "ETH",
     "delivery_date": "2026-08-14T00:00:00",
-    "first_capture": "2026-07-31T00:00:00.000Z"
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "end_date": "2026-08-15T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-260828",
@@ -44984,12 +44988,12 @@
     "id": "HBAR-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-08-14T00:00:00.000Z",
     "internal_id": "future-HBAR-USD_UM_XPERP:HBAR-20310815",
     "symbol": "HBAR",
     "denominator": "USD_UM_XPERP",
     "margin": "HBAR",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
     "id": "HMSTR-USDT-250207",
@@ -54455,7 +54459,8 @@
     "denominator": "USD_UM",
     "margin": "SOL",
     "delivery_date": "2026-08-14T00:00:00",
-    "first_capture": "2026-07-31T00:00:00.000Z"
+    "first_capture": "2026-07-31T00:00:00.000Z",
+    "end_date": "2026-08-15T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-260828",
