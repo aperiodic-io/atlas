@@ -4179,6 +4179,16 @@
     "first_capture": "2022-09-22T00:00:00.000Z"
   },
   {
+    "id": "cxmtusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "unknown",
+    "internal_id": "perpetual-CXMT-USDT:USDT",
+    "symbol": "CXMT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "cyberusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -6251,7 +6261,8 @@
     "internal_id": "perpetual-GDX-USDT:USDT",
     "symbol": "GDX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
     "id": "geniususdt",
@@ -8430,6 +8441,17 @@
     "first_capture": "2025-10-06T00:00:00.000Z"
   },
   {
+    "id": "lyteusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-LYTE-USDT:USDT",
+    "symbol": "LYTE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "magicusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -9325,6 +9347,17 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-02-17T00:00:00.000Z"
+  },
+  {
+    "id": "netusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-NET-USDT:USDT",
+    "symbol": "NET",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "newtusdt",
@@ -11407,6 +11440,17 @@
       "AI Agents"
     ],
     "first_capture": "2025-02-17T00:00:00.000Z"
+  },
+  {
+    "id": "shopusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-SHOP-USDT:USDT",
+    "symbol": "SHOP",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "signusdt",
@@ -13542,6 +13586,17 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "id": "vstusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-VST-USDT:USDT",
+    "symbol": "VST",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "vthousdt",

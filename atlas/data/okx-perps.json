@@ -3479,6 +3479,16 @@
     "first_capture": "2026-06-01T00:00:00.000Z"
   },
   {
+    "id": "LYTE-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-LYTE-USDT:USDT",
+    "symbol": "LYTE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MAGIC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-MAGIC-USDT:USDT",
@@ -3724,6 +3734,16 @@
     "margin": "USDT",
     "contract_size": 10.0,
     "first_capture": "2024-10-03T00:00:00.000Z"
+  },
+  {
+    "id": "MOONSHOT-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-MOONSHOT-USDT:USDT",
+    "symbol": "MOONSHOT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MORPHO-USDT-SWAP",
@@ -4306,6 +4326,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-06T00:00:00.000Z"
+  },
+  {
+    "id": "OUST-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "perpetual-OUST-USDT:USDT",
+    "symbol": "OUST",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "PANW-USDT-SWAP",

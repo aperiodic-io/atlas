@@ -22630,6 +22630,17 @@
     "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
+    "id": "DYDX-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "future-DYDX-USD_UM_XPERP:DYDX-20310822",
+    "symbol": "DYDX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "DYDX",
+    "delivery_date": "2031-08-22T00:00:00"
+  },
+  {
     "id": "EIGEN-USDT-250307",
     "type": "future",
     "internal_id": "future-EIGEN-USDT:USDT-20250307",
@@ -22650,6 +22661,17 @@
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 100.0,
     "first_capture": "2026-06-11T00:00:00.000Z"
+  },
+  {
+    "id": "ENSO-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "future-ENSO-USD_UM_XPERP:ENSO-20310822",
+    "symbol": "ENSO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ENSO",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "EOS-USD-190405",
@@ -53785,6 +53807,17 @@
     "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
+    "id": "OPN-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "future-OPN-USD_UM_XPERP:OPN-20310822",
+    "symbol": "OPN",
+    "denominator": "USD_UM_XPERP",
+    "margin": "OPN",
+    "delivery_date": "2031-08-22T00:00:00"
+  },
+  {
     "id": "ORDI-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 0.1,
@@ -53816,6 +53849,17 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1000000.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "PIEVERSE-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-17T00:00:00.000Z",
+    "internal_id": "future-PIEVERSE-USD_UM_XPERP:PIEVERSE-20310822",
+    "symbol": "PIEVERSE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "PIEVERSE",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "PLTR-USD_UM_XPERP-310801",
