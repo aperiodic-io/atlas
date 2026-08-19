@@ -4794,7 +4794,8 @@
     "internal_id": "spot-DUCK-USDT",
     "symbol": "DUCK",
     "denominator": "USDT",
-    "first_capture": "2025-01-16T00:00:00.000Z"
+    "first_capture": "2025-01-16T00:00:00.000Z",
+    "end_date": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "DYDX-BTC",
@@ -6681,7 +6682,8 @@
     "internal_id": "spot-GODS-USDT",
     "symbol": "GODS",
     "denominator": "USDT",
-    "first_capture": "2021-10-29T00:00:00.000Z"
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "GOG-USD",
@@ -12120,7 +12122,8 @@
     "internal_id": "spot-PRCL-USDT",
     "symbol": "PRCL",
     "denominator": "USDT",
-    "first_capture": "2024-04-16T00:00:00.000Z"
+    "first_capture": "2024-04-16T00:00:00.000Z",
+    "end_date": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "PROMPT-EUR",
@@ -16786,6 +16789,14 @@
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
+    "id": "XBOT-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XBOT-USDT",
+    "symbol": "XBOT",
+    "denominator": "USDT"
+  },
+  {
     "id": "XBSP-USDT",
     "type": "spot",
     "internal_id": "spot-XBSP-USDT",
@@ -16867,6 +16878,14 @@
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
+    "id": "XCRM-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XCRM-USDT",
+    "symbol": "XCRM",
+    "denominator": "USDT"
+  },
+  {
     "id": "XCRWD-USDT",
     "type": "spot",
     "internal_id": "spot-XCRWD-USDT",
@@ -16897,6 +16916,14 @@
     "symbol": "XDELL",
     "denominator": "USDT",
     "first_capture": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "XDKNG-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XDKNG-USDT",
+    "symbol": "XDKNG",
+    "denominator": "USDT"
   },
   {
     "id": "XEC-USDT",
@@ -16999,6 +17026,14 @@
     "symbol": "XHOOD",
     "denominator": "USDT",
     "first_capture": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "XHPE-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XHPE-USDT",
+    "symbol": "XHPE",
+    "denominator": "USDT"
   },
   {
     "id": "XIBM-USDT",
@@ -17224,6 +17259,14 @@
     "denominator": "USDT",
     "first_capture": "2022-06-09T00:00:00.000Z",
     "end_date": "2025-06-21T00:00:00.000Z"
+  },
+  {
+    "id": "XNOW-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XNOW-USDT",
+    "symbol": "XNOW",
+    "denominator": "USDT"
   },
   {
     "id": "XNVDA-USDT",
@@ -17488,6 +17531,14 @@
     "symbol": "XSNDK",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XSNOW-USDT",
+    "type": "spot",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "spot-XSNOW-USDT",
+    "symbol": "XSNOW",
+    "denominator": "USDT"
   },
   {
     "id": "XSOXL-USDT",
