@@ -4186,7 +4186,8 @@
     "internal_id": "perpetual-CXMT-USDT:USDT",
     "symbol": "CXMT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "cyberusdt",
@@ -8445,11 +8446,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-17T00:00:00.000Z",
     "internal_id": "perpetual-LYTE-USDT:USDT",
     "symbol": "LYTE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
     "id": "magicusdt",
@@ -9353,11 +9354,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-17T00:00:00.000Z",
     "internal_id": "perpetual-NET-USDT:USDT",
     "symbol": "NET",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
     "id": "newtusdt",
@@ -11446,11 +11447,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-17T00:00:00.000Z",
     "internal_id": "perpetual-SHOP-USDT:USDT",
     "symbol": "SHOP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
     "id": "signusdt",
@@ -13239,6 +13240,16 @@
     "end_date": "2023-04-12T00:00:00.000Z"
   },
   {
+    "id": "unitreeusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "unknown",
+    "internal_id": "perpetual-UNITREE-USDT:USDT",
+    "symbol": "UNITREE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "uniusdc",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -13592,11 +13603,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-17T00:00:00.000Z",
     "internal_id": "perpetual-VST-USDT:USDT",
     "symbol": "VST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
     "id": "vthousdt",

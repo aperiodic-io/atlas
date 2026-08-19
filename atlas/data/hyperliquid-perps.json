@@ -3435,6 +3435,15 @@
     "end_date": "2026-06-19T00:00:00.000Z"
   },
   {
+    "id": "xyz:AAOI",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:AAOI-USDC:USDC",
+    "symbol": "XYZ:AAOI",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:AAPL",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:AAPL-USDC:USDC",
@@ -3613,6 +3622,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2025-12-15T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:CRWD",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:CRWD-USDC:USDC",
+    "symbol": "XYZ:CRWD",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:CRWV",
@@ -3813,6 +3831,15 @@
     "first_capture": "2025-12-03T00:00:00.000Z"
   },
   {
+    "id": "xyz:IREN",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:IREN-USDC:USDC",
+    "symbol": "XYZ:IREN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:JP225",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:JP225-USDC:USDC",
@@ -3883,6 +3910,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:MAGS",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:MAGS-USDC:USDC",
+    "symbol": "XYZ:MAGS",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:META",
@@ -3964,6 +4000,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:NET",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:NET-USDC:USDC",
+    "symbol": "XYZ:NET",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:NFLX",
@@ -4063,6 +4108,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:RDDT",
+    "type": "perpetual",
+    "first_capture": "2026-08-18T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:RDDT-USDC:USDC",
+    "symbol": "XYZ:RDDT",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:RIVN",
