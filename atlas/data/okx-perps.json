@@ -1667,11 +1667,11 @@
     "id": "CXMT-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-CXMT-USDT:USDT",
     "symbol": "CXMT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "DASH-USD-SWAP",
@@ -6093,6 +6093,16 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2020-09-17T00:00:00.000Z"
+  },
+  {
+    "id": "UNITREE-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-UNITREE-USDT:USDT",
+    "symbol": "UNITREE",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "UP-USDT-SWAP",

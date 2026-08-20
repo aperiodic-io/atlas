@@ -1443,6 +1443,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "RAIN/USDC",
+    "type": "spot",
+    "internal_id": "spot-RAIN-USDC",
+    "symbol": "RAIN",
+    "denominator": "USDC"
+  },
+  {
     "id": "RAM/USDC",
     "type": "spot",
     "internal_id": "spot-RAM-USDC",

@@ -797,6 +797,21 @@
     "first_capture": "2026-06-29T00:00:00.000Z"
   },
   {
+    "id": "ADIUSDT",
+    "type": "perpetual",
+    "base_coin": "ADI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-ADI-USDT:USDT",
+    "symbol": "ADI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AEHRUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AEHR-USDT:USDT",
@@ -4355,11 +4370,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-DDOG-USDT:USDT",
     "symbol": "DDOG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "DEEPUSDT",
@@ -6447,6 +6462,21 @@
     "first_capture": "2021-10-25T00:00:00.000Z"
   },
   {
+    "id": "HDUSDT",
+    "type": "perpetual",
+    "base_coin": "HD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-HD-USDT:USDT",
+    "symbol": "HD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HEIUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-HEI-USDT:USDT",
@@ -7195,11 +7225,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-ISRG-USDT:USDT",
     "symbol": "ISRG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "IWMUSDT",
@@ -8272,6 +8302,21 @@
     "first_capture": "2025-12-26T00:00:00.000Z"
   },
   {
+    "id": "MAGSUSDT",
+    "type": "perpetual",
+    "base_coin": "MAGS",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-MAGS-USDT:USDT",
+    "symbol": "MAGS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MAJORUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-MAJOR-USDT:USDT",
@@ -8812,11 +8857,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-MNST-USDT:USDT",
     "symbol": "MNST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "MNTPERP",
