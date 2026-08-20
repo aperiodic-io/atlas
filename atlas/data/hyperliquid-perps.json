@@ -2816,6 +2816,24 @@
     "first_capture": "2025-12-15T00:00:00.000Z"
   },
   {
+    "id": "io:ANTH",
+    "type": "perpetual",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-IO:ANTH-USDC:USDC",
+    "symbol": "IO:ANTH",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "io:SNDK",
+    "type": "perpetual",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-IO:SNDK-USDC:USDC",
+    "symbol": "IO:SNDK",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "kBONK",
     "type": "perpetual",
     "internal_id": "perpetual-KBONK-USDC:USDC",
@@ -3437,11 +3455,11 @@
   {
     "id": "xyz:AAOI",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:AAOI-USDC:USDC",
     "symbol": "XYZ:AAOI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:AAPL",
@@ -3626,11 +3644,11 @@
   {
     "id": "xyz:CRWD",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CRWD-USDC:USDC",
     "symbol": "XYZ:CRWD",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:CRWV",
@@ -3833,11 +3851,11 @@
   {
     "id": "xyz:IREN",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:IREN-USDC:USDC",
     "symbol": "XYZ:IREN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:JP225",
@@ -3914,11 +3932,11 @@
   {
     "id": "xyz:MAGS",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MAGS-USDC:USDC",
     "symbol": "XYZ:MAGS",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:META",
@@ -3937,6 +3955,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-06-18T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:MRNA",
+    "type": "perpetual",
+    "first_capture": "2026-08-19T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:MRNA-USDC:USDC",
+    "symbol": "XYZ:MRNA",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:MRVL",
@@ -4004,11 +4031,11 @@
   {
     "id": "xyz:NET",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:NET-USDC:USDC",
     "symbol": "XYZ:NET",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:NFLX",
@@ -4112,11 +4139,11 @@
   {
     "id": "xyz:RDDT",
     "type": "perpetual",
-    "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:RDDT-USDC:USDC",
     "symbol": "XYZ:RDDT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": "xyz:RIVN",
