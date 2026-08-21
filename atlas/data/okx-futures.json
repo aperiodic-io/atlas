@@ -2695,6 +2695,17 @@
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
+    "id": "AXTI-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "future-AXTI-USD_UM_XPERP:AXTI-20310822",
+    "symbol": "AXTI",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AXTI",
+    "delivery_date": "2031-08-22T00:00:00"
+  },
+  {
     "id": "BABY-USDT-251003",
     "type": "future",
     "internal_id": "future-BABY-USDT:USDT-20251003",
@@ -19751,12 +19762,12 @@
     "id": "DELL-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "future-DELL-USD_UM_XPERP:DELL-20310822",
     "symbol": "DELL",
     "denominator": "USD_UM_XPERP",
     "margin": "DELL",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "DOGE-USD_UM_XPERP-310404",
@@ -45010,12 +45021,12 @@
     "id": "GALA-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "future-GALA-USD_UM_XPERP:GALA-20310822",
     "symbol": "GALA",
     "denominator": "USD_UM_XPERP",
     "margin": "GALA",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "GOOGL-USD_UM_XPERP-310613",
@@ -54093,6 +54104,17 @@
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
+    "id": "SKHY-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "future-SKHY-USD_UM_XPERP:SKHY-20310822",
+    "symbol": "SKHY",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SKHY",
+    "delivery_date": "2031-08-22T00:00:00"
+  },
+  {
     "id": "SKHYNIX-USD_UM_XPERP-310704",
     "type": "future",
     "contract_size": 1.0,
@@ -54124,6 +54146,17 @@
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-06-23T00:00:00.000Z"
+  },
+  {
+    "id": "SNXX-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "future-SNXX-USD_UM_XPERP:SNXX-20310822",
+    "symbol": "SNXX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SNXX",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "SOFTBANK-USD_UM_XPERP-310704",
@@ -54653,12 +54686,12 @@
     "id": "SOXS-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "future-SOXS-USD_UM_XPERP:SOXS-20310822",
     "symbol": "SOXS",
     "denominator": "USD_UM_XPERP",
     "margin": "SOXS",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "SPCX-USD_UM_XPERP-310613",
@@ -54703,6 +54736,16 @@
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "TEST002-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-TEST002-USD_UM_XPERP:TEST002-20310822",
+    "symbol": "TEST002",
+    "denominator": "USD_UM_XPERP",
+    "margin": "TEST002",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "TEST01-USD_UM_XPERP-310815",
@@ -65222,5 +65265,16 @@
     "margin": "ZIL",
     "delivery_date": "2031-08-01T00:00:00",
     "first_capture": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "ZRO-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "future-ZRO-USD_UM_XPERP:ZRO-20310822",
+    "symbol": "ZRO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ZRO",
+    "delivery_date": "2031-08-22T00:00:00"
   }
 ]
