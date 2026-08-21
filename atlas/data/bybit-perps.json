@@ -805,11 +805,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-ADI-USDT:USDT",
     "symbol": "ADI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "AEHRUSDT",
@@ -1355,6 +1355,21 @@
     "quantity_unit": "base",
     "first_capture": "2022-03-15T00:00:00.000Z",
     "end_date": "2022-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "ANETUSDT",
+    "type": "perpetual",
+    "base_coin": "ANET",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "perpetual-ANET-USDT:USDT",
+    "symbol": "ANET",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "ANIMEUSDT",
@@ -5805,6 +5820,21 @@
     "first_capture": "2024-12-06T00:00:00.000Z"
   },
   {
+    "id": "FUTUUSDT",
+    "type": "perpetual",
+    "base_coin": "FUTU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "perpetual-FUTU-USDT:USDT",
+    "symbol": "FUTU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FWDIUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-FWDI-USDT:USDT",
@@ -6470,11 +6500,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-HD-USDT:USDT",
     "symbol": "HD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "HEIUSDT",
@@ -8310,11 +8340,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-MAGS-USDT:USDT",
     "symbol": "MAGS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "MAJORUSDT",
@@ -9070,6 +9100,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2023-11-23T00:00:00.000Z"
+  },
+  {
+    "id": "MRNAUSDT",
+    "type": "perpetual",
+    "base_coin": "MRNA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "perpetual-MRNA-USDT:USDT",
+    "symbol": "MRNA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MRVLUSDT",
@@ -12666,6 +12711,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2026-01-23T00:00:00.000Z"
+  },
+  {
+    "id": "SPCHUSDT",
+    "type": "perpetual",
+    "base_coin": "SPCH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-20T00:00:00.000Z",
+    "internal_id": "perpetual-SPCH-USDT:USDT",
+    "symbol": "SPCH",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SPCXUSDT",

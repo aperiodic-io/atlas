@@ -2818,20 +2818,20 @@
   {
     "id": "io:ANTH",
     "type": "perpetual",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-IO:ANTH-USDC:USDC",
     "symbol": "IO:ANTH",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "io:SNDK",
     "type": "perpetual",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-IO:SNDK-USDC:USDC",
     "symbol": "IO:SNDK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "kBONK",
@@ -3959,11 +3959,11 @@
   {
     "id": "xyz:MRNA",
     "type": "perpetual",
-    "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:MRNA-USDC:USDC",
     "symbol": "XYZ:MRNA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
     "id": "xyz:MRVL",
