@@ -2698,12 +2698,12 @@
     "id": "AXTI-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-20T00:00:00.000Z",
     "internal_id": "future-AXTI-USD_UM_XPERP:AXTI-20310822",
     "symbol": "AXTI",
     "denominator": "USD_UM_XPERP",
     "margin": "AXTI",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
     "id": "BABY-USDT-251003",
@@ -6873,6 +6873,17 @@
     "margin": "BIO",
     "delivery_date": "2031-08-08T00:00:00",
     "first_capture": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "BMNR-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-BMNR-USD_UM_XPERP:BMNR-20310822",
+    "symbol": "BMNR",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BMNR",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "BNB-USD_UM_XPERP-310523",
@@ -14483,6 +14494,17 @@
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "BTC-USD-260904",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20260904",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2026-09-04T00:00:00"
+  },
+  {
     "id": "BTC-USD-260925",
     "type": "future",
     "internal_id": "future-BTC-USD:BTC-20260925",
@@ -19759,6 +19781,17 @@
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
+    "id": "CRWV-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-CRWV-USD_UM_XPERP:CRWV-20310822",
+    "symbol": "CRWV",
+    "denominator": "USD_UM_XPERP",
+    "margin": "CRWV",
+    "delivery_date": "2031-08-22T00:00:00"
+  },
+  {
     "id": "DELL-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
@@ -22694,6 +22727,17 @@
     "margin": "DYDX",
     "delivery_date": "2031-08-22T00:00:00",
     "first_capture": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "EDGE-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-EDGE-USD_UM_XPERP:EDGE-20310822",
+    "symbol": "EDGE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "EDGE",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "EIGEN-USDT-250307",
@@ -38026,6 +38070,17 @@
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "ETH-USD-260904",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20260904",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2026-09-04T00:00:00"
+  },
+  {
     "id": "ETH-USD-260925",
     "type": "future",
     "internal_id": "future-ETH-USD:ETH-20260925",
@@ -45214,6 +45269,17 @@
     "margin": "KAITO",
     "delivery_date": "2031-07-25T00:00:00",
     "first_capture": "2026-07-20T00:00:00.000Z"
+  },
+  {
+    "id": "LDO-USD_UM_XPERP-310822",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "internal_id": "future-LDO-USD_UM_XPERP:LDO-20310822",
+    "symbol": "LDO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "LDO",
+    "delivery_date": "2031-08-22T00:00:00"
   },
   {
     "id": "LINK-USD-200821",
@@ -54107,12 +54173,12 @@
     "id": "SKHY-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-20T00:00:00.000Z",
     "internal_id": "future-SKHY-USD_UM_XPERP:SKHY-20310822",
     "symbol": "SKHY",
     "denominator": "USD_UM_XPERP",
     "margin": "SKHY",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
     "id": "SKHYNIX-USD_UM_XPERP-310704",
@@ -54151,12 +54217,12 @@
     "id": "SNXX-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-20T00:00:00.000Z",
     "internal_id": "future-SNXX-USD_UM_XPERP:SNXX-20310822",
     "symbol": "SNXX",
     "denominator": "USD_UM_XPERP",
     "margin": "SNXX",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
     "id": "SOFTBANK-USD_UM_XPERP-310704",
@@ -65270,11 +65336,11 @@
     "id": "ZRO-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-20T00:00:00.000Z",
     "internal_id": "future-ZRO-USD_UM_XPERP:ZRO-20310822",
     "symbol": "ZRO",
     "denominator": "USD_UM_XPERP",
     "margin": "ZRO",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-20T00:00:00.000Z"
   }
 ]
