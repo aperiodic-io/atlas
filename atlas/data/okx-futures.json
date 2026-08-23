@@ -6878,12 +6878,12 @@
     "id": "BMNR-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-BMNR-USD_UM_XPERP:BMNR-20310822",
     "symbol": "BMNR",
     "denominator": "USD_UM_XPERP",
     "margin": "BMNR",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "BNB-USD_UM_XPERP-310523",
@@ -14480,7 +14480,8 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-08-21T00:00:00",
-    "first_capture": "2026-08-07T00:00:00.000Z"
+    "first_capture": "2026-08-07T00:00:00.000Z",
+    "end_date": "2026-08-22T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260828",
@@ -14497,12 +14498,12 @@
     "id": "BTC-USD-260904",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20260904",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "delivery_date": "2026-09-04T00:00:00"
+    "delivery_date": "2026-09-04T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260925",
@@ -19784,12 +19785,12 @@
     "id": "CRWV-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-CRWV-USD_UM_XPERP:CRWV-20310822",
     "symbol": "CRWV",
     "denominator": "USD_UM_XPERP",
     "margin": "CRWV",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "DELL-USD_UM_XPERP-310822",
@@ -22732,12 +22733,12 @@
     "id": "EDGE-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-EDGE-USD_UM_XPERP:EDGE-20310822",
     "symbol": "EDGE",
     "denominator": "USD_UM_XPERP",
     "margin": "EDGE",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "EIGEN-USDT-250307",
@@ -38056,7 +38057,8 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-08-21T00:00:00",
-    "first_capture": "2026-08-07T00:00:00.000Z"
+    "first_capture": "2026-08-07T00:00:00.000Z",
+    "end_date": "2026-08-22T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260828",
@@ -38073,12 +38075,12 @@
     "id": "ETH-USD-260904",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20260904",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "delivery_date": "2026-09-04T00:00:00"
+    "delivery_date": "2026-09-04T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260925",
@@ -45274,12 +45276,12 @@
     "id": "LDO-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "future-LDO-USD_UM_XPERP:LDO-20310822",
     "symbol": "LDO",
     "denominator": "USD_UM_XPERP",
     "margin": "LDO",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "LINK-USD-200821",

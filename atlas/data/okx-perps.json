@@ -3790,11 +3790,11 @@
     "id": "MRNA-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "perpetual-MRNA-USDT:USDT",
     "symbol": "MRNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "MRVL-USDT-SWAP",
@@ -4657,11 +4657,11 @@
     "id": "PURR-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-08-21T00:00:00.000Z",
     "internal_id": "perpetual-PURR-USDT:USDT",
     "symbol": "PURR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
     "id": "PYTH-USDT-SWAP",
