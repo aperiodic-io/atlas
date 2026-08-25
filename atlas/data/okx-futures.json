@@ -2376,6 +2376,17 @@
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
+    "id": "ASTER-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-24T00:00:00.000Z",
+    "internal_id": "future-ASTER-USD_UM_XPERP:ASTER-20310829",
+    "symbol": "ASTER",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ASTER",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "AVAX-USD-220603",
     "type": "future",
     "internal_id": "future-AVAX-USD:AVAX-20220603",
@@ -19791,6 +19802,17 @@
     "margin": "CRWV",
     "delivery_date": "2031-08-22T00:00:00",
     "first_capture": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "DASH-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 0.01,
+    "first_capture": "2026-08-24T00:00:00.000Z",
+    "internal_id": "future-DASH-USD_UM_XPERP:DASH-20310829",
+    "symbol": "DASH",
+    "denominator": "USD_UM_XPERP",
+    "margin": "DASH",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "DELL-USD_UM_XPERP-310822",
@@ -54018,6 +54040,17 @@
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
+    "id": "POL-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-24T00:00:00.000Z",
+    "internal_id": "future-POL-USD_UM_XPERP:POL-20310829",
+    "symbol": "POL",
+    "denominator": "USD_UM_XPERP",
+    "margin": "POL",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "PROS-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 1.0,
@@ -65300,6 +65333,17 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "YB-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-24T00:00:00.000Z",
+    "internal_id": "future-YB-USD_UM_XPERP:YB-20310829",
+    "symbol": "YB",
+    "denominator": "USD_UM_XPERP",
+    "margin": "YB",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "ZAMA-USD_UM_XPERP-310725",

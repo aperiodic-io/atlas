@@ -3242,6 +3242,15 @@
     "first_capture": "2026-07-20T00:00:00.000Z"
   },
   {
+    "id": "para:MELI",
+    "type": "perpetual",
+    "first_capture": "2026-08-24T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:MELI-USDC:USDC",
+    "symbol": "PARA:MELI",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:NET",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:NET-USDC:USDC",
