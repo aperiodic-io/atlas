@@ -2379,12 +2379,12 @@
     "id": "ASTER-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-24T00:00:00.000Z",
     "internal_id": "future-ASTER-USD_UM_XPERP:ASTER-20310829",
     "symbol": "ASTER",
     "denominator": "USD_UM_XPERP",
     "margin": "ASTER",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
     "id": "AVAX-USD-220603",
@@ -19807,12 +19807,12 @@
     "id": "DASH-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 0.01,
-    "first_capture": "2026-08-24T00:00:00.000Z",
     "internal_id": "future-DASH-USD_UM_XPERP:DASH-20310829",
     "symbol": "DASH",
     "denominator": "USD_UM_XPERP",
     "margin": "DASH",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
     "id": "DELL-USD_UM_XPERP-310822",
@@ -45141,6 +45141,17 @@
     "end_date": "2024-10-29T00:00:00.000Z"
   },
   {
+    "id": "GRASS-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "future-GRASS-USD_UM_XPERP:GRASS-20310829",
+    "symbol": "GRASS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "GRASS",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "GRVT-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 10.0,
@@ -54043,12 +54054,12 @@
     "id": "POL-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-24T00:00:00.000Z",
     "internal_id": "future-POL-USD_UM_XPERP:POL-20310829",
     "symbol": "POL",
     "denominator": "USD_UM_XPERP",
     "margin": "POL",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
     "id": "PROS-USD_UM_XPERP-310801",
@@ -54082,6 +54093,17 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1000.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "PYTH-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "future-PYTH-USD_UM_XPERP:PYTH-20310829",
+    "symbol": "PYTH",
+    "denominator": "USD_UM_XPERP",
+    "margin": "PYTH",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "QCOM-USD_UM_XPERP-310801",
@@ -54203,6 +54225,17 @@
     "margin": "SHIB",
     "delivery_date": "2031-08-01T00:00:00",
     "first_capture": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "SKDD-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "future-SKDD-USD_UM_XPERP:SKDD-20310829",
+    "symbol": "SKDD",
+    "denominator": "USD_UM_XPERP",
+    "margin": "SKDD",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "SKHY-USD_UM_XPERP-310822",
@@ -65338,12 +65371,12 @@
     "id": "YB-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-24T00:00:00.000Z",
     "internal_id": "future-YB-USD_UM_XPERP:YB-20310829",
     "symbol": "YB",
     "denominator": "USD_UM_XPERP",
     "margin": "YB",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
     "id": "ZAMA-USD_UM_XPERP-310725",

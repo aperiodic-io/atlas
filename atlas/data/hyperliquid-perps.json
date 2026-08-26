@@ -3161,6 +3161,15 @@
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
+    "id": "para:ANSEM",
+    "type": "perpetual",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:ANSEM-USDC:USDC",
+    "symbol": "PARA:ANSEM",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:AVGO",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:AVGO-USDC:USDC",
@@ -3244,11 +3253,11 @@
   {
     "id": "para:MELI",
     "type": "perpetual",
-    "first_capture": "2026-08-24T00:00:00.000Z",
     "internal_id": "perpetual-PARA:MELI-USDC:USDC",
     "symbol": "PARA:MELI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
     "id": "para:NET",
