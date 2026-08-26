@@ -4461,6 +4461,17 @@
     "first_capture": "2026-05-15T00:00:00.000Z"
   },
   {
+    "id": "djtusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-DJT-USDT:USDT",
+    "symbol": "DJT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "dkngusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -9036,6 +9047,17 @@
     "first_capture": "2023-12-26T00:00:00.000Z"
   },
   {
+    "id": "mrnausdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-MRNA-USDT:USDT",
+    "symbol": "MRNA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "mrvlusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10743,6 +10765,17 @@
     "end_date": "2024-05-15T00:00:00.000Z"
   },
   {
+    "id": "ramusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-RAM-USDT:USDT",
+    "symbol": "RAM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "rareusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -11495,6 +11528,17 @@
     "end_date": "2025-12-11T00:00:00.000Z"
   },
   {
+    "id": "skddusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-SKDD-USDT:USDT",
+    "symbol": "SKDD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "skhynixusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -11546,6 +11590,17 @@
     "cmc_id": 39377,
     "category": [],
     "first_capture": "2026-01-22T00:00:00.000Z"
+  },
+  {
+    "id": "skuuusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "internal_id": "perpetual-SKUU-USDT:USDT",
+    "symbol": "SKUU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "skyaiusdt",
