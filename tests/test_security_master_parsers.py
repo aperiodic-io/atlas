@@ -286,6 +286,65 @@ class TestBinanceFuturesPerp:
         assert c.margin == "ETH"
 
 
+class TestBinanceFuturesMarginAsset:
+    """Binance reports the margin asset per symbol; prefer it over the
+    denominator whitelist in ``resolve_margin``, which cannot know which
+    quote assets are stablecoins and misreads new ones as inverse."""
+
+    def test_usd1_margined_perp_is_linear(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("BTCUSD1", "perpetual", margin_asset="USD1"),
+        )
+        assert c.symbol == "BTC"
+        assert c.denominator == "USD1"
+        assert c.margin == "USD1"
+        assert c.internal_id == "perpetual-BTC-USD1:USD1"
+
+    def test_u_margined_perp_is_linear(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("BTCU", "perpetual", margin_asset="U"),
+        )
+        assert c.internal_id == "perpetual-BTC-U:U"
+
+    def test_btc_quoted_perp_is_linear_in_btc(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("ETHBTC", "perpetual", margin_asset="BTC"),
+        )
+        assert c.symbol == "ETH"
+        assert c.denominator == "BTC"
+        assert c.margin == "BTC"
+        assert c.internal_id == "perpetual-ETH-BTC:BTC"
+
+    def test_inverse_perp_keeps_base_margin(self):
+        c = parse_contract(
+            "binance-futures-cm",
+            _sd("BTCUSD_PERP", "perpetual", margin_asset="BTC"),
+        )
+        assert c.internal_id == "perpetual-BTC-USD:BTC"
+
+    def test_dated_future_uses_reported_margin(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("BTCUSDT_260327", "future", margin_asset="USDT"),
+        )
+        assert c.internal_id == "future-BTC-USDT:USDT-20260327"
+
+    def test_falls_back_to_denominator_heuristic_without_margin_asset(self):
+        c = parse_contract("binance-futures", _sd("BTCUSDT", "perpetual"))
+        assert c.internal_id == "perpetual-BTC-USDT:USDT"
+
+    def test_spot_ignores_margin_asset(self):
+        c = parse_contract(
+            "binance-spot",
+            _sd("BTCUSDT", "spot", margin_asset="USDT"),
+        )
+        assert c.margin is None
+        assert c.internal_id == "spot-BTC-USDT"
+
+
 class TestBitmexPerp:
     def test_inverse_xbtusd(self):
         c = _parse("bitmex", "XBTUSD", "perpetual")
