@@ -12,8 +12,8 @@ from .common import (
     make_contract,
     parse_concat,
     parse_yymmdd,
-    resolve_margin,
     split_concat,
+    venue_margin,
 )
 from .common import SkipSymbol
 
@@ -30,7 +30,7 @@ def parse_binance_futures(exchange: str, sd: SymbolData) -> Contract:
         base_str, suffix = sid.rsplit("_", 1)
         pair = split_concat(base_str, ["USD", "BUSD", "USDT", "USDC"])
         symbol, denominator = pair if pair else (base_str, "USD")
-        margin = resolve_margin(symbol, denominator, ctype)
+        margin = venue_margin(sd, symbol, denominator, ctype)
         delivery = None if suffix == "PERP" else parse_yymmdd(suffix)
         return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
@@ -39,7 +39,7 @@ def parse_binance_futures(exchange: str, sd: SymbolData) -> Contract:
         pair = split_concat(match.group(1))
         if pair:
             symbol, denominator = pair
-            margin = resolve_margin(symbol, denominator, ctype)
+            margin = venue_margin(sd, symbol, denominator, ctype)
             return make_contract(
                 exchange,
                 sd,
@@ -62,7 +62,7 @@ def parse_binance_delivery(exchange: str, sd: SymbolData) -> Contract:
     pair = split_concat(base_str, ["USD", "BUSD", "USDT"])
     symbol, denominator = pair if pair else (base_str, "USD")
     ctype = instrument_type(sd)
-    margin = resolve_margin(symbol, denominator, ctype)
+    margin = venue_margin(sd, symbol, denominator, ctype)
     delivery = None if suffix == "PERP" else parse_yymmdd(suffix)
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
@@ -112,6 +112,8 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
             _normalize_binance_instrument_type(item.get("contractType")),
         )
         sd["contract_size"] = 1.0
+        if margin_asset := item.get("marginAsset"):
+            sd["margin_asset"] = margin_asset
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
@@ -133,6 +135,8 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
         )
         if (cs := item.get("contractSize")) is not None:
             sd["contract_size"] = float(cs)
+        if margin_asset := item.get("marginAsset"):
+            sd["margin_asset"] = margin_asset
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
