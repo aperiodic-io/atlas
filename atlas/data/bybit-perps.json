@@ -4493,11 +4493,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-DJT-USDT:USDT",
     "symbol": "DJT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "DKNGUSDT",
@@ -7031,6 +7031,21 @@
     "first_capture": "2021-11-24T00:00:00.000Z"
   },
   {
+    "id": "INFQUSDT",
+    "type": "perpetual",
+    "base_coin": "INFQ",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-INFQ-USDT:USDT",
+    "symbol": "INFQ",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "INITUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-INIT-USDT:USDT",
@@ -7099,11 +7114,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-INTU-USDT:USDT",
     "symbol": "INTU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "INTWUSDT",
@@ -8608,6 +8623,20 @@
     "end_date": "2026-06-29T00:00:00.000Z"
   },
   {
+    "id": "MCDUSDT",
+    "type": "perpetual",
+    "base_coin": "MCD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-MCD-USDT:USDT",
+    "symbol": "MCD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MCUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-MC-USDT:USDT",
@@ -9221,6 +9250,21 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-04-29T00:00:00.000Z"
+  },
+  {
+    "id": "MSTUUSDT",
+    "type": "perpetual",
+    "base_coin": "MSTU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-MSTU-USDT:USDT",
+    "symbol": "MSTU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MTLUSDT",
@@ -11281,11 +11325,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-RAM-USDT:USDT",
     "symbol": "RAM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "RAREUSDT",
@@ -12901,6 +12945,21 @@
     "first_capture": "2026-08-03T00:00:00.000Z"
   },
   {
+    "id": "SPXLUSDT",
+    "type": "perpetual",
+    "base_coin": "SPXL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-SPXL-USDT:USDT",
+    "symbol": "SPXL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SPXPERP",
     "type": "perpetual",
     "internal_id": "perpetual-SPX-USDC:USDC",
@@ -13653,6 +13712,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "TMXUSDT",
+    "type": "perpetual",
+    "base_coin": "TMX",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-TMX-USDT:USDT",
+    "symbol": "TMX",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "TNSRUSDT",
@@ -15277,6 +15351,34 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-08-31T00:00:00.000Z"
+  },
+  {
+    "id": "XLPUSDT",
+    "type": "perpetual",
+    "base_coin": "XLP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "internal_id": "perpetual-XLP-USDT:USDT",
+    "symbol": "XLP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XLUUSDT",
+    "type": "perpetual",
+    "base_coin": "XLU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "internal_id": "perpetual-XLU-USDT:USDT",
+    "symbol": "XLU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "XLVUSDT",

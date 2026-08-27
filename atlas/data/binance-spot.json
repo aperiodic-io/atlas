@@ -643,6 +643,14 @@
     "first_capture": "2023-12-18T00:00:00.000Z"
   },
   {
+    "id": "aceusdc",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-ACE-USDC",
+    "symbol": "ACE",
+    "denominator": "USDC"
+  },
+  {
     "id": "aceusdt",
     "type": "spot",
     "internal_id": "spot-ACE-USDT",
@@ -10342,6 +10350,14 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-09-04T00:00:00.000Z"
+  },
+  {
+    "id": "djtbusdt",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-DJTB-USDT",
+    "symbol": "DJTB",
+    "denominator": "USDT"
   },
   {
     "id": "dltbtc",
@@ -26574,6 +26590,14 @@
     "first_capture": "2025-09-11T00:00:00.000Z"
   },
   {
+    "id": "pumpu",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-PUMP-U",
+    "symbol": "PUMP",
+    "denominator": "U"
+  },
+  {
     "id": "pumpusdc",
     "type": "spot",
     "internal_id": "spot-PUMP-USDC",
@@ -34462,6 +34486,14 @@
     "symbol": "USD1",
     "denominator": "USDT",
     "first_capture": "2025-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "usdcars",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-USDC-ARS",
+    "symbol": "USDC",
+    "denominator": "ARS"
   },
   {
     "id": "usdcbrl",

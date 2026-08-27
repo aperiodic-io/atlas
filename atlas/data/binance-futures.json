@@ -4465,11 +4465,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-DJT-USDT:USDT",
     "symbol": "DJT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "dkngusdt",
@@ -9051,11 +9051,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-MRNA-USDT:USDT",
     "symbol": "MRNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "mrvlusdt",
@@ -10769,11 +10769,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-RAM-USDT:USDT",
     "symbol": "RAM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "rareusdt",
@@ -11532,11 +11532,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-SKDD-USDT:USDT",
     "symbol": "SKDD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "skhynixusdt",
@@ -11596,11 +11596,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-SKUU-USDT:USDT",
     "symbol": "SKUU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "skyaiusdt",
