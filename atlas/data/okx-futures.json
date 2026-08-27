@@ -2695,6 +2695,16 @@
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
+    "id": "AVGO-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-AVGO-USD_UM_XPERP:AVGO-20310829",
+    "symbol": "AVGO",
+    "denominator": "USD_UM_XPERP",
+    "margin": "AVGO",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "AVNT-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 1.0,
@@ -6840,6 +6850,16 @@
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "BE-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-BE-USD_UM_XPERP:BE-20310829",
+    "symbol": "BE",
+    "denominator": "USD_UM_XPERP",
+    "margin": "BE",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "BEAT-USD_UM_XPERP-310620",
@@ -45144,12 +45164,12 @@
     "id": "GRASS-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "future-GRASS-USD_UM_XPERP:GRASS-20310829",
     "symbol": "GRASS",
     "denominator": "USD_UM_XPERP",
     "margin": "GRASS",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "GRVT-USD_UM_XPERP-310801",
@@ -45293,6 +45313,17 @@
     "margin": "JTO",
     "delivery_date": "2031-07-25T00:00:00",
     "first_capture": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "JUP-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "future-JUP-USD_UM_XPERP:JUP-20310829",
+    "symbol": "JUP",
+    "denominator": "USD_UM_XPERP",
+    "margin": "JUP",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "KAITO-USD_UM_XPERP-310725",
@@ -53974,6 +54005,17 @@
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
+    "id": "ONT-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "future-ONT-USD_UM_XPERP:ONT-20310829",
+    "symbol": "ONT",
+    "denominator": "USD_UM_XPERP",
+    "margin": "ONT",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "OP-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 1.0,
@@ -54098,12 +54140,12 @@
     "id": "PYTH-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "future-PYTH-USD_UM_XPERP:PYTH-20310829",
     "symbol": "PYTH",
     "denominator": "USD_UM_XPERP",
     "margin": "PYTH",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "QCOM-USD_UM_XPERP-310801",
@@ -54183,6 +54225,16 @@
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
+    "id": "RLS-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 100.0,
+    "internal_id": "future-RLS-USD_UM_XPERP:RLS-20310829",
+    "symbol": "RLS",
+    "denominator": "USD_UM_XPERP",
+    "margin": "RLS",
+    "delivery_date": "2031-08-29T00:00:00"
+  },
+  {
     "id": "ROBO-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 100.0,
@@ -54230,12 +54282,12 @@
     "id": "SKDD-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "future-SKDD-USD_UM_XPERP:SKDD-20310829",
     "symbol": "SKDD",
     "denominator": "USD_UM_XPERP",
     "margin": "SKDD",
-    "delivery_date": "2031-08-29T00:00:00"
+    "delivery_date": "2031-08-29T00:00:00",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "SKHY-USD_UM_XPERP-310822",
@@ -54848,6 +54900,16 @@
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "STX-USD_UM_XPERP-310829",
+    "type": "future",
+    "contract_size": 10.0,
+    "internal_id": "future-STX-USD_UM_XPERP:STX-20310829",
+    "symbol": "STX",
+    "denominator": "USD_UM_XPERP",
+    "margin": "STX",
+    "delivery_date": "2031-08-29T00:00:00"
   },
   {
     "id": "SUI-USD_UM_XPERP-310404",

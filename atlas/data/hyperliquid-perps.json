@@ -3125,6 +3125,15 @@
     "end_date": "2026-06-11T00:00:00.000Z"
   },
   {
+    "id": "mkts:SMALL2000",
+    "type": "perpetual",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-MKTS:SMALL2000-USDC:USDC",
+    "symbol": "MKTS:SMALL2000",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "mkts:US500",
     "type": "perpetual",
     "internal_id": "perpetual-MKTS:US500-USDC:USDC",
@@ -3132,6 +3141,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "mkts:USBOND",
+    "type": "perpetual",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "perpetual-MKTS:USBOND-USDC:USDC",
+    "symbol": "MKTS:USBOND",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "mkts:USTECH",
@@ -3163,11 +3181,11 @@
   {
     "id": "para:ANSEM",
     "type": "perpetual",
-    "first_capture": "2026-08-25T00:00:00.000Z",
     "internal_id": "perpetual-PARA:ANSEM-USDC:USDC",
     "symbol": "PARA:ANSEM",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
     "id": "para:AVGO",

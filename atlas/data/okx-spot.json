@@ -2055,6 +2055,14 @@
     "first_capture": "2025-09-18T00:00:00.000Z"
   },
   {
+    "id": "BASED-EUR",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-BASED-EUR",
+    "symbol": "BASED",
+    "denominator": "EUR"
+  },
+  {
     "id": "BASED-TRY",
     "type": "spot",
     "internal_id": "spot-BASED-TRY",
@@ -2069,6 +2077,14 @@
     "symbol": "BASED",
     "denominator": "USD",
     "first_capture": "2026-03-30T00:00:00.000Z"
+  },
+  {
+    "id": "BASED-USDC",
+    "type": "spot",
+    "first_capture": "2026-08-26T00:00:00.000Z",
+    "internal_id": "spot-BASED-USDC",
+    "symbol": "BASED",
+    "denominator": "USDC"
   },
   {
     "id": "BASED-USDT",
@@ -14003,12 +14019,26 @@
     "first_capture": "2025-01-07T00:00:00.000Z"
   },
   {
+    "id": "SOPH-EUR",
+    "type": "spot",
+    "internal_id": "spot-SOPH-EUR",
+    "symbol": "SOPH",
+    "denominator": "EUR"
+  },
+  {
     "id": "SOPH-USD",
     "type": "spot",
     "internal_id": "spot-SOPH-USD",
     "symbol": "SOPH",
     "denominator": "USD",
     "first_capture": "2025-06-18T00:00:00.000Z"
+  },
+  {
+    "id": "SOPH-USDC",
+    "type": "spot",
+    "internal_id": "spot-SOPH-USDC",
+    "symbol": "SOPH",
+    "denominator": "USDC"
   },
   {
     "id": "SOPH-USDT",
