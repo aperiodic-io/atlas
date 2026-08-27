@@ -157,6 +157,25 @@ def resolve_margin(symbol: str, denominator: str, ctype: ContractType) -> str | 
     return denominator if denominator in linear_denoms else symbol
 
 
+def venue_margin(
+    sd: SymbolData, symbol: str, denominator: str, ctype: ContractType
+) -> str | None:
+    """Margin asset for a contract, preferring what the venue itself reports.
+
+    ``resolve_margin`` can only guess from a whitelist of known linear quote
+    assets, so every stablecoin the whitelist has not caught up with is read as
+    an inverse contract. A venue that names the margin asset per symbol is
+    authoritative; fall back to the heuristic when it does not (Tardis-sourced
+    rows carry no such field).
+    """
+    if ctype == ContractType.spot:
+        return None
+    reported = sd.get("margin_asset")
+    if reported:
+        return str(reported)
+    return resolve_margin(symbol, denominator, ctype)
+
+
 def make_contract(
     exchange: str,
     sd: SymbolData,
@@ -194,7 +213,7 @@ def parse_concat(
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
     symbol, denominator = pair
-    margin = resolve_margin(symbol, denominator, instrument_type(sd))
+    margin = venue_margin(sd, symbol, denominator, instrument_type(sd))
     return make_contract(exchange, sd, symbol, denominator, margin, instrument_type(sd))
 
 
