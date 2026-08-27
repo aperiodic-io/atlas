@@ -591,6 +591,44 @@ class TestOkexFutures:
             _parse("okx-futures", "BTC-USD", "future")
 
 
+class TestOkxUnifiedMargin:
+    """OKX decorates the quote leg of its unified-margin families — `BTC-USD_UM-260828`,
+    `BTC-USD_UM_XPERP-310404` — while `uly` stays `BTC-USD`. The decoration must not
+    leak into the denominator, and these contracts are linear (`ctType: linear`,
+    `settleCcy: USD`), not inverse."""
+
+    def test_unified_margin_future(self):
+        c = _parse("okx-futures", "BTC-USD_UM-260828", "future")
+        assert c.symbol == "BTC"
+        assert c.denominator == "USD"
+        assert c.margin == "USD"
+        assert c.internal_id == "future-BTC-USD:USD-20260828"
+
+    def test_xperp_future(self):
+        c = _parse("okx-futures", "AAPL-USD_UM_XPERP-310613", "future")
+        assert c.symbol == "AAPL"
+        assert c.denominator == "USD"
+        assert c.margin == "USD"
+        assert c.internal_id == "future-AAPL-USD:USD-20310613"
+
+    def test_unified_margin_swap(self):
+        c = _parse("okx-perps", "ADA-USD_UM-SWAP", "perpetual")
+        assert c.symbol == "ADA"
+        assert c.denominator == "USD"
+        assert c.margin == "USD"
+        assert c.internal_id == "perpetual-ADA-USD:USD"
+
+    def test_does_not_collide_with_the_inverse_contract(self):
+        linear = _parse("okx-futures", "BTC-USD_UM-260828", "future")
+        inverse = _parse("okx-futures", "BTC-USD-260828", "future")
+        assert linear.internal_id != inverse.internal_id
+        assert inverse.internal_id == "future-BTC-USD:BTC-20260828"
+
+    def test_unknown_suffix_is_left_alone(self):
+        c = _parse("okx-futures", "BTC-USD_MYSTERY-260828", "future")
+        assert c.denominator == "USD_MYSTERY"
+
+
 class TestBybitFutures:
     def test_inverse(self):
         c = _parse("bybit-futures", "BTCUSD-28MAR25", "future")
