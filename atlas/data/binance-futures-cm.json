@@ -14,6 +14,7 @@
       "Lending & Borrowing",
       "DAO"
     ],
+    "margin_asset": "AAVE",
     "first_capture": "2021-12-29T00:00:00.000Z"
   },
   {
@@ -388,6 +389,7 @@
       "Staking",
       "Smart Contracts"
     ],
+    "margin_asset": "ADA",
     "first_capture": "2020-08-26T00:00:00.000Z"
   },
   {
@@ -460,6 +462,7 @@
       "Real World Assets Protocols",
       "Smart Contracts"
     ],
+    "margin_asset": "AVAX",
     "first_capture": "2021-11-24T00:00:00.000Z"
   },
   {
@@ -791,6 +794,7 @@
     "category": [
       "Layer 1"
     ],
+    "margin_asset": "BCH",
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -1176,6 +1180,7 @@
       "Layer 1",
       "Smart Contracts"
     ],
+    "margin_asset": "BNB",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -1193,6 +1198,7 @@
       "Layer 1",
       "Smart Contracts"
     ],
+    "margin_asset": "BNB",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -1209,6 +1215,7 @@
       "Layer 1",
       "Smart Contracts"
     ],
+    "margin_asset": "BNB",
     "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
@@ -1485,6 +1492,7 @@
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 100.0,
     "underlying": "crypto",
+    "margin_asset": "BTC",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -1497,6 +1505,7 @@
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 100.0,
     "underlying": "crypto",
+    "margin_asset": "BTC",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -1508,6 +1517,7 @@
     "margin": "BTC",
     "contract_size": 100.0,
     "underlying": "crypto",
+    "margin_asset": "BTC",
     "first_capture": "2020-08-11T00:00:00.000Z"
   },
   {
@@ -1551,6 +1561,7 @@
     "cmc_id": 74,
     "underlying": "crypto",
     "category": [],
+    "margin_asset": "DOGE",
     "first_capture": "2021-02-02T00:00:00.000Z"
   },
   {
@@ -1878,6 +1889,7 @@
     "category": [
       "DeFi"
     ],
+    "margin_asset": "DOT",
     "first_capture": "2020-08-25T00:00:00.000Z"
   },
   {
@@ -1988,6 +2000,7 @@
       "Layer 1",
       "Smart Contracts"
     ],
+    "margin_asset": "ETC",
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
@@ -2264,6 +2277,7 @@
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "ETH",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -2276,6 +2290,7 @@
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "ETH",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -2287,6 +2302,7 @@
     "margin": "ETH",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "ETH",
     "first_capture": "2020-08-18T00:00:00.000Z"
   },
   {
@@ -2332,6 +2348,7 @@
     "category": [
       "Layer 1"
     ],
+    "margin_asset": "FIL",
     "first_capture": "2020-10-23T00:00:00.000Z"
   },
   {
@@ -2821,6 +2838,7 @@
       "Privacy",
       "Interoperability"
     ],
+    "margin_asset": "LINK",
     "first_capture": "2020-08-19T00:00:00.000Z"
   },
   {
@@ -3157,6 +3175,7 @@
       "Layer 1",
       "Privacy"
     ],
+    "margin_asset": "LTC",
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -3209,6 +3228,7 @@
       "Layer 1",
       "Staking"
     ],
+    "margin_asset": "NEAR",
     "first_capture": "2021-12-15T00:00:00.000Z"
   },
   {
@@ -3369,6 +3389,7 @@
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "SOL",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -3381,6 +3402,7 @@
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "SOL",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -3392,6 +3414,7 @@
     "margin": "SOL",
     "contract_size": 10.0,
     "underlying": "crypto",
+    "margin_asset": "SOL",
     "first_capture": "2021-09-02T00:00:00.000Z"
   },
   {
@@ -3407,6 +3430,7 @@
     "category": [
       "Layer 1"
     ],
+    "margin_asset": "SUI",
     "first_capture": "2024-09-18T00:00:00.000Z"
   },
   {
@@ -3467,6 +3491,7 @@
     "category": [
       "Layer 1"
     ],
+    "margin_asset": "TRX",
     "first_capture": "2020-09-07T00:00:00.000Z"
   },
   {
@@ -3483,6 +3508,7 @@
       "DeFi",
       "DAO"
     ],
+    "margin_asset": "UNI",
     "first_capture": "2021-04-13T00:00:00.000Z"
   },
   {
@@ -3542,6 +3568,7 @@
       "Real World Assets Protocols",
       "Smart Contracts"
     ],
+    "margin_asset": "XLM",
     "first_capture": "2021-04-16T00:00:00.000Z"
   },
   {
@@ -3870,6 +3897,7 @@
     "cmc_id": 52,
     "underlying": "crypto",
     "category": [],
+    "margin_asset": "XRP",
     "first_capture": "2026-03-27T00:00:00.000Z"
   },
   {
@@ -3884,6 +3912,7 @@
     "cmc_id": 52,
     "underlying": "crypto",
     "category": [],
+    "margin_asset": "XRP",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -3897,6 +3926,7 @@
     "cmc_id": 52,
     "underlying": "crypto",
     "category": [],
+    "margin_asset": "XRP",
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {

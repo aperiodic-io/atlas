@@ -2089,7 +2089,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "contract_size": 1.0,
-    "first_capture": "2025-01-23T00:00:00.000Z"
+    "first_capture": "2025-01-23T00:00:00.000Z",
+    "end_date": "2026-08-27T00:00:00.000Z"
   },
   {
     "id": "VIRTUAL",
@@ -3127,11 +3128,11 @@
   {
     "id": "mkts:SMALL2000",
     "type": "perpetual",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "perpetual-MKTS:SMALL2000-USDC:USDC",
     "symbol": "MKTS:SMALL2000",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "mkts:US500",
@@ -3145,11 +3146,11 @@
   {
     "id": "mkts:USBOND",
     "type": "perpetual",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "perpetual-MKTS:USBOND-USDC:USDC",
     "symbol": "MKTS:USBOND",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "mkts:USTECH",
@@ -4209,6 +4210,15 @@
     "first_capture": "2026-07-06T00:00:00.000Z"
   },
   {
+    "id": "xyz:SHEIN",
+    "type": "perpetual",
+    "first_capture": "2026-08-27T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:SHEIN-USDC:USDC",
+    "symbol": "XYZ:SHEIN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:SILVER",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SILVER-USDC:USDC",
@@ -4360,6 +4370,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:XBI",
+    "type": "perpetual",
+    "first_capture": "2026-08-27T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:XBI-USDC:USDC",
+    "symbol": "XYZ:XBI",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:XLE",
