@@ -645,10 +645,10 @@
   {
     "id": "aceusdc",
     "type": "spot",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "spot-ACE-USDC",
     "symbol": "ACE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "aceusdt",
@@ -10354,10 +10354,10 @@
   {
     "id": "djtbusdt",
     "type": "spot",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "spot-DJTB-USDT",
     "symbol": "DJTB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "dltbtc",
@@ -26592,10 +26592,10 @@
   {
     "id": "pumpu",
     "type": "spot",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "spot-PUMP-U",
     "symbol": "PUMP",
-    "denominator": "U"
+    "denominator": "U",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "pumpusdc",
@@ -34490,10 +34490,10 @@
   {
     "id": "usdcars",
     "type": "spot",
-    "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "spot-USDC-ARS",
     "symbol": "USDC",
-    "denominator": "ARS"
+    "denominator": "ARS",
+    "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
     "id": "usdcbrl",
