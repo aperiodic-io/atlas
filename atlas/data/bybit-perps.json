@@ -9682,7 +9682,8 @@
     "internal_id": "perpetual-NIULAI-USDT:USDT",
     "symbol": "NIULAI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
     "id": "NKNUSDT",
@@ -12203,12 +12204,12 @@
   {
     "id": "SHEINUSDT",
     "type": "perpetual",
-    "first_capture": "2026-08-27T00:00:00.000Z",
     "internal_id": "perpetual-SHEIN-USDT:USDT",
     "symbol": "SHEIN",
     "denominator": "USDT",
     "margin": "USDT",
-    "quantity_unit": "base"
+    "quantity_unit": "base",
+    "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
     "id": "SHELLUSDT",
