@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import requests
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
@@ -32,10 +33,25 @@ def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
     return {"id": id_value, "type": type_value}
 
 
+@retry(
+    retry=retry_if_exception_type((requests.RequestException, ValueError)),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=1, max=4),
+    reraise=True,
+)
+def _fetch_hyperliquid_payload(type_value: str, timeout_seconds: int) -> dict:
+    """Fetch Hyperliquid metadata, retrying transient invalid responses."""
+    response = requests.post(
+        "https://api.hyperliquid.xyz/info",
+        json={"type": type_value},
+        timeout=timeout_seconds,
+    )
+    response.raise_for_status()
+    return response.json()
+
+
 def fetch_hyperliquid_spot(timeout_seconds: int) -> list[dict[str, str]]:
-    url = "https://api.hyperliquid.xyz/info"
-    payload = {"type": "spotMeta"}
-    response = requests.post(url, json=payload, timeout=timeout_seconds).json()
+    response = _fetch_hyperliquid_payload("spotMeta", timeout_seconds)
 
     tokens = {token["index"]: token["name"] for token in response.get("tokens", [])}
     universe = response.get("universe", [])
@@ -53,9 +69,7 @@ def fetch_hyperliquid_spot(timeout_seconds: int) -> list[dict[str, str]]:
 
 
 def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
-    url = "https://api.hyperliquid.xyz/info"
-    payload = {"type": "meta"}
-    response = requests.post(url, json=payload, timeout=timeout_seconds).json()
+    response = _fetch_hyperliquid_payload("meta", timeout_seconds)
 
     return [
         {**_to_symbol(item["name"], "perpetual"), "contract_size": 1.0}

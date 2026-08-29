@@ -2826,6 +2826,15 @@
     "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
+    "id": "io:NBIS",
+    "type": "perpetual",
+    "first_capture": "2026-08-28T00:00:00.000Z",
+    "internal_id": "perpetual-IO:NBIS-USDC:USDC",
+    "symbol": "IO:NBIS",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "io:SNDK",
     "type": "perpetual",
     "internal_id": "perpetual-IO:SNDK-USDC:USDC",
@@ -4212,11 +4221,11 @@
   {
     "id": "xyz:SHEIN",
     "type": "perpetual",
-    "first_capture": "2026-08-27T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SHEIN-USDC:USDC",
     "symbol": "XYZ:SHEIN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
     "id": "xyz:SILVER",
@@ -4374,11 +4383,11 @@
   {
     "id": "xyz:XBI",
     "type": "perpetual",
-    "first_capture": "2026-08-27T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:XBI-USDC:USDC",
     "symbol": "XYZ:XBI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
     "id": "xyz:XLE",

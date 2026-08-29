@@ -1083,3 +1083,23 @@ class TestFetchHyperliquidPerps:
         with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
             symbols = fetch_hyperliquid_perps(timeout_seconds=5)
         assert symbols[0]["contract_size"] == 1.0
+
+    def test_retries_malformed_response(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        malformed = MagicMock()
+        malformed.raise_for_status.return_value = None
+        malformed.json.side_effect = ValueError("invalid JSON")
+        valid = MagicMock()
+        valid.raise_for_status.return_value = None
+        valid.json.return_value = {"universe": [{"name": "BTC"}]}
+
+        with patch(
+            "atlas.exchange_definitions.hyperliquid.requests.post",
+            side_effect=[malformed, valid],
+        ) as post:
+            assert fetch_hyperliquid_perps(timeout_seconds=5) == [
+                {"id": "BTC", "type": "perpetual", "contract_size": 1.0}
+            ]
+
+        assert post.call_count == 2
