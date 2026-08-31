@@ -1559,6 +1559,15 @@
     "first_capture": "2024-10-29T00:00:00.000Z"
   },
   {
+    "id": "PONS",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-PONS-USDC:USDC",
+    "symbol": "PONS",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "POPCAT",
     "type": "perpetual",
     "internal_id": "perpetual-POPCAT-USDC:USDC",

@@ -15642,6 +15642,18 @@
     "first_capture": "2026-01-21T00:00:00.000Z"
   },
   {
+    "id": "\u725b\u6765usdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-08-30T00:00:00.000Z",
+    "internal_id": "perpetual-\u725b\u6765-USDT:USDT",
+    "symbol": "\u725b\u6765",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "\u9f99\u867eusdt",
     "type": "perpetual",
     "contract_size": 1.0,
