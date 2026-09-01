@@ -7231,6 +7231,17 @@
     "first_capture": "2024-12-23T00:00:00.000Z"
   },
   {
+    "id": "hk0625usdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-HK0625-USDT:USDT",
+    "symbol": "HK0625",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "hk0700usdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -15647,11 +15658,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "crypto",
-    "first_capture": "2026-08-30T00:00:00.000Z",
     "internal_id": "perpetual-\u725b\u6765-USDT:USDT",
     "symbol": "\u725b\u6765",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-30T00:00:00.000Z"
   },
   {
     "id": "\u9f99\u867eusdt",

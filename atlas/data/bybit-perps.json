@@ -738,7 +738,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2024-12-06T00:00:00.000Z"
+    "first_capture": "2024-12-06T00:00:00.000Z",
+    "end_date": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "ADAPERP",
@@ -5331,6 +5332,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "EWZUSDT",
+    "type": "perpetual",
+    "base_coin": "EWZ",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-31T00:00:00.000Z",
+    "internal_id": "perpetual-EWZ-USDT:USDT",
+    "symbol": "EWZ",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FARTCOINPERP",
@@ -9980,6 +9996,21 @@
     "first_capture": "2025-09-11T00:00:00.000Z"
   },
   {
+    "id": "OKTAUSDT",
+    "type": "perpetual",
+    "base_coin": "OKTA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-31T00:00:00.000Z",
+    "internal_id": "perpetual-OKTA-USDT:USDT",
+    "symbol": "OKTA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "OLUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-OL-USDT:USDT",
@@ -10854,6 +10885,21 @@
     "quantity_unit": "base",
     "first_capture": "2024-06-07T00:00:00.000Z",
     "end_date": "2026-04-10T00:00:00.000Z"
+  },
+  {
+    "id": "PONSUSDT",
+    "type": "perpetual",
+    "base_coin": "PONS",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-08-31T00:00:00.000Z",
+    "internal_id": "perpetual-PONS-USDT:USDT",
+    "symbol": "PONS",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "POPCATPERP",
@@ -12209,6 +12255,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
+    "base_coin": "SHEIN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
@@ -13618,6 +13669,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "TEMUSDT",
+    "type": "perpetual",
+    "base_coin": "TEM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-08-31T00:00:00.000Z",
+    "internal_id": "perpetual-TEM-USDT:USDT",
+    "symbol": "TEM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "TENCENTUSDT",

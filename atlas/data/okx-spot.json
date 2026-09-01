@@ -18279,6 +18279,14 @@
     "first_capture": "2019-12-13T00:00:00.000Z"
   },
   {
+    "id": "ZENT-EUR",
+    "type": "spot",
+    "first_capture": "2026-08-31T00:00:00.000Z",
+    "internal_id": "spot-ZENT-EUR",
+    "symbol": "ZENT",
+    "denominator": "EUR"
+  },
+  {
     "id": "ZENT-USD",
     "type": "spot",
     "internal_id": "spot-ZENT-USD",
@@ -18292,8 +18300,7 @@
     "internal_id": "spot-ZENT-USDC",
     "symbol": "ZENT",
     "denominator": "USDC",
-    "first_capture": "2024-07-02T00:00:00.000Z",
-    "end_date": "2025-08-21T00:00:00.000Z"
+    "first_capture": "2024-07-02T00:00:00.000Z"
   },
   {
     "id": "ZENT-USDT",
