@@ -2630,7 +2630,8 @@
     "symbol": "HYNA:ADA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-20T00:00:00.000Z"
+    "first_capture": "2026-01-20T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:BASED",
@@ -2658,7 +2659,8 @@
     "symbol": "HYNA:BNB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-07T00:00:00.000Z"
+    "first_capture": "2026-01-07T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:BTC",
@@ -2703,7 +2705,8 @@
     "symbol": "HYNA:FARTCOIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-14T00:00:00.000Z"
+    "first_capture": "2026-01-14T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:HYPE",
@@ -2741,7 +2744,8 @@
     "symbol": "HYNA:LINK",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-20T00:00:00.000Z"
+    "first_capture": "2026-01-20T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:LIT",
@@ -2787,7 +2791,8 @@
     "symbol": "HYNA:SUI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-12T00:00:00.000Z"
+    "first_capture": "2026-01-12T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:XMR",
@@ -2806,7 +2811,8 @@
     "symbol": "HYNA:XPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-20T00:00:00.000Z"
+    "first_capture": "2026-01-20T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hyna:XRP",
@@ -2834,6 +2840,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-19T00:00:00.000Z"
+  },
+  {
+    "id": "io:GPRO",
+    "type": "perpetual",
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "perpetual-IO:GPRO-USDC:USDC",
+    "symbol": "IO:GPRO",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "io:NBIS",
@@ -3332,6 +3347,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "para:SOFI",
+    "type": "perpetual",
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:SOFI-USDC:USDC",
+    "symbol": "PARA:SOFI",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "para:STX",

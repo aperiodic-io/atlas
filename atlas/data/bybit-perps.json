@@ -5342,11 +5342,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-31T00:00:00.000Z",
     "internal_id": "perpetual-EWZ-USDT:USDT",
     "symbol": "EWZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "FARTCOINPERP",
@@ -8513,6 +8513,21 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "MARSCOINUSDT",
+    "type": "perpetual",
+    "base_coin": "MARSCOIN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "perpetual-MARSCOIN-USDT:USDT",
+    "symbol": "MARSCOIN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MASAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-MASA-USDT:USDT",
@@ -10004,11 +10019,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-31T00:00:00.000Z",
     "internal_id": "perpetual-OKTA-USDT:USDT",
     "symbol": "OKTA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "OLUSDT",
@@ -10895,11 +10910,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-08-31T00:00:00.000Z",
     "internal_id": "perpetual-PONS-USDT:USDT",
     "symbol": "PONS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "POPCATPERP",
@@ -13679,11 +13694,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-08-31T00:00:00.000Z",
     "internal_id": "perpetual-TEM-USDT:USDT",
     "symbol": "TEM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "TENCENTUSDT",

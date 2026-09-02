@@ -53912,6 +53912,28 @@
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
+    "id": "MORPHO-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "future-MORPHO-USD:USD-20310905",
+    "symbol": "MORPHO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
+    "id": "MRNA-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "future-MRNA-USD:USD-20310905",
+    "symbol": "MRNA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
     "id": "MRVL-USD_UM_XPERP-310627",
     "type": "future",
     "internal_id": "future-MRVL-USD:USD-20310627",
@@ -53998,6 +54020,17 @@
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
     "first_capture": "2026-07-17T00:00:00.000Z"
+  },
+  {
+    "id": "NOT-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "future-NOT-USD:USD-20310905",
+    "symbol": "NOT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
   },
   {
     "id": "NVDA-USD_UM_XPERP-310613",
@@ -65560,6 +65593,17 @@
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
     "first_capture": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "ZKP-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "future-ZKP-USD:USD-20310905",
+    "symbol": "ZKP",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
   },
   {
     "id": "ZRO-USD_UM_XPERP-310822",
