@@ -18281,10 +18281,10 @@
   {
     "id": "ZENT-EUR",
     "type": "spot",
-    "first_capture": "2026-08-31T00:00:00.000Z",
     "internal_id": "spot-ZENT-EUR",
     "symbol": "ZENT",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2026-08-31T00:00:00.000Z"
   },
   {
     "id": "ZENT-USD",

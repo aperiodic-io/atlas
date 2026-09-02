@@ -1283,7 +1283,8 @@
     "internal_id": "spot-BTC-GBP",
     "symbol": "BTC",
     "denominator": "GBP",
-    "first_capture": "2026-05-07T00:00:00.000Z"
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "BTCPLN",
@@ -2696,7 +2697,8 @@
     "internal_id": "spot-ETH-GBP",
     "symbol": "ETH",
     "denominator": "GBP",
-    "first_capture": "2026-05-07T00:00:00.000Z"
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "ETHMNT",
@@ -6990,7 +6992,8 @@
     "internal_id": "spot-SOL-GBP",
     "symbol": "SOL",
     "denominator": "GBP",
-    "first_capture": "2026-04-02T00:00:00.000Z"
+    "first_capture": "2026-04-02T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "SOLMNT",
@@ -7886,7 +7889,8 @@
     "internal_id": "spot-USDC-GBP",
     "symbol": "USDC",
     "denominator": "GBP",
-    "first_capture": "2026-05-07T00:00:00.000Z"
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "USDCUSD1",
@@ -7996,7 +8000,8 @@
     "internal_id": "spot-USDT-GBP",
     "symbol": "USDT",
     "denominator": "GBP",
-    "first_capture": "2026-05-07T00:00:00.000Z"
+    "first_capture": "2026-05-07T00:00:00.000Z",
+    "end_date": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "USDTPLN",

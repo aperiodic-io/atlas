@@ -7239,7 +7239,8 @@
     "internal_id": "perpetual-HK0625-USDT:USDT",
     "symbol": "HK0625",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "hk0700usdt",
@@ -9055,6 +9056,18 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "marscoinusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-09-01T00:00:00.000Z",
+    "internal_id": "perpetual-MARSCOIN-USDT:USDT",
+    "symbol": "MARSCOIN",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "maskusdt",
