@@ -2621,7 +2621,8 @@
     "symbol": "HYNA:1000PEPE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-02-11T00:00:00.000Z"
+    "first_capture": "2026-02-11T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "hyna:ADA",
@@ -2640,7 +2641,8 @@
     "symbol": "HYNA:BASED",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-04-02T00:00:00.000Z"
+    "first_capture": "2026-04-02T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "hyna:BCH",
@@ -2678,7 +2680,8 @@
     "symbol": "HYNA:DOGE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-09T00:00:00.000Z"
+    "first_capture": "2026-01-09T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "hyna:ENA",
@@ -2764,7 +2767,8 @@
     "symbol": "HYNA:LTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-20T00:00:00.000Z"
+    "first_capture": "2026-01-20T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "hyna:PUMP",
@@ -2821,7 +2825,8 @@
     "symbol": "HYNA:XRP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-01-05T00:00:00.000Z"
+    "first_capture": "2026-01-05T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "hyna:ZEC",
@@ -2830,7 +2835,8 @@
     "symbol": "HYNA:ZEC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2025-12-15T00:00:00.000Z"
+    "first_capture": "2025-12-15T00:00:00.000Z",
+    "end_date": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "io:ANTH",
@@ -2844,11 +2850,11 @@
   {
     "id": "io:GPRO",
     "type": "perpetual",
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "perpetual-IO:GPRO-USDC:USDC",
     "symbol": "IO:GPRO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "io:NBIS",
@@ -2858,6 +2864,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "io:OAI",
+    "type": "perpetual",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-IO:OAI-USDC:USDC",
+    "symbol": "IO:OAI",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "io:SNDK",
@@ -3286,6 +3301,15 @@
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
+    "id": "para:IGV",
+    "type": "perpetual",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:IGV-USDC:USDC",
+    "symbol": "PARA:IGV",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:IREN",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:IREN-USDC:USDC",
@@ -3351,11 +3375,11 @@
   {
     "id": "para:SOFI",
     "type": "perpetual",
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "perpetual-PARA:SOFI-USDC:USDC",
     "symbol": "PARA:SOFI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "para:STX",

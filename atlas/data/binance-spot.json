@@ -9383,6 +9383,14 @@
     "first_capture": "2020-08-17T00:00:00.000Z"
   },
   {
+    "id": "crwdbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-CRWDB-USDT",
+    "symbol": "CRWDB",
+    "denominator": "USDT"
+  },
+  {
     "id": "crwvbusdt",
     "type": "spot",
     "internal_id": "spot-CRWVB-USDT",
@@ -22337,6 +22345,14 @@
     "first_capture": "2021-11-08T00:00:00.000Z"
   },
   {
+    "id": "mrnabusdt",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-MRNAB-USDT",
+    "symbol": "MRNAB",
+    "denominator": "USDT"
+  },
+  {
     "id": "mrvlbusdt",
     "type": "spot",
     "internal_id": "spot-MRVLB-USDT",
@@ -30893,6 +30909,14 @@
     "first_capture": "2026-07-07T00:00:00.000Z"
   },
   {
+    "id": "sqqqbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-SQQQB-USDT",
+    "symbol": "SQQQB",
+    "denominator": "USDT"
+  },
+  {
     "id": "srmbidr",
     "type": "spot",
     "internal_id": "spot-SRM-BIDR",
@@ -31439,6 +31463,14 @@
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
     "end_date": "2023-11-18T00:00:00.000Z"
+  },
+  {
+    "id": "stxbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-STXB-USDT",
+    "symbol": "STXB",
+    "denominator": "USDT"
   },
   {
     "id": "stxfdusd",
