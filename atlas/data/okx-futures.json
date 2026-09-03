@@ -53915,23 +53915,23 @@
     "id": "MORPHO-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "future-MORPHO-USD:USD-20310905",
     "symbol": "MORPHO",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "MRNA-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "future-MRNA-USD:USD-20310905",
     "symbol": "MRNA",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "MRVL-USD_UM_XPERP-310627",
@@ -54025,12 +54025,12 @@
     "id": "NOT-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "future-NOT-USD:USD-20310905",
     "symbol": "NOT",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "NVDA-USD_UM_XPERP-310613",
@@ -55072,6 +55072,17 @@
     "delivery_date": "2031-08-15T00:00:00"
   },
   {
+    "id": "TIA-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "future-TIA-USD:USD-20310905",
+    "symbol": "TIA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
     "id": "TON-USD_UM_XPERP-310530",
     "type": "future",
     "internal_id": "future-TON-USD:USD-20310530",
@@ -55092,6 +55103,17 @@
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
     "first_capture": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "TRIA-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "future-TRIA-USD:USD-20310905",
+    "symbol": "TRIA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
   },
   {
     "id": "TRUMP-USD_UM_XPERP-310704",
@@ -65598,12 +65620,12 @@
     "id": "ZKP-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "future-ZKP-USD:USD-20310905",
     "symbol": "ZKP",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "ZRO-USD_UM_XPERP-310822",

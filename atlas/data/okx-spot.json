@@ -3719,6 +3719,22 @@
     "end_date": "2023-11-11T00:00:00.000Z"
   },
   {
+    "id": "CP-TRY",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-CP-TRY",
+    "symbol": "CP",
+    "denominator": "TRY"
+  },
+  {
+    "id": "CP-USDT",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-CP-USDT",
+    "symbol": "CP",
+    "denominator": "USDT"
+  },
+  {
     "id": "CQT-BTC",
     "type": "spot",
     "internal_id": "spot-CQT-BTC",
@@ -6877,6 +6893,14 @@
     "first_capture": "2020-12-20T00:00:00.000Z"
   },
   {
+    "id": "GRVT-EUR",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-GRVT-EUR",
+    "symbol": "GRVT",
+    "denominator": "EUR"
+  },
+  {
     "id": "GRVT-TRY",
     "type": "spot",
     "internal_id": "spot-GRVT-TRY",
@@ -6891,6 +6915,14 @@
     "symbol": "GRVT",
     "denominator": "USD",
     "first_capture": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "GRVT-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "spot-GRVT-USDC",
+    "symbol": "GRVT",
+    "denominator": "USDC"
   },
   {
     "id": "GRVT-USDT",

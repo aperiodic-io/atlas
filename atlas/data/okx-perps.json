@@ -1304,6 +1304,15 @@
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
+    "id": "CASHCAT-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "internal_id": "perpetual-CASHCAT-USDT:USDT",
+    "symbol": "CASHCAT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CAT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CAT-USDT:USDT",
@@ -1520,6 +1529,16 @@
     "first_capture": "2026-04-27T00:00:00.000Z"
   },
   {
+    "id": "CP-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-CP-USDT:USDT",
+    "symbol": "CP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CQT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CQT-USDT:USDT",
@@ -1619,6 +1638,24 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-05-19T00:00:00.000Z"
+  },
+  {
+    "id": "CSOPSAMSUNG2L-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-CSOPSAMSUNG2L-USDT:USDT",
+    "symbol": "CSOPSAMSUNG2L",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CSOPSKHYNIX2L-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-CSOPSKHYNIX2L-USDT:USDT",
+    "symbol": "CSOPSKHYNIX2L",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "CSPR-USDT-SWAP",
@@ -1723,6 +1760,15 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "DGAI-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "internal_id": "perpetual-DGAI-USDT:USDT",
+    "symbol": "DGAI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DGB-USDT-SWAP",
@@ -5142,6 +5188,16 @@
     "first_capture": "2026-07-10T00:00:00.000Z"
   },
   {
+    "id": "SHEIN-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-SHEIN-USDT:USDT",
+    "symbol": "SHEIN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SHELL-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-SHELL-USDT:USDT",
@@ -5486,6 +5542,16 @@
     "contract_size": 1.0,
     "first_capture": "2026-05-07T00:00:00.000Z",
     "end_date": "2026-06-03T00:00:00.000Z"
+  },
+  {
+    "id": "SPCH-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-SPCH-USDT:USDT",
+    "symbol": "SPCH",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SPCX-USDT-SWAP",

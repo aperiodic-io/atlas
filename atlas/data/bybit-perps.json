@@ -6269,6 +6269,21 @@
     "end_date": "2025-10-23T00:00:00.000Z"
   },
   {
+    "id": "GPROUSDT",
+    "type": "perpetual",
+    "base_coin": "GPRO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-GPRO-USDT:USDT",
+    "symbol": "GPRO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GPSUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-GPS-USDT:USDT",
@@ -7880,6 +7895,21 @@
     "end_date": "2025-03-19T00:00:00.000Z"
   },
   {
+    "id": "LAOPUUSDT",
+    "type": "perpetual",
+    "base_coin": "LAOPU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-LAOPU-USDT:USDT",
+    "symbol": "LAOPU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LAUNCHCOINUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-LAUNCHCOIN-USDT:USDT",
@@ -8521,11 +8551,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-01T00:00:00.000Z",
     "internal_id": "perpetual-MARSCOIN-USDT:USDT",
     "symbol": "MARSCOIN",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
     "id": "MASAUSDT",
@@ -15798,6 +15828,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-11-23T00:00:00.000Z"
+  },
+  {
+    "id": "YOFCUSDT",
+    "type": "perpetual",
+    "base_coin": "YOFC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-02T00:00:00.000Z",
+    "internal_id": "perpetual-YOFC-USDT:USDT",
+    "symbol": "YOFC",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "YZYUSDT",
