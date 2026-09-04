@@ -1310,7 +1310,8 @@
     "internal_id": "perpetual-CASHCAT-USDT:USDT",
     "symbol": "CASHCAT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "CAT-USDT-SWAP",
@@ -1532,11 +1533,11 @@
     "id": "CP-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 100.0,
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-CP-USDT:USDT",
     "symbol": "CP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "CQT-USDT-SWAP",
@@ -1646,7 +1647,8 @@
     "internal_id": "perpetual-CSOPSAMSUNG2L-USDT:USDT",
     "symbol": "CSOPSAMSUNG2L",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "CSOPSKHYNIX2L-USDT-SWAP",
@@ -1655,7 +1657,8 @@
     "internal_id": "perpetual-CSOPSKHYNIX2L-USDT:USDT",
     "symbol": "CSOPSKHYNIX2L",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "CSPR-USDT-SWAP",
@@ -1741,6 +1744,16 @@
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
+    "id": "DDOG-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-DDOG-USDT:USDT",
+    "symbol": "DDOG",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DEGEN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-DEGEN-USDT:USDT",
@@ -1768,7 +1781,8 @@
     "internal_id": "perpetual-DGAI-USDT:USDT",
     "symbol": "DGAI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "DGB-USDT-SWAP",
@@ -2907,6 +2921,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "IONQ-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-IONQ-USDT:USDT",
+    "symbol": "IONQ",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "IOST-USD-SWAP",
@@ -4740,6 +4764,16 @@
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
+    "id": "PYPL-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-PYPL-USDT:USDT",
+    "symbol": "PYPL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "PYTH-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-PYTH-USDT:USDT",
@@ -5191,11 +5225,11 @@
     "id": "SHEIN-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-SHEIN-USDT:USDT",
     "symbol": "SHEIN",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "SHELL-USDT-SWAP",
@@ -5547,11 +5581,11 @@
     "id": "SPCH-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-SPCH-USDT:USDT",
     "symbol": "SPCH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "SPCX-USDT-SWAP",

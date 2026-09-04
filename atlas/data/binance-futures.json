@@ -4535,11 +4535,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-DDOG-USDT:USDT",
     "symbol": "DDOG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "deepusdt",
@@ -6835,6 +6835,18 @@
     "first_capture": "2026-03-26T00:00:00.000Z"
   },
   {
+    "id": "gprousdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-GPRO-USDT:USDT",
+    "symbol": "GPRO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "gpsusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -6956,11 +6968,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-GTLB-USDT:USDT",
     "symbol": "GTLB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "guausdt",
@@ -9226,11 +9238,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-MDB-USDT:USDT",
     "symbol": "MDB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "mdtusdt",
@@ -10249,11 +10261,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-NVDL-USDT:USDT",
     "symbol": "NVDL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "nvousdt",
@@ -13510,11 +13522,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-TEAM-USDT:USDT",
     "symbol": "TEAM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "temusdt",
@@ -13994,11 +14006,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-TSLL-USDT:USDT",
     "symbol": "TSLL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "tsmusdt",
@@ -15715,11 +15727,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-ZS-USDT:USDT",
     "symbol": "ZS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "\u5e01\u5b89\u4eba\u751fusdt",
