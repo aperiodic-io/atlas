@@ -4218,6 +4218,21 @@
     "first_capture": "2021-12-01T00:00:00.000Z"
   },
   {
+    "id": "CVXSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "CVXSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-CVXSTOCK-USDT:USDT",
+    "symbol": "CVXSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CVXUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-CVX-USDT:USDT",
@@ -6277,11 +6292,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-GPRO-USDT:USDT",
     "symbol": "GPRO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "GPSUSDT",
@@ -7903,11 +7918,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-LAOPU-USDT:USDT",
     "symbol": "LAOPU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "LAUNCHCOINUSDT",
@@ -8708,6 +8723,21 @@
     "quantity_unit": "base",
     "first_capture": "2023-08-15T00:00:00.000Z",
     "end_date": "2023-11-08T00:00:00.000Z"
+  },
+  {
+    "id": "MDBUSDT",
+    "type": "perpetual",
+    "base_coin": "MDB",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-MDB-USDT:USDT",
+    "symbol": "MDB",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MDTUSDT",
@@ -13716,6 +13746,21 @@
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
+    "id": "TEAMUSDT",
+    "type": "perpetual",
+    "base_coin": "TEAM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "perpetual-TEAM-USDT:USDT",
+    "symbol": "TEAM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TEMUSDT",
     "type": "perpetual",
     "base_coin": "TEM",
@@ -15838,11 +15883,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "perpetual-YOFC-USDT:USDT",
     "symbol": "YOFC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "YZYUSDT",

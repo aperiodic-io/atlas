@@ -1,5 +1,16 @@
 [
   {
+    "id": "0G-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "future-0G-USD:USD-20310905",
+    "symbol": "0G",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
     "id": "AAOI-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
@@ -45365,6 +45376,17 @@
     "first_capture": "2026-07-20T00:00:00.000Z"
   },
   {
+    "id": "KITE-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-03T00:00:00.000Z",
+    "internal_id": "future-KITE-USD:USD-20310905",
+    "symbol": "KITE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
     "id": "LDO-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
@@ -54099,6 +54121,16 @@
     "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
+    "id": "OPENAI-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-OPENAI-USD:USD-20310905",
+    "symbol": "OPENAI",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
+  },
+  {
     "id": "OPN-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 10.0,
@@ -55075,12 +55107,12 @@
     "id": "TIA-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "future-TIA-USD:USD-20310905",
     "symbol": "TIA",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "TON-USD_UM_XPERP-310530",
@@ -55108,12 +55140,12 @@
     "id": "TRIA-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "future-TRIA-USD:USD-20310905",
     "symbol": "TRIA",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "TRUMP-USD_UM_XPERP-310704",

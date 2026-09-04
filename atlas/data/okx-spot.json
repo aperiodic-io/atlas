@@ -3721,18 +3721,18 @@
   {
     "id": "CP-TRY",
     "type": "spot",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "spot-CP-TRY",
     "symbol": "CP",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "CP-USDT",
     "type": "spot",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "spot-CP-USDT",
     "symbol": "CP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "CQT-BTC",
@@ -6895,10 +6895,10 @@
   {
     "id": "GRVT-EUR",
     "type": "spot",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "spot-GRVT-EUR",
     "symbol": "GRVT",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "GRVT-TRY",
@@ -6919,10 +6919,10 @@
   {
     "id": "GRVT-USDC",
     "type": "spot",
-    "first_capture": "2026-09-02T00:00:00.000Z",
     "internal_id": "spot-GRVT-USDC",
     "symbol": "GRVT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
     "id": "GRVT-USDT",
