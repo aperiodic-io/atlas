@@ -360,6 +360,16 @@
     "first_capture": "2026-05-28T00:00:00.000Z"
   },
   {
+    "id": "AMC-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "perpetual-AMC-USDT:USDT",
+    "symbol": "AMC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AMD-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AMD-USDT:USDT",
@@ -1747,11 +1757,11 @@
     "id": "DDOG-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-DDOG-USDT:USDT",
     "symbol": "DDOG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "DEGEN-USDT-SWAP",
@@ -2610,6 +2620,16 @@
     "first_capture": "2026-03-04T00:00:00.000Z"
   },
   {
+    "id": "GPRO-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "perpetual-GPRO-USDT:USDT",
+    "symbol": "GPRO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GPS-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-GPS-USDT:USDT",
@@ -2926,11 +2946,11 @@
     "id": "IONQ-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-IONQ-USDT:USDT",
     "symbol": "IONQ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "IOST-USD-SWAP",
@@ -4661,6 +4681,15 @@
     "first_capture": "2024-09-24T00:00:00.000Z"
   },
   {
+    "id": "PONS-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "internal_id": "perpetual-PONS-USDT:USDT",
+    "symbol": "PONS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "POPCAT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-POPCAT-USDT:USDT",
@@ -4767,11 +4796,11 @@
     "id": "PYPL-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-PYPL-USDT:USDT",
     "symbol": "PYPL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "PYTH-USDT-SWAP",

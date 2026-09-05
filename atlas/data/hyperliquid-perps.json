@@ -3417,11 +3417,11 @@
   {
     "id": "para:TTWO",
     "type": "perpetual",
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-PARA:TTWO-USDC:USDC",
     "symbol": "PARA:TTWO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "para:UNITREE",
@@ -3678,6 +3678,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-04-16T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:BMNR",
+    "type": "perpetual",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:BMNR-USDC:USDC",
+    "symbol": "XYZ:BMNR",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:BOT",

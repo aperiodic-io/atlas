@@ -3934,6 +3934,21 @@
     "end_date": "2025-10-21T00:00:00.000Z"
   },
   {
+    "id": "CPUSDT",
+    "type": "perpetual",
+    "base_coin": "CP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "perpetual-CP-USDT:USDT",
+    "symbol": "CP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CRCLUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-CRCL-USDT:USDT",
@@ -4226,11 +4241,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-CVXSTOCK-USDT:USDT",
     "symbol": "CVXSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "CVXUSDT",
@@ -4473,6 +4488,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2024-07-25T00:00:00.000Z"
+  },
+  {
+    "id": "DGAIUSDT",
+    "type": "perpetual",
+    "base_coin": "DGAI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "perpetual-DGAI-USDT:USDT",
+    "symbol": "DGAI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DGBUSDT",
@@ -8733,11 +8763,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-MDB-USDT:USDT",
     "symbol": "MDB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "MDTUSDT",
@@ -13754,11 +13784,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-TEAM-USDT:USDT",
     "symbol": "TEAM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "TEMUSDT",
