@@ -3459,6 +3459,17 @@
     "first_capture": "2026-06-08T00:00:00.000Z"
   },
   {
+    "id": "bydusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-BYD-USDT:USDT",
+    "symbol": "BYD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "bzrxusdt",
     "type": "perpetual",
     "internal_id": "perpetual-BZRX-USDT:USDT",
@@ -6840,11 +6851,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-GPRO-USDT:USDT",
     "symbol": "GPRO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "gpsusdt",
@@ -7289,6 +7300,17 @@
     "margin": "USDT",
     "margin_asset": "USDT",
     "first_capture": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "hk0992usdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-HK0992-USDT:USDT",
+    "symbol": "HK0992",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "hk1810usdt",

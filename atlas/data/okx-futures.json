@@ -3,12 +3,12 @@
     "id": "0G-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "future-0G-USD:USD-20310905",
     "symbol": "0G",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "AAOI-USD_UM_XPERP-310711",
@@ -19815,6 +19815,17 @@
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
     "first_capture": "2026-07-27T00:00:00.000Z"
+  },
+  {
+    "id": "CP-USD_UM_XPERP-310905",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "future-CP-USD:USD-20310905",
+    "symbol": "CP",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-05T00:00:00"
   },
   {
     "id": "CRCL-USD_UM_XPERP-310704",
@@ -45379,12 +45390,12 @@
     "id": "KITE-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "future-KITE-USD:USD-20310905",
     "symbol": "KITE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
     "id": "LDO-USD_UM_XPERP-310822",
@@ -54128,7 +54139,8 @@
     "symbol": "OPENAI",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "OPN-USD_UM_XPERP-310822",
@@ -54392,7 +54404,8 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
-    "first_capture": "2026-08-25T00:00:00.000Z"
+    "first_capture": "2026-08-25T00:00:00.000Z",
+    "end_date": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "SKHY-USD_UM_XPERP-310822",

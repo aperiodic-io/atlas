@@ -16931,7 +16931,8 @@
       "Smart Contracts",
       "Interoperability"
     ],
-    "first_capture": "2019-11-13T00:00:00.000Z"
+    "first_capture": "2019-11-13T00:00:00.000Z",
+    "end_date": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "idbnb",
@@ -20925,6 +20926,30 @@
       "DAO"
     ],
     "first_capture": "2026-03-04T00:00:00.000Z"
+  },
+  {
+    "id": "marscointry",
+    "type": "spot",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "spot-MARSCOIN-TRY",
+    "symbol": "MARSCOIN",
+    "denominator": "TRY"
+  },
+  {
+    "id": "marscoinusdc",
+    "type": "spot",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "spot-MARSCOIN-USDC",
+    "symbol": "MARSCOIN",
+    "denominator": "USDC"
+  },
+  {
+    "id": "marscoinusdt",
+    "type": "spot",
+    "first_capture": "2026-09-04T00:00:00.000Z",
+    "internal_id": "spot-MARSCOIN-USDT",
+    "symbol": "MARSCOIN",
+    "denominator": "USDT"
   },
   {
     "id": "maskbnb",
@@ -29426,7 +29451,8 @@
       "Layer 1",
       "Privacy"
     ],
-    "first_capture": "2022-01-21T00:00:00.000Z"
+    "first_capture": "2022-01-21T00:00:00.000Z",
+    "end_date": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "scrusdt",
@@ -31254,7 +31280,8 @@
     "denominator": "USDT",
     "cmc_id": 1772,
     "category": [],
-    "first_capture": "2020-09-17T00:00:00.000Z"
+    "first_capture": "2020-09-17T00:00:00.000Z",
+    "end_date": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "stotry",
