@@ -14548,7 +14548,8 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-09-04T00:00:00",
-    "first_capture": "2026-08-21T00:00:00.000Z"
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "end_date": "2026-09-05T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-260925",
@@ -19820,12 +19821,12 @@
     "id": "CP-USD_UM_XPERP-310905",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-04T00:00:00.000Z",
     "internal_id": "future-CP-USD:USD-20310905",
     "symbol": "CP",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-05T00:00:00"
+    "delivery_date": "2031-09-05T00:00:00",
+    "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "CRCL-USD_UM_XPERP-310704",
@@ -38160,7 +38161,8 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-09-04T00:00:00",
-    "first_capture": "2026-08-21T00:00:00.000Z"
+    "first_capture": "2026-08-21T00:00:00.000Z",
+    "end_date": "2026-09-05T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-260925",

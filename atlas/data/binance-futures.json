@@ -11159,6 +11159,17 @@
     "end_date": "2025-11-30T00:00:00.000Z"
   },
   {
+    "id": "ponsusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "internal_id": "perpetual-PONS-USDT:USDT",
+    "symbol": "PONS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "popcatusdt",
     "type": "perpetual",
     "contract_size": 1.0,
