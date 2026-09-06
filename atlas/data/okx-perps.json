@@ -363,11 +363,11 @@
     "id": "AMC-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-04T00:00:00.000Z",
     "internal_id": "perpetual-AMC-USDT:USDT",
     "symbol": "AMC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "AMD-USDT-SWAP",
@@ -2283,8 +2283,7 @@
     "denominator": "USDT",
     "margin": "USDT",
     "contract_size": 10.0,
-    "first_capture": "2023-11-27T00:00:00.000Z",
-    "end_date": "2024-07-06T00:00:00.000Z"
+    "first_capture": "2023-11-27T00:00:00.000Z"
   },
   {
     "id": "FIL-USD-SWAP",
@@ -2623,11 +2622,11 @@
     "id": "GPRO-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-04T00:00:00.000Z",
     "internal_id": "perpetual-GPRO-USDT:USDT",
     "symbol": "GPRO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "GPS-USDT-SWAP",
@@ -4687,7 +4686,8 @@
     "internal_id": "perpetual-PONS-USDT:USDT",
     "symbol": "PONS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-05T00:00:00.000Z"
   },
   {
     "id": "POPCAT-USDT-SWAP",

@@ -3682,11 +3682,11 @@
   {
     "id": "xyz:BMNR",
     "type": "perpetual",
-    "first_capture": "2026-09-04T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:BMNR-USDC:USDC",
     "symbol": "XYZ:BMNR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
     "id": "xyz:BOT",
