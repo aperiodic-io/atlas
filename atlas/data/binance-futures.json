@@ -11167,7 +11167,8 @@
     "internal_id": "perpetual-PONS-USDT:USDT",
     "symbol": "PONS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-06T00:00:00.000Z"
   },
   {
     "id": "popcatusdt",
@@ -15765,6 +15766,18 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-02T00:00:00.000Z"
+  },
+  {
+    "id": "\u54c8\u57fa\u7c73usdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-09-06T00:00:00.000Z",
+    "internal_id": "perpetual-\u54c8\u57fa\u7c73-USDT:USDT",
+    "symbol": "\u54c8\u57fa\u7c73",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "\u5e01\u5b89\u4eba\u751fusdt",
