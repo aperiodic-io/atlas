@@ -1758,7 +1758,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2025-07-24T00:00:00.000Z"
+    "first_capture": "2025-07-24T00:00:00.000Z",
+    "end_date": "2026-09-06T00:00:00.000Z"
   },
   {
     "id": "ASRUSDT",
@@ -3253,6 +3254,20 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-17T00:00:00.000Z"
+  },
+  {
+    "id": "BYDUSDT",
+    "type": "perpetual",
+    "base_coin": "BYD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-BYD-USDT:USDT",
+    "symbol": "BYD",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "BZUSDT",
@@ -6845,6 +6860,20 @@
     "end_date": "2026-05-30T00:00:00.000Z"
   },
   {
+    "id": "HUAHONGUSDT",
+    "type": "perpetual",
+    "base_coin": "HUAHONG",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-HUAHONG-USDT:USDT",
+    "symbol": "HUAHONG",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HUMAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-HUMA-USDT:USDT",
@@ -8005,6 +8034,20 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2022-07-21T00:00:00.000Z"
+  },
+  {
+    "id": "LENOVOUSDT",
+    "type": "perpetual",
+    "base_coin": "LENOVO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "internal_id": "perpetual-LENOVO-USDT:USDT",
+    "symbol": "LENOVO",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "LEVERUSDT",
@@ -12224,7 +12267,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2022-03-30T00:00:00.000Z"
+    "first_capture": "2022-03-30T00:00:00.000Z",
+    "end_date": "2026-09-06T00:00:00.000Z"
   },
   {
     "id": "SCRUSDT",

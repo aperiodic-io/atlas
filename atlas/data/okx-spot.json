@@ -17718,6 +17718,13 @@
     "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
+    "id": "XSNDK-USDC",
+    "type": "spot",
+    "internal_id": "spot-XSNDK-USDC",
+    "symbol": "XSNDK",
+    "denominator": "USDC"
+  },
+  {
     "id": "XSNDK-USDT",
     "type": "spot",
     "internal_id": "spot-XSNDK-USDT",
@@ -17748,6 +17755,13 @@
     "symbol": "XSPCX",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XSPY-USDC",
+    "type": "spot",
+    "internal_id": "spot-XSPY-USDC",
+    "symbol": "XSPY",
+    "denominator": "USDC"
   },
   {
     "id": "XSPY-USDT",
