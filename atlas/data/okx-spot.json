@@ -16766,6 +16766,13 @@
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
+    "id": "XAMD-USDC",
+    "type": "spot",
+    "internal_id": "spot-XAMD-USDC",
+    "symbol": "XAMD",
+    "denominator": "USDC"
+  },
+  {
     "id": "XAMD-USDT",
     "type": "spot",
     "internal_id": "spot-XAMD-USDT",
@@ -16886,6 +16893,13 @@
     "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
+    "id": "XCBRS-USDC",
+    "type": "spot",
+    "internal_id": "spot-XCBRS-USDC",
+    "symbol": "XCBRS",
+    "denominator": "USDC"
+  },
+  {
     "id": "XCBRS-USDT",
     "type": "spot",
     "internal_id": "spot-XCBRS-USDT",
@@ -16951,12 +16965,26 @@
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
+    "id": "XCOIN-USDC",
+    "type": "spot",
+    "internal_id": "spot-XCOIN-USDC",
+    "symbol": "XCOIN",
+    "denominator": "USDC"
+  },
+  {
     "id": "XCOIN-USDT",
     "type": "spot",
     "internal_id": "spot-XCOIN-USDT",
     "symbol": "XCOIN",
     "denominator": "USDT",
     "first_capture": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "XCRCL-USDC",
+    "type": "spot",
+    "internal_id": "spot-XCRCL-USDC",
+    "symbol": "XCRCL",
+    "denominator": "USDC"
   },
   {
     "id": "XCRCL-USDT",
@@ -16981,6 +17009,13 @@
     "symbol": "XCRWD",
     "denominator": "USDT",
     "first_capture": "2026-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "XCRWV-USDC",
+    "type": "spot",
+    "internal_id": "spot-XCRWV-USDC",
+    "symbol": "XCRWV",
+    "denominator": "USDC"
   },
   {
     "id": "XCRWV-USDT",
@@ -17069,6 +17104,13 @@
     "end_date": "2024-04-13T00:00:00.000Z"
   },
   {
+    "id": "XEWY-USDC",
+    "type": "spot",
+    "internal_id": "spot-XEWY-USDC",
+    "symbol": "XEWY",
+    "denominator": "USDC"
+  },
+  {
     "id": "XEWY-USDT",
     "type": "spot",
     "internal_id": "spot-XEWY-USDT",
@@ -17141,6 +17183,13 @@
     "first_capture": "2026-07-23T00:00:00.000Z"
   },
   {
+    "id": "XINTC-USDC",
+    "type": "spot",
+    "internal_id": "spot-XINTC-USDC",
+    "symbol": "XINTC",
+    "denominator": "USDC"
+  },
+  {
     "id": "XINTC-USDT",
     "type": "spot",
     "internal_id": "spot-XINTC-USDT",
@@ -17195,6 +17244,20 @@
     "symbol": "XKO",
     "denominator": "USDT",
     "first_capture": "2026-08-19T00:00:00.000Z"
+  },
+  {
+    "id": "XKORU-USDT",
+    "type": "spot",
+    "internal_id": "spot-XKORU-USDT",
+    "symbol": "XKORU",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XLITE-USDC",
+    "type": "spot",
+    "internal_id": "spot-XLITE-USDC",
+    "symbol": "XLITE",
+    "denominator": "USDC"
   },
   {
     "id": "XLITE-USDT",
@@ -17323,6 +17386,13 @@
     "end_date": "2024-01-06T00:00:00.000Z"
   },
   {
+    "id": "XMRVL-USDC",
+    "type": "spot",
+    "internal_id": "spot-XMRVL-USDC",
+    "symbol": "XMRVL",
+    "denominator": "USDC"
+  },
+  {
     "id": "XMRVL-USDT",
     "type": "spot",
     "internal_id": "spot-XMRVL-USDT",
@@ -17339,6 +17409,13 @@
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
+    "id": "XMSTR-USDC",
+    "type": "spot",
+    "internal_id": "spot-XMSTR-USDC",
+    "symbol": "XMSTR",
+    "denominator": "USDC"
+  },
+  {
     "id": "XMSTR-USDT",
     "type": "spot",
     "internal_id": "spot-XMSTR-USDT",
@@ -17347,12 +17424,26 @@
     "first_capture": "2026-07-16T00:00:00.000Z"
   },
   {
+    "id": "XMU-USDC",
+    "type": "spot",
+    "internal_id": "spot-XMU-USDC",
+    "symbol": "XMU",
+    "denominator": "USDC"
+  },
+  {
     "id": "XMU-USDT",
     "type": "spot",
     "internal_id": "spot-XMU-USDT",
     "symbol": "XMU",
     "denominator": "USDT",
     "first_capture": "2026-07-15T00:00:00.000Z"
+  },
+  {
+    "id": "XNBIS-USDC",
+    "type": "spot",
+    "internal_id": "spot-XNBIS-USDC",
+    "symbol": "XNBIS",
+    "denominator": "USDC"
   },
   {
     "id": "XNBIS-USDT",
@@ -17404,6 +17495,13 @@
     "symbol": "XNOW",
     "denominator": "USDT",
     "first_capture": "2026-08-18T00:00:00.000Z"
+  },
+  {
+    "id": "XNVDA-USDC",
+    "type": "spot",
+    "internal_id": "spot-XNVDA-USDC",
+    "symbol": "XNVDA",
+    "denominator": "USDC"
   },
   {
     "id": "XNVDA-USDT",
@@ -17526,6 +17624,13 @@
     "symbol": "XQCOM",
     "denominator": "USDT",
     "first_capture": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "XQQQ-USDC",
+    "type": "spot",
+    "internal_id": "spot-XQQQ-USDC",
+    "symbol": "XQQQ",
+    "denominator": "USDC"
   },
   {
     "id": "XQQQ-USDT",
@@ -17694,6 +17799,20 @@
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
+    "id": "XSHEIN-USDT",
+    "type": "spot",
+    "internal_id": "spot-XSHEIN-USDT",
+    "symbol": "XSHEIN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XSKHY-USDC",
+    "type": "spot",
+    "internal_id": "spot-XSKHY-USDC",
+    "symbol": "XSKHY",
+    "denominator": "USDC"
+  },
+  {
     "id": "XSKHY-USDT",
     "type": "spot",
     "internal_id": "spot-XSKHY-USDT",
@@ -17722,7 +17841,8 @@
     "type": "spot",
     "internal_id": "spot-XSNDK-USDC",
     "symbol": "XSNDK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "XSNDK-USDT",
@@ -17741,12 +17861,26 @@
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
+    "id": "XSOXL-USDC",
+    "type": "spot",
+    "internal_id": "spot-XSOXL-USDC",
+    "symbol": "XSOXL",
+    "denominator": "USDC"
+  },
+  {
     "id": "XSOXL-USDT",
     "type": "spot",
     "internal_id": "spot-XSOXL-USDT",
     "symbol": "XSOXL",
     "denominator": "USDT",
     "first_capture": "2026-07-15T00:00:00.000Z"
+  },
+  {
+    "id": "XSPCX-USDC",
+    "type": "spot",
+    "internal_id": "spot-XSPCX-USDC",
+    "symbol": "XSPCX",
+    "denominator": "USDC"
   },
   {
     "id": "XSPCX-USDT",
@@ -17761,7 +17895,8 @@
     "type": "spot",
     "internal_id": "spot-XSPY-USDC",
     "symbol": "XSPY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "XSPY-USDT",
@@ -17819,6 +17954,13 @@
     "symbol": "XTQQQ",
     "denominator": "USDT",
     "first_capture": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "XTSLA-USDC",
+    "type": "spot",
+    "internal_id": "spot-XTSLA-USDC",
+    "symbol": "XTSLA",
+    "denominator": "USDC"
   },
   {
     "id": "XTSLA-USDT",

@@ -3467,7 +3467,8 @@
     "internal_id": "perpetual-BYD-USDT:USDT",
     "symbol": "BYD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "bzrxusdt",
@@ -7310,7 +7311,8 @@
     "internal_id": "perpetual-HK0992-USDT:USDT",
     "symbol": "HK0992",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "hk1810usdt",
@@ -15773,11 +15775,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "crypto",
-    "first_capture": "2026-09-06T00:00:00.000Z",
     "internal_id": "perpetual-\u54c8\u57fa\u7c73-USDT:USDT",
     "symbol": "\u54c8\u57fa\u7c73",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-06T00:00:00.000Z"
   },
   {
     "id": "\u5e01\u5b89\u4eba\u751fusdt",

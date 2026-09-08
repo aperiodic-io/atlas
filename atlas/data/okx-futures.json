@@ -2332,6 +2332,16 @@
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
+    "id": "ANTHROPIC-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-ANTHROPIC-USD:USD-20310912",
+    "symbol": "ANTHROPIC",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
+  },
+  {
     "id": "APR-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 10.0,
@@ -43167,6 +43177,17 @@
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
+    "id": "FET-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-07T00:00:00.000Z",
+    "internal_id": "future-FET-USD:USD-20310912",
+    "symbol": "FET",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
+  },
+  {
     "id": "FIL-USD-210416",
     "type": "future",
     "internal_id": "future-FIL-USD:FIL-20210416",
@@ -45398,6 +45419,17 @@
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
     "first_capture": "2026-09-03T00:00:00.000Z"
+  },
+  {
+    "id": "KO-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-07T00:00:00.000Z",
+    "internal_id": "future-KO-USD:USD-20310912",
+    "symbol": "KO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
   },
   {
     "id": "LDO-USD_UM_XPERP-310822",
@@ -55013,6 +55045,17 @@
     "end_date": "2026-08-29T00:00:00.000Z"
   },
   {
+    "id": "SOXS-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-07T00:00:00.000Z",
+    "internal_id": "future-SOXS-USD:USD-20310912",
+    "symbol": "SOXS",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
+  },
+  {
     "id": "SPCX-USD_UM_XPERP-310613",
     "type": "future",
     "internal_id": "future-SPCX-USD:USD-20310613",
@@ -55066,6 +55109,17 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "SUSHI-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-07T00:00:00.000Z",
+    "internal_id": "future-SUSHI-USD:USD-20310912",
+    "symbol": "SUSHI",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
   },
   {
     "id": "TAO-USD_UM_XPERP-310523",
