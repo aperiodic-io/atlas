@@ -3267,7 +3267,8 @@
     "internal_id": "perpetual-BYD-USDT:USDT",
     "symbol": "BYD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "BZUSDT",
@@ -6538,6 +6539,21 @@
     "first_capture": "2025-04-30T00:00:00.000Z"
   },
   {
+    "id": "HAJIMIUSDT",
+    "type": "perpetual",
+    "base_coin": "HAJIMI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-07T00:00:00.000Z",
+    "internal_id": "perpetual-HAJIMI-USDT:USDT",
+    "symbol": "HAJIMI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HANAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-HANA-USDT:USDT",
@@ -6871,7 +6887,8 @@
     "internal_id": "perpetual-HUAHONG-USDT:USDT",
     "symbol": "HUAHONG",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "HUMAUSDT",
@@ -8047,7 +8064,8 @@
     "internal_id": "perpetual-LENOVO-USDT:USDT",
     "symbol": "LENOVO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "LEVERUSDT",
