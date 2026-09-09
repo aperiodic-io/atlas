@@ -2339,7 +2339,8 @@
     "symbol": "ANTHROPIC",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
     "id": "APR-USD_UM_XPERP-310815",
@@ -43180,12 +43181,12 @@
     "id": "FET-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "future-FET-USD:USD-20310912",
     "symbol": "FET",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "FIL-USD-210416",
@@ -45424,12 +45425,12 @@
     "id": "KO-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "future-KO-USD:USD-20310912",
     "symbol": "KO",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "LDO-USD_UM_XPERP-310822",
@@ -55048,12 +55049,12 @@
     "id": "SOXS-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "future-SOXS-USD:USD-20310912",
     "symbol": "SOXS",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "SPCX-USD_UM_XPERP-310613",
@@ -55114,12 +55115,12 @@
     "id": "SUSHI-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "future-SUSHI-USD:USD-20310912",
     "symbol": "SUSHI",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "TAO-USD_UM_XPERP-310523",

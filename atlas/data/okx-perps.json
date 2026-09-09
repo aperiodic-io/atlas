@@ -1461,11 +1461,11 @@
     "id": "CNPY-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "perpetual-CNPY-USDT:USDT",
     "symbol": "CNPY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "COAI-USDT-SWAP",
@@ -3104,6 +3104,15 @@
     "contract_size": 10.0,
     "first_capture": "2024-01-11T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z"
+  },
+  {
+    "id": "JP225-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-JP225-USDT:USDT",
+    "symbol": "JP225",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "JST-USDT-SWAP",
@@ -7106,6 +7115,15 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "id": "ZHONGJI-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-ZHONGJI-USDT:USDT",
+    "symbol": "ZHONGJI",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "ZIL-USDT-SWAP",
