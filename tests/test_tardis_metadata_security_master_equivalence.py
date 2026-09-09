@@ -39,7 +39,7 @@ def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
         if available_to_raw
         else None
     )
-    return available_since <= start and (available_to is None or available_to >= end)
+    return available_since < end and (available_to is None or available_to > start)
 
 
 @pytest.mark.parametrize(

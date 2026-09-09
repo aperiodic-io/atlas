@@ -105,7 +105,13 @@ class SecurityMaster:
     def symbol_ids(
         self, exchange: str, first_capture: datetime, end_date: datetime
     ) -> list[str]:
-        """Return symbol ids active for the requested date window."""
+        """Return symbol ids that were available for any part of the requested
+        date window (day-granularity overlap, not full-window containment).
+
+        A symbol listed mid-window (e.g. a mid-month listing within a
+        whole-month window) still overlaps the window and must be included,
+        even though it wasn't available for the window's full duration.
+        """
         windows = self._symbol_windows.get(exchange, [])
         if not windows:
             return []
@@ -122,8 +128,8 @@ class SecurityMaster:
         )
         ids: list[str] = []
         for symbol_id, available_since, available_to in windows:
-            if available_since <= start and (
-                available_to is None or available_to >= end
+            if available_since < end and (
+                available_to is None or available_to > start
             ):
                 ids.append(symbol_id)
         return ids
