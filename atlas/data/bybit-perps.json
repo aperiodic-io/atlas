@@ -5335,6 +5335,21 @@
     "first_capture": "2025-10-14T00:00:00.000Z"
   },
   {
+    "id": "EURUSDUSDT",
+    "type": "perpetual",
+    "base_coin": "EURUSD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-08T00:00:00.000Z",
+    "internal_id": "perpetual-EURUSD-USDT:USDT",
+    "symbol": "EURUSD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EVAAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-EVAA-USDT:USDT",
@@ -6005,6 +6020,21 @@
     "first_capture": "2023-10-23T00:00:00.000Z"
   },
   {
+    "id": "GBPUSDUSDT",
+    "type": "perpetual",
+    "base_coin": "GBPUSD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-08T00:00:00.000Z",
+    "internal_id": "perpetual-GBPUSD-USDT:USDT",
+    "symbol": "GBPUSD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GDXUSDT",
     "type": "perpetual",
     "base_coin": "GDX",
@@ -6547,11 +6577,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-07T00:00:00.000Z",
     "internal_id": "perpetual-HAJIMI-USDT:USDT",
     "symbol": "HAJIMI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
     "id": "HANAUSDT",
@@ -14682,6 +14712,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2024-08-07T00:00:00.000Z"
+  },
+  {
+    "id": "USDJPYUSDT",
+    "type": "perpetual",
+    "base_coin": "USDJPY",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-08T00:00:00.000Z",
+    "internal_id": "perpetual-USDJPY-USDT:USDT",
+    "symbol": "USDJPY",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "USELESSUSDT",
