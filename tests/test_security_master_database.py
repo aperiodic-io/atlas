@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from pathlib import Path
 
 from atlas.database import SecurityMaster
@@ -80,6 +81,76 @@ def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
     ]
     assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
     assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
+
+
+def test_symbol_ids_includes_mid_window_listing(tmp_path: Path) -> None:
+    _write_exchange(
+        tmp_path,
+        "okx-perps",
+        [
+            {
+                "id": "0G-USDT-SWAP",
+                "first_capture": "2025-09-22T00:00:00.000Z",
+            }
+        ],
+    )
+
+    sm = SecurityMaster.load(data_dir=tmp_path)
+
+    symbols = sm.symbol_ids(
+        exchange="okx-perps",
+        first_capture=datetime(2025, 9, 1),
+        end_date=datetime(2025, 10, 1),
+    )
+
+    assert symbols == ["0G-USDT-SWAP"]
+
+
+def test_symbol_ids_excludes_listing_that_starts_after_window(tmp_path: Path) -> None:
+    _write_exchange(
+        tmp_path,
+        "okx-perps",
+        [
+            {
+                "id": "FUTURE-USDT-SWAP",
+                "first_capture": "2025-10-05T00:00:00.000Z",
+            }
+        ],
+    )
+
+    sm = SecurityMaster.load(data_dir=tmp_path)
+
+    symbols = sm.symbol_ids(
+        exchange="okx-perps",
+        first_capture=datetime(2025, 9, 1),
+        end_date=datetime(2025, 10, 1),
+    )
+
+    assert symbols == []
+
+
+def test_symbol_ids_excludes_listing_that_ended_before_window(tmp_path: Path) -> None:
+    _write_exchange(
+        tmp_path,
+        "okx-perps",
+        [
+            {
+                "id": "DELISTED-USDT-SWAP",
+                "first_capture": "2024-01-01T00:00:00.000Z",
+                "end_date": "2025-08-15T00:00:00.000Z",
+            }
+        ],
+    )
+
+    sm = SecurityMaster.load(data_dir=tmp_path)
+
+    symbols = sm.symbol_ids(
+        exchange="okx-perps",
+        first_capture=datetime(2025, 9, 1),
+        end_date=datetime(2025, 10, 1),
+    )
+
+    assert symbols == []
 
 
 def test_security_master_returns_instrument_metadata(tmp_path) -> None:
