@@ -2277,6 +2277,17 @@
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
+    "id": "AERO-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "future-AERO-USD:USD-20310912",
+    "symbol": "AERO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
+  },
+  {
     "id": "AI-USD_UM_XPERP-310704",
     "type": "future",
     "contract_size": 100.0,
@@ -55023,6 +55034,17 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "SOPH-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "future-SOPH-USD:USD-20310912",
+    "symbol": "SOPH",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
+  },
+  {
     "id": "SOXL-USD_UM_XPERP-310627",
     "type": "future",
     "internal_id": "future-SOXL-USD:USD-20310627",
@@ -59517,6 +59539,17 @@
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
     "first_capture": "2026-07-13T00:00:00.000Z"
+  },
+  {
+    "id": "USELESS-USD_UM_XPERP-310912",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "future-USELESS-USD:USD-20310912",
+    "symbol": "USELESS",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-12T00:00:00"
   },
   {
     "id": "VIRTUAL-USD_UM_XPERP-310815",

@@ -539,6 +539,21 @@
     "first_capture": "2025-10-02T00:00:00.000Z"
   },
   {
+    "id": "4STOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "4STOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "perpetual-4STOCK-USDT:USDT",
+    "symbol": "4STOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "4USDT",
     "type": "perpetual",
     "internal_id": "perpetual-4-USDT:USDT",
@@ -5343,11 +5358,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-08T00:00:00.000Z",
     "internal_id": "perpetual-EURUSD-USDT:USDT",
     "symbol": "EURUSD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
     "id": "EVAAUSDT",
@@ -6028,11 +6043,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-08T00:00:00.000Z",
     "internal_id": "perpetual-GBPUSD-USDT:USDT",
     "symbol": "GBPUSD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
     "id": "GDXUSDT",
@@ -14722,11 +14737,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-08T00:00:00.000Z",
     "internal_id": "perpetual-USDJPY-USDT:USDT",
     "symbol": "USDJPY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
     "id": "USELESSUSDT",

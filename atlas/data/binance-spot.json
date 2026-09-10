@@ -3437,6 +3437,11 @@
     "first_capture": "2025-11-29T00:00:00.000Z"
   },
   {
+    "id": "asterthb",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z"
+  },
+  {
     "id": "astertry",
     "type": "spot",
     "internal_id": "spot-ASTER-TRY",
@@ -9286,6 +9291,14 @@
     "denominator": "USDT",
     "first_capture": "2023-09-22T00:00:00.000Z",
     "end_date": "2025-04-17T00:00:00.000Z"
+  },
+  {
+    "id": "crmbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "spot-CRMB-USDT",
+    "symbol": "CRMB",
+    "denominator": "USDT"
   },
   {
     "id": "crvbnb",
@@ -16219,6 +16232,14 @@
     "denominator": "USDT",
     "first_capture": "2021-12-17T00:00:00.000Z",
     "end_date": "2026-06-20T00:00:00.000Z"
+  },
+  {
+    "id": "himsbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "spot-HIMSB-USDT",
+    "symbol": "HIMSB",
+    "denominator": "USDT"
   },
   {
     "id": "hivebnb",
@@ -25854,6 +25875,11 @@
     ],
     "first_capture": "2025-08-18T00:00:00.000Z",
     "end_date": "2026-01-31T00:00:00.000Z"
+  },
+  {
+    "id": "plumethb",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z"
   },
   {
     "id": "plumetry",
@@ -38886,6 +38912,22 @@
     "cmc_id": 38590,
     "category": [],
     "first_capture": "2026-01-07T00:00:00.000Z"
+  },
+  {
+    "id": "\u725b\u6765usdc",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "spot-\u725b\u6765-USDC",
+    "symbol": "\u725b\u6765",
+    "denominator": "USDC"
+  },
+  {
+    "id": "\u725b\u6765usdt",
+    "type": "spot",
+    "first_capture": "2026-09-09T00:00:00.000Z",
+    "internal_id": "spot-\u725b\u6765-USDT",
+    "symbol": "\u725b\u6765",
+    "denominator": "USDT"
   },
   {
     "id": "\u8fd9\u662f\u6d4b\u8bd5\u5e01456",
