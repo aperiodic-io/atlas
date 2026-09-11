@@ -1,0 +1,1235 @@
+{
+  "mappings": [
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40913,
+            "identity_match": null,
+            "is_active": true,
+            "name": "ProShares Bitcoin ETF (Derivatives)",
+            "price_usd": 10.61477959146295,
+            "relative_price_difference": 0.005175296020342061,
+            "slug": "proshares-bitcoin-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "BITOUSDT",
+          "observed_at": "2026-09-11T13:59:18.720000Z",
+          "price": 10.67,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "BITO",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-27T00:00:00Z",
+        "original_id": "bitousdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "BITO"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41076,
+            "identity_match": null,
+            "is_active": true,
+            "name": "CSOP Samsung Daily Max (2x) (Derivatives)",
+            "price_usd": 9.242364492378268,
+            "relative_price_difference": 0.005127611154115282,
+            "slug": "csop-samsung-daily-max-2x-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "CSOPSAMSUNG2LUSDT",
+          "observed_at": "2026-09-11T13:59:26.271000Z",
+          "price": 9.29,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "CSOPSAMSUNG2L",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "csopsamsung2lusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "CSOPSAMSUNG2L"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41075,
+            "identity_match": null,
+            "is_active": true,
+            "name": "CSOP SK Hynix Daily Max (2x) Leveraged Product (Derivatives)",
+            "price_usd": 5.46891329778226,
+            "relative_price_difference": 0.003477897634427944,
+            "slug": "csop-sk-hynix-daily-max-2x-leveraged-product-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "CSOPSKHYNIX2LUSDT",
+          "observed_at": "2026-09-11T13:59:30.769000Z",
+          "price": 5.488,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "CSOPSKHYNIX2L",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "csopskhynix2lusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "CSOPSKHYNIX2L"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 3809,
+            "identity_match": null,
+            "is_active": true,
+            "name": "DOS Network",
+            "price_usd": 0.20164028911213938,
+            "relative_price_difference": 0.010111491840258276,
+            "slug": "dos-network"
+          },
+          {
+            "cmc_id": 40980,
+            "identity_match": null,
+            "is_active": true,
+            "name": "DAPPOS",
+            "price_usd": 0.20175780689868364,
+            "relative_price_difference": 0.009534575853295793,
+            "slug": "dappos"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "DOSUSDT",
+          "observed_at": "2026-09-11T13:59:30.240000Z",
+          "price": 0.2037,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "DOS",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "2 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: multiple_price_matches)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "dosusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "DOS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40955,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Gigadevice Semiconductor Inc (Derivatives)",
+            "price_usd": 57.917924551965804,
+            "relative_price_difference": 0.002213610520259643,
+            "slug": "gigadevice-semiconductor-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GIGADEVUSDT",
+          "observed_at": "2026-09-11T13:59:09.814000Z",
+          "price": 57.79,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GIGADEV",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-03T00:00:00Z",
+        "original_id": "gigadevusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GIGADEV"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40814,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Grvt",
+            "price_usd": 0.177133140019651,
+            "relative_price_difference": 0.003189983007028696,
+            "slug": "grvt"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GRVTUSDT",
+          "observed_at": "2026-09-11T13:59:31.174000Z",
+          "price": 0.1777,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GRVT",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-31T00:00:00Z",
+        "original_id": "grvtusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GRVT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40942,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Goldman Sachs Group Inc (Derivatives)",
+            "price_usd": 1027.2768887055902,
+            "relative_price_difference": 0.0007034156560406796,
+            "slug": "goldman-sachs-group-inc-derivaties"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GSUSDT",
+          "observed_at": "2026-09-11T13:59:02.797000Z",
+          "price": 1028.0,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GS",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-29T00:00:00Z",
+        "original_id": "gsusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "HK0700USDT",
+          "observed_at": "2026-09-11T13:58:00.500000Z",
+          "price": 428.37,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "HK0700",
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "Finding no same-ticker asset does not establish that none exists: CoinMarketCap's reported total changed during the fetch."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-22T00:00:00Z",
+        "original_id": "hk0700usdt"
+      },
+      "method": "untrustworthy_catalogue",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "HK0700"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "HK1810USDT",
+          "observed_at": "2026-09-11T13:59:27.194000Z",
+          "price": 26.26,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "HK1810",
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "Finding no same-ticker asset does not establish that none exists: CoinMarketCap's reported total changed during the fetch."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-22T00:00:00Z",
+        "original_id": "hk1810usdt"
+      },
+      "method": "untrustworthy_catalogue",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "HK1810"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 38456,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Kyuzo's Friends",
+            "price_usd": 0.003139766085041889,
+            "relative_price_difference": 0.9999643613384218,
+            "slug": "kyuzo-s-friends"
+          },
+          {
+            "cmc_id": 40982,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Coca-Cola Co (Derivatives)",
+            "price_usd": 88.10015814770179,
+            "relative_price_difference": 1.7950930964409951e-06,
+            "slug": "coca-cola-co-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "KOUSDT",
+          "observed_at": "2026-09-11T13:59:23.331000Z",
+          "price": 88.1,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "KO",
+        "price_probe_status": "price_compatible",
+        "rationale": "2 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-06T00:00:00Z",
+        "original_id": "kousdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "KO"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41073,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Kuaishou Technology (Derivatives)",
+            "price_usd": 4.011525322426376,
+            "relative_price_difference": 0.0008654240532063837,
+            "slug": "kuaishou-technology-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "KUAISHOUUSDT",
+          "observed_at": "2026-09-11T13:59:18.785000Z",
+          "price": 4.015,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "KUAISHOU",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "kuaishouusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "KUAISHOU"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41074,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Meituan (Derivatives)",
+            "price_usd": 9.627316841307067,
+            "relative_price_difference": 0.0023505863930500773,
+            "slug": "meituan-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MEITUANUSDT",
+          "observed_at": "2026-09-11T13:59:15.520000Z",
+          "price": 9.65,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MEITUAN",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "meituanusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MEITUAN"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39960,
+            "identity_match": null,
+            "is_active": true,
+            "name": "MiniMax Group (Derivatives)",
+            "price_usd": 34.18078314008332,
+            "relative_price_difference": 0.0017294643667255002,
+            "slug": "minimax-group-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MINIMAXUSDT",
+          "observed_at": "2026-09-11T13:59:32.385000Z",
+          "price": 34.24,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MINIMAX",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-17T00:00:00Z",
+        "original_id": "minimaxusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MINIMAX"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40675,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Direxion Daily MU Bull 2X ETF (Derivatives)",
+            "price_usd": 31.4023399518983,
+            "relative_price_difference": 0.003416694639850941,
+            "slug": "direxion-daily-mu-bull-2x-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MUUUSDT",
+          "observed_at": "2026-09-11T13:59:31.478000Z",
+          "price": 31.51,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MUU",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-16T00:00:00Z",
+        "original_id": "muuusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MUU"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40199,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Palo Alto Networks Inc (Derivatives)",
+            "price_usd": 339.90601119315954,
+            "relative_price_difference": 0.0023890256129387305,
+            "slug": "palo-alto-networks-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PANWUSDT",
+          "observed_at": "2026-09-11T13:59:01.494000Z",
+          "price": 340.72,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PANW",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-21T00:00:00Z",
+        "original_id": "panwusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "PANW"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 29787,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Peng",
+            "price_usd": 0.001957852656031975,
+            "relative_price_difference": 0.9999613072597622,
+            "slug": "peng-sol"
+          },
+          {
+            "cmc_id": 40761,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Penguin Solutions Tokenized Stock (Robinhood)",
+            "price_usd": 50.50177200048722,
+            "relative_price_difference": 0.001941264812505528,
+            "slug": "penguin-solutions-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 40822,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Penguin Solutions Inc (Derivatives)",
+            "price_usd": 50.518049864895616,
+            "relative_price_difference": 0.001619567887438447,
+            "slug": "penguin-solutions-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PENGUSDT",
+          "observed_at": "2026-09-11T13:59:27.067000Z",
+          "price": 50.6,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PENG",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "3 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: multiple_price_matches)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-21T00:00:00Z",
+        "original_id": "pengusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "PENG"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39958,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Pop Mart International Group Limited (Derivatives)",
+            "price_usd": 19.887665514941908,
+            "relative_price_difference": 0.000619823369753299,
+            "slug": "pop-mart-international-group-limited-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "POPMARTUSDT",
+          "observed_at": "2026-09-11T13:59:32.673000Z",
+          "price": 19.9,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "POPMART",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-23T00:00:00Z",
+        "original_id": "popmartusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "POPMART"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40941,
+            "identity_match": null,
+            "is_active": true,
+            "name": "PayPal Holdings Inc (Derivatives)",
+            "price_usd": 53.749972856753566,
+            "relative_price_difference": 0.0018575142664147802,
+            "slug": "paypal-holdings-inc-derivaties"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PYPLUSDT",
+          "observed_at": "2026-09-11T13:59:14.289000Z",
+          "price": 53.85,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PYPL",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-29T00:00:00Z",
+        "original_id": "pyplusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "PYPL"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39633,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Reddit (Derivatives)",
+            "price_usd": 155.23610381568216,
+            "relative_price_difference": 0.0006044948452833069,
+            "slug": "reddit-derivatives"
+          },
+          {
+            "cmc_id": 40777,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Reddit Tokenized Stock (Robinhood)",
+            "price_usd": 158.39866424581555,
+            "relative_price_difference": 0.01975577316561862,
+            "slug": "reddit-tokenized-stock-robinhood"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "RDDTUSDT",
+          "observed_at": "2026-09-11T13:59:32.138000Z",
+          "price": 155.33,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "RDDT",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "2 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: multiple_price_matches)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-06T00:00:00Z",
+        "original_id": "rddtusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "RDDT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40807,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SharonAI Holdings Inc (Derivatives)",
+            "price_usd": 59.542875614693834,
+            "relative_price_difference": 0.0011260591395095686,
+            "slug": "sharonai-holdings-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SHAZUSDT",
+          "observed_at": "2026-09-11T13:59:30.522000Z",
+          "price": 59.61,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SHAZ",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-21T00:00:00Z",
+        "original_id": "shazusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SHAZ"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 29770,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Spacemesh",
+            "price_usd": 0.0005228918162058692,
+            "relative_price_difference": 0.9999990816954106,
+            "slug": "spacemesh"
+          },
+          {
+            "cmc_id": 39498,
+            "identity_match": null,
+            "is_active": true,
+            "name": "VanEck Semiconductor ETF (Derivatives)",
+            "price_usd": 569.325140460325,
+            "relative_price_difference": 0.00014903064518535726,
+            "slug": "vaneck-semiconductor-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SMHUSDT",
+          "observed_at": "2026-09-11T13:57:02.747000Z",
+          "price": 569.41,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SMH",
+        "price_probe_status": "price_compatible",
+        "rationale": "2 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-29T00:00:00Z",
+        "original_id": "smhusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SMH"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40725,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SoFi Technologies Tokenized Stock (Robinhood)",
+            "price_usd": 17.40309324915356,
+            "relative_price_difference": 0.001905195691051189,
+            "slug": "sofi-technologies-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 40888,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SoFi Technologies Inc (Derivatives)",
+            "price_usd": 17.30037791832789,
+            "relative_price_difference": 0.004008179716298883,
+            "slug": "sofi-technologies-inc-derivaties"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SOFIUSDT",
+          "observed_at": "2026-09-11T13:59:03.031000Z",
+          "price": 17.37,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SOFI",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "2 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: multiple_price_matches)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-21T00:00:00Z",
+        "original_id": "sofiusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SOFI"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40862,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Direxion Daily Semiconductor Bear 3X Shares (Derivatives)",
+            "price_usd": 44.58698306896631,
+            "relative_price_difference": 0.006478173114363762,
+            "slug": "direxion-daily-semiconductor-bear-3x-shares-derivaties"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SOXSUSDT",
+          "observed_at": "2026-09-11T13:59:31.153000Z",
+          "price": 44.3,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SOXS",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-16T00:00:00Z",
+        "original_id": "soxsusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SOXS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 37068,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SpaceX Tokenized Stock (Robinhood)",
+            "price_usd": 146.77668635985344,
+            "relative_price_difference": 0.008399632753320951,
+            "slug": "spacex-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 39501,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SpaceX (Derivatives)",
+            "price_usd": 148.08684035200142,
+            "relative_price_difference": 0.00045156297798545263,
+            "slug": "spacex-derivatives"
+          },
+          {
+            "cmc_id": 40226,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SPACEX4200",
+            "price_usd": 0.0001044986160509715,
+            "relative_price_difference": 0.9999992940236722,
+            "slug": "spacex4200"
+          },
+          {
+            "cmc_id": 40238,
+            "identity_match": null,
+            "is_active": true,
+            "name": "SpaceX tokenized stock (Backpack)",
+            "price_usd": 147.81899936257128,
+            "relative_price_difference": 0.001357928911152103,
+            "slug": "spacex-tokenized-stock-backpack"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SPCXUSDT",
+          "observed_at": "2026-09-11T13:59:30.812000Z",
+          "price": 148.02,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SPCX",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "4 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: multiple_price_matches)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-20T00:00:00Z",
+        "original_id": "spcxusd1"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SPCX"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40912,
+            "identity_match": null,
+            "is_active": true,
+            "name": "ProShares UltraShort 20+ Year Treasury (Derivatives)",
+            "price_usd": 38.93948164603099,
+            "relative_price_difference": 0.0007576881529425488,
+            "slug": "proshares-ultrashort-20-plus-year-treasury-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TBTUSDT",
+          "observed_at": "2026-09-11T13:59:30.997000Z",
+          "price": 38.91,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TBT",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-27T00:00:00Z",
+        "original_id": "tbtusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TBT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39961,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Tencent Holdings Ltd (Derivatives)",
+            "price_usd": 54.76033564697528,
+            "relative_price_difference": 0.000371495195017834,
+            "slug": "tencent-holdings-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TENCENTUSDT",
+          "observed_at": "2026-09-11T13:59:07.876000Z",
+          "price": 54.74,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TENCENT",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-22T00:00:00Z",
+        "original_id": "tencentusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TENCENT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40911,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares (Derivatives)",
+            "price_usd": 29.81214171606578,
+            "relative_price_difference": 0.0009335886036936501,
+            "slug": "direxion-daily-20-plus-year-treasury-bull-3x-shares-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TMFUSDT",
+          "observed_at": "2026-09-11T13:59:17.436000Z",
+          "price": 29.84,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TMF",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-27T00:00:00Z",
+        "original_id": "tmfusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TMF"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40863,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Direxion Daily Small Cap Bear 3X ETF (Derivatives)",
+            "price_usd": 42.339366807143925,
+            "relative_price_difference": 0.00045762776805115317,
+            "slug": "direxion-daily-small-cap-bear-3x-etf-derivaties"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TZAUSDT",
+          "observed_at": "2026-09-11T13:59:26.879000Z",
+          "price": 42.32,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TZA",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-16T00:00:00Z",
+        "original_id": "tzausdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TZA"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40543,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Knowledge Atlas Technology JSC Ltd (Derivatives)",
+            "price_usd": 98.47141699274538,
+            "relative_price_difference": 0.0006959915491641054,
+            "slug": "knowledge-atlas-technology-jsc-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "CoinMarketCap's reported total changed during the fetch.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "ZHIPUUSDT",
+          "observed_at": "2026-09-11T13:59:32.330000Z",
+          "price": 98.54,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "ZHIPU",
+        "price_probe_status": "price_compatible",
+        "rationale": "1 same-ticker candidate(s) and 0 with name evidence need review; no LLM was configured (probe status: price_compatible)."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-17T00:00:00Z",
+        "original_id": "zhipuusdt"
+      },
+      "method": "deterministic_only",
+      "recorded_at": "2026-09-11T13:59:39.079525Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "ZHIPU"
+    }
+  ],
+  "schema_version": 1
+}
