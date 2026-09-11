@@ -1,0 +1,205 @@
+name: cmc-new-symbol-mapping
+
+on:
+  schedule:
+    # After daily-update (02:00 UTC) has refreshed the snapshots.
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      new-within-days:
+        description: "Only resolve symbols first captured this recently"
+        required: false
+        default: "30"
+      max-llm-symbols:
+        description: "Cap LLM adjudications for this run"
+        required: false
+        default: "40"
+      dry-run:
+        description: "Resolve and report without committing or opening a PR"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  # Free GitHub Models inference with the workflow's own GITHUB_TOKEN.
+  models: read
+
+concurrency:
+  group: cmc-new-symbol-mapping
+  cancel-in-progress: false
+
+env:
+  AUTOMATION_BRANCH: automation/cmc-new-symbol-mapping
+  PR_LABEL: cmc-mapping
+
+jobs:
+  map-new-symbols:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: install-dependencies
+        run: uv pip install --system -e .
+
+      - name: prepare-run
+        id: prepare
+        run: |
+          set -euo pipefail
+          echo "REPORT_PATH=${RUNNER_TEMP}/cmc-new-symbols-report.md" >> "$GITHUB_ENV"
+          echo "SUMMARY_PATH=${RUNNER_TEMP}/cmc-new-symbols-summary.json" >> "$GITHUB_ENV"
+          # A reviewer's own commits on the automation branch must never be
+          # overwritten by the next scheduled regeneration.
+          if git rev-parse --verify "origin/${AUTOMATION_BRANCH}" >/dev/null 2>&1; then
+            echo "head_author=$(git log -1 --format='%an' "origin/${AUTOMATION_BRANCH}")" >> "$GITHUB_OUTPUT"
+          else
+            echo "head_author=github-actions[bot]" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: resolve-new-binance-symbols
+        id: resolve
+        env:
+          # Any OpenAI-compatible endpoint works; unset falls back to GitHub Models.
+          ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
+          ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
+          ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}
+          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '40' }}
+          DRY_RUN: ${{ inputs.dry-run && 'true' || 'false' }}
+        run: |
+          set -euo pipefail
+          dry_run_flag=""
+          if [ "${DRY_RUN}" = "true" ]; then
+            dry_run_flag="--dry-run"
+          fi
+          uv run python integrations/cmc_new_symbol_mapping.py \
+            --new-within-days "${NEW_WITHIN_DAYS}" \
+            --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
+            --report-path "${REPORT_PATH}" \
+            --summary-path "${SUMMARY_PATH}" \
+            ${dry_run_flag}
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+
+          with open(os.environ["SUMMARY_PATH"]) as summary_file:
+              summary = json.load(summary_file)
+          for key in ("new_symbols", "approved", "uncertain", "unmapped", "has_changes"):
+              print(f"{key}={json.dumps(summary[key])}")
+          PY
+
+      - name: commit-and-push-decisions
+        id: push
+        if: steps.resolve.outputs.has_changes == 'true' && !inputs.dry-run
+        env:
+          HEAD_AUTHOR: ${{ steps.prepare.outputs.head_author }}
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+          UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
+        run: |
+          set -euo pipefail
+          echo "pushed=false" >> "$GITHUB_OUTPUT"
+          if [ "${HEAD_AUTHOR}" != "github-actions[bot]" ]; then
+            echo "::warning::${AUTOMATION_BRANCH} carries commits by '${HEAD_AUTHOR}'; leaving it alone"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "${AUTOMATION_BRANCH}"
+          git add atlas/data
+          if git diff --cached --quiet; then
+            echo "No snapshot or mapping changes to commit"
+            exit 0
+          fi
+          git commit \
+            --message "chore(data): map new binance symbols to cmc ids" \
+            --message "approved=${APPROVED} uncertain=${UNCERTAIN} unmapped=${UNMAPPED}"
+          for attempt in 1 2 3 4; do
+            if git push --force-with-lease -u origin "${AUTOMATION_BRANCH}"; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep $((2 ** attempt))
+          done
+          echo "::error::could not push ${AUTOMATION_BRANCH}"
+          exit 1
+
+      - name: open-or-update-pull-request
+        id: pr
+        if: steps.push.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: ${{ github.ref_name }}
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+        run: |
+          set -euo pipefail
+          gh label create "${PR_LABEL}" \
+            --color "1D76DB" \
+            --description "CoinMarketCap ID mapping for newly listed symbols" \
+            || true
+          title="chore(data): CMC IDs for new Binance symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)"
+          existing="$(gh pr list --head "${AUTOMATION_BRANCH}" --state open --json number --jq '.[0].number // empty')"
+          if [ -n "${existing}" ]; then
+            gh pr edit "${existing}" --title "${title}" --body-file "${REPORT_PATH}"
+            url="$(gh pr view "${existing}" --json url --jq .url)"
+          else
+            url="$(gh pr create \
+              --base "${BASE_BRANCH}" \
+              --head "${AUTOMATION_BRANCH}" \
+              --title "${title}" \
+              --body-file "${REPORT_PATH}" \
+              --label "${PR_LABEL}")"
+          fi
+          echo "url=${url}" >> "$GITHUB_OUTPUT"
+          echo "Pull request: ${url}"
+
+      - name: notify-slack
+        if: steps.pr.outputs.url != ''
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+          UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
+        run: |
+          set -euo pipefail
+          uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+
+      - name: job-summary
+        if: always()
+        env:
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          if [ -f "${REPORT_PATH:-}" ]; then
+            cat "${REPORT_PATH}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -n "${PR_URL}" ]; then
+            printf '\nPull request: %s\n' "${PR_URL}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: notify-slack-on-failure
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          uv run python integrations/slack_notify.py --text ":x: atlas cmc-new-symbol-mapping workflow failed — ${RUN_URL}"

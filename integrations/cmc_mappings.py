@@ -33,12 +33,20 @@ class InstrumentInstance:
 
 @dataclass(frozen=True)
 class CmcMapping:
+    """One decision about one instrument instance.
+
+    ``cmc_id`` is ``None`` when a review concluded that no CoinMarketCap asset
+    represents the instrument, so a repeated run can skip it instead of
+    re-deciding it.
+    """
+
     instrument: InstrumentInstance
-    cmc_id: int
+    cmc_id: int | None
     slug: str
     status: str
     method: str
     recorded_at: datetime
+    symbol: str = ""
     evidence: dict[str, Any] = field(default_factory=dict)
 
 
@@ -64,6 +72,10 @@ class MappingStore:
 
     def get(self, instrument: InstrumentInstance) -> CmcMapping | None:
         return self._mappings.get(instrument.key)
+
+    @property
+    def mappings(self) -> tuple[CmcMapping, ...]:
+        return tuple(mapping for _, mapping in sorted(self._mappings.items()))
 
     def upsert(self, mapping: CmcMapping, allow_replace: bool = False) -> None:
         existing = self.get(mapping.instrument)
@@ -109,11 +121,12 @@ def _mapping_from_json(row: object) -> CmcMapping:
             original_id=str(instrument["original_id"]),
             first_capture=_parse_timestamp(instrument["first_capture"]),
         ),
-        cmc_id=int(row["cmc_id"]),
-        slug=str(row["slug"]),
+        cmc_id=None if row.get("cmc_id") is None else int(row["cmc_id"]),
+        slug=str(row.get("slug") or ""),
         status=str(row["status"]),
         method=str(row["method"]),
         recorded_at=_parse_timestamp(row["recorded_at"]),
+        symbol=str(row.get("symbol") or ""),
         evidence=dict(row.get("evidence", {})),
     )
 

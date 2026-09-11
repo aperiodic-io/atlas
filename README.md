@@ -182,6 +182,38 @@ The repository currently ships precomputed JSON snapshots for:
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.
+- CoinMarketCap ID enrichment for newly listed Binance assets, with confident matches written to snapshots and ambiguous ones raised for review.
+
+## CoinMarketCap IDs
+
+Snapshot rows carry a `cmc_id` identifying the underlying asset, plus selected CMC
+`category` tags. Many exchange instruments may share one `cmc_id` — it names an
+asset, not a contract — and `atlas/update.py` treats the field as locally owned,
+so a snapshot refresh never overwrites it.
+
+New Binance listings are resolved automatically by the `cmc-new-symbol-mapping`
+workflow, which runs daily after the snapshot update:
+
+```bash
+# Resolve Binance symbols first captured in the last 30 days
+python integrations/cmc_new_symbol_mapping.py --new-within-days 30 --dry-run
+
+# Deterministic evidence only, no LLM adjudication
+python integrations/cmc_new_symbol_mapping.py --no-llm
+
+# Resolve only these tickers, ignoring age and any prior decision
+python integrations/cmc_new_symbol_mapping.py --symbols PEPE,CHEEMS
+```
+
+It reuses an ID the snapshots already carry for a ticker, accepts a single
+price-compatible CMC candidate, and otherwise asks an LLM to choose *among the
+fetched candidates only*. Confident matches are written to the snapshots;
+ambiguous ones are reported for review. Every decision — candidates, price
+evidence and rationale — is recorded per instrument instance in
+`atlas/data/cmc_mappings.json`, and the workflow opens one pull request covering
+both the confident and the uncertain matches. See
+[`docs/cmc-id-mapping.md`](docs/cmc-id-mapping.md) for the decision ladder,
+configuration and review process.
 
 ## Limitations
 
@@ -200,6 +232,8 @@ The repository currently ships precomputed JSON snapshots for:
 - `atlas/database.py`: load/query local securities master snapshots.
 - `atlas/update.py`: snapshot updater CLI.
 - `atlas/data/*.json`: generated per-exchange snapshot files.
+- `integrations/cmc_new_symbol_mapping.py`: CMC ID resolution for new Binance symbols.
+- `integrations/cmc_mappings.py`: versioned per-instrument CMC decision store.
 
 ## Testing
 
