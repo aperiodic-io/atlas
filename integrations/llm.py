@@ -17,15 +17,32 @@ import json
 import os
 import time
 from dataclasses import dataclass
+from collections.abc import Mapping
 from typing import Any, Protocol
+from urllib.parse import urlparse
 
 import requests
 
 from integrations.http_retry import retry_delay_seconds
 
 
-DEFAULT_BASE_URL = "https://models.github.ai/inference"
-DEFAULT_MODEL = "openai/gpt-4o-mini"
+# GitHub Models used to be the default, reached free inside Actions with the
+# workflow's own GITHUB_TOKEN. It now answers every request with 410 Gone and
+# "github_models_retirement_brownout": the service is being retired, so no URL,
+# model or header would bring it back. opencode Zen is OpenAI-compatible and its
+# free tier needs no account, which is what this job actually wants.
+DEFAULT_BASE_URL = "https://opencode.ai/zen/v1"
+# Zen's free tier rotates, so this id will eventually be retired too. A failure
+# then prints the ids the endpoint advertises, which is the whole fix.
+DEFAULT_MODEL = "mimo-v2-pro-free"
+# Zen serves its free models against this literal bearer token, so the job needs
+# no secret at all to adjudicate. It is a public constant, not a credential.
+ZEN_PUBLIC_TOKEN = "public"
+# Hosts that may receive GITHUB_TOKEN as the bearer token. The fallback to it
+# exists only because GitHub's own inference endpoint authenticates that way;
+# sending a repository token to anyone else would hand a third party write
+# access to the repository.
+GITHUB_TOKEN_HOSTS = frozenset({"models.github.ai", "api.github.com", "github.com"})
 DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_ATTEMPTS = 4
 DEFAULT_MIN_INTERVAL_SECONDS = 1.0
@@ -86,22 +103,19 @@ class LlmConfig:
 
     @classmethod
     def from_env(cls, env: dict[str, str] | None = None) -> LlmConfig:
-        """Build a config from the environment, defaulting to GitHub Models.
+        """Build a config from the environment, defaulting to opencode Zen.
 
-        Raises ``LlmNotConfiguredError`` when neither ``ATLAS_LLM_API_KEY`` nor
-        ``GITHUB_TOKEN`` is set, so callers can degrade to deterministic
-        matching instead of failing a scheduled run.
+        Raises ``LlmNotConfiguredError`` when no usable token can be resolved, so
+        callers can degrade to deterministic matching instead of failing a
+        scheduled run.
         """
         environment = os.environ if env is None else env
+        base_url = (
+            environment.get("ATLAS_LLM_BASE_URL") or DEFAULT_BASE_URL
+        ).strip()
         return cls(
-            api_key=(
-                environment.get("ATLAS_LLM_API_KEY")
-                or environment.get("GITHUB_TOKEN")
-                or ""
-            ).strip(),
-            base_url=(
-                environment.get("ATLAS_LLM_BASE_URL") or DEFAULT_BASE_URL
-            ).strip(),
+            api_key=_resolve_api_key(environment, base_url),
+            base_url=base_url,
             model=(environment.get("ATLAS_LLM_MODEL") or DEFAULT_MODEL).strip(),
             timeout_seconds=_int_from_env(
                 environment, "ATLAS_LLM_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS
@@ -114,8 +128,8 @@ class LlmConfig:
                 "ATLAS_LLM_MIN_INTERVAL_SECONDS",
                 DEFAULT_MIN_INTERVAL_SECONDS,
             ),
-            # GitHub Models answers 410 Gone to an unversioned request; other
-            # providers ignore the header.
+            # Kept for any GitHub-hosted endpoint that wants a version header;
+            # every other provider ignores it.
             api_version=(environment.get("ATLAS_LLM_API_VERSION") or "").strip(),
         )
 
@@ -248,6 +262,29 @@ class ChatClient:
             f"{self.config.model} returned no usable JSON after "
             f"{self.config.max_attempts} attempts: {last_error}"
         ) from last_error
+
+
+def _resolve_api_key(env: Mapping[str, str], base_url: str) -> str:
+    """Return the bearer token for ``base_url``, never leaking one across hosts.
+
+    ``GITHUB_TOKEN`` is a repository credential with write access, and the
+    workflow exports it alongside the provider settings. Falling back to it for
+    whatever endpoint happens to be configured would send it to a third party the
+    moment someone sets ``ATLAS_LLM_BASE_URL`` and forgets the key -- two
+    separate settings, so exactly the mistake a person makes. It is therefore
+    offered only to GitHub's own hosts.
+    """
+    configured = (env.get("ATLAS_LLM_API_KEY") or "").strip()
+    if configured:
+        return configured
+    host = (urlparse(base_url).hostname or "").lower()
+    if host in GITHUB_TOKEN_HOSTS:
+        return (env.get("GITHUB_TOKEN") or "").strip()
+    if host == "opencode.ai":
+        # Free Zen models answer to this public token, so the common case needs
+        # no secret. Anything paid rejects it and says so.
+        return ZEN_PUBLIC_TOKEN
+    return ""
 
 
 def _status_code(error: Exception) -> int | None:

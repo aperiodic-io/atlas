@@ -32,8 +32,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  # Free GitHub Models inference with the workflow's own GITHUB_TOKEN.
-  models: read
+  # No models: read -- GitHub Models is being retired and answers 410 Gone to
+  # every request, so the inference permission it existed for grants nothing.
 
 concurrency:
   group: cmc-new-symbol-mapping
@@ -108,24 +108,27 @@ jobs:
       - name: check-llm-endpoint
         if: steps.prepare.outputs.mode == 'check-llm'
         env:
+          # GITHUB_TOKEN is deliberately not exported here: it is a repository
+          # write credential, and the only endpoint that ever authenticated with
+          # it is retired. Unset, the default reaches Zen's free tier.
           ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
           ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run python integrations/cmc_new_symbol_mapping.py --check-llm
 
       - name: resolve-new-binance-symbols
         id: resolve
         if: steps.prepare.outputs.mode != 'check-llm'
         env:
-          # Any OpenAI-compatible endpoint works; unset falls back to GitHub Models.
+          # Any OpenAI-compatible endpoint works; unset reaches opencode Zen's
+          # free tier, which needs no key. GITHUB_TOKEN is deliberately absent:
+          # see check-llm-endpoint above.
           ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
-          # GitHub Models answers 410 Gone to an unversioned request.
+          # Only a GitHub-hosted endpoint wants this; others ignore it.
           ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
           DAYS: ${{ inputs.days || '60' }}
           MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '100' }}

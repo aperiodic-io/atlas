@@ -454,31 +454,32 @@ LLM access uses any OpenAI-compatible chat-completions endpoint
 
 | variable | where | purpose |
 | --- | --- | --- |
-| `ATLAS_LLM_API_KEY` | secret | provider key; falls back to `GITHUB_TOKEN` |
+| `ATLAS_LLM_API_KEY` | secret | provider key; unset reaches Zen's free tier (see below) |
 | `ATLAS_LLM_BASE_URL` | variable | endpoint root, no `/chat/completions` suffix |
 | `ATLAS_LLM_MODEL` | variable | model id as that provider spells it |
-| `ATLAS_LLM_API_VERSION` | variable | sent as `X-GitHub-Api-Version`; only GitHub Models wants it |
+| `ATLAS_LLM_API_VERSION` | variable | sent as `X-GitHub-Api-Version`; only a GitHub-hosted endpoint wants it |
 | `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | secrets | post via `chat.postMessage` |
 | `SLACK_WEBHOOK_URL` | secret | fallback transport, shared with `daily-update` |
 
-The built-in default targets GitHub Models, free inside Actions via the
-workflow's own `GITHUB_TOKEN` and the `models: read` permission. **That default
-is not currently working in this repository**: every request to
-`https://models.github.ai/inference/chat/completions` comes back `410 Gone`, with
-and without a version header. So configure a provider explicitly.
+**GitHub Models, the former default, is being retired.** It answers every
+request `410 Gone` with `github_models_retirement_brownout`, so no URL, model or
+header brings it back, and the workflow no longer requests the `models: read`
+permission that existed for it. The default now points at opencode Zen.
 
 #### opencode Zen
 
-Zen is OpenAI-compatible at `https://opencode.ai/zen/v1`, so two variables and a
-key are the whole configuration:
+Zen is OpenAI-compatible at `https://opencode.ai/zen/v1` and serves its free
+models against the literal bearer token `public`, so **nothing needs configuring
+for the job to adjudicate** — that base URL, a free model id and that token are
+the built-in defaults. Set these only to override them:
 
 | name | where | value |
 | --- | --- | --- |
-| `ATLAS_LLM_BASE_URL` | repository **variable** | `https://opencode.ai/zen/v1` |
-| `ATLAS_LLM_MODEL` | repository **variable** | a bare model id, e.g. `mimo-v2-pro-free` |
-| `ATLAS_LLM_API_KEY` | repository **secret** | a key from `opencode.ai/auth`, or the literal `public` |
+| `ATLAS_LLM_MODEL` | repository **variable** | a different bare model id |
+| `ATLAS_LLM_API_KEY` | repository **secret** | a key from `opencode.ai/auth`, for paid models or a private quota |
+| `ATLAS_LLM_BASE_URL` | repository **variable** | a different provider entirely |
 
-Two details decide whether this works, and both are easy to get wrong:
+Two details decide whether an override works, and both are easy to get wrong:
 
 - **Model ids carry no provider prefix.** Zen wants the id as the provider spells
   it — `big-pickle`, `nemotron-3-super-free` — *not* `opencode/big-pickle`. The
@@ -498,6 +499,13 @@ Three diagnostics exist because each of these cost a run:
   model from a token the endpoint will not serve.
 - `--check-llm` prints the URL, model, version header and whether a key is set
   *before* it dials, so a wrong variable is visible without reading code.
+`GITHUB_TOKEN` is offered as the bearer token **only** to GitHub's own hosts.
+It is a repository write credential and the workflow used to export it beside the
+provider settings, so an unscoped fallback would have sent it to whichever
+endpoint `ATLAS_LLM_BASE_URL` named — and since the URL and the key are two
+separate settings, setting one and forgetting the other is the ordinary mistake,
+not an exotic one. The workflow no longer exports it to the LLM steps at all.
+
 - On a failure it then asks the endpoint which models it serves and prints them,
   which is the whole fix once the free tier has rotated. That listing is optional
   in practice — Zen was only asked to add a `/models` route — so when it is absent

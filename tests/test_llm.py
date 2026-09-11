@@ -67,13 +67,24 @@ def _no_sleep(monkeypatch):
     monkeypatch.setattr("integrations.llm.time.sleep", lambda _seconds: None)
 
 
-def test_config_from_env_defaults_to_github_models_with_the_workflow_token():
-    config = LlmConfig.from_env({"GITHUB_TOKEN": "ghs_token"})
+def test_config_from_env_defaults_to_zens_free_tier_without_a_secret():
+    """GitHub Models is retired, so the default points at a provider that answers.
 
-    assert config.api_key == "ghs_token"
+    Zen serves its free models against the literal token ``public``, so the
+    scheduled job can adjudicate with no secret configured at all.
+    """
+    config = LlmConfig.from_env({})
+
+    assert config.base_url == "https://opencode.ai/zen/v1"
     assert config.base_url == DEFAULT_BASE_URL
     assert config.model == DEFAULT_MODEL
+    assert config.api_key == "public"
     assert config.chat_completions_url == f"{DEFAULT_BASE_URL}/chat/completions"
+
+
+def test_config_from_env_model_default_carries_no_provider_prefix():
+    """Zen rejects `opencode/<id>`; that form is its client config, not its API."""
+    assert "/" not in DEFAULT_MODEL
 
 
 def test_config_from_env_prefers_an_explicit_provider():
@@ -94,8 +105,43 @@ def test_config_from_env_prefers_an_explicit_provider():
 
 
 def test_config_from_env_without_a_key_is_reported_as_unconfigured():
+    """An endpoint with no token and no public tier cannot be called at all."""
     with pytest.raises(LlmNotConfiguredError):
-        LlmConfig.from_env({})
+        LlmConfig.from_env({"ATLAS_LLM_BASE_URL": "https://openrouter.ai/api/v1"})
+
+
+def test_the_workflow_token_is_never_sent_to_a_third_party_endpoint():
+    """Security: GITHUB_TOKEN is a repository write credential, not an LLM key.
+
+    The workflow exports it beside the provider settings, and the base URL and the
+    key are two separate settings -- so setting the URL and forgetting the key is
+    the ordinary mistake. Falling back to GITHUB_TOKEN there would put a token
+    with write access to this repository in an Authorization header addressed to
+    someone else.
+    """
+    for base_url in (
+        "https://opencode.ai/zen/v1",
+        "https://openrouter.ai/api/v1",
+        "https://models.github.ai.attacker.test/inference",
+    ):
+        config_env = {"GITHUB_TOKEN": "ghs_token", "ATLAS_LLM_BASE_URL": base_url}
+        try:
+            api_key = LlmConfig.from_env(config_env).api_key
+        except LlmNotConfiguredError:
+            continue
+        assert api_key != "ghs_token", base_url
+
+
+def test_the_workflow_token_is_still_offered_to_githubs_own_endpoint():
+    """Scoping the fallback must not break a GitHub endpoint that comes back."""
+    config = LlmConfig.from_env(
+        {
+            "GITHUB_TOKEN": "ghs_token",
+            "ATLAS_LLM_BASE_URL": "https://models.github.ai/inference",
+        }
+    )
+
+    assert config.api_key == "ghs_token"
 
 
 def test_complete_json_sends_a_bearer_token_and_returns_the_parsed_object():
