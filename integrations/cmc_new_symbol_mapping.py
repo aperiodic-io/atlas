@@ -53,7 +53,13 @@ from integrations.cmc_id_probe import (
     price_observations_from_binance_tickers,
 )
 from integrations.cmc_mappings import CmcMapping, InstrumentInstance, MappingStore
-from integrations.llm import ChatClient, LlmConfig, LlmError, LlmNotConfiguredError
+from integrations.llm import (
+    ChatClient,
+    LlmConfig,
+    LlmConfigurationError,
+    LlmError,
+    LlmNotConfiguredError,
+)
 
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
@@ -71,6 +77,17 @@ DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS = 90
 # proportionate gap is tolerated while the signals that mean "rows were genuinely
 # lost" still fail closed.
 DEFAULT_MAX_CATALOGUE_GAP_RATIO = 0.005
+# Binance lists a great many tokenized equities, ETFs and index products, and
+# they dominate new listings: 59 of the 67 unmapped rows in a 60-day window were
+# `equity`. CoinMarketCap does carry entries for some of them, so this is a scope
+# choice rather than a correctness one -- Atlas wants CMC IDs for crypto assets,
+# and an equity contract's "ID" would be a tokenization wrapper, not the asset.
+#
+# Rows whose `underlying` is absent are kept: those are legacy crypto rows that
+# predate the field (BTC, ADA, BNB). `unknown` is kept too, because silently
+# skipping a genuine new listing is worse than a reviewer seeing a few rows that
+# turn out not to be crypto.
+DEFAULT_SKIPPED_UNDERLYINGS = frozenset({"equity", "index", "commodity", "pre_market"})
 MAX_CANDIDATES_IN_PROMPT = 12
 
 SYSTEM_PROMPT = """\
@@ -288,13 +305,15 @@ def collect_new_symbols(
     new_within_days: int = DEFAULT_NEW_WITHIN_DAYS,
     decided_instances: frozenset[str] = frozenset(),
     only_symbols: frozenset[str] = frozenset(),
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
 ) -> list[NewSymbol]:
     """Group rows that still lack a CMC ID by lookup ticker.
 
     Rows are filtered per instrument instance, so an earlier decision about one
     instance never suppresses a later relisting of the same ticker.
     ``only_symbols`` narrows the run to those tickers and ignores the recency and
-    already-decided filters, so a specific asset can be re-resolved by hand.
+    already-decided filters, so a specific asset can be re-resolved by hand --
+    including an underlying this run would otherwise skip.
     """
     if new_within_days < 0:
         raise ValueError("new_within_days must not be negative")
@@ -304,6 +323,8 @@ def collect_new_symbols(
         for row in rows:
             occurrence = _occurrence_from_row(exchange, row)
             if occurrence is None:
+                continue
+            if not only_symbols and row.get("underlying") in skip_underlyings:
                 continue
             lookup_symbol = normalize_cmc_lookup_symbol(occurrence.symbol, cmc_symbols)
             if only_symbols:
@@ -386,46 +407,51 @@ def catalogue_trust(
     match: a missing row would have to share both the ticker and the exact project
     name, and two candidates sharing both go to the LLM as ambiguous anyway.
 
-    These signals still fail closed, because each means rows were genuinely lost
-    rather than merely deduplicated:
+    This is a live, continuously updated, paginated, scraped feed, and **every**
+    categorical signal of "something is wrong" turned out to be its normal
+    behaviour. Vetoing on each in turn blocked three consecutive production runs:
 
-    - malformed rows, which are candidates silently dropped at parse time;
-    - duplicate IDs, which mean pagination overlapped and may also have skipped;
-    - a reported total that changed mid-fetch, so no page is a consistent view;
-    - a missing reported total, leaving nothing to compare against;
-    - a gap larger than ``max_gap_ratio`` of the reported total.
+    - exact equality of reported total and unique IDs (pages overlap and dedup);
+    - any unparseable row (assets with no USD quote);
+    - any duplicate ID (overlapping pages again);
+    - any change in the reported total (CMC lists assets mid-fetch).
+
+    So only *magnitude* is judged. Everything that could hide a candidate --
+    deduplicated, unparseable, lost to pagination, or added after the first page
+    -- is counted into one figure and compared against ``max_gap_ratio``. A real
+    schema break still blows the budget, because ``unique_ids`` craters.
+
+    The one thing no tolerance can rescue is having no total to compare against.
     """
     if max_gap_ratio < 0:
         raise ValueError("max_gap_ratio must not be negative")
-    if diagnostics.malformed_rows:
-        return False, (
-            f"{diagnostics.malformed_rows} catalogue row(s) failed to parse, so "
-            "candidates may have been dropped."
-        )
-    if diagnostics.duplicate_ids:
-        return False, (
-            f"{len(diagnostics.duplicate_ids)} duplicate CMC ID(s) mean pagination "
-            "overlapped and may also have skipped rows."
-        )
-    if diagnostics.total_count_changed:
-        return False, "CoinMarketCap's reported total changed during the fetch."
     if diagnostics.reported_total is None:
         return False, "CoinMarketCap reported no total to compare against."
-    gap = diagnostics.reported_total - diagnostics.unique_ids
-    if gap < 0:
-        return False, (
-            f"CoinMarketCap returned {-gap} more unique IDs than it reported."
-        )
+    # Rows added after the first page are as unavailable to us as rows dropped
+    # from it, so the spread counts toward the same budget. A catalogue that grew
+    # can legitimately yield more unique IDs than the first page claimed, which is
+    # churn rather than incoherence, so the gap floors at zero.
+    gap = max(0, diagnostics.reported_total - diagnostics.unique_ids)
+    unavailable = gap + diagnostics.reported_total_spread
     allowed = max_gap_ratio * diagnostics.reported_total
-    if gap > allowed:
+    causes = []
+    if diagnostics.malformed_rows:
+        causes.append(f"{diagnostics.malformed_rows} unparseable")
+    if diagnostics.duplicate_ids:
+        causes.append(f"{len(diagnostics.duplicate_ids)} duplicated")
+    if diagnostics.reported_total_spread:
+        causes.append(f"total moved by {diagnostics.reported_total_spread} mid-fetch")
+    detail = f" ({', '.join(causes)})" if causes else ""
+    if unavailable > allowed:
         return False, (
-            f"{gap} of {diagnostics.reported_total} catalogue rows are missing, "
-            f"above the {max_gap_ratio:.3%} tolerance."
+            f"{unavailable} of {diagnostics.reported_total} catalogue rows could "
+            f"not be read{detail}, above the {max_gap_ratio:.3%} tolerance."
         )
-    if gap:
+    if unavailable:
         return True, (
-            f"tolerated a gap of {gap} of {diagnostics.reported_total} rows "
-            f"({gap / diagnostics.reported_total:.4%}, within {max_gap_ratio:.3%})"
+            f"tolerated {unavailable} unreadable of {diagnostics.reported_total} "
+            f"rows{detail}: {unavailable / diagnostics.reported_total:.4%}, "
+            f"within {max_gap_ratio:.3%}"
         )
     return True, ""
 
@@ -545,7 +571,9 @@ def decide(
             "low",
             f"{len(evidence.candidates)} same-ticker candidate(s) and "
             f"{len(identified)} with name evidence need review; no LLM was "
-            f"configured (probe status: {evidence.probe_status}).",
+            f"available to adjudicate, so see the run log for whether one was "
+            f"configured and whether it passed its check "
+            f"(probe status: {evidence.probe_status}).",
         )
     return _decide_with_llm(evidence, client, max_relative_difference)
 
@@ -581,6 +609,8 @@ def _decide_with_llm(
 ) -> Decision:
     try:
         answer = client.complete_json(SYSTEM_PROMPT, build_prompt(evidence))
+    except LlmConfigurationError:
+        raise
     except LlmError as error:
         return _decision(
             evidence,
@@ -1074,16 +1104,52 @@ def fetch_price_observations(
     return observations, True
 
 
-def _chat_client(use_llm: bool) -> ChatClient | None:
+@dataclass(frozen=True)
+class LlmAvailability:
+    """Whether an LLM is usable this run, and why not when it is not.
+
+    A deliberate absence and a broken endpoint both mean "no adjudication", but
+    they call for opposite responses: the first is a choice, the second is a
+    misconfiguration somebody has to fix.
+    """
+
+    client: ChatClient | None
+    status: str
+    error: str = ""
+
+    @property
+    def is_broken(self) -> bool:
+        return self.status == "unavailable"
+
+
+def _chat_client(use_llm: bool) -> LlmAvailability:
+    """Build an LLM client, proving the endpoint works before the run relies on it.
+
+    A misconfigured endpoint used to be discovered once per symbol, so a dead URL
+    cost four doomed requests per ticker and reported itself as dozens of
+    unrelated per-symbol outages. One preflight request turns that into a single
+    clear message.
+    """
     if not use_llm:
-        return None
+        return LlmAvailability(None, "not_configured", "disabled for this run")
     try:
         config = LlmConfig.from_env()
     except LlmNotConfiguredError as error:
         print(f"LLM adjudication disabled: {error}", file=sys.stderr)
-        return None
+        return LlmAvailability(None, "not_configured", str(error))
+    client = ChatClient(config, requests.Session())
+    try:
+        client.check()
+    except LlmError as error:
+        client.close()
+        print(
+            f"::error::LLM adjudication is configured but unusable, so every "
+            f"ambiguous ticker would need review: {error}",
+            file=sys.stderr,
+        )
+        return LlmAvailability(None, "unavailable", str(error))
     print(f"LLM adjudication via {config.base_url} ({config.model})", file=sys.stderr)
-    return ChatClient(config, requests.Session())
+    return LlmAvailability(client, "ok")
 
 
 def _public_assets_by_symbol() -> dict[str, dict]:
@@ -1177,7 +1243,14 @@ def resolve_new_symbols(
                 )
             )
             continue
-        decision = decide(evidence, client, max_relative_difference)
+        try:
+            decision = decide(evidence, client, max_relative_difference)
+        except LlmConfigurationError as error:
+            # The endpoint is permanently unusable; stop asking it and finish the
+            # remaining tickers on deterministic evidence alone.
+            print(f"::error::LLM adjudication abandoned: {error}", file=sys.stderr)
+            client = None
+            decision = decide(evidence, None, max_relative_difference)
         if needs_llm and client is not None:
             llm_calls += 1
         decisions.append(decision)
@@ -1185,7 +1258,10 @@ def resolve_new_symbols(
 
 
 def coverage_report(
-    rows_by_exchange: dict[str, list[dict]], now: datetime, window_days: int
+    rows_by_exchange: dict[str, list[dict]],
+    now: datetime,
+    window_days: int,
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
 ) -> dict[str, object]:
     """Summarise CMC ID coverage over a window, for staleness checks.
 
@@ -1204,7 +1280,13 @@ def coverage_report(
             is not None
             and captured >= cutoff
         ]
-        missing = [row for row in in_window if row.get("cmc_id") is None]
+        unmapped = [row for row in in_window if row.get("cmc_id") is None]
+        out_of_scope = [
+            row for row in unmapped if row.get("underlying") in skip_underlyings
+        ]
+        missing = [
+            row for row in unmapped if row.get("underlying") not in skip_underlyings
+        ]
         by_exchange[exchange] = {
             "rows_total": len(rows),
             "rows_missing_cmc_id_total": sum(
@@ -1212,6 +1294,10 @@ def coverage_report(
             ),
             "rows_in_window": len(in_window),
             "rows_in_window_missing_cmc_id": len(missing),
+            "rows_in_window_out_of_scope": len(out_of_scope),
+            "out_of_scope_underlyings": dict(
+                sorted(Counter(str(row.get("underlying")) for row in out_of_scope).items())
+            ),
             "tickers_in_window_missing_cmc_id": sorted(
                 {
                     row["symbol"].upper()
@@ -1223,9 +1309,13 @@ def coverage_report(
     return {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
         "window_days": window_days,
+        "skipped_underlyings": sorted(skip_underlyings),
         "exchanges": by_exchange,
         "rows_in_window_missing_cmc_id": sum(
             int(stats["rows_in_window_missing_cmc_id"]) for stats in by_exchange.values()
+        ),
+        "rows_in_window_out_of_scope": sum(
+            int(stats["rows_in_window_out_of_scope"]) for stats in by_exchange.values()
         ),
     }
 
@@ -1238,8 +1328,8 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
         "",
         f"Run at {coverage['generated_at']}.",
         "",
-        "| exchange | rows | missing id (all time) | rows in window | missing id in window |",
-        "| --- | --- | --- | --- | --- |",
+        "| exchange | rows | missing id (all time) | rows in window | missing id, in scope | skipped as non-crypto |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     exchanges: dict[str, dict[str, object]] = coverage["exchanges"]  # type: ignore[assignment]
     for exchange, stats in exchanges.items():
@@ -1247,7 +1337,8 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
             f"| `{exchange}` | {stats['rows_total']} "
             f"| {stats['rows_missing_cmc_id_total']} "
             f"| {stats['rows_in_window']} "
-            f"| {stats['rows_in_window_missing_cmc_id']} |"
+            f"| {stats['rows_in_window_missing_cmc_id']} "
+            f"| {stats['rows_in_window_out_of_scope']} |"
         )
     for exchange, stats in exchanges.items():
         tickers: list[str] = stats["tickers_in_window_missing_cmc_id"]  # type: ignore[assignment]
@@ -1257,8 +1348,50 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
         more = "" if len(tickers) <= 60 else f" …and {len(tickers) - 60} more"
         lines += ["", f"**{exchange}** tickers still without a CMC ID: {shown}{more}"]
     if not coverage["rows_in_window_missing_cmc_id"]:
-        lines += ["", "Nothing in the window is missing a CMC ID."]
+        lines += ["", "Nothing in scope in the window is missing a CMC ID."]
+    skipped = coverage.get("skipped_underlyings") or []
+    if skipped:
+        lines += [
+            "",
+            f"Rows whose `underlying` is {', '.join(f'`{u}`' for u in skipped)} are "
+            "out of scope and not counted as missing: Atlas maps CMC IDs for crypto "
+            "assets, and a tokenized equity's ID would name the wrapper, not the "
+            "asset. Rows with no `underlying` (legacy crypto) and `unknown` are "
+            "still in scope.",
+        ]
     return "\n".join(lines) + "\n"
+
+
+def _run_coverage_only(
+    rows_by_exchange: dict[str, list[dict]],
+    now: datetime,
+    window_days: int,
+    skip_underlyings: frozenset[str],
+    report_path: Path | None,
+    summary_path: Path | None,
+) -> dict[str, object]:
+    """Report coverage and stop, without contacting CoinMarketCap or Binance."""
+    coverage = coverage_report(rows_by_exchange, now, window_days, skip_underlyings)
+    rendered = render_coverage_report(coverage)
+    if report_path is not None:
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(rendered)
+    summary: dict[str, object] = {
+        "generated_at": coverage["generated_at"],
+        "coverage_only": True,
+        "window_days": window_days,
+        "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
+        "rows_in_window_out_of_scope": coverage["rows_in_window_out_of_scope"],
+        "skipped_underlyings": coverage["skipped_underlyings"],
+        "coverage": coverage["exchanges"],
+        "has_changes": False,
+        "worth_reviewing": False,
+    }
+    if summary_path is not None:
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    print(rendered)
+    return summary
 
 
 def run(
@@ -1271,6 +1404,7 @@ def run(
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
     recheck_unmapped_after_days: int = DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
     max_catalogue_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
     pending_mapping_paths: tuple[Path, ...] = (),
     use_llm: bool = True,
     only_symbols: frozenset[str] = frozenset(),
@@ -1287,23 +1421,14 @@ def run(
     rows_by_exchange = load_snapshots(data_dir, exchanges)
 
     if coverage_only:
-        coverage = coverage_report(rows_by_exchange, now, new_within_days)
-        if report_path is not None:
-            report_path.parent.mkdir(parents=True, exist_ok=True)
-            report_path.write_text(render_coverage_report(coverage))
-        summary: dict[str, object] = {
-            "generated_at": coverage["generated_at"],
-            "coverage_only": True,
-            "window_days": new_within_days,
-            "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
-            "coverage": coverage["exchanges"],
-            "has_changes": False,
-        }
-        if summary_path is not None:
-            summary_path.parent.mkdir(parents=True, exist_ok=True)
-            summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
-        print(render_coverage_report(coverage))
-        return summary
+        return _run_coverage_only(
+            rows_by_exchange,
+            now,
+            new_within_days,
+            skip_underlyings,
+            report_path,
+            summary_path,
+        )
 
     store = MappingStore.load(mapping_path)
     with requests.Session() as session:
@@ -1338,8 +1463,9 @@ def run(
             | pending_proposed_instances(pending_mapping_paths)
         ),
         only_symbols=only_symbols,
+        skip_underlyings=skip_underlyings,
     )
-    summary = {
+    summary: dict[str, object] = {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
         "new_symbols": len(new_symbols),
         "approved": 0,
@@ -1351,11 +1477,19 @@ def run(
         "catalogue_complete": diagnostics.is_complete,
         "catalogue_trustworthy": trustworthy,
         "catalogue_issue": catalogue_issue,
+        "skipped_underlyings": sorted(skip_underlyings),
         "exchange_prices_available": True,
+        "llm_status": "ok",
+        "llm_error": "",
+        # A pull request is only worth opening if somebody can act on it. A run
+        # whose LLM was configured but dead approves nothing and produces a page
+        # of outage notices; two such PRs once blocked every later run, because
+        # the pending-ledger skip treats them as work already awaiting review.
+        "worth_reviewing": False,
     }
     if not new_symbols:
         print("No new Binance symbols need a CMC ID.")
-        _write_outputs(summary, [], now, report_path, summary_path)
+        _write_outputs(summary, [], now, report_path, summary_path, None)
         return summary
 
     print(f"Resolving {len(new_symbols)} new Binance ticker(s)...", file=sys.stderr)
@@ -1368,7 +1502,8 @@ def run(
             "auto-approved this run",
             file=sys.stderr,
         )
-    client = _chat_client(use_llm)
+    llm = _chat_client(use_llm)
+    client = llm.client
     try:
         decisions = resolve_new_symbols(
             new_symbols,
@@ -1409,13 +1544,18 @@ def run(
             "rows_updated": rows_updated,
             "mapping_conflicts": len(conflicting) + recording["conflicts"],
             "exchange_prices_available": prices_available,
+            "llm_status": llm.status,
+            "llm_error": llm.error,
+            "worth_reviewing": (
+                counts[MatchStatus.APPROVED.value] > 0 or not llm.is_broken
+            ),
             "has_changes": True,
         }
     )
     if not dry_run:
         save_snapshots(data_dir, rows_by_exchange, set(rows_updated))
         store.save()
-    _write_outputs(summary, decisions, now, report_path, summary_path)
+    _write_outputs(summary, decisions, now, report_path, summary_path, llm)
     for decision in decisions:
         print(
             f"{decision.lookup_symbol}\t{decision.status.value}\t"
@@ -1431,13 +1571,55 @@ def _write_outputs(
     now: datetime,
     report_path: Path | None,
     summary_path: Path | None,
+    llm: LlmAvailability | None = None,
 ) -> None:
     if report_path is not None:
         report_path.parent.mkdir(parents=True, exist_ok=True)
-        report_path.write_text(render_report(decisions, now))
+        report = render_report(decisions, now)
+        if llm is not None and llm.is_broken:
+            report = (
+                "> **This run had no working LLM, so no ambiguous ticker could be "
+                f"adjudicated.** Fix the endpoint and re-run rather than reviewing "
+                f"these rows one by one.\n>\n> `{llm.error}`\n\n" + report
+            )
+        report_path.write_text(report)
     if summary_path is not None:
         summary_path.parent.mkdir(parents=True, exist_ok=True)
         summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+
+
+def _print_available_models(client: ChatClient) -> None:
+    """Name the models the endpoint will serve, when it is willing to say."""
+    models = client.available_models()
+    if not models:
+        return
+    print(f"\n{len(models)} model(s) this endpoint advertises:", flush=True)
+    for model in models:
+        print(f"  {model}", flush=True)
+
+
+def _check_llm() -> int:
+    """Validate the LLM configuration on its own, for setup and debugging."""
+    try:
+        config = LlmConfig.from_env()
+    except LlmNotConfiguredError as error:
+        print(f"no LLM configured: {error}", file=sys.stderr)
+        return 1
+    print(f"POST {config.chat_completions_url}")
+    print(f"  model: {config.model}")
+    print(f"  api-version header: {config.api_version or '(none sent)'}")
+    print(f"  key: {'set' if config.api_key else 'missing'}", flush=True)
+    with requests.Session() as session:
+        client = ChatClient(config, session)
+        try:
+            client.check()
+        except LlmError as error:
+            # Same stream as the context above, so a CI log reads in order.
+            print(f"LLM check FAILED: {error}", flush=True)
+            _print_available_models(client)
+            return 1
+    print("LLM check OK", flush=True)
+    return 0
 
 
 def main() -> int:
@@ -1475,6 +1657,13 @@ def main() -> int:
         type=int,
         default=DEFAULT_MAX_LLM_SYMBOLS,
         help="cap LLM adjudications per run (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--skip-underlyings",
+        default=",".join(sorted(DEFAULT_SKIPPED_UNDERLYINGS)),
+        help="comma-separated `underlying` values to leave out, so only crypto "
+        "assets are resolved; pass an empty string to resolve everything "
+        "(default: %(default)s)",
     )
     parser.add_argument(
         "--max-catalogue-gap-ratio",
@@ -1515,6 +1704,12 @@ def main() -> int:
         help="re-resolve tickers a previous run already decided",
     )
     parser.add_argument(
+        "--check-llm",
+        action="store_true",
+        help="send one request to the configured LLM endpoint, report the result "
+        "and exit, without touching CoinMarketCap or Binance",
+    )
+    parser.add_argument(
         "--coverage-only",
         action="store_true",
         help="report CMC ID coverage over the window and exit, without "
@@ -1524,6 +1719,9 @@ def main() -> int:
     parser.add_argument("--report-path", type=Path, default=None)
     parser.add_argument("--summary-path", type=Path, default=None)
     args = parser.parse_args()
+
+    if args.check_llm:
+        return _check_llm()
 
     try:
         run(
@@ -1540,6 +1738,11 @@ def main() -> int:
             max_llm_symbols=args.max_llm_symbols,
             recheck_unmapped_after_days=args.recheck_unmapped_after_days,
             max_catalogue_gap_ratio=args.max_catalogue_gap_ratio,
+            skip_underlyings=frozenset(
+                value.strip()
+                for value in args.skip_underlyings.split(",")
+                if value.strip()
+            ),
             pending_mapping_paths=tuple(args.pending_mapping_path),
             use_llm=not args.no_llm,
             only_symbols=frozenset(

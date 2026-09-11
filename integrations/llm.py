@@ -17,19 +17,41 @@ import json
 import os
 import time
 from dataclasses import dataclass
+from collections.abc import Mapping
 from typing import Any, Protocol
+from urllib.parse import urlparse
 
 import requests
 
 from integrations.http_retry import retry_delay_seconds
 
 
-DEFAULT_BASE_URL = "https://models.github.ai/inference"
-DEFAULT_MODEL = "openai/gpt-4o-mini"
+# GitHub Models used to be the default, reached free inside Actions with the
+# workflow's own GITHUB_TOKEN. It now answers every request with 410 Gone and
+# "github_models_retirement_brownout": the service is being retired, so no URL,
+# model or header would bring it back. opencode Zen is OpenAI-compatible and its
+# free tier needs no account, which is what this job actually wants.
+DEFAULT_BASE_URL = "https://opencode.ai/zen/v1"
+# Zen's free tier rotates, so this id will eventually be retired too. A failure
+# then prints the ids the endpoint advertises, which is the whole fix.
+DEFAULT_MODEL = "mimo-v2-pro-free"
+# Zen serves its free models against this literal bearer token, so the job needs
+# no secret at all to adjudicate. It is a public constant, not a credential.
+ZEN_PUBLIC_TOKEN = "public"
+# Hosts that may receive GITHUB_TOKEN as the bearer token. The fallback to it
+# exists only because GitHub's own inference endpoint authenticates that way;
+# sending a repository token to anyone else would hand a third party write
+# access to the repository.
+GITHUB_TOKEN_HOSTS = frozenset({"models.github.ai", "api.github.com", "github.com"})
 DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_ATTEMPTS = 4
 DEFAULT_MIN_INTERVAL_SECONDS = 1.0
 MAX_RETRY_DELAY_SECONDS = 60
+# Retrying a permanent rejection wastes the whole run: a misconfigured endpoint
+# answered 410 Gone four times for each of 38 tickers once, burning nine minutes
+# and reporting itself as 38 separate per-ticker outages. Only these are worth a
+# second attempt; every other 4xx is a configuration error.
+RETRYABLE_STATUS_CODES = frozenset({408, 409, 425, 429, 500, 502, 503, 504})
 
 
 class JsonResponse(Protocol):
@@ -50,6 +72,15 @@ class LlmNotConfiguredError(LlmError):
     """No API key is available, so no completion can be requested."""
 
 
+class LlmConfigurationError(LlmError):
+    """The endpoint rejected the request in a way retrying cannot fix.
+
+    A wrong URL, a retired API version, a bad key or a missing scope are all
+    permanent for the lifetime of a run, so the caller should stop asking rather
+    than fail once per symbol.
+    """
+
+
 @dataclass(frozen=True)
 class LlmConfig:
     api_key: str
@@ -58,6 +89,7 @@ class LlmConfig:
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS
     max_attempts: int = DEFAULT_MAX_ATTEMPTS
     min_interval_seconds: float = DEFAULT_MIN_INTERVAL_SECONDS
+    api_version: str = ""
 
     def __post_init__(self) -> None:
         if not self.api_key:
@@ -71,22 +103,19 @@ class LlmConfig:
 
     @classmethod
     def from_env(cls, env: dict[str, str] | None = None) -> LlmConfig:
-        """Build a config from the environment, defaulting to GitHub Models.
+        """Build a config from the environment, defaulting to opencode Zen.
 
-        Raises ``LlmNotConfiguredError`` when neither ``ATLAS_LLM_API_KEY`` nor
-        ``GITHUB_TOKEN`` is set, so callers can degrade to deterministic
-        matching instead of failing a scheduled run.
+        Raises ``LlmNotConfiguredError`` when no usable token can be resolved, so
+        callers can degrade to deterministic matching instead of failing a
+        scheduled run.
         """
         environment = os.environ if env is None else env
+        base_url = (
+            environment.get("ATLAS_LLM_BASE_URL") or DEFAULT_BASE_URL
+        ).strip()
         return cls(
-            api_key=(
-                environment.get("ATLAS_LLM_API_KEY")
-                or environment.get("GITHUB_TOKEN")
-                or ""
-            ).strip(),
-            base_url=(
-                environment.get("ATLAS_LLM_BASE_URL") or DEFAULT_BASE_URL
-            ).strip(),
+            api_key=_resolve_api_key(environment, base_url),
+            base_url=base_url,
             model=(environment.get("ATLAS_LLM_MODEL") or DEFAULT_MODEL).strip(),
             timeout_seconds=_int_from_env(
                 environment, "ATLAS_LLM_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS
@@ -99,11 +128,30 @@ class LlmConfig:
                 "ATLAS_LLM_MIN_INTERVAL_SECONDS",
                 DEFAULT_MIN_INTERVAL_SECONDS,
             ),
+            # Kept for any GitHub-hosted endpoint that wants a version header;
+            # every other provider ignores it.
+            api_version=(environment.get("ATLAS_LLM_API_VERSION") or "").strip(),
         )
 
     @property
     def chat_completions_url(self) -> str:
         return f"{self.base_url.rstrip('/')}/chat/completions"
+
+    @property
+    def models_url(self) -> str:
+        return f"{self.base_url.rstrip('/')}/models"
+
+    @property
+    def headers(self) -> dict[str, str]:
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "User-Agent": "atlas-llm/1.0",
+        }
+        if self.api_version:
+            headers["X-GitHub-Api-Version"] = self.api_version
+        return headers
 
 
 class ChatClient:
@@ -114,6 +162,51 @@ class ChatClient:
         self._session = session
         self._next_request_at = 0.0
         self.calls = 0
+
+    def check(self) -> None:
+        """Validate the endpoint with one cheap request before the real work.
+
+        Raises ``LlmConfigurationError`` when the endpoint is permanently
+        unusable, so a run can say so once instead of discovering it per symbol.
+        """
+        self.complete_json(
+            "Reply with JSON only.",
+            'Reply with exactly {"ok": true} and nothing else.',
+        )
+
+    def available_models(self) -> list[str]:
+        """Return the model ids the endpoint advertises, or [] if it will not say.
+
+        Providers with a rotating free tier retire model ids without notice, which
+        reaches a scheduled run as an unexplained rejection of a name that worked
+        yesterday. Listing what is actually on offer turns that into a one-line
+        fix. The listing endpoint is optional in practice -- opencode Zen was
+        asked to add one and may not serve it -- so every failure here is silent:
+        this is a diagnostic aid, never a precondition for a completion.
+        """
+        get = getattr(self._session, "get", None)
+        if not callable(get):
+            return []
+        try:
+            response = get(
+                self.config.models_url,
+                timeout=self.config.timeout_seconds,
+                headers=self.config.headers,
+            )
+            response.raise_for_status()
+            payload = response.json()
+        except (requests.RequestException, ValueError):
+            return []
+        if not isinstance(payload, dict):
+            return []
+        data = payload.get("data")
+        if not isinstance(data, list):
+            return []
+        return sorted(
+            str(entry["id"])
+            for entry in data
+            if isinstance(entry, dict) and isinstance(entry.get("id"), str)
+        )
 
     def close(self) -> None:
         close = getattr(self._session, "close", None)
@@ -141,16 +234,18 @@ class ChatClient:
                     self.config.chat_completions_url,
                     json=body,
                     timeout=self.config.timeout_seconds,
-                    headers={
-                        "Authorization": f"Bearer {self.config.api_key}",
-                        "Accept": "application/json",
-                        "Content-Type": "application/json",
-                        "User-Agent": "atlas-llm/1.0",
-                    },
+                    headers=self.config.headers,
                 )
                 response.raise_for_status()
                 payload = response.json()
             except (requests.RequestException, ValueError) as error:
+                status = _status_code(error)
+                if status is not None and status not in RETRYABLE_STATUS_CODES:
+                    raise LlmConfigurationError(
+                        f"{self.config.model} at {self.config.chat_completions_url} "
+                        f"rejected the request with HTTP {status}; retrying cannot "
+                        f"fix this: {error}{_response_detail(error)}"
+                    ) from error
                 last_error = error
                 self._next_request_at = time.monotonic() + retry_delay_seconds(
                     error, attempt, MAX_RETRY_DELAY_SECONDS
@@ -167,6 +262,52 @@ class ChatClient:
             f"{self.config.model} returned no usable JSON after "
             f"{self.config.max_attempts} attempts: {last_error}"
         ) from last_error
+
+
+def _resolve_api_key(env: Mapping[str, str], base_url: str) -> str:
+    """Return the bearer token for ``base_url``, never leaking one across hosts.
+
+    ``GITHUB_TOKEN`` is a repository credential with write access, and the
+    workflow exports it alongside the provider settings. Falling back to it for
+    whatever endpoint happens to be configured would send it to a third party the
+    moment someone sets ``ATLAS_LLM_BASE_URL`` and forgets the key -- two
+    separate settings, so exactly the mistake a person makes. It is therefore
+    offered only to GitHub's own hosts.
+    """
+    configured = (env.get("ATLAS_LLM_API_KEY") or "").strip()
+    if configured:
+        return configured
+    host = (urlparse(base_url).hostname or "").lower()
+    if host in GITHUB_TOKEN_HOSTS:
+        return (env.get("GITHUB_TOKEN") or "").strip()
+    if host == "opencode.ai":
+        # Free Zen models answer to this public token, so the common case needs
+        # no secret. Anything paid rejects it and says so.
+        return ZEN_PUBLIC_TOKEN
+    return ""
+
+
+def _status_code(error: Exception) -> int | None:
+    """Return the HTTP status behind a request failure, if it carries one."""
+    status = getattr(getattr(error, "response", None), "status_code", None)
+    return status if isinstance(status, int) else None
+
+
+def _response_detail(error: Exception, limit: int = 400) -> str:
+    """Return what the endpoint said, which is where the actual reason lives.
+
+    An HTTP status alone leaves a misconfiguration ambiguous -- a 410 could be a
+    retired path, a retired model, or a token the endpoint will not serve. The
+    body usually says which, so discarding it turns a one-line fix into guesswork.
+    """
+    response = getattr(error, "response", None)
+    body = getattr(response, "text", None)
+    if not isinstance(body, str) or not body.strip():
+        return ""
+    collapsed = " ".join(body.split())
+    if len(collapsed) > limit:
+        collapsed = f"{collapsed[:limit]}…"
+    return f" -- endpoint said: {collapsed}"
 
 
 def _message_content(payload: object) -> str:

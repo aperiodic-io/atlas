@@ -227,9 +227,30 @@ calls Binance from `ubuntu-latest` fails. CoinMarketCap is not geo-blocked, whic
 makes the failure look puzzling — the catalogue fetch succeeds and the run dies at
 the first price call. It invokes:
 
+The dispatch form takes one **mode** and one **window**, so there is no pair of
+similar-looking inputs to choose between:
+
+| mode | what it does | network | writes | opens a PR |
+| --- | --- | --- | --- | --- |
+| `resolve` (default) | map new symbols, write confident matches | CMC + Binance + LLM | yes | yes |
+| `preview` | same work, reported only | CMC + Binance + LLM | no | no |
+| `coverage` | count rows still missing an ID | none | no | no |
+| `check-llm` | one request to the LLM endpoint, then stop | LLM only | no | no |
+
+`days` is that single window: in `resolve` and `preview` it bounds how recently a
+symbol was first listed; in `coverage` it bounds which rows are counted. It
+defaults to 60, which costs almost nothing to widen because an instrument instance
+already decided is skipped — so a wider window only re-examines genuinely
+undecided rows, and a few failed runs cannot open a gap.
+
+`max-llm-symbols` defaults to 100 so a backlog clears in one run; in steady state
+a handful of symbols a day never approaches it.
+
+Equivalent on the command line:
+
 ```bash
 python integrations/cmc_new_symbol_mapping.py \
-  --new-within-days 30 --max-llm-symbols 40 \
+  --new-within-days 60 --max-llm-symbols 100 \
   --report-path <report.md> --summary-path <summary.json>
 ```
 
@@ -237,9 +258,35 @@ Scope is `binance-futures` by default (`--exchanges` widens it). A row enters th
 run when all of the following hold:
 
 - the row has no `cmc_id`;
+- its `underlying` is not one Atlas maps no CMC ID for (see *Crypto only* below);
 - its `first_capture` is within `--new-within-days`; and
 - no earlier run already decided that *instrument instance* (see *Not
   re-deciding* below).
+
+### Crypto only
+
+Binance lists a great many tokenized equities, ETFs and index products, and they
+dominate new listings: in one 60-day window, **59 of the 67** unmapped
+`binance-futures` rows had `underlying: equity` — Datadog, Moderna, Shopify,
+Zscaler, leveraged Tesla and NVIDIA ETFs, Korean index products. Left in, they
+drown the review queue.
+
+`--skip-underlyings` (default `commodity,equity,index,pre_market`) leaves them
+out. CoinMarketCap does carry entries for some of them, so this is a **scope**
+choice, not a correctness one: Atlas wants a CMC ID for a crypto asset, and a
+tokenized equity's ID would name the tokenization wrapper rather than the asset.
+
+Two deliberate inclusions:
+
+- **No `underlying` at all** is kept. Those are legacy rows that predate the
+  field — BTC, ADA, BNB, AVAX — and are crypto.
+- **`unknown`** is kept, because silently skipping a genuine new listing is worse
+  than a reviewer seeing a couple of rows that turn out not to be crypto.
+
+`--symbols` overrides the filter, so a specific ticker can always be resolved by
+hand. Pass `--skip-underlyings ""` to resolve everything. The coverage audit
+applies the same scope and reports what it left out, so its headline count is
+work somebody actually wants done.
 
 Contract tickers are folded onto their underlying asset before grouping, so
 `1000CHEEMS` and `CHEEMS` are resolved once, together.
@@ -282,26 +329,37 @@ Two consequences worth stating plainly:
   check is a weak signal, and silently dropping it would be worse than holding
   the work for a human.
 
-### Catalogue trust, and why it is proportionate
+### Catalogue trust: magnitude, not category
 
-The keyless listing endpoint reliably reports a few more assets than it returns
-unique IDs for: 8,184 against 8,179 in the first production run, 8,143 against
-8,141 during the original audit. Demanding exact equality — as this gate first did
-— therefore blocks **every** approval forever, which is not a safety property but
-a broken feature.
+The keyless listing is a live, continuously updated, paginated, scraped feed, and
+**every categorical signal of "something is wrong" turned out to be its normal
+behaviour**. Each was tried as a veto and each blocked a production run on its own:
 
-`catalogue_trust()` is proportionate instead. It tolerates a gap up to
-`--max-catalogue-gap-ratio` (default 0.5%; production's gap is 0.061%) and records
-the tolerated gap in every decision's evidence. These signals still fail closed,
-because each means rows were genuinely lost rather than merely deduplicated:
+| signal vetoed | why it fires normally | run it blocked |
+| --- | --- | --- |
+| reported total ≠ unique IDs | pages overlap; dedup removes repeats | every run, by construction |
+| any unparseable row | assets with no USD quote | 8,183/8,176 with 1 bad row |
+| any duplicate ID | overlapping pages again | — |
+| any change in the reported total | CMC lists assets mid-fetch | 8,183/8,182, total moved by 1 |
 
-| signal | why it blocks |
-| --- | --- |
-| malformed rows | candidates were silently dropped at parse time |
-| duplicate CMC IDs | pagination overlapped, so it may also have skipped |
-| reported total changed mid-fetch | no page is a consistent view |
-| no reported total | nothing to compare against |
-| gap above the tolerance | rows are missing at a scale that is not dedup |
+So `catalogue_trust()` judges only **magnitude**. Everything that could hide a
+candidate — deduplicated, unparseable, lost to pagination, or added after the
+first page — is counted into one figure and compared against
+`--max-catalogue-gap-ratio` (default 0.5%). Observed production figures sit
+between 0.02% and 0.09%. Each cause is still named in the evidence, so a reviewer
+sees *why* rows were unreadable without it being a veto.
+
+A catalogue that **grew** while being read can legitimately yield more unique IDs
+than the first page claimed, so the gap floors at zero rather than being treated
+as incoherence.
+
+Two things still fail closed:
+
+- **no reported total at all** — nothing to measure against, and no tolerance can
+  rescue that;
+- **unreadable rows above the tolerance** — a real schema break craters
+  `unique_ids` and blows the budget, which is what the gate is for.
+
 
 The reason a small gap is safe *here* is that approval rests on **presence** — an
 exact Binance-to-CMC name match — not on a ticker being unique. The original rule
@@ -391,29 +449,144 @@ ledger write from leaving the snapshot and the ledger disagreeing.
 ### Configuration
 
 LLM access uses any OpenAI-compatible chat-completions endpoint
-([`integrations/llm.py`](../integrations/llm.py)). With nothing configured it
-uses GitHub Models, which is free inside Actions via the workflow's own
-`GITHUB_TOKEN` and the `models: read` permission.
+([`integrations/llm.py`](../integrations/llm.py)), reached with bearer auth at
+`<base-url>/chat/completions`.
 
-| variable | purpose |
-| --- | --- |
-| `ATLAS_LLM_API_KEY` | provider key; falls back to `GITHUB_TOKEN` |
-| `ATLAS_LLM_BASE_URL` | default `https://models.github.ai/inference` |
-| `ATLAS_LLM_MODEL` | default `openai/gpt-4o-mini` |
-| `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | post via `chat.postMessage` |
-| `SLACK_WEBHOOK_URL` | fallback transport, shared with `daily-update` |
+| variable | where | purpose |
+| --- | --- | --- |
+| `ATLAS_LLM_API_KEY` | secret | provider key; unset reaches Zen's free tier (see below) |
+| `ATLAS_LLM_BASE_URL` | variable | endpoint root, no `/chat/completions` suffix |
+| `ATLAS_LLM_MODEL` | variable | model id as that provider spells it |
+| `ATLAS_LLM_API_VERSION` | variable | sent as `X-GitHub-Api-Version`; only a GitHub-hosted endpoint wants it |
+| `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | secrets | post via `chat.postMessage` |
+| `SLACK_WEBHOOK_URL` | secret | fallback transport, shared with `daily-update` |
 
-To use a free hosted model instead, set `ATLAS_LLM_BASE_URL` to
-`https://openrouter.ai/api/v1`, `ATLAS_LLM_MODEL` to a `:free` model and
-`ATLAS_LLM_API_KEY` to the provider key. With no key at all the run still
+**GitHub Models, the former default, is being retired.** It answers every
+request `410 Gone` with `github_models_retirement_brownout`, so no URL, model or
+header brings it back, and the workflow no longer requests the `models: read`
+permission that existed for it. The default now points at opencode Zen.
+
+#### opencode Zen
+
+Zen is OpenAI-compatible at `https://opencode.ai/zen/v1` and serves its free
+models against the literal bearer token `public`, so **nothing needs configuring
+for the job to adjudicate** — that base URL, a free model id and that token are
+the built-in defaults. Set these only to override them:
+
+| name | where | value |
+| --- | --- | --- |
+| `ATLAS_LLM_MODEL` | repository **variable** | a different bare model id |
+| `ATLAS_LLM_API_KEY` | repository **secret** | a key from `opencode.ai/auth`, for paid models or a private quota |
+| `ATLAS_LLM_BASE_URL` | repository **variable** | a different provider entirely |
+
+Two details decide whether an override works, and both are easy to get wrong:
+
+- **Model ids carry no provider prefix.** Zen wants the id as the provider spells
+  it — `big-pickle`, `nemotron-3-super-free` — *not* `opencode/big-pickle`. The
+  `provider/model` form is how opencode's own client config namespaces providers,
+  not what the HTTP API accepts.
+- **The free tier rotates.** Models are added and retired without notice, so an id
+  that works today can be rejected next month, and a daily run meets that as an
+  unexplained failure. Take the current list from
+  [opencode.ai/zen](https://opencode.ai/zen) and expect to revisit it. Free ids
+  conventionally end in `-free`, and `ATLAS_LLM_API_KEY=public` reaches the free
+  models without an account at all.
+
+Three diagnostics exist because each of these cost a run:
+
+- A permanent rejection quotes the endpoint's own response body, not just the
+  status, because a bare `410` cannot distinguish a retired path from a retired
+  model from a token the endpoint will not serve.
+- `--check-llm` prints the URL, model, version header and whether a key is set
+  *before* it dials, so a wrong variable is visible without reading code.
+`GITHUB_TOKEN` is offered as the bearer token **only** to GitHub's own hosts.
+It is a repository write credential and the workflow used to export it beside the
+provider settings, so an unscoped fallback would have sent it to whichever
+endpoint `ATLAS_LLM_BASE_URL` named — and since the URL and the key are two
+separate settings, setting one and forgetting the other is the ordinary mistake,
+not an exotic one. The workflow no longer exports it to the LLM steps at all.
+
+- On a failure it then asks the endpoint which models it serves and prints them,
+  which is the whole fix once the free tier has rotated. That listing is optional
+  in practice — Zen was only asked to add a `/models` route — so when it is absent
+  the check stays silent rather than reporting a second, less useful error.
+
+### One run is the whole loop
+
+`mode: resolve` is the only mode a normal day needs: it resolves, writes the
+confident matches, opens a pull request, and pings Slack. Review the PR, merge it
+if it is good. `check-llm` exists for debugging a provider, not as a step in that
+loop.
+
+A run whose LLM was **configured but unusable** is the exception. It approves
+nothing the LLM would have settled, so a pull request would be a page of outage
+notices — and an open PR is worse than none, because the pending-ledger skip
+treats it as work already awaiting review and every later run then finds nothing
+to do. Two such PRs did exactly that. So the run reports
+`worth_reviewing: false`, opens no PR unless something was approved regardless,
+and **fails the job** with the endpoint error. A deliberate absence of an LLM is
+not a misconfiguration and still opens its PR.
+
+Validate a provider in seconds, without spending a run on it:
+
+```bash
+python integrations/cmc_new_symbol_mapping.py --check-llm
+```
+
+A misconfigured endpoint is now a single loud message, not one failure per
+symbol: the run preflights the endpoint once, and a permanent rejection (any 4xx
+that is not 408 or 429) is never retried. The first real run predated this and
+answered 410 Gone four times for each of 38 tickers, burning nine minutes and
+reporting one dead URL as 38 unrelated per-symbol outages.
+
+#### OpenRouter
+
+OpenRouter is OpenAI-compatible at `https://openrouter.ai/api/v1`, accepts the
+`response_format: {"type": "json_object"}` this client sends, and serves
+`GET /api/v1/models`, so the model-listing diagnostic works there too.
+
+| name | where | value |
+| --- | --- | --- |
+| `ATLAS_LLM_BASE_URL` | repository **variable** | `https://openrouter.ai/api/v1` |
+| `ATLAS_LLM_MODEL` | repository **variable** | `openrouter/free`, or a `provider/model:free` id |
+| `ATLAS_LLM_API_KEY` | repository **secret** | the OpenRouter key |
+| `ATLAS_LLM_MIN_INTERVAL_SECONDS` | repository **variable** | `3.1` — see the rate limit below |
+
+Model ids here take the **opposite** form to Zen's: `author/slug`, with a `:free`
+suffix for the free variants — `deepseek/deepseek-r1:free`,
+`meta-llama/llama-3.3-70b-instruct:free`. `openrouter/free` is a router that
+picks among free models and filters for the features a request needs, structured
+outputs included, which is the safer choice here: this client always asks for a
+JSON object, and not every individual free model honours that parameter.
+
+Three things about the free tier decide whether a run succeeds:
+
+- **20 requests per minute.** The 1s default pacing sends 60, so set
+  `ATLAS_LLM_MIN_INTERVAL_SECONDS` to `3.1`. Without it the run still completes —
+  429s are retried, and `Retry-After` is obeyed — but it burns the attempt budget
+  and can report symbols as uncertain that the model would have settled.
+- **50 requests per day**, rising to 1000 once an account has ever bought $10 of
+  credits. `max-llm-symbols` defaults to 100, so a large backlog on a 50/day
+  account will stop partway; the unreached symbols stay `unmapped` and are simply
+  retried on a later run, so this degrades rather than breaks.
+- **Free endpoints require permissive data settings.** If every model answers
+  `404 No endpoints found matching your data policy`, nothing is down: the free
+  endpoints train on and may publish the prompts they receive, and OpenRouter
+  filters them all out until *Settings → Privacy* allows that. Enabling it is an
+  account-wide choice affecting everything that key is used for, not just this
+  job. What this job sends is public market data — Binance ticker symbols and
+  CoinMarketCap names, slugs and prices — so there is nothing confidential in
+  these prompts, but the decision is about the whole account.
+
+Any other OpenAI-compatible provider works the same way. With no key at all the run still
 completes: adjudication is skipped and ambiguous tickers are reported as
 `uncertain` with method `deterministic_only`. Slack is skipped without failing
 the job until its secrets exist.
 
 ### Coverage audit
 
-To check whether coverage has gone stale, dispatch the workflow with
-**coverage-audit** ticked (and `coverage-days`, default 60). It runs:
+To check whether coverage has gone stale, dispatch with **mode** `coverage`. It
+runs:
 
 ```bash
 python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60

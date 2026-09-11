@@ -98,6 +98,10 @@ class CatalogueDiagnostics:
     duplicate_ids: tuple[int, ...]
     malformed_rows: int
     total_count_changed: bool
+    # How far the reported total moved across pages. CMC lists assets
+    # continuously, so a total that shifts between requests is routine churn;
+    # callers need its magnitude, not just that it happened.
+    reported_total_spread: int = 0
 
     @property
     def is_complete(self) -> bool:
@@ -132,6 +136,7 @@ def fetch_cmc_catalogue(  # noqa: PLR0912 - pagination diagnostics are intention
     returned_rows = 0
     reported_total: int | None = None
     total_count_changed = False
+    observed_totals: set[int] = set()
     start = 1
 
     while True:
@@ -156,6 +161,8 @@ def fetch_cmc_catalogue(  # noqa: PLR0912 - pagination diagnostics are intention
             parsed_total = int(total_count) if total_count is not None else None
         except (TypeError, ValueError) as error:
             raise CmcProbeError(f"invalid CMC totalCount {total_count!r}") from error
+        if parsed_total is not None:
+            observed_totals.add(parsed_total)
         if reported_total is None:
             reported_total = parsed_total
         elif parsed_total != reported_total:
@@ -186,6 +193,9 @@ def fetch_cmc_catalogue(  # noqa: PLR0912 - pagination diagnostics are intention
         duplicate_ids=tuple(sorted(duplicate_ids)),
         malformed_rows=malformed_rows,
         total_count_changed=total_count_changed,
+        reported_total_spread=(
+            max(observed_totals) - min(observed_totals) if observed_totals else 0
+        ),
     )
     return CmcCatalogue(tuple(assets_by_id.values()), diagnostics)
 

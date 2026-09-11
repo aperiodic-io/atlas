@@ -9,9 +9,12 @@ from integrations.cmc_id_probe import (
     CmcCatalogue,
     PriceObservation,
 )
+from integrations import cmc_new_symbol_mapping as mapping
 from integrations.cmc_mappings import MappingStore
 from integrations.cmc_new_symbol_mapping import (
     DEFAULT_EXCHANGES,
+    DEFAULT_SKIPPED_UNDERLYINGS,
+    LlmAvailability,
     Decision,
     MatchStatus,
     NewSymbol,
@@ -244,6 +247,7 @@ def _diagnostics(
     duplicate_ids: tuple[int, ...] = (),
     malformed_rows: int = 0,
     total_count_changed: bool = False,
+    reported_total_spread: int = 0,
 ) -> CatalogueDiagnostics:
     return CatalogueDiagnostics(
         reported_total,
@@ -252,6 +256,7 @@ def _diagnostics(
         duplicate_ids,
         malformed_rows,
         total_count_changed,
+        reported_total_spread,
     )
 
 
@@ -264,7 +269,39 @@ def test_catalogue_trust_tolerates_the_gap_production_actually_returns():
     trustworthy, issue = catalogue_trust(_diagnostics(8184, 8179))
 
     assert trustworthy is True
-    assert "tolerated a gap of 5 of 8184 rows" in issue
+    assert "tolerated 5 unreadable of 8184 rows" in issue
+
+
+def test_catalogue_trust_tolerates_a_total_that_moved_mid_fetch():
+    """Regression: run 4 reported 8183/8182 with the total moving by 1.
+
+    CMC lists assets continuously, so the total shifting between pages is routine
+    churn. Vetoing on it blocked a whole run whose real gap was one row.
+    """
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8182, total_count_changed=True, reported_total_spread=1)
+    )
+
+    assert trustworthy is True
+    assert "total moved by 1 mid-fetch" in issue
+    assert "within 0.500%" in issue
+
+
+def test_catalogue_trust_blocks_a_total_that_moved_wildly():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8183, total_count_changed=True, reported_total_spread=900)
+    )
+
+    assert trustworthy is False
+    assert "above the" in issue
+
+
+def test_catalogue_trust_accepts_a_catalogue_that_grew_while_being_read():
+    """More unique IDs than the first page claimed is growth, not incoherence."""
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 8185))
+
+    assert trustworthy is True
+    assert issue == ""
 
 
 def test_catalogue_trust_is_silent_on_a_perfect_catalogue():
@@ -278,21 +315,57 @@ def test_catalogue_trust_blocks_a_gap_beyond_the_tolerance():
     assert "above the" in issue
 
 
-@pytest.mark.parametrize(
-    ("diagnostics", "expected"),
-    [
-        (_diagnostics(100, 100, malformed_rows=1), "failed to parse"),
-        (_diagnostics(100, 100, duplicate_ids=(7,)), "pagination overlapped"),
-        (_diagnostics(100, 100, total_count_changed=True), "changed during the fetch"),
-        (_diagnostics(None, 100), "no total to compare"),
-        (_diagnostics(100, 101), "more unique IDs than it reported"),
-    ],
-)
-def test_catalogue_trust_fails_closed_when_rows_were_genuinely_lost(diagnostics, expected):
-    trustworthy, issue = catalogue_trust(diagnostics)
+def test_catalogue_trust_fails_closed_without_a_total_to_compare_against():
+    """The one defect no tolerance can rescue: nothing to measure against."""
+    trustworthy, issue = catalogue_trust(_diagnostics(None, 100))
 
     assert trustworthy is False
-    assert expected in issue
+    assert "no total to compare" in issue
+
+
+def test_catalogue_trust_tolerates_the_numbers_the_first_real_run_produced():
+    """Regression: the run reported 8183/8176 with one unparseable row.
+
+    A hard veto on any unparseable row blocked every approval, including a clean
+    name match on MARSCOIN. One bad row among 8,183 is as routine as the dedup
+    gap, so it belongs in the same proportionate budget, not in a categorical veto.
+    """
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 8176, malformed_rows=1))
+
+    assert trustworthy is True
+    assert "1 unparseable" in issue
+    assert "within 0.500%" in issue
+
+
+def test_catalogue_trust_reports_every_cause_without_vetoing_on_any():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(
+            8183, 8180, duplicate_ids=(1, 2), malformed_rows=1, reported_total_spread=1
+        )
+    )
+
+    assert trustworthy is True
+    assert "1 unparseable" in issue
+    assert "2 duplicated" in issue
+    assert "total moved by 1 mid-fetch" in issue
+
+
+def test_catalogue_trust_reports_duplicates_without_vetoing_on_them():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8176, duplicate_ids=(1, 2, 3))
+    )
+
+    assert trustworthy is True
+    assert "3 duplicated" in issue
+    assert "within 0.500%" in issue
+
+
+def test_catalogue_trust_still_blocks_a_schema_break_that_drops_many_rows():
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 4000, malformed_rows=4183))
+
+    assert trustworthy is False
+    assert "above the" in issue
+    assert "4183 unparseable" in issue
 
 
 def test_catalogue_trust_rejects_a_negative_tolerance():
@@ -314,9 +387,24 @@ def test_decide_approves_through_a_tolerated_catalogue_gap():
     assert decision.cmc_id == 100
 
 
-def test_decide_withholds_approval_when_rows_failed_to_parse():
+def test_decide_approves_despite_one_unparseable_catalogue_row():
+    """Regression: MARSCOIN had a name match and an agreeing price, and was held
+    for review only because one of 8,183 catalogue rows failed to parse."""
     assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
-    catalogue = CmcCatalogue(assets, _diagnostics(8184, 8184, malformed_rows=3))
+    catalogue = CmcCatalogue(assets, _diagnostics(8183, 8176, malformed_rows=1))
+    evidence = _evidence(
+        "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.APPROVED
+    assert decision.cmc_id == 100
+
+
+def test_decide_withholds_approval_when_the_catalogue_lost_too_many_rows():
+    assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
+    catalogue = CmcCatalogue(assets, _diagnostics(8183, 4000))
     evidence = _evidence(
         "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
     )
@@ -324,7 +412,259 @@ def test_decide_withholds_approval_when_rows_failed_to_parse():
     decision = decide(evidence, ForbiddenChatClient())
 
     assert decision.status is MatchStatus.UNCERTAIN
-    assert "failed to parse" in decision.rationale
+    assert "above the" in decision.rationale
+
+
+# --------------------------------------------------------------------------- #
+# crypto-only scope
+# --------------------------------------------------------------------------- #
+
+
+def test_run_opens_nothing_to_review_when_a_configured_llm_is_dead(tmp_path, monkeypatch):
+    """Regression: two PRs full of LLM-outage notices once blocked every later run.
+
+    The pending-ledger skip treats an open PR as work already awaiting review, so
+    a junk PR is worse than no PR. With nothing approved and a broken endpoint,
+    there is nothing a reviewer can act on.
+    """
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "aaausdt",
+                    "symbol": "AAA",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.0)),
+        [{"symbol": "AAAUSDT", "lastPrice": "1.0", "closeTime": close_time_ms}],
+        [],
+        None,
+        llm_status="unavailable",
+        llm_error="410 Client Error: Gone",
+    )
+
+    summary = run(
+        data_dir=data_dir,
+        exchanges=("binance-futures",),
+        report_path=tmp_path / "report.md",
+        now=NOW,
+    )
+
+    assert summary["llm_status"] == "unavailable"
+    assert summary["approved"] == 0
+    assert summary["worth_reviewing"] is False
+    report = (tmp_path / "report.md").read_text()
+    assert "had no working LLM" in report
+    assert "410 Client Error: Gone" in report
+
+
+def test_run_is_still_worth_reviewing_when_a_dead_llm_did_not_stop_approvals(
+    tmp_path, monkeypatch
+):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "newusdt",
+                    "symbol": "NEW",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(100, "NEW", "new-token", 2.0, "New Token")),
+        [{"symbol": "NEWUSDT", "lastPrice": "2.0", "closeTime": close_time_ms}],
+        [{"assetCode": "NEW", "assetName": "New Token"}],
+        None,
+        llm_status="unavailable",
+        llm_error="410 Client Error: Gone",
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["approved"] == 1
+    assert summary["worth_reviewing"] is True
+
+
+def test_run_is_worth_reviewing_when_no_llm_was_configured_on_purpose(tmp_path, monkeypatch):
+    """A deliberate absence is not a misconfiguration, so the PR still opens."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "aaausdt",
+                    "symbol": "AAA",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.0)),
+        [{"symbol": "AAAUSDT", "lastPrice": "1.0", "closeTime": close_time_ms}],
+        [],
+        None,
+        llm_status="not_configured",
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["llm_status"] == "not_configured"
+    assert summary["worth_reviewing"] is True
+
+
+def test_default_scope_skips_tokenized_equities_and_index_products():
+    assert set(DEFAULT_SKIPPED_UNDERLYINGS) == {
+        "equity",
+        "index",
+        "commodity",
+        "pre_market",
+    }
+
+
+def _row(symbol: str, underlying: str | None, captured: str = "2026-09-05T00:00:00.000Z"):
+    row = {"id": f"{symbol.lower()}usdt", "symbol": symbol, "first_capture": captured}
+    if underlying is not None:
+        row["underlying"] = underlying
+    return row
+
+
+def test_collect_new_symbols_leaves_out_declared_non_crypto_underlyings():
+    """Tokenized equities dominated a real run: 32 of 38 review rows were `equity`."""
+    rows_by_exchange = {
+        "binance-futures": [
+            _row("MARSCOIN", "crypto"),
+            _row("DDOG", "equity"),
+            _row("GDX", "index"),
+            _row("XAU", "commodity"),
+            _row("PREIPO", "pre_market"),
+        ]
+    }
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"MARSCOIN", "DDOG", "GDX", "XAU", "PREIPO"}, now=NOW
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["MARSCOIN"]
+
+
+def test_collect_new_symbols_keeps_rows_with_no_underlying_and_unknown():
+    """Absent `underlying` means a legacy crypto row (BTC, ADA, BNB), not an equity.
+
+    Silently skipping a genuine new listing would be worse than a reviewer seeing
+    a row that turns out not to be crypto, so `unknown` is kept too.
+    """
+    rows_by_exchange = {
+        "binance-futures": [_row("BTC", None), _row("UNITREE", "unknown")]
+    }
+
+    new_symbols = collect_new_symbols(rows_by_exchange, {"BTC", "UNITREE"}, now=NOW)
+
+    assert [s.lookup_symbol for s in new_symbols] == ["BTC", "UNITREE"]
+
+
+def test_collect_new_symbols_honours_an_empty_skip_set():
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"DDOG"}, now=NOW, skip_underlyings=frozenset()
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["DDOG"]
+
+
+def test_only_symbols_overrides_the_underlying_filter():
+    """Asking for a ticker by hand must not be silently refused by scope."""
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"DDOG"}, now=NOW, only_symbols=frozenset({"DDOG"})
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["DDOG"]
+
+
+def test_coverage_report_separates_out_of_scope_rows_from_missing_ones():
+    rows_by_exchange = {
+        "binance-futures": [
+            _row("MARSCOIN", "crypto"),
+            _row("DDOG", "equity"),
+            _row("MRNA", "equity"),
+            _row("BTC", None),
+        ]
+    }
+
+    coverage = coverage_report(rows_by_exchange, NOW, 60)
+    stats = coverage["exchanges"]["binance-futures"]
+
+    assert stats["rows_in_window_missing_cmc_id"] == 2
+    assert stats["rows_in_window_out_of_scope"] == 2
+    assert stats["out_of_scope_underlyings"] == {"equity": 2}
+    assert stats["tickers_in_window_missing_cmc_id"] == ["BTC", "MARSCOIN"]
+    assert coverage["rows_in_window_out_of_scope"] == 2
+
+
+def test_render_coverage_report_explains_what_was_skipped():
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    report = render_coverage_report(coverage_report(rows_by_exchange, NOW, 60))
+
+    assert "skipped as non-crypto" in report
+    assert "`equity`" in report
+    assert "Nothing in scope in the window is missing a CMC ID." in report
+
+
+def test_run_does_not_resolve_a_tokenized_equity(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "ddogusdt",
+                    "symbol": "DDOG",
+                    "underlying": "equity",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(41970, "DDOG", "datadog-inc-derivatives", 120.0, "Datadog")),
+        [],
+        [],
+        ForbiddenChatClient(),
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["new_symbols"] == 0
+    assert summary["has_changes"] is False
 
 
 def test_default_scope_is_binance_futures():
@@ -1168,7 +1508,9 @@ def test_run_in_coverage_only_mode_touches_no_network_and_writes_no_data(tmp_pat
 # --------------------------------------------------------------------------- #
 
 
-def _patch_fetchers(monkeypatch, catalogue, tickers, public_assets, client):
+def _patch_fetchers(
+    monkeypatch, catalogue, tickers, public_assets, client, llm_status="ok", llm_error=""
+):
     monkeypatch.setattr(
         "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue", lambda *_: catalogue
     )
@@ -1181,8 +1523,11 @@ def _patch_fetchers(monkeypatch, catalogue, tickers, public_assets, client):
     monkeypatch.setattr(
         "integrations.cmc_new_symbol_mapping.fetch_public_assets", lambda: public_assets
     )
+    availability = LlmAvailability(
+        client, llm_status if client is not None else (llm_status or "not_configured"), llm_error
+    )
     monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: client
+        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: availability
     )
 
 
@@ -1389,3 +1734,29 @@ def test_run_leaves_snapshots_untouched_on_a_dry_run(tmp_path, monkeypatch):
     assert summary["approved"] == 1
     assert (data_dir / "binance-futures.json").read_text() == original
     assert not (data_dir / "cmc_mappings.json").exists()
+
+
+def test_check_llm_names_the_configuration_it_dialled(monkeypatch, capsys):
+    """Regression: a failed check named neither the URL it used nor the model.
+
+    The failure also went to stderr while the progress line went to stdout, so the
+    two interleaved out of order in the Actions log and the message appeared to
+    arrive before the request it described.
+    """
+    monkeypatch.setenv("ATLAS_LLM_API_KEY", "key")
+    monkeypatch.setenv("ATLAS_LLM_BASE_URL", "https://example.invalid/v1")
+    monkeypatch.setenv("ATLAS_LLM_MODEL", "vendor/some-model")
+    monkeypatch.delenv("ATLAS_LLM_API_VERSION", raising=False)
+
+    def explode(self):
+        raise mapping.LlmConfigurationError("endpoint is gone")
+
+    monkeypatch.setattr(mapping.ChatClient, "check", explode)
+
+    assert mapping._check_llm() == 1
+
+    out = capsys.readouterr().out
+    assert "https://example.invalid/v1/chat/completions" in out
+    assert "vendor/some-model" in out
+    assert "(none sent)" in out
+    assert out.index("POST ") < out.index("LLM check FAILED")
