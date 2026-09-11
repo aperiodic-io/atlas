@@ -221,7 +221,11 @@ tail is a separate, manual exercise.
 
 [`.github/workflows/cmc_new_symbol_mapping.yaml`](../.github/workflows/cmc_new_symbol_mapping.yaml)
 runs daily at 03:30 UTC — after `daily-update` has refreshed the snapshots — and
-on `workflow_dispatch`. It invokes:
+on `workflow_dispatch`. It must run on `ubicloud-standard-2`, as `daily-update`
+does: **Binance answers HTTP 451 to GitHub-hosted runner IPs**, so any job that
+calls Binance from `ubuntu-latest` fails. CoinMarketCap is not geo-blocked, which
+makes the failure look puzzling — the catalogue fetch succeeds and the run dies at
+the first price call. It invokes:
 
 ```bash
 python integrations/cmc_new_symbol_mapping.py \
@@ -260,6 +264,7 @@ tie "Pepe" to "Pepe 2.0", the very confusion identity evidence exists to settle.
 | `no_ticker_candidate` | `unmapped` | a complete catalogue lists no asset with this ticker |
 | `llm_rejected_all_candidates` | `unmapped` | the LLM judged no candidate to be the same underlying asset |
 | `incomplete_catalogue` | `uncertain` | CoinMarketCap's catalogue was self-inconsistent, so nothing is approved and no absence is asserted |
+| `incomplete_catalogue` (prices) | `uncertain` | Binance prices were unavailable for the run, so nothing corroborated the name match |
 | `llm_adjudicated`, `llm_chose_unlisted_id`, `llm_unavailable`, `deterministic_only`, `llm_budget_exhausted` | `uncertain` | no identity evidence, or adjudication could not be trusted or could not run |
 
 Two consequences worth stating plainly:
@@ -272,6 +277,32 @@ Two consequences worth stating plainly:
   snapshots requires the existing instrument's listing window to *overlap* the new
   one, so a delisted ticker that a different project later reuses cannot inherit
   the old ID.
+- **No price, no approval.** If the Binance price fetch fails for the whole run,
+  the run still completes and still reports, but nothing is approved: the price
+  check is a weak signal, and silently dropping it would be worse than holding
+  the work for a human.
+
+### Measured: the completeness gate currently blocks every approval
+
+The first production run (2026-09-11) reported `unique_ids=8179`,
+`reported_total=8184`, so `complete=False`. That is the steady state for the
+keyless listing endpoint, not a transient glitch — the original audit saw the same
+shape at 8,143 vs 8,141. **As built, the completeness gate therefore means no
+mapping is ever auto-approved**; every new ticker lands as `uncertain` for a
+human, which is safe but is not the automation the workflow advertises.
+
+The gate exists because the *old* approval rule argued from absence ("only one
+same-ticker candidate exists"), which a missing row invalidates. The current rule
+argues from presence (an exact Binance-to-CMC name match), which a missing row
+does not invalidate — a missing row would have to share both the ticker *and* the
+exact project name to mislead it, and two candidates sharing ticker and name go
+to the LLM as ambiguous anyway. So a proportionate gate — block approvals on
+duplicate IDs, malformed rows, a total that changes mid-fetch, or a gap beyond a
+small explicit tolerance — would restore automatic approval without restoring the
+original hazard. That is a deliberate loosening of a P1 review finding, so it
+needs the reviewer's agreement rather than a quiet commit; until then the gate
+stays closed and the authenticated `/v1/cryptocurrency/map` client in *Phase 2*
+is the clean fix.
 
 The LLM is constrained, not trusted:
 
@@ -390,13 +421,10 @@ Slack.
 
 ### Known limits
 
-- Candidate discovery still reads the keyless CMC website listing. Because
-  approvals are now gated on catalogue completeness, a chronically inconsistent
-  listing endpoint means **no automatic approvals at all** — everything becomes
-  `uncertain` for a human. During the original audit this endpoint reported 8,143
-  assets while returning 8,141 unique IDs, so that is a live possibility, and the
-  authenticated `/v1/cryptocurrency/map` client in *Phase 2* is what fixes it
-  properly rather than by loosening the gate.
+- Candidate discovery still reads the keyless CMC website listing, which is
+  reliably self-inconsistent; see *Measured* above for what that currently costs.
+- Binance must be reachable from the runner. Use `ubicloud-standard-2`;
+  GitHub-hosted runners get HTTP 451.
 - Approval needs a Binance `assetName` to compare against, which comes from an
   undocumented website endpoint. An asset missing from it cannot be auto-approved.
 - Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.

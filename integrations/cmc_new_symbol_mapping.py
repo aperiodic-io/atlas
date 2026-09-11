@@ -163,6 +163,7 @@ class SymbolEvidence:
     observation: PriceObservation | None = None
     binance_asset: dict | None = None
     catalogue_complete: bool = True
+    exchange_prices_available: bool = True
 
     @property
     def identified_candidates(self) -> tuple[Candidate, ...]:
@@ -320,6 +321,7 @@ def build_symbol_evidence(
     max_timestamp_skew: timedelta = timedelta(
         seconds=DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS
     ),
+    exchange_prices_available: bool = True,
 ) -> SymbolEvidence:
     """Collect same-ticker CMC candidates plus price and Binance identity evidence."""
     cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
@@ -355,6 +357,7 @@ def build_symbol_evidence(
         observation=observation,
         binance_asset=binance_asset,
         catalogue_complete=catalogue.diagnostics.is_complete,
+        exchange_prices_available=exchange_prices_available,
     )
 
 
@@ -480,6 +483,11 @@ def decide(
 
 def _approval_blocker(evidence: SymbolEvidence, candidate: Candidate) -> str | None:
     """Return why this candidate may not be auto-approved, or ``None`` if it may."""
+    if not evidence.exchange_prices_available:
+        return (
+            "Holding for review because Binance prices were unavailable for this "
+            "run, so nothing corroborated the name match."
+        )
     if not evidence.catalogue_complete:
         return (
             "Holding for review because CoinMarketCap returned an inconsistent "
@@ -948,21 +956,33 @@ def save_snapshots(
 
 def fetch_price_observations(
     new_symbols: list[NewSymbol], exchanges: tuple[str, ...]
-) -> dict[str, dict[str, PriceObservation]]:
-    """Fetch Binance tickers once and select the prices the new symbols need."""
+) -> tuple[dict[str, dict[str, PriceObservation]], bool]:
+    """Fetch Binance tickers once and select the prices the new symbols need.
+
+    Returns the observations and whether the fetch succeeded. Binance answers
+    451 from some hosts and can simply be down, and neither should abort an
+    unattended run -- but losing the price check is recorded, because callers
+    must not approve a mapping that nothing corroborated.
+    """
     wanted_by_exchange: dict[str, set[str]] = {exchange: set() for exchange in exchanges}
     for new_symbol in new_symbols:
         for occurrence in new_symbol.occurrences:
             wanted = wanted_by_exchange.setdefault(occurrence.exchange, set())
             wanted.add(occurrence.symbol.upper())
             wanted.add(new_symbol.lookup_symbol)
-    spot_tickers = fetch_spot_prices() if wanted_by_exchange.get("binance-spot") else []
-    futures_tickers = (
-        fetch_futures_prices()
-        if wanted_by_exchange.get("binance-futures")
-        or wanted_by_exchange.get("binance-futures-cm")
-        else []
-    )
+    try:
+        spot_tickers = (
+            fetch_spot_prices() if wanted_by_exchange.get("binance-spot") else []
+        )
+        futures_tickers = (
+            fetch_futures_prices()
+            if wanted_by_exchange.get("binance-futures")
+            or wanted_by_exchange.get("binance-futures-cm")
+            else []
+        )
+    except OSError as error:
+        print(f"Binance prices unavailable: {error}", file=sys.stderr)
+        return {exchange: {} for exchange in wanted_by_exchange}, False
     tickers_by_exchange = {
         "binance-spot": (spot_tickers, "binance-spot"),
         "binance-futures": (futures_tickers, "binance-futures"),
@@ -977,7 +997,7 @@ def fetch_price_observations(
         observations[exchange] = price_observations_from_binance_tickers(
             tickers, wanted, venue=venue
         )
-    return observations
+    return observations, True
 
 
 def _chat_client(use_llm: bool) -> ChatClient | None:
@@ -1016,6 +1036,7 @@ def resolve_new_symbols(
         seconds=DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS
     ),
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
+    exchange_prices_available: bool = True,
 ) -> list[Decision]:
     """Resolve each new ticker, spending LLM calls only on unresolved ones."""
     decisions: list[Decision] = []
@@ -1028,6 +1049,7 @@ def resolve_new_symbols(
             public_assets_by_symbol,
             max_relative_difference=max_relative_difference,
             max_timestamp_skew=max_timestamp_skew,
+            exchange_prices_available=exchange_prices_available,
         )
         concurrent = concurrent_cmc_id(new_symbol, windows_by_symbol)
         if concurrent is not None and evidence.catalogue_complete:
@@ -1244,6 +1266,7 @@ def run(
         "mapping_conflicts": 0,
         "has_changes": False,
         "catalogue_complete": diagnostics.is_complete,
+        "exchange_prices_available": True,
     }
     if not new_symbols:
         print("No new Binance symbols need a CMC ID.")
@@ -1251,6 +1274,15 @@ def run(
         return summary
 
     print(f"Resolving {len(new_symbols)} new Binance ticker(s)...", file=sys.stderr)
+    observations_by_exchange, prices_available = fetch_price_observations(
+        new_symbols, exchanges
+    )
+    if not prices_available:
+        print(
+            "::warning::Binance prices were unavailable; no mapping will be "
+            "auto-approved this run",
+            file=sys.stderr,
+        )
     client = _chat_client(use_llm)
     try:
         decisions = resolve_new_symbols(
@@ -1259,12 +1291,13 @@ def run(
             # Reuse evidence reads every bundled snapshot, not just the
             # exchanges this run resolves.
             mapped_windows_by_symbol(load_snapshots(data_dir, all_snapshot_exchanges(data_dir))),
-            fetch_price_observations(new_symbols, exchanges),
+            observations_by_exchange,
             _public_assets_by_symbol(),
             client,
             max_relative_difference=max_relative_difference,
             max_timestamp_skew=timedelta(seconds=max_timestamp_skew_seconds),
             max_llm_symbols=max_llm_symbols,
+            exchange_prices_available=prices_available,
         )
     finally:
         if client is not None:
@@ -1289,6 +1322,7 @@ def run(
             "unmapped": counts[MatchStatus.UNMAPPED.value],
             "rows_updated": rows_updated,
             "mapping_conflicts": len(conflicting) + recording["conflicts"],
+            "exchange_prices_available": prices_available,
             "has_changes": True,
         }
     )

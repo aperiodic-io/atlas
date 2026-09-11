@@ -48,7 +48,9 @@ env:
 
 jobs:
   map-new-symbols:
-    runs-on: ubuntu-latest
+    # Binance answers 451 to GitHub-hosted runner IPs, so use the same runner
+    # daily-update uses for its Binance calls.
+    runs-on: ubicloud-standard-2
 
     steps:
       - name: checkout

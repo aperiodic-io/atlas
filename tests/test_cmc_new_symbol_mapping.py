@@ -21,6 +21,7 @@ from integrations.cmc_new_symbol_mapping import (
     collect_new_symbols,
     concurrent_cmc_id,
     coverage_report,
+    fetch_price_observations,
     decide,
     identity_match,
     instances_to_skip,
@@ -157,6 +158,78 @@ def _evidence(
 # --------------------------------------------------------------------------- #
 # scope and collection
 # --------------------------------------------------------------------------- #
+
+
+def test_fetch_price_observations_reports_a_binance_refusal_instead_of_raising(monkeypatch, capsys):
+    """Regression: Binance answers 451 from some hosts; that must not abort a run."""
+    import urllib.error
+
+    def _refuse():
+        raise urllib.error.HTTPError("https://fapi.binance.com", 451, "", {}, None)
+
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_futures_prices", _refuse
+    )
+    monkeypatch.setattr("integrations.cmc_new_symbol_mapping.fetch_spot_prices", list)
+    new_symbols = [NewSymbol("NEW", (_occurrence("NEW"),))]
+
+    observations, available = fetch_price_observations(new_symbols, ("binance-futures",))
+
+    assert available is False
+    assert observations == {"binance-futures": {}}
+    assert "Binance prices unavailable" in capsys.readouterr().err
+
+
+def test_decide_withholds_approval_when_binance_prices_were_unavailable():
+    """Without a price, nothing corroborates the name match, so hold for review."""
+    new_symbol = NewSymbol("NEW", (_occurrence("NEW"),))
+    evidence = build_symbol_evidence(
+        new_symbol,
+        _catalogue(_asset(100, "NEW", "new-token", 2.0, "New Token")),
+        {},
+        {"NEW": {"assetCode": "NEW", "assetName": "New Token"}},
+        exchange_prices_available=False,
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.cmc_id == 100
+    assert "Binance prices were unavailable" in decision.rationale
+
+
+def test_run_completes_and_approves_nothing_when_binance_refuses(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [{"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"}],
+            indent=2,
+        )
+    )
+    import urllib.error
+
+    def _refuse():
+        raise urllib.error.HTTPError("https://fapi.binance.com", 451, "", {}, None)
+
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(100, "NEW", "new-token", 2.0, "New Token")),
+        [],
+        [{"assetCode": "NEW", "assetName": "New Token"}],
+        None,
+    )
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_futures_prices", _refuse
+    )
+
+    summary = run(
+        data_dir=data_dir, exchanges=("binance-futures",), dry_run=True, now=NOW
+    )
+
+    assert summary["exchange_prices_available"] is False
+    assert summary["approved"] == 0
+    assert summary["uncertain"] == 1
 
 
 def test_default_scope_is_binance_futures():
