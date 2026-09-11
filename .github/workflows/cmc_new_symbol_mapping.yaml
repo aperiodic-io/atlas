@@ -48,7 +48,9 @@ env:
 
 jobs:
   map-new-symbols:
-    runs-on: ubuntu-latest
+    # Binance answers 451 to GitHub-hosted runner IPs, so use the same runner
+    # daily-update uses for its Binance calls.
+    runs-on: ubicloud-standard-2
 
     steps:
       - name: checkout
@@ -153,6 +155,8 @@ jobs:
               "has_changes",
               "mapping_conflicts",
               "catalogue_complete",
+              "catalogue_trustworthy",
+              "exchange_prices_available",
               "coverage_only",
               "window_days",
               "rows_in_window_missing_cmc_id",
@@ -230,10 +234,10 @@ jobs:
           set -euo pipefail
           uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
 
-      - name: warn-on-an-incomplete-catalogue
-        if: steps.resolve.outputs.catalogue_complete == 'false'
+      - name: warn-when-nothing-could-be-auto-approved
+        if: steps.resolve.outputs.catalogue_trustworthy == 'false' || steps.resolve.outputs.exchange_prices_available == 'false'
         run: |
-          echo "::warning::CoinMarketCap returned an inconsistent catalogue; nothing was auto-approved this run"
+          echo "::warning::Nothing was auto-approved this run — catalogue_trustworthy=${{ steps.resolve.outputs.catalogue_trustworthy }} exchange_prices_available=${{ steps.resolve.outputs.exchange_prices_available }}"
 
       - name: notify-slack-coverage-audit
         if: steps.resolve.outputs.coverage_only == 'true'
