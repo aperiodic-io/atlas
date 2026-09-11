@@ -221,7 +221,11 @@ tail is a separate, manual exercise.
 
 [`.github/workflows/cmc_new_symbol_mapping.yaml`](../.github/workflows/cmc_new_symbol_mapping.yaml)
 runs daily at 03:30 UTC — after `daily-update` has refreshed the snapshots — and
-on `workflow_dispatch`. It invokes:
+on `workflow_dispatch`. It must run on `ubicloud-standard-2`, as `daily-update`
+does: **Binance answers HTTP 451 to GitHub-hosted runner IPs**, so any job that
+calls Binance from `ubuntu-latest` fails. CoinMarketCap is not geo-blocked, which
+makes the failure look puzzling — the catalogue fetch succeeds and the run dies at
+the first price call. It invokes:
 
 ```bash
 python integrations/cmc_new_symbol_mapping.py \
@@ -259,19 +263,52 @@ tie "Pepe" to "Pepe 2.0", the very confusion identity evidence exists to settle.
 | `llm_adjudicated_identity_*` | `approved` | an LLM picked between candidates that *all* carry name evidence, at high confidence |
 | `no_ticker_candidate` | `unmapped` | a complete catalogue lists no asset with this ticker |
 | `llm_rejected_all_candidates` | `unmapped` | the LLM judged no candidate to be the same underlying asset |
-| `incomplete_catalogue` | `uncertain` | CoinMarketCap's catalogue was self-inconsistent, so nothing is approved and no absence is asserted |
+| `untrustworthy_catalogue` | `uncertain` | the catalogue failed a trust check, so no absence is asserted |
+| `approval_withheld` | `uncertain` | identity evidence was found but the catalogue or the price feed could not corroborate it |
 | `llm_adjudicated`, `llm_chose_unlisted_id`, `llm_unavailable`, `deterministic_only`, `llm_budget_exhausted` | `uncertain` | no identity evidence, or adjudication could not be trusted or could not run |
 
 Two consequences worth stating plainly:
 
-- **A self-inconsistent catalogue blocks every approval for that run** and also
-  stops `unmapped` being claimed, since absence of evidence is not evidence of
-  absence. The run still completes and still reports; everything lands as
-  `uncertain` with method `incomplete_catalogue`.
+- **An untrustworthy catalogue blocks every approval for that run** and also stops
+  `unmapped` being claimed, since absence of evidence is not evidence of absence.
+  The run still completes and still reports. See *Catalogue trust* below for what
+  counts as untrustworthy, which is deliberately not "not perfectly complete".
 - **A ticker alone is never identity across time.** Reusing an ID already in the
   snapshots requires the existing instrument's listing window to *overlap* the new
   one, so a delisted ticker that a different project later reuses cannot inherit
   the old ID.
+- **No price, no approval.** If the Binance price fetch fails for the whole run,
+  the run still completes and still reports, but nothing is approved: the price
+  check is a weak signal, and silently dropping it would be worse than holding
+  the work for a human.
+
+### Catalogue trust, and why it is proportionate
+
+The keyless listing endpoint reliably reports a few more assets than it returns
+unique IDs for: 8,184 against 8,179 in the first production run, 8,143 against
+8,141 during the original audit. Demanding exact equality — as this gate first did
+— therefore blocks **every** approval forever, which is not a safety property but
+a broken feature.
+
+`catalogue_trust()` is proportionate instead. It tolerates a gap up to
+`--max-catalogue-gap-ratio` (default 0.5%; production's gap is 0.061%) and records
+the tolerated gap in every decision's evidence. These signals still fail closed,
+because each means rows were genuinely lost rather than merely deduplicated:
+
+| signal | why it blocks |
+| --- | --- |
+| malformed rows | candidates were silently dropped at parse time |
+| duplicate CMC IDs | pagination overlapped, so it may also have skipped |
+| reported total changed mid-fetch | no page is a consistent view |
+| no reported total | nothing to compare against |
+| gap above the tolerance | rows are missing at a scale that is not dedup |
+
+The reason a small gap is safe *here* is that approval rests on **presence** — an
+exact Binance-to-CMC name match — not on a ticker being unique. The original rule
+argued from absence ("only one same-ticker candidate exists"), which a missing row
+destroys; that rule is gone. For a missing row to mislead the current rule it
+would have to share both the ticker *and* the exact project name, and two
+candidates sharing both go to the LLM as ambiguous anyway.
 
 The LLM is constrained, not trusted:
 
@@ -390,13 +427,12 @@ Slack.
 
 ### Known limits
 
-- Candidate discovery still reads the keyless CMC website listing. Because
-  approvals are now gated on catalogue completeness, a chronically inconsistent
-  listing endpoint means **no automatic approvals at all** — everything becomes
-  `uncertain` for a human. During the original audit this endpoint reported 8,143
-  assets while returning 8,141 unique IDs, so that is a live possibility, and the
-  authenticated `/v1/cryptocurrency/map` client in *Phase 2* is what fixes it
-  properly rather than by loosening the gate.
+- Candidate discovery still reads the keyless CMC website listing, which is
+  reliably self-inconsistent; see *Catalogue trust* above. The authenticated
+  `/v1/cryptocurrency/map` client in *Phase 2* removes the need for a tolerance at
+  all.
+- Binance must be reachable from the runner. Use `ubicloud-standard-2`;
+  GitHub-hosted runners get HTTP 451.
 - Approval needs a Binance `assetName` to compare against, which comes from an
   undocumented website endpoint. An asset missing from it cannot be auto-approved.
 - Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.
