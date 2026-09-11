@@ -290,18 +290,28 @@ unique IDs for: 8,184 against 8,179 in the first production run, 8,143 against
 — therefore blocks **every** approval forever, which is not a safety property but
 a broken feature.
 
-`catalogue_trust()` is proportionate instead. It tolerates a gap up to
-`--max-catalogue-gap-ratio` (default 0.5%; production's gap is 0.061%) and records
-the tolerated gap in every decision's evidence. These signals still fail closed,
-because each means rows were genuinely lost rather than merely deduplicated:
+`catalogue_trust()` is proportionate instead. A gap up to
+`--max-catalogue-gap-ratio` (default 0.5%) passes and is recorded in every
+decision's evidence.
+
+Every way a row can go missing — deduplicated, dropped at parse time, lost to
+pagination — already shows up as `reported_total - unique_ids`, so there is one
+budget for all of them rather than a categorical veto per cause. The first real
+run reported 8,183 against 8,176 with **one unparseable row**, and a hard veto on
+any unparseable row blocked every approval that run, including a clean name match
+on `MARSCOIN`. One bad row among 8,183 is as routine as the dedup gap; a genuine
+schema break would blow the budget anyway, because `unique_ids` would crater.
+
+What still fails closed is structural incoherence, where no tolerance helps
+because the numbers cannot be compared at all:
 
 | signal | why it blocks |
 | --- | --- |
-| malformed rows | candidates were silently dropped at parse time |
-| duplicate CMC IDs | pagination overlapped, so it may also have skipped |
 | reported total changed mid-fetch | no page is a consistent view |
 | no reported total | nothing to compare against |
-| gap above the tolerance | rows are missing at a scale that is not dedup |
+| more unique IDs than reported | the numbers are incoherent |
+| gap above the tolerance | rows missing at a scale that is not dedup |
+
 
 The reason a small gap is safe *here* is that approval rests on **presence** — an
 exact Binance-to-CMC name match — not on a ticker being unique. The original rule
@@ -400,8 +410,21 @@ uses GitHub Models, which is free inside Actions via the workflow's own
 | `ATLAS_LLM_API_KEY` | provider key; falls back to `GITHUB_TOKEN` |
 | `ATLAS_LLM_BASE_URL` | default `https://models.github.ai/inference` |
 | `ATLAS_LLM_MODEL` | default `openai/gpt-4o-mini` |
+| `ATLAS_LLM_API_VERSION` | sent as `X-GitHub-Api-Version`; GitHub Models answers **410 Gone** to an unversioned request |
 | `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | post via `chat.postMessage` |
 | `SLACK_WEBHOOK_URL` | fallback transport, shared with `daily-update` |
+
+Validate the configuration in seconds, before a run spends minutes on it:
+
+```bash
+python integrations/cmc_new_symbol_mapping.py --check-llm
+```
+
+A misconfigured endpoint is now a single loud message, not one failure per
+symbol: the run preflights the endpoint once, and a permanent rejection (any 4xx
+that is not 408 or 429) is never retried. The first real run predated this and
+answered 410 Gone four times for each of 38 tickers, burning nine minutes and
+reporting one dead URL as 38 unrelated per-symbol outages.
 
 To use a free hosted model instead, set `ATLAS_LLM_BASE_URL` to
 `https://openrouter.ai/api/v1`, `ATLAS_LLM_MODEL` to a `:free` model and

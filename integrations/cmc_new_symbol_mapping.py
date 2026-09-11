@@ -53,7 +53,13 @@ from integrations.cmc_id_probe import (
     price_observations_from_binance_tickers,
 )
 from integrations.cmc_mappings import CmcMapping, InstrumentInstance, MappingStore
-from integrations.llm import ChatClient, LlmConfig, LlmError, LlmNotConfiguredError
+from integrations.llm import (
+    ChatClient,
+    LlmConfig,
+    LlmConfigurationError,
+    LlmError,
+    LlmNotConfiguredError,
+)
 
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
@@ -386,27 +392,23 @@ def catalogue_trust(
     match: a missing row would have to share both the ticker and the exact project
     name, and two candidates sharing both go to the LLM as ambiguous anyway.
 
-    These signals still fail closed, because each means rows were genuinely lost
-    rather than merely deduplicated:
+    Every way a row can go missing -- deduplicated, dropped at parse time, lost to
+    pagination -- already shows up as ``reported_total - unique_ids``, so there is
+    one proportionate budget for all of them rather than a separate categorical
+    veto per cause. A single unparseable row among 8,183 is as routine as the
+    dedup gap, and a genuine schema break would blow the budget anyway because
+    ``unique_ids`` would crater.
 
-    - malformed rows, which are candidates silently dropped at parse time;
-    - duplicate IDs, which mean pagination overlapped and may also have skipped;
+    What still fails closed is structural incoherence, where no tolerance can
+    help because the numbers cannot be compared at all:
+
     - a reported total that changed mid-fetch, so no page is a consistent view;
     - a missing reported total, leaving nothing to compare against;
+    - more unique IDs than the catalogue claims to hold;
     - a gap larger than ``max_gap_ratio`` of the reported total.
     """
     if max_gap_ratio < 0:
         raise ValueError("max_gap_ratio must not be negative")
-    if diagnostics.malformed_rows:
-        return False, (
-            f"{diagnostics.malformed_rows} catalogue row(s) failed to parse, so "
-            "candidates may have been dropped."
-        )
-    if diagnostics.duplicate_ids:
-        return False, (
-            f"{len(diagnostics.duplicate_ids)} duplicate CMC ID(s) mean pagination "
-            "overlapped and may also have skipped rows."
-        )
     if diagnostics.total_count_changed:
         return False, "CoinMarketCap's reported total changed during the fetch."
     if diagnostics.reported_total is None:
@@ -417,15 +419,22 @@ def catalogue_trust(
             f"CoinMarketCap returned {-gap} more unique IDs than it reported."
         )
     allowed = max_gap_ratio * diagnostics.reported_total
+    causes = []
+    if diagnostics.malformed_rows:
+        causes.append(f"{diagnostics.malformed_rows} unparseable")
+    if diagnostics.duplicate_ids:
+        causes.append(f"{len(diagnostics.duplicate_ids)} duplicated")
+    detail = f" ({', '.join(causes)})" if causes else ""
     if gap > allowed:
         return False, (
-            f"{gap} of {diagnostics.reported_total} catalogue rows are missing, "
-            f"above the {max_gap_ratio:.3%} tolerance."
+            f"{gap} of {diagnostics.reported_total} catalogue rows are missing"
+            f"{detail}, above the {max_gap_ratio:.3%} tolerance."
         )
     if gap:
         return True, (
-            f"tolerated a gap of {gap} of {diagnostics.reported_total} rows "
-            f"({gap / diagnostics.reported_total:.4%}, within {max_gap_ratio:.3%})"
+            f"tolerated a gap of {gap} of {diagnostics.reported_total} rows"
+            f"{detail}: {gap / diagnostics.reported_total:.4%}, "
+            f"within {max_gap_ratio:.3%}"
         )
     return True, ""
 
@@ -581,6 +590,8 @@ def _decide_with_llm(
 ) -> Decision:
     try:
         answer = client.complete_json(SYSTEM_PROMPT, build_prompt(evidence))
+    except LlmConfigurationError:
+        raise
     except LlmError as error:
         return _decision(
             evidence,
@@ -1075,6 +1086,13 @@ def fetch_price_observations(
 
 
 def _chat_client(use_llm: bool) -> ChatClient | None:
+    """Build an LLM client, proving the endpoint works before the run relies on it.
+
+    A misconfigured endpoint used to be discovered once per symbol, so a dead URL
+    cost four doomed requests per ticker and reported itself as dozens of
+    unrelated per-symbol outages. One preflight request turns that into a single
+    clear message, and the run continues on deterministic evidence alone.
+    """
     if not use_llm:
         return None
     try:
@@ -1082,8 +1100,19 @@ def _chat_client(use_llm: bool) -> ChatClient | None:
     except LlmNotConfiguredError as error:
         print(f"LLM adjudication disabled: {error}", file=sys.stderr)
         return None
+    client = ChatClient(config, requests.Session())
+    try:
+        client.check()
+    except LlmError as error:
+        client.close()
+        print(
+            f"::error::LLM adjudication disabled, every ambiguous ticker will need "
+            f"review: {error}",
+            file=sys.stderr,
+        )
+        return None
     print(f"LLM adjudication via {config.base_url} ({config.model})", file=sys.stderr)
-    return ChatClient(config, requests.Session())
+    return client
 
 
 def _public_assets_by_symbol() -> dict[str, dict]:
@@ -1177,7 +1206,14 @@ def resolve_new_symbols(
                 )
             )
             continue
-        decision = decide(evidence, client, max_relative_difference)
+        try:
+            decision = decide(evidence, client, max_relative_difference)
+        except LlmConfigurationError as error:
+            # The endpoint is permanently unusable; stop asking it and finish the
+            # remaining tickers on deterministic evidence alone.
+            print(f"::error::LLM adjudication abandoned: {error}", file=sys.stderr)
+            client = None
+            decision = decide(evidence, None, max_relative_difference)
         if needs_llm and client is not None:
             llm_calls += 1
         decisions.append(decision)
@@ -1440,6 +1476,25 @@ def _write_outputs(
         summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
 
 
+def _check_llm() -> int:
+    """Validate the LLM configuration on its own, for setup and debugging."""
+    try:
+        config = LlmConfig.from_env()
+    except LlmNotConfiguredError as error:
+        print(f"no LLM configured: {error}", file=sys.stderr)
+        return 1
+    print(f"checking {config.chat_completions_url} ({config.model})...")
+    with requests.Session() as session:
+        client = ChatClient(config, session)
+        try:
+            client.check()
+        except LlmError as error:
+            print(f"LLM check FAILED: {error}", file=sys.stderr)
+            return 1
+    print("LLM check OK")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
@@ -1515,6 +1570,12 @@ def main() -> int:
         help="re-resolve tickers a previous run already decided",
     )
     parser.add_argument(
+        "--check-llm",
+        action="store_true",
+        help="send one request to the configured LLM endpoint, report the result "
+        "and exit, without touching CoinMarketCap or Binance",
+    )
+    parser.add_argument(
         "--coverage-only",
         action="store_true",
         help="report CMC ID coverage over the window and exit, without "
@@ -1524,6 +1585,9 @@ def main() -> int:
     parser.add_argument("--report-path", type=Path, default=None)
     parser.add_argument("--summary-path", type=Path, default=None)
     args = parser.parse_args()
+
+    if args.check_llm:
+        return _check_llm()
 
     try:
         run(

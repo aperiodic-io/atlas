@@ -113,6 +113,8 @@ jobs:
           ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
+          # GitHub Models answers 410 Gone to an unversioned request.
+          ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
           NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}

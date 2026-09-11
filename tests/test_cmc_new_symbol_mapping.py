@@ -281,18 +281,47 @@ def test_catalogue_trust_blocks_a_gap_beyond_the_tolerance():
 @pytest.mark.parametrize(
     ("diagnostics", "expected"),
     [
-        (_diagnostics(100, 100, malformed_rows=1), "failed to parse"),
-        (_diagnostics(100, 100, duplicate_ids=(7,)), "pagination overlapped"),
         (_diagnostics(100, 100, total_count_changed=True), "changed during the fetch"),
         (_diagnostics(None, 100), "no total to compare"),
         (_diagnostics(100, 101), "more unique IDs than it reported"),
     ],
 )
-def test_catalogue_trust_fails_closed_when_rows_were_genuinely_lost(diagnostics, expected):
+def test_catalogue_trust_fails_closed_on_structural_incoherence(diagnostics, expected):
     trustworthy, issue = catalogue_trust(diagnostics)
 
     assert trustworthy is False
     assert expected in issue
+
+
+def test_catalogue_trust_tolerates_the_numbers_the_first_real_run_produced():
+    """Regression: the run reported 8183/8176 with one unparseable row.
+
+    A hard veto on any unparseable row blocked every approval, including a clean
+    name match on MARSCOIN. One bad row among 8,183 is as routine as the dedup
+    gap, so it belongs in the same proportionate budget, not in a categorical veto.
+    """
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 8176, malformed_rows=1))
+
+    assert trustworthy is True
+    assert "1 unparseable" in issue
+    assert "within 0.500%" in issue
+
+
+def test_catalogue_trust_reports_duplicates_without_vetoing_on_them():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8176, duplicate_ids=(1, 2, 3))
+    )
+
+    assert trustworthy is True
+    assert "3 duplicated" in issue
+
+
+def test_catalogue_trust_still_blocks_a_schema_break_that_drops_many_rows():
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 4000, malformed_rows=4183))
+
+    assert trustworthy is False
+    assert "above the" in issue
+    assert "4183 unparseable" in issue
 
 
 def test_catalogue_trust_rejects_a_negative_tolerance():
@@ -314,9 +343,24 @@ def test_decide_approves_through_a_tolerated_catalogue_gap():
     assert decision.cmc_id == 100
 
 
-def test_decide_withholds_approval_when_rows_failed_to_parse():
+def test_decide_approves_despite_one_unparseable_catalogue_row():
+    """Regression: MARSCOIN had a name match and an agreeing price, and was held
+    for review only because one of 8,183 catalogue rows failed to parse."""
     assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
-    catalogue = CmcCatalogue(assets, _diagnostics(8184, 8184, malformed_rows=3))
+    catalogue = CmcCatalogue(assets, _diagnostics(8183, 8176, malformed_rows=1))
+    evidence = _evidence(
+        "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.APPROVED
+    assert decision.cmc_id == 100
+
+
+def test_decide_withholds_approval_when_the_catalogue_lost_too_many_rows():
+    assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
+    catalogue = CmcCatalogue(assets, _diagnostics(8183, 4000))
     evidence = _evidence(
         "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
     )
@@ -324,7 +368,7 @@ def test_decide_withholds_approval_when_rows_failed_to_parse():
     decision = decide(evidence, ForbiddenChatClient())
 
     assert decision.status is MatchStatus.UNCERTAIN
-    assert "failed to parse" in decision.rationale
+    assert "above the" in decision.rationale
 
 
 def test_default_scope_is_binance_futures():

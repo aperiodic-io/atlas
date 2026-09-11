@@ -30,6 +30,11 @@ DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_ATTEMPTS = 4
 DEFAULT_MIN_INTERVAL_SECONDS = 1.0
 MAX_RETRY_DELAY_SECONDS = 60
+# Retrying a permanent rejection wastes the whole run: a misconfigured endpoint
+# answered 410 Gone four times for each of 38 tickers once, burning nine minutes
+# and reporting itself as 38 separate per-ticker outages. Only these are worth a
+# second attempt; every other 4xx is a configuration error.
+RETRYABLE_STATUS_CODES = frozenset({408, 409, 425, 429, 500, 502, 503, 504})
 
 
 class JsonResponse(Protocol):
@@ -50,6 +55,15 @@ class LlmNotConfiguredError(LlmError):
     """No API key is available, so no completion can be requested."""
 
 
+class LlmConfigurationError(LlmError):
+    """The endpoint rejected the request in a way retrying cannot fix.
+
+    A wrong URL, a retired API version, a bad key or a missing scope are all
+    permanent for the lifetime of a run, so the caller should stop asking rather
+    than fail once per symbol.
+    """
+
+
 @dataclass(frozen=True)
 class LlmConfig:
     api_key: str
@@ -58,6 +72,7 @@ class LlmConfig:
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS
     max_attempts: int = DEFAULT_MAX_ATTEMPTS
     min_interval_seconds: float = DEFAULT_MIN_INTERVAL_SECONDS
+    api_version: str = ""
 
     def __post_init__(self) -> None:
         if not self.api_key:
@@ -99,11 +114,26 @@ class LlmConfig:
                 "ATLAS_LLM_MIN_INTERVAL_SECONDS",
                 DEFAULT_MIN_INTERVAL_SECONDS,
             ),
+            # GitHub Models answers 410 Gone to an unversioned request; other
+            # providers ignore the header.
+            api_version=(environment.get("ATLAS_LLM_API_VERSION") or "").strip(),
         )
 
     @property
     def chat_completions_url(self) -> str:
         return f"{self.base_url.rstrip('/')}/chat/completions"
+
+    @property
+    def headers(self) -> dict[str, str]:
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "User-Agent": "atlas-llm/1.0",
+        }
+        if self.api_version:
+            headers["X-GitHub-Api-Version"] = self.api_version
+        return headers
 
 
 class ChatClient:
@@ -114,6 +144,17 @@ class ChatClient:
         self._session = session
         self._next_request_at = 0.0
         self.calls = 0
+
+    def check(self) -> None:
+        """Validate the endpoint with one cheap request before the real work.
+
+        Raises ``LlmConfigurationError`` when the endpoint is permanently
+        unusable, so a run can say so once instead of discovering it per symbol.
+        """
+        self.complete_json(
+            "Reply with JSON only.",
+            'Reply with exactly {"ok": true} and nothing else.',
+        )
 
     def close(self) -> None:
         close = getattr(self._session, "close", None)
@@ -141,16 +182,18 @@ class ChatClient:
                     self.config.chat_completions_url,
                     json=body,
                     timeout=self.config.timeout_seconds,
-                    headers={
-                        "Authorization": f"Bearer {self.config.api_key}",
-                        "Accept": "application/json",
-                        "Content-Type": "application/json",
-                        "User-Agent": "atlas-llm/1.0",
-                    },
+                    headers=self.config.headers,
                 )
                 response.raise_for_status()
                 payload = response.json()
             except (requests.RequestException, ValueError) as error:
+                status = _status_code(error)
+                if status is not None and status not in RETRYABLE_STATUS_CODES:
+                    raise LlmConfigurationError(
+                        f"{self.config.model} at {self.config.chat_completions_url} "
+                        f"rejected the request with HTTP {status}; retrying cannot "
+                        f"fix this: {error}"
+                    ) from error
                 last_error = error
                 self._next_request_at = time.monotonic() + retry_delay_seconds(
                     error, attempt, MAX_RETRY_DELAY_SECONDS
@@ -167,6 +210,12 @@ class ChatClient:
             f"{self.config.model} returned no usable JSON after "
             f"{self.config.max_attempts} attempts: {last_error}"
         ) from last_error
+
+
+def _status_code(error: Exception) -> int | None:
+    """Return the HTTP status behind a request failure, if it carries one."""
+    status = getattr(getattr(error, "response", None), "status_code", None)
+    return status if isinstance(status, int) else None
 
 
 def _message_content(payload: object) -> str:

@@ -8,6 +8,7 @@ from integrations.llm import (
     DEFAULT_MODEL,
     ChatClient,
     LlmConfig,
+    LlmConfigurationError,
     LlmError,
     LlmNotConfiguredError,
 )
@@ -34,6 +35,12 @@ class FakeSession:
     def post(self, url: str, **kwargs) -> FakeResponse:
         self.requests.append({"url": url, **kwargs})
         return self._responses.pop(0)
+
+
+def _http_error(status: int) -> requests.HTTPError:
+    error = requests.HTTPError(f"{status} Client Error")
+    error.response = SimpleNamespace(status_code=status, headers={})
+    return error
 
 
 def _completion(content: str) -> FakeResponse:
@@ -127,3 +134,70 @@ def test_complete_json_rejects_a_response_without_choices():
 
     with pytest.raises(LlmError):
         client.complete_json("system", "user")
+
+
+def test_complete_json_does_not_retry_a_permanently_rejected_request():
+    """Regression: a dead endpoint answered 410 four times for each of 38 tickers.
+
+    Retrying a permanent rejection cost nine minutes and reported one dead URL as
+    38 unrelated per-symbol outages.
+    """
+    session = FakeSession([FakeResponse(None, _http_error(410))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError, match="410"):
+        client.complete_json("system", "user")
+
+    assert len(session.requests) == 1
+
+
+@pytest.mark.parametrize("status", [400, 401, 403, 404, 410, 422])
+def test_complete_json_treats_every_permanent_4xx_as_configuration(status):
+    session = FakeSession([FakeResponse(None, _http_error(status))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError):
+        client.complete_json("system", "user")
+
+    assert len(session.requests) == 1
+
+
+@pytest.mark.parametrize("status", [429, 500, 503])
+def test_complete_json_still_retries_a_transient_status(status):
+    session = FakeSession(
+        [FakeResponse(None, _http_error(status)), _completion('{"cmc_id": 1}')]
+    )
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    assert client.complete_json("system", "user") == {"cmc_id": 1}
+    assert len(session.requests) == 2
+
+
+def test_check_validates_the_endpoint_with_one_request():
+    session = FakeSession([_completion('{"ok": true}')])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    client.check()
+
+    assert len(session.requests) == 1
+
+
+def test_check_surfaces_a_dead_endpoint_as_a_configuration_error():
+    session = FakeSession([FakeResponse(None, _http_error(410))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError):
+        client.check()
+
+
+def test_config_sends_the_github_api_version_when_one_is_configured():
+    config = LlmConfig.from_env(
+        {"GITHUB_TOKEN": "ghs", "ATLAS_LLM_API_VERSION": "2026-03-10"}
+    )
+
+    assert config.api_version == "2026-03-10"
+    assert config.headers["X-GitHub-Api-Version"] == "2026-03-10"
+
+
+def test_config_omits_the_api_version_header_when_unset():
+    assert "X-GitHub-Api-Version" not in LlmConfig.from_env({"GITHUB_TOKEN": "g"}).headers
