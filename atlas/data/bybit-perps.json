@@ -547,11 +547,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-09T00:00:00.000Z",
     "internal_id": "perpetual-4STOCK-USDT:USDT",
     "symbol": "4STOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-09T00:00:00.000Z"
   },
   {
     "id": "4USDT",
@@ -3178,6 +3178,21 @@
     "first_capture": "2020-05-28T00:00:00.000Z"
   },
   {
+    "id": "BTDRUSDT",
+    "type": "perpetual",
+    "base_coin": "BTDR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-BTDR-USDT:USDT",
+    "symbol": "BTDR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BTRUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-BTR-USDT:USDT",
@@ -3538,6 +3553,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2023-02-21T00:00:00.000Z"
+  },
+  {
+    "id": "CGNXUSDT",
+    "type": "perpetual",
+    "base_coin": "CGNX",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-CGNX-USDT:USDT",
+    "symbol": "CGNX",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "CGPTUSDT",
@@ -5811,6 +5841,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-12-09T00:00:00.000Z"
+  },
+  {
+    "id": "FORMSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "FORMSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-FORMSTOCK-USDT:USDT",
+    "symbol": "FORMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FORMUSDT",

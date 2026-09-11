@@ -2873,6 +2873,15 @@
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
+    "id": "io:IONQ",
+    "type": "perpetual",
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-IO:IONQ-USDC:USDC",
+    "symbol": "IO:IONQ",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "io:NBIS",
     "type": "perpetual",
     "internal_id": "perpetual-IO:NBIS-USDC:USDC",
