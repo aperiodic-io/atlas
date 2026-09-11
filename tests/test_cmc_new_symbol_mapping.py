@@ -21,6 +21,7 @@ from integrations.cmc_new_symbol_mapping import (
     collect_new_symbols,
     decide,
     known_cmc_ids_by_symbol,
+    pending_proposed_symbols,
     record_decisions,
     render_report,
     resolve_new_symbols,
@@ -723,6 +724,107 @@ def test_symbols_to_skip_rejects_a_negative_recheck_window(tmp_path):
         symbols_to_skip(
             MappingStore(tmp_path / "cmc_mappings.json"), NOW, recheck_unmapped_after_days=-1
         )
+
+
+def test_pending_proposed_symbols_unions_open_pull_request_ledgers(tmp_path):
+    first = MappingStore(tmp_path / "pr-1.json")
+    record_decisions(
+        first,
+        [
+            Decision(
+                _evidence("AAA", (), price=None),
+                MatchStatus.UNMAPPED,
+                None,
+                "",
+                "no_ticker_candidate",
+                "high",
+                "-",
+            )
+        ],
+        recorded_at=NOW - timedelta(days=400),
+    )
+    first.save()
+    second = MappingStore(tmp_path / "pr-2.json")
+    record_decisions(
+        second,
+        [
+            Decision(
+                _evidence("BBB", (_asset(2, "BBB", "beta", 1.0),), price=1.0),
+                MatchStatus.UNCERTAIN,
+                2,
+                "beta",
+                "llm_adjudicated",
+                "medium",
+                "?",
+            )
+        ],
+        recorded_at=NOW,
+    )
+    second.save()
+
+    # A pending proposal is skipped whatever its verdict and however old it is:
+    # it is already awaiting review, unlike a merged unmapped verdict.
+    assert pending_proposed_symbols(
+        [tmp_path / "pr-1.json", tmp_path / "pr-2.json"]
+    ) == frozenset({"AAA", "BBB"})
+
+
+def test_pending_proposed_symbols_ignores_a_missing_or_broken_ledger(tmp_path, capsys):
+    (tmp_path / "broken.json").write_text("{not json")
+
+    assert pending_proposed_symbols(
+        [tmp_path / "absent.json", tmp_path / "broken.json"]
+    ) == frozenset()
+    assert "ignoring unreadable pending mapping store" in capsys.readouterr().err
+
+
+def test_run_does_not_re_propose_a_ticker_awaiting_review(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-spot.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "newusdt",
+                    "symbol": "NEW",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    pending = MappingStore(tmp_path / "pending.json")
+    record_decisions(
+        pending,
+        [
+            Decision(
+                _evidence("NEW", (_asset(100, "NEW", "new-token", 2.0),), price=2.0),
+                MatchStatus.UNCERTAIN,
+                100,
+                "new-token",
+                "llm_adjudicated",
+                "medium",
+                "awaiting review",
+            )
+        ],
+        recorded_at=NOW,
+    )
+    pending.save()
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue",
+        lambda *_: _catalogue(_asset(100, "NEW", "new-token", 2.0)),
+    )
+
+    summary = run(
+        data_dir=data_dir,
+        exchanges=("binance-spot",),
+        pending_mapping_paths=(tmp_path / "pending.json",),
+        now=NOW,
+    )
+
+    assert summary["new_symbols"] == 0
+    assert summary["has_changes"] is False
+    assert json.loads((data_dir / "binance-spot.json").read_text())[0].get("cmc_id") is None
 
 
 def test_binance_exchanges_cover_the_bundled_binance_snapshots():

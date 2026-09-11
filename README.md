@@ -210,7 +210,7 @@ price-compatible CMC candidate, and otherwise asks an LLM to choose *among the
 fetched candidates only*. Confident matches are written to the snapshots;
 ambiguous ones are reported for review. Every decision — candidates, price
 evidence and rationale — is recorded per instrument instance in
-`atlas/data/cmc_mappings.json`, and the workflow opens one pull request covering
+`atlas/data/cmc_mappings.json`, and each run opens its own pull request covering
 both the confident and the uncertain matches. See
 [`docs/cmc-id-mapping.md`](docs/cmc-id-mapping.md) for the decision ladder,
 configuration and review process.

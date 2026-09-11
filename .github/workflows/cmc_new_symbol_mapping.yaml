@@ -31,7 +31,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  AUTOMATION_BRANCH: automation/cmc-new-symbol-mapping
   PR_LABEL: cmc-mapping
 
 jobs:
@@ -57,17 +56,40 @@ jobs:
 
       - name: prepare-run
         id: prepare
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           echo "REPORT_PATH=${RUNNER_TEMP}/cmc-new-symbols-report.md" >> "$GITHUB_ENV"
           echo "SUMMARY_PATH=${RUNNER_TEMP}/cmc-new-symbols-summary.json" >> "$GITHUB_ENV"
-          # A reviewer's own commits on the automation branch must never be
-          # overwritten by the next scheduled regeneration.
-          if git rev-parse --verify "origin/${AUTOMATION_BRANCH}" >/dev/null 2>&1; then
-            echo "head_author=$(git log -1 --format='%an' "origin/${AUTOMATION_BRANCH}")" >> "$GITHUB_OUTPUT"
-          else
-            echo "head_author=github-actions[bot]" >> "$GITHUB_OUTPUT"
+          # Each run gets its own branch, so nothing a reviewer pushes is ever
+          # overwritten and a stalled review never blocks the next run.
+          # run_attempt keeps a re-run of a failed job from colliding with the
+          # branch its first attempt already pushed.
+          echo "RUN_BRANCH=automation/cmc-new-symbols-$(date -u +%Y%m%d)-${{ github.run_number }}-${{ github.run_attempt }}" >> "$GITHUB_ENV"
+          # Tickers already awaiting review in an open PR must not be proposed
+          # twice. Read each open PR's decision ledger rather than its text.
+          branches="${RUNNER_TEMP}/open-pr-branches.txt"
+          if ! gh pr list --state open --label "${PR_LABEL}" --json headRefName --jq '.[].headRefName' > "${branches}"; then
+            echo "::warning::could not list open ${PR_LABEL} pull requests; tickers already awaiting review may be proposed again"
+            : > "${branches}"
           fi
+          mkdir -p "${RUNNER_TEMP}/pending"
+          pending_args=""
+          index=0
+          while read -r branch; do
+            [ -n "${branch}" ] || continue
+            git fetch origin "${branch}" >/dev/null 2>&1 || continue
+            store="${RUNNER_TEMP}/pending/${index}.json"
+            if git show "FETCH_HEAD:atlas/data/cmc_mappings.json" > "${store}" 2>/dev/null; then
+              pending_args="${pending_args} --pending-mapping-path ${store}"
+              index=$((index + 1))
+            else
+              rm -f "${store}"
+            fi
+          done < "${branches}"
+          echo "PENDING_ARGS=${pending_args}" >> "$GITHUB_ENV"
+          echo "Found ${index} open ${PR_LABEL} pull request(s) with a decision ledger"
 
       - name: resolve-new-binance-symbols
         id: resolve
@@ -91,7 +113,7 @@ jobs:
             --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
             --report-path "${REPORT_PATH}" \
             --summary-path "${SUMMARY_PATH}" \
-            ${dry_run_flag}
+            ${PENDING_ARGS} ${dry_run_flag}
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           import os
@@ -106,20 +128,15 @@ jobs:
         id: push
         if: steps.resolve.outputs.has_changes == 'true' && !inputs.dry-run
         env:
-          HEAD_AUTHOR: ${{ steps.prepare.outputs.head_author }}
           APPROVED: ${{ steps.resolve.outputs.approved }}
           UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
           UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
         run: |
           set -euo pipefail
           echo "pushed=false" >> "$GITHUB_OUTPUT"
-          if [ "${HEAD_AUTHOR}" != "github-actions[bot]" ]; then
-            echo "::warning::${AUTOMATION_BRANCH} carries commits by '${HEAD_AUTHOR}'; leaving it alone"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B "${AUTOMATION_BRANCH}"
+          git checkout -b "${RUN_BRANCH}"
           git add atlas/data
           if git diff --cached --quiet; then
             echo "No snapshot or mapping changes to commit"
@@ -129,16 +146,16 @@ jobs:
             --message "chore(data): map new binance symbols to cmc ids" \
             --message "approved=${APPROVED} uncertain=${UNCERTAIN} unmapped=${UNMAPPED}"
           for attempt in 1 2 3 4; do
-            if git push --force-with-lease -u origin "${AUTOMATION_BRANCH}"; then
+            if git push -u origin "${RUN_BRANCH}"; then
               echo "pushed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             sleep $((2 ** attempt))
           done
-          echo "::error::could not push ${AUTOMATION_BRANCH}"
+          echo "::error::could not push ${RUN_BRANCH}"
           exit 1
 
-      - name: open-or-update-pull-request
+      - name: open-pull-request
         id: pr
         if: steps.push.outputs.pushed == 'true'
         env:
@@ -152,19 +169,12 @@ jobs:
             --color "1D76DB" \
             --description "CoinMarketCap ID mapping for newly listed symbols" \
             || true
-          title="chore(data): CMC IDs for new Binance symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)"
-          existing="$(gh pr list --head "${AUTOMATION_BRANCH}" --state open --json number --jq '.[0].number // empty')"
-          if [ -n "${existing}" ]; then
-            gh pr edit "${existing}" --title "${title}" --body-file "${REPORT_PATH}"
-            url="$(gh pr view "${existing}" --json url --jq .url)"
-          else
-            url="$(gh pr create \
-              --base "${BASE_BRANCH}" \
-              --head "${AUTOMATION_BRANCH}" \
-              --title "${title}" \
-              --body-file "${REPORT_PATH}" \
-              --label "${PR_LABEL}")"
-          fi
+          url="$(gh pr create \
+            --base "${BASE_BRANCH}" \
+            --head "${RUN_BRANCH}" \
+            --title "chore(data): CMC IDs for new Binance symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)" \
+            --body-file "${REPORT_PATH}" \
+            --label "${PR_LABEL}")"
           echo "url=${url}" >> "$GITHUB_OUTPUT"
           echo "Pull request: ${url}"
 

@@ -275,9 +275,9 @@ triggered the run — an existing `cmc_id` is never replaced. `uncertain` and
   status, method, confidence, rationale, the full candidate list, the price
   observation and the Binance asset name. `cmc_id` is `null` for an `unmapped`
   verdict.
-- **A pull request** on the `automation/cmc-new-symbol-mapping` branch, labelled
-  `cmc-mapping`, carrying both the approved and the uncertain work, with the
-  review table as its body.
+- **A pull request** on a fresh `automation/cmc-new-symbols-<date>-<run>` branch,
+  labelled `cmc-mapping`, carrying both the approved and the uncertain work, with
+  the review table as its body.
 - **A Slack message** naming the counts and linking the PR.
 
 ### Reviewing a run
@@ -288,9 +288,27 @@ rebrand — not from the ticker or the price — then set `cmc_id` on the branch
 `unmapped` verdict is usually correct for tokenized equities, fiat pairs,
 leveraged tokens and index products, which have no CMC crypto asset.
 
-The workflow regenerates the automation branch on each run, so it checks the
-branch head's author first and leaves the branch alone once a reviewer has
-committed to it.
+### One branch per run
+
+Each run branches from the default branch and opens its own pull request, so a
+review that sits for a week never blocks the next run and nothing a reviewer
+pushes is ever overwritten.
+
+That leaves one thing to handle: a ticker proposed in a PR that has not merged
+yet is absent from the default branch's ledger, so the next run would propose it
+again. Before resolving anything, the workflow lists the open `cmc-mapping` pull
+requests and reads `atlas/data/cmc_mappings.json` from each of their branches,
+passing them as `--pending-mapping-path`. A ticker already awaiting review is
+skipped regardless of its verdict or age — unlike a *merged* `unmapped` verdict,
+which expires. If the PR listing fails the run still proceeds, warning that it
+may duplicate a pending proposal.
+
+Concurrent pull requests merge cleanly where they add `cmc_id` to different
+snapshot rows, even adjacent ones, and a PR still merges cleanly after the daily
+update has rewritten rows around it. The one file that can conflict is
+`atlas/data/cmc_mappings.json`, when two runs insert entries that sort next to
+each other. The resolution is always to keep both sides' entries: dropping one
+loses the record that stops its ticker being proposed again.
 
 ### Not re-deciding
 

@@ -24,6 +24,7 @@ import argparse
 import json
 import sys
 from collections import Counter
+from collections.abc import Iterable
 from dataclasses import dataclass, replace
 from datetime import UTC, datetime, timedelta
 from enum import StrEnum
@@ -178,6 +179,28 @@ def symbols_to_skip(
             mapping.status == MatchStatus.UNMAPPED.value and mapping.recorded_at < cutoff
         )
     )
+
+
+def proposed_symbols(store: MappingStore) -> frozenset[str]:
+    """Return every ticker a store carries a decision for, with no expiry.
+
+    Used for the ledgers on still-open pull request branches: a ticker already
+    awaiting review must not be proposed again, whatever its verdict was.
+    """
+    return frozenset(
+        mapping.symbol.upper() for mapping in store.mappings if mapping.symbol
+    )
+
+
+def pending_proposed_symbols(paths: Iterable[Path]) -> frozenset[str]:
+    """Union the tickers proposed by mapping stores on open PR branches."""
+    proposed: set[str] = set()
+    for path in paths:
+        try:
+            proposed |= proposed_symbols(MappingStore.load(path))
+        except (OSError, ValueError, json.JSONDecodeError) as error:
+            print(f"ignoring unreadable pending mapping store {path}: {error}", file=sys.stderr)
+    return frozenset(proposed)
 
 
 def known_cmc_ids_by_symbol(rows_by_exchange: dict[str, list[dict]]) -> dict[str, int]:
@@ -874,6 +897,7 @@ def run(
     max_timestamp_skew_seconds: int = DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS,
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
     recheck_unmapped_after_days: int = DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
+    pending_mapping_paths: tuple[Path, ...] = (),
     use_llm: bool = True,
     only_symbols: frozenset[str] = frozenset(),
     recheck_decided: bool = False,
@@ -908,6 +932,7 @@ def run(
             frozenset()
             if recheck_decided
             else symbols_to_skip(store, now, recheck_unmapped_after_days)
+            | pending_proposed_symbols(pending_mapping_paths)
         ),
         only_symbols=only_symbols,
     )
@@ -1030,6 +1055,14 @@ def main() -> int:
         "(default: %(default)s)",
     )
     parser.add_argument(
+        "--pending-mapping-path",
+        type=Path,
+        action="append",
+        default=[],
+        help="mapping store from an open pull request whose tickers are already "
+        "awaiting review; repeatable",
+    )
+    parser.add_argument(
         "--no-llm",
         action="store_true",
         help="use deterministic evidence only; unresolved tickers stay uncertain",
@@ -1063,6 +1096,7 @@ def main() -> int:
             max_timestamp_skew_seconds=args.max_timestamp_skew_seconds,
             max_llm_symbols=args.max_llm_symbols,
             recheck_unmapped_after_days=args.recheck_unmapped_after_days,
+            pending_mapping_paths=tuple(args.pending_mapping_path),
             use_llm=not args.no_llm,
             only_symbols=frozenset(
                 symbol.strip().upper()
