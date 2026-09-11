@@ -210,3 +210,195 @@ or reused exchange symbol creates a new instrument instance.
 - Price evidence is normalized and timestamp-aligned.
 - Delisted and relisted instruments remain historically distinguishable.
 - Required CI is deterministic and independent of live metadata drift.
+
+## Automated new-symbol mapping (implemented)
+
+A scheduled workflow keeps the Binance snapshots from accumulating rows without a
+`cmc_id`. It is deliberately scoped to **new** assets: backfilling the historical
+tail is a separate, manual exercise.
+
+### What runs
+
+[`.github/workflows/cmc_new_symbol_mapping.yaml`](../.github/workflows/cmc_new_symbol_mapping.yaml)
+runs daily at 03:30 UTC — after `daily-update` has refreshed the snapshots — and
+on `workflow_dispatch`. It invokes:
+
+```bash
+python integrations/cmc_new_symbol_mapping.py \
+  --new-within-days 30 --max-llm-symbols 40 \
+  --report-path <report.md> --summary-path <summary.json>
+```
+
+Scope is `binance-futures` by default (`--exchanges` widens it). A row enters the
+run when all of the following hold:
+
+- the row has no `cmc_id`;
+- its `first_capture` is within `--new-within-days`; and
+- no earlier run already decided that *instrument instance* (see *Not
+  re-deciding* below).
+
+Contract tickers are folded onto their underlying asset before grouping, so
+`1000CHEEMS` and `CHEEMS` are resolved once, together.
+
+### Decision ladder
+
+Each ticker is resolved by the cheapest sufficient evidence, in order:
+
+**Nothing is approved from a ticker and a price alone.** That is an acceptance
+criterion above, and for good reason: the keyless catalogue can omit a row, and a
+missing second same-ticker asset would turn ambiguity into a false unique match
+and write the wrong ID. Approval requires *identity* evidence — an exact match
+(after case and punctuation normalization) between the Binance `assetName` and
+the candidate's CMC name or slug. The match must be exact: a substring rule would
+tie "Pepe" to "Pepe 2.0", the very confusion identity evidence exists to settle.
+
+| method | status | evidence |
+| --- | --- | --- |
+| `concurrent_instrument_mapping` | `approved` | every instrument was listed *at the same time as* an existing same-ticker instrument already mapped to one CMC ID |
+| `identity_binance_asset_name`, `identity_cmc_slug` | `approved` | exactly one candidate's name or slug matches the Binance asset name, and the price does not contradict it |
+| `llm_adjudicated_identity_*` | `approved` | an LLM picked between candidates that *all* carry name evidence, at high confidence |
+| `no_ticker_candidate` | `unmapped` | a complete catalogue lists no asset with this ticker |
+| `llm_rejected_all_candidates` | `unmapped` | the LLM judged no candidate to be the same underlying asset |
+| `incomplete_catalogue` | `uncertain` | CoinMarketCap's catalogue was self-inconsistent, so nothing is approved and no absence is asserted |
+| `llm_adjudicated`, `llm_chose_unlisted_id`, `llm_unavailable`, `deterministic_only`, `llm_budget_exhausted` | `uncertain` | no identity evidence, or adjudication could not be trusted or could not run |
+
+Two consequences worth stating plainly:
+
+- **A self-inconsistent catalogue blocks every approval for that run** and also
+  stops `unmapped` being claimed, since absence of evidence is not evidence of
+  absence. The run still completes and still reports; everything lands as
+  `uncertain` with method `incomplete_catalogue`.
+- **A ticker alone is never identity across time.** Reusing an ID already in the
+  snapshots requires the existing instrument's listing window to *overlap* the new
+  one, so a delisted ticker that a different project later reuses cannot inherit
+  the old ID.
+
+The LLM is constrained, not trusted:
+
+- it only ever sees candidates fetched from CMC for that ticker, and an ID that
+  is not among them is discarded rather than written;
+- it can never substitute for identity evidence: a confident pick with no name
+  match stays `uncertain`;
+- a high-confidence answer is downgraded to `uncertain` when the chosen
+  candidate's price disagrees with the exchange observation by more than
+  `--max-relative-difference`; and
+- it is asked at most `--max-llm-symbols` times per run, and never for tickers
+  the deterministic rules already settled.
+
+Only `approved` decisions write `cmc_id`, and only onto the new rows that
+triggered the run — an existing `cmc_id` is never replaced. `uncertain` and
+`unmapped` assets leave the snapshots untouched.
+
+### Outputs
+
+- **Snapshots** gain `cmc_id` for approved assets. `cmc_id` is already listed in
+  `LOCALLY_OWNED_FIELDS`, so `atlas/update.py` preserves it.
+- **`atlas/data/cmc_mappings.json`** records every decision per instrument
+  instance through [`integrations/cmc_mappings.py`](../integrations/cmc_mappings.py):
+  status, method, confidence, rationale, the full candidate list, the price
+  observation and the Binance asset name. `cmc_id` is `null` for an `unmapped`
+  verdict.
+- **A pull request** on a fresh `automation/cmc-new-symbols-<date>-<run>` branch,
+  labelled `cmc-mapping`, carrying both the approved and the uncertain work, with
+  the review table as its body.
+- **A Slack message** naming the counts and linking the PR.
+
+### Reviewing a run
+
+Approved rows need a spot check; uncertain rows are the actual work. For each
+one, confirm identity from a contract address, the project name or a known
+rebrand — not from the ticker or the price — then set `cmc_id` on the branch. An
+`unmapped` verdict is usually correct for tokenized equities, fiat pairs,
+leveraged tokens and index products, which have no CMC crypto asset.
+
+### One branch per run
+
+Each run branches from the default branch and opens its own pull request, so a
+review that sits for a week never blocks the next run and nothing a reviewer
+pushes is ever overwritten.
+
+That leaves one thing to handle: a ticker proposed in a PR that has not merged
+yet is absent from the default branch's ledger, so the next run would propose it
+again. Before resolving anything, the workflow lists the open `cmc-mapping` pull
+requests and reads `atlas/data/cmc_mappings.json` from each of their branches,
+passing them as `--pending-mapping-path`. A ticker already awaiting review is
+skipped regardless of its verdict or age — unlike a *merged* `unmapped` verdict,
+which expires. If the PR listing fails the run still proceeds, warning that it
+may duplicate a pending proposal.
+
+Concurrent pull requests merge cleanly where they add `cmc_id` to different
+snapshot rows, even adjacent ones, and a PR still merges cleanly after the daily
+update has rewritten rows around it. The one file that can conflict is
+`atlas/data/cmc_mappings.json`, when two runs insert entries that sort next to
+each other. The resolution is always to keep both sides' entries: dropping one
+loses the record that stops its ticker being proposed again.
+
+### Not re-deciding
+
+`instances_to_skip()` makes runs idempotent, keyed by instrument instance
+(`exchange`, `original_id`, `first_capture`) rather than by ticker. Keying by
+ticker would mean a decision about a 2025 `ABC` silenced a 2026 relisting of
+`ABC` forever, so a reused or relisted symbol could never get its own ID.
+`unmapped` is the one verdict that expires — CoinMarketCap may list the
+asset later — so it becomes eligible again after
+`--recheck-unmapped-after-days` (default 90). `--recheck-decided` lifts the skip for a whole run and
+`--symbols BTC,ETH` narrows a manual run to those tickers alone, ignoring both
+age and history. `--dry-run` reports without writing.
+
+A decision that would overwrite an earlier *approved* mapping with a different
+CMC ID is detected by `partition_conflicts()` **before any snapshot is touched**,
+counted as `mapping_conflicts` in the run summary and named on stderr: an approval
+that needs revising is a human's call. Detecting it first is what keeps a refused
+ledger write from leaving the snapshot and the ledger disagreeing.
+
+### Configuration
+
+LLM access uses any OpenAI-compatible chat-completions endpoint
+([`integrations/llm.py`](../integrations/llm.py)). With nothing configured it
+uses GitHub Models, which is free inside Actions via the workflow's own
+`GITHUB_TOKEN` and the `models: read` permission.
+
+| variable | purpose |
+| --- | --- |
+| `ATLAS_LLM_API_KEY` | provider key; falls back to `GITHUB_TOKEN` |
+| `ATLAS_LLM_BASE_URL` | default `https://models.github.ai/inference` |
+| `ATLAS_LLM_MODEL` | default `openai/gpt-4o-mini` |
+| `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | post via `chat.postMessage` |
+| `SLACK_WEBHOOK_URL` | fallback transport, shared with `daily-update` |
+
+To use a free hosted model instead, set `ATLAS_LLM_BASE_URL` to
+`https://openrouter.ai/api/v1`, `ATLAS_LLM_MODEL` to a `:free` model and
+`ATLAS_LLM_API_KEY` to the provider key. With no key at all the run still
+completes: adjudication is skipped and ambiguous tickers are reported as
+`uncertain` with method `deterministic_only`. Slack is skipped without failing
+the job until its secrets exist.
+
+### Coverage audit
+
+To check whether coverage has gone stale, dispatch the workflow with
+**coverage-audit** ticked (and `coverage-days`, default 60). It runs:
+
+```bash
+python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60
+```
+
+This mode is entirely offline — no CoinMarketCap, no Binance, no LLM — and writes
+nothing. It reports, per exchange, total rows, rows missing a `cmc_id` all-time,
+rows first captured inside the window, and which of those tickers still have no
+ID. It opens no pull request; the table goes to the job summary and the count to
+Slack.
+
+### Known limits
+
+- Candidate discovery still reads the keyless CMC website listing. Because
+  approvals are now gated on catalogue completeness, a chronically inconsistent
+  listing endpoint means **no automatic approvals at all** — everything becomes
+  `uncertain` for a human. During the original audit this endpoint reported 8,143
+  assets while returning 8,141 unique IDs, so that is a live possibility, and the
+  authenticated `/v1/cryptocurrency/map` client in *Phase 2* is what fixes it
+  properly rather than by loosening the gate.
+- Approval needs a Binance `assetName` to compare against, which comes from an
+  undocumented website endpoint. An asset missing from it cannot be auto-approved.
+- Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.
+- Price evidence compares CMC USD aggregates with Binance USDT last prices, so
+  it remains a sanity check, never identity proof.
