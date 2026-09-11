@@ -6334,6 +6334,26 @@
     "first_capture": "2026-05-21T00:00:00.000Z"
   },
   {
+    "id": "US100-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-US100-USDT:USDT",
+    "symbol": "US100",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "US500-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-US500-USDT:USDT",
+    "symbol": "US500",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "USAR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-USAR-USDT:USDT",
@@ -6830,6 +6850,16 @@
     "contract_size": 0.1,
     "first_capture": "2020-05-18T00:00:00.000Z",
     "end_date": "2023-12-20T00:00:00.000Z"
+  },
+  {
+    "id": "XOM-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-10T00:00:00.000Z",
+    "internal_id": "perpetual-XOM-USDT:USDT",
+    "symbol": "XOM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "XPD-USDT-SWAP",
