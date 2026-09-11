@@ -6,38 +6,34 @@ on:
     - cron: "30 3 * * *"
   workflow_dispatch:
     inputs:
-      coverage-audit:
-        description: "Only report CMC ID coverage over the window (no PR, no LLM)"
+      mode:
+        description: "resolve = map new symbols and open a PR · preview = map and report but change nothing · coverage = only count what is missing an ID (offline, seconds) · check-llm = only test the LLM endpoint"
         required: false
-        type: boolean
-        default: false
-      coverage-days:
-        description: "Window for the coverage audit, to spot stale coverage"
+        type: choice
+        default: resolve
+        options:
+          - resolve
+          - preview
+          - coverage
+          - check-llm
+      days:
+        description: "How many days back to look (resolve/preview: symbols first listed in this window; coverage: rows counted)"
         required: false
         default: "60"
       exchanges:
-        description: "Comma-separated snapshots to scan"
+        description: "Which snapshots to scan, comma-separated"
         required: false
         default: "binance-futures"
-      new-within-days:
-        description: "Only resolve symbols first captured this recently"
-        required: false
-        default: "30"
       max-llm-symbols:
-        description: "Cap LLM adjudications for this run"
+        description: "Most symbols the LLM may be asked about in one run (a backlog needs a higher cap)"
         required: false
-        default: "40"
-      dry-run:
-        description: "Resolve and report without committing or opening a PR"
-        required: false
-        type: boolean
-        default: false
+        default: "100"
 
 permissions:
   contents: write
   pull-requests: write
-  # Free GitHub Models inference with the workflow's own GITHUB_TOKEN.
-  models: read
+  # No models: read -- GitHub Models is being retired and answers 410 Gone to
+  # every request, so the inference permission it existed for grants nothing.
 
 concurrency:
   group: cmc-new-symbol-mapping
@@ -105,38 +101,63 @@ jobs:
           done < "${branches}"
           echo "PENDING_ARGS=${pending_args}" >> "$GITHUB_ENV"
           echo "Found ${index} open ${PR_LABEL} pull request(s) with a decision ledger"
+          # A scheduled run sends no inputs, so resolve the default once here
+          # rather than repeating a fallback in every later condition.
+          echo "mode=${{ inputs.mode || 'resolve' }}" >> "$GITHUB_OUTPUT"
 
-      - name: resolve-new-binance-symbols
-        id: resolve
+      - name: check-llm-endpoint
+        if: steps.prepare.outputs.mode == 'check-llm'
         env:
-          # Any OpenAI-compatible endpoint works; unset falls back to GitHub Models.
+          # GITHUB_TOKEN is deliberately not exported here: it is a repository
+          # write credential, and the only endpoint that ever authenticated with
+          # it is retired. Unset, the default reaches Zen's free tier.
           ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
+          # Seconds between requests. A free tier with a requests-per-minute
+          # ceiling needs this raised: the 1s default paces at 60/min, which is
+          # three times OpenRouter's free limit of 20/min.
+          ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
+        run: uv run python integrations/cmc_new_symbol_mapping.py --check-llm
+
+      - name: resolve-new-binance-symbols
+        id: resolve
+        if: steps.prepare.outputs.mode != 'check-llm'
+        env:
+          # Any OpenAI-compatible endpoint works; unset reaches opencode Zen's
+          # free tier, which needs no key. GITHUB_TOKEN is deliberately absent:
+          # see check-llm-endpoint above.
+          ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
+          ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
+          ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
+          # Only a GitHub-hosted endpoint wants this; others ignore it.
+          ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
+          # Seconds between requests. A free tier with a requests-per-minute
+          # ceiling needs this raised: the 1s default paces at 60/min, which is
+          # three times OpenRouter's free limit of 20/min.
+          ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
           EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
-          NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}
-          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '40' }}
-          DRY_RUN: ${{ inputs.dry-run && 'true' || 'false' }}
-          COVERAGE_AUDIT: ${{ inputs.coverage-audit && 'true' || 'false' }}
-          COVERAGE_DAYS: ${{ inputs.coverage-days || '60' }}
+          DAYS: ${{ inputs.days || '60' }}
+          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '100' }}
+          MODE: ${{ steps.prepare.outputs.mode }}
         run: |
           set -euo pipefail
-          extra_args=""
-          window="${NEW_WITHIN_DAYS}"
-          if [ "${COVERAGE_AUDIT}" = "true" ]; then
-            # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
-            extra_args="--coverage-only"
-            window="${COVERAGE_DAYS}"
-          else
-            extra_args="${PENDING_ARGS}"
-            if [ "${DRY_RUN}" = "true" ]; then
-              extra_args="${extra_args} --dry-run"
-            fi
-          fi
+          case "${MODE}" in
+            coverage)
+              # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
+              extra_args="--coverage-only"
+              ;;
+            preview)
+              extra_args="${PENDING_ARGS} --dry-run"
+              ;;
+            *)
+              extra_args="${PENDING_ARGS}"
+              ;;
+          esac
           uv run python integrations/cmc_new_symbol_mapping.py \
             --exchanges "${EXCHANGES}" \
-            --new-within-days "${window}" \
+            --new-within-days "${DAYS}" \
             --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
             --report-path "${REPORT_PATH}" \
             --summary-path "${SUMMARY_PATH}" \
@@ -147,6 +168,20 @@ jobs:
 
           with open(os.environ["SUMMARY_PATH"]) as summary_file:
               summary = json.load(summary_file)
+
+
+          def rendered(value):
+              """Emit a step output a workflow condition can actually compare.
+
+              json.dumps would wrap a string in quote characters, so
+              `llm_status` arrived as `"unavailable"` and never equalled
+              `unavailable` -- which left the fail-on-a-broken-LLM step inert.
+              """
+              if isinstance(value, str):
+                  return value.replace("\n", " ").strip()
+              return json.dumps(value)
+
+
           keys = (
               "new_symbols",
               "approved",
@@ -157,18 +192,20 @@ jobs:
               "catalogue_complete",
               "catalogue_trustworthy",
               "exchange_prices_available",
+              "llm_status",
+              "worth_reviewing",
               "coverage_only",
               "window_days",
               "rows_in_window_missing_cmc_id",
           )
           for key in keys:
               if key in summary:
-                  print(f"{key}={json.dumps(summary[key])}")
+                  print(f"{key}={rendered(summary[key])}")
           PY
 
       - name: commit-and-push-decisions
         id: push
-        if: steps.resolve.outputs.has_changes == 'true' && !inputs.dry-run
+        if: steps.resolve.outputs.has_changes == 'true' && steps.resolve.outputs.worth_reviewing == 'true' && steps.prepare.outputs.mode == 'resolve'
         env:
           APPROVED: ${{ steps.resolve.outputs.approved }}
           UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
@@ -233,6 +270,12 @@ jobs:
         run: |
           set -euo pipefail
           uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+
+      - name: fail-when-the-llm-was-configured-but-unusable
+        if: steps.resolve.outputs.llm_status == 'unavailable'
+        run: |
+          echo "::error::The LLM endpoint is configured but unusable, so ambiguous tickers could not be adjudicated. No pull request was opened unless something was approved without it. Fix the endpoint (try mode: check-llm) and re-run."
+          exit 1
 
       - name: warn-when-nothing-could-be-auto-approved
         if: steps.resolve.outputs.catalogue_trustworthy == 'false' || steps.resolve.outputs.exchange_prices_available == 'false'
