@@ -214,6 +214,11 @@ python integrations/cmc_new_symbol_mapping.py --symbols PEPE,CHEEMS
 The workflow exposes these as one `mode` input (`resolve`, `preview`,
 `coverage`, `check-llm`) and one `days` window.
 
+Only crypto assets are in scope: rows whose `underlying` is `equity`, `index`,
+`commodity` or `pre_market` are skipped, since a tokenized equity's CMC ID would
+name the wrapper rather than the asset. Rows with no `underlying` (legacy crypto)
+and `unknown` are still resolved.
+
 A ticker and an agreeing price never approve a mapping on their own. Approval
 needs identity evidence — an exact match between the Binance asset name and the
 CMC project name or slug — or an existing mapping on a same-ticker instrument

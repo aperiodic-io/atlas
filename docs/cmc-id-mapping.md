@@ -258,9 +258,35 @@ Scope is `binance-futures` by default (`--exchanges` widens it). A row enters th
 run when all of the following hold:
 
 - the row has no `cmc_id`;
+- its `underlying` is not one Atlas maps no CMC ID for (see *Crypto only* below);
 - its `first_capture` is within `--new-within-days`; and
 - no earlier run already decided that *instrument instance* (see *Not
   re-deciding* below).
+
+### Crypto only
+
+Binance lists a great many tokenized equities, ETFs and index products, and they
+dominate new listings: in one 60-day window, **59 of the 67** unmapped
+`binance-futures` rows had `underlying: equity` — Datadog, Moderna, Shopify,
+Zscaler, leveraged Tesla and NVIDIA ETFs, Korean index products. Left in, they
+drown the review queue.
+
+`--skip-underlyings` (default `commodity,equity,index,pre_market`) leaves them
+out. CoinMarketCap does carry entries for some of them, so this is a **scope**
+choice, not a correctness one: Atlas wants a CMC ID for a crypto asset, and a
+tokenized equity's ID would name the tokenization wrapper rather than the asset.
+
+Two deliberate inclusions:
+
+- **No `underlying` at all** is kept. Those are legacy rows that predate the
+  field — BTC, ADA, BNB, AVAX — and are crypto.
+- **`unknown`** is kept, because silently skipping a genuine new listing is worse
+  than a reviewer seeing a couple of rows that turn out not to be crypto.
+
+`--symbols` overrides the filter, so a specific ticker can always be resolved by
+hand. Pass `--skip-underlyings ""` to resolve everything. The coverage audit
+applies the same scope and reports what it left out, so its headline count is
+work somebody actually wants done.
 
 Contract tickers are folded onto their underlying asset before grouping, so
 `1000CHEEMS` and `CHEEMS` are resolved once, together.

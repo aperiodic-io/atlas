@@ -12,6 +12,7 @@ from integrations.cmc_id_probe import (
 from integrations.cmc_mappings import MappingStore
 from integrations.cmc_new_symbol_mapping import (
     DEFAULT_EXCHANGES,
+    DEFAULT_SKIPPED_UNDERLYINGS,
     Decision,
     MatchStatus,
     NewSymbol,
@@ -369,6 +370,142 @@ def test_decide_withholds_approval_when_the_catalogue_lost_too_many_rows():
 
     assert decision.status is MatchStatus.UNCERTAIN
     assert "above the" in decision.rationale
+
+
+# --------------------------------------------------------------------------- #
+# crypto-only scope
+# --------------------------------------------------------------------------- #
+
+
+def test_default_scope_skips_tokenized_equities_and_index_products():
+    assert set(DEFAULT_SKIPPED_UNDERLYINGS) == {
+        "equity",
+        "index",
+        "commodity",
+        "pre_market",
+    }
+
+
+def _row(symbol: str, underlying: str | None, captured: str = "2026-09-05T00:00:00.000Z"):
+    row = {"id": f"{symbol.lower()}usdt", "symbol": symbol, "first_capture": captured}
+    if underlying is not None:
+        row["underlying"] = underlying
+    return row
+
+
+def test_collect_new_symbols_leaves_out_declared_non_crypto_underlyings():
+    """Tokenized equities dominated a real run: 32 of 38 review rows were `equity`."""
+    rows_by_exchange = {
+        "binance-futures": [
+            _row("MARSCOIN", "crypto"),
+            _row("DDOG", "equity"),
+            _row("GDX", "index"),
+            _row("XAU", "commodity"),
+            _row("PREIPO", "pre_market"),
+        ]
+    }
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"MARSCOIN", "DDOG", "GDX", "XAU", "PREIPO"}, now=NOW
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["MARSCOIN"]
+
+
+def test_collect_new_symbols_keeps_rows_with_no_underlying_and_unknown():
+    """Absent `underlying` means a legacy crypto row (BTC, ADA, BNB), not an equity.
+
+    Silently skipping a genuine new listing would be worse than a reviewer seeing
+    a row that turns out not to be crypto, so `unknown` is kept too.
+    """
+    rows_by_exchange = {
+        "binance-futures": [_row("BTC", None), _row("UNITREE", "unknown")]
+    }
+
+    new_symbols = collect_new_symbols(rows_by_exchange, {"BTC", "UNITREE"}, now=NOW)
+
+    assert [s.lookup_symbol for s in new_symbols] == ["BTC", "UNITREE"]
+
+
+def test_collect_new_symbols_honours_an_empty_skip_set():
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"DDOG"}, now=NOW, skip_underlyings=frozenset()
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["DDOG"]
+
+
+def test_only_symbols_overrides_the_underlying_filter():
+    """Asking for a ticker by hand must not be silently refused by scope."""
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"DDOG"}, now=NOW, only_symbols=frozenset({"DDOG"})
+    )
+
+    assert [s.lookup_symbol for s in new_symbols] == ["DDOG"]
+
+
+def test_coverage_report_separates_out_of_scope_rows_from_missing_ones():
+    rows_by_exchange = {
+        "binance-futures": [
+            _row("MARSCOIN", "crypto"),
+            _row("DDOG", "equity"),
+            _row("MRNA", "equity"),
+            _row("BTC", None),
+        ]
+    }
+
+    coverage = coverage_report(rows_by_exchange, NOW, 60)
+    stats = coverage["exchanges"]["binance-futures"]
+
+    assert stats["rows_in_window_missing_cmc_id"] == 2
+    assert stats["rows_in_window_out_of_scope"] == 2
+    assert stats["out_of_scope_underlyings"] == {"equity": 2}
+    assert stats["tickers_in_window_missing_cmc_id"] == ["BTC", "MARSCOIN"]
+    assert coverage["rows_in_window_out_of_scope"] == 2
+
+
+def test_render_coverage_report_explains_what_was_skipped():
+    rows_by_exchange = {"binance-futures": [_row("DDOG", "equity")]}
+
+    report = render_coverage_report(coverage_report(rows_by_exchange, NOW, 60))
+
+    assert "skipped as non-crypto" in report
+    assert "`equity`" in report
+    assert "Nothing in scope in the window is missing a CMC ID." in report
+
+
+def test_run_does_not_resolve_a_tokenized_equity(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "ddogusdt",
+                    "symbol": "DDOG",
+                    "underlying": "equity",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(41970, "DDOG", "datadog-inc-derivatives", 120.0, "Datadog")),
+        [],
+        [],
+        ForbiddenChatClient(),
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["new_symbols"] == 0
+    assert summary["has_changes"] is False
 
 
 def test_default_scope_is_binance_futures():

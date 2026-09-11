@@ -77,6 +77,17 @@ DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS = 90
 # proportionate gap is tolerated while the signals that mean "rows were genuinely
 # lost" still fail closed.
 DEFAULT_MAX_CATALOGUE_GAP_RATIO = 0.005
+# Binance lists a great many tokenized equities, ETFs and index products, and
+# they dominate new listings: 59 of the 67 unmapped rows in a 60-day window were
+# `equity`. CoinMarketCap does carry entries for some of them, so this is a scope
+# choice rather than a correctness one -- Atlas wants CMC IDs for crypto assets,
+# and an equity contract's "ID" would be a tokenization wrapper, not the asset.
+#
+# Rows whose `underlying` is absent are kept: those are legacy crypto rows that
+# predate the field (BTC, ADA, BNB). `unknown` is kept too, because silently
+# skipping a genuine new listing is worse than a reviewer seeing a few rows that
+# turn out not to be crypto.
+DEFAULT_SKIPPED_UNDERLYINGS = frozenset({"equity", "index", "commodity", "pre_market"})
 MAX_CANDIDATES_IN_PROMPT = 12
 
 SYSTEM_PROMPT = """\
@@ -294,13 +305,15 @@ def collect_new_symbols(
     new_within_days: int = DEFAULT_NEW_WITHIN_DAYS,
     decided_instances: frozenset[str] = frozenset(),
     only_symbols: frozenset[str] = frozenset(),
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
 ) -> list[NewSymbol]:
     """Group rows that still lack a CMC ID by lookup ticker.
 
     Rows are filtered per instrument instance, so an earlier decision about one
     instance never suppresses a later relisting of the same ticker.
     ``only_symbols`` narrows the run to those tickers and ignores the recency and
-    already-decided filters, so a specific asset can be re-resolved by hand.
+    already-decided filters, so a specific asset can be re-resolved by hand --
+    including an underlying this run would otherwise skip.
     """
     if new_within_days < 0:
         raise ValueError("new_within_days must not be negative")
@@ -310,6 +323,8 @@ def collect_new_symbols(
         for row in rows:
             occurrence = _occurrence_from_row(exchange, row)
             if occurrence is None:
+                continue
+            if not only_symbols and row.get("underlying") in skip_underlyings:
                 continue
             lookup_symbol = normalize_cmc_lookup_symbol(occurrence.symbol, cmc_symbols)
             if only_symbols:
@@ -1221,7 +1236,10 @@ def resolve_new_symbols(
 
 
 def coverage_report(
-    rows_by_exchange: dict[str, list[dict]], now: datetime, window_days: int
+    rows_by_exchange: dict[str, list[dict]],
+    now: datetime,
+    window_days: int,
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
 ) -> dict[str, object]:
     """Summarise CMC ID coverage over a window, for staleness checks.
 
@@ -1240,7 +1258,13 @@ def coverage_report(
             is not None
             and captured >= cutoff
         ]
-        missing = [row for row in in_window if row.get("cmc_id") is None]
+        unmapped = [row for row in in_window if row.get("cmc_id") is None]
+        out_of_scope = [
+            row for row in unmapped if row.get("underlying") in skip_underlyings
+        ]
+        missing = [
+            row for row in unmapped if row.get("underlying") not in skip_underlyings
+        ]
         by_exchange[exchange] = {
             "rows_total": len(rows),
             "rows_missing_cmc_id_total": sum(
@@ -1248,6 +1272,10 @@ def coverage_report(
             ),
             "rows_in_window": len(in_window),
             "rows_in_window_missing_cmc_id": len(missing),
+            "rows_in_window_out_of_scope": len(out_of_scope),
+            "out_of_scope_underlyings": dict(
+                sorted(Counter(str(row.get("underlying")) for row in out_of_scope).items())
+            ),
             "tickers_in_window_missing_cmc_id": sorted(
                 {
                     row["symbol"].upper()
@@ -1259,9 +1287,13 @@ def coverage_report(
     return {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
         "window_days": window_days,
+        "skipped_underlyings": sorted(skip_underlyings),
         "exchanges": by_exchange,
         "rows_in_window_missing_cmc_id": sum(
             int(stats["rows_in_window_missing_cmc_id"]) for stats in by_exchange.values()
+        ),
+        "rows_in_window_out_of_scope": sum(
+            int(stats["rows_in_window_out_of_scope"]) for stats in by_exchange.values()
         ),
     }
 
@@ -1274,8 +1306,8 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
         "",
         f"Run at {coverage['generated_at']}.",
         "",
-        "| exchange | rows | missing id (all time) | rows in window | missing id in window |",
-        "| --- | --- | --- | --- | --- |",
+        "| exchange | rows | missing id (all time) | rows in window | missing id, in scope | skipped as non-crypto |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     exchanges: dict[str, dict[str, object]] = coverage["exchanges"]  # type: ignore[assignment]
     for exchange, stats in exchanges.items():
@@ -1283,7 +1315,8 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
             f"| `{exchange}` | {stats['rows_total']} "
             f"| {stats['rows_missing_cmc_id_total']} "
             f"| {stats['rows_in_window']} "
-            f"| {stats['rows_in_window_missing_cmc_id']} |"
+            f"| {stats['rows_in_window_missing_cmc_id']} "
+            f"| {stats['rows_in_window_out_of_scope']} |"
         )
     for exchange, stats in exchanges.items():
         tickers: list[str] = stats["tickers_in_window_missing_cmc_id"]  # type: ignore[assignment]
@@ -1293,7 +1326,17 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
         more = "" if len(tickers) <= 60 else f" …and {len(tickers) - 60} more"
         lines += ["", f"**{exchange}** tickers still without a CMC ID: {shown}{more}"]
     if not coverage["rows_in_window_missing_cmc_id"]:
-        lines += ["", "Nothing in the window is missing a CMC ID."]
+        lines += ["", "Nothing in scope in the window is missing a CMC ID."]
+    skipped = coverage.get("skipped_underlyings") or []
+    if skipped:
+        lines += [
+            "",
+            f"Rows whose `underlying` is {', '.join(f'`{u}`' for u in skipped)} are "
+            "out of scope and not counted as missing: Atlas maps CMC IDs for crypto "
+            "assets, and a tokenized equity's ID would name the wrapper, not the "
+            "asset. Rows with no `underlying` (legacy crypto) and `unknown` are "
+            "still in scope.",
+        ]
     return "\n".join(lines) + "\n"
 
 
@@ -1307,6 +1350,7 @@ def run(
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
     recheck_unmapped_after_days: int = DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
     max_catalogue_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
+    skip_underlyings: frozenset[str] = DEFAULT_SKIPPED_UNDERLYINGS,
     pending_mapping_paths: tuple[Path, ...] = (),
     use_llm: bool = True,
     only_symbols: frozenset[str] = frozenset(),
@@ -1323,7 +1367,9 @@ def run(
     rows_by_exchange = load_snapshots(data_dir, exchanges)
 
     if coverage_only:
-        coverage = coverage_report(rows_by_exchange, now, new_within_days)
+        coverage = coverage_report(
+            rows_by_exchange, now, new_within_days, skip_underlyings
+        )
         if report_path is not None:
             report_path.parent.mkdir(parents=True, exist_ok=True)
             report_path.write_text(render_coverage_report(coverage))
@@ -1332,6 +1378,8 @@ def run(
             "coverage_only": True,
             "window_days": new_within_days,
             "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
+            "rows_in_window_out_of_scope": coverage["rows_in_window_out_of_scope"],
+            "skipped_underlyings": coverage["skipped_underlyings"],
             "coverage": coverage["exchanges"],
             "has_changes": False,
         }
@@ -1374,6 +1422,7 @@ def run(
             | pending_proposed_instances(pending_mapping_paths)
         ),
         only_symbols=only_symbols,
+        skip_underlyings=skip_underlyings,
     )
     summary = {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
@@ -1387,6 +1436,7 @@ def run(
         "catalogue_complete": diagnostics.is_complete,
         "catalogue_trustworthy": trustworthy,
         "catalogue_issue": catalogue_issue,
+        "skipped_underlyings": sorted(skip_underlyings),
         "exchange_prices_available": True,
     }
     if not new_symbols:
@@ -1532,6 +1582,13 @@ def main() -> int:
         help="cap LLM adjudications per run (default: %(default)s)",
     )
     parser.add_argument(
+        "--skip-underlyings",
+        default=",".join(sorted(DEFAULT_SKIPPED_UNDERLYINGS)),
+        help="comma-separated `underlying` values to leave out, so only crypto "
+        "assets are resolved; pass an empty string to resolve everything "
+        "(default: %(default)s)",
+    )
+    parser.add_argument(
         "--max-catalogue-gap-ratio",
         type=float,
         default=DEFAULT_MAX_CATALOGUE_GAP_RATIO,
@@ -1604,6 +1661,11 @@ def main() -> int:
             max_llm_symbols=args.max_llm_symbols,
             recheck_unmapped_after_days=args.recheck_unmapped_after_days,
             max_catalogue_gap_ratio=args.max_catalogue_gap_ratio,
+            skip_underlyings=frozenset(
+                value.strip()
+                for value in args.skip_underlyings.split(",")
+                if value.strip()
+            ),
             pending_mapping_paths=tuple(args.pending_mapping_path),
             use_llm=not args.no_llm,
             only_symbols=frozenset(
