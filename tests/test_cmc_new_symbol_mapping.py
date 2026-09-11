@@ -11,7 +11,7 @@ from integrations.cmc_id_probe import (
 )
 from integrations.cmc_mappings import MappingStore
 from integrations.cmc_new_symbol_mapping import (
-    BINANCE_EXCHANGES,
+    DEFAULT_EXCHANGES,
     Decision,
     MatchStatus,
     NewSymbol,
@@ -19,14 +19,19 @@ from integrations.cmc_new_symbol_mapping import (
     apply_decisions,
     build_symbol_evidence,
     collect_new_symbols,
+    concurrent_cmc_id,
+    coverage_report,
     decide,
-    known_cmc_ids_by_symbol,
-    pending_proposed_symbols,
+    identity_match,
+    instances_to_skip,
+    mapped_windows_by_symbol,
+    partition_conflicts,
+    pending_proposed_instances,
     record_decisions,
+    render_coverage_report,
     render_report,
     resolve_new_symbols,
     run,
-    symbols_to_skip,
 )
 from integrations.llm import LlmError
 
@@ -61,10 +66,20 @@ class ForbiddenChatClient:
         pass
 
 
-def _catalogue(*assets: CmcAsset) -> CmcCatalogue:
+def _catalogue(*assets: CmcAsset, complete: bool = True) -> CmcCatalogue:
+    count = len(assets)
     return CmcCatalogue(
         assets,
-        CatalogueDiagnostics(len(assets), len(assets), len(assets), (), 0, False),
+        CatalogueDiagnostics(
+            # A reported total above the unique count is how the keyless endpoint
+            # signals that a row may be missing from this page.
+            count if complete else count + 1,
+            count,
+            count,
+            (),
+            0,
+            False,
+        ),
     )
 
 
@@ -72,24 +87,35 @@ def _asset(cmc_id: int, symbol: str, slug: str, price: float, name: str = "") ->
     return CmcAsset(cmc_id, symbol, slug, price, OBSERVED_AT, True, name or slug.title())
 
 
-def _observation(symbol: str, price: float, venue: str = "binance-spot") -> PriceObservation:
+def _observation(
+    symbol: str, price: float, venue: str = "binance-futures"
+) -> PriceObservation:
     return PriceObservation(price, "USDT", OBSERVED_AT, venue, f"{symbol}USDT")
 
 
 def _occurrence(
-    exchange_symbol: str, original_id: str | None = None, exchange: str = "binance-spot"
+    exchange_symbol: str,
+    original_id: str | None = None,
+    exchange: str = "binance-futures",
+    first_capture: datetime | None = None,
+    end_date: datetime | None = None,
 ) -> SymbolOccurrence:
     return SymbolOccurrence(
         exchange,
         original_id or f"{exchange_symbol.lower()}usdt",
         exchange_symbol,
-        NOW - timedelta(days=1),
-        "spot",
+        first_capture or NOW - timedelta(days=1),
+        "perpetual",
+        end_date,
     )
 
 
 def _evidence_for(
-    new_symbol: NewSymbol, assets: tuple[CmcAsset, ...], price: float | None
+    new_symbol: NewSymbol,
+    assets: tuple[CmcAsset, ...],
+    price: float | None,
+    binance_name: str | None = None,
+    catalogue: CmcCatalogue | None = None,
 ):
     observations: dict[str, dict[str, PriceObservation]] = {}
     if price is not None:
@@ -97,23 +123,49 @@ def _evidence_for(
             observations.setdefault(occurrence.exchange, {})[
                 occurrence.symbol.upper()
             ] = _observation(occurrence.symbol, price, occurrence.exchange)
-    return build_symbol_evidence(new_symbol, _catalogue(*assets), observations)
+    public_assets = (
+        {}
+        if binance_name is None
+        else {
+            new_symbol.lookup_symbol: {
+                "assetCode": new_symbol.lookup_symbol,
+                "assetName": binance_name,
+            }
+        }
+    )
+    return build_symbol_evidence(
+        new_symbol, catalogue or _catalogue(*assets), observations, public_assets
+    )
 
 
 def _evidence(
     lookup_symbol: str,
     assets: tuple[CmcAsset, ...],
     price: float | None,
-    exchange_symbol: str | None = None,
-    exchange: str = "binance-spot",
+    binance_name: str | None = None,
+    catalogue: CmcCatalogue | None = None,
 ):
-    occurrence = _occurrence(exchange_symbol or lookup_symbol, exchange=exchange)
-    return _evidence_for(NewSymbol(lookup_symbol, (occurrence,)), assets, price)
+    return _evidence_for(
+        NewSymbol(lookup_symbol, (_occurrence(lookup_symbol),)),
+        assets,
+        price,
+        binance_name=binance_name,
+        catalogue=catalogue,
+    )
+
+
+# --------------------------------------------------------------------------- #
+# scope and collection
+# --------------------------------------------------------------------------- #
+
+
+def test_default_scope_is_binance_futures():
+    assert DEFAULT_EXCHANGES == ("binance-futures",)
 
 
 def test_collect_new_symbols_keeps_only_recent_rows_without_a_cmc_id():
     rows_by_exchange = {
-        "binance-spot": [
+        "binance-futures": [
             {"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"},
             {"id": "oldusdt", "symbol": "OLD", "first_capture": "2021-01-01T00:00:00.000Z"},
             {
@@ -139,11 +191,9 @@ def test_collect_new_symbols_groups_a_multiplier_contract_under_its_base_ticker(
                 "id": "1000cheemsusdt",
                 "symbol": "1000CHEEMS",
                 "first_capture": "2026-09-01T00:00:00.000Z",
-            }
-        ],
-        "binance-spot": [
-            {"id": "cheemsusdt", "symbol": "CHEEMS", "first_capture": "2026-09-02T00:00:00.000Z"}
-        ],
+            },
+            {"id": "cheemsusdc", "symbol": "CHEEMS", "first_capture": "2026-09-02T00:00:00.000Z"},
+        ]
     }
 
     new_symbols = collect_new_symbols(rows_by_exchange, {"CHEEMS"}, now=NOW)
@@ -151,24 +201,49 @@ def test_collect_new_symbols_groups_a_multiplier_contract_under_its_base_ticker(
     assert len(new_symbols) == 1
     assert new_symbols[0].lookup_symbol == "CHEEMS"
     assert new_symbols[0].exchange_symbols == ("1000CHEEMS", "CHEEMS")
-    assert len(new_symbols[0].occurrences) == 2
 
 
-def test_collect_new_symbols_skips_a_ticker_a_previous_run_decided():
+def test_collect_new_symbols_skips_an_instrument_instance_a_previous_run_decided():
     rows_by_exchange = {
-        "binance-spot": [
+        "binance-futures": [
             {"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"}
         ]
     }
+    decided = frozenset({"binance-futures:newusdt:2026-09-05T00:00:00Z"})
 
     assert collect_new_symbols(
-        rows_by_exchange, {"NEW"}, now=NOW, decided_symbols=frozenset({"NEW"})
+        rows_by_exchange, {"NEW"}, now=NOW, decided_instances=decided
     ) == []
+
+
+def test_collect_new_symbols_still_resolves_a_relisted_instrument_of_a_decided_ticker():
+    """Regression: a decision about one instance must not silence a relisting.
+
+    Keying the skip set by ticker meant a 2025 ABC decision suppressed a 2026 ABC
+    instance forever, so a reused or relisted symbol could never get its own ID.
+    """
+    rows_by_exchange = {
+        "binance-futures": [
+            {
+                "id": "abcusdt",
+                "symbol": "ABC",
+                "first_capture": "2026-09-05T00:00:00.000Z",
+            }
+        ]
+    }
+    # The ledger holds a *different* instance of the same ticker.
+    decided = frozenset({"binance-futures:abcusdt:2025-01-01T00:00:00Z"})
+
+    new_symbols = collect_new_symbols(
+        rows_by_exchange, {"ABC"}, now=NOW, decided_instances=decided
+    )
+
+    assert [new_symbol.lookup_symbol for new_symbol in new_symbols] == ["ABC"]
 
 
 def test_collect_new_symbols_narrows_to_requested_tickers_ignoring_age_and_history():
     rows_by_exchange = {
-        "binance-spot": [
+        "binance-futures": [
             {"id": "oldusdt", "symbol": "OLD", "first_capture": "2019-01-01T00:00:00.000Z"},
             {"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"},
         ]
@@ -178,55 +253,316 @@ def test_collect_new_symbols_narrows_to_requested_tickers_ignoring_age_and_histo
         rows_by_exchange,
         {"OLD", "NEW"},
         now=NOW,
-        decided_symbols=frozenset({"OLD"}),
+        decided_instances=frozenset({"binance-futures:oldusdt:2019-01-01T00:00:00Z"}),
         only_symbols=frozenset({"OLD"}),
     )
 
     assert [new_symbol.lookup_symbol for new_symbol in new_symbols] == ["OLD"]
 
 
-def test_collect_new_symbols_matches_a_requested_ticker_through_its_multiplier():
-    rows_by_exchange = {
-        "binance-futures": [
-            {
-                "id": "1000cheemsusdt",
-                "symbol": "1000CHEEMS",
-                "first_capture": "2019-01-01T00:00:00.000Z",
-            }
-        ]
-    }
+def test_collect_new_symbols_rejects_a_negative_window():
+    with pytest.raises(ValueError, match="new_within_days"):
+        collect_new_symbols({}, set(), now=NOW, new_within_days=-1)
 
-    new_symbols = collect_new_symbols(
-        rows_by_exchange, {"CHEEMS"}, now=NOW, only_symbols=frozenset({"CHEEMS"})
+
+# --------------------------------------------------------------------------- #
+# skip ledger
+# --------------------------------------------------------------------------- #
+
+
+def test_instances_to_skip_is_keyed_by_instrument_instance(tmp_path):
+    store = MappingStore(tmp_path / "m.json")
+    record_decisions(
+        store,
+        [
+            Decision(
+                _evidence("NEW", (_asset(1, "NEW", "new-token", 1.0),), 1.0),
+                MatchStatus.APPROVED,
+                1,
+                "new-token",
+                "identity_binance_asset_name",
+                "high",
+                "ok",
+            )
+        ],
+        recorded_at=NOW,
     )
 
-    assert [new_symbol.lookup_symbol for new_symbol in new_symbols] == ["CHEEMS"]
+    assert instances_to_skip(store, NOW) == frozenset(
+        {"binance-futures:newusdt:2026-09-10T12:00:00Z"}
+    )
 
 
-def test_known_cmc_ids_by_symbol_ignores_a_ticker_with_conflicting_ids():
-    rows_by_exchange = {
-        "binance-spot": [
-            {"id": "a", "symbol": "AAA", "cmc_id": 1},
-            {"id": "b", "symbol": "AAA", "cmc_id": 1},
-            {"id": "c", "symbol": "BBB", "cmc_id": 2},
-            {"id": "d", "symbol": "BBB", "cmc_id": 3},
-        ]
-    }
+def test_instances_to_skip_revisits_an_unmapped_instance_after_the_recheck_window(tmp_path):
+    store = MappingStore(tmp_path / "m.json")
+    record_decisions(
+        store,
+        [
+            Decision(
+                _evidence("AAPLB", (), None),
+                MatchStatus.UNMAPPED,
+                None,
+                "",
+                "no_ticker_candidate",
+                "high",
+                "-",
+            )
+        ],
+        recorded_at=NOW - timedelta(days=120),
+    )
+    record_decisions(
+        store,
+        [
+            Decision(
+                _evidence("BOT", (), None),
+                MatchStatus.UNMAPPED,
+                None,
+                "",
+                "no_ticker_candidate",
+                "high",
+                "-",
+            )
+        ],
+        recorded_at=NOW - timedelta(days=10),
+    )
 
-    assert known_cmc_ids_by_symbol(rows_by_exchange) == {"AAA": 1}
+    assert instances_to_skip(store, NOW, recheck_unmapped_after_days=90) == frozenset(
+        {"binance-futures:botusdt:2026-09-10T12:00:00Z"}
+    )
 
 
-def test_decide_approves_a_single_price_compatible_candidate_without_an_llm():
+def test_instances_to_skip_never_expires_an_approved_decision(tmp_path):
+    store = MappingStore(tmp_path / "m.json")
+    record_decisions(
+        store,
+        [
+            Decision(
+                _evidence("NEW", (_asset(100, "NEW", "new-token", 1.0),), 1.0),
+                MatchStatus.APPROVED,
+                100,
+                "new-token",
+                "identity_binance_asset_name",
+                "high",
+                "ok",
+            )
+        ],
+        recorded_at=NOW - timedelta(days=900),
+    )
+
+    assert len(instances_to_skip(store, NOW)) == 1
+
+
+def test_instances_to_skip_rejects_a_negative_recheck_window(tmp_path):
+    with pytest.raises(ValueError, match="recheck_unmapped_after_days"):
+        instances_to_skip(
+            MappingStore(tmp_path / "m.json"), NOW, recheck_unmapped_after_days=-1
+        )
+
+
+def test_pending_proposed_instances_unions_open_pull_request_ledgers(tmp_path):
+    for name, ticker, recorded_at in (
+        ("pr-1.json", "AAA", NOW - timedelta(days=400)),
+        ("pr-2.json", "BBB", NOW),
+    ):
+        store = MappingStore(tmp_path / name)
+        record_decisions(
+            store,
+            [
+                Decision(
+                    _evidence(ticker, (), None),
+                    MatchStatus.UNMAPPED,
+                    None,
+                    "",
+                    "no_ticker_candidate",
+                    "high",
+                    "-",
+                )
+            ],
+            recorded_at=recorded_at,
+        )
+        store.save()
+
+    # A pending proposal is skipped whatever its verdict and however old it is.
+    assert pending_proposed_instances(
+        [tmp_path / "pr-1.json", tmp_path / "pr-2.json"]
+    ) == frozenset(
+        {
+            "binance-futures:aaausdt:2026-09-10T12:00:00Z",
+            "binance-futures:bbbusdt:2026-09-10T12:00:00Z",
+        }
+    )
+
+
+def test_pending_proposed_instances_ignores_a_missing_or_unparseable_ledger(tmp_path, capsys):
+    (tmp_path / "broken.json").write_text("{not json")
+
+    assert pending_proposed_instances(
+        [tmp_path / "absent.json", tmp_path / "broken.json"]
+    ) == frozenset()
+    assert "ignoring unreadable pending mapping store" in capsys.readouterr().err
+
+
+def test_pending_proposed_instances_ignores_valid_json_in_the_wrong_shape(tmp_path, capsys):
+    """Regression: a reviewer-editable ledger must not abort a scheduled run.
+
+    ``{"mappings": [{"instrument": {}}]}`` is valid JSON, so the loader used to
+    raise ``KeyError`` straight past this boundary.
+    """
+    (tmp_path / "wrong-shape.json").write_text(
+        json.dumps({"schema_version": 1, "mappings": [{"instrument": {}}]})
+    )
+
+    assert pending_proposed_instances([tmp_path / "wrong-shape.json"]) == frozenset()
+    assert "ignoring unreadable pending mapping store" in capsys.readouterr().err
+
+
+# --------------------------------------------------------------------------- #
+# identity evidence
+# --------------------------------------------------------------------------- #
+
+
+def test_identity_match_accepts_an_exact_name_or_slug_match():
+    asset = _asset(1, "PEPE", "pepe", 1.0, "Pepe")
+
+    assert identity_match(asset, {"assetName": "Pepe"}) == "binance_asset_name"
+    assert identity_match(asset, {"assetName": "pepe"}) == "binance_asset_name"
+    assert (
+        identity_match(_asset(2, "A", "arena-z", 1.0, "Other"), {"assetName": "Arena Z"})
+        == "cmc_slug"
+    )
+
+
+def test_identity_match_refuses_a_near_miss_and_a_missing_asset():
+    # "Pepe" must not identify "Pepe 2.0" -- the exact confusion it has to resolve.
+    assert identity_match(_asset(1, "PEPE", "pepe-2", 1.0, "Pepe 2.0"), {"assetName": "Pepe"}) is None
+    assert identity_match(_asset(1, "PEPE", "pepe", 1.0, "Pepe"), None) is None
+    assert identity_match(_asset(1, "PEPE", "pepe", 1.0, "Pepe"), {}) is None
+    assert identity_match(_asset(1, "PEPE", "pepe", 1.0, "Pepe"), {"assetName": ""}) is None
+
+
+# --------------------------------------------------------------------------- #
+# reuse of an existing mapping
+# --------------------------------------------------------------------------- #
+
+
+def test_concurrent_cmc_id_reuses_an_overlapping_instrument():
+    windows = mapped_windows_by_symbol(
+        {
+            "binance-spot": [
+                {
+                    "id": "btcusdt",
+                    "symbol": "BTC",
+                    "cmc_id": 1,
+                    "first_capture": "2020-01-01T00:00:00.000Z",
+                }
+            ]
+        }
+    )
+    new_symbol = NewSymbol("BTC", (_occurrence("BTC", "btcusdc"),))
+
+    assert concurrent_cmc_id(new_symbol, windows) == (1, "BTC")
+
+
+def test_concurrent_cmc_id_refuses_a_relisted_ticker_whose_window_does_not_overlap():
+    """Regression: a reused ticker must not inherit a delisted project's ID."""
+    windows = mapped_windows_by_symbol(
+        {
+            "binance-spot": [
+                {
+                    "id": "abcusdt",
+                    "symbol": "ABC",
+                    "cmc_id": 10,
+                    "first_capture": "2019-01-01T00:00:00.000Z",
+                    "end_date": "2021-01-01T00:00:00.000Z",
+                }
+            ]
+        }
+    )
+    relisted = NewSymbol(
+        "ABC",
+        (_occurrence("ABC", "abcusdt", first_capture=datetime(2026, 9, 1, tzinfo=UTC)),),
+    )
+
+    assert concurrent_cmc_id(relisted, windows) is None
+
+
+def test_concurrent_cmc_id_refuses_a_ticker_mapped_to_several_ids():
+    windows = mapped_windows_by_symbol(
+        {
+            "binance-spot": [
+                {"id": "a", "symbol": "AAA", "cmc_id": 2, "first_capture": "2020-01-01T00:00:00.000Z"},
+                {"id": "b", "symbol": "AAA", "cmc_id": 3, "first_capture": "2020-01-01T00:00:00.000Z"},
+            ]
+        }
+    )
+
+    assert concurrent_cmc_id(NewSymbol("AAA", (_occurrence("AAA"),)), windows) is None
+
+
+# --------------------------------------------------------------------------- #
+# the decision ladder
+# --------------------------------------------------------------------------- #
+
+
+def test_decide_never_approves_from_ticker_and_price_alone():
+    """Regression: the repo's acceptance criteria forbid this approval.
+
+    A lone same-ticker candidate with an agreeing price used to be approved
+    automatically, so a catalogue that silently omitted a second same-ticker
+    asset turned ambiguity into a false unique match and wrote the wrong ID.
+    """
     evidence = _evidence("NEW", (_asset(100, "NEW", "new-token", 2.0),), price=2.0)
+
+    decision = decide(evidence, None)
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.method == "deterministic_only"
+
+
+def test_decide_approves_a_name_match_corroborated_by_price():
+    evidence = _evidence(
+        "NEW",
+        (_asset(100, "NEW", "new-token", 2.0, "New Token"),),
+        price=2.0,
+        binance_name="New Token",
+    )
 
     decision = decide(evidence, ForbiddenChatClient())
 
     assert decision.status is MatchStatus.APPROVED
     assert decision.cmc_id == 100
-    assert decision.method == "unique_ticker_price_compatible"
+    assert decision.method == "identity_binance_asset_name"
 
 
-def test_decide_reports_an_unmapped_ticker_without_calling_the_llm():
+def test_decide_withholds_approval_when_the_catalogue_is_incomplete():
+    """Regression: an inconsistent catalogue must not produce an approval."""
+    assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
+    evidence = _evidence(
+        "NEW",
+        assets,
+        price=2.0,
+        binance_name="New Token",
+        catalogue=_catalogue(*assets, complete=False),
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.method == "incomplete_catalogue"
+    assert decision.cmc_id == 100
+
+
+def test_decide_does_not_claim_unmapped_from_an_incomplete_catalogue():
+    """Regression: absence of evidence is not evidence of absence."""
+    evidence = _evidence("AAPLB", (), price=None, catalogue=_catalogue(complete=False))
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.method == "incomplete_catalogue"
+
+
+def test_decide_reports_an_unmapped_ticker_from_a_complete_catalogue():
     evidence = _evidence("AAPLB", (), price=255.0)
 
     decision = decide(evidence, ForbiddenChatClient())
@@ -236,7 +572,8 @@ def test_decide_reports_an_unmapped_ticker_without_calling_the_llm():
     assert decision.method == "no_ticker_candidate"
 
 
-def test_decide_asks_the_llm_to_break_a_ticker_collision():
+def test_decide_resolves_an_exact_name_match_without_spending_an_llm_call():
+    """One exact name match is sufficient evidence, so the LLM is not consulted."""
     evidence = _evidence(
         "PEPE",
         (
@@ -244,19 +581,53 @@ def test_decide_asks_the_llm_to_break_a_ticker_collision():
             _asset(24478, "PEPE", "pepe", 1.0, "Pepe"),
         ),
         price=1.0,
+        binance_name="Pepe",
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.APPROVED
+    assert (decision.cmc_id, decision.slug) == (24478, "pepe")
+
+
+def test_decide_asks_the_llm_when_two_candidates_share_the_same_project_name():
+    evidence = _evidence(
+        "PEPE",
+        (
+            _asset(22454, "PEPE", "pepe-bsc", 0.9, "Pepe"),
+            _asset(24478, "PEPE", "pepe", 1.0, "Pepe"),
+        ),
+        price=1.0,
+        binance_name="Pepe",
     )
     client = FakeChatClient(
-        [{"cmc_id": 24478, "confidence": "high", "reasoning": "Binance lists Pepe."}]
+        [{"cmc_id": 24478, "confidence": "high", "reasoning": "the Ethereum Pepe."}]
     )
 
     decision = decide(evidence, client)
 
     assert decision.status is MatchStatus.APPROVED
     assert (decision.cmc_id, decision.slug) == (24478, "pepe")
-    assert decision.method == "llm_adjudicated"
     prompt = json.loads(client.prompts[0])
     assert {candidate["cmc_id"] for candidate in prompt["candidates"]} == {22454, 24478}
-    assert prompt["exchange_asset"]["lookup_ticker"] == "PEPE"
+    assert prompt["catalogue_complete"] is True
+
+
+def test_decide_does_not_approve_an_llm_pick_without_identity_evidence():
+    """Regression: the LLM's confidence is not a substitute for identity."""
+    evidence = _evidence(
+        "AAA",
+        (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)),
+        price=1.0,
+    )
+
+    decision = decide(
+        evidence, FakeChatClient([{"cmc_id": 1, "confidence": "high", "reasoning": "hunch"}])
+    )
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.cmc_id == 1
+    assert "cannot establish identity" in decision.rationale
 
 
 def test_decide_does_not_trust_an_llm_id_that_is_not_a_candidate():
@@ -276,8 +647,12 @@ def test_decide_does_not_trust_an_llm_id_that_is_not_a_candidate():
 def test_decide_downgrades_a_confident_match_that_the_price_contradicts():
     evidence = _evidence(
         "AAA",
-        (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 50.0)),
+        (
+            _asset(1, "AAA", "alpha", 1.0, "Alpha"),
+            _asset(2, "AAA", "beta", 50.0, "Beta"),
+        ),
         price=1.0,
+        binance_name="Beta",
     )
 
     decision = decide(
@@ -308,8 +683,12 @@ def test_decide_records_an_llm_rejection_as_unmapped():
 def test_decide_keeps_a_medium_confidence_match_for_human_review():
     evidence = _evidence(
         "AAA",
-        (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)),
+        (
+            _asset(1, "AAA", "alpha-one", 1.0, "Alpha"),
+            _asset(2, "AAA", "alpha-two", 1.01, "Alpha"),
+        ),
         price=1.0,
+        binance_name="Alpha",
     )
 
     decision = decide(
@@ -317,21 +696,7 @@ def test_decide_keeps_a_medium_confidence_match_for_human_review():
     )
 
     assert decision.status is MatchStatus.UNCERTAIN
-    assert decision.cmc_id == 1
     assert decision.confidence == "medium"
-
-
-def test_decide_without_an_llm_leaves_an_ambiguous_ticker_uncertain():
-    evidence = _evidence(
-        "AAA",
-        (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)),
-        price=1.0,
-    )
-
-    decision = decide(evidence, None)
-
-    assert decision.status is MatchStatus.UNCERTAIN
-    assert decision.method == "deterministic_only"
 
 
 def test_decide_marks_an_llm_outage_as_uncertain_rather_than_failing():
@@ -347,23 +712,33 @@ def test_decide_marks_an_llm_outage_as_uncertain_rather_than_failing():
     assert decision.method == "llm_unavailable"
 
 
-def test_resolve_new_symbols_reuses_an_id_the_snapshots_already_carry():
-    occurrence = SymbolOccurrence(
-        "binance-futures", "btcusdt", "BTC", NOW - timedelta(days=1), "perpetual"
+def test_resolve_new_symbols_reuses_a_concurrently_listed_mapping_without_an_llm():
+    occurrence = _occurrence("BTC", "btcusdc")
+    windows = mapped_windows_by_symbol(
+        {
+            "binance-spot": [
+                {
+                    "id": "btcusdt",
+                    "symbol": "BTC",
+                    "cmc_id": 1,
+                    "first_capture": "2020-01-01T00:00:00.000Z",
+                }
+            ]
+        }
     )
+
     decisions = resolve_new_symbols(
         [NewSymbol("BTC", (occurrence,))],
         _catalogue(_asset(1, "BTC", "bitcoin", 64000.0)),
-        {"BTC": 1},
+        windows,
         {},
         {},
         ForbiddenChatClient(),
     )
 
     assert decisions[0].status is MatchStatus.APPROVED
-    assert decisions[0].method == "existing_binance_mapping"
-    assert decisions[0].cmc_id == 1
-    assert decisions[0].slug == "bitcoin"
+    assert decisions[0].method == "concurrent_instrument_mapping"
+    assert (decisions[0].cmc_id, decisions[0].slug) == (1, "bitcoin")
 
 
 def test_resolve_new_symbols_stops_spending_llm_calls_at_the_budget():
@@ -374,15 +749,7 @@ def test_resolve_new_symbols_stops_spending_llm_calls_at_the_budget():
         _asset(4, "BBB", "delta", 2.0),
     )
     new_symbols = [
-        NewSymbol(
-            ticker,
-            (
-                SymbolOccurrence(
-                    "binance-spot", f"{ticker.lower()}usdt", ticker, NOW, "spot"
-                ),
-            ),
-        )
-        for ticker in ("AAA", "BBB")
+        NewSymbol(ticker, (_occurrence(ticker),)) for ticker in ("AAA", "BBB")
     ]
 
     decisions = resolve_new_symbols(
@@ -395,56 +762,94 @@ def test_resolve_new_symbols_stops_spending_llm_calls_at_the_budget():
         max_llm_symbols=1,
     )
 
-    assert decisions[0].status is MatchStatus.APPROVED
-    assert decisions[1].status is MatchStatus.UNCERTAIN
     assert decisions[1].method == "llm_budget_exhausted"
+    assert decisions[1].status is MatchStatus.UNCERTAIN
+
+
+# --------------------------------------------------------------------------- #
+# writing decisions
+# --------------------------------------------------------------------------- #
 
 
 def test_apply_decisions_fills_new_rows_and_never_replaces_an_existing_id():
     rows_by_exchange = {
-        "binance-spot": [
+        "binance-futures": [
             {"id": "newusdt", "symbol": "NEW"},
-            {"id": "newbtc", "symbol": "NEW"},
+            {"id": "newusdc", "symbol": "NEW"},
             {"id": "oldusdt", "symbol": "NEW", "cmc_id": 777},
         ]
     }
     new_symbol = NewSymbol(
-        "NEW", (_occurrence("NEW", "newusdt"), _occurrence("NEW", "newbtc"))
+        "NEW", (_occurrence("NEW", "newusdt"), _occurrence("NEW", "newusdc"))
     )
     decision = Decision(
-        evidence=_evidence_for(new_symbol, (_asset(100, "NEW", "new-token", 1.0),), 1.0),
+        evidence=_evidence_for(
+            new_symbol,
+            (_asset(100, "NEW", "new-token", 1.0, "New Token"),),
+            1.0,
+            binance_name="New Token",
+        ),
         status=MatchStatus.APPROVED,
         cmc_id=100,
         slug="new-token",
-        method="unique_ticker_price_compatible",
+        method="identity_binance_asset_name",
         confidence="high",
         rationale="ok",
     )
 
     updated = apply_decisions(rows_by_exchange, [decision])
 
-    assert updated == {"binance-spot": 2}
-    assert [row.get("cmc_id") for row in rows_by_exchange["binance-spot"]] == [100, 100, 777]
+    assert updated == {"binance-futures": 2}
+    assert [row.get("cmc_id") for row in rows_by_exchange["binance-futures"]] == [
+        100,
+        100,
+        777,
+    ]
 
 
 def test_apply_decisions_ignores_uncertain_and_unmapped_decisions():
-    rows_by_exchange = {"binance-spot": [{"id": "newusdt", "symbol": "NEW"}]}
-    evidence = _evidence("NEW", (_asset(100, "NEW", "new-token", 1.0),), price=1.0)
+    rows_by_exchange = {"binance-futures": [{"id": "newusdt", "symbol": "NEW"}]}
+    evidence = _evidence("NEW", (_asset(100, "NEW", "new-token", 1.0),), 1.0)
     decisions = [
         Decision(evidence, MatchStatus.UNCERTAIN, 100, "new-token", "llm_adjudicated", "low", "?"),
         Decision(evidence, MatchStatus.UNMAPPED, None, "", "no_ticker_candidate", "high", "-"),
     ]
 
     assert apply_decisions(rows_by_exchange, decisions) == {}
-    assert "cmc_id" not in rows_by_exchange["binance-spot"][0]
+    assert "cmc_id" not in rows_by_exchange["binance-futures"][0]
+
+
+def test_partition_conflicts_holds_back_a_decision_contradicting_an_approval(tmp_path):
+    """Regression: conflicts must be caught before any snapshot is mutated."""
+    store = MappingStore(tmp_path / "m.json")
+    new_symbol = NewSymbol("AAA", (_occurrence("AAA", "aaausdt"),))
+    assets = (_asset(10, "AAA", "alpha", 1.0), _asset(20, "AAA", "beta", 1.0))
+    evidence = _evidence_for(new_symbol, assets, 1.0)
+    record_decisions(
+        store,
+        [Decision(evidence, MatchStatus.APPROVED, 10, "alpha", "manual", "high", "a")],
+        recorded_at=NOW,
+    )
+
+    applicable, conflicting = partition_conflicts(
+        store,
+        [Decision(evidence, MatchStatus.APPROVED, 20, "beta", "llm_adjudicated", "high", "b")],
+    )
+
+    assert applicable == []
+    assert len(conflicting) == 1
 
 
 def test_record_decisions_stores_one_reviewable_row_per_instrument(tmp_path):
     store = MappingStore(tmp_path / "cmc_mappings.json")
     evidence = _evidence(
         "AAA",
-        (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)),
+        (
+            _asset(1, "AAA", "alpha", 1.0, "Alpha"),
+            _asset(2, "AAA", "beta", 1.01, "Beta"),
+        ),
         price=1.0,
+        binance_name="Alpha",
     )
     decisions = [
         Decision(evidence, MatchStatus.UNCERTAIN, 1, "alpha", "llm_adjudicated", "medium", "maybe")
@@ -456,42 +861,51 @@ def test_record_decisions_stores_one_reviewable_row_per_instrument(tmp_path):
     }
     store.save()
     restored = MappingStore.load(tmp_path / "cmc_mappings.json")
-
-    assert symbols_to_skip(restored, NOW) == frozenset({"AAA"})
     mapping = restored.mappings[0]
+
     assert (mapping.status, mapping.cmc_id, mapping.symbol) == ("uncertain", 1, "AAA")
-    assert mapping.evidence["confidence"] == "medium"
-    assert [candidate["cmc_id"] for candidate in mapping.evidence["candidates"]] == [1, 2]
-    assert mapping.evidence["exchange_price"]["venue"] == "binance-spot"
+    assert [c["cmc_id"] for c in mapping.evidence["candidates"]] == [1, 2]
+    assert mapping.evidence["candidates"][0]["identity_match"] == "binance_asset_name"
+    assert mapping.evidence["catalogue_complete"] is True
 
 
-def test_record_decisions_keeps_an_unmapped_ticker_so_it_is_not_re_asked(tmp_path):
+def test_record_decisions_keeps_an_unmapped_verdict_with_a_null_id(tmp_path):
     store = MappingStore(tmp_path / "cmc_mappings.json")
-    evidence = _evidence("AAPLB", (), price=255.0)
     decisions = [
-        Decision(evidence, MatchStatus.UNMAPPED, None, "", "no_ticker_candidate", "high", "none")
+        Decision(
+            _evidence("AAPLB", (), None),
+            MatchStatus.UNMAPPED,
+            None,
+            "",
+            "no_ticker_candidate",
+            "high",
+            "none",
+        )
     ]
 
     record_decisions(store, decisions, recorded_at=NOW)
     store.save()
-    restored = MappingStore.load(tmp_path / "cmc_mappings.json")
 
-    assert restored.mappings[0].cmc_id is None
-    assert symbols_to_skip(restored, NOW) == frozenset({"AAPLB"})
+    assert MappingStore.load(tmp_path / "cmc_mappings.json").mappings[0].cmc_id is None
 
 
 def test_render_report_separates_approved_from_uncertain_matches():
     approved = Decision(
-        _evidence("NEW", (_asset(100, "NEW", "new-token", 1.0),), price=1.0),
+        _evidence(
+            "NEW",
+            (_asset(100, "NEW", "new-token", 1.0, "New Token"),),
+            1.0,
+            binance_name="New Token",
+        ),
         MatchStatus.APPROVED,
         100,
         "new-token",
-        "unique_ticker_price_compatible",
+        "identity_binance_asset_name",
         "high",
-        "price agrees",
+        "name and price agree",
     )
     uncertain = Decision(
-        _evidence("AAA", (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)), price=1.0),
+        _evidence("AAA", (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.01)), 1.0),
         MatchStatus.UNCERTAIN,
         1,
         "alpha",
@@ -505,111 +919,221 @@ def test_render_report_separates_approved_from_uncertain_matches():
     assert "approved (written to snapshots): **1**" in report
     assert "uncertain (needs human review): **1**" in report
     assert "### Approved" in report
-    assert "### Uncertain — please review" in report
-    assert "`NEW`" in report
-    assert "new-token" in report
+    assert "### Uncertain" in report
     assert "Candidates: 1 (alpha), 2 (beta)" in report
+
+
+# --------------------------------------------------------------------------- #
+# coverage audit
+# --------------------------------------------------------------------------- #
+
+
+def test_coverage_report_counts_missing_ids_inside_and_outside_the_window():
+    rows_by_exchange = {
+        "binance-futures": [
+            {"id": "a", "symbol": "AAA", "first_capture": "2026-08-20T00:00:00.000Z"},
+            {"id": "b", "symbol": "BBB", "cmc_id": 2, "first_capture": "2026-08-21T00:00:00.000Z"},
+            {"id": "c", "symbol": "CCC", "first_capture": "2019-01-01T00:00:00.000Z"},
+        ]
+    }
+
+    coverage = coverage_report(rows_by_exchange, NOW, window_days=60)
+    stats = coverage["exchanges"]["binance-futures"]
+
+    assert stats["rows_total"] == 3
+    assert stats["rows_missing_cmc_id_total"] == 2
+    assert stats["rows_in_window"] == 2
+    assert stats["rows_in_window_missing_cmc_id"] == 1
+    assert stats["tickers_in_window_missing_cmc_id"] == ["AAA"]
+    assert coverage["rows_in_window_missing_cmc_id"] == 1
+
+
+def test_render_coverage_report_lists_the_stale_tickers():
+    rows_by_exchange = {
+        "binance-futures": [
+            {"id": "a", "symbol": "AAA", "first_capture": "2026-08-20T00:00:00.000Z"}
+        ]
+    }
+
+    report = render_coverage_report(coverage_report(rows_by_exchange, NOW, 60))
+
+    assert "coverage over the last 60 days" in report
+    assert "`AAA`" in report
+
+
+def test_coverage_report_rejects_a_negative_window():
+    with pytest.raises(ValueError, match="window_days"):
+        coverage_report({}, NOW, window_days=-1)
+
+
+def test_run_in_coverage_only_mode_touches_no_network_and_writes_no_data(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    original = json.dumps(
+        [{"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"}],
+        indent=2,
+    )
+    (data_dir / "binance-futures.json").write_text(original)
+
+    # No fetchers are patched: reaching the network at all would fail the test.
+    summary = run(
+        data_dir=data_dir,
+        exchanges=("binance-futures",),
+        new_within_days=60,
+        coverage_only=True,
+        report_path=tmp_path / "coverage.md",
+        summary_path=tmp_path / "coverage.json",
+        now=NOW,
+    )
+
+    assert summary["coverage_only"] is True
+    assert summary["window_days"] == 60
+    assert summary["rows_in_window_missing_cmc_id"] == 1
+    assert summary["has_changes"] is False
+    assert (data_dir / "binance-futures.json").read_text() == original
+    assert not (data_dir / "cmc_mappings.json").exists()
+    assert "`NEW`" in (tmp_path / "coverage.md").read_text()
+
+
+# --------------------------------------------------------------------------- #
+# the full run
+# --------------------------------------------------------------------------- #
+
+
+def _patch_fetchers(monkeypatch, catalogue, tickers, public_assets, client):
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue", lambda *_: catalogue
+    )
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_futures_prices", lambda: tickers
+    )
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_spot_prices", lambda: tickers
+    )
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping.fetch_public_assets", lambda: public_assets
+    )
+    monkeypatch.setattr(
+        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: client
+    )
 
 
 def test_run_writes_approved_ids_a_decision_store_and_a_review_report(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
-    (data_dir / "binance-spot.json").write_text(
+    (data_dir / "binance-futures.json").write_text(
         json.dumps(
             [
-                {
-                    "id": "newusdt",
-                    "type": "spot",
-                    "symbol": "NEW",
-                    "first_capture": "2026-09-05T00:00:00.000Z",
-                },
-                {
-                    "id": "ambigusdt",
-                    "type": "spot",
-                    "symbol": "AMBIG",
-                    "first_capture": "2026-09-06T00:00:00.000Z",
-                },
-                {
-                    "id": "staleusdt",
-                    "type": "spot",
-                    "symbol": "STALE",
-                    "first_capture": "2020-01-01T00:00:00.000Z",
-                },
+                {"id": "newusdt", "type": "perpetual", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"},
+                {"id": "ambigusdt", "type": "perpetual", "symbol": "AMBIG", "first_capture": "2026-09-06T00:00:00.000Z"},
+                {"id": "staleusdt", "type": "perpetual", "symbol": "STALE", "first_capture": "2020-01-01T00:00:00.000Z"},
             ],
             indent=2,
         )
     )
-    catalogue = _catalogue(
-        _asset(100, "NEW", "new-token", 2.0),
-        _asset(200, "AMBIG", "ambig-one", 5.0),
-        _asset(201, "AMBIG", "ambig-two", 5.0),
-    )
     close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue",
-        lambda *_: catalogue,
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_spot_prices",
-        lambda: [
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(
+            _asset(100, "NEW", "new-token", 2.0, "New Token"),
+            _asset(200, "AMBIG", "ambig-one", 5.0, "Ambig One"),
+            _asset(201, "AMBIG", "ambig-two", 5.0, "Ambig Two"),
+        ),
+        [
             {"symbol": "NEWUSDT", "lastPrice": "2.0", "closeTime": close_time_ms},
             {"symbol": "AMBIGUSDT", "lastPrice": "5.0", "closeTime": close_time_ms},
         ],
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_futures_prices", list
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_public_assets",
-        lambda: [{"assetCode": "NEW", "assetName": "New Token"}],
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping._chat_client",
-        lambda *_: FakeChatClient(
-            [{"cmc_id": 201, "confidence": "low", "reasoning": "unclear"}]
-        ),
+        [{"assetCode": "NEW", "assetName": "New Token"}],
+        FakeChatClient([{"cmc_id": 201, "confidence": "low", "reasoning": "unclear"}]),
     )
 
     summary = run(
         data_dir=data_dir,
-        exchanges=("binance-spot",),
+        exchanges=("binance-futures",),
         report_path=tmp_path / "report.md",
         summary_path=tmp_path / "summary.json",
         now=NOW,
     )
 
-    rows = json.loads((data_dir / "binance-spot.json").read_text())
+    rows = json.loads((data_dir / "binance-futures.json").read_text())
     assert {row["id"]: row.get("cmc_id") for row in rows} == {
         "newusdt": 100,
         "ambigusdt": None,
         "staleusdt": None,
     }
-    assert summary["approved"] == 1
-    assert summary["uncertain"] == 1
-    assert summary["rows_updated"] == {"binance-spot": 1}
-    assert summary["has_changes"] is True
+    assert (summary["approved"], summary["uncertain"]) == (1, 1)
+    assert summary["rows_updated"] == {"binance-futures": 1}
+    assert summary["mapping_conflicts"] == 0
     store = MappingStore.load(data_dir / "cmc_mappings.json")
-    assert symbols_to_skip(store, NOW) == frozenset({"NEW", "AMBIG"})
-    report = (tmp_path / "report.md").read_text()
-    assert "### Approved" in report
-    assert "### Uncertain" in report
+    assert {mapping.symbol for mapping in store.mappings} == {"NEW", "AMBIG"}
+    assert "### Approved" in (tmp_path / "report.md").read_text()
     assert json.loads((tmp_path / "summary.json").read_text())["approved"] == 1
+
+
+def test_run_leaves_the_snapshot_untouched_when_a_decision_conflicts(tmp_path, monkeypatch):
+    """Regression: the full run path must not write a snapshot the ledger refuses."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    snapshot = json.dumps(
+        [{"id": "aaausdt", "type": "perpetual", "symbol": "AAA", "first_capture": "2026-09-05T00:00:00.000Z"}],
+        indent=2,
+    )
+    (data_dir / "binance-futures.json").write_text(snapshot)
+    store = MappingStore(data_dir / "cmc_mappings.json")
+    evidence = _evidence_for(
+        NewSymbol(
+            "AAA",
+            (
+                _occurrence(
+                    "AAA", "aaausdt", first_capture=datetime(2026, 9, 5, tzinfo=UTC)
+                ),
+            ),
+        ),
+        (_asset(10, "AAA", "alpha", 1.0, "Alpha"),),
+        1.0,
+    )
+    record_decisions(
+        store,
+        [Decision(evidence, MatchStatus.APPROVED, 10, "alpha", "manual", "high", "a")],
+        recorded_at=NOW,
+    )
+    store.save()
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(20, "AAA", "beta", 1.0, "Alpha")),
+        [{"symbol": "AAAUSDT", "lastPrice": "1.0", "closeTime": close_time_ms}],
+        [{"assetCode": "AAA", "assetName": "Alpha"}],
+        ForbiddenChatClient(),
+    )
+
+    summary = run(
+        data_dir=data_dir,
+        exchanges=("binance-futures",),
+        recheck_decided=True,
+        now=NOW,
+    )
+
+    assert summary["mapping_conflicts"] == 1
+    assert summary["rows_updated"] == {}
+    # Neither file moved: the snapshot still has no ID and the ledger keeps 10.
+    assert json.loads((data_dir / "binance-futures.json").read_text())[0].get("cmc_id") is None
+    assert MappingStore.load(data_dir / "cmc_mappings.json").mappings[0].cmc_id == 10
 
 
 def test_run_reports_no_work_when_no_new_symbol_needs_an_id(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
-    (data_dir / "binance-spot.json").write_text(
+    (data_dir / "binance-futures.json").write_text(
         json.dumps([{"id": "btcusdt", "symbol": "BTC", "cmc_id": 1}], indent=2)
     )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue",
-        lambda *_: _catalogue(_asset(1, "BTC", "bitcoin", 64000.0)),
+    _patch_fetchers(
+        monkeypatch, _catalogue(_asset(1, "BTC", "bitcoin", 64000.0)), [], [], None
     )
 
     summary = run(
         data_dir=data_dir,
-        exchanges=("binance-spot",),
+        exchanges=("binance-futures",),
         report_path=tmp_path / "report.md",
         now=NOW,
     )
@@ -619,177 +1143,12 @@ def test_run_reports_no_work_when_no_new_symbol_needs_an_id(tmp_path, monkeypatc
     assert not (data_dir / "cmc_mappings.json").exists()
 
 
-def test_run_leaves_snapshots_untouched_on_a_dry_run(tmp_path, monkeypatch):
+def test_run_does_not_re_propose_an_instance_awaiting_review(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
-    original = json.dumps(
-        [
-            {
-                "id": "newusdt",
-                "symbol": "NEW",
-                "first_capture": "2026-09-05T00:00:00.000Z",
-            }
-        ],
-        indent=2,
-    )
-    (data_dir / "binance-spot.json").write_text(original)
-    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue",
-        lambda *_: _catalogue(_asset(100, "NEW", "new-token", 2.0)),
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_spot_prices",
-        lambda: [{"symbol": "NEWUSDT", "lastPrice": "2.0", "closeTime": close_time_ms}],
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_futures_prices", list
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_public_assets", list
-    )
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: None
-    )
-
-    summary = run(
-        data_dir=data_dir, exchanges=("binance-spot",), dry_run=True, now=NOW
-    )
-
-    assert summary["approved"] == 1
-    assert (data_dir / "binance-spot.json").read_text() == original
-    assert not (data_dir / "cmc_mappings.json").exists()
-
-
-def test_record_decisions_reports_a_conflict_with_an_earlier_approval(tmp_path, capsys):
-    store = MappingStore(tmp_path / "cmc_mappings.json")
-    new_symbol = NewSymbol("AAA", (_occurrence("AAA", "aaausdt"),))
-    assets = (_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.0))
-    evidence = _evidence_for(new_symbol, assets, 1.0)
-    approved = Decision(evidence, MatchStatus.APPROVED, 1, "alpha", "llm_adjudicated", "high", "a")
-    record_decisions(store, [approved], recorded_at=NOW)
-
-    contradicting = Decision(
-        evidence, MatchStatus.APPROVED, 2, "beta", "llm_adjudicated", "high", "b"
-    )
-    recording = record_decisions(store, [contradicting], recorded_at=NOW)
-
-    assert recording == {"recorded": 0, "conflicts": 1}
-    assert store.mappings[0].cmc_id == 1
-    assert "refusing to replace an approved CMC mapping" in capsys.readouterr().err
-
-
-def test_symbols_to_skip_revisits_an_unmapped_ticker_after_the_recheck_window(tmp_path):
-    store = MappingStore(tmp_path / "cmc_mappings.json")
-    stale = _evidence("AAPLB", (), price=None)
-    record_decisions(
-        store,
-        [Decision(stale, MatchStatus.UNMAPPED, None, "", "no_ticker_candidate", "high", "-")],
-        recorded_at=NOW - timedelta(days=120),
-    )
-    fresh = _evidence("BOT", (), price=None)
-    record_decisions(
-        store,
-        [Decision(fresh, MatchStatus.UNMAPPED, None, "", "no_ticker_candidate", "high", "-")],
-        recorded_at=NOW - timedelta(days=10),
-    )
-
-    assert symbols_to_skip(store, NOW, recheck_unmapped_after_days=90) == frozenset({"BOT"})
-
-
-def test_symbols_to_skip_never_expires_an_approved_ticker(tmp_path):
-    store = MappingStore(tmp_path / "cmc_mappings.json")
-    evidence = _evidence("NEW", (_asset(100, "NEW", "new-token", 1.0),), price=1.0)
-    record_decisions(
-        store,
-        [
-            Decision(
-                evidence,
-                MatchStatus.APPROVED,
-                100,
-                "new-token",
-                "unique_ticker_price_compatible",
-                "high",
-                "ok",
-            )
-        ],
-        recorded_at=NOW - timedelta(days=900),
-    )
-
-    assert symbols_to_skip(store, NOW) == frozenset({"NEW"})
-
-
-def test_symbols_to_skip_rejects_a_negative_recheck_window(tmp_path):
-    with pytest.raises(ValueError, match="recheck_unmapped_after_days"):
-        symbols_to_skip(
-            MappingStore(tmp_path / "cmc_mappings.json"), NOW, recheck_unmapped_after_days=-1
-        )
-
-
-def test_pending_proposed_symbols_unions_open_pull_request_ledgers(tmp_path):
-    first = MappingStore(tmp_path / "pr-1.json")
-    record_decisions(
-        first,
-        [
-            Decision(
-                _evidence("AAA", (), price=None),
-                MatchStatus.UNMAPPED,
-                None,
-                "",
-                "no_ticker_candidate",
-                "high",
-                "-",
-            )
-        ],
-        recorded_at=NOW - timedelta(days=400),
-    )
-    first.save()
-    second = MappingStore(tmp_path / "pr-2.json")
-    record_decisions(
-        second,
-        [
-            Decision(
-                _evidence("BBB", (_asset(2, "BBB", "beta", 1.0),), price=1.0),
-                MatchStatus.UNCERTAIN,
-                2,
-                "beta",
-                "llm_adjudicated",
-                "medium",
-                "?",
-            )
-        ],
-        recorded_at=NOW,
-    )
-    second.save()
-
-    # A pending proposal is skipped whatever its verdict and however old it is:
-    # it is already awaiting review, unlike a merged unmapped verdict.
-    assert pending_proposed_symbols(
-        [tmp_path / "pr-1.json", tmp_path / "pr-2.json"]
-    ) == frozenset({"AAA", "BBB"})
-
-
-def test_pending_proposed_symbols_ignores_a_missing_or_broken_ledger(tmp_path, capsys):
-    (tmp_path / "broken.json").write_text("{not json")
-
-    assert pending_proposed_symbols(
-        [tmp_path / "absent.json", tmp_path / "broken.json"]
-    ) == frozenset()
-    assert "ignoring unreadable pending mapping store" in capsys.readouterr().err
-
-
-def test_run_does_not_re_propose_a_ticker_awaiting_review(tmp_path, monkeypatch):
-    data_dir = tmp_path / "data"
-    data_dir.mkdir()
-    (data_dir / "binance-spot.json").write_text(
+    (data_dir / "binance-futures.json").write_text(
         json.dumps(
-            [
-                {
-                    "id": "newusdt",
-                    "symbol": "NEW",
-                    "first_capture": "2026-09-05T00:00:00.000Z",
-                }
-            ],
+            [{"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"}],
             indent=2,
         )
     )
@@ -798,7 +1157,20 @@ def test_run_does_not_re_propose_a_ticker_awaiting_review(tmp_path, monkeypatch)
         pending,
         [
             Decision(
-                _evidence("NEW", (_asset(100, "NEW", "new-token", 2.0),), price=2.0),
+                _evidence_for(
+                    NewSymbol(
+                        "NEW",
+                        (
+                            _occurrence(
+                                "NEW",
+                                "newusdt",
+                                first_capture=datetime(2026, 9, 5, tzinfo=UTC),
+                            ),
+                        ),
+                    ),
+                    (_asset(100, "NEW", "new-token", 2.0),),
+                    2.0,
+                ),
                 MatchStatus.UNCERTAIN,
                 100,
                 "new-token",
@@ -810,32 +1182,42 @@ def test_run_does_not_re_propose_a_ticker_awaiting_review(tmp_path, monkeypatch)
         recorded_at=NOW,
     )
     pending.save()
-    monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue",
-        lambda *_: _catalogue(_asset(100, "NEW", "new-token", 2.0)),
+    _patch_fetchers(
+        monkeypatch, _catalogue(_asset(100, "NEW", "new-token", 2.0)), [], [], None
     )
 
     summary = run(
         data_dir=data_dir,
-        exchanges=("binance-spot",),
+        exchanges=("binance-futures",),
         pending_mapping_paths=(tmp_path / "pending.json",),
         now=NOW,
     )
 
     assert summary["new_symbols"] == 0
     assert summary["has_changes"] is False
-    assert json.loads((data_dir / "binance-spot.json").read_text())[0].get("cmc_id") is None
 
 
-def test_binance_exchanges_cover_the_bundled_binance_snapshots():
-    assert set(BINANCE_EXCHANGES) == {
-        "binance-spot",
-        "binance-futures",
-        "binance-futures-cm",
-    }
+def test_run_leaves_snapshots_untouched_on_a_dry_run(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    original = json.dumps(
+        [{"id": "newusdt", "symbol": "NEW", "first_capture": "2026-09-05T00:00:00.000Z"}],
+        indent=2,
+    )
+    (data_dir / "binance-futures.json").write_text(original)
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(100, "NEW", "new-token", 2.0, "New Token")),
+        [{"symbol": "NEWUSDT", "lastPrice": "2.0", "closeTime": close_time_ms}],
+        [{"assetCode": "NEW", "assetName": "New Token"}],
+        None,
+    )
 
+    summary = run(
+        data_dir=data_dir, exchanges=("binance-futures",), dry_run=True, now=NOW
+    )
 
-@pytest.mark.parametrize("days", [-1])
-def test_collect_new_symbols_rejects_a_negative_window(days):
-    with pytest.raises(ValueError, match="new_within_days"):
-        collect_new_symbols({}, set(), now=NOW, new_within_days=days)
+    assert summary["approved"] == 1
+    assert (data_dir / "binance-futures.json").read_text() == original
+    assert not (data_dir / "cmc_mappings.json").exists()

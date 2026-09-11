@@ -191,12 +191,15 @@ Snapshot rows carry a `cmc_id` identifying the underlying asset, plus selected C
 asset, not a contract — and `atlas/update.py` treats the field as locally owned,
 so a snapshot refresh never overwrites it.
 
-New Binance listings are resolved automatically by the `cmc-new-symbol-mapping`
-workflow, which runs daily after the snapshot update:
+New `binance-futures` listings are resolved automatically by the
+`cmc-new-symbol-mapping` workflow, which runs daily after the snapshot update:
 
 ```bash
-# Resolve Binance symbols first captured in the last 30 days
+# Resolve symbols first captured in the last 30 days
 python integrations/cmc_new_symbol_mapping.py --new-within-days 30 --dry-run
+
+# Offline staleness check: coverage over the last 60 days, no network, no writes
+python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60
 
 # Deterministic evidence only, no LLM adjudication
 python integrations/cmc_new_symbol_mapping.py --no-llm
@@ -205,10 +208,13 @@ python integrations/cmc_new_symbol_mapping.py --no-llm
 python integrations/cmc_new_symbol_mapping.py --symbols PEPE,CHEEMS
 ```
 
-It reuses an ID the snapshots already carry for a ticker, accepts a single
-price-compatible CMC candidate, and otherwise asks an LLM to choose *among the
-fetched candidates only*. Confident matches are written to the snapshots;
-ambiguous ones are reported for review. Every decision — candidates, price
+A ticker and an agreeing price never approve a mapping on their own. Approval
+needs identity evidence — an exact match between the Binance asset name and the
+CMC project name or slug — or an existing mapping on a same-ticker instrument
+that was listed at the same time. An LLM disambiguates between candidates that
+already carry name evidence, choosing *among the fetched candidates only*.
+Confident matches are written to the snapshots; everything else is reported for
+review. Every decision — candidates, price
 evidence and rationale — is recorded per instrument instance in
 `atlas/data/cmc_mappings.json`, and each run opens its own pull request covering
 both the confident and the uncertain matches. See

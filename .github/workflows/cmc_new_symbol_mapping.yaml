@@ -6,6 +6,19 @@ on:
     - cron: "30 3 * * *"
   workflow_dispatch:
     inputs:
+      coverage-audit:
+        description: "Only report CMC ID coverage over the window (no PR, no LLM)"
+        required: false
+        type: boolean
+        default: false
+      coverage-days:
+        description: "Window for the coverage audit, to spot stale coverage"
+        required: false
+        default: "60"
+      exchanges:
+        description: "Comma-separated snapshots to scan"
+        required: false
+        default: "binance-futures"
       new-within-days:
         description: "Only resolve symbols first captured this recently"
         required: false
@@ -99,29 +112,54 @@ jobs:
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
           NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}
           MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '40' }}
           DRY_RUN: ${{ inputs.dry-run && 'true' || 'false' }}
+          COVERAGE_AUDIT: ${{ inputs.coverage-audit && 'true' || 'false' }}
+          COVERAGE_DAYS: ${{ inputs.coverage-days || '60' }}
         run: |
           set -euo pipefail
-          dry_run_flag=""
-          if [ "${DRY_RUN}" = "true" ]; then
-            dry_run_flag="--dry-run"
+          extra_args=""
+          window="${NEW_WITHIN_DAYS}"
+          if [ "${COVERAGE_AUDIT}" = "true" ]; then
+            # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
+            extra_args="--coverage-only"
+            window="${COVERAGE_DAYS}"
+          else
+            extra_args="${PENDING_ARGS}"
+            if [ "${DRY_RUN}" = "true" ]; then
+              extra_args="${extra_args} --dry-run"
+            fi
           fi
           uv run python integrations/cmc_new_symbol_mapping.py \
-            --new-within-days "${NEW_WITHIN_DAYS}" \
+            --exchanges "${EXCHANGES}" \
+            --new-within-days "${window}" \
             --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
             --report-path "${REPORT_PATH}" \
             --summary-path "${SUMMARY_PATH}" \
-            ${PENDING_ARGS} ${dry_run_flag}
+            ${extra_args}
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           import os
 
           with open(os.environ["SUMMARY_PATH"]) as summary_file:
               summary = json.load(summary_file)
-          for key in ("new_symbols", "approved", "uncertain", "unmapped", "has_changes"):
-              print(f"{key}={json.dumps(summary[key])}")
+          keys = (
+              "new_symbols",
+              "approved",
+              "uncertain",
+              "unmapped",
+              "has_changes",
+              "mapping_conflicts",
+              "catalogue_complete",
+              "coverage_only",
+              "window_days",
+              "rows_in_window_missing_cmc_id",
+          )
+          for key in keys:
+              if key in summary:
+                  print(f"{key}={json.dumps(summary[key])}")
           PY
 
       - name: commit-and-push-decisions
@@ -191,6 +229,24 @@ jobs:
         run: |
           set -euo pipefail
           uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+
+      - name: warn-on-an-incomplete-catalogue
+        if: steps.resolve.outputs.catalogue_complete == 'false'
+        run: |
+          echo "::warning::CoinMarketCap returned an inconsistent catalogue; nothing was auto-approved this run"
+
+      - name: notify-slack-coverage-audit
+        if: steps.resolve.outputs.coverage_only == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          WINDOW_DAYS: ${{ steps.resolve.outputs.window_days }}
+          MISSING: ${{ steps.resolve.outputs.rows_in_window_missing_cmc_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          uv run python integrations/slack_notify.py --text ":mag: atlas CMC coverage audit — ${MISSING} instrument row(s) from the last ${WINDOW_DAYS} days still have no CMC ID. Details: ${RUN_URL}"
 
       - name: job-summary
         if: always()

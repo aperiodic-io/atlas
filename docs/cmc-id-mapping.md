@@ -229,12 +229,13 @@ python integrations/cmc_new_symbol_mapping.py \
   --report-path <report.md> --summary-path <summary.json>
 ```
 
-A symbol enters the run when all of the following hold in `binance-spot`,
-`binance-futures` or `binance-futures-cm`:
+Scope is `binance-futures` by default (`--exchanges` widens it). A row enters the
+run when all of the following hold:
 
 - the row has no `cmc_id`;
 - its `first_capture` is within `--new-within-days`; and
-- no earlier run already decided its ticker (see *Not re-deciding* below).
+- no earlier run already decided that *instrument instance* (see *Not
+  re-deciding* below).
 
 Contract tickers are folded onto their underlying asset before grouping, so
 `1000CHEEMS` and `CHEEMS` are resolved once, together.
@@ -243,24 +244,46 @@ Contract tickers are folded onto their underlying asset before grouping, so
 
 Each ticker is resolved by the cheapest sufficient evidence, in order:
 
+**Nothing is approved from a ticker and a price alone.** That is an acceptance
+criterion above, and for good reason: the keyless catalogue can omit a row, and a
+missing second same-ticker asset would turn ambiguity into a false unique match
+and write the wrong ID. Approval requires *identity* evidence — an exact match
+(after case and punctuation normalization) between the Binance `assetName` and
+the candidate's CMC name or slug. The match must be exact: a substring rule would
+tie "Pepe" to "Pepe 2.0", the very confusion identity evidence exists to settle.
+
 | method | status | evidence |
 | --- | --- | --- |
-| `existing_binance_mapping` | `approved` | another Binance row already maps this exact ticker to one CMC ID |
-| `unique_ticker_price_compatible` | `approved` | exactly one CMC asset uses the ticker and its USD price matches the Binance observation inside the threshold |
-| `llm_adjudicated` | `approved` / `uncertain` | an LLM chose among the fetched candidates; `approved` only at high confidence |
-| `no_ticker_candidate` | `unmapped` | CoinMarketCap lists no asset with this ticker |
+| `concurrent_instrument_mapping` | `approved` | every instrument was listed *at the same time as* an existing same-ticker instrument already mapped to one CMC ID |
+| `identity_binance_asset_name`, `identity_cmc_slug` | `approved` | exactly one candidate's name or slug matches the Binance asset name, and the price does not contradict it |
+| `llm_adjudicated_identity_*` | `approved` | an LLM picked between candidates that *all* carry name evidence, at high confidence |
+| `no_ticker_candidate` | `unmapped` | a complete catalogue lists no asset with this ticker |
 | `llm_rejected_all_candidates` | `unmapped` | the LLM judged no candidate to be the same underlying asset |
-| `llm_chose_unlisted_id`, `llm_unavailable`, `deterministic_only`, `llm_budget_exhausted` | `uncertain` | adjudication could not be trusted or could not run |
+| `incomplete_catalogue` | `uncertain` | CoinMarketCap's catalogue was self-inconsistent, so nothing is approved and no absence is asserted |
+| `llm_adjudicated`, `llm_chose_unlisted_id`, `llm_unavailable`, `deterministic_only`, `llm_budget_exhausted` | `uncertain` | no identity evidence, or adjudication could not be trusted or could not run |
+
+Two consequences worth stating plainly:
+
+- **A self-inconsistent catalogue blocks every approval for that run** and also
+  stops `unmapped` being claimed, since absence of evidence is not evidence of
+  absence. The run still completes and still reports; everything lands as
+  `uncertain` with method `incomplete_catalogue`.
+- **A ticker alone is never identity across time.** Reusing an ID already in the
+  snapshots requires the existing instrument's listing window to *overlap* the new
+  one, so a delisted ticker that a different project later reuses cannot inherit
+  the old ID.
 
 The LLM is constrained, not trusted:
 
 - it only ever sees candidates fetched from CMC for that ticker, and an ID that
   is not among them is discarded rather than written;
+- it can never substitute for identity evidence: a confident pick with no name
+  match stays `uncertain`;
 - a high-confidence answer is downgraded to `uncertain` when the chosen
   candidate's price disagrees with the exchange observation by more than
   `--max-relative-difference`; and
 - it is asked at most `--max-llm-symbols` times per run, and never for tickers
-  the two deterministic rules already settled.
+  the deterministic rules already settled.
 
 Only `approved` decisions write `cmc_id`, and only onto the new rows that
 triggered the run — an existing `cmc_id` is never replaced. `uncertain` and
@@ -312,16 +335,21 @@ loses the record that stops its ticker being proposed again.
 
 ### Not re-deciding
 
-`symbols_to_skip()` makes runs idempotent: a ticker with any recorded decision is
-skipped. `unmapped` is the one verdict that expires — CoinMarketCap may list the
+`instances_to_skip()` makes runs idempotent, keyed by instrument instance
+(`exchange`, `original_id`, `first_capture`) rather than by ticker. Keying by
+ticker would mean a decision about a 2025 `ABC` silenced a 2026 relisting of
+`ABC` forever, so a reused or relisted symbol could never get its own ID.
+`unmapped` is the one verdict that expires — CoinMarketCap may list the
 asset later — so it becomes eligible again after
 `--recheck-unmapped-after-days` (default 90). `--recheck-decided` lifts the skip for a whole run and
 `--symbols BTC,ETH` narrows a manual run to those tickers alone, ignoring both
 age and history. `--dry-run` reports without writing.
 
 A decision that would overwrite an earlier *approved* mapping with a different
-CMC ID is refused by the store, counted as `mapping_conflicts` in the run summary
-and named on stderr: an approval that needs revising is a human's call.
+CMC ID is detected by `partition_conflicts()` **before any snapshot is touched**,
+counted as `mapping_conflicts` in the run summary and named on stderr: an approval
+that needs revising is a human's call. Detecting it first is what keeps a refused
+ledger write from leaving the snapshot and the ledger disagreeing.
 
 ### Configuration
 
@@ -345,11 +373,32 @@ completes: adjudication is skipped and ambiguous tickers are reported as
 `uncertain` with method `deterministic_only`. Slack is skipped without failing
 the job until its secrets exist.
 
+### Coverage audit
+
+To check whether coverage has gone stale, dispatch the workflow with
+**coverage-audit** ticked (and `coverage-days`, default 60). It runs:
+
+```bash
+python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60
+```
+
+This mode is entirely offline — no CoinMarketCap, no Binance, no LLM — and writes
+nothing. It reports, per exchange, total rows, rows missing a `cmc_id` all-time,
+rows first captured inside the window, and which of those tickers still have no
+ID. It opens no pull request; the table goes to the job summary and the count to
+Slack.
+
 ### Known limits
 
-- Candidate discovery still reads the keyless CMC website listing, so the
-  catalogue-completeness caveats in this document's audit findings still apply.
-  The authenticated client in *Phase 2* above remains the target.
-- Coverage is the three Binance snapshots; other venues have no `cmc_id` yet.
+- Candidate discovery still reads the keyless CMC website listing. Because
+  approvals are now gated on catalogue completeness, a chronically inconsistent
+  listing endpoint means **no automatic approvals at all** — everything becomes
+  `uncertain` for a human. During the original audit this endpoint reported 8,143
+  assets while returning 8,141 unique IDs, so that is a live possibility, and the
+  authenticated `/v1/cryptocurrency/map` client in *Phase 2* is what fixes it
+  properly rather than by loosening the gate.
+- Approval needs a Binance `assetName` to compare against, which comes from an
+  undocumented website endpoint. An asset missing from it cannot be auto-approved.
+- Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.
 - Price evidence compares CMC USD aggregates with Binance USDT last prices, so
   it remains a sanity check, never identity proof.

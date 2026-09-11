@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import Counter
 from collections.abc import Iterable
@@ -56,7 +57,7 @@ from integrations.llm import ChatClient, LlmConfig, LlmError, LlmNotConfiguredEr
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
 DEFAULT_MAPPING_FILENAME = "cmc_mappings.json"
-BINANCE_EXCHANGES = ("binance-spot", "binance-futures", "binance-futures-cm")
+DEFAULT_EXCHANGES = ("binance-futures",)
 DEFAULT_NEW_WITHIN_DAYS = 30
 DEFAULT_MAX_RELATIVE_DIFFERENCE = 0.05
 DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS = 180
@@ -101,6 +102,17 @@ class SymbolOccurrence:
     symbol: str
     first_capture: datetime
     instrument_type: str | None = None
+    end_date: datetime | None = None
+
+    @property
+    def instance(self) -> InstrumentInstance:
+        return InstrumentInstance(self.exchange, self.original_id, self.first_capture)
+
+    def overlaps(self, first_capture: datetime, end_date: datetime | None) -> bool:
+        """Whether this instrument was listed at the same time as another."""
+        if self.end_date is not None and first_capture > self.end_date:
+            return False
+        return end_date is None or self.first_capture <= end_date
 
 
 @dataclass(frozen=True)
@@ -120,9 +132,26 @@ class NewSymbol:
 
 
 @dataclass(frozen=True)
+class MappedWindow:
+    """An already-mapped instrument's availability window and CMC ID."""
+
+    cmc_id: int
+    first_capture: datetime
+    end_date: datetime | None
+
+
+@dataclass(frozen=True)
 class Candidate:
     asset: CmcAsset
     relative_price_difference: float | None = None
+    identity_match: str | None = None
+
+    def price_agrees(self, max_relative_difference: float) -> bool:
+        """Whether price corroborates, treating an absent observation as neutral."""
+        return (
+            self.relative_price_difference is None
+            or self.relative_price_difference <= max_relative_difference
+        )
 
 
 @dataclass(frozen=True)
@@ -133,6 +162,14 @@ class SymbolEvidence:
     price_compatible_cmc_id: int | None = None
     observation: PriceObservation | None = None
     binance_asset: dict | None = None
+    catalogue_complete: bool = True
+
+    @property
+    def identified_candidates(self) -> tuple[Candidate, ...]:
+        """Candidates carrying identity evidence, not merely the same ticker."""
+        return tuple(
+            candidate for candidate in self.candidates if candidate.identity_match
+        )
 
 
 @dataclass(frozen=True)
@@ -150,74 +187,88 @@ class Decision:
         return self.evidence.new_symbol.lookup_symbol
 
 
-def symbols_to_skip(
+def instances_to_skip(
     store: MappingStore,
     now: datetime,
     recheck_unmapped_after_days: int = DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
 ) -> frozenset[str]:
-    """Return tickers a previous run settled and this run should not re-decide.
+    """Return instrument instances a previous run settled, by instance key.
+
+    Keyed by ``(exchange, original_id, first_capture)`` rather than by ticker, so
+    a delisting-and-relisting or a reused exchange symbol is a new instance that
+    still gets its own decision.
 
     An ``unmapped`` verdict only means CoinMarketCap had no matching asset at the
-    time, so it expires: the ticker becomes eligible again once the recheck
+    time, so it expires: the instance becomes eligible again once the recheck
     window passes.
     """
     if recheck_unmapped_after_days < 0:
         raise ValueError("recheck_unmapped_after_days must not be negative")
     latest: dict[str, CmcMapping] = {}
     for mapping in store.mappings:
-        if not mapping.symbol:
-            continue
-        symbol = mapping.symbol.upper()
-        previous = latest.get(symbol)
+        key = mapping.instrument.key
+        previous = latest.get(key)
         if previous is None or mapping.recorded_at > previous.recorded_at:
-            latest[symbol] = mapping
+            latest[key] = mapping
     cutoff = now - timedelta(days=recheck_unmapped_after_days)
     return frozenset(
-        symbol
-        for symbol, mapping in latest.items()
+        key
+        for key, mapping in latest.items()
         if not (
             mapping.status == MatchStatus.UNMAPPED.value and mapping.recorded_at < cutoff
         )
     )
 
 
-def proposed_symbols(store: MappingStore) -> frozenset[str]:
-    """Return every ticker a store carries a decision for, with no expiry.
+def proposed_instances(store: MappingStore) -> frozenset[str]:
+    """Return every instrument instance a store holds a decision for, no expiry.
 
-    Used for the ledgers on still-open pull request branches: a ticker already
+    Used for the ledgers on still-open pull request branches: an instance already
     awaiting review must not be proposed again, whatever its verdict was.
     """
-    return frozenset(
-        mapping.symbol.upper() for mapping in store.mappings if mapping.symbol
-    )
+    return frozenset(mapping.instrument.key for mapping in store.mappings)
 
 
-def pending_proposed_symbols(paths: Iterable[Path]) -> frozenset[str]:
-    """Union the tickers proposed by mapping stores on open PR branches."""
+def pending_proposed_instances(paths: Iterable[Path]) -> frozenset[str]:
+    """Union the instances proposed by mapping stores on open PR branches."""
     proposed: set[str] = set()
     for path in paths:
         try:
-            proposed |= proposed_symbols(MappingStore.load(path))
+            proposed |= proposed_instances(MappingStore.load(path))
         except (OSError, ValueError, json.JSONDecodeError) as error:
             print(f"ignoring unreadable pending mapping store {path}: {error}", file=sys.stderr)
     return frozenset(proposed)
 
 
-def known_cmc_ids_by_symbol(rows_by_exchange: dict[str, list[dict]]) -> dict[str, int]:
-    """Return tickers the snapshots already map unambiguously to one CMC ID."""
-    ids_by_symbol: dict[str, set[int]] = {}
+def mapped_windows_by_symbol(
+    rows_by_exchange: dict[str, list[dict]],
+) -> dict[str, tuple[MappedWindow, ...]]:
+    """Index already-mapped instruments by ticker, keeping their listing windows.
+
+    A ticker alone is not identity: the same code can be reused by an unrelated
+    project years later. Callers must additionally require that the windows
+    overlap before treating an existing ID as evidence.
+    """
+    windows: dict[str, list[MappedWindow]] = {}
     for rows in rows_by_exchange.values():
         for row in rows:
             cmc_id = row.get("cmc_id")
             symbol = row.get("symbol")
-            if not isinstance(symbol, str) or not _is_cmc_id(cmc_id):
+            first_capture = _parse_optional_timestamp(row.get("first_capture"))
+            if (
+                not isinstance(symbol, str)
+                or not _is_cmc_id(cmc_id)
+                or first_capture is None
+            ):
                 continue
-            ids_by_symbol.setdefault(symbol.upper(), set()).add(int(cmc_id))
-    return {
-        symbol: next(iter(ids))
-        for symbol, ids in ids_by_symbol.items()
-        if len(ids) == 1
-    }
+            windows.setdefault(symbol.upper(), []).append(
+                MappedWindow(
+                    cmc_id=int(cmc_id),
+                    first_capture=first_capture,
+                    end_date=_parse_optional_timestamp(row.get("end_date")),
+                )
+            )
+    return {symbol: tuple(items) for symbol, items in windows.items()}
 
 
 def collect_new_symbols(
@@ -225,11 +276,13 @@ def collect_new_symbols(
     cmc_symbols: set[str],
     now: datetime,
     new_within_days: int = DEFAULT_NEW_WITHIN_DAYS,
-    decided_symbols: frozenset[str] = frozenset(),
+    decided_instances: frozenset[str] = frozenset(),
     only_symbols: frozenset[str] = frozenset(),
 ) -> list[NewSymbol]:
     """Group rows that still lack a CMC ID by lookup ticker.
 
+    Rows are filtered per instrument instance, so an earlier decision about one
+    instance never suppresses a later relisting of the same ticker.
     ``only_symbols`` narrows the run to those tickers and ignores the recency and
     already-decided filters, so a specific asset can be re-resolved by hand.
     """
@@ -247,7 +300,8 @@ def collect_new_symbols(
                 if not {occurrence.symbol.upper(), lookup_symbol} & only_symbols:
                     continue
             elif (
-                occurrence.first_capture < cutoff or lookup_symbol in decided_symbols
+                occurrence.first_capture < cutoff
+                or occurrence.instance.key in decided_instances
             ):
                 continue
             occurrences_by_lookup.setdefault(lookup_symbol, []).append(occurrence)
@@ -284,11 +338,15 @@ def build_symbol_evidence(
             price_compatible_cmc_id = result.match.asset.cmc_id
     elif not assets:
         probe_status = ProbeStatus.NO_TICKER_CANDIDATE.value
+    binance_asset = (public_assets_by_symbol or {}).get(new_symbol.lookup_symbol)
     candidates = tuple(
-        Candidate(asset, _relative_difference(asset, observation))
+        Candidate(
+            asset,
+            _relative_difference(asset, observation),
+            identity_match(asset, binance_asset),
+        )
         for asset in sorted(assets, key=lambda asset: asset.cmc_id)
     )
-    binance_asset = (public_assets_by_symbol or {}).get(new_symbol.lookup_symbol)
     return SymbolEvidence(
         new_symbol=new_symbol,
         candidates=candidates,
@@ -296,17 +354,57 @@ def build_symbol_evidence(
         price_compatible_cmc_id=price_compatible_cmc_id,
         observation=observation,
         binance_asset=binance_asset,
+        catalogue_complete=catalogue.diagnostics.is_complete,
     )
 
 
-def decide_from_snapshots(
-    new_symbol: NewSymbol, known_ids: dict[str, int]
+def identity_match(asset: CmcAsset, binance_asset: dict | None) -> str | None:
+    """Return how a Binance asset's name identifies this CMC asset, or ``None``.
+
+    Only an exact match after normalization counts. A substring rule would happily
+    tie "Pepe" to "Pepe 2.0", which is the very confusion identity evidence has to
+    resolve.
+    """
+    if not binance_asset:
+        return None
+    name = binance_asset.get("assetName")
+    if not isinstance(name, str):
+        return None
+    normalized = _normalized_identity(name)
+    if not normalized:
+        return None
+    if asset.name and normalized == _normalized_identity(asset.name):
+        return "binance_asset_name"
+    if asset.slug and normalized == _normalized_identity(asset.slug):
+        return "cmc_slug"
+    return None
+
+
+def concurrent_cmc_id(
+    new_symbol: NewSymbol, windows_by_symbol: dict[str, tuple[MappedWindow, ...]]
 ) -> tuple[int, str] | None:
-    """Return a CMC ID the snapshots already carry for this ticker, if any."""
+    """Return a CMC ID already mapped to a *concurrently listed* same-ticker row.
+
+    Every occurrence must overlap a mapped instrument carrying the same single ID.
+    Requiring the windows to overlap is what keeps a reused or relisted ticker
+    from inheriting an unrelated project's ID.
+    """
     for symbol in (new_symbol.lookup_symbol, *new_symbol.exchange_symbols):
-        cmc_id = known_ids.get(symbol.upper())
-        if cmc_id is not None:
-            return cmc_id, symbol.upper()
+        windows = windows_by_symbol.get(symbol.upper())
+        if not windows:
+            continue
+        ids: set[int] = set()
+        for occurrence in new_symbol.occurrences:
+            overlapping = {
+                window.cmc_id
+                for window in windows
+                if occurrence.overlaps(window.first_capture, window.end_date)
+            }
+            if not overlapping:
+                return None
+            ids |= overlapping
+        if len(ids) == 1:
+            return next(iter(ids)), symbol.upper()
     return None
 
 
@@ -315,8 +413,24 @@ def decide(
     client: ChatClient | None,
     max_relative_difference: float = DEFAULT_MAX_RELATIVE_DIFFERENCE,
 ) -> Decision:
-    """Resolve one new ticker, escalating to the LLM only when it can help."""
+    """Resolve one new ticker, escalating to the LLM only when it can help.
+
+    A same ticker plus an agreeing price never approves on its own: an incomplete
+    catalogue can hide a second same-ticker asset and turn ambiguity into a false
+    unique match. Approval needs identity evidence, per this repository's
+    acceptance criteria.
+    """
     if not evidence.candidates:
+        if not evidence.catalogue_complete:
+            return _decision(
+                evidence,
+                MatchStatus.UNCERTAIN,
+                None,
+                "incomplete_catalogue",
+                "low",
+                "CoinMarketCap returned an inconsistent catalogue, so finding no "
+                "same-ticker asset does not establish that none exists.",
+            )
         return _decision(
             evidence,
             MatchStatus.UNMAPPED,
@@ -325,18 +439,30 @@ def decide(
             "high",
             "CoinMarketCap lists no asset with this ticker.",
         )
-    if (
-        len(evidence.candidates) == 1
-        and evidence.price_compatible_cmc_id == evidence.candidates[0].asset.cmc_id
-    ):
-        asset = evidence.candidates[0].asset
+    identified = evidence.identified_candidates
+    if len(identified) == 1 and identified[0].price_agrees(max_relative_difference):
+        candidate = identified[0]
+        blocker = _approval_blocker(evidence, candidate)
+        rationale = (
+            f"Binance asset name matches {candidate.asset.name or candidate.asset.slug} "
+            f"({candidate.identity_match}) and the price does not contradict it."
+        )
+        if blocker is None:
+            return _decision(
+                evidence,
+                MatchStatus.APPROVED,
+                candidate.asset,
+                f"identity_{candidate.identity_match}",
+                "high",
+                rationale,
+            )
         return _decision(
             evidence,
-            MatchStatus.APPROVED,
-            asset,
-            "unique_ticker_price_compatible",
-            "high",
-            "Only one CoinMarketCap asset uses this ticker and its price agrees.",
+            MatchStatus.UNCERTAIN,
+            candidate.asset,
+            "incomplete_catalogue",
+            "medium",
+            f"{rationale} {blocker}",
         )
     if client is None:
         return _decision(
@@ -345,10 +471,26 @@ def decide(
             None,
             "deterministic_only",
             "low",
-            f"{len(evidence.candidates)} same-ticker candidates need review; "
-            f"no LLM was configured (probe status: {evidence.probe_status}).",
+            f"{len(evidence.candidates)} same-ticker candidate(s) and "
+            f"{len(identified)} with name evidence need review; no LLM was "
+            f"configured (probe status: {evidence.probe_status}).",
         )
     return _decide_with_llm(evidence, client, max_relative_difference)
+
+
+def _approval_blocker(evidence: SymbolEvidence, candidate: Candidate) -> str | None:
+    """Return why this candidate may not be auto-approved, or ``None`` if it may."""
+    if not evidence.catalogue_complete:
+        return (
+            "Holding for review because CoinMarketCap returned an inconsistent "
+            "catalogue for this run."
+        )
+    if not candidate.identity_match:
+        return (
+            "Holding for review because only the ticker and price agree, which "
+            "cannot establish identity."
+        )
+    return None
 
 
 def _decide_with_llm(
@@ -390,19 +532,24 @@ def _decide_with_llm(
             f"LLM returned CMC ID {answer.get('cmc_id')!r}, which is not a "
             f"candidate for this ticker: {reasoning}",
         )
-    price_contradicts = (
-        candidate.relative_price_difference is not None
-        and candidate.relative_price_difference > max_relative_difference
-    )
-    if confidence == "high" and not price_contradicts:
+    price_contradicts = not candidate.price_agrees(max_relative_difference)
+    blocker = _approval_blocker(evidence, candidate)
+    if confidence == "high" and not price_contradicts and blocker is None:
         return _decision(
-            evidence, MatchStatus.APPROVED, candidate.asset, "llm_adjudicated", "high", reasoning
+            evidence,
+            MatchStatus.APPROVED,
+            candidate.asset,
+            f"llm_adjudicated_identity_{candidate.identity_match}",
+            "high",
+            reasoning,
         )
     if price_contradicts:
         reasoning = (
             f"{reasoning} Price evidence disagrees by "
             f"{candidate.relative_price_difference:.2%}."
         )
+    if blocker is not None:
+        reasoning = f"{reasoning} {blocker}"
     return _decision(
         evidence,
         MatchStatus.UNCERTAIN,
@@ -439,10 +586,12 @@ def build_prompt(evidence: SymbolEvidence) -> str:
                 "price_usd": candidate.asset.price_usd,
                 "is_active": candidate.asset.is_active,
                 "relative_price_difference": candidate.relative_price_difference,
+                "binance_name_matches": candidate.identity_match is not None,
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
         "price_probe_status": evidence.probe_status,
+        "catalogue_complete": evidence.catalogue_complete,
     }
     if evidence.binance_asset is not None:
         payload["binance_asset"] = {
@@ -529,6 +678,33 @@ def record_decisions(
     return {"recorded": recorded, "conflicts": conflicts}
 
 
+def partition_conflicts(
+    store: MappingStore, decisions: list[Decision]
+) -> tuple[list[Decision], list[Decision]]:
+    """Split decisions into those safe to apply and those conflicting with the store.
+
+    A decision conflicts when the ledger already holds an *approved* mapping for
+    one of its instrument instances with a different CMC ID. Conflicts are found
+    before any snapshot is touched, so a ledger write the store refuses can never
+    leave the snapshot and the ledger disagreeing.
+    """
+    applicable: list[Decision] = []
+    conflicting: list[Decision] = []
+    for decision in decisions:
+        conflicts = False
+        for occurrence in decision.evidence.new_symbol.occurrences:
+            existing = store.get(occurrence.instance)
+            if (
+                existing is not None
+                and existing.status == MatchStatus.APPROVED.value
+                and existing.cmc_id != decision.cmc_id
+            ):
+                conflicts = True
+                break
+        (conflicting if conflicts else applicable).append(decision)
+    return applicable, conflicting
+
+
 def render_report(decisions: list[Decision], generated_at: datetime) -> str:
     """Render a review-ready markdown summary for a pull request body."""
     counts = Counter(decision.status.value for decision in decisions)
@@ -602,9 +778,11 @@ def _evidence_payload(decision: Decision, occurrence: SymbolOccurrence) -> dict:
                 "price_usd": candidate.asset.price_usd,
                 "is_active": candidate.asset.is_active,
                 "relative_price_difference": candidate.relative_price_difference,
+                "identity_match": candidate.identity_match,
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
+        "catalogue_complete": evidence.catalogue_complete,
     }
     if evidence.observation is not None:
         payload["exchange_price"] = {
@@ -654,6 +832,10 @@ def _candidate_by_id(evidence: SymbolEvidence, cmc_id: object) -> Candidate | No
         ),
         None,
     )
+
+
+def _normalized_identity(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
 def _relative_difference(
@@ -712,6 +894,7 @@ def _occurrence_from_row(exchange: str, row: object) -> SymbolOccurrence | None:
         symbol=symbol,
         first_capture=first_capture,
         instrument_type=instrument_type if isinstance(instrument_type, str) else None,
+        end_date=_parse_optional_timestamp(row.get("end_date")),
     )
 
 
@@ -727,6 +910,17 @@ def _parse_optional_timestamp(value: object) -> datetime | None:
 
 def _is_cmc_id(value: object) -> bool:
     return isinstance(value, int) and not isinstance(value, bool) and value > 0
+
+
+def all_snapshot_exchanges(data_dir: Path) -> tuple[str, ...]:
+    """Every per-exchange snapshot in the data directory, by stem."""
+    return tuple(
+        sorted(
+            path.stem
+            for path in data_dir.glob("*.json")
+            if path.name != DEFAULT_MAPPING_FILENAME
+        )
+    )
 
 
 def load_snapshots(data_dir: Path, exchanges: tuple[str, ...]) -> dict[str, list[dict]]:
@@ -813,7 +1007,7 @@ def _public_assets_by_symbol() -> dict[str, dict]:
 def resolve_new_symbols(
     new_symbols: list[NewSymbol],
     catalogue: CmcCatalogue,
-    known_ids: dict[str, int],
+    windows_by_symbol: dict[str, tuple[MappedWindow, ...]],
     observations_by_exchange: dict[str, dict[str, PriceObservation]],
     public_assets_by_symbol: dict[str, dict],
     client: ChatClient | None,
@@ -835,9 +1029,9 @@ def resolve_new_symbols(
             max_relative_difference=max_relative_difference,
             max_timestamp_skew=max_timestamp_skew,
         )
-        known = decide_from_snapshots(new_symbol, known_ids)
-        if known is not None:
-            cmc_id, matched_symbol = known
+        concurrent = concurrent_cmc_id(new_symbol, windows_by_symbol)
+        if concurrent is not None and evidence.catalogue_complete:
+            cmc_id, matched_symbol = concurrent
             slug = next(
                 (
                     candidate.asset.slug
@@ -852,21 +1046,21 @@ def resolve_new_symbols(
                     status=MatchStatus.APPROVED,
                     cmc_id=cmc_id,
                     slug=slug,
-                    method="existing_binance_mapping",
+                    method="concurrent_instrument_mapping",
                     confidence="high",
                     rationale=(
-                        f"Binance ticker {matched_symbol} is already mapped to CMC ID "
-                        f"{cmc_id} in the snapshots."
+                        f"Every instrument was listed alongside an existing "
+                        f"{matched_symbol} instrument already mapped to CMC ID {cmc_id}."
                     ),
                 )
             )
             continue
+        identified = evidence.identified_candidates
         needs_llm = not (
             not evidence.candidates
             or (
-                len(evidence.candidates) == 1
-                and evidence.price_compatible_cmc_id
-                == evidence.candidates[0].asset.cmc_id
+                len(identified) == 1
+                and identified[0].price_agrees(max_relative_difference)
             )
         )
         if needs_llm and client is not None and llm_calls >= max_llm_symbols:
@@ -888,10 +1082,87 @@ def resolve_new_symbols(
     return decisions
 
 
+def coverage_report(
+    rows_by_exchange: dict[str, list[dict]], now: datetime, window_days: int
+) -> dict[str, object]:
+    """Summarise CMC ID coverage over a window, for staleness checks.
+
+    Deliberately offline: it reads only the snapshots, so it can answer "is
+    anything stale?" without touching CoinMarketCap or Binance.
+    """
+    if window_days < 0:
+        raise ValueError("window_days must not be negative")
+    cutoff = now - timedelta(days=window_days)
+    by_exchange: dict[str, dict[str, object]] = {}
+    for exchange, rows in sorted(rows_by_exchange.items()):
+        in_window = [
+            row
+            for row in rows
+            if (captured := _parse_optional_timestamp(row.get("first_capture")))
+            is not None
+            and captured >= cutoff
+        ]
+        missing = [row for row in in_window if row.get("cmc_id") is None]
+        by_exchange[exchange] = {
+            "rows_total": len(rows),
+            "rows_missing_cmc_id_total": sum(
+                1 for row in rows if row.get("cmc_id") is None
+            ),
+            "rows_in_window": len(in_window),
+            "rows_in_window_missing_cmc_id": len(missing),
+            "tickers_in_window_missing_cmc_id": sorted(
+                {
+                    row["symbol"].upper()
+                    for row in missing
+                    if isinstance(row.get("symbol"), str) and row["symbol"]
+                }
+            ),
+        }
+    return {
+        "generated_at": now.isoformat().replace("+00:00", "Z"),
+        "window_days": window_days,
+        "exchanges": by_exchange,
+        "rows_in_window_missing_cmc_id": sum(
+            int(stats["rows_in_window_missing_cmc_id"]) for stats in by_exchange.values()
+        ),
+    }
+
+
+def render_coverage_report(coverage: dict[str, object]) -> str:
+    """Render the coverage audit as markdown for a job summary or Slack."""
+    window_days = coverage["window_days"]
+    lines = [
+        f"## CMC ID coverage over the last {window_days} days",
+        "",
+        f"Run at {coverage['generated_at']}.",
+        "",
+        "| exchange | rows | missing id (all time) | rows in window | missing id in window |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    exchanges: dict[str, dict[str, object]] = coverage["exchanges"]  # type: ignore[assignment]
+    for exchange, stats in exchanges.items():
+        lines.append(
+            f"| `{exchange}` | {stats['rows_total']} "
+            f"| {stats['rows_missing_cmc_id_total']} "
+            f"| {stats['rows_in_window']} "
+            f"| {stats['rows_in_window_missing_cmc_id']} |"
+        )
+    for exchange, stats in exchanges.items():
+        tickers: list[str] = stats["tickers_in_window_missing_cmc_id"]  # type: ignore[assignment]
+        if not tickers:
+            continue
+        shown = ", ".join(f"`{ticker}`" for ticker in tickers[:60])
+        more = "" if len(tickers) <= 60 else f" …and {len(tickers) - 60} more"
+        lines += ["", f"**{exchange}** tickers still without a CMC ID: {shown}{more}"]
+    if not coverage["rows_in_window_missing_cmc_id"]:
+        lines += ["", "Nothing in the window is missing a CMC ID."]
+    return "\n".join(lines) + "\n"
+
+
 def run(
     data_dir: Path = DEFAULT_DATA_DIR,
     mapping_path: Path | None = None,
-    exchanges: tuple[str, ...] = BINANCE_EXCHANGES,
+    exchanges: tuple[str, ...] = DEFAULT_EXCHANGES,
     new_within_days: int = DEFAULT_NEW_WITHIN_DAYS,
     max_relative_difference: float = DEFAULT_MAX_RELATIVE_DIFFERENCE,
     max_timestamp_skew_seconds: int = DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS,
@@ -901,6 +1172,7 @@ def run(
     use_llm: bool = True,
     only_symbols: frozenset[str] = frozenset(),
     recheck_decided: bool = False,
+    coverage_only: bool = False,
     dry_run: bool = False,
     report_path: Path | None = None,
     summary_path: Path | None = None,
@@ -910,6 +1182,26 @@ def run(
     now = now or datetime.now(UTC)
     mapping_path = mapping_path or data_dir / DEFAULT_MAPPING_FILENAME
     rows_by_exchange = load_snapshots(data_dir, exchanges)
+
+    if coverage_only:
+        coverage = coverage_report(rows_by_exchange, now, new_within_days)
+        if report_path is not None:
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            report_path.write_text(render_coverage_report(coverage))
+        summary: dict[str, object] = {
+            "generated_at": coverage["generated_at"],
+            "coverage_only": True,
+            "window_days": new_within_days,
+            "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
+            "coverage": coverage["exchanges"],
+            "has_changes": False,
+        }
+        if summary_path is not None:
+            summary_path.parent.mkdir(parents=True, exist_ok=True)
+            summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+        print(render_coverage_report(coverage))
+        return summary
+
     store = MappingStore.load(mapping_path)
     with requests.Session() as session:
         catalogue = fetch_cmc_catalogue(session)
@@ -921,6 +1213,12 @@ def run(
         f"complete={diagnostics.is_complete}",
         file=sys.stderr,
     )
+    if not diagnostics.is_complete:
+        print(
+            "::warning::CoinMarketCap returned an inconsistent catalogue; no mapping "
+            "will be auto-approved this run",
+            file=sys.stderr,
+        )
 
     cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
     new_symbols = collect_new_symbols(
@@ -928,15 +1226,15 @@ def run(
         cmc_symbols,
         now=now,
         new_within_days=new_within_days,
-        decided_symbols=(
+        decided_instances=(
             frozenset()
             if recheck_decided
-            else symbols_to_skip(store, now, recheck_unmapped_after_days)
-            | pending_proposed_symbols(pending_mapping_paths)
+            else instances_to_skip(store, now, recheck_unmapped_after_days)
+            | pending_proposed_instances(pending_mapping_paths)
         ),
         only_symbols=only_symbols,
     )
-    summary: dict[str, object] = {
+    summary = {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
         "new_symbols": len(new_symbols),
         "approved": 0,
@@ -958,7 +1256,9 @@ def run(
         decisions = resolve_new_symbols(
             new_symbols,
             catalogue,
-            known_cmc_ids_by_symbol(rows_by_exchange),
+            # Reuse evidence reads every bundled snapshot, not just the
+            # exchanges this run resolves.
+            mapped_windows_by_symbol(load_snapshots(data_dir, all_snapshot_exchanges(data_dir))),
             fetch_price_observations(new_symbols, exchanges),
             _public_assets_by_symbol(),
             client,
@@ -970,6 +1270,15 @@ def run(
         if client is not None:
             client.close()
 
+    # Conflicts are resolved before anything is written, so the snapshots and the
+    # ledger can never end up disagreeing about an approved instrument.
+    decisions, conflicting = partition_conflicts(store, decisions)
+    for decision in conflicting:
+        print(
+            f"{decision.lookup_symbol}: refusing to replace an approved CMC mapping; "
+            f"proposed {decision.cmc_id} for an instrument already approved otherwise",
+            file=sys.stderr,
+        )
     counts = Counter(decision.status.value for decision in decisions)
     rows_updated = apply_decisions(rows_by_exchange, decisions)
     recording = record_decisions(store, decisions, recorded_at=now)
@@ -979,7 +1288,7 @@ def run(
             "uncertain": counts[MatchStatus.UNCERTAIN.value],
             "unmapped": counts[MatchStatus.UNMAPPED.value],
             "rows_updated": rows_updated,
-            "mapping_conflicts": recording["conflicts"],
+            "mapping_conflicts": len(conflicting) + recording["conflicts"],
             "has_changes": True,
         }
     )
@@ -1022,7 +1331,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--exchanges",
-        default=",".join(BINANCE_EXCHANGES),
+        default=",".join(DEFAULT_EXCHANGES),
         help="comma-separated snapshots to scan (default: %(default)s)",
     )
     parser.add_argument(
@@ -1077,6 +1386,12 @@ def main() -> int:
         action="store_true",
         help="re-resolve tickers a previous run already decided",
     )
+    parser.add_argument(
+        "--coverage-only",
+        action="store_true",
+        help="report CMC ID coverage over the window and exit, without "
+        "contacting CoinMarketCap, Binance or an LLM",
+    )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--report-path", type=Path, default=None)
     parser.add_argument("--summary-path", type=Path, default=None)
@@ -1104,6 +1419,7 @@ def main() -> int:
                 if symbol.strip()
             ),
             recheck_decided=args.recheck_decided,
+            coverage_only=args.coverage_only,
             dry_run=args.dry_run,
             report_path=args.report_path,
             summary_path=args.summary_path,
