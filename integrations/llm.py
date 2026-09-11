@@ -124,6 +124,10 @@ class LlmConfig:
         return f"{self.base_url.rstrip('/')}/chat/completions"
 
     @property
+    def models_url(self) -> str:
+        return f"{self.base_url.rstrip('/')}/models"
+
+    @property
     def headers(self) -> dict[str, str]:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
@@ -154,6 +158,40 @@ class ChatClient:
         self.complete_json(
             "Reply with JSON only.",
             'Reply with exactly {"ok": true} and nothing else.',
+        )
+
+    def available_models(self) -> list[str]:
+        """Return the model ids the endpoint advertises, or [] if it will not say.
+
+        Providers with a rotating free tier retire model ids without notice, which
+        reaches a scheduled run as an unexplained rejection of a name that worked
+        yesterday. Listing what is actually on offer turns that into a one-line
+        fix. The listing endpoint is optional in practice -- opencode Zen was
+        asked to add one and may not serve it -- so every failure here is silent:
+        this is a diagnostic aid, never a precondition for a completion.
+        """
+        get = getattr(self._session, "get", None)
+        if not callable(get):
+            return []
+        try:
+            response = get(
+                self.config.models_url,
+                timeout=self.config.timeout_seconds,
+                headers=self.config.headers,
+            )
+            response.raise_for_status()
+            payload = response.json()
+        except (requests.RequestException, ValueError):
+            return []
+        if not isinstance(payload, dict):
+            return []
+        data = payload.get("data")
+        if not isinstance(data, list):
+            return []
+        return sorted(
+            str(entry["id"])
+            for entry in data
+            if isinstance(entry, dict) and isinstance(entry.get("id"), str)
         )
 
     def close(self) -> None:

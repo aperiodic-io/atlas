@@ -1588,6 +1588,16 @@ def _write_outputs(
         summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
 
 
+def _print_available_models(client: ChatClient) -> None:
+    """Name the models the endpoint will serve, when it is willing to say."""
+    models = client.available_models()
+    if not models:
+        return
+    print(f"\n{len(models)} model(s) this endpoint advertises:", flush=True)
+    for model in models:
+        print(f"  {model}", flush=True)
+
+
 def _check_llm() -> int:
     """Validate the LLM configuration on its own, for setup and debugging."""
     try:
@@ -1606,6 +1616,7 @@ def _check_llm() -> int:
         except LlmError as error:
             # Same stream as the context above, so a CI log reads in order.
             print(f"LLM check FAILED: {error}", flush=True)
+            _print_available_models(client)
             return 1
     print("LLM check OK", flush=True)
     return 0

@@ -37,6 +37,18 @@ class FakeSession:
         return self._responses.pop(0)
 
 
+class FakeGetSession(FakeSession):
+    """A session that also answers GET, as a model listing needs."""
+
+    def __init__(self, listing: FakeResponse) -> None:
+        super().__init__([])
+        self._listing = listing
+
+    def get(self, url: str, **kwargs) -> FakeResponse:
+        self.requests.append({"url": url, **kwargs})
+        return self._listing
+
+
 def _http_error(status: int, body: str | None = None) -> requests.HTTPError:
     error = requests.HTTPError(f"{status} Client Error")
     response = SimpleNamespace(status_code=status, headers={})
@@ -246,3 +258,54 @@ def test_a_rejection_without_a_body_reads_no_differently():
         client.complete_json("system", "user")
 
     assert "endpoint said" not in str(caught.value)
+
+
+def test_available_models_returns_the_advertised_ids_sorted():
+    """A rotating free tier retires ids without notice, so list what is on offer."""
+    listing = FakeResponse(
+        {
+            "object": "list",
+            "data": [
+                {"id": "nemotron-3-super-free"},
+                {"id": "big-pickle"},
+                {"id": "mimo-v2-pro-free"},
+            ],
+        }
+    )
+    session = FakeGetSession(listing)
+    client = ChatClient(
+        LlmConfig(api_key="key", base_url="https://opencode.ai/zen/v1"), session
+    )
+
+    assert client.available_models() == [
+        "big-pickle",
+        "mimo-v2-pro-free",
+        "nemotron-3-super-free",
+    ]
+    assert session.requests[0]["url"] == "https://opencode.ai/zen/v1/models"
+
+
+def test_available_models_is_silent_when_the_endpoint_does_not_serve_a_listing():
+    """opencode Zen was only asked to add /models, so its absence must not raise.
+
+    Model discovery is a diagnostic aid printed after a failure. If it threw, it
+    would replace the real endpoint error with a second, less useful one.
+    """
+    session = FakeGetSession(FakeResponse(None, _http_error(404)))
+    client = ChatClient(LlmConfig(api_key="key"), session)
+
+    assert client.available_models() == []
+
+
+def test_available_models_tolerates_a_listing_that_is_not_shaped_as_expected():
+    """A proxy answering with HTML or a bare list must not break the diagnostic."""
+    for payload in ([], {"data": "nope"}, {"data": [{"name": "no-id"}, 7]}, "html"):
+        client = ChatClient(LlmConfig(api_key="key"), FakeGetSession(FakeResponse(payload)))
+        assert client.available_models() == []
+
+
+def test_available_models_is_skipped_when_the_session_cannot_get():
+    """The injected session only promises post(), so GET must be opt-in."""
+    client = ChatClient(LlmConfig(api_key="key"), FakeSession([]))
+
+    assert client.available_models() == []

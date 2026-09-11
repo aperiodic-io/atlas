@@ -465,21 +465,43 @@ The built-in default targets GitHub Models, free inside Actions via the
 workflow's own `GITHUB_TOKEN` and the `models: read` permission. **That default
 is not currently working in this repository**: every request to
 `https://models.github.ai/inference/chat/completions` comes back `410 Gone`, with
-and without a version header. So configure a provider explicitly. For opencode
-Zen:
+and without a version header. So configure a provider explicitly.
+
+#### opencode Zen
+
+Zen is OpenAI-compatible at `https://opencode.ai/zen/v1`, so two variables and a
+key are the whole configuration:
 
 | name | where | value |
 | --- | --- | --- |
 | `ATLAS_LLM_BASE_URL` | repository **variable** | `https://opencode.ai/zen/v1` |
-| `ATLAS_LLM_MODEL` | repository **variable** | `opencode/<model-id>` from the opencode console |
-| `ATLAS_LLM_API_KEY` | repository **secret** | the opencode key |
+| `ATLAS_LLM_MODEL` | repository **variable** | a bare model id, e.g. `mimo-v2-pro-free` |
+| `ATLAS_LLM_API_KEY` | repository **secret** | a key from `opencode.ai/auth`, or the literal `public` |
 
-A permanent rejection now quotes the endpoint's own response body, not just the
-status, because a bare `410` cannot distinguish a retired path from a retired
-model from a token the endpoint will not serve — and guessing between those is
-what cost several runs. `--check-llm` prints the exact URL, model, version header
-and whether a key is set before it dials, so a wrong variable is visible without
-reading any code.
+Two details decide whether this works, and both are easy to get wrong:
+
+- **Model ids carry no provider prefix.** Zen wants the id as the provider spells
+  it — `big-pickle`, `nemotron-3-super-free` — *not* `opencode/big-pickle`. The
+  `provider/model` form is how opencode's own client config namespaces providers,
+  not what the HTTP API accepts.
+- **The free tier rotates.** Models are added and retired without notice, so an id
+  that works today can be rejected next month, and a daily run meets that as an
+  unexplained failure. Take the current list from
+  [opencode.ai/zen](https://opencode.ai/zen) and expect to revisit it. Free ids
+  conventionally end in `-free`, and `ATLAS_LLM_API_KEY=public` reaches the free
+  models without an account at all.
+
+Three diagnostics exist because each of these cost a run:
+
+- A permanent rejection quotes the endpoint's own response body, not just the
+  status, because a bare `410` cannot distinguish a retired path from a retired
+  model from a token the endpoint will not serve.
+- `--check-llm` prints the URL, model, version header and whether a key is set
+  *before* it dials, so a wrong variable is visible without reading code.
+- On a failure it then asks the endpoint which models it serves and prints them,
+  which is the whole fix once the free tier has rotated. That listing is optional
+  in practice — Zen was only asked to add a `/models` route — so when it is absent
+  the check stays silent rather than reporting a second, less useful error.
 
 ### One run is the whole loop
 
