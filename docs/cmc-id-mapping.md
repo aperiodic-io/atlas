@@ -449,18 +449,37 @@ ledger write from leaving the snapshot and the ledger disagreeing.
 ### Configuration
 
 LLM access uses any OpenAI-compatible chat-completions endpoint
-([`integrations/llm.py`](../integrations/llm.py)). With nothing configured it
-uses GitHub Models, which is free inside Actions via the workflow's own
-`GITHUB_TOKEN` and the `models: read` permission.
+([`integrations/llm.py`](../integrations/llm.py)), reached with bearer auth at
+`<base-url>/chat/completions`.
 
-| variable | purpose |
-| --- | --- |
-| `ATLAS_LLM_API_KEY` | provider key; falls back to `GITHUB_TOKEN` |
-| `ATLAS_LLM_BASE_URL` | default `https://models.github.ai/inference` |
-| `ATLAS_LLM_MODEL` | default `openai/gpt-4o-mini` |
-| `ATLAS_LLM_API_VERSION` | sent as `X-GitHub-Api-Version`; GitHub Models answers **410 Gone** to an unversioned request |
-| `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | post via `chat.postMessage` |
-| `SLACK_WEBHOOK_URL` | fallback transport, shared with `daily-update` |
+| variable | where | purpose |
+| --- | --- | --- |
+| `ATLAS_LLM_API_KEY` | secret | provider key; falls back to `GITHUB_TOKEN` |
+| `ATLAS_LLM_BASE_URL` | variable | endpoint root, no `/chat/completions` suffix |
+| `ATLAS_LLM_MODEL` | variable | model id as that provider spells it |
+| `ATLAS_LLM_API_VERSION` | variable | sent as `X-GitHub-Api-Version`; only GitHub Models wants it |
+| `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | secrets | post via `chat.postMessage` |
+| `SLACK_WEBHOOK_URL` | secret | fallback transport, shared with `daily-update` |
+
+The built-in default targets GitHub Models, free inside Actions via the
+workflow's own `GITHUB_TOKEN` and the `models: read` permission. **That default
+is not currently working in this repository**: every request to
+`https://models.github.ai/inference/chat/completions` comes back `410 Gone`, with
+and without a version header. So configure a provider explicitly. For opencode
+Zen:
+
+| name | where | value |
+| --- | --- | --- |
+| `ATLAS_LLM_BASE_URL` | repository **variable** | `https://opencode.ai/zen/v1` |
+| `ATLAS_LLM_MODEL` | repository **variable** | `opencode/<model-id>` from the opencode console |
+| `ATLAS_LLM_API_KEY` | repository **secret** | the opencode key |
+
+A permanent rejection now quotes the endpoint's own response body, not just the
+status, because a bare `410` cannot distinguish a retired path from a retired
+model from a token the endpoint will not serve — and guessing between those is
+what cost several runs. `--check-llm` prints the exact URL, model, version header
+and whether a key is set before it dials, so a wrong variable is visible without
+reading any code.
 
 ### One run is the whole loop
 
@@ -490,9 +509,8 @@ that is not 408 or 429) is never retried. The first real run predated this and
 answered 410 Gone four times for each of 38 tickers, burning nine minutes and
 reporting one dead URL as 38 unrelated per-symbol outages.
 
-To use a free hosted model instead, set `ATLAS_LLM_BASE_URL` to
-`https://openrouter.ai/api/v1`, `ATLAS_LLM_MODEL` to a `:free` model and
-`ATLAS_LLM_API_KEY` to the provider key. With no key at all the run still
+Any other OpenAI-compatible provider works the same way — OpenRouter is
+`https://openrouter.ai/api/v1` with a `:free` model. With no key at all the run still
 completes: adjudication is skipped and ambiguous tickers are reported as
 `uncertain` with method `deterministic_only`. Slack is skipped without failing
 the job until its secrets exist.

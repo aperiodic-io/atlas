@@ -9,6 +9,7 @@ from integrations.cmc_id_probe import (
     CmcCatalogue,
     PriceObservation,
 )
+from integrations import cmc_new_symbol_mapping as mapping
 from integrations.cmc_mappings import MappingStore
 from integrations.cmc_new_symbol_mapping import (
     DEFAULT_EXCHANGES,
@@ -1733,3 +1734,29 @@ def test_run_leaves_snapshots_untouched_on_a_dry_run(tmp_path, monkeypatch):
     assert summary["approved"] == 1
     assert (data_dir / "binance-futures.json").read_text() == original
     assert not (data_dir / "cmc_mappings.json").exists()
+
+
+def test_check_llm_names_the_configuration_it_dialled(monkeypatch, capsys):
+    """Regression: a failed check named neither the URL it used nor the model.
+
+    The failure also went to stderr while the progress line went to stdout, so the
+    two interleaved out of order in the Actions log and the message appeared to
+    arrive before the request it described.
+    """
+    monkeypatch.setenv("ATLAS_LLM_API_KEY", "key")
+    monkeypatch.setenv("ATLAS_LLM_BASE_URL", "https://example.invalid/v1")
+    monkeypatch.setenv("ATLAS_LLM_MODEL", "vendor/some-model")
+    monkeypatch.delenv("ATLAS_LLM_API_VERSION", raising=False)
+
+    def explode(self):
+        raise mapping.LlmConfigurationError("endpoint is gone")
+
+    monkeypatch.setattr(mapping.ChatClient, "check", explode)
+
+    assert mapping._check_llm() == 1
+
+    out = capsys.readouterr().out
+    assert "https://example.invalid/v1/chat/completions" in out
+    assert "vendor/some-model" in out
+    assert "(none sent)" in out
+    assert out.index("POST ") < out.index("LLM check FAILED")

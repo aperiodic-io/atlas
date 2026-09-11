@@ -192,7 +192,7 @@ class ChatClient:
                     raise LlmConfigurationError(
                         f"{self.config.model} at {self.config.chat_completions_url} "
                         f"rejected the request with HTTP {status}; retrying cannot "
-                        f"fix this: {error}"
+                        f"fix this: {error}{_response_detail(error)}"
                     ) from error
                 last_error = error
                 self._next_request_at = time.monotonic() + retry_delay_seconds(
@@ -216,6 +216,23 @@ def _status_code(error: Exception) -> int | None:
     """Return the HTTP status behind a request failure, if it carries one."""
     status = getattr(getattr(error, "response", None), "status_code", None)
     return status if isinstance(status, int) else None
+
+
+def _response_detail(error: Exception, limit: int = 400) -> str:
+    """Return what the endpoint said, which is where the actual reason lives.
+
+    An HTTP status alone leaves a misconfiguration ambiguous -- a 410 could be a
+    retired path, a retired model, or a token the endpoint will not serve. The
+    body usually says which, so discarding it turns a one-line fix into guesswork.
+    """
+    response = getattr(error, "response", None)
+    body = getattr(response, "text", None)
+    if not isinstance(body, str) or not body.strip():
+        return ""
+    collapsed = " ".join(body.split())
+    if len(collapsed) > limit:
+        collapsed = f"{collapsed[:limit]}…"
+    return f" -- endpoint said: {collapsed}"
 
 
 def _message_content(payload: object) -> str:

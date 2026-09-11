@@ -37,9 +37,12 @@ class FakeSession:
         return self._responses.pop(0)
 
 
-def _http_error(status: int) -> requests.HTTPError:
+def _http_error(status: int, body: str | None = None) -> requests.HTTPError:
     error = requests.HTTPError(f"{status} Client Error")
-    error.response = SimpleNamespace(status_code=status, headers={})
+    response = SimpleNamespace(status_code=status, headers={})
+    if body is not None:
+        response.text = body
+    error.response = response
     return error
 
 
@@ -201,3 +204,45 @@ def test_config_sends_the_github_api_version_when_one_is_configured():
 
 def test_config_omits_the_api_version_header_when_unset():
     assert "X-GitHub-Api-Version" not in LlmConfig.from_env({"GITHUB_TOKEN": "g"}).headers
+
+
+def test_a_permanent_rejection_quotes_what_the_endpoint_said():
+    """Regression: a bare status code turned a one-line fix into days of guessing.
+
+    GitHub Models answered 410 Gone and the client reported only the number, which
+    cannot distinguish a retired path from a retired model from a token the
+    endpoint will not serve. The body says which, so it belongs in the message.
+    """
+    body = '{"error":{"message":"unknown model: openai/gpt-4o-mini"}}'
+    session = FakeSession([FakeResponse(None, _http_error(410, body))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError) as caught:
+        client.complete_json("system", "user")
+
+    assert "unknown model: openai/gpt-4o-mini" in str(caught.value)
+
+
+def test_a_quoted_response_body_is_collapsed_and_truncated():
+    """A provider that answers with an HTML error page must not flood the log."""
+    session = FakeSession([FakeResponse(None, _http_error(404, "<html>\n" + "x" * 900))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError) as caught:
+        client.complete_json("system", "user")
+
+    message = str(caught.value)
+    assert "\n" not in message
+    assert len(message) < 700
+    assert message.endswith("\u2026")
+
+
+def test_a_rejection_without_a_body_reads_no_differently():
+    """An endpoint that says nothing must not leave a dangling 'said:' clause."""
+    session = FakeSession([FakeResponse(None, _http_error(403))])
+    client = ChatClient(LlmConfig(api_key="key", min_interval_seconds=0), session)
+
+    with pytest.raises(LlmConfigurationError) as caught:
+        client.complete_json("system", "user")
+
+    assert "endpoint said" not in str(caught.value)

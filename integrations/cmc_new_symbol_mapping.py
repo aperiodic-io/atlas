@@ -1595,15 +1595,19 @@ def _check_llm() -> int:
     except LlmNotConfiguredError as error:
         print(f"no LLM configured: {error}", file=sys.stderr)
         return 1
-    print(f"checking {config.chat_completions_url} ({config.model})...")
+    print(f"POST {config.chat_completions_url}")
+    print(f"  model: {config.model}")
+    print(f"  api-version header: {config.api_version or '(none sent)'}")
+    print(f"  key: {'set' if config.api_key else 'missing'}", flush=True)
     with requests.Session() as session:
         client = ChatClient(config, session)
         try:
             client.check()
         except LlmError as error:
-            print(f"LLM check FAILED: {error}", file=sys.stderr)
+            # Same stream as the context above, so a CI log reads in order.
+            print(f"LLM check FAILED: {error}", flush=True)
             return 1
-    print("LLM check OK")
+    print("LLM check OK", flush=True)
     return 0
 
 
