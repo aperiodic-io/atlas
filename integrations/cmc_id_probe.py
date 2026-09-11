@@ -58,6 +58,7 @@ class CmcAsset:
     price_usd: float
     last_updated: datetime
     is_active: bool
+    name: str = ""
 
 
 @dataclass(frozen=True)
@@ -411,6 +412,7 @@ def _parse_cmc_asset(item: object) -> CmcAsset:
         price_usd=price,
         last_updated=_parse_timestamp(item["lastUpdated"]),
         is_active=bool(item.get("isActive")),
+        name=str(item.get("name") or ""),
     )
 
 

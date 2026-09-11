@@ -5,12 +5,12 @@ from __future__ import annotations
 import argparse
 import json
 import time
-from email.utils import parsedate_to_datetime
-from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Protocol
 
 import requests
+
+from integrations.http_retry import retry_delay_seconds
 
 
 CMC_DETAIL_URL = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail"
@@ -174,25 +174,7 @@ def _parse_categories(payload: object, cmc_id: int) -> list[str]:
 
 def _retry_delay(error: Exception, attempt: int) -> float:
     """Return a bounded CMC cooldown, preferring its Retry-After instruction."""
-    response = getattr(error, "response", None)
-    retry_after = getattr(response, "headers", {}).get("Retry-After")
-    try:
-        requested_delay = float(retry_after)
-    except (TypeError, ValueError):
-        requested_delay = _http_date_delay(retry_after)
-    return min(max(requested_delay, 2**attempt), MAX_RETRY_DELAY_SECONDS)
-
-
-def _http_date_delay(retry_after: object) -> float:
-    if not isinstance(retry_after, str):
-        return 0
-    try:
-        retry_at = parsedate_to_datetime(retry_after)
-    except (TypeError, ValueError, IndexError):
-        return 0
-    if retry_at.tzinfo is None:
-        retry_at = retry_at.replace(tzinfo=UTC)
-    return max((retry_at - datetime.now(UTC)).total_seconds(), 0)
+    return retry_delay_seconds(error, attempt, MAX_RETRY_DELAY_SECONDS)
 
 
 def main() -> int:

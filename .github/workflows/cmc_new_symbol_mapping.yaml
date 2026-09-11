@@ -1,0 +1,271 @@
+name: cmc-new-symbol-mapping
+
+on:
+  schedule:
+    # After daily-update (02:00 UTC) has refreshed the snapshots.
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      coverage-audit:
+        description: "Only report CMC ID coverage over the window (no PR, no LLM)"
+        required: false
+        type: boolean
+        default: false
+      coverage-days:
+        description: "Window for the coverage audit, to spot stale coverage"
+        required: false
+        default: "60"
+      exchanges:
+        description: "Comma-separated snapshots to scan"
+        required: false
+        default: "binance-futures"
+      new-within-days:
+        description: "Only resolve symbols first captured this recently"
+        required: false
+        default: "30"
+      max-llm-symbols:
+        description: "Cap LLM adjudications for this run"
+        required: false
+        default: "40"
+      dry-run:
+        description: "Resolve and report without committing or opening a PR"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  # Free GitHub Models inference with the workflow's own GITHUB_TOKEN.
+  models: read
+
+concurrency:
+  group: cmc-new-symbol-mapping
+  cancel-in-progress: false
+
+env:
+  PR_LABEL: cmc-mapping
+
+jobs:
+  map-new-symbols:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: install-dependencies
+        run: uv pip install --system -e .
+
+      - name: prepare-run
+        id: prepare
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "REPORT_PATH=${RUNNER_TEMP}/cmc-new-symbols-report.md" >> "$GITHUB_ENV"
+          echo "SUMMARY_PATH=${RUNNER_TEMP}/cmc-new-symbols-summary.json" >> "$GITHUB_ENV"
+          # Each run gets its own branch, so nothing a reviewer pushes is ever
+          # overwritten and a stalled review never blocks the next run.
+          # run_attempt keeps a re-run of a failed job from colliding with the
+          # branch its first attempt already pushed.
+          echo "RUN_BRANCH=automation/cmc-new-symbols-$(date -u +%Y%m%d)-${{ github.run_number }}-${{ github.run_attempt }}" >> "$GITHUB_ENV"
+          # Tickers already awaiting review in an open PR must not be proposed
+          # twice. Read each open PR's decision ledger rather than its text.
+          branches="${RUNNER_TEMP}/open-pr-branches.txt"
+          if ! gh pr list --state open --label "${PR_LABEL}" --json headRefName --jq '.[].headRefName' > "${branches}"; then
+            echo "::warning::could not list open ${PR_LABEL} pull requests; tickers already awaiting review may be proposed again"
+            : > "${branches}"
+          fi
+          mkdir -p "${RUNNER_TEMP}/pending"
+          pending_args=""
+          index=0
+          while read -r branch; do
+            [ -n "${branch}" ] || continue
+            git fetch origin "${branch}" >/dev/null 2>&1 || continue
+            store="${RUNNER_TEMP}/pending/${index}.json"
+            if git show "FETCH_HEAD:atlas/data/cmc_mappings.json" > "${store}" 2>/dev/null; then
+              pending_args="${pending_args} --pending-mapping-path ${store}"
+              index=$((index + 1))
+            else
+              rm -f "${store}"
+            fi
+          done < "${branches}"
+          echo "PENDING_ARGS=${pending_args}" >> "$GITHUB_ENV"
+          echo "Found ${index} open ${PR_LABEL} pull request(s) with a decision ledger"
+
+      - name: resolve-new-binance-symbols
+        id: resolve
+        env:
+          # Any OpenAI-compatible endpoint works; unset falls back to GitHub Models.
+          ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
+          ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
+          ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
+          NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}
+          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '40' }}
+          DRY_RUN: ${{ inputs.dry-run && 'true' || 'false' }}
+          COVERAGE_AUDIT: ${{ inputs.coverage-audit && 'true' || 'false' }}
+          COVERAGE_DAYS: ${{ inputs.coverage-days || '60' }}
+        run: |
+          set -euo pipefail
+          extra_args=""
+          window="${NEW_WITHIN_DAYS}"
+          if [ "${COVERAGE_AUDIT}" = "true" ]; then
+            # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
+            extra_args="--coverage-only"
+            window="${COVERAGE_DAYS}"
+          else
+            extra_args="${PENDING_ARGS}"
+            if [ "${DRY_RUN}" = "true" ]; then
+              extra_args="${extra_args} --dry-run"
+            fi
+          fi
+          uv run python integrations/cmc_new_symbol_mapping.py \
+            --exchanges "${EXCHANGES}" \
+            --new-within-days "${window}" \
+            --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
+            --report-path "${REPORT_PATH}" \
+            --summary-path "${SUMMARY_PATH}" \
+            ${extra_args}
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+
+          with open(os.environ["SUMMARY_PATH"]) as summary_file:
+              summary = json.load(summary_file)
+          keys = (
+              "new_symbols",
+              "approved",
+              "uncertain",
+              "unmapped",
+              "has_changes",
+              "mapping_conflicts",
+              "catalogue_complete",
+              "coverage_only",
+              "window_days",
+              "rows_in_window_missing_cmc_id",
+          )
+          for key in keys:
+              if key in summary:
+                  print(f"{key}={json.dumps(summary[key])}")
+          PY
+
+      - name: commit-and-push-decisions
+        id: push
+        if: steps.resolve.outputs.has_changes == 'true' && !inputs.dry-run
+        env:
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+          UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
+        run: |
+          set -euo pipefail
+          echo "pushed=false" >> "$GITHUB_OUTPUT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "${RUN_BRANCH}"
+          git add atlas/data
+          if git diff --cached --quiet; then
+            echo "No snapshot or mapping changes to commit"
+            exit 0
+          fi
+          git commit \
+            --message "chore(data): map new binance symbols to cmc ids" \
+            --message "approved=${APPROVED} uncertain=${UNCERTAIN} unmapped=${UNMAPPED}"
+          for attempt in 1 2 3 4; do
+            if git push -u origin "${RUN_BRANCH}"; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep $((2 ** attempt))
+          done
+          echo "::error::could not push ${RUN_BRANCH}"
+          exit 1
+
+      - name: open-pull-request
+        id: pr
+        if: steps.push.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: ${{ github.ref_name }}
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+        run: |
+          set -euo pipefail
+          gh label create "${PR_LABEL}" \
+            --color "1D76DB" \
+            --description "CoinMarketCap ID mapping for newly listed symbols" \
+            || true
+          url="$(gh pr create \
+            --base "${BASE_BRANCH}" \
+            --head "${RUN_BRANCH}" \
+            --title "chore(data): CMC IDs for new Binance symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)" \
+            --body-file "${REPORT_PATH}" \
+            --label "${PR_LABEL}")"
+          echo "url=${url}" >> "$GITHUB_OUTPUT"
+          echo "Pull request: ${url}"
+
+      - name: notify-slack
+        if: steps.pr.outputs.url != ''
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+          APPROVED: ${{ steps.resolve.outputs.approved }}
+          UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
+          UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
+        run: |
+          set -euo pipefail
+          uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+
+      - name: warn-on-an-incomplete-catalogue
+        if: steps.resolve.outputs.catalogue_complete == 'false'
+        run: |
+          echo "::warning::CoinMarketCap returned an inconsistent catalogue; nothing was auto-approved this run"
+
+      - name: notify-slack-coverage-audit
+        if: steps.resolve.outputs.coverage_only == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          WINDOW_DAYS: ${{ steps.resolve.outputs.window_days }}
+          MISSING: ${{ steps.resolve.outputs.rows_in_window_missing_cmc_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          uv run python integrations/slack_notify.py --text ":mag: atlas CMC coverage audit — ${MISSING} instrument row(s) from the last ${WINDOW_DAYS} days still have no CMC ID. Details: ${RUN_URL}"
+
+      - name: job-summary
+        if: always()
+        env:
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          if [ -f "${REPORT_PATH:-}" ]; then
+            cat "${REPORT_PATH}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -n "${PR_URL}" ]; then
+            printf '\nPull request: %s\n' "${PR_URL}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: notify-slack-on-failure
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          uv run python integrations/slack_notify.py --text ":x: atlas cmc-new-symbol-mapping workflow failed — ${RUN_URL}"

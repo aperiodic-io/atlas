@@ -33,12 +33,20 @@ class InstrumentInstance:
 
 @dataclass(frozen=True)
 class CmcMapping:
+    """One decision about one instrument instance.
+
+    ``cmc_id`` is ``None`` when a review concluded that no CoinMarketCap asset
+    represents the instrument, so a repeated run can skip it instead of
+    re-deciding it.
+    """
+
     instrument: InstrumentInstance
-    cmc_id: int
+    cmc_id: int | None
     slug: str
     status: str
     method: str
     recorded_at: datetime
+    symbol: str = ""
     evidence: dict[str, Any] = field(default_factory=dict)
 
 
@@ -64,6 +72,10 @@ class MappingStore:
 
     def get(self, instrument: InstrumentInstance) -> CmcMapping | None:
         return self._mappings.get(instrument.key)
+
+    @property
+    def mappings(self) -> tuple[CmcMapping, ...]:
+        return tuple(mapping for _, mapping in sorted(self._mappings.items()))
 
     def upsert(self, mapping: CmcMapping, allow_replace: bool = False) -> None:
         existing = self.get(mapping.instrument)
@@ -100,22 +112,31 @@ def _mapping_to_json(mapping: CmcMapping) -> dict[str, Any]:
 
 
 def _mapping_from_json(row: object) -> CmcMapping:
+    """Parse one stored row, reporting any structural defect as ``ValueError``.
+
+    Callers distinguish "this store is unusable" from a crash, so a row of valid
+    JSON in the wrong shape must not escape as ``KeyError`` or ``TypeError``.
+    """
     if not isinstance(row, dict) or not isinstance(row.get("instrument"), dict):
         raise ValueError("invalid CMC mapping row")
     instrument = row["instrument"]
-    return CmcMapping(
-        instrument=InstrumentInstance(
-            exchange=str(instrument["exchange"]),
-            original_id=str(instrument["original_id"]),
-            first_capture=_parse_timestamp(instrument["first_capture"]),
-        ),
-        cmc_id=int(row["cmc_id"]),
-        slug=str(row["slug"]),
-        status=str(row["status"]),
-        method=str(row["method"]),
-        recorded_at=_parse_timestamp(row["recorded_at"]),
-        evidence=dict(row.get("evidence", {})),
-    )
+    try:
+        return CmcMapping(
+            instrument=InstrumentInstance(
+                exchange=str(instrument["exchange"]),
+                original_id=str(instrument["original_id"]),
+                first_capture=_parse_timestamp(instrument["first_capture"]),
+            ),
+            cmc_id=None if row.get("cmc_id") is None else int(row["cmc_id"]),
+            slug=str(row.get("slug") or ""),
+            status=str(row["status"]),
+            method=str(row["method"]),
+            recorded_at=_parse_timestamp(row["recorded_at"]),
+            symbol=str(row.get("symbol") or ""),
+            evidence=dict(row.get("evidence", {})),
+        )
+    except (KeyError, TypeError, AttributeError) as error:
+        raise ValueError(f"malformed CMC mapping row: {error}") from error
 
 
 def _format_timestamp(value: datetime) -> str:
