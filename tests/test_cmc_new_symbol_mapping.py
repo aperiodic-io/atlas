@@ -245,6 +245,7 @@ def _diagnostics(
     duplicate_ids: tuple[int, ...] = (),
     malformed_rows: int = 0,
     total_count_changed: bool = False,
+    reported_total_spread: int = 0,
 ) -> CatalogueDiagnostics:
     return CatalogueDiagnostics(
         reported_total,
@@ -253,6 +254,7 @@ def _diagnostics(
         duplicate_ids,
         malformed_rows,
         total_count_changed,
+        reported_total_spread,
     )
 
 
@@ -265,7 +267,39 @@ def test_catalogue_trust_tolerates_the_gap_production_actually_returns():
     trustworthy, issue = catalogue_trust(_diagnostics(8184, 8179))
 
     assert trustworthy is True
-    assert "tolerated a gap of 5 of 8184 rows" in issue
+    assert "tolerated 5 unreadable of 8184 rows" in issue
+
+
+def test_catalogue_trust_tolerates_a_total_that_moved_mid_fetch():
+    """Regression: run 4 reported 8183/8182 with the total moving by 1.
+
+    CMC lists assets continuously, so the total shifting between pages is routine
+    churn. Vetoing on it blocked a whole run whose real gap was one row.
+    """
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8182, total_count_changed=True, reported_total_spread=1)
+    )
+
+    assert trustworthy is True
+    assert "total moved by 1 mid-fetch" in issue
+    assert "within 0.500%" in issue
+
+
+def test_catalogue_trust_blocks_a_total_that_moved_wildly():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(8183, 8183, total_count_changed=True, reported_total_spread=900)
+    )
+
+    assert trustworthy is False
+    assert "above the" in issue
+
+
+def test_catalogue_trust_accepts_a_catalogue_that_grew_while_being_read():
+    """More unique IDs than the first page claimed is growth, not incoherence."""
+    trustworthy, issue = catalogue_trust(_diagnostics(8183, 8185))
+
+    assert trustworthy is True
+    assert issue == ""
 
 
 def test_catalogue_trust_is_silent_on_a_perfect_catalogue():
@@ -279,19 +313,12 @@ def test_catalogue_trust_blocks_a_gap_beyond_the_tolerance():
     assert "above the" in issue
 
 
-@pytest.mark.parametrize(
-    ("diagnostics", "expected"),
-    [
-        (_diagnostics(100, 100, total_count_changed=True), "changed during the fetch"),
-        (_diagnostics(None, 100), "no total to compare"),
-        (_diagnostics(100, 101), "more unique IDs than it reported"),
-    ],
-)
-def test_catalogue_trust_fails_closed_on_structural_incoherence(diagnostics, expected):
-    trustworthy, issue = catalogue_trust(diagnostics)
+def test_catalogue_trust_fails_closed_without_a_total_to_compare_against():
+    """The one defect no tolerance can rescue: nothing to measure against."""
+    trustworthy, issue = catalogue_trust(_diagnostics(None, 100))
 
     assert trustworthy is False
-    assert expected in issue
+    assert "no total to compare" in issue
 
 
 def test_catalogue_trust_tolerates_the_numbers_the_first_real_run_produced():
@@ -308,6 +335,19 @@ def test_catalogue_trust_tolerates_the_numbers_the_first_real_run_produced():
     assert "within 0.500%" in issue
 
 
+def test_catalogue_trust_reports_every_cause_without_vetoing_on_any():
+    trustworthy, issue = catalogue_trust(
+        _diagnostics(
+            8183, 8180, duplicate_ids=(1, 2), malformed_rows=1, reported_total_spread=1
+        )
+    )
+
+    assert trustworthy is True
+    assert "1 unparseable" in issue
+    assert "2 duplicated" in issue
+    assert "total moved by 1 mid-fetch" in issue
+
+
 def test_catalogue_trust_reports_duplicates_without_vetoing_on_them():
     trustworthy, issue = catalogue_trust(
         _diagnostics(8183, 8176, duplicate_ids=(1, 2, 3))
@@ -315,6 +355,7 @@ def test_catalogue_trust_reports_duplicates_without_vetoing_on_them():
 
     assert trustworthy is True
     assert "3 duplicated" in issue
+    assert "within 0.500%" in issue
 
 
 def test_catalogue_trust_still_blocks_a_schema_break_that_drops_many_rows():

@@ -329,35 +329,36 @@ Two consequences worth stating plainly:
   check is a weak signal, and silently dropping it would be worse than holding
   the work for a human.
 
-### Catalogue trust, and why it is proportionate
+### Catalogue trust: magnitude, not category
 
-The keyless listing endpoint reliably reports a few more assets than it returns
-unique IDs for: 8,184 against 8,179 in the first production run, 8,143 against
-8,141 during the original audit. Demanding exact equality — as this gate first did
-— therefore blocks **every** approval forever, which is not a safety property but
-a broken feature.
+The keyless listing is a live, continuously updated, paginated, scraped feed, and
+**every categorical signal of "something is wrong" turned out to be its normal
+behaviour**. Each was tried as a veto and each blocked a production run on its own:
 
-`catalogue_trust()` is proportionate instead. A gap up to
-`--max-catalogue-gap-ratio` (default 0.5%) passes and is recorded in every
-decision's evidence.
+| signal vetoed | why it fires normally | run it blocked |
+| --- | --- | --- |
+| reported total ≠ unique IDs | pages overlap; dedup removes repeats | every run, by construction |
+| any unparseable row | assets with no USD quote | 8,183/8,176 with 1 bad row |
+| any duplicate ID | overlapping pages again | — |
+| any change in the reported total | CMC lists assets mid-fetch | 8,183/8,182, total moved by 1 |
 
-Every way a row can go missing — deduplicated, dropped at parse time, lost to
-pagination — already shows up as `reported_total - unique_ids`, so there is one
-budget for all of them rather than a categorical veto per cause. The first real
-run reported 8,183 against 8,176 with **one unparseable row**, and a hard veto on
-any unparseable row blocked every approval that run, including a clean name match
-on `MARSCOIN`. One bad row among 8,183 is as routine as the dedup gap; a genuine
-schema break would blow the budget anyway, because `unique_ids` would crater.
+So `catalogue_trust()` judges only **magnitude**. Everything that could hide a
+candidate — deduplicated, unparseable, lost to pagination, or added after the
+first page — is counted into one figure and compared against
+`--max-catalogue-gap-ratio` (default 0.5%). Observed production figures sit
+between 0.02% and 0.09%. Each cause is still named in the evidence, so a reviewer
+sees *why* rows were unreadable without it being a veto.
 
-What still fails closed is structural incoherence, where no tolerance helps
-because the numbers cannot be compared at all:
+A catalogue that **grew** while being read can legitimately yield more unique IDs
+than the first page claimed, so the gap floors at zero rather than being treated
+as incoherence.
 
-| signal | why it blocks |
-| --- | --- |
-| reported total changed mid-fetch | no page is a consistent view |
-| no reported total | nothing to compare against |
-| more unique IDs than reported | the numbers are incoherent |
-| gap above the tolerance | rows missing at a scale that is not dedup |
+Two things still fail closed:
+
+- **no reported total at all** — nothing to measure against, and no tolerance can
+  rescue that;
+- **unreadable rows above the tolerance** — a real schema break craters
+  `unique_ids` and blows the budget, which is what the gate is for.
 
 
 The reason a small gap is safe *here* is that approval rests on **presence** — an

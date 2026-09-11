@@ -407,48 +407,50 @@ def catalogue_trust(
     match: a missing row would have to share both the ticker and the exact project
     name, and two candidates sharing both go to the LLM as ambiguous anyway.
 
-    Every way a row can go missing -- deduplicated, dropped at parse time, lost to
-    pagination -- already shows up as ``reported_total - unique_ids``, so there is
-    one proportionate budget for all of them rather than a separate categorical
-    veto per cause. A single unparseable row among 8,183 is as routine as the
-    dedup gap, and a genuine schema break would blow the budget anyway because
-    ``unique_ids`` would crater.
+    This is a live, continuously updated, paginated, scraped feed, and **every**
+    categorical signal of "something is wrong" turned out to be its normal
+    behaviour. Vetoing on each in turn blocked three consecutive production runs:
 
-    What still fails closed is structural incoherence, where no tolerance can
-    help because the numbers cannot be compared at all:
+    - exact equality of reported total and unique IDs (pages overlap and dedup);
+    - any unparseable row (assets with no USD quote);
+    - any duplicate ID (overlapping pages again);
+    - any change in the reported total (CMC lists assets mid-fetch).
 
-    - a reported total that changed mid-fetch, so no page is a consistent view;
-    - a missing reported total, leaving nothing to compare against;
-    - more unique IDs than the catalogue claims to hold;
-    - a gap larger than ``max_gap_ratio`` of the reported total.
+    So only *magnitude* is judged. Everything that could hide a candidate --
+    deduplicated, unparseable, lost to pagination, or added after the first page
+    -- is counted into one figure and compared against ``max_gap_ratio``. A real
+    schema break still blows the budget, because ``unique_ids`` craters.
+
+    The one thing no tolerance can rescue is having no total to compare against.
     """
     if max_gap_ratio < 0:
         raise ValueError("max_gap_ratio must not be negative")
-    if diagnostics.total_count_changed:
-        return False, "CoinMarketCap's reported total changed during the fetch."
     if diagnostics.reported_total is None:
         return False, "CoinMarketCap reported no total to compare against."
-    gap = diagnostics.reported_total - diagnostics.unique_ids
-    if gap < 0:
-        return False, (
-            f"CoinMarketCap returned {-gap} more unique IDs than it reported."
-        )
+    # Rows added after the first page are as unavailable to us as rows dropped
+    # from it, so the spread counts toward the same budget. A catalogue that grew
+    # can legitimately yield more unique IDs than the first page claimed, which is
+    # churn rather than incoherence, so the gap floors at zero.
+    gap = max(0, diagnostics.reported_total - diagnostics.unique_ids)
+    unavailable = gap + diagnostics.reported_total_spread
     allowed = max_gap_ratio * diagnostics.reported_total
     causes = []
     if diagnostics.malformed_rows:
         causes.append(f"{diagnostics.malformed_rows} unparseable")
     if diagnostics.duplicate_ids:
         causes.append(f"{len(diagnostics.duplicate_ids)} duplicated")
+    if diagnostics.reported_total_spread:
+        causes.append(f"total moved by {diagnostics.reported_total_spread} mid-fetch")
     detail = f" ({', '.join(causes)})" if causes else ""
-    if gap > allowed:
+    if unavailable > allowed:
         return False, (
-            f"{gap} of {diagnostics.reported_total} catalogue rows are missing"
-            f"{detail}, above the {max_gap_ratio:.3%} tolerance."
+            f"{unavailable} of {diagnostics.reported_total} catalogue rows could "
+            f"not be read{detail}, above the {max_gap_ratio:.3%} tolerance."
         )
-    if gap:
+    if unavailable:
         return True, (
-            f"tolerated a gap of {gap} of {diagnostics.reported_total} rows"
-            f"{detail}: {gap / diagnostics.reported_total:.4%}, "
+            f"tolerated {unavailable} unreadable of {diagnostics.reported_total} "
+            f"rows{detail}: {unavailable / diagnostics.reported_total:.4%}, "
             f"within {max_gap_ratio:.3%}"
         )
     return True, ""
@@ -569,7 +571,9 @@ def decide(
             "low",
             f"{len(evidence.candidates)} same-ticker candidate(s) and "
             f"{len(identified)} with name evidence need review; no LLM was "
-            f"configured (probe status: {evidence.probe_status}).",
+            f"available to adjudicate, so see the run log for whether one was "
+            f"configured and whether it passed its check "
+            f"(probe status: {evidence.probe_status}).",
         )
     return _decide_with_llm(evidence, client, max_relative_difference)
 
