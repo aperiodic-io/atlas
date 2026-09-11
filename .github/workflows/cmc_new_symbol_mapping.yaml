@@ -157,6 +157,20 @@ jobs:
 
           with open(os.environ["SUMMARY_PATH"]) as summary_file:
               summary = json.load(summary_file)
+
+
+          def rendered(value):
+              """Emit a step output a workflow condition can actually compare.
+
+              json.dumps would wrap a string in quote characters, so
+              `llm_status` arrived as `"unavailable"` and never equalled
+              `unavailable` -- which left the fail-on-a-broken-LLM step inert.
+              """
+              if isinstance(value, str):
+                  return value.replace("\n", " ").strip()
+              return json.dumps(value)
+
+
           keys = (
               "new_symbols",
               "approved",
@@ -175,7 +189,7 @@ jobs:
           )
           for key in keys:
               if key in summary:
-                  print(f"{key}={json.dumps(summary[key])}")
+                  print(f"{key}={rendered(summary[key])}")
           PY
 
       - name: commit-and-push-decisions
