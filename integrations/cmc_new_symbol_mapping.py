@@ -39,6 +39,7 @@ from integrations.binance import (
     fetch_spot_prices,
 )
 from integrations.cmc_id_probe import (
+    CatalogueDiagnostics,
     CmcAsset,
     CmcCatalogue,
     CmcProbeError,
@@ -63,6 +64,13 @@ DEFAULT_MAX_RELATIVE_DIFFERENCE = 0.05
 DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS = 180
 DEFAULT_MAX_LLM_SYMBOLS = 40
 DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS = 90
+# CMC's keyless listing reliably reports a few more assets than it returns
+# unique IDs for -- 8,184 against 8,179 in production, 8,143 against 8,141 during
+# the audit -- most likely because its pages overlap and dedup removes the
+# repeats. Demanding exact equality therefore blocks every approval forever, so a
+# proportionate gap is tolerated while the signals that mean "rows were genuinely
+# lost" still fail closed.
+DEFAULT_MAX_CATALOGUE_GAP_RATIO = 0.005
 MAX_CANDIDATES_IN_PROMPT = 12
 
 SYSTEM_PROMPT = """\
@@ -162,7 +170,8 @@ class SymbolEvidence:
     price_compatible_cmc_id: int | None = None
     observation: PriceObservation | None = None
     binance_asset: dict | None = None
-    catalogue_complete: bool = True
+    catalogue_trustworthy: bool = True
+    catalogue_issue: str = ""
     exchange_prices_available: bool = True
 
     @property
@@ -322,8 +331,12 @@ def build_symbol_evidence(
         seconds=DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS
     ),
     exchange_prices_available: bool = True,
+    max_catalogue_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
 ) -> SymbolEvidence:
     """Collect same-ticker CMC candidates plus price and Binance identity evidence."""
+    trustworthy, issue = catalogue_trust(
+        catalogue.diagnostics, max_catalogue_gap_ratio
+    )
     cmc_symbols = {asset.symbol.upper() for asset in catalogue.assets}
     assets = candidates_for_symbol(catalogue.assets, new_symbol.lookup_symbol)
     observation = _observation_for(
@@ -356,9 +369,65 @@ def build_symbol_evidence(
         price_compatible_cmc_id=price_compatible_cmc_id,
         observation=observation,
         binance_asset=binance_asset,
-        catalogue_complete=catalogue.diagnostics.is_complete,
+        catalogue_trustworthy=trustworthy,
+        catalogue_issue=issue,
         exchange_prices_available=exchange_prices_available,
     )
+
+
+def catalogue_trust(
+    diagnostics: CatalogueDiagnostics,
+    max_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
+) -> tuple[bool, str]:
+    """Whether the catalogue is sound enough to approve an identity match.
+
+    Approval rests on *presence* -- an exact Binance-to-CMC name match -- not on a
+    ticker being unique, so a handful of absent rows cannot manufacture a false
+    match: a missing row would have to share both the ticker and the exact project
+    name, and two candidates sharing both go to the LLM as ambiguous anyway.
+
+    These signals still fail closed, because each means rows were genuinely lost
+    rather than merely deduplicated:
+
+    - malformed rows, which are candidates silently dropped at parse time;
+    - duplicate IDs, which mean pagination overlapped and may also have skipped;
+    - a reported total that changed mid-fetch, so no page is a consistent view;
+    - a missing reported total, leaving nothing to compare against;
+    - a gap larger than ``max_gap_ratio`` of the reported total.
+    """
+    if max_gap_ratio < 0:
+        raise ValueError("max_gap_ratio must not be negative")
+    if diagnostics.malformed_rows:
+        return False, (
+            f"{diagnostics.malformed_rows} catalogue row(s) failed to parse, so "
+            "candidates may have been dropped."
+        )
+    if diagnostics.duplicate_ids:
+        return False, (
+            f"{len(diagnostics.duplicate_ids)} duplicate CMC ID(s) mean pagination "
+            "overlapped and may also have skipped rows."
+        )
+    if diagnostics.total_count_changed:
+        return False, "CoinMarketCap's reported total changed during the fetch."
+    if diagnostics.reported_total is None:
+        return False, "CoinMarketCap reported no total to compare against."
+    gap = diagnostics.reported_total - diagnostics.unique_ids
+    if gap < 0:
+        return False, (
+            f"CoinMarketCap returned {-gap} more unique IDs than it reported."
+        )
+    allowed = max_gap_ratio * diagnostics.reported_total
+    if gap > allowed:
+        return False, (
+            f"{gap} of {diagnostics.reported_total} catalogue rows are missing, "
+            f"above the {max_gap_ratio:.3%} tolerance."
+        )
+    if gap:
+        return True, (
+            f"tolerated a gap of {gap} of {diagnostics.reported_total} rows "
+            f"({gap / diagnostics.reported_total:.4%}, within {max_gap_ratio:.3%})"
+        )
+    return True, ""
 
 
 def identity_match(asset: CmcAsset, binance_asset: dict | None) -> str | None:
@@ -424,15 +493,15 @@ def decide(
     acceptance criteria.
     """
     if not evidence.candidates:
-        if not evidence.catalogue_complete:
+        if not evidence.catalogue_trustworthy:
             return _decision(
                 evidence,
                 MatchStatus.UNCERTAIN,
                 None,
-                "incomplete_catalogue",
+                "untrustworthy_catalogue",
                 "low",
-                "CoinMarketCap returned an inconsistent catalogue, so finding no "
-                "same-ticker asset does not establish that none exists.",
+                "Finding no same-ticker asset does not establish that none exists: "
+                f"{evidence.catalogue_issue}",
             )
         return _decision(
             evidence,
@@ -463,7 +532,7 @@ def decide(
             evidence,
             MatchStatus.UNCERTAIN,
             candidate.asset,
-            "incomplete_catalogue",
+            "approval_withheld",
             "medium",
             f"{rationale} {blocker}",
         )
@@ -481,19 +550,23 @@ def decide(
     return _decide_with_llm(evidence, client, max_relative_difference)
 
 
-def _approval_blocker(evidence: SymbolEvidence, candidate: Candidate) -> str | None:
-    """Return why this candidate may not be auto-approved, or ``None`` if it may."""
+def _approval_blocker(
+    evidence: SymbolEvidence, candidate: Candidate | None
+) -> str | None:
+    """Return why this candidate may not be auto-approved, or ``None`` if it may.
+
+    ``candidate`` is ``None`` when the caller is reusing an ID from a concurrently
+    listed instrument, where identity rests on the overlapping listing windows
+    rather than on a name match.
+    """
     if not evidence.exchange_prices_available:
         return (
             "Holding for review because Binance prices were unavailable for this "
             "run, so nothing corroborated the name match."
         )
-    if not evidence.catalogue_complete:
-        return (
-            "Holding for review because CoinMarketCap returned an inconsistent "
-            "catalogue for this run."
-        )
-    if not candidate.identity_match:
+    if not evidence.catalogue_trustworthy:
+        return f"Holding for review: {evidence.catalogue_issue}"
+    if candidate is not None and not candidate.identity_match:
         return (
             "Holding for review because only the ticker and price agree, which "
             "cannot establish identity."
@@ -599,7 +672,7 @@ def build_prompt(evidence: SymbolEvidence) -> str:
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
         "price_probe_status": evidence.probe_status,
-        "catalogue_complete": evidence.catalogue_complete,
+        "catalogue_trustworthy": evidence.catalogue_trustworthy,
     }
     if evidence.binance_asset is not None:
         payload["binance_asset"] = {
@@ -790,7 +863,8 @@ def _evidence_payload(decision: Decision, occurrence: SymbolOccurrence) -> dict:
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
-        "catalogue_complete": evidence.catalogue_complete,
+        "catalogue_trustworthy": evidence.catalogue_trustworthy,
+        "catalogue_issue": evidence.catalogue_issue,
     }
     if evidence.observation is not None:
         payload["exchange_price"] = {
@@ -1020,7 +1094,11 @@ def _public_assets_by_symbol() -> dict[str, dict]:
             if isinstance(asset.get("assetCode"), str)
         }
     except OSError as error:
-        print(f"Binance public asset metadata unavailable: {error}", file=sys.stderr)
+        print(
+            "::warning::Binance asset names unavailable, so no mapping can be "
+            f"approved on identity evidence this run: {error}",
+            file=sys.stderr,
+        )
         return {}
 
 
@@ -1037,6 +1115,7 @@ def resolve_new_symbols(
     ),
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
     exchange_prices_available: bool = True,
+    max_catalogue_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
 ) -> list[Decision]:
     """Resolve each new ticker, spending LLM calls only on unresolved ones."""
     decisions: list[Decision] = []
@@ -1050,9 +1129,10 @@ def resolve_new_symbols(
             max_relative_difference=max_relative_difference,
             max_timestamp_skew=max_timestamp_skew,
             exchange_prices_available=exchange_prices_available,
+            max_catalogue_gap_ratio=max_catalogue_gap_ratio,
         )
         concurrent = concurrent_cmc_id(new_symbol, windows_by_symbol)
-        if concurrent is not None and evidence.catalogue_complete:
+        if concurrent is not None and _approval_blocker(evidence, None) is None:
             cmc_id, matched_symbol = concurrent
             slug = next(
                 (
@@ -1190,6 +1270,7 @@ def run(
     max_timestamp_skew_seconds: int = DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS,
     max_llm_symbols: int = DEFAULT_MAX_LLM_SYMBOLS,
     recheck_unmapped_after_days: int = DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
+    max_catalogue_gap_ratio: float = DEFAULT_MAX_CATALOGUE_GAP_RATIO,
     pending_mapping_paths: tuple[Path, ...] = (),
     use_llm: bool = True,
     only_symbols: frozenset[str] = frozenset(),
@@ -1228,17 +1309,19 @@ def run(
     with requests.Session() as session:
         catalogue = fetch_cmc_catalogue(session)
     diagnostics = catalogue.diagnostics
+    trustworthy, catalogue_issue = catalogue_trust(diagnostics, max_catalogue_gap_ratio)
     print(
         "CMC catalogue: "
         f"unique_ids={diagnostics.unique_ids} "
         f"reported_total={diagnostics.reported_total} "
-        f"complete={diagnostics.is_complete}",
+        f"complete={diagnostics.is_complete} "
+        f"trustworthy={trustworthy}"
+        + (f" ({catalogue_issue})" if catalogue_issue else ""),
         file=sys.stderr,
     )
-    if not diagnostics.is_complete:
+    if not trustworthy:
         print(
-            "::warning::CoinMarketCap returned an inconsistent catalogue; no mapping "
-            "will be auto-approved this run",
+            f"::warning::No mapping will be auto-approved this run: {catalogue_issue}",
             file=sys.stderr,
         )
 
@@ -1266,6 +1349,8 @@ def run(
         "mapping_conflicts": 0,
         "has_changes": False,
         "catalogue_complete": diagnostics.is_complete,
+        "catalogue_trustworthy": trustworthy,
+        "catalogue_issue": catalogue_issue,
         "exchange_prices_available": True,
     }
     if not new_symbols:
@@ -1298,6 +1383,7 @@ def run(
             max_timestamp_skew=timedelta(seconds=max_timestamp_skew_seconds),
             max_llm_symbols=max_llm_symbols,
             exchange_prices_available=prices_available,
+            max_catalogue_gap_ratio=max_catalogue_gap_ratio,
         )
     finally:
         if client is not None:
@@ -1391,6 +1477,14 @@ def main() -> int:
         help="cap LLM adjudications per run (default: %(default)s)",
     )
     parser.add_argument(
+        "--max-catalogue-gap-ratio",
+        type=float,
+        default=DEFAULT_MAX_CATALOGUE_GAP_RATIO,
+        help="largest tolerated fraction of catalogue rows CoinMarketCap reports "
+        "but does not return, above which nothing is auto-approved "
+        "(default: %(default)s)",
+    )
+    parser.add_argument(
         "--recheck-unmapped-after-days",
         type=int,
         default=DEFAULT_RECHECK_UNMAPPED_AFTER_DAYS,
@@ -1445,6 +1539,7 @@ def main() -> int:
             max_timestamp_skew_seconds=args.max_timestamp_skew_seconds,
             max_llm_symbols=args.max_llm_symbols,
             recheck_unmapped_after_days=args.recheck_unmapped_after_days,
+            max_catalogue_gap_ratio=args.max_catalogue_gap_ratio,
             pending_mapping_paths=tuple(args.pending_mapping_path),
             use_llm=not args.no_llm,
             only_symbols=frozenset(

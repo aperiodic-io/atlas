@@ -19,6 +19,7 @@ from integrations.cmc_new_symbol_mapping import (
     apply_decisions,
     build_symbol_evidence,
     collect_new_symbols,
+    catalogue_trust,
     concurrent_cmc_id,
     coverage_report,
     fetch_price_observations,
@@ -230,6 +231,100 @@ def test_run_completes_and_approves_nothing_when_binance_refuses(tmp_path, monke
     assert summary["exchange_prices_available"] is False
     assert summary["approved"] == 0
     assert summary["uncertain"] == 1
+
+
+# --------------------------------------------------------------------------- #
+# catalogue trust
+# --------------------------------------------------------------------------- #
+
+
+def _diagnostics(
+    reported_total: int | None,
+    unique_ids: int,
+    duplicate_ids: tuple[int, ...] = (),
+    malformed_rows: int = 0,
+    total_count_changed: bool = False,
+) -> CatalogueDiagnostics:
+    return CatalogueDiagnostics(
+        reported_total,
+        unique_ids,
+        unique_ids,
+        duplicate_ids,
+        malformed_rows,
+        total_count_changed,
+    )
+
+
+def test_catalogue_trust_tolerates_the_gap_production_actually_returns():
+    """The keyless endpoint reported 8184 and returned 8179 unique IDs.
+
+    Demanding exact equality blocks every approval forever, so a proportionate
+    gap has to pass while still being recorded.
+    """
+    trustworthy, issue = catalogue_trust(_diagnostics(8184, 8179))
+
+    assert trustworthy is True
+    assert "tolerated a gap of 5 of 8184 rows" in issue
+
+
+def test_catalogue_trust_is_silent_on_a_perfect_catalogue():
+    assert catalogue_trust(_diagnostics(8184, 8184)) == (True, "")
+
+
+def test_catalogue_trust_blocks_a_gap_beyond_the_tolerance():
+    trustworthy, issue = catalogue_trust(_diagnostics(8184, 7000))
+
+    assert trustworthy is False
+    assert "above the" in issue
+
+
+@pytest.mark.parametrize(
+    ("diagnostics", "expected"),
+    [
+        (_diagnostics(100, 100, malformed_rows=1), "failed to parse"),
+        (_diagnostics(100, 100, duplicate_ids=(7,)), "pagination overlapped"),
+        (_diagnostics(100, 100, total_count_changed=True), "changed during the fetch"),
+        (_diagnostics(None, 100), "no total to compare"),
+        (_diagnostics(100, 101), "more unique IDs than it reported"),
+    ],
+)
+def test_catalogue_trust_fails_closed_when_rows_were_genuinely_lost(diagnostics, expected):
+    trustworthy, issue = catalogue_trust(diagnostics)
+
+    assert trustworthy is False
+    assert expected in issue
+
+
+def test_catalogue_trust_rejects_a_negative_tolerance():
+    with pytest.raises(ValueError, match="max_gap_ratio"):
+        catalogue_trust(_diagnostics(100, 100), max_gap_ratio=-0.1)
+
+
+def test_decide_approves_through_a_tolerated_catalogue_gap():
+    """The whole point: a 5-in-8184 gap must not block an identity match."""
+    assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
+    catalogue = CmcCatalogue(assets, _diagnostics(8184, 8179))
+    evidence = _evidence(
+        "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.APPROVED
+    assert decision.cmc_id == 100
+
+
+def test_decide_withholds_approval_when_rows_failed_to_parse():
+    assets = (_asset(100, "NEW", "new-token", 2.0, "New Token"),)
+    catalogue = CmcCatalogue(assets, _diagnostics(8184, 8184, malformed_rows=3))
+    evidence = _evidence(
+        "NEW", assets, price=2.0, binance_name="New Token", catalogue=catalogue
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert "failed to parse" in decision.rationale
 
 
 def test_default_scope_is_binance_futures():
@@ -621,7 +716,7 @@ def test_decide_withholds_approval_when_the_catalogue_is_incomplete():
     decision = decide(evidence, ForbiddenChatClient())
 
     assert decision.status is MatchStatus.UNCERTAIN
-    assert decision.method == "incomplete_catalogue"
+    assert decision.method == "approval_withheld"
     assert decision.cmc_id == 100
 
 
@@ -632,7 +727,7 @@ def test_decide_does_not_claim_unmapped_from_an_incomplete_catalogue():
     decision = decide(evidence, ForbiddenChatClient())
 
     assert decision.status is MatchStatus.UNCERTAIN
-    assert decision.method == "incomplete_catalogue"
+    assert decision.method == "untrustworthy_catalogue"
 
 
 def test_decide_reports_an_unmapped_ticker_from_a_complete_catalogue():
@@ -683,7 +778,7 @@ def test_decide_asks_the_llm_when_two_candidates_share_the_same_project_name():
     assert (decision.cmc_id, decision.slug) == (24478, "pepe")
     prompt = json.loads(client.prompts[0])
     assert {candidate["cmc_id"] for candidate in prompt["candidates"]} == {22454, 24478}
-    assert prompt["catalogue_complete"] is True
+    assert prompt["catalogue_trustworthy"] is True
 
 
 def test_decide_does_not_approve_an_llm_pick_without_identity_evidence():
@@ -939,7 +1034,7 @@ def test_record_decisions_stores_one_reviewable_row_per_instrument(tmp_path):
     assert (mapping.status, mapping.cmc_id, mapping.symbol) == ("uncertain", 1, "AAA")
     assert [c["cmc_id"] for c in mapping.evidence["candidates"]] == [1, 2]
     assert mapping.evidence["candidates"][0]["identity_match"] == "binance_asset_name"
-    assert mapping.evidence["catalogue_complete"] is True
+    assert mapping.evidence["catalogue_trustworthy"] is True
 
 
 def test_record_decisions_keeps_an_unmapped_verdict_with_a_null_id(tmp_path):
