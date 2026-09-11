@@ -462,7 +462,23 @@ uses GitHub Models, which is free inside Actions via the workflow's own
 | `SLACK_BOT_TOKEN` + `SLACK_CHANNEL_ID` | post via `chat.postMessage` |
 | `SLACK_WEBHOOK_URL` | fallback transport, shared with `daily-update` |
 
-Validate the configuration in seconds, before a run spends minutes on it:
+### One run is the whole loop
+
+`mode: resolve` is the only mode a normal day needs: it resolves, writes the
+confident matches, opens a pull request, and pings Slack. Review the PR, merge it
+if it is good. `check-llm` exists for debugging a provider, not as a step in that
+loop.
+
+A run whose LLM was **configured but unusable** is the exception. It approves
+nothing the LLM would have settled, so a pull request would be a page of outage
+notices — and an open PR is worse than none, because the pending-ledger skip
+treats it as work already awaiting review and every later run then finds nothing
+to do. Two such PRs did exactly that. So the run reports
+`worth_reviewing: false`, opens no PR unless something was approved regardless,
+and **fails the job** with the endpoint error. A deliberate absence of an LLM is
+not a misconfiguration and still opens its PR.
+
+Validate a provider in seconds, without spending a run on it:
 
 ```bash
 python integrations/cmc_new_symbol_mapping.py --check-llm

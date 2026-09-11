@@ -167,6 +167,8 @@ jobs:
               "catalogue_complete",
               "catalogue_trustworthy",
               "exchange_prices_available",
+              "llm_status",
+              "worth_reviewing",
               "coverage_only",
               "window_days",
               "rows_in_window_missing_cmc_id",
@@ -178,7 +180,7 @@ jobs:
 
       - name: commit-and-push-decisions
         id: push
-        if: steps.resolve.outputs.has_changes == 'true' && steps.prepare.outputs.mode == 'resolve'
+        if: steps.resolve.outputs.has_changes == 'true' && steps.resolve.outputs.worth_reviewing == 'true' && steps.prepare.outputs.mode == 'resolve'
         env:
           APPROVED: ${{ steps.resolve.outputs.approved }}
           UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}
@@ -243,6 +245,12 @@ jobs:
         run: |
           set -euo pipefail
           uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+
+      - name: fail-when-the-llm-was-configured-but-unusable
+        if: steps.resolve.outputs.llm_status == 'unavailable'
+        run: |
+          echo "::error::The LLM endpoint is configured but unusable, so ambiguous tickers could not be adjudicated. No pull request was opened unless something was approved without it. Fix the endpoint (try mode: check-llm) and re-run."
+          exit 1
 
       - name: warn-when-nothing-could-be-auto-approved
         if: steps.resolve.outputs.catalogue_trustworthy == 'false' || steps.resolve.outputs.exchange_prices_available == 'false'

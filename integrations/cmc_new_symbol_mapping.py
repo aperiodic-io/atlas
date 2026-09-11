@@ -1104,34 +1104,52 @@ def fetch_price_observations(
     return observations, True
 
 
-def _chat_client(use_llm: bool) -> ChatClient | None:
+@dataclass(frozen=True)
+class LlmAvailability:
+    """Whether an LLM is usable this run, and why not when it is not.
+
+    A deliberate absence and a broken endpoint both mean "no adjudication", but
+    they call for opposite responses: the first is a choice, the second is a
+    misconfiguration somebody has to fix.
+    """
+
+    client: ChatClient | None
+    status: str
+    error: str = ""
+
+    @property
+    def is_broken(self) -> bool:
+        return self.status == "unavailable"
+
+
+def _chat_client(use_llm: bool) -> LlmAvailability:
     """Build an LLM client, proving the endpoint works before the run relies on it.
 
     A misconfigured endpoint used to be discovered once per symbol, so a dead URL
     cost four doomed requests per ticker and reported itself as dozens of
     unrelated per-symbol outages. One preflight request turns that into a single
-    clear message, and the run continues on deterministic evidence alone.
+    clear message.
     """
     if not use_llm:
-        return None
+        return LlmAvailability(None, "not_configured", "disabled for this run")
     try:
         config = LlmConfig.from_env()
     except LlmNotConfiguredError as error:
         print(f"LLM adjudication disabled: {error}", file=sys.stderr)
-        return None
+        return LlmAvailability(None, "not_configured", str(error))
     client = ChatClient(config, requests.Session())
     try:
         client.check()
     except LlmError as error:
         client.close()
         print(
-            f"::error::LLM adjudication disabled, every ambiguous ticker will need "
-            f"review: {error}",
+            f"::error::LLM adjudication is configured but unusable, so every "
+            f"ambiguous ticker would need review: {error}",
             file=sys.stderr,
         )
-        return None
+        return LlmAvailability(None, "unavailable", str(error))
     print(f"LLM adjudication via {config.base_url} ({config.model})", file=sys.stderr)
-    return client
+    return LlmAvailability(client, "ok")
 
 
 def _public_assets_by_symbol() -> dict[str, dict]:
@@ -1344,6 +1362,38 @@ def render_coverage_report(coverage: dict[str, object]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _run_coverage_only(
+    rows_by_exchange: dict[str, list[dict]],
+    now: datetime,
+    window_days: int,
+    skip_underlyings: frozenset[str],
+    report_path: Path | None,
+    summary_path: Path | None,
+) -> dict[str, object]:
+    """Report coverage and stop, without contacting CoinMarketCap or Binance."""
+    coverage = coverage_report(rows_by_exchange, now, window_days, skip_underlyings)
+    rendered = render_coverage_report(coverage)
+    if report_path is not None:
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(rendered)
+    summary: dict[str, object] = {
+        "generated_at": coverage["generated_at"],
+        "coverage_only": True,
+        "window_days": window_days,
+        "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
+        "rows_in_window_out_of_scope": coverage["rows_in_window_out_of_scope"],
+        "skipped_underlyings": coverage["skipped_underlyings"],
+        "coverage": coverage["exchanges"],
+        "has_changes": False,
+        "worth_reviewing": False,
+    }
+    if summary_path is not None:
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    print(rendered)
+    return summary
+
+
 def run(
     data_dir: Path = DEFAULT_DATA_DIR,
     mapping_path: Path | None = None,
@@ -1371,27 +1421,14 @@ def run(
     rows_by_exchange = load_snapshots(data_dir, exchanges)
 
     if coverage_only:
-        coverage = coverage_report(
-            rows_by_exchange, now, new_within_days, skip_underlyings
+        return _run_coverage_only(
+            rows_by_exchange,
+            now,
+            new_within_days,
+            skip_underlyings,
+            report_path,
+            summary_path,
         )
-        if report_path is not None:
-            report_path.parent.mkdir(parents=True, exist_ok=True)
-            report_path.write_text(render_coverage_report(coverage))
-        summary: dict[str, object] = {
-            "generated_at": coverage["generated_at"],
-            "coverage_only": True,
-            "window_days": new_within_days,
-            "rows_in_window_missing_cmc_id": coverage["rows_in_window_missing_cmc_id"],
-            "rows_in_window_out_of_scope": coverage["rows_in_window_out_of_scope"],
-            "skipped_underlyings": coverage["skipped_underlyings"],
-            "coverage": coverage["exchanges"],
-            "has_changes": False,
-        }
-        if summary_path is not None:
-            summary_path.parent.mkdir(parents=True, exist_ok=True)
-            summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
-        print(render_coverage_report(coverage))
-        return summary
 
     store = MappingStore.load(mapping_path)
     with requests.Session() as session:
@@ -1428,7 +1465,7 @@ def run(
         only_symbols=only_symbols,
         skip_underlyings=skip_underlyings,
     )
-    summary = {
+    summary: dict[str, object] = {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
         "new_symbols": len(new_symbols),
         "approved": 0,
@@ -1442,10 +1479,17 @@ def run(
         "catalogue_issue": catalogue_issue,
         "skipped_underlyings": sorted(skip_underlyings),
         "exchange_prices_available": True,
+        "llm_status": "ok",
+        "llm_error": "",
+        # A pull request is only worth opening if somebody can act on it. A run
+        # whose LLM was configured but dead approves nothing and produces a page
+        # of outage notices; two such PRs once blocked every later run, because
+        # the pending-ledger skip treats them as work already awaiting review.
+        "worth_reviewing": False,
     }
     if not new_symbols:
         print("No new Binance symbols need a CMC ID.")
-        _write_outputs(summary, [], now, report_path, summary_path)
+        _write_outputs(summary, [], now, report_path, summary_path, None)
         return summary
 
     print(f"Resolving {len(new_symbols)} new Binance ticker(s)...", file=sys.stderr)
@@ -1458,7 +1502,8 @@ def run(
             "auto-approved this run",
             file=sys.stderr,
         )
-    client = _chat_client(use_llm)
+    llm = _chat_client(use_llm)
+    client = llm.client
     try:
         decisions = resolve_new_symbols(
             new_symbols,
@@ -1499,13 +1544,18 @@ def run(
             "rows_updated": rows_updated,
             "mapping_conflicts": len(conflicting) + recording["conflicts"],
             "exchange_prices_available": prices_available,
+            "llm_status": llm.status,
+            "llm_error": llm.error,
+            "worth_reviewing": (
+                counts[MatchStatus.APPROVED.value] > 0 or not llm.is_broken
+            ),
             "has_changes": True,
         }
     )
     if not dry_run:
         save_snapshots(data_dir, rows_by_exchange, set(rows_updated))
         store.save()
-    _write_outputs(summary, decisions, now, report_path, summary_path)
+    _write_outputs(summary, decisions, now, report_path, summary_path, llm)
     for decision in decisions:
         print(
             f"{decision.lookup_symbol}\t{decision.status.value}\t"
@@ -1521,10 +1571,18 @@ def _write_outputs(
     now: datetime,
     report_path: Path | None,
     summary_path: Path | None,
+    llm: LlmAvailability | None = None,
 ) -> None:
     if report_path is not None:
         report_path.parent.mkdir(parents=True, exist_ok=True)
-        report_path.write_text(render_report(decisions, now))
+        report = render_report(decisions, now)
+        if llm is not None and llm.is_broken:
+            report = (
+                "> **This run had no working LLM, so no ambiguous ticker could be "
+                f"adjudicated.** Fix the endpoint and re-run rather than reviewing "
+                f"these rows one by one.\n>\n> `{llm.error}`\n\n" + report
+            )
+        report_path.write_text(report)
     if summary_path is not None:
         summary_path.parent.mkdir(parents=True, exist_ok=True)
         summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")

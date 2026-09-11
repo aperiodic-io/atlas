@@ -13,6 +13,7 @@ from integrations.cmc_mappings import MappingStore
 from integrations.cmc_new_symbol_mapping import (
     DEFAULT_EXCHANGES,
     DEFAULT_SKIPPED_UNDERLYINGS,
+    LlmAvailability,
     Decision,
     MatchStatus,
     NewSymbol,
@@ -416,6 +417,122 @@ def test_decide_withholds_approval_when_the_catalogue_lost_too_many_rows():
 # --------------------------------------------------------------------------- #
 # crypto-only scope
 # --------------------------------------------------------------------------- #
+
+
+def test_run_opens_nothing_to_review_when_a_configured_llm_is_dead(tmp_path, monkeypatch):
+    """Regression: two PRs full of LLM-outage notices once blocked every later run.
+
+    The pending-ledger skip treats an open PR as work already awaiting review, so
+    a junk PR is worse than no PR. With nothing approved and a broken endpoint,
+    there is nothing a reviewer can act on.
+    """
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "aaausdt",
+                    "symbol": "AAA",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.0)),
+        [{"symbol": "AAAUSDT", "lastPrice": "1.0", "closeTime": close_time_ms}],
+        [],
+        None,
+        llm_status="unavailable",
+        llm_error="410 Client Error: Gone",
+    )
+
+    summary = run(
+        data_dir=data_dir,
+        exchanges=("binance-futures",),
+        report_path=tmp_path / "report.md",
+        now=NOW,
+    )
+
+    assert summary["llm_status"] == "unavailable"
+    assert summary["approved"] == 0
+    assert summary["worth_reviewing"] is False
+    report = (tmp_path / "report.md").read_text()
+    assert "had no working LLM" in report
+    assert "410 Client Error: Gone" in report
+
+
+def test_run_is_still_worth_reviewing_when_a_dead_llm_did_not_stop_approvals(
+    tmp_path, monkeypatch
+):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "newusdt",
+                    "symbol": "NEW",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(100, "NEW", "new-token", 2.0, "New Token")),
+        [{"symbol": "NEWUSDT", "lastPrice": "2.0", "closeTime": close_time_ms}],
+        [{"assetCode": "NEW", "assetName": "New Token"}],
+        None,
+        llm_status="unavailable",
+        llm_error="410 Client Error: Gone",
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["approved"] == 1
+    assert summary["worth_reviewing"] is True
+
+
+def test_run_is_worth_reviewing_when_no_llm_was_configured_on_purpose(tmp_path, monkeypatch):
+    """A deliberate absence is not a misconfiguration, so the PR still opens."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-futures.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "aaausdt",
+                    "symbol": "AAA",
+                    "underlying": "crypto",
+                    "first_capture": "2026-09-05T00:00:00.000Z",
+                }
+            ],
+            indent=2,
+        )
+    )
+    close_time_ms = int(OBSERVED_AT.timestamp() * 1000)
+    _patch_fetchers(
+        monkeypatch,
+        _catalogue(_asset(1, "AAA", "alpha", 1.0), _asset(2, "AAA", "beta", 1.0)),
+        [{"symbol": "AAAUSDT", "lastPrice": "1.0", "closeTime": close_time_ms}],
+        [],
+        None,
+        llm_status="not_configured",
+    )
+
+    summary = run(data_dir=data_dir, exchanges=("binance-futures",), now=NOW)
+
+    assert summary["llm_status"] == "not_configured"
+    assert summary["worth_reviewing"] is True
 
 
 def test_default_scope_skips_tokenized_equities_and_index_products():
@@ -1390,7 +1507,9 @@ def test_run_in_coverage_only_mode_touches_no_network_and_writes_no_data(tmp_pat
 # --------------------------------------------------------------------------- #
 
 
-def _patch_fetchers(monkeypatch, catalogue, tickers, public_assets, client):
+def _patch_fetchers(
+    monkeypatch, catalogue, tickers, public_assets, client, llm_status="ok", llm_error=""
+):
     monkeypatch.setattr(
         "integrations.cmc_new_symbol_mapping.fetch_cmc_catalogue", lambda *_: catalogue
     )
@@ -1403,8 +1522,11 @@ def _patch_fetchers(monkeypatch, catalogue, tickers, public_assets, client):
     monkeypatch.setattr(
         "integrations.cmc_new_symbol_mapping.fetch_public_assets", lambda: public_assets
     )
+    availability = LlmAvailability(
+        client, llm_status if client is not None else (llm_status or "not_configured"), llm_error
+    )
     monkeypatch.setattr(
-        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: client
+        "integrations.cmc_new_symbol_mapping._chat_client", lambda *_: availability
     )
 
 
