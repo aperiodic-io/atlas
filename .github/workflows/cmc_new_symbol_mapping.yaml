@@ -115,6 +115,10 @@ jobs:
           ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
           ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
+          # Seconds between requests. A free tier with a requests-per-minute
+          # ceiling needs this raised: the 1s default paces at 60/min, which is
+          # three times OpenRouter's free limit of 20/min.
+          ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
         run: uv run python integrations/cmc_new_symbol_mapping.py --check-llm
 
       - name: resolve-new-binance-symbols
@@ -129,6 +133,10 @@ jobs:
           ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
           # Only a GitHub-hosted endpoint wants this; others ignore it.
           ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
+          # Seconds between requests. A free tier with a requests-per-minute
+          # ceiling needs this raised: the 1s default paces at 60/min, which is
+          # three times OpenRouter's free limit of 20/min.
+          ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
           EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
           DAYS: ${{ inputs.days || '60' }}
           MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '100' }}

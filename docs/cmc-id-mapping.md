@@ -539,8 +539,46 @@ that is not 408 or 429) is never retried. The first real run predated this and
 answered 410 Gone four times for each of 38 tickers, burning nine minutes and
 reporting one dead URL as 38 unrelated per-symbol outages.
 
-Any other OpenAI-compatible provider works the same way — OpenRouter is
-`https://openrouter.ai/api/v1` with a `:free` model. With no key at all the run still
+#### OpenRouter
+
+OpenRouter is OpenAI-compatible at `https://openrouter.ai/api/v1`, accepts the
+`response_format: {"type": "json_object"}` this client sends, and serves
+`GET /api/v1/models`, so the model-listing diagnostic works there too.
+
+| name | where | value |
+| --- | --- | --- |
+| `ATLAS_LLM_BASE_URL` | repository **variable** | `https://openrouter.ai/api/v1` |
+| `ATLAS_LLM_MODEL` | repository **variable** | `openrouter/free`, or a `provider/model:free` id |
+| `ATLAS_LLM_API_KEY` | repository **secret** | the OpenRouter key |
+| `ATLAS_LLM_MIN_INTERVAL_SECONDS` | repository **variable** | `3.1` — see the rate limit below |
+
+Model ids here take the **opposite** form to Zen's: `author/slug`, with a `:free`
+suffix for the free variants — `deepseek/deepseek-r1:free`,
+`meta-llama/llama-3.3-70b-instruct:free`. `openrouter/free` is a router that
+picks among free models and filters for the features a request needs, structured
+outputs included, which is the safer choice here: this client always asks for a
+JSON object, and not every individual free model honours that parameter.
+
+Three things about the free tier decide whether a run succeeds:
+
+- **20 requests per minute.** The 1s default pacing sends 60, so set
+  `ATLAS_LLM_MIN_INTERVAL_SECONDS` to `3.1`. Without it the run still completes —
+  429s are retried, and `Retry-After` is obeyed — but it burns the attempt budget
+  and can report symbols as uncertain that the model would have settled.
+- **50 requests per day**, rising to 1000 once an account has ever bought $10 of
+  credits. `max-llm-symbols` defaults to 100, so a large backlog on a 50/day
+  account will stop partway; the unreached symbols stay `unmapped` and are simply
+  retried on a later run, so this degrades rather than breaks.
+- **Free endpoints require permissive data settings.** If every model answers
+  `404 No endpoints found matching your data policy`, nothing is down: the free
+  endpoints train on and may publish the prompts they receive, and OpenRouter
+  filters them all out until *Settings → Privacy* allows that. Enabling it is an
+  account-wide choice affecting everything that key is used for, not just this
+  job. What this job sends is public market data — Binance ticker symbols and
+  CoinMarketCap names, slugs and prices — so there is nothing confidential in
+  these prompts, but the decision is about the whole account.
+
+Any other OpenAI-compatible provider works the same way. With no key at all the run still
 completes: adjudication is skipped and ambiguous tickers are reported as
 `uncertain` with method `deterministic_only`. Slack is skipped without failing
 the job until its secrets exist.

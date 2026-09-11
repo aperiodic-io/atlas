@@ -5,6 +5,7 @@ import requests
 
 from integrations.llm import (
     DEFAULT_BASE_URL,
+    DEFAULT_MIN_INTERVAL_SECONDS,
     DEFAULT_MODEL,
     ChatClient,
     LlmConfig,
@@ -355,3 +356,37 @@ def test_available_models_is_skipped_when_the_session_cannot_get():
     client = ChatClient(LlmConfig(api_key="key"), FakeSession([]))
 
     assert client.available_models() == []
+
+
+def test_blank_numeric_settings_fall_back_to_defaults():
+    """An unset GitHub Actions variable arrives as an empty string, not absent.
+
+    The workflow forwards vars.ATLAS_LLM_MIN_INTERVAL_SECONDS unconditionally, so
+    every run with that variable unset passes "" -- which must not blow up
+    config construction or silently pace at zero.
+    """
+    config = LlmConfig.from_env(
+        {
+            "ATLAS_LLM_API_KEY": "key",
+            "ATLAS_LLM_MIN_INTERVAL_SECONDS": "",
+            "ATLAS_LLM_MAX_ATTEMPTS": "",
+            "ATLAS_LLM_TIMEOUT_SECONDS": "",
+            "ATLAS_LLM_MODEL": "",
+            "ATLAS_LLM_BASE_URL": "",
+            "ATLAS_LLM_API_VERSION": "",
+        }
+    )
+
+    assert config.min_interval_seconds == DEFAULT_MIN_INTERVAL_SECONDS
+    assert config.base_url == DEFAULT_BASE_URL
+    assert config.model == DEFAULT_MODEL
+    assert config.api_version == ""
+
+
+def test_pacing_can_be_slowed_for_a_rate_limited_free_tier():
+    """OpenRouter's free tier allows 20 requests/min; the 1s default sends 60."""
+    config = LlmConfig.from_env(
+        {"ATLAS_LLM_API_KEY": "key", "ATLAS_LLM_MIN_INTERVAL_SECONDS": "3.1"}
+    )
+
+    assert config.min_interval_seconds == 3.1
