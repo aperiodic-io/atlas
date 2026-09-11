@@ -1,0 +1,1661 @@
+{
+  "mappings": [
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41997,
+            "identity_match": null,
+            "is_active": true,
+            "name": "BYD CO. LTD. (Derivatives)",
+            "price_usd": 10.176523166786133,
+            "relative_price_difference": 0.0006414126633365743,
+            "slug": "byd-co-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "BYDUSDT",
+          "observed_at": "2026-09-11T13:33:36.185000Z",
+          "price": 10.17,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "BYD",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-07T00:00:00Z",
+        "original_id": "bydusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "BYD"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40857,
+            "identity_match": null,
+            "is_active": true,
+            "name": "ChangXin Memory Technologies (Derivatives)",
+            "price_usd": 8.398616189026862,
+            "relative_price_difference": 0.002460753046892114,
+            "slug": "changxin-memory-technologies-derivaties"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "CXMTUSDT",
+          "observed_at": "2026-09-11T13:33:22.738000Z",
+          "price": 8.378,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "CXMT",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-18T00:00:00Z",
+        "original_id": "cxmtusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "CXMT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40715,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Datadog Tokenized Stock (Robinhood)",
+            "price_usd": 221.6708401673903,
+            "relative_price_difference": 0.006094067312064258,
+            "slug": "datadog-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 41970,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Datadog Inc (Derivatives)",
+            "price_usd": 220.44179569741002,
+            "relative_price_difference": 0.011604736145765081,
+            "slug": "datadog-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "DDOGUSDT",
+          "observed_at": "2026-09-11T13:33:23.961000Z",
+          "price": 223.03,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "DDOG",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "ddogusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "DDOG"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 31891,
+            "identity_match": null,
+            "is_active": true,
+            "name": "TrumpCoin",
+            "price_usd": 4.4803521366929445e-06,
+            "relative_price_difference": 0.9999994931728351,
+            "slug": "trumpcoin-solana"
+          },
+          {
+            "cmc_id": 41918,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Trump Media & Technology Group Corp (Derivatives)",
+            "price_usd": 8.877676276867469,
+            "relative_price_difference": 0.004262022270075653,
+            "slug": "trump-media-technology-group-corp-derivaties"
+          },
+          {
+            "cmc_id": 41999,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Trump Media & Technology Group Tokenized Stock (Robinhood)",
+            "price_usd": 8.819818355592712,
+            "relative_price_difference": 0.0022829914487881827,
+            "slug": "trump-media-tchnology-group-tokenized-stock-robinhood"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "DJTUSDT",
+          "observed_at": "2026-09-11T13:33:00.438000Z",
+          "price": 8.84,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "DJT",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-25T00:00:00Z",
+        "original_id": "djtusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "DJT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41869,
+            "identity_match": null,
+            "is_active": true,
+            "name": "VanEck Gold Miners ETF (Derivatives)",
+            "price_usd": 98.2721173126104,
+            "relative_price_difference": 0.0031861710148061565,
+            "slug": "vaneck-gold-miners-etf-derivaties"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GDXUSDT",
+          "observed_at": "2026-09-11T13:33:30.467000Z",
+          "price": 97.96,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GDX",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-17T00:00:00Z",
+        "original_id": "gdxusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GDX"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 28380,
+            "identity_match": null,
+            "is_active": true,
+            "name": "GoldPro Token",
+            "price_usd": 5.020266106932796,
+            "relative_price_difference": 2.6590860837702595,
+            "slug": "ipmb"
+          },
+          {
+            "cmc_id": 41982,
+            "identity_match": null,
+            "is_active": true,
+            "name": "GoPro Inc (Derivatives)",
+            "price_usd": 1.405069192305467,
+            "relative_price_difference": 0.024102909843634765,
+            "slug": "gopro-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GPROUSDT",
+          "observed_at": "2026-09-11T13:33:52.994000Z",
+          "price": 1.372,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GPRO",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-03T00:00:00Z",
+        "original_id": "gprousdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GPRO"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41974,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Gitlab Inc (Derivatives)",
+            "price_usd": 47.31453134638055,
+            "relative_price_difference": 0.016943042875949606,
+            "slug": "gitlab-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GTLBUSDT",
+          "observed_at": "2026-09-11T13:33:49.036000Z",
+          "price": 48.13,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GTLB",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "gtlbusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "GTLB"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39672,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Hanmi Semiconductor Co Ltd (Derivatives)",
+            "price_usd": 175.68723180046305,
+            "relative_price_difference": 0.0020605975548819,
+            "slug": "hanmi-semiconductor-co-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "HANMIUSDT",
+          "observed_at": "2026-09-11T13:33:40.884000Z",
+          "price": 176.05,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "HANMI",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "hanmiusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "HANMI"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "HK0625USDT",
+          "observed_at": "2026-09-11T13:33:00.534000Z",
+          "price": 40.61,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "HK0625",
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "Finding no same-ticker asset does not establish that none exists: 1 catalogue row(s) failed to parse, so candidates may have been dropped."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-01T00:00:00Z",
+        "original_id": "hk0625usdt"
+      },
+      "method": "untrustworthy_catalogue",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "HK0625"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41998,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Lenovo Group Ltd (Derivatives)",
+            "price_usd": 31.386226612448272,
+            "relative_price_difference": 0.004244079554306069,
+            "slug": "lenovo-group-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "HK0992USDT",
+          "observed_at": "2026-09-11T13:33:51.028000Z",
+          "price": 31.52,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "HK0992",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-07T00:00:00Z",
+        "original_id": "hk0992usdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "HK0992"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40701,
+            "identity_match": null,
+            "is_active": true,
+            "name": "IonQ Tokenized Stock (Robinhood)",
+            "price_usd": 37.03155045698264,
+            "relative_price_difference": 0.0013940091125647961,
+            "slug": "ionq-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 41949,
+            "identity_match": null,
+            "is_active": true,
+            "name": "IONQ Inc (Derivatives)",
+            "price_usd": 37.02664534130319,
+            "relative_price_difference": 0.0012613667199348293,
+            "slug": "ionq-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "IONQUSDT",
+          "observed_at": "2026-09-11T13:33:44.070000Z",
+          "price": 36.98,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "IONQ",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-28T00:00:00Z",
+        "original_id": "ionqusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "IONQ"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41783,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Samsung KODEX 200 ETF(Derivatives)",
+            "price_usd": 82.92740087530647,
+            "relative_price_difference": 0.002022726864505434,
+            "slug": "samsung-kodex-200-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "KODEX200USDT",
+          "observed_at": "2026-09-11T13:33:04.510000Z",
+          "price": 82.76,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "KODEX200",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "kodex200usdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "KODEX200"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41780,
+            "identity_match": null,
+            "is_active": true,
+            "name": "LG Electronics Inc (Derivatives)",
+            "price_usd": 149.2639688902402,
+            "relative_price_difference": 0.0017716032902026367,
+            "slug": "lg-electronics-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "LGELECTRONICSUSDT",
+          "observed_at": "2026-09-11T13:33:24.115000Z",
+          "price": 149.0,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "LGELECTRONICS",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "lgelectronicsusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "LGELECTRONICS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40984,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Roundhill Photonics & Optics ETF (Derivatives)",
+            "price_usd": 25.218736335619056,
+            "relative_price_difference": 0.00517805382173355,
+            "slug": "roundhill-photonics-optics-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "LYTEUSDT",
+          "observed_at": "2026-09-11T13:33:47.455000Z",
+          "price": 25.35,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "LYTE",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-17T00:00:00Z",
+        "original_id": "lyteusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "LYTE"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41945,
+            "identity_match": null,
+            "is_active": true,
+            "name": "MARA Holdings Inc (Derivatives)",
+            "price_usd": 11.73071031579786,
+            "relative_price_difference": 0.0017686008367086517,
+            "slug": "mara-holdings-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MARAUSDT",
+          "observed_at": "2026-09-11T13:33:51.524000Z",
+          "price": 11.71,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MARA",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-28T00:00:00Z",
+        "original_id": "marausdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MARA"
+    },
+    {
+      "cmc_id": 40944,
+      "evidence": {
+        "binance_asset_name": "MarsCoin",
+        "candidates": [
+          {
+            "cmc_id": 40944,
+            "identity_match": "binance_asset_name",
+            "is_active": true,
+            "name": "MarsCoin",
+            "price_usd": 0.13397987805566883,
+            "relative_price_difference": 0.0037189317692680034,
+            "slug": "marscoin-meme-bsc"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "medium",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MARSCOINUSDT",
+          "observed_at": "2026-09-11T13:33:47.967000Z",
+          "price": 0.13448,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MARSCOIN",
+        "price_probe_status": "price_compatible",
+        "rationale": "Binance asset name matches MarsCoin (binance_asset_name) and the price does not contradict it. Holding for review: 1 catalogue row(s) failed to parse, so candidates may have been dropped."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-01T00:00:00Z",
+        "original_id": "marscoinusdt"
+      },
+      "method": "approval_withheld",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "marscoin-meme-bsc",
+      "status": "uncertain",
+      "symbol": "MARSCOIN"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 33712,
+            "identity_match": null,
+            "is_active": true,
+            "name": "MOODENG (moodengbnb.com)",
+            "price_usd": 1.4918928367186996e-08,
+            "relative_price_difference": 0.9999999999599352,
+            "slug": "moodengbnb-com"
+          },
+          {
+            "cmc_id": 40754,
+            "identity_match": null,
+            "is_active": true,
+            "name": "MongoDB Tokenized Stock (Robinhood)",
+            "price_usd": 366.35696431065617,
+            "relative_price_difference": 0.01614801323775771,
+            "slug": "mongodb-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 41972,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Mongodb Inc (Derivatives)",
+            "price_usd": 372.84563120986155,
+            "relative_price_difference": 0.0012773080803006331,
+            "slug": "mongodb-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MDBUSDT",
+          "observed_at": "2026-09-11T13:33:41.766000Z",
+          "price": 372.37,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MDB",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "mdbusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MDB"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41946,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Merck & Co Inc (Derivatives)",
+            "price_usd": 145.72910465746784,
+            "relative_price_difference": 0.0014369478935392593,
+            "slug": "merck-co-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MRKUSDT",
+          "observed_at": "2026-09-11T13:33:30.537000Z",
+          "price": 145.52,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MRK",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-28T00:00:00Z",
+        "original_id": "mrkusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MRK"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41887,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Moderna Inc (Derivatives)",
+            "price_usd": 136.49262130415707,
+            "relative_price_difference": 0.002173979792696272,
+            "slug": "moderna-inc-derivatives"
+          },
+          {
+            "cmc_id": 42005,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Moderna Tokenized Stock (Robinhood)",
+            "price_usd": 137.61813771295473,
+            "relative_price_difference": 0.0060540808023594,
+            "slug": "moderna-tokenized-stock-robinhood"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MRNAUSDT",
+          "observed_at": "2026-09-11T13:33:47.604000Z",
+          "price": 136.79,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MRNA",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-25T00:00:00Z",
+        "original_id": "mrnausdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "MRNA"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41782,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Naver Corp (Derivatives)",
+            "price_usd": 152.66929526789826,
+            "relative_price_difference": 0.0005852357314081205,
+            "slug": "naver-corp-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "NAVERUSDT",
+          "observed_at": "2026-09-11T13:11:39.985000Z",
+          "price": 152.58,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "NAVER",
+        "price_probe_status": "stale_price",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "naverusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "NAVER"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41771,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Cloudflare, Inc. Class A Common Stock (Derivatives)",
+            "price_usd": 312.27362256489494,
+            "relative_price_difference": 0.004610408756550719,
+            "slug": "cloudflare-inc-class-a-common-stock-derivatives"
+          },
+          {
+            "cmc_id": 41987,
+            "identity_match": null,
+            "is_active": true,
+            "name": "NetNet",
+            "price_usd": 522.1509614391224,
+            "relative_price_difference": 0.6643853163302382,
+            "slug": "netnet"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "NETUSDT",
+          "observed_at": "2026-09-11T13:33:51.586000Z",
+          "price": 313.72,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "NET",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-17T00:00:00Z",
+        "original_id": "netusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "NET"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41947,
+            "identity_match": null,
+            "is_active": true,
+            "name": "GraniteShares 2x Long NVDA Daily ETF (Derivatives)",
+            "price_usd": 34.558842087372874,
+            "relative_price_difference": 0.00637280394213367,
+            "slug": "graniteshares-2x-long-nvda-daily-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "NVDLUSDT",
+          "observed_at": "2026-09-11T13:33:48.957000Z",
+          "price": 34.34,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "NVDL",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "nvdlusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "NVDL"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 39861,
+            "identity_match": null,
+            "is_active": true,
+            "name": "PDD Holdings Inc (Derivatives)",
+            "price_usd": 78.39485491138714,
+            "relative_price_difference": 0.010894325098480272,
+            "slug": "pdd-holdings-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PDDUSDT",
+          "observed_at": "2026-09-11T13:33:46.571000Z",
+          "price": 77.55,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PDD",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-28T00:00:00Z",
+        "original_id": "pddusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "PDD"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40938,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Pons",
+            "price_usd": 0.6297847225422103,
+            "relative_price_difference": 0.017258476081748204,
+            "slug": "pons"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PONSUSDT",
+          "observed_at": "2026-09-11T13:33:52.152000Z",
+          "price": 0.6191,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PONS",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-06T00:00:00Z",
+        "original_id": "ponsusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "PONS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40676,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Roundhill T-REX 2X Long DRAM Daily Target ETF (Derivatives)",
+            "price_usd": 13.836154858689527,
+            "relative_price_difference": 0.01512508134185813,
+            "slug": "roundhill-t-rex-2x-long-dram-daily-target-etf-derivatives"
+          },
+          {
+            "cmc_id": 41977,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Ramses",
+            "price_usd": 0.0602949272628513,
+            "relative_price_difference": 0.9955763076109426,
+            "slug": "ramses"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "RAMUSDT",
+          "observed_at": "2026-09-11T13:33:51.535000Z",
+          "price": 13.63,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "RAM",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-25T00:00:00Z",
+        "original_id": "ramusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "RAM"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41779,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Samsung Electro-Mechanics Co Ltd (Derivatives)",
+            "price_usd": 1058.1258429079537,
+            "relative_price_difference": 0.002163441930599538,
+            "slug": "samsung-electro-mechanics-co-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SAMSUNGEMUSDT",
+          "observed_at": "2026-09-11T13:29:59.621000Z",
+          "price": 1060.42,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SAMSUNGEM",
+        "price_probe_status": "stale_price",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "samsungemusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SAMSUNGEM"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40727,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Shopify Tokenized Stock (Robinhood)",
+            "price_usd": 130.43264123980913,
+            "relative_price_difference": 0.0005572356536446428,
+            "slug": "shopify-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 41871,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Shopify Inc (Derivatives)",
+            "price_usd": 130.39876297490093,
+            "relative_price_difference": 0.0002973532901267205,
+            "slug": "shopify-inc-derivaties"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SHOPUSDT",
+          "observed_at": "2026-09-11T13:33:47.633000Z",
+          "price": 130.36,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SHOP",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-17T00:00:00Z",
+        "original_id": "shopusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SHOP"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41072,
+            "identity_match": null,
+            "is_active": true,
+            "name": "GraniteShares 2x Short SK Hynix Daily ETF(Derivatives)",
+            "price_usd": 6.788795837657817,
+            "relative_price_difference": 0.017540399760084355,
+            "slug": "graniteshares-2x-short-sk-hynix-daily-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SKDDUSDT",
+          "observed_at": "2026-09-11T13:33:43.827000Z",
+          "price": 6.91,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SKDD",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-25T00:00:00Z",
+        "original_id": "skddusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SKDD"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41071,
+            "identity_match": null,
+            "is_active": true,
+            "name": "GraniteShares 2x Long SK Hynix Daily ETF (Derivatives)",
+            "price_usd": 31.47810312465761,
+            "relative_price_difference": 0.01936862450316102,
+            "slug": "graniteshares-2x-long-sk-hynix-daily-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "SKUUUSDT",
+          "observed_at": "2026-09-11T13:33:45.151000Z",
+          "price": 30.88,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "SKUU",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-25T00:00:00Z",
+        "original_id": "skuuusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "SKUU"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41971,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Atlassian Corp (Derivatives)",
+            "price_usd": 179.28939077922809,
+            "relative_price_difference": 0.0175923792919009,
+            "slug": "atlassian-corp-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TEAMUSDT",
+          "observed_at": "2026-09-11T13:33:00.743000Z",
+          "price": 182.5,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TEAM",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "teamusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TEAM"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 15288,
+            "identity_match": null,
+            "is_active": true,
+            "name": "TemplarDAO",
+            "price_usd": 3.499019162070977,
+            "relative_price_difference": 0.9410244536984497,
+            "slug": "templardao"
+          },
+          {
+            "cmc_id": 36107,
+            "identity_match": null,
+            "is_active": true,
+            "name": "TEMMARKET",
+            "price_usd": 9.99608411887739e-07,
+            "relative_price_difference": 0.9999999831517207,
+            "slug": "tem-market"
+          },
+          {
+            "cmc_id": 41950,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Tempus AI Inc (Derivatives)",
+            "price_usd": 59.17892322688203,
+            "relative_price_difference": 0.002546380804280654,
+            "slug": "tempus-ai-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TEMUSDT",
+          "observed_at": "2026-09-11T13:33:45.166000Z",
+          "price": 59.33,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TEM",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-28T00:00:00Z",
+        "original_id": "temusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TEM"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41944,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Direxion Daily TSLA Bull 2X ETF (Derivatives)",
+            "price_usd": 9.638192063701114,
+            "relative_price_difference": 0.010452560194957536,
+            "slug": "direxion-daily-tsla-bull-2x-etf-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "TSLLUSDT",
+          "observed_at": "2026-09-11T13:33:52.292000Z",
+          "price": 9.74,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "TSLL",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "tsllusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "TSLL"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40974,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Yushu Technology Co (Derivatives)",
+            "price_usd": 70.47328814827219,
+            "relative_price_difference": 0.0012289094632626548,
+            "slug": "yushu-technology-co-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "UNITREEUSDT",
+          "observed_at": "2026-09-11T13:33:49.514000Z",
+          "price": 70.56,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "UNITREE",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-19T00:00:00Z",
+        "original_id": "unitreeusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "UNITREE"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41870,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Vistra Corp (Derivatives)",
+            "price_usd": 148.9740501591487,
+            "relative_price_difference": 0.011914482809052468,
+            "slug": "vistra-corp-derivaties"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "VSTUSDT",
+          "observed_at": "2026-09-11T13:33:44.946000Z",
+          "price": 147.22,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "VST",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-17T00:00:00Z",
+        "original_id": "vstusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "VST"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 41778,
+            "identity_match": null,
+            "is_active": true,
+            "name": "ZhongJi Innolight Co., Ltd. (Derivatives)",
+            "price_usd": 151.35948136005268,
+            "relative_price_difference": 6.948959468402697e-05,
+            "slug": "zhongji-innolight-co-ltd-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "ZHONGJIUSDT",
+          "observed_at": "2026-09-11T13:33:44.318000Z",
+          "price": 151.37,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "ZHONGJI",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-14T00:00:00Z",
+        "original_id": "zhongjiusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "ZHONGJI"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40766,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Zscaler Tokenized Stock (Robinhood)",
+            "price_usd": 160.68276785294438,
+            "relative_price_difference": 0.023145675403098236,
+            "slug": "zscaler-tokenized-stock-robinhood"
+          },
+          {
+            "cmc_id": 41973,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Zscaler Inc (Derivatives)",
+            "price_usd": 164.48460926769886,
+            "relative_price_difference": 3.2772401368785346e-05,
+            "slug": "zscaler-inc-derivatives"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "ZSUSDT",
+          "observed_at": "2026-09-11T13:33:14.767000Z",
+          "price": 164.49,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "ZS",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-02T00:00:00Z",
+        "original_id": "zsusdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "ZS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 38679,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u54c8\u57fa\u7c73",
+            "price_usd": 0.039356654112184815,
+            "relative_price_difference": 0.019866652298129454,
+            "slug": "hajimi"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "\u54c8\u57fa\u7c73USDT",
+          "observed_at": "2026-09-11T13:33:48.910000Z",
+          "price": 0.03859,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "\u54c8\u57fa\u7c73",
+        "price_probe_status": "price_compatible",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-06T00:00:00Z",
+        "original_id": "\u54c8\u57fa\u7c73usdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "\u54c8\u57fa\u7c73"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "binance_asset_name": "\u725b\u6765",
+        "candidates": [
+          {
+            "cmc_id": 41858,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (niulai.site)",
+            "price_usd": 1.3733306150061706e-05,
+            "relative_price_difference": 0.9999005985368409,
+            "slug": "niulai-site"
+          },
+          {
+            "cmc_id": 41861,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (Niu Lai)",
+            "price_usd": 0.13899817151232352,
+            "relative_price_difference": 0.006066672787518208,
+            "slug": "niu-lai"
+          },
+          {
+            "cmc_id": 41867,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (niulai.space)",
+            "price_usd": 2.944637665313642e-06,
+            "relative_price_difference": 0.99997868675691,
+            "slug": "niulai-space"
+          }
+        ],
+        "catalogue_issue": "1 catalogue row(s) failed to parse, so candidates may have been dropped.",
+        "catalogue_trustworthy": false,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "\u725b\u6765USDT",
+          "observed_at": "2026-09-11T13:33:51.754000Z",
+          "price": 0.13816,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "\u725b\u6765",
+        "price_probe_status": "price_mismatch",
+        "rationale": "LLM adjudication failed: openai/gpt-4o-mini returned no usable JSON after 4 attempts: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-30T00:00:00Z",
+        "original_id": "\u725b\u6765usdt"
+      },
+      "method": "llm_unavailable",
+      "recorded_at": "2026-09-11T13:33:54.396590Z",
+      "slug": "",
+      "status": "uncertain",
+      "symbol": "\u725b\u6765"
+    }
+  ],
+  "schema_version": 1
+}
