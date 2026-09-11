@@ -227,9 +227,30 @@ calls Binance from `ubuntu-latest` fails. CoinMarketCap is not geo-blocked, whic
 makes the failure look puzzling — the catalogue fetch succeeds and the run dies at
 the first price call. It invokes:
 
+The dispatch form takes one **mode** and one **window**, so there is no pair of
+similar-looking inputs to choose between:
+
+| mode | what it does | network | writes | opens a PR |
+| --- | --- | --- | --- | --- |
+| `resolve` (default) | map new symbols, write confident matches | CMC + Binance + LLM | yes | yes |
+| `preview` | same work, reported only | CMC + Binance + LLM | no | no |
+| `coverage` | count rows still missing an ID | none | no | no |
+| `check-llm` | one request to the LLM endpoint, then stop | LLM only | no | no |
+
+`days` is that single window: in `resolve` and `preview` it bounds how recently a
+symbol was first listed; in `coverage` it bounds which rows are counted. It
+defaults to 60, which costs almost nothing to widen because an instrument instance
+already decided is skipped — so a wider window only re-examines genuinely
+undecided rows, and a few failed runs cannot open a gap.
+
+`max-llm-symbols` defaults to 100 so a backlog clears in one run; in steady state
+a handful of symbols a day never approaches it.
+
+Equivalent on the command line:
+
 ```bash
 python integrations/cmc_new_symbol_mapping.py \
-  --new-within-days 30 --max-llm-symbols 40 \
+  --new-within-days 60 --max-llm-symbols 100 \
   --report-path <report.md> --summary-path <summary.json>
 ```
 
@@ -435,8 +456,8 @@ the job until its secrets exist.
 
 ### Coverage audit
 
-To check whether coverage has gone stale, dispatch the workflow with
-**coverage-audit** ticked (and `coverage-days`, default 60). It runs:
+To check whether coverage has gone stale, dispatch with **mode** `coverage`. It
+runs:
 
 ```bash
 python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60

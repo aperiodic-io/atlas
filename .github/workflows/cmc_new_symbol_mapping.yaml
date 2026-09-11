@@ -6,32 +6,28 @@ on:
     - cron: "30 3 * * *"
   workflow_dispatch:
     inputs:
-      coverage-audit:
-        description: "Only report CMC ID coverage over the window (no PR, no LLM)"
+      mode:
+        description: "resolve = map new symbols and open a PR · preview = map and report but change nothing · coverage = only count what is missing an ID (offline, seconds) · check-llm = only test the LLM endpoint"
         required: false
-        type: boolean
-        default: false
-      coverage-days:
-        description: "Window for the coverage audit, to spot stale coverage"
+        type: choice
+        default: resolve
+        options:
+          - resolve
+          - preview
+          - coverage
+          - check-llm
+      days:
+        description: "How many days back to look (resolve/preview: symbols first listed in this window; coverage: rows counted)"
         required: false
         default: "60"
       exchanges:
-        description: "Comma-separated snapshots to scan"
+        description: "Which snapshots to scan, comma-separated"
         required: false
         default: "binance-futures"
-      new-within-days:
-        description: "Only resolve symbols first captured this recently"
-        required: false
-        default: "30"
       max-llm-symbols:
-        description: "Cap LLM adjudications for this run"
+        description: "Most symbols the LLM may be asked about in one run (a backlog needs a higher cap)"
         required: false
-        default: "40"
-      dry-run:
-        description: "Resolve and report without committing or opening a PR"
-        required: false
-        type: boolean
-        default: false
+        default: "100"
 
 permissions:
   contents: write
@@ -105,9 +101,23 @@ jobs:
           done < "${branches}"
           echo "PENDING_ARGS=${pending_args}" >> "$GITHUB_ENV"
           echo "Found ${index} open ${PR_LABEL} pull request(s) with a decision ledger"
+          # A scheduled run sends no inputs, so resolve the default once here
+          # rather than repeating a fallback in every later condition.
+          echo "mode=${{ inputs.mode || 'resolve' }}" >> "$GITHUB_OUTPUT"
+
+      - name: check-llm-endpoint
+        if: steps.prepare.outputs.mode == 'check-llm'
+        env:
+          ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
+          ATLAS_LLM_BASE_URL: ${{ vars.ATLAS_LLM_BASE_URL }}
+          ATLAS_LLM_MODEL: ${{ vars.ATLAS_LLM_MODEL }}
+          ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run python integrations/cmc_new_symbol_mapping.py --check-llm
 
       - name: resolve-new-binance-symbols
         id: resolve
+        if: steps.prepare.outputs.mode != 'check-llm'
         env:
           # Any OpenAI-compatible endpoint works; unset falls back to GitHub Models.
           ATLAS_LLM_API_KEY: ${{ secrets.ATLAS_LLM_API_KEY }}
@@ -117,28 +127,26 @@ jobs:
           ATLAS_LLM_API_VERSION: ${{ vars.ATLAS_LLM_API_VERSION }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
-          NEW_WITHIN_DAYS: ${{ inputs.new-within-days || '30' }}
-          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '40' }}
-          DRY_RUN: ${{ inputs.dry-run && 'true' || 'false' }}
-          COVERAGE_AUDIT: ${{ inputs.coverage-audit && 'true' || 'false' }}
-          COVERAGE_DAYS: ${{ inputs.coverage-days || '60' }}
+          DAYS: ${{ inputs.days || '60' }}
+          MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '100' }}
+          MODE: ${{ steps.prepare.outputs.mode }}
         run: |
           set -euo pipefail
-          extra_args=""
-          window="${NEW_WITHIN_DAYS}"
-          if [ "${COVERAGE_AUDIT}" = "true" ]; then
-            # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
-            extra_args="--coverage-only"
-            window="${COVERAGE_DAYS}"
-          else
-            extra_args="${PENDING_ARGS}"
-            if [ "${DRY_RUN}" = "true" ]; then
-              extra_args="${extra_args} --dry-run"
-            fi
-          fi
+          case "${MODE}" in
+            coverage)
+              # Offline staleness check: no CoinMarketCap, no Binance, no LLM, no PR.
+              extra_args="--coverage-only"
+              ;;
+            preview)
+              extra_args="${PENDING_ARGS} --dry-run"
+              ;;
+            *)
+              extra_args="${PENDING_ARGS}"
+              ;;
+          esac
           uv run python integrations/cmc_new_symbol_mapping.py \
             --exchanges "${EXCHANGES}" \
-            --new-within-days "${window}" \
+            --new-within-days "${DAYS}" \
             --max-llm-symbols "${MAX_LLM_SYMBOLS}" \
             --report-path "${REPORT_PATH}" \
             --summary-path "${SUMMARY_PATH}" \
@@ -170,7 +178,7 @@ jobs:
 
       - name: commit-and-push-decisions
         id: push
-        if: steps.resolve.outputs.has_changes == 'true' && !inputs.dry-run
+        if: steps.resolve.outputs.has_changes == 'true' && steps.prepare.outputs.mode == 'resolve'
         env:
           APPROVED: ${{ steps.resolve.outputs.approved }}
           UNCERTAIN: ${{ steps.resolve.outputs.uncertain }}

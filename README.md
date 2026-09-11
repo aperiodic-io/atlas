@@ -195,11 +195,14 @@ New `binance-futures` listings are resolved automatically by the
 `cmc-new-symbol-mapping` workflow, which runs daily after the snapshot update:
 
 ```bash
-# Resolve symbols first captured in the last 30 days
-python integrations/cmc_new_symbol_mapping.py --new-within-days 30 --dry-run
+# Resolve symbols first listed in the last 60 days
+python integrations/cmc_new_symbol_mapping.py --new-within-days 60
 
-# Offline staleness check: coverage over the last 60 days, no network, no writes
+# Offline staleness check: coverage only, no network, no writes
 python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60
+
+# Check the LLM endpoint is usable, in seconds
+python integrations/cmc_new_symbol_mapping.py --check-llm
 
 # Deterministic evidence only, no LLM adjudication
 python integrations/cmc_new_symbol_mapping.py --no-llm
@@ -207,6 +210,9 @@ python integrations/cmc_new_symbol_mapping.py --no-llm
 # Resolve only these tickers, ignoring age and any prior decision
 python integrations/cmc_new_symbol_mapping.py --symbols PEPE,CHEEMS
 ```
+
+The workflow exposes these as one `mode` input (`resolve`, `preview`,
+`coverage`, `check-llm`) and one `days` window.
 
 A ticker and an agreeing price never approve a mapping on their own. Approval
 needs identity evidence — an exact match between the Binance asset name and the
