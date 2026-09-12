@@ -47,8 +47,12 @@ class SecurityMaster:
             if exchanges is not None and exchange not in exchanges:
                 continue
             rows = json.loads(json_file.read_text())
+            if not isinstance(rows, list):
+                continue
             windows: list[tuple[str, datetime, datetime | None]] = []
             for sd in rows:
+                if not isinstance(sd, dict):
+                    continue
                 if isinstance(sd.get("id"), str):
                     metadata_map[(exchange, sd["id"])] = sd.copy()
                 start_dt = _parse_iso_timestamp(sd.get("first_capture"))

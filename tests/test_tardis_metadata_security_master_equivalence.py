@@ -27,6 +27,16 @@ def _row_first_capture(row: dict) -> str | None:
     return row.get("first_capture")
 
 
+def _exchange_snapshot_files() -> list[Path]:
+    """Return only data files whose top-level value is an exchange-row array."""
+    data_dir = Path(__file__).resolve().parents[1] / "atlas" / "data"
+    return [
+        path
+        for path in sorted(data_dir.glob("*.json"))
+        if isinstance(json.loads(path.read_text()), list)
+    ]
+
+
 def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
     available_since = datetime.fromisoformat(
         symbol["availableSince"].replace("Z", "+00:00")
@@ -44,11 +54,7 @@ def _is_active_in_window(symbol: dict, start: datetime, end: datetime) -> bool:
 
 @pytest.mark.parametrize(
     "exchange_file",
-    sorted(
-        (Path(__file__).resolve().parents[1] / "atlas" / "data").glob(
-            "*.json"
-        )
-    ),
+    _exchange_snapshot_files(),
     ids=lambda p: p.stem,
 )
 def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
