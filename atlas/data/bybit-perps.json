@@ -3186,11 +3186,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-10T00:00:00.000Z",
     "internal_id": "perpetual-BTDR-USDT:USDT",
     "symbol": "BTDR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
     "id": "BTRUSDT",
@@ -3563,11 +3563,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-10T00:00:00.000Z",
     "internal_id": "perpetual-CGNX-USDT:USDT",
     "symbol": "CGNX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
     "id": "CGPTUSDT",
@@ -5851,11 +5851,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-10T00:00:00.000Z",
     "internal_id": "perpetual-FORMSTOCK-USDT:USDT",
     "symbol": "FORMSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
     "id": "FORMUSDT",
@@ -6912,6 +6912,21 @@
     "quantity_unit": "base",
     "first_capture": "2023-02-13T00:00:00.000Z",
     "end_date": "2026-04-04T00:00:00.000Z"
+  },
+  {
+    "id": "HORIZONUSDT",
+    "type": "perpetual",
+    "base_coin": "HORIZON",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-11T00:00:00.000Z",
+    "internal_id": "perpetual-HORIZON-USDT:USDT",
+    "symbol": "HORIZON",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "HOTUSDT",
@@ -8960,6 +8975,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-11T00:00:00.000Z"
+  },
+  {
+    "id": "MEITUUSDT",
+    "type": "perpetual",
+    "base_coin": "MEITU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-11T00:00:00.000Z",
+    "internal_id": "perpetual-MEITU-USDT:USDT",
+    "symbol": "MEITU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MELANIAUSDT",
@@ -12451,6 +12481,21 @@
     "quantity_unit": "base",
     "first_capture": "2024-12-13T00:00:00.000Z",
     "end_date": "2025-10-21T00:00:00.000Z"
+  },
+  {
+    "id": "SENSETIMEUSDT",
+    "type": "perpetual",
+    "base_coin": "SENSETIME",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-11T00:00:00.000Z",
+    "internal_id": "perpetual-SENSETIME-USDT:USDT",
+    "symbol": "SENSETIME",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SENTUSDT",
