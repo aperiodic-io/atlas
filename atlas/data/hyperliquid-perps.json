@@ -2875,11 +2875,11 @@
   {
     "id": "io:IONQ",
     "type": "perpetual",
-    "first_capture": "2026-09-10T00:00:00.000Z",
     "internal_id": "perpetual-IO:IONQ-USDC:USDC",
     "symbol": "IO:IONQ",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
     "id": "io:NBIS",
@@ -3288,6 +3288,15 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-08-07T00:00:00.000Z"
+  },
+  {
+    "id": "para:CIFR",
+    "type": "perpetual",
+    "first_capture": "2026-09-11T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:CIFR-USDC:USDC",
+    "symbol": "PARA:CIFR",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "para:COHR",
