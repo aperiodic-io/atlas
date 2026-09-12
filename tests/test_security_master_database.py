@@ -178,3 +178,27 @@ def test_security_master_returns_instrument_metadata(tmp_path) -> None:
         .instrument_metadata("bybit-perps", "BTCUSD")["quantity_unit"]
         == "quote"
     )
+
+
+def test_security_master_ignores_non_exchange_json_files(tmp_path: Path) -> None:
+    _write_exchange(
+        tmp_path,
+        "binance-spot",
+        [
+            {
+                "id": "BTCUSDT",
+                "first_capture": "2024-01-01T00:00:00.000Z",
+            }
+        ],
+    )
+    (tmp_path / "cmc_mappings.json").write_text(
+        json.dumps({"schema_version": 1, "mappings": []})
+    )
+
+    symbols = SecurityMaster.load(data_dir=tmp_path).symbol_ids(
+        exchange="binance-spot",
+        first_capture=datetime(2024, 1, 1),
+        end_date=datetime(2024, 2, 1),
+    )
+
+    assert symbols == ["BTCUSDT"]

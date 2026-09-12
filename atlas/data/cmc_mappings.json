@@ -1,0 +1,354 @@
+{
+  "mappings": [
+    {
+      "cmc_id": 40857,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40857,
+            "identity_match": null,
+            "is_active": true,
+            "name": "ChangXin Memory Technologies (Derivatives)",
+            "price_usd": 8.38606332015831,
+            "relative_price_difference": 0.00035006315909986556,
+            "slug": "changxin-memory-technologies-derivaties"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "medium",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "CXMTUSDT",
+          "observed_at": "2026-09-11T15:20:16.839000Z",
+          "price": 8.389,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "CXMT",
+        "price_probe_status": "price_compatible",
+        "rationale": "Ticker CXMT matches and price is compatible, but the candidate is a derivative and its name does not directly match the plain asset, so confidence is medium. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-18T00:00:00Z",
+        "original_id": "cxmtusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "changxin-memory-technologies-derivaties",
+      "status": "uncertain",
+      "symbol": "CXMT"
+    },
+    {
+      "cmc_id": 3809,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 3809,
+            "identity_match": null,
+            "is_active": true,
+            "name": "DOS Network",
+            "price_usd": 0.2014531435803769,
+            "relative_price_difference": 0.0017188127830679906,
+            "slug": "dos-network"
+          },
+          {
+            "cmc_id": 40980,
+            "identity_match": null,
+            "is_active": true,
+            "name": "DAPPOS",
+            "price_usd": 0.2015368352664009,
+            "relative_price_difference": 0.0013040868860213493,
+            "slug": "dappos"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "DOSUSDT",
+          "observed_at": "2026-09-11T15:19:50.910000Z",
+          "price": 0.2018,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "DOS",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "The exchange ticker DOS matches the symbol and the project name \"DOS Network\" of candidate 3809, providing strong identity evidence. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-11T00:00:00Z",
+        "original_id": "dosusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "dos-network",
+      "status": "uncertain",
+      "symbol": "DOS"
+    },
+    {
+      "cmc_id": 40814,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40814,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Grvt",
+            "price_usd": 0.17391890287501924,
+            "relative_price_difference": 0.0010401902641054962,
+            "slug": "grvt"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "GRVTUSDT",
+          "observed_at": "2026-09-11T15:20:16.314000Z",
+          "price": 0.1741,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "GRVT",
+        "price_probe_status": "price_compatible",
+        "rationale": "The candidate asset 'Grvt' with symbol 'GRVT' matches the exchange asset 'GRVT' in name, symbol, and price, establishing a clear identity match. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-07-31T00:00:00Z",
+        "original_id": "grvtusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "grvt",
+      "status": "uncertain",
+      "symbol": "GRVT"
+    },
+    {
+      "cmc_id": 40944,
+      "evidence": {
+        "binance_asset_name": "MarsCoin",
+        "candidates": [
+          {
+            "cmc_id": 40944,
+            "identity_match": "binance_asset_name",
+            "is_active": true,
+            "name": "MarsCoin",
+            "price_usd": 0.12822001806017566,
+            "relative_price_difference": 0.004502965371306962,
+            "slug": "marscoin-meme-bsc"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "MARSCOINUSDT",
+          "observed_at": "2026-09-11T15:20:27.099000Z",
+          "price": 0.1288,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "MARSCOIN",
+        "price_probe_status": "price_compatible",
+        "rationale": "Binance asset name matches MarsCoin (binance_asset_name) and the price does not contradict it."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-01T00:00:00Z",
+        "original_id": "marscoinusdt"
+      },
+      "method": "identity_binance_asset_name",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "marscoin-meme-bsc",
+      "status": "approved",
+      "symbol": "MARSCOIN"
+    },
+    {
+      "cmc_id": 40938,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40938,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Pons",
+            "price_usd": 0.6474581148848667,
+            "relative_price_difference": 0.004216987257971841,
+            "slug": "pons"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "PONSUSDT",
+          "observed_at": "2026-09-11T15:20:26.413000Z",
+          "price": 0.6502,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "PONS",
+        "price_probe_status": "price_compatible",
+        "rationale": "The exchange base asset PONS exactly matches the active CMC project Pons, and the compatible price supports the identity match. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-06T00:00:00Z",
+        "original_id": "ponsusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "pons",
+      "status": "uncertain",
+      "symbol": "PONS"
+    },
+    {
+      "cmc_id": 40974,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 40974,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Yushu Technology Co (Derivatives)",
+            "price_usd": 70.3821077903605,
+            "relative_price_difference": 0.000538088748075954,
+            "slug": "yushu-technology-co-derivatives"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "UNITREEUSDT",
+          "observed_at": "2026-09-11T15:20:26.682000Z",
+          "price": 70.42,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "UNITREE",
+        "price_probe_status": "price_compatible",
+        "rationale": "The Binance perpetual asset and CMC candidate both identify UNITREE as the Yushu Technology Co derivatives asset, with matching ticker and derivative context. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-19T00:00:00Z",
+        "original_id": "unitreeusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "yushu-technology-co-derivatives",
+      "status": "uncertain",
+      "symbol": "UNITREE"
+    },
+    {
+      "cmc_id": 38679,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 38679,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u54c8\u57fa\u7c73",
+            "price_usd": 0.03918061327633717,
+            "relative_price_difference": 0.009840452960900418,
+            "slug": "hajimi"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "\u54c8\u57fa\u7c73USDT",
+          "observed_at": "2026-09-11T15:20:26.409000Z",
+          "price": 0.03957,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "\u54c8\u57fa\u7c73",
+        "price_probe_status": "price_compatible",
+        "rationale": "The exchange asset name matches the candidate's name and symbol exactly, indicating the same underlying asset. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-06T00:00:00Z",
+        "original_id": "\u54c8\u57fa\u7c73usdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "hajimi",
+      "status": "uncertain",
+      "symbol": "\u54c8\u57fa\u7c73"
+    },
+    {
+      "cmc_id": 41858,
+      "evidence": {
+        "binance_asset_name": "\u725b\u6765",
+        "candidates": [
+          {
+            "cmc_id": 41858,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (niulai.site)",
+            "price_usd": 1.3733306150061706e-05,
+            "relative_price_difference": 0.9999050780608926,
+            "slug": "niulai-site"
+          },
+          {
+            "cmc_id": 41861,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (Niu Lai)",
+            "price_usd": 0.14407660133196956,
+            "relative_price_difference": 0.004170574150058346,
+            "slug": "niu-lai"
+          },
+          {
+            "cmc_id": 41867,
+            "identity_match": null,
+            "is_active": true,
+            "name": "\u725b\u6765 (niulai.space)",
+            "price_usd": 2.944637665313642e-06,
+            "relative_price_difference": 0.9999796472375911,
+            "slug": "niulai-space"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8183 rows (1 unparseable, 1 duplicated, total moved by 1 mid-fetch): 0.0244%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "\u725b\u6765USDT",
+          "observed_at": "2026-09-11T15:20:21.161000Z",
+          "price": 0.14468,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "\u725b\u6765",
+        "price_probe_status": "price_compatible",
+        "rationale": "The exchange's base asset '\u725b\u7f8a' (beef) maps directly to CMC candidate 41858 ('\u725b\u7f8a (niulai.site)'), which shares the exact same symbol and is the first candidate with a direct name match to the exchange asset. Price evidence disagrees by 99.99%. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-08-30T00:00:00Z",
+        "original_id": "\u725b\u6765usdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-11T15:20:30.967802Z",
+      "slug": "niulai-site",
+      "status": "uncertain",
+      "symbol": "\u725b\u6765"
+    }
+  ],
+  "schema_version": 1
+}
