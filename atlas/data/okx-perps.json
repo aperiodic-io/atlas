@@ -2358,6 +2358,16 @@
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
+    "id": "FLOCK-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-12T00:00:00.000Z",
+    "internal_id": "perpetual-FLOCK-USDT:USDT",
+    "symbol": "FLOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FLOKI-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-FLOKI-USDT:USDT",
