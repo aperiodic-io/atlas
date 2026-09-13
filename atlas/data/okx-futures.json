@@ -54225,12 +54225,12 @@
     "id": "ORCL-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-11T00:00:00.000Z",
     "internal_id": "future-ORCL-USD:USD-20310912",
     "symbol": "ORCL",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
     "id": "ORDI-USD_UM_XPERP-310815",
@@ -54445,12 +54445,12 @@
     "id": "SAHARA-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-11T00:00:00.000Z",
     "internal_id": "future-SAHARA-USD:USD-20310912",
     "symbol": "SAHARA",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
     "id": "SAMSUNG-USD_UM_XPERP-310704",
@@ -65788,12 +65788,12 @@
     "id": "ZEN-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 0.1,
-    "first_capture": "2026-09-11T00:00:00.000Z",
     "internal_id": "future-ZEN-USD:USD-20310912",
     "symbol": "ZEN",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-12T00:00:00"
+    "delivery_date": "2031-09-12T00:00:00",
+    "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
     "id": "ZIL-USD_UM_XPERP-310801",
