@@ -1779,6 +1779,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "SYN/USDC",
+    "type": "spot",
+    "internal_id": "spot-SYN-USDC",
+    "symbol": "SYN",
+    "denominator": "USDC"
+  },
+  {
     "id": "TAO1/USDC",
     "type": "spot",
     "internal_id": "spot-TAO1-USDC",
