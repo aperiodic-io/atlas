@@ -45455,6 +45455,17 @@
     "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
+    "id": "KORU-USD_UM_XPERP-310919",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "future-KORU-USD:USD-20310919",
+    "symbol": "KORU",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-19T00:00:00"
+  },
+  {
     "id": "LDO-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
@@ -54242,6 +54253,17 @@
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
     "first_capture": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "PENDLE-USD_UM_XPERP-310919",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "future-PENDLE-USD:USD-20310919",
+    "symbol": "PENDLE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-19T00:00:00"
   },
   {
     "id": "PENGU-USD_UM_XPERP-310711",

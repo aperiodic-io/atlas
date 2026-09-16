@@ -278,6 +278,15 @@
     "first_capture": "2025-01-03T00:00:00.000Z"
   },
   {
+    "id": "AKE-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 100.0,
+    "internal_id": "perpetual-AKE-USDT:USDT",
+    "symbol": "AKE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ALAB-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ALAB-USDT:USDT",
@@ -2751,6 +2760,15 @@
     "first_capture": "2025-07-03T00:00:00.000Z"
   },
   {
+    "id": "HANMI-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-HANMI-USDT:USDT",
+    "symbol": "HANMI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HBAR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-HBAR-USDT:USDT",
@@ -3393,6 +3411,15 @@
     "end_date": "2020-10-11T00:00:00.000Z"
   },
   {
+    "id": "LGELECTRONICS-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-LGELECTRONICS-USDT:USDT",
+    "symbol": "LGELECTRONICS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LIGHT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-LIGHT-USDT:USDT",
@@ -4015,6 +4042,15 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "id": "NAVER-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "internal_id": "perpetual-NAVER-USDT:USDT",
+    "symbol": "NAVER",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "NBIS-USDT-SWAP",
