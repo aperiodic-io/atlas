@@ -12097,6 +12097,22 @@
     "end_date": "2025-09-30T00:00:00.000Z"
   },
   {
+    "id": "PONS-TRY",
+    "type": "spot",
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "spot-PONS-TRY",
+    "symbol": "PONS",
+    "denominator": "TRY"
+  },
+  {
+    "id": "PONS-USDT",
+    "type": "spot",
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "spot-PONS-USDT",
+    "symbol": "PONS",
+    "denominator": "USDT"
+  },
+  {
     "id": "POR-EUR",
     "type": "spot",
     "internal_id": "spot-POR-EUR",
@@ -16160,6 +16176,22 @@
     "denominator": "USDT",
     "first_capture": "2019-12-13T00:00:00.000Z",
     "end_date": "2024-04-13T00:00:00.000Z"
+  },
+  {
+    "id": "VVV-TRY",
+    "type": "spot",
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "spot-VVV-TRY",
+    "symbol": "VVV",
+    "denominator": "TRY"
+  },
+  {
+    "id": "VVV-USDT",
+    "type": "spot",
+    "first_capture": "2026-09-15T00:00:00.000Z",
+    "internal_id": "spot-VVV-USDT",
+    "symbol": "VVV",
+    "denominator": "USDT"
   },
   {
     "id": "W-EUR",
