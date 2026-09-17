@@ -6420,6 +6420,11 @@
     "end_date": "2023-11-21T00:00:00.000Z"
   },
   {
+    "id": "bnbthb",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z"
+  },
+  {
     "id": "bnbtry",
     "type": "spot",
     "internal_id": "spot-BNB-TRY",
@@ -12848,6 +12853,11 @@
     "end_date": "2023-11-21T00:00:00.000Z"
   },
   {
+    "id": "eththb",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z"
+  },
+  {
     "id": "ethtry",
     "type": "spot",
     "internal_id": "spot-ETH-TRY",
@@ -15328,6 +15338,14 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "gprobusdt",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "spot-GPROB-USDT",
+    "symbol": "GPROB",
+    "denominator": "USDT"
   },
   {
     "id": "gpsbnb",
@@ -27500,6 +27518,14 @@
     "end_date": "2021-07-20T00:00:00.000Z"
   },
   {
+    "id": "rddtbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "spot-RDDTB-USDT",
+    "symbol": "RDDTB",
+    "denominator": "USDT"
+  },
+  {
     "id": "rdnbtc",
     "type": "spot",
     "internal_id": "spot-RDN-BTC",
@@ -30554,6 +30580,11 @@
     "denominator": "RUB",
     "first_capture": "2021-07-04T00:00:00.000Z",
     "end_date": "2023-11-21T00:00:00.000Z"
+  },
+  {
+    "id": "solthb",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "soltry",
@@ -37505,6 +37536,11 @@
     "category": [],
     "first_capture": "2020-11-23T00:00:00.000Z",
     "end_date": "2023-11-21T00:00:00.000Z"
+  },
+  {
+    "id": "xrpthb",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "xrptry",

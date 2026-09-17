@@ -3876,6 +3876,21 @@
     "first_capture": "2021-08-31T00:00:00.000Z"
   },
   {
+    "id": "CONLUSDT",
+    "type": "perpetual",
+    "base_coin": "CONL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "perpetual-CONL-USDT:USDT",
+    "symbol": "CONL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "COOKIEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-COOKIE-USDT:USDT",
@@ -7101,6 +7116,21 @@
     "first_capture": "2026-06-04T00:00:00.000Z"
   },
   {
+    "id": "IBITUSDT",
+    "type": "perpetual",
+    "base_coin": "IBIT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "perpetual-IBIT-USDT:USDT",
+    "symbol": "IBIT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "IBMUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-IBM-USDT:USDT",
@@ -9553,6 +9583,21 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-04-27T00:00:00.000Z"
+  },
+  {
+    "id": "MSFUUSDT",
+    "type": "perpetual",
+    "base_coin": "MSFU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "perpetual-MSFU-USDT:USDT",
+    "symbol": "MSFU",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "MSTRUSDT",

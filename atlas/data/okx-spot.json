@@ -12099,18 +12099,18 @@
   {
     "id": "PONS-TRY",
     "type": "spot",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "spot-PONS-TRY",
     "symbol": "PONS",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "PONS-USDT",
     "type": "spot",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "spot-PONS-USDT",
     "symbol": "PONS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "POR-EUR",
@@ -16180,18 +16180,18 @@
   {
     "id": "VVV-TRY",
     "type": "spot",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "spot-VVV-TRY",
     "symbol": "VVV",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "VVV-USDT",
     "type": "spot",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "spot-VVV-USDT",
     "symbol": "VVV",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "W-EUR",
@@ -17189,6 +17189,14 @@
     "first_capture": "2026-07-28T00:00:00.000Z"
   },
   {
+    "id": "XGOOGL-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "spot-XGOOGL-USDC",
+    "symbol": "XGOOGL",
+    "denominator": "USDC"
+  },
+  {
     "id": "XGOOGL-USDT",
     "type": "spot",
     "internal_id": "spot-XGOOGL-USDT",
@@ -17203,6 +17211,14 @@
     "symbol": "XHIMS",
     "denominator": "USDT",
     "first_capture": "2026-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "XHOOD-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "spot-XHOOD-USDC",
+    "symbol": "XHOOD",
+    "denominator": "USDC"
   },
   {
     "id": "XHOOD-USDT",
