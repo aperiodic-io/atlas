@@ -3443,6 +3443,15 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "para:TREAD",
+    "type": "perpetual",
+    "first_capture": "2026-09-16T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:TREAD-USDC:USDC",
+    "symbol": "PARA:TREAD",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:TTWO",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:TTWO-USDC:USDC",
@@ -4061,11 +4070,11 @@
   {
     "id": "xyz:KSTR",
     "type": "perpetual",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:KSTR-USDC:USDC",
     "symbol": "XYZ:KSTR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "xyz:LITE",
@@ -4403,11 +4412,11 @@
   {
     "id": "xyz:SNXX",
     "type": "perpetual",
-    "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:SNXX-USDC:USDC",
     "symbol": "XYZ:SNXX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
     "id": "xyz:SOFTBANK",
