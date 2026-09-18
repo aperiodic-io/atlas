@@ -3884,11 +3884,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "perpetual-CONL-USDT:USDT",
     "symbol": "CONL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "COOKIEUSDT",
@@ -7124,11 +7124,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "perpetual-IBIT-USDT:USDT",
     "symbol": "IBIT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "IBMUSDT",
@@ -9593,11 +9593,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "perpetual-MSFU-USDT:USDT",
     "symbol": "MSFU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "MSTRUSDT",
