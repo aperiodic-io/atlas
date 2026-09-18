@@ -15342,10 +15342,10 @@
   {
     "id": "gprobusdt",
     "type": "spot",
-    "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "spot-GPROB-USDT",
     "symbol": "GPROB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "gpsbnb",
@@ -27520,10 +27520,10 @@
   {
     "id": "rddtbusdt",
     "type": "spot",
-    "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "spot-RDDTB-USDT",
     "symbol": "RDDTB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
     "id": "rdnbtc",
