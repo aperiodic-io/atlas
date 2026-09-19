@@ -2866,9 +2866,18 @@
   {
     "id": "io:DRAM",
     "type": "perpetual",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "perpetual-IO:DRAM-USDC:USDC",
     "symbol": "IO:DRAM",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "first_capture": "2026-09-17T00:00:00.000Z"
+  },
+  {
+    "id": "io:EWY",
+    "type": "perpetual",
+    "first_capture": "2026-09-18T00:00:00.000Z",
+    "internal_id": "perpetual-IO:EWY-USDC:USDC",
+    "symbol": "IO:EWY",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -3836,11 +3845,11 @@
   {
     "id": "xyz:CVX",
     "type": "perpetual",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:CVX-USDC:USDC",
     "symbol": "XYZ:CVX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "xyz:CXMT",
@@ -4484,11 +4493,11 @@
   {
     "id": "xyz:TLT",
     "type": "perpetual",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:TLT-USDC:USDC",
     "symbol": "XYZ:TLT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "xyz:TSLA",

@@ -3721,10 +3721,10 @@
   {
     "id": "CP-EUR",
     "type": "spot",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "spot-CP-EUR",
     "symbol": "CP",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "CP-TRY",
@@ -3737,10 +3737,10 @@
   {
     "id": "CP-USDC",
     "type": "spot",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "spot-CP-USDC",
     "symbol": "CP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "CP-USDT",
@@ -16782,6 +16782,14 @@
     "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
+    "id": "XAAPL-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-18T00:00:00.000Z",
+    "internal_id": "spot-XAAPL-USDC",
+    "symbol": "XAAPL",
+    "denominator": "USDC"
+  },
+  {
     "id": "XAAPL-USDT",
     "type": "spot",
     "internal_id": "spot-XAAPL-USDT",
@@ -16828,6 +16836,14 @@
     "symbol": "XAMD",
     "denominator": "USDT",
     "first_capture": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "XAMZN-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-18T00:00:00.000Z",
+    "internal_id": "spot-XAMZN-USDC",
+    "symbol": "XAMZN",
+    "denominator": "USDC"
   },
   {
     "id": "XAMZN-USDT",
@@ -17433,10 +17449,10 @@
   {
     "id": "XMETA-USDC",
     "type": "spot",
-    "first_capture": "2026-09-17T00:00:00.000Z",
     "internal_id": "spot-XMETA-USDC",
     "symbol": "XMETA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "XMETA-USDT",
