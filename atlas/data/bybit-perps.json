@@ -1370,11 +1370,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-AMZU-USDT:USDT",
     "symbol": "AMZU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "ANCUSDT",
@@ -3955,11 +3955,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-CORZ-USDT:USDT",
     "symbol": "CORZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "COSTUSDT",
@@ -6626,11 +6626,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-GTLB-USDT:USDT",
     "symbol": "GTLB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "GUNUSDT",
@@ -7263,7 +7263,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2022-04-13T00:00:00.000Z"
+    "first_capture": "2022-04-13T00:00:00.000Z",
+    "end_date": "2026-09-19T00:00:00.000Z"
   },
   {
     "id": "IDEXUSDT",
@@ -12555,11 +12556,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-SECZ-USDT:USDT",
     "symbol": "SECZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "SEIPERP",
@@ -13654,11 +13655,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-STONK-USDT:USDT",
     "symbol": "STONK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "STORJUSDT",
@@ -14251,11 +14252,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-TLT-USDT:USDT",
     "symbol": "TLT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
     "id": "TMFUSDT",
@@ -16648,10 +16649,10 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-ZS-USDT:USDT",
     "symbol": "ZS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-18T00:00:00.000Z"
   }
 ]
