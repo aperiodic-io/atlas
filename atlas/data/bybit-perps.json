@@ -4399,6 +4399,21 @@
     "first_capture": "2023-08-16T00:00:00.000Z"
   },
   {
+    "id": "CYPHUSDT",
+    "type": "perpetual",
+    "base_coin": "CYPH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-CYPH-USDT:USDT",
+    "symbol": "CYPH",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CYSUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-CYS-USDT:USDT",
@@ -7084,6 +7099,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-06-25T00:00:00.000Z"
+  },
+  {
+    "id": "HUTUSDT",
+    "type": "perpetual",
+    "base_coin": "HUT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-HUT-USDT:USDT",
+    "symbol": "HUT",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "HYPEPERP",
@@ -10825,6 +10855,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-03-25T00:00:00.000Z"
+  },
+  {
+    "id": "PATHUSDT",
+    "type": "perpetual",
+    "base_coin": "PATH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-PATH-USDT:USDT",
+    "symbol": "PATH",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "PAXGPERP",

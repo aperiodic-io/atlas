@@ -2841,6 +2841,16 @@
     "first_capture": "2025-05-26T00:00:00.000Z"
   },
   {
+    "id": "HUT-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-HUT-USDT:USDT",
+    "symbol": "HUT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HYPE-USD-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
@@ -4333,6 +4343,16 @@
     "margin": "USDT",
     "contract_size": 0.01,
     "first_capture": "2025-09-04T00:00:00.000Z"
+  },
+  {
+    "id": "OKLO-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-OKLO-USDT:USDT",
+    "symbol": "OKLO",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "OKTA-USDT-SWAP",
@@ -5987,6 +6007,26 @@
     "margin": "USDT",
     "contract_size": 0.01,
     "first_capture": "2024-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "TEAM-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-TEAM-USDT:USDT",
+    "symbol": "TEAM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TEM-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "internal_id": "perpetual-TEM-USDT:USDT",
+    "symbol": "TEM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "TER-USDT-SWAP",
