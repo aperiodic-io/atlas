@@ -2291,12 +2291,12 @@
     "id": "AGLD-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "future-AGLD-USD:USD-20310926",
     "symbol": "AGLD",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-26T00:00:00"
+    "delivery_date": "2031-09-26T00:00:00",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "AI-USD_UM_XPERP-310704",
@@ -2330,6 +2330,17 @@
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
     "first_capture": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "id": "AMAT-USD_UM_XPERP-310926",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "future-AMAT-USD:USD-20310926",
+    "symbol": "AMAT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-26T00:00:00"
   },
   {
     "id": "AMD-USD_UM_XPERP-310711",
@@ -19832,12 +19843,12 @@
     "id": "CFX-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "future-CFX-USD:USD-20310926",
     "symbol": "CFX",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-26T00:00:00"
+    "delivery_date": "2031-09-26T00:00:00",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "CHIP-USD_UM_XPERP-310822",
@@ -19904,6 +19915,17 @@
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "id": "CRDO-USD_UM_XPERP-310926",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "future-CRDO-USD:USD-20310926",
+    "symbol": "CRDO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-26T00:00:00"
   },
   {
     "id": "CRV-USD_UM_XPERP-310815",
@@ -45282,12 +45304,12 @@
     "id": "GLW-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "future-GLW-USD:USD-20310926",
     "symbol": "GLW",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-26T00:00:00"
+    "delivery_date": "2031-09-26T00:00:00",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "GOOGL-USD_UM_XPERP-310613",
@@ -45519,6 +45541,17 @@
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
     "first_capture": "2026-09-03T00:00:00.000Z"
+  },
+  {
+    "id": "KMNO-USD_UM_XPERP-310926",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "future-KMNO-USD:USD-20310926",
+    "symbol": "KMNO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-26T00:00:00"
   },
   {
     "id": "KO-USD_UM_XPERP-310912",
@@ -54178,6 +54211,17 @@
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
+    "id": "MUU-USD_UM_XPERP-310926",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "future-MUU-USD:USD-20310926",
+    "symbol": "MUU",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-26T00:00:00"
+  },
+  {
     "id": "NBIS-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
@@ -54621,12 +54665,12 @@
     "id": "SEI-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "future-SEI-USD:USD-20310926",
     "symbol": "SEI",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-26T00:00:00"
+    "delivery_date": "2031-09-26T00:00:00",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "SHIB-USD_UM_XPERP-310801",
@@ -59731,12 +59775,12 @@
     "id": "TSM-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "future-TSM-USD:USD-20310926",
     "symbol": "TSM",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-09-26T00:00:00"
+    "delivery_date": "2031-09-26T00:00:00",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "UB-USD_UM_XPERP-310627",
@@ -65992,6 +66036,17 @@
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
     "first_capture": "2026-09-11T00:00:00.000Z"
+  },
+  {
+    "id": "ZHIPU-USD_UM_XPERP-310926",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "future-ZHIPU-USD:USD-20310926",
+    "symbol": "ZHIPU",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-09-26T00:00:00"
   },
   {
     "id": "ZIL-USD_UM_XPERP-310801",

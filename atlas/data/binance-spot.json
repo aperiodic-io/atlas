@@ -3011,6 +3011,14 @@
     "end_date": "2026-04-03T00:00:00.000Z"
   },
   {
+    "id": "arbu",
+    "type": "spot",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "spot-ARB-U",
+    "symbol": "ARB",
+    "denominator": "U"
+  },
+  {
     "id": "arbusd",
     "type": "spot",
     "internal_id": "spot-AR-BUSD",
@@ -11774,6 +11782,14 @@
       "DeFi"
     ],
     "first_capture": "2026-03-31T00:00:00.000Z"
+  },
+  {
+    "id": "enausd1",
+    "type": "spot",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "spot-ENA-USD1",
+    "symbol": "ENA",
+    "denominator": "USD1"
   },
   {
     "id": "enausdc",

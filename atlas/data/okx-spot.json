@@ -1579,7 +1579,8 @@
     "internal_id": "spot-AUDF-USD",
     "symbol": "AUDF",
     "denominator": "USD",
-    "first_capture": "2026-04-22T00:00:00.000Z"
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "end_date": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "AUDF-USDT",
@@ -1603,7 +1604,8 @@
     "internal_id": "spot-AUDM-USD",
     "symbol": "AUDM",
     "denominator": "USD",
-    "first_capture": "2026-04-22T00:00:00.000Z"
+    "first_capture": "2026-04-22T00:00:00.000Z",
+    "end_date": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "AUDM-USDT",
@@ -3013,6 +3015,14 @@
     "end_date": "2024-01-13T00:00:00.000Z"
   },
   {
+    "id": "CARDS-EUR",
+    "type": "spot",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "spot-CARDS-EUR",
+    "symbol": "CARDS",
+    "denominator": "EUR"
+  },
+  {
     "id": "CARDS-TRY",
     "type": "spot",
     "internal_id": "spot-CARDS-TRY",
@@ -3027,6 +3037,14 @@
     "symbol": "CARDS",
     "denominator": "USD",
     "first_capture": "2026-06-25T00:00:00.000Z"
+  },
+  {
+    "id": "CARDS-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "spot-CARDS-USDC",
+    "symbol": "CARDS",
+    "denominator": "USDC"
   },
   {
     "id": "CARDS-USDT",
