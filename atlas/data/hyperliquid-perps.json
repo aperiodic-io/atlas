@@ -3220,11 +3220,12 @@
   {
     "id": "mkts:BVIV",
     "type": "perpetual",
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "perpetual-MKTS:BVIV-USDC:USDC",
     "symbol": "MKTS:BVIV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-21T00:00:00.000Z",
+    "end_date": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "mkts:SMALL2000",

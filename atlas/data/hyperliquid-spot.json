@@ -1183,6 +1183,13 @@
     "denominator": "USDC"
   },
   {
+    "id": "NAV/USDC",
+    "type": "spot",
+    "internal_id": "spot-NAV-USDC",
+    "symbol": "NAV",
+    "denominator": "USDC"
+  },
+  {
     "id": "NBT/USDC",
     "type": "spot",
     "internal_id": "spot-NBT-USDC",

@@ -9695,6 +9695,17 @@
     "first_capture": "2024-10-25T00:00:00.000Z"
   },
   {
+    "id": "moonshotusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
+    "internal_id": "perpetual-MOONSHOT-USDT:USDT",
+    "symbol": "MOONSHOT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "morphousdt",
     "type": "perpetual",
     "contract_size": 1.0,

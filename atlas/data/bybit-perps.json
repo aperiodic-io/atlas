@@ -4407,11 +4407,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "perpetual-CYPH-USDT:USDT",
     "symbol": "CYPH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "CYSUSDT",
@@ -7109,11 +7109,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "perpetual-HUT-USDT:USDT",
     "symbol": "HUT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "HYPEPERP",
@@ -10418,6 +10418,21 @@
     "first_capture": "2025-09-11T00:00:00.000Z"
   },
   {
+    "id": "OKLOUSDT",
+    "type": "perpetual",
+    "base_coin": "OKLO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "perpetual-OKLO-USDT:USDT",
+    "symbol": "OKLO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "OKTAUSDT",
     "type": "perpetual",
     "base_coin": "OKTA",
@@ -10786,6 +10801,16 @@
     "end_date": "2025-10-23T00:00:00.000Z"
   },
   {
+    "id": "OURAUSDT",
+    "type": "perpetual",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "perpetual-OURA-USDT:USDT",
+    "symbol": "OURA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quantity_unit": "base"
+  },
+  {
     "id": "OUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-O-USDT:USDT",
@@ -10865,11 +10890,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-21T00:00:00.000Z",
     "internal_id": "perpetual-PATH-USDT:USDT",
     "symbol": "PATH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "PAXGPERP",
@@ -12580,6 +12605,21 @@
     "quantity_unit": "base",
     "first_capture": "2021-12-01T00:00:00.000Z",
     "end_date": "2026-06-13T00:00:00.000Z"
+  },
+  {
+    "id": "SDGRUSDT",
+    "type": "perpetual",
+    "base_coin": "SDGR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "perpetual-SDGR-USDT:USDT",
+    "symbol": "SDGR",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SDUSDT",
@@ -14942,6 +14982,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-03-18T00:00:00.000Z"
+  },
+  {
+    "id": "URNMUSDT",
+    "type": "perpetual",
+    "base_coin": "URNM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "internal_id": "perpetual-URNM-USDT:USDT",
+    "symbol": "URNM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "UROUSDT",
