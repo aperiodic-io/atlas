@@ -10426,11 +10426,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "perpetual-OKLO-USDT:USDT",
     "symbol": "OKLO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "OKTAUSDT",
@@ -10803,12 +10803,12 @@
   {
     "id": "OURAUSDT",
     "type": "perpetual",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "perpetual-OURA-USDT:USDT",
     "symbol": "OURA",
     "denominator": "USDT",
     "margin": "USDT",
-    "quantity_unit": "base"
+    "quantity_unit": "base",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "OUSDT",
@@ -11321,6 +11321,16 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2024-09-05T00:00:00.000Z"
+  },
+  {
+    "id": "POLYMARKETUSDT",
+    "type": "perpetual",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-POLYMARKET-USDT:USDT",
+    "symbol": "POLYMARKET",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quantity_unit": "base"
   },
   {
     "id": "POLYXUSDT",
@@ -12615,11 +12625,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "perpetual-SDGR-USDT:USDT",
     "symbol": "SDGR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "SDUSDT",
@@ -14992,11 +15002,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "perpetual-URNM-USDT:USDT",
     "symbol": "URNM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "UROUSDT",

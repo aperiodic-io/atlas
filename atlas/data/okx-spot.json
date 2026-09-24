@@ -3017,10 +3017,10 @@
   {
     "id": "CARDS-EUR",
     "type": "spot",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "spot-CARDS-EUR",
     "symbol": "CARDS",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "CARDS-TRY",
@@ -3041,10 +3041,10 @@
   {
     "id": "CARDS-USDC",
     "type": "spot",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "spot-CARDS-USDC",
     "symbol": "CARDS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "CARDS-USDT",
@@ -3317,8 +3317,7 @@
     "internal_id": "spot-CETUS-USDC",
     "symbol": "CETUS",
     "denominator": "USDC",
-    "first_capture": "2024-04-11T00:00:00.000Z",
-    "end_date": "2025-03-19T00:00:00.000Z"
+    "first_capture": "2024-04-11T00:00:00.000Z"
   },
   {
     "id": "CETUS-USDT",
@@ -8516,8 +8515,7 @@
     "internal_id": "spot-LAT-USDC",
     "symbol": "LAT",
     "denominator": "USDC",
-    "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-20T00:00:00.000Z"
+    "first_capture": "2024-09-27T00:00:00.000Z"
   },
   {
     "id": "LAT-USDT",
@@ -8861,6 +8859,14 @@
     "symbol": "LIT",
     "denominator": "USD",
     "first_capture": "2026-01-15T00:00:00.000Z"
+  },
+  {
+    "id": "LIT-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "spot-LIT-USDC",
+    "symbol": "LIT",
+    "denominator": "USDC"
   },
   {
     "id": "LIT-USDT",

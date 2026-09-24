@@ -10811,6 +10811,17 @@
     "first_capture": "2023-11-07T00:00:00.000Z"
   },
   {
+    "id": "ourausdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
+    "internal_id": "perpetual-OURA-USDT:USDT",
+    "symbol": "OURA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ousdt",
     "type": "perpetual",
     "contract_size": 1.0,
