@@ -4294,6 +4294,15 @@
     "first_capture": "2025-12-05T00:00:00.000Z"
   },
   {
+    "id": "xyz:OURA",
+    "type": "perpetual",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-XYZ:OURA-USDC:USDC",
+    "symbol": "XYZ:OURA",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:PALLADIUM",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:PALLADIUM-USDC:USDC",

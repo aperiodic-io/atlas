@@ -1502,6 +1502,14 @@
     "first_capture": "2021-10-05T00:00:00.000Z"
   },
   {
+    "id": "agpubusdt",
+    "type": "spot",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "spot-AGPUB-USDT",
+    "symbol": "AGPUB",
+    "denominator": "USDT"
+  },
+  {
     "id": "aibnb",
     "type": "spot",
     "internal_id": "spot-AI-BNB",
@@ -2241,6 +2249,14 @@
     "denominator": "USDT",
     "first_capture": "2023-03-03T00:00:00.000Z",
     "end_date": "2025-02-25T00:00:00.000Z"
+  },
+  {
+    "id": "amcbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "spot-AMCB-USDT",
+    "symbol": "AMCB",
+    "denominator": "USDT"
   },
   {
     "id": "amdbusdt",
@@ -3013,10 +3029,10 @@
   {
     "id": "arbu",
     "type": "spot",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "spot-ARB-U",
     "symbol": "ARB",
-    "denominator": "U"
+    "denominator": "U",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "arbusd",
@@ -9885,6 +9901,14 @@
     "first_capture": "2023-08-15T00:00:00.000Z"
   },
   {
+    "id": "cyphbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "spot-CYPHB-USDT",
+    "symbol": "CYPHB",
+    "denominator": "USDT"
+  },
+  {
     "id": "daibtc",
     "type": "spot",
     "internal_id": "spot-DAI-BTC",
@@ -11786,10 +11810,10 @@
   {
     "id": "enausd1",
     "type": "spot",
-    "first_capture": "2026-09-22T00:00:00.000Z",
     "internal_id": "spot-ENA-USD1",
     "symbol": "ENA",
-    "denominator": "USD1"
+    "denominator": "USD1",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "enausdc",

@@ -1744,6 +1744,16 @@
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
+    "id": "CYPH-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-CYPH-USDT:USDT",
+    "symbol": "CYPH",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DASH-USD-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-DASH-USD:DASH",
@@ -2741,6 +2751,16 @@
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
+    "id": "GTLB-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-GTLB-USDT:USDT",
+    "symbol": "GTLB",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GUN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-GUN-USDT:USDT",
@@ -3349,6 +3369,16 @@
     "margin": "USDT",
     "contract_size": 0.1,
     "first_capture": "2020-09-08T00:00:00.000Z"
+  },
+  {
+    "id": "KSTR-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-KSTR-USDT:USDT",
+    "symbol": "KSTR",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "LA-USDT-SWAP",
@@ -4018,6 +4048,16 @@
     "first_capture": "2026-02-25T00:00:00.000Z"
   },
   {
+    "id": "MSTU-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-MSTU-USDT:USDT",
+    "symbol": "MSTU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MU-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-MU-USDT:USDT",
@@ -4556,6 +4596,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-06T00:00:00.000Z"
+  },
+  {
+    "id": "OURA-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "internal_id": "perpetual-OURA-USDT:USDT",
+    "symbol": "OURA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "OUST-USDT-SWAP",
