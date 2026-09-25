@@ -1504,10 +1504,10 @@
   {
     "id": "agpubusdt",
     "type": "spot",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "spot-AGPUB-USDT",
     "symbol": "AGPUB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "aibnb",
@@ -2253,10 +2253,10 @@
   {
     "id": "amcbusdt",
     "type": "spot",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "spot-AMCB-USDT",
     "symbol": "AMCB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "amdbusdt",
@@ -9903,10 +9903,10 @@
   {
     "id": "cyphbusdt",
     "type": "spot",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "spot-CYPHB-USDT",
     "symbol": "CYPHB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "daibtc",
@@ -16804,6 +16804,30 @@
       "Interoperability"
     ],
     "first_capture": "2025-04-22T00:00:00.000Z"
+  },
+  {
+    "id": "hypetry",
+    "type": "spot",
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-HYPE-TRY",
+    "symbol": "HYPE",
+    "denominator": "TRY"
+  },
+  {
+    "id": "hypeusdc",
+    "type": "spot",
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-HYPE-USDC",
+    "symbol": "HYPE",
+    "denominator": "USDC"
+  },
+  {
+    "id": "hypeusdt",
+    "type": "spot",
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-HYPE-USDT",
+    "symbol": "HYPE",
+    "denominator": "USDT"
   },
   {
     "id": "ibmbusdt",

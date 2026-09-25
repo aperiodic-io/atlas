@@ -3402,6 +3402,18 @@
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
+    "id": "btcusdt_270326",
+    "type": "future",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "internal_id": "future-BTC-USDT:USDT-20270326",
+    "symbol": "BTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "delivery_date": "2027-03-26T00:00:00"
+  },
+  {
     "id": "btrusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -5961,6 +5973,18 @@
     ],
     "margin_asset": "USDT",
     "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "ethusdt_270326",
+    "type": "future",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "internal_id": "future-ETH-USDT:USDT-20270326",
+    "symbol": "ETH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "delivery_date": "2027-03-26T00:00:00"
   },
   {
     "id": "ethwusdt",
@@ -9703,7 +9727,8 @@
     "internal_id": "perpetual-MOONSHOT-USDT:USDT",
     "symbol": "MOONSHOT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "morphousdt",
@@ -10819,7 +10844,8 @@
     "internal_id": "perpetual-OURA-USDT:USDT",
     "symbol": "OURA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "ousdt",
@@ -14476,7 +14502,8 @@
     "internal_id": "perpetual-USDBRL-USDT:USDT",
     "symbol": "USDBRL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
     "id": "usdcusdt",

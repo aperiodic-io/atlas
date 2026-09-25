@@ -8863,10 +8863,10 @@
   {
     "id": "LIT-USDC",
     "type": "spot",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "spot-LIT-USDC",
     "symbol": "LIT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "LIT-USDT",
