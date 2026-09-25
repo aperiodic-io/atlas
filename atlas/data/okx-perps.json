@@ -1747,11 +1747,11 @@
     "id": "CYPH-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-CYPH-USDT:USDT",
     "symbol": "CYPH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "DASH-USD-SWAP",
@@ -2754,11 +2754,11 @@
     "id": "GTLB-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-GTLB-USDT:USDT",
     "symbol": "GTLB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "GUN-USDT-SWAP",
@@ -3238,6 +3238,16 @@
     "first_capture": "2025-10-18T00:00:00.000Z"
   },
   {
+    "id": "KII-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "perpetual-KII-USDT:USDT",
+    "symbol": "KII",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KIOXIA-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-KIOXIA-USDT:USDT",
@@ -3374,11 +3384,11 @@
     "id": "KSTR-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-KSTR-USDT:USDT",
     "symbol": "KSTR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "LA-USDT-SWAP",
@@ -4051,11 +4061,11 @@
     "id": "MSTU-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-MSTU-USDT:USDT",
     "symbol": "MSTU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "MU-USDT-SWAP",
@@ -4601,11 +4611,11 @@
     "id": "OURA-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-OURA-USDT:USDT",
     "symbol": "OURA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "OUST-USDT-SWAP",

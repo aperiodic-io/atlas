@@ -11325,12 +11325,12 @@
   {
     "id": "POLYMARKETUSDT",
     "type": "perpetual",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-POLYMARKET-USDT:USDT",
     "symbol": "POLYMARKET",
     "denominator": "USDT",
     "margin": "USDT",
-    "quantity_unit": "base"
+    "quantity_unit": "base",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "POLYXUSDT",

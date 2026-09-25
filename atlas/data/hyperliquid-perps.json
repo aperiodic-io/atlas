@@ -3273,6 +3273,24 @@
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
+    "id": "para:2Y",
+    "type": "perpetual",
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:2Y-USDC:USDC",
+    "symbol": "PARA:2Y",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "para:30Y",
+    "type": "perpetual",
+    "first_capture": "2026-09-24T00:00:00.000Z",
+    "internal_id": "perpetual-PARA:30Y-USDC:USDC",
+    "symbol": "PARA:30Y",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:AAOI",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:AAOI-USDC:USDC",
@@ -4296,11 +4314,11 @@
   {
     "id": "xyz:OURA",
     "type": "perpetual",
-    "first_capture": "2026-09-23T00:00:00.000Z",
     "internal_id": "perpetual-XYZ:OURA-USDC:USDC",
     "symbol": "XYZ:OURA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "xyz:PALLADIUM",
