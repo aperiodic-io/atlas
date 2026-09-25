@@ -251,6 +251,46 @@
       "symbol": "UNITREE"
     },
     {
+      "cmc_id": 42335,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 42335,
+            "identity_match": null,
+            "is_active": true,
+            "name": "1 US Dollar (USD) to Brazil Real (BRL) (Derivatives)",
+            "price_usd": 5.202104235136137,
+            "relative_price_difference": 0.0003258704915376418,
+            "slug": "1-us-dollar-to-brazil-real-derivatives"
+          }
+        ],
+        "catalogue_issue": "tolerated 4 unreadable of 8156 rows (4 duplicated, total moved by 1 mid-fetch): 0.0490%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "USDBRLUSDT",
+          "observed_at": "2026-09-25T08:48:27.096000Z",
+          "price": 5.2038,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "USDBRL",
+        "price_probe_status": "stale_price",
+        "rationale": "The exchange asset is the USDBRL perpetual contract, and the sole candidate is the corresponding USD/BRL derivatives contract, so the contract type and symbol\u2014not the stale price\u2014establish the match. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-21T00:00:00Z",
+        "original_id": "usdbrlusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-09-25T08:59:09.139546Z",
+      "slug": "1-us-dollar-to-brazil-real-derivatives",
+      "status": "uncertain",
+      "symbol": "USDBRL"
+    },
+    {
       "cmc_id": 38679,
       "evidence": {
         "candidates": [
