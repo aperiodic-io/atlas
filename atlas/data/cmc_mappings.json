@@ -1,6 +1,119 @@
 {
   "mappings": [
     {
+      "cmc_id": 1,
+      "evidence": {
+        "binance_asset_name": "Bitcoin",
+        "candidates": [
+          {
+            "cmc_id": 1,
+            "identity_match": "binance_asset_name",
+            "is_active": true,
+            "name": "Bitcoin",
+            "price_usd": 84265.41494075811,
+            "relative_price_difference": 0.0003990766047752821,
+            "slug": "bitcoin"
+          },
+          {
+            "cmc_id": 32295,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bullish Trump Coin",
+            "price_usd": 3.269198170927951e-08,
+            "relative_price_difference": 0.9999999999996118,
+            "slug": "bullish-trump-coin"
+          },
+          {
+            "cmc_id": 38133,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin AI",
+            "price_usd": 0.0015123597696536813,
+            "relative_price_difference": 0.9999999820452635,
+            "slug": "bitcoin-ai"
+          },
+          {
+            "cmc_id": 38552,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin Base",
+            "price_usd": 0.002681337188510704,
+            "relative_price_difference": 0.9999999681671626,
+            "slug": "bitcoin-base"
+          },
+          {
+            "cmc_id": 38601,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin X (tokenxoff.xyz)",
+            "price_usd": 9.455607494842551e-05,
+            "relative_price_difference": 0.9999999988774302,
+            "slug": "bitcoin-x-tokenxoff-xyz"
+          },
+          {
+            "cmc_id": 38650,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin Inu (tokeninu.xyz)",
+            "price_usd": 0.00015251920890045587,
+            "relative_price_difference": 0.9999999981892919,
+            "slug": "bitcoin-inu-tokeninu-xyz"
+          },
+          {
+            "cmc_id": 38692,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin Second Chance",
+            "price_usd": 0.0019086140518282785,
+            "relative_price_difference": 0.9999999773409324,
+            "slug": "bitcoin-second-chance"
+          },
+          {
+            "cmc_id": 39556,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bridged BTC (NEAR Intents)",
+            "price_usd": 85347.73926743309,
+            "relative_price_difference": 0.013248431915655232,
+            "slug": "bridged-btc-near-intents"
+          },
+          {
+            "cmc_id": 39579,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bitcoin Gold AI",
+            "price_usd": 0.00021636201025658684,
+            "relative_price_difference": 0.99999999743135,
+            "slug": "bitcoin-gold-ai"
+          }
+        ],
+        "catalogue_issue": "tolerated 1 unreadable of 8154 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "BTCUSDT",
+          "observed_at": "2026-09-26T08:45:29.071000Z",
+          "price": 84231.8,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "BTC",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "Every instrument was listed alongside an existing BTC instrument already mapped to CMC ID 1."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-25T00:00:00Z",
+        "original_id": "btcusdt_270326"
+      },
+      "method": "concurrent_instrument_mapping",
+      "recorded_at": "2026-09-26T08:45:28.991483Z",
+      "slug": "bitcoin",
+      "status": "approved",
+      "symbol": "BTC"
+    },
+    {
       "cmc_id": 40857,
       "evidence": {
         "candidates": [
@@ -88,6 +201,56 @@
       "slug": "dos-network",
       "status": "uncertain",
       "symbol": "DOS"
+    },
+    {
+      "cmc_id": 1027,
+      "evidence": {
+        "binance_asset_name": "Ethereum",
+        "candidates": [
+          {
+            "cmc_id": 1027,
+            "identity_match": "binance_asset_name",
+            "is_active": true,
+            "name": "Ethereum",
+            "price_usd": 2693.6757273126987,
+            "relative_price_difference": 0.00019892293482655268,
+            "slug": "ethereum"
+          },
+          {
+            "cmc_id": 39555,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Bridged ETH (NEAR Intents)",
+            "price_usd": 2692.6277572174286,
+            "relative_price_difference": 0.00019020280511645153,
+            "slug": "bridged-eth-near-intents"
+          }
+        ],
+        "catalogue_issue": "tolerated 1 unreadable of 8154 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "ETHUSDT",
+          "observed_at": "2026-09-26T08:45:28.803000Z",
+          "price": 2693.14,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "ETH",
+        "price_probe_status": "multiple_price_matches",
+        "rationale": "Every instrument was listed alongside an existing ETH instrument already mapped to CMC ID 1027."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-09-25T00:00:00Z",
+        "original_id": "ethusdt_270326"
+      },
+      "method": "concurrent_instrument_mapping",
+      "recorded_at": "2026-09-26T08:45:28.991483Z",
+      "slug": "ethereum",
+      "status": "approved",
+      "symbol": "ETH"
     },
     {
       "cmc_id": 40814,
