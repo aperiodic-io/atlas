@@ -1202,6 +1202,19 @@
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
+    "id": "bnbusd_270326",
+    "type": "future",
+    "contract_size": 10.0,
+    "margin_asset": "BNB",
+    "underlying": "crypto",
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "internal_id": "future-BNB-USD:BNB-20270326",
+    "symbol": "BNB",
+    "denominator": "USD",
+    "margin": "BNB",
+    "delivery_date": "2027-03-26T00:00:00"
+  },
+  {
     "id": "bnbusd_perp",
     "type": "perpetual",
     "internal_id": "perpetual-BNB-USD:BNB",
@@ -1507,6 +1520,19 @@
     "underlying": "crypto",
     "margin_asset": "BTC",
     "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "btcusd_270326",
+    "type": "future",
+    "contract_size": 100.0,
+    "margin_asset": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20270326",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2027-03-26T00:00:00"
   },
   {
     "id": "btcusd_perp",
@@ -2292,6 +2318,19 @@
     "underlying": "crypto",
     "margin_asset": "ETH",
     "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "ethusd_270326",
+    "type": "future",
+    "contract_size": 10.0,
+    "margin_asset": "ETH",
+    "underlying": "crypto",
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20270326",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2027-03-26T00:00:00"
   },
   {
     "id": "ethusd_perp",
@@ -3406,6 +3445,19 @@
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
+    "id": "solusd_270326",
+    "type": "future",
+    "contract_size": 10.0,
+    "margin_asset": "SOL",
+    "underlying": "crypto",
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "internal_id": "future-SOL-USD:SOL-20270326",
+    "symbol": "SOL",
+    "denominator": "USD",
+    "margin": "SOL",
+    "delivery_date": "2027-03-26T00:00:00"
+  },
+  {
     "id": "solusd_perp",
     "type": "perpetual",
     "internal_id": "perpetual-SOL-USD:SOL",
@@ -3914,6 +3966,19 @@
     "category": [],
     "margin_asset": "XRP",
     "first_capture": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "xrpusd_270326",
+    "type": "future",
+    "contract_size": 10.0,
+    "margin_asset": "XRP",
+    "underlying": "crypto",
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "internal_id": "future-XRP-USD:XRP-20270326",
+    "symbol": "XRP",
+    "denominator": "USD",
+    "margin": "XRP",
+    "delivery_date": "2027-03-26T00:00:00"
   },
   {
     "id": "xrpusd_perp",

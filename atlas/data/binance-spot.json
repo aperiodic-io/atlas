@@ -16808,26 +16808,26 @@
   {
     "id": "hypetry",
     "type": "spot",
-    "first_capture": "2026-09-24T00:00:00.000Z",
     "internal_id": "spot-HYPE-TRY",
     "symbol": "HYPE",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
     "id": "hypeusdc",
     "type": "spot",
-    "first_capture": "2026-09-24T00:00:00.000Z",
     "internal_id": "spot-HYPE-USDC",
     "symbol": "HYPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
     "id": "hypeusdt",
     "type": "spot",
-    "first_capture": "2026-09-24T00:00:00.000Z",
     "internal_id": "spot-HYPE-USDT",
     "symbol": "HYPE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
     "id": "ibmbusdt",
@@ -34824,7 +34824,8 @@
     "internal_id": "spot-USDP-USDT",
     "symbol": "USDP",
     "denominator": "USDT",
-    "first_capture": "2021-09-10T00:00:00.000Z"
+    "first_capture": "2021-09-10T00:00:00.000Z",
+    "end_date": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "usdsusdt",
