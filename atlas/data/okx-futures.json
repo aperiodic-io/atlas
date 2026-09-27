@@ -14637,7 +14637,8 @@
     "margin": "BTC",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 100.0,
-    "first_capture": "2026-01-16T00:00:00.000Z"
+    "first_capture": "2026-01-16T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-261030",
@@ -14654,12 +14655,12 @@
     "id": "BTC-USD-261127",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20261127",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "BTC-USD-261225",
@@ -19782,7 +19783,8 @@
     "margin": "USD",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 0.01,
-    "first_capture": "2026-03-13T00:00:00.000Z"
+    "first_capture": "2026-03-13T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-261030",
@@ -19799,12 +19801,12 @@
     "id": "BTC-USD_UM-261127",
     "type": "future",
     "contract_size": 0.01,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-BTC-USD:USD-20261127",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "BTC-USD_UM-261225",
@@ -38349,7 +38351,8 @@
     "margin": "ETH",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 10.0,
-    "first_capture": "2026-01-16T00:00:00.000Z"
+    "first_capture": "2026-01-16T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-261030",
@@ -38366,12 +38369,12 @@
     "id": "ETH-USD-261127",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20261127",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "ETH-USD-261225",
@@ -43285,7 +43288,8 @@
     "margin": "USD",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 0.001,
-    "first_capture": "2026-06-15T00:00:00.000Z"
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-261030",
@@ -43302,12 +43306,12 @@
     "id": "ETH-USD_UM-261127",
     "type": "future",
     "contract_size": 0.001,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-ETH-USD:USD-20261127",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "ETH-USD_UM-261225",
@@ -55416,7 +55420,8 @@
     "margin": "USD",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 0.1,
-    "first_capture": "2026-06-15T00:00:00.000Z"
+    "first_capture": "2026-06-15T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-261030",
@@ -55433,12 +55438,12 @@
     "id": "SOL-USD_UM-261127",
     "type": "future",
     "contract_size": 0.1,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-SOL-USD:USD-20261127",
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "SOL-USD_UM-261225",
@@ -60425,7 +60430,8 @@
     "margin": "USD",
     "delivery_date": "2026-09-25T00:00:00",
     "contract_size": 0.001,
-    "first_capture": "2026-03-13T00:00:00.000Z"
+    "first_capture": "2026-03-13T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-261030",
@@ -60442,12 +60448,12 @@
     "id": "XAU-USD_UM-261127",
     "type": "future",
     "contract_size": 0.001,
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-XAU-USD:USD-20261127",
     "symbol": "XAU",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2026-11-27T00:00:00"
+    "delivery_date": "2026-11-27T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "XAU-USD_UM-261225",

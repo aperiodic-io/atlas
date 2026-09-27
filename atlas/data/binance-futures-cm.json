@@ -1181,7 +1181,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "BNB",
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "bnbusd_261225",
@@ -1207,12 +1208,12 @@
     "contract_size": 10.0,
     "margin_asset": "BNB",
     "underlying": "crypto",
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-BNB-USD:BNB-20270326",
     "symbol": "BNB",
     "denominator": "USD",
     "margin": "BNB",
-    "delivery_date": "2027-03-26T00:00:00"
+    "delivery_date": "2027-03-26T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "bnbusd_perp",
@@ -1506,7 +1507,8 @@
     "contract_size": 100.0,
     "underlying": "crypto",
     "margin_asset": "BTC",
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "btcusd_261225",
@@ -1527,12 +1529,12 @@
     "contract_size": 100.0,
     "margin_asset": "BTC",
     "underlying": "crypto",
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20270326",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "delivery_date": "2027-03-26T00:00:00"
+    "delivery_date": "2027-03-26T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "btcusd_perp",
@@ -2304,7 +2306,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "ETH",
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "ethusd_261225",
@@ -2325,12 +2328,12 @@
     "contract_size": 10.0,
     "margin_asset": "ETH",
     "underlying": "crypto",
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20270326",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "delivery_date": "2027-03-26T00:00:00"
+    "delivery_date": "2027-03-26T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "ethusd_perp",
@@ -3429,7 +3432,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "SOL",
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "solusd_261225",
@@ -3450,12 +3454,12 @@
     "contract_size": 10.0,
     "margin_asset": "SOL",
     "underlying": "crypto",
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-SOL-USD:SOL-20270326",
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "SOL",
-    "delivery_date": "2027-03-26T00:00:00"
+    "delivery_date": "2027-03-26T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "solusd_perp",
@@ -3950,7 +3954,8 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "XRP",
-    "first_capture": "2026-03-27T00:00:00.000Z"
+    "first_capture": "2026-03-27T00:00:00.000Z",
+    "end_date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "xrpusd_261225",
@@ -3973,12 +3978,12 @@
     "contract_size": 10.0,
     "margin_asset": "XRP",
     "underlying": "crypto",
-    "first_capture": "2026-09-25T00:00:00.000Z",
     "internal_id": "future-XRP-USD:XRP-20270326",
     "symbol": "XRP",
     "denominator": "USD",
     "margin": "XRP",
-    "delivery_date": "2027-03-26T00:00:00"
+    "delivery_date": "2027-03-26T00:00:00",
+    "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
     "id": "xrpusd_perp",
