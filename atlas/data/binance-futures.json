@@ -4455,6 +4455,17 @@
     "first_capture": "2020-11-12T00:00:00.000Z"
   },
   {
+    "id": "cvnausdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-CVNA-USDT:USDT",
+    "symbol": "CVNA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "cvxbusd",
     "type": "perpetual",
     "internal_id": "perpetual-CVX-BUSD:BUSD",
@@ -10503,6 +10514,17 @@
     "first_capture": "2025-05-12T00:00:00.000Z"
   },
   {
+    "id": "oklousdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-OKLO-USDT:USDT",
+    "symbol": "OKLO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "olusdt",
     "type": "perpetual",
     "internal_id": "perpetual-OL-USDT:USDT",
@@ -12142,6 +12164,17 @@
     ],
     "margin_asset": "USDT",
     "first_capture": "2020-10-19T00:00:00.000Z"
+  },
+  {
+    "id": "rumusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-RUM-USDT:USDT",
+    "symbol": "RUM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "runeusdt",
@@ -14288,6 +14321,17 @@
     "first_capture": "2025-03-20T00:00:00.000Z"
   },
   {
+    "id": "twstusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-TWST-USDT:USDT",
+    "symbol": "TWST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "twtusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -15344,6 +15388,17 @@
     "category": [],
     "margin_asset": "USDT",
     "first_capture": "2025-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "xomusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-XOM-USDT:USDT",
+    "symbol": "XOM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "xpdusdt",
