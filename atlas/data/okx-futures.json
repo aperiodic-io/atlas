@@ -2376,6 +2376,16 @@
     "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
+    "id": "APE-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 0.1,
+    "internal_id": "future-APE-USD:USD-20311003",
+    "symbol": "APE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "APR-USD_UM_XPERP-310815",
     "type": "future",
     "contract_size": 10.0,
@@ -23018,6 +23028,16 @@
     "delivery_date": "2025-03-07T00:00:00",
     "first_capture": "2024-08-29T00:00:00.000Z",
     "end_date": "2024-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "EIGEN-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 1.0,
+    "internal_id": "future-EIGEN-USD:USD-20311003",
+    "symbol": "EIGEN",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "ENA-USD_UM_XPERP-310613",
@@ -54478,6 +54498,16 @@
     "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
+    "id": "OKB-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 0.01,
+    "internal_id": "future-OKB-USD:USD-20311003",
+    "symbol": "OKB",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "OKTA-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 1.0,
@@ -55487,6 +55517,16 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 0.01,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "SOON-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 10.0,
+    "internal_id": "future-SOON-USD:USD-20311003",
+    "symbol": "SOON",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "SOPH-USD_UM_XPERP-310912",

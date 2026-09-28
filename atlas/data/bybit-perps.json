@@ -7977,6 +7977,20 @@
     "first_capture": "2025-10-07T00:00:00.000Z"
   },
   {
+    "id": "KIIUSDT",
+    "type": "perpetual",
+    "base_coin": "KII",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "internal_id": "perpetual-KII-USDT:USDT",
+    "symbol": "KII",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KITEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-KITE-USDT:USDT",
