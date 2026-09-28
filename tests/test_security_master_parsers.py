@@ -466,6 +466,34 @@ class TestHyperliquid:
         with pytest.raises(SkipSymbol):
             _parse("hyperliquid-perps", "@0", "spot")
 
+    def test_hip3_perp_keeps_dex_prefix(self):
+        c = parse_contract(
+            "hyperliquid-perps",
+            _sd("xyz:KSTR", "perpetual", margin_asset="USDC"),
+        )
+        assert c.internal_id == "perpetual-XYZ:KSTR-USDC:USDC"
+
+    @pytest.mark.parametrize(
+        ("sid", "collateral", "expected"),
+        [
+            ("flx:TSLA", "USDH", "perpetual-FLX:TSLA-USDH:USDH"),
+            ("km:US500", "USDH", "perpetual-KM:US500-USDH:USDH"),
+            ("hyna:BTC", "USDE", "perpetual-HYNA:BTC-USDE:USDE"),
+            ("cash:NVDA", "USDT0", "perpetual-CASH:NVDA-USDT0:USDT0"),
+        ],
+    )
+    def test_hip3_perp_settles_in_the_dex_collateral(self, sid, collateral, expected):
+        # A HIP-3 dex quotes, margins and settles every perp in its own
+        # collateral token, which is not necessarily USDC.
+        c = parse_contract("hyperliquid-perps", _sd(sid, "perpetual", margin_asset=collateral))
+        assert c.denominator == collateral
+        assert c.margin == collateral
+        assert c.internal_id == expected
+
+    def test_perp_without_venue_collateral_falls_back_to_usdc(self):
+        c = _parse("hyperliquid-perps", "xyz:KSTR", "perpetual")
+        assert c.internal_id == "perpetual-XYZ:KSTR-USDC:USDC"
+
 
 class TestBitfinexDerivatives:
     def test_btc_perpetual(self):
@@ -1072,17 +1100,84 @@ class TestFetchBinanceFuturesCoinM:
 
 
 class TestFetchHyperliquidPerps:
-    def _mock_post(self, universe: list[dict]) -> MagicMock:
+    @staticmethod
+    def _response(payload: object) -> MagicMock:
         resp = MagicMock()
-        resp.json.return_value = {"universe": universe}
+        resp.raise_for_status.return_value = None
+        resp.json.return_value = payload
         return resp
+
+    def _mock_info(
+        self,
+        metas: dict[str | None, dict],
+        tokens: list[dict] | None = None,
+    ):
+        """Route `/info` requests by body: `meta` per dex, `perpDexs`, `spotMeta`."""
+        dexes = [None] + [{"name": dex} for dex in metas if dex is not None]
+
+        def post(url, json, timeout):
+            if json["type"] == "perpDexs":
+                return self._response(dexes)
+            if json["type"] == "spotMeta":
+                return self._response({"tokens": tokens or [], "universe": []})
+            assert json["type"] == "meta"
+            return self._response(metas[json.get("dex")])
+
+        return post
 
     def test_contract_size_is_one_unit_of_underlying(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
         item = {"name": "BTC", "szDecimals": 5, "maxLeverage": 40}
-        with patch("atlas.exchange_definitions.hyperliquid.requests.post", return_value=self._mock_post([item])):
+        post = self._mock_info({None: {"universe": [item]}})
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=post):
             symbols = fetch_hyperliquid_perps(timeout_seconds=5)
         assert symbols[0]["contract_size"] == 1.0
+
+    def test_includes_hip3_dexes_with_their_collateral(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        tokens = [
+            {"index": 0, "name": "USDC"},
+            {"index": 235, "name": "USDE"},
+            {"index": 360, "name": "USDH"},
+        ]
+        metas = {
+            None: {"universe": [{"name": "BTC"}], "collateralToken": 0},
+            "xyz": {"universe": [{"name": "xyz:KSTR"}], "collateralToken": 0},
+            "flx": {
+                "universe": [{"name": "flx:TSLA"}, {"name": "flx:XMR", "isDelisted": True}],
+                "collateralToken": 360,
+            },
+            "hyna": {"universe": [{"name": "hyna:BTC"}], "collateralToken": 235},
+        }
+        post = self._mock_info(metas, tokens)
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=post):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+
+        assert {sd["id"]: sd.get("margin_asset") for sd in symbols} == {
+            "BTC": "USDC",
+            "xyz:KSTR": "USDC",
+            "flx:TSLA": "USDH",
+            "flx:XMR": "USDH",
+            "hyna:BTC": "USDE",
+        }
+        assert all(sd["type"] == "perpetual" for sd in symbols)
+        assert all(sd["contract_size"] == 1.0 for sd in symbols)
+
+    def test_fetched_hip3_perps_parse_to_collateral_denominated_ids(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        metas = {
+            None: {"universe": [{"name": "BTC"}], "collateralToken": 0},
+            "cash": {"universe": [{"name": "cash:NVDA"}], "collateralToken": 268},
+        }
+        tokens = [{"index": 0, "name": "USDC"}, {"index": 268, "name": "USDT0"}]
+        post = self._mock_info(metas, tokens)
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=post):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+
+        ids = [parse_contract("hyperliquid-perps", sd).internal_id for sd in symbols]
+        assert ids == ["perpetual-BTC-USDC:USDC", "perpetual-CASH:NVDA-USDT0:USDT0"]
 
     def test_retries_malformed_response(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
@@ -1090,16 +1185,19 @@ class TestFetchHyperliquidPerps:
         malformed = MagicMock()
         malformed.raise_for_status.return_value = None
         malformed.json.side_effect = ValueError("invalid JSON")
-        valid = MagicMock()
-        valid.raise_for_status.return_value = None
-        valid.json.return_value = {"universe": [{"name": "BTC"}]}
+        valid = self._response({"universe": [{"name": "BTC"}]})
 
         with patch(
             "atlas.exchange_definitions.hyperliquid.requests.post",
-            side_effect=[malformed, valid],
+            side_effect=[
+                malformed,
+                valid,
+                self._response([None]),
+                self._response({"tokens": [], "universe": []}),
+            ],
         ) as post:
             assert fetch_hyperliquid_perps(timeout_seconds=5) == [
                 {"id": "BTC", "type": "perpetual", "contract_size": 1.0}
             ]
 
-        assert post.call_count == 2
+        assert post.call_count == 4

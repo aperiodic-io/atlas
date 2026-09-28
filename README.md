@@ -53,6 +53,7 @@ Examples:
 - Spot: `btcusdt` (Binance spot) -> `spot-BTC-USDT`
 - Perpetual: `btcusdt` (Binance futures) -> `perpetual-BTC-USDT:USDT`
 - Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
+- Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
 
 ## Installation
 

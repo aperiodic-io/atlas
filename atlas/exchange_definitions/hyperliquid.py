@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
@@ -22,11 +24,13 @@ def parse_hyperliquid(exchange: str, sd: SymbolData) -> Contract:
         margin = resolve_margin(symbol, denominator, ctype)
         return make_contract(exchange, sd, symbol, denominator, margin, ctype)
 
-    # Perpetuals on Hyperliquid are usually just the symbol name
-    symbol = sid
-    denominator = "USDC"
-    margin = "USDC"
-    return make_contract(exchange, sd, symbol, denominator, margin, ctype)
+    # Perpetuals are named by their asset alone; HIP-3 builder-deployed perps
+    # carry their dex as a prefix (`xyz:TSLA`), which is kept in the symbol.
+    # A perp dex quotes, margins and settles in its own collateral token, which
+    # the fetcher records per symbol: USDC on the main dex, but e.g. USDH or
+    # USDT0 on some HIP-3 dexes. Rows without it (Tardis-only) assume USDC.
+    collateral = sd.get("margin_asset") or "USDC"
+    return make_contract(exchange, sd, sid, collateral, collateral, ctype)
 
 
 def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
@@ -39,11 +43,16 @@ def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
     wait=wait_exponential(multiplier=1, min=1, max=4),
     reraise=True,
 )
-def _fetch_hyperliquid_payload(type_value: str, timeout_seconds: int) -> dict:
+def _fetch_hyperliquid_payload(
+    type_value: str, timeout_seconds: int, dex: str | None = None
+) -> Any:
     """Fetch Hyperliquid metadata, retrying transient invalid responses."""
+    body = {"type": type_value}
+    if dex is not None:
+        body["dex"] = dex
     response = requests.post(
         "https://api.hyperliquid.xyz/info",
-        json={"type": type_value},
+        json=body,
         timeout=timeout_seconds,
     )
     response.raise_for_status()
@@ -68,10 +77,32 @@ def fetch_hyperliquid_spot(timeout_seconds: int) -> list[dict[str, str]]:
     return symbols
 
 
-def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
-    response = _fetch_hyperliquid_payload("meta", timeout_seconds)
+def _hip3_dex_names(timeout_seconds: int) -> list[str]:
+    """Names of the HIP-3 builder-deployed perp dexes (the main dex is `null`)."""
+    dexes = _fetch_hyperliquid_payload("perpDexs", timeout_seconds)
+    return [dex["name"] for dex in dexes if dex and dex.get("name")]
 
-    return [
-        {**_to_symbol(item["name"], "perpetual"), "contract_size": 1.0}
-        for item in response.get("universe", [])
+
+def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
+    """Perpetuals on the main dex and on every HIP-3 dex, delisted ones included.
+
+    Each symbol carries its dex's collateral token as `margin_asset`, resolved
+    from the dex's `collateralToken` spot-token index.
+    """
+    metas = [_fetch_hyperliquid_payload("meta", timeout_seconds)]
+    metas += [
+        _fetch_hyperliquid_payload("meta", timeout_seconds, dex=dex)
+        for dex in _hip3_dex_names(timeout_seconds)
     ]
+    spot_meta = _fetch_hyperliquid_payload("spotMeta", timeout_seconds)
+    token_names = {token["index"]: token["name"] for token in spot_meta.get("tokens", [])}
+
+    symbols = []
+    for meta in metas:
+        collateral = token_names.get(meta.get("collateralToken"))
+        for item in meta.get("universe", []):
+            sd = {**_to_symbol(item["name"], "perpetual"), "contract_size": 1.0}
+            if collateral:
+                sd["margin_asset"] = collateral
+            symbols.append(sd)
+    return symbols
