@@ -17156,11 +17156,36 @@
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
+    "id": "XDP-EUR",
+    "type": "spot",
+    "first_capture": "2026-09-28T00:00:00.000Z",
+    "internal_id": "spot-XDP-EUR",
+    "symbol": "XDP",
+    "denominator": "EUR"
+  },
+  {
+    "id": "XDP-TRY",
+    "type": "spot",
+    "first_capture": "2026-09-28T00:00:00.000Z",
+    "internal_id": "spot-XDP-TRY",
+    "symbol": "XDP",
+    "denominator": "TRY"
+  },
+  {
+    "id": "XDP-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-28T00:00:00.000Z",
+    "internal_id": "spot-XDP-USDC",
+    "symbol": "XDP",
+    "denominator": "USDC"
+  },
+  {
     "id": "XDP-USDT",
     "type": "spot",
     "internal_id": "spot-XDP-USDT",
     "symbol": "XDP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "XDRAM-USDT",

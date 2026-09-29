@@ -2383,7 +2383,8 @@
     "symbol": "APE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "APR-USD_UM_XPERP-310815",
@@ -20057,7 +20058,8 @@
     "symbol": "DATA",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "DELL-USD_UM_XPERP-310822",
@@ -23037,7 +23039,8 @@
     "symbol": "EIGEN",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "ENA-USD_UM_XPERP-310613",
@@ -54505,7 +54508,8 @@
     "symbol": "OKB",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "OKTA-USD_UM_XPERP-310829",
@@ -55526,7 +55530,8 @@
     "symbol": "SOON",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "SOPH-USD_UM_XPERP-310912",
@@ -60537,6 +60542,17 @@
     "delivery_date": "2031-05-02T00:00:00",
     "contract_size": 0.001,
     "first_capture": "2026-04-28T00:00:00.000Z"
+  },
+  {
+    "id": "XDP-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-28T00:00:00.000Z",
+    "internal_id": "future-XDP-USD:USD-20311003",
+    "symbol": "XDP",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "XIAOMI-USD_UM_XPERP-310919",
