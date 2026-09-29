@@ -498,6 +498,17 @@
     "first_capture": "2023-02-22T00:00:00.000Z"
   },
   {
+    "id": "acnusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-ACN-USDT:USDT",
+    "symbol": "ACN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "actusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -3504,6 +3515,17 @@
     "first_capture": "2025-05-22T00:00:00.000Z"
   },
   {
+    "id": "bwetusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-BWET-USDT:USDT",
+    "symbol": "BWET",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "bxusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -4225,6 +4247,17 @@
     "first_capture": "2026-06-08T00:00:00.000Z"
   },
   {
+    "id": "crmlusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-CRML-USDT:USDT",
+    "symbol": "CRML",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "crmusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -4463,7 +4496,8 @@
     "internal_id": "perpetual-CVNA-USDT:USDT",
     "symbol": "CVNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "cvxbusd",
@@ -9797,6 +9831,17 @@
     "first_capture": "2023-12-26T00:00:00.000Z"
   },
   {
+    "id": "mpusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-MP-USDT:USDT",
+    "symbol": "MP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "mrkusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10252,6 +10297,17 @@
     "first_capture": "2025-03-24T00:00:00.000Z"
   },
   {
+    "id": "nkeusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-NKE-USDT:USDT",
+    "symbol": "NKE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "nknusdt",
     "type": "perpetual",
     "internal_id": "perpetual-NKN-USDT:USDT",
@@ -10522,7 +10578,8 @@
     "internal_id": "perpetual-OKLO-USDT:USDT",
     "symbol": "OKLO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "olusdt",
@@ -12174,7 +12231,8 @@
     "internal_id": "perpetual-RUM-USDT:USDT",
     "symbol": "RUM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "runeusdt",
@@ -12408,6 +12466,17 @@
     "margin_asset": "USDT",
     "first_capture": "2021-04-12T00:00:00.000Z",
     "end_date": "2022-06-18T00:00:00.000Z"
+  },
+  {
+    "id": "seczusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-SECZ-USDT:USDT",
+    "symbol": "SECZ",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "seiusdt",
@@ -14329,7 +14398,8 @@
     "internal_id": "perpetual-TWST-USDT:USDT",
     "symbol": "TWST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "twtusdt",
@@ -14452,6 +14522,17 @@
     "margin_asset": "USDT",
     "first_capture": "2021-02-19T00:00:00.000Z",
     "end_date": "2024-11-01T00:00:00.000Z"
+  },
+  {
+    "id": "unhusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-UNH-USDT:USDT",
+    "symbol": "UNH",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "unibusd",
@@ -15398,7 +15479,8 @@
     "internal_id": "perpetual-XOM-USDT:USDT",
     "symbol": "XOM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "xpdusdt",
