@@ -235,23 +235,18 @@ configuration and review process.
 
 ## Raw Data Coverage
 
-Atlas also keeps the coverage file of the aperiodic.io raw data buckets
-(`aperiodic-raw-trades`, `-quotes`, `-derivatives`) up to date. Several
-workflows write files into those buckets; the `raw-coverage` workflow is the
-only writer of each bucket's `v1/_coverage.json`. It lists the bucket and
-records, per dataset × exchange × symbol, the first and last day, missing
-periods, day count and bytes. It runs four times a day and alerts Slack when a
-run fails or the newest day is more than three days old.
+`atlas/data/raw/coverage.json` is the coverage of the aperiodic.io raw data
+buckets (`aperiodic-raw-trades`, `-quotes`, `-derivatives`): per dataset ×
+exchange × symbol, the first and last day, missing periods, day count and bytes.
+The daily `raw-coverage` workflow lists the buckets and commits it, whichever
+workflow wrote the files, and alerts Slack when a run fails or the newest day is
+more than three days old. aperiodic.io reads it from GitHub.
 
 ```bash
 pip install -e ".[raw]"
-# needs R2_ENDPOINT_URL, R2_DATA_KEY_ID, R2_DATA_KEY_SECRET
+# needs R2_ENDPOINT_URL, R2_DATA_KEY_ID, R2_DATA_KEY_SECRET (read-only is enough)
 python integrations/raw_coverage.py --dry-run
 ```
-
-The file stays in the private buckets, not in this repository: aperiodic.io
-publishes each series from a delayed start, and the real first days are not
-public.
 
 ## Limitations
 

@@ -6,7 +6,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from integrations.raw_coverage import (
-    COVERAGE_KEY,
+    build_all,
     build_coverage,
     footer_days,
     latest_day,
@@ -29,9 +29,6 @@ class MemoryBucket:
 
     def get_range(self, key: str, start: int, end: int) -> bytes:
         return self.objects[key][start:end]
-
-    def put(self, key: str, body: bytes) -> None:
-        self.objects[key] = body
 
 
 def parquet(*days: date) -> bytes:
@@ -126,7 +123,7 @@ def test_build_coverage_ignores_other_datasets_and_venues():
     assert list(coverage["datasets"]["trades"]) == ["binance-futures"]
 
 
-def test_write_coverage_writes_one_file_per_bucket_with_its_own_datasets():
+def test_build_all_merges_the_three_buckets_and_writes_one_file(tmp_path):
     buckets = {
         "trades": MemoryBucket({key("trades", "okx-perps", BTC, "2026-09-01"): b"x"}),
         "quotes": MemoryBucket({key("quotes", "okx-perps", BTC, "2026-09-02"): b"x"}),
@@ -135,16 +132,15 @@ def test_write_coverage_writes_one_file_per_bucket_with_its_own_datasets():
         ),
     }
 
-    merged = write_coverage(buckets)
+    coverage = build_all(buckets)
+    path = tmp_path / "raw" / "coverage.json"
+    write_coverage(coverage, path)
 
-    for group, bucket in buckets.items():
-        written = json.loads(bucket.objects[COVERAGE_KEY])
-        assert written["schema_version"] == 1
-        assert written["generated_at"].endswith("Z")
-        expected = {"derivatives": ["funding_rate"]}.get(group, [group])
-        assert list(written["datasets"]) == expected
-    assert set(merged["datasets"]) == {"trades", "quotes", "funding_rate"}
-    assert latest_day(merged) == date(2026, 9, 3)
+    written = json.loads(path.read_text())
+    assert written["schema_version"] == 1
+    assert written["generated_at"].endswith("Z")
+    assert set(written["datasets"]) == {"trades", "quotes", "funding_rate"}
+    assert latest_day(written) == date(2026, 9, 3)
 
 
 def test_latest_day_is_none_without_series():

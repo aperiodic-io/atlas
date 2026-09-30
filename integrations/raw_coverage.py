@@ -1,19 +1,14 @@
-"""Keep `v1/_coverage.json` in the raw data buckets up to date.
+"""Coverage of the aperiodic.io raw data buckets, as `atlas/data/raw/coverage.json`.
 
 The raw buckets (`aperiodic-raw-trades`, `-quotes`, `-derivatives`) are written
 by several workflows (the backfill, the daily export, our own live capture, gap
-backfills), none of which know about each other. This job is the single writer
-of each bucket's coverage file: it lists the bucket, so the file is always what
-is actually there, whoever wrote it.
+backfills), none of which know about each other. This lists the buckets, so the
+file is always what is actually there, whoever wrote it. aperiodic.io reads it
+from GitHub, as it reads the snapshots.
 
-Per series (dataset, exchange, symbol) the file holds `first` and `last`
-exchange-time days (for a monthly file from its footer statistics), the
-`missing` periods between them with no file, `days` and `bytes`. aperiodic.io
-reads the three files and merges them.
-
-The file stays in the private buckets rather than in this repository: the site
-publishes each series from a delayed start, and the real first days are not
-public.
+Per series (dataset, exchange, symbol) it holds `first` and `last` exchange-time
+days (for a monthly file from its footer statistics), the `missing` periods
+between them with no file, `days` and `bytes`.
 
     python integrations/raw_coverage.py                 # write, fail if stale
     python integrations/raw_coverage.py --dry-run       # print the summary only
@@ -34,7 +29,9 @@ from typing import Any, Protocol
 
 SCHEMA_VERSION = 1
 PREFIX = f"v{SCHEMA_VERSION}"
-COVERAGE_KEY = f"{PREFIX}/_coverage.json"
+COVERAGE_PATH = (
+    Path(__file__).parent.parent / "atlas" / "data" / "raw" / "coverage.json"
+)
 DEFAULT_BUCKET_PREFIX = "aperiodic-raw"
 EXCHANGES = ("binance-futures", "okx-perps", "hyperliquid-perps")
 GROUP_DATASETS: dict[str, tuple[str, ...]] = {
@@ -52,8 +49,6 @@ class Bucket(Protocol):
     def list(self, prefix: str) -> list[tuple[str, int]]: ...
 
     def get_range(self, key: str, start: int, end: int) -> bytes: ...
-
-    def put(self, key: str, body: bytes) -> None: ...
 
 
 class R2Bucket:
@@ -74,11 +69,6 @@ class R2Bucket:
             Bucket=self.name, Key=key, Range=f"bytes={start}-{end - 1}"
         )
         return response["Body"].read()
-
-    def put(self, key: str, body: bytes) -> None:
-        self.client.put_object(
-            Bucket=self.name, Key=key, Body=body, ContentType="application/json"
-        )
 
 
 def period_of(day: date) -> str:
@@ -218,15 +208,21 @@ def build_coverage(bucket: Bucket, datasets: tuple[str, ...]) -> dict[str, Any]:
     }
 
 
-def write_coverage(buckets: dict[str, Bucket], dry_run: bool = False) -> dict[str, Any]:
-    """Write each bucket's coverage file; return them merged."""
+def build_all(buckets: dict[str, Bucket]) -> dict[str, Any]:
+    """The coverage of all three buckets, as one file."""
     datasets: dict[str, Any] = {}
     for group, group_datasets in GROUP_DATASETS.items():
-        part = build_coverage(buckets[group], group_datasets)
-        if not dry_run:
-            buckets[group].put(COVERAGE_KEY, json.dumps(part, indent=1).encode())
-        datasets.update(part["datasets"])
-    return {"schema_version": SCHEMA_VERSION, "datasets": datasets}
+        datasets.update(build_coverage(buckets[group], group_datasets)["datasets"])
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "generated_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "datasets": datasets,
+    }
+
+
+def write_coverage(coverage: dict[str, Any], path: Path = COVERAGE_PATH) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(coverage, indent=1) + "\n")
 
 
 def latest_day(coverage: dict[str, Any]) -> date | None:
@@ -282,7 +278,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    coverage = write_coverage(r2_buckets(args.bucket_prefix), dry_run=args.dry_run)
+    coverage = build_all(r2_buckets(args.bucket_prefix))
+    if not args.dry_run:
+        write_coverage(coverage)
     newest = latest_day(coverage)
     lag = (datetime.now(UTC).date() - newest).days if newest else None
     report = (

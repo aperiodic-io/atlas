@@ -1,19 +1,19 @@
 name: raw-coverage
 
-# The single writer of v1/_coverage.json in the raw data buckets
-# (aperiodic-raw-trades, -quotes, -derivatives). The backfill, the daily export,
-# the live capture and gap backfills all write files there without knowing about
-# each other; this lists the buckets and rewrites each coverage file from what is
-# actually there. Fails, and alerts Slack, when the newest day is stale.
+# Lists the aperiodic.io raw data buckets (aperiodic-raw-trades, -quotes,
+# -derivatives) and commits their coverage as atlas/data/raw/coverage.json,
+# which aperiodic.io reads from GitHub. Several workflows write into the buckets
+# without knowing about each other; the listing is what is actually there.
+# Fails, and alerts Slack, when the newest day is stale.
 
 on:
   schedule:
-    # 10:30 UTC is after the daily raw export's 10:00 target.
-    - cron: "30 4,10,16,22 * * *"
+    # After the daily raw export's 10:00 UTC target.
+    - cron: "30 10 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Print the summary without writing the files"
+        description: "Print the summary without writing the file"
         type: boolean
         default: false
       max_lag_days:
@@ -26,10 +26,10 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  write-coverage:
+  update-raw-coverage:
     runs-on: ubicloud-standard-2
     timeout-minutes: 180
 
@@ -48,7 +48,7 @@ jobs:
       - name: install-dependencies
         run: uv pip install --system -e ".[raw]"
 
-      - name: write-coverage
+      - name: build-coverage
         env:
           R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL }}
           R2_DATA_KEY_ID: ${{ secrets.R2_DATA_KEY_ID }}
@@ -56,6 +56,21 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
           MAX_LAG_DAYS: ${{ inputs.max_lag_days || '3' }}
         run: python integrations/raw_coverage.py $DRY_RUN --max-lag-days "$MAX_LAG_DAYS"
+
+      # Also after a stale-data failure: the file is still what is in the buckets.
+      - name: commit-coverage
+        if: always() && hashFiles('atlas/data/raw/coverage.json') != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add atlas/data/raw/coverage.json
+          if git diff --cached --quiet; then
+            echo "No coverage changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): raw data coverage update"
+          git pull --rebase
+          git push
 
       - name: notify-slack-on-failure
         if: failure()
