@@ -2866,6 +2866,13 @@
     "end_date": "2024-08-10T00:00:00.000Z"
   },
   {
+    "id": "BTC-PLN",
+    "type": "spot",
+    "internal_id": "spot-BTC-PLN",
+    "symbol": "BTC",
+    "denominator": "PLN"
+  },
+  {
     "id": "BTC-TRY",
     "type": "spot",
     "internal_id": "spot-BTC-TRY",
@@ -5546,6 +5553,13 @@
     "denominator": "EURT",
     "first_capture": "2022-07-19T00:00:00.000Z",
     "end_date": "2024-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "ETH-PLN",
+    "type": "spot",
+    "internal_id": "spot-ETH-PLN",
+    "symbol": "ETH",
+    "denominator": "PLN"
   },
   {
     "id": "ETH-TRY",
@@ -15736,6 +15750,13 @@
     "end_date": "2024-10-25T00:00:00.000Z"
   },
   {
+    "id": "USDC-PLN",
+    "type": "spot",
+    "internal_id": "spot-USDC-PLN",
+    "symbol": "USDC",
+    "denominator": "PLN"
+  },
+  {
     "id": "USDC-SGD",
     "type": "spot",
     "internal_id": "spot-USDC-SGD",
@@ -17158,26 +17179,26 @@
   {
     "id": "XDP-EUR",
     "type": "spot",
-    "first_capture": "2026-09-28T00:00:00.000Z",
     "internal_id": "spot-XDP-EUR",
     "symbol": "XDP",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "XDP-TRY",
     "type": "spot",
-    "first_capture": "2026-09-28T00:00:00.000Z",
     "internal_id": "spot-XDP-TRY",
     "symbol": "XDP",
-    "denominator": "TRY"
+    "denominator": "TRY",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "XDP-USDC",
     "type": "spot",
-    "first_capture": "2026-09-28T00:00:00.000Z",
     "internal_id": "spot-XDP-USDC",
     "symbol": "XDP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "XDP-USDT",
