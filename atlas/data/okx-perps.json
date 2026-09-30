@@ -6934,11 +6934,11 @@
     "id": "XDP-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 100.0,
-    "first_capture": "2026-09-28T00:00:00.000Z",
     "internal_id": "perpetual-XDP-USDT:USDT",
     "symbol": "XDP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
     "id": "XEM-USDT-SWAP",

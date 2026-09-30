@@ -4339,6 +4339,21 @@
     "first_capture": "2021-12-01T00:00:00.000Z"
   },
   {
+    "id": "CVNAUSDT",
+    "type": "perpetual",
+    "base_coin": "CVNA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-29T00:00:00.000Z",
+    "internal_id": "perpetual-CVNA-USDT:USDT",
+    "symbol": "CVNA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CVXSTOCKUSDT",
     "type": "perpetual",
     "base_coin": "CVXSTOCK",
@@ -12411,6 +12426,21 @@
     "end_date": "2025-11-28T00:00:00.000Z"
   },
   {
+    "id": "RUMUSDT",
+    "type": "perpetual",
+    "base_coin": "RUM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-29T00:00:00.000Z",
+    "internal_id": "perpetual-RUM-USDT:USDT",
+    "symbol": "RUM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RUNEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-RUNE-USDT:USDT",
@@ -14803,6 +14833,21 @@
     "first_capture": "2025-03-19T00:00:00.000Z"
   },
   {
+    "id": "TWSTUSDT",
+    "type": "perpetual",
+    "base_coin": "TWST",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-09-29T00:00:00.000Z",
+    "internal_id": "perpetual-TWST-USDT:USDT",
+    "symbol": "TWST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TWTPERP",
     "type": "perpetual",
     "internal_id": "perpetual-TWT-USDC:USDC",
@@ -15924,6 +15969,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-02-10T00:00:00.000Z"
+  },
+  {
+    "id": "XDPUSDT",
+    "type": "perpetual",
+    "base_coin": "XDP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-09-29T00:00:00.000Z",
+    "internal_id": "perpetual-XDP-USDT:USDT",
+    "symbol": "XDP",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "XEMUSDT",
