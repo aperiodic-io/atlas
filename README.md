@@ -233,6 +233,26 @@ both the confident and the uncertain matches. See
 [`docs/cmc-id-mapping.md`](docs/cmc-id-mapping.md) for the decision ladder,
 configuration and review process.
 
+## Raw Data Coverage
+
+Atlas also keeps the coverage file of the aperiodic.io raw data buckets
+(`aperiodic-raw-trades`, `-quotes`, `-derivatives`) up to date. Several
+workflows write files into those buckets; the `raw-coverage` workflow is the
+only writer of each bucket's `v1/_coverage.json`. It lists the bucket and
+records, per dataset × exchange × symbol, the first and last day, missing
+periods, day count and bytes. It runs four times a day and alerts Slack when a
+run fails or the newest day is more than three days old.
+
+```bash
+pip install -e ".[raw]"
+# needs R2_ENDPOINT_URL, R2_DATA_KEY_ID, R2_DATA_KEY_SECRET
+python integrations/raw_coverage.py --dry-run
+```
+
+The file stays in the private buckets, not in this repository: aperiodic.io
+publishes each series from a delayed start, and the real first days are not
+public.
+
 ## Limitations
 
 - No options mapping in the securities master map:
@@ -252,6 +272,7 @@ configuration and review process.
 - `atlas/data/*.json`: generated per-exchange snapshot files.
 - `integrations/cmc_new_symbol_mapping.py`: CMC ID resolution for new Binance symbols.
 - `integrations/cmc_mappings.py`: versioned per-instrument CMC decision store.
+- `integrations/raw_coverage.py`: coverage files of the raw data buckets.
 
 ## Testing
 

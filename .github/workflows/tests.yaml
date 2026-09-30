@@ -30,7 +30,7 @@ jobs:
 
       - name: install-dependencies
         run: |
-          uv pip install --system ".[tests]"
+          uv pip install --system ".[tests,raw]"
 
       - name: run-tests
         env:

@@ -1,0 +1,68 @@
+name: raw-coverage
+
+# The single writer of v1/_coverage.json in the raw data buckets
+# (aperiodic-raw-trades, -quotes, -derivatives). The backfill, the daily export,
+# the live capture and gap backfills all write files there without knowing about
+# each other; this lists the buckets and rewrites each coverage file from what is
+# actually there. Fails, and alerts Slack, when the newest day is stale.
+
+on:
+  schedule:
+    # 10:30 UTC is after the daily raw export's 10:00 target.
+    - cron: "30 4,10,16,22 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the summary without writing the files"
+        type: boolean
+        default: false
+      max_lag_days:
+        description: "Fail when the newest day of any series is older than this"
+        type: string
+        default: "3"
+
+concurrency:
+  group: raw-coverage
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  write-coverage:
+    runs-on: ubicloud-standard-2
+    timeout-minutes: 180
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: install-dependencies
+        run: uv pip install --system -e ".[raw]"
+
+      - name: write-coverage
+        env:
+          R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL }}
+          R2_DATA_KEY_ID: ${{ secrets.R2_DATA_KEY_ID }}
+          R2_DATA_KEY_SECRET: ${{ secrets.R2_DATA_KEY_SECRET }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+          MAX_LAG_DAYS: ${{ inputs.max_lag_days || '3' }}
+        run: python integrations/raw_coverage.py $DRY_RUN --max-lag-days "$MAX_LAG_DAYS"
+
+      - name: notify-slack-on-failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sf -X POST -H 'Content-type: application/json' \
+            --data "{\"text\": \":x: raw-coverage failed (stale raw data or a bucket error) — <${RUN_URL}|view run>\"}" \
+            "$SLACK_WEBHOOK_URL"

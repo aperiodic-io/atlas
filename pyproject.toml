@@ -45,6 +45,7 @@ Source = "https://github.com/unravel-finance/atlas"
 [project.optional-dependencies]
 quality = ["ruff==0.14.1", "pre-commit~=2.20.0"]
 tests = ["pytest==8.2.2", "pytest-cov==5.0.0", "pytest-xdist==3.6.1"]
+raw = ["boto3~=1.40", "pyarrow>=21"]
 
 
 # bumpver command: ``bumpver update --patch``
