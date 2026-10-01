@@ -4347,11 +4347,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-29T00:00:00.000Z",
     "internal_id": "perpetual-CVNA-USDT:USDT",
     "symbol": "CVNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-29T00:00:00.000Z"
   },
   {
     "id": "CVXSTOCKUSDT",
@@ -12434,11 +12434,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-29T00:00:00.000Z",
     "internal_id": "perpetual-RUM-USDT:USDT",
     "symbol": "RUM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-29T00:00:00.000Z"
   },
   {
     "id": "RUNEUSDT",
@@ -14841,11 +14841,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-09-29T00:00:00.000Z",
     "internal_id": "perpetual-TWST-USDT:USDT",
     "symbol": "TWST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-29T00:00:00.000Z"
   },
   {
     "id": "TWTPERP",
@@ -15979,11 +15979,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-09-29T00:00:00.000Z",
     "internal_id": "perpetual-XDP-USDT:USDT",
     "symbol": "XDP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-09-29T00:00:00.000Z"
   },
   {
     "id": "XEMUSDT",
