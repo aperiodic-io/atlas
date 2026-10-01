@@ -2870,7 +2870,8 @@
     "type": "spot",
     "internal_id": "spot-BTC-PLN",
     "symbol": "BTC",
-    "denominator": "PLN"
+    "denominator": "PLN",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "BTC-TRY",
@@ -3941,6 +3942,38 @@
     "symbol": "CSPR",
     "denominator": "USDT",
     "first_capture": "2021-05-11T00:00:00.000Z"
+  },
+  {
+    "id": "CT-EUR",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-CT-EUR",
+    "symbol": "CT",
+    "denominator": "EUR"
+  },
+  {
+    "id": "CT-TRY",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-CT-TRY",
+    "symbol": "CT",
+    "denominator": "TRY"
+  },
+  {
+    "id": "CT-USDC",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-CT-USDC",
+    "symbol": "CT",
+    "denominator": "USDC"
+  },
+  {
+    "id": "CT-USDT",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-CT-USDT",
+    "symbol": "CT",
+    "denominator": "USDT"
   },
   {
     "id": "CTC-BTC",
@@ -5559,7 +5592,8 @@
     "type": "spot",
     "internal_id": "spot-ETH-PLN",
     "symbol": "ETH",
-    "denominator": "PLN"
+    "denominator": "PLN",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "ETH-TRY",
@@ -15754,7 +15788,8 @@
     "type": "spot",
     "internal_id": "spot-USDC-PLN",
     "symbol": "USDC",
-    "denominator": "PLN"
+    "denominator": "PLN",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "USDC-SGD",

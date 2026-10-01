@@ -1174,6 +1174,14 @@
     "first_capture": "2019-03-30T00:00:00.000Z"
   },
   {
+    "id": "adbebusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-ADBEB-USDT",
+    "symbol": "ADBEB",
+    "denominator": "USDT"
+  },
+  {
     "id": "adxbtc",
     "type": "spot",
     "internal_id": "spot-ADX-BTC",
@@ -14481,6 +14489,14 @@
     "first_capture": "2025-10-25T00:00:00.000Z"
   },
   {
+    "id": "fwdibusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-FWDIB-USDT",
+    "symbol": "FWDIB",
+    "denominator": "USDT"
+  },
+  {
     "id": "fxsbtc",
     "type": "spot",
     "internal_id": "spot-FXS-BTC",
@@ -16678,6 +16694,14 @@
     "symbol": "HOT",
     "denominator": "USDT",
     "first_capture": "2021-03-04T00:00:00.000Z"
+  },
+  {
+    "id": "hpebusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-HPEB-USDT",
+    "symbol": "HPEB",
+    "denominator": "USDT"
   },
   {
     "id": "humabnb",
@@ -25286,6 +25310,14 @@
     "end_date": "2025-05-03T00:00:00.000Z"
   },
   {
+    "id": "pddbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-PDDB-USDT",
+    "symbol": "PDDB",
+    "denominator": "USDT"
+  },
+  {
     "id": "pendlebtc",
     "type": "spot",
     "internal_id": "spot-PENDLE-BTC",
@@ -29813,6 +29845,14 @@
     "cmc_id": 8119,
     "category": [],
     "first_capture": "2021-02-24T00:00:00.000Z"
+  },
+  {
+    "id": "shazbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-SHAZB-USDT",
+    "symbol": "SHAZB",
+    "denominator": "USDT"
   },
   {
     "id": "shellbnb",
@@ -36197,6 +36237,14 @@
     "first_capture": "2026-07-07T00:00:00.000Z"
   },
   {
+    "id": "wenbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-WENB-USDT",
+    "symbol": "WENB",
+    "denominator": "USDT"
+  },
+  {
     "id": "wfdusd",
     "type": "spot",
     "internal_id": "spot-W-FDUSD",
@@ -38850,6 +38898,14 @@
       "Privacy"
     ],
     "first_capture": "2024-06-17T00:00:00.000Z"
+  },
+  {
+    "id": "zmbusdt",
+    "type": "spot",
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "spot-ZMB-USDT",
+    "symbol": "ZMB",
+    "denominator": "USDT"
   },
   {
     "id": "zrobtc",

@@ -20040,6 +20040,17 @@
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
+    "id": "CT-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "future-CT-USD:USD-20311003",
+    "symbol": "CT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "DASH-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 0.01,
@@ -54545,6 +54556,17 @@
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
+    "id": "ONE-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "future-ONE-USD:USD-20311003",
+    "symbol": "ONE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "ONT-USD_UM_XPERP-310829",
     "type": "future",
     "contract_size": 10.0,
@@ -54633,6 +54655,17 @@
     "first_capture": "2026-07-10T00:00:00.000Z"
   },
   {
+    "id": "PEOPLE-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 100.0,
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "future-PEOPLE-USD:USD-20311003",
+    "symbol": "PEOPLE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "PEPE-USD_UM_XPERP-310404",
     "type": "future",
     "internal_id": "future-PEPE-USD:USD-20310404",
@@ -54719,6 +54752,17 @@
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1000.0,
     "first_capture": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "PURR-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-09-30T00:00:00.000Z",
+    "internal_id": "future-PURR-USD:USD-20311003",
+    "symbol": "PURR",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "PYTH-USD_UM_XPERP-310829",

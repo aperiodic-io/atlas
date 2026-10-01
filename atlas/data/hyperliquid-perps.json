@@ -4986,6 +4986,16 @@
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
+    "id": "xyz:GLW",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "internal_id": "perpetual-XYZ:GLW-USDC:USDC",
+    "symbol": "XYZ:GLW",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:GME",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:GME-USDC:USDC",

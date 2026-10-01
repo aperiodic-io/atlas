@@ -4446,6 +4446,17 @@
     "first_capture": "2021-10-26T00:00:00.000Z"
   },
   {
+    "id": "ctusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "internal_id": "perpetual-CT-USDT:USDT",
+    "symbol": "CT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "cudisusdt",
     "type": "perpetual",
     "internal_id": "perpetual-CUDIS-USDT:USDT",
