@@ -4298,6 +4298,21 @@
     "end_date": "2026-03-20T00:00:00.000Z"
   },
   {
+    "id": "CTUSDT",
+    "type": "perpetual",
+    "base_coin": "CT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-01T00:00:00.000Z",
+    "internal_id": "perpetual-CT-USDT:USDT",
+    "symbol": "CT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CUDISUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-CUDIS-USDT:USDT",
