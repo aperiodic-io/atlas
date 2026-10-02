@@ -1,6 +1,46 @@
 {
   "mappings": [
     {
+      "cmc_id": 42253,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 42253,
+            "identity_match": null,
+            "is_active": true,
+            "name": "Concrete",
+            "price_usd": 0.5934085262616159,
+            "relative_price_difference": 0.0017362609500926258,
+            "slug": "concrete"
+          }
+        ],
+        "catalogue_issue": "tolerated 1 unreadable of 8144 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "CTUSDT",
+          "observed_at": "2026-10-02T09:58:03.482000Z",
+          "price": 0.59238,
+          "quote_currency": "USDT",
+          "venue": "binance-futures"
+        },
+        "exchange_symbol": "CT",
+        "price_probe_status": "stale_price",
+        "rationale": "The exchange asset 'Concrete' with symbol 'CT' directly maps to CMC ID 42253 (Concrete), confirmed by the exchange's instrument CTUSDT on Binance Futures. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2026-10-01T00:00:00Z",
+        "original_id": "ctusdt"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-10-02T09:58:05.937516Z",
+      "slug": "concrete",
+      "status": "uncertain",
+      "symbol": "CT"
+    },
+    {
       "cmc_id": 40857,
       "evidence": {
         "candidates": [
