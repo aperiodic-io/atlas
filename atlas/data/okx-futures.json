@@ -20043,12 +20043,12 @@
     "id": "CT-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 10.0,
-    "first_capture": "2026-09-30T00:00:00.000Z",
     "internal_id": "future-CT-USD:USD-20311003",
     "symbol": "CT",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "DASH-USD_UM_XPERP-310829",
@@ -54559,12 +54559,12 @@
     "id": "ONE-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-30T00:00:00.000Z",
     "internal_id": "future-ONE-USD:USD-20311003",
     "symbol": "ONE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "ONT-USD_UM_XPERP-310829",
@@ -54658,12 +54658,12 @@
     "id": "PEOPLE-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 100.0,
-    "first_capture": "2026-09-30T00:00:00.000Z",
     "internal_id": "future-PEOPLE-USD:USD-20311003",
     "symbol": "PEOPLE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "PEPE-USD_UM_XPERP-310404",
@@ -54757,12 +54757,12 @@
     "id": "PURR-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-09-30T00:00:00.000Z",
     "internal_id": "future-PURR-USD:USD-20311003",
     "symbol": "PURR",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
     "id": "PYTH-USD_UM_XPERP-310829",
@@ -54796,6 +54796,17 @@
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
     "first_capture": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "QUANT-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 0.01,
+    "first_capture": "2026-10-01T00:00:00.000Z",
+    "internal_id": "future-QUANT-USD:USD-20311003",
+    "symbol": "QUANT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "RAVE-USD_UM_XPERP-310815",
