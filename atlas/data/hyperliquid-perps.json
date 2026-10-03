@@ -4125,6 +4125,16 @@
     "margin": "USDC"
   },
   {
+    "id": "para:GDX",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "internal_id": "perpetual-PARA:GDX-USDC:USDC",
+    "symbol": "PARA:GDX",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:GLW",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:GLW-USDC:USDC",
