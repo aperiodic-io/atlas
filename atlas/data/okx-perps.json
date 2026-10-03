@@ -101,6 +101,16 @@
     "first_capture": "2024-02-22T00:00:00.000Z"
   },
   {
+    "id": "ACN-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "perpetual-ACN-USDT:USDT",
+    "symbol": "ACN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ACT-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ACT-USDT:USDT",
@@ -1281,6 +1291,16 @@
     "contract_size": 100.0,
     "first_capture": "2025-01-27T00:00:00.000Z",
     "end_date": "2025-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "BWET-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "perpetual-BWET-USDT:USDT",
+    "symbol": "BWET",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "BX-USDT-SWAP",
@@ -2791,6 +2811,16 @@
     "first_capture": "2025-07-03T00:00:00.000Z"
   },
   {
+    "id": "H100-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "perpetual-H100-USDT:USDT",
+    "symbol": "H100",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HANMI-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -4293,6 +4323,16 @@
     "end_date": "2025-07-26T00:00:00.000Z"
   },
   {
+    "id": "NKE-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "perpetual-NKE-USDT:USDT",
+    "symbol": "NKE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NMR-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-NMR-USDT:USDT",
@@ -5390,6 +5430,16 @@
     "contract_size": 1.0,
     "first_capture": "2024-10-22T00:00:00.000Z",
     "end_date": "2025-10-31T00:00:00.000Z"
+  },
+  {
+    "id": "SECZ-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "perpetual-SECZ-USDT:USDT",
+    "symbol": "SECZ",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SEI-USDT-SWAP",

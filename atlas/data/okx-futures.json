@@ -2266,6 +2266,17 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "ADBE-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "future-ADBE-USD:USD-20311003",
+    "symbol": "ADBE",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
+  },
+  {
     "id": "AEON-USD_UM_XPERP-310801",
     "type": "future",
     "contract_size": 10.0,
@@ -2385,6 +2396,17 @@
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
     "first_capture": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "APP-USD_UM_XPERP-311003",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-02T00:00:00.000Z",
+    "internal_id": "future-APP-USD:USD-20311003",
+    "symbol": "APP",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-03T00:00:00"
   },
   {
     "id": "APR-USD_UM_XPERP-310815",
@@ -54801,12 +54823,12 @@
     "id": "QUANT-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 0.01,
-    "first_capture": "2026-10-01T00:00:00.000Z",
     "internal_id": "future-QUANT-USD:USD-20311003",
     "symbol": "QUANT",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-10-01T00:00:00.000Z"
   },
   {
     "id": "RAVE-USD_UM_XPERP-310815",
