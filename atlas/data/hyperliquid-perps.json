@@ -4560,6 +4560,16 @@
     "first_capture": "2025-12-02T00:00:00.000Z"
   },
   {
+    "id": "xyz:ACN",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "internal_id": "perpetual-XYZ:ACN-USDC:USDC",
+    "symbol": "XYZ:ACN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:ALUMINIUM",
     "type": "perpetual",
     "contract_size": 1.0,
