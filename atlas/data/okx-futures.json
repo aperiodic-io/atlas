@@ -2269,12 +2269,12 @@
     "id": "ADBE-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-02T00:00:00.000Z",
     "internal_id": "future-ADBE-USD:USD-20311003",
     "symbol": "ADBE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-10-02T00:00:00.000Z"
   },
   {
     "id": "AEON-USD_UM_XPERP-310801",
@@ -2401,12 +2401,12 @@
     "id": "APP-USD_UM_XPERP-311003",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-02T00:00:00.000Z",
     "internal_id": "future-APP-USD:USD-20311003",
     "symbol": "APP",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-03T00:00:00"
+    "delivery_date": "2031-10-03T00:00:00",
+    "first_capture": "2026-10-02T00:00:00.000Z"
   },
   {
     "id": "APR-USD_UM_XPERP-310815",
