@@ -7,6 +7,9 @@ from atlas.update import (
     _matches_exchange_constraints,
 )
 from atlas.update import _apply_snapshot_metadata
+import json
+import importlib
+from types import SimpleNamespace
 
 
 def test_apply_snapshot_metadata_preserves_existing_lifecycle_fields() -> None:
@@ -63,6 +66,57 @@ def test_merge_existing_fields_does_not_override_source_values() -> None:
 
     assert symbols[0]["first_capture"] == "2024-01-01T00:00:00.000Z"
     assert merged[0]["first_capture"] == "2024-01-01T00:00:00.000Z"
+
+
+def test_tardis_refresh_removes_git_capture_provenance() -> None:
+    existing = {"HYPE/USDC": {"id": "HYPE/USDC", "first_capture": "2026-01-01T00:00:00Z", "first_capture_source": {"source": "git", "commit": "abc"}}}
+    rows = _merge_existing_fields([{"id": "HYPE/USDC", "first_capture": "2025-01-01T00:00:00Z"}], existing, ignore_metadata=True)
+    assert rows[0]["first_capture"] == "2025-01-01T00:00:00Z"
+    assert "first_capture_source" not in rows[0]
+
+
+def test_direct_refresh_retains_git_capture_provenance_until_replaced() -> None:
+    existing = {"HYPE/USDC": {"id": "HYPE/USDC", "first_capture": "2026-01-01T00:00:00Z", "first_capture_source": {"source": "git", "commit": "abc"}}}
+    rows = _merge_existing_fields([{"id": "HYPE/USDC"}], existing)
+    assert rows[0]["first_capture_source"]["source"] == "git"
+    refreshed = _merge_existing_fields([{"id": "HYPE/USDC", "first_capture": "2025-01-01T00:00:00Z"}], existing)
+    assert "first_capture_source" not in refreshed[0]
+
+
+def test_new_direct_hyperliquid_rows_receive_stable_capture_dates(tmp_path, monkeypatch) -> None:
+    updater = importlib.import_module("atlas.update")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [{"id": "NEW/USDC", "type": "spot"}]})
+    assert updater.update(["hyperliquid-spot"], source) == []
+    path = tmp_path / "hyperliquid-spot.json"
+    original = json.loads(path.read_text())[0]
+    assert original["first_capture"]
+    assert original["first_capture_source"]["source"] == "exchange"
+    assert updater.update(["hyperliquid-spot"], source) == []
+    assert json.loads(path.read_text())[0]["first_capture"] == original["first_capture"]
+
+
+def test_partial_tardis_refresh_preserves_direct_capture_instances(tmp_path, monkeypatch) -> None:
+    updater = importlib.import_module("atlas.update")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    path = tmp_path / "hyperliquid-spot.json"
+    path.write_text(json.dumps([
+        {"id": "HYPE/USDC", "type": "spot", "first_capture": "2026-03-01T00:00:00Z", "first_capture_source": {"source": "git", "commit": "abc"}, "cmc_id": 32196},
+        {"id": "HFUN/USDC", "type": "spot", "first_capture": "2026-03-01T00:00:00Z", "first_capture_source": {"source": "git", "commit": "abc"}, "cmc_id": 34624},
+    ]))
+    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
+        {"id": "HYPE/USDC", "type": "spot", "availableSince": "2025-01-01T00:00:00Z"},
+        {"id": "HFUN/USDC", "type": "spot"},
+        {"id": "NEW/USDC", "type": "spot"},
+    ]})
+    assert updater.update(["hyperliquid-spot"], source) == []
+    rows = {row["id"]: row for row in json.loads(path.read_text())}
+    assert rows["HYPE/USDC"]["first_capture"] == "2025-01-01T00:00:00Z"
+    assert "first_capture_source" not in rows["HYPE/USDC"]
+    assert rows["HFUN/USDC"]["first_capture"] == "2026-03-01T00:00:00Z"
+    assert rows["HFUN/USDC"]["first_capture_source"]["source"] == "git"
+    assert rows["HFUN/USDC"]["cmc_id"] == 34624
+    assert rows["NEW/USDC"]["first_capture_source"]["source"] == "exchange"
 
 
 def test_merge_existing_fields_preserves_existing_cmc_id() -> None:

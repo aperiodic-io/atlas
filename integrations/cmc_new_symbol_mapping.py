@@ -1,14 +1,14 @@
-"""Propose CoinMarketCap IDs for newly listed Binance base assets.
+"""Propose CoinMarketCap IDs for newly listed Binance and Hyperliquid assets.
 
 Atlas needs one stable CMC ID per underlying asset, so every symbol that appears
-on Binance without a ``cmc_id`` has to be resolved. This module deliberately
+on a supported exchange without a ``cmc_id`` has to be resolved. This module deliberately
 scopes itself to *new* assets: rows whose ``first_capture`` is recent, whose
 ``cmc_id`` is still missing, and whose ticker no earlier run already decided.
 
 Resolution is layered, cheapest and most defensible first:
 
-1. reuse a CMC ID the Binance snapshots already carry for the same ticker;
-2. accept a single same-ticker CMC candidate whose price is compatible;
+1. reuse an existing CMC ID for an overlapping listing of the underlying;
+2. match exchange identity metadata and corroborate it with price evidence;
 3. otherwise ask an LLM to adjudicate *among the fetched candidates only*.
 
 An LLM answer is never trusted on its own: the chosen ID must be one of the
@@ -53,6 +53,7 @@ from integrations.cmc_id_probe import (
     price_observations_from_binance_tickers,
 )
 from integrations.cmc_mappings import CmcMapping, InstrumentInstance, MappingStore
+from integrations import hyperliquid
 from integrations.llm import (
     ChatClient,
     LlmConfig,
@@ -64,7 +65,7 @@ from integrations.llm import (
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
 DEFAULT_MAPPING_FILENAME = "cmc_mappings.json"
-DEFAULT_EXCHANGES = ("binance-futures",)
+DEFAULT_EXCHANGES = ("binance-futures", "hyperliquid-perps", "hyperliquid-spot")
 DEFAULT_NEW_WITHIN_DAYS = 30
 DEFAULT_MAX_RELATIVE_DIFFERENCE = 0.05
 DEFAULT_MAX_TIMESTAMP_SKEW_SECONDS = 180
@@ -170,6 +171,7 @@ class Candidate:
     asset: CmcAsset
     relative_price_difference: float | None = None
     identity_match: str | None = None
+    price_issue: str = ""
 
     def price_agrees(self, max_relative_difference: float) -> bool:
         """Whether price corroborates, treating an absent observation as neutral."""
@@ -190,6 +192,7 @@ class SymbolEvidence:
     catalogue_trustworthy: bool = True
     catalogue_issue: str = ""
     exchange_prices_available: bool = True
+    hyperliquid_assets: tuple[dict, ...] = ()
 
     @property
     def identified_candidates(self) -> tuple[Candidate, ...]:
@@ -318,15 +321,19 @@ def collect_new_symbols(
     if new_within_days < 0:
         raise ValueError("new_within_days must not be negative")
     cutoff = now - timedelta(days=new_within_days)
-    occurrences_by_lookup: dict[str, list[SymbolOccurrence]] = {}
+    occurrences_by_lookup: dict[tuple[str, str], list[SymbolOccurrence]] = {}
     for exchange, rows in sorted(rows_by_exchange.items()):
         for row in rows:
             occurrence = _occurrence_from_row(exchange, row)
             if occurrence is None:
                 continue
-            if not only_symbols and row.get("underlying") in skip_underlyings:
+            if not only_symbols and _row_out_of_scope(exchange, row, skip_underlyings):
                 continue
-            lookup_symbol = normalize_cmc_lookup_symbol(occurrence.symbol, cmc_symbols)
+            lookup_symbol = (
+                hyperliquid.lookup_symbol(occurrence.symbol, cmc_symbols)
+                if exchange == "hyperliquid-perps"
+                else normalize_cmc_lookup_symbol(occurrence.symbol, cmc_symbols)
+            )
             if only_symbols:
                 if not {occurrence.symbol.upper(), lookup_symbol} & only_symbols:
                     continue
@@ -335,11 +342,26 @@ def collect_new_symbols(
                 or occurrence.instance.key in decided_instances
             ):
                 continue
-            occurrences_by_lookup.setdefault(lookup_symbol, []).append(occurrence)
+            # HIP-1 tokens carry their own identity; a spot name must neither
+            # validate nor block a same-ticker perpetual underlying.
+            group = (lookup_symbol, f"{exchange}:{occurrence.original_id}" if exchange.startswith("hyperliquid-") else "")
+            occurrences_by_lookup.setdefault(group, []).append(occurrence)
     return [
         NewSymbol(lookup_symbol, tuple(occurrences))
-        for lookup_symbol, occurrences in sorted(occurrences_by_lookup.items())
+        for (lookup_symbol, _), occurrences in sorted(occurrences_by_lookup.items())
     ]
+
+
+def _row_out_of_scope(exchange: str, row: dict, skip_underlyings: frozenset[str]) -> bool:
+    if row.get("underlying") in skip_underlyings:
+        return True
+    symbol = row.get("symbol")
+    return bool(
+        skip_underlyings
+        and exchange == "hyperliquid-perps"
+        and isinstance(symbol, str)
+        and ":" in hyperliquid.contract_symbol(symbol)
+    )
 
 
 def build_symbol_evidence(
@@ -363,6 +385,22 @@ def build_symbol_evidence(
     observation = _observation_for(
         new_symbol, observations_by_exchange, cmc_symbols
     )
+    binance_asset = (public_assets_by_symbol or {}).get(new_symbol.lookup_symbol)
+    hl_occurrences = [item for item in new_symbol.occurrences if item.exchange.startswith("hyperliquid-")]
+    hl_assets = tuple(
+        (public_assets_by_symbol or {}).get(f"{item.exchange}:{item.original_id.upper()}", {})
+        for item in hl_occurrences
+    )
+    if hl_occurrences:
+        # Binance's name is not evidence of a Hyperliquid spot token's identity.
+        binance_asset = None
+        direct_ids = {cmc_id for metadata in hl_assets for cmc_id in metadata.get("cmc_market_ids", [])}
+        # A venue-specific identity link can establish a rebrand/ticker alias.
+        # It still cannot introduce an ID absent from the fetched catalogue.
+        by_id = {asset.cmc_id: asset for asset in assets}
+        by_id.update({asset.cmc_id: asset for asset in catalogue.assets if asset.cmc_id in direct_ids})
+        assets = list(by_id.values())
+
     probe_status = "no_exchange_price"
     price_compatible_cmc_id: int | None = None
     if observation is not None and assets:
@@ -374,12 +412,50 @@ def build_symbol_evidence(
             price_compatible_cmc_id = result.match.asset.cmc_id
     elif not assets:
         probe_status = ProbeStatus.NO_TICKER_CANDIDATE.value
-    binance_asset = (public_assets_by_symbol or {}).get(new_symbol.lookup_symbol)
+
+    def candidate_identity(asset):
+        if not hl_occurrences:
+            return identity_match(asset, binance_asset)
+        if all(asset.cmc_id in metadata.get("cmc_market_ids", []) for metadata in hl_assets):
+            return "hyperliquid_cmc_market"
+        if all(asset.cmc_id in metadata.get("cmc_contract_matches", []) for metadata in hl_assets):
+            return "hyperliquid_contract"
+        if any(
+            metadata.get("cmc_contract_checks", {}).get(str(asset.cmc_id))
+            and asset.cmc_id not in metadata.get("cmc_contract_matches", [])
+            for metadata in hl_assets
+        ):
+            return None
+        if all(
+            isinstance(metadata.get("fullName"), str) and metadata["fullName"]
+            and _normalized_identity(metadata["fullName"]) in {
+                _normalized_identity(asset.name), _normalized_identity(asset.slug)
+            }
+            for metadata in hl_assets
+        ):
+            return "hyperliquid_full_name"
+        return None
+
+    def candidate_price_issue(asset):
+        if any(asset.cmc_id in metadata.get("cmc_quote_failed_ids", []) for metadata in hl_assets):
+            return "The CMC ID quote refresh failed."
+        for item in hl_occurrences:
+            price = _observation_for(NewSymbol(new_symbol.lookup_symbol, (item,)), observations_by_exchange, cmc_symbols)
+            if price is None:
+                return f"No Hyperliquid price for {item.original_id}."
+            if abs(asset.last_updated - price.observed_at) > max_timestamp_skew:
+                return f"Stale Hyperliquid/CMC price comparison for {item.original_id}."
+            difference = _relative_difference(asset, price)
+            if difference is None or difference > max_relative_difference:
+                return f"Hyperliquid price contradicts CMC for {item.original_id}."
+        return ""
+
     candidates = tuple(
         Candidate(
             asset,
             _relative_difference(asset, observation),
-            identity_match(asset, binance_asset),
+            candidate_identity(asset),
+            candidate_price_issue(asset),
         )
         for asset in sorted(assets, key=lambda asset: asset.cmc_id)
     )
@@ -393,6 +469,7 @@ def build_symbol_evidence(
         catalogue_trustworthy=trustworthy,
         catalogue_issue=issue,
         exchange_prices_available=exchange_prices_available,
+        hyperliquid_assets=hl_assets,
     )
 
 
@@ -541,8 +618,9 @@ def decide(
     if len(identified) == 1 and identified[0].price_agrees(max_relative_difference):
         candidate = identified[0]
         blocker = _approval_blocker(evidence, candidate)
+        identity_description = "Hyperliquid identity evidence identifies" if evidence.hyperliquid_assets else "Binance asset name matches"
         rationale = (
-            f"Binance asset name matches {candidate.asset.name or candidate.asset.slug} "
+            f"{identity_description} {candidate.asset.name or candidate.asset.slug} "
             f"({candidate.identity_match}) and the price does not contradict it."
         )
         if blocker is None:
@@ -594,6 +672,13 @@ def _approval_blocker(
         )
     if not evidence.catalogue_trustworthy:
         return f"Holding for review: {evidence.catalogue_issue}"
+    if evidence.hyperliquid_assets:
+        if evidence.observation is None:
+            return "Holding for review because this Hyperliquid instrument has no price observation."
+        if evidence.probe_status in {"stale_price", "price_mismatch", "invalid_exchange_price"}:
+            return f"Holding for review because Hyperliquid price evidence is {evidence.probe_status}."
+        if candidate is not None and candidate.price_issue:
+            return f"Holding for review: {candidate.price_issue}"
     if candidate is not None and not candidate.identity_match:
         return (
             "Holding for review because only the ticker and price agree, which "
@@ -695,9 +780,12 @@ def build_prompt(evidence: SymbolEvidence) -> str:
                 "symbol": candidate.asset.symbol,
                 "slug": candidate.asset.slug,
                 "price_usd": candidate.asset.price_usd,
+                "last_updated": candidate.asset.last_updated.isoformat().replace("+00:00", "Z"),
                 "is_active": candidate.asset.is_active,
                 "relative_price_difference": candidate.relative_price_difference,
-                "binance_name_matches": candidate.identity_match is not None,
+                "binance_name_matches": candidate.identity_match in {"binance_asset_name", "cmc_slug"},
+                "identity_match": candidate.identity_match,
+                "price_issue": candidate.price_issue,
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
@@ -710,6 +798,8 @@ def build_prompt(evidence: SymbolEvidence) -> str:
             for key in ("assetCode", "assetName", "tags", "delisted", "preDelist")
             if key in evidence.binance_asset
         }
+    if evidence.hyperliquid_assets:
+        payload["hyperliquid_assets"] = list(evidence.hyperliquid_assets)
     if evidence.observation is not None:
         payload["exchange_price"] = {
             "venue": evidence.observation.venue,
@@ -728,8 +818,8 @@ def apply_decisions(
     rows_by_exchange: dict[str, list[dict]], decisions: list[Decision]
 ) -> dict[str, int]:
     """Write approved CMC IDs onto the new rows only, never replacing an ID."""
-    approved_ids: dict[tuple[str, str], int] = {
-        (occurrence.exchange, occurrence.original_id): decision.cmc_id
+    approved_ids: dict[str, int] = {
+        occurrence.instance.key: decision.cmc_id
         for decision in decisions
         if decision.status is MatchStatus.APPROVED and decision.cmc_id is not None
         for occurrence in decision.evidence.new_symbol.occurrences
@@ -740,7 +830,10 @@ def apply_decisions(
             original_id = row.get("id")
             if not isinstance(original_id, str) or row.get("cmc_id") is not None:
                 continue
-            cmc_id = approved_ids.get((exchange, original_id))
+            first_capture = _parse_optional_timestamp(row.get("first_capture"))
+            if first_capture is None:
+                continue
+            cmc_id = approved_ids.get(InstrumentInstance(exchange, original_id, first_capture).key)
             if cmc_id is None:
                 continue
             row["cmc_id"] = cmc_id
@@ -890,6 +983,8 @@ def _evidence_payload(decision: Decision, occurrence: SymbolOccurrence) -> dict:
                 "is_active": candidate.asset.is_active,
                 "relative_price_difference": candidate.relative_price_difference,
                 "identity_match": candidate.identity_match,
+                "last_updated": candidate.asset.last_updated.isoformat().replace("+00:00", "Z"),
+                "price_issue": candidate.price_issue,
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
         ],
@@ -909,6 +1004,8 @@ def _evidence_payload(decision: Decision, occurrence: SymbolOccurrence) -> dict:
         }
     if evidence.binance_asset is not None:
         payload["binance_asset_name"] = evidence.binance_asset.get("assetName")
+    if evidence.hyperliquid_assets:
+        payload["hyperliquid_assets"] = list(evidence.hyperliquid_assets)
     return payload
 
 
@@ -968,16 +1065,19 @@ def _observation_for(
 ) -> PriceObservation | None:
     """Prefer a spot observation, normalized to one base unit of the asset."""
     for occurrence in sorted(
-        new_symbol.occurrences, key=lambda item: item.exchange != "binance-spot"
+        new_symbol.occurrences, key=lambda item: item.exchange not in {"binance-spot", "hyperliquid-spot"}
     ):
         observations = observations_by_exchange.get(occurrence.exchange, {})
-        observation = observations.get(occurrence.symbol.upper()) or observations.get(
-            new_symbol.lookup_symbol
-        )
+        if occurrence.exchange.startswith("hyperliquid-"):
+            observation = observations.get(occurrence.original_id.upper())
+        else:
+            observation = observations.get(occurrence.symbol.upper()) or observations.get(new_symbol.lookup_symbol)
         if observation is None:
             continue
-        multiplier = contract_multiplier_for_cmc_lookup(
-            occurrence.symbol, new_symbol.lookup_symbol, cmc_symbols
+        multiplier = (
+            hyperliquid.contract_multiplier(occurrence.symbol)
+            if occurrence.exchange == "hyperliquid-perps"
+            else contract_multiplier_for_cmc_lookup(occurrence.symbol, new_symbol.lookup_symbol, cmc_symbols)
         )
         return replace(
             observation,
@@ -1059,7 +1159,8 @@ def save_snapshots(
 
 
 def fetch_price_observations(
-    new_symbols: list[NewSymbol], exchanges: tuple[str, ...]
+    new_symbols: list[NewSymbol], exchanges: tuple[str, ...],
+    identity_assets: dict[str, dict] | None = None,
 ) -> tuple[dict[str, dict[str, PriceObservation]], bool]:
     """Fetch Binance tickers once and select the prices the new symbols need.
 
@@ -1074,6 +1175,33 @@ def fetch_price_observations(
             wanted = wanted_by_exchange.setdefault(occurrence.exchange, set())
             wanted.add(occurrence.symbol.upper())
             wanted.add(new_symbol.lookup_symbol)
+    observations: dict[str, dict[str, PriceObservation]] = {}
+    prices_available = True
+    hl_occurrences = [item for symbol in new_symbols for item in symbol.occurrences if item.exchange.startswith("hyperliquid-")]
+    if hl_occurrences:
+        with requests.Session() as session:
+            try:
+                spot_prices, spot_assets = hyperliquid.fetch_spot_market_data(session)
+                observations["hyperliquid-spot"] = spot_prices
+                if identity_assets is not None:
+                    identity_assets.update({f"hyperliquid-spot:{pair}": asset for pair, asset in spot_assets.items()})
+                    # HYPE is the native Hyperliquid asset, on both markets.
+                    native = spot_assets.get("HYPE/USDC", {})
+                    if native:
+                        identity_assets["hyperliquid-perps:HYPE"] = native
+            except hyperliquid.HyperliquidError as error:
+                print(f"Hyperliquid spot metadata/prices unavailable: {error}", file=sys.stderr)
+                observations["hyperliquid-spot"] = {}
+            dexes = {item.original_id.split(":", 1)[0] if ":" in item.original_id else None for item in hl_occurrences if item.exchange == "hyperliquid-perps"}
+            observations["hyperliquid-perps"] = {}
+            for dex in sorted(dexes, key=lambda value: value or ""):
+                try:
+                    observations["hyperliquid-perps"].update(hyperliquid.fetch_perp_market_data(session, dex=dex))
+                except hyperliquid.HyperliquidError as error:
+                    print(f"Hyperliquid perp prices unavailable ({dex or 'main'}): {error}", file=sys.stderr)
+            # Partial outages are gated per instrument below; healthy exchanges
+            # remain useful in a mixed run.
+            prices_available = any(observations.get(item.exchange, {}).get(item.original_id.upper()) for item in hl_occurrences)
     try:
         spot_tickers = (
             fetch_spot_prices() if wanted_by_exchange.get("binance-spot") else []
@@ -1086,14 +1214,17 @@ def fetch_price_observations(
         )
     except OSError as error:
         print(f"Binance prices unavailable: {error}", file=sys.stderr)
-        return {exchange: {} for exchange in wanted_by_exchange}, False
+        # Preserve independently successful Hyperliquid calls.
+        return {exchange: observations.get(exchange, {}) for exchange in wanted_by_exchange}, False
     tickers_by_exchange = {
         "binance-spot": (spot_tickers, "binance-spot"),
         "binance-futures": (futures_tickers, "binance-futures"),
         "binance-futures-cm": (futures_tickers, "binance-futures"),
     }
-    observations: dict[str, dict[str, PriceObservation]] = {}
     for exchange, wanted in wanted_by_exchange.items():
+        if exchange.startswith("hyperliquid-"):
+            observations.setdefault(exchange, {})
+            continue
         tickers, venue = tickers_by_exchange.get(exchange, ([], exchange))
         if not wanted or not tickers:
             observations[exchange] = {}
@@ -1101,7 +1232,7 @@ def fetch_price_observations(
         observations[exchange] = price_observations_from_binance_tickers(
             tickers, wanted, venue=venue
         )
-    return observations, True
+    return observations, prices_available
 
 
 @dataclass(frozen=True)
@@ -1198,6 +1329,14 @@ def resolve_new_symbols(
             max_catalogue_gap_ratio=max_catalogue_gap_ratio,
         )
         concurrent = concurrent_cmc_id(new_symbol, windows_by_symbol)
+        if any(item.exchange == "hyperliquid-spot" for item in new_symbol.occurrences):
+            # HIP-1 ticker reuse does not establish token identity across venues.
+            concurrent = None
+        if concurrent is not None and evidence.hyperliquid_assets:
+            reused = _candidate_by_id(evidence, concurrent[0])
+            identified_ids = {candidate.asset.cmc_id for candidate in evidence.identified_candidates}
+            if reused is None or reused.price_issue or (identified_ids and reused.asset.cmc_id not in identified_ids):
+                concurrent = None
         if concurrent is not None and _approval_blocker(evidence, None) is None:
             cmc_id, matched_symbol = concurrent
             slug = next(
@@ -1282,10 +1421,10 @@ def coverage_report(
         ]
         unmapped = [row for row in in_window if row.get("cmc_id") is None]
         out_of_scope = [
-            row for row in unmapped if row.get("underlying") in skip_underlyings
+            row for row in unmapped if _row_out_of_scope(exchange, row, skip_underlyings)
         ]
         missing = [
-            row for row in unmapped if row.get("underlying") not in skip_underlyings
+            row for row in unmapped if not _row_out_of_scope(exchange, row, skip_underlyings)
         ]
         by_exchange[exchange] = {
             "rows_total": len(rows),
@@ -1394,6 +1533,86 @@ def _run_coverage_only(
     return summary
 
 
+def _enrich_hyperliquid_identities(new_symbols, identity_assets, catalogue, observations_by_exchange, max_relative_difference):
+    if any(item.exchange == "hyperliquid-spot" for symbol in new_symbols for item in symbol.occurrences):
+        # Only tokens considered by this run need detail requests. Metadata for
+        # unrelated tokens must not enlarge a daily mapping job.
+        wanted_keys = {f"{item.exchange}:{item.original_id.upper()}" for symbol in new_symbols for item in symbol.occurrences}
+        selected_assets = {key: value for key, value in identity_assets.items() if key in wanted_keys}
+        with requests.Session() as session:
+            hyperliquid.enrich_contract_identity(
+                session, selected_assets, catalogue,
+                observations=observations_by_exchange.get("hyperliquid-spot", {}),
+                max_relative_difference=max_relative_difference,
+            )
+    if any(item.exchange == "hyperliquid-perps" for symbol in new_symbols for item in symbol.occurrences):
+        with requests.Session() as session:
+            try:
+                perp_identities = hyperliquid.fetch_cmc_perp_identities(session)
+                for key, metadata in perp_identities.items():
+                    identity_assets.setdefault(key, {}).update(metadata)
+            except hyperliquid.HyperliquidError as error:
+                print(f"::warning::Hyperliquid CMC market identity unavailable: {error}", file=sys.stderr)
+
+
+def _refresh_hyperliquid_prices(new_symbols, exchanges, identity_assets, catalogue, observations_by_exchange, max_relative_difference, max_timestamp_skew_seconds):
+    identified_ids = {
+        candidate.asset.cmc_id
+        for evidence in (
+            build_symbol_evidence(symbol, catalogue, observations_by_exchange, identity_assets, max_relative_difference=max_relative_difference)
+            for symbol in new_symbols
+            if any(item.exchange.startswith("hyperliquid-") for item in symbol.occurrences)
+        )
+        if evidence.observation is not None
+        for candidate in evidence.identified_candidates
+    }
+    failed_ids = set()
+    print(f"Refreshing {len(identified_ids)} identity-selected CMC ID quotes...", file=sys.stderr)
+    with requests.Session() as session:
+        catalogue = hyperliquid.refresh_cmc_id_quotes(session, catalogue, identified_ids, failed_ids=failed_ids)
+    if failed_ids:
+        for symbol in new_symbols:
+            for item in symbol.occurrences:
+                if item.exchange.startswith("hyperliquid-"):
+                    identity_assets.setdefault(f"{item.exchange}:{item.original_id.upper()}", {})["cmc_quote_failed_ids"] = sorted(failed_ids)
+    for metadata in identity_assets.values():
+        if metadata.get("cmc_market_ids") or metadata.get("cmc_contract_matches") or metadata.get("fullName"):
+            metadata["cmc_quote_source"] = hyperliquid.CMC_DETAIL_URL
+    # Read live marks after potentially slow identity/quote requests so the
+    # comparison uses aligned times rather than old receipt timestamps.
+    observations, available = fetch_price_observations(new_symbols, exchanges)
+    _align_hyperliquid_prices(new_symbols, identity_assets, catalogue, observations, max_timestamp_skew_seconds)
+    return catalogue, observations, available
+
+
+def _align_hyperliquid_prices(new_symbols, identity_assets, catalogue, observations, max_timestamp_skew_seconds):
+    skew = timedelta(seconds=max_timestamp_skew_seconds)
+    with requests.Session() as session:
+        for symbol in new_symbols:
+            if not all(item.exchange.startswith("hyperliquid-") for item in symbol.occurrences):
+                continue
+            evidence = build_symbol_evidence(symbol, catalogue, observations, identity_assets)
+            if evidence.observation is None or len(evidence.identified_candidates) != 1:
+                continue
+            candidate = evidence.identified_candidates[0]
+            if abs(candidate.asset.last_updated - evidence.observation.observed_at) <= skew:
+                continue
+            for item in symbol.occurrences:
+                # The adapter returns contract prices. Normalize once later in
+                # _observation_for, including for multiplier candles.
+                price = observations.get(item.exchange, {}).get(item.original_id.upper())
+                if price is None:
+                    continue
+                try:
+                    candle = hyperliquid.fetch_aligned_candle(session, price, candidate.asset.last_updated)
+                except hyperliquid.HyperliquidError as error:
+                    print(f"Hyperliquid aligned candle unavailable for {item.original_id}: {error}", file=sys.stderr)
+                    continue
+                if candle is not None:
+                    observations[item.exchange][item.original_id.upper()] = candle
+                    identity_assets.setdefault(f"{item.exchange}:{item.original_id.upper()}", {})["hyperliquid_price_source"] = {"type": "candleSnapshot", "interval": "1m"}
+
+
 def run(
     data_dir: Path = DEFAULT_DATA_DIR,
     mapping_path: Path | None = None,
@@ -1415,7 +1634,7 @@ def run(
     summary_path: Path | None = None,
     now: datetime | None = None,
 ) -> dict[str, object]:
-    """Resolve new Binance tickers and report what a reviewer has to look at."""
+    """Resolve new exchange tickers and report what a reviewer has to look at."""
     now = now or datetime.now(UTC)
     mapping_path = mapping_path or data_dir / DEFAULT_MAPPING_FILENAME
     rows_by_exchange = load_snapshots(data_dir, exchanges)
@@ -1488,14 +1707,21 @@ def run(
         "worth_reviewing": False,
     }
     if not new_symbols:
-        print("No new Binance symbols need a CMC ID.")
+        print("No new exchange symbols need a CMC ID.")
         _write_outputs(summary, [], now, report_path, summary_path, None)
         return summary
 
-    print(f"Resolving {len(new_symbols)} new Binance ticker(s)...", file=sys.stderr)
+    print(f"Resolving {len(new_symbols)} new exchange ticker(s)...", file=sys.stderr)
+    identity_assets = _public_assets_by_symbol() if any(not item.exchange.startswith("hyperliquid-") for symbol in new_symbols for item in symbol.occurrences) else {}
     observations_by_exchange, prices_available = fetch_price_observations(
-        new_symbols, exchanges
+        new_symbols, exchanges, identity_assets
     )
+    _enrich_hyperliquid_identities(new_symbols, identity_assets, catalogue, observations_by_exchange, max_relative_difference)
+    if any(item.exchange.startswith("hyperliquid-") for symbol in new_symbols for item in symbol.occurrences):
+        catalogue, observations_by_exchange, prices_available = _refresh_hyperliquid_prices(
+            new_symbols, exchanges, identity_assets, catalogue, observations_by_exchange,
+            max_relative_difference, max_timestamp_skew_seconds,
+        )
     if not prices_available:
         print(
             "::warning::Binance prices were unavailable; no mapping will be "
@@ -1512,7 +1738,7 @@ def run(
             # exchanges this run resolves.
             mapped_windows_by_symbol(load_snapshots(data_dir, all_snapshot_exchanges(data_dir))),
             observations_by_exchange,
-            _public_assets_by_symbol(),
+            identity_assets,
             client,
             max_relative_difference=max_relative_difference,
             max_timestamp_skew=timedelta(seconds=max_timestamp_skew_seconds),

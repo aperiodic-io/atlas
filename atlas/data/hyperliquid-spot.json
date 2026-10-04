@@ -4,1386 +4,2392 @@
     "type": "spot",
     "internal_id": "spot-AAPL-USDC",
     "symbol": "AAPL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AAPLX/USDC",
     "type": "spot",
     "internal_id": "spot-AAPLX-USDC",
     "symbol": "AAPLX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-07T04:22:39Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "57b2e0ecc38ef74c6b6aa6acb12fc1ae9bba6053"
+    }
   },
   {
     "id": "AAVE0/USDC",
     "type": "spot",
     "internal_id": "spot-AAVE0-USDC",
     "symbol": "AAVE0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ADHD/USDC",
     "type": "spot",
     "internal_id": "spot-ADHD-USDC",
     "symbol": "ADHD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AIW3/USDC",
     "type": "spot",
     "internal_id": "spot-AIW3-USDC",
     "symbol": "AIW3",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-04T05:10:58Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "48fbbb9a7faea591e51f5f8e6e1acc99143d3681"
+    }
   },
   {
     "id": "AMZN/USDC",
     "type": "spot",
     "internal_id": "spot-AMZN-USDC",
     "symbol": "AMZN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ANON/USDC",
     "type": "spot",
     "internal_id": "spot-ANON-USDC",
     "symbol": "ANON",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 35092
   },
   {
     "id": "ANSEM/USDC",
     "type": "spot",
     "internal_id": "spot-ANSEM-USDC",
     "symbol": "ANSEM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ANT/USDC",
     "type": "spot",
     "internal_id": "spot-ANT-USDC",
     "symbol": "ANT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ANZ/USDC",
     "type": "spot",
     "internal_id": "spot-ANZ-USDC",
     "symbol": "ANZ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "APU/USDC",
     "type": "spot",
     "internal_id": "spot-APU-USDC",
     "symbol": "APU",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ARI/USDC",
     "type": "spot",
     "internal_id": "spot-ARI-USDC",
     "symbol": "ARI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ASI/USDC",
     "type": "spot",
     "internal_id": "spot-ASI-USDC",
     "symbol": "ASI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ATEHUN/USDC",
     "type": "spot",
     "internal_id": "spot-ATEHUN-USDC",
     "symbol": "ATEHUN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AUTIST/USDC",
     "type": "spot",
     "internal_id": "spot-AUTIST-USDC",
     "symbol": "AUTIST",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AVAX0/USDC",
     "type": "spot",
     "internal_id": "spot-AVAX0-USDC",
     "symbol": "AVAX0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AVGO/USDC",
     "type": "spot",
     "internal_id": "spot-AVGO-USDC",
     "symbol": "AVGO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-13T05:44:50Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c419084b9da50c849584d9e8617c686ea37c97ef"
+    }
   },
   {
     "id": "AXL/USDH",
     "type": "spot",
     "internal_id": "spot-AXL-USDH",
     "symbol": "AXL",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "AZTEC/USDC",
     "type": "spot",
     "internal_id": "spot-AZTEC-USDC",
     "symbol": "AZTEC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BAGS/USDC",
     "type": "spot",
     "internal_id": "spot-BAGS-USDC",
     "symbol": "BAGS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BASED/USDC",
     "type": "spot",
     "internal_id": "spot-BASED-USDC",
     "symbol": "BASED",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-31T04:33:54Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "d0662419e080edd6725c19f27b2bc2acb7ec2fdd"
+    }
   },
   {
     "id": "BAYC/USDC",
     "type": "spot",
     "internal_id": "spot-BAYC-USDC",
     "symbol": "BAYC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BEATS/USDC",
     "type": "spot",
     "internal_id": "spot-BEATS-USDC",
     "symbol": "BEATS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BERA/USDC",
     "type": "spot",
     "internal_id": "spot-BERA-USDC",
     "symbol": "BERA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BID/USDC",
     "type": "spot",
     "internal_id": "spot-BID-USDC",
     "symbol": "BID",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BIGBEN/USDC",
     "type": "spot",
     "internal_id": "spot-BIGBEN-USDC",
     "symbol": "BIGBEN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BNB0/USDC",
     "type": "spot",
     "internal_id": "spot-BNB0-USDC",
     "symbol": "BNB0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BNB1/USDC",
     "type": "spot",
     "internal_id": "spot-BNB1-USDC",
     "symbol": "BNB1",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BOZO/USDC",
     "type": "spot",
     "internal_id": "spot-BOZO-USDC",
     "symbol": "BOZO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BRIDGE/USDC",
     "type": "spot",
     "internal_id": "spot-BRIDGE-USDC",
     "symbol": "BRIDGE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BRLA/USDC",
     "type": "spot",
     "internal_id": "spot-BRLA-USDC",
     "symbol": "BRLA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-05T04:57:50Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "4ca2e406f02b7091890eeb9beb19d15189abd763"
+    }
   },
   {
     "id": "BUBZ/USDC",
     "type": "spot",
     "internal_id": "spot-BUBZ-USDC",
     "symbol": "BUBZ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BUDDY/USDC",
     "type": "spot",
     "internal_id": "spot-BUDDY-USDC",
     "symbol": "BUDDY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 36961
   },
   {
     "id": "BUSSY/USDC",
     "type": "spot",
     "internal_id": "spot-BUSSY-USDC",
     "symbol": "BUSSY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "BZEC/USDC",
     "type": "spot",
     "internal_id": "spot-BZEC-USDC",
     "symbol": "BZEC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CAPPY/USDC",
     "type": "spot",
     "internal_id": "spot-CAPPY-USDC",
     "symbol": "CAPPY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CASH/USDC",
     "type": "spot",
     "internal_id": "spot-CASH-USDC",
     "symbol": "CASH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CAT/USDC",
     "type": "spot",
     "internal_id": "spot-CAT-USDC",
     "symbol": "CAT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CATBAL/USDC",
     "type": "spot",
     "internal_id": "spot-CATBAL-USDC",
     "symbol": "CATBAL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CATNIP/USDC",
     "type": "spot",
     "internal_id": "spot-CATNIP-USDC",
     "symbol": "CATNIP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CFX0/USDC",
     "type": "spot",
     "internal_id": "spot-CFX0-USDC",
     "symbol": "CFX0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-04T06:39:15Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "797a9688fe88453d13af7393640413226ace0f7e"
+    }
   },
   {
     "id": "CFX0/USDH",
     "type": "spot",
     "internal_id": "spot-CFX0-USDH",
     "symbol": "CFX0",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CHEF/USDC",
     "type": "spot",
     "internal_id": "spot-CHEF-USDC",
     "symbol": "CHEF",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CHINA/USDC",
     "type": "spot",
     "internal_id": "spot-CHINA-USDC",
     "symbol": "CHINA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CINDY/USDC",
     "type": "spot",
     "internal_id": "spot-CINDY-USDC",
     "symbol": "CINDY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "COOK/USDC",
     "type": "spot",
     "internal_id": "spot-COOK-USDC",
     "symbol": "COOK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "COPE/USDC",
     "type": "spot",
     "internal_id": "spot-COPE-USDC",
     "symbol": "COPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "COZY/USDC",
     "type": "spot",
     "internal_id": "spot-COZY-USDC",
     "symbol": "COZY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CRCL/USDC",
     "type": "spot",
     "internal_id": "spot-CRCL-USDC",
     "symbol": "CRCL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CRCLX/USDC",
     "type": "spot",
     "internal_id": "spot-CRCLX-USDC",
     "symbol": "CRCLX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-09T03:29:13Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "596a8492436935a084ef8a860785868b5f05baf3"
+    }
   },
   {
     "id": "CREAM/USDC",
     "type": "spot",
     "internal_id": "spot-CREAM-USDC",
     "symbol": "CREAM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "CZ/USDC",
     "type": "spot",
     "internal_id": "spot-CZ-USDC",
     "symbol": "CZ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DBLN/USDC",
     "type": "spot",
     "internal_id": "spot-DBLN-USDC",
     "symbol": "DBLN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DEFIN/USDC",
     "type": "spot",
     "internal_id": "spot-DEFIN-USDC",
     "symbol": "DEFIN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DEPIN/USDC",
     "type": "spot",
     "internal_id": "spot-DEPIN-USDC",
     "symbol": "DEPIN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DIABLO/USDC",
     "type": "spot",
     "internal_id": "spot-DIABLO-USDC",
     "symbol": "DIABLO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DIME/USDC",
     "type": "spot",
     "internal_id": "spot-DIME-USDC",
     "symbol": "DIME",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-10T04:05:36Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "a1fefbec7e4e781a82fc8ded37d57f03c6f8dcb9"
+    }
   },
   {
     "id": "DROP/USDC",
     "type": "spot",
     "internal_id": "spot-DROP-USDC",
     "symbol": "DROP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "DRV/USDC",
     "type": "spot",
     "internal_id": "spot-DRV-USDC",
     "symbol": "DRV",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-11T05:09:37Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "cd0a91866bfbba2a69f377a87182fb2373429ce9"
+    }
   },
   {
     "id": "EARTH/USDC",
     "type": "spot",
     "internal_id": "spot-EARTH-USDC",
     "symbol": "EARTH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "EX/USDC",
     "type": "spot",
     "internal_id": "spot-EX-USDC",
     "symbol": "EX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FARM/USDC",
     "type": "spot",
     "internal_id": "spot-FARM-USDC",
     "symbol": "FARM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 34751
   },
   {
     "id": "FARMED/USDC",
     "type": "spot",
     "internal_id": "spot-FARMED-USDC",
     "symbol": "FARMED",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FATCAT/USDC",
     "type": "spot",
     "internal_id": "spot-FATCAT-USDC",
     "symbol": "FATCAT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FEIT/USDC",
     "type": "spot",
     "internal_id": "spot-FEIT-USDC",
     "symbol": "FEIT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FEUSD/USDC",
     "type": "spot",
     "internal_id": "spot-FEUSD-USDC",
     "symbol": "FEUSD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FI/USDC",
     "type": "spot",
     "internal_id": "spot-FI-USDC",
     "symbol": "FI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FLASK/USDC",
     "type": "spot",
     "internal_id": "spot-FLASK-USDC",
     "symbol": "FLASK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FLOCK/USDC",
     "type": "spot",
     "internal_id": "spot-FLOCK-USDC",
     "symbol": "FLOCK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-29T05:17:55Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "d611976e0110165293fed2bad658f4be7426ac91"
+    },
+    "cmc_id": 34987
   },
   {
     "id": "FLR/USDC",
     "type": "spot",
     "internal_id": "spot-FLR-USDC",
     "symbol": "FLR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 7950
   },
   {
     "id": "FLY/USDC",
     "type": "spot",
     "internal_id": "spot-FLY-USDC",
     "symbol": "FLY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FRAC/USDC",
     "type": "spot",
     "internal_id": "spot-FRAC-USDC",
     "symbol": "FRAC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FRCT/USDC",
     "type": "spot",
     "internal_id": "spot-FRCT-USDC",
     "symbol": "FRCT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FRIED/USDC",
     "type": "spot",
     "internal_id": "spot-FRIED-USDC",
     "symbol": "FRIED",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FRUDO/USDC",
     "type": "spot",
     "internal_id": "spot-FRUDO-USDC",
     "symbol": "FRUDO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FUCKY/USDC",
     "type": "spot",
     "internal_id": "spot-FUCKY-USDC",
     "symbol": "FUCKY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FUN/USDC",
     "type": "spot",
     "internal_id": "spot-FUN-USDC",
     "symbol": "FUN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FUND/USDC",
     "type": "spot",
     "internal_id": "spot-FUND-USDC",
     "symbol": "FUND",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FXMR/USDC",
     "type": "spot",
     "internal_id": "spot-FXMR-USDC",
     "symbol": "FXMR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-29T05:17:55Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "d611976e0110165293fed2bad658f4be7426ac91"
+    }
   },
   {
     "id": "FXRP/USDC",
     "type": "spot",
     "internal_id": "spot-FXRP-USDC",
     "symbol": "FXRP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "FXRP/USDH",
     "type": "spot",
     "internal_id": "spot-FXRP-USDH",
     "symbol": "FXRP",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "G/USDC",
     "type": "spot",
     "internal_id": "spot-G-USDC",
     "symbol": "G",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GENESY/USDC",
     "type": "spot",
     "internal_id": "spot-GENESY-USDC",
     "symbol": "GENESY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GLD/USDC",
     "type": "spot",
     "internal_id": "spot-GLD-USDC",
     "symbol": "GLD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39617
   },
   {
     "id": "GMEOW/USDC",
     "type": "spot",
     "internal_id": "spot-GMEOW-USDC",
     "symbol": "GMEOW",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GOD/USDC",
     "type": "spot",
     "internal_id": "spot-GOD-USDC",
     "symbol": "GOD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GOOGL/USDC",
     "type": "spot",
     "internal_id": "spot-GOOGL-USDC",
     "symbol": "GOOGL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GPT/USDC",
     "type": "spot",
     "internal_id": "spot-GPT-USDC",
     "symbol": "GPT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GUESS/USDC",
     "type": "spot",
     "internal_id": "spot-GUESS-USDC",
     "symbol": "GUESS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "GUP/USDC",
     "type": "spot",
     "internal_id": "spot-GUP-USDC",
     "symbol": "GUP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "H/USDC",
     "type": "spot",
     "internal_id": "spot-H-USDC",
     "symbol": "H",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HAPPY/USDC",
     "type": "spot",
     "internal_id": "spot-HAPPY-USDC",
     "symbol": "HAPPY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HAR/USDC",
     "type": "spot",
     "internal_id": "spot-HAR-USDC",
     "symbol": "HAR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HBOOST/USDC",
     "type": "spot",
     "internal_id": "spot-HBOOST-USDC",
     "symbol": "HBOOST",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HEAD/USDC",
     "type": "spot",
     "internal_id": "spot-HEAD-USDC",
     "symbol": "HEAD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HFUN/USDC",
     "type": "spot",
     "internal_id": "spot-HFUN-USDC",
     "symbol": "HFUN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 34624
   },
   {
     "id": "HGOD/USDC",
     "type": "spot",
     "internal_id": "spot-HGOD-USDC",
     "symbol": "HGOD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HIP/USDC",
     "type": "spot",
     "internal_id": "spot-HIP-USDC",
     "symbol": "HIP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HMT/USDC",
     "type": "spot",
     "internal_id": "spot-HMT-USDC",
     "symbol": "HMT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 10347
   },
   {
     "id": "HNIL/USDC",
     "type": "spot",
     "internal_id": "spot-HNIL-USDC",
     "symbol": "HNIL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-03T05:49:26Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "eaf539cd8af9e52d3a85eb4f797b4b4f4cd6193e"
+    }
   },
   {
     "id": "HODL/USDC",
     "type": "spot",
     "internal_id": "spot-HODL-USDC",
     "symbol": "HODL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HOLD/USDC",
     "type": "spot",
     "internal_id": "spot-HOLD-USDC",
     "symbol": "HOLD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HOOD/USDC",
     "type": "spot",
     "internal_id": "spot-HOOD-USDC",
     "symbol": "HOOD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39625
   },
   {
     "id": "HOP/USDC",
     "type": "spot",
     "internal_id": "spot-HOP-USDC",
     "symbol": "HOP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HOPE/USDC",
     "type": "spot",
     "internal_id": "spot-HOPE-USDC",
     "symbol": "HOPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HORSY/USDC",
     "type": "spot",
     "internal_id": "spot-HORSY-USDC",
     "symbol": "HORSY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HPENGU/USDC",
     "type": "spot",
     "internal_id": "spot-HPENGU-USDC",
     "symbol": "HPENGU",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HPEPE/USDC",
     "type": "spot",
     "internal_id": "spot-HPEPE-USDC",
     "symbol": "HPEPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HPL/USDC",
     "type": "spot",
     "internal_id": "spot-HPL-USDC",
     "symbol": "HPL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-19T06:03:41Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c8453d3a3dc6217f19aa49d572cdbb866edb3ba0"
+    },
+    "cmc_id": 39635
   },
   {
     "id": "HPL/USDH",
     "type": "spot",
     "internal_id": "spot-HPL-USDH",
     "symbol": "HPL",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HPUMP/USDC",
     "type": "spot",
     "internal_id": "spot-HPUMP-USDC",
     "symbol": "HPUMP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HPYH/USDC",
     "type": "spot",
     "internal_id": "spot-HPYH-USDC",
     "symbol": "HPYH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HREKT/USDC",
     "type": "spot",
     "internal_id": "spot-HREKT-USDC",
     "symbol": "HREKT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HSEI/USDC",
     "type": "spot",
     "internal_id": "spot-HSEI-USDC",
     "symbol": "HSEI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HTAO/USDC",
     "type": "spot",
     "internal_id": "spot-HTAO-USDC",
     "symbol": "HTAO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-04-08T04:34:46Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "b4ffc1f6f07e57aca531b1b41cef55d36595e35e"
+    }
   },
   {
     "id": "HWAVE/USDC",
     "type": "spot",
     "internal_id": "spot-HWAVE-USDC",
     "symbol": "HWAVE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HWTR/USDC",
     "type": "spot",
     "internal_id": "spot-HWTR-USDC",
     "symbol": "HWTR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HYENA/USDC",
     "type": "spot",
     "internal_id": "spot-HYENA-USDC",
     "symbol": "HYENA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HYPE/USDC",
     "type": "spot",
     "internal_id": "spot-HYPE-USDC",
     "symbol": "HYPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 32196
   },
   {
     "id": "HYPE/USDE",
     "type": "spot",
     "internal_id": "spot-HYPE-USDE",
     "symbol": "HYPE",
-    "denominator": "USDE"
+    "denominator": "USDE",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HYPE/USDH",
     "type": "spot",
     "internal_id": "spot-HYPE-USDH",
     "symbol": "HYPE",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "HYPE/USDT0",
     "type": "spot",
     "internal_id": "spot-HYPE-USDT0",
     "symbol": "HYPE",
-    "denominator": "USDT0"
+    "denominator": "USDT0",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ILIENS/USDC",
     "type": "spot",
     "internal_id": "spot-ILIENS-USDC",
     "symbol": "ILIENS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ISLAND/USDC",
     "type": "spot",
     "internal_id": "spot-ISLAND-USDC",
     "symbol": "ISLAND",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "IZEC/USDC",
     "type": "spot",
     "internal_id": "spot-IZEC-USDC",
     "symbol": "IZEC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "JEET/USDC",
     "type": "spot",
     "internal_id": "spot-JEET-USDC",
     "symbol": "JEET",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "JEFF/USDC",
     "type": "spot",
     "internal_id": "spot-JEFF-USDC",
     "symbol": "JEFF",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "JPEG/USDC",
     "type": "spot",
     "internal_id": "spot-JPEG-USDC",
     "symbol": "JPEG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KEI/USDC",
     "type": "spot",
     "internal_id": "spot-KEI-USDC",
     "symbol": "KEI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KHYPE/USDC",
     "type": "spot",
     "internal_id": "spot-KHYPE-USDC",
     "symbol": "KHYPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-21T06:06:28Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "ed56ca15c9c84ee809f75181f83553a0d597088c"
+    },
+    "cmc_id": 39072
   },
   {
     "id": "KHYPE/USDH",
     "type": "spot",
     "internal_id": "spot-KHYPE-USDH",
     "symbol": "KHYPE",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KITE/USDC",
     "type": "spot",
     "internal_id": "spot-KITE-USDC",
     "symbol": "KITE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-04-22T04:43:51Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "b7932d7682f5861dbfbe4ffd489f9225e3056340"
+    },
+    "cmc_id": 38828
   },
   {
     "id": "KITTEN/USDC",
     "type": "spot",
     "internal_id": "spot-KITTEN-USDC",
     "symbol": "KITTEN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KITTY/USDC",
     "type": "spot",
     "internal_id": "spot-KITTY-USDC",
     "symbol": "KITTY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KNTQ/USDC",
     "type": "spot",
     "internal_id": "spot-KNTQ-USDC",
     "symbol": "KNTQ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-21T06:06:28Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "ed56ca15c9c84ee809f75181f83553a0d597088c"
+    },
+    "cmc_id": 39070
   },
   {
     "id": "KNTQ/USDH",
     "type": "spot",
     "internal_id": "spot-KNTQ-USDH",
     "symbol": "KNTQ",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "KOBE/USDC",
     "type": "spot",
     "internal_id": "spot-KOBE-USDC",
     "symbol": "KOBE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LADY/USDC",
     "type": "spot",
     "internal_id": "spot-LADY-USDC",
     "symbol": "LADY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LAMA/USDC",
     "type": "spot",
     "internal_id": "spot-LAMA-USDC",
     "symbol": "LAMA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-04-03T04:27:33Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "284091947ebeb6177a0bdd8ef34a381d213247a0"
+    }
   },
   {
     "id": "LATINA/USDC",
     "type": "spot",
     "internal_id": "spot-LATINA-USDC",
     "symbol": "LATINA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LAUNCH/USDC",
     "type": "spot",
     "internal_id": "spot-LAUNCH-USDC",
     "symbol": "LAUNCH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LICK/USDC",
     "type": "spot",
     "internal_id": "spot-LICK-USDC",
     "symbol": "LICK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LICKO/USDC",
     "type": "spot",
     "internal_id": "spot-LICKO-USDC",
     "symbol": "LICKO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LINK0/USDC",
     "type": "spot",
     "internal_id": "spot-LINK0-USDC",
     "symbol": "LINK0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LINK0/USDT0",
     "type": "spot",
     "internal_id": "spot-LINK0-USDT0",
     "symbol": "LINK0",
-    "denominator": "USDT0"
+    "denominator": "USDT0",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LIQD/USDC",
     "type": "spot",
     "internal_id": "spot-LIQD-USDC",
     "symbol": "LIQD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LIQUID/USDC",
     "type": "spot",
     "internal_id": "spot-LIQUID-USDC",
     "symbol": "LIQUID",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LMTS/USDC",
     "type": "spot",
     "internal_id": "spot-LMTS-USDC",
     "symbol": "LMTS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LORA/USDC",
     "type": "spot",
     "internal_id": "spot-LORA-USDC",
     "symbol": "LORA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LQNA/USDC",
     "type": "spot",
     "internal_id": "spot-LQNA-USDC",
     "symbol": "LQNA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LTHREE/USDC",
     "type": "spot",
     "internal_id": "spot-LTHREE-USDC",
     "symbol": "LTHREE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "LUCKY/USDC",
     "type": "spot",
     "internal_id": "spot-LUCKY-USDC",
     "symbol": "LUCKY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MAGA/USDC",
     "type": "spot",
     "internal_id": "spot-MAGA-USDC",
     "symbol": "MAGA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MANLET/USDC",
     "type": "spot",
     "internal_id": "spot-MANLET-USDC",
     "symbol": "MANLET",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MAX/USDC",
     "type": "spot",
     "internal_id": "spot-MAX-USDC",
     "symbol": "MAX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-14T06:36:01Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "fded42dcfd2551a905e153074399036c61102439"
+    }
   },
   {
     "id": "MAXI/USDC",
     "type": "spot",
     "internal_id": "spot-MAXI-USDC",
     "symbol": "MAXI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MBAPPE/USDC",
     "type": "spot",
     "internal_id": "spot-MBAPPE-USDC",
     "symbol": "MBAPPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MEOW/USDC",
     "type": "spot",
     "internal_id": "spot-MEOW-USDC",
     "symbol": "MEOW",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "META/USDC",
     "type": "spot",
     "internal_id": "spot-META-USDC",
     "symbol": "META",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MGW/USDC",
     "type": "spot",
     "internal_id": "spot-MGW-USDC",
     "symbol": "MGW",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-11T06:44:55Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "326ae26d01dd6110071b8a0999a222d1c74f2d30"
+    }
   },
   {
     "id": "MMOVE/USDC",
     "type": "spot",
     "internal_id": "spot-MMOVE-USDC",
     "symbol": "MMOVE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MOG/USDC",
     "type": "spot",
     "internal_id": "spot-MOG-USDC",
     "symbol": "MOG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MON/USDC",
     "type": "spot",
     "internal_id": "spot-MON-USDC",
     "symbol": "MON",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MONAD/USDC",
     "type": "spot",
     "internal_id": "spot-MONAD-USDC",
     "symbol": "MONAD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MSFT/USDC",
     "type": "spot",
     "internal_id": "spot-MSFT-USDC",
     "symbol": "MSFT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39616
   },
   {
     "id": "MU/USDC",
     "type": "spot",
     "internal_id": "spot-MU-USDC",
     "symbol": "MU",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-13T05:44:50Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c419084b9da50c849584d9e8617c686ea37c97ef"
+    }
   },
   {
     "id": "MUNCH/USDC",
     "type": "spot",
     "internal_id": "spot-MUNCH-USDC",
     "symbol": "MUNCH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "MUX/USDC",
     "type": "spot",
     "internal_id": "spot-MUX-USDC",
     "symbol": "MUX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-25T05:10:58Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "197f4a5ff9ace31236dc1e0ae032b7e937e121e9"
+    }
   },
   {
     "id": "NASDAQ/USDC",
     "type": "spot",
     "internal_id": "spot-NASDAQ-USDC",
     "symbol": "NASDAQ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NAV/USDC",
     "type": "spot",
     "internal_id": "spot-NAV-USDC",
     "symbol": "NAV",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-23T07:14:00Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "6de80547984dab831040d6a9a44923d8b3565750"
+    }
   },
   {
     "id": "NBT/USDC",
     "type": "spot",
     "internal_id": "spot-NBT-USDC",
     "symbol": "NBT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NEIRO/USDC",
     "type": "spot",
     "internal_id": "spot-NEIRO-USDC",
     "symbol": "NEIRO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NEKO/USDC",
     "type": "spot",
     "internal_id": "spot-NEKO-USDC",
     "symbol": "NEKO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-27T04:31:44Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "7c89f1f53434ee97ea52c25541ae1751e328b328"
+    }
   },
   {
     "id": "NFT/USDC",
     "type": "spot",
     "internal_id": "spot-NFT-USDC",
     "symbol": "NFT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NIGGO/USDC",
     "type": "spot",
     "internal_id": "spot-NIGGO-USDC",
     "symbol": "NIGGO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NMTD/USDC",
     "type": "spot",
     "internal_id": "spot-NMTD-USDC",
     "symbol": "NMTD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NOCEX/USDC",
     "type": "spot",
     "internal_id": "spot-NOCEX-USDC",
     "symbol": "NOCEX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "NVDAX/USDC",
     "type": "spot",
     "internal_id": "spot-NVDAX-USDC",
     "symbol": "NVDAX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-16T04:56:20Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "6320cad1c78167d52abf5e0905b81b6cdce93bb6"
+    }
   },
   {
     "id": "NYAN/USDC",
     "type": "spot",
     "internal_id": "spot-NYAN-USDC",
     "symbol": "NYAN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "OMNIX/USDC",
     "type": "spot",
     "internal_id": "spot-OMNIX-USDC",
     "symbol": "OMNIX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ONEAR/USDC",
     "type": "spot",
     "internal_id": "spot-ONEAR-USDC",
     "symbol": "ONEAR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-11T06:44:55Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "326ae26d01dd6110071b8a0999a222d1c74f2d30"
+    }
   },
   {
     "id": "ORA/USDC",
     "type": "spot",
     "internal_id": "spot-ORA-USDC",
     "symbol": "ORA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ORCL/USDC",
     "type": "spot",
     "internal_id": "spot-ORCL-USDC",
     "symbol": "ORCL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-13T05:44:50Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c419084b9da50c849584d9e8617c686ea37c97ef"
+    }
   },
   {
     "id": "OTTI/USDC",
     "type": "spot",
     "internal_id": "spot-OTTI-USDC",
     "symbol": "OTTI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PANDA/USDC",
     "type": "spot",
     "internal_id": "spot-PANDA-USDC",
     "symbol": "PANDA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PEAR/USDC",
     "type": "spot",
     "internal_id": "spot-PEAR-USDC",
     "symbol": "PEAR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PEG/USDC",
     "type": "spot",
     "internal_id": "spot-PEG-USDC",
     "symbol": "PEG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PENIS/USDC",
     "type": "spot",
     "internal_id": "spot-PENIS-USDC",
     "symbol": "PENIS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PEPE/USDC",
     "type": "spot",
     "internal_id": "spot-PEPE-USDC",
     "symbol": "PEPE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PERP/USDC",
     "type": "spot",
     "internal_id": "spot-PERP-USDC",
     "symbol": "PERP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PICKL/USDC",
     "type": "spot",
     "internal_id": "spot-PICKL-USDC",
     "symbol": "PICKL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PIGEON/USDC",
     "type": "spot",
     "internal_id": "spot-PIGEON-USDC",
     "symbol": "PIGEON",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PILL/USDC",
     "type": "spot",
     "internal_id": "spot-PILL-USDC",
     "symbol": "PILL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PIP/USDC",
     "type": "spot",
     "internal_id": "spot-PIP-USDC",
     "symbol": "PIP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 34625
   },
   {
     "id": "POINTS/USDC",
     "type": "spot",
     "internal_id": "spot-POINTS-USDC",
     "symbol": "POINTS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PRFI/USDC",
     "type": "spot",
     "internal_id": "spot-PRFI-USDC",
     "symbol": "PRFI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PUMP/USDC",
     "type": "spot",
     "internal_id": "spot-PUMP-USDC",
     "symbol": "PUMP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PUP/USDC",
     "type": "spot",
     "internal_id": "spot-PUP-USDC",
     "symbol": "PUP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PURR/USDC",
@@ -1391,923 +2397,1590 @@
     "internal_id": "spot-PURR-USDC",
     "symbol": "PURR",
     "denominator": "USDC",
-    "first_capture": "2024-10-29T00:00:00.000Z"
+    "first_capture": "2024-10-29T00:00:00.000Z",
+    "cmc_id": 34332
   },
   {
     "id": "PURRO/USDC",
     "type": "spot",
     "internal_id": "spot-PURRO-USDC",
     "symbol": "PURRO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "PURRPS/USDC",
     "type": "spot",
     "internal_id": "spot-PURRPS-USDC",
     "symbol": "PURRPS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "QONE/USDC",
     "type": "spot",
     "internal_id": "spot-QONE-USDC",
     "symbol": "QONE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39537
   },
   {
     "id": "QQQ/USDC",
     "type": "spot",
     "internal_id": "spot-QQQ-USDC",
     "symbol": "QQQ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "QQQM/USDC",
     "type": "spot",
     "internal_id": "spot-QQQM-USDC",
     "symbol": "QQQM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-04-14T04:42:59Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "ee3ea83b20161eeebdc636230a79f15f9f85243e"
+    }
   },
   {
     "id": "QQQX/USDC",
     "type": "spot",
     "internal_id": "spot-QQQX-USDC",
     "symbol": "QQQX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-21T05:16:51Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "4bb06ed5fa69347196fa4a59267f7edb936b7fd2"
+    }
   },
   {
     "id": "QUANT/USDC",
     "type": "spot",
     "internal_id": "spot-QUANT-USDC",
     "symbol": "QUANT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RAGE/USDC",
     "type": "spot",
     "internal_id": "spot-RAGE-USDC",
     "symbol": "RAGE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RAIN/USDC",
     "type": "spot",
     "internal_id": "spot-RAIN-USDC",
     "symbol": "RAIN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-20T02:52:07Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "419df0695e0aa1044087b5a6ae6c915909e05eba"
+    }
   },
   {
     "id": "RAM/USDC",
     "type": "spot",
     "internal_id": "spot-RAM-USDC",
     "symbol": "RAM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-08T04:08:14Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "75d8345a7362f051e44a6844994aa9392d48819d"
+    }
   },
   {
     "id": "RANK/USDC",
     "type": "spot",
     "internal_id": "spot-RANK-USDC",
     "symbol": "RANK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RAT/USDC",
     "type": "spot",
     "internal_id": "spot-RAT-USDC",
     "symbol": "RAT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "REI/USDC",
     "type": "spot",
     "internal_id": "spot-REI-USDC",
     "symbol": "REI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RETARD/USDC",
     "type": "spot",
     "internal_id": "spot-RETARD-USDC",
     "symbol": "RETARD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "REX/USDC",
     "type": "spot",
     "internal_id": "spot-REX-USDC",
     "symbol": "REX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RICH/USDC",
     "type": "spot",
     "internal_id": "spot-RICH-USDC",
     "symbol": "RICH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RIP/USDC",
     "type": "spot",
     "internal_id": "spot-RIP-USDC",
     "symbol": "RIP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RISE/USDC",
     "type": "spot",
     "internal_id": "spot-RISE-USDC",
     "symbol": "RISE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RISK/USDC",
     "type": "spot",
     "internal_id": "spot-RISK-USDC",
     "symbol": "RISK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RIVER/USDC",
     "type": "spot",
     "internal_id": "spot-RIVER-USDC",
     "symbol": "RIVER",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-26T04:30:54Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "f1bc4ad3e352509773f4462eaf43b3f428fc0780"
+    }
   },
   {
     "id": "RUB/USDC",
     "type": "spot",
     "internal_id": "spot-RUB-USDC",
     "symbol": "RUB",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RUBT/USDT0",
     "type": "spot",
     "internal_id": "spot-RUBT-USDT0",
     "symbol": "RUBT",
-    "denominator": "USDT0"
+    "denominator": "USDT0",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RUG/USDC",
     "type": "spot",
     "internal_id": "spot-RUG-USDC",
     "symbol": "RUG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "RZR/USDC",
     "type": "spot",
     "internal_id": "spot-RZR-USDC",
     "symbol": "RZR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SCHIZO/USDC",
     "type": "spot",
     "internal_id": "spot-SCHIZO-USDC",
     "symbol": "SCHIZO",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SEDA/USDC",
     "type": "spot",
     "internal_id": "spot-SEDA-USDC",
     "symbol": "SEDA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SELL/USDC",
     "type": "spot",
     "internal_id": "spot-SELL-USDC",
     "symbol": "SELL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SENT/USDC",
     "type": "spot",
     "internal_id": "spot-SENT-USDC",
     "symbol": "SENT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SHEEP/USDC",
     "type": "spot",
     "internal_id": "spot-SHEEP-USDC",
     "symbol": "SHEEP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SHOE/USDC",
     "type": "spot",
     "internal_id": "spot-SHOE-USDC",
     "symbol": "SHOE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SHREK/USDC",
     "type": "spot",
     "internal_id": "spot-SHREK-USDC",
     "symbol": "SHREK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SIGN/USDC",
     "type": "spot",
     "internal_id": "spot-SIGN-USDC",
     "symbol": "SIGN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SIX/USDC",
     "type": "spot",
     "internal_id": "spot-SIX-USDC",
     "symbol": "SIX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SKHYX/USDC",
     "type": "spot",
     "internal_id": "spot-SKHYX-USDC",
     "symbol": "SKHYX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-22T10:49:17+02:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "03893bb3c914c25f8159b7052889e2b6e3757182"
+    }
   },
   {
     "id": "SLAY/USDC",
     "type": "spot",
     "internal_id": "spot-SLAY-USDC",
     "symbol": "SLAY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SLV/USDC",
     "type": "spot",
     "internal_id": "spot-SLV-USDC",
     "symbol": "SLV",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39620
   },
   {
     "id": "SNDKX/USDC",
     "type": "spot",
     "internal_id": "spot-SNDKX-USDC",
     "symbol": "SNDKX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-30T04:54:56Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "24dcb2f7079e702f02e3f1c11f3abff94e757f08"
+    }
   },
   {
     "id": "SOLV/USDC",
     "type": "spot",
     "internal_id": "spot-SOLV-USDC",
     "symbol": "SOLV",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 12165
   },
   {
     "id": "SOON/USDC",
     "type": "spot",
     "internal_id": "spot-SOON-USDC",
     "symbol": "SOON",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SOVRN/USDC",
     "type": "spot",
     "internal_id": "spot-SOVRN-USDC",
     "symbol": "SOVRN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SPCX/USDC",
     "type": "spot",
     "internal_id": "spot-SPCX-USDC",
     "symbol": "SPCX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-14T06:36:01Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "fded42dcfd2551a905e153074399036c61102439"
+    }
   },
   {
     "id": "SPCXD/USDC",
     "type": "spot",
     "internal_id": "spot-SPCXD-USDC",
     "symbol": "SPCXD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-06-07T06:19:50Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "3dbd0332b6ef9a0ddeb7f9dcd8c4df87b944ec02"
+    }
   },
   {
     "id": "SPCXX/USDC",
     "type": "spot",
     "internal_id": "spot-SPCXX-USDC",
     "symbol": "SPCXX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-01T05:23:03Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c23053af69782fb96cfe0e4e08460d7cf813d6b8"
+    }
   },
   {
     "id": "SPH/USDC",
     "type": "spot",
     "internal_id": "spot-SPH-USDC",
     "symbol": "SPH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SPY/USDC",
     "type": "spot",
     "internal_id": "spot-SPY-USDC",
     "symbol": "SPY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39621
   },
   {
     "id": "SPYX/USDC",
     "type": "spot",
     "internal_id": "spot-SPYX-USDC",
     "symbol": "SPYX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-18T04:45:27Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "fdfd6ebb1a49545065f43fdc8fc12ef39c88514b"
+    }
   },
   {
     "id": "STABLE/USDC",
     "type": "spot",
     "internal_id": "spot-STABLE-USDC",
     "symbol": "STABLE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "STACK/USDC",
     "type": "spot",
     "internal_id": "spot-STACK-USDC",
     "symbol": "STACK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "STAR/USDC",
     "type": "spot",
     "internal_id": "spot-STAR-USDC",
     "symbol": "STAR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "STEEL/USDC",
     "type": "spot",
     "internal_id": "spot-STEEL-USDC",
     "symbol": "STEEL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "STHYPE/USDH",
     "type": "spot",
     "internal_id": "spot-STHYPE-USDH",
     "symbol": "STHYPE",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-04T04:05:32Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "2e5b95b446f8ade82002609952e255d084087e90"
+    }
   },
   {
     "id": "STLOOP/USDC",
     "type": "spot",
     "internal_id": "spot-STLOOP-USDC",
     "symbol": "STLOOP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "STRICT/USDC",
     "type": "spot",
     "internal_id": "spot-STRICT-USDC",
     "symbol": "STRICT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SUCKY/USDC",
     "type": "spot",
     "internal_id": "spot-SUCKY-USDC",
     "symbol": "SUCKY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SWAP/USDC",
     "type": "spot",
     "internal_id": "spot-SWAP-USDC",
     "symbol": "SWAP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SYLVI/USDC",
     "type": "spot",
     "internal_id": "spot-SYLVI-USDC",
     "symbol": "SYLVI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "SYN/USDC",
     "type": "spot",
     "internal_id": "spot-SYN-USDC",
     "symbol": "SYN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-14T07:29:23Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "9ab21c80a3144372b8ed7138f046b67306542683"
+    }
   },
   {
     "id": "TAO1/USDC",
     "type": "spot",
     "internal_id": "spot-TAO1-USDC",
     "symbol": "TAO1",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-27T04:31:44Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "7c89f1f53434ee97ea52c25541ae1751e328b328"
+    }
   },
   {
     "id": "TATE/USDC",
     "type": "spot",
     "internal_id": "spot-TATE-USDC",
     "symbol": "TATE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TEST/USDC",
     "type": "spot",
     "internal_id": "spot-TEST-USDC",
     "symbol": "TEST",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "THBILL/USDC",
     "type": "spot",
     "internal_id": "spot-THBILL-USDC",
     "symbol": "THBILL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TILT/USDC",
     "type": "spot",
     "internal_id": "spot-TILT-USDC",
     "symbol": "TILT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TIME/USDC",
     "type": "spot",
     "internal_id": "spot-TIME-USDC",
     "symbol": "TIME",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TJIF/USDC",
     "type": "spot",
     "internal_id": "spot-TJIF-USDC",
     "symbol": "TJIF",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TRADE/USDC",
     "type": "spot",
     "internal_id": "spot-TRADE-USDC",
     "symbol": "TRADE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TREAD/USDC",
     "type": "spot",
     "internal_id": "spot-TREAD-USDC",
     "symbol": "TREAD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-15T07:06:42Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "77a999a98ab8660b0e0badf2598c714906a77065"
+    }
   },
   {
     "id": "TREND/USDC",
     "type": "spot",
     "internal_id": "spot-TREND-USDC",
     "symbol": "TREND",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TRUMP/USDC",
     "type": "spot",
     "internal_id": "spot-TRUMP-USDC",
     "symbol": "TRUMP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "TRX1/USDC",
     "type": "spot",
     "internal_id": "spot-TRX1-USDC",
     "symbol": "TRX1",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-04-16T04:48:51Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "2ee413654a72609dec7ff23ff92a715370df0ae2"
+    }
   },
   {
     "id": "TSLA/USDC",
     "type": "spot",
     "internal_id": "spot-TSLA-USDC",
     "symbol": "TSLA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 39618
   },
   {
     "id": "TSLAX/USDC",
     "type": "spot",
     "internal_id": "spot-TSLAX-USDC",
     "symbol": "TSLAX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-05T05:11:11Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "f34fff5d556674342ba411bf78369fba219e99d0"
+    }
   },
   {
     "id": "UANSEM/USDC",
     "type": "spot",
     "internal_id": "spot-UANSEM-USDC",
     "symbol": "UANSEM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-10T05:59:19Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "edb5721147a80e3fc3a3c0a818cb071470bcfe62"
+    }
   },
   {
     "id": "UAVAX/USDC",
     "type": "spot",
     "internal_id": "spot-UAVAX-USDC",
     "symbol": "UAVAX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-31T04:33:54Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "d0662419e080edd6725c19f27b2bc2acb7ec2fdd"
+    }
   },
   {
     "id": "UBONK/USDC",
     "type": "spot",
     "internal_id": "spot-UBONK-USDC",
     "symbol": "UBONK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UBTC/USDC",
     "type": "spot",
     "internal_id": "spot-UBTC-USDC",
     "symbol": "UBTC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UBTC/USDH",
     "type": "spot",
     "internal_id": "spot-UBTC-USDH",
     "symbol": "UBTC",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UDZ/USDC",
     "type": "spot",
     "internal_id": "spot-UDZ-USDC",
     "symbol": "UDZ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UENA/USDC",
     "type": "spot",
     "internal_id": "spot-UENA-USDC",
     "symbol": "UENA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UETH/USDC",
     "type": "spot",
     "internal_id": "spot-UETH-USDC",
     "symbol": "UETH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UETH/USDH",
     "type": "spot",
     "internal_id": "spot-UETH-USDH",
     "symbol": "UETH",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UFART/USDC",
     "type": "spot",
     "internal_id": "spot-UFART-USDC",
     "symbol": "UFART",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UMEGA/USDC",
     "type": "spot",
     "internal_id": "spot-UMEGA-USDC",
     "symbol": "UMEGA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UMOG/USDC",
     "type": "spot",
     "internal_id": "spot-UMOG-USDC",
     "symbol": "UMOG",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UMON/USDC",
     "type": "spot",
     "internal_id": "spot-UMON-USDC",
     "symbol": "UMON",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UP/USDC",
     "type": "spot",
     "internal_id": "spot-UP-USDC",
     "symbol": "UP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UPHL/USDC",
     "type": "spot",
     "internal_id": "spot-UPHL-USDC",
     "symbol": "UPHL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UPUMP/USDC",
     "type": "spot",
     "internal_id": "spot-UPUMP-USDC",
     "symbol": "UPUMP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USDE/USDC",
     "type": "spot",
     "internal_id": "spot-USDE-USDC",
     "symbol": "USDE",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USDH/USDC",
     "type": "spot",
     "internal_id": "spot-USDH-USDC",
     "symbol": "USDH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 38331
   },
   {
     "id": "USDHL/USDC",
     "type": "spot",
     "internal_id": "spot-USDHL-USDC",
     "symbol": "USDHL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 38332
   },
   {
     "id": "USDT0/USDC",
     "type": "spot",
     "internal_id": "spot-USDT0-USDC",
     "symbol": "USDT0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 38517
   },
   {
     "id": "USDUC/USDC",
     "type": "spot",
     "internal_id": "spot-USDUC-USDC",
     "symbol": "USDUC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-24T04:15:17Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "c907ae6646f2009c0435c6a8702c159cda0f28cb"
+    },
+    "cmc_id": 36849
   },
   {
     "id": "USDXL/USDC",
     "type": "spot",
     "internal_id": "spot-USDXL-USDC",
     "symbol": "USDXL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USDXL/USDT0",
     "type": "spot",
     "internal_id": "spot-USDXL-USDT0",
     "symbol": "USDXL",
-    "denominator": "USDT0"
+    "denominator": "USDT0",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USH/USDC",
     "type": "spot",
     "internal_id": "spot-USH-USDC",
     "symbol": "USH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USOL/USDC",
     "type": "spot",
     "internal_id": "spot-USOL-USDC",
     "symbol": "USOL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USPYX/USDC",
     "type": "spot",
     "internal_id": "spot-USPYX-USDC",
     "symbol": "USPYX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "USR/USDC",
     "type": "spot",
     "internal_id": "spot-USR-USDC",
     "symbol": "USR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UUUSPX/USDC",
     "type": "spot",
     "internal_id": "spot-UUUSPX-USDC",
     "symbol": "UUUSPX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UVIRT/USDC",
     "type": "spot",
     "internal_id": "spot-UVIRT-USDC",
     "symbol": "UVIRT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UWLD/USDC",
     "type": "spot",
     "internal_id": "spot-UWLD-USDC",
     "symbol": "UWLD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UXPL/USDC",
     "type": "spot",
     "internal_id": "spot-UXPL-USDC",
     "symbol": "UXPL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UXPL/USDH",
     "type": "spot",
     "internal_id": "spot-UXPL-USDH",
     "symbol": "UXPL",
-    "denominator": "USDH"
+    "denominator": "USDH",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "UZEC/USDC",
     "type": "spot",
     "internal_id": "spot-UZEC-USDC",
     "symbol": "UZEC",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VAPOR/USDC",
     "type": "spot",
     "internal_id": "spot-VAPOR-USDC",
     "symbol": "VAPOR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VAULT/USDC",
     "type": "spot",
     "internal_id": "spot-VAULT-USDC",
     "symbol": "VAULT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VEGAS/USDC",
     "type": "spot",
     "internal_id": "spot-VEGAS-USDC",
     "symbol": "VEGAS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VIZN/USDC",
     "type": "spot",
     "internal_id": "spot-VIZN-USDC",
     "symbol": "VIZN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VORTX/USDC",
     "type": "spot",
     "internal_id": "spot-VORTX-USDC",
     "symbol": "VORTX",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "VSN/USDC",
     "type": "spot",
     "internal_id": "spot-VSN-USDC",
     "symbol": "VSN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WAGMI/USDC",
     "type": "spot",
     "internal_id": "spot-WAGMI-USDC",
     "symbol": "WAGMI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WAR/USDC",
     "type": "spot",
     "internal_id": "spot-WAR-USDC",
     "symbol": "WAR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WARS/USDC",
     "type": "spot",
     "internal_id": "spot-WARS-USDC",
     "symbol": "WARS",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-05-30T05:44:14Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "6205a4ef4faacad55a6e451962a0b262a11f40c8"
+    }
   },
   {
     "id": "WASH/USDC",
     "type": "spot",
     "internal_id": "spot-WASH-USDC",
     "symbol": "WASH",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WBRL/USDC",
     "type": "spot",
     "internal_id": "spot-WBRL-USDC",
     "symbol": "WBRL",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-07-15T04:47:55Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "5e139e739d95f247f0ff022186cd7f18ce47966f"
+    }
   },
   {
     "id": "WHYPI/USDC",
     "type": "spot",
     "internal_id": "spot-WHYPI-USDC",
     "symbol": "WHYPI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WMNT/USDC",
     "type": "spot",
     "internal_id": "spot-WMNT-USDC",
     "symbol": "WMNT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WOULD/USDC",
     "type": "spot",
     "internal_id": "spot-WOULD-USDC",
     "symbol": "WOULD",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WOW/USDC",
     "type": "spot",
     "internal_id": "spot-WOW-USDC",
     "symbol": "WOW",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WOWBIT/USDC",
     "type": "spot",
     "internal_id": "spot-WOWBIT-USDC",
     "symbol": "WOWBIT",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "WWB/USDC",
     "type": "spot",
     "internal_id": "spot-WWB-USDC",
     "symbol": "WWB",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "XAUM/USDC",
     "type": "spot",
     "internal_id": "spot-XAUM-USDC",
     "symbol": "XAUM",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-08-19T02:52:47Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "30c43e849b9649622dd8e35f1a4f87258e688591"
+    },
+    "cmc_id": 34212
   },
   {
     "id": "XAUT0/USDC",
     "type": "spot",
     "internal_id": "spot-XAUT0-USDC",
     "symbol": "XAUT0",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    },
+    "cmc_id": 37082
   },
   {
     "id": "XAUT0/USDT0",
     "type": "spot",
     "internal_id": "spot-XAUT0-USDT0",
     "symbol": "XAUT0",
-    "denominator": "USDT0"
+    "denominator": "USDT0",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "XION/USDC",
     "type": "spot",
     "internal_id": "spot-XION-USDC",
     "symbol": "XION",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "XMR1/USDC",
     "type": "spot",
     "internal_id": "spot-XMR1-USDC",
     "symbol": "XMR1",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "XULIAN/USDC",
     "type": "spot",
     "internal_id": "spot-XULIAN-USDC",
     "symbol": "XULIAN",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "YAP/USDC",
     "type": "spot",
     "internal_id": "spot-YAP-USDC",
     "symbol": "YAP",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "YEETI/USDC",
     "type": "spot",
     "internal_id": "spot-YEETI-USDC",
     "symbol": "YEETI",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ZAMA/USDC",
     "type": "spot",
     "internal_id": "spot-ZAMA-USDC",
     "symbol": "ZAMA",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-03-02T20:39:53+01:00",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "234dc28e91c9ee783d73a99dc4d61f86a7a78a42"
+    }
   },
   {
     "id": "ZEC1/USDC",
     "type": "spot",
     "internal_id": "spot-ZEC1-USDC",
     "symbol": "ZEC1",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "first_capture": "2026-09-20T07:22:44Z",
+    "first_capture_source": {
+      "source": "git",
+      "commit": "60f490442a264507f3e1e2b16bbb47511619dd26"
+    }
   }
 ]

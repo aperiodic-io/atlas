@@ -24,6 +24,8 @@ def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
 
 
 def _row_first_capture(row: dict) -> str | None:
+    if row.get("first_capture_source", {}).get("source") in {"git", "exchange"}:
+        return None
     return row.get("first_capture")
 
 
@@ -145,6 +147,9 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         first_capture=month_start,
         end_date=month_end,
     )
+    # Direct-exchange rows have separately sourced capture bounds. They are
+    # tested by snapshot/lifecycle fixtures, not by equivalence with Tardis.
+    local_symbols = [symbol for symbol in local_symbols if symbol in local_start_dates]
     assert sorted(tardis_symbols) == sorted(local_symbols), (
         f"symbol mismatch for exchange={exchange} "
         f"window={month_start:%Y-%m-%d}..{month_end:%Y-%m-%d}"
