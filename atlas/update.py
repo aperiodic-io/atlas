@@ -327,7 +327,7 @@ def update(
         symbols = _drop_none_fields(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
-        print(f"  {len(symbols)} symbols → {path.name}")
+        print(f"  {len(symbols)} symbols written to {path.name}")
 
     print(f"\nTotal: {total} symbols across {len(exchanges)} exchanges")
     if failed_exchanges:

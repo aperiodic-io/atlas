@@ -9,6 +9,8 @@ from atlas.update import (
 from atlas.update import _apply_snapshot_metadata
 import json
 import importlib
+import io
+from contextlib import redirect_stdout
 from types import SimpleNamespace
 
 
@@ -117,6 +119,18 @@ def test_partial_tardis_refresh_preserves_direct_capture_instances(tmp_path, mon
     assert rows["HFUN/USDC"]["first_capture_source"]["source"] == "git"
     assert rows["HFUN/USDC"]["cmc_id"] == 34624
     assert rows["NEW/USDC"]["first_capture_source"]["source"] == "exchange"
+
+
+def test_update_progress_supports_ascii_terminals(tmp_path, monkeypatch) -> None:
+    updater = importlib.import_module("atlas.update")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [{"id": "NEW/USDC", "type": "spot"}]})
+    buffer = io.BytesIO()
+    output = io.TextIOWrapper(buffer, encoding="ascii")
+    with redirect_stdout(output):
+        assert updater.update(["hyperliquid-spot"], source) == []
+    output.flush()
+    assert buffer.getvalue().decode("ascii")
 
 
 def test_merge_existing_fields_preserves_existing_cmc_id() -> None:
