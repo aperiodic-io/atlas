@@ -23,7 +23,7 @@ on:
       exchanges:
         description: "Which snapshots to scan, comma-separated"
         required: false
-        default: "binance-futures"
+        default: "binance-futures,hyperliquid-perps,hyperliquid-spot"
       max-llm-symbols:
         description: "Most symbols the LLM may be asked about in one run (a backlog needs a higher cap)"
         required: false
@@ -121,7 +121,7 @@ jobs:
           ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
         run: uv run python integrations/cmc_new_symbol_mapping.py --check-llm
 
-      - name: resolve-new-binance-symbols
+      - name: resolve-new-symbols
         id: resolve
         if: steps.prepare.outputs.mode != 'check-llm'
         env:
@@ -137,7 +137,7 @@ jobs:
           # ceiling needs this raised: the 1s default paces at 60/min, which is
           # three times OpenRouter's free limit of 20/min.
           ATLAS_LLM_MIN_INTERVAL_SECONDS: ${{ vars.ATLAS_LLM_MIN_INTERVAL_SECONDS }}
-          EXCHANGES: ${{ inputs.exchanges || 'binance-futures' }}
+          EXCHANGES: ${{ inputs.exchanges || 'binance-futures,hyperliquid-perps,hyperliquid-spot' }}
           DAYS: ${{ inputs.days || '60' }}
           MAX_LLM_SYMBOLS: ${{ inputs.max-llm-symbols || '100' }}
           MODE: ${{ steps.prepare.outputs.mode }}
@@ -222,7 +222,7 @@ jobs:
             exit 0
           fi
           git commit \
-            --message "chore(data): map new binance symbols to cmc ids" \
+            --message "chore(data): map new exchange symbols to cmc ids" \
             --message "approved=${APPROVED} uncertain=${UNCERTAIN} unmapped=${UNMAPPED}"
           for attempt in 1 2 3 4; do
             if git push -u origin "${RUN_BRANCH}"; then
@@ -251,7 +251,7 @@ jobs:
           url="$(gh pr create \
             --base "${BASE_BRANCH}" \
             --head "${RUN_BRANCH}" \
-            --title "chore(data): CMC IDs for new Binance symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)" \
+            --title "chore(data): CMC IDs for new exchange symbols (${APPROVED} approved, ${UNCERTAIN} uncertain)" \
             --body-file "${REPORT_PATH}" \
             --label "${PR_LABEL}")"
           echo "url=${url}" >> "$GITHUB_OUTPUT"
@@ -269,7 +269,7 @@ jobs:
           UNMAPPED: ${{ steps.resolve.outputs.unmapped }}
         run: |
           set -euo pipefail
-          uv run python integrations/slack_notify.py --text ":label: atlas — new Binance symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
+          uv run python integrations/slack_notify.py --text ":label: atlas — new exchange symbols need CMC IDs: ${APPROVED} approved, ${UNCERTAIN} uncertain, ${UNMAPPED} unmapped. Review ${PR_URL}"
 
       - name: fail-when-the-llm-was-configured-but-unusable
         if: steps.resolve.outputs.llm_status == 'unavailable'

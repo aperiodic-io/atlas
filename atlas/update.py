@@ -122,6 +122,14 @@ def _merge_existing_fields(
     return merged_symbols
 
 
+def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+    """Record first observation of new API rows without inventing listing dates."""
+    captured_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
+    for symbol in symbols:
+        if symbol.get("id") not in existing_by_id and not symbol.get("first_capture"):
+            symbol["first_capture"] = captured_at
+
+
 def _enrich(exchange: str, sd: dict) -> dict:
     """Return a symbol dict enriched with pre-computed Contract fields."""
     _NONE = {
@@ -277,9 +285,19 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        incoming_symbols = _merge_existing_fields(
-            incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
-        )
+        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+            # Hybrid metadata is partial: clear lifecycle fields only on rows
+            # that actually supplied Tardis availability bounds. API-only rows
+            # must retain their captured instance and approved CMC mapping.
+            incoming_symbols = [
+                _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
+                for sd in incoming_symbols
+            ]
+            _capture_new_hyperliquid_rows(incoming_symbols, existing_by_id)
+        else:
+            incoming_symbols = _merge_existing_fields(
+                incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
+            )
         incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
         # Never drop existing rows if the source omits them.
@@ -306,7 +324,7 @@ def update(
         symbols = _drop_none_fields(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
-        print(f"  {len(symbols)} symbols → {path.name}")
+        print(f"  {len(symbols)} symbols written to {path.name}")
 
     print(f"\nTotal: {total} symbols across {len(exchanges)} exchanges")
     if failed_exchanges:

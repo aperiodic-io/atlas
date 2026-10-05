@@ -213,7 +213,7 @@ or reused exchange symbol creates a new instrument instance.
 
 ## Automated new-symbol mapping (implemented)
 
-A scheduled workflow keeps the Binance snapshots from accumulating rows without a
+A scheduled workflow keeps the Binance and Hyperliquid snapshots from accumulating rows without a
 `cmc_id`. It is deliberately scoped to **new** assets: backfilling the historical
 tail is a separate, manual exercise.
 
@@ -254,7 +254,10 @@ python integrations/cmc_new_symbol_mapping.py \
   --report-path <report.md> --summary-path <summary.json>
 ```
 
-Scope is `binance-futures` by default (`--exchanges` widens it). A row enters the
+Scope is `binance-futures,hyperliquid-perps,hyperliquid-spot` by default
+(`--exchanges` overrides it). Hyperliquid's identity and price adapters, historical
+backfill, and limitations are described in [Hyperliquid CMC mapping](hyperliquid-cmc-mapping.md).
+A row enters the
 run when all of the following hold:
 
 - the row has no `cmc_id`;
