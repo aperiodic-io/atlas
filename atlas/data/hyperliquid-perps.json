@@ -5134,6 +5134,16 @@
     "margin": "USDC"
   },
   {
+    "id": "xyz:INNOLIGHT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "internal_id": "perpetual-XYZ:INNOLIGHT-USDC:USDC",
+    "symbol": "XYZ:INNOLIGHT",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:INTC",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:INTC-USDC:USDC",
