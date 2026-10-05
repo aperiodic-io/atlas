@@ -48,13 +48,12 @@ def restore_first_captures(repository: Path, dry_run: bool = False) -> dict[str,
             for row in historical:
                 captures.setdefault(
                     row["id"],
-                    (row.get("first_capture") or date.replace("+00:00", "Z"), revision),
+                    row.get("first_capture") or date.replace("+00:00", "Z"),
                 )
         updated = 0
         for row in rows:
             if not row.get("first_capture") and row["id"] in captures:
-                row["first_capture"], revision = captures[row["id"]]
-                row["first_capture_source"] = {"source": "git", "commit": revision}
+                row["first_capture"] = captures[row["id"]]
                 updated += 1
         if updated:
             counts[exchange] = updated

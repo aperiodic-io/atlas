@@ -23,12 +23,6 @@ def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
     return _LEGACY_TO_INTERNAL_EXCHANGE.get(exchange_file_stem, exchange_file_stem)
 
 
-def _row_first_capture(row: dict) -> str | None:
-    if row.get("first_capture_source", {}).get("source") in {"git", "exchange"}:
-        return None
-    return row.get("first_capture")
-
-
 def _exchange_snapshot_files() -> list[Path]:
     """Return only data files whose top-level value is an exchange-row array."""
     data_dir = Path(__file__).resolve().parents[1] / "atlas" / "data"
@@ -65,7 +59,7 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
     exchange = _internal_exchange_for_data_file(exchange_file.stem)
     tardis_exchange = to_tardis_exchange_id(exchange)
     rows = json.loads(exchange_file.read_text())
-    rows = [row for row in rows if _row_first_capture(row)]
+    rows = [row for row in rows if row.get("first_capture")]
     if not rows:
         pytest.skip(
             "snapshot has no first_capture metadata "
@@ -80,8 +74,13 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         if s.get("type") in allowed_types
         and (symbol_filter(s) if symbol_filter else True)
     ]
+    if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+        # Hyperliquid API-only rows use Atlas observation dates. Compare
+        # availability bounds only where Tardis supplies the same instrument.
+        tardis_ids = {symbol["id"] for symbol in live_symbols if symbol.get("availableSince")}
+        rows = [row for row in rows if row["id"] in tardis_ids]
     local_start_dates = {
-        row["id"]: datetime.fromisoformat(_row_first_capture(row).replace("Z", "+00:00")).replace(
+        row["id"]: datetime.fromisoformat(row["first_capture"].replace("Z", "+00:00")).replace(
             tzinfo=None
         )
         for row in rows
@@ -122,7 +121,7 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
 
     sm = SecurityMaster.load(exchanges=[exchange])
     starts = [
-        datetime.fromisoformat(_row_first_capture(r).replace("Z", "+00:00")) for r in rows
+        datetime.fromisoformat(r["first_capture"].replace("Z", "+00:00")) for r in rows
     ]
     ends = [
         datetime.fromisoformat(r["end_date"].replace("Z", "+00:00"))

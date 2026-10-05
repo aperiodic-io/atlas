@@ -49,11 +49,11 @@ def test_recovery_uses_first_capture_of_current_listing_and_preserves_known_date
     assert (data / "hyperliquid-spot.json").read_bytes() == original
     assert restore_first_captures(tmp_path) == {"hyperliquid-spot": 2}
     rows = json.loads((data / "hyperliquid-spot.json").read_text())
-    assert rows[0]["first_capture"] == "2026-01-01T00:00:00Z"
-    assert rows[0]["first_capture_source"]["source"] == "git"
-    assert len(rows[0]["first_capture_source"]["commit"]) == 40
-    assert rows[1]["first_capture"] == "2026-03-01T00:00:00Z"
-    assert rows[2]["first_capture"] == "2025-01-01T00:00:00Z"
+    assert rows == [
+        {"id": "HYPE/USDC", "first_capture": "2026-01-01T00:00:00Z"},
+        {"id": "OLD/USDC", "first_capture": "2026-03-01T00:00:00Z"},
+        {"id": "KEEP/USDC", "first_capture": "2025-01-01T00:00:00Z"},
+    ]
     assert restore_first_captures(tmp_path) == {}
 
 

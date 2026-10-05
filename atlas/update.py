@@ -109,7 +109,7 @@ def _merge_existing_fields(
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence except for locally owned fields.
     """
-    metadata_keys = {"first_capture", "first_capture_source", "end_date"}
+    metadata_keys = {"first_capture", "end_date"}
     merged_symbols: list[dict] = []
     for sd in symbols:
         existing = existing_by_id.get(sd.get("id"))
@@ -118,8 +118,6 @@ def _merge_existing_fields(
             for key, value in existing.items()
             if not (ignore_metadata and key in metadata_keys)
         }
-        if existing_values is not None and sd.get("first_capture") and "first_capture_source" not in sd:
-            existing_values.pop("first_capture_source", None)
         merged_symbols.append(_merge_symbol(existing_values, sd))
     return merged_symbols
 
@@ -130,7 +128,6 @@ def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str,
     for symbol in symbols:
         if symbol.get("id") not in existing_by_id and not symbol.get("first_capture"):
             symbol["first_capture"] = captured_at
-            symbol["first_capture_source"] = {"source": "exchange"}
 
 
 def _enrich(exchange: str, sd: dict) -> dict:
