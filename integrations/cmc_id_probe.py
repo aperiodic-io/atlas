@@ -325,8 +325,8 @@ def classify_price_candidates(
         raise ValueError("max_relative_difference must be positive")
     if max_timestamp_skew < timedelta(0):
         raise ValueError("max_timestamp_skew must not be negative")
-    if exchange_price.quote_currency not in {"USD", "USDT"}:
-        raise ValueError("the probe supports only USD and USDT exchange quotes")
+    if exchange_price.quote_currency not in {"USD", "USDT", "USDC"}:
+        raise ValueError("the probe supports only USD, USDT and USDC exchange quotes")
     if (
         not math.isfinite(exchange_price.normalized_price)
         or exchange_price.normalized_price <= 0

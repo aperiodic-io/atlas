@@ -667,8 +667,8 @@ def test_run_does_not_resolve_a_tokenized_equity(tmp_path, monkeypatch):
     assert summary["has_changes"] is False
 
 
-def test_default_scope_is_binance_futures():
-    assert DEFAULT_EXCHANGES == ("binance-futures",)
+def test_default_scope_includes_binance_and_hyperliquid():
+    assert DEFAULT_EXCHANGES == ("binance-futures", "hyperliquid-perps", "hyperliquid-spot")
 
 
 def test_collect_new_symbols_keeps_only_recent_rows_without_a_cmc_id():
@@ -1282,8 +1282,8 @@ def test_resolve_new_symbols_stops_spending_llm_calls_at_the_budget():
 def test_apply_decisions_fills_new_rows_and_never_replaces_an_existing_id():
     rows_by_exchange = {
         "binance-futures": [
-            {"id": "newusdt", "symbol": "NEW"},
-            {"id": "newusdc", "symbol": "NEW"},
+            {"id": "newusdt", "symbol": "NEW", "first_capture": (NOW - timedelta(days=1)).isoformat()},
+            {"id": "newusdc", "symbol": "NEW", "first_capture": (NOW - timedelta(days=1)).isoformat()},
             {"id": "oldusdt", "symbol": "NEW", "cmc_id": 777},
         ]
     }
