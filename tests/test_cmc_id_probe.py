@@ -110,6 +110,32 @@ def test_catalogue_reports_total_count_changes_without_aborting() -> None:
     assert not catalogue.diagnostics.is_complete
 
 
+def test_catalogue_keeps_the_date_cmc_added_each_asset() -> None:
+    """The listing date is what exposes a ticker taken over by a later project."""
+    dated = {**_asset(20314, "LUNA", 0.07), "dateAdded": "2022-05-26T12:47:26.000Z"}
+    undated = _asset(1, "BTC", 100)
+    session = FakeSession(
+        [{"data": {"totalCount": "2", "cryptoCurrencyList": [dated, undated]}}]
+    )
+
+    catalogue = fetch_cmc_catalogue(session, page_size=10, max_attempts=1)
+
+    by_id = {asset.cmc_id: asset for asset in catalogue.assets}
+    assert by_id[20314].date_added == datetime(2022, 5, 26, 12, 47, 26, tzinfo=UTC)
+    assert by_id[1].date_added is None
+    assert catalogue.diagnostics.malformed_rows == 0
+
+
+def test_catalogue_treats_an_unreadable_listing_date_as_unknown() -> None:
+    row = {**_asset(1, "BTC", 100), "dateAdded": "not a date"}
+    session = FakeSession([{"data": {"totalCount": "1", "cryptoCurrencyList": [row]}}])
+
+    catalogue = fetch_cmc_catalogue(session, page_size=10, max_attempts=1)
+
+    assert catalogue.assets[0].date_added is None
+    assert catalogue.diagnostics.malformed_rows == 0
+
+
 def test_bulk_binance_prices_select_requested_usdt_spot_pairs() -> None:
     session = FakeSession(
         [
