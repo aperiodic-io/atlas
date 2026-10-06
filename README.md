@@ -15,6 +15,8 @@
 
 # Atlas - Crypto Security Master
 
+> Built and maintained by **[Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)**. Atlas is the open-source securities master behind Aperiodic's crypto market data and research. [Check out Aperiodic →](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)
+
 Atlas - Crypto Security Master is a Python securities master for crypto venues. It normalizes exchange-native instrument IDs into a consistent `Contract` model and builds a fast lookup map (`internal_id`) from precomputed JSON snapshots.
 
 **Daily updates:** snapshot JSONs are refreshed automatically every day via GitHub Actions, and committed back to this repository.
@@ -258,6 +260,10 @@ configuration and review process.
 ```bash
 pytest tests/
 ```
+
+## About Aperiodic
+
+Atlas is open-sourced by [Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas). If Atlas is useful to you, take a look at what else we build at [aperiodic.io](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas), and give this repo a ⭐ so more people find it.
 
 ## License
 
