@@ -869,6 +869,17 @@
     "first_capture": "2024-12-20T00:00:00.000Z"
   },
   {
+    "id": "akamusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-AKAM-USDT:USDT",
+    "symbol": "AKAM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "akeusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -9418,6 +9429,17 @@
     "end_date": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "mcdusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-MCD-USDT:USDT",
+    "symbol": "MCD",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "mdbusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -14669,6 +14691,17 @@
     "first_capture": "2023-03-12T00:00:00.000Z"
   },
   {
+    "id": "usdexusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-USDEX-USDT:USDT",
+    "symbol": "USDEX",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "uselessusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -14928,6 +14961,17 @@
     ],
     "margin_asset": "USDT",
     "first_capture": "2024-12-10T00:00:00.000Z"
+  },
+  {
+    "id": "vktxusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "internal_id": "perpetual-VKTX-USDT:USDT",
+    "symbol": "VKTX",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "voxelusdt",
