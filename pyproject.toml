@@ -39,8 +39,9 @@ path = "atlas/__init__.py"
 
 
 [project.urls]
-Issues = "https://github.com/unravel-finance/atlas/issues"
-Source = "https://github.com/unravel-finance/atlas"
+Homepage = "https://aperiodic.io"
+Issues = "https://github.com/aperiodic-io/atlas/issues"
+Source = "https://github.com/aperiodic-io/atlas"
 
 [project.optional-dependencies]
 quality = ["ruff==0.14.1", "pre-commit~=2.20.0"]
