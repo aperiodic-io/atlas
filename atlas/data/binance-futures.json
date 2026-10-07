@@ -27,7 +27,8 @@
     "cmc_id": 34422,
     "category": [],
     "margin_asset": "USDT",
-    "first_capture": "2025-06-05T00:00:00.000Z"
+    "first_capture": "2025-06-05T00:00:00.000Z",
+    "end_date": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "1000000mogusdt",
@@ -877,7 +878,8 @@
     "internal_id": "perpetual-AKAM-USDT:USDT",
     "symbol": "AKAM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "akeusdt",
@@ -9437,7 +9439,8 @@
     "internal_id": "perpetual-MCD-USDT:USDT",
     "symbol": "MCD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "mdbusdt",
@@ -11542,7 +11545,8 @@
       "AI Agents"
     ],
     "margin_asset": "USDT",
-    "first_capture": "2025-04-11T00:00:00.000Z"
+    "first_capture": "2025-04-11T00:00:00.000Z",
+    "end_date": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "promusdt",
@@ -11620,7 +11624,8 @@
       "DeFi"
     ],
     "margin_asset": "USDT",
-    "first_capture": "2025-06-13T00:00:00.000Z"
+    "first_capture": "2025-06-13T00:00:00.000Z",
+    "end_date": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "pumpusdt",
@@ -14699,7 +14704,8 @@
     "internal_id": "perpetual-USDEX-USDT:USDT",
     "symbol": "USDEX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "uselessusdt",
@@ -14971,7 +14977,8 @@
     "internal_id": "perpetual-VKTX-USDT:USDT",
     "symbol": "VKTX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "voxelusdt",

@@ -4478,6 +4478,17 @@
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
+    "id": "para:SMH",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-07T08:04:39.383326Z",
+    "internal_id": "perpetual-PARA:SMH-USDC:USDC",
+    "symbol": "PARA:SMH",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:SOFI",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:SOFI-USDC:USDC",
@@ -5236,7 +5247,7 @@
     "symbol": "XYZ:GLW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-01T08:13:13Z"
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "xyz:GME",
@@ -5499,7 +5510,7 @@
     "symbol": "XYZ:LRCX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-09-28T12:18:41Z"
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "xyz:LYTE",
@@ -6027,7 +6038,7 @@
     "symbol": "XYZ:TWST",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-09-30T07:51:35Z"
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "xyz:UMC",
@@ -6038,7 +6049,7 @@
     "symbol": "XYZ:UMC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-09-28T12:18:41Z"
+    "first_capture": "2026-10-06T00:00:00.000Z"
   },
   {
     "id": "xyz:UNITREE",
