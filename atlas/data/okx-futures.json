@@ -43435,6 +43435,17 @@
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
+    "id": "EWZ-USD_UM_XPERP-311010",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "future-EWZ-USD:USD-20311010",
+    "symbol": "EWZ",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-10T00:00:00"
+  },
+  {
     "id": "FET-USD_UM_XPERP-310912",
     "type": "future",
     "contract_size": 10.0,
@@ -54655,6 +54666,28 @@
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
+    "id": "OURA-USD_UM_XPERP-311010",
+    "type": "future",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "future-OURA-USD:USD-20311010",
+    "symbol": "OURA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-10T00:00:00"
+  },
+  {
+    "id": "PARTI-USD_UM_XPERP-311010",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "future-PARTI-USD:USD-20311010",
+    "symbol": "PARTI",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-10T00:00:00"
+  },
+  {
     "id": "PENDLE-USD_UM_XPERP-310919",
     "type": "future",
     "contract_size": 1.0,
@@ -54939,6 +54972,17 @@
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
     "first_capture": "2026-06-28T00:00:00.000Z"
+  },
+  {
+    "id": "SAND-USD_UM_XPERP-311010",
+    "type": "future",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "future-SAND-USD:USD-20311010",
+    "symbol": "SAND",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-10T00:00:00"
   },
   {
     "id": "SCR-USDT-250411",
