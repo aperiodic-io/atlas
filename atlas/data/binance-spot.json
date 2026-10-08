@@ -18068,6 +18068,14 @@
     "first_capture": "2021-12-28T00:00:00.000Z"
   },
   {
+    "id": "jpmbusdt",
+    "type": "spot",
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "spot-JPMB-USDT",
+    "symbol": "JPMB",
+    "denominator": "USDT"
+  },
+  {
     "id": "jstbnb",
     "type": "spot",
     "internal_id": "spot-JST-BNB",
@@ -19874,6 +19882,14 @@
     "denominator": "USDT",
     "first_capture": "2021-02-18T00:00:00.000Z",
     "end_date": "2025-02-11T00:00:00.000Z"
+  },
+  {
+    "id": "llybusdt",
+    "type": "spot",
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "spot-LLYB-USDT",
+    "symbol": "LLYB",
+    "denominator": "USDT"
   },
   {
     "id": "lokabnb",
@@ -29645,6 +29661,14 @@
     "first_capture": "2020-07-06T00:00:00.000Z"
   },
   {
+    "id": "seczbusdt",
+    "type": "spot",
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "spot-SECZB-USDT",
+    "symbol": "SECZB",
+    "denominator": "USDT"
+  },
+  {
     "id": "seibnb",
     "type": "spot",
     "internal_id": "spot-SEI-BNB",
@@ -31326,7 +31350,8 @@
     "denominator": "USDT",
     "cmc_id": 18934,
     "category": [],
-    "first_capture": "2022-08-19T00:00:00.000Z"
+    "first_capture": "2022-08-19T00:00:00.000Z",
+    "end_date": "2026-10-07T00:00:00.000Z"
   },
   {
     "id": "stmxbnb",
@@ -34840,6 +34865,14 @@
     "cmc_id": 3408,
     "category": [],
     "first_capture": "2019-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "usdebusdt",
+    "type": "spot",
+    "first_capture": "2026-10-07T00:00:00.000Z",
+    "internal_id": "spot-USDEB-USDT",
+    "symbol": "USDEB",
+    "denominator": "USDT"
   },
   {
     "id": "usdeusdc",
