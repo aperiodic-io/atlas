@@ -59,6 +59,10 @@ class CmcAsset:
     last_updated: datetime
     is_active: bool
     name: str = ""
+    # When CMC first listed the asset. A ticker reused by a later project gets a
+    # new asset, so a listing date after an instrument stopped trading rules the
+    # asset out for it.
+    date_added: datetime | None = None
 
 
 @dataclass(frozen=True)
@@ -423,7 +427,16 @@ def _parse_cmc_asset(item: object) -> CmcAsset:
         last_updated=_parse_timestamp(item["lastUpdated"]),
         is_active=bool(item.get("isActive")),
         name=str(item.get("name") or ""),
+        date_added=_parse_optional_timestamp(item.get("dateAdded")),
     )
+
+
+def _parse_optional_timestamp(value: object) -> datetime | None:
+    """Parse a supplementary timestamp, where a bad one must not drop the asset."""
+    try:
+        return _parse_timestamp(value)
+    except ValueError:
+        return None
 
 
 def _parse_timestamp(value: object) -> datetime:

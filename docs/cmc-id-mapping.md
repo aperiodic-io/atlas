@@ -327,6 +327,15 @@ Two consequences worth stating plainly:
   snapshots requires the existing instrument's listing window to *overlap* the new
   one, so a delisted ticker that a different project later reuses cannot inherit
   the old ID.
+- **A delisted instrument cannot be an asset CMC listed after it stopped
+  trading.** Every approval path — name match, LLM pick and concurrent reuse —
+  is withheld for review when the candidate's CMC `dateAdded` falls after an
+  instrument's `end_date`. Once a ticker passes to a new project, the exchange's
+  current asset name and price describe the newcomer, so for a delisted row they
+  *agree* with the wrong ID; only the dates disagree. The original case: Binance's
+  pre-crash `LUNA` contracts, which ended on 2022-05-13 and traded what is now Terra
+  Classic (LUNC, 4172), had been given Terra 2.0's 20314, which CMC added on
+  2022-05-26. An unknown listing date is treated as no evidence either way.
 - **No price, no approval.** If the Binance price fetch fails for the whole run,
   the run still completes and still reports, but nothing is approved: the price
   check is a weak signal, and silently dropping it would be worse than holding
@@ -614,3 +623,8 @@ Slack.
 - Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.
 - Price evidence compares CMC USD aggregates with Binance USDT last prices, so
   it remains a sanity check, never identity proof.
+- A snapshot row holds one `cmc_id` for its whole life. When Tardis carries a
+  symbol continuously across a ticker handover, as Binance spot `LUNAUSDT`,
+  `LUNABUSD` and `LUNATRY` do across the May 2022 Terra split, the row keeps the
+  asset it trades today (Terra 2.0, 20314), and its history before the handover
+  belongs to another asset (Terra Classic, 4172).
