@@ -873,6 +873,64 @@ class TestFetchOkxSwap:
         assert "contract_size" not in symbols[0]
 
 
+class TestFetchOkxUnderlying:
+    """OKX tags every instrument with `instCategory`; the ticker alone is ambiguous.
+
+    Tokenized stocks on spot carry an `X` prefix (`XAAPL-USDT`), which reads like a
+    crypto ticker, and stock perps use the bare ticker (`AAPL-USDT-SWAP`).
+    """
+
+    def _mock_get(self, data: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"data": data}
+        return resp
+
+    @pytest.mark.parametrize(
+        ("fetcher_name", "inst_id"),
+        [
+            ("fetch_okx_spot", "XAAPL-USDT"),
+            ("fetch_okx_swap", "AAPL-USDT-SWAP"),
+            ("fetch_okx_futures", "AAPL-USD_UM_XPERP-310613"),
+        ],
+    )
+    @pytest.mark.parametrize(
+        ("inst_category", "expected_underlying"),
+        [
+            ("1", UnderlyingType.crypto.value),
+            ("3", UnderlyingType.equity.value),
+            ("4", UnderlyingType.commodity.value),
+            ("", UnderlyingType.unknown.value),
+            ("99", UnderlyingType.unknown.value),
+        ],
+    )
+    def test_underlying_is_normalized_from_inst_category(
+        self, fetcher_name: str, inst_id: str, inst_category: str, expected_underlying: str
+    ):
+        from atlas.exchange_definitions import okx
+
+        item = {"instId": inst_id, "state": "live", "instCategory": inst_category}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = getattr(okx, fetcher_name)(timeout_seconds=5)
+        assert symbols[0]["underlying"] == expected_underlying
+
+    def test_missing_inst_category_is_explicitly_unknown(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+
+        item = {"instId": "BTC-USDT-SWAP", "state": "live"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["underlying"] == UnderlyingType.unknown.value
+
+    def test_venue_category_field_is_not_mistaken_for_asset_class(self):
+        """`category` is `1` on every instrument, whatever the asset class."""
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+
+        item = {"instId": "XAU-USDT-SWAP", "state": "live", "category": "1", "instCategory": "4"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["underlying"] == UnderlyingType.commodity.value
+
+
 class TestFetchBybit:
     def test_retries_malformed_response(self):
         from atlas.exchange_definitions.bybit import fetch_bybit_spot
