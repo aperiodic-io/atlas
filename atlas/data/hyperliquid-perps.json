@@ -3470,6 +3470,17 @@
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
+    "id": "io:H100",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-13T11:52:26.336798Z",
+    "internal_id": "perpetual-IO:H100-USDC:USDC",
+    "symbol": "IO:H100",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "io:IONQ",
     "type": "perpetual",
     "internal_id": "perpetual-IO:IONQ-USDC:USDC",
@@ -3545,6 +3556,17 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-10-05T00:00:00.000Z"
+  },
+  {
+    "id": "io:XIAOMI",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-12T00:00:00.000Z",
+    "internal_id": "perpetual-IO:XIAOMI-USDC:USDC",
+    "symbol": "IO:XIAOMI",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "kBONK",
@@ -5830,6 +5852,17 @@
     "contract_size": 1.0,
     "margin_asset": "USDC",
     "first_capture": "2026-08-18T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:RELIANCE",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-13T11:52:26.336798Z",
+    "internal_id": "perpetual-XYZ:RELIANCE-USDC:USDC",
+    "symbol": "XYZ:RELIANCE",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:RIVN",

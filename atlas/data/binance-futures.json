@@ -9953,6 +9953,18 @@
     "first_capture": "2026-02-09T00:00:00.000Z"
   },
   {
+    "id": "mstuusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-12T00:00:00.000Z",
+    "internal_id": "perpetual-MSTU-USDT:USDT",
+    "symbol": "MSTU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "mtlusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -11918,6 +11930,18 @@
     "end_date": "2026-03-25T00:00:00.000Z"
   },
   {
+    "id": "rdwusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-12T00:00:00.000Z",
+    "internal_id": "perpetual-RDW-USDT:USDT",
+    "symbol": "RDW",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "recallusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -12870,6 +12894,18 @@
     ],
     "margin_asset": "USDT",
     "first_capture": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "id": "snpsusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-12T00:00:00.000Z",
+    "internal_id": "perpetual-SNPS-USDT:USDT",
+    "symbol": "SNPS",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "sntusdt",
@@ -15824,6 +15860,18 @@
     ],
     "margin_asset": "USDT",
     "first_capture": "2025-10-17T00:00:00.000Z"
+  },
+  {
+    "id": "zcshusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-12T00:00:00.000Z",
+    "internal_id": "perpetual-ZCSH-USDT:USDT",
+    "symbol": "ZCSH",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "zecusdc",
