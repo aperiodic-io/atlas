@@ -711,6 +711,21 @@
     "first_capture": "2022-04-08T00:00:00.000Z"
   },
   {
+    "id": "ACNUSDT",
+    "type": "perpetual",
+    "base_coin": "ACN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-08T00:00:00.000Z",
+    "internal_id": "perpetual-ACN-USDT:USDT",
+    "symbol": "ACN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ACTUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-ACT-USDT:USDT",
@@ -8694,6 +8709,21 @@
     "end_date": "2025-04-29T00:00:00.000Z"
   },
   {
+    "id": "LULUUSDT",
+    "type": "perpetual",
+    "base_coin": "LULU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-08T00:00:00.000Z",
+    "internal_id": "perpetual-LULU-USDT:USDT",
+    "symbol": "LULU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LUMIAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-LUMIA-USDT:USDT",
@@ -10168,6 +10198,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "NKEUSDT",
+    "type": "perpetual",
+    "base_coin": "NKE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-08T00:00:00.000Z",
+    "internal_id": "perpetual-NKE-USDT:USDT",
+    "symbol": "NKE",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "NKNUSDT",
