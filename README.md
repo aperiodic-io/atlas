@@ -107,16 +107,16 @@ print(len(active))
 
 ```bash
 # Hybrid mode (default): Binance/OKX direct API + Tardis fallback
-python3 atlas/update.py --source hybrid
+python3 -m atlas.update --source hybrid
 
 # Tardis only
-python3 atlas/update.py --source tardis
+python3 -m atlas.update --source tardis
 
 # Exchange API only (supported exchanges only)
-python3 atlas/update.py --source exchange
+python3 -m atlas.update --source exchange
 
 # Restrict to selected exchanges
-python3 atlas/update.py --exchanges binance-spot,okx-spot
+python3 -m atlas.update --exchanges binance-spot,okx-spot
 ```
 
 ## Supported Exchanges
