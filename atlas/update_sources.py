@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
-from atlas.exchanges import get_exchange_fetcher
+from atlas.exchanges import get_exchange_fetcher, is_on_tardis
 from atlas.utils import _fetch_exchange
 
 
@@ -42,6 +42,8 @@ class HybridSymbolSource:
         fetcher = get_exchange_fetcher(exchange)
         if fetcher is None:
             return self.tardis_source.fetch_exchange(exchange)
+        if not is_on_tardis(exchange):
+            return self.exchange_source.fetch_exchange(exchange)
 
         # When an API fetcher exists, we merge results:
         # 1. Start with Tardis data to get all historical/delisted symbols and metadata

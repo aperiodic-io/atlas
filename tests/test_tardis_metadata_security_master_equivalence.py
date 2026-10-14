@@ -7,7 +7,7 @@ import pytest
 
 from atlas.database import SecurityMaster
 from atlas.exchange_ids import to_tardis_exchange_id
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import get_allowed_types, get_symbol_filter, is_on_tardis
 from atlas.utils import _fetch_exchange
 
 _LEGACY_TO_INTERNAL_EXCHANGE = {
@@ -57,6 +57,8 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
     exchange_file: Path,
 ) -> None:
     exchange = _internal_exchange_for_data_file(exchange_file.stem)
+    if not is_on_tardis(exchange):
+        pytest.skip(f"Tardis does not list {exchange}: its rows come from the venue API only")
     tardis_exchange = to_tardis_exchange_id(exchange)
     rows = json.loads(exchange_file.read_text())
     rows = [row for row in rows if row.get("first_capture")]

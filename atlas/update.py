@@ -12,7 +12,7 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import get_allowed_types, get_symbol_filter, is_on_tardis
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -29,6 +29,7 @@ LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
 
 EXCHANGES = [
     "aster-perpetual",
+    "hibachi-perpetual",
     "binance-futures",
     "binance-futures-cm",
     "binance-spot",
@@ -123,7 +124,7 @@ def _merge_existing_fields(
     return merged_symbols
 
 
-def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+def _capture_new_api_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
     """Record first observation of new API rows without inventing listing dates."""
     captured_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     for symbol in symbols:
@@ -266,6 +267,9 @@ def update(
         if is_beta_exchange(exchange):
             print(f"Skipping {exchange} (beta exchange)", flush=True)
             continue
+        if isinstance(source, TardisSymbolSource) and not is_on_tardis(exchange):
+            print(f"Skipping {exchange} (not on Tardis)", flush=True)
+            continue
         print(f"Fetching {exchange}...", flush=True)
         try:
             data = source.fetch_exchange(exchange)
@@ -294,11 +298,15 @@ def update(
                 _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
                 for sd in incoming_symbols
             ]
-            _capture_new_hyperliquid_rows(incoming_symbols, existing_by_id)
+            _capture_new_api_rows(incoming_symbols, existing_by_id)
         else:
             incoming_symbols = _merge_existing_fields(
                 incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
             )
+            if not is_on_tardis(exchange):
+                # No Tardis availability bounds exist: a new row's start is
+                # Atlas's first observation, as for Hyperliquid's API-only rows.
+                _capture_new_api_rows(incoming_symbols, existing_by_id)
         incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
         # Never drop existing rows if the source omits them.
