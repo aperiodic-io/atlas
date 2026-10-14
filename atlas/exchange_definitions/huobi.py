@@ -4,6 +4,9 @@ import re
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
+from ..types import UnderlyingType
+from .fields import parse_recorded_legs
+from .http import get_json
 from .common import (
     SkipSymbol,
     instrument_type,
@@ -58,3 +61,60 @@ def parse_huobi_dm_swap(exchange: str, sd: SymbolData) -> Contract:
 
 def parse_huobi_dm_linear_swap(exchange: str, sd: SymbolData) -> Contract:
     return parse_dash(exchange, sd)
+
+
+# --- Exchange API (live-producers' htx-perpetual-usdt) ----------------------
+#
+# Only contract_status 1 (listed) trades; 5 and 6 are the transient
+# settlement/delivery states every contract passes through at funding time.
+# Everything else (0 delisting, 2 pending, 3 suspended, 4, 7, 8) is excluded,
+# as live-producers does.
+_HTX_ACTIVE_STATUSES = {1, 5, 6}
+
+_HTX_UNDERLYING = (
+    # An ETF is listed under both labels; it is an equity security.
+    ("Stocks", UnderlyingType.equity),
+    ("Indices", UnderlyingType.index),
+    ("Metals", UnderlyingType.commodity),
+    ("Commodities", UnderlyingType.commodity),
+)
+
+
+def _htx_underlying(labels: list[str]) -> UnderlyingType:
+    if not labels:
+        return UnderlyingType.crypto
+    for label, underlying in _HTX_UNDERLYING:
+        if label in labels:
+            return underlying
+    return UnderlyingType.unknown
+
+
+def fetch_htx_perpetual_usdt(timeout_seconds: int) -> list[dict]:
+    payload = get_json(
+        "https://api.hbdm.vn/linear-swap-api/v1/swap_contract_info", timeout_seconds
+    )
+    symbols = []
+    for item in payload.get("data", []):
+        if item.get("business_type") != "swap":
+            continue
+        if item.get("contract_status") not in _HTX_ACTIVE_STATUSES:
+            continue
+        code = item["contract_code"]
+        base, quote = code.split("-", 1)
+        symbols.append(
+            {
+                "id": code,
+                "type": "perpetual",
+                "base_coin": base,
+                "quote_coin": quote,
+                "margin_asset": item.get("trade_partition") or quote,
+                "contract_size": float(item.get("contract_size") or 1.0),
+                "quantity_unit": "base",
+                "underlying": _htx_underlying(item.get("tradfi_labels") or []).value,
+            }
+        )
+    return symbols
+
+
+def parse_htx_linear_swap(exchange: str, sd: SymbolData) -> Contract:
+    return parse_recorded_legs(exchange, sd) or parse_huobi_dm_linear_swap(exchange, sd)

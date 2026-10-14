@@ -22,9 +22,16 @@ from .common import (
 )
 
 
+# Bybit's `symbolType`: empty for ordinary crypto, `innovation` for its
+# innovation-zone (newly listed) crypto. ETFs are equity securities. Any value
+# Bybit adds later is `unknown` until mapped, never silently crypto.
 _BYBIT_UNDERLYING_TYPE_MAP = {
+    "": UnderlyingType.crypto,
+    "innovation": UnderlyingType.crypto,
     "stock": UnderlyingType.equity,
+    "ETF": UnderlyingType.equity,
     "commodity": UnderlyingType.commodity,
+    "forex": UnderlyingType.forex,
 }
 
 
@@ -150,8 +157,9 @@ def _to_symbol(
         "settle_coin": item.get("settleCoin"),
         "quantity_unit": quantity_unit,
         "contract_size": 1.0,
+        # The inverse category carries no `symbolType`: all of it is crypto.
         "underlying": _BYBIT_UNDERLYING_TYPE_MAP.get(
-            item.get("symbolType"), UnderlyingType.crypto
+            item.get("symbolType") or "", UnderlyingType.unknown
         ).value,
     }
     if type_value == "future":

@@ -62,6 +62,20 @@ EXCHANGES = [
     "phemex",
     "poloniex",
     "upbit",
+    "gateio-perpetual-usdt",
+    "gateio-futures-usdt",
+    "gateio-perpetual-btc",
+    "htx-perpetual-usdt",
+    "mexc-perpetual",
+    "bitget-perpetual-usdt",
+    "bitget-perpetual-usdc",
+    "bitget-perpetual-coin",
+    "bitget-futures-coin",
+    "deribit-perpetual",
+    "deribit-futures",
+    "whitebit-perpetual",
+    "cryptocom-perpetual",
+    "cryptocom-futures",
 ]
 
 
@@ -122,8 +136,13 @@ def _merge_existing_fields(
     return merged_symbols
 
 
-def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
-    """Record first observation of new API rows without inventing listing dates."""
+def _capture_new_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+    """Record first observation of new API rows without inventing listing dates.
+
+    `SecurityMaster.load` ignores rows without `first_capture`, so a row the
+    exchange API reports but Tardis does not (yet) cover would otherwise be
+    invisible to lookups.
+    """
     captured_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     for symbol in symbols:
         if symbol.get("id") not in existing_by_id and not symbol.get("first_capture"):
@@ -285,19 +304,18 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-            # Hybrid metadata is partial: clear lifecycle fields only on rows
-            # that actually supplied Tardis availability bounds. API-only rows
-            # must retain their captured instance and approved CMC mapping.
-            incoming_symbols = [
-                _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
-                for sd in incoming_symbols
-            ]
-            _capture_new_hyperliquid_rows(incoming_symbols, existing_by_id)
-        else:
-            incoming_symbols = _merge_existing_fields(
-                incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
-            )
+        # Hybrid metadata is partial: clear lifecycle fields only on rows
+        # that actually supplied Tardis availability bounds. API-only rows
+        # must retain their captured instance and approved CMC mapping.
+        incoming_symbols = [
+            _merge_existing_fields(
+                [sd],
+                existing_by_id,
+                ignore_metadata=is_tardis_data and bool(sd.get("first_capture")),
+            )[0]
+            for sd in incoming_symbols
+        ]
+        _capture_new_rows(incoming_symbols, existing_by_id)
         incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
         # Never drop existing rows if the source omits them.

@@ -41,6 +41,30 @@ class TestHelpers:
         assert is_beta_exchange("okx-spot") is False
         assert is_beta_exchange("coinbase") is True
 
+    @pytest.mark.parametrize(
+        "exchange",
+        [
+            "gateio-perpetual-usdt",
+            "gateio-futures-usdt",
+            "gateio-perpetual-btc",
+            "htx-perpetual-usdt",
+            "mexc-perpetual",
+            "bitget-perpetual-usdt",
+            "bitget-perpetual-usdc",
+            "bitget-perpetual-coin",
+            "bitget-futures-coin",
+            "deribit-perpetual",
+            "deribit-futures",
+            "whitebit-perpetual",
+            "cryptocom-perpetual",
+            "cryptocom-futures",
+        ],
+    )
+    def test_exchanges_with_api_fetchers_are_stable(self, exchange):
+        # The daily update skips beta exchanges, so a venue with its own
+        # fetcher must not be beta or it would never get a snapshot.
+        assert is_beta_exchange(exchange) is False
+
 
 # ---------------------------------------------------------------------------
 # Spot exchanges
@@ -1028,7 +1052,11 @@ class TestFetchBybit:
             ("", UnderlyingType.crypto.value),
             ("innovation", UnderlyingType.crypto.value),
             ("stock", UnderlyingType.equity.value),
+            ("ETF", UnderlyingType.equity.value),  # SPYUSDT, QQQUSDT
             ("commodity", UnderlyingType.commodity.value),
+            ("forex", UnderlyingType.forex.value),  # EURUSDUSDT, USDJPYUSDT
+            (None, UnderlyingType.crypto.value),  # the inverse category
+            ("bond", UnderlyingType.unknown.value),  # never silently crypto
         ],
     )
     def test_derivative_underlying_is_normalized(
@@ -1098,6 +1126,33 @@ class TestFetchBinanceFuturesUsdM:
         with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
             symbols = fetch_binance_futures_usdm(timeout_seconds=5)
         assert symbols[0]["underlying"] == UnderlyingType.equity.value
+
+    @pytest.mark.parametrize(
+        ("raw", "expected"),
+        [
+            ("FX", UnderlyingType.forex.value),  # USDBRLUSDT
+            ("CN_EQUITY", UnderlyingType.equity.value),  # CXMTUSDT, UNITREEUSDT
+            ("INDEX", UnderlyingType.index.value),  # BTCDOMUSDT
+            ("PREMARKET", UnderlyingType.pre_market.value),  # OPENAIUSDT (pre-IPO)
+        ],
+    )
+    def test_every_live_underlying_type_is_mapped(self, raw, expected):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("USDBRLUSDT") | {"contractType": "TRADIFI_PERPETUAL", "underlyingType": raw}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["underlying"] == expected
+
+    def test_tradfi_perpetuals_are_perpetuals(self):
+        # The fetcher must not rely on update.py renaming them back.
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("XAUUSDT") | {"contractType": "TRADIFI_PERPETUAL", "underlyingType": "COMMODITY"}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            (symbol,) = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbol["type"] == "perpetual"
+        assert parse_contract("binance-futures", symbol).internal_id == "perpetual-XAU-USDT:USDT"
 
     def test_unknown_underlying_type_is_explicit(self):
         from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
@@ -1169,8 +1224,10 @@ class TestFetchHyperliquidPerps:
         self,
         metas: dict[str | None, dict],
         tokens: list[dict] | None = None,
+        categories: list[list[str]] | None = None,
     ):
-        """Route `/info` requests by body: `meta` per dex, `perpDexs`, `spotMeta`."""
+        """Route `/info` requests by body: `meta` per dex, `perpDexs`, `spotMeta`,
+        `perpCategories`."""
         dexes = [None] + [{"name": dex} for dex in metas if dex is not None]
 
         def post(url, json, timeout):
@@ -1178,6 +1235,8 @@ class TestFetchHyperliquidPerps:
                 return self._response(dexes)
             if json["type"] == "spotMeta":
                 return self._response({"tokens": tokens or [], "universe": []})
+            if json["type"] == "perpCategories":
+                return self._response(categories or [])
             assert json["type"] == "meta"
             return self._response(metas[json.get("dex")])
 
@@ -1222,6 +1281,49 @@ class TestFetchHyperliquidPerps:
         assert all(sd["type"] == "perpetual" for sd in symbols)
         assert all(sd["contract_size"] == 1.0 for sd in symbols)
 
+    def test_underlying_comes_from_the_venues_perp_categories(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        # Captured from `{"type": "perpCategories"}` on 2026-10-14.
+        categories = [
+            ["xyz:TSLA", "stocks"],
+            ["para:AAOI", "stock"],
+            ["xyz:SP500", "indices"],
+            ["xyz:GOLD", "commodities"],
+            ["xyz:JPY", "fx"],
+            ["km:EUR", "FX"],
+            ["io:OAI", "preipo"],
+            ["para:10Y", "rates"],
+            ["para:BTCD", "crypto"],
+            ["xyz:NEW", "bonds"],
+        ]
+        names = [name for name, _ in categories]
+        metas = {
+            None: {"universe": [{"name": "BTC"}, {"name": "kPEPE"}]},
+            "xyz": {"universe": [{"name": n} for n in names] + [{"name": "xyz:NIFTY", "isDelisted": True}, {"name": "xyz:MYSTERY", "isDelisted": True}]},
+        }
+        post = self._mock_info(metas, categories=categories)
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=post):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+
+        assert {sd["id"]: sd["underlying"] for sd in symbols} == {
+            "BTC": "crypto",  # the main dex lists crypto only
+            "kPEPE": "crypto",
+            "xyz:TSLA": "equity",
+            "para:AAOI": "equity",
+            "xyz:SP500": "index",
+            "xyz:GOLD": "commodity",
+            "xyz:JPY": "forex",
+            "km:EUR": "forex",
+            "io:OAI": "pre_market",
+            "para:10Y": "index",  # a treasury yield is a benchmark level
+            "para:BTCD": "crypto",
+            "xyz:NEW": "unknown",  # a label Atlas has not mapped yet
+            # Uncategorised (delisted before the venue categorised assets):
+            "xyz:NIFTY": "index",  # from the curated table
+            "xyz:MYSTERY": "unknown",
+        }
+
     def test_fetched_hip3_perps_parse_to_collateral_denominated_ids(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
 
@@ -1252,10 +1354,11 @@ class TestFetchHyperliquidPerps:
                 valid,
                 self._response([None]),
                 self._response({"tokens": [], "universe": []}),
+                self._response([]),
             ],
         ) as post:
             assert fetch_hyperliquid_perps(timeout_seconds=5) == [
-                {"id": "BTC", "type": "perpetual", "contract_size": 1.0}
+                {"id": "BTC", "type": "perpetual", "contract_size": 1.0, "underlying": "crypto"}
             ]
 
-        assert post.call_count == 4
+        assert post.call_count == 5
