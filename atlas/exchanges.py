@@ -54,6 +54,7 @@ from .exchange_definitions.okx import (
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
+from .exchange_definitions.variational import fetch_variational_perps, parse_variational
 from .parser_interface import Parser
 
 ExchangeFetcher = Callable[[int], list[dict[str, str]]]
@@ -194,6 +195,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),
     "upbit": _define("upbit", parse_upbit),
+    "variational-perpetual": _define(
+        "variational-perpetual",
+        parse_variational,
+        exchange_fetcher=fetch_variational_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
 }
 
 PARSERS: dict[str, Parser] = {
