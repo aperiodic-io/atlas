@@ -3562,11 +3562,11 @@
     "type": "perpetual",
     "contract_size": 1.0,
     "margin_asset": "USDC",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-IO:XIAOMI-USDC:USDC",
     "symbol": "IO:XIAOMI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "kBONK",
@@ -4365,7 +4365,7 @@
     "symbol": "PARA:GDX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-03T07:30:25Z"
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "para:GLW",

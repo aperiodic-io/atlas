@@ -7047,7 +7047,8 @@
     "symbol": "BLUR",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "BMNR-USD_UM_XPERP-310822",
@@ -7097,12 +7098,12 @@
     "id": "BSP-USD_UM_XPERP-311017",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "future-BSP-USD:USD-20311017",
     "symbol": "BSP",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "BSV-USD-190405",
@@ -20108,12 +20109,12 @@
     "id": "CXMT-USD_UM_XPERP-311017",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "future-CXMT-USD:USD-20311017",
     "symbol": "CXMT",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "DASH-USD_UM_XPERP-310829",
@@ -55918,12 +55919,12 @@
     "id": "TQQQ-USD_UM_XPERP-311017",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "future-TQQQ-USD:USD-20311017",
     "symbol": "TQQQ",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "TRB-USD_UM_XPERP-310815",
@@ -60263,12 +60264,12 @@
     "id": "UNITREE-USD_UM_XPERP-311017",
     "type": "future",
     "contract_size": 1.0,
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "future-UNITREE-USD:USD-20311017",
     "symbol": "UNITREE",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "UP-USD_UM_XPERP-310919",
@@ -60344,7 +60345,8 @@
     "symbol": "W",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-10-17T00:00:00"
+    "delivery_date": "2031-10-17T00:00:00",
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "WDC-USD_UM_XPERP-310829",

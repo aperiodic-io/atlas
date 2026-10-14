@@ -2862,11 +2862,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-BMNU-USDT:USDT",
     "symbol": "BMNU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "BMTUSDT",
@@ -3325,11 +3325,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-BWET-USDT:USDT",
     "symbol": "BWET",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "BXUSDT",
@@ -6608,7 +6608,8 @@
     "internal_id": "perpetual-GRAL-USDT:USDT",
     "symbol": "GRAL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "GRAMUSDT",
@@ -9256,11 +9257,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-MELI-USDT:USDT",
     "symbol": "MELI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "MEMEFIUSDT",
@@ -9744,11 +9745,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-MP-USDT:USDT",
     "symbol": "MP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "MRKUSDT",
@@ -10442,11 +10443,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-NUSTOCK-USDT:USDT",
     "symbol": "NUSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "NVDAUSDT",
@@ -11115,11 +11116,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-PBR-USDT:USDT",
     "symbol": "PBR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "PDDUSDT",
@@ -13372,7 +13373,8 @@
     "internal_id": "perpetual-SNPS-USDT:USDT",
     "symbol": "SNPS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "SNTUSDT",
@@ -15156,11 +15158,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-UMC-USDT:USDT",
     "symbol": "UMC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "UNFIUSDT",
@@ -15343,11 +15345,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-USDEX-USDT:USDT",
     "symbol": "USDEX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "USDJPYUSDT",
@@ -15651,11 +15653,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-VIST-USDT:USDT",
     "symbol": "VIST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "VKTXUSDT",
@@ -15666,11 +15668,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-09T00:00:00.000Z",
     "internal_id": "perpetual-VKTX-USDT:USDT",
     "symbol": "VKTX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-09T00:00:00.000Z"
   },
   {
     "id": "VOXELUSDT",
@@ -16716,11 +16718,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "equity",
-    "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-YPF-USDT:USDT",
     "symbol": "YPF",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
     "id": "YZYUSDT",
@@ -16801,7 +16803,8 @@
     "internal_id": "perpetual-ZCSH-USDT:USDT",
     "symbol": "ZCSH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
     "id": "ZCXUSDT",
