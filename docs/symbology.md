@@ -222,10 +222,10 @@ Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 
 ## Coverage
 
-The first build, on 14 October 2026, minted 2,554 assets: 1,983 crypto, 507
-equity, 25 fiat, 17 index, 14 commodity and 8 unknown. It identified the base
-asset of 22,680 of 31,576 instrument rows (10,019 from CMC market pairs), and the
-quote asset of 31,082 of them.
+The first build, on 14 October 2026, minted 2,550 assets: 1,983 crypto,
+504 equity, 25 fiat, 20 index, 14 commodity and 4 unknown. It identified the
+base asset of 20,992 of 31,837 instrument rows (10,019 from CMC market pairs), and
+the quote asset of 31,082 of them.
 
 | Snapshot | Active rows | Active base resolved |
 | --- | ---: | ---: |
@@ -233,18 +233,18 @@ quote asset of 31,082 of them.
 | `binance-futures` | 794 | 100.0% |
 | `binance-futures-cm` | 30 | 100.0% |
 | `bybit-spot` | 528 | 99.6% |
-| `bybit-perps` | 894 | 98.2% |
+| `bybit-perps` | 894 | 98.0% |
 | `bybit-futures` | 44 | 100.0% |
-| `okx-spot` | 1,171 | 93.6% |
-| `okx-perps` | 501 | 98.0% |
+| `okx-spot` | 1,171 | 93.5% |
+| `okx-perps` | 501 | 97.8% |
 | `okx-futures` | 274 | 97.8% |
-| `coinbase` | 515 | 99.4% |
+| `coinbase` | 515 | 99.2% |
 | `bitget` | 3,464 | 18.5% |
 | `bitget-futures` | 906 | 98.3% |
-| `gate-io` | 2,200 | 73.9% |
-| `gate-io-futures` | 1,070 | 97.6% |
-| `hyperliquid-perps` | 396 | 80.3% |
-| `hyperliquid-spot` | 331 | 38.7% |
+| `gate-io` | 2,200 | 73.7% |
+| `gate-io-futures` | 1,070 | 97.4% |
+| `hyperliquid-perps` | 396 | 79.3% |
+| `hyperliquid-spot` | 331 | 35.6% |
 
 The gaps are assets CMC does not track: Bitget's 2,800 tokenized stocks, Gate's
 leveraged tokens (`ADA3L`, `ADA3S`), Hyperliquid's HIP-1 spot tokens and
