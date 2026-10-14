@@ -33,6 +33,8 @@ KNOWN_QUOTES = [
     "MNT",
     "USDE",
     "USDS",
+    "RLUSD",
+    "XUSD",
     "USD",
     "JPY",
     "MXN",
@@ -57,6 +59,9 @@ KNOWN_QUOTES = [
     "DAI",
     "VAI",
     "KRW",
+    "THB",
+    "AED",
+    "KZT",
     "UST",
     "GUSD",
     "CNHT",
@@ -206,10 +211,23 @@ def make_contract(
     )
 
 
+def venue_assets(sd: SymbolData) -> tuple[str, str] | None:
+    """The base and quote assets a venue reports for a symbol, when it does.
+
+    Splitting a concatenated ticker against a list of quote currencies is a
+    guess (``ARBIDR`` is ARB/IDR, not AR/BIDR); a venue's own fields are not.
+    """
+    base = sd.get("base_coin")
+    quote = sd.get("quote_coin")
+    if isinstance(base, str) and base and isinstance(quote, str) and quote:
+        return base, quote
+    return None
+
+
 def parse_concat(
     exchange: str, sd: SymbolData, quotes: list[str] = KNOWN_QUOTES
 ) -> Contract:
-    pair = split_concat(sd["id"].upper(), quotes)
+    pair = venue_assets(sd) or split_concat(sd["id"].upper(), quotes)
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
     symbol, denominator = pair
