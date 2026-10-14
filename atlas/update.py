@@ -29,6 +29,7 @@ LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
 
 EXCHANGES = [
     "aster-perpetual",
+    "apex-perpetual",
     "hibachi-perpetual",
     "binance-futures",
     "binance-futures-cm",

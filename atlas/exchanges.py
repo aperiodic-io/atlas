@@ -4,6 +4,7 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
+from .exchange_definitions.apex import fetch_apex_perps, parse_apex
 from .exchange_definitions.aster import fetch_aster_perps, parse_aster
 from .exchange_definitions.binance import (
     fetch_binance_futures_coinm,
@@ -109,6 +110,13 @@ def hyperliquid_filter(sd: dict) -> bool:
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
+    "apex-perpetual": _define(
+        "apex-perpetual",
+        parse_apex,
+        exchange_fetcher=fetch_apex_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
     "hibachi-perpetual": _define(
         "hibachi-perpetual",
         parse_hibachi,
