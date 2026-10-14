@@ -55,6 +55,7 @@ from .exchange_definitions.orderly import fetch_orderly_perps, parse_orderly
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
+from .exchange_definitions.vest import fetch_vest_perps, parse_vest
 from .parser_interface import Parser
 
 ExchangeFetcher = Callable[[int], list[dict[str, str]]]
@@ -199,6 +200,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         "orderly-perpetual",
         parse_orderly,
         exchange_fetcher=fetch_orderly_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
+    "vest-perpetual": _define(
+        "vest-perpetual",
+        parse_vest,
+        exchange_fetcher=fetch_vest_perps,
         allowed_types={"perpetual"},
         beta=False,
     ),

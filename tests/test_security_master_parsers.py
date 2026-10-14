@@ -1201,3 +1201,115 @@ class TestFetchHyperliquidPerps:
             ]
 
         assert post.call_count == 4
+
+
+# ---------------------------------------------------------------------------
+# Vest Markets
+# ---------------------------------------------------------------------------
+
+# Recorded from GET https://server-prod.hz.vestmarkets.com/v2/exchangeInfo on
+# 2026-10-14 (fields the fetcher reads; CL-USD-PERP is Colgate-Palmolive).
+_VEST_MARKETS = [
+    {"symbol": "BTC-PERP", "displayName": "Bitcoin", "base": "BTC", "quote": "USDC", "asset": "crypto", "tradingStatus": "TRADING"},
+    {"symbol": "AAPL-USD-PERP", "displayName": "Apple Inc", "base": "AAPL-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "SPY-USD-PERP", "displayName": "SPDR S&P 500 ETF Trust", "base": "SPY-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NOK-PERP", "displayName": "Nokia Corporation", "base": "NOK", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NOK-USD-PERP", "displayName": "Norwegian Krone/US Dollar", "base": "NOK-USD", "quote": "USDC", "asset": "forex", "tradingStatus": "TRADING"},
+    {"symbol": "JPY-USD-PERP", "displayName": "Japanese Yen / U.S. Dollar", "base": "JPY-USD", "quote": "USDC", "asset": "forex", "tradingStatus": "TRADING"},
+    {"symbol": "CL-PERP", "displayName": "Crude Oil Futures", "base": "CL", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "GC-PERP", "displayName": "Gold Futures", "base": "GC", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "SPX-USD-PERP", "displayName": "S&P 500 E-mini Futures", "base": "SPX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NDX-USD-PERP", "displayName": "NASDAQ 100 E-mini Futures", "base": "NDX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "GLD-USD-PERP", "displayName": "SPDR Gold Shares", "base": "GLD-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "CL-USD-PERP", "displayName": "Colgate-Palmolive Company", "base": "CL-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "HALT"},
+    {"symbol": "kPEPE-PERP", "displayName": "Pepe", "base": "kPEPE", "quote": "USDC", "asset": "crypto", "tradingStatus": "HALT"},
+    {"symbol": "PAYX-USD-PERP", "displayName": "Paychex, Inc.", "base": "PAYX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "HALT"},
+]
+
+
+def _vest_rows() -> dict:
+    from atlas.exchange_definitions.vest import vest_symbols
+
+    return {row["id"]: row for row in vest_symbols(_VEST_MARKETS)}
+
+
+class TestVest:
+    def test_only_trading_markets_are_fetched(self):
+        # HALT markets cannot be streamed (Vest rejects their subscriptions).
+        rows = _vest_rows()
+        assert "PAYX-USD-PERP" not in rows
+        assert "kPEPE-PERP" not in rows
+        assert "CL-USD-PERP" not in rows
+        assert len(rows) == 11
+
+    @pytest.mark.parametrize(
+        ("sid", "internal_id"),
+        [
+            ("BTC-PERP", "perpetual-BTC-USDC:USDC"),
+            ("AAPL-USD-PERP", "perpetual-AAPL-USDC:USDC"),
+            ("NOK-PERP", "perpetual-NOK-USDC:USDC"),
+            ("NOK-USD-PERP", "perpetual-NOKUSD-USDC:USDC"),
+            ("JPY-USD-PERP", "perpetual-JPYUSD-USDC:USDC"),
+            ("CL-PERP", "perpetual-CL-USDC:USDC"),
+            ("SPX-USD-PERP", "perpetual-SPX-USDC:USDC"),
+        ],
+    )
+    def test_internal_id_matches_the_producer(self, sid, internal_id):
+        # Stocks lose the "-USD" quote suffix; FX keeps the pair, since NOK
+        # alone would be Nokia's ID too. Mirrors streaming/feeds/vest/vest.go.
+        c = parse_contract("vest-perpetual", _vest_rows()[sid])
+        assert c.internal_id == internal_id
+        assert c.instrument_type == ContractType.perpetual
+        assert c.contract_size == 1.0
+
+    @pytest.mark.parametrize(
+        ("sid", "underlying"),
+        [
+            ("BTC-PERP", UnderlyingType.crypto),
+            ("AAPL-USD-PERP", UnderlyingType.equity),
+            ("SPY-USD-PERP", UnderlyingType.equity),  # an ETF is an equity
+            ("GLD-USD-PERP", UnderlyingType.equity),
+            ("NOK-PERP", UnderlyingType.equity),
+            ("JPY-USD-PERP", UnderlyingType.forex),
+            # Vest calls its CME-futures markets "stock".
+            ("CL-PERP", UnderlyingType.commodity),
+            ("GC-PERP", UnderlyingType.commodity),
+            ("SPX-USD-PERP", UnderlyingType.index),
+            ("NDX-USD-PERP", UnderlyingType.index),
+        ],
+    )
+    def test_underlying_from_the_venue_asset_class(self, sid, underlying):
+        assert _vest_rows()[sid]["underlying"] == underlying.value
+
+    def test_colliding_markets_keep_the_smallest_venue_symbol(self):
+        # If Colgate (CL-USD-PERP) traded again next to crude oil (CL-PERP),
+        # both would map to CL; the producer keeps CL-PERP, and so must Atlas.
+        from atlas.exchange_definitions.vest import vest_symbols
+
+        markets = [dict(m, tradingStatus="TRADING") for m in reversed(_VEST_MARKETS)]
+        ids = [row["id"] for row in vest_symbols(markets)]
+        assert "CL-PERP" in ids
+        assert "CL-USD-PERP" not in ids
+
+    def test_row_without_venue_base_is_skipped(self):
+        # A Tardis-shaped row carries no base asset to normalise.
+        with pytest.raises(SkipSymbol):
+            parse_contract("vest-perpetual", _sd("BTC-PERP", "perpetual"))
+
+    def test_fetcher_reads_exchange_info(self):
+        from atlas.exchange_definitions import vest
+
+        response = MagicMock()
+        response.json.return_value = {"symbols": _VEST_MARKETS, "exchange": {}}
+        with patch.object(vest.requests, "get", return_value=response) as get:
+            rows = vest.fetch_vest_perps(5)
+        get.assert_called_once_with(vest.VEST_EXCHANGE_INFO_URL, timeout=5)
+        assert len(rows) == 11
+
+    def test_is_refreshed_by_the_daily_update(self):
+        from atlas.exchanges import get_allowed_types
+        from atlas.update import EXCHANGES
+
+        assert is_beta_exchange("vest-perpetual") is False
+        assert get_allowed_types("vest-perpetual") == {"perpetual"}
+        assert "vest-perpetual" in EXCHANGES

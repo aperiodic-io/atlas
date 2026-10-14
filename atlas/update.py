@@ -63,6 +63,7 @@ EXCHANGES = [
     "poloniex",
     "upbit",
     "orderly-perpetual",
+    "vest-perpetual",
 ]
 
 
