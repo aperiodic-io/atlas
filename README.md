@@ -36,9 +36,9 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - lookup by `(exchange, original_id)` -> `internal_id`
   - active-symbol filtering by date window
 - Refreshes snapshot data from:
-  - exchange APIs (where supported)
+  - exchange APIs (default; Binance, Bybit, Hyperliquid, OKX)
   - Tardis
-  - hybrid mode (exchange API first, Tardis fallback)
+  - hybrid mode (exchange API overlaid on Tardis)
 
 ## Symbology
 
@@ -106,18 +106,45 @@ print(len(active))
 ### Update local snapshots
 
 ```bash
-# Hybrid mode (default): Binance/OKX direct API + Tardis fallback
+# Exchange API only (default, used by the daily workflow)
+python3 atlas/update.py --source exchange
+
+# Hybrid mode: exchange APIs overlaid on Tardis
 python3 atlas/update.py --source hybrid
 
 # Tardis only
 python3 atlas/update.py --source tardis
 
-# Exchange API only (supported exchanges only)
-python3 atlas/update.py --source exchange
-
 # Restrict to selected exchanges
 python3 atlas/update.py --exchanges binance-spot,okx-spot
 ```
+
+#### Listing and delisting dates
+
+In exchange mode each fetch is treated as the exchange's whole current
+universe, so `first_capture` and `end_date` come from the exchanges:
+
+- `first_capture` is the exchange listing time where one is published
+  (Binance futures `onboardDate`, Bybit derivatives `launchTime`, OKX
+  `listTime`), otherwise the time a run first saw the instrument. A value
+  already on file is never overwritten.
+- `end_date` is set from an explicit exchange signal when there is one: Binance
+  futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`), Bybit derivatives
+  `Closed` (at `deliveryTime`), and Hyperliquid `isDelisted` (at first sighting,
+  as Hyperliquid publishes no time).
+- An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
+  OKX, Hyperliquid spot) is marked `missing_since` on the first run that misses
+  it. If a run at least 12 hours later still misses it, `end_date` is set to that
+  first miss; if it comes back first, the mark is dropped. Expired dated futures
+  end at delivery straight away.
+- Halted, suspended and pre-market instruments (Binance spot `HALT`, OKX
+  `suspend`, Bybit `PreLaunch`/`Delivering`) stay listed.
+- A run that would newly drop more than 10% of an exchange's open instruments
+  (and more than 5), or that returns nothing, fails that exchange and leaves its
+  file untouched, since that looks like a broken API response.
+- An existing `end_date` is never overwritten, a relisted instrument has its
+  `end_date` cleared, and delisted instruments that were never on file are not
+  added.
 
 ## Supported Exchanges
 
@@ -241,7 +268,7 @@ configuration and review process.
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
+- `--source exchange` only works for exchanges that have direct API fetchers implemented (Binance, Bybit, Hyperliquid and OKX variants).
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout

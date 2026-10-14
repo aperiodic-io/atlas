@@ -162,11 +162,12 @@ tolerance, and relative difference.
 ### Delisted, inactive, and relisted assets
 
 Keep every historical Atlas contract row. `first_capture` and `end_date` remain
-the availability bounds; Tardis `availableTo` can supply `end_date`. Absence
-from a failed or partial fetch must never mean delisting.
+the availability bounds; exchange delisting statuses supply `end_date` (see the
+README's "Listing and delisting dates"). Absence from a failed or partial fetch
+must never mean delisting.
 
-Mark an unseen instrument `suspected_delisted` only after successful snapshots;
-confirm after a configurable threshold or explicit exchange status. Keep CMC
+An unseen instrument is marked `missing_since` after a successful snapshot and
+confirmed by a later run at least 12 hours on, or by explicit exchange status. Keep CMC
 mappings immutable for delisted assets, query their saved IDs historically, and
 mark inactive CMC assets `cmc_inactive` rather than recycling an ID. A relisting
 or reused exchange symbol creates a new instrument instance.
