@@ -4351,17 +4351,6 @@
   {
    "asset_id": "BIFI",
    "ticker": "BIFI",
-   "name": "Bitcoin File",
-   "asset_class": "crypto",
-   "cmc_id": 2994,
-   "cmc_slug": "bitcoin-file",
-   "status": "active",
-   "cmc_date_added": "2018-07-28T00:00:00Z",
-   "minted_at": "2026-10-14"
-  },
-  {
-   "asset_id": "BIFI.BEEFY_FINANCE",
-   "ticker": "BIFI",
    "name": "Beefy",
    "asset_class": "crypto",
    "cmc_id": 7311,
@@ -4391,6 +4380,17 @@
    ],
    "status": "active",
    "cmc_date_added": "2020-12-29T00:00:00Z",
+   "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "BIFI.BITCOIN_FILE",
+   "ticker": "BIFI",
+   "name": "Bitcoin File",
+   "asset_class": "crypto",
+   "cmc_id": 2994,
+   "cmc_slug": "bitcoin-file",
+   "status": "active",
+   "cmc_date_added": "2018-07-28T00:00:00Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -14393,7 +14393,7 @@
    "asset_id": "IXIC",
    "ticker": "IXIC",
    "name": "Nasdaq index (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "index",
    "cmc_id": 39468,
    "cmc_slug": "nasdaq-index-derivatives",
    "categories": [
@@ -14626,14 +14626,6 @@
    ],
    "status": "active",
    "cmc_date_added": "2021-08-25T21:39:22Z",
-   "minted_at": "2026-10-14"
-  },
-  {
-   "asset_id": "JP225",
-   "ticker": "JP225",
-   "name": "JP225",
-   "asset_class": "equity",
-   "status": "active",
    "minted_at": "2026-10-14"
   },
   {
@@ -15399,22 +15391,6 @@
    "minted_at": "2026-10-14"
   },
   {
-   "asset_id": "KR200",
-   "ticker": "KR200",
-   "name": "KR200",
-   "asset_class": "equity",
-   "status": "active",
-   "minted_at": "2026-10-14"
-  },
-  {
-   "asset_id": "KR200.INDEX",
-   "ticker": "KR200",
-   "name": "KR200",
-   "asset_class": "index",
-   "status": "active",
-   "minted_at": "2026-10-14"
-  },
-  {
    "asset_id": "KRL",
    "ticker": "KRL",
    "name": "Kryll",
@@ -15442,7 +15418,7 @@
    "asset_id": "KS200",
    "ticker": "KS200",
    "name": "KOSPI 200 Index (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "index",
    "cmc_id": 39853,
    "cmc_slug": "kospi-200-index-derivatives",
    "categories": [
@@ -15470,7 +15446,7 @@
    "asset_id": "KSTR",
    "ticker": "KSTR",
    "name": "KraneShares SSE STAR Market 50 Index ETF (Derivatives)",
-   "asset_class": "equity",
+   "asset_class": "index",
    "cmc_id": 40678,
    "cmc_slug": "kraneshares-sse-star-market-50-index-etf-derivatives",
    "categories": [
@@ -17208,6 +17184,20 @@
   {
    "asset_id": "MAX",
    "ticker": "MAX",
+   "name": "MAX Exchange Token",
+   "asset_class": "crypto",
+   "cmc_id": 5067,
+   "cmc_slug": "max-exchange-token",
+   "aliases": [
+    "MAXEXCHANGE"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-07-14T00:00:00Z",
+   "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MAX.MASTERCARD_TOKENIZED_STOCK_XSTOCK",
+   "ticker": "MAX",
    "name": "Mastercard tokenized stock (xStock)",
    "asset_class": "crypto",
    "cmc_id": 37051,
@@ -17218,20 +17208,6 @@
    ],
    "status": "active",
    "cmc_date_added": "2025-07-01T18:39:57Z",
-   "minted_at": "2026-10-14"
-  },
-  {
-   "asset_id": "MAX.MAX_EXCHANGE_TOKEN",
-   "ticker": "MAX",
-   "name": "MAX Exchange Token",
-   "asset_class": "crypto",
-   "cmc_id": 5067,
-   "cmc_slug": "max-exchange-token",
-   "aliases": [
-    "MAXEXCHANGE"
-   ],
-   "status": "active",
-   "cmc_date_added": "2020-07-14T00:00:00Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -19622,7 +19598,7 @@
    "asset_id": "NI225",
    "ticker": "NI225",
    "name": "Nikkei 225 (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "equity",
    "cmc_id": 39852,
    "cmc_slug": "nikkei-225-derivatives",
    "categories": [
@@ -27296,7 +27272,7 @@
    "asset_id": "SP500",
    "ticker": "S&P500",
    "name": "Standard and Poor's 500 index (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "index",
    "cmc_id": 39474,
    "cmc_slug": "standard-and-poors-500-index-derivatives",
    "categories": [
@@ -27304,14 +27280,6 @@
    ],
    "status": "active",
    "cmc_date_added": "2026-01-29T01:51:08Z",
-   "minted_at": "2026-10-14"
-  },
-  {
-   "asset_id": "SP500.EQUITY",
-   "ticker": "SP500",
-   "name": "SP500",
-   "asset_class": "equity",
-   "status": "active",
    "minted_at": "2026-10-14"
   },
   {
