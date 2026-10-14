@@ -137,6 +137,8 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bitget-futures` | **`UNSTABLE (BETA)`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
 | `bybit-spot` | ✅ **`STABLE`** |
+| `apex-perpetual` | ✅ **`STABLE`** (venue API only) |
+| `aster-perpetual` | ✅ **`STABLE`** |
 | `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
 | `coinbase` | **`UNSTABLE (BETA)`** |
@@ -151,6 +153,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-linear-swap` | **`UNSTABLE (BETA)`** |
+| `hibachi-perpetual` | ✅ **`STABLE`** (venue API only) |
 | `hyperliquid-spot` | ✅ **`STABLE`** |
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
@@ -166,12 +169,15 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 
 The repository currently ships precomputed JSON snapshots for:
 
+- `apex-perpetual`
+- `aster-perpetual`
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
+- `hibachi-perpetual`
 - `hyperliquid-spot`
 - `hyperliquid-perps`
 - `okx-spot`
@@ -181,7 +187,8 @@ The repository currently ships precomputed JSON snapshots for:
 ## Features
 
 - Unified parser layer with exchange-specific symbol rules.
-- Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default).
+- Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default). An exchange read from its own API is stable.
+- Venues Tardis does not list (`on_tardis=False`: ApeX, Hibachi) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.
