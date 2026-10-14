@@ -88,7 +88,9 @@ DEFAULT_MAX_CATALOGUE_GAP_RATIO = 0.005
 # predate the field (BTC, ADA, BNB). `unknown` is kept too, because silently
 # skipping a genuine new listing is worse than a reviewer seeing a few rows that
 # turn out not to be crypto.
-DEFAULT_SKIPPED_UNDERLYINGS = frozenset({"equity", "index", "commodity", "pre_market"})
+DEFAULT_SKIPPED_UNDERLYINGS = frozenset(
+    {"equity", "index", "commodity", "pre_market", "forex"}
+)
 MAX_CANDIDATES_IN_PROMPT = 12
 
 SYSTEM_PROMPT = """\

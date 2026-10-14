@@ -28,7 +28,7 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - `denominator` (quote / settlement)
   - `margin` (for derivatives)
   - `type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
-  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `pre_market`, `unknown`), when supplied by the venue
+  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `forex`, `pre_market`, `unknown`), when supplied by the venue
   - `contract_size` (when available from source metadata)
   - `delivery_date` (for dated contracts)
   - `internal_id` string
@@ -218,7 +218,7 @@ The workflow exposes these as one `mode` input (`resolve`, `preview`,
 `coverage`, `check-llm`) and one `days` window.
 
 Only crypto assets are in scope: rows whose `underlying` is `equity`, `index`,
-`commodity` or `pre_market` are skipped, since a tokenized equity's CMC ID would
+`commodity`, `forex` or `pre_market` are skipped, since a tokenized equity's CMC ID would
 name the wrapper rather than the asset. Rows with no `underlying` (legacy crypto)
 and `unknown` are still resolved.
 
