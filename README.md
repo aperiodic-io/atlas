@@ -143,10 +143,12 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
+| `dydx-perpetual` | ✅ **`STABLE`** |
 | `ftx` | **`UNSTABLE (BETA)`** |
 | `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
+| `grvt-perpetual` | ✅ **`STABLE`** |
 | `huobi` | **`UNSTABLE (BETA)`** |
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
@@ -155,6 +157,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
+| `nado-perpetual` | ✅ **`STABLE`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
@@ -172,8 +175,11 @@ The repository currently ships precomputed JSON snapshots for:
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
+- `dydx-perpetual` (indexer API; dated from Tardis `dydx-v4`)
+- `grvt-perpetual` (venue API only; `first_capture` is the venue listing time)
 - `hyperliquid-spot`
 - `hyperliquid-perps`
+- `nado-perpetual` (venue API only; `first_capture` is Atlas's first observation)
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`

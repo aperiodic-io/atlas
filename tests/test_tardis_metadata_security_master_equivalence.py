@@ -19,6 +19,13 @@ _LEGACY_TO_INTERNAL_EXCHANGE = {
 }
 
 
+# Venues Tardis does not cover: their snapshots come from the venue API alone.
+_NOT_ON_TARDIS = {"grvt-perpetual", "nado-perpetual"}
+# Venues whose API-only rows carry Atlas observation dates (see
+# atlas.update.API_CAPTURED_EXCHANGES); only rows Tardis supplies are compared.
+_API_CAPTURED_ON_TARDIS = {"hyperliquid-perps", "hyperliquid-spot", "dydx-perpetual"}
+
+
 def _internal_exchange_for_data_file(exchange_file_stem: str) -> str:
     return _LEGACY_TO_INTERNAL_EXCHANGE.get(exchange_file_stem, exchange_file_stem)
 
@@ -57,6 +64,8 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
     exchange_file: Path,
 ) -> None:
     exchange = _internal_exchange_for_data_file(exchange_file.stem)
+    if exchange in _NOT_ON_TARDIS:
+        pytest.skip(f"{exchange} is not covered by Tardis")
     tardis_exchange = to_tardis_exchange_id(exchange)
     rows = json.loads(exchange_file.read_text())
     rows = [row for row in rows if row.get("first_capture")]
@@ -74,8 +83,8 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         if s.get("type") in allowed_types
         and (symbol_filter(s) if symbol_filter else True)
     ]
-    if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-        # Hyperliquid API-only rows use Atlas observation dates. Compare
+    if exchange in _API_CAPTURED_ON_TARDIS:
+        # API-only rows use Atlas observation dates. Compare
         # availability bounds only where Tardis supplies the same instrument.
         tardis_ids = {symbol["id"] for symbol in live_symbols if symbol.get("availableSince")}
         rows = [row for row in rows if row["id"] in tardis_ids]

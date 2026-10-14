@@ -44,10 +44,12 @@ EXCHANGES = [
     "crypto-com",
     "cryptofacilities",
     "deribit",
+    "dydx-perpetual",
     "ftx",
     "gate-io-futures",
     "gate-io",
     "gemini",
+    "grvt-perpetual",
     "huobi-dm-linear-swap",
     "huobi-dm-swap",
     "huobi-dm",
@@ -56,6 +58,7 @@ EXCHANGES = [
     "hyperliquid-perps",
     "kraken",
     "kucoin",
+    "nado-perpetual",
     "okx-perps",
     "okx-futures",
     "okx-spot",
@@ -63,6 +66,14 @@ EXCHANGES = [
     "poloniex",
     "upbit",
 ]
+
+
+# Venues whose API rows may carry no Tardis availability: a new row records Atlas's
+# first observation as first_capture (or the venue's listing time, when its fetcher
+# provides one), so the security master can resolve it.
+API_CAPTURED_EXCHANGES = frozenset(
+    {"hyperliquid-perps", "hyperliquid-spot", "dydx-perpetual", "grvt-perpetual", "nado-perpetual"}
+)
 
 
 def _append_contract_size_change(sd: dict, new_size: float, effective_from: str) -> dict:
@@ -285,7 +296,7 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+        if exchange in API_CAPTURED_EXCHANGES:
             # Hybrid metadata is partial: clear lifecycle fields only on rows
             # that actually supplied Tardis availability bounds. API-only rows
             # must retain their captured instance and approved CMC mapping.

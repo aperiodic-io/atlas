@@ -27,9 +27,11 @@ from .exchange_definitions.coinbase import parse_coinbase
 from .exchange_definitions.crypto_com import parse_crypto_com
 from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.deribit import parse_deribit
+from .exchange_definitions.dydx import fetch_dydx_perps, parse_dydx
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
 from .exchange_definitions.gemini import parse_gemini
+from .exchange_definitions.grvt import fetch_grvt_perps, parse_grvt
 from .exchange_definitions.huobi import (
     parse_huobi,
     parse_huobi_dm,
@@ -43,6 +45,7 @@ from .exchange_definitions.hyperliquid import (
 )
 from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
+from .exchange_definitions.nado import fetch_nado_perps, parse_nado
 from .exchange_definitions.okx import (
     fetch_okx_futures,
     fetch_okx_spot,
@@ -70,7 +73,7 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid"))
+    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid", "dydx", "grvt", "nado"))
 
 
 def _define(
@@ -147,10 +150,23 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),
+    "dydx-perpetual": _define(
+        "dydx-perpetual",
+        parse_dydx,
+        tardis_id="dydx-v4",
+        exchange_fetcher=fetch_dydx_perps,
+        allowed_types={"perpetual"},
+    ),
     "ftx": _define("ftx", parse_ftx),
     "gate-io": _define("gate-io", parse_gate_io),
     "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
     "gemini": _define("gemini", parse_gemini),
+    "grvt-perpetual": _define(
+        "grvt-perpetual",
+        parse_grvt,
+        exchange_fetcher=fetch_grvt_perps,
+        allowed_types={"perpetual"},
+    ),
     "huobi": _define("huobi", parse_huobi),
     "huobi-dm": _define("huobi-dm", parse_huobi_dm),
     "huobi-dm-swap": _define("huobi-dm-swap", parse_huobi_dm_swap),
@@ -173,6 +189,12 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),
+    "nado-perpetual": _define(
+        "nado-perpetual",
+        parse_nado,
+        exchange_fetcher=fetch_nado_perps,
+        allowed_types={"perpetual"},
+    ),
     "okx-spot": _define(
         "okx-spot", parse_okex, tardis_id="okex", exchange_fetcher=fetch_okx_spot
     ),
