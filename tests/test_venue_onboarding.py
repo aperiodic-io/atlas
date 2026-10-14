@@ -4,11 +4,14 @@ from __future__ import annotations
 
 import importlib
 import json
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
 
+from atlas.database import SecurityMaster
 from atlas.exchange_definitions import is_beta_exchange
+from atlas.parsers import parse_contract
 from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
 
 NEW_STABLE_EXCHANGES = ["bitget", "bitget-futures", "gate-io", "gate-io-futures", "coinbase"]
@@ -92,3 +95,61 @@ def test_api_only_rows_receive_stable_capture_dates(tmp_path, monkeypatch, excha
     rows = {r["id"]: r for r in json.loads(path.read_text())}
     assert rows[row["id"]]["first_capture"] == captured
     assert rows[row["id"]]["internal_id"]
+
+
+# ---------------------------------------------------------------------------
+# Bundled snapshots
+# ---------------------------------------------------------------------------
+
+_DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
+
+
+def _snapshot(exchange: str) -> list[dict]:
+    return json.loads((_DATA_DIR / f"{exchange}.json").read_text())
+
+
+@pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
+def test_snapshot_is_bundled_and_fully_mapped(exchange: str):
+    rows = _snapshot(exchange)
+    allowed = get_allowed_types(exchange)
+
+    assert rows
+    assert {row["type"] for row in rows} <= allowed
+    assert [row["id"] for row in rows if not row.get("internal_id")] == []
+    assert [row["id"] for row in rows if not row.get("first_capture")] == []
+    assert len({row["id"] for row in rows}) == len(rows)
+
+
+@pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
+def test_snapshot_internal_ids_match_the_parser(exchange: str):
+    mismatches = [
+        (row["id"], row["internal_id"], parse_contract(exchange, row).internal_id)
+        for row in _snapshot(exchange)
+        if parse_contract(exchange, row).internal_id != row["internal_id"]
+    ]
+    assert mismatches == []
+
+
+@pytest.mark.parametrize(
+    ("exchange", "original_id", "internal_id"),
+    [
+        ("bitget", "BTCUSDT", "spot-BTC-USDT"),
+        ("bitget-futures", "BTCPERP", "perpetual-BTC-USDC:USDC"),
+        ("bitget-futures", "BTCUSD_CM", "perpetual-BTC-USD:BTC"),
+        ("bitget-futures", "BTCUSDH25", "future-BTC-USD:BTC-20250328"),
+        ("gate-io", "BTC_USDT", "spot-BTC-USDT"),
+        ("gate-io-futures", "BTC_USD", "perpetual-BTC-USD:BTC"),
+        ("coinbase", "BTC-USD", "spot-BTC-USD"),
+    ],
+)
+def test_security_master_resolves_new_venues(exchange: str, original_id: str, internal_id: str):
+    sm = SecurityMaster.load(exchanges=[exchange])
+    assert sm.by_exchange_and_original_id(exchange, original_id) == internal_id
+
+
+def test_security_master_resolves_api_only_rows():
+    """Rows Tardis does not list are reachable because they carry a first_capture."""
+    rows = {row["id"]: row for row in _snapshot("gate-io-futures")}
+    delivery = next(row for row in rows.values() if row["type"] == "future" and not row.get("end_date"))
+    sm = SecurityMaster.load(exchanges=["gate-io-futures"])
+    assert sm.by_exchange_and_original_id("gate-io-futures", delivery["id"]) == delivery["internal_id"]
