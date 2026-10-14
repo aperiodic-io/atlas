@@ -15,7 +15,13 @@ class SymbolSource(Protocol):
 @dataclass(frozen=True)
 class TardisSymbolSource:
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
-        return _fetch_exchange(exchange)
+        data = _fetch_exchange(exchange)
+        # Tardis answers an exchange it does not cover (e.g. the RWA perp
+        # venues) with an error object; a Tardis refresh replaces the snapshot
+        # wholesale, so that must fail the exchange rather than empty it.
+        if not isinstance(data.get("availableSymbols"), list):
+            raise ValueError(f"Tardis has no symbol list for {exchange}: {data.get('message', data)}")
+        return data
 
 
 @dataclass(frozen=True)
