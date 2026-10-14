@@ -363,7 +363,7 @@ def instruments_from_rows(rows_by_exchange: Mapping[str, list[dict]]) -> list[In
 def load_overrides(path: Path) -> dict[tuple[str, str], Override]:
     if not path.exists():
         return {}
-    payload = json.loads(path.read_text())
+    payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict) or payload.get("schema_version") != OVERRIDES_SCHEMA_VERSION:
         raise ValueError("unsupported symbology overrides schema")
     overrides: dict[tuple[str, str], Override] = {}
@@ -392,7 +392,7 @@ def load_overrides(path: Path) -> dict[tuple[str, str], Override]:
 def load_ticker_eras(path: Path) -> tuple[TickerEra, ...]:
     if not path.exists():
         return ()
-    payload = json.loads(path.read_text())
+    payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict) or payload.get("schema_version") != OVERRIDES_SCHEMA_VERSION:
         raise ValueError("unsupported symbology overrides schema")
     eras: list[TickerEra] = []
@@ -1554,7 +1554,7 @@ def load_snapshots(data_dir: Path, exchanges: Iterable[str]) -> dict[str, list[d
         path = data_dir / f"{exchange}.json"
         if not path.exists():
             continue
-        rows = json.loads(path.read_text())
+        rows = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(rows, list):
             rows_by_exchange[exchange] = [row for row in rows if isinstance(row, dict)]
     return rows_by_exchange
@@ -1593,7 +1593,7 @@ def fetch_pair_listings(
 def load_cached_pairs(cache_dir: Path) -> list[MarketPair]:
     pairs: list[MarketPair] = []
     for path in sorted(cache_dir.glob("*.json")):
-        for row in json.loads(path.read_text()):
+        for row in json.loads(path.read_text(encoding="utf-8")):
             pairs.append(_pair_from_json(row))
     return pairs
 
@@ -1777,7 +1777,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     rendered = render_report(report, registry)
     if args.report_path:
-        args.report_path.write_text(rendered)
+        args.report_path.write_text(rendered, encoding="utf-8")
     if args.summary_path:
         args.summary_path.write_text(json.dumps(report.summary(), indent=2))
     summary = report.summary()

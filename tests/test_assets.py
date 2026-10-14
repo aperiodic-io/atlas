@@ -229,3 +229,12 @@ def test_registry_search_by_ticker(tmp_path):
         "BTC.BITCOIN_WORMHOLE",
     ]
     assert [asset.asset_id for asset in registry.find_by_ticker("XBT")] == ["BTC"]
+
+
+def test_registry_round_trips_non_ascii_names_as_utf8(tmp_path, monkeypatch):
+    path = tmp_path / "assets.json"
+    registry = AssetRegistry(path)
+    registry.add(_asset(asset_id="PLN", cmc_id=2805, ticker="PLN", name="Polish Złoty", asset_class=AssetClass.fiat))
+    registry.save()
+    assert "Złoty".encode() in path.read_bytes()
+    assert AssetRegistry.load(path).get("PLN").name == "Polish Złoty"

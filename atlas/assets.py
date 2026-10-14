@@ -181,7 +181,7 @@ class AssetRegistry:
         registry = cls(path)
         if not path.exists():
             return registry
-        payload = json.loads(path.read_text())
+        payload = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(payload, dict) or payload.get("schema_version") != SCHEMA_VERSION:
             raise ValueError("unsupported asset registry schema")
         rows = payload.get("assets")
@@ -198,7 +198,9 @@ class AssetRegistry:
             "assets": [asset.to_json() for asset in self],
         }
         temporary_path = self.path.with_suffix(f"{self.path.suffix}.tmp")
-        temporary_path.write_text(json.dumps(payload, indent=1, ensure_ascii=False) + "\n")
+        temporary_path.write_text(
+            json.dumps(payload, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
         temporary_path.replace(self.path)
 
     def __len__(self) -> int:
