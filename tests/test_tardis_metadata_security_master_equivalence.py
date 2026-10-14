@@ -74,6 +74,11 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         if s.get("type") in allowed_types
         and (symbol_filter(s) if symbol_filter else True)
     ]
+    if not any(symbol.get("availableSince") for symbol in live_symbols):
+        pytest.skip(
+            f"Tardis does not cover {exchange}: its first_capture is the venue's own "
+            "listing date, which has nothing to match here"
+        )
     if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
         # Hyperliquid API-only rows use Atlas observation dates. Compare
         # availability bounds only where Tardis supplies the same instrument.

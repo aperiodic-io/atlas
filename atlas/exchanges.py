@@ -51,6 +51,7 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.orderly import fetch_orderly_perps, parse_orderly
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
@@ -194,6 +195,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),
     "upbit": _define("upbit", parse_upbit),
+    "orderly-perpetual": _define(
+        "orderly-perpetual",
+        parse_orderly,
+        exchange_fetcher=fetch_orderly_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
 }
 
 PARSERS: dict[str, Parser] = {
