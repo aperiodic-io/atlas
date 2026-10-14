@@ -12,7 +12,7 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import captures_api_only_rows, get_allowed_types, get_symbol_filter
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -122,7 +122,7 @@ def _merge_existing_fields(
     return merged_symbols
 
 
-def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+def _capture_new_api_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
     """Record first observation of new API rows without inventing listing dates."""
     captured_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     for symbol in symbols:
@@ -285,7 +285,7 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+        if captures_api_only_rows(exchange):
             # Hybrid metadata is partial: clear lifecycle fields only on rows
             # that actually supplied Tardis availability bounds. API-only rows
             # must retain their captured instance and approved CMC mapping.
@@ -293,7 +293,7 @@ def update(
                 _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
                 for sd in incoming_symbols
             ]
-            _capture_new_hyperliquid_rows(incoming_symbols, existing_by_id)
+            _capture_new_api_rows(incoming_symbols, existing_by_id)
         else:
             incoming_symbols = _merge_existing_fields(
                 incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
@@ -342,8 +342,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description=(
-            "Update securities master using exchange APIs for Binance/OKX and "
-            "Tardis fallback for all other exchanges"
+            "Update securities master using exchange APIs where Atlas has a "
+            "fetcher (stable exchanges) merged over Tardis metadata"
         )
     )
     parser.add_argument(
@@ -357,8 +357,9 @@ if __name__ == "__main__":
         choices=["hybrid", "tardis", "exchange"],
         default="hybrid",
         help=(
-            "Data source mode: hybrid (default, Binance/OKX direct + Tardis fallback), "
-            "tardis (all via Tardis), exchange (direct only; only Binance/OKX supported)"
+            "Data source mode: hybrid (default, exchange API merged over Tardis "
+            "history), tardis (all via Tardis), exchange (direct API only; "
+            "exchanges with an API fetcher)"
         ),
     )
     args = parser.parse_args()

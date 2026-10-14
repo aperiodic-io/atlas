@@ -106,7 +106,7 @@ print(len(active))
 ### Update local snapshots
 
 ```bash
-# Hybrid mode (default): Binance/OKX direct API + Tardis fallback
+# Hybrid mode (default): exchange API (stable exchanges) merged over Tardis history
 python3 -m atlas.update --source hybrid
 
 # Tardis only
@@ -133,19 +133,19 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bitmex` | **`UNSTABLE (BETA)`** |
 | `bitfinex` | **`UNSTABLE (BETA)`** |
 | `bitfinex-derivatives` | **`UNSTABLE (BETA)`** |
-| `bitget` | **`UNSTABLE (BETA)`** |
-| `bitget-futures` | **`UNSTABLE (BETA)`** |
+| `bitget` | ✅ **`STABLE`** |
+| `bitget-futures` | ✅ **`STABLE`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
 | `bybit-spot` | ✅ **`STABLE`** |
 | `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
-| `coinbase` | **`UNSTABLE (BETA)`** |
+| `coinbase` | ✅ **`STABLE`** |
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
 | `ftx` | **`UNSTABLE (BETA)`** |
-| `gate-io` | **`UNSTABLE (BETA)`** |
-| `gate-io-futures` | **`UNSTABLE (BETA)`** |
+| `gate-io` | ✅ **`STABLE`** |
+| `gate-io-futures` | ✅ **`STABLE`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
 | `huobi` | **`UNSTABLE (BETA)`** |
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
@@ -169,9 +169,14 @@ The repository currently ships precomputed JSON snapshots for:
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
+- `bitget`
+- `bitget-futures`
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
+- `coinbase`
+- `gate-io`
+- `gate-io-futures`
 - `hyperliquid-spot`
 - `hyperliquid-perps`
 - `okx-spot`
@@ -241,7 +246,8 @@ configuration and review process.
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
+- `--source exchange` only works for exchanges that have direct API fetchers implemented: the stable exchanges (Binance, OKX, Bybit, Hyperliquid, Bitget, Gate and Coinbase variants).
+- Rows that only the exchange API lists (no Tardis history yet), such as Bitget's tokenized stocks or Gate's delivery futures, get `first_capture` set to the first update run that saw them, not their listing date.
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout

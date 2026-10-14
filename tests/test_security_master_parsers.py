@@ -39,7 +39,8 @@ class TestHelpers:
     def test_beta_exchange_classification(self):
         assert is_beta_exchange("binance-spot") is False
         assert is_beta_exchange("okx-spot") is False
-        assert is_beta_exchange("coinbase") is True
+        assert is_beta_exchange("coinbase") is False
+        assert is_beta_exchange("kraken") is True
 
 
 # ---------------------------------------------------------------------------

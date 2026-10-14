@@ -7,7 +7,7 @@ import pytest
 
 from atlas.database import SecurityMaster
 from atlas.exchange_ids import to_tardis_exchange_id
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import captures_api_only_rows, get_allowed_types, get_symbol_filter
 from atlas.utils import _fetch_exchange
 
 _LEGACY_TO_INTERNAL_EXCHANGE = {
@@ -74,9 +74,10 @@ def test_get_symbols_matches_local_atlas_for_all_covered_exchanges(
         if s.get("type") in allowed_types
         and (symbol_filter(s) if symbol_filter else True)
     ]
-    if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-        # Hyperliquid API-only rows use Atlas observation dates. Compare
-        # availability bounds only where Tardis supplies the same instrument.
+    if captures_api_only_rows(exchange):
+        # API-only rows (Hyperliquid, Bitget, Gate, Coinbase) use Atlas
+        # observation dates. Compare availability bounds only where Tardis
+        # supplies the same instrument.
         tardis_ids = {symbol["id"] for symbol in live_symbols if symbol.get("availableSince")}
         rows = [row for row in rows if row["id"] in tardis_ids]
     local_start_dates = {

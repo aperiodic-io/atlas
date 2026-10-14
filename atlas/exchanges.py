@@ -13,7 +13,12 @@ from .exchange_definitions.binance import (
     parse_binance_futures,
 )
 from .exchange_definitions.bitfinex import parse_bitfinex, parse_bitfinex_derivatives
-from .exchange_definitions.bitget import parse_bitget, parse_bitget_futures
+from .exchange_definitions.bitget import (
+    fetch_bitget_futures,
+    fetch_bitget_spot,
+    parse_bitget,
+    parse_bitget_futures,
+)
 from .exchange_definitions.bitmex import parse_bitmex
 from .exchange_definitions.bitstamp import parse_bitstamp
 from .exchange_definitions.bybit import (
@@ -23,12 +28,17 @@ from .exchange_definitions.bybit import (
     parse_bybit,
     parse_bybit_spot,
 )
-from .exchange_definitions.coinbase import parse_coinbase
+from .exchange_definitions.coinbase import fetch_coinbase_spot, parse_coinbase
 from .exchange_definitions.crypto_com import parse_crypto_com
 from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.deribit import parse_deribit
 from .exchange_definitions.ftx import parse_ftx
-from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
+from .exchange_definitions.gate_io import (
+    fetch_gate_io_futures,
+    fetch_gate_io_spot,
+    parse_gate_io,
+    parse_gate_io_futures,
+)
 from .exchange_definitions.gemini import parse_gemini
 from .exchange_definitions.huobi import (
     parse_huobi,
@@ -67,10 +77,37 @@ class ExchangeDefinition:
     exchange_fetcher: ExchangeFetcher | None = None
     symbol_filter: Callable[[dict], bool] | None = None
     allowed_types: set[str] | None = None
+    # Record a first_capture date for API rows that Tardis does not (yet) list.
+    # Without one, SecurityMaster.load() leaves the row out of every lookup.
+    capture_api_only_rows: bool = False
+
+
+# Exchanges with direct API fetchers and bundled snapshots. Every other
+# exchange is beta (Tardis-only) and skipped by `update.py`.
+STABLE_EXCHANGES = frozenset(
+    {
+        "binance-spot",
+        "binance-futures",
+        "binance-futures-cm",
+        "bitget",
+        "bitget-futures",
+        "bybit-spot",
+        "bybit-perps",
+        "bybit-futures",
+        "coinbase",
+        "gate-io",
+        "gate-io-futures",
+        "hyperliquid-spot",
+        "hyperliquid-perps",
+        "okx-spot",
+        "okx-perps",
+        "okx-futures",
+    }
+)
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid"))
+    return exchange in STABLE_EXCHANGES
 
 
 def _define(
@@ -81,6 +118,7 @@ def _define(
     exchange_fetcher: ExchangeFetcher | None = None,
     symbol_filter: Callable[[dict], bool] | None = None,
     allowed_types: set[str] | None = None,
+    capture_api_only_rows: bool = False,
 ) -> ExchangeDefinition:
     return ExchangeDefinition(
         parser=parser,
@@ -89,6 +127,7 @@ def _define(
         exchange_fetcher=exchange_fetcher,
         symbol_filter=symbol_filter,
         allowed_types=allowed_types,
+        capture_api_only_rows=capture_api_only_rows,
     )
 
 
@@ -119,8 +158,20 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "bitmex": _define("bitmex", parse_bitmex),
     "bitfinex": _define("bitfinex", parse_bitfinex),
     "bitfinex-derivatives": _define("bitfinex-derivatives", parse_bitfinex_derivatives),
-    "bitget": _define("bitget", parse_bitget),
-    "bitget-futures": _define("bitget-futures", parse_bitget_futures),
+    "bitget": _define(
+        "bitget",
+        parse_bitget,
+        exchange_fetcher=fetch_bitget_spot,
+        allowed_types={"spot"},
+        capture_api_only_rows=True,
+    ),
+    "bitget-futures": _define(
+        "bitget-futures",
+        parse_bitget_futures,
+        exchange_fetcher=fetch_bitget_futures,
+        allowed_types={"perpetual", "future"},
+        capture_api_only_rows=True,
+    ),
     "bitstamp": _define("bitstamp", parse_bitstamp),
     "bybit-spot": _define(
         "bybit-spot",
@@ -143,13 +194,31 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_futures,
         allowed_types={"future"},
     ),
-    "coinbase": _define("coinbase", parse_coinbase),
+    "coinbase": _define(
+        "coinbase",
+        parse_coinbase,
+        exchange_fetcher=fetch_coinbase_spot,
+        allowed_types={"spot"},
+        capture_api_only_rows=True,
+    ),
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),
     "ftx": _define("ftx", parse_ftx),
-    "gate-io": _define("gate-io", parse_gate_io),
-    "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
+    "gate-io": _define(
+        "gate-io",
+        parse_gate_io,
+        exchange_fetcher=fetch_gate_io_spot,
+        allowed_types={"spot"},
+        capture_api_only_rows=True,
+    ),
+    "gate-io-futures": _define(
+        "gate-io-futures",
+        parse_gate_io_futures,
+        exchange_fetcher=fetch_gate_io_futures,
+        allowed_types={"perpetual", "future"},
+        capture_api_only_rows=True,
+    ),
     "gemini": _define("gemini", parse_gemini),
     "huobi": _define("huobi", parse_huobi),
     "huobi-dm": _define("huobi-dm", parse_huobi_dm),
@@ -162,6 +231,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_hyperliquid_spot,
         symbol_filter=hyperliquid_filter,
         allowed_types={"spot"},
+        capture_api_only_rows=True,
     ),
     "hyperliquid-perps": _define(
         "hyperliquid-perps",
@@ -170,6 +240,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_hyperliquid_perps,
         symbol_filter=hyperliquid_filter,
         allowed_types={"perpetual"},
+        capture_api_only_rows=True,
     ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),
@@ -235,3 +306,8 @@ def get_allowed_types(exchange: str) -> set[str] | None:
     if definition is None:
         return None
     return definition.allowed_types
+
+
+def captures_api_only_rows(exchange: str) -> bool:
+    definition = get_exchange_definition(exchange)
+    return definition is not None and definition.capture_api_only_rows
