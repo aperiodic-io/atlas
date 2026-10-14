@@ -62,6 +62,7 @@ EXCHANGES = [
     "phemex",
     "poloniex",
     "upbit",
+    "vest-perpetual",
 ]
 
 
