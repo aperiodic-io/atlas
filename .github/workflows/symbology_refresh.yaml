@@ -52,4 +52,5 @@ jobs:
             exit 0
           fi
           git commit -m "chore(data): weekly symbology refresh"
+          git pull --rebase
           git push

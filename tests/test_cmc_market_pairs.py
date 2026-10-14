@@ -350,3 +350,11 @@ def test_every_venue_maps_categories_to_known_exchanges():
 def test_market_pair_is_hashable():
     assert hash(_pair()) == hash(_pair())
     assert isinstance(_pair(), MarketPair)
+
+
+@pytest.mark.parametrize(
+    ("row_symbol", "pair_symbol", "expected"),
+    [("KAVA", "AVA", False), ("KNC", "NC", False), ("KMNO", "MNO", False), ("MBABYDOGE", "BABYDOGE", True)],
+)
+def test_letter_multiplier_prefixes_need_a_real_ticker(row_symbol, pair_symbol, expected):
+    assert symbols_consistent(row_symbol, pair_symbol) is expected

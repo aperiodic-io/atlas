@@ -248,7 +248,7 @@ def _ticker_variants(symbol: str) -> set[str]:
         if ":" in value:
             variants.add(value.split(":", 1)[1])
     for value in list(variants):
-        if match := re.fullmatch(r"(?:10{3,}|1M|K)([A-Z0-9].*)", value):
+        if (match := re.fullmatch(r"(?:10{3,}|1M)([A-Z0-9].*)", value)) or (match := re.fullmatch(r"[KM]([A-Z][A-Z0-9]{3,})", value)):
             variants.add(match.group(1))
     return variants | {_TICKER_ALIASES[value] for value in variants if value in _TICKER_ALIASES}
 

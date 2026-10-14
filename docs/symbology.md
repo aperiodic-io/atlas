@@ -82,12 +82,17 @@ Each row's base asset is resolved from the strongest evidence available;
 | `override` | A curated decision in [`overrides.json`](../atlas/data/symbology/overrides.json), including ticker eras (below). |
 | `cmc_ledger` | An approved decision in the CMC mapping ledger, `atlas/data/cmc_mappings.json` (manual approvals rank above everything but overrides). |
 | `cmc_market_pair` | CoinMarketCap's own exchange listing: for every market it tracks on a venue, CMC publishes the venue's native ticker next to the base and quote CMC IDs. Atlas finds its row for that ticker and checks that the tickers agree. |
+| `venue_majority` | CMC listed this row under another asset than the venue's other markets of the ticker, and the venue's majority decided (see below). The same label marks a legacy `cmc_id` that the venue's concurrent CMC-identified listings refuted. |
 | `snapshot_cmc_id` | A `cmc_id` the row carried from an earlier mapping run. |
 | `venue_lineage` | The same ticker on the same exchange, listed at an overlapping time, is identified, and every such listing agrees. An exchange does not list two assets under one ticker at once. |
 | `cross_venue_consensus` | Other exchanges list the ticker at an overlapping time; each venue votes for the asset its identified listings agree on, and one asset holds at least 75% of the votes, from two or more venues. |
 | `venue_reference` | The venue declares the derivative's underlying an equity, index or commodity CMC does not track (`AAL`, `NAS100`); its Atlas reference asset is reused, or minted once without a CMC ID. |
 
-Direct evidence (the first four) is sticky: a row keeps its match after it
+On Hyperliquid, HIP-3 perpetuals (`cash:ETH`, `flx:ETH`) learn from each other
+but never from the main dex: deployers reuse tickers (`para:STX` is Seagate, not
+Stacks).
+
+Direct evidence (everything above `venue_lineage`) is sticky: a row keeps its match after it
 delists and CMC stops listing it. Inferred matches are recomputed on every run,
 so a guess never hardens into evidence.
 
@@ -257,7 +262,8 @@ rebuild reproduces it exactly.
   stocks, leveraged tokens) have no asset yet. The registry already holds assets
   without a CMC ID (the TradFi reference assets), so minting these from another
   source is the natural next step.
-* Price checks need CMC's live aggregate prices, so an offline build cannot
-  reject a pair (it reuses the decisions the last online build stored).
+* Price checks need CMC's live aggregate prices. An online build that cannot
+  fetch them does not use market pairs at all, so it never stores an unchecked
+  pair; it keeps the evidence earlier builds stored, as an offline build does.
 * `unified_id` needs all legs resolved; a derivative without a margin asset has
   none.

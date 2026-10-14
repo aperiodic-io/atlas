@@ -616,6 +616,7 @@ def test_match_enum_values_are_stable():
         "venue_lineage",
         "cross_venue_consensus",
         "venue_reference",
+        "venue_majority",
     }
 
 
@@ -691,8 +692,12 @@ def test_rows_spanning_an_era_infer_only_from_anchors_after_it():
         # CMC's Bybit pair for this row names the wrong asset, so it is unmatched.
         "bybit-spot": [_row("LUNAUSDT", "LUNA", "USDT", first="2021-12-04")],
         "okx-spot": [_row("LUNA-USDT", "LUNA", "USDT", first="2021-02-24")],
+        "gate-io": [_row("LUNA_USDT", "LUNA", "USDT", first="2021-01-28")],
     }
-    pairs = [_pair("okx", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade-spot/luna-usdt")]
+    pairs = [
+        _pair("okx", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade-spot/luna-usdt"),
+        _pair("gate", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade/LUNA_USDT"),
+    ]
     _build(rows, pairs, ticker_eras=eras)
     bybit = rows["bybit-spot"][0]
     assert bybit["base_asset_id"] == "LUNA"
@@ -714,8 +719,8 @@ def test_legacy_cmc_ids_yield_to_concurrent_strong_anchors_on_the_same_venue():
     report, _ = _build(rows, pairs)
     delisted = _by_id(rows, "binance-futures", "apebusd")
     assert delisted["cmc_id"] == 1027
-    assert delisted["base_asset_match"] == "venue_lineage"
-    assert ("binance-futures", "apebusd", 1027, "venue_lineage", 9000, "snapshot_cmc_id") in report.disagreements
+    assert delisted["base_asset_match"] == "venue_majority"
+    assert ("binance-futures", "apebusd", 1027, "venue_majority", 9000, "snapshot_cmc_id") in report.disagreements
     assert _by_id(rows, "binance-spot", "ethbtc")["base_asset_match"] == "snapshot_cmc_id"
 
 
@@ -781,19 +786,6 @@ def test_ticker_reuse_guard_ignores_listing_dates_of_retired_assets():
     }
     _build(rows, details=details)
     assert rows["binance-spot"][1]["base_asset_id"] == "FTM"
-
-
-def test_hyperliquid_dex_perps_learn_from_other_dexes():
-    rows = {
-        "hyperliquid-perps": [
-            _row("BTC", "BTC", "USDC", "perpetual", margin="USDC"),
-            _row("cash:BTC", "CASH:BTC", "USDT0", "perpetual", margin="USDT0", first="2026-01-01"),
-        ]
-    }
-    pairs = [_pair("hyperliquid", "perpetual", 1, "BTC", 3408, "USDC", ticker="BTC_USDC")]
-    _build(rows, pairs)
-    assert _by_id(rows, "hyperliquid-perps", "cash:BTC")["base_asset_id"] == "BTC"
-    assert _by_id(rows, "hyperliquid-perps", "cash:BTC")["base_asset_match"] == "venue_lineage"
 
 
 def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
@@ -965,8 +957,8 @@ def test_a_venue_outvotes_a_minority_cmc_listing_of_one_ticker():
     report, _ = _build(rows, pairs, details=details)
     assert {row["cmc_id"] for rows_ in rows.values() for row in rows_} == {5426}
     usdc = _by_id(rows, "gate-io", "SOL_USDC")
-    assert usdc["base_asset_match"] == "venue_lineage"
-    assert ("gate-io", "SOL_USDC", 5426, "venue_lineage", 16116, "cmc_market_pair") in report.disagreements
+    assert usdc["base_asset_match"] == "venue_majority"
+    assert ("gate-io", "SOL_USDC", 5426, "venue_majority", 16116, "cmc_market_pair") in report.disagreements
 
 
 def test_a_tied_venue_keeps_both_listings_and_reports_them():
@@ -984,3 +976,169 @@ def test_a_tied_venue_keeps_both_listings_and_reports_them():
     assert rows["bitget"][0]["cmc_id"] == 28324
     assert rows["bitget-futures"][0]["cmc_id"] == 11156
     assert report.venue_ticker_conflicts == [("bitget", "DYDX", (11156, 28324))]
+
+
+# --- Review fixes ------------------------------------------------------------
+
+
+def test_an_unresolved_row_drops_an_inferred_cmc_id():
+    rows = {
+        "binance-spot": [
+            _row("xyzbtc", "XYZ", "BTC", end="2024-01-01", cmc_id=777, base_asset_id="XYZ",
+                 base_asset_match="venue_lineage", category=["DeFi"])
+        ]
+    }
+    _build(rows)
+    row = rows["binance-spot"][0]
+    assert "cmc_id" not in row
+    assert "category" not in row
+    _build(rows)
+    assert "base_asset_id" not in row
+
+
+def test_an_override_without_an_asset_clears_the_cmc_id():
+    rows = {"binance-spot": [_row("btcusdt", "BTC", "USDT", cmc_id=1)]}
+    overrides = {("binance-spot", "btcusdt"): Override("binance-spot", "btcusdt", None, "test")}
+    _build(rows, overrides=overrides)
+    assert "cmc_id" not in rows["binance-spot"][0]
+
+
+def test_hip3_rows_do_not_learn_from_the_main_dex():
+    rows = {
+        "hyperliquid-perps": [
+            _row("STX", "STX", "USDC", "perpetual", margin="USDC"),
+            _row("para:STX", "PARA:STX", "USDC", "perpetual", margin="USDC", first="2026-01-01"),
+            _row("cash:ETH", "CASH:ETH", "USDT0", "perpetual", margin="USDT0", first="2026-01-01"),
+            _row("flx:ETH", "FLX:ETH", "USDH", "perpetual", margin="USDH", first="2026-01-01"),
+        ]
+    }
+    pairs = [
+        _pair("hyperliquid", "perpetual", 9000, "STX", 3408, "USDC", ticker="STX_USDC"),
+        _pair("hyperliquid", "perpetual", 1027, "cash:ETH", 3408, "USDT0", ticker="cash:ETH_USDT0"),
+    ]
+    _build(rows, pairs)
+    assert "base_asset_id" not in _by_id(rows, "hyperliquid-perps", "para:STX")
+    # Another HIP-3 dex's listing of the ticker is still evidence.
+    assert _by_id(rows, "hyperliquid-perps", "flx:ETH")["base_asset_id"] == "ETH"
+
+
+def test_cross_venue_consensus_needs_two_venues():
+    rows = {
+        "gate-io": [_row("USDP_USDT", "USDP", "USDT")],
+        "binance-spot": [_row("usdpusdt", "USDP", "USDT", first="2021-09-10", end="2025-01-01")],
+    }
+    pairs = [_pair("gate", "spot", 9000, "USDP", 825, "USDT", url="https://x/trade/USDP_USDT")]
+    _build(rows, pairs)
+    assert "base_asset_id" not in _by_id(rows, "binance-spot", "usdpusdt")
+
+
+def test_aliases_come_from_direct_matches_only():
+    rows = {
+        "binance-futures": [_row("neiroethusdt", "NEIROETH", "USDT", "perpetual", margin="USDT", end="2025-01-01")],
+        "binance-spot": [_row("neirousdt", "NEIRO", "USDT", first="2024-09-01")],
+    }
+    pairs = [_pair("binance", "spot", 24478, "NEIRO", 825, "USDT", url="https://x/trade/NEIRO_USDT")]
+    _, registry = _build(rows, pairs)
+    assert registry.get("PEPE").aliases == ("NEIRO",)
+    rows["binance-futures"][0]["base_asset_match"] = "cross_venue_consensus"
+    rows["binance-futures"][0]["cmc_id"] = 24478
+    _, registry = _build(rows, pairs, registry=AssetRegistry())
+    assert "NEIROETH" not in registry.get("PEPE").aliases
+
+
+def test_price_check_knows_registry_tickers_for_letter_multipliers():
+    registry = AssetRegistry()
+    registry.mint(ticker="PEPE", name="Pepe", asset_class=AssetClass.crypto, cmc_id=24478, cmc_slug="pepe")
+    rows = {"hyperliquid-perps": [_row("kPEPE", "KPEPE", "USDC", "perpetual", margin="USDC")]}
+    pairs = [_priced_pair("hyperliquid", "perpetual", 24478, "kPEPE", 3408, "USDC", ticker="kPEPE_USDC", price=0.009)]
+    report, _ = _build(rows, pairs, registry=registry, details={}, asset_prices={24478: 0.000009})
+    assert report.pair_price_mismatches == []
+    assert rows["hyperliquid-perps"][0]["base_asset_match"] == "cmc_market_pair"
+
+
+def test_a_price_rejected_pair_also_discards_its_stored_match():
+    details = {**DETAILS, 32778: _detail(32778, "DOGE", "Impostor", "dogegov"), 74: _detail(74, "DOGE", "Dogecoin", "dogecoin")}
+    rows = {
+        "gate-io": [_row("DOGE_USDT", "DOGE", "USDT")],
+        "gate-io-futures": [
+            _row("DOGE_USDT", "DOGE", "USDT", "perpetual", margin="USDT", cmc_id=32778, base_asset_match="cmc_market_pair")
+        ],
+    }
+    pairs = [
+        _priced_pair("gate", "spot", 74, "DOGE", 825, "USDT", url="https://x/trade/DOGE_USDT", price=0.08),
+        _priced_pair("gate", "perpetual", 32778, "DOGE", 825, "USDT", ticker="DOGE_USDT", price=0.08),
+    ]
+    _build(rows, pairs, details=details, asset_prices={74: 0.08, 32778: 0.0006})
+    assert rows["gate-io-futures"][0]["cmc_id"] == 74
+
+
+def test_venue_majority_decisions_survive_an_offline_rebuild():
+    details = {**DETAILS, 16116: _detail(16116, "SOL", "Wrapped Solana", "wrapped-solana")}
+    details[5426] = _detail(5426, "SOL", "Solana", "solana", rank=5)
+    rows = {
+        "gate-io": [
+            _row("SOL_USDT", "SOL", "USDT"),
+            _row("SOL_USD1", "SOL", "USD1"),
+            _row("SOL_USDC", "SOL", "USDC"),
+            # A delisted, reviewed listing that disagrees must not unsettle it offline.
+            _row("SOL_ETH", "SOL", "ETH", end="2026-01-01"),
+        ],
+    }
+    pairs = [
+        _pair("gate", "spot", 5426, "SOL", 825, "USDT", url="https://x/trade/SOL_USDT"),
+        _pair("gate", "spot", 5426, "SOL", 825, "USD1", url="https://x/trade/SOL_USD1"),
+        _pair("gate", "spot", 16116, "SOL", 3408, "USDC", url="https://x/trade/SOL_USDC"),
+    ]
+    ledger = {("gate-io", "SOL_ETH", _ts("2020-01-01")): (16116, False)}
+    _, registry = _build(rows, pairs, details=details, ledger=ledger)
+    assert _by_id(rows, "gate-io", "SOL_USDC")["base_asset_match"] == "venue_majority"
+    before = json.dumps(rows, sort_keys=True)
+    _build(rows, registry=registry, ledger=ledger)
+    assert json.dumps(rows, sort_keys=True) == before
+
+
+def test_tracked_reference_assets_are_reused_whatever_their_class():
+    details = {
+        **DETAILS,
+        39474: _detail(39474, "SP500", "Standard and Poor's 500 index (Derivatives)", "sp500-derivatives",
+                       tags=("TradFi Assets (Derivatives)",)),
+    }
+    rows = {
+        "hyperliquid-perps": [_row("xyz:SP500", "XYZ:SP500", "USDC", "perpetual", margin="USDC")],
+        "bitget-futures": [_row("SP500USDT", "SP500", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        "gate-io-futures": [_row("SP500_USDT", "SP500", "USDT", "perpetual", margin="USDT", underlying="index")],
+    }
+    pairs = [_pair("hyperliquid", "perpetual", 39474, "xyz:SP500", 3408, "USDC", ticker="xyz:SP500_USDC")]
+    _, registry = _build(rows, pairs, details=details)
+    assert {rows[e][0]["base_asset_id"] for e in rows} == {"SP500"}
+    assert registry.get("SP500").asset_class is AssetClass.index
+
+
+def test_override_history_is_ordered(tmp_path):
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"schema_version": 1, "overrides": [{
+        "exchange": "x", "original_id": "y", "cmc_id": 3, "reason": "r",
+        "history": [{"cmc_id": 2, "until": "2024-01-01T00:00:00Z"}, {"cmc_id": 1, "until": "2022-01-01T00:00:00Z"}],
+    }]}))
+    history = load_overrides(path)[("x", "y")].history
+    assert [segment.cmc_id for segment in history] == [1, 2]
+
+
+def test_subset_runs_resolve_against_every_snapshot_but_write_only_their_own(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "binance-spot.json").write_text(json.dumps([_row("ethbtc", "ETH", "BTC", cmc_id=1027)]))
+    (data_dir / "gate-io.json").write_text(json.dumps([_row("ETH_TRY", "ETH", "TRY", end="2026-01-01")]))
+    (data_dir / "okx-spot.json").write_text(json.dumps([_row("ETH-USDT", "ETH", "USDT", cmc_id=1027)]))
+    okx_before = (data_dir / "okx-spot.json").read_text()
+    from integrations.cmc_asset_details import save_detail_cache
+
+    cache = tmp_path / "details.json"
+    save_detail_cache(cache, DETAILS)
+    main([
+        "--data-dir", str(data_dir), "--registry-path", str(tmp_path / "assets.json"),
+        "--overrides-path", str(tmp_path / "none.json"), "--exchanges", "gate-io",
+        "--offline", "--details-cache", str(cache),
+    ])
+    assert json.loads((data_dir / "gate-io.json").read_text())[0]["base_asset_id"] == "ETH"
+    assert (data_dir / "okx-spot.json").read_text() == okx_before

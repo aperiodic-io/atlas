@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# Shared with symbology-refresh: both rewrite the snapshots and push to main.
+concurrency:
+  group: symbology
+  cancel-in-progress: false
+
 jobs:
   update-security-master:
     runs-on: ubicloud-standard-2
@@ -32,12 +37,12 @@ jobs:
         run: uv run python -m atlas.update --source hybrid
 
       # Resolve Atlas asset IDs (base/quote/margin, unified_id) for new and
-      # changed rows from CoinMarketCap's exchange market pairs. A failure here
-      # must not hold back the snapshot refresh, so the commit step still runs.
+      # changed rows from CoinMarketCap's exchange market pairs. It runs even if
+      # an exchange failed to refresh; a failure here fails the job (and alerts
+      # Slack) but the commit step below still keeps the snapshot refresh.
       - name: build-symbology
         id: symbology
         if: always()
-        continue-on-error: true
         run: |
           uv run python -m integrations.symbology \
             --report-path "${RUNNER_TEMP}/symbology-report.md" \
@@ -55,6 +60,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore(data): daily security master update"
+          git pull --rebase
           git push
 
       - name: notify-slack-on-failure
