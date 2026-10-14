@@ -15,6 +15,8 @@
       "DAO"
     ],
     "margin_asset": "AAVE",
+    "base_coin": "AAVE",
+    "quote_coin": "USD",
     "first_capture": "2021-12-29T00:00:00.000Z"
   },
   {
@@ -390,6 +392,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "ADA",
+    "base_coin": "ADA",
+    "quote_coin": "USD",
     "first_capture": "2020-08-26T00:00:00.000Z"
   },
   {
@@ -463,6 +467,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "AVAX",
+    "base_coin": "AVAX",
+    "quote_coin": "USD",
     "first_capture": "2021-11-24T00:00:00.000Z"
   },
   {
@@ -795,6 +801,8 @@
       "Layer 1"
     ],
     "margin_asset": "BCH",
+    "base_coin": "BCH",
+    "quote_coin": "USD",
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -1200,6 +1208,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "BNB",
+    "base_coin": "BNB",
+    "quote_coin": "USD",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -1213,6 +1223,8 @@
     "denominator": "USD",
     "margin": "BNB",
     "delivery_date": "2027-03-26T00:00:00",
+    "base_coin": "BNB",
+    "quote_coin": "USD",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -1230,6 +1242,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "BNB",
+    "base_coin": "BNB",
+    "quote_coin": "USD",
     "first_capture": "2020-08-21T00:00:00.000Z"
   },
   {
@@ -1521,6 +1535,8 @@
     "contract_size": 100.0,
     "underlying": "crypto",
     "margin_asset": "BTC",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -1534,6 +1550,8 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2027-03-26T00:00:00",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -1546,6 +1564,8 @@
     "contract_size": 100.0,
     "underlying": "crypto",
     "margin_asset": "BTC",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
     "first_capture": "2020-08-11T00:00:00.000Z"
   },
   {
@@ -1590,6 +1610,8 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "DOGE",
+    "base_coin": "DOGE",
+    "quote_coin": "USD",
     "first_capture": "2021-02-02T00:00:00.000Z"
   },
   {
@@ -1918,6 +1940,8 @@
       "DeFi"
     ],
     "margin_asset": "DOT",
+    "base_coin": "DOT",
+    "quote_coin": "USD",
     "first_capture": "2020-08-25T00:00:00.000Z"
   },
   {
@@ -2029,6 +2053,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "ETC",
+    "base_coin": "ETC",
+    "quote_coin": "USD",
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
@@ -2320,6 +2346,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "ETH",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -2333,6 +2361,8 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2027-03-26T00:00:00",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -2345,6 +2375,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "ETH",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
     "first_capture": "2020-08-18T00:00:00.000Z"
   },
   {
@@ -2391,6 +2423,8 @@
       "Layer 1"
     ],
     "margin_asset": "FIL",
+    "base_coin": "FIL",
+    "quote_coin": "USD",
     "first_capture": "2020-10-23T00:00:00.000Z"
   },
   {
@@ -2881,6 +2915,8 @@
       "Interoperability"
     ],
     "margin_asset": "LINK",
+    "base_coin": "LINK",
+    "quote_coin": "USD",
     "first_capture": "2020-08-19T00:00:00.000Z"
   },
   {
@@ -3218,6 +3254,8 @@
       "Privacy"
     ],
     "margin_asset": "LTC",
+    "base_coin": "LTC",
+    "quote_coin": "USD",
     "first_capture": "2020-09-08T00:00:00.000Z"
   },
   {
@@ -3272,6 +3310,8 @@
       "Staking"
     ],
     "margin_asset": "NEAR",
+    "base_coin": "NEAR",
+    "quote_coin": "USD",
     "first_capture": "2021-12-15T00:00:00.000Z"
   },
   {
@@ -3447,6 +3487,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "SOL",
+    "base_coin": "SOL",
+    "quote_coin": "USD",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -3460,6 +3502,8 @@
     "denominator": "USD",
     "margin": "SOL",
     "delivery_date": "2027-03-26T00:00:00",
+    "base_coin": "SOL",
+    "quote_coin": "USD",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -3472,6 +3516,8 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "SOL",
+    "base_coin": "SOL",
+    "quote_coin": "USD",
     "first_capture": "2021-09-02T00:00:00.000Z"
   },
   {
@@ -3488,6 +3534,8 @@
       "Layer 1"
     ],
     "margin_asset": "SUI",
+    "base_coin": "SUI",
+    "quote_coin": "USD",
     "first_capture": "2024-09-18T00:00:00.000Z"
   },
   {
@@ -3549,6 +3597,8 @@
       "Layer 1"
     ],
     "margin_asset": "TRX",
+    "base_coin": "TRX",
+    "quote_coin": "USD",
     "first_capture": "2020-09-07T00:00:00.000Z"
   },
   {
@@ -3566,6 +3616,8 @@
       "DAO"
     ],
     "margin_asset": "UNI",
+    "base_coin": "UNI",
+    "quote_coin": "USD",
     "first_capture": "2021-04-13T00:00:00.000Z"
   },
   {
@@ -3626,6 +3678,8 @@
       "Smart Contracts"
     ],
     "margin_asset": "XLM",
+    "base_coin": "XLM",
+    "quote_coin": "USD",
     "first_capture": "2021-04-16T00:00:00.000Z"
   },
   {
@@ -3971,6 +4025,8 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "XRP",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
     "first_capture": "2026-06-26T00:00:00.000Z"
   },
   {
@@ -3984,6 +4040,8 @@
     "denominator": "USD",
     "margin": "XRP",
     "delivery_date": "2027-03-26T00:00:00",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -3998,6 +4056,8 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "XRP",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
     "first_capture": "2020-09-09T00:00:00.000Z"
   },
   {
