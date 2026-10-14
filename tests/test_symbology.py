@@ -220,9 +220,25 @@ def test_cross_venue_consensus_fills_unlisted_rows():
     gate = _by_id(rows, "gate-io", "ETH_TRY")
     assert gate["base_asset_id"] == "ETH"
     assert gate["base_asset_match"] == "cross_venue_consensus"
-    # TRY is not known anywhere, so the quote stays unresolved and so does unified_id.
-    assert "quote_asset_id" not in gate
-    assert "unified_id" not in gate
+    # No venue quotes TRY live here, but the ISO code names one fiat currency.
+    assert gate["quote_asset_id"] == "TRY"
+    assert gate["unified_id"] == "spot-ETH-TRY"
+
+
+def test_dead_quote_tickers_resolve_through_delisted_base_rows():
+    details = {**DETAILS, 4687: _detail(4687, "BUSD", "BUSD", "binance-usd")}
+    rows = {
+        "binance-spot": [
+            _row("busdusdt", "BUSD", "USDT", end="2024-01-01", cmc_id=4687),
+            _row("ethbusd", "ETH", "BUSD", end="2024-01-01", cmc_id=1027),
+            _row("ethrub", "ETH", "RUB", end="2022-03-01", cmc_id=1027),
+        ]
+    }
+    _, registry = _build(rows, details=details)
+    assert _by_id(rows, "binance-spot", "ethbusd")["quote_asset_id"] == "BUSD"
+    assert _by_id(rows, "binance-spot", "ethrub")["quote_asset_id"] == "RUB"
+    assert registry.get("RUB").asset_class is AssetClass.fiat
+    assert registry.get("RUB").cmc_id == 2806
 
 
 def test_cross_venue_consensus_requires_agreement():
@@ -599,4 +615,372 @@ def test_match_enum_values_are_stable():
         "snapshot_cmc_id",
         "venue_lineage",
         "cross_venue_consensus",
+        "venue_reference",
     }
+
+
+def test_ticker_eras_assign_and_record_history_across_venues():
+    from integrations.symbology import TickerEra
+
+    eras = (TickerEra("LUNA", 4172, _ts("2022-05-28"), "Terra crash"),)
+    rows = {
+        # Ended before the era closed: the old asset, whatever else is known.
+        "binance-futures": [
+            _row("lunausdt", "LUNA", "USDT", "perpetual", margin="USDT", first="2021-01-28", end="2022-05-13")
+        ],
+        # Spans the change: today's asset, with the old one as history.
+        "okx-spot": [_row("LUNA-USDT", "LUNA", "USDT", first="2021-02-24")],
+        # Listed after the change: untouched.
+        "binance-spot": [_row("lunausdc", "LUNA", "USDC", first="2025-12-24")],
+    }
+    pairs = [
+        _pair("okx", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade-spot/luna-usdt"),
+        _pair("binance", "spot", 20314, "LUNA", 3408, "USDC", url="https://x/trade/LUNA_USDC"),
+    ]
+    _build(rows, pairs, ticker_eras=eras)
+    old = rows["binance-futures"][0]
+    assert old["base_asset_id"] == "LUNC"
+    assert old["base_asset_match"] == "override"
+    spanning = rows["okx-spot"][0]
+    assert spanning["base_asset_id"] == "LUNA"
+    assert spanning["base_asset_match"] == "cmc_market_pair"
+    assert spanning["base_asset_history"] == [{"asset_id": "LUNC", "until": "2022-05-28T00:00:00Z"}]
+    assert "base_asset_history" not in rows["binance-spot"][0]
+
+
+def test_ticker_era_history_is_not_applied_to_an_unrelated_current_asset_when_unresolved():
+    from integrations.symbology import TickerEra
+
+    eras = (TickerEra("LUNA", 4172, _ts("2022-05-28"), "Terra crash"),)
+    rows = {"gate-io": [_row("LUNA_ETH", "LUNA", "ETH", first="2021-01-28", end="2024-12-27")]}
+    _build(rows, ticker_eras=eras)
+    # Nothing identifies today's LUNA on this row, so it gets no asset at all
+    # rather than a history entry hanging off nothing.
+    assert "base_asset_id" not in rows["gate-io"][0]
+
+
+def test_load_overrides_reads_ticker_eras(tmp_path):
+    from integrations.symbology import load_ticker_eras
+
+    path = tmp_path / "overrides.json"
+    path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "overrides": [],
+                "ticker_eras": [
+                    {"ticker": "luna", "cmc_id": 4172, "until": "2022-05-28T00:00:00Z", "reason": "x"}
+                ],
+            }
+        )
+    )
+    (era,) = load_ticker_eras(path)
+    assert era.ticker == "LUNA"
+    assert era.cmc_id == 4172
+    assert load_ticker_eras(tmp_path / "missing.json") == ()
+
+
+def test_rows_spanning_an_era_infer_only_from_anchors_after_it():
+    from integrations.symbology import TickerEra
+
+    eras = (TickerEra("LUNA", 4172, _ts("2022-05-28"), "Terra crash"),)
+    rows = {
+        "bybit-perps": [
+            _row("LUNAUSDT", "LUNA", "USDT", "perpetual", margin="USDT", first="2021-10-11", end="2022-05-13")
+        ],
+        # CMC's Bybit pair for this row names the wrong asset, so it is unmatched.
+        "bybit-spot": [_row("LUNAUSDT", "LUNA", "USDT", first="2021-12-04")],
+        "okx-spot": [_row("LUNA-USDT", "LUNA", "USDT", first="2021-02-24")],
+    }
+    pairs = [_pair("okx", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade-spot/luna-usdt")]
+    _build(rows, pairs, ticker_eras=eras)
+    bybit = rows["bybit-spot"][0]
+    assert bybit["base_asset_id"] == "LUNA"
+    assert bybit["base_asset_match"] == "cross_venue_consensus"
+    assert bybit["base_asset_history"] == [{"asset_id": "LUNC", "until": "2022-05-28T00:00:00Z"}]
+    assert rows["bybit-perps"][0]["base_asset_id"] == "LUNC"
+
+
+def test_legacy_cmc_ids_yield_to_concurrent_strong_anchors_on_the_same_venue():
+    rows = {
+        "binance-futures": [
+            _row("apeusdt", "APE", "USDT", "perpetual", margin="USDT", first="2022-03-17", cmc_id=9000),
+            _row("apebusd", "APE", "BUSD", "perpetual", margin="BUSD", first="2022-05-19", end="2023-05-17", cmc_id=9000),
+        ],
+        # Legacy IDs a strong anchor does not contradict are kept.
+        "binance-spot": [_row("ethbtc", "ETH", "BTC", end="2020-01-01", cmc_id=1027)],
+    }
+    pairs = [_pair("binance", "perpetual", 1027, "APE", 825, "USDT", ticker="APEUSDT")]
+    report, _ = _build(rows, pairs)
+    delisted = _by_id(rows, "binance-futures", "apebusd")
+    assert delisted["cmc_id"] == 1027
+    assert delisted["base_asset_match"] == "venue_lineage"
+    assert ("binance-futures", "apebusd", 1027, "venue_lineage", 9000, "snapshot_cmc_id") in report.disagreements
+    assert _by_id(rows, "binance-spot", "ethbtc")["base_asset_match"] == "snapshot_cmc_id"
+
+
+def test_reviewed_ledger_decisions_are_not_overruled_by_lineage():
+    rows = {
+        "binance-futures": [
+            _row("apeusdt", "APE", "USDT", "perpetual", margin="USDT", first="2022-03-17"),
+            _row("apebusd", "APE", "BUSD", "perpetual", margin="BUSD", first="2022-05-19", end="2023-05-17"),
+        ],
+    }
+    pairs = [_pair("binance", "perpetual", 1027, "APE", 825, "USDT", ticker="APEUSDT")]
+    ledger = {("binance-futures", "apebusd", _ts("2022-05-19")): (9000, False)}
+    _build(rows, pairs, ledger=ledger)
+    assert _by_id(rows, "binance-futures", "apebusd")["cmc_id"] == 9000
+
+
+def test_cross_venue_consensus_takes_a_supermajority_of_venues():
+    rows = {
+        "binance-spot": [_row("dogeusdt", "DOGE", "USDT")],
+        "okx-spot": [_row("DOGE-USDT", "DOGE", "USDT")],
+        "bybit-spot": [_row("DOGEUSDT", "DOGE", "USDT")],
+        "coinbase": [_row("DOGE-USD", "DOGE", "USD")],
+        # One venue's CMC listing names an unrelated DOGE token.
+        "hyperliquid-spot": [_row("DOGE/USDC", "DOGE", "USDC")],
+        "gate-io": [_row("DOGE_TRY", "DOGE", "TRY")],
+    }
+    pairs = [
+        _pair("binance", "spot", 1027, "DOGE", 825, "USDT", url="https://x/trade/DOGE_USDT"),
+        _pair("okx", "spot", 1027, "DOGE", 825, "USDT", url="https://x/trade-spot/doge-usdt"),
+        _pair("bybit", "spot", 1027, "DOGE", 825, "USDT", url="https://x/spot/DOGE/USDT"),
+        _pair("coinbase-exchange", "spot", 1027, "DOGE", 2781, "USD", url="https://x/trade/DOGE-USD"),
+        _pair("hyperliquid", "spot", 9000, "DOGE", 3408, "USDC", url="https://x/trade/DOGE/USDC"),
+    ]
+    _build(rows, pairs)
+    assert rows["gate-io"][0]["cmc_id"] == 1027
+    assert rows["gate-io"][0]["base_asset_match"] == "cross_venue_consensus"
+
+
+def test_cross_venue_consensus_refuses_a_close_split():
+    rows = {
+        "binance-spot": [_row("abcusdt", "ABC", "USDT")],
+        "okx-spot": [_row("ABC-USDT", "ABC", "USDT")],
+        "bybit-spot": [_row("ABCUSDT", "ABC", "USDT")],
+        "gate-io": [_row("ABC_TRY", "ABC", "TRY")],
+    }
+    pairs = [
+        _pair("binance", "spot", 1027, "ABC", 825, "USDT", url="https://x/trade/ABC_USDT"),
+        _pair("okx", "spot", 1027, "ABC", 825, "USDT", url="https://x/trade-spot/abc-usdt"),
+        _pair("bybit", "spot", 9000, "ABC", 825, "USDT", url="https://x/spot/ABC/USDT"),
+    ]
+    _build(rows, pairs)
+    assert "base_asset_id" not in rows["gate-io"][0]
+
+
+def test_ticker_reuse_guard_ignores_listing_dates_of_retired_assets():
+    details = dict(DETAILS)
+    details[3513] = _detail(3513, "FTM", "Fantom (Migrated to Sonic)", "fantom", date_added="2024-05-01", status="untracked")
+    rows = {
+        "binance-spot": [
+            _row("ftmusdt", "FTM", "USDT", first="2019-06-11", end="2025-01-13", cmc_id=3513),
+            _row("ftmbusd", "FTM", "BUSD", first="2019-06-11", end="2023-12-01"),
+        ]
+    }
+    _build(rows, details=details)
+    assert rows["binance-spot"][1]["base_asset_id"] == "FTM"
+
+
+def test_hyperliquid_dex_perps_learn_from_other_dexes():
+    rows = {
+        "hyperliquid-perps": [
+            _row("BTC", "BTC", "USDC", "perpetual", margin="USDC"),
+            _row("cash:BTC", "CASH:BTC", "USDT0", "perpetual", margin="USDT0", first="2026-01-01"),
+        ]
+    }
+    pairs = [_pair("hyperliquid", "perpetual", 1, "BTC", 3408, "USDC", ticker="BTC_USDC")]
+    _build(rows, pairs)
+    assert _by_id(rows, "hyperliquid-perps", "cash:BTC")["base_asset_id"] == "BTC"
+    assert _by_id(rows, "hyperliquid-perps", "cash:BTC")["base_asset_match"] == "venue_lineage"
+
+
+def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
+    rows = {
+        "bybit-perps": [_row("AALUSDT", "AAL", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        "gate-io-futures": [
+            _row("AAL_USDT", "AAL", "USDT", "perpetual", margin="USDT", underlying="equity"),
+            _row("NAS100_USDT", "NAS100", "USDT", "perpetual", margin="USDT", underlying="index"),
+            # The venue's ticker matches a CMC-tracked reference asset: reuse it.
+            _row("TSLA_USDT", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity"),
+        ],
+        "binance-futures": [_row("tslausdt", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        # Spot tokens are wrappers, not the reference asset: left alone.
+        "bitget": [_row("RAALUSDT", "RAAL", "USDT", underlying="equity")],
+    }
+    pairs = [
+        _pair("binance", "perpetual", 38152, "TSLA", 825, "USDT", ticker="TSLAUSDT"),
+        _pair("bybit", "perpetual", 825, "USDT", 825, "USDT", ticker="NOPE"),
+    ]
+    _report, registry = _build(rows, pairs)
+    aal = {rows[e][0]["base_asset_id"] for e in ("bybit-perps", "gate-io-futures")}
+    assert aal == {"AAL"}
+    assert registry.get("AAL").asset_class is AssetClass.equity
+    assert registry.get("AAL").cmc_id is None
+    assert _by_id(rows, "gate-io-futures", "AAL_USDT")["base_asset_match"] == "venue_reference"
+    assert "cmc_id" not in _by_id(rows, "gate-io-futures", "AAL_USDT")
+    assert _by_id(rows, "gate-io-futures", "NAS100_USDT")["unified_id"] == "perpetual-NAS100-USDT:USDT"
+    assert registry.get("NAS100").asset_class is AssetClass.index
+    assert _by_id(rows, "gate-io-futures", "TSLA_USDT")["base_asset_id"] == "TSLA"
+    assert "base_asset_id" not in rows["bitget"][0]
+    # Rebuilding finds the native asset again rather than minting a second one.
+    before = len(registry)
+    _build(rows, pairs, registry=registry)
+    assert len(registry) == before
+
+
+def test_reference_asset_collides_with_a_crypto_ticker():
+    registry = AssetRegistry()
+    registry.mint(ticker="CAT", name="Simons Cat", asset_class=AssetClass.crypto, cmc_id=32724, cmc_slug="cat")
+    rows = {"gate-io-futures": [_row("CAT_USDT", "CAT", "USDT", "perpetual", margin="USDT", underlying="equity")]}
+    _build(rows, registry=registry, details={**DETAILS, 32724: _detail(32724, "CAT", "Simons Cat", "cat")})
+    assert rows["gate-io-futures"][0]["base_asset_id"] == "CAT.EQUITY"
+
+
+def test_tradfi_rows_never_infer_a_token_wrapper():
+    details = {
+        **DETAILS,
+        38000: _detail(38000, "GEON", "General Electric Tokenized Stock (Ondo)", "ge-ondo"),
+    }
+    rows = {
+        "bitget-futures": [_row("GEUSDT", "GE", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        "gate-io-futures": [_row("GE_USDT", "GE", "USDT", "perpetual", margin="USDT", underlying="equity")],
+    }
+    pairs = [_pair("bitget", "perpetual", 38000, "GE", 825, "USDT", ticker="GEUSDT_UMCBL")]
+    _, registry = _build(rows, pairs, details=details)
+    gate = rows["gate-io-futures"][0]
+    assert gate["base_asset_match"] == "venue_reference"
+    assert registry.get(gate["base_asset_id"]).asset_class is AssetClass.equity
+
+
+def test_venue_tickers_become_aliases_and_explain_multipliers():
+    details = {**DETAILS, 16086: _detail(16086, "BTT", "BitTorrent [New]", "bittorrent-new")}
+    rows = {
+        "binance-spot": [_row("bttcusdt", "BTTC", "USDT")],
+        "binance-futures": [_row("1000bttcusdt", "1000BTTC", "USDT", "perpetual", margin="USDT")],
+    }
+    pairs = [
+        _pair("binance", "spot", 16086, "BTTC", 825, "USDT", url="https://x/trade/BTTC_USDT"),
+        _pair("binance", "perpetual", 16086, "1000BTTC", 825, "USDT", ticker="1000BTTCUSDT"),
+    ]
+    _, registry = _build(rows, pairs, details=details)
+    assert registry.get("BTT").aliases == ("BTTC",)
+    assert rows["binance-futures"][0]["base_multiplier"] == 1000
+    assert "base_multiplier" not in rows["binance-spot"][0]
+
+
+def _priced_pair(*args, price, **kwargs):
+    from dataclasses import replace
+
+    return replace(_pair(*args, **kwargs), price_usd=price)
+
+
+def test_pairs_priced_unlike_their_asset_are_rejected():
+    details = {**DETAILS, 32778: _detail(32778, "DOGE", "Department Of Government Efficiency", "dogegov")}
+    details[74] = _detail(74, "DOGE", "Dogecoin", "dogecoin")
+    rows = {
+        "gate-io": [_row("DOGE_USDT", "DOGE", "USDT")],
+        "gate-io-futures": [_row("DOGE_USDT", "DOGE", "USDT", "perpetual", margin="USDT")],
+        "binance-futures": [_row("1000pepeusdt", "1000PEPE", "USDT", "perpetual", margin="USDT")],
+    }
+    pairs = [
+        _priced_pair("gate", "spot", 74, "DOGE", 825, "USDT", url="https://x/trade/DOGE_USDT", price=0.0815),
+        # CMC files Gate's DOGE perpetual under an unrelated token 120x cheaper.
+        _priced_pair("gate", "perpetual", 32778, "DOGE", 825, "USDT", ticker="DOGE_USDT", price=0.0815),
+        # A multiplied contract may be priced per contract.
+        _priced_pair("binance", "perpetual", 24478, "1000PEPE", 825, "USDT", ticker="1000PEPEUSDT", price=0.009),
+    ]
+    prices = {74: 0.0816, 32778: 0.00066, 24478: 0.000009}
+    report, _ = _build(rows, pairs, details=details, asset_prices=prices)
+    perp = rows["gate-io-futures"][0]
+    assert perp["base_asset_id"] == "DOGE"
+    assert perp["cmc_id"] == 74
+    assert perp["base_asset_match"] == "venue_lineage"
+    assert [(e, i, c) for e, i, c, _ in report.pair_price_mismatches] == [
+        ("gate-io-futures", "DOGE_USDT", 32778)
+    ]
+    assert rows["binance-futures"][0]["base_asset_match"] == "cmc_market_pair"
+
+
+def test_pair_price_check_is_skipped_without_prices():
+    rows = {"gate-io-futures": [_row("DOGE_USDT", "DOGE", "USDT", "perpetual", margin="USDT")]}
+    pairs = [_priced_pair("gate", "perpetual", 1027, "DOGE", 825, "USDT", ticker="DOGE_USDT", price=0.08)]
+    report, _ = _build(rows, pairs)
+    assert rows["gate-io-futures"][0]["base_asset_match"] == "cmc_market_pair"
+    assert report.pair_price_mismatches == []
+
+
+@pytest.mark.parametrize(
+    ("symbol", "ticker", "expected"),
+    [
+        ("SHIB1000", "SHIB", 1000),
+        ("MBABYDOGE", "BABYDOGE", 1_000_000),
+        ("MOVE", "MOVE", None),
+        ("1000000MOG", "MOG", 1_000_000),
+        ("10000NEX", "NEX", 10000),
+        ("PEPE2", "PEPE", None),
+    ],
+)
+def test_contract_multiplier_forms(symbol, ticker, expected):
+    from atlas.assets import Asset
+
+    asset = Asset(asset_id="A", ticker=ticker, name="x", asset_class=AssetClass.crypto)
+    assert base_multiplier(symbol, asset) == expected
+
+
+def test_price_check_allows_suffix_multipliers_and_order_of_magnitude_noise():
+    details = {**DETAILS, 5994: _detail(5994, "SHIB", "Shiba Inu", "shiba-inu")}
+    rows = {
+        "bybit-perps": [_row("SHIB1000USDT", "SHIB1000", "USDT", "perpetual", margin="USDT")],
+        "gate-io": [_row("ETH_USDT", "ETH", "USDT")],
+    }
+    pairs = [
+        _priced_pair("bybit", "perpetual", 5994, "SHIB1000", 825, "USDT", ticker="SHIB1000USDT", price=0.0099),
+        # An illiquid venue trading 4x off CMC's aggregate is noise, not identity.
+        _priced_pair("gate", "spot", 1027, "ETH", 825, "USDT", url="https://x/trade/ETH_USDT", price=10.0),
+    ]
+    report, _ = _build(rows, pairs, details=details, asset_prices={5994: 0.0000099, 1027: 2.5})
+    assert report.pair_price_mismatches == []
+    assert rows["bybit-perps"][0]["base_multiplier"] == 1000
+
+
+def test_a_venue_outvotes_a_minority_cmc_listing_of_one_ticker():
+    details = {**DETAILS, 16116: _detail(16116, "SOL", "Wrapped Solana", "wrapped-solana")}
+    details[5426] = _detail(5426, "SOL", "Solana", "solana", rank=5)
+    rows = {
+        "gate-io": [
+            _row("SOL_USDT", "SOL", "USDT"),
+            _row("SOL_USD1", "SOL", "USD1"),
+            _row("SOL_USDC", "SOL", "USDC"),
+        ],
+        "gate-io-futures": [_row("SOL_USDT", "SOL", "USDT", "perpetual", margin="USDT")],
+    }
+    pairs = [
+        _pair("gate", "spot", 5426, "SOL", 825, "USDT", url="https://x/trade/SOL_USDT"),
+        _pair("gate", "spot", 5426, "SOL", 825, "USD1", url="https://x/trade/SOL_USD1"),
+        _pair("gate", "spot", 16116, "SOL", 3408, "USDC", url="https://x/trade/SOL_USDC"),
+        _pair("gate", "perpetual", 5426, "SOL", 825, "USDT", ticker="SOL_USDT"),
+    ]
+    report, _ = _build(rows, pairs, details=details)
+    assert {row["cmc_id"] for rows_ in rows.values() for row in rows_} == {5426}
+    usdc = _by_id(rows, "gate-io", "SOL_USDC")
+    assert usdc["base_asset_match"] == "venue_lineage"
+    assert ("gate-io", "SOL_USDC", 5426, "venue_lineage", 16116, "cmc_market_pair") in report.disagreements
+
+
+def test_a_tied_venue_keeps_both_listings_and_reports_them():
+    details = {**DETAILS, 28324: _detail(28324, "DYDX", "dYdX", "dydx-chain")}
+    details[11156] = _detail(11156, "ETHDYDX", "dYdX (ethDYDX)", "dydx")
+    rows = {
+        "bitget": [_row("DYDXUSDT", "DYDX", "USDT")],
+        "bitget-futures": [_row("DYDXUSDT", "DYDX", "USDT", "perpetual", margin="USDT")],
+    }
+    pairs = [
+        _pair("bitget", "spot", 28324, "DYDX", 825, "USDT", url="https://x/spot/DYDXUSDT"),
+        _pair("bitget", "perpetual", 11156, "DYDX", 825, "USDT", ticker="DYDXUSDT_UMCBL"),
+    ]
+    report, _ = _build(rows, pairs, details=details)
+    assert rows["bitget"][0]["cmc_id"] == 28324
+    assert rows["bitget-futures"][0]["cmc_id"] == 11156
+    assert report.venue_ticker_conflicts == [("bitget", "DYDX", (11156, 28324))]

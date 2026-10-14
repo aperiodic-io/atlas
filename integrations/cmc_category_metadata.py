@@ -1,4 +1,9 @@
-"""Populate selected CMC CATEGORY tags for snapshot rows with a CoinMarketCap ID."""
+"""Populate selected CMC CATEGORY tags for snapshot rows with a CoinMarketCap ID.
+
+The unified symbology build (``python -m integrations.symbology``) now stores
+categories on each asset in the Atlas registry and writes them to rows itself;
+this script remains for refreshing ``category`` on snapshots outside it.
+"""
 
 from __future__ import annotations
 

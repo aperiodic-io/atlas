@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import sys
 from collections import Counter, defaultdict
@@ -65,6 +66,7 @@ from integrations.cmc_asset_details import (
     load_detail_cache,
     save_detail_cache,
 )
+from integrations.cmc_id_probe import CmcProbeError, fetch_cmc_catalogue
 from integrations.cmc_market_pairs import (
     CMC_VENUES,
     MarketPair,
@@ -113,11 +115,60 @@ SYMBOLOGY_FIELDS = (
     "unified_id",
 )
 
-# A ticker prefix that scales the contract: 1000PEPE, 1MBABYDOGE, kPEPE.
-_MULTIPLIER_PREFIX = re.compile(r"(10{3,}|1M|K)([A-Z0-9].*)")
+# A numeric prefix that scales a contract (1000PEPE, 1MBABYDOGE). Letter forms
+# (kPEPE, MBABYDOGE) are only multipliers when the rest is the asset's ticker,
+# which ``contract_multiplier`` checks; tables that cannot, use this form only.
+_NUMERIC_MULTIPLIER_PREFIX = re.compile(r"(10{3,}|1M)([A-Z].*)")
 _NON_CRYPTO_UNDERLYINGS = ("equity", "commodity", "index")
 _FAR_FUTURE = datetime.max.replace(tzinfo=UTC)
 _FAR_PAST = datetime.min.replace(tzinfo=UTC)
+
+
+# CoinMarketCap's fiat currency IDs, verified against its detail endpoint. A
+# quote currency a venue has stopped listing pairs in (RUB on Binance) has no
+# live CMC evidence left, but its ISO code still names exactly one currency.
+FIAT_CMC_IDS: dict[str, tuple[int, str]] = {
+    "USD": (2781, "United States Dollar"), "AUD": (2782, "Australian Dollar"),
+    "BRL": (2783, "Brazilian Real"), "CAD": (2784, "Canadian Dollar"),
+    "CHF": (2785, "Swiss Franc"), "CLP": (2786, "Chilean Peso"),
+    "CNY": (2787, "Chinese Yuan"), "CZK": (2788, "Czech Koruna"),
+    "DKK": (2789, "Danish Krone"), "EUR": (2790, "Euro"),
+    "GBP": (2791, "Pound Sterling"), "HKD": (2792, "Hong Kong Dollar"),
+    "HUF": (2793, "Hungarian Forint"), "IDR": (2794, "Indonesian Rupiah"),
+    "ILS": (2795, "Israeli New Shekel"), "INR": (2796, "Indian Rupee"),
+    "JPY": (2797, "Japanese Yen"), "KRW": (2798, "South Korean Won"),
+    "MXN": (2799, "Mexican Peso"), "MYR": (2800, "Malaysian Ringgit"),
+    "NOK": (2801, "Norwegian Krone"), "NZD": (2802, "New Zealand Dollar"),
+    "PHP": (2803, "Philippine Peso"), "PKR": (2804, "Pakistani Rupee"),
+    "PLN": (2805, "Polish Złoty"), "RUB": (2806, "Russian Ruble"),
+    "SEK": (2807, "Swedish Krona"), "SGD": (2808, "Singapore Dollar"),
+    "THB": (2809, "Thai Baht"), "TRY": (2810, "Turkish Lira"),
+    "TWD": (2811, "New Taiwan Dollar"), "ZAR": (2812, "South African Rand"),
+    "AED": (2813, "United Arab Emirates Dirham"), "BGN": (2814, "Bulgarian Lev"),
+    "RON": (2817, "Romanian Leu"), "NGN": (2819, "Nigerian Naira"),
+    "COP": (2820, "Colombian Peso"), "ARS": (2821, "Argentine Peso"),
+    "PEN": (2822, "Peruvian Sol"), "VND": (2823, "Vietnamese Dong"),
+    "UAH": (2824, "Ukrainian Hryvnia"), "KZT": (3551, "Kazakhstani Tenge"),
+}
+
+
+def fiat_detail(code: str) -> CmcAssetDetail | None:
+    entry = FIAT_CMC_IDS.get(code)
+    if entry is None:
+        return None
+    cmc_id, name = entry
+    return CmcAssetDetail(
+        cmc_id=cmc_id,
+        name=name,
+        symbol=code,
+        slug=name.lower().replace(" ", "-"),
+        kind="fiat",
+        status="active",
+        date_added=None,
+        rank=None,
+        price_usd=None,
+        categories=(),
+    )
 
 
 class Match(StrEnum):
@@ -127,11 +178,15 @@ class Match(StrEnum):
     snapshot = "snapshot_cmc_id"
     venue_lineage = "venue_lineage"
     cross_venue = "cross_venue_consensus"
+    venue_reference = "venue_reference"
 
 
 DIRECT_MATCHES = frozenset(
     {Match.override, Match.cmc_ledger, Match.cmc_market_pair, Match.snapshot}
 )
+# Direct evidence with known provenance. A legacy ``cmc_id`` of unknown origin
+# (``snapshot_cmc_id``) is direct too, but yields to these when they disagree.
+STRONG_MATCHES = frozenset({Match.override, Match.cmc_ledger, Match.cmc_market_pair})
 
 
 @dataclass(frozen=True)
@@ -183,6 +238,28 @@ class Override:
 
 
 @dataclass(frozen=True)
+class TickerEra:
+    """A ticker that meant another asset until ``until``, on every venue.
+
+    Exchanges re-ticker an asset when its old ticker is handed to a successor:
+    Terra's LUNA became LUNC (and UST became USTC) when Terra 2.0 took ``LUNA``.
+    Rows that stopped trading before ``until`` keep the old ticker but are the
+    old asset; rows that traded across it changed asset under one ticker.
+    """
+
+    ticker: str
+    cmc_id: int
+    until: datetime
+    reason: str
+
+    def applies_to(self, instrument: Instrument) -> bool:
+        return instrument.symbol == self.ticker and instrument.first_capture < self.until
+
+    def contains(self, instrument: Instrument) -> bool:
+        return instrument.end_date is not None and instrument.end_date <= self.until
+
+
+@dataclass(frozen=True)
 class BaseResolution:
     cmc_id: int
     method: Match
@@ -204,10 +281,15 @@ class SymbologyReport:
     # (exchange, id, previous base asset, new base asset)
     reassigned: list[tuple[str, str, str, str]] = field(default_factory=list)
     lineage_conflicts: list[tuple[str, str, tuple[int, ...]]] = field(default_factory=list)
+    # (venue family, ticker, CMC IDs) where CMC lists one live ticker on one
+    # venue under several assets and no listing outvotes the others.
+    venue_ticker_conflicts: list[tuple[str, str, tuple[int, ...]]] = field(default_factory=list)
     rejected_reused_tickers: list[tuple[str, str, int]] = field(default_factory=list)
     missing_details: set[int] = field(default_factory=set)
     unresolved_active: list[tuple[str, str, str]] = field(default_factory=list)
     pair_symbol_mismatches: list[tuple[str, str, str, int]] = field(default_factory=list)
+    # (exchange, id, CMC ID the pair named, pair price / asset price)
+    pair_price_mismatches: list[tuple[str, str, int, float]] = field(default_factory=list)
     pair_conflicts: list[tuple[str, str]] = field(default_factory=list)
     pairs_unmatched: Counter = field(default_factory=Counter)
     pairs_total: Counter = field(default_factory=Counter)
@@ -227,10 +309,12 @@ class SymbologyReport:
             "disagreements": len(self.disagreements),
             "reassigned": len(self.reassigned),
             "lineage_conflicts": len(self.lineage_conflicts),
+            "venue_ticker_conflicts": len(self.venue_ticker_conflicts),
             "rejected_reused_tickers": len(self.rejected_reused_tickers),
             "missing_details": len(self.missing_details),
             "unresolved_active": len(self.unresolved_active),
             "pair_symbol_mismatches": len(self.pair_symbol_mismatches),
+            "pair_price_mismatches": len(self.pair_price_mismatches),
             "pair_conflicts": len(self.pair_conflicts),
             "per_exchange": {
                 exchange: {
@@ -305,6 +389,28 @@ def load_overrides(path: Path) -> dict[tuple[str, str], Override]:
     return overrides
 
 
+def load_ticker_eras(path: Path) -> tuple[TickerEra, ...]:
+    if not path.exists():
+        return ()
+    payload = json.loads(path.read_text())
+    if not isinstance(payload, dict) or payload.get("schema_version") != OVERRIDES_SCHEMA_VERSION:
+        raise ValueError("unsupported symbology overrides schema")
+    eras: list[TickerEra] = []
+    for row in payload.get("ticker_eras", []):
+        try:
+            eras.append(
+                TickerEra(
+                    ticker=str(row["ticker"]).upper(),
+                    cmc_id=int(row["cmc_id"]),
+                    until=_require_timestamp(row["until"]),
+                    reason=str(row["reason"]),
+                )
+            )
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError(f"malformed ticker era {row!r}: {error}") from error
+    return tuple(sorted(eras, key=lambda era: (era.ticker, era.until)))
+
+
 def ledger_decisions(store: MappingStore | None) -> dict[tuple[str, str, datetime], tuple[int, bool]]:
     """Approved ledger IDs keyed by instrument instance; flag manual approvals."""
     if store is None:
@@ -333,16 +439,32 @@ def resolve_base_assets(
     overrides: Mapping[tuple[str, str], Override],
     details: Mapping[int, CmcAssetDetail],
     report: SymbologyReport,
+    ticker_eras: Iterable[TickerEra] = (),
 ) -> dict[tuple[str, str], BaseResolution]:
+    eras_by_ticker: dict[str, list[TickerEra]] = defaultdict(list)
+    for era in ticker_eras:
+        eras_by_ticker[era.ticker].append(era)
+
     resolutions: dict[tuple[str, str], BaseResolution] = {}
     excluded: set[tuple[str, str]] = set()
+    spanning: dict[tuple[str, str], list[TickerEra]] = {}
     for instrument in instruments:
+        eras = [era for era in eras_by_ticker.get(instrument.symbol, ()) if era.applies_to(instrument)]
+        override = overrides.get(instrument.key)
+        if override is None and (closed := next((e for e in eras if e.contains(instrument)), None)):
+            resolutions[instrument.key] = BaseResolution(closed.cmc_id, Match.override)
+            continue
+        if eras and override is None:
+            spanning[instrument.key] = eras
         resolution = _direct_resolution(instrument, pair_matches, ledger, overrides, report)
         if resolution is None:
-            if (override := overrides.get(instrument.key)) is not None and override.cmc_id is None:
+            if override is not None and override.cmc_id is None:
                 excluded.add(instrument.key)
             continue
         resolutions[instrument.key] = resolution
+    _attach_era_history(resolutions, spanning)
+    _settle_venue_ticker_conflicts(instruments, resolutions, report)
+    _overrule_contradicted_legacy_ids(instruments, resolutions, details, report, spanning)
 
     unresolved = [
         instrument
@@ -356,8 +478,9 @@ def resolve_base_assets(
         details,
         report,
         method=Match.venue_lineage,
-        group_key=lambda instrument: (instrument.family, instrument.symbol),
+        group_key=_lineage_key,
         same_family=True,
+        spanning=spanning,
     )
     unresolved = [instrument for instrument in unresolved if instrument.key not in resolutions]
     _infer(
@@ -369,8 +492,34 @@ def resolve_base_assets(
         method=Match.cross_venue,
         group_key=lambda instrument: (instrument.symbol,),
         same_family=False,
+        spanning=spanning,
+    )
+    _attach_era_history(resolutions, spanning)
+    # Keep one entry per row that inference left unresolved.
+    report.lineage_conflicts = list(
+        {
+            (exchange, original_id): (exchange, original_id, cmc_ids)
+            for exchange, original_id, cmc_ids in report.lineage_conflicts
+            if (exchange, original_id) not in resolutions
+        }.values()
     )
     return resolutions
+
+
+def _attach_era_history(
+    resolutions: dict[tuple[str, str], BaseResolution],
+    spanning: Mapping[tuple[str, str], list[TickerEra]],
+) -> None:
+    """Record the earlier asset of rows that traded across a ticker change."""
+    for key, eras in spanning.items():
+        resolution = resolutions.get(key)
+        if resolution is None or resolution.history:
+            continue
+        history = tuple(
+            AssetSegment(era.cmc_id, era.until) for era in eras if era.cmc_id != resolution.cmc_id
+        )
+        if history:
+            resolutions[key] = BaseResolution(resolution.cmc_id, resolution.method, history)
 
 
 def _direct_resolution(
@@ -386,21 +535,22 @@ def _direct_resolution(
             return None
         return BaseResolution(override.cmc_id, Match.override, override.history)
 
-    candidates: list[tuple[int, Match]] = []
+    # Ranked by source, so a stored match ranks where its source would: a
+    # rebuild without CMC then labels every row exactly as the last one did.
+    candidates: list[tuple[int, int, Match]] = []
     ledger_hit = ledger.get(
         (instrument.exchange, instrument.original_id, instrument.first_capture)
     )
-    if ledger_hit is not None and ledger_hit[1]:
-        candidates.append((ledger_hit[0], Match.cmc_ledger))
+    if ledger_hit is not None:
+        candidates.append((0 if ledger_hit[1] else 2, ledger_hit[0], Match.cmc_ledger))
     if (pair := pair_matches.get(instrument.key)) is not None:
-        candidates.append((pair.base_cmc_id, Match.cmc_market_pair))
-    if ledger_hit is not None and not ledger_hit[1]:
-        candidates.append((ledger_hit[0], Match.cmc_ledger))
+        candidates.append((1, pair.base_cmc_id, Match.cmc_market_pair))
     stored = _stored_direct_match(instrument.row)
     if stored is not None:
-        candidates.append(stored)
+        candidates.append((_EVIDENCE_RANK[stored[1]], stored[0], stored[1]))
     if not candidates:
         return None
+    candidates = [(cmc_id, method) for _, cmc_id, method in sorted(candidates, key=lambda c: c[0])]
 
     chosen_id, chosen_method = candidates[0]
     for other_id, other_method in candidates[1:]:
@@ -417,6 +567,9 @@ def _direct_resolution(
             )
             break
     return BaseResolution(chosen_id, chosen_method)
+
+
+_EVIDENCE_RANK = {Match.cmc_ledger: 2, Match.cmc_market_pair: 1, Match.snapshot: 3}
 
 
 def _stored_direct_match(row: Mapping[str, Any]) -> tuple[int, Match] | None:
@@ -442,6 +595,212 @@ def _stored_direct_match(row: Mapping[str, Any]) -> tuple[int, Match] | None:
     return (cmc_id, parsed)
 
 
+def _anchor_index(
+    instruments: Iterable[Instrument],
+    resolutions: Mapping[tuple[str, str], BaseResolution],
+    methods: frozenset[Match],
+    group_key,
+) -> dict[tuple, list[Instrument]]:
+    anchors_by_group: dict[tuple, list[Instrument]] = defaultdict(list)
+    for instrument in instruments:
+        resolution = resolutions.get(instrument.key)
+        if resolution is not None and resolution.method in methods:
+            anchors_by_group[group_key(instrument)].append(instrument)
+    return anchors_by_group
+
+
+def _lineage_key(instrument: Instrument) -> tuple:
+    """Same venue, same ticker. Hyperliquid's HIP-3 dexes list the ticker of the
+    asset they track after a ``dex:`` prefix, so ``cash:BTC`` is grouped with
+    the main dex's ``BTC``."""
+    ticker = instrument.symbol
+    if instrument.family == "hyperliquid-perps":
+        ticker = ticker.split(":", 1)[-1]
+    return (instrument.family, ticker)
+
+
+def _consensus_votes(
+    instrument: Instrument,
+    anchors: Iterable[Instrument],
+    resolutions: Mapping[tuple[str, str], BaseResolution],
+    same_family: bool,
+    spanning: Mapping[tuple[str, str], list[TickerEra]] | None,
+) -> dict[str, set[int]]:
+    """The CMC IDs that anchors trading alongside ``instrument`` resolve to, by venue."""
+    # A row that traded across a ticker change is identified by what the
+    # ticker means *after* it, so anchors that ended before do not count.
+    eras = (spanning or {}).get(instrument.key, ())
+    after = max((era.until for era in eras), default=None)
+    votes: dict[str, set[int]] = defaultdict(set)
+    for anchor in anchors:
+        if (
+            anchor.key != instrument.key
+            and anchor.overlaps(instrument)
+            and (same_family or anchor.family != instrument.family)
+            and (after is None or anchor.end_date is None or anchor.end_date > after)
+        ):
+            votes[anchor.family].add(_cmc_id_at(resolutions[anchor.key], instrument))
+    return votes
+
+
+def _consensus(
+    instrument: Instrument,
+    anchors: Iterable[Instrument],
+    resolutions: Mapping[tuple[str, str], BaseResolution],
+    same_family: bool,
+    spanning: Mapping[tuple[str, str], list[TickerEra]] | None,
+) -> set[int]:
+    votes = _consensus_votes(instrument, anchors, resolutions, same_family, spanning)
+    return set().union(*votes.values()) if votes else set()
+
+
+# Cross-venue consensus is decided by venues, not listings: each venue votes for
+# the one asset its listings agree on, and the winner needs this share of the
+# votes and at least two venues behind it. One venue whose CMC listing names a
+# same-ticker impostor cannot then block, or win, a consensus.
+CROSS_VENUE_MAJORITY = 0.75
+
+
+def _cross_venue_winner(votes: Mapping[str, set[int]]) -> int | None:
+    ballots = Counter(next(iter(ids)) for ids in votes.values() if len(ids) == 1)
+    if not ballots:
+        return None
+    winner, count = ballots.most_common(1)[0]
+    if len(votes) == 1:
+        return winner
+    if count >= 2 and count >= CROSS_VENUE_MAJORITY * len(votes):
+        return winner
+    return None
+
+
+def _listed_after_ended(
+    instrument: Instrument, cmc_id: int, details: Mapping[int, CmcAssetDetail]
+) -> bool:
+    """Whether CMC added the asset only after the instrument stopped trading.
+
+    Only a live asset's listing date is trusted: CMC re-dates assets it retires
+    (Fantom, migrated to Sonic, is "added" 2024-05-01), and a ticker's reuser
+    is by its nature the live asset.
+    """
+    detail = details.get(cmc_id)
+    return (
+        detail is not None
+        and detail.status in ("", "active")
+        and detail.date_added is not None
+        and instrument.end_date is not None
+        and instrument.end_date < detail.date_added
+    )
+
+
+def _settle_venue_ticker_conflicts(
+    instruments: list[Instrument],
+    resolutions: dict[tuple[str, str], BaseResolution],
+    report: SymbologyReport,
+) -> None:
+    """Make one live ticker on one venue mean one asset, when the venue says which.
+
+    CMC sometimes files one of a venue's markets for a ticker under a 1:1 twin
+    of the asset its other markets trade (Wrapped Solana for one SOL pair, the
+    bridged ethDYDX for one DYDX perpetual) -- twins a price check cannot tell
+    apart. Each of the venue's snapshots votes for the asset most of its live
+    rows of the ticker are listed under; an asset with a strict majority of the
+    snapshots' votes is the ticker's meaning, and the venue's other live rows
+    follow it. A tie is left as CMC lists it and reported.
+    """
+    groups: dict[tuple[str, str], list[Instrument]] = defaultdict(list)
+    for instrument in instruments:
+        resolution = resolutions.get(instrument.key)
+        if (
+            instrument.active
+            and resolution is not None
+            and resolution.method is Match.cmc_market_pair
+        ):
+            groups[(instrument.family, instrument.symbol)].append(instrument)
+    for (family, ticker), members in sorted(groups.items()):
+        cmc_ids = {resolutions[member.key].cmc_id for member in members}
+        if len(cmc_ids) < 2:
+            continue
+        by_snapshot: dict[str, Counter] = defaultdict(Counter)
+        for member in members:
+            by_snapshot[member.exchange][resolutions[member.key].cmc_id] += 1
+        ballots = Counter()
+        for counts in by_snapshot.values():
+            (top, top_count), *rest = counts.most_common()
+            if not rest or rest[0][1] < top_count:
+                ballots[top] += 1
+        winner = None
+        if ballots:
+            (leader, votes), *others = ballots.most_common()
+            if votes * 2 > len(by_snapshot) and (not others or others[0][1] < votes):
+                winner = leader
+        if winner is None:
+            report.venue_ticker_conflicts.append((family, ticker, tuple(sorted(cmc_ids))))
+            continue
+        for member in members:
+            current = resolutions[member.key]
+            if current.cmc_id == winner:
+                continue
+            report.disagreements.append(
+                (
+                    member.exchange,
+                    member.original_id,
+                    winner,
+                    Match.venue_lineage.value,
+                    current.cmc_id,
+                    Match.cmc_market_pair.value,
+                )
+            )
+            resolutions[member.key] = BaseResolution(winner, Match.venue_lineage, current.history)
+
+
+def _overrule_contradicted_legacy_ids(
+    instruments: list[Instrument],
+    resolutions: dict[tuple[str, str], BaseResolution],
+    details: Mapping[int, CmcAssetDetail],
+    report: SymbologyReport,
+    spanning: Mapping[tuple[str, str], list[TickerEra]],
+) -> None:
+    """Replace a legacy ``cmc_id`` that the venue's own identified listings refute.
+
+    An exchange does not list two assets under one ticker at the same time, so
+    when every strongly identified listing of the ticker on the venue during
+    the row's lifetime names one asset and the row's legacy ID names another,
+    the legacy ID is the error.
+    """
+
+    def group_key(instrument: Instrument) -> tuple:
+        return (instrument.family, instrument.symbol)
+
+    anchors_by_group = _anchor_index(instruments, resolutions, STRONG_MATCHES, group_key)
+    for instrument in instruments:
+        resolution = resolutions.get(instrument.key)
+        if resolution is None or resolution.method is not Match.snapshot:
+            continue
+        cmc_ids = _consensus(
+            instrument,
+            anchors_by_group.get(group_key(instrument), ()),
+            resolutions,
+            same_family=True,
+            spanning=spanning,
+        )
+        if len(cmc_ids) != 1:
+            continue
+        (cmc_id,) = cmc_ids
+        if cmc_id == resolution.cmc_id or _listed_after_ended(instrument, cmc_id, details):
+            continue
+        report.disagreements.append(
+            (
+                instrument.exchange,
+                instrument.original_id,
+                cmc_id,
+                Match.venue_lineage.value,
+                resolution.cmc_id,
+                Match.snapshot.value,
+            )
+        )
+        resolutions[instrument.key] = BaseResolution(cmc_id, Match.venue_lineage)
+
+
 def _infer(
     unresolved: list[Instrument],
     instruments: list[Instrument],
@@ -451,45 +810,57 @@ def _infer(
     method: Match,
     group_key,
     same_family: bool,
+    spanning: Mapping[tuple[str, str], list[TickerEra]] | None = None,
 ) -> None:
-    anchors_by_group: dict[tuple, list[Instrument]] = defaultdict(list)
-    for instrument in instruments:
-        resolution = resolutions.get(instrument.key)
-        if resolution is not None and resolution.method in DIRECT_MATCHES:
-            anchors_by_group[group_key(instrument)].append(instrument)
-
+    anchors_by_group = _anchor_index(instruments, resolutions, DIRECT_MATCHES, group_key)
     inferred: dict[tuple[str, str], BaseResolution] = {}
     for instrument in unresolved:
-        anchors = [
-            anchor
-            for anchor in anchors_by_group.get(group_key(instrument), [])
-            if anchor.overlaps(instrument)
-            and (same_family or anchor.family != instrument.family)
-        ]
-        if not anchors:
+        votes = _consensus_votes(
+            instrument,
+            anchors_by_group.get(group_key(instrument), ()),
+            resolutions,
+            same_family=same_family,
+            spanning=spanning,
+        )
+        if not votes:
             continue
-        cmc_ids = {
-            _cmc_id_at(resolutions[anchor.key], instrument) for anchor in anchors
-        }
-        if len(cmc_ids) != 1:
+        cmc_ids = set().union(*votes.values())
+        cmc_id = (
+            next(iter(cmc_ids)) if len(cmc_ids) == 1 else None
+        ) if same_family else _cross_venue_winner(votes)
+        if cmc_id is None:
             report.lineage_conflicts.append(
                 (instrument.exchange, instrument.original_id, tuple(sorted(cmc_ids)))
             )
             continue
-        (cmc_id,) = cmc_ids
-        detail = details.get(cmc_id)
-        if (
-            detail is not None
-            and detail.date_added is not None
-            and instrument.end_date is not None
-            and instrument.end_date < detail.date_added
-        ):
+        if _wraps_declared_underlying(instrument, details.get(cmc_id)):
+            continue
+        if _listed_after_ended(instrument, cmc_id, details):
             report.rejected_reused_tickers.append(
                 (instrument.exchange, instrument.original_id, cmc_id)
             )
             continue
         inferred[instrument.key] = BaseResolution(cmc_id, method)
     resolutions.update(inferred)
+
+
+def _wraps_declared_underlying(instrument: Instrument, detail: CmcAssetDetail | None) -> bool:
+    """Whether inference would hand a TradFi derivative a token instead of its reference.
+
+    Other venues' CMC listings sometimes name a tokenized wrapper (an Ondo
+    stock token) for a ticker; a row whose venue declares the underlying an
+    equity, index or commodity tracks the reference asset, not the wrapper.
+    """
+    return (
+        detail is not None
+        and instrument.row.get("underlying") in _NON_CRYPTO_UNDERLYINGS
+        and not is_reference_detail(detail)
+    )
+
+
+def is_reference_detail(detail: CmcAssetDetail) -> bool:
+    """Whether a CMC asset is the reference price of a TradFi asset, not a token."""
+    return detail.name.endswith("(Derivatives)") or "TradFi Assets (Derivatives)" in detail.tags
 
 
 def _cmc_id_at(resolution: BaseResolution, instrument: Instrument) -> int:
@@ -512,6 +883,9 @@ class TickerTables:
     global_quotes: dict[str, Counter] = field(default_factory=lambda: defaultdict(Counter))
     family_bases: dict[tuple[str, str], Counter] = field(default_factory=lambda: defaultdict(Counter))
     global_bases: dict[str, Counter] = field(default_factory=lambda: defaultdict(Counter))
+    # Identified base assets of delisted rows too: BUSD has no live listing left.
+    family_bases_ever: dict[tuple[str, str], Counter] = field(default_factory=lambda: defaultdict(Counter))
+    global_bases_ever: dict[str, Counter] = field(default_factory=lambda: defaultdict(Counter))
 
     def resolve(self, family: str, ticker: str | None) -> int | None:
         if not ticker:
@@ -524,6 +898,14 @@ class TickerTables:
         ):
             if winner := _dominant(votes):
                 return winner
+        if ticker in FIAT_CMC_IDS:
+            return FIAT_CMC_IDS[ticker][0]
+        for votes in (
+            self.family_bases_ever.get((family, ticker)),
+            self.global_bases_ever.get(ticker),
+        ):
+            if winner := _dominant(votes):
+                return winner
         return None
 
 
@@ -531,28 +913,50 @@ def build_ticker_tables(
     instruments: Iterable[Instrument],
     pair_matches: Mapping[tuple[str, str], MarketPair],
     resolutions: Mapping[tuple[str, str], BaseResolution],
+    registry: AssetRegistry | None = None,
 ) -> TickerTables:
+    """Learn what each quote ticker means, per venue and across venues.
+
+    Votes come from CMC's quote IDs on matched pairs and, so that a rebuild
+    without CMC reproduces the last one, from the quote assets rows already
+    carry. A venue's identified base assets cover tickers CMC never quotes.
+    """
     tables = TickerTables()
     for instrument in instruments:
-        pair = pair_matches.get(instrument.key)
-        if (
-            pair is not None
-            and pair.quote_cmc_id is not None
-            and instrument.denominator
-            and sanitize_ticker(pair.quote_symbol) == sanitize_ticker(instrument.denominator)
-        ):
-            tables.family_quotes[(instrument.family, instrument.denominator)][pair.quote_cmc_id] += 1
-            tables.global_quotes[instrument.denominator][pair.quote_cmc_id] += 1
+        quote_cmc_id = _quote_evidence(instrument, pair_matches.get(instrument.key), registry)
+        if quote_cmc_id is not None and instrument.denominator:
+            tables.family_quotes[(instrument.family, instrument.denominator)][quote_cmc_id] += 1
+            tables.global_quotes[instrument.denominator][quote_cmc_id] += 1
         resolution = resolutions.get(instrument.key)
         if (
             resolution is not None
-            and instrument.active
             and resolution.method in DIRECT_MATCHES
-            and _MULTIPLIER_PREFIX.fullmatch(instrument.symbol) is None
+            and _NUMERIC_MULTIPLIER_PREFIX.fullmatch(instrument.symbol) is None
         ):
-            tables.family_bases[(instrument.family, instrument.symbol)][resolution.cmc_id] += 1
-            tables.global_bases[instrument.symbol][resolution.cmc_id] += 1
+            tables.family_bases_ever[(instrument.family, instrument.symbol)][resolution.cmc_id] += 1
+            tables.global_bases_ever[instrument.symbol][resolution.cmc_id] += 1
+            if instrument.active:
+                tables.family_bases[(instrument.family, instrument.symbol)][resolution.cmc_id] += 1
+                tables.global_bases[instrument.symbol][resolution.cmc_id] += 1
     return tables
+
+
+def _quote_evidence(
+    instrument: Instrument, pair: MarketPair | None, registry: AssetRegistry | None
+) -> int | None:
+    if (
+        pair is not None
+        and pair.quote_cmc_id is not None
+        and instrument.denominator
+        and sanitize_ticker(pair.quote_symbol) == sanitize_ticker(instrument.denominator)
+    ):
+        return pair.quote_cmc_id
+    stored = instrument.row.get("quote_asset_id")
+    if registry is not None and isinstance(stored, str):
+        asset = registry.get(stored)
+        if asset is not None and asset.cmc_id is not None:
+            return asset.cmc_id
+    return None
 
 
 def _dominant(votes: Counter | None, share: float = 0.9) -> int | None:
@@ -568,6 +972,14 @@ def resolve_quote(
     pair: MarketPair | None,
     tables: TickerTables,
 ) -> int | None:
+    """What the row's quote ticker means on its venue.
+
+    The venue-wide meaning wins over one pair's quote ID: CMC occasionally
+    labels a pair's quote wrongly (Binance's ``HK0625USDT`` "quoted in HKD").
+    """
+    resolved = tables.resolve(instrument.family, instrument.denominator)
+    if resolved is not None:
+        return resolved
     if (
         pair is not None
         and pair.quote_cmc_id is not None
@@ -575,7 +987,7 @@ def resolve_quote(
         and sanitize_ticker(pair.quote_symbol) == sanitize_ticker(instrument.denominator)
     ):
         return pair.quote_cmc_id
-    return tables.resolve(instrument.family, instrument.denominator)
+    return None
 
 
 def resolve_margin(
@@ -596,22 +1008,49 @@ def resolve_margin(
 def base_multiplier(symbol: str, asset: Asset) -> int | None:
     """Units of ``asset`` one unit of a venue ticker represents, when not one.
 
-    ``1000PEPE`` is 1,000 PEPE, ``kPEPE`` likewise and ``1MBABYDOGE`` one
-    million BABYDOGE. A ticker that is the asset's own (or an alias) has none.
+    ``1000PEPE`` is 1,000 PEPE, as are ``kPEPE`` and Bybit's ``SHIB1000``-style
+    suffix; ``1MBABYDOGE`` and Gate's ``MBABYDOGE`` are a million. A ticker that
+    is the asset's own (or an alias) has none.
     """
+    tickers = {asset.ticker, *asset.aliases}
+    if sanitize_ticker(symbol.split(":", 1)[-1]) in {sanitize_ticker(t) for t in tickers}:
+        return None
+    if (scale := contract_multiplier(symbol, tickers)) is not None:
+        return scale
+    # A venue's numeric prefix declares the multiplier even when the rest is not
+    # quite the asset's ticker (Bybit's 1000NEIROCTO for Neiro).
+    return _numeric_prefix(symbol)
+
+
+def _numeric_prefix(symbol: str) -> int | None:
+    match = _NUMERIC_MULTIPLIER_PREFIX.fullmatch(sanitize_ticker(symbol.split(":", 1)[-1]))
+    if match is None:
+        return None
+    return 1_000_000 if match.group(1) == "1M" else int(match.group(1))
+
+
+_SCALE_WORDS = {"K": 1000, "M": 1_000_000, "1M": 1_000_000}
+
+
+def contract_multiplier(symbol: str, tickers: Iterable[str]) -> int | None:
+    names = {sanitize_ticker(name) for name in tickers if name}
     ticker = sanitize_ticker(symbol.split(":", 1)[-1])
-    names = {sanitize_ticker(asset.ticker), *(sanitize_ticker(a) for a in asset.aliases)}
-    if ticker in names:
+    if not ticker or ticker in names:
         return None
-    match = _MULTIPLIER_PREFIX.fullmatch(ticker)
-    if match is None or match.group(2) not in names:
-        return None
-    prefix = match.group(1)
-    if prefix == "K":
-        return 1000
-    if prefix == "1M":
-        return 1_000_000
-    return int(prefix)
+    for name in names:
+        if not name or (not ticker.endswith(name) and not ticker.startswith(name)):
+            continue
+        if ticker.endswith(name):
+            prefix = ticker[: -len(name)]
+            if re.fullmatch(r"10{3,}", prefix):
+                return int(prefix)
+            if prefix in _SCALE_WORDS:
+                return _SCALE_WORDS[prefix]
+        if ticker.startswith(name):
+            suffix = ticker[len(name) :]
+            if re.fullmatch(r"10{3,}", suffix):
+                return int(suffix)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -622,10 +1061,7 @@ def base_multiplier(symbol: str, asset: Asset) -> int | None:
 def classify_asset(detail: CmcAssetDetail, underlyings: Counter) -> AssetClass:
     if detail.is_fiat:
         return AssetClass.fiat
-    is_reference = detail.name.endswith("(Derivatives)") or (
-        "TradFi Assets (Derivatives)" in detail.tags
-    )
-    if not is_reference:
+    if not is_reference_detail(detail):
         return AssetClass.crypto
     for underlying, _ in underlyings.most_common():
         if underlying in _NON_CRYPTO_UNDERLYINGS:
@@ -671,6 +1107,7 @@ def ensure_assets(
                 cmc_slug=detail.slug,
                 categories=detail.categories,
                 status=status,
+                cmc_date_added=_iso_or_none(detail.date_added),
             )
             report.minted.append(asset.asset_id)
         else:
@@ -682,6 +1119,7 @@ def ensure_assets(
                 cmc_slug=detail.slug,
                 categories=detail.categories,
                 status=status,
+                cmc_date_added=_iso_or_none(detail.date_added) or existing.cmc_date_added,
             )
 
 
@@ -698,25 +1136,25 @@ def build_symbology(
     overrides: Mapping[tuple[str, str], Override] | None = None,
     details: Mapping[int, CmcAssetDetail] | None = None,
     now: datetime | None = None,
+    ticker_eras: Iterable[TickerEra] = (),
+    asset_prices: Mapping[int, float] | None = None,
 ) -> SymbologyReport:
     """Resolve, mint and write symbology fields onto ``rows_by_exchange`` in place."""
     report = SymbologyReport(generated_at=now or datetime.now(UTC))
     pair_matches = pair_result.matches if pair_result is not None else {}
     details = details or {}
     if pair_result is not None:
-        report.pair_symbol_mismatches = [
-            (key[0], key[1], pair.base_symbol, pair.base_cmc_id)
-            for key, pair in pair_result.symbol_mismatches
-        ]
-        report.pair_conflicts = list(pair_result.conflicts)
-        for pair in pair_result.unmatched:
-            report.pairs_unmatched[f"{pair.venue}/{pair.category}"] += 1
+        _record_pair_diagnostics(report, pair_result)
 
     instruments = instruments_from_rows(rows_by_exchange)
+    pair_matches = _price_checked(instruments, pair_matches, asset_prices or {}, details, report)
+    # The guards need each candidate's listing date, status and kind; fall back
+    # to what the registry recorded so an offline rebuild decides the same way.
+    facts = {**_registry_facts(registry), **details}
     resolutions = resolve_base_assets(
-        instruments, pair_matches, ledger or {}, overrides or {}, details, report
+        instruments, pair_matches, ledger or {}, overrides or {}, facts, report, ticker_eras
     )
-    tables = build_ticker_tables(instruments, pair_matches, resolutions)
+    tables = build_ticker_tables(instruments, pair_matches, resolutions, registry)
 
     legs: dict[tuple[str, str], tuple[int | None, int | None, int | None]] = {}
     usage: Counter = Counter()
@@ -736,38 +1174,200 @@ def build_symbology(
         if base is not None and isinstance(instrument.row.get("underlying"), str):
             underlyings[base][instrument.row["underlying"]] += 1
 
-    ensure_assets(registry, usage, underlyings, details, report)
+    minting_details = dict(details)
+    for code, (cmc_id, _) in FIAT_CMC_IDS.items():
+        if cmc_id in usage and cmc_id not in minting_details and registry.by_cmc_id(cmc_id) is None:
+            minting_details[cmc_id] = fiat_detail(code)
+    ensure_assets(registry, usage, underlyings, minting_details, report)
+    _record_aliases(registry, instruments, legs)
 
     for instrument in instruments:
-        base, quote, margin = legs[instrument.key]
-        _write_row(instrument, registry, resolutions.get(instrument.key), base, quote, margin, report)
+        base_cmc_id, quote_cmc_id, margin_cmc_id = legs[instrument.key]
+        resolution = resolutions.get(instrument.key)
+        base = registry.by_cmc_id(base_cmc_id) if base_cmc_id is not None else None
+        method = resolution.method if resolution is not None else None
+        history = resolution.history if resolution is not None else ()
+        if resolution is None and instrument.key not in (overrides or {}):
+            base = _reference_asset(registry, instrument, report)
+            method = Match.venue_reference if base is not None else None
+        margin = registry.by_cmc_id(margin_cmc_id) if margin_cmc_id is not None else None
+        if margin is None and base is not None and instrument.margin == instrument.symbol:
+            margin = base
+        _write_row(
+            instrument,
+            registry,
+            base if method is not None else None,
+            method,
+            history,
+            registry.by_cmc_id(quote_cmc_id) if quote_cmc_id is not None else None,
+            margin if instrument.type != "spot" else None,
+            report,
+        )
     return report
+
+
+def _record_pair_diagnostics(report: SymbologyReport, pair_result: MatchResult) -> None:
+    report.pair_symbol_mismatches = [
+        (key[0], key[1], pair.base_symbol, pair.base_cmc_id)
+        for key, pair in pair_result.symbol_mismatches
+    ]
+    report.pair_conflicts = list(pair_result.conflicts)
+    for pair in pair_result.unmatched:
+        report.pairs_unmatched[f"{pair.venue}/{pair.category}"] += 1
+
+
+# A CMC pair is rejected when its price and its asset's price differ by more
+# than this factor (after any contract multiplier). Same-asset pairs agree to a
+# few percent on liquid venues and within a few times on illiquid ones; the
+# misfiled pairs this catches are 13x to 10^8x apart.
+PAIR_PRICE_TOLERANCE = 10.0
+
+
+def _price_checked(
+    instruments: Iterable[Instrument],
+    pair_matches: Mapping[tuple[str, str], MarketPair],
+    asset_prices: Mapping[int, float],
+    details: Mapping[int, CmcAssetDetail],
+    report: SymbologyReport,
+) -> dict[tuple[str, str], MarketPair]:
+    """Drop CMC pairs whose own price contradicts the asset they name.
+
+    CMC occasionally files a venue's market under a same-ticker impostor (Gate's
+    DOGE perpetual under a 120x cheaper "DOGE" token). The pair's price comes
+    from the venue, the asset's from CMC's aggregate, so a large gap means the
+    pair names the wrong asset -- whatever the ticker says.
+    """
+    symbols = {instrument.key: instrument.symbol for instrument in instruments}
+    checked: dict[tuple[str, str], MarketPair] = {}
+    tickers = {cmc_id: detail.symbol for cmc_id, detail in details.items()}
+    for key, pair in pair_matches.items():
+        reference = asset_prices.get(pair.base_cmc_id)
+        if reference is None and (detail := details.get(pair.base_cmc_id)) is not None:
+            reference = detail.price_usd
+        if not pair.price_usd or not reference:
+            checked[key] = pair
+            continue
+        ratio = pair.price_usd / reference
+        symbol = symbols.get(key, "")
+        scales = {
+            1.0,
+            float(contract_multiplier(symbol, {tickers.get(pair.base_cmc_id, "")}) or 1),
+            float(_numeric_prefix(symbol) or 1),
+        }
+        if any(abs(math.log(ratio / scale)) <= math.log(PAIR_PRICE_TOLERANCE) for scale in scales):
+            checked[key] = pair
+        else:
+            report.pair_price_mismatches.append((key[0], key[1], pair.base_cmc_id, ratio))
+    return checked
+
+
+def _registry_facts(registry: AssetRegistry) -> dict[int, CmcAssetDetail]:
+    """What the registry remembers about each CMC asset, shaped like CMC details."""
+    facts: dict[int, CmcAssetDetail] = {}
+    for asset in registry:
+        if asset.cmc_id is None:
+            continue
+        reference = asset.asset_class in (AssetClass.equity, AssetClass.commodity, AssetClass.index)
+        facts[asset.cmc_id] = CmcAssetDetail(
+            cmc_id=asset.cmc_id,
+            name=asset.name,
+            symbol=asset.ticker,
+            slug=asset.cmc_slug or "",
+            kind="fiat" if asset.asset_class is AssetClass.fiat else "",
+            status=asset.status,
+            date_added=_parse_timestamp(asset.cmc_date_added),
+            rank=None,
+            price_usd=None,
+            categories=asset.categories,
+            tags=("TradFi Assets (Derivatives)",) if reference else (),
+        )
+    return facts
+
+
+def _record_aliases(
+    registry: AssetRegistry,
+    instruments: Iterable[Instrument],
+    legs: Mapping[tuple[str, str], tuple[int | None, int | None, int | None]],
+) -> None:
+    """Remember the venue tickers an asset trades under (``BTTC`` for BTT).
+
+    A multiplied ticker (``1000BTTC``, ``kPEPE``) is not an alias but a contract
+    size, so it is left out -- and the alias is what lets ``1000BTTC`` be read
+    as 1,000 of it.
+    """
+    aliases: dict[str, set[str]] = defaultdict(set)
+    for instrument in instruments:
+        base_cmc_id = legs[instrument.key][0]
+        asset = registry.by_cmc_id(base_cmc_id) if base_cmc_id is not None else None
+        if asset is None:
+            continue
+        ticker = sanitize_ticker(instrument.symbol.split(":", 1)[-1])
+        own = sanitize_ticker(asset.ticker)
+        if not ticker or ticker == own or _NUMERIC_MULTIPLIER_PREFIX.fullmatch(ticker):
+            continue
+        if contract_multiplier(ticker, {own}) is not None:
+            continue
+        aliases[asset.asset_id].add(ticker)
+    for asset_id, names in aliases.items():
+        registry.add_aliases(asset_id, names)
+
+
+def _reference_asset(
+    registry: AssetRegistry, instrument: Instrument, report: SymbologyReport
+) -> Asset | None:
+    """The TradFi reference asset a derivative tracks, by the venue's own word.
+
+    A venue that labels a perpetual's underlying as an equity, index or
+    commodity has named the asset class; with the ticker that identifies the
+    reference asset (``AAL`` the stock). A CMC-tracked reference asset of that
+    class and ticker is used when there is one; otherwise an Atlas-native asset
+    without a CMC ID is minted, once, and found again on later runs. Spot rows
+    are tokens wrapping such an asset, not the asset, and are left alone.
+    """
+    underlying = instrument.row.get("underlying")
+    if instrument.type == "spot" or underlying not in _NON_CRYPTO_UNDERLYINGS:
+        return None
+    asset_class = AssetClass(underlying)
+    ticker = instrument.symbol.split(":", 1)[-1]
+    if not sanitize_ticker(ticker):
+        return None
+    candidates = [
+        asset for asset in registry.find_by_ticker(ticker) if asset.asset_class is asset_class
+    ]
+    tracked = [asset for asset in candidates if asset.cmc_id is not None]
+    native = [asset for asset in candidates if asset.cmc_id is None]
+    if tracked:
+        return tracked[0] if len(tracked) == 1 else None
+    if native:
+        return native[0] if len(native) == 1 else None
+    asset = registry.mint(
+        ticker=ticker, name=ticker, asset_class=asset_class, qualifier=asset_class.value
+    )
+    report.minted.append(asset.asset_id)
+    return asset
 
 
 def _write_row(
     instrument: Instrument,
     registry: AssetRegistry,
-    resolution: BaseResolution | None,
-    base_cmc_id: int | None,
-    quote_cmc_id: int | None,
-    margin_cmc_id: int | None,
+    base: Asset | None,
+    method: Match | None,
+    history: tuple[AssetSegment, ...],
+    quote: Asset | None,
+    margin: Asset | None,
     report: SymbologyReport,
 ) -> None:
     row = instrument.row
     previous_base = row.get("base_asset_id")
     for key in SYMBOLOGY_FIELDS:
         row.pop(key, None)
-
-    base = registry.by_cmc_id(base_cmc_id) if base_cmc_id is not None else None
-    quote = registry.by_cmc_id(quote_cmc_id) if quote_cmc_id is not None else None
-    margin = registry.by_cmc_id(margin_cmc_id) if margin_cmc_id is not None else None
     exchange = instrument.exchange
     report.rows[exchange] += 1
     if instrument.active:
         report.active_rows[exchange] += 1
 
-    if base is not None and resolution is not None:
-        _write_base(instrument, registry, base, resolution, report)
+    if base is not None and method is not None:
+        _write_base(instrument, registry, base, method, history, report)
         if isinstance(previous_base, str) and previous_base != base.asset_id:
             report.reassigned.append(
                 (exchange, instrument.original_id, previous_base, base.asset_id)
@@ -780,7 +1380,7 @@ def _write_row(
         report.quote_resolved[exchange] += 1
     if margin is not None:
         row["margin_asset_id"] = margin.asset_id
-    if base is not None and quote is not None:
+    if base is not None and method is not None and quote is not None:
         unified = unified_id(instrument, base, quote, margin)
         if unified is not None:
             row["unified_id"] = unified
@@ -790,28 +1390,32 @@ def _write_base(
     instrument: Instrument,
     registry: AssetRegistry,
     base: Asset,
-    resolution: BaseResolution,
+    method: Match,
+    history: tuple[AssetSegment, ...],
     report: SymbologyReport,
 ) -> None:
     row = instrument.row
     row["base_asset_id"] = base.asset_id
-    row["cmc_id"] = base.cmc_id
+    if base.cmc_id is not None:
+        row["cmc_id"] = base.cmc_id
+    else:
+        row.pop("cmc_id", None)
     if base.categories:
         row["category"] = list(base.categories)
     else:
         row.pop("category", None)
-    row["base_asset_match"] = resolution.method.value
+    row["base_asset_match"] = method.value
     if (multiplier := base_multiplier(instrument.symbol, base)) is not None:
         row["base_multiplier"] = multiplier
-    history = [
+    history_rows = [
         {"asset_id": asset.asset_id, "until": _format_timestamp(segment.until)}
-        for segment in resolution.history
+        for segment in history
         if (asset := registry.by_cmc_id(segment.cmc_id)) is not None
     ]
-    if history:
-        row["base_asset_history"] = history
+    if history_rows:
+        row["base_asset_history"] = history_rows
     report.base_resolved[instrument.exchange] += 1
-    report.methods[resolution.method.value] += 1
+    report.methods[method.value] += 1
     if instrument.active:
         report.active_base_resolved[instrument.exchange] += 1
 
@@ -893,9 +1497,19 @@ def render_report(report: SymbologyReport, registry: AssetRegistry, limit: int =
         lambda e: f"`{e[0]}` `{e[1]}`: CMC says {e[2]} ({e[3]})",
     )
     section(
+        "CMC pairs priced unlike the asset they name (not used)",
+        report.pair_price_mismatches,
+        lambda e: f"`{e[0]}` `{e[1]}`: {asset_name(e[2])} at {e[3]:.3g}x its price",
+    )
+    section(
         "Rows claimed by conflicting CMC pairs (not used)",
         report.pair_conflicts,
         lambda e: f"`{e[0]}` `{e[1]}`",
+    )
+    section(
+        "One live ticker listed under several assets on one venue (left as CMC lists them)",
+        report.venue_ticker_conflicts,
+        lambda e: f"`{e[0]}` `{e[1]}`: {', '.join(asset_name(i) for i in e[2])}",
     )
     section(
         "Inference conflicts (anchors disagree)",
@@ -1011,6 +1625,7 @@ def run(
     rows_by_exchange = load_snapshots(data_dir, exchanges)
     registry = AssetRegistry.load(registry_path)
     overrides = load_overrides(overrides_path)
+    ticker_eras = load_ticker_eras(overrides_path)
     ledger_path = data_dir / DEFAULT_LEDGER_FILENAME
     ledger = ledger_decisions(MappingStore.load(ledger_path) if ledger_path.exists() else None)
     details: dict[int, CmcAssetDetail] = (
@@ -1032,9 +1647,14 @@ def run(
             pairs = fetch_pair_listings(session, venues, pairs_cache)
         if pairs:
             pair_result = match_market_pairs(pairs, rows_by_exchange)
+        asset_prices: dict[int, float] = {}
+        if not offline:
+            asset_prices = fetch_asset_prices(session)
 
         if not offline:
-            wanted = _referenced_cmc_ids(rows_by_exchange, pair_result, ledger, overrides)
+            wanted = _referenced_cmc_ids(
+                rows_by_exchange, pair_result, ledger, overrides, ticker_eras
+            )
             if not refresh_details:
                 wanted = {
                     cmc_id
@@ -1058,6 +1678,8 @@ def run(
         ledger=ledger,
         overrides=overrides,
         details=details,
+        ticker_eras=ticker_eras,
+        asset_prices=asset_prices,
     )
     if not dry_run:
         registry.save()
@@ -1065,11 +1687,25 @@ def run(
     return report, registry
 
 
+def fetch_asset_prices(session: requests.Session) -> dict[int, float]:
+    """CMC's aggregate USD price for every active asset, for the pair price check.
+
+    A failure only disables the check, so it is reported and swallowed.
+    """
+    try:
+        catalogue = fetch_cmc_catalogue(session)
+    except (CmcProbeError, requests.RequestException, ValueError) as error:
+        print(f"  CMC prices unavailable, skipping the pair price check: {error}", flush=True)
+        return {}
+    return {asset.cmc_id: asset.price_usd for asset in catalogue.assets if asset.price_usd > 0}
+
+
 def _referenced_cmc_ids(
     rows_by_exchange: Mapping[str, list[dict]],
     pair_result: MatchResult | None,
     ledger: Mapping[tuple[str, str, datetime], tuple[int, bool]],
     overrides: Mapping[tuple[str, str], Override],
+    ticker_eras: Iterable[TickerEra] = (),
 ) -> set[int]:
     ids: set[int] = set()
     for rows in rows_by_exchange.values():
@@ -1087,6 +1723,7 @@ def _referenced_cmc_ids(
         if override.cmc_id is not None:
             ids.add(override.cmc_id)
         ids.update(segment.cmc_id for segment in override.history)
+    ids.update(era.cmc_id for era in ticker_eras)
     return ids
 
 
@@ -1167,6 +1804,10 @@ def _require_timestamp(value: object) -> datetime:
     if parsed is None:
         raise ValueError(f"invalid timestamp {value!r}")
     return parsed
+
+
+def _iso_or_none(value: datetime | None) -> str | None:
+    return None if value is None else _format_timestamp(value)
 
 
 def _format_timestamp(value: datetime) -> str:

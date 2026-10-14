@@ -57,6 +57,48 @@ Examples:
 - Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
 - Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
 
+### Unified symbology: Atlas asset IDs
+
+`internal_id` is built from each venue's own tickers. On top of it, Atlas gives
+every **asset** one stable, descriptive string ID of its own -- `BTC`, `ETH`,
+`USDT`, `USD`, `PEPE`, `TSLA` -- and points every instrument leg at it:
+
+| Field | Example (`1000PEPEUSDT` on Binance futures) |
+| --- | --- |
+| `base_asset_id` | `PEPE` |
+| `base_multiplier` | `1000` |
+| `quote_asset_id` | `USDT` |
+| `margin_asset_id` | `USDT` |
+| `unified_id` | `perpetual-PEPE-USDT:USDT` (the same on Bybit, OKX, Bitget and Gate; `kPEPE` on Hyperliquid is `perpetual-PEPE-USDC:USDC`) |
+| `base_asset_match` | `cmc_market_pair` (how the asset was identified) |
+
+Asset IDs are the bare ticker when it is free, and `<TICKER>.<QUALIFIER>` when
+another asset already holds the ticker (`TSLA` is Tesla the stock that
+perpetuals track; Hyperliquid's tokenized Tesla is
+`TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID`). Once minted, an ID never changes. The
+registry, [`atlas/data/symbology/assets.json`](atlas/data/symbology/assets.json),
+records each asset's name, class (`crypto`, `fiat`, `equity`, `commodity`,
+`index`), categories and CoinMarketCap ID. The CMC ID is an attribute, not the
+identity.
+
+Identification is seeded from CoinMarketCap's own exchange listings across
+Binance, OKX, Bybit, Hyperliquid, Bitget, Gate and Coinbase. Each venue ticker
+CMC tracks comes with its base and quote assets. Delisted rows are resolved
+through overlapping listings on the same venue, then a unanimous consensus
+across venues, and are guarded against ticker reuse. See
+[`docs/symbology.md`](docs/symbology.md).
+
+```python
+from datetime import datetime
+from atlas import SecurityMaster
+
+sm = SecurityMaster.load()
+sm.base_asset("binance-futures", "1000pepeusdt").asset_id   # 'PEPE'
+sm.by_unified_id("perpetual-BTC-USDT:USDT")                 # every venue's BTC/USDT perp
+sm.assets_in_category("Memes")
+sm.base_asset("binance-spot", "lunausdt", at=datetime(2022, 1, 1)).asset_id  # 'LUNC'
+```
+
 ## Installation
 
 Python 3.12+ is required.
@@ -191,13 +233,18 @@ The repository currently ships precomputed JSON snapshots for:
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.
 - CoinMarketCap ID enrichment for newly listed Binance assets, with confident matches written to snapshots and ambiguous ones raised for review.
+- Unified symbology: Atlas-minted asset IDs for every instrument's base, quote and margin assets, plus a venue-independent `unified_id`, across the top 7 exchanges.
+- Atlas asset categories (promoted from CoinMarketCap's allow-listed tags, including Memes) on every asset.
 
 ## CoinMarketCap IDs
 
-Snapshot rows carry a `cmc_id` identifying the underlying asset, plus selected CMC
-`category` tags. Many exchange instruments may share one `cmc_id` — it names an
+Snapshot rows carry a `cmc_id` identifying the underlying asset, plus its
+Atlas `category` list. Many exchange instruments may share one `cmc_id` — it names an
 asset, not a contract — and `atlas/update.py` treats the field as locally owned,
-so a snapshot refresh never overwrites it.
+so a snapshot refresh never overwrites it. The symbology build
+(`python -m integrations.symbology`, run daily) keeps `cmc_id` and `category` in
+step with each row's `base_asset_id`, and resolves every listing CoinMarketCap
+tracks on the seven supported venues from CMC's own exchange market pairs.
 
 New `binance-futures` listings are resolved automatically by the
 `cmc-new-symbol-mapping` workflow, which runs daily after the snapshot update:
@@ -260,6 +307,12 @@ configuration and review process.
 - `atlas/data/*.json`: generated per-exchange snapshot files.
 - `integrations/cmc_new_symbol_mapping.py`: CMC ID resolution for new Binance symbols.
 - `integrations/cmc_mappings.py`: versioned per-instrument CMC decision store.
+- `atlas/assets.py`: the asset registry and asset-ID minting.
+- `atlas/categories.py`: the Atlas asset category taxonomy.
+- `atlas/data/symbology/assets.json`: the asset registry; `overrides.json` holds curated decisions and ticker eras.
+- `integrations/cmc_market_pairs.py`: CoinMarketCap exchange market pairs and their match to Atlas rows.
+- `integrations/cmc_asset_details.py`: per-asset CoinMarketCap metadata (names, tickers, categories).
+- `integrations/symbology.py`: the unified symbology build.
 
 ## Testing
 

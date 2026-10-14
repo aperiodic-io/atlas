@@ -1,0 +1,55 @@
+name: symbology-refresh
+
+# Weekly: refetch CoinMarketCap details for every asset in the registry so
+# tickers, names, status and the promoted categories stay current. Asset IDs
+# never change; only their descriptive metadata does.
+on:
+  schedule:
+    - cron: "0 5 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: symbology
+  cancel-in-progress: false
+
+jobs:
+  refresh-symbology:
+    runs-on: ubicloud-standard-2
+    timeout-minutes: 240
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: install-dependencies
+        run: uv pip install --system -e .
+
+      - name: refresh-symbology
+        run: |
+          uv run python -m integrations.symbology --refresh-details \
+            --report-path "${RUNNER_TEMP}/symbology-report.md" \
+            --summary-path "${RUNNER_TEMP}/symbology-summary.json"
+          cat "${RUNNER_TEMP}/symbology-report.md" >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: commit-symbology
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add atlas/data/*.json atlas/data/symbology/*.json
+          if git diff --cached --quiet; then
+            echo "No symbology changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): weekly symbology refresh"
+          git push

@@ -113,6 +113,9 @@ class Asset:
     # ``XBT`` for Bitcoin, ``UBTC`` for Hyperliquid's unit Bitcoin.
     aliases: tuple[str, ...] = ()
     status: str = "active"
+    # When CoinMarketCap first listed the asset (ISO 8601). Kept so the
+    # ticker-reuse guard works without fetching CMC.
+    cmc_date_added: str | None = None
     minted_at: str = field(
         default_factory=lambda: datetime.now(UTC).strftime("%Y-%m-%d")
     )
@@ -158,6 +161,7 @@ class Asset:
                 categories=tuple(row.get("categories") or ()),
                 aliases=tuple(row.get("aliases") or ()),
                 status=str(row.get("status") or "active"),
+                cmc_date_added=row.get("cmc_date_added"),
                 minted_at=str(row.get("minted_at") or ""),
             )
         except (KeyError, TypeError) as error:
@@ -247,6 +251,7 @@ class AssetRegistry:
         qualifier: str | None = None,
         categories: Iterable[str] = (),
         status: str = "active",
+        cmc_date_added: str | None = None,
     ) -> Asset:
         """Register a new asset, or return the one already holding ``cmc_id``."""
         if cmc_id is not None and (existing := self.by_cmc_id(cmc_id)) is not None:
@@ -264,6 +269,7 @@ class AssetRegistry:
                 cmc_slug=cmc_slug,
                 categories=tuple(categories),
                 status=status,
+                cmc_date_added=cmc_date_added,
             )
         )
 

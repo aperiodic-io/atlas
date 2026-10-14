@@ -24,8 +24,22 @@ from atlas.update_sources import (
 _DATA_DIR = Path(__file__).parent / "data"
 
 # These fields are maintained locally and must not be replaced or removed by
-# exchange or Tardis payloads during a snapshot refresh.
-LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
+# exchange or Tardis payloads during a snapshot refresh. The symbology fields
+# are written by ``integrations/symbology.py``.
+LOCALLY_OWNED_FIELDS = frozenset(
+    {
+        "cmc_id",
+        "category",
+        "contract_size_history",
+        "base_asset_id",
+        "quote_asset_id",
+        "margin_asset_id",
+        "base_multiplier",
+        "base_asset_match",
+        "base_asset_history",
+        "unified_id",
+    }
+)
 
 EXCHANGES = [
     "binance-futures",
