@@ -81,10 +81,13 @@ def _define(
     exchange_fetcher: ExchangeFetcher | None = None,
     symbol_filter: Callable[[dict], bool] | None = None,
     allowed_types: set[str] | None = None,
+    beta: bool | None = None,
 ) -> ExchangeDefinition:
+    """`beta` overrides the prefix-based default; exchange-API-only venues that
+    the daily update must refresh pass `beta=False`."""
     return ExchangeDefinition(
         parser=parser,
-        beta=not _is_stable_exchange(exchange),
+        beta=(not _is_stable_exchange(exchange)) if beta is None else beta,
         tardis_id=tardis_id or exchange,
         exchange_fetcher=exchange_fetcher,
         symbol_filter=symbol_filter,
