@@ -27,6 +27,7 @@ from .exchange_definitions.coinbase import parse_coinbase
 from .exchange_definitions.crypto_com import parse_crypto_com
 from .exchange_definitions.cryptofacilities import parse_cryptofacilities
 from .exchange_definitions.deribit import parse_deribit
+from .exchange_definitions.extended import fetch_extended_perps, parse_extended
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
 from .exchange_definitions.gemini import parse_gemini
@@ -43,6 +44,7 @@ from .exchange_definitions.hyperliquid import (
 )
 from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
+from .exchange_definitions.lighter import fetch_lighter_perps, parse_lighter
 from .exchange_definitions.okx import (
     fetch_okx_futures,
     fetch_okx_spot,
@@ -51,6 +53,7 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.paradex import fetch_paradex_perps, parse_paradex
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
@@ -70,7 +73,9 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid"))
+    return exchange.startswith(
+        ("okx", "binance", "bybit", "hyperliquid", "lighter", "paradex", "extended")
+    )
 
 
 def _define(
@@ -172,6 +177,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     "kraken": _define("kraken", parse_kraken),
+    "lighter-perpetual": _define(
+        "lighter-perpetual",
+        parse_lighter,
+        tardis_id="lighter",
+        exchange_fetcher=fetch_lighter_perps,
+        allowed_types={"perpetual"},
+    ),
     "kucoin": _define("kucoin", parse_kucoin),
     "okx-spot": _define(
         "okx-spot", parse_okex, tardis_id="okex", exchange_fetcher=fetch_okx_spot
@@ -187,6 +199,18 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_okex_futures,
         tardis_id="okex-futures",
         exchange_fetcher=fetch_okx_futures,
+    ),
+    "paradex-perpetual": _define(
+        "paradex-perpetual",
+        parse_paradex,
+        exchange_fetcher=fetch_paradex_perps,
+        allowed_types={"perpetual"},
+    ),
+    "extended-perpetual": _define(
+        "extended-perpetual",
+        parse_extended,
+        exchange_fetcher=fetch_extended_perps,
+        allowed_types={"perpetual"},
     ),
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),

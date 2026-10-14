@@ -1,0 +1,2172 @@
+{
+"code": 200,
+"order_book_details": [
+{
+"symbol": "SHEIN",
+"market_id": 230,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1787917930714"
+},
+{
+"symbol": "BCH",
+"market_id": 58,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1754666072358"
+},
+{
+"symbol": "XAU",
+"market_id": 92,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1760970336561"
+},
+{
+"symbol": "DYDX",
+"market_id": 62,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755189641732"
+},
+{
+"symbol": "DATA",
+"market_id": 34,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1743182758999"
+},
+{
+"symbol": "CTR",
+"market_id": 183,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1779749721359"
+},
+{
+"symbol": "ANTHROPIC",
+"market_id": 193,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1780826545083"
+},
+{
+"symbol": "FOGO",
+"market_id": 124,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1768486801655"
+},
+{
+"symbol": "1000BONK",
+"market_id": 18,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1738358847767"
+},
+{
+"symbol": "SEI",
+"market_id": 32,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1741981597202"
+},
+{
+"symbol": "DOT",
+"market_id": 11,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461300"
+},
+{
+"symbol": "ASTER",
+"market_id": 83,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758207890540"
+},
+{
+"symbol": "BOTZ",
+"market_id": 154,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1772570399732"
+},
+{
+"symbol": "BOT",
+"market_id": 185,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779996271238"
+},
+{
+"symbol": "ASML",
+"market_id": 151,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1772570399728"
+},
+{
+"symbol": "AI16Z",
+"market_id": 22,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1739641276377"
+},
+{
+"symbol": "SNDK",
+"market_id": 139,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1770669512154"
+},
+{
+"symbol": "NATGAS",
+"market_id": 158,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1774293435331"
+},
+{
+"symbol": "XCU",
+"market_id": 136,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1770669512143"
+},
+{
+"symbol": "FARTCOIN",
+"market_id": 21,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1739641263879"
+},
+{
+"symbol": "PIPPIN",
+"market_id": 135,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770318520338"
+},
+{
+"symbol": "AI",
+"market_id": 232,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1788369977362"
+},
+{
+"symbol": "SPX",
+"market_id": 42,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1749842301453"
+},
+{
+"symbol": "BABA",
+"market_id": 177,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779291189898"
+},
+{
+"symbol": "ZEC",
+"market_id": 90,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759488237281"
+},
+{
+"symbol": "AVNT",
+"market_id": 82,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758191620704"
+},
+{
+"symbol": "BYD",
+"market_id": 200,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271590"
+},
+{
+"symbol": "FIL",
+"market_id": 103,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1762627046370"
+},
+{
+"symbol": "LITE",
+"market_id": 178,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779291189910"
+},
+{
+"symbol": "ZORA",
+"market_id": 53,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753809173787"
+},
+{
+"symbol": "KORU",
+"market_id": 226,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1786635163530"
+},
+{
+"symbol": "CRCL",
+"market_id": 121,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1767814866811"
+},
+{
+"symbol": "MRVL",
+"market_id": 174,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1778529708248"
+},
+{
+"symbol": "FOLKS",
+"market_id": 215,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1784043451018"
+},
+{
+"symbol": "US500",
+"market_id": 180,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779199406489"
+},
+{
+"symbol": "STBL",
+"market_id": 85,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758726443506"
+},
+{
+"symbol": "GOOGL",
+"market_id": 116,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764342069407"
+},
+{
+"symbol": "ORCL",
+"market_id": 165,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1777566285742"
+},
+{
+"symbol": "TAO",
+"market_id": 13,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461338"
+},
+{
+"symbol": "USDCHF",
+"market_id": 99,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1761854385750"
+},
+{
+"symbol": "MSFT",
+"market_id": 115,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764342057501"
+},
+{
+"symbol": "PAXG",
+"market_id": 48,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753717308876"
+},
+{
+"symbol": "CHIP",
+"market_id": 163,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1776802540133"
+},
+{
+"symbol": "PYTH",
+"market_id": 78,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1757338780882"
+},
+{
+"symbol": "AVAX",
+"market_id": 9,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461262"
+},
+{
+"symbol": "RIVER",
+"market_id": 126,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1769097406144"
+},
+{
+"symbol": "CRO",
+"market_id": 73,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756480007954"
+},
+{
+"symbol": "ROBO",
+"market_id": 149,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1772570399722"
+},
+{
+"symbol": "UNITREE",
+"market_id": 220,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1785941392745"
+},
+{
+"symbol": "EDGE",
+"market_id": 157,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1774033966062"
+},
+{
+"symbol": "PRL",
+"market_id": 4097,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1790685203569"
+},
+{
+"symbol": "US100",
+"market_id": 181,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779199406549"
+},
+{
+"symbol": "NBIS",
+"market_id": 189,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1780590039878"
+},
+{
+"symbol": "UNI",
+"market_id": 30,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1741193101476"
+},
+{
+"symbol": "BRENTOIL",
+"market_id": 159,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1774293435481"
+},
+{
+"symbol": "XAG",
+"market_id": 93,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1760970348731"
+},
+{
+"symbol": "ETHFI",
+"market_id": 64,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755189665870"
+},
+{
+"symbol": "PENGU",
+"market_id": 47,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753266646633"
+},
+{
+"symbol": "SKY",
+"market_id": 79,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758191584762"
+},
+{
+"symbol": "XRP",
+"market_id": 7,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461225"
+},
+{
+"symbol": "WLFI",
+"market_id": 72,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756225882260"
+},
+{
+"symbol": "BERA",
+"market_id": 20,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1739641252448"
+},
+{
+"symbol": "USDHKD",
+"market_id": 198,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1782137271582"
+},
+{
+"symbol": "1000NOT",
+"market_id": 172,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1778529708246"
+},
+{
+"symbol": "XPT",
+"market_id": 147,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1771440148292"
+},
+{
+"symbol": "POL",
+"market_id": 14,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461356"
+},
+{
+"symbol": "MYX",
+"market_id": 80,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758191596843"
+},
+{
+"symbol": "SYRUP",
+"market_id": 44,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1751386231037"
+},
+{
+"symbol": "SKHYNIXUSD",
+"market_id": 161,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1775691111267"
+},
+{
+"symbol": "LINEA",
+"market_id": 76,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756725952123"
+},
+{
+"symbol": "GMX",
+"market_id": 61,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755189629810"
+},
+{
+"symbol": "HYUNDAI",
+"market_id": 141,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770825551906"
+},
+{
+"symbol": "ARM",
+"market_id": 206,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988526"
+},
+{
+"symbol": "1000FLOKI",
+"market_id": 19,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1738358871831"
+},
+{
+"symbol": "ADI",
+"market_id": 213,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1782838090935"
+},
+{
+"symbol": "DUSK",
+"market_id": 125,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1769097406139"
+},
+{
+"symbol": "TTWO",
+"market_id": 179,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779291190041"
+},
+{
+"symbol": "URA",
+"market_id": 150,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1772570399726"
+},
+{
+"symbol": "RAY",
+"market_id": 233,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1789144096906"
+},
+{
+"symbol": "NOK",
+"market_id": 208,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988530"
+},
+{
+"symbol": "MU",
+"market_id": 164,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1777566285723"
+},
+{
+"symbol": "EWY",
+"market_id": 166,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1777566285743"
+},
+{
+"symbol": "NVDA",
+"market_id": 110,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764167969615"
+},
+{
+"symbol": "BIRB",
+"market_id": 133,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770318520252"
+},
+{
+"symbol": "ONDO",
+"market_id": 38,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1745443223573"
+},
+{
+"symbol": "STABLECOINX",
+"market_id": 229,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1787765924596"
+},
+{
+"symbol": "MET",
+"market_id": 95,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1761324910009"
+},
+{
+"symbol": "OP",
+"market_id": 55,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753809197905"
+},
+{
+"symbol": "WTI",
+"market_id": 145,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1771440148271"
+},
+{
+"symbol": "HYPE",
+"market_id": 24,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1740427690638"
+},
+{
+"symbol": "ENA",
+"market_id": 29,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1741193089539"
+},
+{
+"symbol": "META",
+"market_id": 117,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764342093420"
+},
+{
+"symbol": "NOW",
+"market_id": 191,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1780593887523"
+},
+{
+"symbol": "0G",
+"market_id": 84,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1758726431503"
+},
+{
+"symbol": "PLTR",
+"market_id": 111,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764167981632"
+},
+{
+"symbol": "US10Y",
+"market_id": 227,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1787153245304"
+},
+{
+"symbol": "ANSEM",
+"market_id": 219,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1785337042413"
+},
+{
+"symbol": "TSM",
+"market_id": 168,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1778090119199"
+},
+{
+"symbol": "AMD",
+"market_id": 138,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1770669512153"
+},
+{
+"symbol": "GME",
+"market_id": 176,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1778529708326"
+},
+{
+"symbol": "KIOXIA",
+"market_id": 225,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1786635163449"
+},
+{
+"symbol": "TRUMP",
+"market_id": 15,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1738256715579"
+},
+{
+"symbol": "DRV",
+"market_id": 4099,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1791453375748"
+},
+{
+"symbol": "AVGO",
+"market_id": 210,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988534"
+},
+{
+"symbol": "STRK",
+"market_id": 104,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1762627046949"
+},
+{
+"symbol": "HYUNDAIUSD",
+"market_id": 160,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1775691111265"
+},
+{
+"symbol": "ETH",
+"market_id": 0,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461100"
+},
+{
+"symbol": "ZK",
+"market_id": 56,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753809210196"
+},
+{
+"symbol": "SKHYNIX",
+"market_id": 143,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770825551938"
+},
+{
+"symbol": "KAITO",
+"market_id": 33,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1743182734785"
+},
+{
+"symbol": "CRV",
+"market_id": 36,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1745443199889"
+},
+{
+"symbol": "CBRS",
+"market_id": 175,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1778781339035"
+},
+{
+"symbol": "AERO",
+"market_id": 65,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755189677789"
+},
+{
+"symbol": "HANMI",
+"market_id": 148,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1771440148372"
+},
+{
+"symbol": "JTO",
+"market_id": 134,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1770321027659"
+},
+{
+"symbol": "APT",
+"market_id": 31,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1741981584411"
+},
+{
+"symbol": "MSTR",
+"market_id": 122,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1767814866816"
+},
+{
+"symbol": "AXTI",
+"market_id": 224,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1786635163447"
+},
+{
+"symbol": "XPL",
+"market_id": 71,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756225866568"
+},
+{
+"symbol": "TENCENT",
+"market_id": 201,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271591"
+},
+{
+"symbol": "JUP",
+"market_id": 26,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1740427715306"
+},
+{
+"symbol": "MKR",
+"market_id": 28,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1741193078035"
+},
+{
+"symbol": "LDO",
+"market_id": 46,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753266633953"
+},
+{
+"symbol": "BTC",
+"market_id": 1,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461107"
+},
+{
+"symbol": "DASH",
+"market_id": 127,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1769097406145"
+},
+{
+"symbol": "DRAM",
+"market_id": 195,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1781190442885"
+},
+{
+"symbol": "LINK",
+"market_id": 8,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461243"
+},
+{
+"symbol": "GRAM",
+"market_id": 12,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461318"
+},
+{
+"symbol": "XIAOMI",
+"market_id": 203,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271594"
+},
+{
+"symbol": "TSLA",
+"market_id": 112,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764167993606"
+},
+{
+"symbol": "OPENAI",
+"market_id": 192,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1780655309694"
+},
+{
+"symbol": "EDEN",
+"market_id": 89,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759422109069"
+},
+{
+"symbol": "USDCAD",
+"market_id": 100,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1761854405561"
+},
+{
+"symbol": "BB",
+"market_id": 211,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988536"
+},
+{
+"symbol": "PONS",
+"market_id": 231,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1788369977354"
+},
+{
+"symbol": "EURUSD",
+"market_id": 96,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1761854325598"
+},
+{
+"symbol": "SOXL",
+"market_id": 197,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1781190442993"
+},
+{
+"symbol": "SOXS",
+"market_id": 222,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1786635163435"
+},
+{
+"symbol": "VVV",
+"market_id": 69,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755711250173"
+},
+{
+"symbol": "POPCAT",
+"market_id": 23,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1739641288846"
+},
+{
+"symbol": "BNB",
+"market_id": 25,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1740427714620"
+},
+{
+"symbol": "SMIC",
+"market_id": 202,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271593"
+},
+{
+"symbol": "EIGEN",
+"market_id": 49,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753717320938"
+},
+{
+"symbol": "SOL",
+"market_id": 2,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461127"
+},
+{
+"symbol": "SOXX",
+"market_id": 169,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1778090119293"
+},
+{
+"symbol": "STRC",
+"market_id": 156,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1773948802649"
+},
+{
+"symbol": "WLD",
+"market_id": 6,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461206"
+},
+{
+"symbol": "TIA",
+"market_id": 67,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755711226047"
+},
+{
+"symbol": "MNT",
+"market_id": 63,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755189653857"
+},
+{
+"symbol": "YZY",
+"market_id": 70,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1755772113977"
+},
+{
+"symbol": "STABLE",
+"market_id": 118,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1765485938719"
+},
+{
+"symbol": "SAMSUNGUSD",
+"market_id": 162,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1775691111362"
+},
+{
+"symbol": "SPY",
+"market_id": 128,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1769097406146"
+},
+{
+"symbol": "MON",
+"market_id": 91,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759918598028"
+},
+{
+"symbol": "XPD",
+"market_id": 146,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1771440148290"
+},
+{
+"symbol": "WIF",
+"market_id": 5,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461187"
+},
+{
+"symbol": "SPACEX",
+"market_id": 173,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1778267448907"
+},
+{
+"symbol": "IWM",
+"market_id": 153,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1772570399730"
+},
+{
+"symbol": "H100",
+"market_id": 182,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1779575900187"
+},
+{
+"symbol": "USDKRW",
+"market_id": 105,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1763659438438"
+},
+{
+"symbol": "RESOLV",
+"market_id": 51,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753809149798"
+},
+{
+"symbol": "IBM",
+"market_id": 188,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1780321974317"
+},
+{
+"symbol": "USELESS",
+"market_id": 66,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755711215269"
+},
+{
+"symbol": "HBAR",
+"market_id": 59,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1754666084541"
+},
+{
+"symbol": "ZHIPU",
+"market_id": 205,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271675"
+},
+{
+"symbol": "1000PEPE",
+"market_id": 4,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461166"
+},
+{
+"symbol": "FF",
+"market_id": 87,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759161717050"
+},
+{
+"symbol": "QNT",
+"market_id": 190,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1780590040081"
+},
+{
+"symbol": "AZTEC",
+"market_id": 144,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1770885132385"
+},
+{
+"symbol": "MEGA",
+"market_id": 94,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1761167001648"
+},
+{
+"symbol": "XMR",
+"market_id": 77,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1757338778663"
+},
+{
+"symbol": "MORPHO",
+"market_id": 68,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1755711237917"
+},
+{
+"symbol": "SUI",
+"market_id": 16,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1738358834905"
+},
+{
+"symbol": "AUDUSD",
+"market_id": 106,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1763659451059"
+},
+{
+"symbol": "SKHY",
+"market_id": 216,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1784051694386"
+},
+{
+"symbol": "BIO",
+"market_id": 171,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1778529708231"
+},
+{
+"symbol": "TRX",
+"market_id": 43,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1751386219190"
+},
+{
+"symbol": "BMNR",
+"market_id": 123,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1767814866914"
+},
+{
+"symbol": "XLM",
+"market_id": 119,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1765485938795"
+},
+{
+"symbol": "1000TOSHI",
+"market_id": 81,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1758191608983"
+},
+{
+"symbol": "PROVE",
+"market_id": 57,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1754415293933"
+},
+{
+"symbol": "AAPL",
+"market_id": 113,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764342033347"
+},
+{
+"symbol": "MAGS",
+"market_id": 155,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1772570399858"
+},
+{
+"symbol": "NMR",
+"market_id": 74,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756480016776"
+},
+{
+"symbol": "ZRO",
+"market_id": 60,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1754666096603"
+},
+{
+"symbol": "DOGE",
+"market_id": 3,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461147"
+},
+{
+"symbol": "WDC",
+"market_id": 223,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1786635163446"
+},
+{
+"symbol": "STONK",
+"market_id": 4095,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1789474535999"
+},
+{
+"symbol": "CXMT",
+"market_id": 217,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1784122407522"
+},
+{
+"symbol": "DELL",
+"market_id": 187,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1780074018633"
+},
+{
+"symbol": "APEX",
+"market_id": 86,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759054813900"
+},
+{
+"symbol": "LIT",
+"market_id": 120,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1767373259151"
+},
+{
+"symbol": "BE",
+"market_id": 196,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1781190442900"
+},
+{
+"symbol": "VIRTUAL",
+"market_id": 41,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1749842289899"
+},
+{
+"symbol": "LAUNCHCOIN",
+"market_id": 54,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1753809185849"
+},
+{
+"symbol": "SKR",
+"market_id": 130,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1769188596989"
+},
+{
+"symbol": "AAVE",
+"market_id": 27,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1741193029540"
+},
+{
+"symbol": "PENDLE",
+"market_id": 37,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1745443211838"
+},
+{
+"symbol": "SAMSUNG",
+"market_id": 140,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770825551892"
+},
+{
+"symbol": "ICP",
+"market_id": 102,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1762627034219"
+},
+{
+"symbol": "CC",
+"market_id": 101,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1762182031545"
+},
+{
+"symbol": "MINIMAX",
+"market_id": 199,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271588"
+},
+{
+"symbol": "LTC",
+"market_id": 35,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1743182782837"
+},
+{
+"symbol": "ARC",
+"market_id": 132,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1770318520249"
+},
+{
+"symbol": "RAIL",
+"market_id": 184,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1779749721522"
+},
+{
+"symbol": "AMZN",
+"market_id": 114,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764342045376"
+},
+{
+"symbol": "CRWV",
+"market_id": 167,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1778090119190"
+},
+{
+"symbol": "INTC",
+"market_id": 137,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1770669512152"
+},
+{
+"symbol": "QQQ",
+"market_id": 129,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1769097406175"
+},
+{
+"symbol": "GBPUSD",
+"market_id": 97,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1761854337618"
+},
+{
+"symbol": "NEAR",
+"market_id": 10,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1737098461281"
+},
+{
+"symbol": "DIA",
+"market_id": 152,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1772570399731"
+},
+{
+"symbol": "COIN",
+"market_id": 109,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764093549135"
+},
+{
+"symbol": "HOOD",
+"market_id": 108,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1764093537000"
+},
+{
+"symbol": "AAOI",
+"market_id": 207,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988529"
+},
+{
+"symbol": "QCOM",
+"market_id": 209,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1782318988533"
+},
+{
+"symbol": "VARIATIONAL",
+"market_id": 4098,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1791371881781"
+},
+{
+"symbol": "GEV",
+"market_id": 218,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1784664162889"
+},
+{
+"symbol": "WEN",
+"market_id": 214,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1783343228324"
+},
+{
+"symbol": "CAP",
+"market_id": 212,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1782334682452"
+},
+{
+"symbol": "AXS",
+"market_id": 131,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1769188596996"
+},
+{
+"symbol": "RKLB",
+"market_id": 186,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1779996271448"
+},
+{
+"symbol": "MRNA",
+"market_id": 228,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1787167960565"
+},
+{
+"symbol": "1000SHIB",
+"market_id": 17,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1738358846887"
+},
+{
+"symbol": "DOLO",
+"market_id": 75,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1756480029382"
+},
+{
+"symbol": "OURA",
+"market_id": 4096,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 7,
+"created_at": "1790181747807"
+},
+{
+"symbol": "CASHCAT",
+"market_id": 221,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1786035100213"
+},
+{
+"symbol": "GRASS",
+"market_id": 52,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753809161649"
+},
+{
+"symbol": "2Z",
+"market_id": 88,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1759422098246"
+},
+{
+"symbol": "POPMART",
+"market_id": 204,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 6,
+"created_at": "1782137271596"
+},
+{
+"symbol": "ADA",
+"market_id": 39,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1747326422205"
+},
+{
+"symbol": "ARB",
+"market_id": 50,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1753717333426"
+},
+{
+"symbol": "SPCX",
+"market_id": 194,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 5,
+"created_at": "1781268147643"
+},
+{
+"symbol": "KRCOMP",
+"market_id": 142,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 0,
+"created_at": "1770825551908"
+},
+{
+"symbol": "USDJPY",
+"market_id": 98,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1761854353868"
+},
+{
+"symbol": "S",
+"market_id": 40,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1747326434871"
+},
+{
+"symbol": "WHEAT",
+"market_id": 170,
+"market_type": "perp",
+"status": "inactive",
+"multiplier": "1.000000000000000000",
+"strategy_index": 3,
+"created_at": "1778229044413"
+},
+{
+"symbol": "PUMP",
+"market_id": 45,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 2,
+"created_at": "1752514693101"
+},
+{
+"symbol": "NZDUSD",
+"market_id": 107,
+"market_type": "perp",
+"status": "active",
+"multiplier": "1.000000000000000000",
+"strategy_index": 4,
+"created_at": "1763659462674"
+}
+],
+"spot_order_book_details": [
+{
+"symbol": "LINK/USDC",
+"market_id": 2050,
+"market_type": "spot",
+"status": "active",
+"created_at": "1768058911367"
+},
+{
+"symbol": "AAVE/USDC",
+"market_id": 2052,
+"market_type": "spot",
+"status": "active",
+"created_at": "1768058911383"
+}
+]
+}

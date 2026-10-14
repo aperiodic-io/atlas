@@ -56,9 +56,12 @@ EXCHANGES = [
     "hyperliquid-perps",
     "kraken",
     "kucoin",
+    "lighter-perpetual",
     "okx-perps",
     "okx-futures",
     "okx-spot",
+    "paradex-perpetual",
+    "extended-perpetual",
     "phemex",
     "poloniex",
     "upbit",
@@ -120,6 +123,21 @@ def _merge_existing_fields(
         }
         merged_symbols.append(_merge_symbol(existing_values, sd))
     return merged_symbols
+
+
+# Exchanges whose rows come (wholly or partly) from the venue's own API rather
+# than Tardis. Rows Tardis does not cover get their first observation as
+# first_capture, without which SecurityMaster does not index them; the venue's
+# own listing time, where it states one, is kept separately as listing_date.
+API_CAPTURED_EXCHANGES = frozenset(
+    {
+        "hyperliquid-perps",
+        "hyperliquid-spot",
+        "lighter-perpetual",
+        "paradex-perpetual",
+        "extended-perpetual",
+    }
+)
 
 
 def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
@@ -285,7 +303,7 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+        if exchange in API_CAPTURED_EXCHANGES:
             # Hybrid metadata is partial: clear lifecycle fields only on rows
             # that actually supplied Tardis availability bounds. API-only rows
             # must retain their captured instance and approved CMC mapping.
