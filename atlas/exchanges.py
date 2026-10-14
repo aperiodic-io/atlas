@@ -30,6 +30,7 @@ from .exchange_definitions.deribit import parse_deribit
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
 from .exchange_definitions.gemini import parse_gemini
+from .exchange_definitions.gmx import fetch_gmx_perps, parse_gmx
 from .exchange_definitions.huobi import (
     parse_huobi,
     parse_huobi_dm,
@@ -173,6 +174,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_hyperliquid_perps,
         symbol_filter=hyperliquid_filter,
         allowed_types={"perpetual"},
+    ),
+    "gmx-perpetual": _define(
+        "gmx-perpetual",
+        parse_gmx,
+        exchange_fetcher=fetch_gmx_perps,
+        allowed_types={"perpetual"},
+        beta=False,
     ),
     "kraken": _define("kraken", parse_kraken),
     "kucoin": _define("kucoin", parse_kucoin),

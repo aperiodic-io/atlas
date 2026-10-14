@@ -48,6 +48,7 @@ EXCHANGES = [
     "gate-io-futures",
     "gate-io",
     "gemini",
+    "gmx-perpetual",
     "huobi-dm-linear-swap",
     "huobi-dm-swap",
     "huobi-dm",
