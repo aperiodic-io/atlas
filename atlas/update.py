@@ -28,6 +28,7 @@ _DATA_DIR = Path(__file__).parent / "data"
 LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
 
 EXCHANGES = [
+    "aster-perpetual",
     "binance-futures",
     "binance-futures-cm",
     "binance-spot",

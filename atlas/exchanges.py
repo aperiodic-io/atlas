@@ -4,6 +4,7 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
+from .exchange_definitions.aster import fetch_aster_perps, parse_aster
 from .exchange_definitions.binance import (
     fetch_binance_futures_coinm,
     fetch_binance_futures_usdm,
@@ -84,7 +85,9 @@ def _define(
 ) -> ExchangeDefinition:
     return ExchangeDefinition(
         parser=parser,
-        beta=not _is_stable_exchange(exchange),
+        # An exchange read from its own API is maintained here, not beta: the
+        # DeFi venues Tardis does not cover have no other source.
+        beta=not (_is_stable_exchange(exchange) or exchange_fetcher is not None),
         tardis_id=tardis_id or exchange,
         exchange_fetcher=exchange_fetcher,
         symbol_filter=symbol_filter,
@@ -98,6 +101,13 @@ def hyperliquid_filter(sd: dict) -> bool:
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
+    "aster-perpetual": _define(
+        "aster-perpetual",
+        parse_aster,
+        tardis_id="aster-futures",
+        exchange_fetcher=fetch_aster_perps,
+        allowed_types={"perpetual"},
+    ),
     "binance-spot": _define(
         "binance-spot",
         parse_binance,
