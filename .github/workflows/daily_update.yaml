@@ -29,7 +29,7 @@ jobs:
           uv pip install --system -e .
 
       - name: run-update
-        run: uv run python -m atlas.update --source hybrid
+        run: uv run python -m atlas.update --source exchange
 
       - name: commit-updated-jsons
         if: always()

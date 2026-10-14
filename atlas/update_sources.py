@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Protocol
+from typing import Any, ClassVar, Protocol
 
 from atlas.exchanges import get_exchange_fetcher
 from atlas.utils import _fetch_exchange
@@ -20,6 +20,13 @@ class TardisSymbolSource:
 
 @dataclass(frozen=True)
 class ExchangeApiSymbolSource:
+    """Live exchange listings; each fetch returns the exchange's whole current universe.
+
+    Rows the exchange reports as delisted carry an `end_date`. Anything absent
+    from a fetch is no longer listed, which lets the updater detect delistings.
+    """
+
+    complete_universe: ClassVar[bool] = True
     timeout_seconds: int = 20
 
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:

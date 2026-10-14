@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from datetime import UTC, datetime
 
 import requests
 
@@ -10,9 +11,11 @@ from ..types import UnderlyingType
 from .common import (
     instrument_type,
     make_contract,
+    ms_to_utc_timestamp,
     parse_concat,
     parse_yymmdd,
     split_concat,
+    utc_timestamp,
     venue_margin,
 )
 from .common import SkipSymbol
@@ -71,6 +74,24 @@ def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
     return {"id": id_value, "type": type_value}
 
 
+# Spot symbols in these states are either delisted (BREAK) or not yet listed.
+_SPOT_UNLISTED_STATUSES = {"BREAK", "PRE_TRADING"}
+
+# Futures in these states have stopped trading for good; `deliveryDate` is when.
+# `onboardDate` is when a contract was listed.
+_FUTURES_DELISTED_STATUSES = {"SETTLING", "CLOSE", "DELIVERED"}
+
+
+def _mark_futures_lifecycle(sd: dict, item: dict, status: str | None) -> dict:
+    if listed_at := ms_to_utc_timestamp(item.get("onboardDate")):
+        sd["first_capture"] = listed_at
+    if status in _FUTURES_DELISTED_STATUSES:
+        sd["end_date"] = ms_to_utc_timestamp(item.get("deliveryDate")) or utc_timestamp(
+            datetime.now(UTC)
+        )
+    return sd
+
+
 def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
     payload = requests.get(
         "https://api.binance.com/api/v3/exchangeInfo", timeout=timeout_seconds
@@ -78,7 +99,7 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
     return [
         _to_symbol(item["symbol"].lower(), "spot")
         for item in payload.get("symbols", [])
-        if item.get("status") == "TRADING"
+        if item.get("status") not in _SPOT_UNLISTED_STATUSES
     ]
 
 
@@ -117,7 +138,7 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(sd)
+        symbols.append(_mark_futures_lifecycle(sd, item, item.get("status")))
     return symbols
 
 
@@ -127,7 +148,8 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
     ).json()
     symbols = []
     for item in payload.get("symbols", []):
-        if item.get("contractStatus") != "TRADING":
+        status = item.get("contractStatus")
+        if status != "TRADING" and status not in _FUTURES_DELISTED_STATUSES:
             continue
         sd = _to_symbol(
             item["symbol"].lower(),
@@ -140,5 +162,5 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(sd)
+        symbols.append(_mark_futures_lifecycle(sd, item, status))
     return symbols
