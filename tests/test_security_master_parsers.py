@@ -1,5 +1,8 @@
-import pytest
+import json
 from datetime import datetime
+from pathlib import Path
+
+import pytest
 from unittest.mock import MagicMock, patch
 
 
@@ -1201,3 +1204,238 @@ class TestFetchHyperliquidPerps:
             ]
 
         assert post.call_count == 4
+
+
+# ---------------------------------------------------------------------------
+# Oracle-priced RWA perp venues: Ostium, Avantis, gTrade
+#
+# The fixtures are excerpts of the venues' live responses (2026-10-14). Their
+# internal_ids must equal the live-producers Atlas-scheme IDs
+# (streaming/feeds/{ostium,avantis,gtrade}), which is what joins live records
+# to stored partitions; the venues are RWA venues, so getting each pair's
+# underlying class right (forex vs equity vs index vs commodity) matters as
+# much as the ID.
+# ---------------------------------------------------------------------------
+
+_FIXTURES = Path(__file__).parent / "fixtures"
+
+
+def _fixture(name: str):
+    return json.loads((_FIXTURES / name).read_text())
+
+
+def _mock_json(payload) -> MagicMock:
+    resp = MagicMock()
+    resp.raise_for_status.return_value = None
+    resp.json.return_value = payload
+    return resp
+
+
+def _by_id(symbols: list[dict]) -> dict[str, dict]:
+    return {sd["id"]: sd for sd in symbols}
+
+
+class TestFetchOstiumPerps:
+    def _fetch(self):
+        from atlas.exchange_definitions.ostium import fetch_ostium_perps
+
+        with (
+            patch(
+                "atlas.exchange_definitions.ostium.requests.post",
+                return_value=_mock_json(_fixture("ostium_pairs.json")),
+            ),
+            patch(
+                "atlas.exchange_definitions.ostium.requests.get",
+                return_value=_mock_json(_fixture("ostium_prices.json")),
+            ),
+        ):
+            return fetch_ostium_perps(timeout_seconds=5)
+
+    def test_live_pairs_only(self):
+        # USD/KRW (53) is listed with a zero open-interest cap; NVO-USD is a
+        # price feed with no pair yet. Neither can be traded.
+        ids = [sd["id"] for sd in self._fetch()]
+        assert ids == ["0", "2", "4", "5", "6", "10", "13", "18", "52"]
+
+    @pytest.mark.parametrize(
+        ("pair_id", "internal_id", "underlying"),
+        [
+            ("0", "perpetual-BTC-USDC:USDC", "crypto"),
+            ("2", "perpetual-EUR-USDC:USDC", "forex"),
+            # Non-USD quotes keep both legs, so USD/JPY cannot collide with a
+            # USD-quoted USD contract.
+            ("4", "perpetual-USDJPY-USDC:USDC", "forex"),
+            ("5", "perpetual-XAU-USDC:USDC", "commodity"),
+            # The symbol is the venue's display name from the price feed, not
+            # the subgraph's original ticker (HG, SPX, NIK).
+            ("6", "perpetual-XCU-USDC:USDC", "commodity"),
+            ("10", "perpetual-US500-USDC:USDC", "index"),
+            ("13", "perpetual-JP225JPY-USDC:USDC", "index"),
+            ("18", "perpetual-NVDA-USDC:USDC", "equity"),
+            # ETFs (URA) are equity shares whatever they track.
+            ("52", "perpetual-URA-USDC:USDC", "equity"),
+        ],
+    )
+    def test_internal_id_and_underlying(self, pair_id, internal_id, underlying):
+        sd = _by_id(self._fetch())[pair_id]
+        c = parse_contract("ostium-perpetual", sd)
+        assert c.internal_id == internal_id
+        assert c.original_id == pair_id
+        assert c.contract_size == 1.0
+        assert c.margin == "USDC"
+        assert sd["underlying"] == underlying
+
+    def test_feed_ids_join_case_insensitively(self):
+        from atlas.exchange_definitions.ostium import ostium_symbols
+
+        pairs = [{"id": "0", "from": "BTC", "to": "USD", "feed": "0xABCD", "maxOI": "1", "group": {"name": "crypto"}}]
+        prices = [{"feed_id": "0xabcd", "pair": "BTC-USD"}]
+        assert [sd["base_coin"] for sd in ostium_symbols(pairs, prices)] == ["BTC"]
+
+    def test_retries_indexer_without_queried_fields(self):
+        # The endpoint load-balances two indexers; a GraphQL error from one is
+        # retried rather than read as an empty venue.
+        from atlas.exchange_definitions.ostium import fetch_ostium_perps
+
+        error = _mock_json({"errors": [{"message": "Type `Pair` has no field `isActive`"}]})
+        with (
+            patch(
+                "atlas.exchange_definitions.ostium.requests.post",
+                side_effect=[error, _mock_json(_fixture("ostium_pairs.json"))],
+            ) as post,
+            patch(
+                "atlas.exchange_definitions.ostium.requests.get",
+                return_value=_mock_json(_fixture("ostium_prices.json")),
+            ),
+        ):
+            assert len(fetch_ostium_perps(timeout_seconds=5)) == 9
+        assert post.call_count == 2
+
+    def test_rows_without_metadata_are_skipped(self):
+        with pytest.raises(SkipSymbol):
+            parse_contract("ostium-perpetual", _sd("0", "perpetual"))
+
+
+class TestFetchAvantisPerps:
+    def _fetch(self):
+        from atlas.exchange_definitions.avantis import fetch_avantis_perps
+
+        with patch(
+            "atlas.exchange_definitions.avantis.requests.get",
+            return_value=_mock_json(_fixture("avantis_trading.json")),
+        ):
+            return fetch_avantis_perps(timeout_seconds=5)
+
+    def test_listed_pairs_only_in_index_order(self):
+        # 22 (SHIB) and 35 ("DELISTED") are delisted; 32 has no name at all.
+        ids = [sd["id"] for sd in self._fetch()]
+        assert ids == ["0", "11", "12", "21", "78", "96", "114", "115", "188"]
+
+    @pytest.mark.parametrize(
+        ("index", "internal_id", "underlying"),
+        [
+            ("0", "perpetual-ETH-USDC:USDC", "crypto"),
+            ("11", "perpetual-EUR-USDC:USDC", "forex"),
+            ("12", "perpetual-USDJPY-USDC:USDC", "forex"),
+            # Metals and energy are commodities.
+            ("21", "perpetual-XAU-USDC:USDC", "commodity"),
+            ("96", "perpetual-WTI-USDC:USDC", "commodity"),
+            # US500 is priced off SPY, which the venue classifies as equity.
+            ("78", "perpetual-US500-USDC:USDC", "equity"),
+            # Whitespace inside a name would break the ID.
+            ("114", "perpetual-SKHYNIX-USDC:USDC", "equity"),
+            # Upside perps are separate markets sharing ETH's price feed.
+            ("115", "perpetual-ETH_UPSIDE-USDC:USDC", "crypto"),
+            # KRX equities are quoted in KRW.
+            ("188", "perpetual-005930KRW-USDC:USDC", "equity"),
+        ],
+    )
+    def test_internal_id_and_underlying(self, index, internal_id, underlying):
+        sd = _by_id(self._fetch())[index]
+        c = parse_contract("avantis-perpetual", sd)
+        assert c.internal_id == internal_id
+        assert c.original_id == index
+        assert c.contract_size == 1.0
+        assert sd["underlying"] == underlying
+
+    @pytest.mark.parametrize(
+        ("asset_type", "group", "expected"),
+        [
+            ("", "CRYPTO3", UnderlyingType.crypto),
+            (None, "FOREX", UnderlyingType.forex),
+            ("", "COMMODITIES", UnderlyingType.commodity),
+            ("", "EQUITIES", UnderlyingType.equity),
+            ("", "SOMETHING", UnderlyingType.unknown),
+            ("metal", "CRYPTO1", UnderlyingType.commodity),
+        ],
+    )
+    def test_underlying_falls_back_to_the_group(self, asset_type, group, expected):
+        from atlas.exchange_definitions.avantis import avantis_underlying
+
+        assert avantis_underlying(asset_type, group) == expected
+
+
+class TestFetchGtradePerps:
+    def _fetch(self):
+        from atlas.exchange_definitions.gtrade import fetch_gtrade_perps
+
+        with patch(
+            "atlas.exchange_definitions.gtrade.requests.get",
+            return_value=_mock_json(_fixture("gtrade_markets.json")),
+        ):
+            return fetch_gtrade_perps(timeout_seconds=5)
+
+    @pytest.mark.parametrize(
+        ("market", "internal_id", "underlying"),
+        [
+            # One market per pair whatever the collateral (DAI, WETH, USDC,
+            # GNS): settled in USD.
+            ("BTC/USD", "perpetual-BTC-USD:USD", "crypto"),
+            ("EUR/USD", "perpetual-EUR-USD:USD", "forex"),
+            ("USD/JPY", "perpetual-USDJPY-USD:USD", "forex"),
+            ("EUR/JPY", "perpetual-EURJPY-USD:USD", "forex"),
+            ("XAU/USD", "perpetual-XAU-USD:USD", "commodity"),
+            ("WTI/USD", "perpetual-WTI-USD:USD", "commodity"),
+            # The venue files index ETFs under indices.
+            ("SPY/USD", "perpetual-SPY-USD:USD", "index"),
+            ("AAPL/USD", "perpetual-AAPL-USD:USD", "equity"),
+            # gTrade's SPX is the SPX6900 token, not the S&P 500.
+            ("SPX/USD", "perpetual-SPX-USD:USD", "crypto"),
+        ],
+    )
+    def test_internal_id_and_underlying(self, market, internal_id, underlying):
+        sd = _by_id(self._fetch())[market]
+        c = parse_contract("gtrade-perpetual", sd)
+        assert c.internal_id == internal_id
+        assert c.original_id == market
+        assert c.contract_size == 1.0
+        assert sd["underlying"] == underlying
+
+    def test_markets_without_base_or_quote_are_skipped(self):
+        from atlas.exchange_definitions.gtrade import gtrade_symbols
+
+        assert gtrade_symbols([{"symbol": "X/USD", "base": "", "quote": "USD", "group": "crypto"}]) == []
+
+    def test_retries_malformed_response(self):
+        from atlas.exchange_definitions.gtrade import fetch_gtrade_perps
+
+        with patch(
+            "atlas.exchange_definitions.gtrade.requests.get",
+            side_effect=[_mock_json({"code": "NOT_READY"}), _mock_json(_fixture("gtrade_markets.json"))],
+        ) as get:
+            assert len(fetch_gtrade_perps(timeout_seconds=5)) == 9
+        assert get.call_count == 2
+
+
+class TestRwaVenueRegistry:
+    @pytest.mark.parametrize("exchange", ["ostium-perpetual", "avantis-perpetual", "gtrade-perpetual"])
+    def test_refreshed_daily_from_the_exchange_api(self, exchange):
+        # Tardis does not cover these venues: the update must not skip them as
+        # beta, and they need an exchange-API fetcher.
+        from atlas.exchanges import get_allowed_types, get_exchange_fetcher
+        from atlas.update import EXCHANGES
+
+        assert is_beta_exchange(exchange) is False
+        assert get_exchange_fetcher(exchange) is not None
+        assert get_allowed_types(exchange) == {"perpetual"}
+        assert exchange in EXCHANGES

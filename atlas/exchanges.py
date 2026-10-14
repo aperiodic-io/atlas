@@ -4,6 +4,7 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
+from .exchange_definitions.avantis import fetch_avantis_perps, parse_avantis
 from .exchange_definitions.binance import (
     fetch_binance_futures_coinm,
     fetch_binance_futures_usdm,
@@ -30,6 +31,7 @@ from .exchange_definitions.deribit import parse_deribit
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
 from .exchange_definitions.gemini import parse_gemini
+from .exchange_definitions.gtrade import fetch_gtrade_perps, parse_gtrade
 from .exchange_definitions.huobi import (
     parse_huobi,
     parse_huobi_dm,
@@ -51,6 +53,7 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.ostium import fetch_ostium_perps, parse_ostium
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
@@ -190,6 +193,29 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_okex_futures,
         tardis_id="okex-futures",
         exchange_fetcher=fetch_okx_futures,
+    ),
+    # Oracle-priced RWA perp venues: no Tardis coverage, so the exchange API is
+    # the only source and the daily update must refresh them (beta=False).
+    "ostium-perpetual": _define(
+        "ostium-perpetual",
+        parse_ostium,
+        exchange_fetcher=fetch_ostium_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
+    "avantis-perpetual": _define(
+        "avantis-perpetual",
+        parse_avantis,
+        exchange_fetcher=fetch_avantis_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
+    "gtrade-perpetual": _define(
+        "gtrade-perpetual",
+        parse_gtrade,
+        exchange_fetcher=fetch_gtrade_perps,
+        allowed_types={"perpetual"},
+        beta=False,
     ),
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),

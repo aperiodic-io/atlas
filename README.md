@@ -161,6 +161,21 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
+| `ostium-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `avantis-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `gtrade-perpetual` | ✅ **`STABLE`** (exchange API only) |
+
+Ostium, Avantis (Veranta) and gTrade are oracle-priced RWA perp venues that
+Tardis does not cover: their rows come from the venues' own APIs only, and each
+row's `underlying` comes from the venue's category metadata (Ostium's pair
+group, Avantis' price-feed asset type, gTrade's market group; Ostium's `etf`
+group is classed as `equity`). Their `original_id` is what the venue addresses
+a market by (Ostium and Avantis: the pair index; gTrade: the API symbol such as
+`BTC/USD`), and a non-USD quote is kept in the symbol (`USDJPY`, `JP225JPY`,
+`005930KRW`). Ostium and Avantis settle in USDC; gTrade settles every market in
+whichever collateral the trader posts (DAI, WETH, USDC, GNS) and quotes it in
+USD, so its contracts are `...-USD:USD`. See the module docstrings in
+`atlas/exchange_definitions/{ostium,avantis,gtrade}.py`.
 
 ### Bundled Snapshot Coverage
 
@@ -177,6 +192,9 @@ The repository currently ships precomputed JSON snapshots for:
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
+- `ostium-perpetual`
+- `avantis-perpetual`
+- `gtrade-perpetual`
 
 ## Features
 

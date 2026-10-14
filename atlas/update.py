@@ -62,6 +62,9 @@ EXCHANGES = [
     "phemex",
     "poloniex",
     "upbit",
+    "ostium-perpetual",
+    "avantis-perpetual",
+    "gtrade-perpetual",
 ]
 
 
