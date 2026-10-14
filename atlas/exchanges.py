@@ -16,6 +16,7 @@ from .exchange_definitions.bitfinex import parse_bitfinex, parse_bitfinex_deriva
 from .exchange_definitions.bitget import parse_bitget, parse_bitget_futures
 from .exchange_definitions.bitmex import parse_bitmex
 from .exchange_definitions.bitstamp import parse_bitstamp
+from .exchange_definitions.bluefin import fetch_bluefin_perps, parse_bluefin
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
     fetch_bybit_perps,
@@ -51,8 +52,10 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
+from .exchange_definitions.standx import fetch_standx_perps, parse_standx
 from .exchange_definitions.upbit import parse_upbit
 from .parser_interface import Parser
 
@@ -70,7 +73,9 @@ class ExchangeDefinition:
 
 
 def _is_stable_exchange(exchange: str) -> bool:
-    return exchange.startswith(("okx", "binance", "bybit", "hyperliquid"))
+    return exchange.startswith(
+        ("okx", "binance", "bybit", "hyperliquid", "pacifica", "standx", "bluefin")
+    )
 
 
 def _define(
@@ -191,6 +196,25 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),
     "upbit": _define("upbit", parse_upbit),
+    # DeFi perpetual venues: listed from their own APIs only (Tardis has none).
+    "pacifica-perpetual": _define(
+        "pacifica-perpetual",
+        parse_pacifica,
+        exchange_fetcher=fetch_pacifica_perps,
+        allowed_types={"perpetual"},
+    ),
+    "standx-perpetual": _define(
+        "standx-perpetual",
+        parse_standx,
+        exchange_fetcher=fetch_standx_perps,
+        allowed_types={"perpetual"},
+    ),
+    "bluefin-perpetual": _define(
+        "bluefin-perpetual",
+        parse_bluefin,
+        exchange_fetcher=fetch_bluefin_perps,
+        allowed_types={"perpetual"},
+    ),
 }
 
 PARSERS: dict[str, Parser] = {

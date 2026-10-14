@@ -161,6 +161,9 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
+| `pacifica-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `standx-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `bluefin-perpetual` | ✅ **`STABLE`** (exchange API only) |
 
 ### Bundled Snapshot Coverage
 
@@ -177,6 +180,10 @@ The repository currently ships precomputed JSON snapshots for:
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
+- `pacifica-perpetual`, `standx-perpetual`, `bluefin-perpetual` (DeFi perpetual
+  venues Tardis does not cover: listed from each venue's own API, with the
+  settlement token as denominator and margin, the venue's listing time as
+  `first_capture`, and `underlying` from the venue's market categories)
 
 ## Features
 
