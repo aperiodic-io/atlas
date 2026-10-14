@@ -14,6 +14,7 @@ from .common import (
     SkipSymbol,
     instrument_type,
     make_contract,
+    metadata_delivery_date,
     parse_cme_month_year,
     parse_concat,
     parse_ddmmmyy,
@@ -28,17 +29,6 @@ _BYBIT_UNDERLYING_TYPE_MAP = {
 }
 
 
-def _metadata_delivery_date(sd: SymbolData) -> datetime | None:
-    """Parse an API-provided delivery timestamp retained in the symbol record."""
-    raw_delivery_date = sd.get("delivery_date")
-    if not isinstance(raw_delivery_date, str):
-        return None
-    try:
-        return datetime.fromisoformat(raw_delivery_date.replace("Z", "+00:00"))
-    except ValueError:
-        return None
-
-
 def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
     sid = sd["id"]
     ctype = instrument_type(sd)
@@ -50,7 +40,7 @@ def parse_bybit(exchange: str, sd: SymbolData) -> Contract:
     quote_coin = sd.get("quote_coin")
     settle_coin = sd.get("settle_coin")
     if base_coin and quote_coin:
-        delivery = _metadata_delivery_date(sd) if ctype == ContractType.future else None
+        delivery = metadata_delivery_date(sd) if ctype == ContractType.future else None
         return make_contract(
             exchange,
             sd,
