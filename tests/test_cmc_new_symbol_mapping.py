@@ -88,8 +88,17 @@ def _catalogue(*assets: CmcAsset, complete: bool = True) -> CmcCatalogue:
     )
 
 
-def _asset(cmc_id: int, symbol: str, slug: str, price: float, name: str = "") -> CmcAsset:
-    return CmcAsset(cmc_id, symbol, slug, price, OBSERVED_AT, True, name or slug.title())
+def _asset(
+    cmc_id: int,
+    symbol: str,
+    slug: str,
+    price: float,
+    name: str = "",
+    date_added: datetime | None = None,
+) -> CmcAsset:
+    return CmcAsset(
+        cmc_id, symbol, slug, price, OBSERVED_AT, True, name or slug.title(), date_added
+    )
 
 
 def _observation(
@@ -1170,6 +1179,152 @@ def test_decide_downgrades_a_confident_match_that_the_price_contradicts():
     assert decision.status is MatchStatus.UNCERTAIN
     assert decision.cmc_id == 2
     assert "Price evidence disagrees" in decision.rationale
+
+
+# Terra's May 2022 collapse is the canonical ticker reuse: the original chain was
+# renamed Terra Classic (LUNC, CMC 4172) and the new chain took the LUNA ticker
+# under a new CMC asset (20314) that CMC added after the old LUNA instruments
+# had already stopped trading.
+TERRA_CLASSIC_END = datetime(2022, 5, 13, tzinfo=UTC)
+TERRA_V2_ADDED = datetime(2022, 5, 26, 12, 47, 26, tzinfo=UTC)
+
+
+def _old_luna_contract() -> SymbolOccurrence:
+    return _occurrence(
+        "LUNA",
+        "lunausd_perp",
+        exchange="binance-futures-cm",
+        first_capture=datetime(2021, 9, 3, tzinfo=UTC),
+        end_date=TERRA_CLASSIC_END,
+    )
+
+
+def _terra_v2(date_added: datetime | None = TERRA_V2_ADDED) -> CmcAsset:
+    return _asset(20314, "LUNA", "terra-luna-v2", 0.07, "Terra", date_added)
+
+
+def test_decide_withholds_a_name_match_for_an_asset_cmc_added_after_the_instrument_ended():
+    """Regression: a delisted LUNA contract was mapped to Terra 2.0.
+
+    Today's exchange name and price both describe the project that took the
+    ticker over, so they agree with the newer asset; only the dates show the
+    instrument stopped trading before that asset existed.
+    """
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)),
+        (_terra_v2(),),
+        price=0.07,
+        binance_name="Terra",
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.method == "approval_withheld"
+    assert "2022-05-26" in decision.rationale
+    assert "lunausd_perp" in decision.rationale
+
+
+def test_decide_still_approves_an_asset_cmc_added_before_the_instrument_ended():
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)),
+        (_terra_v2(date_added=TERRA_CLASSIC_END - timedelta(days=1)),),
+        price=0.07,
+        binance_name="Terra",
+    )
+
+    decision = decide(evidence, ForbiddenChatClient())
+
+    assert decision.status is MatchStatus.APPROVED
+    assert decision.cmc_id == 20314
+
+
+def test_decide_treats_an_unknown_listing_date_as_no_evidence_of_reuse():
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)),
+        (_terra_v2(date_added=None),),
+        price=0.07,
+        binance_name="Terra",
+    )
+
+    assert decide(evidence, ForbiddenChatClient()).status is MatchStatus.APPROVED
+
+
+def test_decide_withholds_a_confident_llm_pick_cmc_added_after_the_instrument_ended():
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)),
+        (
+            _asset(99, "LUNA", "terra-older", 0.07, "Terra", datetime(2020, 1, 1, tzinfo=UTC)),
+            _terra_v2(),
+        ),
+        price=0.07,
+        binance_name="Terra",
+    )
+
+    decision = decide(
+        evidence,
+        FakeChatClient([{"cmc_id": 20314, "confidence": "high", "reasoning": "name"}]),
+    )
+
+    assert decision.status is MatchStatus.UNCERTAIN
+    assert decision.cmc_id == 20314
+    assert "2022-05-26" in decision.rationale
+
+
+def test_prompt_shows_the_dates_that_reveal_a_reused_ticker():
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)), (_terra_v2(),), price=0.07
+    )
+
+    payload = json.loads(mapping.build_prompt(evidence))
+
+    assert payload["candidates"][0]["date_added"] == "2022-05-26T12:47:26Z"
+    assert payload["exchange_asset"]["instruments"][0]["end_date"] == "2022-05-13"
+
+
+def test_resolve_new_symbols_does_not_inherit_an_id_cmc_added_after_the_instrument_ended():
+    """A wrong ID on an overlapping sibling row must not spread to this one.
+
+    The USD-M LUNA perpetual carried Terra 2.0's ID and overlapped the
+    coin-margined LUNA contract, so concurrent reuse alone would copy it over.
+    """
+    windows = mapped_windows_by_symbol(
+        {
+            "binance-futures": [
+                {
+                    "id": "lunausdt",
+                    "symbol": "LUNA",
+                    "cmc_id": 20314,
+                    "first_capture": "2021-01-28T00:00:00.000Z",
+                    "end_date": "2022-05-13T00:00:00.000Z",
+                }
+            ]
+        }
+    )
+
+    decisions = resolve_new_symbols(
+        [NewSymbol("LUNA", (_old_luna_contract(),))],
+        _catalogue(_terra_v2()),
+        windows,
+        {},
+        {},
+        None,
+    )
+
+    assert decisions[0].status is not MatchStatus.APPROVED
+    assert decisions[0].method != "concurrent_instrument_mapping"
+
+
+def test_evidence_payload_records_when_cmc_added_each_candidate(tmp_path):
+    evidence = _evidence_for(
+        NewSymbol("LUNA", (_old_luna_contract(),)), (_terra_v2(),), price=0.07
+    )
+    store = MappingStore(tmp_path / "cmc_mappings.json")
+
+    record_decisions(store, [decide(evidence, None)], NOW)
+
+    (stored,) = store.mappings
+    assert stored.evidence["candidates"][0]["date_added"] == "2022-05-26T12:47:26Z"
 
 
 def test_decide_records_an_llm_rejection_as_unmapped():

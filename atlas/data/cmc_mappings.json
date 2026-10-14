@@ -1,6 +1,43 @@
 {
   "mappings": [
     {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-13T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-13, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": null,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-futures-cm",
+        "first_capture": "2021-09-03T00:00:00Z",
+        "original_id": "lunausd_perp"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
       "cmc_id": 42253,
       "evidence": {
         "candidates": [
@@ -168,6 +205,80 @@
       "slug": "grvt",
       "status": "uncertain",
       "symbol": "GRVT"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2022-05-12T00:00:00Z",
+        "original_id": "lunabusd"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-13T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-13, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-futures",
+        "first_capture": "2021-01-28T00:00:00Z",
+        "original_id": "lunausdt"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
     },
     {
       "cmc_id": 40944,
@@ -428,6 +539,339 @@
       "slug": "niulai-site",
       "status": "uncertain",
       "symbol": "\u725b\u6765"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-10-15T00:00:00Z",
+        "original_id": "lunaaud"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-11-05T00:00:00Z",
+        "original_id": "lunabidr"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-01-28T00:00:00Z",
+        "original_id": "lunabnb"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2022-01-05T00:00:00Z",
+        "original_id": "lunabrl"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-01-28T00:00:00Z",
+        "original_id": "lunabtc"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-12-24T00:00:00Z",
+        "original_id": "lunaeth"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2021-03-30T00:00:00Z",
+        "original_id": "lunaeur"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2022-03-18T00:00:00Z",
+        "original_id": "lunagbp"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
+    },
+    {
+      "cmc_id": 4172,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 4172,
+            "date_added": "2019-07-26T00:00:00Z",
+            "name": "Terra Classic",
+            "slug": "terra-luna",
+            "symbol": "LUNC"
+          },
+          {
+            "cmc_id": 20314,
+            "date_added": "2022-05-26T12:47:26Z",
+            "name": "Terra",
+            "slug": "terra-luna-v2",
+            "symbol": "LUNA"
+          }
+        ],
+        "confidence": "high",
+        "exchange_symbol": "LUNA",
+        "instrument_end_date": "2022-05-14T00:00:00.000Z",
+        "rationale": "Ticker reuse: this LUNA instrument stopped trading on 2022-05-14, before CMC added Terra 2.0 (20314) on 2022-05-26, so it traded the original Terra chain, now Terra Classic (LUNC, 4172).",
+        "replaced_cmc_id": 20314,
+        "source": "CoinMarketCap cryptocurrency detail for IDs 4172 and 20314, checked 2026-10-06"
+      },
+      "instrument": {
+        "exchange": "binance-spot",
+        "first_capture": "2022-01-05T00:00:00Z",
+        "original_id": "lunaust"
+      },
+      "method": "manual",
+      "recorded_at": "2026-10-06T01:30:34Z",
+      "slug": "terra-luna",
+      "status": "approved",
+      "symbol": "LUNA"
     },
     {
       "cmc_id": 38337,
@@ -34363,6 +34807,94 @@
       "slug": "",
       "status": "uncertain",
       "symbol": "TATE"
+    },
+    {
+      "cmc_id": 38361,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 21829,
+            "date_added": "2022-09-15T04:59:24Z",
+            "identity_match": null,
+            "is_active": true,
+            "last_updated": "2026-10-14T08:52:00Z",
+            "name": "Ten Best Coins",
+            "price_issue": "Hyperliquid price contradicts CMC for TBC/USDC.",
+            "price_usd": 9145.835297040361,
+            "relative_price_difference": 913.5835297040361,
+            "slug": "ten-best-coins"
+          },
+          {
+            "cmc_id": 31460,
+            "date_added": "2024-05-27T07:14:53Z",
+            "identity_match": null,
+            "is_active": true,
+            "last_updated": "2026-10-14T08:53:00Z",
+            "name": "Tour Billion",
+            "price_issue": "Hyperliquid price contradicts CMC for TBC/USDC.",
+            "price_usd": 0.5531331083571496,
+            "relative_price_difference": 0.944686689164285,
+            "slug": "tour-billion"
+          },
+          {
+            "cmc_id": 38361,
+            "date_added": "2025-09-11T05:07:03Z",
+            "identity_match": "hyperliquid_full_name",
+            "is_active": true,
+            "last_updated": "2026-10-14T08:54:00Z",
+            "name": "TuringBitChain",
+            "price_issue": "Hyperliquid price contradicts CMC for TBC/USDC.",
+            "price_usd": 5.0939853079493975,
+            "relative_price_difference": 0.49060146920506026,
+            "slug": "turingbitchain"
+          }
+        ],
+        "catalogue_issue": "tolerated 3 unreadable of 8132 rows (3 duplicated, total moved by 1 mid-fetch): 0.0369%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1059",
+          "observed_at": "2026-10-14T08:54:45.631513Z",
+          "price": 10.0,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "TBC",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x43091e1de65b7347dc0a0c248008836e17814830",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "TuringBitChain",
+            "index": 1213,
+            "isCanonical": false,
+            "name": "TBC",
+            "pair": "@1059",
+            "quote": "USDC",
+            "szDecimals": 1,
+            "tokenId": "0xbd000fe4fd5cc113a1d50fb130b659cc",
+            "weiDecimals": 6
+          }
+        ],
+        "price_probe_status": "price_mismatch",
+        "rationale": "The Hyperliquid asset's full name 'TuringBitChain' matches the CMC entry for TuringBitChain (symbol TBC). Price evidence disagrees by 49.06%. Holding for review because Hyperliquid price evidence is price_mismatch."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-13T11:52:20.815504Z",
+        "original_id": "TBC/USDC"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-10-14T08:54:42.287010Z",
+      "slug": "turingbitchain",
+      "status": "uncertain",
+      "symbol": "TBC"
     },
     {
       "cmc_id": null,

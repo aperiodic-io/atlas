@@ -684,7 +684,38 @@ def _approval_blocker(
             "Holding for review because only the ticker and price agree, which "
             "cannot establish identity."
         )
+    if candidate is not None:
+        return _listed_after_instrument_ended(evidence.new_symbol, candidate.asset)
     return None
+
+
+def _listed_after_instrument_ended(new_symbol: NewSymbol, asset: CmcAsset) -> str | None:
+    """Explain why ``asset`` cannot be an instrument that stopped trading before it existed.
+
+    Exchanges hand a delisted ticker to whichever project claims it next -- old
+    LUNA became Terra Classic (LUNC) and the new chain took ``LUNA`` -- and the
+    exchange's current name and price for that ticker then describe the newcomer.
+    For a delisted instrument they agree with the wrong asset, so its CMC listing
+    date is the one piece of evidence that can still tell the two apart.
+    """
+    if asset.date_added is None:
+        return None
+    ended_before = [
+        occurrence
+        for occurrence in new_symbol.occurrences
+        if occurrence.end_date is not None and occurrence.end_date < asset.date_added
+    ]
+    if not ended_before:
+        return None
+    instruments = ", ".join(
+        f"{occurrence.original_id} (ended {occurrence.end_date.date().isoformat()})"
+        for occurrence in ended_before
+    )
+    return (
+        f"Holding for review because CMC added {asset.name or asset.slug} on "
+        f"{asset.date_added.date().isoformat()}, after {instruments} stopped trading; "
+        "the ticker was probably reused by a later project."
+    )
 
 
 def _decide_with_llm(
@@ -769,6 +800,11 @@ def build_prompt(evidence: SymbolEvidence) -> str:
                     "exchange": occurrence.exchange,
                     "original_id": occurrence.original_id,
                     "type": occurrence.instrument_type,
+                    "end_date": (
+                        None
+                        if occurrence.end_date is None
+                        else occurrence.end_date.date().isoformat()
+                    ),
                 }
                 for occurrence in new_symbol.occurrences[:10]
             ],
@@ -781,6 +817,7 @@ def build_prompt(evidence: SymbolEvidence) -> str:
                 "slug": candidate.asset.slug,
                 "price_usd": candidate.asset.price_usd,
                 "last_updated": candidate.asset.last_updated.isoformat().replace("+00:00", "Z"),
+                "date_added": _format_optional_timestamp(candidate.asset.date_added),
                 "is_active": candidate.asset.is_active,
                 "relative_price_difference": candidate.relative_price_difference,
                 "binance_name_matches": candidate.identity_match in {"binance_asset_name", "cmc_slug"},
@@ -984,6 +1021,7 @@ def _evidence_payload(decision: Decision, occurrence: SymbolOccurrence) -> dict:
                 "relative_price_difference": candidate.relative_price_difference,
                 "identity_match": candidate.identity_match,
                 "last_updated": candidate.asset.last_updated.isoformat().replace("+00:00", "Z"),
+                "date_added": _format_optional_timestamp(candidate.asset.date_added),
                 "price_issue": candidate.price_issue,
             }
             for candidate in evidence.candidates[:MAX_CANDIDATES_IN_PROMPT]
@@ -1108,6 +1146,10 @@ def _occurrence_from_row(exchange: str, row: object) -> SymbolOccurrence | None:
         instrument_type=instrument_type if isinstance(instrument_type, str) else None,
         end_date=_parse_optional_timestamp(row.get("end_date")),
     )
+
+
+def _format_optional_timestamp(value: datetime | None) -> str | None:
+    return None if value is None else value.isoformat().replace("+00:00", "Z")
 
 
 def _parse_optional_timestamp(value: object) -> datetime | None:
@@ -1336,6 +1378,10 @@ def resolve_new_symbols(
             reused = _candidate_by_id(evidence, concurrent[0])
             identified_ids = {candidate.asset.cmc_id for candidate in evidence.identified_candidates}
             if reused is None or reused.price_issue or (identified_ids and reused.asset.cmc_id not in identified_ids):
+                concurrent = None
+        if concurrent is not None:
+            reused = _candidate_by_id(evidence, concurrent[0])
+            if reused is not None and _listed_after_instrument_ended(new_symbol, reused.asset):
                 concurrent = None
         if concurrent is not None and _approval_blocker(evidence, None) is None:
             cmc_id, matched_symbol = concurrent
