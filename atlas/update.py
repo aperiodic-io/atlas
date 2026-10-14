@@ -360,8 +360,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description=(
-            "Update securities master using exchange APIs for Binance/OKX and "
-            "Tardis fallback for all other exchanges"
+            "Update securities master using exchange APIs where a fetcher exists "
+            "and Tardis for history and all other exchanges"
         )
     )
     parser.add_argument(
@@ -375,8 +375,8 @@ if __name__ == "__main__":
         choices=["hybrid", "tardis", "exchange"],
         default="hybrid",
         help=(
-            "Data source mode: hybrid (default, Binance/OKX direct + Tardis fallback), "
-            "tardis (all via Tardis), exchange (direct only; only Binance/OKX supported)"
+            "Data source mode: hybrid (default, exchange API + Tardis history), "
+            "tardis (all via Tardis), exchange (direct only; exchanges with a fetcher)"
         ),
     )
     args = parser.parse_args()
