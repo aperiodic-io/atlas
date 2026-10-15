@@ -56,6 +56,7 @@ from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.upbit import parse_upbit
 from .exchange_definitions.vest import fetch_vest_perps, parse_vest
+from .exchange_definitions.variational import fetch_variational_perps, parse_variational
 from .parser_interface import Parser
 
 ExchangeFetcher = Callable[[int], list[dict[str, str]]]
@@ -207,6 +208,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         "vest-perpetual",
         parse_vest,
         exchange_fetcher=fetch_vest_perps,
+        allowed_types={"perpetual"},
+        beta=False,
+    ),
+    "variational-perpetual": _define(
+        "variational-perpetual",
+        parse_variational,
+        exchange_fetcher=fetch_variational_perps,
         allowed_types={"perpetual"},
         beta=False,
     ),

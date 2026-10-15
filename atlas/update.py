@@ -64,6 +64,7 @@ EXCHANGES = [
     "upbit",
     "orderly-perpetual",
     "vest-perpetual",
+    "variational-perpetual",
 ]
 
 
