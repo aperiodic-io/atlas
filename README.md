@@ -106,7 +106,7 @@ print(len(active))
 ### Update local snapshots
 
 ```bash
-# Hybrid mode (default): Binance/OKX direct API + Tardis fallback
+# Hybrid mode (default): exchange API where a fetcher exists, merged with Tardis history
 python3 -m atlas.update --source hybrid
 
 # Tardis only
@@ -170,6 +170,57 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `pacifica-perpetual` | ✅ **`STABLE`** (exchange API only) |
 | `standx-perpetual` | ✅ **`STABLE`** (exchange API only) |
 | `bluefin-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `gateio-perpetual-usdt` | ✅ **`STABLE`** |
+| `gateio-futures-usdt` | ✅ **`STABLE`** |
+| `gateio-perpetual-btc` | ✅ **`STABLE`** |
+| `htx-perpetual-usdt` | ✅ **`STABLE`** |
+| `mexc-perpetual` | ✅ **`STABLE`** |
+| `bitget-perpetual-usdt` | ✅ **`STABLE`** |
+| `bitget-perpetual-usdc` | ✅ **`STABLE`** |
+| `bitget-perpetual-coin` | ✅ **`STABLE`** |
+| `bitget-futures-coin` | ✅ **`STABLE`** |
+| `deribit-perpetual` | ✅ **`STABLE`** |
+| `deribit-futures` | ✅ **`STABLE`** |
+| `whitebit-perpetual` | ✅ **`STABLE`** |
+| `cryptocom-perpetual` | ✅ **`STABLE`** |
+| `cryptocom-futures` | ✅ **`STABLE`** |
+
+An exchange is stable exactly when it has its own exchange-API fetcher.
+
+### live-producers venues
+
+The venues the live producers stream are registered under the producer's own
+exchange id (`gateio-perpetual-usdt`, `htx-perpetual-usdt`, ...), so a
+published record joins its Atlas row by `(exchange, internal_id)` without a
+mapping table. Where Tardis carries the same instruments under the same ids,
+hybrid updates merge its history through `tardis_id` (Gate's two perpetual
+families share `gate-io-futures` and are split by settlement suffix; Bitget's
+USDT and USDC perpetuals share `bitget-futures`). The older Tardis-named
+exchanges (`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`,
+`deribit`, `crypto-com`) remain beta parsers. Bybit keeps its existing
+`bybit-perps` / `bybit-futures` (the producer's `bybit-perpetual-usd` and
+`bybit-perpetual-coin` both live in `bybit-perps`).
+
+Rows the venue API reports but Tardis does not cover get their first
+observation as `first_capture`; MEXC and Bitget coin-margined rows use the
+venue's listing time instead, as Tardis has no history for them.
+
+### Underlying classification
+
+Every exchange fetcher sets `underlying` from the venue's own metadata:
+Binance `underlyingType`, Bybit `symbolType`, OKX `instCategory`, Hyperliquid
+`perpCategories` (main-dex perps are crypto; HIP-3 assets the venue does not
+categorise, mostly delisted, come from a curated table in
+`exchange_definitions/hyperliquid.py`), Gate `contract_type` and
+`is_pre_market`, HTX `tradfi_labels`, MEXC trade zones (`conceptPlate`),
+Bitget `symbolType`/`isRwa`, Deribit `underlying_type`, WhiteBIT TradFi
+membership of `/markets`, Crypto.com `product_type`. Conventions across
+venues: ETFs are `equity`; pre-IPO companies are `pre_market`; crypto and
+cash indices, and treasury yields, are `index`; a venue value Atlas does not
+know is `unknown`, never `crypto`. Venues disagree on tokenized gold
+(PAXG, XAUT): Binance and Bybit call it crypto, MEXC and Bitget commodity;
+Atlas follows each venue. Rows only Tardis knows (delisted before a fetcher
+saw them) carry no `underlying`.
 
 ### Bundled Snapshot Coverage
 
@@ -196,6 +247,20 @@ The repository currently ships precomputed JSON snapshots for:
   venues Tardis does not cover: listed from each venue's own API, with the
   settlement token as denominator and margin, the venue's listing time as
   `first_capture`, and `underlying` from the venue's market categories)
+- `gateio-perpetual-usdt`
+- `gateio-futures-usdt`
+- `gateio-perpetual-btc`
+- `htx-perpetual-usdt`
+- `mexc-perpetual`
+- `bitget-perpetual-usdt`
+- `bitget-perpetual-usdc`
+- `bitget-perpetual-coin`
+- `bitget-futures-coin`
+- `deribit-perpetual`
+- `deribit-futures`
+- `whitebit-perpetual`
+- `cryptocom-perpetual`
+- `cryptocom-futures`
 
 ## Features
 
@@ -261,7 +326,8 @@ configuration and review process.
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
+- `--source exchange` only works for exchanges that have direct API fetchers implemented (the stable exchanges above).
+- `--source tardis` fails for exchanges Tardis does not cover (`mexc-perpetual`, `whitebit-perpetual`, `gateio-futures-usdt`, `bitget-perpetual-coin`, `bitget-futures-coin`) rather than writing an empty snapshot.
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout

@@ -294,3 +294,54 @@ def test_append_contract_size_change_omits_history_field_when_unchanged_from_exi
     }
     result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
     assert "contract_size_history" not in result
+
+
+def test_new_direct_rows_receive_capture_dates_on_every_exchange(tmp_path, monkeypatch) -> None:
+    # SecurityMaster.load drops rows without first_capture, so a venue Tardis
+    # does not cover would otherwise be invisible to lookups.
+    updater = importlib.import_module("atlas.update")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
+        {"id": "BTC_USDT", "type": "perpetual", "margin_asset": "USDT"}
+    ]})
+    assert updater.update(["mexc-perpetual"], source) == []
+    path = tmp_path / "mexc-perpetual.json"
+    original = json.loads(path.read_text())[0]
+    assert original["first_capture"]
+    assert updater.update(["mexc-perpetual"], source) == []
+    assert json.loads(path.read_text())[0]["first_capture"] == original["first_capture"]
+
+
+def test_partial_tardis_refresh_keeps_direct_capture_on_every_exchange(tmp_path, monkeypatch) -> None:
+    updater = importlib.import_module("atlas.update")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    path = tmp_path / "gateio-perpetual-usdt.json"
+    path.write_text(json.dumps([
+        {"id": "BTC_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
+        {"id": "NEW_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
+    ]))
+    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
+        {"id": "BTC_USDT", "type": "perpetual", "availableSince": "2020-01-01T00:00:00Z"},
+        {"id": "NEW_USDT", "type": "perpetual"},
+    ]})
+    assert updater.update(["gateio-perpetual-usdt"], source) == []
+    rows = {row["id"]: row for row in json.loads(path.read_text())}
+    assert rows["BTC_USDT"]["first_capture"] == "2020-01-01T00:00:00Z"
+    assert rows["NEW_USDT"]["first_capture"] == "2026-03-01T00:00:00Z"
+
+
+def test_tardis_source_refuses_exchanges_tardis_does_not_cover() -> None:
+    # Tardis's "mexc" is MEXC spot; mexc-perpetual must never read it, and a
+    # Tardis-only refresh must fail loudly instead of writing an empty file.
+    import pytest
+
+    from atlas.exchanges import is_on_tardis
+    from atlas.update_sources import HybridSymbolSource, TardisSymbolSource
+
+    assert not is_on_tardis("mexc-perpetual")
+    with pytest.raises(ValueError, match="Tardis"):
+        TardisSymbolSource().fetch_exchange("mexc-perpetual")
+
+    api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [{"id": "BTC_USDT"}]})
+    hybrid = HybridSymbolSource(exchange_source=api)
+    assert hybrid.fetch_exchange("mexc-perpetual") == {"availableSymbols": [{"id": "BTC_USDT"}]}

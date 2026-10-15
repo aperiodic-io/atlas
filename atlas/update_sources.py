@@ -15,6 +15,10 @@ class SymbolSource(Protocol):
 @dataclass(frozen=True)
 class TardisSymbolSource:
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
+        # Fail loudly rather than refresh a venue Tardis does not list from an
+        # empty (or, under a shared name such as "mexc", the wrong) listing.
+        if not is_on_tardis(exchange):
+            raise ValueError(f"Tardis does not list {exchange}")
         return _fetch_exchange(exchange)
 
 

@@ -4,6 +4,7 @@ import requests
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
+from ..types import UnderlyingType
 from .common import (
     SkipSymbol,
     instrument_type,
@@ -73,8 +74,27 @@ def parse_okex_futures(exchange: str, sd: SymbolData) -> Contract:
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
 
+# OKX classifies every instrument by `instCategory`. The ticker cannot stand in
+# for it: tokenized stocks on spot carry an `X` prefix (`XAAPL-USDT`) that reads
+# like a crypto ticker, and stock perps use the bare ticker (`AAPL-USDT-SWAP`).
+# The venue's `category` field is `1` on every instrument and says nothing here.
+_OKX_UNDERLYING_TYPE_MAP = {
+    "1": UnderlyingType.crypto,
+    "3": UnderlyingType.equity,
+    "4": UnderlyingType.commodity,
+}
+
+
+def _normalize_okx_underlying_type(inst_category: str | None) -> UnderlyingType:
+    return _OKX_UNDERLYING_TYPE_MAP.get(inst_category or "", UnderlyingType.unknown)
+
+
 def _to_symbol(item: dict, type_value: str) -> dict:
-    result: dict = {"id": item["instId"], "type": type_value}
+    result: dict = {
+        "id": item["instId"],
+        "type": type_value,
+        "underlying": _normalize_okx_underlying_type(item.get("instCategory")).value,
+    }
     if ct_val := item.get("ctVal"):
         result["contract_size"] = float(ct_val)
     return result
