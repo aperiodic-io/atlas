@@ -279,7 +279,7 @@ def test_one_ticker_per_venue_means_one_asset_at_a_time(snapshots):
 
 
 def test_offline_rebuild_is_a_fixpoint(snapshots, registry):
-    """Rebuilding without CMC reproduces the committed data exactly."""
+    """Rebuilding without CMC reproduces the committed data exactly, key order included."""
     rows = copy.deepcopy(snapshots)
     rebuilt_registry = AssetRegistry.load(DEFAULT_REGISTRY_PATH)
     ledger_path = DEFAULT_DATA_DIR / "cmc_mappings.json"
@@ -298,7 +298,7 @@ def test_offline_rebuild_is_a_fixpoint(snapshots, registry):
         (exchange, before["id"])
         for exchange in rows
         for before, after in zip(snapshots[exchange], rows[exchange], strict=True)
-        if json.dumps(before, sort_keys=True) != json.dumps(after, sort_keys=True)
+        if json.dumps(before) != json.dumps(after)
     ]
     assert changed == []
     assert [a.to_json() for a in rebuilt_registry] == [a.to_json() for a in registry]

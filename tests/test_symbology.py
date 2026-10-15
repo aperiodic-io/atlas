@@ -358,9 +358,11 @@ def test_rebuild_is_idempotent():
         _pair("binance", "perpetual", 24478, "1000PEPE", 825, "USDT", ticker="1000PEPEUSDT"),
     ]
     _, registry = _build(rows, pairs)
-    first = json.dumps(rows, sort_keys=True)
+    # Key order too: snapshots are diffed as text, so a rebuild that only
+    # reorders fields would still rewrite every row.
+    first = json.dumps(rows)
     report, _ = _build(rows, pairs, registry=registry)
-    assert json.dumps(rows, sort_keys=True) == first
+    assert json.dumps(rows) == first
     assert report.minted == []
     assert report.reassigned == []
 

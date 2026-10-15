@@ -1481,7 +1481,8 @@ def _write_base(
     report: SymbologyReport,
 ) -> None:
     row = instrument.row
-    row["base_asset_id"] = base.asset_id
+    # cmc_id and category survive the strip of symbology fields, so they go
+    # first: a rebuild then appends the rest in the same order as a first build.
     if base.cmc_id is not None:
         row["cmc_id"] = base.cmc_id
     else:
@@ -1490,6 +1491,7 @@ def _write_base(
         row["category"] = list(base.categories)
     else:
         row.pop("category", None)
+    row["base_asset_id"] = base.asset_id
     row["base_asset_match"] = method.value
     if (multiplier := base_multiplier(instrument.symbol, base)) is not None:
         row["base_multiplier"] = multiplier
