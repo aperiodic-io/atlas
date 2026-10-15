@@ -91,6 +91,9 @@ EXCHANGES = [
     "ostium-perpetual",
     "avantis-perpetual",
     "gtrade-perpetual",
+    "orderly-perpetual",
+    "vest-perpetual",
+    "variational-perpetual",
 ]
 
 

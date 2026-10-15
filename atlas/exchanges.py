@@ -90,6 +90,7 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.orderly import fetch_orderly_perps, parse_orderly
 from .exchange_definitions.ostium import fetch_ostium_perps, parse_ostium
 from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
 from .exchange_definitions.paradex import fetch_paradex_perps, parse_paradex
@@ -98,6 +99,8 @@ from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.standx import fetch_standx_perps, parse_standx
 from .exchange_definitions.upbit import parse_upbit
 from .exchange_definitions.whitebit import fetch_whitebit_perpetual, parse_whitebit
+from .exchange_definitions.vest import fetch_vest_perps, parse_vest
+from .exchange_definitions.variational import fetch_variational_perps, parse_variational
 from .parser_interface import Parser
 
 ExchangeFetcher = Callable[[int], list[dict[str, str]]]
@@ -483,6 +486,27 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         on_tardis=False,
     ),
     **_LIVE_PRODUCER_VENUES,
+    "orderly-perpetual": _define(
+        "orderly-perpetual",
+        parse_orderly,
+        exchange_fetcher=fetch_orderly_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "vest-perpetual": _define(
+        "vest-perpetual",
+        parse_vest,
+        exchange_fetcher=fetch_vest_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "variational-perpetual": _define(
+        "variational-perpetual",
+        parse_variational,
+        exchange_fetcher=fetch_variational_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
 }
 
 PARSERS: dict[str, Parser] = {

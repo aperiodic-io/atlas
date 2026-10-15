@@ -1600,3 +1600,305 @@ class TestRwaVenueRegistry:
         assert get_exchange_fetcher(exchange) is not None
         assert get_allowed_types(exchange) == {"perpetual"}
         assert exchange in EXCHANGES
+
+
+# ---------------------------------------------------------------------------
+# Vest Markets
+# ---------------------------------------------------------------------------
+
+# Recorded from GET https://server-prod.hz.vestmarkets.com/v2/exchangeInfo on
+# 2026-10-14 (fields the fetcher reads; CL-USD-PERP is Colgate-Palmolive).
+_VEST_MARKETS = [
+    {"symbol": "BTC-PERP", "displayName": "Bitcoin", "base": "BTC", "quote": "USDC", "asset": "crypto", "tradingStatus": "TRADING"},
+    {"symbol": "AAPL-USD-PERP", "displayName": "Apple Inc", "base": "AAPL-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "SPY-USD-PERP", "displayName": "SPDR S&P 500 ETF Trust", "base": "SPY-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NOK-PERP", "displayName": "Nokia Corporation", "base": "NOK", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NOK-USD-PERP", "displayName": "Norwegian Krone/US Dollar", "base": "NOK-USD", "quote": "USDC", "asset": "forex", "tradingStatus": "TRADING"},
+    {"symbol": "JPY-USD-PERP", "displayName": "Japanese Yen / U.S. Dollar", "base": "JPY-USD", "quote": "USDC", "asset": "forex", "tradingStatus": "TRADING"},
+    {"symbol": "CL-PERP", "displayName": "Crude Oil Futures", "base": "CL", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "GC-PERP", "displayName": "Gold Futures", "base": "GC", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "SPX-USD-PERP", "displayName": "S&P 500 E-mini Futures", "base": "SPX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "NDX-USD-PERP", "displayName": "NASDAQ 100 E-mini Futures", "base": "NDX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "GLD-USD-PERP", "displayName": "SPDR Gold Shares", "base": "GLD-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "TRADING"},
+    {"symbol": "CL-USD-PERP", "displayName": "Colgate-Palmolive Company", "base": "CL-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "HALT"},
+    {"symbol": "kPEPE-PERP", "displayName": "Pepe", "base": "kPEPE", "quote": "USDC", "asset": "crypto", "tradingStatus": "HALT"},
+    {"symbol": "PAYX-USD-PERP", "displayName": "Paychex, Inc.", "base": "PAYX-USD", "quote": "USDC", "asset": "stock", "tradingStatus": "HALT"},
+]
+
+
+def _vest_rows() -> dict:
+    from atlas.exchange_definitions.vest import vest_symbols
+
+    return {row["id"]: row for row in vest_symbols(_VEST_MARKETS)}
+
+
+class TestVest:
+    def test_only_trading_markets_are_fetched(self):
+        # HALT markets cannot be streamed (Vest rejects their subscriptions).
+        rows = _vest_rows()
+        assert "PAYX-USD-PERP" not in rows
+        assert "kPEPE-PERP" not in rows
+        assert "CL-USD-PERP" not in rows
+        assert len(rows) == 11
+
+    @pytest.mark.parametrize(
+        ("sid", "internal_id"),
+        [
+            ("BTC-PERP", "perpetual-BTC-USDC:USDC"),
+            ("AAPL-USD-PERP", "perpetual-AAPL-USDC:USDC"),
+            ("NOK-PERP", "perpetual-NOK-USDC:USDC"),
+            ("NOK-USD-PERP", "perpetual-NOKUSD-USDC:USDC"),
+            ("JPY-USD-PERP", "perpetual-JPYUSD-USDC:USDC"),
+            ("CL-PERP", "perpetual-CL-USDC:USDC"),
+            ("SPX-USD-PERP", "perpetual-SPX-USDC:USDC"),
+        ],
+    )
+    def test_internal_id_matches_the_producer(self, sid, internal_id):
+        # Stocks lose the "-USD" quote suffix; FX keeps the pair, since NOK
+        # alone would be Nokia's ID too. Mirrors streaming/feeds/vest/vest.go.
+        c = parse_contract("vest-perpetual", _vest_rows()[sid])
+        assert c.internal_id == internal_id
+        assert c.instrument_type == ContractType.perpetual
+        assert c.contract_size == 1.0
+
+    @pytest.mark.parametrize(
+        ("sid", "underlying"),
+        [
+            ("BTC-PERP", UnderlyingType.crypto),
+            ("AAPL-USD-PERP", UnderlyingType.equity),
+            ("SPY-USD-PERP", UnderlyingType.equity),  # an ETF is an equity
+            ("GLD-USD-PERP", UnderlyingType.equity),
+            ("NOK-PERP", UnderlyingType.equity),
+            ("JPY-USD-PERP", UnderlyingType.forex),
+            # Vest calls its CME-futures markets "stock".
+            ("CL-PERP", UnderlyingType.commodity),
+            ("GC-PERP", UnderlyingType.commodity),
+            ("SPX-USD-PERP", UnderlyingType.index),
+            ("NDX-USD-PERP", UnderlyingType.index),
+        ],
+    )
+    def test_underlying_from_the_venue_asset_class(self, sid, underlying):
+        assert _vest_rows()[sid]["underlying"] == underlying.value
+
+    def test_colliding_markets_keep_the_smallest_venue_symbol(self):
+        # If Colgate (CL-USD-PERP) traded again next to crude oil (CL-PERP),
+        # both would map to CL; the producer keeps CL-PERP, and so must Atlas.
+        from atlas.exchange_definitions.vest import vest_symbols
+
+        markets = [dict(m, tradingStatus="TRADING") for m in reversed(_VEST_MARKETS)]
+        ids = [row["id"] for row in vest_symbols(markets)]
+        assert "CL-PERP" in ids
+        assert "CL-USD-PERP" not in ids
+
+    def test_row_without_venue_base_is_skipped(self):
+        # A Tardis-shaped row carries no base asset to normalise.
+        with pytest.raises(SkipSymbol):
+            parse_contract("vest-perpetual", _sd("BTC-PERP", "perpetual"))
+
+    def test_fetcher_reads_exchange_info(self):
+        from atlas.exchange_definitions import vest
+
+        response = MagicMock()
+        response.json.return_value = {"symbols": _VEST_MARKETS, "exchange": {}}
+        with patch.object(vest.requests, "get", return_value=response) as get:
+            rows = vest.fetch_vest_perps(5)
+        get.assert_called_once_with(vest.VEST_EXCHANGE_INFO_URL, timeout=5)
+        assert len(rows) == 11
+
+    def test_is_refreshed_by_the_daily_update(self):
+        from atlas.exchanges import get_allowed_types
+        from atlas.update import EXCHANGES
+
+        assert is_beta_exchange("vest-perpetual") is False
+        assert get_allowed_types("vest-perpetual") == {"perpetual"}
+        assert "vest-perpetual" in EXCHANGES
+# Variational
+# ---------------------------------------------------------------------------
+
+# Listings recorded from GET /metadata/stats on 2026-10-14 (fields the fetcher reads):
+# crypto, commodity, equity, an ETF, pre-IPO, a ticker with "_", and a total-return swap.
+_VARIATIONAL_LISTINGS = [
+    {
+        "ticker": "US500",
+        "name": "State Street SPDR S&P 500 ETF Trust",
+        "funding_rate": "0.133513",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:50.037618856Z",
+            "size_1k": {
+                "bid": "769.589",
+                "ask": "769.881"
+            }
+        }
+    },
+    {
+        "ticker": "OPN_OPINION",
+        "name": "Opinion",
+        "funding_rate": "0.109500",
+        "funding_interval_s": 14400,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:10.710474653Z",
+            "size_1k": {
+                "bid": "0.06188",
+                "ask": "0.06206"
+            }
+        }
+    },
+    {
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "funding_rate": "0",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:43.047094944Z",
+            "size_1k": {
+                "bid": "367.012",
+                "ask": "367.16"
+            }
+        }
+    },
+    {
+        "ticker": "BTC",
+        "name": "Bitcoin",
+        "funding_rate": "-0.001381",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:43.050754667Z",
+            "size_1k": {
+                "bid": "81646.74",
+                "ask": "81656.55"
+            }
+        }
+    },
+    {
+        "ticker": "XAU",
+        "name": "Gold",
+        "funding_rate": "0.233568",
+        "funding_interval_s": 14400,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:00.787192880Z",
+            "size_1k": {
+                "bid": "4104.64",
+                "ask": "4105.91"
+            }
+        }
+    },
+    {
+        "ticker": "OPENAI",
+        "name": "OpenAI",
+        "funding_rate": "0.05475",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:14.200743546Z",
+            "size_1k": {
+                "bid": "1595.95",
+                "ask": "1597.25"
+            }
+        }
+    },
+    {
+        "ticker": "XAUS",
+        "name": "Swap on Gold Spot",
+        "funding_rate": "0",
+        "funding_interval_s": 0
+    }
+]
+
+
+class TestVariational:
+    @staticmethod
+    def _get(payload: object) -> MagicMock:
+        resp = MagicMock()
+        resp.raise_for_status.return_value = None
+        resp.json.return_value = payload
+        return resp
+
+    def _fetch(self, listings: list[dict]) -> list[dict]:
+        from atlas.exchange_definitions.variational import fetch_variational_perps
+
+        with patch(
+            "atlas.exchange_definitions.variational.requests.get",
+            return_value=self._get({"listings": listings}),
+        ):
+            return fetch_variational_perps(timeout_seconds=5)
+
+    def test_every_perpetual_settles_in_usdc_under_its_ticker(self):
+        """The internal_id must equal the producer's Atlas-scheme ID,
+        perpetual-<ticker>-USDC:USDC (live-producers streaming/feeds/variational)."""
+        rows = {sd["id"]: sd for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+        assert set(rows) == {"US500", "TSLA", "BTC", "XAU", "OPENAI", "OPN_OPINION"}
+        for ticker, sd in rows.items():
+            c = parse_contract("variational-perpetual", sd)
+            assert c.internal_id == f"perpetual-{ticker}-USDC:USDC"
+            assert c.contract_size == 1.0
+            assert c.instrument_type == ContractType.perpetual
+
+    def test_total_return_swaps_are_not_perpetuals(self):
+        """XAUS ("Swap on Gold Spot") has no funding interval and no quotes."""
+        assert "XAUS" not in {sd["id"] for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+
+    def test_underlying_from_documented_rules(self):
+        rows = {sd["id"]: sd["underlying"] for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+        assert rows == {
+            "BTC": "crypto",
+            "OPN_OPINION": "crypto",
+            "XAU": "commodity",
+            "TSLA": "equity",
+            "US500": "equity",
+            "OPENAI": "pre_market",
+        }
+
+    @pytest.mark.parametrize(
+        ("ticker", "name", "funding", "want"),
+        [
+            # Corporate and fund suffixes of real listings.
+            ("NOK", "Nokia Oyj", "0", UnderlyingType.equity),
+            ("NVO", "Novo Nordisk A/S", "0", UnderlyingType.equity),
+            ("BRKB", "Berkshire Hathaway Inc.", "0", UnderlyingType.equity),
+            ("JPM", "JPMorgan Chase & Co.", "0", UnderlyingType.equity),
+            ("ARM", "Arm Holdings plc American Depositary Shares", "0", UnderlyingType.equity),
+            ("QQQ", "Invesco QQQ Trust, Series 1", "0.25", UnderlyingType.equity),
+            ("CRWV", "CoreWeave, Inc. Class A Common Stock", "0", UnderlyingType.equity),
+            ("NBIS", "Nebius Group N.V.", "0", UnderlyingType.equity),
+            ("UVXY", "ProShares - Ultra VIX Short-Term Futures ETF", "0", UnderlyingType.equity),
+            # Tokens whose names contain look-alike words stay crypto.
+            ("TWT", "Trust Wallet", "0.1095", UnderlyingType.crypto),
+            ("TRUST", "Intuition", "0.1095", UnderlyingType.crypto),
+            ("GIGGLE", "Giggle Fund", "0.1095", UnderlyingType.crypto),
+            ("F", "SynFutures", "0.1095", UnderlyingType.crypto),
+            ("ONG", "Ontology Gas", "0.1095", UnderlyingType.crypto),
+            ("AGLD", "Adventure Gold", "0.09", UnderlyingType.crypto),
+            # Tokenized gold is a crypto token, as on Binance (PAXG, XAUT are COIN there).
+            ("PAXG", "PAX Gold", "0.1095", UnderlyingType.crypto),
+            ("XAUT", "Tether Gold", "0.1095", UnderlyingType.crypto),
+            # Documented commodities, named without a suffix.
+            ("NATGAS", "Natural Gas", "-0.18", UnderlyingType.commodity),
+            ("COPPER", "Copper", "0", UnderlyingType.commodity),
+            # A pre-IPO listing not in the table is still recognised by its fixed funding.
+            ("NEWCO", "NewCo", "0.05475", UnderlyingType.pre_market),
+            ("ANTHROPIC", "Anthropic", "0.1", UnderlyingType.pre_market),
+        ],
+    )
+    def test_classify_underlying(self, ticker, name, funding, want):
+        from atlas.exchange_definitions.variational import classify_underlying
+
+        assert classify_underlying(ticker, name, funding) == want.value
+
+    def test_duplicate_ticker_is_kept_once(self):
+        btc = next(x for x in _VARIATIONAL_LISTINGS if x["ticker"] == "BTC")
+        assert [sd["id"] for sd in self._fetch([btc, btc])] == ["BTC"]
+
+    def test_retries_a_malformed_response(self):
+        from atlas.exchange_definitions.variational import fetch_variational_perps
+
+        bad = self._get({"error": "maintenance"})
+        good = self._get({"listings": _VARIATIONAL_LISTINGS})
+        with patch(
+            "atlas.exchange_definitions.variational.requests.get", side_effect=[bad, good]
+        ) as get:
+            assert len(fetch_variational_perps(timeout_seconds=5)) == 6
+        assert get.call_count == 2
+
+    def test_is_not_beta(self):
+        """A beta exchange would be skipped by the daily update."""
+        assert is_beta_exchange("variational-perpetual") is False
