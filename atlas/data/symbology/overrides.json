@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "overrides": [],
+  "ticker_eras": [
+    {
+      "ticker": "LUNA",
+      "cmc_id": 4172,
+      "until": "2022-05-28T00:00:00Z",
+      "reason": "Terra's original LUNA traded as LUNA until the May 2022 collapse; it is now Terra Classic (LUNC, CMC 4172). Terra 2.0 (CMC 20314, added 2022-05-26, genesis 2022-05-28) took the LUNA ticker, often on the same exchange instrument."
+    },
+    {
+      "ticker": "UST",
+      "cmc_id": 7129,
+      "until": "2022-05-28T00:00:00Z",
+      "reason": "TerraUSD traded as UST until the May 2022 collapse; exchanges renamed it USTC (TerraClassicUSD, CMC 7129)."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from datetime import datetime
+import calendar
+from datetime import UTC, datetime, timedelta
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
@@ -33,6 +34,8 @@ KNOWN_QUOTES = [
     "MNT",
     "USDE",
     "USDS",
+    "RLUSD",
+    "XUSD",
     "USD",
     "JPY",
     "MXN",
@@ -57,6 +60,9 @@ KNOWN_QUOTES = [
     "DAI",
     "VAI",
     "KRW",
+    "THB",
+    "AED",
+    "KZT",
     "UST",
     "GUSD",
     "CNHT",
@@ -134,6 +140,36 @@ def parse_cme_month_year(month_code: str, year_suffix: str) -> datetime | None:
         return None
 
 
+def last_weekday_of_month(year: int, month: int, weekday: int) -> datetime:
+    """Midnight of the last ``weekday`` (Monday=0 ... Sunday=6) in a month."""
+    last = datetime(year, month, calendar.monthrange(year, month)[1])
+    return last - timedelta(days=(last.weekday() - weekday) % 7)
+
+
+def epoch_to_iso(value: object, *, milliseconds: bool) -> str | None:
+    """ISO-8601 UTC timestamp for a venue epoch value; None when absent or zero."""
+    try:
+        timestamp = float(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+    if timestamp <= 0:
+        return None
+    if milliseconds:
+        timestamp /= 1000
+    return datetime.fromtimestamp(timestamp, tz=UTC).isoformat()
+
+
+def metadata_delivery_date(sd: SymbolData) -> datetime | None:
+    """Parse an API-provided ``delivery_date`` retained in the symbol record."""
+    raw_delivery_date = sd.get("delivery_date")
+    if not isinstance(raw_delivery_date, str):
+        return None
+    try:
+        return datetime.fromisoformat(raw_delivery_date.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 def resolve_margin(symbol: str, denominator: str, ctype: ContractType) -> str | None:
     if ctype == ContractType.spot:
         return None
@@ -206,10 +242,48 @@ def make_contract(
     )
 
 
+def venue_assets(sd: SymbolData) -> tuple[str, str] | None:
+    """The base and quote assets a venue reports for a symbol, when it does.
+
+    Splitting a concatenated ticker against a list of quote currencies is a
+    guess (``ARBIDR`` is ARB/IDR, not AR/BIDR); a venue's own fields are not.
+    """
+    base = sd.get("base_coin")
+    quote = sd.get("quote_coin")
+    if isinstance(base, str) and base and isinstance(quote, str) and quote:
+        return base, quote
+    return None
+
+
+def parse_venue_fields(exchange: str, sd: SymbolData) -> Contract | None:
+    """Build a contract from venue-reported ``base_coin``/``quote_coin`` fields.
+
+    Exchange API fetchers record the venue's own base, quote and settlement
+    assets, which are authoritative where raw-symbol heuristics have to guess
+    (``BTCPERP`` is USDC-linear, ``rNVDA`` is a tokenized stock, ...). Returns
+    None for rows without those fields, e.g. Tardis-only historical rows, so
+    the caller can fall back to parsing the raw id.
+    """
+    assets = venue_assets(sd)
+    if assets is None:
+        return None
+    base, quote = assets
+    ctype = instrument_type(sd)
+    settle_coin = sd.get("settle_coin")
+    if ctype == ContractType.spot:
+        margin = None
+    elif settle_coin:
+        margin = str(settle_coin)
+    else:
+        margin = venue_margin(sd, base, quote, ctype)
+    delivery = metadata_delivery_date(sd) if ctype == ContractType.future else None
+    return make_contract(exchange, sd, base, quote, margin, ctype, delivery)
+
+
 def parse_concat(
     exchange: str, sd: SymbolData, quotes: list[str] = KNOWN_QUOTES
 ) -> Contract:
-    pair = split_concat(sd["id"].upper(), quotes)
+    pair = venue_assets(sd) or split_concat(sd["id"].upper(), quotes)
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
     symbol, denominator = pair

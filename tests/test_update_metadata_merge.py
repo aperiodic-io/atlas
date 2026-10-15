@@ -294,3 +294,26 @@ def test_append_contract_size_change_omits_history_field_when_unchanged_from_exi
     }
     result = _append_contract_size_change(sd, new_size=0.001, effective_from="2026-01-01T00:00:00Z")
     assert "contract_size_history" not in result
+
+
+def test_merge_existing_fields_preserves_symbology_fields() -> None:
+    from atlas.update import LOCALLY_OWNED_FIELDS
+    from integrations.symbology import SYMBOLOGY_FIELDS
+
+    assert set(SYMBOLOGY_FIELDS) <= LOCALLY_OWNED_FIELDS
+    existing = {
+        "BTCUSDT": {
+            "id": "BTCUSDT",
+            "type": "spot",
+            "base_asset_id": "BTC",
+            "quote_asset_id": "USDT",
+            "unified_id": "spot-BTC-USDT",
+            "base_asset_match": "cmc_market_pair",
+            "category": ["Layer 1"],
+        }
+    }
+    incoming = [{"id": "BTCUSDT", "type": "spot", "base_asset_id": "WRONG", "category": None}]
+    merged = _merge_existing_fields(incoming, existing)
+    assert merged[0]["base_asset_id"] == "BTC"
+    assert merged[0]["unified_id"] == "spot-BTC-USDT"
+    assert merged[0]["category"] == ["Layer 1"]
