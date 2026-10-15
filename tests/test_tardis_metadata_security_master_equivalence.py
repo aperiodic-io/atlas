@@ -20,7 +20,13 @@ _LEGACY_TO_INTERNAL_EXCHANGE = {
 
 
 # Venues Tardis does not cover: their snapshots come from the venue API alone.
-_NOT_ON_TARDIS = {"grvt-perpetual", "nado-perpetual"}
+_NOT_ON_TARDIS = {
+    "bluefin-perpetual",
+    "grvt-perpetual",
+    "nado-perpetual",
+    "pacifica-perpetual",
+    "standx-perpetual",
+}
 # Venues whose API-only rows carry Atlas observation dates (see
 # atlas.update.API_CAPTURED_EXCHANGES); only rows Tardis supplies are compared.
 _API_CAPTURED_ON_TARDIS = {"hyperliquid-perps", "hyperliquid-spot", "dydx-perpetual"}
