@@ -27460,6 +27460,70 @@
       "symbol": "LQNA"
     },
     {
+      "cmc_id": 1214,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 1214,
+            "date_added": "2016-04-06T00:00:00Z",
+            "identity_match": "hyperliquid_full_name",
+            "is_active": true,
+            "last_updated": "2026-10-15T08:29:00Z",
+            "name": "Lisk",
+            "price_issue": "Hyperliquid price contradicts CMC for LSK/USDC.",
+            "price_usd": 0.1909907671640138,
+            "relative_price_difference": 0.7522088730643469,
+            "slug": "lisk"
+          }
+        ],
+        "catalogue_issue": "tolerated 2 unreadable of 8142 rows (2 duplicated, total moved by 1 mid-fetch): 0.0246%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1060",
+          "observed_at": "2026-10-15T08:29:46.465901Z",
+          "price": 0.109,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "LSK",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x502c7b9a06b509532f969eb4d2419af52d762bf8",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "Lisk",
+            "index": 1214,
+            "isCanonical": false,
+            "name": "LSK",
+            "pair": "@1060",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x772eafcad4949799f23ad7098081094e",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "price_mismatch",
+        "rationale": "LSK matches the CMC asset Lisk (ID 1214) by full name identity. Price evidence disagrees by 75.22%. Holding for review because Hyperliquid price evidence is price_mismatch."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-15T06:53:28.194333Z",
+        "original_id": "LSK/USDC"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-10-15T08:29:41.901249Z",
+      "slug": "lisk",
+      "status": "uncertain",
+      "symbol": "LSK"
+    },
+    {
       "cmc_id": null,
       "evidence": {
         "candidates": [],
