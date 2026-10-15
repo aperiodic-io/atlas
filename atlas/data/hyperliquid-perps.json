@@ -3522,7 +3522,7 @@
     "symbol": "IO:PRL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-09-28T12:18:41Z"
+    "first_capture": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "io:SBE",
@@ -5445,6 +5445,17 @@
     "contract_size": 1.0,
     "margin_asset": "USDC",
     "first_capture": "2026-08-18T00:00:00.000Z"
+  },
+  {
+    "id": "xyz:JIO",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-15T06:53:33.427610Z",
+    "internal_id": "perpetual-XYZ:JIO-USDC:USDC",
+    "symbol": "XYZ:JIO",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "xyz:JP225",
