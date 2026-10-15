@@ -56,6 +56,9 @@ Examples:
 - Perpetual: `btcusdt` (Binance futures) -> `perpetual-BTC-USDT:USDT`
 - Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
 - Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
+- Lighter perpetual: market `96` (`EURUSD`) -> `perpetual-EUR-USDC:USDC` (the numeric market id is the original id; a USD-quoted FX pair is named by its base, other pairs keep the full ticker: `USDJPY` -> `perpetual-USDJPY-USDC:USDC`)
+- Paradex perpetual: `XAU-USD-PERP` -> `perpetual-XAU-USDC:USDC` (settled in USDC)
+- Extended perpetual: `SPX500m-USD` -> `perpetual-SPX500M-USD:USD` (the asset as Extended names it, settled in its USD collateral)
 
 ## Installation
 
@@ -161,9 +164,12 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
 | `nado-perpetual` | ✅ **`STABLE`** |
+| `lighter-perpetual` | ✅ **`STABLE`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
+| `paradex-perpetual` | ✅ **`STABLE`** |
+| `extended-perpetual` | ✅ **`STABLE`** |
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
@@ -240,6 +246,7 @@ The repository currently ships precomputed JSON snapshots for:
 - `hyperliquid-spot`
 - `hyperliquid-perps`
 - `nado-perpetual` (venue API only; `first_capture` is Atlas's first observation)
+- `lighter-perpetual`
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
@@ -261,6 +268,8 @@ The repository currently ships precomputed JSON snapshots for:
 - `whitebit-perpetual`
 - `cryptocom-perpetual`
 - `cryptocom-futures`
+- `paradex-perpetual`
+- `extended-perpetual`
 
 ## Features
 

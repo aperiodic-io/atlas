@@ -49,6 +49,7 @@ from .exchange_definitions.deribit import (
     parse_deribit_api,
 )
 from .exchange_definitions.dydx import fetch_dydx_perps, parse_dydx
+from .exchange_definitions.extended import fetch_extended_perps, parse_extended
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import (
     fetch_gateio_futures_usdt,
@@ -76,6 +77,7 @@ from .exchange_definitions.hyperliquid import (
 )
 from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
+from .exchange_definitions.lighter import fetch_lighter_perps, parse_lighter
 from .exchange_definitions.mexc import fetch_mexc_perpetual, parse_mexc
 from .exchange_definitions.nado import fetch_nado_perps, parse_nado
 from .exchange_definitions.okx import (
@@ -87,6 +89,7 @@ from .exchange_definitions.okx import (
     parse_okex_swap,
 )
 from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
+from .exchange_definitions.paradex import fetch_paradex_perps, parse_paradex
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
 from .exchange_definitions.standx import fetch_standx_perps, parse_standx
@@ -384,6 +387,13 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     "kraken": _define("kraken", parse_kraken),
+    "lighter-perpetual": _define(
+        "lighter-perpetual",
+        parse_lighter,
+        tardis_id="lighter",
+        exchange_fetcher=fetch_lighter_perps,
+        allowed_types={"perpetual"},
+    ),
     "kucoin": _define("kucoin", parse_kucoin),
     "nado-perpetual": _define(
         "nado-perpetual",
@@ -406,6 +416,20 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_okex_futures,
         tardis_id="okex-futures",
         exchange_fetcher=fetch_okx_futures,
+    ),
+    "paradex-perpetual": _define(
+        "paradex-perpetual",
+        parse_paradex,
+        exchange_fetcher=fetch_paradex_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "extended-perpetual": _define(
+        "extended-perpetual",
+        parse_extended,
+        exchange_fetcher=fetch_extended_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
     ),
     "phemex": _define("phemex", parse_phemex),
     "poloniex": _define("poloniex", parse_poloniex),
