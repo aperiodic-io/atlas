@@ -38,7 +38,10 @@ INCLUDED_CATEGORY_TAGS = (
     "AI Agents",
     "AI Applications",
     "Interoperability",
+    "Memes",
 )
+# CMC files "Memes" under INDUSTRY rather than CATEGORY; no other INDUSTRY tag is wanted.
+INCLUDED_INDUSTRY_TAGS = frozenset({"Memes"})
 
 
 class JsonResponse(Protocol):
@@ -167,7 +170,11 @@ def _parse_categories(payload: object, cmc_id: int) -> list[str]:
     names = {
         tag.get("name")
         for tag in tags
-        if isinstance(tag, dict) and tag.get("category") == "CATEGORY"
+        if isinstance(tag, dict)
+        and (
+            tag.get("category") == "CATEGORY"
+            or (tag.get("category") == "INDUSTRY" and tag.get("name") in INCLUDED_INDUSTRY_TAGS)
+        )
     }
     return [name for name in INCLUDED_CATEGORY_TAGS if name in names]
 
