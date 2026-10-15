@@ -65,6 +65,9 @@ EXCHANGES = [
     "phemex",
     "poloniex",
     "upbit",
+    "pacifica-perpetual",
+    "standx-perpetual",
+    "bluefin-perpetual",
 ]
 
 
