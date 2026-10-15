@@ -1902,3 +1902,136 @@ class TestVariational:
     def test_is_not_beta(self):
         """A beta exchange would be skipped by the daily update."""
         assert is_beta_exchange("variational-perpetual") is False
+
+
+# ---------------------------------------------------------------------------
+# GMX v2 (Arbitrum)
+# ---------------------------------------------------------------------------
+
+# Recorded from https://arbitrum-api.gmxinfra.io on 2026-10-14 (trimmed to the
+# fields the fetcher reads).
+_GMX_MARKETS_INFO = {
+    "markets": [
+        {"name": "BTC/USD [WBTC.b-USDC]", "marketToken": "0x47c031236e19d024b42f8AE6780E44A573170703", "indexToken": "0x47904963fc8b2340414262125aF798B9655E58Cd", "longToken": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": True, "listingDate": "2023-08-08T00:00:00.000Z"},
+        {"name": "ETH/USD [ETH-USDC]", "marketToken": "0x70d95587d40A2caf56bd97485aB3Eec10Bee6336", "indexToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "longToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": True, "listingDate": "2023-08-08T00:00:00.000Z"},
+        {"name": "SWAP-ONLY [USDC-USDT]", "marketToken": "0xB686BcB112660343E6d15BDb65297e110C8311c4", "indexToken": "0x0000000000000000000000000000000000000000", "longToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "shortToken": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", "isListed": True, "listingDate": "2023-08-08T00:00:00.000Z"},
+        {"name": "ETH/USD [wstETH-USDe]", "marketToken": "0x0Cf1fb4d1FF67A3D8Ca92c9d6643F8F9be8e03E5", "indexToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "longToken": "0x5979D7b546E38E414F7E9822514be443A4800529", "shortToken": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34", "isListed": True, "listingDate": "2024-07-31T00:00:00.000Z"},
+        {"name": "XAUT (deprecated)/USD [WBTC.b-USDC]", "marketToken": "0xAbDb2530E24f0736DfbF6dA2600B52Bd6455acDd", "indexToken": "0xcF558864c6B130Ce76d20641D008ebd4871eDED0", "longToken": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": False, "listingDate": "2026-01-23T00:00:00.000Z"},
+        {"name": "XAUT.v2/USD [WBTC.b-USDC]", "marketToken": "0xeb28aD1a2e497F4Acc5D9b87e7B496623C93061E", "indexToken": "0x7624cccCc59361D583F28BEC40D37e7771d2ef5D", "longToken": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": True, "listingDate": "2026-01-23T00:00:00.000Z"},
+        {"name": "GOLD/USD [ETH-USDC]", "marketToken": "0x0Df2BE76F517BCF0000AbfFcB6344B3b2aC4Cc4f", "indexToken": "0xc48d782c5C54157d37d2Fa4E6BA27E8cf57Da956", "longToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": True, "listingDate": "2026-04-09T00:00:00.000Z"},
+        {"name": "SPY/USD [ETH-USDC]", "marketToken": "0xcBd4c1b0c89D50793c5A3e8d96d98FcB4f1B1c47", "indexToken": "0x0315441076FF6d3eA09814a2F90a1f980cF03e9e", "longToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "shortToken": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "isListed": True, "listingDate": "2026-08-21T00:00:00.000Z"},
+    ]
+}
+_GMX_TOKENS = {
+    "tokens": [
+        {"symbol": "ETH", "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "decimals": 18},
+        {"symbol": "BTC", "address": "0x47904963fc8b2340414262125aF798B9655E58Cd", "decimals": 8, "synthetic": True},
+        {"symbol": "WBTC.b", "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f", "decimals": 8},
+        {"symbol": "USDC", "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", "decimals": 6},
+        {"symbol": "USDT", "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", "decimals": 6},
+        {"symbol": "wstETH", "address": "0x5979D7b546E38E414F7E9822514be443A4800529", "decimals": 18},
+        {"symbol": "USDe", "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34", "decimals": 18},
+        {"symbol": "XAUT", "address": "0xcF558864c6B130Ce76d20641D008ebd4871eDED0", "decimals": 6, "synthetic": True},
+        {"symbol": "XAUT.v2", "address": "0x7624cccCc59361D583F28BEC40D37e7771d2ef5D", "decimals": 18, "synthetic": True},
+        {"symbol": "GOLD", "address": "0xc48d782c5C54157d37d2Fa4E6BA27E8cf57Da956", "decimals": 18, "synthetic": True},
+        {"symbol": "SPY", "address": "0x0315441076FF6d3eA09814a2F90a1f980cF03e9e", "decimals": 18, "synthetic": True},
+    ]
+}
+
+
+class TestGmx:
+    def _fetch(self):
+        from atlas.exchange_definitions.gmx import fetch_gmx_perps
+
+        def response(payload):
+            r = MagicMock()
+            r.raise_for_status.return_value = None
+            r.json.return_value = payload
+            return r
+
+        with patch(
+            "atlas.exchange_definitions.gmx.requests.get",
+            side_effect=[response(_GMX_MARKETS_INFO), response(_GMX_TOKENS)],
+        ) as get:
+            rows = fetch_gmx_perps(timeout_seconds=5)
+        assert [c.args[0] for c in get.call_args_list] == [
+            "https://arbitrum-api.gmxinfra.io/markets/info",
+            "https://arbitrum-api.gmxinfra.io/tokens",
+        ]
+        return rows
+
+    def test_fetch_keeps_listed_perpetual_markets(self):
+        # Swap-only pools trade no position, the deprecated XAUT market is
+        # delisted: neither is a contract the producer streams.
+        ids = [sd["id"] for sd in self._fetch()]
+        assert ids == [
+            "0x47c031236e19d024b42f8AE6780E44A573170703",
+            "0x70d95587d40A2caf56bd97485aB3Eec10Bee6336",
+            "0x0Cf1fb4d1FF67A3D8Ca92c9d6643F8F9be8e03E5",
+            "0xeb28aD1a2e497F4Acc5D9b87e7B496623C93061E",
+            "0x0Df2BE76F517BCF0000AbfFcB6344B3b2aC4Cc4f",
+            "0xcBd4c1b0c89D50793c5A3e8d96d98FcB4f1B1c47",
+        ]
+
+    def test_each_pool_is_its_own_usd_contract(self):
+        # ETH trades in several pools with separate open interest and
+        # funding; the pool is part of the symbol. The internal_id must equal
+        # the producer's Atlas-scheme ID (perpetual-<SYMBOL>-USD:USD).
+        by_id = {sd["id"]: parse_contract("gmx-perpetual", sd) for sd in self._fetch()}
+        assert by_id["0x70d95587d40A2caf56bd97485aB3Eec10Bee6336"].internal_id == "perpetual-ETH[ETH-USDC]-USD:USD"
+        assert by_id["0x0Cf1fb4d1FF67A3D8Ca92c9d6643F8F9be8e03E5"].internal_id == "perpetual-ETH[WSTETH-USDE]-USD:USD"
+        btc = by_id["0x47c031236e19d024b42f8AE6780E44A573170703"]
+        assert btc.internal_id == "perpetual-BTC[WBTC.B-USDC]-USD:USD"
+        assert btc.denominator == "USD"
+        assert btc.margin == "USD"
+        assert btc.contract_size == 1.0
+        assert btc.instrument_type == ContractType.perpetual
+
+    def test_underlying_classes(self):
+        # GMX's tradfi markets are commodities and US equities (SPY/QQQ ETFs,
+        # SPCX); tokenized gold (XAUT.v2) is a crypto token priced from crypto
+        # venues.
+        by_symbol = {sd["index_symbol"]: sd["underlying"] for sd in self._fetch()}
+        assert by_symbol == {
+            "BTC": "crypto",
+            "ETH": "crypto",
+            "XAUT.v2": "crypto",
+            "GOLD": "commodity",
+            "SPY": "equity",
+        }
+        from atlas.exchange_definitions.gmx import gmx_underlying
+
+        for symbol, expected in [
+            ("SILVER", UnderlyingType.commodity),
+            ("WTIOIL", UnderlyingType.commodity),
+            ("BRENTOIL", UnderlyingType.commodity),
+            ("NATGAS", UnderlyingType.commodity),
+            ("QQQ", UnderlyingType.equity),
+            ("SPCX", UnderlyingType.equity),
+            ("kPEPE", UnderlyingType.crypto),
+        ]:
+            assert gmx_underlying(symbol) == expected
+
+    def test_listing_date_from_the_venue(self):
+        # GMX reports each market's listing date. It is kept as `listing_date`,
+        # not `first_capture`: that field holds Tardis availability bounds,
+        # which do not exist for GMX.
+        rows = {sd["id"]: sd for sd in self._fetch()}
+        spy = rows["0xcBd4c1b0c89D50793c5A3e8d96d98FcB4f1B1c47"]
+        assert spy["listing_date"] == "2026-08-21T00:00:00.000Z"
+        assert "first_capture" not in spy
+
+    def test_colliding_symbols_are_dropped(self):
+        from atlas.exchange_definitions.gmx import gmx_symbols
+
+        twin = dict(_GMX_MARKETS_INFO["markets"][1], marketToken="0x0000000000000000000000000000000000000001")
+        rows = gmx_symbols({"markets": [_GMX_MARKETS_INFO["markets"][1], twin]}, _GMX_TOKENS)
+        assert rows == []
+
+    def test_not_beta(self):
+        # The daily update skips beta exchanges; GMX is exchange-API only.
+        assert is_beta_exchange("gmx-perpetual") is False
+
+    def test_rows_without_pool_metadata_are_skipped(self):
+        with pytest.raises(SkipSymbol):
+            parse_contract("gmx-perpetual", _sd("0x70d95587d40A2caf56bd97485aB3Eec10Bee6336", "perpetual"))
