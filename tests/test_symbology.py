@@ -479,7 +479,9 @@ def test_categories_are_cleared_when_the_asset_has_none():
     rows = {"binance-spot": [_row("ethusdt", "ETH", "USDT", category=["DeFi"])]}
     pairs = [_pair("binance", "spot", 1027, "ETH", 825, "USDT", url="https://x/trade/ETH_USDT")]
     _build(rows, pairs)
-    assert "category" not in rows["binance-spot"][0]
+    # Every row with a cmc_id carries category, empty or not, as it did
+    # before symbology: readers index it directly.
+    assert rows["binance-spot"][0]["category"] == []
 
 
 @pytest.mark.parametrize(
@@ -814,6 +816,7 @@ def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
     assert registry.get("AAL").cmc_id is None
     assert _by_id(rows, "gate-io-futures", "AAL_USDT")["base_asset_match"] == "venue_reference"
     assert "cmc_id" not in _by_id(rows, "gate-io-futures", "AAL_USDT")
+    assert "category" not in _by_id(rows, "gate-io-futures", "AAL_USDT")
     assert _by_id(rows, "gate-io-futures", "NAS100_USDT")["unified_id"] == "perpetual-NAS100-USDT:USDT"
     assert registry.get("NAS100").asset_class is AssetClass.index
     assert _by_id(rows, "gate-io-futures", "TSLA_USDT")["base_asset_id"] == "TSLA"

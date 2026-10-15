@@ -138,6 +138,16 @@ def test_unified_ids_agree_with_their_legs(snapshots):
     assert problems == []
 
 
+def test_rows_with_a_cmc_id_keep_a_category_list(snapshots):
+    """The pre-symbology contract: ``category`` sits beside ``cmc_id``, even when empty."""
+    missing = [
+        (exchange, row["id"])
+        for exchange, row in _rows(snapshots)
+        if "cmc_id" in row and not isinstance(row.get("category"), list)
+    ]
+    assert missing == []
+
+
 def test_derivatives_margin_and_spot_has_none(snapshots):
     for exchange, row in _rows(snapshots):
         if row.get("type") == "spot":

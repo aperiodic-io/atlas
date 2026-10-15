@@ -1483,13 +1483,12 @@ def _write_base(
     row = instrument.row
     # cmc_id and category survive the strip of symbology fields, so they go
     # first: a rebuild then appends the rest in the same order as a first build.
+    # Rows with a cmc_id always carry category, empty or not, as before.
     if base.cmc_id is not None:
         row["cmc_id"] = base.cmc_id
-    else:
-        row.pop("cmc_id", None)
-    if base.categories:
         row["category"] = list(base.categories)
     else:
+        row.pop("cmc_id", None)
         row.pop("category", None)
     row["base_asset_id"] = base.asset_id
     row["base_asset_match"] = method.value
