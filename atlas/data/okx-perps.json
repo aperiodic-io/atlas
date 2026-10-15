@@ -5684,6 +5684,16 @@
     "first_capture": "2026-07-14T00:00:00.000Z"
   },
   {
+    "id": "SOFI-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "perpetual-SOFI-USDT:USDT",
+    "symbol": "SOFI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SOFTBANK-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -6207,6 +6217,16 @@
     "first_capture": "2023-10-31T00:00:00.000Z"
   },
   {
+    "id": "TLT-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "perpetual-TLT-USDT:USDT",
+    "symbol": "TLT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TMF-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -6453,6 +6473,16 @@
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
+    "id": "TXN-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "perpetual-TXN-USDT:USDT",
+    "symbol": "TXN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "UB-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-UB-USDT:USDT",
@@ -6677,6 +6707,16 @@
     "contract_size": 10.0,
     "first_capture": "2024-03-25T00:00:00.000Z",
     "end_date": "2024-08-30T00:00:00.000Z"
+  },
+  {
+    "id": "VICR-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "perpetual-VICR-USDT:USDT",
+    "symbol": "VICR",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "VINE-USDT-SWAP",
