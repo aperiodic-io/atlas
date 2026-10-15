@@ -6,12 +6,12 @@
     "symbol": "AAPL",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "AAPL.APPLE_TOKENIZED_STOCK_HYPERLIQUID",
     "cmc_id": 39624,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "AAPL.APPLE_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AAPL.APPLE_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -23,12 +23,12 @@
     "symbol": "AAPLX",
     "denominator": "USDC",
     "first_capture": "2026-08-07T04:22:39Z",
-    "base_asset_id": "AAPLX",
     "cmc_id": 36994,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "AAPLX",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AAPLX-USDC"
@@ -58,8 +58,8 @@
     "symbol": "AIW3",
     "denominator": "USDC",
     "first_capture": "2026-08-04T05:10:58Z",
-    "base_asset_id": "AIW3",
     "cmc_id": 40957,
+    "base_asset_id": "AIW3",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AIW3-USDC"
@@ -71,12 +71,12 @@
     "symbol": "AMZN",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "AMZN.AMAZON_TOKENIZED_STOCK_HYPERLIQUID",
     "cmc_id": 39619,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "AMZN.AMAZON_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AMZN.AMAZON_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -89,10 +89,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 35092,
-    "base_asset_id": "ANON",
     "category": [
       "AI Agents"
     ],
+    "base_asset_id": "ANON",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ANON-USDC"
@@ -122,8 +122,8 @@
     "symbol": "ANZ",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ANZ",
     "cmc_id": 35577,
+    "base_asset_id": "ANZ",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ANZ-USDC"
@@ -135,11 +135,11 @@
     "symbol": "APU",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "APU",
     "cmc_id": 30008,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "APU",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-APU-USDC"
@@ -196,12 +196,12 @@
     "symbol": "AVGO",
     "denominator": "USDC",
     "first_capture": "2026-05-13T05:44:50Z",
-    "base_asset_id": "AVGO",
     "cmc_id": 39871,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "AVGO",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AVGO-USDC"
@@ -213,13 +213,13 @@
     "symbol": "AXL",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "AXL",
     "cmc_id": 17799,
     "category": [
       "DeFi",
       "Real World Assets Protocols",
       "Interoperability"
     ],
+    "base_asset_id": "AXL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-AXL-USDH"
@@ -231,13 +231,13 @@
     "symbol": "AZTEC",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "AZTEC",
     "cmc_id": 39521,
     "category": [
       "Layer 2",
       "Smart Contracts",
       "Privacy"
     ],
+    "base_asset_id": "AZTEC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-AZTEC-USDC"
@@ -258,11 +258,11 @@
     "symbol": "BASED",
     "denominator": "USDC",
     "first_capture": "2026-03-31T04:33:54Z",
-    "base_asset_id": "BASED",
     "cmc_id": 39812,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "BASED",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-BASED-USDC"
@@ -292,11 +292,11 @@
     "symbol": "BERA",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "BERA",
     "cmc_id": 24647,
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "BERA",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-BERA-USDC"
@@ -381,10 +381,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 36961,
-    "base_asset_id": "BUDDY",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "BUDDY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-BUDDY-USDC"
@@ -504,11 +504,11 @@
     "symbol": "COOK",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "COOK.COOK_PROTOCOL",
     "cmc_id": 8997,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "COOK.COOK_PROTOCOL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-COOK.COOK_PROTOCOL-USDC"
@@ -538,12 +538,12 @@
     "symbol": "CRCL",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "CRCL",
     "cmc_id": 38154,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "CRCL",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-CRCL-USDC"
@@ -555,12 +555,12 @@
     "symbol": "CRCLX",
     "denominator": "USDC",
     "first_capture": "2026-08-09T03:29:13Z",
-    "base_asset_id": "CRCLX",
     "cmc_id": 37005,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "CRCLX",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-CRCLX-USDC"
@@ -572,13 +572,13 @@
     "symbol": "CREAM",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "CREAM",
     "cmc_id": 6193,
     "category": [
       "DeFi",
       "Lending & Borrowing",
       "DAO"
     ],
+    "base_asset_id": "CREAM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-CREAM-USDC"
@@ -635,11 +635,11 @@
     "symbol": "DIME",
     "denominator": "USDC",
     "first_capture": "2026-03-10T04:05:36Z",
-    "base_asset_id": "DIME",
     "cmc_id": 39656,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "DIME",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-DIME-USDC"
@@ -660,11 +660,11 @@
     "symbol": "DRV",
     "denominator": "USDC",
     "first_capture": "2026-07-11T05:09:37Z",
-    "base_asset_id": "DRV",
     "cmc_id": 35014,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "DRV",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-DRV-USDC"
@@ -695,10 +695,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 34751,
-    "base_asset_id": "FARM.FARM_2",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "FARM.FARM_2",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-FARM.FARM_2-USDC"
@@ -765,10 +765,10 @@
     "denominator": "USDC",
     "first_capture": "2026-07-29T05:17:55Z",
     "cmc_id": 34987,
-    "base_asset_id": "FLOCK",
     "category": [
       "AI Applications"
     ],
+    "base_asset_id": "FLOCK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-FLOCK-USDC"
@@ -781,10 +781,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 7950,
-    "base_asset_id": "FLR",
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "FLR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-FLR-USDC"
@@ -895,11 +895,11 @@
     "symbol": "G",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "G",
     "cmc_id": 32120,
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "G",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-G-USDC"
@@ -951,12 +951,12 @@
     "symbol": "GOOGL",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "GOOGL.ALPHABET_TOKENIZED_STOCK_HYPERLIQUID",
     "cmc_id": 39622,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "GOOGL.ALPHABET_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-GOOGL.ALPHABET_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -968,8 +968,8 @@
     "symbol": "GPT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "GPT",
     "cmc_id": 24281,
+    "base_asset_id": "GPT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-GPT-USDC"
@@ -999,11 +999,11 @@
     "symbol": "H",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "H",
     "cmc_id": 36922,
     "category": [
       "Privacy"
     ],
+    "base_asset_id": "H",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-H-USDC"
@@ -1052,10 +1052,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 34624,
-    "base_asset_id": "HFUN",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "HFUN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-HFUN-USDC"
@@ -1126,11 +1126,11 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 39625,
-    "base_asset_id": "HOOD.ROBINHOOD_TOKENIZED_STOCK_HYPERLIQUID",
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "HOOD.ROBINHOOD_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-HOOD.ROBINHOOD_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -1188,11 +1188,11 @@
     "denominator": "USDC",
     "first_capture": "2026-05-19T06:03:41Z",
     "cmc_id": 39635,
-    "base_asset_id": "HPL",
     "category": [
       "DeFi",
       "Lending & Borrowing"
     ],
+    "base_asset_id": "HPL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-HPL-USDC"
@@ -1204,12 +1204,12 @@
     "symbol": "HPL",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "HPL",
     "cmc_id": 39635,
     "category": [
       "DeFi",
       "Lending & Borrowing"
     ],
+    "base_asset_id": "HPL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-HPL-USDH"
@@ -1239,11 +1239,11 @@
     "symbol": "HREKT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "REKT",
     "cmc_id": 34434,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "REKT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-REKT-USDC"
@@ -1301,11 +1301,11 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 32196,
-    "base_asset_id": "HYPE",
     "category": [
       "DeFi",
       "Layer 1"
     ],
+    "base_asset_id": "HYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-HYPE-USDC"
@@ -1317,12 +1317,12 @@
     "symbol": "HYPE",
     "denominator": "USDE",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "HYPE",
     "cmc_id": 32196,
     "category": [
       "DeFi",
       "Layer 1"
     ],
+    "base_asset_id": "HYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDE",
     "unified_id": "spot-HYPE-USDE"
@@ -1334,12 +1334,12 @@
     "symbol": "HYPE",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "HYPE",
     "cmc_id": 32196,
     "category": [
       "DeFi",
       "Layer 1"
     ],
+    "base_asset_id": "HYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-HYPE-USDH"
@@ -1351,12 +1351,12 @@
     "symbol": "HYPE",
     "denominator": "USDT0",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "HYPE",
     "cmc_id": 32196,
     "category": [
       "DeFi",
       "Layer 1"
     ],
+    "base_asset_id": "HYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT0",
     "unified_id": "spot-HYPE-USDT0"
@@ -1377,8 +1377,8 @@
     "symbol": "ISLAND",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ISLAND",
     "cmc_id": 34794,
+    "base_asset_id": "ISLAND",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ISLAND-USDC"
@@ -1436,10 +1436,10 @@
     "denominator": "USDC",
     "first_capture": "2026-05-21T06:06:28Z",
     "cmc_id": 39072,
-    "base_asset_id": "KHYPE",
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "KHYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-KHYPE-USDC"
@@ -1451,11 +1451,11 @@
     "symbol": "KHYPE",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "KHYPE",
     "cmc_id": 39072,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "KHYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-KHYPE-USDH"
@@ -1468,12 +1468,12 @@
     "denominator": "USDC",
     "first_capture": "2026-04-22T04:43:51Z",
     "cmc_id": 38828,
-    "base_asset_id": "KITE",
     "category": [
       "Layer 1",
       "DApp",
       "AI Agents"
     ],
+    "base_asset_id": "KITE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-KITE-USDC"
@@ -1504,10 +1504,10 @@
     "denominator": "USDC",
     "first_capture": "2026-05-21T06:06:28Z",
     "cmc_id": 39070,
-    "base_asset_id": "KNTQ",
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "KNTQ",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-KNTQ-USDC"
@@ -1519,11 +1519,11 @@
     "symbol": "KNTQ",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "KNTQ",
     "cmc_id": 39070,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "KNTQ",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-KNTQ-USDH"
@@ -1562,11 +1562,11 @@
     "symbol": "LATINA",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "LATINA",
     "cmc_id": 37578,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "LATINA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-LATINA-USDC"
@@ -1578,11 +1578,11 @@
     "symbol": "LAUNCH",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "LAUNCH",
     "cmc_id": 9279,
     "category": [
       "Privacy"
     ],
+    "base_asset_id": "LAUNCH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-LAUNCH-USDC"
@@ -1648,8 +1648,8 @@
     "symbol": "LMTS",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "LMTS",
     "cmc_id": 38756,
+    "base_asset_id": "LMTS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-LMTS-USDC"
@@ -1678,7 +1678,16 @@
     "first_capture": "2026-10-15T06:53:28.194333Z",
     "internal_id": "spot-LSK-USDC",
     "symbol": "LSK",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "cmc_id": 1214,
+    "category": [
+      "Layer 2",
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "LSK",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-LSK-USDC"
   },
   {
     "id": "LTHREE/USDC",
@@ -1759,12 +1768,12 @@
     "symbol": "META",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "META.META_PLATFORMS_TOKENIZED_STOCK_HYPERLIQUID",
     "cmc_id": 39615,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "META.META_PLATFORMS_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-META.META_PLATFORMS_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -1794,11 +1803,11 @@
     "symbol": "MOG",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "MOG",
     "cmc_id": 27659,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "MOG",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-MOG-USDC"
@@ -1810,13 +1819,13 @@
     "symbol": "MON",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "MON",
     "cmc_id": 30495,
     "category": [
       "DeFi",
       "Layer 1",
       "Smart Contracts"
     ],
+    "base_asset_id": "MON",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-MON-USDC"
@@ -1838,11 +1847,11 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 39616,
-    "base_asset_id": "MSFT.MICROSOFT_TOKENIZED_STOCK_HYPERLIQUID",
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "MSFT.MICROSOFT_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-MSFT.MICROSOFT_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -1854,12 +1863,12 @@
     "symbol": "MU",
     "denominator": "USDC",
     "first_capture": "2026-05-13T05:44:50Z",
-    "base_asset_id": "MU",
     "cmc_id": 39469,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "MU",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-MU-USDC"
@@ -1880,12 +1889,12 @@
     "symbol": "MUX",
     "denominator": "USDC",
     "first_capture": "2026-07-25T05:10:58Z",
-    "base_asset_id": "MUX",
     "cmc_id": 40175,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "MUX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-MUX-USDC"
@@ -1906,11 +1915,11 @@
     "symbol": "NAV",
     "denominator": "USDC",
     "first_capture": "2026-09-23T07:14:00Z",
-    "base_asset_id": "NAV",
     "cmc_id": 377,
     "category": [
       "Privacy"
     ],
+    "base_asset_id": "NAV",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-NAV-USDC"
@@ -1922,8 +1931,8 @@
     "symbol": "NBT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "NBT",
     "cmc_id": 18101,
+    "base_asset_id": "NBT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-NBT-USDC"
@@ -1935,11 +1944,11 @@
     "symbol": "NEIRO",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "NEIRO.NEIRO_SOL_2",
     "cmc_id": 32464,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "NEIRO.NEIRO_SOL_2",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-NEIRO.NEIRO_SOL_2-USDC"
@@ -1960,11 +1969,11 @@
     "symbol": "NFT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "NFT",
     "cmc_id": 9816,
     "category": [
       "Collectibles & NFTs"
     ],
+    "base_asset_id": "NFT",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-NFT-USDC"
@@ -2003,12 +2012,12 @@
     "symbol": "NVDAX",
     "denominator": "USDC",
     "first_capture": "2026-07-16T04:56:20Z",
-    "base_asset_id": "NVDAX",
     "cmc_id": 36992,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "NVDAX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-NVDAX-USDC"
@@ -2056,12 +2065,12 @@
     "symbol": "ORCL",
     "denominator": "USDC",
     "first_capture": "2026-05-13T05:44:50Z",
-    "base_asset_id": "ORCL",
     "cmc_id": 39482,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "ORCL",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ORCL-USDC"
@@ -2082,8 +2091,8 @@
     "symbol": "PANDA",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PANDA",
     "cmc_id": 19400,
+    "base_asset_id": "PANDA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PANDA-USDC"
@@ -2095,8 +2104,8 @@
     "symbol": "PEAR",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PEAR",
     "cmc_id": 25394,
+    "base_asset_id": "PEAR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PEAR-USDC"
@@ -2126,11 +2135,11 @@
     "symbol": "PEPE",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PEPE",
     "cmc_id": 24478,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "PEPE",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PEPE-USDC"
@@ -2142,11 +2151,11 @@
     "symbol": "PERP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PERP",
     "cmc_id": 6950,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "PERP",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PERP-USDC"
@@ -2186,10 +2195,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 34625,
-    "base_asset_id": "PIP",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "PIP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PIP-USDC"
@@ -2219,11 +2228,11 @@
     "symbol": "PUMP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PUMP.PUMP_SOLANA",
     "cmc_id": 33991,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "PUMP.PUMP_SOLANA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PUMP.PUMP_SOLANA-USDC"
@@ -2245,10 +2254,10 @@
     "denominator": "USDC",
     "cmc_id": 34332,
     "first_capture": "2024-10-29T00:00:00.000Z",
-    "base_asset_id": "PURR.PURR",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "PURR.PURR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PURR.PURR-USDC"
@@ -2291,8 +2300,8 @@
     "symbol": "QQQ",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "QQQ.INVESCO_QQQ_TRUST_TOKENIZED_ETF_HYPERLIQUID",
     "cmc_id": 39623,
+    "base_asset_id": "QQQ.INVESCO_QQQ_TRUST_TOKENIZED_ETF_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-QQQ.INVESCO_QQQ_TRUST_TOKENIZED_ETF_HYPERLIQUID-USDC"
@@ -2313,12 +2322,12 @@
     "symbol": "QQQX",
     "denominator": "USDC",
     "first_capture": "2026-07-21T05:16:51Z",
-    "base_asset_id": "QQQX",
     "cmc_id": 37057,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "QQQX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-QQQX-USDC"
@@ -2348,8 +2357,8 @@
     "symbol": "RAIN",
     "denominator": "USDC",
     "first_capture": "2026-08-20T02:52:07Z",
-    "base_asset_id": "RAIN",
     "cmc_id": 38341,
+    "base_asset_id": "RAIN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RAIN-USDC"
@@ -2361,11 +2370,11 @@
     "symbol": "RAM",
     "denominator": "USDC",
     "first_capture": "2026-03-08T04:08:14Z",
-    "base_asset_id": "RAM",
     "cmc_id": 40676,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "RAM",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RAM-USDC"
@@ -2458,11 +2467,11 @@
     "symbol": "RIVER",
     "denominator": "USDC",
     "first_capture": "2026-03-26T04:30:54Z",
-    "base_asset_id": "RIVER",
     "cmc_id": 38417,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "RIVER",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RIVER-USDC"
@@ -2492,8 +2501,8 @@
     "symbol": "RUG",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "RUG",
     "cmc_id": 21885,
+    "base_asset_id": "RUG",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RUG-USDC"
@@ -2505,11 +2514,11 @@
     "symbol": "RZR",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "RZR",
     "cmc_id": 37291,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "RZR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RZR-USDC"
@@ -2530,8 +2539,8 @@
     "symbol": "SEDA",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SEDA",
     "cmc_id": 23305,
+    "base_asset_id": "SEDA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SEDA-USDC"
@@ -2552,8 +2561,8 @@
     "symbol": "SENT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SENT",
     "cmc_id": 38868,
+    "base_asset_id": "SENT",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SENT-USDC"
@@ -2592,8 +2601,8 @@
     "symbol": "SIGN",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SIGN",
     "cmc_id": 35600,
+    "base_asset_id": "SIGN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SIGN-USDC"
@@ -2614,12 +2623,12 @@
     "symbol": "SKHYX",
     "denominator": "USDC",
     "first_capture": "2026-07-22T10:49:17+02:00",
-    "base_asset_id": "SKHYX",
     "cmc_id": 40786,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "SKHYX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SKHYX-USDC"
@@ -2631,12 +2640,12 @@
     "symbol": "SLAY",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SLAY",
     "cmc_id": 36020,
     "category": [
       "DeFi",
       "Interoperability"
     ],
+    "base_asset_id": "SLAY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SLAY-USDC"
@@ -2683,11 +2692,11 @@
     "symbol": "SOON",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SOON",
     "cmc_id": 36542,
     "category": [
       "Layer 2"
     ],
+    "base_asset_id": "SOON",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SOON-USDC"
@@ -2699,11 +2708,11 @@
     "symbol": "SOVRN",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SOVRN",
     "cmc_id": 19722,
     "category": [
       "DAO"
     ],
+    "base_asset_id": "SOVRN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SOVRN-USDC"
@@ -2715,12 +2724,12 @@
     "symbol": "SPCX",
     "denominator": "USDC",
     "first_capture": "2026-06-14T06:36:01Z",
-    "base_asset_id": "SPCX",
     "cmc_id": 39501,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "SPCX",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SPCX-USDC"
@@ -2741,12 +2750,12 @@
     "symbol": "SPCXX",
     "denominator": "USDC",
     "first_capture": "2026-08-01T05:23:03Z",
-    "base_asset_id": "SPCXX",
     "cmc_id": 40218,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "SPCXX",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SPCXX-USDC"
@@ -2780,12 +2789,12 @@
     "symbol": "SPYX",
     "denominator": "USDC",
     "first_capture": "2026-07-18T04:45:27Z",
-    "base_asset_id": "SPYX",
     "cmc_id": 37006,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "SPYX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SPYX-USDC"
@@ -2797,12 +2806,12 @@
     "symbol": "STABLE",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "STABLE",
     "cmc_id": 38892,
     "category": [
       "Layer 1",
       "Staking"
     ],
+    "base_asset_id": "STABLE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-STABLE-USDC"
@@ -2877,11 +2886,11 @@
     "symbol": "SWAP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SWAP",
     "cmc_id": 5829,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "SWAP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SWAP-USDC"
@@ -2902,12 +2911,12 @@
     "symbol": "SYN",
     "denominator": "USDC",
     "first_capture": "2026-09-14T07:29:23Z",
-    "base_asset_id": "SYN",
     "cmc_id": 12147,
     "category": [
       "DeFi",
       "Interoperability"
     ],
+    "base_asset_id": "SYN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SYN-USDC"
@@ -3000,8 +3009,8 @@
     "symbol": "TREAD",
     "denominator": "USDC",
     "first_capture": "2026-09-15T07:06:42Z",
-    "base_asset_id": "TREAD",
     "cmc_id": 42319,
+    "base_asset_id": "TREAD",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-TREAD-USDC"
@@ -3022,11 +3031,11 @@
     "symbol": "TRUMP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "TRUMP",
     "cmc_id": 35336,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "TRUMP",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-TRUMP-USDC"
@@ -3048,11 +3057,11 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 39618,
-    "base_asset_id": "TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID",
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID-USDC"
@@ -3064,12 +3073,12 @@
     "symbol": "TSLAX",
     "denominator": "USDC",
     "first_capture": "2026-08-05T05:11:11Z",
-    "base_asset_id": "TSLAX",
     "cmc_id": 37004,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
+    "base_asset_id": "TSLAX",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "unified_id": "spot-TSLAX-USDC"
@@ -3081,11 +3090,11 @@
     "symbol": "UANSEM",
     "denominator": "USDC",
     "first_capture": "2026-07-10T05:59:19Z",
-    "base_asset_id": "ANSEM",
     "cmc_id": 40588,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "ANSEM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ANSEM-USDC"
@@ -3115,11 +3124,11 @@
     "symbol": "UBTC",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "BTC",
     "cmc_id": 1,
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "BTC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-BTC-USDC"
@@ -3131,11 +3140,11 @@
     "symbol": "UBTC",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "BTC",
     "cmc_id": 1,
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "BTC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDH",
     "unified_id": "spot-BTC-USDH"
@@ -3165,12 +3174,12 @@
     "symbol": "UETH",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ETH",
     "cmc_id": 1027,
     "category": [
       "Layer 1",
       "Smart Contracts"
     ],
+    "base_asset_id": "ETH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ETH-USDC"
@@ -3182,12 +3191,12 @@
     "symbol": "UETH",
     "denominator": "USDH",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ETH",
     "cmc_id": 1027,
     "category": [
       "Layer 1",
       "Smart Contracts"
     ],
+    "base_asset_id": "ETH",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDH",
     "unified_id": "spot-ETH-USDH"
@@ -3235,8 +3244,8 @@
     "symbol": "UP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "UP.UNIFI_PROTOCOL",
     "cmc_id": 7077,
+    "base_asset_id": "UP.UNIFI_PROTOCOL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-UP.UNIFI_PROTOCOL-USDC"
@@ -3257,8 +3266,8 @@
     "symbol": "UPUMP",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "PUMP",
     "cmc_id": 36507,
+    "base_asset_id": "PUMP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-PUMP-USDC"
@@ -3270,8 +3279,8 @@
     "symbol": "USDE",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "USDE",
     "cmc_id": 29470,
+    "base_asset_id": "USDE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-USDE-USDC"
@@ -3310,10 +3319,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 38517,
-    "base_asset_id": "USDT0",
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "USDT0",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-USDT0-USDC"
@@ -3326,10 +3335,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-24T04:15:17Z",
     "cmc_id": 36849,
-    "base_asset_id": "USDUC",
     "category": [
       "Memes"
     ],
+    "base_asset_id": "USDUC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-USDUC-USDC"
@@ -3368,11 +3377,11 @@
     "symbol": "USOL",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "SOL",
     "cmc_id": 5426,
     "category": [
       "Layer 1"
     ],
+    "base_asset_id": "SOL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SOL-USDC"
@@ -3393,8 +3402,8 @@
     "symbol": "USR",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "USR",
     "cmc_id": 32873,
+    "base_asset_id": "USR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-USR-USDC"
@@ -3451,12 +3460,12 @@
     "symbol": "UZEC",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ZEC",
     "cmc_id": 1437,
     "category": [
       "Layer 1",
       "Privacy"
     ],
+    "base_asset_id": "ZEC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ZEC-USDC"
@@ -3513,8 +3522,8 @@
     "symbol": "VSN",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "VSN",
     "cmc_id": 37322,
+    "base_asset_id": "VSN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-VSN-USDC"
@@ -3526,11 +3535,11 @@
     "symbol": "WAGMI",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "WAGMI",
     "cmc_id": 35309,
     "category": [
       "AI Agents"
     ],
+    "base_asset_id": "WAGMI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-WAGMI-USDC"
@@ -3551,8 +3560,8 @@
     "symbol": "WARS",
     "denominator": "USDC",
     "first_capture": "2026-05-30T05:44:14Z",
-    "base_asset_id": "WARS",
     "cmc_id": 39901,
+    "base_asset_id": "WARS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-WARS-USDC"
@@ -3573,8 +3582,8 @@
     "symbol": "WBRL",
     "denominator": "USDC",
     "first_capture": "2026-07-15T04:47:55Z",
-    "base_asset_id": "WBRL",
     "cmc_id": 40233,
+    "base_asset_id": "WBRL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-WBRL-USDC"
@@ -3595,11 +3604,11 @@
     "symbol": "WMNT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "WMNT",
     "cmc_id": 27614,
     "category": [
       "DeFi"
     ],
+    "base_asset_id": "WMNT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-WMNT-USDC"
@@ -3611,11 +3620,11 @@
     "symbol": "WOULD",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "WOULD",
     "cmc_id": 35837,
     "category": [
       "Memes"
     ],
+    "base_asset_id": "WOULD",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-WOULD-USDC"
@@ -3655,10 +3664,10 @@
     "denominator": "USDC",
     "first_capture": "2026-08-19T02:52:47Z",
     "cmc_id": 34212,
-    "base_asset_id": "XAUM",
     "category": [
       "Real World Assets Protocols"
     ],
+    "base_asset_id": "XAUM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-XAUM-USDC"
@@ -3671,10 +3680,10 @@
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
     "cmc_id": 37082,
-    "base_asset_id": "XAUT0",
     "category": [
       "Real World Assets Protocols"
     ],
+    "base_asset_id": "XAUT0",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-XAUT0-USDC"
@@ -3686,11 +3695,11 @@
     "symbol": "XAUT0",
     "denominator": "USDT0",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "XAUT0",
     "cmc_id": 37082,
     "category": [
       "Real World Assets Protocols"
     ],
+    "base_asset_id": "XAUT0",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT0",
     "unified_id": "spot-XAUT0-USDT0"
@@ -3747,11 +3756,11 @@
     "symbol": "ZAMA",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "base_asset_id": "ZAMA",
     "cmc_id": 39332,
     "category": [
       "Privacy"
     ],
+    "base_asset_id": "ZAMA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-ZAMA-USDC"
