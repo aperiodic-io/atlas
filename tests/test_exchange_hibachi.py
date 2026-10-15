@@ -22,7 +22,7 @@ from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 from atlas.update_sources import HybridSymbolSource, TardisSymbolSource
 
-PAYLOAD = json.loads((Path(__file__).parent / "data" / "hibachi_inventory.json").read_text())
+PAYLOAD = json.loads((Path(__file__).parent / "data" / "hibachi_inventory.json").read_text(encoding="utf-8"))
 EXCHANGE = "hibachi-perpetual"
 
 

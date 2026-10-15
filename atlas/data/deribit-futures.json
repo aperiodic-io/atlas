@@ -293,7 +293,8 @@
     "symbol": "AVAX",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "AVAX_USDC-13SEP26",
@@ -2928,7 +2929,8 @@
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "BTC-13SEP24",
@@ -3812,7 +3814,7 @@
     "quantity_unit": "quote",
     "underlying": "crypto",
     "delivery_date": "2026-10-18T08:00:00+00:00",
-    "first_capture": "2026-10-14T21:25:17.211586Z",
+    "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20261018",
     "symbol": "BTC",
     "denominator": "USD",
@@ -8365,7 +8367,8 @@
     "symbol": "BTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "BTC_USDC-13SEP26",
@@ -8765,7 +8768,7 @@
     "quantity_unit": "base",
     "underlying": "crypto",
     "delivery_date": "2026-10-18T08:00:00+00:00",
-    "first_capture": "2026-10-14T21:25:17.211586Z",
+    "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "future-BTC-USDC:USDC-20261018",
     "symbol": "BTC",
     "denominator": "USDC",
@@ -11120,7 +11123,8 @@
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "ETH-13SEP24",
@@ -12004,7 +12008,7 @@
     "quantity_unit": "quote",
     "underlying": "crypto",
     "delivery_date": "2026-10-18T08:00:00+00:00",
-    "first_capture": "2026-10-14T21:25:17.211586Z",
+    "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20261018",
     "symbol": "ETH",
     "denominator": "USD",
@@ -16046,7 +16050,8 @@
     "symbol": "ETH",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "ETH_USDC-13SEP26",
@@ -16446,7 +16451,7 @@
     "quantity_unit": "base",
     "underlying": "crypto",
     "delivery_date": "2026-10-18T08:00:00+00:00",
-    "first_capture": "2026-10-14T21:25:17.211586Z",
+    "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "future-ETH-USDC:USDC-20261018",
     "symbol": "ETH",
     "denominator": "USDC",
@@ -18295,7 +18300,8 @@
     "symbol": "HYPE",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "HYPE_USDC-13SEP26",
@@ -20226,7 +20232,8 @@
     "symbol": "SOL",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "SOL_USDC-13SEP26",
@@ -22487,7 +22494,8 @@
     "symbol": "TRX",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "TRX_USDC-13SEP26",
@@ -24748,7 +24756,8 @@
     "symbol": "XRP",
     "denominator": "USDC",
     "margin": "USDC",
-    "delivery_date": "2026-10-13T00:00:00"
+    "delivery_date": "2026-10-13T00:00:00",
+    "end_date": "2026-10-14T00:00:00.000Z"
   },
   {
     "id": "XRP_USDC-13SEP26",

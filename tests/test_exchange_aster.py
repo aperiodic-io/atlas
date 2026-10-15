@@ -20,7 +20,7 @@ from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_e
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
-PAYLOAD = json.loads((Path(__file__).parent / "data" / "aster_exchangeinfo.json").read_text())
+PAYLOAD = json.loads((Path(__file__).parent / "data" / "aster_exchangeinfo.json").read_text(encoding="utf-8"))
 EXCHANGE = "aster-perpetual"
 
 

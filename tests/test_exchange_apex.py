@@ -20,7 +20,7 @@ from atlas.exchanges import get_allowed_types, get_exchange_fetcher, is_on_tardi
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
-PAYLOAD = json.loads((Path(__file__).parent / "data" / "apex_symbols.json").read_text())
+PAYLOAD = json.loads((Path(__file__).parent / "data" / "apex_symbols.json").read_text(encoding="utf-8"))
 EXCHANGE = "apex-perpetual"
 
 

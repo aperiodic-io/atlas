@@ -25,7 +25,7 @@ DATA = Path(__file__).resolve().parent / "data" / "defi"
 
 
 def _payload(name: str):
-    return json.loads((DATA / name).read_text())
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
 def _response(payload) -> MagicMock:

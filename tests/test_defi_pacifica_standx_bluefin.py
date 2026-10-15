@@ -34,7 +34,7 @@ FIXTURES = Path(__file__).parent / "fixtures" / "defi"
 
 
 def _payload(name: str):
-    return json.loads((FIXTURES / name).read_text())
+    return json.loads((FIXTURES / name).read_text(encoding="utf-8"))
 
 
 def _response(payload) -> MagicMock:

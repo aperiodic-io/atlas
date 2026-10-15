@@ -5301,6 +5301,14 @@
     "end_date": "2026-02-11T00:00:00.000Z"
   },
   {
+    "id": "bbbusdt",
+    "type": "spot",
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "spot-BBB-USDT",
+    "symbol": "BBB",
+    "denominator": "USDT"
+  },
+  {
     "id": "bbfdusd",
     "type": "spot",
     "internal_id": "spot-BB-FDUSD",
@@ -21515,6 +21523,14 @@
     "end_date": "2022-08-12T00:00:00.000Z"
   },
   {
+    "id": "mdbbusdt",
+    "type": "spot",
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "spot-MDBB-USDT",
+    "symbol": "MDBB",
+    "denominator": "USDT"
+  },
+  {
     "id": "mdtbtc",
     "type": "spot",
     "internal_id": "spot-MDT-BTC",
@@ -25413,6 +25429,14 @@
       "Real World Assets Protocols"
     ],
     "first_capture": "2023-07-03T00:00:00.000Z"
+  },
+  {
+    "id": "pengbusdt",
+    "type": "spot",
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "spot-PENGB-USDT",
+    "symbol": "PENGB",
+    "denominator": "USDT"
   },
   {
     "id": "pengubnb",
@@ -35316,6 +35340,14 @@
     "cmc_id": 39120,
     "category": [],
     "first_capture": "2026-01-13T00:00:00.000Z"
+  },
+  {
+    "id": "uvxybusdt",
+    "type": "spot",
+    "first_capture": "2026-10-14T00:00:00.000Z",
+    "internal_id": "spot-UVXYB-USDT",
+    "symbol": "UVXYB",
+    "denominator": "USDT"
   },
   {
     "id": "vanabnb",

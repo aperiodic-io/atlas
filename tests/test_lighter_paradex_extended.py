@@ -44,7 +44,7 @@ DATA = Path(__file__).parent / "data" / "defi_b"
 
 
 def _payload(name: str) -> dict:
-    return json.loads((DATA / name).read_text())
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
 def _rows(exchange: str, symbols: list[dict]) -> dict[str, dict]:

@@ -1382,7 +1382,7 @@ _FIXTURES = Path(__file__).parent / "fixtures"
 
 
 def _fixture(name: str):
-    return json.loads((_FIXTURES / name).read_text())
+    return json.loads((_FIXTURES / name).read_text(encoding="utf-8"))
 
 
 def _mock_json(payload) -> MagicMock:
