@@ -4,6 +4,8 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass
 
+from .exchange_definitions.apex import fetch_apex_perps, parse_apex
+from .exchange_definitions.aster import fetch_aster_perps, parse_aster
 from .exchange_definitions.binance import (
     fetch_binance_futures_coinm,
     fetch_binance_futures_usdm,
@@ -33,6 +35,7 @@ from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import parse_gate_io, parse_gate_io_futures
 from .exchange_definitions.gemini import parse_gemini
 from .exchange_definitions.grvt import fetch_grvt_perps, parse_grvt
+from .exchange_definitions.hibachi import fetch_hibachi_perps, parse_hibachi
 from .exchange_definitions.huobi import (
     parse_huobi,
     parse_huobi_dm,
@@ -73,6 +76,11 @@ class ExchangeDefinition:
     exchange_fetcher: ExchangeFetcher | None = None
     symbol_filter: Callable[[dict], bool] | None = None
     allowed_types: set[str] | None = None
+    # Whether Tardis lists the exchange. One it does not (a DeFi venue read only
+    # from its own API) is skipped by the Tardis source rather than refreshed
+    # from an empty listing, and its rows get Atlas's first observation as
+    # their availability start.
+    on_tardis: bool = True
 
 
 def _is_stable_exchange(exchange: str) -> bool:
@@ -100,14 +108,18 @@ def _define(
     exchange_fetcher: ExchangeFetcher | None = None,
     symbol_filter: Callable[[dict], bool] | None = None,
     allowed_types: set[str] | None = None,
+    on_tardis: bool = True,
 ) -> ExchangeDefinition:
     return ExchangeDefinition(
         parser=parser,
-        beta=not _is_stable_exchange(exchange),
+        # An exchange read from its own API is maintained here, not beta: the
+        # DeFi venues Tardis does not cover have no other source.
+        beta=not (_is_stable_exchange(exchange) or exchange_fetcher is not None),
         tardis_id=tardis_id or exchange,
         exchange_fetcher=exchange_fetcher,
         symbol_filter=symbol_filter,
         allowed_types=allowed_types,
+        on_tardis=on_tardis,
     )
 
 
@@ -117,6 +129,27 @@ def hyperliquid_filter(sd: dict) -> bool:
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
+    "apex-perpetual": _define(
+        "apex-perpetual",
+        parse_apex,
+        exchange_fetcher=fetch_apex_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "hibachi-perpetual": _define(
+        "hibachi-perpetual",
+        parse_hibachi,
+        exchange_fetcher=fetch_hibachi_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "aster-perpetual": _define(
+        "aster-perpetual",
+        parse_aster,
+        tardis_id="aster-futures",
+        exchange_fetcher=fetch_aster_perps,
+        allowed_types={"perpetual"},
+    ),
     "binance-spot": _define(
         "binance-spot",
         parse_binance,
@@ -182,6 +215,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_grvt,
         exchange_fetcher=fetch_grvt_perps,
         allowed_types={"perpetual"},
+        on_tardis=False,
     ),
     "huobi": _define("huobi", parse_huobi),
     "huobi-dm": _define("huobi-dm", parse_huobi_dm),
@@ -210,6 +244,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_nado,
         exchange_fetcher=fetch_nado_perps,
         allowed_types={"perpetual"},
+        on_tardis=False,
     ),
     "okx-spot": _define(
         "okx-spot", parse_okex, tardis_id="okex", exchange_fetcher=fetch_okx_spot
@@ -235,18 +270,21 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_pacifica,
         exchange_fetcher=fetch_pacifica_perps,
         allowed_types={"perpetual"},
+        on_tardis=False,
     ),
     "standx-perpetual": _define(
         "standx-perpetual",
         parse_standx,
         exchange_fetcher=fetch_standx_perps,
         allowed_types={"perpetual"},
+        on_tardis=False,
     ),
     "bluefin-perpetual": _define(
         "bluefin-perpetual",
         parse_bluefin,
         exchange_fetcher=fetch_bluefin_perps,
         allowed_types={"perpetual"},
+        on_tardis=False,
     ),
 }
 
@@ -264,6 +302,13 @@ def is_beta_exchange(exchange: str) -> bool:
     if definition is None:
         return False
     return definition.beta
+
+
+def is_on_tardis(exchange: str) -> bool:
+    definition = get_exchange_definition(exchange)
+    if definition is None:
+        return True
+    return definition.on_tardis
 
 
 def to_tardis_exchange_id(exchange: str) -> str:

@@ -1,0 +1,778 @@
+{
+ "markets": [
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "ETH/USDT Perps",
+    "id": 1,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1727701319.73488",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.000000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.01",
+     "0.1",
+     "1",
+     "10"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.000000001",
+    "symbol": "ETH/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.01",
+    "underlyingDecimals": 9,
+    "underlyingSymbol": "ETH"
+   },
+   "info": {
+    "bestAskPrice": "2408.450000",
+    "bestBidPrice": "2408.190000",
+    "category": null,
+    "estimatedFundingRate": "-0.000008",
+    "markPrice": "2409.139837",
+    "openInterestQuantity": "106.899441209",
+    "price24hAgo": "2508.310000",
+    "priceLatest": "2409.230000",
+    "spotPrice": "2409.217413",
+    "tags": [],
+    "volume24h": "3530221.938765"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "BTC/USDT Perps",
+    "id": 2,
+    "initialMarginRate": "0.033333",
+    "maintenanceMarginRate": "0.020000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1727701319.73488",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.0000000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.1",
+     "1",
+     "10",
+     "100"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.0000000001",
+    "symbol": "BTC/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.1",
+    "underlyingDecimals": 10,
+    "underlyingSymbol": "BTC"
+   },
+   "info": {
+    "bestAskPrice": "81640.80000",
+    "bestBidPrice": "81640.70000",
+    "category": null,
+    "estimatedFundingRate": "0.000002",
+    "markPrice": "81638.03028",
+    "openInterestQuantity": "9.2815109244",
+    "price24hAgo": "83379.30000",
+    "priceLatest": "81652.90000",
+    "spotPrice": "81627.52416",
+    "tags": [],
+    "volume24h": "27714740.571577"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "SOL/USDT Perps",
+    "id": 3,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1727701319.73488",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.00000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.001",
+     "0.01",
+     "0.1",
+     "1"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00000001",
+    "symbol": "SOL/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.001",
+    "underlyingDecimals": 8,
+    "underlyingSymbol": "SOL"
+   },
+   "info": {
+    "bestAskPrice": "103.9620000",
+    "bestBidPrice": "103.9300000",
+    "category": null,
+    "estimatedFundingRate": "0.000006",
+    "markPrice": "103.9339773",
+    "openInterestQuantity": "1079.05783268",
+    "price24hAgo": "107.0640000",
+    "priceLatest": "103.9920000",
+    "spotPrice": "103.9049250",
+    "tags": [],
+    "volume24h": "684006.908785"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "SUI/USDT Perps",
+    "id": 23,
+    "initialMarginRate": "0.142857",
+    "maintenanceMarginRate": "0.085714",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1741613803.063",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.000001",
+    "symbol": "SUI/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 6,
+    "underlyingSymbol": "SUI"
+   },
+   "info": {
+    "bestAskPrice": "1.017250000",
+    "bestBidPrice": "1.016320000",
+    "category": "Flash",
+    "estimatedFundingRate": "0.000010",
+    "markPrice": "1.016749581",
+    "openInterestQuantity": "7393.159269",
+    "price24hAgo": "1.051080000",
+    "priceLatest": "1.017660000",
+    "spotPrice": "1.016216637",
+    "tags": [
+     "flash"
+    ],
+    "volume24h": "16530.631020"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "XRP/USDT Perps",
+    "id": 24,
+    "initialMarginRate": "0.142857",
+    "maintenanceMarginRate": "0.085714",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1741613813.311",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.000001",
+    "symbol": "XRP/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 6,
+    "underlyingSymbol": "XRP"
+   },
+   "info": {
+    "bestAskPrice": "1.324320000",
+    "bestBidPrice": "1.323800000",
+    "category": "Flash",
+    "estimatedFundingRate": "0.000002",
+    "markPrice": "1.323821101",
+    "openInterestQuantity": "22041.526793",
+    "price24hAgo": "1.369150000",
+    "priceLatest": "1.324720000",
+    "spotPrice": "1.323662189",
+    "tags": [
+     "flash"
+    ],
+    "volume24h": "15692.275933"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "BNB/USDT Perps",
+    "id": 30,
+    "initialMarginRate": "0.083333",
+    "maintenanceMarginRate": "0.050000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1742671380.269",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.00000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.001",
+     "0.01",
+     "0.1",
+     "1"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00000001",
+    "symbol": "BNB/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.001",
+    "underlyingDecimals": 8,
+    "underlyingSymbol": "BNB"
+   },
+   "info": {
+    "bestAskPrice": "726.9700000",
+    "bestBidPrice": "726.8020000",
+    "category": "BlueChip",
+    "estimatedFundingRate": "0.000010",
+    "markPrice": "726.9641623",
+    "openInterestQuantity": "190.56677322",
+    "price24hAgo": "742.2930000",
+    "priceLatest": "727.0740000",
+    "spotPrice": "726.5864650",
+    "tags": [
+     "bluechip"
+    ],
+    "volume24h": "5978.182408"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "HYPE/USDT Perps",
+    "id": 49,
+    "initialMarginRate": "0.142857",
+    "maintenanceMarginRate": "0.085714",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1749480291.452",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.0000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.0001",
+     "0.001",
+     "0.01",
+     "0.1"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.0000001",
+    "symbol": "HYPE/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.0001",
+    "underlyingDecimals": 7,
+    "underlyingSymbol": "HYPE"
+   },
+   "info": {
+    "bestAskPrice": "80.95680000",
+    "bestBidPrice": "80.93670000",
+    "category": "MajorCoin",
+    "estimatedFundingRate": "0.000008",
+    "markPrice": "80.93234042",
+    "openInterestQuantity": "2330.2490261",
+    "price24hAgo": "81.59580000",
+    "priceLatest": "80.96150000",
+    "spotPrice": "80.89678372",
+    "tags": [
+     "majorcoin"
+    ],
+    "volume24h": "239108.063359"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "AUD/USDT Perps",
+    "id": 60,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1778625450.039",
+    "marketOpenTimestamp": "1779825600",
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00001",
+    "symbol": "AUD/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "AUD"
+   },
+   "info": {
+    "bestAskPrice": "0.697800000",
+    "bestBidPrice": "0.696030000",
+    "category": "FxMajor",
+    "estimatedFundingRate": "-0.000004",
+    "markPrice": "0.697050000",
+    "openInterestQuantity": "9039.85097",
+    "price24hAgo": "0.698620000",
+    "priceLatest": "0.697050000",
+    "spotPrice": "0.697140000",
+    "tags": [
+     "major"
+    ],
+    "volume24h": "393278.474809"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "GBP/USDT Perps",
+    "id": 61,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1778625450.089",
+    "marketOpenTimestamp": "1779825600",
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00001",
+    "symbol": "GBP/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "GBP"
+   },
+   "info": {
+    "bestAskPrice": "1.319180000",
+    "bestBidPrice": "1.318880000",
+    "category": "FxMajor",
+    "estimatedFundingRate": "0.000006",
+    "markPrice": "1.319253394",
+    "openInterestQuantity": "12241.20149",
+    "price24hAgo": "1.325970000",
+    "priceLatest": "1.318880000",
+    "spotPrice": "1.319275000",
+    "tags": [
+     "major"
+    ],
+    "volume24h": "3098601.709988"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "EUR/USDT Perps",
+    "id": 62,
+    "initialMarginRate": "0.033333",
+    "maintenanceMarginRate": "0.020000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1778625450.105",
+    "marketOpenTimestamp": "1779825600",
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00001",
+    "symbol": "EUR/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "EUR"
+   },
+   "info": {
+    "bestAskPrice": "1.115750000",
+    "bestBidPrice": "1.115740000",
+    "category": "FxMajor",
+    "estimatedFundingRate": "0.000007",
+    "markPrice": "1.115664167",
+    "openInterestQuantity": "80262.19299",
+    "price24hAgo": "1.120140000",
+    "priceLatest": "1.115750000",
+    "spotPrice": "1.115145000",
+    "tags": [
+     "major"
+    ],
+    "volume24h": "13607904.903118"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "NZD/USDT Perps",
+    "id": 63,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1780955564.328",
+    "marketOpenTimestamp": "1781186400",
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00001",
+    "symbol": "NZD/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "NZD"
+   },
+   "info": {
+    "bestAskPrice": "0.560330000",
+    "bestBidPrice": "0.558440000",
+    "category": "FxMajor",
+    "estimatedFundingRate": "-0.000003",
+    "markPrice": "0.559537875",
+    "openInterestQuantity": "8024.04968",
+    "price24hAgo": "0.561550000",
+    "priceLatest": "0.559380000",
+    "spotPrice": "0.559737500",
+    "tags": [
+     "major"
+    ],
+    "volume24h": "3456364.726097"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "PAXG/USDT Perps",
+    "id": 64,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1782913569.201",
+    "marketOpenTimestamp": "1782918000",
+    "minNotional": "1",
+    "minOrderSize": "0.00000001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.01",
+     "0.1",
+     "1",
+     "10"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.00000001",
+    "symbol": "PAXG/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.01",
+    "underlyingDecimals": 8,
+    "underlyingSymbol": "PAXG"
+   },
+   "info": {
+    "bestAskPrice": "4111.620000",
+    "bestBidPrice": "4110.200000",
+    "category": "Crypto",
+    "estimatedFundingRate": "0.000009",
+    "markPrice": "4110.529062",
+    "openInterestQuantity": "27.03034688",
+    "price24hAgo": "4161.130000",
+    "priceLatest": "4111.060000",
+    "spotPrice": "4108.403527",
+    "tags": [
+     "new"
+    ],
+    "volume24h": "328514.058146"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "XAG/USDT Perps",
+    "id": 65,
+    "initialMarginRate": "0.100000",
+    "maintenanceMarginRate": "0.060000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1783458939.085",
+    "marketOpenTimestamp": "1783609200",
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": "1792015200",
+    "orderbookGranularities": [
+     "0.01",
+     "0.1",
+     "1",
+     "10"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "PAUSED",
+    "stepSize": "0.00001",
+    "symbol": "XAG/USDT-P",
+    "symbolStatus": "CLOSED",
+    "tickSize": "0.01",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "XAG"
+   },
+   "info": {
+    "bestAskPrice": null,
+    "bestBidPrice": null,
+    "category": "fx",
+    "estimatedFundingRate": "0.000088",
+    "markPrice": "55.644078",
+    "openInterestQuantity": "202.78000",
+    "price24hAgo": "59.290000",
+    "priceLatest": "55.700000",
+    "spotPrice": "55.640000",
+    "tags": [
+     "commodity"
+    ],
+    "volume24h": "16896.598647"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "JPY/USDT Perps",
+    "id": 66,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1785964827.404",
+    "marketOpenTimestamp": "1786546800",
+    "minNotional": "1",
+    "minOrderSize": "1",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.000001",
+     "0.00001",
+     "0.0001",
+     "0.001"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "1",
+    "symbol": "JPY/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.000001",
+    "underlyingDecimals": 0,
+    "underlyingSymbol": "JPY"
+   },
+   "info": {
+    "bestAskPrice": "0.0063190000",
+    "bestBidPrice": "0.0063150000",
+    "category": "fx",
+    "estimatedFundingRate": "0.000004",
+    "markPrice": "0.0063170000",
+    "openInterestQuantity": "2172529",
+    "price24hAgo": "0.0063170000",
+    "priceLatest": "0.0063170000",
+    "spotPrice": "0.0063161656",
+    "tags": [
+     "new",
+     "major"
+    ],
+    "volume24h": "322203.283348"
+   }
+  },
+  {
+   "contract": {
+    "category": "FX",
+    "displayName": "CAD/USDT Perps",
+    "id": 67,
+    "initialMarginRate": "0.050000",
+    "maintenanceMarginRate": "0.030000",
+    "marketCloseTimestamp": null,
+    "marketCreationTimestamp": "1787777001.081",
+    "marketOpenTimestamp": "1787842800",
+    "minNotional": "1",
+    "minOrderSize": "0.01",
+    "nextCloseTimestamp": "1792184400",
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.00001",
+     "0.0001",
+     "0.001",
+     "0.01"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "LIVE",
+    "stepSize": "0.01",
+    "symbol": "CAD/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.00001",
+    "underlyingDecimals": 2,
+    "underlyingSymbol": "CAD"
+   },
+   "info": {
+    "bestAskPrice": "0.703650000",
+    "bestBidPrice": "0.701730000",
+    "category": "fx",
+    "estimatedFundingRate": "-0.000003",
+    "markPrice": "0.702660000",
+    "openInterestQuantity": "21937.08",
+    "price24hAgo": "0.703620000",
+    "priceLatest": "0.702660000",
+    "spotPrice": "0.702551844",
+    "tags": [
+     "new",
+     "major"
+    ],
+    "volume24h": "515359.423106"
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "FARTCOIN/USDT Flash",
+    "id": 4,
+    "initialMarginRate": "0.333333",
+    "maintenanceMarginRate": "0.200000",
+    "marketCloseTimestamp": "1763391600",
+    "marketCreationTimestamp": "1735571149.134",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.000001",
+     "0.00001",
+     "0.0001",
+     "0.001"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "CLOSED",
+    "stepSize": "0.00001",
+    "symbol": "FARTCOIN/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.000001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "FARTCOIN"
+   },
+   "info": {
+    "bestAskPrice": null,
+    "bestBidPrice": null,
+    "category": null,
+    "estimatedFundingRate": null,
+    "markPrice": null,
+    "openInterestQuantity": null,
+    "price24hAgo": null,
+    "priceLatest": null,
+    "spotPrice": null,
+    "tags": [],
+    "volume24h": null
+   }
+  },
+  {
+   "contract": {
+    "category": "CRYPTO",
+    "displayName": "ZEREBRO/USDT Flash",
+    "id": 5,
+    "initialMarginRate": "0.500000",
+    "maintenanceMarginRate": "0.400000",
+    "marketCloseTimestamp": "1741359600",
+    "marketCreationTimestamp": "1735571154.21",
+    "marketOpenTimestamp": null,
+    "minNotional": "1",
+    "minOrderSize": "0.00001",
+    "nextCloseTimestamp": null,
+    "nextOpenTimestamp": null,
+    "orderbookGranularities": [
+     "0.000001",
+     "0.00001",
+     "0.0001",
+     "0.001"
+    ],
+    "settlementDecimals": 6,
+    "settlementSymbol": "USDT",
+    "status": "CLOSED",
+    "stepSize": "0.00001",
+    "symbol": "ZEREBRO/USDT-P",
+    "symbolStatus": "OPEN",
+    "tickSize": "0.000001",
+    "underlyingDecimals": 5,
+    "underlyingSymbol": "ZEREBRO"
+   },
+   "info": {
+    "bestAskPrice": null,
+    "bestBidPrice": null,
+    "category": null,
+    "estimatedFundingRate": null,
+    "markPrice": null,
+    "openInterestQuantity": null,
+    "price24hAgo": null,
+    "priceLatest": null,
+    "spotPrice": null,
+    "tags": [],
+    "volume24h": null
+   }
+  }
+ ]
+}

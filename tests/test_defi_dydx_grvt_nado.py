@@ -13,6 +13,7 @@ import pytest
 
 from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchanges import (
+    is_on_tardis,
     get_allowed_types,
     get_exchange_fetcher,
     to_tardis_exchange_id,
@@ -43,7 +44,9 @@ def test_registered_as_stable_perpetual_venues_with_api_fetchers(slug):
     assert slug in EXCHANGES
     assert get_allowed_types(slug) == {"perpetual"}
     assert get_exchange_fetcher(slug) is not None
-    assert slug in API_CAPTURED_EXCHANGES
+    # New rows get Atlas's first observation as their start: dYdX because only
+    # part of its history is on Tardis, GRVT and Nado because none of it is.
+    assert slug in API_CAPTURED_EXCHANGES or not is_on_tardis(slug)
 
 
 def test_dydx_reads_tardis_dydx_v4_history():
