@@ -227,6 +227,21 @@ know is `unknown`, never `crypto`. Venues disagree on tokenized gold
 (PAXG, XAUT): Binance and Bybit call it crypto, MEXC and Bitget commodity;
 Atlas follows each venue. Rows only Tardis knows (delisted before a fetcher
 saw them) carry no `underlying`.
+| `ostium-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `avantis-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `gtrade-perpetual` | ✅ **`STABLE`** (exchange API only) |
+
+Ostium, Avantis (Veranta) and gTrade are oracle-priced RWA perp venues that
+Tardis does not cover: their rows come from the venues' own APIs only, and each
+row's `underlying` comes from the venue's category metadata (Ostium's pair
+group, Avantis' price-feed asset type, gTrade's market group; Ostium's `etf`
+group is classed as `equity`). Their `original_id` is what the venue addresses
+a market by (Ostium and Avantis: the pair index; gTrade: the API symbol such as
+`BTC/USD`), and a non-USD quote is kept in the symbol (`USDJPY`, `JP225JPY`,
+`005930KRW`). Ostium and Avantis settle in USDC; gTrade settles every market in
+whichever collateral the trader posts (DAI, WETH, USDC, GNS) and quotes it in
+USD, so its contracts are `...-USD:USD`. See the module docstrings in
+`atlas/exchange_definitions/{ostium,avantis,gtrade}.py`.
 
 ### Bundled Snapshot Coverage
 
@@ -270,6 +285,9 @@ The repository currently ships precomputed JSON snapshots for:
 - `cryptocom-futures`
 - `paradex-perpetual`
 - `extended-perpetual`
+- `ostium-perpetual`
+- `avantis-perpetual`
+- `gtrade-perpetual`
 
 ## Features
 

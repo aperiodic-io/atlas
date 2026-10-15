@@ -19,7 +19,13 @@ class TardisSymbolSource:
         # empty (or, under a shared name such as "mexc", the wrong) listing.
         if not is_on_tardis(exchange):
             raise ValueError(f"Tardis does not list {exchange}")
-        return _fetch_exchange(exchange)
+        data = _fetch_exchange(exchange)
+        # Tardis answers an exchange it does not cover with an error object; a
+        # Tardis refresh replaces the snapshot wholesale, so that must fail the
+        # exchange rather than empty it.
+        if not isinstance(data.get("availableSymbols"), list):
+            raise ValueError(f"Tardis has no symbol list for {exchange}: {data.get('message', data)}")
+        return data
 
 
 @dataclass(frozen=True)

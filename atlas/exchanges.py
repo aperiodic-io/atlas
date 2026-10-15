@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 from .exchange_definitions.apex import fetch_apex_perps, parse_apex
 from .exchange_definitions.aster import fetch_aster_perps, parse_aster
+from .exchange_definitions.avantis import fetch_avantis_perps, parse_avantis
 from .exchange_definitions.binance import (
     fetch_binance_futures_coinm,
     fetch_binance_futures_usdm,
@@ -61,6 +62,7 @@ from .exchange_definitions.gate_io import (
 )
 from .exchange_definitions.gemini import parse_gemini
 from .exchange_definitions.grvt import fetch_grvt_perps, parse_grvt
+from .exchange_definitions.gtrade import fetch_gtrade_perps, parse_gtrade
 from .exchange_definitions.hibachi import fetch_hibachi_perps, parse_hibachi
 from .exchange_definitions.huobi import (
     fetch_htx_perpetual_usdt,
@@ -88,6 +90,7 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
+from .exchange_definitions.ostium import fetch_ostium_perps, parse_ostium
 from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
 from .exchange_definitions.paradex import fetch_paradex_perps, parse_paradex
 from .exchange_definitions.phemex import parse_phemex
@@ -428,6 +431,29 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         "extended-perpetual",
         parse_extended,
         exchange_fetcher=fetch_extended_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    # Oracle-priced RWA perp venues: no Tardis coverage, so the exchange API is
+    # the only source and the daily update must refresh them (on_tardis=False).
+    "ostium-perpetual": _define(
+        "ostium-perpetual",
+        parse_ostium,
+        exchange_fetcher=fetch_ostium_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "avantis-perpetual": _define(
+        "avantis-perpetual",
+        parse_avantis,
+        exchange_fetcher=fetch_avantis_perps,
+        allowed_types={"perpetual"},
+        on_tardis=False,
+    ),
+    "gtrade-perpetual": _define(
+        "gtrade-perpetual",
+        parse_gtrade,
+        exchange_fetcher=fetch_gtrade_perps,
         allowed_types={"perpetual"},
         on_tardis=False,
     ),

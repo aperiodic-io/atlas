@@ -345,3 +345,60 @@ def test_tardis_source_refuses_exchanges_tardis_does_not_cover() -> None:
     api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [{"id": "BTC_USDT"}]})
     hybrid = HybridSymbolSource(exchange_source=api)
     assert hybrid.fetch_exchange("mexc-perpetual") == {"availableSymbols": [{"id": "BTC_USDT"}]}
+def test_tardis_refresh_of_an_uncovered_venue_keeps_the_snapshot(tmp_path, monkeypatch) -> None:
+    # Tardis answers an exchange it does not cover with an error object, not
+    # a symbol list. A Tardis-sourced refresh replaces the snapshot wholesale,
+    # so reading that as "no symbols" would wipe e.g. Ostium's snapshot; it
+    # must fail the exchange instead.
+    updater = importlib.import_module("atlas.update")
+    sources = importlib.import_module("atlas.update_sources")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    monkeypatch.setattr(
+        sources,
+        "_fetch_exchange",
+        lambda _exchange: {"code": 100, "message": "Invalid 'exchange' param provided"},
+    )
+    path = tmp_path / "ostium-perpetual.json"
+    rows = [{"id": "0", "type": "perpetual", "base_coin": "BTC", "quote_coin": "USD", "settle_coin": "USDC"}]
+    path.write_text(json.dumps(rows))
+
+    # Ostium is marked off-Tardis, so a Tardis-only update skips it untouched.
+    assert updater.update(["ostium-perpetual"], sources.TardisSymbolSource()) == []
+    assert json.loads(path.read_text()) == rows
+    # An exchange Tardis does list but answers with an error object fails
+    # instead of being refreshed to an empty snapshot.
+    import pytest
+
+    with pytest.raises(ValueError, match="no symbol list"):
+        sources.TardisSymbolSource().fetch_exchange("gateio-perpetual-usdt")
+
+
+def test_hybrid_refresh_of_an_uncovered_venue_uses_the_exchange_api(tmp_path, monkeypatch) -> None:
+    updater = importlib.import_module("atlas.update")
+    sources = importlib.import_module("atlas.update_sources")
+    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
+    monkeypatch.setattr(
+        sources,
+        "_fetch_exchange",
+        lambda _exchange: {"code": 100, "message": "Invalid 'exchange' param provided"},
+    )
+    api_rows = [
+        {
+            "id": "BTC/USD",
+            "type": "perpetual",
+            "contract_size": 1.0,
+            "base_coin": "BTC",
+            "quote_coin": "USD",
+            "settle_coin": "USD",
+            "margin_asset": "USD",
+            "underlying": "crypto",
+        }
+    ]
+    source = sources.HybridSymbolSource(
+        exchange_source=SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": api_rows})
+    )
+
+    assert updater.update(["gtrade-perpetual"], source) == []
+    (row,) = json.loads((tmp_path / "gtrade-perpetual.json").read_text())
+    assert row["internal_id"] == "perpetual-BTC-USD:USD"
+    assert row["underlying"] == "crypto"

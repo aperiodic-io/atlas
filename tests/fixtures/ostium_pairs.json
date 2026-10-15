@@ -1,0 +1,106 @@
+{
+ "data": {
+  "pairs": [
+   {
+    "feed": "0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de",
+    "from": "BTC",
+    "group": {
+     "name": "crypto"
+    },
+    "id": "0",
+    "maxOI": "150000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x0730076c3c0f5da594eb635c5d5a22116233bdb2a9c2977279cc348b8b8ce917",
+    "from": "EUR",
+    "group": {
+     "name": "forex"
+    },
+    "id": "2",
+    "maxOI": "2500000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x3d6c40e9d821c10e442cb3fc6cb1c589ffd8b906e734a1ab3b3f7d213ac395d6",
+    "from": "USD",
+    "group": {
+     "name": "forex"
+    },
+    "id": "4",
+    "maxOI": "800000000000",
+    "to": "JPY"
+   },
+   {
+    "feed": "0xe21c86d8b6a127bfef214d88fdb0c279e55d27dd8c443733e46c8d3de3c98cd6",
+    "from": "XAU",
+    "group": {
+     "name": "commodities"
+    },
+    "id": "5",
+    "maxOI": "1700000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0xcf2e5ff1c8d081b9454e500162a88da6e54f5f44f92849eda1e3e90dc1ff5e57",
+    "from": "HG",
+    "group": {
+     "name": "commodities"
+    },
+    "id": "6",
+    "maxOI": "800000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x051a9d682677ed7ea03763668f7e2098163e3e21f893fbe29016776fc394bd07",
+    "from": "SPX",
+    "group": {
+     "name": "indices"
+    },
+    "id": "10",
+    "maxOI": "1000000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x6ae89eb4d72112188d8d5042fda1e7bb4773ca77d0f0f71fc688e72492053c36",
+    "from": "NIK",
+    "group": {
+     "name": "indices"
+    },
+    "id": "13",
+    "maxOI": "50000000000",
+    "to": "JPY"
+   },
+   {
+    "feed": "0x9c509299f764872e868dab612b2fd6f2e281e62874ae678bcd5e75dbeb21df0c",
+    "from": "NVDA",
+    "group": {
+     "name": "stocks"
+    },
+    "id": "18",
+    "maxOI": "500000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x3d9449e64c15e7eba5afdb70c24cf7eb9cebcd8c7e4e2658088aa4881588546d",
+    "from": "URA",
+    "group": {
+     "name": "etf"
+    },
+    "id": "52",
+    "maxOI": "25000000000",
+    "to": "USD"
+   },
+   {
+    "feed": "0x4e90cb857a2d0313d53432f883ca8991d668468b8986b954e218b0c49f04e715",
+    "from": "USD",
+    "group": {
+     "name": "forex"
+    },
+    "id": "53",
+    "maxOI": "0",
+    "to": "KRW"
+   }
+  ]
+ }
+}

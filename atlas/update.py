@@ -88,6 +88,9 @@ EXCHANGES = [
     "whitebit-perpetual",
     "cryptocom-perpetual",
     "cryptocom-futures",
+    "ostium-perpetual",
+    "avantis-perpetual",
+    "gtrade-perpetual",
 ]
 
 
