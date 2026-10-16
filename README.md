@@ -57,7 +57,6 @@ Examples:
 - Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
 - Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
 - Lighter perpetual: market `96` (`EURUSD`) -> `perpetual-EUR-USDC:USDC` (the numeric market id is the original id; a USD-quoted FX pair is named by its base, other pairs keep the full ticker: `USDJPY` -> `perpetual-USDJPY-USDC:USDC`)
-- Paradex perpetual: `XAU-USD-PERP` -> `perpetual-XAU-USDC:USDC` (settled in USDC)
 - Extended perpetual: `SPX500m-USD` -> `perpetual-SPX500M-USD:USD` (the asset as Extended names it, settled in its USD collateral)
 
 ## Installation
@@ -148,7 +147,6 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
-| `dydx-perpetual` | ✅ **`STABLE`** |
 | `ftx` | **`UNSTABLE (BETA)`** |
 | `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
@@ -158,24 +156,19 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-linear-swap` | **`UNSTABLE (BETA)`** |
-| `hibachi-perpetual` | ✅ **`STABLE`** (venue API only) |
 | `hyperliquid-spot` | ✅ **`STABLE`** |
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
-| `nado-perpetual` | ✅ **`STABLE`** |
 | `lighter-perpetual` | ✅ **`STABLE`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
-| `paradex-perpetual` | ✅ **`STABLE`** |
 | `extended-perpetual` | ✅ **`STABLE`** |
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
 | `pacifica-perpetual` | ✅ **`STABLE`** (exchange API only) |
-| `standx-perpetual` | ✅ **`STABLE`** (exchange API only) |
-| `bluefin-perpetual` | ✅ **`STABLE`** (exchange API only) |
 | `gateio-perpetual-usdt` | ✅ **`STABLE`** |
 | `gateio-futures-usdt` | ✅ **`STABLE`** |
 | `gateio-perpetual-btc` | ✅ **`STABLE`** |
@@ -255,20 +248,17 @@ The repository currently ships precomputed JSON snapshots for:
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
-- `dydx-perpetual` (indexer API; dated from Tardis `dydx-v4`)
 - `grvt-perpetual` (venue API only; `first_capture` is the venue listing time)
-- `hibachi-perpetual`
 - `hyperliquid-spot`
 - `hyperliquid-perps`
-- `nado-perpetual` (venue API only; `first_capture` is Atlas's first observation)
 - `lighter-perpetual`
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
-- `pacifica-perpetual`, `standx-perpetual`, `bluefin-perpetual` (DeFi perpetual
-  venues Tardis does not cover: listed from each venue's own API, with the
-  settlement token as denominator and margin, the venue's listing time as
-  `first_capture`, and `underlying` from the venue's market categories)
+- `pacifica-perpetual` (DeFi perpetual venue Tardis does not cover: listed from
+  the venue's own API, with the settlement token as denominator and margin, the
+  venue's listing time as `first_capture`, and `underlying` from the venue's
+  market categories)
 - `gateio-perpetual-usdt`
 - `gateio-futures-usdt`
 - `gateio-perpetual-btc`
@@ -283,7 +273,6 @@ The repository currently ships precomputed JSON snapshots for:
 - `whitebit-perpetual`
 - `cryptocom-perpetual`
 - `cryptocom-futures`
-- `paradex-perpetual`
 - `extended-perpetual`
 - `ostium-perpetual`
 - `avantis-perpetual`
@@ -293,7 +282,7 @@ The repository currently ships precomputed JSON snapshots for:
 
 - Unified parser layer with exchange-specific symbol rules.
 - Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default). An exchange read from its own API is stable.
-- Venues Tardis does not list (`on_tardis=False`: ApeX, Hibachi) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
+- Venues Tardis does not list (`on_tardis=False`, e.g. ApeX, GRVT) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.

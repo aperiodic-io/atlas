@@ -27,7 +27,6 @@ from .exchange_definitions.bitget import (
 )
 from .exchange_definitions.bitmex import parse_bitmex
 from .exchange_definitions.bitstamp import parse_bitstamp
-from .exchange_definitions.bluefin import fetch_bluefin_perps, parse_bluefin
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
     fetch_bybit_perps,
@@ -49,7 +48,6 @@ from .exchange_definitions.deribit import (
     parse_deribit,
     parse_deribit_api,
 )
-from .exchange_definitions.dydx import fetch_dydx_perps, parse_dydx
 from .exchange_definitions.extended import fetch_extended_perps, parse_extended
 from .exchange_definitions.ftx import parse_ftx
 from .exchange_definitions.gate_io import (
@@ -62,9 +60,7 @@ from .exchange_definitions.gate_io import (
 )
 from .exchange_definitions.gemini import parse_gemini
 from .exchange_definitions.grvt import fetch_grvt_perps, parse_grvt
-from .exchange_definitions.gmx import fetch_gmx_perps, parse_gmx
 from .exchange_definitions.gtrade import fetch_gtrade_perps, parse_gtrade
-from .exchange_definitions.hibachi import fetch_hibachi_perps, parse_hibachi
 from .exchange_definitions.huobi import (
     fetch_htx_perpetual_usdt,
     parse_htx_linear_swap,
@@ -82,7 +78,6 @@ from .exchange_definitions.kraken import parse_kraken
 from .exchange_definitions.kucoin import parse_kucoin
 from .exchange_definitions.lighter import fetch_lighter_perps, parse_lighter
 from .exchange_definitions.mexc import fetch_mexc_perpetual, parse_mexc
-from .exchange_definitions.nado import fetch_nado_perps, parse_nado
 from .exchange_definitions.okx import (
     fetch_okx_futures,
     fetch_okx_spot,
@@ -91,16 +86,12 @@ from .exchange_definitions.okx import (
     parse_okex_futures,
     parse_okex_swap,
 )
-from .exchange_definitions.orderly import fetch_orderly_perps, parse_orderly
 from .exchange_definitions.ostium import fetch_ostium_perps, parse_ostium
 from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
-from .exchange_definitions.paradex import fetch_paradex_perps, parse_paradex
 from .exchange_definitions.phemex import parse_phemex
 from .exchange_definitions.poloniex import parse_poloniex
-from .exchange_definitions.standx import fetch_standx_perps, parse_standx
 from .exchange_definitions.upbit import parse_upbit
 from .exchange_definitions.whitebit import fetch_whitebit_perpetual, parse_whitebit
-from .exchange_definitions.vest import fetch_vest_perps, parse_vest
 from .exchange_definitions.variational import fetch_variational_perps, parse_variational
 from .parser_interface import Parser
 
@@ -292,13 +283,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
         on_tardis=False,
     ),
-    "hibachi-perpetual": _define(
-        "hibachi-perpetual",
-        parse_hibachi,
-        exchange_fetcher=fetch_hibachi_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
     "aster-perpetual": _define(
         "aster-perpetual",
         parse_aster,
@@ -355,13 +339,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),
-    "dydx-perpetual": _define(
-        "dydx-perpetual",
-        parse_dydx,
-        tardis_id="dydx-v4",
-        exchange_fetcher=fetch_dydx_perps,
-        allowed_types={"perpetual"},
-    ),
     "ftx": _define("ftx", parse_ftx),
     "gate-io": _define("gate-io", parse_gate_io),
     "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
@@ -393,13 +370,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         symbol_filter=hyperliquid_filter,
         allowed_types={"perpetual"},
     ),
-    "gmx-perpetual": _define(
-        "gmx-perpetual",
-        parse_gmx,
-        exchange_fetcher=fetch_gmx_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
     "kraken": _define("kraken", parse_kraken),
     "lighter-perpetual": _define(
         "lighter-perpetual",
@@ -409,13 +379,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     "kucoin": _define("kucoin", parse_kucoin),
-    "nado-perpetual": _define(
-        "nado-perpetual",
-        parse_nado,
-        exchange_fetcher=fetch_nado_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
     "okx-spot": _define(
         "okx-spot", parse_okex, tardis_id="okex", exchange_fetcher=fetch_okx_spot
     ),
@@ -430,13 +393,6 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         parse_okex_futures,
         tardis_id="okex-futures",
         exchange_fetcher=fetch_okx_futures,
-    ),
-    "paradex-perpetual": _define(
-        "paradex-perpetual",
-        parse_paradex,
-        exchange_fetcher=fetch_paradex_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
     ),
     "extended-perpetual": _define(
         "extended-perpetual",
@@ -479,35 +435,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
         on_tardis=False,
     ),
-    "standx-perpetual": _define(
-        "standx-perpetual",
-        parse_standx,
-        exchange_fetcher=fetch_standx_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
-    "bluefin-perpetual": _define(
-        "bluefin-perpetual",
-        parse_bluefin,
-        exchange_fetcher=fetch_bluefin_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
     **_LIVE_PRODUCER_VENUES,
-    "orderly-perpetual": _define(
-        "orderly-perpetual",
-        parse_orderly,
-        exchange_fetcher=fetch_orderly_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
-    "vest-perpetual": _define(
-        "vest-perpetual",
-        parse_vest,
-        exchange_fetcher=fetch_vest_perps,
-        allowed_types={"perpetual"},
-        on_tardis=False,
-    ),
     "variational-perpetual": _define(
         "variational-perpetual",
         parse_variational,

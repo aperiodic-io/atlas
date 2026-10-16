@@ -1,8 +1,8 @@
-"""Parsers and exchange-API fetchers of Lighter, Paradex and Extended, from
+"""Parsers and exchange-API fetchers of Lighter and Extended, from
 recorded venue payloads (tests/data/defi_b, fields trimmed to those read).
 
 The internal IDs pinned here are the ones the live producer
-(live-producers streaming/feeds/{lighter,paradex,extended}) publishes under
+(live-producers streaming/feeds/{lighter,extended}) publishes under
 the Atlas scheme; the two sides must agree for every live contract.
 """
 
@@ -31,7 +31,6 @@ from atlas.exchange_definitions.lighter import (
     lighter_symbol,
     lighter_symbols,
 )
-from atlas.exchange_definitions.paradex import fetch_paradex_perps, paradex_symbols
 from atlas.exchanges import (
     get_allowed_types,
     get_exchange_fetcher,
@@ -56,9 +55,7 @@ def _iid(exchange: str, sd: dict) -> str:
 
 
 class TestRegistration:
-    @pytest.mark.parametrize(
-        "exchange", ["lighter-perpetual", "paradex-perpetual", "extended-perpetual"]
-    )
+    @pytest.mark.parametrize("exchange", ["lighter-perpetual", "extended-perpetual"])
     def test_stable_perpetual_only_with_an_api_fetcher(self, exchange):
         # Beta exchanges are skipped by update(); these have no other source.
         assert is_beta_exchange(exchange) is False
@@ -182,46 +179,6 @@ class TestLighter:
         assert get.call_args.args[0].endswith("/api/v1/orderBookDetails?filter=perp")
 
 
-class TestParadex:
-    symbols = paradex_symbols(_payload("paradex_markets.json"))
-
-    def test_perpetuals_only(self):
-        assert len(self.symbols) == 66  # options and spot are skipped
-        assert all(sd["id"].endswith("-PERP") for sd in self.symbols)
-
-    @pytest.mark.parametrize(
-        ("market", "expected", "underlying"),
-        [
-            ("BTC-USD-PERP", "perpetual-BTC-USDC:USDC", "crypto"),
-            ("PAXG-USD-PERP", "perpetual-PAXG-USDC:USDC", "crypto"),
-            ("kPEPE-USD-PERP", "perpetual-KPEPE-USDC:USDC", "crypto"),
-            ("XAU-USD-PERP", "perpetual-XAU-USDC:USDC", "commodity"),
-            ("NG-USD-PERP", "perpetual-NG-USDC:USDC", "commodity"),
-            ("BZ-USD-PERP", "perpetual-BZ-USDC:USDC", "commodity"),
-            ("US500-USD-PERP", "perpetual-US500-USDC:USDC", "index"),
-            ("NVDA-USD-PERP", "perpetual-NVDA-USDC:USDC", "equity"),
-            ("EWY-USD-PERP", "perpetual-EWY-USDC:USDC", "equity"),
-        ],
-    )
-    def test_internal_id_and_underlying(self, market, expected, underlying):
-        sd = _rows("paradex-perpetual", self.symbols)[market]
-        assert _iid("paradex-perpetual", sd) == expected
-        assert sd["underlying"] == underlying
-        assert sd["margin_asset"] == "USDC"
-
-    def test_open_time_is_listing_date(self):
-        sd = _rows("paradex-perpetual", self.symbols)["BZ-USD-PERP"]
-        assert sd["listing_date"].startswith("2026-04-02")
-
-    def test_fetch(self):
-        resp = MagicMock()
-        resp.json.return_value = _payload("paradex_markets.json")
-        with patch(
-            "atlas.exchange_definitions.paradex.requests.get", return_value=resp
-        ):
-            assert len(fetch_paradex_perps(5)) == 66
-
-
 class TestExtended:
     symbols = extended_symbols(_payload("extended_markets.json"))
 
@@ -298,14 +255,6 @@ class TestExtended:
             "lighter_order_book_details.json",
             "96",
             "perpetual-EUR-USDC:USDC",
-        ),
-        (
-            "paradex-perpetual",
-            "paradex",
-            "fetch_paradex_perps",
-            "paradex_markets.json",
-            "XAU-USD-PERP",
-            "perpetual-XAU-USDC:USDC",
         ),
         (
             "extended-perpetual",
