@@ -10478,5 +10478,20 @@
     "symbol": "\u9f99\u867e",
     "denominator": "USDT",
     "margin": "USDT"
+  },
+  {
+    "id": "WAL-USDT",
+    "type": "perpetual",
+    "base_coin": "WAL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-15T00:00:00.000Z",
+    "internal_id": "perpetual-WAL-USDT:USDT",
+    "symbol": "WAL",
+    "denominator": "USDT",
+    "margin": "USDT"
   }
 ]

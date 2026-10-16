@@ -8070,6 +8070,20 @@
     "first_capture": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "walusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "WAL",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-15T00:00:00.000Z",
+    "internal_id": "perpetual-WAL-USDT:USDT",
+    "symbol": "WAL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "wdcusdt",
     "type": "perpetual",
     "contract_size": 1.0,

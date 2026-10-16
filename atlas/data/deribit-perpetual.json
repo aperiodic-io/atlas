@@ -2178,5 +2178,35 @@
     "symbol": "ZEC",
     "denominator": "USDC",
     "margin": "USDC"
+  },
+  {
+    "id": "CASHCAT_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "CASHCAT",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-15T00:00:00.000Z",
+    "internal_id": "perpetual-CASHCAT-USDC:USDC",
+    "symbol": "CASHCAT",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "PONS_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "PONS",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-15T00:00:00.000Z",
+    "internal_id": "perpetual-PONS-USDC:USDC",
+    "symbol": "PONS",
+    "denominator": "USDC",
+    "margin": "USDC"
   }
 ]
