@@ -83,13 +83,16 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
 
 
 def _normalize_binance_instrument_type(raw_type: str | None) -> str:
-    return "perpetual" if raw_type == "PERPETUAL" else "future"
+    # TradFi perpetuals (stocks, metals, FX) are `TRADIFI_PERPETUAL`.
+    return "perpetual" if (raw_type or "").endswith("PERPETUAL") else "future"
 
 
 _BINANCE_UNDERLYING_TYPE_MAP = {
     "COIN": UnderlyingType.crypto,
+    "CN_EQUITY": UnderlyingType.equity,
     "COMMODITY": UnderlyingType.commodity,
     "EQUITY": UnderlyingType.equity,
+    "FX": UnderlyingType.forex,
     "HK_EQUITY": UnderlyingType.equity,
     "INDEX": UnderlyingType.index,
     "KR_EQUITY": UnderlyingType.equity,

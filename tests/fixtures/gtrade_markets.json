@@ -1,0 +1,76 @@
+{
+ "data": [
+  {
+   "symbol": "BTC/USD",
+   "pairIndex": 0,
+   "base": "BTC",
+   "quote": "USD",
+   "group": "crypto",
+   "isOpen": true
+  },
+  {
+   "symbol": "EUR/USD",
+   "pairIndex": 21,
+   "base": "EUR",
+   "quote": "USD",
+   "group": "forex",
+   "isOpen": true
+  },
+  {
+   "symbol": "USD/JPY",
+   "pairIndex": 22,
+   "base": "USD",
+   "quote": "JPY",
+   "group": "forex",
+   "isOpen": true
+  },
+  {
+   "symbol": "EUR/JPY",
+   "pairIndex": 29,
+   "base": "EUR",
+   "quote": "JPY",
+   "group": "forex",
+   "isOpen": true
+  },
+  {
+   "symbol": "AAPL/USD",
+   "pairIndex": 58,
+   "base": "AAPL",
+   "quote": "USD",
+   "group": "stocks",
+   "isOpen": false
+  },
+  {
+   "symbol": "SPY/USD",
+   "pairIndex": 86,
+   "base": "SPY",
+   "quote": "USD",
+   "group": "indices",
+   "isOpen": false
+  },
+  {
+   "symbol": "XAU/USD",
+   "pairIndex": 90,
+   "base": "XAU",
+   "quote": "USD",
+   "group": "commodities",
+   "isOpen": false
+  },
+  {
+   "symbol": "WTI/USD",
+   "pairIndex": 187,
+   "base": "WTI",
+   "quote": "USD",
+   "group": "commodities",
+   "isOpen": false
+  },
+  {
+   "symbol": "SPX/USD",
+   "pairIndex": 308,
+   "base": "SPX",
+   "quote": "USD",
+   "group": "crypto",
+   "isOpen": true
+  }
+ ]
+}

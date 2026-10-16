@@ -12,7 +12,7 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import get_allowed_types, get_symbol_filter, is_on_tardis
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -28,6 +28,8 @@ _DATA_DIR = Path(__file__).parent / "data"
 LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
 
 EXCHANGES = [
+    "aster-perpetual",
+    "apex-perpetual",
     "binance-futures",
     "binance-futures-cm",
     "binance-spot",
@@ -48,6 +50,7 @@ EXCHANGES = [
     "gate-io-futures",
     "gate-io",
     "gemini",
+    "grvt-perpetual",
     "huobi-dm-linear-swap",
     "huobi-dm-swap",
     "huobi-dm",
@@ -56,13 +59,35 @@ EXCHANGES = [
     "hyperliquid-perps",
     "kraken",
     "kucoin",
+    "lighter-perpetual",
     "okx-perps",
     "okx-futures",
     "okx-spot",
+    "extended-perpetual",
     "phemex",
     "poloniex",
     "upbit",
+    "pacifica-perpetual",
+    "gateio-perpetual-usdt",
+    "gateio-futures-usdt",
+    "gateio-perpetual-btc",
+    "htx-perpetual-usdt",
+    "mexc-perpetual",
+    "bitget-perpetual-usdt",
+    "bitget-perpetual-usdc",
+    "bitget-perpetual-coin",
+    "bitget-futures-coin",
+    "deribit-perpetual",
+    "deribit-futures",
+    "whitebit-perpetual",
+    "cryptocom-perpetual",
+    "cryptocom-futures",
+    "ostium-perpetual",
+    "avantis-perpetual",
+    "gtrade-perpetual",
+    "variational-perpetual",
 ]
+
 
 
 def _append_contract_size_change(sd: dict, new_size: float, effective_from: str) -> dict:
@@ -122,8 +147,13 @@ def _merge_existing_fields(
     return merged_symbols
 
 
-def _capture_new_hyperliquid_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
-    """Record first observation of new API rows without inventing listing dates."""
+def _capture_new_rows(symbols: list[dict], existing_by_id: dict[str, dict]) -> None:
+    """Record first observation of new API rows without inventing listing dates.
+
+    `SecurityMaster.load` ignores rows without `first_capture`, so a row the
+    exchange API reports but Tardis does not (yet) cover would otherwise be
+    invisible to lookups.
+    """
     captured_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     for symbol in symbols:
         if symbol.get("id") not in existing_by_id and not symbol.get("first_capture"):
@@ -265,6 +295,9 @@ def update(
         if is_beta_exchange(exchange):
             print(f"Skipping {exchange} (beta exchange)", flush=True)
             continue
+        if isinstance(source, TardisSymbolSource) and not is_on_tardis(exchange):
+            print(f"Skipping {exchange} (not on Tardis)", flush=True)
+            continue
         print(f"Fetching {exchange}...", flush=True)
         try:
             data = source.fetch_exchange(exchange)
@@ -285,19 +318,18 @@ def update(
 
         incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
         incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-            # Hybrid metadata is partial: clear lifecycle fields only on rows
-            # that actually supplied Tardis availability bounds. API-only rows
-            # must retain their captured instance and approved CMC mapping.
-            incoming_symbols = [
-                _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
-                for sd in incoming_symbols
-            ]
-            _capture_new_hyperliquid_rows(incoming_symbols, existing_by_id)
-        else:
-            incoming_symbols = _merge_existing_fields(
-                incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
-            )
+        # Hybrid metadata is partial: clear lifecycle fields only on rows
+        # that actually supplied Tardis availability bounds. API-only rows
+        # must retain their captured instance and approved CMC mapping.
+        incoming_symbols = [
+            _merge_existing_fields(
+                [sd],
+                existing_by_id,
+                ignore_metadata=is_tardis_data and bool(sd.get("first_capture")),
+            )[0]
+            for sd in incoming_symbols
+        ]
+        _capture_new_rows(incoming_symbols, existing_by_id)
         incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
         # Never drop existing rows if the source omits them.
@@ -342,8 +374,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description=(
-            "Update securities master using exchange APIs for Binance/OKX and "
-            "Tardis fallback for all other exchanges"
+            "Update securities master using exchange APIs where a fetcher exists "
+            "and Tardis for history and all other exchanges"
         )
     )
     parser.add_argument(
@@ -357,8 +389,8 @@ if __name__ == "__main__":
         choices=["hybrid", "tardis", "exchange"],
         default="hybrid",
         help=(
-            "Data source mode: hybrid (default, Binance/OKX direct + Tardis fallback), "
-            "tardis (all via Tardis), exchange (direct only; only Binance/OKX supported)"
+            "Data source mode: hybrid (default, exchange API + Tardis history), "
+            "tardis (all via Tardis), exchange (direct only; exchanges with a fetcher)"
         ),
     )
     args = parser.parse_args()

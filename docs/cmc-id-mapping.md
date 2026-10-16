@@ -274,7 +274,7 @@ dominate new listings: in one 60-day window, **59 of the 67** unmapped
 Zscaler, leveraged Tesla and NVIDIA ETFs, Korean index products. Left in, they
 drown the review queue.
 
-`--skip-underlyings` (default `commodity,equity,index,pre_market`) leaves them
+`--skip-underlyings` (default `commodity,equity,forex,index,pre_market`) leaves them
 out. CoinMarketCap does carry entries for some of them, so this is a **scope**
 choice, not a correctness one: Atlas wants a CMC ID for a crypto asset, and a
 tokenized equity's ID would name the tokenization wrapper rather than the asset.

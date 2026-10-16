@@ -551,6 +551,7 @@ def test_default_scope_skips_tokenized_equities_and_index_products():
         "index",
         "commodity",
         "pre_market",
+        "forex",
     }
 
 
@@ -570,11 +571,12 @@ def test_collect_new_symbols_leaves_out_declared_non_crypto_underlyings():
             _row("GDX", "index"),
             _row("XAU", "commodity"),
             _row("PREIPO", "pre_market"),
+            _row("EURUSD", "forex"),
         ]
     }
 
     new_symbols = collect_new_symbols(
-        rows_by_exchange, {"MARSCOIN", "DDOG", "GDX", "XAU", "PREIPO"}, now=NOW
+        rows_by_exchange, {"MARSCOIN", "DDOG", "GDX", "XAU", "PREIPO", "EURUSD"}, now=NOW
     )
 
     assert [s.lookup_symbol for s in new_symbols] == ["MARSCOIN"]
