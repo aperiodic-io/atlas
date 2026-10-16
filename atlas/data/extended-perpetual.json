@@ -3570,6 +3570,20 @@
     "margin": "USD"
   },
   {
+    "id": "PEARL-USD",
+    "type": "perpetual",
+    "base_asset": "PEARL",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "listing_date": "2026-10-16T09:28:06.758Z",
+    "first_capture": "2026-10-16T10:33:22.788314Z",
+    "internal_id": "perpetual-PEARL-USD:USD",
+    "symbol": "PEARL",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "PENDLE-USD",
     "type": "perpetual",
     "base_asset": "PENDLE",

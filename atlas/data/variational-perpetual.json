@@ -462,6 +462,18 @@
     "margin": "USDC"
   },
   {
+    "id": "APP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-16T10:33:23.793167Z",
+    "internal_id": "perpetual-APP-USDC:USDC",
+    "symbol": "APP",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "APRO",
     "type": "perpetual",
     "contract_size": 1.0,
