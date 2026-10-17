@@ -5975,6 +5975,17 @@
     "first_capture": "2026-02-20T00:00:00.000Z"
   },
   {
+    "id": "xyz:SNAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-17T06:29:15.316338Z",
+    "internal_id": "perpetual-XYZ:SNAP-USDC:USDC",
+    "symbol": "XYZ:SNAP",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "xyz:SNDK",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SNDK-USDC:USDC",

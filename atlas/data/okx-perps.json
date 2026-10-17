@@ -1887,6 +1887,16 @@
     "end_date": "2024-08-30T00:00:00.000Z"
   },
   {
+    "id": "DNA-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-DNA-USDT:USDT",
+    "symbol": "DNA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DOG-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-DOG-USDT:USDT",
@@ -2781,6 +2791,16 @@
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
+    "id": "GS-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-GS-USDT:USDT",
+    "symbol": "GS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GTLB-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -3215,6 +3235,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-09T00:00:00.000Z"
+  },
+  {
+    "id": "JPM-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-JPM-USDT:USDT",
+    "symbol": "JPM",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "JST-USDT-SWAP",
@@ -3820,6 +3850,16 @@
     "contract_size": 10.0,
     "first_capture": "2024-08-06T00:00:00.000Z",
     "end_date": "2025-04-09T00:00:00.000Z"
+  },
+  {
+    "id": "MCD-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-MCD-USDT:USDT",
+    "symbol": "MCD",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "ME-USDT-SWAP",
@@ -6675,6 +6715,16 @@
     "contract_size": 10.0,
     "first_capture": "2024-07-18T00:00:00.000Z",
     "end_date": "2025-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "V-USDT-SWAP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-V-USDT:USDT",
+    "symbol": "V",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "VANA-USDT-SWAP",

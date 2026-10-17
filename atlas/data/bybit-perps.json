@@ -4769,6 +4769,21 @@
     "end_date": "2025-10-23T00:00:00.000Z"
   },
   {
+    "id": "DNAUSDT",
+    "type": "perpetual",
+    "base_coin": "DNA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-DNA-USDT:USDT",
+    "symbol": "DNA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DODOUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-DODO-USDT:USDT",
@@ -4976,6 +4991,21 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2024-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "DRVUSDT",
+    "type": "perpetual",
+    "base_coin": "DRV",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-16T00:00:00.000Z",
+    "internal_id": "perpetual-DRV-USDT:USDT",
+    "symbol": "DRV",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DUCKUSDT",
