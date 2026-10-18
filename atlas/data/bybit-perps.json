@@ -4777,11 +4777,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-DNA-USDT:USDT",
     "symbol": "DNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "DODOUSDT",
@@ -5001,11 +5001,11 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-DRV-USDT:USDT",
     "symbol": "DRV",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "DUCKUSDT",
@@ -11750,7 +11750,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2025-04-10T00:00:00.000Z"
+    "first_capture": "2025-04-10T00:00:00.000Z",
+    "end_date": "2026-10-17T00:00:00.000Z"
   },
   {
     "id": "PROMUSDT",
@@ -13778,7 +13779,8 @@
     "quantity_unit": "base",
     "contract_size": 1.0,
     "underlying": "crypto",
-    "first_capture": "2026-01-19T00:00:00.000Z"
+    "first_capture": "2026-01-19T00:00:00.000Z",
+    "end_date": "2026-10-17T00:00:00.000Z"
   },
   {
     "id": "SPOTUSDT",
