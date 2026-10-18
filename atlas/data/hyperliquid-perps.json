@@ -4478,6 +4478,17 @@
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
+    "id": "para:PAPER",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "first_capture": "2026-10-18T06:54:29.029610Z",
+    "internal_id": "perpetual-PARA:PAPER-USDC:USDC",
+    "symbol": "PARA:PAPER",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "para:RDDT",
     "type": "perpetual",
     "internal_id": "perpetual-PARA:RDDT-USDC:USDC",

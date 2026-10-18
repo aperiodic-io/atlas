@@ -1890,11 +1890,11 @@
     "id": "DNA-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 10.0,
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-DNA-USDT:USDT",
     "symbol": "DNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "DOG-USDT-SWAP",
@@ -2794,11 +2794,11 @@
     "id": "GS-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-GS-USDT:USDT",
     "symbol": "GS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "GTLB-USDT-SWAP",
@@ -3240,11 +3240,11 @@
     "id": "JPM-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-JPM-USDT:USDT",
     "symbol": "JPM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "JST-USDT-SWAP",
@@ -3855,11 +3855,11 @@
     "id": "MCD-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-MCD-USDT:USDT",
     "symbol": "MCD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "ME-USDT-SWAP",
@@ -6720,11 +6720,11 @@
     "id": "V-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "perpetual-V-USDT:USDT",
     "symbol": "V",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
     "id": "VANA-USDT-SWAP",
