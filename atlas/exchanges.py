@@ -164,8 +164,8 @@ def _id_suffix_filter(suffix: str) -> Callable[[dict], bool]:
 # live-producers venues. Their Atlas slug is the producer's exchange id, so a
 # consumer joins a published record to its Atlas row without a mapping table.
 _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
-    "gateio-perpetual-usdt": _define(
-        "gateio-perpetual-usdt",
+    "gateio-perps-usdt": _define(
+        "gateio-perps-usdt",
         parse_gateio,
         tardis_id="gate-io-futures",
         exchange_fetcher=fetch_gateio_perpetual_usdt,
@@ -179,16 +179,16 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_gateio_futures_usdt,
         allowed_types={"future"},
     ),
-    "gateio-perpetual-btc": _define(
-        "gateio-perpetual-btc",
+    "gateio-perps-btc": _define(
+        "gateio-perps-btc",
         parse_gateio,
         tardis_id="gate-io-futures",
         exchange_fetcher=fetch_gateio_perpetual_btc,
         symbol_filter=_id_suffix_filter("_USD"),
         allowed_types={"perpetual"},
     ),
-    "htx-perpetual-usdt": _define(
-        "htx-perpetual-usdt",
+    "htx-perps-usdt": _define(
+        "htx-perps-usdt",
         parse_htx_linear_swap,
         tardis_id="huobi-dm-linear-swap",
         exchange_fetcher=fetch_htx_perpetual_usdt,
@@ -196,23 +196,23 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     # Tardis's `mexc` is MEXC spot; it has no MEXC futures.
-    "mexc-perpetual": _define(
-        "mexc-perpetual",
+    "mexc-perps": _define(
+        "mexc-perps",
         parse_mexc,
         on_tardis=False,
         exchange_fetcher=fetch_mexc_perpetual,
         allowed_types={"perpetual"},
     ),
-    "bitget-perpetual-usdt": _define(
-        "bitget-perpetual-usdt",
+    "bitget-perps-usdt": _define(
+        "bitget-perps-usdt",
         parse_bitget_v3,
         tardis_id="bitget-futures",
         exchange_fetcher=fetch_bitget_perpetual_usdt,
         symbol_filter=_id_suffix_filter("USDT"),
         allowed_types={"perpetual"},
     ),
-    "bitget-perpetual-usdc": _define(
-        "bitget-perpetual-usdc",
+    "bitget-perps-usdc": _define(
+        "bitget-perps-usdc",
         parse_bitget_v3,
         tardis_id="bitget-futures",
         exchange_fetcher=fetch_bitget_perpetual_usdc,
@@ -221,8 +221,8 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
     ),
     # Tardis lists Bitget's pre-migration coin-margined symbols (`BTCUSD`),
     # not the v3 ones the venue trades now (`BTCUSD_CM`, `BTCCMZ26`).
-    "bitget-perpetual-coin": _define(
-        "bitget-perpetual-coin",
+    "bitget-perps-coin": _define(
+        "bitget-perps-coin",
         parse_bitget_v3,
         on_tardis=False,
         exchange_fetcher=fetch_bitget_perpetual_coin,
@@ -235,8 +235,8 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bitget_futures_coin,
         allowed_types={"future"},
     ),
-    "deribit-perpetual": _define(
-        "deribit-perpetual",
+    "deribit-perps": _define(
+        "deribit-perps",
         parse_deribit_api,
         tardis_id="deribit",
         exchange_fetcher=fetch_deribit_perpetual,
@@ -249,15 +249,15 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_deribit_futures,
         allowed_types={"future"},
     ),
-    "whitebit-perpetual": _define(
-        "whitebit-perpetual",
+    "whitebit-perps": _define(
+        "whitebit-perps",
         parse_whitebit,
         on_tardis=False,
         exchange_fetcher=fetch_whitebit_perpetual,
         allowed_types={"perpetual"},
     ),
-    "cryptocom-perpetual": _define(
-        "cryptocom-perpetual",
+    "cryptocom-perps": _define(
+        "cryptocom-perps",
         parse_cryptocom_derivative,
         tardis_id="crypto-com",
         exchange_fetcher=fetch_cryptocom_perpetual,
@@ -274,15 +274,15 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
 
 
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
-    "apex-perpetual": _define(
-        "apex-perpetual",
+    "apex-perps": _define(
+        "apex-perps",
         parse_apex,
         exchange_fetcher=fetch_apex_perps,
         allowed_types={"perpetual"},
         on_tardis=False,
     ),
-    "aster-perpetual": _define(
-        "aster-perpetual",
+    "aster-perps": _define(
+        "aster-perps",
         parse_aster,
         tardis_id="aster-futures",
         exchange_fetcher=fetch_aster_perps,
@@ -341,8 +341,8 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "gate-io": _define("gate-io", parse_gate_io),
     "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
     "gemini": _define("gemini", parse_gemini),
-    "grvt-perpetual": _define(
-        "grvt-perpetual",
+    "grvt-perps": _define(
+        "grvt-perps",
         parse_grvt,
         exchange_fetcher=fetch_grvt_perps,
         allowed_types={"perpetual"},
@@ -369,8 +369,8 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         allowed_types={"perpetual"},
     ),
     "kraken": _define("kraken", parse_kraken),
-    "lighter-perpetual": _define(
-        "lighter-perpetual",
+    "lighter-perps": _define(
+        "lighter-perps",
         parse_lighter,
         tardis_id="lighter",
         exchange_fetcher=fetch_lighter_perps,
@@ -392,8 +392,8 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         tardis_id="okex-futures",
         exchange_fetcher=fetch_okx_futures,
     ),
-    "extended-perpetual": _define(
-        "extended-perpetual",
+    "extended-perps": _define(
+        "extended-perps",
         parse_extended,
         exchange_fetcher=fetch_extended_perps,
         allowed_types={"perpetual"},
@@ -401,8 +401,8 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     ),
     # Oracle-priced RWA perp venue: no Tardis coverage, so the exchange API is
     # the only source and the daily update must refresh it (on_tardis=False).
-    "avantis-perpetual": _define(
-        "avantis-perpetual",
+    "avantis-perps": _define(
+        "avantis-perps",
         parse_avantis,
         exchange_fetcher=fetch_avantis_perps,
         allowed_types={"perpetual"},
@@ -412,16 +412,16 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "poloniex": _define("poloniex", parse_poloniex),
     "upbit": _define("upbit", parse_upbit),
     # DeFi perpetual venues: listed from their own APIs only (Tardis has none).
-    "pacifica-perpetual": _define(
-        "pacifica-perpetual",
+    "pacifica-perps": _define(
+        "pacifica-perps",
         parse_pacifica,
         exchange_fetcher=fetch_pacifica_perps,
         allowed_types={"perpetual"},
         on_tardis=False,
     ),
     **_LIVE_PRODUCER_VENUES,
-    "variational-perpetual": _define(
-        "variational-perpetual",
+    "variational-perps": _define(
+        "variational-perps",
         parse_variational,
         exchange_fetcher=fetch_variational_perps,
         allowed_types={"perpetual"},

@@ -57,7 +57,7 @@ def parse_deribit(exchange: str, sd: SymbolData) -> Contract:
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
 
-# --- Exchange API (live-producers' deribit-perpetual / deribit-futures) -----
+# --- Exchange API (live-producers' deribit-perps / deribit-futures) -----
 
 _DERIBIT_UNDERLYING_TYPES = {
     "crypto": UnderlyingType.crypto,

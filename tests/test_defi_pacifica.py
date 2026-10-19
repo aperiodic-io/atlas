@@ -53,7 +53,7 @@ def _ids(exchange: str, symbols: list[dict]) -> dict[str, str]:
 
 def test_registered_as_stable_perpetual_api_venue() -> None:
     # Beta exchanges are skipped by atlas.update, so this must not be beta.
-    exchange = "pacifica-perpetual"
+    exchange = "pacifica-perps"
     assert is_beta_exchange(exchange) is False
     assert get_allowed_types(exchange) == {"perpetual"}
     assert get_exchange_fetcher(exchange) is not None
@@ -86,7 +86,7 @@ def test_pacifica_fetches_every_perpetual_but_not_spot() -> None:
 
 
 def test_pacifica_ids_carry_the_usdc_settlement_and_fx_rule() -> None:
-    ids = _ids("pacifica-perpetual", _pacifica_symbols())
+    ids = _ids("pacifica-perps", _pacifica_symbols())
     assert ids["BTC"] == "perpetual-BTC-USDC:USDC"
     assert ids["kBONK"] == "perpetual-KBONK-USDC:USDC"
     assert ids["XAU"] == "perpetual-XAU-USDC:USDC"
@@ -151,11 +151,11 @@ def test_pacifica_listing_time_is_first_capture() -> None:
 
 
 def test_pacifica_parser_without_fetcher_fields() -> None:
-    c = parse_contract("pacifica-perpetual", {"id": "ETH", "type": "perpetual"})
+    c = parse_contract("pacifica-perps", {"id": "ETH", "type": "perpetual"})
     assert c.internal_id == "perpetual-ETH-USDC:USDC"
     assert c.instrument_type == ContractType.perpetual
     with pytest.raises(SkipSymbol):
-        parse_contract("pacifica-perpetual", {"id": "SOL-USDC", "type": "spot"})
+        parse_contract("pacifica-perps", {"id": "SOL-USDC", "type": "spot"})
 
 
 def test_pacifica_fetch_retries_a_failed_response() -> None:
@@ -186,7 +186,7 @@ def test_update_writes_snapshots_from_the_exchange_source(
     def get(url, timeout):
         return _response(payloads[url])
 
-    exchanges = ["pacifica-perpetual"]
+    exchanges = ["pacifica-perps"]
     with patch("requests.get", side_effect=get):
         assert updater.update(exchanges, ExchangeApiSymbolSource()) == []
 
@@ -198,5 +198,5 @@ def test_update_writes_snapshots_from_the_exchange_source(
             assert row["internal_id"] == parse_contract(exchange, row).internal_id
             assert row["underlying"] in {u.value for u in UnderlyingType}
     assert counts == {
-        "pacifica-perpetual": 77,
+        "pacifica-perps": 77,
     }

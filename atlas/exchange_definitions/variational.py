@@ -1,4 +1,4 @@
-"""Variational Omni (`variational-perpetual`).
+"""Variational Omni (`variational-perps`).
 
 Variational is an RFQ perpetuals venue; its only public market data is the read-only
 `GET https://omni-client-api.prod.ap-northeast-1.variational.io/metadata/stats`

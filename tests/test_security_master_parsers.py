@@ -47,19 +47,19 @@ class TestHelpers:
     @pytest.mark.parametrize(
         "exchange",
         [
-            "gateio-perpetual-usdt",
+            "gateio-perps-usdt",
             "gateio-futures-usdt",
-            "gateio-perpetual-btc",
-            "htx-perpetual-usdt",
-            "mexc-perpetual",
-            "bitget-perpetual-usdt",
-            "bitget-perpetual-usdc",
-            "bitget-perpetual-coin",
+            "gateio-perps-btc",
+            "htx-perps-usdt",
+            "mexc-perps",
+            "bitget-perps-usdt",
+            "bitget-perps-usdc",
+            "bitget-perps-coin",
             "bitget-futures-coin",
-            "deribit-perpetual",
+            "deribit-perps",
             "deribit-futures",
-            "whitebit-perpetual",
-            "cryptocom-perpetual",
+            "whitebit-perps",
+            "cryptocom-perps",
             "cryptocom-futures",
         ],
     )
@@ -1626,7 +1626,7 @@ class TestFetchAvantisPerps:
     )
     def test_internal_id_and_underlying(self, index, internal_id, underlying):
         sd = _by_id(self._fetch())[index]
-        c = parse_contract("avantis-perpetual", sd)
+        c = parse_contract("avantis-perps", sd)
         assert c.internal_id == internal_id
         assert c.original_id == index
         assert c.contract_size == 1.0
@@ -1650,7 +1650,7 @@ class TestFetchAvantisPerps:
 
 
 class TestRwaVenueRegistry:
-    @pytest.mark.parametrize("exchange", ["avantis-perpetual"])
+    @pytest.mark.parametrize("exchange", ["avantis-perps"])
     def test_refreshed_daily_from_the_exchange_api(self, exchange):
         # Tardis does not cover this venue: the update must not skip them as
         # beta, and they need an exchange-API fetcher.
@@ -1780,7 +1780,7 @@ class TestVariational:
         rows = {sd["id"]: sd for sd in self._fetch(_VARIATIONAL_LISTINGS)}
         assert set(rows) == {"US500", "TSLA", "BTC", "XAU", "OPENAI", "OPN_OPINION"}
         for ticker, sd in rows.items():
-            c = parse_contract("variational-perpetual", sd)
+            c = parse_contract("variational-perps", sd)
             assert c.internal_id == f"perpetual-{ticker}-USDC:USDC"
             assert c.contract_size == 1.0
             assert c.instrument_type == ContractType.perpetual
@@ -1853,4 +1853,4 @@ class TestVariational:
 
     def test_is_not_beta(self):
         """A beta exchange would be skipped by the daily update."""
-        assert is_beta_exchange("variational-perpetual") is False
+        assert is_beta_exchange("variational-perps") is False

@@ -79,11 +79,11 @@ class TestGate:
 
         usdt = _fetch(fetch_gateio_perpetual_usdt, {"/futures/usdt/contracts": GATE_USDT})
         btc = _fetch(fetch_gateio_perpetual_btc, {"/futures/btc/contracts": GATE_BTC})
-        assert _ids("gateio-perpetual-usdt", usdt)["BTC_USDT"] == "perpetual-BTC-USDT:USDT"
+        assert _ids("gateio-perps-usdt", usdt)["BTC_USDT"] == "perpetual-BTC-USDT:USDT"
         # FX pairs keep Gate's concatenated base, as the producer does.
-        assert _ids("gateio-perpetual-usdt", usdt)["EURUSD_USDT"] == "perpetual-EURUSD-USDT:USDT"
+        assert _ids("gateio-perps-usdt", usdt)["EURUSD_USDT"] == "perpetual-EURUSD-USDT:USDT"
         # BTC-settled contracts are inverse: margin is the base asset.
-        assert _ids("gateio-perpetual-btc", btc) == {"BTC_USD": "perpetual-BTC-USD:BTC"}
+        assert _ids("gateio-perps-btc", btc) == {"BTC_USD": "perpetual-BTC-USD:BTC"}
 
     def test_contract_sizes(self):
         from atlas.exchange_definitions.gate_io import fetch_gateio_perpetual_btc, fetch_gateio_perpetual_usdt
@@ -128,13 +128,13 @@ class TestGate:
         assert rows[0]["contract_size"] == 0.0001
 
     def test_tardis_rows_parse_from_the_id(self):
-        assert parse_contract("gateio-perpetual-btc", {"id": "BTC_USD", "type": "perpetual"}).internal_id == "perpetual-BTC-USD:BTC"
-        assert parse_contract("gateio-perpetual-usdt", {"id": "ETH_USDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
+        assert parse_contract("gateio-perps-btc", {"id": "BTC_USD", "type": "perpetual"}).internal_id == "perpetual-BTC-USD:BTC"
+        assert parse_contract("gateio-perps-usdt", {"id": "ETH_USDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
 
     def test_shared_tardis_feed_is_split_by_settlement(self):
         from atlas.exchanges import get_symbol_filter
 
-        usdt, btc = get_symbol_filter("gateio-perpetual-usdt"), get_symbol_filter("gateio-perpetual-btc")
+        usdt, btc = get_symbol_filter("gateio-perps-usdt"), get_symbol_filter("gateio-perps-btc")
         assert usdt({"id": "BTC_USDT"})
         assert not usdt({"id": "BTC_USD"})
         assert btc({"id": "BTC_USD"})
@@ -163,7 +163,7 @@ class TestHtx:
         from atlas.exchange_definitions.huobi import fetch_htx_perpetual_usdt
 
         rows = _fetch(fetch_htx_perpetual_usdt, {"/swap_contract_info": HTX})
-        ids = _ids("htx-perpetual-usdt", rows)
+        ids = _ids("htx-perps-usdt", rows)
         # Suspended (status 3) is not delisted: the daily update would close a
         # contract the fetcher left out.
         assert "end_date" not in {sd["id"]: sd for sd in rows}["CYBER-USDT"]
@@ -222,7 +222,7 @@ class TestMexc:
     def test_ids_use_the_settle_asset(self):
         from atlas.exchange_definitions.mexc import fetch_mexc_perpetual
 
-        ids = _ids("mexc-perpetual", _fetch(fetch_mexc_perpetual, {"/contract/detail": MEXC}))
+        ids = _ids("mexc-perps", _fetch(fetch_mexc_perpetual, {"/contract/detail": MEXC}))
         assert ids["BTC_USDT"] == "perpetual-BTC-USDT:USDT"
         # Coin-margined: settles in BTC.
         assert ids["BTC_USD"] == "perpetual-BTC-USD:BTC"
@@ -304,11 +304,11 @@ class TestBitget:
         usdc = _fetch(bitget.fetch_bitget_perpetual_usdc, BITGET_ROUTES)
         coin = _fetch(bitget.fetch_bitget_perpetual_coin, BITGET_ROUTES)
         dated = _fetch(bitget.fetch_bitget_futures_coin, BITGET_ROUTES)
-        assert _ids("bitget-perpetual-usdt", usdt)["BTCUSDT"] == "perpetual-BTC-USDT:USDT"
+        assert _ids("bitget-perps-usdt", usdt)["BTCUSDT"] == "perpetual-BTC-USDT:USDT"
         # Offline contracts are reported delisted.
         assert "end_date" in {sd["id"]: sd for sd in usdt}["OLDUSDT"]
-        assert _ids("bitget-perpetual-usdc", usdc) == {"BTCPERP": "perpetual-BTC-USDC:USDC"}
-        assert _ids("bitget-perpetual-coin", coin) == {"BTCUSD_CM": "perpetual-BTC-USD:BTC"}
+        assert _ids("bitget-perps-usdc", usdc) == {"BTCPERP": "perpetual-BTC-USDC:USDC"}
+        assert _ids("bitget-perps-coin", coin) == {"BTCUSD_CM": "perpetual-BTC-USD:BTC"}
         assert _ids("bitget-futures-coin", dated) == {"BTCCMZ26": "future-BTC-USD:BTC-20261225"}
 
     def test_quantity_units(self):
@@ -336,8 +336,8 @@ class TestBitget:
         }
 
     def test_tardis_rows_parse_from_the_id(self):
-        assert parse_contract("bitget-perpetual-usdc", {"id": "ETHPERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USDC:USDC"
-        assert parse_contract("bitget-perpetual-usdt", {"id": "ETHUSDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
+        assert parse_contract("bitget-perps-usdc", {"id": "ETHPERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USDC:USDC"
+        assert parse_contract("bitget-perps-usdt", {"id": "ETHUSDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
 
 
 # ---------------------------------------------------------------------------
@@ -372,7 +372,7 @@ class TestDeribit:
     def test_linear_contracts_settle_in_their_quote(self):
         from atlas.exchange_definitions.deribit import fetch_deribit_futures, fetch_deribit_perpetual
 
-        perps = _ids("deribit-perpetual", _fetch(fetch_deribit_perpetual, {"/get_instruments": DERIBIT}))
+        perps = _ids("deribit-perps", _fetch(fetch_deribit_perpetual, {"/get_instruments": DERIBIT}))
         dated = _ids("deribit-futures", _fetch(fetch_deribit_futures, {"/get_instruments": DERIBIT}))
         assert perps["BTC-PERPETUAL"] == "perpetual-BTC-USD:BTC"
         assert perps["BTC_USDC-PERPETUAL"] == "perpetual-BTC-USDC:USDC"
@@ -385,7 +385,7 @@ class TestDeribit:
     def test_tardis_rows_infer_linear_from_the_name(self):
         assert parse_contract("deribit", {"id": "SOL_USDC-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-SOL-USDC:USDC"
         assert parse_contract("deribit", {"id": "ETH_USDC-28MAR25", "type": "future"}).internal_id == "future-ETH-USDC:USDC-20250328"
-        assert parse_contract("deribit-perpetual", {"id": "ETH-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:ETH"
+        assert parse_contract("deribit-perps", {"id": "ETH-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:ETH"
 
     def test_contract_size_and_underlying(self):
         from atlas.exchange_definitions.deribit import fetch_deribit_perpetual
@@ -427,7 +427,7 @@ class TestWhitebit:
         from atlas.exchange_definitions.whitebit import fetch_whitebit_perpetual
 
         rows = _fetch(fetch_whitebit_perpetual, {"/public/futures": WHITEBIT_FUTURES, "/public/markets": WHITEBIT_MARKETS})
-        assert _ids("whitebit-perpetual", rows)["BTC_PERP"] == "perpetual-BTC-USDT:USDT"
+        assert _ids("whitebit-perps", rows)["BTC_PERP"] == "perpetual-BTC-USDT:USDT"
         # TradFi perps are missing from /markets (or flagged there).
         assert _classes(rows) == {
             "BTC_PERP": "crypto",
@@ -467,7 +467,7 @@ class TestCryptocom:
     def test_ids(self):
         from atlas.exchange_definitions.crypto_com import fetch_cryptocom_futures, fetch_cryptocom_perpetual
 
-        perps = _ids("cryptocom-perpetual", _fetch(fetch_cryptocom_perpetual, {"/get-instruments": CDC}))
+        perps = _ids("cryptocom-perps", _fetch(fetch_cryptocom_perpetual, {"/get-instruments": CDC}))
         dated = _ids("cryptocom-futures", _fetch(fetch_cryptocom_futures, {"/get-instruments": CDC}))
         assert perps["BTCUSD-PERP"] == "perpetual-BTC-USD:USD"
         assert "OLDUSD-PERP" not in perps
@@ -488,7 +488,7 @@ class TestCryptocom:
         assert _classes(_fetch(fetch_cryptocom_futures, {"/get-instruments": CDC})) == {"BTCUSD-261127": "crypto"}
 
     def test_tardis_rows_parse_from_the_id(self):
-        assert parse_contract("cryptocom-perpetual", {"id": "ETHUSD-PERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:USD"
+        assert parse_contract("cryptocom-perps", {"id": "ETHUSD-PERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:USD"
         assert parse_contract("cryptocom-futures", {"id": "ETHUSD-250328", "type": "future"}).internal_id == "future-ETH-USD:USD-20250328"
 
 
@@ -500,19 +500,19 @@ class TestCryptocom:
 @pytest.mark.parametrize(
     ("exchange", "tardis_id"),
     [
-        ("gateio-perpetual-usdt", "gate-io-futures"),
-        ("gateio-perpetual-btc", "gate-io-futures"),
+        ("gateio-perps-usdt", "gate-io-futures"),
+        ("gateio-perps-btc", "gate-io-futures"),
         ("gateio-futures-usdt", None),
-        ("htx-perpetual-usdt", "huobi-dm-linear-swap"),
-        ("mexc-perpetual", None),
-        ("bitget-perpetual-usdt", "bitget-futures"),
-        ("bitget-perpetual-usdc", "bitget-futures"),
-        ("bitget-perpetual-coin", None),
+        ("htx-perps-usdt", "huobi-dm-linear-swap"),
+        ("mexc-perps", None),
+        ("bitget-perps-usdt", "bitget-futures"),
+        ("bitget-perps-usdc", "bitget-futures"),
+        ("bitget-perps-coin", None),
         ("bitget-futures-coin", None),
-        ("deribit-perpetual", "deribit"),
+        ("deribit-perps", "deribit"),
         ("deribit-futures", "deribit"),
-        ("whitebit-perpetual", None),
-        ("cryptocom-perpetual", "crypto-com"),
+        ("whitebit-perps", None),
+        ("cryptocom-perps", "crypto-com"),
         ("cryptocom-futures", "crypto-com"),
     ],
 )

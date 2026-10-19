@@ -67,7 +67,7 @@ def parse_huobi_dm_linear_swap(exchange: str, sd: SymbolData) -> Contract:
     return parse_dash(exchange, sd)
 
 
-# --- Exchange API (live-producers' htx-perpetual-usdt) ----------------------
+# --- Exchange API (live-producers' htx-perps-usdt) ----------------------
 #
 # contract_status: 0 delisted, 1 listed, 2 pending listing, 3 suspended,
 # 4 listing suspended, 5 settling, 6 delivering, 7 settled, 8 delivered. Swaps

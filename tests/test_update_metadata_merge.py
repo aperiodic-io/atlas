@@ -304,18 +304,18 @@ def test_new_direct_rows_receive_capture_dates_on_every_exchange(tmp_path, monke
     source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
         {"id": "BTC_USDT", "type": "perpetual", "margin_asset": "USDT"}
     ]})
-    assert updater.update(["mexc-perpetual"], source) == []
-    path = tmp_path / "mexc-perpetual.json"
+    assert updater.update(["mexc-perps"], source) == []
+    path = tmp_path / "mexc-perps.json"
     original = json.loads(path.read_text())[0]
     assert original["first_capture"]
-    assert updater.update(["mexc-perpetual"], source) == []
+    assert updater.update(["mexc-perps"], source) == []
     assert json.loads(path.read_text())[0]["first_capture"] == original["first_capture"]
 
 
 def test_partial_tardis_refresh_keeps_direct_capture_on_every_exchange(tmp_path, monkeypatch) -> None:
     updater = importlib.import_module("atlas.update")
     monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    path = tmp_path / "gateio-perpetual-usdt.json"
+    path = tmp_path / "gateio-perps-usdt.json"
     path.write_text(json.dumps([
         {"id": "BTC_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
         {"id": "NEW_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
@@ -324,27 +324,27 @@ def test_partial_tardis_refresh_keeps_direct_capture_on_every_exchange(tmp_path,
         {"id": "BTC_USDT", "type": "perpetual", "availableSince": "2020-01-01T00:00:00Z"},
         {"id": "NEW_USDT", "type": "perpetual"},
     ]})
-    assert updater.update(["gateio-perpetual-usdt"], source) == []
+    assert updater.update(["gateio-perps-usdt"], source) == []
     rows = {row["id"]: row for row in json.loads(path.read_text())}
     assert rows["BTC_USDT"]["first_capture"] == "2020-01-01T00:00:00Z"
     assert rows["NEW_USDT"]["first_capture"] == "2026-03-01T00:00:00Z"
 
 
 def test_tardis_source_refuses_exchanges_tardis_does_not_cover() -> None:
-    # Tardis's "mexc" is MEXC spot; mexc-perpetual must never read it, and a
+    # Tardis's "mexc" is MEXC spot; mexc-perps must never read it, and a
     # Tardis-only refresh must fail loudly instead of writing an empty file.
     import pytest
 
     from atlas.exchanges import is_on_tardis
     from atlas.update_sources import HybridSymbolSource, TardisSymbolSource
 
-    assert not is_on_tardis("mexc-perpetual")
+    assert not is_on_tardis("mexc-perps")
     with pytest.raises(ValueError, match="Tardis"):
-        TardisSymbolSource().fetch_exchange("mexc-perpetual")
+        TardisSymbolSource().fetch_exchange("mexc-perps")
 
     api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [{"id": "BTC_USDT"}]})
     hybrid = HybridSymbolSource(exchange_source=api)
-    assert hybrid.fetch_exchange("mexc-perpetual") == {"availableSymbols": [{"id": "BTC_USDT"}]}
+    assert hybrid.fetch_exchange("mexc-perps") == {"availableSymbols": [{"id": "BTC_USDT"}]}
 def test_tardis_refresh_of_an_uncovered_venue_keeps_the_snapshot(tmp_path, monkeypatch) -> None:
     # Tardis answers an exchange it does not cover with an error object, not
     # a symbol list. A Tardis-sourced refresh replaces the snapshot wholesale,
@@ -358,19 +358,19 @@ def test_tardis_refresh_of_an_uncovered_venue_keeps_the_snapshot(tmp_path, monke
         "_fetch_exchange",
         lambda _exchange: {"code": 100, "message": "Invalid 'exchange' param provided"},
     )
-    path = tmp_path / "avantis-perpetual.json"
+    path = tmp_path / "avantis-perps.json"
     rows = [{"id": "0", "type": "perpetual", "base_coin": "BTC", "quote_coin": "USD", "settle_coin": "USDC"}]
     path.write_text(json.dumps(rows))
 
     # Avantis is marked off-Tardis, so a Tardis-only update skips it untouched.
-    assert updater.update(["avantis-perpetual"], sources.TardisSymbolSource()) == []
+    assert updater.update(["avantis-perps"], sources.TardisSymbolSource()) == []
     assert json.loads(path.read_text()) == rows
     # An exchange Tardis does list but answers with an error object fails
     # instead of being refreshed to an empty snapshot.
     import pytest
 
     with pytest.raises(ValueError, match="no symbol list"):
-        sources.TardisSymbolSource().fetch_exchange("gateio-perpetual-usdt")
+        sources.TardisSymbolSource().fetch_exchange("gateio-perps-usdt")
 
 
 def test_hybrid_refresh_of_an_uncovered_venue_uses_the_exchange_api(tmp_path, monkeypatch) -> None:
@@ -398,7 +398,7 @@ def test_hybrid_refresh_of_an_uncovered_venue_uses_the_exchange_api(tmp_path, mo
         exchange_source=SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": api_rows})
     )
 
-    assert updater.update(["avantis-perpetual"], source) == []
-    (row,) = json.loads((tmp_path / "avantis-perpetual.json").read_text())
+    assert updater.update(["avantis-perps"], source) == []
+    (row,) = json.loads((tmp_path / "avantis-perps.json").read_text())
     assert row["internal_id"] == "perpetual-BTC-USDC:USDC"
     assert row["underlying"] == "crypto"

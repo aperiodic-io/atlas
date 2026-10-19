@@ -459,7 +459,7 @@ class TestDeribit:
 
 def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
     monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    path = tmp_path / "extended-perpetual.json"
+    path = tmp_path / "extended-perps.json"
     open_row = {
         "id": "OLD-USD", "type": "perpetual", "base_asset": "OLD", "margin_asset": "USD",
         "first_capture": "2025-01-17T07:21:01.318Z",
@@ -472,7 +472,7 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
     )
 
     with _Clock() as clock:
-        assert updater.update(["extended-perpetual"], source) == []
+        assert updater.update(["extended-perps"], source) == []
 
     (row,) = json.loads(path.read_text())
     clock.assert_now(row["end_date"])
@@ -482,13 +482,13 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
 @pytest.mark.parametrize(
     "exchange",
     [
-        "aster-perpetual", "apex-perpetual", "avantis-perpetual", "extended-perpetual",
-        "grvt-perpetual", "lighter-perpetual", "pacifica-perpetual", "variational-perpetual",
-        "gateio-perpetual-usdt", "gateio-perpetual-btc", "gateio-futures-usdt",
-        "htx-perpetual-usdt", "mexc-perpetual", "bitget-perpetual-usdt",
-        "bitget-perpetual-usdc", "bitget-perpetual-coin", "bitget-futures-coin",
-        "deribit-perpetual", "deribit-futures", "whitebit-perpetual",
-        "cryptocom-perpetual", "cryptocom-futures",
+        "aster-perps", "apex-perps", "avantis-perps", "extended-perps",
+        "grvt-perps", "lighter-perps", "pacifica-perps", "variational-perps",
+        "gateio-perps-usdt", "gateio-perps-btc", "gateio-futures-usdt",
+        "htx-perps-usdt", "mexc-perps", "bitget-perps-usdt",
+        "bitget-perps-usdc", "bitget-perps-coin", "bitget-futures-coin",
+        "deribit-perps", "deribit-futures", "whitebit-perps",
+        "cryptocom-perps", "cryptocom-futures",
     ],
 )  # fmt: skip
 def test_daily_update_refreshes_the_venue(exchange):

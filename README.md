@@ -190,8 +190,8 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bitget-futures` | **`UNSTABLE (BETA)`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
 | `bybit-spot` | ✅ **`STABLE`** |
-| `apex-perpetual` | ✅ **`STABLE`** (venue API only) |
-| `aster-perpetual` | ✅ **`STABLE`** |
+| `apex-perps` | ✅ **`STABLE`** (venue API only) |
+| `aster-perps` | ✅ **`STABLE`** |
 | `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
 | `coinbase` | **`UNSTABLE (BETA)`** |
@@ -202,7 +202,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
-| `grvt-perpetual` | ✅ **`STABLE`** |
+| `grvt-perps` | ✅ **`STABLE`** |
 | `huobi` | **`UNSTABLE (BETA)`** |
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
@@ -211,28 +211,28 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
-| `lighter-perpetual` | ✅ **`STABLE`** |
+| `lighter-perps` | ✅ **`STABLE`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
-| `extended-perpetual` | ✅ **`STABLE`** |
+| `extended-perps` | ✅ **`STABLE`** |
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
-| `pacifica-perpetual` | ✅ **`STABLE`** (exchange API only) |
-| `gateio-perpetual-usdt` | ✅ **`STABLE`** |
+| `pacifica-perps` | ✅ **`STABLE`** (exchange API only) |
+| `gateio-perps-usdt` | ✅ **`STABLE`** |
 | `gateio-futures-usdt` | ✅ **`STABLE`** |
-| `gateio-perpetual-btc` | ✅ **`STABLE`** |
-| `htx-perpetual-usdt` | ✅ **`STABLE`** |
-| `mexc-perpetual` | ✅ **`STABLE`** |
-| `bitget-perpetual-usdt` | ✅ **`STABLE`** |
-| `bitget-perpetual-usdc` | ✅ **`STABLE`** |
-| `bitget-perpetual-coin` | ✅ **`STABLE`** |
+| `gateio-perps-btc` | ✅ **`STABLE`** |
+| `htx-perps-usdt` | ✅ **`STABLE`** |
+| `mexc-perps` | ✅ **`STABLE`** |
+| `bitget-perps-usdt` | ✅ **`STABLE`** |
+| `bitget-perps-usdc` | ✅ **`STABLE`** |
+| `bitget-perps-coin` | ✅ **`STABLE`** |
 | `bitget-futures-coin` | ✅ **`STABLE`** |
-| `deribit-perpetual` | ✅ **`STABLE`** |
+| `deribit-perps` | ✅ **`STABLE`** |
 | `deribit-futures` | ✅ **`STABLE`** |
-| `whitebit-perpetual` | ✅ **`STABLE`** |
-| `cryptocom-perpetual` | ✅ **`STABLE`** |
+| `whitebit-perps` | ✅ **`STABLE`** |
+| `cryptocom-perps` | ✅ **`STABLE`** |
 | `cryptocom-futures` | ✅ **`STABLE`** |
 
 An exchange is stable exactly when it has its own exchange-API fetcher.
@@ -240,7 +240,7 @@ An exchange is stable exactly when it has its own exchange-API fetcher.
 ### live-producers venues
 
 The venues the live producers stream are registered under the producer's own
-exchange id (`gateio-perpetual-usdt`, `htx-perpetual-usdt`, ...), so a
+exchange id (`gateio-perps-usdt`, `htx-perps-usdt`, ...), so a
 published record joins its Atlas row by `(exchange, internal_id)` without a
 mapping table. Where Tardis carries the same instruments under the same ids,
 hybrid updates merge its history through `tardis_id` (Gate's two perpetual
@@ -248,8 +248,8 @@ families share `gate-io-futures` and are split by settlement suffix; Bitget's
 USDT and USDC perpetuals share `bitget-futures`). The older Tardis-named
 exchanges (`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`,
 `deribit`, `crypto-com`) remain beta parsers. Bybit keeps its existing
-`bybit-perps` / `bybit-futures` (the producer's `bybit-perpetual-usd` and
-`bybit-perpetual-coin` both live in `bybit-perps`).
+`bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
+`bybit-perps-coin` both live in `bybit-perps`).
 
 New rows take the venue's listing time as `first_capture` where it publishes
 one, otherwise their first observation (see [Listing and delisting
@@ -271,7 +271,7 @@ know is `unknown`, never `crypto`. Venues disagree on tokenized gold
 (PAXG, XAUT): Binance and Bybit call it crypto, MEXC and Bitget commodity;
 Atlas follows each venue. Rows only Tardis knows (delisted before a fetcher
 saw them) carry no `underlying`.
-| `avantis-perpetual` | ✅ **`STABLE`** (exchange API only) |
+| `avantis-perps` | ✅ **`STABLE`** (exchange API only) |
 
 Avantis (Veranta) is an oracle-priced RWA perp venue that Tardis does not
 cover: its rows come from the venue's own API only, and each row's `underlying`
@@ -285,41 +285,41 @@ by (the pair index), and a non-USD quote is kept in the symbol (`USDJPY`,
 
 The repository currently ships precomputed JSON snapshots for:
 
-- `apex-perpetual`
-- `aster-perpetual`
+- `apex-perps`
+- `aster-perps`
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
-- `grvt-perpetual` (venue API only; `first_capture` is the venue listing time)
+- `grvt-perps` (venue API only; `first_capture` is the venue listing time)
 - `hyperliquid-spot`
 - `hyperliquid-perps`
-- `lighter-perpetual`
+- `lighter-perps`
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
-- `pacifica-perpetual` (DeFi perpetual venue Tardis does not cover: listed from
+- `pacifica-perps` (DeFi perpetual venue Tardis does not cover: listed from
   the venue's own API, with the settlement token as denominator and margin, the
   venue's listing time as `first_capture`, and `underlying` from the venue's
   market categories)
-- `gateio-perpetual-usdt`
+- `gateio-perps-usdt`
 - `gateio-futures-usdt`
-- `gateio-perpetual-btc`
-- `htx-perpetual-usdt`
-- `mexc-perpetual`
-- `bitget-perpetual-usdt`
-- `bitget-perpetual-usdc`
-- `bitget-perpetual-coin`
+- `gateio-perps-btc`
+- `htx-perps-usdt`
+- `mexc-perps`
+- `bitget-perps-usdt`
+- `bitget-perps-usdc`
+- `bitget-perps-coin`
 - `bitget-futures-coin`
-- `deribit-perpetual`
+- `deribit-perps`
 - `deribit-futures`
-- `whitebit-perpetual`
-- `cryptocom-perpetual`
+- `whitebit-perps`
+- `cryptocom-perps`
 - `cryptocom-futures`
-- `extended-perpetual`
-- `avantis-perpetual`
+- `extended-perps`
+- `avantis-perps`
 
 ## Features
 
@@ -386,7 +386,7 @@ configuration and review process.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
 - `--source exchange` only works for exchanges that have direct API fetchers implemented (the stable exchanges above).
-- `--source tardis` skips exchanges Tardis does not cover (the DeFi venues, `mexc-perpetual`, `whitebit-perpetual`, `gateio-futures-usdt`, `bitget-perpetual-coin`, `bitget-futures-coin`) rather than writing an empty snapshot.
+- `--source tardis` skips exchanges Tardis does not cover (the DeFi venues, `mexc-perps`, `whitebit-perps`, `gateio-futures-usdt`, `bitget-perps-coin`, `bitget-futures-coin`) rather than writing an empty snapshot.
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout

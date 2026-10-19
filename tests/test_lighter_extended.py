@@ -55,7 +55,7 @@ def _iid(exchange: str, sd: dict) -> str:
 
 
 class TestRegistration:
-    @pytest.mark.parametrize("exchange", ["lighter-perpetual", "extended-perpetual"])
+    @pytest.mark.parametrize("exchange", ["lighter-perps", "extended-perps"])
     def test_stable_perpetual_only_with_an_api_fetcher(self, exchange):
         # Beta exchanges are skipped by update(); these have no other source.
         assert is_beta_exchange(exchange) is False
@@ -64,14 +64,14 @@ class TestRegistration:
 
     def test_lighter_reads_tardis_under_its_tardis_id(self):
         # Tardis archives Lighter as "lighter", keyed by the same market ids.
-        assert to_tardis_exchange_id("lighter-perpetual") == "lighter"
+        assert to_tardis_exchange_id("lighter-perps") == "lighter"
 
 
 class TestLighter:
     symbols = lighter_symbols(_payload("lighter_order_book_details.json"))
 
     def test_perp_markets_only_inactive_included(self):
-        rows = _rows("lighter-perpetual", self.symbols)
+        rows = _rows("lighter-perps", self.symbols)
         assert len(rows) == 239
         assert rows["22"]["base_asset"] == "AI16Z"  # inactive, kept for history
         assert not any(sd["id"] == "2048" for sd in self.symbols)  # spot ETH/USDC
@@ -96,11 +96,11 @@ class TestLighter:
         ],
     )
     def test_internal_ids(self, market_id, expected):
-        sd = _rows("lighter-perpetual", self.symbols)[market_id]
-        assert _iid("lighter-perpetual", sd) == expected
+        sd = _rows("lighter-perps", self.symbols)[market_id]
+        assert _iid("lighter-perps", sd) == expected
 
     def test_internal_ids_are_unique(self):
-        ids = [_iid("lighter-perpetual", sd) for sd in self.symbols]
+        ids = [_iid("lighter-perps", sd) for sd in self.symbols]
         assert len(ids) == len(set(ids))
 
     def test_symbol_rule(self):
@@ -155,12 +155,12 @@ class TestLighter:
     def test_listing_time_is_the_first_capture(self):
         # The daily update reads Lighter's API only; its listing time is the
         # best start there is (rows on file keep their own first_capture).
-        rows = _rows("lighter-perpetual", self.symbols)
+        rows = _rows("lighter-perps", self.symbols)
         assert rows["0"]["first_capture"] == "2025-01-17T07:21:01.100Z"
 
     def test_missing_base_asset_is_skipped(self):
         with pytest.raises(SkipSymbol):
-            parse_contract("lighter-perpetual", {"id": "5", "type": "perpetual"})
+            parse_contract("lighter-perps", {"id": "5", "type": "perpetual"})
 
     def test_fetch_retries_then_succeeds(self):
         good = MagicMock()
@@ -209,8 +209,8 @@ class TestExtended:
         ],
     )
     def test_internal_id_and_underlying(self, market, expected, underlying):
-        sd = _rows("extended-perpetual", self.symbols)[market]
-        assert _iid("extended-perpetual", sd) == expected
+        sd = _rows("extended-perps", self.symbols)[market]
+        assert _iid("extended-perps", sd) == expected
         assert sd["underlying"] == underlying
 
     def test_every_trading_market_has_a_known_underlying(self):
@@ -248,7 +248,7 @@ class TestExtended:
     ("exchange", "fetcher_module", "fetcher", "payload", "original_id", "internal_id"),
     [
         (
-            "lighter-perpetual",
+            "lighter-perps",
             "lighter",
             "fetch_lighter_perps",
             "lighter_order_book_details.json",
@@ -256,7 +256,7 @@ class TestExtended:
             "perpetual-EUR-USDC:USDC",
         ),
         (
-            "extended-perpetual",
+            "extended-perps",
             "extended",
             "fetch_extended_perps",
             "extended_markets.json",

@@ -21,7 +21,7 @@ from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
 PAYLOAD = json.loads((Path(__file__).parent / "data" / "apex_symbols.json").read_text(encoding="utf-8"))
-EXCHANGE = "apex-perpetual"
+EXCHANGE = "apex-perps"
 
 
 def _by_id() -> dict[str, dict]:

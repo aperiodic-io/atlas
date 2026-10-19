@@ -14,7 +14,7 @@ def parse_crypto_com(exchange: str, sd: SymbolData) -> Contract:
     return parse_underscore_spot(exchange, sd)
 
 
-# --- Exchange API (live-producers' cryptocom-perpetual / cryptocom-futures) --
+# --- Exchange API (live-producers' cryptocom-perps / cryptocom-futures) --
 #
 # Crypto.com derivatives are quoted and settled in USD (`BTCUSD-PERP`,
 # `BTCUSD-261127`), which is also ccxt's settle currency for them.

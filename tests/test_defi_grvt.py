@@ -37,7 +37,7 @@ def _response(payload) -> MagicMock:
 def test_registered_as_stable_perpetual_venue_with_an_api_fetcher():
     # A beta exchange is skipped by the daily update; GRVT is fetched from the
     # venue (Tardis does not cover it).
-    slug = "grvt-perpetual"
+    slug = "grvt-perps"
     assert not is_beta_exchange(slug)
     assert slug in EXCHANGES
     assert get_allowed_types(slug) == {"perpetual"}
@@ -64,7 +64,7 @@ class TestGrvt:
 
     def test_perps_settle_in_their_usdt_quote(self):
         c = parse_contract(
-            "grvt-perpetual", {"id": "BTC_USDT_Perp", "type": "perpetual"}
+            "grvt-perps", {"id": "BTC_USDT_Perp", "type": "perpetual"}
         )
         assert c.internal_id == "perpetual-BTC-USDT:USDT"
 
@@ -97,7 +97,7 @@ class TestGrvt:
         assert by_id["OPENAI_USDT_Perp"]["underlying"] == "pre_market"
         assert by_id["BTC_USDT_Perp"]["first_capture"].endswith("Z")
         ids = {
-            sd["id"]: parse_contract("grvt-perpetual", sd).internal_id
+            sd["id"]: parse_contract("grvt-perps", sd).internal_id
             for sd in by_id.values()
         }
         assert ids["KPEPE_USDT_Perp"] == "perpetual-KPEPE-USDT:USDT"
@@ -119,11 +119,11 @@ class TestGrvt:
     def test_instrument_without_base_and_quote_is_split(self):
         assert (
             parse_contract(
-                "grvt-perpetual", {"id": "ETH_USDT_Perp", "type": "perpetual"}
+                "grvt-perps", {"id": "ETH_USDT_Perp", "type": "perpetual"}
             ).internal_id
             == "perpetual-ETH-USDT:USDT"
         )
         with pytest.raises(SkipSymbol):
             parse_contract(
-                "grvt-perpetual", {"id": "BTC_USDT_Fut_20Oct23", "type": "perpetual"}
+                "grvt-perps", {"id": "BTC_USDT_Fut_20Oct23", "type": "perpetual"}
             )

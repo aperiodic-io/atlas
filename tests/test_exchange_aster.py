@@ -21,7 +21,7 @@ from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
 PAYLOAD = json.loads((Path(__file__).parent / "data" / "aster_exchangeinfo.json").read_text(encoding="utf-8"))
-EXCHANGE = "aster-perpetual"
+EXCHANGE = "aster-perps"
 
 
 def _by_id() -> dict[str, dict]:
