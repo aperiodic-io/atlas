@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from typing import Any
 
 import requests
@@ -7,7 +8,7 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 
 from ..contracts import Contract
 from ..parser_interface import SymbolData
-from .common import SkipSymbol, instrument_type, make_contract, resolve_margin
+from .common import SkipSymbol, instrument_type, make_contract, resolve_margin, utc_timestamp
 
 
 import re
@@ -86,6 +87,8 @@ def _hip3_dex_names(timeout_seconds: int) -> list[str]:
 def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
     """Perpetuals on the main dex and on every HIP-3 dex, delisted ones included.
 
+    Delisted perps carry an `end_date` so the updater can close their rows.
+
     Each symbol carries its dex's collateral token as `margin_asset`, resolved
     from the dex's `collateralToken` spot-token index.
     """
@@ -95,6 +98,7 @@ def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
         for dex in _hip3_dex_names(timeout_seconds)
     ]
     spot_meta = _fetch_hyperliquid_payload("spotMeta", timeout_seconds)
+    captured_at = utc_timestamp(datetime.now(UTC))
     token_names = {token["index"]: token["name"] for token in spot_meta.get("tokens", [])}
 
     symbols = []
@@ -104,5 +108,8 @@ def fetch_hyperliquid_perps(timeout_seconds: int) -> list[dict]:
             sd = {**_to_symbol(item["name"], "perpetual"), "contract_size": 1.0}
             if collateral:
                 sd["margin_asset"] = collateral
+            if item.get("isDelisted"):
+                # Hyperliquid flags delistings without saying when; use first sighting.
+                sd["end_date"] = captured_at
             symbols.append(sd)
     return symbols

@@ -8,6 +8,7 @@ from .common import (
     SkipSymbol,
     instrument_type,
     make_contract,
+    ms_to_utc_timestamp,
     parse_dash,
     parse_yymmdd,
     parse_yyyymmdd,
@@ -73,10 +74,17 @@ def parse_okex_futures(exchange: str, sd: SymbolData) -> Contract:
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
 
+# OKX drops delisted instruments from this endpoint; `suspend` is a temporary halt
+# and `preopen` has not started trading yet.
+_LISTED_STATES = {"live", "suspend"}
+
+
 def _to_symbol(item: dict, type_value: str) -> dict:
     result: dict = {"id": item["instId"], "type": type_value}
     if ct_val := item.get("ctVal"):
         result["contract_size"] = float(ct_val)
+    if listed_at := ms_to_utc_timestamp(item.get("listTime")):
+        result["first_capture"] = listed_at
     return result
 
 
@@ -88,7 +96,7 @@ def fetch_okx_spot(timeout_seconds: int) -> list[dict[str, str]]:
     return [
         _to_symbol(item, "spot")
         for item in payload.get("data", [])
-        if item.get("state") == "live"
+        if item.get("state") in _LISTED_STATES
     ]
 
 
@@ -100,7 +108,7 @@ def fetch_okx_swap(timeout_seconds: int) -> list[dict[str, str]]:
     return [
         _to_symbol(item, "perpetual")
         for item in payload.get("data", [])
-        if item.get("state") == "live"
+        if item.get("state") in _LISTED_STATES
     ]
 
 
@@ -112,5 +120,5 @@ def fetch_okx_futures(timeout_seconds: int) -> list[dict[str, str]]:
     return [
         _to_symbol(item, "future")
         for item in payload.get("data", [])
-        if item.get("state") == "live"
+        if item.get("state") in _LISTED_STATES
     ]

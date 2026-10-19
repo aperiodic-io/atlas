@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from datetime import UTC, datetime
+import time
+from datetime import datetime
 
 import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
@@ -14,9 +15,12 @@ from .common import (
     SkipSymbol,
     instrument_type,
     make_contract,
+    ms_to_datetime,
+    ms_to_utc_timestamp,
     parse_cme_month_year,
     parse_concat,
     parse_ddmmmyy,
+    parse_utc_timestamp,
     resolve_margin,
     split_concat,
 )
@@ -34,7 +38,7 @@ def _metadata_delivery_date(sd: SymbolData) -> datetime | None:
     if not isinstance(raw_delivery_date, str):
         return None
     try:
-        return datetime.fromisoformat(raw_delivery_date.replace("Z", "+00:00"))
+        return parse_utc_timestamp(raw_delivery_date)
     except ValueError:
         return None
 
@@ -154,16 +158,10 @@ def _to_symbol(
             item.get("symbolType"), UnderlyingType.crypto
         ).value,
     }
-    if type_value == "future":
-        delivery_time = item.get("deliveryTime")
-        try:
-            delivery_timestamp = int(delivery_time) if delivery_time is not None else 0
-        except (TypeError, ValueError):
-            delivery_timestamp = 0
-        if delivery_timestamp > 0:
-            symbol["delivery_date"] = datetime.fromtimestamp(
-                delivery_timestamp / 1000, tz=UTC
-            ).isoformat()
+    if listed_at := ms_to_utc_timestamp(item.get("launchTime")):
+        symbol["first_capture"] = listed_at
+    if type_value == "future" and (delivery := ms_to_datetime(item.get("deliveryTime"))):
+        symbol["delivery_date"] = delivery.isoformat()
     return {key: value for key, value in symbol.items() if value is not None}
 
 
@@ -174,10 +172,15 @@ def _to_symbol(
     reraise=True,
 )
 def _fetch_bybit_payload(
-    category: str, timeout_seconds: int, cursor: str | None = None
+    category: str,
+    timeout_seconds: int,
+    cursor: str | None = None,
+    status: str | None = None,
 ) -> dict:
     """Fetch a Bybit instruments payload, retrying transient invalid responses."""
     params = {"category": category, "limit": 1000}
+    if status:
+        params["status"] = status
     if cursor:
         params["cursor"] = cursor
     response = requests.get(
@@ -198,33 +201,68 @@ def fetch_bybit_spot(timeout_seconds: int) -> list[dict[str, str]]:
     ]
 
 
+# Bybit derivatives only list `Trading` instruments unless asked for a status.
+# PreLaunch (pre-market) and Delivering contracts are still listed; Closed ones
+# are delisted, and their `deliveryTime` is when trading stopped.
+_BYBIT_LISTED_STATUSES = ("Trading", "PreLaunch", "Delivering")
+_BYBIT_DELISTED_STATUS = "Closed"
+
+
+# bybit-perps and bybit-futures are split from the same per-category download,
+# which includes the full paginated Closed history; reuse it within one run.
+_DERIVATIVES_CACHE_SECONDS = 600
+_derivatives_cache: dict[tuple[str, int], tuple[float, list[dict]]] = {}
+
+
+def clear_derivatives_cache() -> None:
+    _derivatives_cache.clear()
+
+
 def _fetch_bybit_derivatives(
     category: str, timeout_seconds: int
 ) -> list[dict[str, str]]:
-    symbols: dict[str, dict[str, str | float]] = {}
-    cursor: str | None = None
-    while True:
-        payload = _fetch_bybit_payload(category, timeout_seconds, cursor)
-        for item in payload.get("result", {}).get("list", []):
-            if item.get("status") != "Trading":
-                continue
+    key = (category, timeout_seconds)
+    cached = _derivatives_cache.get(key)
+    if cached is None or time.monotonic() - cached[0] > _DERIVATIVES_CACHE_SECONDS:
+        cached = (time.monotonic(), _download_bybit_derivatives(category, timeout_seconds))
+        _derivatives_cache[key] = cached
+    return [dict(symbol) for symbol in cached[1]]
 
-            ctype = item.get("contractType", "")
-            if "Perpetual" in ctype:
-                type_value = "perpetual"
-            elif "Futures" in ctype:
-                type_value = "future"
-            else:
-                continue
-            symbol = _to_symbol(
-                item,
-                type_value,
-                "base" if category == "linear" else "quote",
-            )
-            symbols[str(symbol["id"])] = symbol
-        cursor = payload.get("result", {}).get("nextPageCursor") or None
-        if cursor is None:
-            break
+
+def _download_bybit_derivatives(
+    category: str, timeout_seconds: int
+) -> list[dict[str, str]]:
+    symbols: dict[str, dict[str, str | float]] = {}
+    for status in (*_BYBIT_LISTED_STATUSES, _BYBIT_DELISTED_STATUS):
+        cursor: str | None = None
+        while True:
+            payload = _fetch_bybit_payload(category, timeout_seconds, cursor, status)
+            for item in payload.get("result", {}).get("list", []):
+                if item.get("status") != status:
+                    continue
+
+                ctype = item.get("contractType", "")
+                if "Perpetual" in ctype:
+                    type_value = "perpetual"
+                elif "Futures" in ctype:
+                    type_value = "future"
+                else:
+                    continue
+                symbol = _to_symbol(
+                    item,
+                    type_value,
+                    "base" if category == "linear" else "quote",
+                )
+                if status == _BYBIT_DELISTED_STATUS:
+                    end_date = ms_to_utc_timestamp(item.get("deliveryTime"))
+                    if end_date is None:
+                        continue
+                    symbol["end_date"] = end_date
+                # A listed status wins if the same symbol appears more than once.
+                symbols.setdefault(str(symbol["id"]), symbol)
+            cursor = payload.get("result", {}).get("nextPageCursor") or None
+            if cursor is None:
+                break
     return list(symbols.values())
 
 
