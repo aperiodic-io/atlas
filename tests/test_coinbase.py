@@ -44,7 +44,9 @@ class TestCoinbaseParser:
 
 
 class TestCoinbaseFetcher:
-    def test_only_tradeable_products(self, monkeypatch):
+    def test_listed_products_including_halted_ones(self, monkeypatch):
+        # Halted products are still listed; only `delisted` ones leave, so the
+        # update's disappearance check closes them and nothing else.
         from atlas.exchange_definitions import coinbase
 
         def product(pid: str, **extra: object) -> dict:
@@ -77,6 +79,8 @@ class TestCoinbaseFetcher:
         assert coinbase.fetch_coinbase_spot(5) == [
             {"id": "BTC-USD", "type": "spot", "base_coin": "BTC", "quote_coin": "USD"},
             {"id": "ETH-EUR", "type": "spot", "base_coin": "ETH", "quote_coin": "EUR"},
+            {"id": "XYZ-USD", "type": "spot", "base_coin": "XYZ", "quote_coin": "USD"},
+            {"id": "ABC-USD", "type": "spot", "base_coin": "ABC", "quote_coin": "USD"},
         ]
         assert captured["url"] == "https://api.exchange.coinbase.com/products"
         assert captured["headers"]["User-Agent"]

@@ -43,12 +43,16 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "okx-spot": 0.92,
     "okx-perps": 0.97,
     "okx-futures": 0.97,
-    "hyperliquid-perps": 0.78,
+    "hyperliquid-perps": 0.92,
     "hyperliquid-spot": 0.25,
-    "bitget": 0.18,
-    "bitget-futures": 0.95,
+    # Bitget spot is mostly tokenized stocks CMC does not track.
+    "bitget": 0.16,
+    "bitget-perps-usdt": 0.95,
+    "bitget-perps-usdc": 0.95,
+    "bitget-perps-coin": 0.95,
     "gate-io": 0.72,
-    "gate-io-futures": 0.95,
+    "gateio-perps-usdt": 0.95,
+    "gateio-futures-usdt": 0.95,
     "coinbase": 0.97,
 }
 
@@ -182,9 +186,11 @@ def test_quote_coverage(snapshots):
         ("coinbase", "BTC-USD", "BTC", "USD", None, "spot-BTC-USD"),
         ("coinbase", "ETH-EUR", "ETH", "EUR", None, "spot-ETH-EUR"),
         ("bitget", "BTCUSDT", "BTC", "USDT", None, "spot-BTC-USDT"),
-        ("bitget-futures", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("bitget-perps-usdt", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("bitget-perps-coin", "BTCUSD_CM", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
         ("gate-io", "BTC_USDT", "BTC", "USDT", None, "spot-BTC-USDT"),
-        ("gate-io-futures", "BTC_USDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("gateio-perps-usdt", "BTC_USDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("gateio-perps-btc", "BTC_USD", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
         ("binance-spot", "ethbtc", "ETH", "BTC", None, "spot-ETH-BTC"),
         # Parser split fixed by the venue's own base/quote fields.
         ("binance-spot", "arbidr", "ARB", "IDR", None, "spot-ARB-IDR"),
@@ -237,7 +243,7 @@ def test_tradfi_underlyings_share_one_asset_across_venues(sm):
             ("binance-futures", "tslausdt"),
             ("bybit-perps", "TSLAUSDT"),
             ("okx-perps", "TSLA-USDT-SWAP"),
-            ("gate-io-futures", "TSLA_USDT"),
+            ("gateio-perps-usdt", "TSLA_USDT"),
             ("hyperliquid-perps", "xyz:TSLA"),
         ]
     }
@@ -253,8 +259,8 @@ def test_unified_id_groups_a_contract_across_venues(sm):
         "binance-futures",
         "bybit-perps",
         "okx-perps",
-        "bitget-futures",
-        "gate-io-futures",
+        "bitget-perps-usdt",
+        "gateio-perps-usdt",
     } <= venues
     assert {"binance-spot", "bybit-spot", "okx-spot", "bitget", "gate-io"} <= {
         exchange for exchange, _ in sm.by_unified_id("spot-BTC-USDT")

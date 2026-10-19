@@ -14,7 +14,18 @@
     "symbol": "ADA",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 2010,
+    "category": [
+      "Layer 1",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ADA",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ADA-USDT:USDT-20261016"
   },
   {
     "id": "ADA_USDT_20261023",
@@ -30,7 +41,18 @@
     "internal_id": "future-ADA-USDT:USDT-20261023",
     "symbol": "ADA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 2010,
+    "category": [
+      "Layer 1",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ADA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ADA-USDT:USDT-20261023"
   },
   {
     "id": "ADA_USDT_20261030",
@@ -46,7 +68,18 @@
     "internal_id": "future-ADA-USDT:USDT-20261030",
     "symbol": "ADA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 2010,
+    "category": [
+      "Layer 1",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ADA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ADA-USDT:USDT-20261030"
   },
   {
     "id": "ARB_USDT_20261016",
@@ -63,7 +96,18 @@
     "symbol": "ARB",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 11841,
+    "category": [
+      "Layer 2",
+      "DApp",
+      "DAO"
+    ],
+    "base_asset_id": "ARB",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ARB-USDT:USDT-20261016"
   },
   {
     "id": "ARB_USDT_20261023",
@@ -79,7 +123,18 @@
     "internal_id": "future-ARB-USDT:USDT-20261023",
     "symbol": "ARB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 11841,
+    "category": [
+      "Layer 2",
+      "DApp",
+      "DAO"
+    ],
+    "base_asset_id": "ARB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ARB-USDT:USDT-20261023"
   },
   {
     "id": "ARB_USDT_20261030",
@@ -95,7 +150,18 @@
     "internal_id": "future-ARB-USDT:USDT-20261030",
     "symbol": "ARB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 11841,
+    "category": [
+      "Layer 2",
+      "DApp",
+      "DAO"
+    ],
+    "base_asset_id": "ARB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ARB-USDT:USDT-20261030"
   },
   {
     "id": "AVAX_USDT_20261016",
@@ -112,7 +178,18 @@
     "symbol": "AVAX",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-AVAX-USDT:USDT-20261016"
   },
   {
     "id": "AVAX_USDT_20261023",
@@ -128,7 +205,18 @@
     "internal_id": "future-AVAX-USDT:USDT-20261023",
     "symbol": "AVAX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-AVAX-USDT:USDT-20261023"
   },
   {
     "id": "AVAX_USDT_20261030",
@@ -144,7 +232,18 @@
     "internal_id": "future-AVAX-USDT:USDT-20261030",
     "symbol": "AVAX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-AVAX-USDT:USDT-20261030"
   },
   {
     "id": "BTC_USDT_20261016",
@@ -161,7 +260,16 @@
     "symbol": "BTC",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20261016"
   },
   {
     "id": "BTC_USDT_20261023",
@@ -177,7 +285,16 @@
     "internal_id": "future-BTC-USDT:USDT-20261023",
     "symbol": "BTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20261023"
   },
   {
     "id": "BTC_USDT_20261030",
@@ -193,7 +310,16 @@
     "internal_id": "future-BTC-USDT:USDT-20261030",
     "symbol": "BTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20261030"
   },
   {
     "id": "BTC_USDT_20261225",
@@ -209,7 +335,16 @@
     "internal_id": "future-BTC-USDT:USDT-20261225",
     "symbol": "BTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20261225"
   },
   {
     "id": "BTC_USDT_20270326",
@@ -225,7 +360,16 @@
     "internal_id": "future-BTC-USDT:USDT-20270326",
     "symbol": "BTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20270326"
   },
   {
     "id": "DOGE_USDT_20261016",
@@ -242,7 +386,16 @@
     "symbol": "DOGE",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20261016"
   },
   {
     "id": "DOGE_USDT_20261023",
@@ -258,7 +411,16 @@
     "internal_id": "future-DOGE-USDT:USDT-20261023",
     "symbol": "DOGE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20261023"
   },
   {
     "id": "DOGE_USDT_20261030",
@@ -274,7 +436,16 @@
     "internal_id": "future-DOGE-USDT:USDT-20261030",
     "symbol": "DOGE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20261030"
   },
   {
     "id": "DOGE_USDT_20261225",
@@ -290,7 +461,16 @@
     "internal_id": "future-DOGE-USDT:USDT-20261225",
     "symbol": "DOGE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20261225"
   },
   {
     "id": "DOGE_USDT_20270326",
@@ -306,7 +486,16 @@
     "internal_id": "future-DOGE-USDT:USDT-20270326",
     "symbol": "DOGE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20270326"
   },
   {
     "id": "ETH_USDT_20261016",
@@ -323,7 +512,17 @@
     "symbol": "ETH",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20261016"
   },
   {
     "id": "ETH_USDT_20261023",
@@ -339,7 +538,17 @@
     "internal_id": "future-ETH-USDT:USDT-20261023",
     "symbol": "ETH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20261023"
   },
   {
     "id": "ETH_USDT_20261030",
@@ -355,7 +564,17 @@
     "internal_id": "future-ETH-USDT:USDT-20261030",
     "symbol": "ETH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20261030"
   },
   {
     "id": "ETH_USDT_20261225",
@@ -371,7 +590,17 @@
     "internal_id": "future-ETH-USDT:USDT-20261225",
     "symbol": "ETH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20261225"
   },
   {
     "id": "ETH_USDT_20270326",
@@ -387,7 +616,17 @@
     "internal_id": "future-ETH-USDT:USDT-20270326",
     "symbol": "ETH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20270326"
   },
   {
     "id": "LINK_USDT_20261016",
@@ -404,7 +643,20 @@
     "symbol": "LINK",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LINK-USDT:USDT-20261016"
   },
   {
     "id": "LINK_USDT_20261023",
@@ -420,7 +672,20 @@
     "internal_id": "future-LINK-USDT:USDT-20261023",
     "symbol": "LINK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LINK-USDT:USDT-20261023"
   },
   {
     "id": "LINK_USDT_20261030",
@@ -436,7 +701,20 @@
     "internal_id": "future-LINK-USDT:USDT-20261030",
     "symbol": "LINK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LINK-USDT:USDT-20261030"
   },
   {
     "id": "LTC_USDT_20261016",
@@ -453,7 +731,17 @@
     "symbol": "LTC",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 2,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "LTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LTC-USDT:USDT-20261016"
   },
   {
     "id": "LTC_USDT_20261023",
@@ -469,7 +757,17 @@
     "internal_id": "future-LTC-USDT:USDT-20261023",
     "symbol": "LTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 2,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "LTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LTC-USDT:USDT-20261023"
   },
   {
     "id": "LTC_USDT_20261030",
@@ -485,7 +783,17 @@
     "internal_id": "future-LTC-USDT:USDT-20261030",
     "symbol": "LTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 2,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "LTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-LTC-USDT:USDT-20261030"
   },
   {
     "id": "SOL_USDT_20261016",
@@ -502,7 +810,16 @@
     "symbol": "SOL",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-SOL-USDT:USDT-20261016"
   },
   {
     "id": "SOL_USDT_20261023",
@@ -518,7 +835,16 @@
     "internal_id": "future-SOL-USDT:USDT-20261023",
     "symbol": "SOL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-SOL-USDT:USDT-20261023"
   },
   {
     "id": "SOL_USDT_20261030",
@@ -534,7 +860,16 @@
     "internal_id": "future-SOL-USDT:USDT-20261030",
     "symbol": "SOL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-SOL-USDT:USDT-20261030"
   },
   {
     "id": "UNI_USDT_20261016",
@@ -551,7 +886,17 @@
     "symbol": "UNI",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 7083,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "UNI",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-UNI-USDT:USDT-20261016"
   },
   {
     "id": "UNI_USDT_20261023",
@@ -567,7 +912,17 @@
     "internal_id": "future-UNI-USDT:USDT-20261023",
     "symbol": "UNI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 7083,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "UNI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-UNI-USDT:USDT-20261023"
   },
   {
     "id": "UNI_USDT_20261030",
@@ -583,7 +938,17 @@
     "internal_id": "future-UNI-USDT:USDT-20261030",
     "symbol": "UNI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 7083,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "UNI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-UNI-USDT:USDT-20261030"
   },
   {
     "id": "WLD_USDT_20261016",
@@ -600,7 +965,16 @@
     "symbol": "WLD",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 13502,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLD",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-WLD-USDT:USDT-20261016"
   },
   {
     "id": "WLD_USDT_20261023",
@@ -616,7 +990,16 @@
     "internal_id": "future-WLD-USDT:USDT-20261023",
     "symbol": "WLD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 13502,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-WLD-USDT:USDT-20261023"
   },
   {
     "id": "WLD_USDT_20261030",
@@ -632,7 +1015,16 @@
     "internal_id": "future-WLD-USDT:USDT-20261030",
     "symbol": "WLD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 13502,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-WLD-USDT:USDT-20261030"
   },
   {
     "id": "XRP_USDT_20261016",
@@ -649,7 +1041,14 @@
     "symbol": "XRP",
     "denominator": "USDT",
     "margin": "USDT",
-    "end_date": "2026-10-16T08:00:00.000Z"
+    "end_date": "2026-10-16T08:00:00.000Z",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-XRP-USDT:USDT-20261016"
   },
   {
     "id": "XRP_USDT_20261023",
@@ -665,7 +1064,14 @@
     "internal_id": "future-XRP-USDT:USDT-20261023",
     "symbol": "XRP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-XRP-USDT:USDT-20261023"
   },
   {
     "id": "XRP_USDT_20261030",
@@ -681,6 +1087,13 @@
     "internal_id": "future-XRP-USDT:USDT-20261030",
     "symbol": "XRP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-XRP-USDT:USDT-20261030"
   }
 ]

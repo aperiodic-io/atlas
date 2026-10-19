@@ -311,7 +311,9 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "bitmex": _define("bitmex", parse_bitmex),
     "bitfinex": _define("bitfinex", parse_bitfinex),
     "bitfinex-derivatives": _define("bitfinex-derivatives", parse_bitfinex_derivatives),
-    "bitget": _define("bitget", parse_bitget, exchange_fetcher=fetch_bitget_spot),
+    "bitget": _define(
+        "bitget", parse_bitget, exchange_fetcher=fetch_bitget_spot, allowed_types={"spot"}
+    ),
     "bitget-futures": _define("bitget-futures", parse_bitget_futures),
     "bitstamp": _define("bitstamp", parse_bitstamp),
     "bybit-spot": _define(
@@ -335,12 +337,16 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_futures,
         allowed_types={"future"},
     ),
-    "coinbase": _define("coinbase", parse_coinbase, exchange_fetcher=fetch_coinbase_spot),
+    "coinbase": _define(
+        "coinbase", parse_coinbase, exchange_fetcher=fetch_coinbase_spot, allowed_types={"spot"}
+    ),
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),
     "ftx": _define("ftx", parse_ftx),
-    "gate-io": _define("gate-io", parse_gate_io, exchange_fetcher=fetch_gate_io_spot),
+    "gate-io": _define(
+        "gate-io", parse_gate_io, exchange_fetcher=fetch_gate_io_spot, allowed_types={"spot"}
+    ),
     "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
     "gemini": _define("gemini", parse_gemini),
     "grvt-perps": _define(

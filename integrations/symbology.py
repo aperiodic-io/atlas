@@ -129,6 +129,8 @@ _NON_CRYPTO_UNDERLYINGS = ("equity", "commodity", "index")
 # (`pre_market`) contracts get no Atlas reference asset either: they stay
 # unresolved rather than take a same-ticker token.
 _NOT_A_TOKEN_UNDERLYINGS = (*_NON_CRYPTO_UNDERLYINGS, "forex", "pre_market")
+# Venues' own test listings (OKX's TEST002-USD_UM_XPERP-310822): no asset.
+_TEST_MARKET_TICKER = re.compile(r"TEST\d*")
 _FAR_FUTURE = datetime.max.replace(tzinfo=UTC)
 _FAR_PAST = datetime.min.replace(tzinfo=UTC)
 
@@ -1250,11 +1252,32 @@ def build_symbology(
             registry.by_cmc_id(quote_cmc_id) if quote_cmc_id is not None else None,
             margin if instrument.type != "spot" else None,
             report,
-            clear_cmc_id=(override := (overrides or {}).get(instrument.key)) is not None
-            and override.cmc_id is None,
+            clear_cmc_id=_withdrawn_cmc_id(instrument, overrides, rejected_pairs),
         )
     _classify_unknown_references(registry, rows_by_exchange)
     return report
+
+
+def _withdrawn_cmc_id(
+    instrument: Instrument,
+    overrides: Mapping[tuple[str, str], Override] | None,
+    rejected_pairs: frozenset[tuple[str, str, int]],
+) -> bool:
+    """Whether a row's cmc_id lost its evidence and must not outlive this build.
+
+    An override can withhold an asset, and today's price check can reject the
+    CMC listing an earlier build took the cmc_id from. A cmc_id that predates
+    symbology is the row's own record and is never withdrawn by a price check.
+    """
+    override = (overrides or {}).get(instrument.key)
+    if override is not None and override.cmc_id is None:
+        return True
+    cmc_id = instrument.row.get("cmc_id")
+    return (
+        instrument.row.get("base_asset_match") == Match.cmc_market_pair.value
+        and isinstance(cmc_id, int)
+        and (*instrument.key, cmc_id) in rejected_pairs
+    )
 
 
 def _classify_unknown_references(
@@ -1407,7 +1430,7 @@ def _reference_asset(
         return None
     asset_class = AssetClass(underlying)
     ticker = instrument.symbol.split(":", 1)[-1]
-    if not sanitize_ticker(ticker):
+    if not sanitize_ticker(ticker) or _TEST_MARKET_TICKER.fullmatch(ticker.upper()):
         return None
     candidates = registry.find_by_ticker(ticker)
     # A CMC-tracked reference asset is the one, whatever class the venue or CMC

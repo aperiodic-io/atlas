@@ -1,4 +1,7 @@
-"""Bitget, Gate and Coinbase are stable venues with API fetchers and snapshots."""
+"""Bitget, Gate and Coinbase spot are stable venues with API fetchers and snapshots.
+
+Their contracts are the live-producers venues (`bitget-perps-*`, `gateio-*`).
+"""
 
 from __future__ import annotations
 
@@ -14,7 +17,7 @@ from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import parse_contract
 from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
 
-NEW_STABLE_EXCHANGES = ["bitget", "bitget-futures", "gate-io", "gate-io-futures", "coinbase"]
+NEW_STABLE_EXCHANGES = ["bitget", "gate-io", "coinbase"]
 
 
 # ---------------------------------------------------------------------------
@@ -41,8 +44,6 @@ class TestRegistry:
             ("bitget", {"spot"}),
             ("gate-io", {"spot"}),
             ("coinbase", {"spot"}),
-            ("bitget-futures", {"perpetual", "future"}),
-            ("gate-io-futures", {"perpetual", "future"}),
         ],
     )
     def test_allowed_types(self, exchange: str, allowed: set[str]):
@@ -62,17 +63,7 @@ class TestRegistry:
     ("exchange", "row"),
     [
         ("bitget", {"id": "RNKEUSDT", "type": "spot", "base_coin": "rNKE", "quote_coin": "USDT"}),
-        (
-            "gate-io-futures",
-            {
-                "id": "BTC_USDT_20261225",
-                "type": "future",
-                "base_coin": "BTC",
-                "quote_coin": "USDT",
-                "settle_coin": "USDT",
-                "delivery_date": "2026-12-25T08:00:00+00:00",
-            },
-        ),
+        ("gate-io", {"id": "NEW_USDT", "type": "spot", "base_coin": "NEW", "quote_coin": "USDT"}),
     ],
 )
 def test_api_only_rows_receive_stable_capture_dates(tmp_path, monkeypatch, exchange, row):
@@ -134,11 +125,7 @@ def test_snapshot_internal_ids_match_the_parser(exchange: str):
     ("exchange", "original_id", "internal_id"),
     [
         ("bitget", "BTCUSDT", "spot-BTC-USDT"),
-        ("bitget-futures", "BTCPERP", "perpetual-BTC-USDC:USDC"),
-        ("bitget-futures", "BTCUSD_CM", "perpetual-BTC-USD:BTC"),
-        ("bitget-futures", "BTCUSDH25", "future-BTC-USD:BTC-20250328"),
         ("gate-io", "BTC_USDT", "spot-BTC-USDT"),
-        ("gate-io-futures", "BTC_USD", "perpetual-BTC-USD:BTC"),
         ("coinbase", "BTC-USD", "spot-BTC-USD"),
     ],
 )
@@ -148,8 +135,9 @@ def test_security_master_resolves_new_venues(exchange: str, original_id: str, in
 
 
 def test_security_master_resolves_api_only_rows():
-    """Rows Tardis does not list are reachable because they carry a first_capture."""
-    rows = {row["id"]: row for row in _snapshot("gate-io-futures")}
-    delivery = next(row for row in rows.values() if row["type"] == "future" and not row.get("end_date"))
-    sm = SecurityMaster.load(exchanges=["gate-io-futures"])
-    assert sm.by_exchange_and_original_id("gate-io-futures", delivery["id"]) == delivery["internal_id"]
+    """Rows Tardis does not list (Bitget's tokenized stocks) carry a first_capture."""
+    stock = next(
+        row for row in _snapshot("bitget") if row.get("underlying") == "equity" and not row.get("end_date")
+    )
+    sm = SecurityMaster.load(exchanges=["bitget"])
+    assert sm.by_exchange_and_original_id("bitget", stock["id"]) == stock["internal_id"]

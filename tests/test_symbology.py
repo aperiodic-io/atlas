@@ -835,6 +835,15 @@ def test_reference_asset_collides_with_a_crypto_ticker():
     assert rows["gateio-perps-usdt"][0]["base_asset_id"] == "CAT.EQUITY"
 
 
+@pytest.mark.parametrize("ticker", ["TEST002", "TEST01", "TEST"])
+def test_exchange_test_markets_get_no_reference_asset(ticker):
+    # OKX lists test contracts (TEST002-USD_UM_XPERP-310822) it labels equity.
+    rows = {"okx-futures": [_row(f"{ticker}-USD-310822", ticker, "USD", "future", margin="USD", underlying="equity")]}
+    _, registry = _build(rows)
+    assert "base_asset_id" not in rows["okx-futures"][0]
+    assert registry.find_by_ticker(ticker) == []
+
+
 def test_tradfi_rows_never_infer_a_token_wrapper():
     details = {
         **DETAILS,
@@ -917,6 +926,33 @@ def test_pairs_priced_unlike_their_asset_are_rejected():
         ("gateio-perps-usdt", "DOGE_USDT", 32778)
     ]
     assert rows["binance-futures"][0]["base_asset_match"] == "cmc_market_pair"
+
+
+def test_a_price_rejected_pair_withdraws_the_cmc_id_it_wrote():
+    # Gate's IRIS_USDT trades 38x off IRISnet today. The cmc_id the last
+    # build took from that listing goes with it; left behind, an offline
+    # rebuild would read it as evidence and resolve the row again.
+    details = {**DETAILS, 3874: _detail(3874, "IRIS", "IRISnet", "irisnet")}
+    rows = {"gate-io": [_row("IRIS_USDT", "IRIS", "USDT")]}
+    pair = _priced_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT", price=0.01)
+    _, registry = _build(rows, [_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT")], details=details)
+    assert rows["gate-io"][0]["cmc_id"] == 3874
+
+    _build(rows, [pair], registry=registry, details=details, asset_prices={3874: 0.38})
+    row = rows["gate-io"][0]
+    assert "base_asset_id" not in row
+    assert "cmc_id" not in row
+    first = json.dumps(rows)
+    _build(rows, registry=registry, details=details)
+    assert json.dumps(rows) == first
+
+
+def test_a_price_rejected_pair_keeps_a_cmc_id_it_did_not_write():
+    details = {**DETAILS, 3874: _detail(3874, "IRIS", "IRISnet", "irisnet")}
+    rows = {"gate-io": [_row("IRIS_USDT", "IRIS", "USDT", cmc_id=3874)]}
+    pair = _priced_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT", price=0.01)
+    _build(rows, [pair], details=details, asset_prices={3874: 0.38})
+    assert rows["gate-io"][0]["cmc_id"] == 3874
 
 
 def test_pair_price_check_is_skipped_without_prices():

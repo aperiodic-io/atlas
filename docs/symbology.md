@@ -121,7 +121,12 @@ Three safeguards hold back a wrong inference:
   project. (Retired assets are exempt, because CMC re-dates them.)
 * **Wrappers.** A derivative whose venue declares a TradFi underlying is never
   inferred to be a token that wraps it (an Ondo stock token); it gets the
-  reference asset.
+  reference asset. Forex and pre-IPO (`pre_market`) contracts are never
+  inferred to be a same-ticker token either, and get no reference asset.
+  Venues' own test listings (`TEST002`) get no asset at all.
+* **Withdrawn evidence.** When today's price check rejects the CMC listing a
+  row's `cmc_id` came from, and nothing else identifies the row, the build
+  drops that `cmc_id`. A `cmc_id` that predates symbology is never dropped.
 * **Conflicts.** Inference needs unanimity. If identified listings disagree
   (Tesla the stock and a Tesla token both trade as `TSLA`), the row is left
   unresolved and reported.
@@ -218,35 +223,44 @@ conflicts, rejected ticker reuse and the active rows still without an asset.
 Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 `bybit-spot`, `bybit-perps`, `bybit-futures`, `okx-spot`, `okx-perps`,
 `okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget`,
-`bitget-futures`, `gate-io`, `gate-io-futures` and `coinbase`.
+`bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
+`bitget-futures-coin`, `gate-io`, `gateio-perps-usdt`, `gateio-perps-btc`,
+`gateio-futures-usdt` and `coinbase`. Bitget's and Gate's contracts are the
+live-producers venues; their Tardis-named `bitget-futures` and `gate-io-futures`
+have no snapshot.
 
 ## Coverage
 
-The first build, on 14 October 2026, minted 2,550 assets: 1,983 crypto,
-504 equity, 25 fiat, 20 index, 14 commodity and 4 unknown. It identified the
-base asset of 20,992 of 31,837 instrument rows (10,019 from CMC market pairs), and
-the quote asset of 31,082 of them.
+The build of 19 October 2026 holds 2,607 assets: 1,989 crypto,
+519 equity, 25 fiat, 47 index, 26 commodity and 1 unknown. It
+identifies the base asset of 21,110 of 31,716 parsed instrument rows
+(10,068 from CMC market pairs), and the quote asset of 31,222 of them.
 
 | Snapshot | Active rows | Active base resolved |
 | --- | ---: | ---: |
 | `binance-spot` | 1,380 | 100.0% |
 | `binance-futures` | 794 | 100.0% |
 | `binance-futures-cm` | 30 | 100.0% |
-| `bybit-spot` | 528 | 99.6% |
-| `bybit-perps` | 894 | 98.0% |
+| `bybit-spot` | 527 | 99.6% |
+| `bybit-perps` | 894 | 99.3% |
 | `bybit-futures` | 44 | 100.0% |
-| `okx-spot` | 1,171 | 93.5% |
-| `okx-perps` | 501 | 97.8% |
-| `okx-futures` | 274 | 97.8% |
+| `okx-spot` | 1,184 | 92.8% |
+| `okx-perps` | 510 | 99.6% |
+| `okx-futures` | 275 | 98.2% |
 | `coinbase` | 515 | 99.2% |
-| `bitget` | 3,464 | 18.5% |
-| `bitget-futures` | 906 | 98.3% |
-| `gate-io` | 2,200 | 73.7% |
-| `gate-io-futures` | 1,070 | 97.4% |
-| `hyperliquid-perps` | 396 | 79.3% |
-| `hyperliquid-spot` | 331 | 35.6% |
+| `bitget` | 3,587 | 17.7% |
+| `bitget-perps-usdt` | 834 | 98.1% |
+| `bitget-perps-usdc` | 49 | 100.0% |
+| `bitget-perps-coin` | 20 | 100.0% |
+| `bitget-futures-coin` | 4 | 100.0% |
+| `gate-io` | 2,203 | 73.6% |
+| `gateio-perps-usdt` | 1,047 | 97.3% |
+| `gateio-perps-btc` | 1 | 100.0% |
+| `gateio-futures-usdt` | 30 | 100.0% |
+| `hyperliquid-perps` | 400 | 94.0% |
+| `hyperliquid-spot` | 333 | 35.7% |
 
-The gaps are assets CMC does not track: Bitget's 2,800 tokenized stocks, Gate's
+The gaps are assets CMC does not track: Bitget's 3,000 tokenized stocks, Gate's
 leveraged tokens (`ADA3L`, `ADA3S`), Hyperliquid's HIP-1 spot tokens and
 HIP-3 pre-IPO markets, and OKX's xStocks. `tests/test_symbology_data.py` holds
 each snapshot's coverage to a floor just below these numbers. The same test

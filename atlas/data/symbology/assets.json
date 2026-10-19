@@ -130,6 +130,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "10Y",
+   "ticker": "10Y",
+   "name": "10Y",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "1810",
    "ticker": "1810",
    "name": "Xiaomi Corp HKD price (Derivatives)",
@@ -163,6 +171,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "2Y",
+   "ticker": "2Y",
+   "name": "2Y",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "2Z",
    "ticker": "2Z",
    "name": "DoubleZero",
@@ -172,6 +188,14 @@
    "status": "active",
    "cmc_date_added": "2025-09-29T01:04:27Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "30Y",
+   "ticker": "30Y",
+   "name": "30Y",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "3KDS",
@@ -1731,6 +1755,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ALUMINIUM",
+   "ticker": "ALUMINIUM",
+   "name": "ALUMINIUM",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "AM",
    "ticker": "AM",
    "name": "Aston Martin Cognizant Fan Token",
@@ -2565,6 +2597,14 @@
    "status": "active",
    "cmc_date_added": "2017-03-22T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ARKK",
+   "ticker": "ARKK",
+   "name": "ARKK",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "ARKM",
@@ -3508,6 +3548,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "B200",
+   "ticker": "B200",
+   "name": "B200",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "B3",
    "ticker": "B3",
    "name": "B3 (Base)",
@@ -4444,6 +4492,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "BIOTECH",
+   "ticker": "BIOTECH",
+   "name": "BIOTECH",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "BIRB",
    "ticker": "BIRB",
    "name": "Moonbirds",
@@ -4745,6 +4801,14 @@
    "status": "active",
    "cmc_date_added": "2026-03-19T03:53:40Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "BMNU",
+   "ticker": "BMNU",
+   "name": "BMNU",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "BMT",
@@ -5615,6 +5679,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "BVIV",
+   "ticker": "BVIV",
+   "name": "BVIV",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "BVOL",
    "ticker": "BVOL",
    "name": "BVOL",
@@ -5856,6 +5928,21 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CAMBRICON.CAMBRICON_TECHNOLOGIES_CORP_LTD_DERIVATIVES",
+   "ticker": "CAMBRICON",
+   "name": "Cambricon Technologies Corp Ltd (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42600,
+   "cmc_slug": "cambricon-technologies-corp-ltd-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-01-28T14:52:45Z",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "CAMP",
@@ -7053,6 +7140,14 @@
    "status": "active",
    "cmc_date_added": "2025-03-30T07:17:33Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CORN.COMMODITY",
+   "ticker": "CORN",
+   "name": "CORN",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "CORZ",
@@ -8261,6 +8356,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DEFENSE",
+   "ticker": "DEFENSE",
+   "name": "DEFENSE",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "DEFI",
    "ticker": "DEFI",
    "name": "DEFI",
@@ -8769,6 +8872,20 @@
    "status": "active",
    "cmc_date_added": "2025-12-23T01:31:34Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "DNA",
+   "ticker": "DNA",
+   "name": "NeoSoul",
+   "asset_class": "crypto",
+   "cmc_id": 42524,
+   "cmc_slug": "neosoul",
+   "categories": [
+    "DApp"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-09T07:24:03Z",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "DNT",
@@ -9514,6 +9631,14 @@
    "status": "active",
    "cmc_date_added": "2024-03-29T04:42:08Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ENERGY",
+   "ticker": "ENERGY",
+   "name": "ENERGY",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "ENJ",
@@ -11195,6 +11320,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "GAS.COMMODITY",
+   "ticker": "GAS",
+   "name": "GAS",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "GAT",
    "ticker": "GAT",
    "name": "Gather",
@@ -11533,6 +11666,14 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GLDMINE",
+   "ticker": "GLDMINE",
+   "name": "GLDMINE",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "GLDX",
@@ -11925,6 +12066,14 @@
    "status": "active",
    "cmc_date_added": "2025-02-11T09:31:39Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GOLDJM",
+   "ticker": "GOLDJM",
+   "name": "GOLDJM",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "GOMINING",
@@ -12446,7 +12595,7 @@
    "asset_id": "H100",
    "ticker": "H100",
    "name": "H100 Group AB (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "commodity",
    "cmc_id": 42399,
    "cmc_slug": "h100-group-ab-derivatives",
    "categories": [
@@ -12954,6 +13103,14 @@
    "status": "active",
    "cmc_date_added": "2020-06-05T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "HO",
+   "ticker": "HO",
+   "name": "HO",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "HOD",
@@ -13517,6 +13674,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "IBIDEN",
+   "ticker": "IBIDEN",
+   "name": "IBIDEN",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "IBIT",
    "ticker": "IBIT",
    "name": "IBIT",
@@ -13589,6 +13754,14 @@
    "status": "active",
    "cmc_date_added": "2025-07-01T15:48:56Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "IBOV",
+   "ticker": "IBOV",
+   "name": "IBOV",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "ICNT",
@@ -13719,6 +13892,14 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "IGV",
+   "ticker": "IGV",
+   "name": "IGV",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "IKA",
@@ -13877,6 +14058,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "INFOTECH",
+   "ticker": "INFOTECH",
+   "name": "INFOTECH",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "INFQ",
    "ticker": "INFQ",
    "name": "Infleqtion Inc (Derivatives)",
@@ -13923,6 +14112,14 @@
    "status": "active",
    "cmc_date_added": "2020-09-29T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "INNOLIGHT",
+   "ticker": "INNOLIGHT",
+   "name": "INNOLIGHT",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "INR",
@@ -16810,6 +17007,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MAG7",
+   "ticker": "MAG7",
+   "name": "MAG7",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "MAG7XON",
    "ticker": "MAG7Xon",
    "name": "Magnificent 7 and Crypto Portfolio Tokenized Assets (Ondo)",
@@ -16854,7 +17059,7 @@
    "asset_id": "MAGS",
    "ticker": "MAGS",
    "name": "Roundhill Magnificent Seven ETF (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "equity",
    "cmc_id": 39510,
    "cmc_slug": "roundhill-magnificent-seven-etf-derivatives",
    "categories": [
@@ -19188,7 +19393,7 @@
    "asset_id": "NCLD",
    "ticker": "NCLD",
    "name": "Roundhill Neocloud ETF (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "equity",
    "cmc_id": 40983,
    "cmc_slug": "roundhill-neocloud-etf-derivatives",
    "categories": [
@@ -19598,7 +19803,7 @@
    "asset_id": "NI225",
    "ticker": "NI225",
    "name": "Nikkei 225 (Derivatives)",
-   "asset_class": "equity",
+   "asset_class": "index",
    "cmc_id": 39852,
    "cmc_slug": "nikkei-225-derivatives",
    "categories": [
@@ -19626,6 +19831,14 @@
    "status": "active",
    "cmc_date_added": "2024-03-12T08:57:13Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "NIFTY",
+   "ticker": "NIFTY",
+   "name": "NIFTY",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "NIGHT",
@@ -20016,6 +20229,22 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "NU.EQUITY",
+   "ticker": "NU",
+   "name": "NU",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
+   "asset_id": "NUCLEAR",
+   "ticker": "NUCLEAR",
+   "name": "NUCLEAR",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "NULS",
    "ticker": "NULS",
    "name": "NULS",
@@ -20391,6 +20620,14 @@
    "status": "active",
    "cmc_date_added": "2024-04-18T10:50:54Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "OIL",
+   "ticker": "OIL",
+   "name": "OIL",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "OKB",
@@ -21241,6 +21478,20 @@
    "status": "active",
    "cmc_date_added": "2025-06-02T06:14:22Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "PAPER",
+   "ticker": "PAPER",
+   "name": "Papertrade",
+   "asset_class": "crypto",
+   "cmc_id": 42610,
+   "cmc_slug": "papertrade",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-19T09:21:37Z",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "PARTI",
@@ -24009,6 +24260,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "RELIANCE",
+   "ticker": "RELIANCE",
+   "name": "RELIANCE",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "REN",
    "ticker": "REN",
    "name": "Ren",
@@ -24746,6 +25005,14 @@
    "status": "active",
    "cmc_date_added": "2026-02-20T18:34:09Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ROBOT",
+   "ticker": "ROBOT",
+   "name": "ROBOT",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "ROK",
@@ -25915,6 +26182,22 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SEMI",
+   "ticker": "SEMI",
+   "name": "SEMI",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
+   "asset_id": "SEMIS",
+   "ticker": "SEMIS",
+   "name": "SEMIS",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "SENSETIME",
    "ticker": "SENSETIME",
    "name": "SENSETIME",
@@ -26293,6 +26576,14 @@
    "status": "active",
    "cmc_date_added": "2025-04-25T14:19:12Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SILVERJM",
+   "ticker": "SILVERJM",
+   "name": "SILVERJM",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "SIMO",
@@ -26708,6 +26999,14 @@
    "status": "active",
    "cmc_date_added": "2026-05-22T15:12:03Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SMALL2000",
+   "ticker": "SMALL2000",
+   "name": "SMALL2000",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "SMART",
@@ -27287,6 +27586,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SOY",
+   "ticker": "SOY",
+   "name": "SOY",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "SP500",
    "ticker": "S&P500",
    "name": "Standard and Poor's 500 index (Derivatives)",
@@ -27550,6 +27857,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SPXL",
+   "ticker": "SPXL",
+   "name": "SPXL",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "SPY",
    "ticker": "SPY",
    "name": "State Street SPDR S&P 500 ETF Trust (Derivatives)",
@@ -27680,6 +27995,24 @@
    "status": "active",
    "cmc_date_added": "2026-09-01T08:25:27Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SQQQX",
+   "ticker": "SQQQx",
+   "name": "ProShares UltraPro Short QQQ tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42599,
+   "cmc_slug": "proshares-ultrapro-short-qqq-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XSQQQ"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "SQR",
@@ -28749,6 +29082,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "TCNT",
+   "ticker": "TCNT",
+   "name": "TCNT",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "TCOM",
    "ticker": "TCOM",
    "name": "TCOM Global",
@@ -29156,6 +29497,24 @@
    "status": "active",
    "cmc_date_added": "2026-07-27T12:21:33Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "TMFX",
+   "ticker": "TMFx",
+   "name": "Direxion Daily 20 Year Treasury Bull 3X tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42602,
+   "cmc_slug": "direxion-daily-20-year-treasury-bull-3x-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XTMF"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "TMO",
@@ -29760,6 +30119,24 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "TSLLX",
+   "ticker": "TSLLx",
+   "name": "Direxion Daily TSLA Bull 2X Shares tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42604,
+   "cmc_slug": "direxion-daily-tsla-bull-2x-shares-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XTSLL"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "TSM",
    "ticker": "TSM",
    "name": "Taiwan Semiconductor Manufacturing (Derivatives)",
@@ -29845,6 +30222,14 @@
    "status": "active",
    "cmc_date_added": "2025-12-18T07:16:15Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "TTF",
+   "ticker": "TTF",
+   "name": "TTF",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "TTMI",
@@ -30451,6 +30836,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "URANIUM",
+   "ticker": "URANIUM",
+   "name": "URANIUM",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "URANUS",
    "ticker": "URANUS",
    "name": "Uranus",
@@ -30490,6 +30883,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "US100",
+   "ticker": "US100",
+   "name": "US100",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "US2000",
    "ticker": "US2000",
    "name": "US2000",
@@ -30504,6 +30905,22 @@
    "asset_class": "index",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USA100",
+   "ticker": "USA100",
+   "name": "USA100",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
+   "asset_id": "USA500",
+   "ticker": "USA500",
+   "name": "USA500",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "USAR",
@@ -30544,6 +30961,14 @@
    "status": "active",
    "cmc_date_added": "2026-01-27T14:07:38Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USBOND",
+   "ticker": "USBOND",
+   "name": "USBOND",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "USD",
@@ -30842,6 +31267,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "USENERGY",
+   "ticker": "USENERGY",
+   "name": "USENERGY",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "USO",
    "ticker": "USO",
    "name": "United States Oil Fund LP (Derivatives)",
@@ -30855,6 +31288,14 @@
    "status": "active",
    "cmc_date_added": "2026-01-30T06:54:54Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USOIL",
+   "ticker": "USOIL",
+   "name": "USOIL",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "USR",
@@ -30880,6 +31321,14 @@
    "status": "active",
    "cmc_date_added": "2020-09-21T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USTECH",
+   "ticker": "USTECH",
+   "name": "USTECH",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "USUAL",
@@ -31282,6 +31731,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "VIX",
+   "ticker": "VIX",
+   "name": "VIX",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "VKTX",
    "ticker": "VKTX",
    "name": "Viking Therapeutics Inc (Derivatives)",
@@ -31320,6 +31777,14 @@
    "status": "active",
    "cmc_date_added": "2023-01-20T11:18:48Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "VOL",
+   "ticker": "VOL",
+   "name": "VOL",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "VOLX",
@@ -31980,6 +32445,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "WHEAT",
+   "ticker": "WHEAT",
+   "name": "WHEAT",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
+  },
+  {
    "asset_id": "WHUF",
    "ticker": "WHUF",
    "name": "Whuffie",
@@ -32282,6 +32755,14 @@
    "status": "active",
    "cmc_date_added": "2023-04-27T07:25:20Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "WTI",
+   "ticker": "WTI",
+   "name": "WTI",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "WUXIAPPTEC",
@@ -32754,6 +33235,14 @@
    "status": "active",
    "cmc_date_added": "2014-08-05T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "XLP",
+   "ticker": "XLP",
+   "name": "XLP",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-19"
   },
   {
    "asset_id": "XLU",
