@@ -8,6 +8,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
@@ -19,6 +20,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
@@ -30,6 +32,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -41,6 +44,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
@@ -85,6 +89,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
@@ -96,6 +101,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
@@ -2263,6 +2269,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -2274,6 +2281,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-02T00:00:00.000Z"
   },
   {
@@ -2285,6 +2293,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
@@ -2296,6 +2305,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-09T00:00:00.000Z"
   },
   {
@@ -2307,6 +2317,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
@@ -2318,6 +2329,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
@@ -2329,6 +2341,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
@@ -2340,6 +2353,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-14T00:00:00.000Z"
   },
   {
@@ -2351,6 +2365,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
@@ -2362,6 +2377,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z"
   },
   {
@@ -2373,6 +2389,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -2384,6 +2401,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-08T00:00:00.000Z"
   },
   {
@@ -2395,6 +2413,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -2406,6 +2425,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-02T00:00:00.000Z"
   },
   {
@@ -2417,6 +2437,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
@@ -2428,6 +2449,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
@@ -2439,6 +2461,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -2450,6 +2473,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
@@ -2461,6 +2485,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
@@ -2472,6 +2497,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -2483,6 +2509,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
@@ -2494,6 +2521,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -2505,6 +2533,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
@@ -2813,6 +2842,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
@@ -2824,6 +2854,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
@@ -2835,6 +2866,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
@@ -2846,6 +2878,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-08T00:00:00.000Z"
   },
   {
@@ -2857,6 +2890,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
@@ -2879,6 +2913,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
@@ -6982,6 +7017,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
@@ -6993,6 +7029,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
@@ -7004,6 +7041,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-20T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -7015,6 +7053,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -7026,6 +7065,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-15T00:00:00.000Z"
   },
   {
@@ -7037,6 +7077,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-08T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-06T00:00:00.000Z"
   },
   {
@@ -7048,6 +7089,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
@@ -7059,6 +7101,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
@@ -7070,6 +7113,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -7081,6 +7125,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -7092,6 +7137,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-16T00:00:00.000Z"
   },
   {
@@ -7103,6 +7149,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
@@ -14715,6 +14762,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
@@ -14726,6 +14774,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -14737,6 +14786,7 @@
     "margin": "BTC",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
@@ -14748,6 +14798,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
@@ -14759,6 +14810,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2027-06-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -14770,6 +14822,7 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2027-09-24T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -19861,6 +19914,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -19872,6 +19926,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -19883,6 +19938,7 @@
     "margin": "USD",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -19894,6 +19950,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -19905,6 +19962,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 0.0001,
+    "underlying": "crypto",
     "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
@@ -19916,6 +19974,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-09T00:00:00",
     "contract_size": 0.01,
+    "underlying": "commodity",
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -19927,6 +19986,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-30T00:00:00.000Z"
   },
   {
@@ -19938,6 +19998,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -19960,6 +20021,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
@@ -19971,6 +20033,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
@@ -19982,6 +20045,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
@@ -19993,6 +20057,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-09T00:00:00",
     "contract_size": 0.1,
+    "underlying": "commodity",
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -20004,6 +20069,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -20015,6 +20081,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
@@ -20026,6 +20093,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
@@ -20037,6 +20105,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -20048,6 +20117,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
@@ -20059,6 +20129,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-02T00:00:00.000Z"
   },
   {
@@ -20070,6 +20141,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
@@ -20081,6 +20153,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
@@ -20092,6 +20165,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
@@ -20103,6 +20177,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
@@ -20114,6 +20189,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
@@ -20125,6 +20201,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
@@ -20136,6 +20213,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -20147,6 +20225,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
@@ -20158,6 +20237,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
@@ -20169,6 +20249,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-16T00:00:00.000Z"
   },
   {
@@ -20180,6 +20261,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -20202,6 +20284,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
@@ -23073,6 +23156,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-08T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
@@ -23084,6 +23168,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-25T00:00:00.000Z"
   },
   {
@@ -23095,6 +23180,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
@@ -23106,6 +23192,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
@@ -23128,6 +23215,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -23139,6 +23227,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -23150,6 +23239,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
@@ -28683,6 +28773,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-31T00:00:00.000Z"
   },
   {
@@ -34183,6 +34274,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-08T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-07T00:00:00.000Z"
   },
   {
@@ -38484,6 +38576,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
@@ -38495,6 +38588,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -38506,6 +38600,7 @@
     "margin": "ETH",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-10T00:00:00.000Z"
   },
   {
@@ -38517,6 +38612,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
@@ -38528,6 +38624,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2027-06-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -38539,6 +38636,7 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2027-09-24T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -43421,6 +43519,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -43432,6 +43531,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -43443,6 +43543,7 @@
     "margin": "USD",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 0.001,
+    "underlying": "crypto",
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -43454,6 +43555,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -43465,6 +43567,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 0.001,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -43476,6 +43579,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
@@ -43487,6 +43591,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -43498,6 +43603,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-07T00:00:00.000Z"
   },
   {
@@ -43509,6 +43615,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
@@ -45511,6 +45618,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-13T00:00:00.000Z"
   },
   {
@@ -45522,6 +45630,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
@@ -45533,6 +45642,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -45544,6 +45654,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-19T00:00:00.000Z"
   },
   {
@@ -45555,6 +45666,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
@@ -45566,6 +45678,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -45577,6 +45690,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-20T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -45599,6 +45713,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
@@ -45610,6 +45725,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
@@ -45621,6 +45737,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
@@ -45632,6 +45749,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-14T00:00:00.000Z"
   },
   {
@@ -45654,6 +45772,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-08T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-06T00:00:00.000Z"
   },
   {
@@ -45665,6 +45784,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
@@ -45687,6 +45807,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.1,
+    "underlying": "crypto",
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -45698,6 +45819,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
@@ -45709,6 +45831,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
@@ -45720,6 +45843,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -45731,6 +45855,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -45742,6 +45867,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
@@ -45753,6 +45879,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -45764,6 +45891,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-05-29T00:00:00.000Z"
   },
   {
@@ -45775,6 +45903,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -45786,6 +45915,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
@@ -45797,6 +45927,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-20T00:00:00.000Z"
   },
   {
@@ -45808,6 +45939,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -45819,6 +45951,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-03T00:00:00.000Z"
   },
   {
@@ -45830,6 +45963,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
@@ -45841,6 +45975,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
@@ -45852,6 +45987,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
@@ -45863,6 +45999,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
@@ -45874,6 +46011,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-21T00:00:00.000Z"
   },
   {
@@ -48624,6 +48762,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -48635,6 +48774,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -48646,6 +48786,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
@@ -54344,6 +54485,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 0.1,
+    "underlying": "crypto",
     "first_capture": "2026-03-30T00:00:00.000Z"
   },
   {
@@ -54388,6 +54530,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -54399,6 +54542,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -54410,6 +54554,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -54421,6 +54566,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
@@ -54432,6 +54578,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-07T00:00:00.000Z"
   },
   {
@@ -54443,6 +54590,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
@@ -54454,6 +54602,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
@@ -54465,6 +54614,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
@@ -54476,6 +54626,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -54487,6 +54638,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -54498,6 +54650,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -54509,6 +54662,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -54520,6 +54674,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
@@ -54531,6 +54686,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
@@ -54542,6 +54698,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -54553,6 +54710,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -54564,6 +54722,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-08T00:00:00.000Z"
   },
   {
@@ -54575,6 +54734,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-17T00:00:00.000Z"
   },
   {
@@ -54586,6 +54746,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
@@ -54597,6 +54758,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -54608,6 +54770,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-20T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-18T00:00:00.000Z"
   },
   {
@@ -54619,6 +54782,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -54630,6 +54794,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -54641,6 +54806,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-10T00:00:00.000Z"
   },
   {
@@ -54652,6 +54818,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-20T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-17T00:00:00.000Z"
   },
   {
@@ -54663,6 +54830,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
@@ -54674,6 +54842,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-26T00:00:00.000Z"
   },
   {
@@ -54685,6 +54854,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
@@ -54696,6 +54866,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-04T00:00:00.000Z"
   },
   {
@@ -54707,6 +54878,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
@@ -54718,6 +54890,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
@@ -54729,6 +54902,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
@@ -54740,6 +54914,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-07T00:00:00.000Z"
   },
   {
@@ -54751,6 +54926,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-07T00:00:00.000Z"
   },
   {
@@ -54762,6 +54938,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-15T00:00:00.000Z"
   },
   {
@@ -54773,6 +54950,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-08T00:00:00.000Z"
   },
   {
@@ -54784,6 +54962,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-10T00:00:00.000Z"
   },
   {
@@ -54795,6 +54974,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
@@ -54806,6 +54986,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1000000.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -54817,6 +54998,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-17T00:00:00.000Z"
   },
   {
@@ -54828,6 +55010,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
@@ -54839,6 +55022,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
@@ -54850,6 +55034,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
@@ -54861,6 +55046,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-30T00:00:00.000Z"
   },
   {
@@ -54883,6 +55069,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1000.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -54894,6 +55081,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-30T00:00:00.000Z"
   },
   {
@@ -54905,6 +55093,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-25T00:00:00.000Z"
   },
   {
@@ -54916,6 +55105,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-27T00:00:00.000Z"
   },
   {
@@ -54927,6 +55117,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -54938,6 +55129,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-01T00:00:00.000Z"
   },
   {
@@ -54949,6 +55141,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-10T00:00:00.000Z"
   },
   {
@@ -54960,6 +55153,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-16T00:00:00.000Z"
   },
   {
@@ -54971,6 +55165,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-20T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-19T00:00:00.000Z"
   },
   {
@@ -54982,6 +55177,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-08T00:00:00.000Z"
   },
   {
@@ -54993,6 +55189,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -55004,6 +55201,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-18T00:00:00.000Z"
   },
   {
@@ -55015,6 +55213,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
@@ -55026,6 +55225,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-11T00:00:00.000Z"
   },
   {
@@ -55037,6 +55237,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
@@ -55048,6 +55249,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -55059,6 +55261,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-07T00:00:00.000Z"
   },
   {
@@ -55081,6 +55284,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
@@ -55092,6 +55296,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
@@ -55115,6 +55320,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -55126,6 +55332,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
@@ -55137,6 +55344,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -55148,6 +55356,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-06T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-03T00:00:00.000Z"
   },
   {
@@ -55159,6 +55368,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-24T00:00:00.000Z"
   },
   {
@@ -55170,6 +55380,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -55181,6 +55392,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-20T00:00:00.000Z"
   },
   {
@@ -55192,6 +55404,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
@@ -55674,6 +55887,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -55685,6 +55899,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -55696,6 +55911,7 @@
     "margin": "USD",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 0.1,
+    "underlying": "crypto",
     "first_capture": "2026-06-15T00:00:00.000Z"
   },
   {
@@ -55707,6 +55923,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -55718,6 +55935,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -55729,6 +55947,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -55740,6 +55959,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-09T00:00:00.000Z"
   },
   {
@@ -55751,6 +55971,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-23T00:00:00.000Z"
   },
   {
@@ -55774,6 +55995,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
@@ -55785,6 +56007,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 0.01,
+    "underlying": "equity",
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -55796,6 +56019,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -55807,6 +56031,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -55818,6 +56043,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-17T00:00:00.000Z"
   },
   {
@@ -55829,6 +56055,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-27T00:00:00.000Z"
   },
   {
@@ -55840,6 +56067,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -55851,6 +56079,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-07T00:00:00.000Z"
   },
   {
@@ -55862,6 +56091,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -55872,7 +56102,8 @@
     "symbol": "TEST002",
     "denominator": "USD",
     "margin": "USD",
-    "delivery_date": "2031-08-22T00:00:00"
+    "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "equity"
   },
   {
     "id": "TEST01-USD_UM_XPERP-310815",
@@ -55913,6 +56144,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
@@ -55935,6 +56167,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
@@ -55946,6 +56179,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
@@ -55957,6 +56191,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-02T00:00:00.000Z"
   },
   {
@@ -55968,6 +56203,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-06-28T00:00:00.000Z"
   },
   {
@@ -60225,6 +60461,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-23T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-05-20T00:00:00.000Z"
   },
   {
@@ -60236,6 +60473,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 1.0,
+    "underlying": "equity",
     "first_capture": "2026-06-09T00:00:00.000Z"
   },
   {
@@ -60247,6 +60485,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-21T00:00:00.000Z"
   },
   {
@@ -60258,6 +60497,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-27T00:00:00",
     "contract_size": 100.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-24T00:00:00.000Z"
   },
   {
@@ -60269,6 +60509,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-18T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-13T00:00:00.000Z"
   },
   {
@@ -60280,6 +60521,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-12T00:00:00.000Z"
   },
   {
@@ -60291,6 +60533,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
@@ -60302,6 +60545,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-10T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-10-08T00:00:00.000Z"
   },
   {
@@ -60313,6 +60557,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-23T00:00:00.000Z"
   },
   {
@@ -60324,6 +60569,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-09T00:00:00.000Z"
   },
   {
@@ -60335,6 +60581,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-13T00:00:00.000Z"
   },
   {
@@ -60346,6 +60593,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
@@ -60357,6 +60605,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-17T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-10-13T00:00:00.000Z"
   },
   {
@@ -60368,6 +60617,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -60379,6 +60629,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-15T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-12T00:00:00.000Z"
   },
   {
@@ -60390,6 +60641,7 @@
     "margin": "USD",
     "delivery_date": "2031-06-13T00:00:00",
     "contract_size": 10.0,
+    "underlying": "crypto",
     "first_capture": "2026-06-11T00:00:00.000Z"
   },
   {
@@ -60401,6 +60653,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
@@ -60423,6 +60676,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-09T00:00:00",
     "contract_size": 0.01,
+    "underlying": "commodity",
     "first_capture": "2026-05-04T00:00:00.000Z"
   },
   {
@@ -60739,6 +60993,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-10-30T00:00:00",
+    "underlying": "commodity",
     "first_capture": "2026-08-28T00:00:00.000Z"
   },
   {
@@ -60750,6 +61005,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2026-11-27T00:00:00",
+    "underlying": "commodity",
     "first_capture": "2026-09-25T00:00:00.000Z"
   },
   {
@@ -60761,6 +61017,7 @@
     "margin": "USD",
     "delivery_date": "2026-12-25T00:00:00",
     "contract_size": 0.001,
+    "underlying": "commodity",
     "first_capture": "2026-06-12T00:00:00.000Z"
   },
   {
@@ -60772,6 +61029,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2027-03-26T00:00:00",
+    "underlying": "commodity",
     "first_capture": "2026-07-22T00:00:00.000Z"
   },
   {
@@ -60783,6 +61041,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-02T00:00:00",
     "contract_size": 0.001,
+    "underlying": "commodity",
     "first_capture": "2026-04-28T00:00:00.000Z"
   },
   {
@@ -60794,6 +61053,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-10-03T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-28T00:00:00.000Z"
   },
   {
@@ -60805,6 +61065,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-19T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-18T00:00:00.000Z"
   },
   {
@@ -60816,6 +61077,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-04T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-03T00:00:00.000Z"
   },
   {
@@ -60827,6 +61089,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-11T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-09T00:00:00.000Z"
   },
   {
@@ -66525,6 +66788,7 @@
     "margin": "USD",
     "delivery_date": "2031-04-04T00:00:00",
     "contract_size": 1.0,
+    "underlying": "crypto",
     "first_capture": "2026-04-01T00:00:00.000Z"
   },
   {
@@ -66536,6 +66800,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-29T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-24T00:00:00.000Z"
   },
   {
@@ -66547,6 +66812,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-07-25T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-24T00:00:00.000Z"
   },
   {
@@ -66558,6 +66824,7 @@
     "margin": "USD",
     "delivery_date": "2031-05-30T00:00:00",
     "contract_size": 0.01,
+    "underlying": "crypto",
     "first_capture": "2026-05-27T00:00:00.000Z"
   },
   {
@@ -66569,6 +66836,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-12T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-11T00:00:00.000Z"
   },
   {
@@ -66580,6 +66848,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-26T00:00:00",
+    "underlying": "equity",
     "first_capture": "2026-09-22T00:00:00.000Z"
   },
   {
@@ -66591,6 +66860,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-01T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-07-29T00:00:00.000Z"
   },
   {
@@ -66602,6 +66872,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-09-05T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-09-01T00:00:00.000Z"
   },
   {
@@ -66613,6 +66884,7 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
+    "underlying": "crypto",
     "first_capture": "2026-08-20T00:00:00.000Z"
   }
 ]
