@@ -7,8 +7,10 @@ from .fields import parse_recorded_legs
 from .http import get_json, iso_from_seconds
 from .common import (
     SkipSymbol,
+    delisted_end_date,
     instrument_type,
     make_contract,
+    ms_to_utc_timestamp,
     parse_underscore_spot,
     parse_yyyymmdd,
     resolve_margin,
@@ -71,6 +73,12 @@ def _gate_underlying(item: dict) -> UnderlyingType:
     return _GATE_CONTRACT_TYPES.get(contract_type, UnderlyingType.unknown)
 
 
+# Contract `status`: prelaunch, trading, delisting (reduce-only wind-down),
+# delisted, circuit_breaker (a temporary halt). Only `delisted` has ended;
+# Gate publishes no time for it.
+_GATE_DELISTED = "delisted"
+
+
 def _gate_perpetual(item: dict, settle: str) -> dict:
     name = item["name"]
     base, quote = name.split("_", 1)
@@ -78,7 +86,8 @@ def _gate_perpetual(item: dict, settle: str) -> dict:
     # quanto_multiplier 0; linear ones are `quanto_multiplier` base units.
     multiplier = float(item.get("quanto_multiplier") or 0)
     inverse = item.get("type") == "inverse"
-    return {
+    launched = item.get("launch_time") or item.get("create_time")
+    sd = {
         "id": name,
         "type": "perpetual",
         "base_coin": base,
@@ -87,7 +96,11 @@ def _gate_perpetual(item: dict, settle: str) -> dict:
         "contract_size": multiplier if multiplier > 0 else 1.0,
         "quantity_unit": "quote" if inverse else "base",
         "underlying": _gate_underlying(item).value,
+        "first_capture": ms_to_utc_timestamp(int(launched) * 1000) if launched else None,
     }
+    if item.get("status") == _GATE_DELISTED:
+        sd["end_date"] = delisted_end_date()
+    return {k: v for k, v in sd.items() if v is not None}
 
 
 def _fetch_gate_perpetuals(settle: str, timeout_seconds: int) -> list[dict]:

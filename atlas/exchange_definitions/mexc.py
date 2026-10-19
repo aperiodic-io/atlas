@@ -5,7 +5,7 @@ from __future__ import annotations
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract, venue_margin
+from .common import SkipSymbol, delisted_end_date, instrument_type, make_contract, venue_margin
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
 
@@ -46,6 +46,11 @@ def mexc_underlying(item: dict) -> UnderlyingType:
     return UnderlyingType.crypto
 
 
+# `state`: 0 enabled, 1 delivering, 2 delivered, 3 offline, 4 paused. Delivering
+# and paused contracts are still listed.
+_MEXC_DELISTED_STATES = {2, 3}
+
+
 def _mexc_symbol(item: dict) -> dict:
     base, quote, settle = item["baseCoin"], item["quoteCoin"], item["settleCoin"]
     inverse = settle != quote
@@ -65,13 +70,16 @@ def _mexc_symbol(item: dict) -> dict:
         "first_capture": iso_from_millis(item.get("openingTime"))
         or iso_from_millis(item.get("createTime")),
     }
+    if item.get("state") in _MEXC_DELISTED_STATES:
+        # MEXC publishes no delisting time.
+        sd["end_date"] = delisted_end_date()
     return {k: v for k, v in sd.items() if v is not None}
 
 
 def fetch_mexc_perpetual(timeout_seconds: int) -> list[dict]:
-    """Enabled (`state` 0) contracts; 1-4 are delivering, delivered, offline, paused."""
+    """Every contract; delivered and offline ones are reported delisted."""
     payload = get_json("https://contract.mexc.com/api/v1/contract/detail", timeout_seconds)
-    return [_mexc_symbol(item) for item in payload.get("data", []) if item.get("state") == 0]
+    return [_mexc_symbol(item) for item in payload.get("data", [])]
 
 
 def parse_mexc(exchange: str, sd: SymbolData) -> Contract:

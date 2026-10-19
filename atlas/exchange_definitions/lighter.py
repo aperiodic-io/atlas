@@ -19,8 +19,6 @@ classifies the inactive ones.
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
-
 import requests
 from tenacity import (
     retry,
@@ -32,7 +30,13 @@ from tenacity import (
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract
+from .common import (
+    SkipSymbol,
+    delisted_end_date,
+    instrument_type,
+    make_contract,
+    ms_to_utc_timestamp,
+)
 
 LIGHTER_URL = "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?filter=perp"
 
@@ -142,22 +146,12 @@ def _fetch_lighter_payload(timeout_seconds: int) -> dict:
     return payload
 
 
-def _iso_from_ms(value: object) -> str | None:
-    try:
-        ms = int(str(value))
-    except (TypeError, ValueError):
-        return None
-    if ms <= 0:
-        return None
-    return (
-        datetime.fromtimestamp(ms / 1000, tz=UTC)
-        .isoformat(timespec="milliseconds")
-        .replace("+00:00", "Z")
-    )
-
-
 def lighter_symbols(payload: dict) -> list[dict]:
-    """Every perp market, inactive ones included (they stay in the master)."""
+    """Every perp market, inactive ones included (they stay in the master).
+
+    ``created_at`` is the listing time. An ``inactive`` market is delisted and
+    ends at the first run that sees it (Lighter publishes no delisting time).
+    """
     symbols = []
     for item in payload.get("order_book_details") or []:
         if item.get("market_type") != "perp" or item.get("market_id") is None:
@@ -175,8 +169,10 @@ def lighter_symbols(payload: dict) -> list[dict]:
             "contract_size": size if size > 0 else 1.0,
             "underlying": lighter_underlying(name, item.get("strategy_index")).value,
         }
-        if listed := _iso_from_ms(item.get("created_at")):
-            sd["listing_date"] = listed
+        if listed := ms_to_utc_timestamp(item.get("created_at")):
+            sd["first_capture"] = listed
+        if item.get("status") == "inactive":
+            sd["end_date"] = delisted_end_date()
         symbols.append(sd)
     return symbols
 

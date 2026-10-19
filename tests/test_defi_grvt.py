@@ -58,7 +58,8 @@ class TestGrvt:
             return_value=_response(_payload("grvt_all_instruments.json")),
         ) as post:
             symbols = fetch_grvt_perps(timeout_seconds=5)
-        assert post.call_args.kwargs["json"] == {"is_active": True}
+        # `is_active: false` also returns the delisted instruments.
+        assert post.call_args.kwargs["json"] == {"is_active": False}
         return symbols
 
     def test_perps_settle_in_their_usdt_quote(self):
@@ -67,8 +68,15 @@ class TestGrvt:
         )
         assert c.internal_id == "perpetual-BTC-USDT:USDT"
 
-    def test_fetch_keeps_active_perps_with_venue_asset_class_and_listing_time(self):
+    def test_fetch_reports_delisted_perps_as_ended(self):
         by_id = {sd["id"]: sd for sd in self._fetch()}
+        assert {sid for sid, sd in by_id.items() if "end_date" in sd} == {
+            "AI16Z_USDT_Perp",
+            "SPCX_USDT_Perp",
+        }
+
+    def test_fetch_keeps_active_perps_with_venue_asset_class_and_listing_time(self):
+        by_id = {sd["id"]: sd for sd in self._fetch() if "end_date" not in sd}
         assert set(by_id) == {
             "BTC_USDT_Perp",
             "TSLA_USDT_Perp",

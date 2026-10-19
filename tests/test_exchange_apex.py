@@ -37,10 +37,13 @@ def test_registered_as_an_api_only_exchange():
 
 
 def test_fetcher_keeps_listed_perpetual_and_stock_contracts():
-    # The stock list is where ApeX keeps its RWA perps (ccxt misses it);
-    # delisted, hidden, disabled and prediction contracts are not streamed.
+    # The stock list is where ApeX keeps its RWA perps (ccxt misses it).
+    # Retired contracts (trading and display both off) and prediction contracts
+    # are left out. Hidden contracts that still trade (IOUSDT, STBLUSDT) are not
+    # streamed but are still listed: leaving them out would let the daily
+    # update close them as delisted.
     assert set(_by_id()) == {
-        "BTCUSDT", "ETHUSDT", "DOGEUSDT", "PAXGUSDT",
+        "BTCUSDT", "ETHUSDT", "DOGEUSDT", "PAXGUSDT", "IOUSDT", "STBLUSDT",
         "AAPLUSDT", "TSLAUSDT", "XAUUSDT", "NATGASUSDT", "SPYUSDT", "QQQUSDT", "SOXLUSDT",
     }
 
@@ -99,4 +102,4 @@ def test_fetch_retries_transient_failures():
     ) as get, patch("time.sleep"):
         rows = fetch_apex_perps(timeout_seconds=5)
     assert get.call_count == 3
-    assert len(rows) == 11
+    assert len(rows) == 13

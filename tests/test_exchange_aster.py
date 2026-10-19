@@ -96,10 +96,16 @@ def test_unknown_classification_is_not_guessed():
     assert classify_aster_underlying({"symbolType": 0, "underlyingType": "INDEX"}).value == "unknown"
 
 
-def test_availability_bounds_are_left_to_tardis():
-    # first_capture/end_date are Tardis's capture window (the equivalence test
-    # compares them); Aster's onboardDate/deliveryDate are listing times.
-    assert all("first_capture" not in sd and "end_date" not in sd for sd in _by_id().values())
+def test_listing_and_delisting_times_come_from_the_venue():
+    # The daily update reads Aster's own API, which (as Binance's) dates every
+    # contract's listing (`onboardDate`) and the delisting of the ones that
+    # stopped trading (`deliveryDate`); see test_venue_lifecycle.py.
+    by_status = {item["symbol"].lower(): item["status"] for item in PAYLOAD["symbols"]}
+    rows = _by_id()
+    assert all(sd.get("first_capture") for sd in rows.values())
+    assert {sid for sid, sd in rows.items() if "end_date" in sd} == {
+        sid for sid in rows if by_status[sid] != "TRADING"
+    }
 
 
 def test_tardis_only_rows_parse_without_asset_fields():

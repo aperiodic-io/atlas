@@ -22,7 +22,7 @@ from tenacity import (
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract
+from .common import SkipSymbol, delisted_end_date, instrument_type, make_contract
 
 GRVT_ASSET_CLASSES = {
     "CRYPTO": UnderlyingType.crypto,
@@ -76,7 +76,8 @@ def _ns_to_iso(value: Any) -> str | None:
 def _fetch_grvt_instruments(timeout_seconds: int) -> list[dict[str, Any]]:
     response = requests.post(
         "https://market-data.grvt.io/full/v1/all_instruments",
-        json={"is_active": True},
+        # `is_active: true` would filter the delisted instruments out.
+        json={"is_active": False},
         timeout=timeout_seconds,
     )
     response.raise_for_status()
@@ -87,10 +88,13 @@ def _fetch_grvt_instruments(timeout_seconds: int) -> list[dict[str, Any]]:
 
 
 def fetch_grvt_perps(timeout_seconds: int) -> list[dict]:
-    """The active perpetuals (GRVT has no history source to date delisted ones)."""
+    """Every perpetual; a ``DELISTED`` one ends at the first run that sees it.
+
+    GRVT publishes no delisting time. ``create_time`` is the listing time.
+    """
     symbols = []
     for item in _fetch_grvt_instruments(timeout_seconds):
-        if item.get("kind") != "PERPETUAL" or item.get("status", "ACTIVE") != "ACTIVE":
+        if item.get("kind") != "PERPETUAL":
             continue
         base, quote = item.get("base"), item.get("quote")
         if not item.get("instrument") or not base or not quote:
@@ -106,5 +110,7 @@ def fetch_grvt_perps(timeout_seconds: int) -> list[dict]:
         }
         if listed := _ns_to_iso(item.get("create_time")):
             sd["first_capture"] = listed
+        if item.get("status") == "DELISTED":
+            sd["end_date"] = delisted_end_date()
         symbols.append(sd)
     return symbols

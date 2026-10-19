@@ -152,12 +152,11 @@ class TestLighter:
             == 9
         )
 
-    def test_listing_time_is_kept_as_listing_date(self):
-        # first_capture is Tardis availability (or Atlas's first observation),
-        # not the venue's listing time.
+    def test_listing_time_is_the_first_capture(self):
+        # The daily update reads Lighter's API only; its listing time is the
+        # best start there is (rows on file keep their own first_capture).
         rows = _rows("lighter-perpetual", self.symbols)
-        assert rows["0"]["listing_date"] == "2025-01-17T07:21:01.100Z"
-        assert "first_capture" not in rows["0"]
+        assert rows["0"]["first_capture"] == "2025-01-17T07:21:01.100Z"
 
     def test_missing_base_asset_is_skipped(self):
         with pytest.raises(SkipSymbol):

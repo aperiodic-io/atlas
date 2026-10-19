@@ -74,12 +74,18 @@ def _fetch_apex_symbols(timeout_seconds: int) -> Any:
 
 
 def apex_symbols(payload: dict[str, Any]) -> list[dict]:
-    """The listed (tradeable and shown) perpetual and stock contracts."""
+    """The perpetual and stock contracts that are tradeable or shown.
+
+    ApeX keeps retired contracts in these lists with both flags off and has no
+    status that tells a retirement from a pause, nor any listing or delisting
+    time. Leaving retired contracts out lets the updater's two-run
+    confirmation and mass-disappearance guard decide when one has delisted.
+    """
     config = payload["data"]["contractConfig"]
     symbols = []
     for list_name, stock_list in (("perpetualContract", False), ("stockContract", True)):
         for contract in config.get(list_name) or []:
-            if not (contract.get("enableTrade") and contract.get("enableDisplay")):
+            if not (contract.get("enableTrade") or contract.get("enableDisplay")):
                 continue
             if not contract.get("crossSymbolName"):
                 continue

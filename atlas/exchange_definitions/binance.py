@@ -84,7 +84,7 @@ _SPOT_UNLISTED_STATUSES = {"BREAK", "PRE_TRADING"}
 _FUTURES_DELISTED_STATUSES = {"SETTLING", "CLOSE", "DELIVERED"}
 
 
-def _mark_futures_lifecycle(sd: dict, item: dict, status: str | None) -> dict:
+def mark_futures_lifecycle(sd: dict, item: dict, status: str | None) -> dict:
     if listed_at := ms_to_utc_timestamp(item.get("onboardDate")):
         sd["first_capture"] = listed_at
     if status in _FUTURES_DELISTED_STATUSES:
@@ -145,7 +145,7 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(_mark_futures_lifecycle(sd, item, item.get("status")))
+        symbols.append(mark_futures_lifecycle(sd, item, item.get("status")))
     return symbols
 
 
@@ -166,5 +166,5 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(_mark_futures_lifecycle(sd, item, item.get("contractStatus")))
+        symbols.append(mark_futures_lifecycle(sd, item, item.get("contractStatus")))
     return symbols

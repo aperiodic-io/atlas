@@ -5,7 +5,16 @@ from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
-from .common import SkipSymbol, instrument_type, make_contract, parse_concat, resolve_margin, split_concat
+from .common import (
+    SkipSymbol,
+    delisted_end_date,
+    instrument_type,
+    make_contract,
+    ms_to_utc_timestamp,
+    parse_concat,
+    resolve_margin,
+    split_concat,
+)
 
 
 def parse_bitget(exchange: str, sd: SymbolData) -> Contract:
@@ -64,7 +73,14 @@ def _bitget_underlying(item: dict) -> UnderlyingType:
     return underlying
 
 
-def _bitget_symbol(item: dict, category: str, *, listing_dates: bool) -> dict:
+# v3 `status`: `listed` has not started trading, `offline` is delisted (at
+# `offTime`, -1 until set), and `online`, `limit_open`, `limit_close` and
+# `restrictedAPI` are listed, the last three with temporary restrictions.
+_BITGET_NOT_YET_LISTED = "listed"
+_BITGET_DELISTED = "offline"
+
+
+def _bitget_symbol(item: dict, category: str) -> dict:
     base, quote = item["baseCoin"], item["quoteCoin"]
     coin_margined = category == "COIN-FUTURES"
     sd = {
@@ -81,37 +97,37 @@ def _bitget_symbol(item: dict, category: str, *, listing_dates: bool) -> dict:
     }
     if sd["type"] == "future":
         sd["delivery_date"] = iso_from_millis(item.get("deliveryTime"))
-    if listing_dates:
-        # Tardis does not cover the v3 coin-margined symbols; the venue's
-        # launch time is the only listing date there is.
-        sd["first_capture"] = iso_from_millis(item.get("launchTime"))
+    # `launchTime` is 0 on contracts listed before Bitget recorded it.
+    sd["first_capture"] = ms_to_utc_timestamp(item.get("launchTime"))
+    if item.get("status") == _BITGET_DELISTED:
+        sd["end_date"] = delisted_end_date(item.get("offTime"))
     return {k: v for k, v in sd.items() if v is not None}
 
 
-def _fetch_bitget(category: str, timeout_seconds: int, *, listing_dates: bool) -> list[dict]:
+def _fetch_bitget(category: str, timeout_seconds: int) -> list[dict]:
     payload = get_json(_BITGET_V3_INSTRUMENTS, timeout_seconds, params={"category": category})
     return [
-        _bitget_symbol(item, category, listing_dates=listing_dates)
+        _bitget_symbol(item, category)
         for item in payload.get("data") or []
-        if item.get("status") == "online"
+        if item.get("status") != _BITGET_NOT_YET_LISTED
     ]
 
 
 def fetch_bitget_perpetual_usdt(timeout_seconds: int) -> list[dict]:
-    return _fetch_bitget("USDT-FUTURES", timeout_seconds, listing_dates=False)
+    return _fetch_bitget("USDT-FUTURES", timeout_seconds)
 
 
 def fetch_bitget_perpetual_usdc(timeout_seconds: int) -> list[dict]:
-    return _fetch_bitget("USDC-FUTURES", timeout_seconds, listing_dates=False)
+    return _fetch_bitget("USDC-FUTURES", timeout_seconds)
 
 
 def fetch_bitget_perpetual_coin(timeout_seconds: int) -> list[dict]:
-    rows = _fetch_bitget("COIN-FUTURES", timeout_seconds, listing_dates=True)
+    rows = _fetch_bitget("COIN-FUTURES", timeout_seconds)
     return [sd for sd in rows if sd["type"] == "perpetual"]
 
 
 def fetch_bitget_futures_coin(timeout_seconds: int) -> list[dict]:
-    rows = _fetch_bitget("COIN-FUTURES", timeout_seconds, listing_dates=True)
+    rows = _fetch_bitget("COIN-FUTURES", timeout_seconds)
     return [sd for sd in rows if sd["type"] == "future"]
 
 

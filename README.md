@@ -127,24 +127,37 @@ In exchange mode each fetch is treated as the exchange's whole current
 universe, so `first_capture` and `end_date` come from the exchanges:
 
 - `first_capture` is the exchange listing time where one is published
-  (Binance futures `onboardDate`, Bybit derivatives `launchTime`, OKX
-  `listTime`), otherwise the time a run first saw the instrument. A value
-  already on file is never overwritten.
+  (Binance futures and Aster `onboardDate`, Bybit derivatives and Bitget
+  `launchTime`, OKX `listTime`, Gate `launch_time`, HTX `create_date`, MEXC
+  `openingTime`/`createTime`, Deribit `creation_timestamp`, Extended `createdAt`,
+  Lighter `created_at`, GRVT `create_time`, Pacifica `created_at`), otherwise the
+  time a run first saw the instrument. A value already on file is never
+  overwritten.
 - `end_date` is set from an explicit exchange signal when there is one: Binance
   futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`, or the run time if
   that has not passed yet), Bybit derivatives `Closed` (at `deliveryTime`), and
   Hyperliquid `isDelisted` (at first sighting, as Hyperliquid publishes no time).
   Hyperliquid also keeps no candle or funding history for delisted HIP-3 perps,
   so HIP-3 perps already delisted when this tracking started end on the first
-  run that saw the flag.
+  run that saw the flag. Of the live-producers venues, Aster
+  `SETTLING`/`CLOSE`/`DELIVERED` (as Binance), Bitget `offline` (at `offTime`)
+  and HTX delisted/delivered or past its `delivery_time` (the scheduled
+  delisting) are dated; Extended `DELISTED`, GRVT `DELISTED`, Lighter
+  `inactive`, Avantis `isPairListed: false`, MEXC delivered/offline and Gate
+  `delisted` end at first sighting.
 - An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
-  OKX, Hyperliquid spot) is marked `missing_since` on the first run that misses
+  OKX, Hyperliquid spot, and every venue without a delisted status: ApeX,
+  Pacifica, Variational, Deribit, WhiteBIT, Crypto.com) is marked
+  `missing_since` on the first run that misses
   it. If a run at least 12 hours later still misses it, `end_date` is set to that
   first miss; if it comes back first, the mark is dropped. Expired dated futures
   end at delivery straight away.
 - Halted, suspended and pre-market instruments (Binance spot `HALT`, Binance
   futures pending/delivering statuses, OKX `suspend`, Bybit
-  `PreLaunch`/`Delivering`) stay listed.
+  `PreLaunch`/`Delivering`, Bitget `limit_open`/`limit_close`/`restrictedAPI`,
+  HTX suspended and settling, MEXC paused and delivering, Gate `delisting` and
+  `circuit_breaker`, Extended `PRELISTED`/`REDUCE_ONLY`, ApeX contracts that
+  still trade or show) stay listed.
 - A run that returns nothing for an exchange fails it and leaves its file
   untouched. A run that would newly drop more than 10% of an exchange's open
   instruments (and more than 5) looks like a broken API response: it still
@@ -238,9 +251,9 @@ exchanges (`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`,
 `bybit-perps` / `bybit-futures` (the producer's `bybit-perpetual-usd` and
 `bybit-perpetual-coin` both live in `bybit-perps`).
 
-Rows the venue API reports but Tardis does not cover get their first
-observation as `first_capture`; MEXC and Bitget coin-margined rows use the
-venue's listing time instead, as Tardis has no history for them.
+New rows take the venue's listing time as `first_capture` where it publishes
+one, otherwise their first observation (see [Listing and delisting
+dates](#listing-and-delisting-dates)).
 
 ### Underlying classification
 

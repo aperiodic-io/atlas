@@ -29,6 +29,7 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
+from .binance import mark_futures_lifecycle
 from .common import SkipSymbol, instrument_type, make_contract, split_concat
 
 ASTER_EXCHANGE_INFO_URL = "https://fapi.asterdex.com/fapi/v1/exchangeInfo"
@@ -86,10 +87,9 @@ def aster_symbols(payload: dict[str, Any]) -> list[dict]:
     """Every perpetual of an exchangeInfo payload, delisting ones included.
 
     A contract still ``PENDING_TRADING`` has no contract type yet and is left
-    out until it lists. Availability bounds (``first_capture``/``end_date``)
-    are Tardis's capture window, which the hybrid source supplies; the venue's
-    ``onboardDate``/``deliveryDate`` are listing and delisting times, a
-    different thing, so they are not copied into them.
+    out until it lists. As on Binance, ``onboardDate`` is the listing time and a
+    ``SETTLING``/``CLOSE``/``DELIVERED`` contract stopped trading at
+    ``deliveryDate``.
     """
     symbols = []
     for item in payload.get("symbols", []):
@@ -104,7 +104,7 @@ def aster_symbols(payload: dict[str, Any]) -> list[dict]:
             "margin_asset": item.get("marginAsset"),
             "underlying": classify_aster_underlying(item).value,
         }
-        symbols.append(sd)
+        symbols.append(mark_futures_lifecycle(sd, item, item.get("status")))
     return symbols
 
 

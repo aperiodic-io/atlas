@@ -5,8 +5,10 @@ and US and Korean equities, all settled in USDC. Discovery mirrors the
 live-producers feed (``streaming/feeds/avantis``):
 
 * every pair of ``GET https://data.avantisfi.com/v2/trading`` with
-  ``isPairListed`` and a non-blank base and quote (the catalog keeps delisted
-  pairs, some with empty or placeholder names);
+  ``isPairListed`` and a non-blank base and quote. The catalog keeps delisted
+  pairs (``isPairListed`` false, some with empty or placeholder names); they
+  are reported delisted, ending at the first run that sees them, since the
+  catalog has no delisting time;
 * ``original_id`` is the pair index;
 * the symbol is the base as listed with whitespace removed (``SK HYNIX`` ->
   ``SKHYNIX``), with the quote appended when it is not USD (``USD/JPY`` ->
@@ -28,7 +30,7 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract
+from .common import SkipSymbol, delisted_end_date, instrument_type, make_contract
 
 AVANTIS_TRADING_URL = "https://data.avantisfi.com/v2/trading"
 AVANTIS_SETTLE_ASSET = "USDC"
@@ -81,12 +83,21 @@ def _fetch_avantis_catalog(timeout_seconds: int) -> dict[str, Any]:
 
 
 def avantis_symbols(catalog: dict[str, Any]) -> list[dict]:
-    """Listed pairs of a /v2/trading catalog as symbol rows, in index order."""
+    """Pairs of a /v2/trading catalog as symbol rows, in index order.
+
+    A delisted pair carries only its id and ``end_date``: its name may be gone,
+    and the updater only uses it to close the row already on file.
+    """
     groups = catalog.get("groupInfo") or {}
     symbols = []
     for index, pair in (catalog.get("pairInfos") or {}).items():
         base_raw, quote = pair.get("from") or "", pair.get("to") or ""
-        if not pair.get("isPairListed") or not base_raw.strip() or not quote.strip():
+        if not pair.get("isPairListed"):
+            symbols.append(
+                {"id": str(index), "type": "perpetual", "end_date": delisted_end_date()}
+            )
+            continue
+        if not base_raw.strip() or not quote.strip():
             continue
         attributes = (pair.get("feed") or {}).get("attributes") or {}
         group = groups.get(str(pair.get("groupIndex"))) or {}

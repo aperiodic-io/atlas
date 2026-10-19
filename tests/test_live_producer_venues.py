@@ -159,12 +159,14 @@ HTX = {
 
 
 class TestHtx:
-    def test_only_trading_contracts_and_their_ids(self):
+    def test_listed_contracts_and_their_ids(self):
         from atlas.exchange_definitions.huobi import fetch_htx_perpetual_usdt
 
         rows = _fetch(fetch_htx_perpetual_usdt, {"/swap_contract_info": HTX})
         ids = _ids("htx-perpetual-usdt", rows)
-        assert "CYBER-USDT" not in ids
+        # Suspended (status 3) is not delisted: the daily update would close a
+        # contract the fetcher left out.
+        assert "end_date" not in {sd["id"]: sd for sd in rows}["CYBER-USDT"]
         # Status 5 (settling at funding time) is still a trading contract.
         assert ids["ETH-USDT"] == "perpetual-ETH-USDT:USDT"
         assert ids["BTC-USDT"] == "perpetual-BTC-USDT:USDT"
@@ -180,6 +182,7 @@ class TestHtx:
             "TQQQ-USDT": "equity",  # an index ETF is still an equity
             "XAU-USDT": "commodity",
             "TBT-USDT": "index",
+            "CYBER-USDT": "crypto",
         }
 
 
@@ -225,8 +228,10 @@ class TestMexc:
         assert ids["BTC_USD"] == "perpetual-BTC-USD:BTC"
         # A stablecoin the linear whitelist does not know is still linear.
         assert ids["ETH_USD1"] == "perpetual-ETH-USD1:USD1"
-        # Offline contracts (state 3) are not listed.
-        assert "GONE_USDT" not in ids
+        # Offline contracts (state 3) are reported delisted.
+        rows = {sd["id"]: sd for sd in _fetch(fetch_mexc_perpetual, {"/contract/detail": MEXC})}
+        assert "end_date" in rows["GONE_USDT"]
+        assert "end_date" not in rows["BTC_USDT"]
 
     def test_contract_size_units_and_listing_date(self):
         from atlas.exchange_definitions.mexc import fetch_mexc_perpetual
@@ -255,6 +260,7 @@ class TestMexc:
             "SI_USDT": "crypto",  # a memecoin named after a stock
             "TESLA_USDT": "equity",
             "ODD_USDT": "unknown",  # TradFi, class not given
+            "GONE_USDT": "crypto",
         }
 
 
@@ -299,7 +305,8 @@ class TestBitget:
         coin = _fetch(bitget.fetch_bitget_perpetual_coin, BITGET_ROUTES)
         dated = _fetch(bitget.fetch_bitget_futures_coin, BITGET_ROUTES)
         assert _ids("bitget-perpetual-usdt", usdt)["BTCUSDT"] == "perpetual-BTC-USDT:USDT"
-        assert "OLDUSDT" not in _ids("bitget-perpetual-usdt", usdt)
+        # Offline contracts are reported delisted.
+        assert "end_date" in {sd["id"]: sd for sd in usdt}["OLDUSDT"]
         assert _ids("bitget-perpetual-usdc", usdc) == {"BTCPERP": "perpetual-BTC-USDC:USDC"}
         assert _ids("bitget-perpetual-coin", coin) == {"BTCUSD_CM": "perpetual-BTC-USD:BTC"}
         assert _ids("bitget-futures-coin", dated) == {"BTCCMZ26": "future-BTC-USD:BTC-20261225"}
@@ -312,8 +319,8 @@ class TestBitget:
         # quantityMultiplier is an order step, not a contract multiplier.
         assert (usdc["contract_size"], usdc["quantity_unit"]) == (1.0, "base")
         assert (coin["contract_size"], coin["quantity_unit"]) == (1.0, "quote")
-        # Tardis lacks the v3 coin-margined symbols: the launch time dates them.
-        assert coin["first_capture"] == "2026-01-21T12:09:58.543000Z"
+        # The launch time dates a listing where Bitget recorded one.
+        assert coin["first_capture"] == "2026-01-21T12:09:58.543Z"
         assert "first_capture" not in usdc
 
     def test_underlying(self):
@@ -325,6 +332,7 @@ class TestBitget:
             "XAUUSDT": "commodity",
             "CLUSDT": "commodity",
             "EURUSDUSDT": "unknown",
+            "OLDUSDT": "crypto",
         }
 
     def test_tardis_rows_parse_from_the_id(self):

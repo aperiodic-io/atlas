@@ -686,6 +686,20 @@
     "margin": "USDT"
   },
   {
+    "id": "IOUSDT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "IO",
+    "settle_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-19T18:51:17.865Z",
+    "internal_id": "perpetual-IO-USDT:USDT",
+    "symbol": "IO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JUPUSDT",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -1438,6 +1452,20 @@
     "first_capture": "2026-10-14T22:47:47.235923Z",
     "internal_id": "perpetual-SPY-USDT:USDT",
     "symbol": "SPY",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "STBLUSDT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "STBL",
+    "settle_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-19T18:51:17.865Z",
+    "internal_id": "perpetual-STBL-USDT:USDT",
+    "symbol": "STBL",
     "denominator": "USDT",
     "margin": "USDT"
   },

@@ -3,7 +3,13 @@ from __future__ import annotations
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract, parse_ddmmmyy
+from .common import (
+    SkipSymbol,
+    instrument_type,
+    make_contract,
+    ms_to_utc_timestamp,
+    parse_ddmmmyy,
+)
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
 
@@ -78,6 +84,7 @@ def _deribit_symbol(item: dict) -> dict:
         "underlying": _DERIBIT_UNDERLYING_TYPES.get(
             item.get("underlying_type") or "", UnderlyingType.unknown
         ).value,
+        "first_capture": ms_to_utc_timestamp(item.get("creation_timestamp")),
     }
     if not perpetual:
         sd["delivery_date"] = iso_from_millis(item.get("expiration_timestamp"))

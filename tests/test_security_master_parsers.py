@@ -1596,10 +1596,14 @@ class TestFetchAvantisPerps:
         ):
             return fetch_avantis_perps(timeout_seconds=5)
 
-    def test_listed_pairs_only_in_index_order(self):
-        # 22 (SHIB) and 35 ("DELISTED") are delisted; 32 has no name at all.
-        ids = [sd["id"] for sd in self._fetch()]
-        assert ids == ["0", "11", "12", "21", "78", "96", "114", "115", "188"]
+    def test_pairs_in_index_order_with_delisted_ones_ended(self):
+        # 22 (SHIB), 32 (no name at all) and 35 ("DELISTED") are delisted: they
+        # carry only an end_date, which closes the row on file.
+        rows = self._fetch()
+        assert [sd["id"] for sd in rows] == [
+            "0", "11", "12", "21", "22", "32", "35", "78", "96", "114", "115", "188",
+        ]
+        assert {sd["id"] for sd in rows if "end_date" in sd} == {"22", "32", "35"}
 
     @pytest.mark.parametrize(
         ("index", "internal_id", "underlying"),

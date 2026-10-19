@@ -18,8 +18,6 @@ others (S&P 500, Nasdaq-100, Nikkei 225, KOSPI 200) indices.
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
-
 import requests
 from tenacity import (
     retry,
@@ -31,7 +29,13 @@ from tenacity import (
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract
+from .common import (
+    SkipSymbol,
+    delisted_end_date,
+    instrument_type,
+    make_contract,
+    ms_to_utc_timestamp,
+)
 
 EXTENDED_URL = "https://api.starknet.extended.exchange/api/v1/info/markets"
 
@@ -88,7 +92,12 @@ def _fetch_extended_payload(timeout_seconds: int) -> dict:
 
 
 def extended_symbols(payload: dict) -> list[dict]:
-    """Every perpetual, delisted and prelisted ones included."""
+    """Every perpetual, delisted and prelisted ones included.
+
+    ``createdAt`` is the listing time. A ``DELISTED`` market ends at the first
+    run that sees it (Extended publishes no delisting time); ``PRELISTED`` and
+    ``REDUCE_ONLY`` markets are still listed.
+    """
     symbols = []
     for item in payload.get("data") or []:
         if item.get("type") != "PERPETUAL" or not item.get("name"):
@@ -103,13 +112,10 @@ def extended_symbols(payload: dict) -> list[dict]:
                 item.get("category"), item.get("subCategory"), item.get("description")
             ).value,
         }
-        created = item.get("createdAt")
-        if isinstance(created, int) and created > 0:
-            sd["listing_date"] = (
-                datetime.fromtimestamp(created / 1000, tz=UTC)
-                .isoformat(timespec="milliseconds")
-                .replace("+00:00", "Z")
-            )
+        if listed := ms_to_utc_timestamp(item.get("createdAt")):
+            sd["first_capture"] = listed
+        if item.get("status") == "DELISTED":
+            sd["end_date"] = delisted_end_date()
         symbols.append(sd)
     return symbols
 
