@@ -84,7 +84,7 @@ _SPOT_UNLISTED_STATUSES = {"BREAK", "PRE_TRADING"}
 _FUTURES_DELISTED_STATUSES = {"SETTLING", "CLOSE", "DELIVERED"}
 
 
-def _mark_futures_lifecycle(sd: dict, item: dict, status: str | None) -> dict:
+def mark_futures_lifecycle(sd: dict, item: dict, status: str | None) -> dict:
     if listed_at := ms_to_utc_timestamp(item.get("onboardDate")):
         sd["first_capture"] = listed_at
     if status in _FUTURES_DELISTED_STATUSES:
@@ -108,13 +108,16 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
 
 
 def _normalize_binance_instrument_type(raw_type: str | None) -> str:
-    return "perpetual" if raw_type == "PERPETUAL" else "future"
+    # TradFi perpetuals (stocks, metals, FX) are `TRADIFI_PERPETUAL`.
+    return "perpetual" if (raw_type or "").endswith("PERPETUAL") else "future"
 
 
 _BINANCE_UNDERLYING_TYPE_MAP = {
     "COIN": UnderlyingType.crypto,
+    "CN_EQUITY": UnderlyingType.equity,
     "COMMODITY": UnderlyingType.commodity,
     "EQUITY": UnderlyingType.equity,
+    "FX": UnderlyingType.forex,
     "HK_EQUITY": UnderlyingType.equity,
     "INDEX": UnderlyingType.index,
     "KR_EQUITY": UnderlyingType.equity,
@@ -142,7 +145,7 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(_mark_futures_lifecycle(sd, item, item.get("status")))
+        symbols.append(mark_futures_lifecycle(sd, item, item.get("status")))
     return symbols
 
 
@@ -163,5 +166,5 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
         sd["underlying"] = _normalize_binance_underlying_type(
             item.get("underlyingType")
         ).value
-        symbols.append(_mark_futures_lifecycle(sd, item, item.get("contractStatus")))
+        symbols.append(mark_futures_lifecycle(sd, item, item.get("contractStatus")))
     return symbols

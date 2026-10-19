@@ -11,14 +11,20 @@ logging.basicConfig(level=logging.WARNING)
 _exchange_cache: dict[str, dict] = {}
 
 
+def _fetch_exchange(exchange: str) -> dict:
+    """Fetch and cache the full exchange details from Tardis."""
+    tardis_exchange_id = to_tardis_exchange_id(exchange)
+    if tardis_exchange_id is None:
+        raise ValueError(f"Tardis does not cover {exchange}")
+    return _fetch_tardis_exchange(tardis_exchange_id)
+
+
 @tenacity.retry(
     stop=tenacity.stop_after_attempt(5),
     wait=tenacity.wait_fixed(60),
     before_sleep=tenacity.before_sleep_log(logger, logging.WARNING),
 )
-def _fetch_exchange(exchange: str) -> dict:
-    """Fetch and cache the full exchange details from Tardis."""
-    tardis_exchange_id = to_tardis_exchange_id(exchange)
+def _fetch_tardis_exchange(tardis_exchange_id: str) -> dict:
     if tardis_exchange_id not in _exchange_cache:
         _exchange_cache[tardis_exchange_id] = requests.get(
             f"https://api.tardis.dev/v1/exchanges/{tardis_exchange_id}"

@@ -28,7 +28,7 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - `denominator` (quote / settlement)
   - `margin` (for derivatives)
   - `type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
-  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `pre_market`, `unknown`), when supplied by the venue
+  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `forex`, `pre_market`, `unknown`), when supplied by the venue
   - `contract_size` (when available from source metadata)
   - `delivery_date` (for dated contracts)
   - `internal_id` string
@@ -56,6 +56,8 @@ Examples:
 - Perpetual: `btcusdt` (Binance futures) -> `perpetual-BTC-USDT:USDT`
 - Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
 - Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
+- Lighter perpetual: market `96` (`EURUSD`) -> `perpetual-EUR-USDC:USDC` (the numeric market id is the original id; a USD-quoted FX pair is named by its base, other pairs keep the full ticker: `USDJPY` -> `perpetual-USDJPY-USDC:USDC`)
+- Extended perpetual: `SPX500m-USD` -> `perpetual-SPX500M-USD:USD` (the asset as Extended names it, settled in its USD collateral)
 
 ## Installation
 
@@ -125,24 +127,37 @@ In exchange mode each fetch is treated as the exchange's whole current
 universe, so `first_capture` and `end_date` come from the exchanges:
 
 - `first_capture` is the exchange listing time where one is published
-  (Binance futures `onboardDate`, Bybit derivatives `launchTime`, OKX
-  `listTime`), otherwise the time a run first saw the instrument. A value
-  already on file is never overwritten.
+  (Binance futures and Aster `onboardDate`, Bybit derivatives and Bitget
+  `launchTime`, OKX `listTime`, Gate `launch_time`, HTX `create_date`, MEXC
+  `openingTime`/`createTime`, Deribit `creation_timestamp`, Extended `createdAt`,
+  Lighter `created_at`, GRVT `create_time`, Pacifica `created_at`), otherwise the
+  time a run first saw the instrument. A value already on file is never
+  overwritten.
 - `end_date` is set from an explicit exchange signal when there is one: Binance
   futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`, or the run time if
   that has not passed yet), Bybit derivatives `Closed` (at `deliveryTime`), and
   Hyperliquid `isDelisted` (at first sighting, as Hyperliquid publishes no time).
   Hyperliquid also keeps no candle or funding history for delisted HIP-3 perps,
   so HIP-3 perps already delisted when this tracking started end on the first
-  run that saw the flag.
+  run that saw the flag. Of the live-producers venues, Aster
+  `SETTLING`/`CLOSE`/`DELIVERED` (as Binance), Bitget `offline` (at `offTime`)
+  and HTX delisted/delivered or past its `delivery_time` (the scheduled
+  delisting) are dated; Extended `DELISTED`, GRVT `DELISTED`, Lighter
+  `inactive`, Avantis `isPairListed: false`, MEXC delivered/offline and Gate
+  `delisted` end at first sighting.
 - An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
-  OKX, Hyperliquid spot) is marked `missing_since` on the first run that misses
+  OKX, Hyperliquid spot, and every venue without a delisted status: ApeX,
+  Pacifica, Variational, Deribit, WhiteBIT, Crypto.com) is marked
+  `missing_since` on the first run that misses
   it. If a run at least 12 hours later still misses it, `end_date` is set to that
   first miss; if it comes back first, the mark is dropped. Expired dated futures
   end at delivery straight away.
 - Halted, suspended and pre-market instruments (Binance spot `HALT`, Binance
   futures pending/delivering statuses, OKX `suspend`, Bybit
-  `PreLaunch`/`Delivering`) stay listed.
+  `PreLaunch`/`Delivering`, Bitget `limit_open`/`limit_close`/`restrictedAPI`,
+  HTX suspended and settling, MEXC paused and delivering, Gate `delisting` and
+  `circuit_breaker`, Extended `PRELISTED`/`REDUCE_ONLY`, ApeX contracts that
+  still trade or show) stay listed.
 - A run that returns nothing for an exchange fails it and leaves its file
   untouched. A run that would newly drop more than 10% of an exchange's open
   instruments (and more than 5) looks like a broken API response: it still
@@ -175,6 +190,8 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bitget-futures` | **`UNSTABLE (BETA)`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
 | `bybit-spot` | ✅ **`STABLE`** |
+| `apex-perps` | ✅ **`STABLE`** (venue API only) |
+| `aster-perps` | ✅ **`STABLE`** |
 | `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
 | `coinbase` | **`UNSTABLE (BETA)`** |
@@ -185,6 +202,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
+| `grvt-perps` | ✅ **`STABLE`** |
 | `huobi` | **`UNSTABLE (BETA)`** |
 | `huobi-dm` | **`UNSTABLE (BETA)`** |
 | `huobi-dm-swap` | **`UNSTABLE (BETA)`** |
@@ -193,33 +211,121 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `hyperliquid-perps` | ✅ **`STABLE`** |
 | `kraken` | **`UNSTABLE (BETA)`** |
 | `kucoin` | **`UNSTABLE (BETA)`** |
+| `lighter-perps` | ✅ **`STABLE`** |
 | `okx-spot` | ✅ **`STABLE`** |
 | `okx-perps` | ✅ **`STABLE`** |
 | `okx-futures` | ✅ **`STABLE`** |
+| `extended-perps` | ✅ **`STABLE`** |
 | `phemex` | **`UNSTABLE (BETA)`** |
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
+| `pacifica-perps` | ✅ **`STABLE`** (exchange API only) |
+| `gateio-perps-usdt` | ✅ **`STABLE`** |
+| `gateio-futures-usdt` | ✅ **`STABLE`** |
+| `gateio-perps-btc` | ✅ **`STABLE`** |
+| `htx-perps-usdt` | ✅ **`STABLE`** |
+| `mexc-perps` | ✅ **`STABLE`** |
+| `bitget-perps-usdt` | ✅ **`STABLE`** |
+| `bitget-perps-usdc` | ✅ **`STABLE`** |
+| `bitget-perps-coin` | ✅ **`STABLE`** |
+| `bitget-futures-coin` | ✅ **`STABLE`** |
+| `deribit-perps` | ✅ **`STABLE`** |
+| `deribit-futures` | ✅ **`STABLE`** |
+| `whitebit-perps` | ✅ **`STABLE`** |
+| `cryptocom-perps` | ✅ **`STABLE`** |
+| `cryptocom-futures` | ✅ **`STABLE`** |
+
+An exchange is stable exactly when it has its own exchange-API fetcher.
+
+### live-producers venues
+
+The venues the live producers stream are registered under the producer's own
+exchange id (`gateio-perps-usdt`, `htx-perps-usdt`, ...), so a
+published record joins its Atlas row by `(exchange, internal_id)` without a
+mapping table. Where Tardis carries the same instruments under the same ids,
+hybrid updates merge its history through `tardis_id` (Gate's two perpetual
+families share `gate-io-futures` and are split by settlement suffix; Bitget's
+USDT and USDC perpetuals share `bitget-futures`). The older Tardis-named
+exchanges (`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`,
+`deribit`, `crypto-com`) remain beta parsers. Bybit keeps its existing
+`bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
+`bybit-perps-coin` both live in `bybit-perps`).
+
+New rows take the venue's listing time as `first_capture` where it publishes
+one, otherwise their first observation (see [Listing and delisting
+dates](#listing-and-delisting-dates)).
+
+### Underlying classification
+
+Every exchange fetcher sets `underlying` from the venue's own metadata:
+Binance `underlyingType`, Bybit `symbolType`, OKX `instCategory`, Hyperliquid
+`perpCategories` (main-dex perps are crypto; HIP-3 assets the venue does not
+categorise, mostly delisted, come from a curated table in
+`exchange_definitions/hyperliquid.py`), Gate `contract_type` and
+`is_pre_market`, HTX `tradfi_labels`, MEXC trade zones (`conceptPlate`),
+Bitget `symbolType`/`isRwa`, Deribit `underlying_type`, WhiteBIT TradFi
+membership of `/markets`, Crypto.com `product_type`. Conventions across
+venues: ETFs are `equity`; pre-IPO companies are `pre_market`; crypto and
+cash indices, and treasury yields, are `index`; a venue value Atlas does not
+know is `unknown`, never `crypto`. Venues disagree on tokenized gold
+(PAXG, XAUT): Binance and Bybit call it crypto, MEXC and Bitget commodity;
+Atlas follows each venue. Rows only Tardis knows (delisted before a fetcher
+saw them) carry no `underlying`.
+| `avantis-perps` | ✅ **`STABLE`** (exchange API only) |
+
+Avantis (Veranta) is an oracle-priced RWA perp venue that Tardis does not
+cover: its rows come from the venue's own API only, and each row's `underlying`
+comes from the venue's category metadata (the price-feed asset type, falling
+back to the pair group). Its `original_id` is what the venue addresses a market
+by (the pair index), and a non-USD quote is kept in the symbol (`USDJPY`,
+`005930KRW`). Avantis settles in USDC. See the module docstring in
+`atlas/exchange_definitions/avantis.py`.
 
 ### Bundled Snapshot Coverage
 
 The repository currently ships precomputed JSON snapshots for:
 
+- `apex-perps`
+- `aster-perps`
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
+- `grvt-perps` (venue API only; `first_capture` is the venue listing time)
 - `hyperliquid-spot`
 - `hyperliquid-perps`
+- `lighter-perps`
 - `okx-spot`
 - `okx-perps`
 - `okx-futures`
+- `pacifica-perps` (DeFi perpetual venue Tardis does not cover: listed from
+  the venue's own API, with the settlement token as denominator and margin, the
+  venue's listing time as `first_capture`, and `underlying` from the venue's
+  market categories)
+- `gateio-perps-usdt`
+- `gateio-futures-usdt`
+- `gateio-perps-btc`
+- `htx-perps-usdt`
+- `mexc-perps`
+- `bitget-perps-usdt`
+- `bitget-perps-usdc`
+- `bitget-perps-coin`
+- `bitget-futures-coin`
+- `deribit-perps`
+- `deribit-futures`
+- `whitebit-perps`
+- `cryptocom-perps`
+- `cryptocom-futures`
+- `extended-perps`
+- `avantis-perps`
 
 ## Features
 
 - Unified parser layer with exchange-specific symbol rules.
-- Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default).
+- Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default). An exchange read from its own API is stable.
+- Venues Tardis does not list (`on_tardis=False`, e.g. ApeX, GRVT) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.
@@ -256,7 +362,7 @@ The workflow exposes these as one `mode` input (`resolve`, `preview`,
 `coverage`, `check-llm`) and one `days` window.
 
 Only crypto assets are in scope: rows whose `underlying` is `equity`, `index`,
-`commodity` or `pre_market` are skipped, since a tokenized equity's CMC ID would
+`commodity`, `forex` or `pre_market` are skipped, since a tokenized equity's CMC ID would
 name the wrapper rather than the asset. Rows with no `underlying` (legacy crypto)
 and `unknown` are still resolved.
 
@@ -279,7 +385,8 @@ configuration and review process.
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- `--source exchange` only works for exchanges that have direct API fetchers implemented (Binance, Bybit, Hyperliquid and OKX variants).
+- `--source exchange` only works for exchanges that have direct API fetchers implemented (the stable exchanges above).
+- `--source tardis` skips exchanges Tardis does not cover (the DeFi venues, `mexc-perps`, `whitebit-perps`, `gateio-futures-usdt`, `bitget-perps-coin`, `bitget-futures-coin`) rather than writing an empty snapshot.
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout

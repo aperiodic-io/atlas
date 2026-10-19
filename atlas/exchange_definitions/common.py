@@ -38,6 +38,17 @@ def ms_to_utc_timestamp(value: object) -> str | None:
     return utc_timestamp(parsed) if parsed else None
 
 
+def delisted_end_date(delisted_at_ms: object = None) -> str:
+    """`end_date` for an instrument the exchange reports delisted.
+
+    The exchange's delisting time when it has one that has passed, otherwise
+    now: the first run that sees the delisting.
+    """
+    now = datetime.now(UTC)
+    delisted = ms_to_datetime(delisted_at_ms)
+    return utc_timestamp(delisted if delisted and delisted <= now else now)
+
+
 class SkipSymbol(Exception):
     """Raised by a parser when a symbol is intentionally skipped or unrecognised."""
 
