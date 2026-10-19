@@ -36,7 +36,7 @@ def _response(payload: object) -> MagicMock:
 class TestBitgetSpotParser:
     def test_api_fields_are_authoritative_and_upper_cased(self):
         c = parse_contract(
-            "bitget",
+            "bitget-spot",
             _sd("RNNNNUSDT", "spot", base_coin="rNNNN", quote_coin="USDT"),
         )
         assert c.internal_id == "spot-RNNNN-USDT"
@@ -61,7 +61,7 @@ class TestBitgetSpotParser:
         ],
     )
     def test_tardis_only_rows_split_on_bitget_quotes(self, sid: str, expected: str):
-        assert _iid("bitget", sid, "spot") == expected
+        assert _iid("bitget-spot", sid, "spot") == expected
 
 
 def _bitget_instrument(symbol: str, base: str, quote: str, **extra: str) -> dict:
@@ -120,4 +120,4 @@ class TestBitgetSpotFetcher:
 
     def test_fetched_rows_parse_from_their_legs(self, monkeypatch):
         rows, _ = self._fetch(monkeypatch, [_bitget_instrument("RNKEUSDT", "rNKE", "USDT", symbolType="stock")])
-        assert parse_contract("bitget", rows[0]).internal_id == "spot-RNKE-USDT"
+        assert parse_contract("bitget-spot", rows[0]).internal_id == "spot-RNKE-USDT"

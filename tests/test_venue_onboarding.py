@@ -1,6 +1,8 @@
 """Bitget, Gate and Coinbase spot are stable venues with API fetchers and snapshots.
 
-Their contracts are the live-producers venues (`bitget-perps-*`, `gateio-*`).
+Bitget and Gate spot follow the live-producers naming (`bitget-spot`,
+`gateio-spot`), like their contracts (`bitget-perps-*`, `gateio-*`); their
+Tardis-named exchanges (`bitget`, `gate-io`) stay beta parsers.
 """
 
 from __future__ import annotations
@@ -17,7 +19,8 @@ from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import parse_contract
 from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
 
-NEW_STABLE_EXCHANGES = ["bitget", "gate-io", "coinbase"]
+NEW_STABLE_EXCHANGES = ["bitget-spot", "gateio-spot", "coinbase"]
+TARDIS_IDS = {"bitget-spot": "bitget", "gateio-spot": "gate-io", "coinbase": "coinbase"}
 
 
 # ---------------------------------------------------------------------------
@@ -35,14 +38,20 @@ class TestRegistry:
         assert get_exchange_fetcher(exchange) is not None
 
     @pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
-    def test_exchange_ids_are_tardis_ids(self, exchange: str):
-        assert to_tardis_exchange_id(exchange) == exchange
+    def test_tardis_ids(self, exchange: str):
+        assert to_tardis_exchange_id(exchange) == TARDIS_IDS[exchange]
+
+    @pytest.mark.parametrize("exchange", ["bitget", "gate-io"])
+    def test_tardis_named_spot_exchanges_stay_beta_parsers(self, exchange: str):
+        assert is_beta_exchange(exchange) is True
+        assert get_exchange_fetcher(exchange) is None
+        assert not (_DATA_DIR / f"{exchange}.json").exists()
 
     @pytest.mark.parametrize(
         ("exchange", "allowed"),
         [
-            ("bitget", {"spot"}),
-            ("gate-io", {"spot"}),
+            ("bitget-spot", {"spot"}),
+            ("gateio-spot", {"spot"}),
             ("coinbase", {"spot"}),
         ],
     )
@@ -62,8 +71,8 @@ class TestRegistry:
 @pytest.mark.parametrize(
     ("exchange", "row"),
     [
-        ("bitget", {"id": "RNKEUSDT", "type": "spot", "base_coin": "rNKE", "quote_coin": "USDT"}),
-        ("gate-io", {"id": "NEW_USDT", "type": "spot", "base_coin": "NEW", "quote_coin": "USDT"}),
+        ("bitget-spot", {"id": "RNKEUSDT", "type": "spot", "base_coin": "rNKE", "quote_coin": "USDT"}),
+        ("gateio-spot", {"id": "NEW_USDT", "type": "spot", "base_coin": "NEW", "quote_coin": "USDT"}),
     ],
 )
 def test_api_only_rows_receive_stable_capture_dates(tmp_path, monkeypatch, exchange, row):
@@ -124,8 +133,8 @@ def test_snapshot_internal_ids_match_the_parser(exchange: str):
 @pytest.mark.parametrize(
     ("exchange", "original_id", "internal_id"),
     [
-        ("bitget", "BTCUSDT", "spot-BTC-USDT"),
-        ("gate-io", "BTC_USDT", "spot-BTC-USDT"),
+        ("bitget-spot", "BTCUSDT", "spot-BTC-USDT"),
+        ("gateio-spot", "BTC_USDT", "spot-BTC-USDT"),
         ("coinbase", "BTC-USD", "spot-BTC-USD"),
     ],
 )
@@ -137,7 +146,7 @@ def test_security_master_resolves_new_venues(exchange: str, original_id: str, in
 def test_security_master_resolves_api_only_rows():
     """Rows Tardis does not list (Bitget's tokenized stocks) carry a first_capture."""
     stock = next(
-        row for row in _snapshot("bitget") if row.get("underlying") == "equity" and not row.get("end_date")
+        row for row in _snapshot("bitget-spot") if row.get("underlying") == "equity" and not row.get("end_date")
     )
-    sm = SecurityMaster.load(exchanges=["bitget"])
-    assert sm.by_exchange_and_original_id("bitget", stock["id"]) == stock["internal_id"]
+    sm = SecurityMaster.load(exchanges=["bitget-spot"])
+    assert sm.by_exchange_and_original_id("bitget-spot", stock["id"]) == stock["internal_id"]

@@ -117,7 +117,7 @@ def test_every_symbology_exchange_has_a_family():
     assert set(SYMBOLOGY_EXCHANGES) == set(VENUE_FAMILIES)
     assert {
         "binance-spot", "bybit-perps", "okx-futures", "hyperliquid-perps",
-        "bitget", "bitget-perps-usdt", "gate-io", "gateio-perps-usdt", "gateio-futures-usdt", "coinbase",
+        "bitget-spot", "bitget-perps-usdt", "gateio-spot", "gateio-perps-usdt", "gateio-futures-usdt", "coinbase",
     } <= set(SYMBOLOGY_EXCHANGES)
 
 
@@ -210,14 +210,14 @@ def test_cross_venue_consensus_fills_unlisted_rows():
     rows = {
         "binance-spot": [_row("ethusdt", "ETH", "USDT")],
         "okx-spot": [_row("ETH-USDT", "ETH", "USDT")],
-        "gate-io": [_row("ETH_TRY", "ETH", "TRY", end="2026-01-01")],
+        "gateio-spot": [_row("ETH_TRY", "ETH", "TRY", end="2026-01-01")],
     }
     pairs = [
         _pair("binance", "spot", 1027, "ETH", 825, "USDT", url="https://x/trade/ETH_USDT"),
         _pair("okx", "spot", 1027, "ETH", 825, "USDT", url="https://x/trade-spot/eth-usdt"),
     ]
     _build(rows, pairs)
-    gate = _by_id(rows, "gate-io", "ETH_TRY")
+    gate = _by_id(rows, "gateio-spot", "ETH_TRY")
     assert gate["base_asset_id"] == "ETH"
     assert gate["base_asset_match"] == "cross_venue_consensus"
     # No venue quotes TRY live here, but the ISO code names one fiat currency.
@@ -245,15 +245,15 @@ def test_cross_venue_consensus_requires_agreement():
     rows = {
         "binance-spot": [_row("tslausdt", "TSLA", "USDT")],
         "hyperliquid-spot": [_row("TSLA/USDC", "TSLA", "USDC")],
-        "gate-io": [_row("TSLA_USDT", "TSLA", "USDT")],
+        "gateio-spot": [_row("TSLA_USDT", "TSLA", "USDT")],
     }
     pairs = [
         _pair("binance", "spot", 38152, "TSLA", 825, "USDT", url="https://x/trade/TSLA_USDT"),
         _pair("hyperliquid", "spot", 39618, "TSLA", 3408, "USDC", url="https://x/trade/TSLA/USDC"),
     ]
     report, _ = _build(rows, pairs)
-    assert "base_asset_id" not in _by_id(rows, "gate-io", "TSLA_USDT")
-    assert ("gate-io", "TSLA_USDT", (38152, 39618)) in report.lineage_conflicts
+    assert "base_asset_id" not in _by_id(rows, "gateio-spot", "TSLA_USDT")
+    assert ("gateio-spot", "TSLA_USDT", (38152, 39618)) in report.lineage_conflicts
 
 
 def test_ticker_reuse_is_rejected_by_cmc_listing_date():
@@ -657,11 +657,11 @@ def test_ticker_era_history_is_not_applied_to_an_unrelated_current_asset_when_un
     from integrations.symbology import TickerEra
 
     eras = (TickerEra("LUNA", 4172, _ts("2022-05-28"), "Terra crash"),)
-    rows = {"gate-io": [_row("LUNA_ETH", "LUNA", "ETH", first="2021-01-28", end="2024-12-27")]}
+    rows = {"gateio-spot": [_row("LUNA_ETH", "LUNA", "ETH", first="2021-01-28", end="2024-12-27")]}
     _build(rows, ticker_eras=eras)
     # Nothing identifies today's LUNA on this row, so it gets no asset at all
     # rather than a history entry hanging off nothing.
-    assert "base_asset_id" not in rows["gate-io"][0]
+    assert "base_asset_id" not in rows["gateio-spot"][0]
 
 
 def test_load_overrides_reads_ticker_eras(tmp_path):
@@ -696,7 +696,7 @@ def test_rows_spanning_an_era_infer_only_from_anchors_after_it():
         # CMC's Bybit pair for this row names the wrong asset, so it is unmatched.
         "bybit-spot": [_row("LUNAUSDT", "LUNA", "USDT", first="2021-12-04")],
         "okx-spot": [_row("LUNA-USDT", "LUNA", "USDT", first="2021-02-24")],
-        "gate-io": [_row("LUNA_USDT", "LUNA", "USDT", first="2021-01-28")],
+        "gateio-spot": [_row("LUNA_USDT", "LUNA", "USDT", first="2021-01-28")],
     }
     pairs = [
         _pair("okx", "spot", 20314, "LUNA", 825, "USDT", url="https://x/trade-spot/luna-usdt"),
@@ -749,7 +749,7 @@ def test_cross_venue_consensus_takes_a_supermajority_of_venues():
         "coinbase": [_row("DOGE-USD", "DOGE", "USD")],
         # One venue's CMC listing names an unrelated DOGE token.
         "hyperliquid-spot": [_row("DOGE/USDC", "DOGE", "USDC")],
-        "gate-io": [_row("DOGE_TRY", "DOGE", "TRY")],
+        "gateio-spot": [_row("DOGE_TRY", "DOGE", "TRY")],
     }
     pairs = [
         _pair("binance", "spot", 1027, "DOGE", 825, "USDT", url="https://x/trade/DOGE_USDT"),
@@ -759,8 +759,8 @@ def test_cross_venue_consensus_takes_a_supermajority_of_venues():
         _pair("hyperliquid", "spot", 9000, "DOGE", 3408, "USDC", url="https://x/trade/DOGE/USDC"),
     ]
     _build(rows, pairs)
-    assert rows["gate-io"][0]["cmc_id"] == 1027
-    assert rows["gate-io"][0]["base_asset_match"] == "cross_venue_consensus"
+    assert rows["gateio-spot"][0]["cmc_id"] == 1027
+    assert rows["gateio-spot"][0]["base_asset_match"] == "cross_venue_consensus"
 
 
 def test_cross_venue_consensus_refuses_a_close_split():
@@ -768,7 +768,7 @@ def test_cross_venue_consensus_refuses_a_close_split():
         "binance-spot": [_row("abcusdt", "ABC", "USDT")],
         "okx-spot": [_row("ABC-USDT", "ABC", "USDT")],
         "bybit-spot": [_row("ABCUSDT", "ABC", "USDT")],
-        "gate-io": [_row("ABC_TRY", "ABC", "TRY")],
+        "gateio-spot": [_row("ABC_TRY", "ABC", "TRY")],
     }
     pairs = [
         _pair("binance", "spot", 1027, "ABC", 825, "USDT", url="https://x/trade/ABC_USDT"),
@@ -776,7 +776,7 @@ def test_cross_venue_consensus_refuses_a_close_split():
         _pair("bybit", "spot", 9000, "ABC", 825, "USDT", url="https://x/spot/ABC/USDT"),
     ]
     _build(rows, pairs)
-    assert "base_asset_id" not in rows["gate-io"][0]
+    assert "base_asset_id" not in rows["gateio-spot"][0]
 
 
 def test_ticker_reuse_guard_ignores_listing_dates_of_retired_assets():
@@ -803,7 +803,7 @@ def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
         ],
         "binance-futures": [_row("tslausdt", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity")],
         # Spot tokens are wrappers, not the reference asset: left alone.
-        "bitget": [_row("RAALUSDT", "RAAL", "USDT", underlying="equity")],
+        "bitget-spot": [_row("RAALUSDT", "RAAL", "USDT", underlying="equity")],
     }
     pairs = [
         _pair("binance", "perpetual", 38152, "TSLA", 825, "USDT", ticker="TSLAUSDT"),
@@ -820,7 +820,7 @@ def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
     assert _by_id(rows, "gateio-perps-usdt", "NAS100_USDT")["unified_id"] == "perpetual-NAS100-USDT:USDT"
     assert registry.get("NAS100").asset_class is AssetClass.index
     assert _by_id(rows, "gateio-perps-usdt", "TSLA_USDT")["base_asset_id"] == "TSLA"
-    assert "base_asset_id" not in rows["bitget"][0]
+    assert "base_asset_id" not in rows["bitget-spot"][0]
     # Rebuilding finds the native asset again rather than minting a second one.
     before = len(registry)
     _build(rows, pairs, registry=registry)
@@ -905,7 +905,7 @@ def test_pairs_priced_unlike_their_asset_are_rejected():
     details = {**DETAILS, 32778: _detail(32778, "DOGE", "Department Of Government Efficiency", "dogegov")}
     details[74] = _detail(74, "DOGE", "Dogecoin", "dogecoin")
     rows = {
-        "gate-io": [_row("DOGE_USDT", "DOGE", "USDT")],
+        "gateio-spot": [_row("DOGE_USDT", "DOGE", "USDT")],
         "gateio-perps-usdt": [_row("DOGE_USDT", "DOGE", "USDT", "perpetual", margin="USDT")],
         "binance-futures": [_row("1000pepeusdt", "1000PEPE", "USDT", "perpetual", margin="USDT")],
     }
@@ -933,13 +933,13 @@ def test_a_price_rejected_pair_withdraws_the_cmc_id_it_wrote():
     # build took from that listing goes with it; left behind, an offline
     # rebuild would read it as evidence and resolve the row again.
     details = {**DETAILS, 3874: _detail(3874, "IRIS", "IRISnet", "irisnet")}
-    rows = {"gate-io": [_row("IRIS_USDT", "IRIS", "USDT")]}
+    rows = {"gateio-spot": [_row("IRIS_USDT", "IRIS", "USDT")]}
     pair = _priced_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT", price=0.01)
     _, registry = _build(rows, [_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT")], details=details)
-    assert rows["gate-io"][0]["cmc_id"] == 3874
+    assert rows["gateio-spot"][0]["cmc_id"] == 3874
 
     _build(rows, [pair], registry=registry, details=details, asset_prices={3874: 0.38})
-    row = rows["gate-io"][0]
+    row = rows["gateio-spot"][0]
     assert "base_asset_id" not in row
     assert "cmc_id" not in row
     first = json.dumps(rows)
@@ -949,10 +949,10 @@ def test_a_price_rejected_pair_withdraws_the_cmc_id_it_wrote():
 
 def test_a_price_rejected_pair_keeps_a_cmc_id_it_did_not_write():
     details = {**DETAILS, 3874: _detail(3874, "IRIS", "IRISnet", "irisnet")}
-    rows = {"gate-io": [_row("IRIS_USDT", "IRIS", "USDT", cmc_id=3874)]}
+    rows = {"gateio-spot": [_row("IRIS_USDT", "IRIS", "USDT", cmc_id=3874)]}
     pair = _priced_pair("gate", "spot", 3874, "IRIS", 825, "USDT", url="https://x/trade/IRIS_USDT", price=0.01)
     _build(rows, [pair], details=details, asset_prices={3874: 0.38})
-    assert rows["gate-io"][0]["cmc_id"] == 3874
+    assert rows["gateio-spot"][0]["cmc_id"] == 3874
 
 
 def test_pair_price_check_is_skipped_without_prices():
@@ -985,7 +985,7 @@ def test_price_check_allows_suffix_multipliers_and_order_of_magnitude_noise():
     details = {**DETAILS, 5994: _detail(5994, "SHIB", "Shiba Inu", "shiba-inu")}
     rows = {
         "bybit-perps": [_row("SHIB1000USDT", "SHIB1000", "USDT", "perpetual", margin="USDT")],
-        "gate-io": [_row("ETH_USDT", "ETH", "USDT")],
+        "gateio-spot": [_row("ETH_USDT", "ETH", "USDT")],
     }
     pairs = [
         _priced_pair("bybit", "perpetual", 5994, "SHIB1000", 825, "USDT", ticker="SHIB1000USDT", price=0.0099),
@@ -1001,7 +1001,7 @@ def test_a_venue_outvotes_a_minority_cmc_listing_of_one_ticker():
     details = {**DETAILS, 16116: _detail(16116, "SOL", "Wrapped Solana", "wrapped-solana")}
     details[5426] = _detail(5426, "SOL", "Solana", "solana", rank=5)
     rows = {
-        "gate-io": [
+        "gateio-spot": [
             _row("SOL_USDT", "SOL", "USDT"),
             _row("SOL_USD1", "SOL", "USD1"),
             _row("SOL_USDC", "SOL", "USDC"),
@@ -1016,16 +1016,16 @@ def test_a_venue_outvotes_a_minority_cmc_listing_of_one_ticker():
     ]
     report, _ = _build(rows, pairs, details=details)
     assert {row["cmc_id"] for rows_ in rows.values() for row in rows_} == {5426}
-    usdc = _by_id(rows, "gate-io", "SOL_USDC")
+    usdc = _by_id(rows, "gateio-spot", "SOL_USDC")
     assert usdc["base_asset_match"] == "venue_majority"
-    assert ("gate-io", "SOL_USDC", 5426, "venue_majority", 16116, "cmc_market_pair") in report.disagreements
+    assert ("gateio-spot", "SOL_USDC", 5426, "venue_majority", 16116, "cmc_market_pair") in report.disagreements
 
 
 def test_a_tied_venue_keeps_both_listings_and_reports_them():
     details = {**DETAILS, 28324: _detail(28324, "DYDX", "dYdX", "dydx-chain")}
     details[11156] = _detail(11156, "ETHDYDX", "dYdX (ethDYDX)", "dydx")
     rows = {
-        "bitget": [_row("DYDXUSDT", "DYDX", "USDT")],
+        "bitget-spot": [_row("DYDXUSDT", "DYDX", "USDT")],
         "bitget-perps-usdt": [_row("DYDXUSDT", "DYDX", "USDT", "perpetual", margin="USDT")],
     }
     pairs = [
@@ -1033,7 +1033,7 @@ def test_a_tied_venue_keeps_both_listings_and_reports_them():
         _pair("bitget", "perpetual", 11156, "DYDX", 825, "USDT", ticker="DYDXUSDT_UMCBL"),
     ]
     report, _ = _build(rows, pairs, details=details)
-    assert rows["bitget"][0]["cmc_id"] == 28324
+    assert rows["bitget-spot"][0]["cmc_id"] == 28324
     assert rows["bitget-perps-usdt"][0]["cmc_id"] == 11156
     assert report.venue_ticker_conflicts == [("bitget", "DYDX", (11156, 28324))]
 
@@ -1084,7 +1084,7 @@ def test_hip3_rows_do_not_learn_from_the_main_dex():
 
 def test_cross_venue_consensus_needs_two_venues():
     rows = {
-        "gate-io": [_row("USDP_USDT", "USDP", "USDT")],
+        "gateio-spot": [_row("USDP_USDT", "USDP", "USDT")],
         "binance-spot": [_row("usdpusdt", "USDP", "USDT", first="2021-09-10", end="2025-01-01")],
     }
     pairs = [_pair("gate", "spot", 9000, "USDP", 825, "USDT", url="https://x/trade/USDP_USDT")]
@@ -1119,7 +1119,7 @@ def test_price_check_knows_registry_tickers_for_letter_multipliers():
 def test_a_price_rejected_pair_also_discards_its_stored_match():
     details = {**DETAILS, 32778: _detail(32778, "DOGE", "Impostor", "dogegov"), 74: _detail(74, "DOGE", "Dogecoin", "dogecoin")}
     rows = {
-        "gate-io": [_row("DOGE_USDT", "DOGE", "USDT")],
+        "gateio-spot": [_row("DOGE_USDT", "DOGE", "USDT")],
         "gateio-perps-usdt": [
             _row("DOGE_USDT", "DOGE", "USDT", "perpetual", margin="USDT", cmc_id=32778, base_asset_match="cmc_market_pair")
         ],
@@ -1136,7 +1136,7 @@ def test_venue_majority_decisions_survive_an_offline_rebuild():
     details = {**DETAILS, 16116: _detail(16116, "SOL", "Wrapped Solana", "wrapped-solana")}
     details[5426] = _detail(5426, "SOL", "Solana", "solana", rank=5)
     rows = {
-        "gate-io": [
+        "gateio-spot": [
             _row("SOL_USDT", "SOL", "USDT"),
             _row("SOL_USD1", "SOL", "USD1"),
             _row("SOL_USDC", "SOL", "USDC"),
@@ -1149,9 +1149,9 @@ def test_venue_majority_decisions_survive_an_offline_rebuild():
         _pair("gate", "spot", 5426, "SOL", 825, "USD1", url="https://x/trade/SOL_USD1"),
         _pair("gate", "spot", 16116, "SOL", 3408, "USDC", url="https://x/trade/SOL_USDC"),
     ]
-    ledger = {("gate-io", "SOL_ETH", _ts("2020-01-01")): (16116, False)}
+    ledger = {("gateio-spot", "SOL_ETH", _ts("2020-01-01")): (16116, False)}
     _, registry = _build(rows, pairs, details=details, ledger=ledger)
-    assert _by_id(rows, "gate-io", "SOL_USDC")["base_asset_match"] == "venue_majority"
+    assert _by_id(rows, "gateio-spot", "SOL_USDC")["base_asset_match"] == "venue_majority"
     before = json.dumps(rows, sort_keys=True)
     _build(rows, registry=registry, ledger=ledger)
     assert json.dumps(rows, sort_keys=True) == before
@@ -1188,7 +1188,7 @@ def test_subset_runs_resolve_against_every_snapshot_but_write_only_their_own(tmp
     data_dir = tmp_path / "data"
     data_dir.mkdir()
     (data_dir / "binance-spot.json").write_text(json.dumps([_row("ethbtc", "ETH", "BTC", cmc_id=1027)]))
-    (data_dir / "gate-io.json").write_text(json.dumps([_row("ETH_TRY", "ETH", "TRY", end="2026-01-01")]))
+    (data_dir / "gateio-spot.json").write_text(json.dumps([_row("ETH_TRY", "ETH", "TRY", end="2026-01-01")]))
     (data_dir / "okx-spot.json").write_text(json.dumps([_row("ETH-USDT", "ETH", "USDT", cmc_id=1027)]))
     okx_before = (data_dir / "okx-spot.json").read_text()
     from integrations.cmc_asset_details import save_detail_cache
@@ -1197,8 +1197,8 @@ def test_subset_runs_resolve_against_every_snapshot_but_write_only_their_own(tmp
     save_detail_cache(cache, DETAILS)
     main([
         "--data-dir", str(data_dir), "--registry-path", str(tmp_path / "assets.json"),
-        "--overrides-path", str(tmp_path / "none.json"), "--exchanges", "gate-io",
+        "--overrides-path", str(tmp_path / "none.json"), "--exchanges", "gateio-spot",
         "--offline", "--details-cache", str(cache),
     ])
-    assert json.loads((data_dir / "gate-io.json").read_text())[0]["base_asset_id"] == "ETH"
+    assert json.loads((data_dir / "gateio-spot.json").read_text())[0]["base_asset_id"] == "ETH"
     assert (data_dir / "okx-spot.json").read_text() == okx_before

@@ -94,7 +94,7 @@ CMC_VENUES: dict[str, CmcVenue] = {
         CmcVenue(
             "bitget",
             {
-                "spot": ("bitget",),
+                "spot": ("bitget-spot",),
                 "perpetual": ("bitget-perps-usdt", "bitget-perps-usdc", "bitget-perps-coin"),
                 "futures": ("bitget-futures-coin",),
             },
@@ -102,7 +102,7 @@ CMC_VENUES: dict[str, CmcVenue] = {
         CmcVenue(
             "gate",
             {
-                "spot": ("gate-io",),
+                "spot": ("gateio-spot",),
                 "perpetual": ("gateio-perps-usdt", "gateio-perps-btc"),
                 "futures": ("gateio-futures-usdt",),
             },

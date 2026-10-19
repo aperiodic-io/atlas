@@ -19901,7 +19901,6 @@
     "type": "spot",
     "base_coin": "DNA",
     "quote_coin": "USDT",
-    "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "spot-DNA-USDT",
     "symbol": "DNA",
     "denominator": "USDT",
@@ -19909,6 +19908,7 @@
     "category": [
       "DApp"
     ],
+    "first_capture": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "DNA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -54248,10 +54248,10 @@
     "type": "spot",
     "base_coin": "Q3L",
     "quote_coin": "USDT",
-    "first_capture": "2026-10-19T07:00:00.000Z",
     "internal_id": "spot-Q3L-USDT",
     "symbol": "Q3L",
     "denominator": "USDT",
+    "first_capture": "2026-10-19T07:00:00.000Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -54259,10 +54259,10 @@
     "type": "spot",
     "base_coin": "Q3S",
     "quote_coin": "USDT",
-    "first_capture": "2026-10-19T07:00:00.000Z",
     "internal_id": "spot-Q3S-USDT",
     "symbol": "Q3S",
     "denominator": "USDT",
+    "first_capture": "2026-10-19T07:00:00.000Z",
     "quote_asset_id": "USDT"
   },
   {

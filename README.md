@@ -228,7 +228,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bitmex` | **`UNSTABLE (BETA)`** |
 | `bitfinex` | **`UNSTABLE (BETA)`** |
 | `bitfinex-derivatives` | **`UNSTABLE (BETA)`** |
-| `bitget` | ✅ **`STABLE`** |
+| `bitget` | **`UNSTABLE (BETA)`** |
 | `bitget-futures` | **`UNSTABLE (BETA)`** |
 | `bitstamp` | **`UNSTABLE (BETA)`** |
 | `bybit-spot` | ✅ **`STABLE`** |
@@ -241,7 +241,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
 | `ftx` | **`UNSTABLE (BETA)`** |
-| `gate-io` | ✅ **`STABLE`** |
+| `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
 | `grvt-perps` | ✅ **`STABLE`** |
@@ -262,11 +262,13 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `poloniex` | **`UNSTABLE (BETA)`** |
 | `upbit` | **`UNSTABLE (BETA)`** |
 | `pacifica-perps` | ✅ **`STABLE`** (exchange API only) |
+| `gateio-spot` | ✅ **`STABLE`** |
 | `gateio-perps-usdt` | ✅ **`STABLE`** |
 | `gateio-futures-usdt` | ✅ **`STABLE`** |
 | `gateio-perps-btc` | ✅ **`STABLE`** |
 | `htx-perps-usdt` | ✅ **`STABLE`** |
 | `mexc-perps` | ✅ **`STABLE`** |
+| `bitget-spot` | ✅ **`STABLE`** |
 | `bitget-perps-usdt` | ✅ **`STABLE`** |
 | `bitget-perps-usdc` | ✅ **`STABLE`** |
 | `bitget-perps-coin` | ✅ **`STABLE`** |
@@ -287,9 +289,12 @@ published record joins its Atlas row by `(exchange, internal_id)` without a
 mapping table. Where Tardis carries the same instruments under the same ids,
 hybrid updates merge its history through `tardis_id` (Gate's two perpetual
 families share `gate-io-futures` and are split by settlement suffix; Bitget's
-USDT and USDC perpetuals share `bitget-futures`). The older Tardis-named
-exchanges (`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`,
-`deribit`, `crypto-com`) remain beta parsers. Bybit keeps its existing
+USDT and USDC perpetuals share `bitget-futures`). Bitget and Gate spot take the
+same scheme (`bitget-spot`, `gateio-spot`, as `okx-spot`) though the producers
+do not stream them yet, and merge Tardis's `bitget` and `gate-io`. The older
+Tardis-named exchanges (`gate-io-futures`, `huobi-dm-linear-swap`,
+`bitget-futures`, `bitget`, `gate-io`, `deribit`, `crypto-com`) remain beta
+parsers. Bybit keeps its existing
 `bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
 `bybit-perps-coin` both live in `bybit-perps`).
 
@@ -332,13 +337,11 @@ The repository currently ships precomputed JSON snapshots for:
 - `binance-spot`
 - `binance-futures`
 - `binance-futures-cm`
-- `bitget` (spot)
 - `bybit-spot`
 - `bybit-perps`
 - `bybit-futures`
 - `grvt-perps` (venue API only; `first_capture` is the venue listing time)
 - `coinbase` (spot)
-- `gate-io` (spot)
 - `hyperliquid-spot`
 - `hyperliquid-perps`
 - `lighter-perps`
@@ -349,11 +352,13 @@ The repository currently ships precomputed JSON snapshots for:
   the venue's own API, with the settlement token as denominator and margin, the
   venue's listing time as `first_capture`, and `underlying` from the venue's
   market categories)
+- `gateio-spot`
 - `gateio-perps-usdt`
 - `gateio-futures-usdt`
 - `gateio-perps-btc`
 - `htx-perps-usdt`
 - `mexc-perps`
+- `bitget-spot`
 - `bitget-perps-usdt`
 - `bitget-perps-usdc`
 - `bitget-perps-coin`

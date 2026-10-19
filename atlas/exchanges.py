@@ -165,7 +165,16 @@ def _id_suffix_filter(suffix: str) -> Callable[[dict], bool]:
 
 # live-producers venues. Their Atlas slug is the producer's exchange id, so a
 # consumer joins a published record to its Atlas row without a mapping table.
+# `bitget-spot` and `gateio-spot` are not streamed yet; they take the slug the
+# producer's scheme gives them (`<venue>-spot`, as `okx-spot`).
 _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
+    "gateio-spot": _define(
+        "gateio-spot",
+        parse_gate_io,
+        tardis_id="gate-io",
+        exchange_fetcher=fetch_gate_io_spot,
+        allowed_types={"spot"},
+    ),
     "gateio-perps-usdt": _define(
         "gateio-perps-usdt",
         parse_gateio,
@@ -204,6 +213,13 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         on_tardis=False,
         exchange_fetcher=fetch_mexc_perpetual,
         allowed_types={"perpetual"},
+    ),
+    "bitget-spot": _define(
+        "bitget-spot",
+        parse_bitget,
+        tardis_id="bitget",
+        exchange_fetcher=fetch_bitget_spot,
+        allowed_types={"spot"},
     ),
     "bitget-perps-usdt": _define(
         "bitget-perps-usdt",
@@ -311,9 +327,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "bitmex": _define("bitmex", parse_bitmex),
     "bitfinex": _define("bitfinex", parse_bitfinex),
     "bitfinex-derivatives": _define("bitfinex-derivatives", parse_bitfinex_derivatives),
-    "bitget": _define(
-        "bitget", parse_bitget, exchange_fetcher=fetch_bitget_spot, allowed_types={"spot"}
-    ),
+    "bitget": _define("bitget", parse_bitget),
     "bitget-futures": _define("bitget-futures", parse_bitget_futures),
     "bitstamp": _define("bitstamp", parse_bitstamp),
     "bybit-spot": _define(
@@ -344,9 +358,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),
     "ftx": _define("ftx", parse_ftx),
-    "gate-io": _define(
-        "gate-io", parse_gate_io, exchange_fetcher=fetch_gate_io_spot, allowed_types={"spot"}
-    ),
+    "gate-io": _define("gate-io", parse_gate_io),
     "gate-io-futures": _define("gate-io-futures", parse_gate_io_futures),
     "gemini": _define("gemini", parse_gemini),
     "grvt-perps": _define(

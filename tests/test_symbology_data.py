@@ -46,11 +46,11 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "hyperliquid-perps": 0.92,
     "hyperliquid-spot": 0.25,
     # Bitget spot is mostly tokenized stocks CMC does not track.
-    "bitget": 0.16,
+    "bitget-spot": 0.16,
     "bitget-perps-usdt": 0.95,
     "bitget-perps-usdc": 0.95,
     "bitget-perps-coin": 0.95,
-    "gate-io": 0.72,
+    "gateio-spot": 0.72,
     "gateio-perps-usdt": 0.95,
     "gateio-futures-usdt": 0.95,
     "coinbase": 0.97,
@@ -185,10 +185,10 @@ def test_quote_coverage(snapshots):
         ("hyperliquid-perps", "BTC", "BTC", "USDC", "USDC", "perpetual-BTC-USDC:USDC"),
         ("coinbase", "BTC-USD", "BTC", "USD", None, "spot-BTC-USD"),
         ("coinbase", "ETH-EUR", "ETH", "EUR", None, "spot-ETH-EUR"),
-        ("bitget", "BTCUSDT", "BTC", "USDT", None, "spot-BTC-USDT"),
+        ("bitget-spot", "BTCUSDT", "BTC", "USDT", None, "spot-BTC-USDT"),
         ("bitget-perps-usdt", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("bitget-perps-coin", "BTCUSD_CM", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
-        ("gate-io", "BTC_USDT", "BTC", "USDT", None, "spot-BTC-USDT"),
+        ("gateio-spot", "BTC_USDT", "BTC", "USDT", None, "spot-BTC-USDT"),
         ("gateio-perps-usdt", "BTC_USDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("gateio-perps-btc", "BTC_USD", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
         ("binance-spot", "ethbtc", "ETH", "BTC", None, "spot-ETH-BTC"),
@@ -262,7 +262,7 @@ def test_unified_id_groups_a_contract_across_venues(sm):
         "bitget-perps-usdt",
         "gateio-perps-usdt",
     } <= venues
-    assert {"binance-spot", "bybit-spot", "okx-spot", "bitget", "gate-io"} <= {
+    assert {"binance-spot", "bybit-spot", "okx-spot", "bitget-spot", "gateio-spot"} <= {
         exchange for exchange, _ in sm.by_unified_id("spot-BTC-USDT")
     }
 

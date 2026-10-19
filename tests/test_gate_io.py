@@ -37,11 +37,11 @@ class TestGateParsers:
         ],
     )
     def test_spot_tardis_ids(self, sid: str, expected: str):
-        assert _iid("gate-io", sid, "spot") == expected
+        assert _iid("gateio-spot", sid, "spot") == expected
 
     def test_spot_api_fields_are_authoritative(self):
         assert (
-            _iid("gate-io", "BTC_USDT", "spot", base_coin="BTC", quote_coin="USDT")
+            _iid("gateio-spot", "BTC_USDT", "spot", base_coin="BTC", quote_coin="USDT")
             == "spot-BTC-USDT"
         )
 

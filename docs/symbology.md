@@ -222,12 +222,12 @@ conflicts, rejected ticker reuse and the active rows still without an asset.
 
 Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 `bybit-spot`, `bybit-perps`, `bybit-futures`, `okx-spot`, `okx-perps`,
-`okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget`,
+`okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget-spot`,
 `bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
-`bitget-futures-coin`, `gate-io`, `gateio-perps-usdt`, `gateio-perps-btc`,
+`bitget-futures-coin`, `gateio-spot`, `gateio-perps-usdt`, `gateio-perps-btc`,
 `gateio-futures-usdt` and `coinbase`. Bitget's and Gate's contracts are the
-live-producers venues; their Tardis-named `bitget-futures` and `gate-io-futures`
-have no snapshot.
+live-producers venues, and their spot takes the same scheme; the Tardis-named
+`bitget`, `bitget-futures`, `gate-io` and `gate-io-futures` have no snapshot.
 
 ## Coverage
 
@@ -248,12 +248,12 @@ identifies the base asset of 21,110 of 31,716 parsed instrument rows
 | `okx-perps` | 510 | 99.6% |
 | `okx-futures` | 275 | 98.2% |
 | `coinbase` | 515 | 99.2% |
-| `bitget` | 3,587 | 17.7% |
+| `bitget-spot` | 3,587 | 17.7% |
 | `bitget-perps-usdt` | 834 | 98.1% |
 | `bitget-perps-usdc` | 49 | 100.0% |
 | `bitget-perps-coin` | 20 | 100.0% |
 | `bitget-futures-coin` | 4 | 100.0% |
-| `gate-io` | 2,203 | 73.6% |
+| `gateio-spot` | 2,203 | 73.6% |
 | `gateio-perps-usdt` | 1,047 | 97.3% |
 | `gateio-perps-btc` | 1 | 100.0% |
 | `gateio-futures-usdt` | 30 | 100.0% |
