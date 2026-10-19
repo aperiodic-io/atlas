@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
+    inputs:
+      accept_missing:
+        description: "Comma-separated exchanges whose mass delisting is real (overrides the partial-snapshot guard)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -29,7 +34,9 @@ jobs:
           uv pip install --system -e .
 
       - name: run-update
-        run: uv run python -m atlas.update --source exchange
+        env:
+          ACCEPT_MISSING: ${{ inputs.accept_missing }}
+        run: uv run python -m atlas.update --source exchange --accept-missing "$ACCEPT_MISSING"
 
       - name: commit-updated-jsons
         if: always()

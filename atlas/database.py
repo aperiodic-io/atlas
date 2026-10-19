@@ -4,14 +4,9 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+from atlas.exchange_definitions.common import parse_utc_timestamp
 
 _DATA_DIR = Path(__file__).parent / "data"
-
-
-def _parse_iso_timestamp(value: str | None) -> datetime | None:
-    if value is None:
-        return None
-    return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
 class SecurityMaster:
@@ -55,10 +50,10 @@ class SecurityMaster:
                     continue
                 if isinstance(sd.get("id"), str):
                     metadata_map[(exchange, sd["id"])] = sd.copy()
-                start_dt = _parse_iso_timestamp(sd.get("first_capture"))
+                start_dt = parse_utc_timestamp(sd.get("first_capture"))
                 if start_dt is None:
                     continue
-                end_dt = _parse_iso_timestamp(sd.get("end_date"))
+                end_dt = parse_utc_timestamp(sd.get("end_date"))
                 windows.append((sd["id"], start_dt, end_dt))
                 if iid := sd.get("internal_id"):
                     internal_id_map[(exchange, sd["id"])] = iid

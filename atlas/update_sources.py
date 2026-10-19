@@ -1,10 +1,23 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from enum import StrEnum
 from typing import Any, ClassVar, Protocol
 
 from atlas.exchanges import get_exchange_fetcher
 from atlas.utils import _fetch_exchange
+
+
+class SymbolLifecycle(StrEnum):
+    """How a source's rows relate to the rows already on file."""
+
+    # The source carries the full history; its output replaces the file.
+    REPLACE = "replace"
+    # The source is partial; rows it omits are kept as they are.
+    MERGE = "merge"
+    # The source lists the whole current universe; rows it omits are delisting
+    # candidates, and its rows may report delistings themselves.
+    COMPLETE = "complete"
 
 
 class SymbolSource(Protocol):
@@ -12,8 +25,15 @@ class SymbolSource(Protocol):
         """Return exchange metadata shaped like {\"availableSymbols\": [...]}"""
 
 
+def source_lifecycle(source: SymbolSource) -> SymbolLifecycle:
+    """A source's lifecycle; sources that do not declare one are treated as partial."""
+    return getattr(source, "lifecycle", SymbolLifecycle.MERGE)
+
+
 @dataclass(frozen=True)
 class TardisSymbolSource:
+    lifecycle: ClassVar[SymbolLifecycle] = SymbolLifecycle.REPLACE
+
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
         return _fetch_exchange(exchange)
 
@@ -26,7 +46,7 @@ class ExchangeApiSymbolSource:
     from a fetch is no longer listed, which lets the updater detect delistings.
     """
 
-    complete_universe: ClassVar[bool] = True
+    lifecycle: ClassVar[SymbolLifecycle] = SymbolLifecycle.COMPLETE
     timeout_seconds: int = 20
 
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
@@ -41,6 +61,8 @@ class HybridSymbolSource:
     """
     Use exchange APIs for selected exchanges and fall back to Tardis for the rest.
     """
+
+    lifecycle: ClassVar[SymbolLifecycle] = SymbolLifecycle.MERGE
 
     exchange_source: ExchangeApiSymbolSource = field(default_factory=ExchangeApiSymbolSource)
     tardis_source: TardisSymbolSource = field(default_factory=TardisSymbolSource)

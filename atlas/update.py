@@ -3,7 +3,9 @@ from __future__ import annotations
 import json
 import re
 import sys
+from collections.abc import Callable, Collection
 from datetime import UTC, datetime, timedelta
+from functools import partial
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -12,20 +14,23 @@ if __package__ in (None, ""):
 from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
-from atlas.exchange_definitions.common import utc_timestamp
+from atlas.exchange_definitions.common import parse_utc_timestamp, utc_timestamp
 from atlas.exchanges import get_allowed_types, get_symbol_filter
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
     HybridSymbolSource,
+    SymbolLifecycle,
     SymbolSource,
     TardisSymbolSource,
+    source_lifecycle,
 )
 
 _DATA_DIR = Path(__file__).parent / "data"
 
 # A complete snapshot that newly loses more than this share of open rows (and at
-# least the minimum count) is treated as a partial API response, not delistings.
+# least the minimum count) is treated as a partial API response, not delistings,
+# unless the run is told to accept the losses for that exchange.
 MAX_NEWLY_MISSING_FRACTION = 0.1
 MIN_NEWLY_MISSING_GUARD = 5
 
@@ -85,15 +90,14 @@ def _append_contract_size_change(sd: dict, new_size: float, effective_from: str)
     return result
 
 
-def _load_existing_symbols(path: Path) -> tuple[list[dict], dict[str, dict]]:
+def _load_existing_symbols(path: Path) -> list[dict]:
     if not path.exists():
-        return [], {}
+        return []
     try:
         rows = json.loads(path.read_text())
     except json.JSONDecodeError:
-        return [], {}
-    rows = [row for row in rows if isinstance(row, dict) and "id" in row]
-    return rows, {row["id"]: row for row in rows}
+        return []
+    return [row for row in rows if isinstance(row, dict) and "id" in row]
 
 
 def _merge_symbol(
@@ -113,20 +117,25 @@ def _merge_symbol(
 
 
 def _merge_existing_fields(
-    symbols: list[dict], existing_by_id: dict[str, dict], ignore_metadata: bool = False
+    symbols: list[dict],
+    existing_by_id: dict[str, dict],
+    ignore_metadata: bool | Callable[[dict], bool] = False,
 ) -> list[dict]:
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence except for locally owned fields.
+    `ignore_metadata` (for all rows, or per incoming row) drops the lifecycle
+    fields on file so the source's bounds replace them.
     """
     metadata_keys = {"first_capture", "end_date"}
     merged_symbols: list[dict] = []
     for sd in symbols:
         existing = existing_by_id.get(sd.get("id"))
+        ignore = ignore_metadata(sd) if callable(ignore_metadata) else ignore_metadata
         existing_values = None if existing is None else {
             key: value
             for key, value in existing.items()
-            if not (ignore_metadata and key in metadata_keys)
+            if not (ignore and key in metadata_keys)
         }
         merged_symbols.append(_merge_symbol(existing_values, sd))
     return merged_symbols
@@ -143,9 +152,8 @@ class SuspiciousSnapshotError(ValueError):
     """A complete-universe snapshot looks partial, so delistings can't be trusted."""
 
 
-def _parse_timestamp(value: str) -> datetime:
-    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
+class EmptySnapshotError(ValueError):
+    """The source returned nothing for an exchange that has open rows on file."""
 
 
 def _delivery_end_date(row: dict, now: datetime) -> str | None:
@@ -157,7 +165,7 @@ def _delivery_end_date(row: dict, now: datetime) -> str | None:
     raw = row.get("delivery_date")
     if not raw:
         return None
-    delivery = _parse_timestamp(raw)
+    delivery = parse_utc_timestamp(raw)
     if delivery.time() == datetime.min.time():
         delivery += timedelta(days=1)
     return utc_timestamp(delivery) if delivery <= now else None
@@ -174,7 +182,7 @@ def _check_snapshot_plausible(
     incoming_ids = {sd.get("id") for sd in incoming_symbols}
     open_rows = [row for row in existing_rows if _is_open(row)]
     if open_rows and not incoming_symbols:
-        raise SuspiciousSnapshotError("source returned no symbols")
+        raise EmptySnapshotError("source returned no symbols")
     newly_missing = [
         row["id"]
         for row in open_rows
@@ -184,7 +192,9 @@ def _check_snapshot_plausible(
     if len(newly_missing) > limit:
         raise SuspiciousSnapshotError(
             f"{len(newly_missing)} of {len(open_rows)} open symbols vanished at once "
-            f"(limit {int(limit)}), e.g. {', '.join(sorted(newly_missing)[:5])}"
+            f"(limit {int(limit)}), e.g. {', '.join(sorted(newly_missing)[:5])}; "
+            "none were marked missing. If the exchange really dropped them, rerun "
+            "with --accept-missing for this exchange"
         )
 
 
@@ -237,7 +247,7 @@ def _close_missing_rows(
             rows.append({**row, "end_date": end_date, "missing_since": None})
         elif not row.get("missing_since"):
             rows.append({**row, "missing_since": captured_at})
-        elif now - _parse_timestamp(row["missing_since"]) >= CONFIRM_MISSING_AFTER:
+        elif now - parse_utc_timestamp(row["missing_since"]) >= CONFIRM_MISSING_AFTER:
             rows.append({**row, "end_date": row["missing_since"], "missing_since": None})
         else:
             rows.append(row)
@@ -364,9 +374,9 @@ def _matches_exchange_constraints(
     )
 
 
-def _fetch_incoming_symbols(
-    source: SymbolSource, exchange: str, allowed_types: set[str], symbol_filter
-) -> list[dict]:
+def _fetch_incoming_symbols(source: SymbolSource, exchange: str) -> list[dict]:
+    allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
+    symbol_filter = get_symbol_filter(exchange)
     data = source.fetch_exchange(exchange)
     return [
         sd.copy()
@@ -376,100 +386,174 @@ def _fetch_incoming_symbols(
 
 
 def _combine_with_existing_rows(
-    source: SymbolSource,
+    lifecycle: SymbolLifecycle,
     incoming_symbols: list[dict],
     existing_rows: list[dict],
+    *,
+    infer_missing: bool,
     now: datetime,
     captured_at: str,
 ) -> list[dict]:
-    """Add back existing rows the source omitted; Tardis output replaces them."""
-    if isinstance(source, TardisSymbolSource):
+    """Add back existing rows the source omitted, tracking misses when trusted."""
+    if lifecycle is SymbolLifecycle.REPLACE:
         return incoming_symbols
-    if getattr(source, "complete_universe", False):
+    if infer_missing:
         incoming_ids = {sd["id"] for sd in incoming_symbols}
         existing_rows = _close_missing_rows(existing_rows, incoming_ids, now, captured_at)
     return _merge_missing_rows(incoming_symbols, existing_rows)
 
 
+def _clear_pending_misses(symbols: list[dict]) -> list[dict]:
+    """Drop `missing_since` from rows written by a source that cannot see delistings."""
+    return [{k: v for k, v in sd.items() if k != "missing_since"} for sd in symbols]
+
+
+def _replaces_lifecycle_on_file(exchange: str, sd: dict, is_tardis_data: bool) -> bool:
+    """Whether a row's Tardis availability bounds replace the lifecycle on file.
+
+    Hyperliquid hybrid metadata is partial: only rows that actually supplied
+    Tardis bounds replace them. API-only rows must retain their captured
+    instance and approved CMC mapping.
+    """
+    if not is_tardis_data:
+        return False
+    if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
+        return bool(sd.get("first_capture"))
+    return True
+
+
+def _infers_missing(
+    exchange: str,
+    lifecycle: SymbolLifecycle,
+    incoming_symbols: list[dict],
+    existing_rows: list[dict],
+    now: datetime,
+    accept_missing: Collection[str],
+) -> bool:
+    """Whether rows this snapshot omits may be marked missing.
+
+    An implausible snapshot raises unless the exchange's losses are accepted;
+    an empty one always raises.
+    """
+    if lifecycle is not SymbolLifecycle.COMPLETE:
+        return False
+    try:
+        _check_snapshot_plausible(incoming_symbols, existing_rows, now)
+    except SuspiciousSnapshotError:
+        if exchange not in accept_missing:
+            raise
+    return True
+
+
+def _build_exchange_rows(
+    exchange: str,
+    lifecycle: SymbolLifecycle,
+    incoming_symbols: list[dict],
+    existing_rows: list[dict],
+    *,
+    infer_missing: bool,
+    now: datetime,
+) -> list[dict]:
+    """Turn one exchange's fetched rows plus the rows on file into the rows to write."""
+    existing_by_id = {row["id"]: row for row in existing_rows}
+    complete = lifecycle is SymbolLifecycle.COMPLETE
+    captured_at = utc_timestamp(now)
+    allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
+    symbol_filter = get_symbol_filter(exchange)
+    is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
+
+    incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
+    incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
+    if complete:
+        incoming_symbols = _resolve_reported_lifecycle(incoming_symbols, existing_by_id)
+    incoming_symbols = _merge_existing_fields(
+        incoming_symbols,
+        existing_by_id,
+        ignore_metadata=partial(
+            _replaces_lifecycle_on_file, exchange, is_tardis_data=is_tardis_data
+        ),
+    )
+    # Only a complete source can say an existing row is still listed.
+    _capture_first_seen(
+        [sd for sd in incoming_symbols if complete or sd.get("id") not in existing_by_id],
+        captured_at,
+    )
+    incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
+
+    symbols = _combine_with_existing_rows(
+        lifecycle,
+        incoming_symbols,
+        existing_rows,
+        infer_missing=infer_missing,
+        now=now,
+        captured_at=captured_at,
+    )
+    if not complete:
+        symbols = _clear_pending_misses(symbols)
+    # Existing rows are retained for historical coverage, but only if they
+    # belong to this virtual exchange's product universe. This prevents
+    # shared Tardis feeds from leaking spot/futures into Bybit perpetuals.
+    symbols = [
+        sd
+        for sd in symbols
+        if _matches_exchange_constraints(sd, allowed_types, symbol_filter)
+    ]
+    symbols = sorted(
+        symbols,
+        key=lambda sd: (
+            sd.get("id", ""),
+            sd.get("first_capture") or "",
+            sd.get("end_date") or "",
+        )
+    )
+    return _drop_none_fields(symbols)
+
+
 def update(
     exchanges: list[str] = EXCHANGES,
     source: SymbolSource | None = None,
+    accept_missing: Collection[str] = (),
 ) -> list[str]:
+    """Refresh each exchange's file and return the exchanges that failed.
+
+    A suspicious complete snapshot still updates the rows it returned but
+    marks nothing missing, and the exchange is reported as failed.
+    """
     if source is None:
         source = ExchangeApiSymbolSource()
-    complete_universe = getattr(source, "complete_universe", False)
+    lifecycle = source_lifecycle(source)
     _DATA_DIR.mkdir(exist_ok=True)
     total = 0
     failed_exchanges: list[str] = []
     for exchange in exchanges:
         path = _DATA_DIR / f"{exchange}.json"
-        existing_rows, existing_by_id = _load_existing_symbols(path)
+        existing_rows = _load_existing_symbols(path)
         if is_beta_exchange(exchange):
             print(f"Skipping {exchange} (beta exchange)", flush=True)
             continue
         print(f"Fetching {exchange}...", flush=True)
         now = datetime.now(UTC)
-        captured_at = utc_timestamp(now)
-        allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
-        symbol_filter = get_symbol_filter(exchange)
         try:
-            incoming_symbols = _fetch_incoming_symbols(
-                source, exchange, allowed_types, symbol_filter
+            incoming_symbols = _fetch_incoming_symbols(source, exchange)
+            infer_missing = _infers_missing(
+                exchange, lifecycle, incoming_symbols, existing_rows, now, accept_missing
             )
-            if complete_universe:
-                _check_snapshot_plausible(incoming_symbols, existing_rows, now)
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
             failed_exchanges.append(exchange)
-            continue
+            if not isinstance(e, SuspiciousSnapshotError):
+                continue
+            # A suspicious but non-empty snapshot still updates what it returned.
+            infer_missing = False
 
-        is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
-
-        incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
-        incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
-        if complete_universe:
-            incoming_symbols = _resolve_reported_lifecycle(incoming_symbols, existing_by_id)
-        if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-            # Hybrid metadata is partial: clear lifecycle fields only on rows
-            # that actually supplied Tardis availability bounds. API-only rows
-            # must retain their captured instance and approved CMC mapping.
-            incoming_symbols = [
-                _merge_existing_fields([sd], existing_by_id, ignore_metadata=is_tardis_data and bool(sd.get("first_capture")))[0]
-                for sd in incoming_symbols
-            ]
-        else:
-            incoming_symbols = _merge_existing_fields(
-                incoming_symbols, existing_by_id, ignore_metadata=is_tardis_data
-            )
-        if complete_universe:
-            _capture_first_seen(incoming_symbols, captured_at)
-        else:
-            _capture_first_seen(
-                [sd for sd in incoming_symbols if sd.get("id") not in existing_by_id],
-                captured_at,
-            )
-        incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
-
-        symbols = _combine_with_existing_rows(
-            source, incoming_symbols, existing_rows, now, captured_at
+        symbols = _build_exchange_rows(
+            exchange,
+            lifecycle,
+            incoming_symbols,
+            existing_rows,
+            infer_missing=infer_missing,
+            now=now,
         )
-        # Existing rows are retained for historical coverage, but only if they
-        # belong to this virtual exchange's product universe. This prevents
-        # shared Tardis feeds from leaking spot/futures into Bybit perpetuals.
-        symbols = [
-            sd
-            for sd in symbols
-            if _matches_exchange_constraints(sd, allowed_types, symbol_filter)
-        ]
-        symbols = sorted(
-            symbols,
-            key=lambda sd: (
-                sd.get("id", ""),
-                sd.get("first_capture") or "",
-                sd.get("end_date") or "",
-            )
-        )
-        symbols = _drop_none_fields(symbols)
         path.write_text(json.dumps(symbols, indent=2))
         total += len(symbols)
         print(f"  {len(symbols)} symbols written to {path.name}")
@@ -482,6 +566,10 @@ def update(
             file=sys.stderr,
         )
     return failed_exchanges
+
+
+def _exchange_list(value: str) -> list[str]:
+    return [e.strip() for e in value.split(",") if e.strip()]
 
 
 def parse_args(argv: list[str] | None = None):
@@ -498,6 +586,15 @@ def parse_args(argv: list[str] | None = None):
         type=str,
         default="",
         help="Comma-separated list of exchanges (default: all)",
+    )
+    parser.add_argument(
+        "--accept-missing",
+        type=_exchange_list,
+        default=[],
+        help=(
+            "Comma-separated exchanges whose many vanished symbols are real "
+            "delistings, overriding the partial-snapshot guard for this run"
+        ),
     )
     parser.add_argument(
         "--source",
@@ -524,6 +621,6 @@ if __name__ == "__main__":
     else:
         source = HybridSymbolSource()
 
-    failed_exchanges = update(exchanges, source=source)
+    failed_exchanges = update(exchanges, source=source, accept_missing=args.accept_missing)
     if failed_exchanges:
         sys.exit(1)

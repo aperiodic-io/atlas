@@ -1,5 +1,5 @@
 import pytest
-from datetime import datetime
+from datetime import UTC, datetime, timedelta
 from unittest.mock import MagicMock, patch
 
 
@@ -899,6 +899,14 @@ class TestFetchOkxSwap:
 
 
 class TestFetchBybit:
+    @pytest.fixture(autouse=True)
+    def _fresh_derivatives_cache(self):
+        from atlas.exchange_definitions import bybit
+
+        bybit.clear_derivatives_cache()
+        yield
+        bybit.clear_derivatives_cache()
+
     def test_retries_malformed_response(self):
         from atlas.exchange_definitions.bybit import fetch_bybit_spot
 
@@ -1017,6 +1025,29 @@ class TestFetchBybit:
         assert "first_capture" not in futures["BTCUSDZ25"]
         assert futures["BTC-01DEC23"]["end_date"] == "2023-12-01T08:00:00.000Z"
         assert futures["BTC-01DEC23"]["delivery_date"] == "2023-12-01T08:00:00+00:00"
+
+    def test_perps_and_futures_download_each_category_and_status_once(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps
+
+        get = self._route({
+            ("linear", "Trading", None): {"list": [
+                {"symbol": "BTCUSDT", "status": "Trading", "contractType": "LinearPerpetual"},
+                {"symbol": "BTCUSDT-26DEC25", "status": "Trading", "contractType": "LinearFutures"},
+            ]},
+        })
+        requested = []
+
+        def counting_get(url, params, timeout):
+            requested.append((params["category"], params.get("status"), params.get("cursor")))
+            return get(url, params, timeout)
+
+        with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=counting_get):
+            perps = fetch_bybit_perps(timeout_seconds=5)
+            futures = fetch_bybit_futures(timeout_seconds=5)
+
+        assert [sd["id"] for sd in perps] == ["BTCUSDT"]
+        assert [sd["id"] for sd in futures] == ["BTCUSDT-26DEC25"]
+        assert len(requested) == len(set(requested)) == 8
 
     @pytest.mark.parametrize(
         ("symbol_type", "expected_underlying"),
@@ -1161,6 +1192,17 @@ class TestFetchBinanceFuturesUsdM:
             symbols = fetch_binance_futures_usdm(timeout_seconds=5)
         assert symbols[0]["end_date"] == "2025-09-26T08:00:00.000Z"
 
+    def test_delisted_status_with_future_delivery_date_ends_now(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        # Perpetuals carry a 2100-12-25 sentinel deliveryDate until Binance sets the delist time.
+        item = self._item("BTCUSDT") | {"status": "SETTLING", "deliveryDate": 4133404800000}
+        before = datetime.now(UTC)
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        end = datetime.fromisoformat(symbols[0]["end_date"].replace("Z", "+00:00"))
+        assert before - timedelta(seconds=1) <= end <= datetime.now(UTC)
+
 
 class TestFetchBinanceFuturesCoinM:
     def _mock_get(self, symbols: list[dict]) -> MagicMock:
@@ -1189,7 +1231,20 @@ class TestFetchBinanceFuturesCoinM:
         assert {sd["id"]: sd.get("end_date") for sd in symbols} == {
             "btcusd_perp": None,
             "lunausd_perp": "2022-05-17T00:00:00.000Z",
+            "newusd_perp": None,
         }
+
+    @pytest.mark.parametrize(
+        "status", ["TRADING", "PENDING_TRADING", "PRE_DELIVERING", "DELIVERING", "PRE_SETTLE"]
+    )
+    def test_listed_statuses_are_kept_without_end_date(self, status):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_251226", "contractType": "CURRENT_QUARTER", "contractStatus": status,
+                "deliveryDate": 1766736000000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert [sd["id"] for sd in symbols] == ["btcusd_251226"]
+        assert "end_date" not in symbols[0]
 
     def test_contract_size_populated_from_api_field(self):
         from atlas.exchange_definitions.binance import fetch_binance_futures_coinm

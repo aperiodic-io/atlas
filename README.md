@@ -129,19 +129,30 @@ universe, so `first_capture` and `end_date` come from the exchanges:
   `listTime`), otherwise the time a run first saw the instrument. A value
   already on file is never overwritten.
 - `end_date` is set from an explicit exchange signal when there is one: Binance
-  futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`), Bybit derivatives
-  `Closed` (at `deliveryTime`), and Hyperliquid `isDelisted` (at first sighting,
-  as Hyperliquid publishes no time).
+  futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`, or the run time if
+  that has not passed yet), Bybit derivatives `Closed` (at `deliveryTime`), and
+  Hyperliquid `isDelisted` (at first sighting, as Hyperliquid publishes no time).
+  Hyperliquid also keeps no candle or funding history for delisted HIP-3 perps,
+  so HIP-3 perps already delisted when this tracking started end on the first
+  run that saw the flag.
 - An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
   OKX, Hyperliquid spot) is marked `missing_since` on the first run that misses
   it. If a run at least 12 hours later still misses it, `end_date` is set to that
   first miss; if it comes back first, the mark is dropped. Expired dated futures
   end at delivery straight away.
-- Halted, suspended and pre-market instruments (Binance spot `HALT`, OKX
-  `suspend`, Bybit `PreLaunch`/`Delivering`) stay listed.
-- A run that would newly drop more than 10% of an exchange's open instruments
-  (and more than 5), or that returns nothing, fails that exchange and leaves its
-  file untouched, since that looks like a broken API response.
+- Halted, suspended and pre-market instruments (Binance spot `HALT`, Binance
+  futures pending/delivering statuses, OKX `suspend`, Bybit
+  `PreLaunch`/`Delivering`) stay listed.
+- A run that returns nothing for an exchange fails it and leaves its file
+  untouched. A run that would newly drop more than 10% of an exchange's open
+  instruments (and more than 5) looks like a broken API response: it still
+  updates the instruments it returned, but marks nothing missing and fails the
+  exchange. If the instruments really were delisted, rerun with
+  `--accept-missing <exchange>` (or the `accept_missing` input when dispatching
+  the daily workflow by hand).
+- `missing_since` is only maintained in exchange mode; `hybrid` and `tardis`
+  runs cannot see delistings, so they clear it. `SecurityMaster` ignores it, so
+  a row stays tradable until its `end_date` is set.
 - An existing `end_date` is never overwritten, a relisted instrument has its
   `end_date` cleared, and delisted instruments that were never on file are not
   added.

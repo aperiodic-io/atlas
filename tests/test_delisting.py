@@ -4,13 +4,21 @@ from types import SimpleNamespace
 
 import pytest
 
+from atlas.exchange_definitions.common import ms_to_datetime, parse_utc_timestamp
+from atlas.update_sources import (
+    ExchangeApiSymbolSource,
+    HybridSymbolSource,
+    SymbolLifecycle,
+    TardisSymbolSource,
+)
+
 updater = importlib.import_module("atlas.update")
 
 
 def _complete_source(rows: list[dict]) -> SimpleNamespace:
     """A source that reports an exchange's whole current universe, like the APIs do."""
     return SimpleNamespace(
-        complete_universe=True,
+        lifecycle=SymbolLifecycle.COMPLETE,
         fetch_exchange=lambda _exchange: {"availableSymbols": [dict(r) for r in rows]},
     )
 
@@ -43,7 +51,7 @@ def test_exchange_api_is_the_default_source(data_dir, monkeypatch) -> None:
         updater,
         "ExchangeApiSymbolSource",
         lambda: SimpleNamespace(
-            complete_universe=True,
+            lifecycle=SymbolLifecycle.COMPLETE,
             fetch_exchange=lambda _e: {"availableSymbols": [_spot("btcusdt")]},
         ),
     )
@@ -54,8 +62,34 @@ def test_exchange_api_is_the_default_source(data_dir, monkeypatch) -> None:
 def test_daily_workflow_uses_exchange_source() -> None:
     from pathlib import Path
 
-    workflow = Path(__file__).parents[1] / ".github/workflows/daily_update.yaml"
-    assert "python -m atlas.update --source exchange" in workflow.read_text()
+    workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text()
+    assert "python -m atlas.update --source exchange" in workflow
+    assert '--accept-missing "$ACCEPT_MISSING"' in workflow
+    assert "ACCEPT_MISSING: ${{ inputs.accept_missing }}" in workflow
+
+
+def test_sources_declare_how_their_rows_relate_to_the_file() -> None:
+    assert ExchangeApiSymbolSource.lifecycle is SymbolLifecycle.COMPLETE
+    assert HybridSymbolSource.lifecycle is SymbolLifecycle.MERGE
+    assert TardisSymbolSource.lifecycle is SymbolLifecycle.REPLACE
+
+
+def test_accept_missing_is_a_comma_separated_exchange_list() -> None:
+    assert updater.parse_args([]).accept_missing == []
+    assert updater.parse_args(["--accept-missing", ""]).accept_missing == []
+    assert updater.parse_args(["--accept-missing", "okx-spot, bybit-perps"]).accept_missing == [
+        "okx-spot",
+        "bybit-perps",
+    ]
+
+
+def test_timestamp_helpers_return_utc_datetimes() -> None:
+    assert parse_utc_timestamp("2026-10-12T02:00:00.000Z").isoformat() == "2026-10-12T02:00:00+00:00"
+    assert parse_utc_timestamp("2020-09-25T00:00:00").isoformat() == "2020-09-25T00:00:00+00:00"
+    assert parse_utc_timestamp(None) is None
+    assert ms_to_datetime("1701417600000").isoformat() == "2023-12-01T08:00:00+00:00"
+    assert ms_to_datetime("0") is None
+    assert ms_to_datetime(None) is None
 
 
 def test_vanished_row_is_kept_and_marked_missing_on_first_miss(data_dir) -> None:
@@ -258,15 +292,39 @@ def test_delisted_row_without_first_capture_is_not_stamped(data_dir) -> None:
     assert "first_capture" not in _read(path)["omgusdt"]
 
 
-def test_mass_disappearance_fails_the_exchange_without_writing(data_dir) -> None:
-    rows = [_spot(f"coin{i}usdt") for i in range(100)]
+def test_mass_disappearance_fails_the_exchange_but_marks_nothing_missing(data_dir) -> None:
+    rows = [_spot(f"coin{i}usdt", first_capture="2020-01-01T00:00:00.000Z") for i in range(100)]
     path = _write(data_dir, "binance-spot", rows)
-    before = path.read_text()
 
-    failed = updater.update(["binance-spot"], _complete_source(rows[:80]))
+    failed = updater.update(["binance-spot"], _complete_source([*rows[:80], _spot("newusdt")]))
 
     assert failed == ["binance-spot"]
-    assert path.read_text() == before
+    written = _read(path)
+    assert all(written[row["id"]] == row for row in rows[80:])
+    assert not any("missing_since" in row for row in written.values())
+    assert written["newusdt"]["first_capture"]
+
+
+def test_mass_disappearance_does_not_confirm_earlier_misses(data_dir) -> None:
+    rows = [_spot(f"coin{i}usdt") for i in range(100)]
+    pending = _spot("gonebtc", missing_since="2026-10-12T02:00:00.000Z")
+    path = _write(data_dir, "binance-spot", [*rows, pending])
+
+    assert updater.update(["binance-spot"], _complete_source(rows[:80])) == ["binance-spot"]
+
+    assert _read(path)["gonebtc"] == pending
+
+
+def test_accepted_mass_disappearance_marks_rows_missing(data_dir) -> None:
+    rows = [_spot(f"coin{i}usdt") for i in range(100)]
+    path = _write(data_dir, "binance-spot", rows)
+
+    failed = updater.update(
+        ["binance-spot"], _complete_source(rows[:80]), accept_missing={"binance-spot"}
+    )
+
+    assert failed == []
+    assert sum("missing_since" in row for row in _read(path).values()) == 20
 
 
 def test_small_disappearance_on_small_exchange_is_allowed(data_dir) -> None:
@@ -293,3 +351,16 @@ def test_partial_sources_never_infer_delistings(data_dir) -> None:
     assert updater.update(["binance-spot"], source) == []
 
     assert _read(path)["gonebtc"] == _spot("gonebtc")
+
+
+@pytest.mark.parametrize("lifecycle", [None, SymbolLifecycle.MERGE, SymbolLifecycle.REPLACE])
+def test_sources_that_cannot_see_delistings_clear_pending_misses(data_dir, lifecycle) -> None:
+    rows = [*LIVE, _spot("flakybtc", missing_since="2026-10-12T02:00:00.000Z")]
+    path = _write(data_dir, "binance-spot", [*rows, _spot("gonebtc", missing_since="2026-10-12T02:00:00.000Z")])
+    source = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [dict(r) for r in rows]})
+    if lifecycle is not None:
+        source.lifecycle = lifecycle
+
+    assert updater.update(["binance-spot"], source) == []
+
+    assert not any("missing_since" in row for row in _read(path).values())
