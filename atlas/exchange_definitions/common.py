@@ -1,9 +1,41 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
+
+
+def utc_timestamp(value: datetime) -> str:
+    """Format a lifecycle timestamp the way snapshot rows store it (ms precision, Z suffix)."""
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=UTC)
+    return value.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.") + f"{value.microsecond // 1000:03d}Z"
+
+
+def parse_utc_timestamp(value: str | None) -> datetime | None:
+    """Parse a stored ISO timestamp, reading naive values as UTC."""
+    if value is None:
+        return None
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
+
+
+def ms_to_datetime(value: object) -> datetime | None:
+    """Convert an exchange epoch-milliseconds field to a UTC datetime; 0 or junk means unset."""
+    try:
+        millis = int(value)
+    except (TypeError, ValueError):
+        return None
+    if millis <= 0:
+        return None
+    return datetime.fromtimestamp(millis / 1000, tz=UTC)
+
+
+def ms_to_utc_timestamp(value: object) -> str | None:
+    """Convert an exchange epoch-milliseconds field to a snapshot timestamp, if usable."""
+    parsed = ms_to_datetime(value)
+    return utc_timestamp(parsed) if parsed else None
 
 
 class SkipSymbol(Exception):

@@ -1,5 +1,5 @@
 import pytest
-from datetime import datetime
+from datetime import UTC, datetime, timedelta
 from unittest.mock import MagicMock, patch
 
 
@@ -872,8 +872,41 @@ class TestFetchOkxSwap:
             symbols = fetch_okx_swap(timeout_seconds=5)
         assert "contract_size" not in symbols[0]
 
+    @pytest.mark.parametrize("fetcher", ["fetch_okx_spot", "fetch_okx_swap", "fetch_okx_futures"])
+    def test_list_time_is_reported_as_first_capture(self, fetcher):
+        from atlas.exchange_definitions import okx
+
+        items = [{"instId": "BTC-USDT", "state": "live", "listTime": "1611907686000"},
+                 {"instId": "OLD-USDT", "state": "live", "listTime": ""}]
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get(items)):
+            symbols = getattr(okx, fetcher)(timeout_seconds=5)
+        assert symbols[0]["first_capture"] == "2021-01-29T08:08:06.000Z"
+        assert "first_capture" not in symbols[1]
+
+    @pytest.mark.parametrize("fetcher", ["fetch_okx_spot", "fetch_okx_swap", "fetch_okx_futures"])
+    def test_suspended_instruments_stay_listed_and_preopen_is_skipped(self, fetcher):
+        from atlas.exchange_definitions import okx
+
+        items = [
+            {"instId": "LIVE", "state": "live"},
+            {"instId": "HALTED", "state": "suspend"},
+            {"instId": "UPCOMING", "state": "preopen"},
+        ]
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get(items)):
+            symbols = getattr(okx, fetcher)(timeout_seconds=5)
+        assert [sd["id"] for sd in symbols] == ["LIVE", "HALTED"]
+        assert all("end_date" not in sd for sd in symbols)
+
 
 class TestFetchBybit:
+    @pytest.fixture(autouse=True)
+    def _fresh_derivatives_cache(self):
+        from atlas.exchange_definitions import bybit
+
+        bybit.clear_derivatives_cache()
+        yield
+        bybit.clear_derivatives_cache()
+
     def test_retries_malformed_response(self):
         from atlas.exchange_definitions.bybit import fetch_bybit_spot
 
@@ -894,51 +927,39 @@ class TestFetchBybit:
 
         assert get.call_count == 2
 
+    @staticmethod
+    def _route(pages: dict[tuple[str, str, str | None], dict]):
+        """Serve instruments-info pages keyed by (category, status, cursor); unknown keys are empty."""
+
+        def get(url, params, timeout):
+            resp = MagicMock()
+            resp.raise_for_status.return_value = None
+            key = (params["category"], params.get("status"), params.get("cursor"))
+            resp.json.return_value = {
+                "result": pages.get(key, {"list": [], "nextPageCursor": ""})
+            }
+            return resp
+
+        return get
+
     def test_derivative_fetch_preserves_mapping_metadata_and_paginates(self):
         from atlas.exchange_definitions.bybit import fetch_bybit_perps
 
-        first = MagicMock()
-        first.raise_for_status.return_value = None
-        first.json.return_value = {
-            "result": {
-                "list": [
-                    {
-                        "symbol": "BTCUSDT",
-                        "status": "Trading",
-                        "contractType": "LinearPerpetual",
-                        "baseCoin": "BTC",
-                        "quoteCoin": "USDT",
-                        "settleCoin": "USDT",
-                    }
-                ],
-                "nextPageCursor": "next-page",
+        def perp(symbol, quote):
+            return {
+                "symbol": symbol,
+                "status": "Trading",
+                "contractType": "LinearPerpetual",
+                "baseCoin": "BTC",
+                "quoteCoin": quote,
+                "settleCoin": quote,
             }
-        }
-        second = MagicMock()
-        second.raise_for_status.return_value = None
-        second.json.return_value = {
-            "result": {
-                "list": [
-                    {
-                        "symbol": "BTCPERP",
-                        "status": "Trading",
-                        "contractType": "LinearPerpetual",
-                        "baseCoin": "BTC",
-                        "quoteCoin": "USDC",
-                        "settleCoin": "USDC",
-                    }
-                ],
-                "nextPageCursor": "",
-            }
-        }
-        inverse = MagicMock()
-        inverse.raise_for_status.return_value = None
-        inverse.json.return_value = {"result": {"list": [], "nextPageCursor": ""}}
 
-        with patch(
-            "atlas.exchange_definitions.bybit.requests.get",
-            side_effect=[first, second, inverse],
-        ) as get:
+        get = self._route({
+            ("linear", "Trading", None): {"list": [perp("BTCUSDT", "USDT")], "nextPageCursor": "next-page"},
+            ("linear", "Trading", "next-page"): {"list": [perp("BTCPERP", "USDC")], "nextPageCursor": ""},
+        })
+        with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
             assert fetch_bybit_perps(timeout_seconds=5) == [
                 {
                     "id": "BTCUSDT",
@@ -962,7 +983,71 @@ class TestFetchBybit:
                 },
             ]
 
-        assert get.call_args_list[1].kwargs["params"]["cursor"] == "next-page"
+    def test_prelaunch_and_delivering_stay_listed_and_closed_ends_at_delivery_time(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps
+
+        get = self._route({
+            ("linear", "Trading", None): {"list": [
+                {"symbol": "BTCUSDT", "status": "Trading", "contractType": "LinearPerpetual", "deliveryTime": "0"},
+            ]},
+            ("linear", "PreLaunch", None): {"list": [
+                {"symbol": "OPENAIUSDT", "status": "PreLaunch", "contractType": "LinearPerpetual", "deliveryTime": "0",
+                 "launchTime": "1759996800000"},
+            ]},
+            ("inverse", "Delivering", None): {"list": [
+                {"symbol": "BTCUSDZ25", "status": "Delivering", "contractType": "InverseFutures",
+                 "deliveryTime": "1766736000000"},
+            ]},
+            ("linear", "Closed", None): {"list": [
+                {"symbol": "LUNAUSDT", "status": "Closed", "contractType": "LinearPerpetual",
+                 "deliveryTime": "1656001291000"},
+                {"symbol": "BTC-01DEC23", "status": "Closed", "contractType": "LinearFutures",
+                 "deliveryTime": "1701417600000"},
+            ], "nextPageCursor": "page-2"},
+            ("linear", "Closed", "page-2"): {"list": [
+                {"symbol": "BTTUSDT", "status": "Closed", "contractType": "LinearPerpetual",
+                 "deliveryTime": "1644818400000"},
+            ]},
+        })
+        with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
+            perp_rows = {sd["id"]: sd for sd in fetch_bybit_perps(timeout_seconds=5)}
+            perps = {sid: sd.get("end_date") for sid, sd in perp_rows.items()}
+            futures = {sd["id"]: sd for sd in fetch_bybit_futures(timeout_seconds=5)}
+
+        assert perps == {
+            "BTCUSDT": None,
+            "OPENAIUSDT": None,
+            "LUNAUSDT": "2022-06-23T16:21:31.000Z",
+            "BTTUSDT": "2022-02-14T06:00:00.000Z",
+        }
+        assert "end_date" not in futures["BTCUSDZ25"]
+        assert perp_rows["OPENAIUSDT"]["first_capture"] == "2025-10-09T08:00:00.000Z"
+        assert "first_capture" not in futures["BTCUSDZ25"]
+        assert futures["BTC-01DEC23"]["end_date"] == "2023-12-01T08:00:00.000Z"
+        assert futures["BTC-01DEC23"]["delivery_date"] == "2023-12-01T08:00:00+00:00"
+
+    def test_perps_and_futures_download_each_category_and_status_once(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps
+
+        get = self._route({
+            ("linear", "Trading", None): {"list": [
+                {"symbol": "BTCUSDT", "status": "Trading", "contractType": "LinearPerpetual"},
+                {"symbol": "BTCUSDT-26DEC25", "status": "Trading", "contractType": "LinearFutures"},
+            ]},
+        })
+        requested = []
+
+        def counting_get(url, params, timeout):
+            requested.append((params["category"], params.get("status"), params.get("cursor")))
+            return get(url, params, timeout)
+
+        with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=counting_get):
+            perps = fetch_bybit_perps(timeout_seconds=5)
+            futures = fetch_bybit_futures(timeout_seconds=5)
+
+        assert [sd["id"] for sd in perps] == ["BTCUSDT"]
+        assert [sd["id"] for sd in futures] == ["BTCUSDT-26DEC25"]
+        assert len(requested) == len(set(requested)) == 8
 
     @pytest.mark.parametrize(
         ("symbol_type", "expected_underlying"),
@@ -996,6 +1081,22 @@ class TestFetchBybit:
         )
 
         assert symbol["delivery_date"] == "2026-07-24T08:00:00+00:00"
+
+
+class TestFetchBinanceSpot:
+    def test_only_break_and_pre_trading_are_excluded(self):
+        from atlas.exchange_definitions.binance import fetch_binance_spot
+
+        resp = MagicMock()
+        resp.json.return_value = {"symbols": [
+            {"symbol": "BTCUSDT", "status": "TRADING"},
+            {"symbol": "HALTUSDT", "status": "HALT"},
+            {"symbol": "GONEUSDT", "status": "BREAK"},
+            {"symbol": "SOONUSDT", "status": "PRE_TRADING"},
+        ]}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=resp):
+            symbols = fetch_binance_spot(timeout_seconds=5)
+        assert symbols == [{"id": "btcusdt", "type": "spot"}, {"id": "haltusdt", "type": "spot"}]
 
 
 class TestFetchBinanceFuturesUsdM:
@@ -1052,7 +1153,7 @@ class TestFetchBinanceFuturesUsdM:
     def test_delisted_symbol_includes_underlying_type(self):
         from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
 
-        item = self._item("OMGUSDT") | {"status": "SETTLING"}
+        item = self._item("OMGUSDT") | {"status": "SETTLING", "deliveryDate": 1738314000000}
         with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
             symbols = fetch_binance_futures_usdm(timeout_seconds=5)
         assert symbols == [
@@ -1061,8 +1162,46 @@ class TestFetchBinanceFuturesUsdM:
                 "type": "perpetual",
                 "contract_size": 1.0,
                 "underlying": UnderlyingType.crypto.value,
+                "end_date": "2025-01-31T09:00:00.000Z",
             }
         ]
+
+    def test_onboard_date_is_reported_as_first_capture(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("BTCUSDT") | {"onboardDate": 1568008500000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["first_capture"] == "2019-09-09T05:55:00.000Z"
+
+    @pytest.mark.parametrize("status", ["TRADING", "PENDING_TRADING", "PRE_DELIVERING", "DELIVERING"])
+    def test_listed_statuses_have_no_end_date(self, status):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("BTCUSDT") | {"status": status, "deliveryDate": 4133404800000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert "end_date" not in symbols[0]
+
+    @pytest.mark.parametrize("status", ["SETTLING", "CLOSE", "DELIVERED"])
+    def test_delisted_statuses_end_at_delivery_date(self, status):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("BTCUSDT_250926") | {"status": status, "deliveryDate": 1758873600000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["end_date"] == "2025-09-26T08:00:00.000Z"
+
+    def test_delisted_status_with_future_delivery_date_ends_now(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        # Perpetuals carry a 2100-12-25 sentinel deliveryDate until Binance sets the delist time.
+        item = self._item("BTCUSDT") | {"status": "SETTLING", "deliveryDate": 4133404800000}
+        before = datetime.now(UTC)
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        end = datetime.fromisoformat(symbols[0]["end_date"].replace("Z", "+00:00"))
+        assert before - timedelta(seconds=1) <= end <= datetime.now(UTC)
 
 
 class TestFetchBinanceFuturesCoinM:
@@ -1070,6 +1209,42 @@ class TestFetchBinanceFuturesCoinM:
         resp = MagicMock()
         resp.json.return_value = {"symbols": symbols}
         return resp
+
+    def test_onboard_date_is_reported_as_first_capture(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING",
+                "onboardDate": 1597042800000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert symbols[0]["first_capture"] == "2020-08-10T07:00:00.000Z"
+
+    def test_delisted_contract_ends_at_delivery_date(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        items = [
+            {"symbol": "BTCUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "TRADING"},
+            {"symbol": "LUNAUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "SETTLING",
+             "deliveryDate": 1652745600000},
+            {"symbol": "NEWUSD_PERP", "contractType": "PERPETUAL", "contractStatus": "PENDING_TRADING"},
+        ]
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get(items)):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert {sd["id"]: sd.get("end_date") for sd in symbols} == {
+            "btcusd_perp": None,
+            "lunausd_perp": "2022-05-17T00:00:00.000Z",
+            "newusd_perp": None,
+        }
+
+    @pytest.mark.parametrize(
+        "status", ["TRADING", "PENDING_TRADING", "PRE_DELIVERING", "DELIVERING", "PRE_SETTLE"]
+    )
+    def test_listed_statuses_are_kept_without_end_date(self, status):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
+        item = {"symbol": "BTCUSD_251226", "contractType": "CURRENT_QUARTER", "contractStatus": status,
+                "deliveryDate": 1766736000000}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_coinm(timeout_seconds=5)
+        assert [sd["id"] for sd in symbols] == ["btcusd_251226"]
+        assert "end_date" not in symbols[0]
 
     def test_contract_size_populated_from_api_field(self):
         from atlas.exchange_definitions.binance import fetch_binance_futures_coinm
@@ -1124,6 +1299,22 @@ class TestFetchHyperliquidPerps:
             return self._response(metas[json.get("dex")])
 
         return post
+
+    def test_delisted_perps_are_marked_with_an_end_date(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        metas = {
+            None: {"universe": [{"name": "BTC"}, {"name": "LUNA", "isDelisted": True}]},
+            "flx": {"universe": [{"name": "flx:XMR", "isDelisted": True}]},
+        }
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=self._mock_info(metas)):
+            symbols = {sd["id"]: sd for sd in fetch_hyperliquid_perps(timeout_seconds=5)}
+
+        assert "end_date" not in symbols["BTC"]
+        for sid in ("LUNA", "flx:XMR"):
+            end = datetime.fromisoformat(symbols[sid]["end_date"].replace("Z", "+00:00"))
+            assert end.tzinfo is not None
+            assert "isDelisted" not in symbols[sid]
 
     def test_contract_size_is_one_unit_of_underlying(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps

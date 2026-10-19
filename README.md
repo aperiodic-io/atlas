@@ -36,9 +36,9 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - lookup by `(exchange, original_id)` -> `internal_id`
   - active-symbol filtering by date window
 - Refreshes snapshot data from:
-  - exchange APIs (where supported)
+  - exchange APIs (default; Binance, Bybit, Hyperliquid, OKX)
   - Tardis
-  - hybrid mode (exchange API first, Tardis fallback)
+  - hybrid mode (exchange API overlaid on Tardis)
 
 ## Symbology
 
@@ -106,18 +106,56 @@ print(len(active))
 ### Update local snapshots
 
 ```bash
-# Hybrid mode (default): Binance/OKX direct API + Tardis fallback
+# Exchange API only (default, used by the daily workflow)
+python3 -m atlas.update --source exchange
+
+# Hybrid mode: exchange APIs overlaid on Tardis
 python3 -m atlas.update --source hybrid
 
 # Tardis only
 python3 -m atlas.update --source tardis
 
-# Exchange API only (supported exchanges only)
-python3 -m atlas.update --source exchange
-
 # Restrict to selected exchanges
 python3 -m atlas.update --exchanges binance-spot,okx-spot
 ```
+
+#### Listing and delisting dates
+
+In exchange mode each fetch is treated as the exchange's whole current
+universe, so `first_capture` and `end_date` come from the exchanges:
+
+- `first_capture` is the exchange listing time where one is published
+  (Binance futures `onboardDate`, Bybit derivatives `launchTime`, OKX
+  `listTime`), otherwise the time a run first saw the instrument. A value
+  already on file is never overwritten.
+- `end_date` is set from an explicit exchange signal when there is one: Binance
+  futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`, or the run time if
+  that has not passed yet), Bybit derivatives `Closed` (at `deliveryTime`), and
+  Hyperliquid `isDelisted` (at first sighting, as Hyperliquid publishes no time).
+  Hyperliquid also keeps no candle or funding history for delisted HIP-3 perps,
+  so HIP-3 perps already delisted when this tracking started end on the first
+  run that saw the flag.
+- An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
+  OKX, Hyperliquid spot) is marked `missing_since` on the first run that misses
+  it. If a run at least 12 hours later still misses it, `end_date` is set to that
+  first miss; if it comes back first, the mark is dropped. Expired dated futures
+  end at delivery straight away.
+- Halted, suspended and pre-market instruments (Binance spot `HALT`, Binance
+  futures pending/delivering statuses, OKX `suspend`, Bybit
+  `PreLaunch`/`Delivering`) stay listed.
+- A run that returns nothing for an exchange fails it and leaves its file
+  untouched. A run that would newly drop more than 10% of an exchange's open
+  instruments (and more than 5) looks like a broken API response: it still
+  updates the instruments it returned, but marks nothing missing and fails the
+  exchange. If the instruments really were delisted, rerun with
+  `--accept-missing <exchange>` (or the `accept_missing` input when dispatching
+  the daily workflow by hand).
+- `missing_since` is only maintained in exchange mode; `hybrid` and `tardis`
+  runs cannot see delistings, so they clear it. `SecurityMaster` ignores it, so
+  a row stays tradable until its `end_date` is set.
+- An existing `end_date` is never overwritten, a relisted instrument has its
+  `end_date` cleared, and delisted instruments that were never on file are not
+  added.
 
 ## Supported Exchanges
 
@@ -241,7 +279,7 @@ configuration and review process.
   - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
   - Option contracts may parse for some exchanges (for example, Deribit), but they are not included in the precomputed `internal_id` map.
 - Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- `--source exchange` only works for exchanges that have direct API fetchers implemented (currently Binance/OKX variants).
+- `--source exchange` only works for exchanges that have direct API fetchers implemented (Binance, Bybit, Hyperliquid and OKX variants).
 - The bundled data is limited to the snapshot files present in `atlas/data`; all other exchange coverage depends on running updates with an available upstream source.
 
 ## Project Layout
