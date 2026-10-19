@@ -42,7 +42,8 @@ class TestHelpers:
     def test_beta_exchange_classification(self):
         assert is_beta_exchange("binance-spot") is False
         assert is_beta_exchange("okx-spot") is False
-        assert is_beta_exchange("coinbase") is True
+        assert is_beta_exchange("coinbase") is False
+        assert is_beta_exchange("kraken") is True
 
     @pytest.mark.parametrize(
         "exchange",
@@ -1854,3 +1855,119 @@ class TestVariational:
     def test_is_not_beta(self):
         """A beta exchange would be skipped by the daily update."""
         assert is_beta_exchange("variational-perps") is False
+
+
+# ---------------------------------------------------------------------------
+# Venue-reported base/quote assets take precedence over ticker splitting
+# ---------------------------------------------------------------------------
+
+
+class TestVenueReportedAssets:
+    @pytest.mark.parametrize(
+        ("exchange", "sid", "base", "quote", "expected"),
+        [
+            # A quote list can only guess: ARBIDR is ARB/IDR, not AR/BIDR.
+            ("binance-spot", "arbidr", "ARB", "IDR", "spot-ARB-IDR"),
+            # USDTUSD would split as USD/TUSD, BNBUSD as BN/BUSD.
+            ("binance-spot", "usdtusd", "USDT", "USD", "spot-USDT-USD"),
+            ("binance-spot", "bnbusd", "BNB", "USD", "spot-BNB-USD"),
+            ("bybit-spot", "BTCRLUSD", "BTC", "RLUSD", "spot-BTC-RLUSD"),
+            ("bybit-spot", "USDTAED", "USDT", "AED", "spot-USDT-AED"),
+        ],
+    )
+    def test_spot_prefers_venue_assets(self, exchange, sid, base, quote, expected):
+        c = parse_contract(exchange, _sd(sid, "spot", base_coin=base, quote_coin=quote))
+        assert c.internal_id == expected
+
+    def test_binance_futures_prefers_venue_assets(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("1000pepeusdc", "perpetual", base_coin="1000PEPE", quote_coin="USDC", margin_asset="USDC"),
+        )
+        assert c.internal_id == "perpetual-1000PEPE-USDC:USDC"
+
+    def test_binance_dated_future_keeps_delivery_date_with_venue_assets(self):
+        c = parse_contract(
+            "binance-futures",
+            _sd("btcusdt_261225", "future", base_coin="BTC", quote_coin="USDT", margin_asset="USDT"),
+        )
+        assert c.internal_id == "future-BTC-USDT:USDT-20261225"
+
+    @pytest.mark.parametrize(
+        ("sid", "expected"),
+        [
+            ("ETHTHB", "spot-ETH-THB"),
+            ("USDTKZT", "spot-USDT-KZT"),
+            ("BTCAED", "spot-BTC-AED"),
+            ("XRPRLUSD", "spot-XRP-RLUSD"),
+            ("BTCXUSD", "spot-BTC-XUSD"),
+        ],
+    )
+    def test_newer_quotes_split_without_venue_assets(self, sid, expected):
+        assert _parse("bybit-spot", sid, "spot").internal_id == expected
+
+
+class TestVenueAssetFetchers:
+    def _response(self, payload):
+        response = MagicMock()
+        response.raise_for_status.return_value = None
+        response.json.return_value = payload
+        return response
+
+    def test_binance_spot_fetch_keeps_base_and_quote(self):
+        from atlas.exchange_definitions.binance import fetch_binance_spot
+
+        payload = {
+            "symbols": [
+                {"symbol": "ARBIDR", "status": "TRADING", "baseAsset": "ARB", "quoteAsset": "IDR"},
+                {"symbol": "OLDUSDT", "status": "BREAK", "baseAsset": "OLD", "quoteAsset": "USDT"},
+            ]
+        }
+        with patch(
+            "atlas.exchange_definitions.binance.requests.get",
+            return_value=self._response(payload),
+        ):
+            assert fetch_binance_spot(timeout_seconds=5) == [
+                {"id": "arbidr", "type": "spot", "base_coin": "ARB", "quote_coin": "IDR"}
+            ]
+
+    def test_binance_futures_fetch_keeps_base_and_quote(self):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        payload = {
+            "symbols": [
+                {
+                    "symbol": "1000PEPEUSDT",
+                    "contractType": "PERPETUAL",
+                    "baseAsset": "1000PEPE",
+                    "quoteAsset": "USDT",
+                    "marginAsset": "USDT",
+                    "underlyingType": "COIN",
+                }
+            ]
+        }
+        with patch(
+            "atlas.exchange_definitions.binance.requests.get",
+            return_value=self._response(payload),
+        ):
+            (symbol,) = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbol["base_coin"] == "1000PEPE"
+        assert symbol["quote_coin"] == "USDT"
+
+    def test_bybit_spot_fetch_keeps_base_and_quote(self):
+        from atlas.exchange_definitions.bybit import fetch_bybit_spot
+
+        payload = {
+            "result": {
+                "list": [
+                    {"symbol": "BTCRLUSD", "status": "Trading", "baseCoin": "BTC", "quoteCoin": "RLUSD"},
+                ]
+            }
+        }
+        with patch(
+            "atlas.exchange_definitions.bybit.requests.get",
+            return_value=self._response(payload),
+        ):
+            assert fetch_bybit_spot(timeout_seconds=5) == [
+                {"id": "BTCRLUSD", "type": "spot", "base_coin": "BTC", "quote_coin": "RLUSD"}
+            ]

@@ -152,7 +152,13 @@ def _to_symbol(
     item: dict, type_value: str, quantity_unit: str, *, derivative: bool = True
 ) -> dict[str, str | float]:
     if not derivative:
-        return {"id": item["symbol"], "type": type_value}
+        symbol = {
+            "id": item["symbol"],
+            "type": type_value,
+            "base_coin": item.get("baseCoin"),
+            "quote_coin": item.get("quoteCoin"),
+        }
+        return {key: value for key, value in symbol.items() if value is not None}
     symbol = {
         "id": item["symbol"],
         "type": type_value,

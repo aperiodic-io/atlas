@@ -13,6 +13,11 @@ on:
 permissions:
   contents: write
 
+# Shared with symbology-refresh: both rewrite the snapshots and push to main.
+concurrency:
+  group: symbology
+  cancel-in-progress: false
+
 jobs:
   update-security-master:
     runs-on: ubicloud-standard-2
@@ -38,17 +43,31 @@ jobs:
           ACCEPT_MISSING: ${{ inputs.accept_missing }}
         run: uv run python -m atlas.update --source exchange --accept-missing "$ACCEPT_MISSING"
 
+      # Resolve Atlas asset IDs (base/quote/margin, unified_id) for new and
+      # changed rows from CoinMarketCap's exchange market pairs. It runs even if
+      # an exchange failed to refresh; a failure here fails the job (and alerts
+      # Slack) but the commit step below still keeps the snapshot refresh.
+      - name: build-symbology
+        id: symbology
+        if: always()
+        run: |
+          uv run python -m integrations.symbology \
+            --report-path "${RUNNER_TEMP}/symbology-report.md" \
+            --summary-path "${RUNNER_TEMP}/symbology-summary.json"
+          cat "${RUNNER_TEMP}/symbology-report.md" >> "${GITHUB_STEP_SUMMARY}"
+
       - name: commit-updated-jsons
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add atlas/data/*.json
+          git add atlas/data/*.json atlas/data/symbology/*.json
           if git diff --cached --quiet; then
             echo "No JSON changes to commit"
             exit 0
           fi
           git commit -m "chore(data): daily security master update"
+          git pull --rebase
           git push
 
       - name: notify-slack-on-failure
