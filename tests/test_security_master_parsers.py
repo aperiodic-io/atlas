@@ -1,5 +1,8 @@
-import pytest
+import json
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
+
+import pytest
 from unittest.mock import MagicMock, patch
 
 
@@ -40,6 +43,30 @@ class TestHelpers:
         assert is_beta_exchange("binance-spot") is False
         assert is_beta_exchange("okx-spot") is False
         assert is_beta_exchange("coinbase") is True
+
+    @pytest.mark.parametrize(
+        "exchange",
+        [
+            "gateio-perpetual-usdt",
+            "gateio-futures-usdt",
+            "gateio-perpetual-btc",
+            "htx-perpetual-usdt",
+            "mexc-perpetual",
+            "bitget-perpetual-usdt",
+            "bitget-perpetual-usdc",
+            "bitget-perpetual-coin",
+            "bitget-futures-coin",
+            "deribit-perpetual",
+            "deribit-futures",
+            "whitebit-perpetual",
+            "cryptocom-perpetual",
+            "cryptocom-futures",
+        ],
+    )
+    def test_exchanges_with_api_fetchers_are_stable(self, exchange):
+        # The daily update skips beta exchanges, so a venue with its own
+        # fetcher must not be beta or it would never get a snapshot.
+        assert is_beta_exchange(exchange) is False
 
 
 # ---------------------------------------------------------------------------
@@ -898,6 +925,64 @@ class TestFetchOkxSwap:
         assert all("end_date" not in sd for sd in symbols)
 
 
+class TestFetchOkxUnderlying:
+    """OKX tags every instrument with `instCategory`; the ticker alone is ambiguous.
+
+    Tokenized stocks on spot carry an `X` prefix (`XAAPL-USDT`), which reads like a
+    crypto ticker, and stock perps use the bare ticker (`AAPL-USDT-SWAP`).
+    """
+
+    def _mock_get(self, data: list[dict]) -> MagicMock:
+        resp = MagicMock()
+        resp.json.return_value = {"data": data}
+        return resp
+
+    @pytest.mark.parametrize(
+        ("fetcher_name", "inst_id"),
+        [
+            ("fetch_okx_spot", "XAAPL-USDT"),
+            ("fetch_okx_swap", "AAPL-USDT-SWAP"),
+            ("fetch_okx_futures", "AAPL-USD_UM_XPERP-310613"),
+        ],
+    )
+    @pytest.mark.parametrize(
+        ("inst_category", "expected_underlying"),
+        [
+            ("1", UnderlyingType.crypto.value),
+            ("3", UnderlyingType.equity.value),
+            ("4", UnderlyingType.commodity.value),
+            ("", UnderlyingType.unknown.value),
+            ("99", UnderlyingType.unknown.value),
+        ],
+    )
+    def test_underlying_is_normalized_from_inst_category(
+        self, fetcher_name: str, inst_id: str, inst_category: str, expected_underlying: str
+    ):
+        from atlas.exchange_definitions import okx
+
+        item = {"instId": inst_id, "state": "live", "instCategory": inst_category}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = getattr(okx, fetcher_name)(timeout_seconds=5)
+        assert symbols[0]["underlying"] == expected_underlying
+
+    def test_missing_inst_category_is_explicitly_unknown(self):
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+
+        item = {"instId": "BTC-USDT-SWAP", "state": "live"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["underlying"] == UnderlyingType.unknown.value
+
+    def test_venue_category_field_is_not_mistaken_for_asset_class(self):
+        """`category` is `1` on every instrument, whatever the asset class."""
+        from atlas.exchange_definitions.okx import fetch_okx_swap
+
+        item = {"instId": "XAU-USDT-SWAP", "state": "live", "category": "1", "instCategory": "4"}
+        with patch("atlas.exchange_definitions.okx.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_okx_swap(timeout_seconds=5)
+        assert symbols[0]["underlying"] == UnderlyingType.commodity.value
+
+
 class TestFetchBybit:
     @pytest.fixture(autouse=True)
     def _fresh_derivatives_cache(self):
@@ -1055,7 +1140,11 @@ class TestFetchBybit:
             ("", UnderlyingType.crypto.value),
             ("innovation", UnderlyingType.crypto.value),
             ("stock", UnderlyingType.equity.value),
+            ("ETF", UnderlyingType.equity.value),  # SPYUSDT, QQQUSDT
             ("commodity", UnderlyingType.commodity.value),
+            ("forex", UnderlyingType.forex.value),  # EURUSDUSDT, USDJPYUSDT
+            (None, UnderlyingType.crypto.value),  # the inverse category
+            ("bond", UnderlyingType.unknown.value),  # never silently crypto
         ],
     )
     def test_derivative_underlying_is_normalized(
@@ -1141,6 +1230,33 @@ class TestFetchBinanceFuturesUsdM:
         with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
             symbols = fetch_binance_futures_usdm(timeout_seconds=5)
         assert symbols[0]["underlying"] == UnderlyingType.equity.value
+
+    @pytest.mark.parametrize(
+        ("raw", "expected"),
+        [
+            ("FX", UnderlyingType.forex.value),  # USDBRLUSDT
+            ("CN_EQUITY", UnderlyingType.equity.value),  # CXMTUSDT, UNITREEUSDT
+            ("INDEX", UnderlyingType.index.value),  # BTCDOMUSDT
+            ("PREMARKET", UnderlyingType.pre_market.value),  # OPENAIUSDT (pre-IPO)
+        ],
+    )
+    def test_every_live_underlying_type_is_mapped(self, raw, expected):
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("USDBRLUSDT") | {"contractType": "TRADIFI_PERPETUAL", "underlyingType": raw}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            symbols = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbols[0]["underlying"] == expected
+
+    def test_tradfi_perpetuals_are_perpetuals(self):
+        # The fetcher must not rely on update.py renaming them back.
+        from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
+
+        item = self._item("XAUUSDT") | {"contractType": "TRADIFI_PERPETUAL", "underlyingType": "COMMODITY"}
+        with patch("atlas.exchange_definitions.binance.requests.get", return_value=self._mock_get([item])):
+            (symbol,) = fetch_binance_futures_usdm(timeout_seconds=5)
+        assert symbol["type"] == "perpetual"
+        assert parse_contract("binance-futures", symbol).internal_id == "perpetual-XAU-USDT:USDT"
 
     def test_unknown_underlying_type_is_explicit(self):
         from atlas.exchange_definitions.binance import fetch_binance_futures_usdm
@@ -1286,8 +1402,10 @@ class TestFetchHyperliquidPerps:
         self,
         metas: dict[str | None, dict],
         tokens: list[dict] | None = None,
+        categories: list[list[str]] | None = None,
     ):
-        """Route `/info` requests by body: `meta` per dex, `perpDexs`, `spotMeta`."""
+        """Route `/info` requests by body: `meta` per dex, `perpDexs`, `spotMeta`,
+        `perpCategories`."""
         dexes = [None] + [{"name": dex} for dex in metas if dex is not None]
 
         def post(url, json, timeout):
@@ -1295,6 +1413,8 @@ class TestFetchHyperliquidPerps:
                 return self._response(dexes)
             if json["type"] == "spotMeta":
                 return self._response({"tokens": tokens or [], "universe": []})
+            if json["type"] == "perpCategories":
+                return self._response(categories or [])
             assert json["type"] == "meta"
             return self._response(metas[json.get("dex")])
 
@@ -1355,6 +1475,49 @@ class TestFetchHyperliquidPerps:
         assert all(sd["type"] == "perpetual" for sd in symbols)
         assert all(sd["contract_size"] == 1.0 for sd in symbols)
 
+    def test_underlying_comes_from_the_venues_perp_categories(self):
+        from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
+
+        # Captured from `{"type": "perpCategories"}` on 2026-10-14.
+        categories = [
+            ["xyz:TSLA", "stocks"],
+            ["para:AAOI", "stock"],
+            ["xyz:SP500", "indices"],
+            ["xyz:GOLD", "commodities"],
+            ["xyz:JPY", "fx"],
+            ["km:EUR", "FX"],
+            ["io:OAI", "preipo"],
+            ["para:10Y", "rates"],
+            ["para:BTCD", "crypto"],
+            ["xyz:NEW", "bonds"],
+        ]
+        names = [name for name, _ in categories]
+        metas = {
+            None: {"universe": [{"name": "BTC"}, {"name": "kPEPE"}]},
+            "xyz": {"universe": [{"name": n} for n in names] + [{"name": "xyz:NIFTY", "isDelisted": True}, {"name": "xyz:MYSTERY", "isDelisted": True}]},
+        }
+        post = self._mock_info(metas, categories=categories)
+        with patch("atlas.exchange_definitions.hyperliquid.requests.post", side_effect=post):
+            symbols = fetch_hyperliquid_perps(timeout_seconds=5)
+
+        assert {sd["id"]: sd["underlying"] for sd in symbols} == {
+            "BTC": "crypto",  # the main dex lists crypto only
+            "kPEPE": "crypto",
+            "xyz:TSLA": "equity",
+            "para:AAOI": "equity",
+            "xyz:SP500": "index",
+            "xyz:GOLD": "commodity",
+            "xyz:JPY": "forex",
+            "km:EUR": "forex",
+            "io:OAI": "pre_market",
+            "para:10Y": "index",  # a treasury yield is a benchmark level
+            "para:BTCD": "crypto",
+            "xyz:NEW": "unknown",  # a label Atlas has not mapped yet
+            # Uncategorised (delisted before the venue categorised assets):
+            "xyz:NIFTY": "index",  # from the curated table
+            "xyz:MYSTERY": "unknown",
+        }
+
     def test_fetched_hip3_perps_parse_to_collateral_denominated_ids(self):
         from atlas.exchange_definitions.hyperliquid import fetch_hyperliquid_perps
 
@@ -1385,10 +1548,305 @@ class TestFetchHyperliquidPerps:
                 valid,
                 self._response([None]),
                 self._response({"tokens": [], "universe": []}),
+                self._response([]),
             ],
         ) as post:
             assert fetch_hyperliquid_perps(timeout_seconds=5) == [
-                {"id": "BTC", "type": "perpetual", "contract_size": 1.0}
+                {"id": "BTC", "type": "perpetual", "contract_size": 1.0, "underlying": "crypto"}
             ]
 
-        assert post.call_count == 4
+        assert post.call_count == 5
+
+
+# ---------------------------------------------------------------------------
+# Oracle-priced RWA perp venue: Avantis
+#
+# The fixture is an excerpt of the venue's live response (2026-10-14). Its
+# internal_ids must equal the live-producers Atlas-scheme IDs
+# (streaming/feeds/avantis), which is what joins live records to stored
+# partitions; the venue is an RWA venue, so getting each pair's underlying class
+# right (forex vs equity vs index vs commodity) matters as much as the ID.
+# ---------------------------------------------------------------------------
+
+_FIXTURES = Path(__file__).parent / "fixtures"
+
+
+def _fixture(name: str):
+    return json.loads((_FIXTURES / name).read_text(encoding="utf-8"))
+
+
+def _mock_json(payload) -> MagicMock:
+    resp = MagicMock()
+    resp.raise_for_status.return_value = None
+    resp.json.return_value = payload
+    return resp
+
+
+def _by_id(symbols: list[dict]) -> dict[str, dict]:
+    return {sd["id"]: sd for sd in symbols}
+
+
+class TestFetchAvantisPerps:
+    def _fetch(self):
+        from atlas.exchange_definitions.avantis import fetch_avantis_perps
+
+        with patch(
+            "atlas.exchange_definitions.avantis.requests.get",
+            return_value=_mock_json(_fixture("avantis_trading.json")),
+        ):
+            return fetch_avantis_perps(timeout_seconds=5)
+
+    def test_listed_pairs_only_in_index_order(self):
+        # 22 (SHIB) and 35 ("DELISTED") are delisted; 32 has no name at all.
+        ids = [sd["id"] for sd in self._fetch()]
+        assert ids == ["0", "11", "12", "21", "78", "96", "114", "115", "188"]
+
+    @pytest.mark.parametrize(
+        ("index", "internal_id", "underlying"),
+        [
+            ("0", "perpetual-ETH-USDC:USDC", "crypto"),
+            ("11", "perpetual-EUR-USDC:USDC", "forex"),
+            ("12", "perpetual-USDJPY-USDC:USDC", "forex"),
+            # Metals and energy are commodities.
+            ("21", "perpetual-XAU-USDC:USDC", "commodity"),
+            ("96", "perpetual-WTI-USDC:USDC", "commodity"),
+            # US500 is priced off SPY, which the venue classifies as equity.
+            ("78", "perpetual-US500-USDC:USDC", "equity"),
+            # Whitespace inside a name would break the ID.
+            ("114", "perpetual-SKHYNIX-USDC:USDC", "equity"),
+            # Upside perps are separate markets sharing ETH's price feed.
+            ("115", "perpetual-ETH_UPSIDE-USDC:USDC", "crypto"),
+            # KRX equities are quoted in KRW.
+            ("188", "perpetual-005930KRW-USDC:USDC", "equity"),
+        ],
+    )
+    def test_internal_id_and_underlying(self, index, internal_id, underlying):
+        sd = _by_id(self._fetch())[index]
+        c = parse_contract("avantis-perpetual", sd)
+        assert c.internal_id == internal_id
+        assert c.original_id == index
+        assert c.contract_size == 1.0
+        assert sd["underlying"] == underlying
+
+    @pytest.mark.parametrize(
+        ("asset_type", "group", "expected"),
+        [
+            ("", "CRYPTO3", UnderlyingType.crypto),
+            (None, "FOREX", UnderlyingType.forex),
+            ("", "COMMODITIES", UnderlyingType.commodity),
+            ("", "EQUITIES", UnderlyingType.equity),
+            ("", "SOMETHING", UnderlyingType.unknown),
+            ("metal", "CRYPTO1", UnderlyingType.commodity),
+        ],
+    )
+    def test_underlying_falls_back_to_the_group(self, asset_type, group, expected):
+        from atlas.exchange_definitions.avantis import avantis_underlying
+
+        assert avantis_underlying(asset_type, group) == expected
+
+
+class TestRwaVenueRegistry:
+    @pytest.mark.parametrize("exchange", ["avantis-perpetual"])
+    def test_refreshed_daily_from_the_exchange_api(self, exchange):
+        # Tardis does not cover this venue: the update must not skip them as
+        # beta, and they need an exchange-API fetcher.
+        from atlas.exchanges import get_allowed_types, get_exchange_fetcher
+        from atlas.update import EXCHANGES
+
+        assert is_beta_exchange(exchange) is False
+        assert get_exchange_fetcher(exchange) is not None
+        assert get_allowed_types(exchange) == {"perpetual"}
+        assert exchange in EXCHANGES
+
+
+# ---------------------------------------------------------------------------
+# Variational
+# ---------------------------------------------------------------------------
+
+# Listings recorded from GET /metadata/stats on 2026-10-14 (fields the fetcher reads):
+# crypto, commodity, equity, an ETF, pre-IPO, a ticker with "_", and a total-return swap.
+_VARIATIONAL_LISTINGS = [
+    {
+        "ticker": "US500",
+        "name": "State Street SPDR S&P 500 ETF Trust",
+        "funding_rate": "0.133513",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:50.037618856Z",
+            "size_1k": {
+                "bid": "769.589",
+                "ask": "769.881"
+            }
+        }
+    },
+    {
+        "ticker": "OPN_OPINION",
+        "name": "Opinion",
+        "funding_rate": "0.109500",
+        "funding_interval_s": 14400,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:10.710474653Z",
+            "size_1k": {
+                "bid": "0.06188",
+                "ask": "0.06206"
+            }
+        }
+    },
+    {
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "funding_rate": "0",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:43.047094944Z",
+            "size_1k": {
+                "bid": "367.012",
+                "ask": "367.16"
+            }
+        }
+    },
+    {
+        "ticker": "BTC",
+        "name": "Bitcoin",
+        "funding_rate": "-0.001381",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:22:43.050754667Z",
+            "size_1k": {
+                "bid": "81646.74",
+                "ask": "81656.55"
+            }
+        }
+    },
+    {
+        "ticker": "XAU",
+        "name": "Gold",
+        "funding_rate": "0.233568",
+        "funding_interval_s": 14400,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:00.787192880Z",
+            "size_1k": {
+                "bid": "4104.64",
+                "ask": "4105.91"
+            }
+        }
+    },
+    {
+        "ticker": "OPENAI",
+        "name": "OpenAI",
+        "funding_rate": "0.05475",
+        "funding_interval_s": 28800,
+        "quotes": {
+            "updated_at": "2026-10-14T21:23:14.200743546Z",
+            "size_1k": {
+                "bid": "1595.95",
+                "ask": "1597.25"
+            }
+        }
+    },
+    {
+        "ticker": "XAUS",
+        "name": "Swap on Gold Spot",
+        "funding_rate": "0",
+        "funding_interval_s": 0
+    }
+]
+
+
+class TestVariational:
+    @staticmethod
+    def _get(payload: object) -> MagicMock:
+        resp = MagicMock()
+        resp.raise_for_status.return_value = None
+        resp.json.return_value = payload
+        return resp
+
+    def _fetch(self, listings: list[dict]) -> list[dict]:
+        from atlas.exchange_definitions.variational import fetch_variational_perps
+
+        with patch(
+            "atlas.exchange_definitions.variational.requests.get",
+            return_value=self._get({"listings": listings}),
+        ):
+            return fetch_variational_perps(timeout_seconds=5)
+
+    def test_every_perpetual_settles_in_usdc_under_its_ticker(self):
+        """The internal_id must equal the producer's Atlas-scheme ID,
+        perpetual-<ticker>-USDC:USDC (live-producers streaming/feeds/variational)."""
+        rows = {sd["id"]: sd for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+        assert set(rows) == {"US500", "TSLA", "BTC", "XAU", "OPENAI", "OPN_OPINION"}
+        for ticker, sd in rows.items():
+            c = parse_contract("variational-perpetual", sd)
+            assert c.internal_id == f"perpetual-{ticker}-USDC:USDC"
+            assert c.contract_size == 1.0
+            assert c.instrument_type == ContractType.perpetual
+
+    def test_total_return_swaps_are_not_perpetuals(self):
+        """XAUS ("Swap on Gold Spot") has no funding interval and no quotes."""
+        assert "XAUS" not in {sd["id"] for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+
+    def test_underlying_from_documented_rules(self):
+        rows = {sd["id"]: sd["underlying"] for sd in self._fetch(_VARIATIONAL_LISTINGS)}
+        assert rows == {
+            "BTC": "crypto",
+            "OPN_OPINION": "crypto",
+            "XAU": "commodity",
+            "TSLA": "equity",
+            "US500": "equity",
+            "OPENAI": "pre_market",
+        }
+
+    @pytest.mark.parametrize(
+        ("ticker", "name", "funding", "want"),
+        [
+            # Corporate and fund suffixes of real listings.
+            ("NOK", "Nokia Oyj", "0", UnderlyingType.equity),
+            ("NVO", "Novo Nordisk A/S", "0", UnderlyingType.equity),
+            ("BRKB", "Berkshire Hathaway Inc.", "0", UnderlyingType.equity),
+            ("JPM", "JPMorgan Chase & Co.", "0", UnderlyingType.equity),
+            ("ARM", "Arm Holdings plc American Depositary Shares", "0", UnderlyingType.equity),
+            ("QQQ", "Invesco QQQ Trust, Series 1", "0.25", UnderlyingType.equity),
+            ("CRWV", "CoreWeave, Inc. Class A Common Stock", "0", UnderlyingType.equity),
+            ("NBIS", "Nebius Group N.V.", "0", UnderlyingType.equity),
+            ("UVXY", "ProShares - Ultra VIX Short-Term Futures ETF", "0", UnderlyingType.equity),
+            # Tokens whose names contain look-alike words stay crypto.
+            ("TWT", "Trust Wallet", "0.1095", UnderlyingType.crypto),
+            ("TRUST", "Intuition", "0.1095", UnderlyingType.crypto),
+            ("GIGGLE", "Giggle Fund", "0.1095", UnderlyingType.crypto),
+            ("F", "SynFutures", "0.1095", UnderlyingType.crypto),
+            ("ONG", "Ontology Gas", "0.1095", UnderlyingType.crypto),
+            ("AGLD", "Adventure Gold", "0.09", UnderlyingType.crypto),
+            # Tokenized gold is a crypto token, as on Binance (PAXG, XAUT are COIN there).
+            ("PAXG", "PAX Gold", "0.1095", UnderlyingType.crypto),
+            ("XAUT", "Tether Gold", "0.1095", UnderlyingType.crypto),
+            # Documented commodities, named without a suffix.
+            ("NATGAS", "Natural Gas", "-0.18", UnderlyingType.commodity),
+            ("COPPER", "Copper", "0", UnderlyingType.commodity),
+            # A pre-IPO listing not in the table is still recognised by its fixed funding.
+            ("NEWCO", "NewCo", "0.05475", UnderlyingType.pre_market),
+            ("ANTHROPIC", "Anthropic", "0.1", UnderlyingType.pre_market),
+        ],
+    )
+    def test_classify_underlying(self, ticker, name, funding, want):
+        from atlas.exchange_definitions.variational import classify_underlying
+
+        assert classify_underlying(ticker, name, funding) == want.value
+
+    def test_duplicate_ticker_is_kept_once(self):
+        btc = next(x for x in _VARIATIONAL_LISTINGS if x["ticker"] == "BTC")
+        assert [sd["id"] for sd in self._fetch([btc, btc])] == ["BTC"]
+
+    def test_retries_a_malformed_response(self):
+        from atlas.exchange_definitions.variational import fetch_variational_perps
+
+        bad = self._get({"error": "maintenance"})
+        good = self._get({"listings": _VARIATIONAL_LISTINGS})
+        with patch(
+            "atlas.exchange_definitions.variational.requests.get", side_effect=[bad, good]
+        ) as get:
+            assert len(fetch_variational_perps(timeout_seconds=5)) == 6
+        assert get.call_count == 2
+
+    def test_is_not_beta(self):
+        """A beta exchange would be skipped by the daily update."""
+        assert is_beta_exchange("variational-perpetual") is False

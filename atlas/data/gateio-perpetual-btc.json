@@ -1,0 +1,237 @@
+[
+  {
+    "id": "ADA_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-18T00:00:00.000Z",
+    "internal_id": "perpetual-ADA-USD:ADA",
+    "symbol": "ADA",
+    "denominator": "USD",
+    "margin": "ADA"
+  },
+  {
+    "id": "BCH_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-18T00:00:00.000Z",
+    "internal_id": "perpetual-BCH-USD:BCH",
+    "symbol": "BCH",
+    "denominator": "USD",
+    "margin": "BCH"
+  },
+  {
+    "id": "BNB_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-BNB-USD:BNB",
+    "symbol": "BNB",
+    "denominator": "USD",
+    "margin": "BNB"
+  },
+  {
+    "id": "BSV_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-BSV-USD:BSV",
+    "symbol": "BSV",
+    "denominator": "USD",
+    "margin": "BSV"
+  },
+  {
+    "id": "BTC_USD",
+    "type": "perpetual",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "BTC",
+    "contract_size": 1.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "internal_id": "perpetual-BTC-USD:BTC",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC"
+  },
+  {
+    "id": "BTM_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-BTM-USD:BTM",
+    "symbol": "BTM",
+    "denominator": "USD",
+    "margin": "BTM"
+  },
+  {
+    "id": "BTT_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2021-12-17T00:00:00.000Z",
+    "internal_id": "perpetual-BTT-USD:BTT",
+    "symbol": "BTT",
+    "denominator": "USD",
+    "margin": "BTT"
+  },
+  {
+    "id": "DASH_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-DASH-USD:DASH",
+    "symbol": "DASH",
+    "denominator": "USD",
+    "margin": "DASH"
+  },
+  {
+    "id": "EOS_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-EOS-USD:EOS",
+    "symbol": "EOS",
+    "denominator": "USD",
+    "margin": "EOS"
+  },
+  {
+    "id": "ETC_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-ETC-USD:ETC",
+    "symbol": "ETC",
+    "denominator": "USD",
+    "margin": "ETC"
+  },
+  {
+    "id": "ETH_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2024-04-11T00:00:00.000Z",
+    "internal_id": "perpetual-ETH-USD:ETH",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH"
+  },
+  {
+    "id": "HT_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-HT-USD:HT",
+    "symbol": "HT",
+    "denominator": "USD",
+    "margin": "HT"
+  },
+  {
+    "id": "LTC_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-18T00:00:00.000Z",
+    "internal_id": "perpetual-LTC-USD:LTC",
+    "symbol": "LTC",
+    "denominator": "USD",
+    "margin": "LTC"
+  },
+  {
+    "id": "MDA_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-10-22T00:00:00.000Z",
+    "internal_id": "perpetual-MDA-USD:MDA",
+    "symbol": "MDA",
+    "denominator": "USD",
+    "margin": "MDA"
+  },
+  {
+    "id": "NEO_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-NEO-USD:NEO",
+    "symbol": "NEO",
+    "denominator": "USD",
+    "margin": "NEO"
+  },
+  {
+    "id": "ONT_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-ONT-USD:ONT",
+    "symbol": "ONT",
+    "denominator": "USD",
+    "margin": "ONT"
+  },
+  {
+    "id": "TRX_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-TRX-USD:TRX",
+    "symbol": "TRX",
+    "denominator": "USD",
+    "margin": "TRX"
+  },
+  {
+    "id": "WAVES_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-WAVES-USD:WAVES",
+    "symbol": "WAVES",
+    "denominator": "USD",
+    "margin": "WAVES"
+  },
+  {
+    "id": "XLM_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-XLM-USD:XLM",
+    "symbol": "XLM",
+    "denominator": "USD",
+    "margin": "XLM"
+  },
+  {
+    "id": "XMR_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-XMR-USD:XMR",
+    "symbol": "XMR",
+    "denominator": "USD",
+    "margin": "XMR"
+  },
+  {
+    "id": "XRP_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-18T00:00:00.000Z",
+    "internal_id": "perpetual-XRP-USD:XRP",
+    "symbol": "XRP",
+    "denominator": "USD",
+    "margin": "XRP"
+  },
+  {
+    "id": "ZEC_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-ZEC-USD:ZEC",
+    "symbol": "ZEC",
+    "denominator": "USD",
+    "margin": "ZEC"
+  },
+  {
+    "id": "ZRX_USD",
+    "type": "perpetual",
+    "first_capture": "2020-07-01T00:00:00.000Z",
+    "end_date": "2022-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-ZRX-USD:ZRX",
+    "symbol": "ZRX",
+    "denominator": "USD",
+    "margin": "ZRX"
+  }
+]

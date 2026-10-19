@@ -1,0 +1,255 @@
+{
+ "pairInfos": {
+  "0": {
+   "from": "ETH",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 0,
+   "feed": {
+    "feedId": "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+    "attributes": {
+     "symbol": "Crypto.ETH/USD",
+     "assetType": "crypto"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 2,
+    "exponent": -8,
+    "minChannel": "real_time",
+    "state": "stable"
+   }
+  },
+  "11": {
+   "from": "EUR",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 2,
+   "feed": {
+    "feedId": "0xa995d00bb36a63cef7fd2c287dc105fc8f3d93779f062f09551b0af3e81ec30b",
+    "attributes": {
+     "symbol": "FX.EUR/USD",
+     "assetType": "fx"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 327,
+    "exponent": -5,
+    "minChannel": "real_time",
+    "state": "stable"
+   }
+  },
+  "12": {
+   "from": "USD",
+   "to": "JPY",
+   "isPairListed": true,
+   "groupIndex": 2,
+   "feed": {
+    "feedId": "0xef2c98c804ba503c6a707e38be4dfbb16683775f195b091252bf24693042fd52",
+    "attributes": {
+     "symbol": "FX.USD/JPY",
+     "assetType": "fx"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 340,
+    "exponent": -3,
+    "minChannel": "real_time",
+    "state": "stable"
+   }
+  },
+  "21": {
+   "from": "XAU",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 3,
+   "feed": {
+    "feedId": "0x765d2ba906dbc32ca17cc11f5310a89e9ee1f6420508c63861f2f8ba4ee34bb2",
+    "attributes": {
+     "symbol": "Metal.XAU/USD",
+     "assetType": "metal"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 346,
+    "exponent": -3,
+    "minChannel": "fixed_rate@200ms",
+    "state": "stable"
+   }
+  },
+  "96": {
+   "from": "WTI",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 3,
+   "feed": {
+    "feedId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "attributes": {
+     "symbol": "Commodities.CLLX6/USD",
+     "assetType": "commodity"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 3454,
+    "exponent": -5,
+    "minChannel": "fixed_rate@50ms",
+    "state": "stable"
+   }
+  },
+  "78": {
+   "from": "US500",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 6,
+   "feed": {
+    "feedId": "0x19e09bb805456ada3979a7d1cbb4b6d63babc3a0f8e8a9509f68afa5c4c11cd5",
+    "attributes": {
+     "symbol": "Equity.US.SPY/USD",
+     "assetType": "equity"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 1398,
+    "exponent": -5,
+    "minChannel": "fixed_rate@50ms",
+    "state": "stable"
+   }
+  },
+  "114": {
+   "from": "SK HYNIX",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 6,
+   "feed": {
+    "feedId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "attributes": {
+     "symbol": "Equity.US.SKHY/USD",
+     "assetType": "equity"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 3437,
+    "exponent": -5,
+    "minChannel": "fixed_rate@200ms",
+    "state": "stable"
+   }
+  },
+  "115": {
+   "from": "ETH_UPSIDE",
+   "to": "USD",
+   "isPairListed": true,
+   "groupIndex": 0,
+   "feed": {
+    "feedId": "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+    "attributes": {
+     "symbol": "Crypto.ETH/USD",
+     "assetType": "crypto"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 2,
+    "exponent": -8,
+    "minChannel": "real_time",
+    "state": "stable"
+   }
+  },
+  "188": {
+   "from": "005930",
+   "to": "KRW",
+   "isPairListed": true,
+   "groupIndex": 6,
+   "feed": {
+    "feedId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "attributes": {
+     "symbol": "Equity.KR.005930/KRW",
+     "assetType": "equity"
+    }
+   },
+   "lazerFeed": {
+    "feedId": 2179,
+    "exponent": -5,
+    "minChannel": "fixed_rate@200ms",
+    "state": "stable"
+   }
+  },
+  "22": {
+   "from": "SHIB",
+   "to": "USD",
+   "isPairListed": false,
+   "groupIndex": 4,
+   "feed": {
+    "feedId": "0xf0d57deca57b3da2fe63a493f4c25925fdfd8edf834b20f93e1f84dbd1504d4a",
+    "attributes": {
+     "symbol": "",
+     "assetType": ""
+    }
+   },
+   "lazerFeed": {
+    "feedId": 20,
+    "exponent": 0,
+    "minChannel": "",
+    "state": ""
+   }
+  },
+  "35": {
+   "from": "DELISTED",
+   "to": "USD",
+   "isPairListed": false,
+   "groupIndex": 0,
+   "feed": {
+    "feedId": "0xec7a775f46379b5e943c3526b1c8d54cd49749176b0b98e02dde68d1bd335c17",
+    "attributes": {
+     "symbol": "",
+     "assetType": ""
+    }
+   },
+   "lazerFeed": {
+    "feedId": 45,
+    "exponent": 0,
+    "minChannel": "",
+    "state": ""
+   }
+  },
+  "32": {
+   "from": "",
+   "to": "",
+   "isPairListed": false,
+   "groupIndex": 0,
+   "feed": {
+    "feedId": "0xe417fb7d1edcfe70283c608fa9f14d11ebf4d1b3ecf2e97e42a110f7fb649843",
+    "attributes": {
+     "symbol": "",
+     "assetType": ""
+    }
+   },
+   "lazerFeed": {
+    "feedId": 0,
+    "exponent": 0,
+    "minChannel": "",
+    "state": ""
+   }
+  }
+ },
+ "groupInfo": {
+  "0": {
+   "name": "CRYPTO1"
+  },
+  "1": {
+   "name": "CRYPTO2"
+  },
+  "2": {
+   "name": "FOREX"
+  },
+  "3": {
+   "name": "COMMODITIES"
+  },
+  "4": {
+   "name": "CRYPTO3"
+  },
+  "5": {
+   "name": "CRYPTO4"
+  },
+  "6": {
+   "name": "EQUITIES"
+  }
+ }
+}

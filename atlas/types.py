@@ -8,5 +8,6 @@ class UnderlyingType(str, Enum):
     commodity = "commodity"
     equity = "equity"
     index = "index"
+    forex = "forex"
     pre_market = "pre_market"
     unknown = "unknown"

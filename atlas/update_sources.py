@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from enum import StrEnum
 from typing import Any, ClassVar, Protocol
 
-from atlas.exchanges import get_exchange_fetcher
+from atlas.exchanges import get_exchange_fetcher, is_on_tardis
 from atlas.utils import _fetch_exchange
 
 
@@ -35,7 +35,17 @@ class TardisSymbolSource:
     lifecycle: ClassVar[SymbolLifecycle] = SymbolLifecycle.REPLACE
 
     def fetch_exchange(self, exchange: str) -> dict[str, Any]:
-        return _fetch_exchange(exchange)
+        # Fail loudly rather than refresh a venue Tardis does not list from an
+        # empty (or, under a shared name such as "mexc", the wrong) listing.
+        if not is_on_tardis(exchange):
+            raise ValueError(f"Tardis does not list {exchange}")
+        data = _fetch_exchange(exchange)
+        # Tardis answers an exchange it does not cover with an error object; a
+        # Tardis refresh replaces the snapshot wholesale, so that must fail the
+        # exchange rather than empty it.
+        if not isinstance(data.get("availableSymbols"), list):
+            raise ValueError(f"Tardis has no symbol list for {exchange}: {data.get('message', data)}")
+        return data
 
 
 @dataclass(frozen=True)
@@ -71,6 +81,8 @@ class HybridSymbolSource:
         fetcher = get_exchange_fetcher(exchange)
         if fetcher is None:
             return self.tardis_source.fetch_exchange(exchange)
+        if not is_on_tardis(exchange):
+            return self.exchange_source.fetch_exchange(exchange)
 
         # When an API fetcher exists, we merge results:
         # 1. Start with Tardis data to get all historical/delisted symbols and metadata

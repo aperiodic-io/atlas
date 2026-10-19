@@ -1,0 +1,235 @@
+{
+ "data": {
+  "contractConfig": {
+   "perpetualContract": [
+    {
+     "crossSymbolName": "BTCUSDT",
+     "symbol": "BTC-USDT",
+     "baseTokenId": "BTC",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "UNKNOWN_CONTRACT_TYPE",
+     "category": "L1",
+     "tag": "HOT"
+    },
+    {
+     "crossSymbolName": "ETHUSDT",
+     "symbol": "ETH-USDT",
+     "baseTokenId": "ETH",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "UNKNOWN_CONTRACT_TYPE",
+     "category": "L1",
+     "tag": "HOT"
+    },
+    {
+     "crossSymbolName": "TONUSDT",
+     "symbol": "TON-USDT",
+     "baseTokenId": "TON",
+     "settleAssetId": "USDT",
+     "enableTrade": false,
+     "enableDisplay": false,
+     "enableOpenPosition": false,
+     "contractType": "UNKNOWN_CONTRACT_TYPE",
+     "category": "L1",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "DOGEUSDT",
+     "symbol": "DOGE-USDT",
+     "baseTokenId": "DOGE",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "UNKNOWN_CONTRACT_TYPE",
+     "category": "L1,MEME",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "IOUSDT",
+     "symbol": "IO-USDT",
+     "baseTokenId": "IO",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": false,
+     "enableOpenPosition": false,
+     "contractType": "UNKNOWN_CONTRACT_TYPE",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "PAXGUSDT",
+     "symbol": "PAXG-USDT",
+     "baseTokenId": "PAXG",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "PERPETUAL_CONTRACT",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "STBLUSDT",
+     "symbol": "STBL-USDT",
+     "baseTokenId": "STBL",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": false,
+     "enableOpenPosition": true,
+     "contractType": "PERPETUAL_CONTRACT",
+     "category": "DEFI",
+     "tag": ""
+    }
+   ],
+   "stockContract": [
+    {
+     "crossSymbolName": "IWMUSDT",
+     "symbol": "IWM-USDT",
+     "baseTokenId": "IWM",
+     "settleAssetId": "USDT",
+     "enableTrade": false,
+     "enableDisplay": false,
+     "enableOpenPosition": false,
+     "contractType": "STOCK_CONTRACT",
+     "category": "INDEX",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "XAUUSDT",
+     "symbol": "XAU-USDT",
+     "baseTokenId": "XAU",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "COMMODITY",
+     "tag": "NEW"
+    },
+    {
+     "crossSymbolName": "SPYUSDT",
+     "symbol": "SPY-USDT",
+     "baseTokenId": "SPY",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "INDEX",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "QQQUSDT",
+     "symbol": "QQQ-USDT",
+     "baseTokenId": "QQQ",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "INDEX",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "AAPLUSDT",
+     "symbol": "AAPL-USDT",
+     "baseTokenId": "AAPL",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "STOCK",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "TSLAUSDT",
+     "symbol": "TSLA-USDT",
+     "baseTokenId": "TSLA",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "STOCK",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "AAPLTESTUSDT",
+     "symbol": "AAPLTEST-USDT",
+     "baseTokenId": "AAPLTEST",
+     "settleAssetId": "USDT",
+     "enableTrade": false,
+     "enableDisplay": false,
+     "enableOpenPosition": false,
+     "contractType": "STOCK_CONTRACT",
+     "tag": ""
+    },
+    {
+     "crossSymbolName": "NATGASUSDT",
+     "symbol": "NATGAS-USDT",
+     "baseTokenId": "NATGAS",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "category": "COMMODITY",
+     "tag": "7*24"
+    },
+    {
+     "crossSymbolName": "SOXLUSDT",
+     "symbol": "SOXL-USDT",
+     "baseTokenId": "SOXL",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": true,
+     "enableOpenPosition": true,
+     "contractType": "STOCK_CONTRACT",
+     "tag": "7x24h"
+    },
+    {
+     "crossSymbolName": "KORUUSDT",
+     "symbol": "KORU-USDT",
+     "baseTokenId": "KORU",
+     "settleAssetId": "USDT",
+     "enableTrade": false,
+     "enableDisplay": false,
+     "enableOpenPosition": false,
+     "contractType": "STOCK_CONTRACT",
+     "tag": "7x24h"
+    }
+   ],
+   "predictionContract": [
+    {
+     "crossSymbolName": "Knicks_Win_Against_Celtics_Dec2USDT",
+     "symbol": "Knicks_Win_Against_Celtics_Dec2-USDT",
+     "baseTokenId": "Knicks_Win_Against_Celtics_Dec2",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": false,
+     "enableOpenPosition": true,
+     "contractType": "PREDICTION_CONTRACT",
+     "category": "NBA",
+     "tag": "NEW"
+    },
+    {
+     "crossSymbolName": "Thunder_Win_Against_Warriors_Dec2USDT",
+     "symbol": "Thunder_Win_Against_Warriors_Dec2-USDT",
+     "baseTokenId": "Thunder_Win_Against_Warriors_Dec2",
+     "settleAssetId": "USDT",
+     "enableTrade": true,
+     "enableDisplay": false,
+     "enableOpenPosition": true,
+     "contractType": "PREDICTION_CONTRACT",
+     "category": "NBA",
+     "tag": "NEW"
+    }
+   ]
+  }
+ }
+}

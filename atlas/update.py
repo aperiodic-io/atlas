@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.common import parse_utc_timestamp, utc_timestamp
-from atlas.exchanges import get_allowed_types, get_symbol_filter
+from atlas.exchanges import get_allowed_types, get_symbol_filter, is_on_tardis
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
@@ -43,6 +43,8 @@ CONFIRM_MISSING_AFTER = timedelta(hours=12)
 LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
 
 EXCHANGES = [
+    "aster-perpetual",
+    "apex-perpetual",
     "binance-futures",
     "binance-futures-cm",
     "binance-spot",
@@ -63,6 +65,7 @@ EXCHANGES = [
     "gate-io-futures",
     "gate-io",
     "gemini",
+    "grvt-perpetual",
     "huobi-dm-linear-swap",
     "huobi-dm-swap",
     "huobi-dm",
@@ -71,13 +74,33 @@ EXCHANGES = [
     "hyperliquid-perps",
     "kraken",
     "kucoin",
+    "lighter-perpetual",
     "okx-perps",
     "okx-futures",
     "okx-spot",
+    "extended-perpetual",
     "phemex",
     "poloniex",
     "upbit",
+    "pacifica-perpetual",
+    "gateio-perpetual-usdt",
+    "gateio-futures-usdt",
+    "gateio-perpetual-btc",
+    "htx-perpetual-usdt",
+    "mexc-perpetual",
+    "bitget-perpetual-usdt",
+    "bitget-perpetual-usdc",
+    "bitget-perpetual-coin",
+    "bitget-futures-coin",
+    "deribit-perpetual",
+    "deribit-futures",
+    "whitebit-perpetual",
+    "cryptocom-perpetual",
+    "cryptocom-futures",
+    "avantis-perpetual",
+    "variational-perpetual",
 ]
+
 
 
 def _append_contract_size_change(sd: dict, new_size: float, effective_from: str) -> dict:
@@ -408,18 +431,14 @@ def _clear_pending_misses(symbols: list[dict]) -> list[dict]:
     return [{k: v for k, v in sd.items() if k != "missing_since"} for sd in symbols]
 
 
-def _replaces_lifecycle_on_file(exchange: str, sd: dict, is_tardis_data: bool) -> bool:
+def _replaces_lifecycle_on_file(sd: dict, is_tardis_data: bool) -> bool:
     """Whether a row's Tardis availability bounds replace the lifecycle on file.
 
-    Hyperliquid hybrid metadata is partial: only rows that actually supplied
-    Tardis bounds replace them. API-only rows must retain their captured
-    instance and approved CMC mapping.
+    Hybrid metadata is partial: only rows that actually supplied Tardis bounds
+    replace them. API-only rows must retain their captured instance and
+    approved CMC mapping.
     """
-    if not is_tardis_data:
-        return False
-    if exchange in {"hyperliquid-perps", "hyperliquid-spot"}:
-        return bool(sd.get("first_capture"))
-    return True
+    return is_tardis_data and bool(sd.get("first_capture"))
 
 
 def _infers_missing(
@@ -470,7 +489,7 @@ def _build_exchange_rows(
         incoming_symbols,
         existing_by_id,
         ignore_metadata=partial(
-            _replaces_lifecycle_on_file, exchange, is_tardis_data=is_tardis_data
+            _replaces_lifecycle_on_file, is_tardis_data=is_tardis_data
         ),
     )
     # Only a complete source can say an existing row is still listed.
@@ -531,6 +550,9 @@ def update(
         if is_beta_exchange(exchange):
             print(f"Skipping {exchange} (beta exchange)", flush=True)
             continue
+        if isinstance(source, TardisSymbolSource) and not is_on_tardis(exchange):
+            print(f"Skipping {exchange} (not on Tardis)", flush=True)
+            continue
         print(f"Fetching {exchange}...", flush=True)
         now = datetime.now(UTC)
         try:
@@ -577,8 +599,8 @@ def parse_args(argv: list[str] | None = None):
 
     parser = argparse.ArgumentParser(
         description=(
-            "Update securities master from exchange APIs (Binance, Bybit, "
-            "Hyperliquid, OKX), detecting delistings from the live listings"
+            "Update securities master from exchange APIs, detecting delistings "
+            "from the live listings"
         )
     )
     parser.add_argument(
