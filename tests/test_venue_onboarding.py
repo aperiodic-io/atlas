@@ -1,8 +1,9 @@
 """Bitget, Gate and Coinbase spot are stable venues with API fetchers and snapshots.
 
-Bitget and Gate spot follow the live-producers naming (`bitget-spot`,
-`gateio-spot`), like their contracts (`bitget-perps-*`, `gateio-*`); their
-Tardis-named exchanges (`bitget`, `gate-io`) stay beta parsers.
+They follow the live-producers naming (`bitget-spot`, `gateio-spot`,
+`coinbase-spot`), like Bitget's and Gate's contracts (`bitget-perps-*`,
+`gateio-*`); their Tardis-named exchanges (`bitget`, `gate-io`, `coinbase`) stay
+beta parsers.
 """
 
 from __future__ import annotations
@@ -19,8 +20,8 @@ from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import parse_contract
 from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
 
-NEW_STABLE_EXCHANGES = ["bitget-spot", "gateio-spot", "coinbase"]
-TARDIS_IDS = {"bitget-spot": "bitget", "gateio-spot": "gate-io", "coinbase": "coinbase"}
+NEW_STABLE_EXCHANGES = ["bitget-spot", "gateio-spot", "coinbase-spot"]
+TARDIS_IDS = {"bitget-spot": "bitget", "gateio-spot": "gate-io", "coinbase-spot": "coinbase"}
 
 
 # ---------------------------------------------------------------------------
@@ -41,7 +42,7 @@ class TestRegistry:
     def test_tardis_ids(self, exchange: str):
         assert to_tardis_exchange_id(exchange) == TARDIS_IDS[exchange]
 
-    @pytest.mark.parametrize("exchange", ["bitget", "gate-io"])
+    @pytest.mark.parametrize("exchange", ["bitget", "gate-io", "coinbase"])
     def test_tardis_named_spot_exchanges_stay_beta_parsers(self, exchange: str):
         assert is_beta_exchange(exchange) is True
         assert get_exchange_fetcher(exchange) is None
@@ -52,7 +53,7 @@ class TestRegistry:
         [
             ("bitget-spot", {"spot"}),
             ("gateio-spot", {"spot"}),
-            ("coinbase", {"spot"}),
+            ("coinbase-spot", {"spot"}),
         ],
     )
     def test_allowed_types(self, exchange: str, allowed: set[str]):
@@ -135,7 +136,7 @@ def test_snapshot_internal_ids_match_the_parser(exchange: str):
     [
         ("bitget-spot", "BTCUSDT", "spot-BTC-USDT"),
         ("gateio-spot", "BTC_USDT", "spot-BTC-USDT"),
-        ("coinbase", "BTC-USD", "spot-BTC-USD"),
+        ("coinbase-spot", "BTC-USD", "spot-BTC-USD"),
     ],
 )
 def test_security_master_resolves_new_venues(exchange: str, original_id: str, internal_id: str):

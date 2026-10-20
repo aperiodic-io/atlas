@@ -29129,7 +29129,12 @@
     "denominator": "USDC",
     "first_capture": "2022-06-14T00:00:00.000Z",
     "end_date": "2022-09-30T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 3330,
+    "category": [],
+    "base_asset_id": "USDP",
+    "base_asset_match": "override",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-USDP-USDC"
   },
   {
     "id": "USDP-USDT",
@@ -29139,7 +29144,12 @@
     "denominator": "USDT",
     "first_capture": "2022-04-20T00:00:00.000Z",
     "end_date": "2022-09-30T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 3330,
+    "category": [],
+    "base_asset_id": "USDP",
+    "base_asset_match": "override",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-USDP-USDT"
   },
   {
     "id": "USDS-USD",

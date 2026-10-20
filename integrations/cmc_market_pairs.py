@@ -90,7 +90,7 @@ CMC_VENUES: dict[str, CmcVenue] = {
             "hyperliquid",
             {"spot": ("hyperliquid-spot",), "perpetual": ("hyperliquid-perps",)},
         ),
-        CmcVenue("coinbase-exchange", {"spot": ("coinbase",)}),
+        CmcVenue("coinbase-exchange", {"spot": ("coinbase-spot",)}),
         CmcVenue(
             "bitget",
             {

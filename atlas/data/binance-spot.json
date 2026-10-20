@@ -9586,8 +9586,8 @@
     "end_date": "2022-09-30T00:00:00.000Z",
     "base_asset_id": "BNB",
     "base_asset_match": "snapshot_cmc_id",
-    "quote_asset_id": "USDP.USDP",
-    "unified_id": "spot-BNB-USDP.USDP"
+    "quote_asset_id": "USDP",
+    "unified_id": "spot-BNB-USDP"
   },
   {
     "id": "bnbusdt",
@@ -10904,8 +10904,8 @@
     "cmc_id": 1,
     "base_asset_id": "BTC",
     "base_asset_match": "venue_lineage",
-    "quote_asset_id": "USDP.USDP",
-    "unified_id": "spot-BTC-USDP.USDP"
+    "quote_asset_id": "USDP",
+    "unified_id": "spot-BTC-USDP"
   },
   {
     "id": "btcusds",
@@ -19046,8 +19046,8 @@
     "cmc_id": 1027,
     "base_asset_id": "ETH",
     "base_asset_match": "venue_lineage",
-    "quote_asset_id": "USDP.USDP",
-    "unified_id": "spot-ETH-USDP.USDP"
+    "quote_asset_id": "USDP",
+    "unified_id": "spot-ETH-USDP"
   },
   {
     "id": "ethusds",
@@ -51220,7 +51220,11 @@
     "symbol": "USDP",
     "denominator": "BUSD",
     "first_capture": "2021-09-10T00:00:00.000Z",
-    "end_date": "2022-09-27T00:00:00.000Z"
+    "end_date": "2022-09-27T00:00:00.000Z",
+    "cmc_id": 3330,
+    "category": [],
+    "base_asset_id": "USDP",
+    "base_asset_match": "override"
   },
   {
     "id": "usdpusdt",
@@ -51230,7 +51234,12 @@
     "denominator": "USDT",
     "first_capture": "2021-09-10T00:00:00.000Z",
     "end_date": "2026-09-25T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 3330,
+    "category": [],
+    "base_asset_id": "USDP",
+    "base_asset_match": "override",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-USDP-USDT"
   },
   {
     "id": "usdsusdt",

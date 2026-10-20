@@ -117,7 +117,7 @@ def test_every_symbology_exchange_has_a_family():
     assert set(SYMBOLOGY_EXCHANGES) == set(VENUE_FAMILIES)
     assert {
         "binance-spot", "bybit-perps", "okx-futures", "hyperliquid-perps",
-        "bitget-spot", "bitget-perps-usdt", "gateio-spot", "gateio-perps-usdt", "gateio-futures-usdt", "coinbase",
+        "bitget-spot", "bitget-perps-usdt", "gateio-spot", "gateio-perps-usdt", "gateio-futures-usdt", "coinbase-spot",
     } <= set(SYMBOLOGY_EXCHANGES)
 
 
@@ -151,7 +151,7 @@ def test_the_same_asset_gets_the_same_id_on_every_exchange():
     rows = {
         "binance-spot": [_row("btcusdt", "BTC", "USDT")],
         "okx-spot": [_row("BTC-USDT", "BTC", "USDT")],
-        "coinbase": [_row("BTC-USD", "BTC", "USD")],
+        "coinbase-spot": [_row("BTC-USD", "BTC", "USD")],
         "hyperliquid-spot": [_row("UBTC/USDC", "UBTC", "USDC")],
     }
     pairs = [
@@ -162,7 +162,7 @@ def test_the_same_asset_gets_the_same_id_on_every_exchange():
     ]
     _, registry = _build(rows, pairs)
     assert {rows[e][0]["base_asset_id"] for e in rows} == {"BTC"}
-    assert _by_id(rows, "coinbase", "BTC-USD")["quote_asset_id"] == "USD"
+    assert _by_id(rows, "coinbase-spot", "BTC-USD")["quote_asset_id"] == "USD"
     assert registry.get("USD").asset_class is AssetClass.fiat
     # A venue ticker that differs from the asset's is recorded as an alias.
     assert "UBTC" not in registry.get("BTC").aliases or True
@@ -746,7 +746,7 @@ def test_cross_venue_consensus_takes_a_supermajority_of_venues():
         "binance-spot": [_row("dogeusdt", "DOGE", "USDT")],
         "okx-spot": [_row("DOGE-USDT", "DOGE", "USDT")],
         "bybit-spot": [_row("DOGEUSDT", "DOGE", "USDT")],
-        "coinbase": [_row("DOGE-USD", "DOGE", "USD")],
+        "coinbase-spot": [_row("DOGE-USD", "DOGE", "USD")],
         # One venue's CMC listing names an unrelated DOGE token.
         "hyperliquid-spot": [_row("DOGE/USDC", "DOGE", "USDC")],
         "gateio-spot": [_row("DOGE_TRY", "DOGE", "TRY")],
@@ -1202,3 +1202,121 @@ def test_subset_runs_resolve_against_every_snapshot_but_write_only_their_own(tmp
     ])
     assert json.loads((data_dir / "gateio-spot.json").read_text())[0]["base_asset_id"] == "ETH"
     assert (data_dir / "okx-spot.json").read_text() == okx_before
+
+
+_USDP_DETAILS = {
+    **DETAILS,
+    3330: _detail(3330, "USDP", "Pax Dollar", "paxos-standard", rank=200),
+    8886: _detail(8886, "USDP", "USDP Stablecoin", "usdp", date_added="2021-03-01"),
+}
+
+
+def _usdp_rows():
+    return {
+        # CMC identifies Gate's USDP as the DeFi stablecoin...
+        "gateio-spot": [_row("USDP_USDT", "USDP", "USDT", first="2023-06-19")],
+        # ...but on Binance USDP is Paxos's renamed PAX.
+        "binance-spot": [
+            _row("btcusdp", "BTC", "USDP", first="2021-09-10", end="2022-09-30"),
+            _row("usdpusdt", "USDP", "USDT", first="2021-09-10", end="2026-09-25"),
+            _row("btcusdt", "BTC", "USDT"),
+        ],
+    }
+
+
+_USDP_PAIRS = [
+    _pair("gate", "spot", 8886, "USDP", 825, "USDT", url="https://x/trade/USDP_USDT"),
+    _pair("binance", "spot", 1, "BTC", 825, "USDT", url="https://x/trade/BTC_USDT"),
+]
+
+
+def _cmc_id(registry, asset_id):
+    return registry.get(asset_id).cmc_id
+
+
+def test_a_ticker_borrows_its_meaning_from_other_venues_without_a_venue_ticker():
+    rows = _usdp_rows()
+    _, registry = _build(rows, _USDP_PAIRS, details=_USDP_DETAILS)
+    assert _cmc_id(registry, _by_id(rows, "binance-spot", "btcusdp")["quote_asset_id"]) == 8886
+
+
+def test_venue_tickers_pin_a_tickers_meaning_on_one_venue():
+    from integrations.symbology import VenueTicker
+
+    pins = (VenueTicker("binance", "USDP", 3330, "Paxos renamed PAX"),)
+    rows = _usdp_rows()
+    _, registry = _build(rows, _USDP_PAIRS, details=_USDP_DETAILS, venue_tickers=pins)
+    btcusdp = _by_id(rows, "binance-spot", "btcusdp")
+    assert _cmc_id(registry, btcusdp["quote_asset_id"]) == 3330
+    usdpusdt = _by_id(rows, "binance-spot", "usdpusdt")
+    assert _cmc_id(registry, usdpusdt["base_asset_id"]) == 3330
+    assert usdpusdt["base_asset_match"] == "override"
+    assert usdpusdt["cmc_id"] == 3330
+    # Other venues keep what CMC says their USDP is.
+    assert _cmc_id(registry, _by_id(rows, "gateio-spot", "USDP_USDT")["base_asset_id"]) == 8886
+
+    # The pin outranks the wrong quote the rows already carry, offline too.
+    before = json.dumps(rows, sort_keys=True)
+    _build(rows, registry=registry, details=_USDP_DETAILS, venue_tickers=pins)
+    assert json.dumps(rows, sort_keys=True) == before
+
+
+def test_venue_tickers_correct_rows_that_already_carry_the_other_asset():
+    from integrations.symbology import VenueTicker
+
+    rows = _usdp_rows()
+    _, registry = _build(rows, _USDP_PAIRS, details=_USDP_DETAILS)
+    pins = (VenueTicker("binance", "USDP", 3330, "Paxos renamed PAX"),)
+    _build(rows, registry=registry, details=_USDP_DETAILS, venue_tickers=pins)
+    assert _cmc_id(registry, _by_id(rows, "binance-spot", "btcusdp")["quote_asset_id"]) == 3330
+    assert _cmc_id(registry, _by_id(rows, "binance-spot", "usdpusdt")["base_asset_id"]) == 3330
+
+
+def test_a_row_override_outranks_a_venue_ticker():
+    from integrations.symbology import VenueTicker
+
+    pins = (VenueTicker("binance", "USDP", 3330, "Paxos renamed PAX"),)
+    overrides = {("binance-spot", "usdpusdt"): Override("binance-spot", "usdpusdt", 8886, "test")}
+    rows = _usdp_rows()
+    _, registry = _build(rows, _USDP_PAIRS, details=_USDP_DETAILS, venue_tickers=pins, overrides=overrides)
+    assert _cmc_id(registry, _by_id(rows, "binance-spot", "usdpusdt")["base_asset_id"]) == 8886
+
+
+def test_load_venue_tickers(tmp_path):
+    from integrations.symbology import load_venue_tickers
+
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({
+        "schema_version": 1,
+        "overrides": [],
+        "venue_tickers": [{"family": "binance", "ticker": "usdp", "cmc_id": 3330, "reason": "x"}],
+    }))
+    (pin,) = load_venue_tickers(path)
+    assert (pin.family, pin.ticker, pin.cmc_id) == ("binance", "USDP", 3330)
+    assert load_venue_tickers(tmp_path / "missing.json") == ()
+
+
+@pytest.mark.parametrize(
+    "entry",
+    [
+        {"family": "nope", "ticker": "USDP", "cmc_id": 3330, "reason": "x"},
+        {"family": "binance", "ticker": "USDP", "reason": "x"},
+    ],
+)
+def test_load_venue_tickers_rejects_bad_entries(tmp_path, entry):
+    from integrations.symbology import load_venue_tickers
+
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"schema_version": 1, "overrides": [], "venue_tickers": [entry]}))
+    with pytest.raises(ValueError):
+        load_venue_tickers(path)
+
+
+def test_load_venue_tickers_rejects_duplicates(tmp_path):
+    from integrations.symbology import load_venue_tickers
+
+    entry = {"family": "binance", "ticker": "USDP", "cmc_id": 3330, "reason": "x"}
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"schema_version": 1, "overrides": [], "venue_tickers": [entry, entry]}))
+    with pytest.raises(ValueError):
+        load_venue_tickers(path)

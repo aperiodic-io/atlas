@@ -107,6 +107,7 @@ EXCHANGES = [
     "bitget-perps-usdc",
     "bitget-perps-coin",
     "bitget-spot",
+    "coinbase-spot",
     "bitget-futures-coin",
     "deribit-perps",
     "deribit-futures",

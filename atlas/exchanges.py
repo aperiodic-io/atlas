@@ -165,8 +165,8 @@ def _id_suffix_filter(suffix: str) -> Callable[[dict], bool]:
 
 # live-producers venues. Their Atlas slug is the producer's exchange id, so a
 # consumer joins a published record to its Atlas row without a mapping table.
-# `bitget-spot` and `gateio-spot` are not streamed yet; they take the slug the
-# producer's scheme gives them (`<venue>-spot`, as `okx-spot`).
+# `bitget-spot`, `gateio-spot` and `coinbase-spot` are not streamed yet; they
+# take the slug the producer's scheme gives them (`<venue>-spot`, as `okx-spot`).
 _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
     "gateio-spot": _define(
         "gateio-spot",
@@ -213,6 +213,13 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         on_tardis=False,
         exchange_fetcher=fetch_mexc_perpetual,
         allowed_types={"perpetual"},
+    ),
+    "coinbase-spot": _define(
+        "coinbase-spot",
+        parse_coinbase,
+        tardis_id="coinbase",
+        exchange_fetcher=fetch_coinbase_spot,
+        allowed_types={"spot"},
     ),
     "bitget-spot": _define(
         "bitget-spot",
@@ -351,9 +358,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_futures,
         allowed_types={"future"},
     ),
-    "coinbase": _define(
-        "coinbase", parse_coinbase, exchange_fetcher=fetch_coinbase_spot, allowed_types={"spot"}
-    ),
+    "coinbase": _define("coinbase", parse_coinbase),
     "crypto-com": _define("crypto-com", parse_crypto_com),
     "cryptofacilities": _define("cryptofacilities", parse_cryptofacilities),
     "deribit": _define("deribit", parse_deribit),

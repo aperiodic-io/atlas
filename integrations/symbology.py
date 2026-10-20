@@ -106,7 +106,7 @@ VENUE_FAMILIES: dict[str, str] = {
     "gateio-perps-usdt": "gate",
     "gateio-perps-btc": "gate",
     "gateio-futures-usdt": "gate",
-    "coinbase": "coinbase",
+    "coinbase-spot": "coinbase",
 }
 SYMBOLOGY_EXCHANGES: tuple[str, ...] = tuple(VENUE_FAMILIES)
 
@@ -280,6 +280,21 @@ class TickerEra:
 
 
 @dataclass(frozen=True)
+class VenueTicker:
+    """What a ticker means on one venue family, as base, quote and margin.
+
+    For tickers two assets share where CMC's evidence from other venues points
+    at the wrong one: Binance listed Paxos's renamed PAX as ``USDP``, while
+    Gate's ``USDP`` is an unrelated stablecoin. A row override still wins.
+    """
+
+    family: str
+    ticker: str
+    cmc_id: int
+    reason: str
+
+
+@dataclass(frozen=True)
 class BaseResolution:
     cmc_id: int
     method: Match
@@ -436,6 +451,36 @@ def load_ticker_eras(path: Path) -> tuple[TickerEra, ...]:
     return tuple(sorted(eras, key=lambda era: (era.ticker, era.until)))
 
 
+def load_venue_tickers(path: Path) -> tuple[VenueTicker, ...]:
+    if not path.exists():
+        return ()
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict) or payload.get("schema_version") != OVERRIDES_SCHEMA_VERSION:
+        raise ValueError("unsupported symbology overrides schema")
+    families = set(VENUE_FAMILIES.values())
+    pins: dict[tuple[str, str], VenueTicker] = {}
+    for row in payload.get("venue_tickers", []):
+        try:
+            pin = VenueTicker(
+                family=str(row["family"]),
+                ticker=str(row["ticker"]).upper(),
+                cmc_id=int(row["cmc_id"]),
+                reason=str(row["reason"]),
+            )
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError(f"malformed venue ticker {row!r}: {error}") from error
+        if pin.family not in families:
+            raise ValueError(f"venue ticker for unknown venue family {pin.family!r}")
+        if (pin.family, pin.ticker) in pins:
+            raise ValueError(f"duplicate venue ticker for {(pin.family, pin.ticker)}")
+        pins[(pin.family, pin.ticker)] = pin
+    return tuple(pins.values())
+
+
+def _pinned_tickers(venue_tickers: Iterable[VenueTicker]) -> dict[tuple[str, str], int]:
+    return {(pin.family, pin.ticker): pin.cmc_id for pin in venue_tickers}
+
+
 def ledger_decisions(store: MappingStore | None) -> dict[tuple[str, str, datetime], tuple[int, bool]]:
     """Approved ledger IDs keyed by instrument instance; flag manual approvals."""
     if store is None:
@@ -466,7 +511,9 @@ def resolve_base_assets(
     report: SymbologyReport,
     ticker_eras: Iterable[TickerEra] = (),
     rejected_pairs: frozenset[tuple[str, str, int]] = frozenset(),
+    venue_tickers: Iterable[VenueTicker] = (),
 ) -> dict[tuple[str, str], BaseResolution]:
+    pinned = _pinned_tickers(venue_tickers)
     eras_by_ticker: dict[str, list[TickerEra]] = defaultdict(list)
     for era in ticker_eras:
         eras_by_ticker[era.ticker].append(era)
@@ -477,6 +524,9 @@ def resolve_base_assets(
     for instrument in instruments:
         eras = [era for era in eras_by_ticker.get(instrument.symbol, ()) if era.applies_to(instrument)]
         override = overrides.get(instrument.key)
+        if override is None and (pin := pinned.get((instrument.family, instrument.symbol))) is not None:
+            resolutions[instrument.key] = BaseResolution(pin, Match.override)
+            continue
         if override is None and (closed := next((e for e in eras if e.contains(instrument)), None)):
             resolutions[instrument.key] = BaseResolution(closed.cmc_id, Match.override)
             continue
@@ -918,6 +968,8 @@ def _cmc_id_at(resolution: BaseResolution, instrument: Instrument) -> int:
 
 @dataclass
 class TickerTables:
+    # Curated meanings (``venue_tickers``) outrank every vote.
+    pinned: dict[tuple[str, str], int] = field(default_factory=dict)
     family_quotes: dict[tuple[str, str], Counter] = field(default_factory=lambda: defaultdict(Counter))
     global_quotes: dict[str, Counter] = field(default_factory=lambda: defaultdict(Counter))
     family_bases: dict[tuple[str, str], Counter] = field(default_factory=lambda: defaultdict(Counter))
@@ -929,6 +981,8 @@ class TickerTables:
     def resolve(self, family: str, ticker: str | None) -> int | None:
         if not ticker:
             return None
+        if (pinned := self.pinned.get((family, ticker))) is not None:
+            return pinned
         for votes in (
             self.family_quotes.get((family, ticker)),
             self.family_bases.get((family, ticker)),
@@ -953,6 +1007,7 @@ def build_ticker_tables(
     pair_matches: Mapping[tuple[str, str], MarketPair],
     resolutions: Mapping[tuple[str, str], BaseResolution],
     registry: AssetRegistry | None = None,
+    venue_tickers: Iterable[VenueTicker] = (),
 ) -> TickerTables:
     """Learn what each quote ticker means, per venue and across venues.
 
@@ -960,7 +1015,7 @@ def build_ticker_tables(
     without CMC reproduces the last one, from the quote assets rows already
     carry. A venue's identified base assets cover tickers CMC never quotes.
     """
-    tables = TickerTables()
+    tables = TickerTables(pinned=_pinned_tickers(venue_tickers))
     for instrument in instruments:
         quote_cmc_id = _quote_evidence(instrument, pair_matches.get(instrument.key), registry)
         if quote_cmc_id is not None and instrument.denominator:
@@ -1179,6 +1234,7 @@ def build_symbology(
     now: datetime | None = None,
     ticker_eras: Iterable[TickerEra] = (),
     asset_prices: Mapping[int, float] | None = None,
+    venue_tickers: Iterable[VenueTicker] = (),
 ) -> SymbologyReport:
     """Resolve, mint and write symbology fields onto ``rows_by_exchange`` in place."""
     report = SymbologyReport(generated_at=now or datetime.now(UTC))
@@ -1203,8 +1259,9 @@ def build_symbology(
         report,
         ticker_eras,
         rejected_pairs,
+        venue_tickers,
     )
-    tables = build_ticker_tables(instruments, pair_matches, resolutions, registry)
+    tables = build_ticker_tables(instruments, pair_matches, resolutions, registry, venue_tickers)
 
     legs: dict[tuple[str, str], tuple[int | None, int | None, int | None]] = {}
     usage: Counter = Counter()
@@ -1748,6 +1805,7 @@ def run(
     registry = AssetRegistry.load(registry_path)
     overrides = load_overrides(overrides_path)
     ticker_eras = load_ticker_eras(overrides_path)
+    venue_tickers = load_venue_tickers(overrides_path)
     ledger_path = data_dir / DEFAULT_LEDGER_FILENAME
     ledger = ledger_decisions(MappingStore.load(ledger_path) if ledger_path.exists() else None)
     details: dict[int, CmcAssetDetail] = (
@@ -1780,7 +1838,7 @@ def run(
 
         if not offline:
             wanted = _referenced_cmc_ids(
-                rows_by_exchange, pair_result, ledger, overrides, ticker_eras
+                rows_by_exchange, pair_result, ledger, overrides, ticker_eras, venue_tickers
             )
             if not refresh_details:
                 wanted = {
@@ -1807,6 +1865,7 @@ def run(
         details=details,
         ticker_eras=ticker_eras,
         asset_prices=asset_prices,
+        venue_tickers=venue_tickers,
     )
     if not dry_run:
         registry.save()
@@ -1836,6 +1895,7 @@ def _referenced_cmc_ids(
     ledger: Mapping[tuple[str, str, datetime], tuple[int, bool]],
     overrides: Mapping[tuple[str, str], Override],
     ticker_eras: Iterable[TickerEra] = (),
+    venue_tickers: Iterable[VenueTicker] = (),
 ) -> set[int]:
     ids: set[int] = set()
     for rows in rows_by_exchange.values():
@@ -1854,6 +1914,7 @@ def _referenced_cmc_ids(
             ids.add(override.cmc_id)
         ids.update(segment.cmc_id for segment in override.history)
     ids.update(era.cmc_id for era in ticker_eras)
+    ids.update(pin.cmc_id for pin in venue_tickers)
     return ids
 
 

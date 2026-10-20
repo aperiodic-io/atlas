@@ -26,6 +26,7 @@ from integrations.symbology import (
     load_overrides,
     load_snapshots,
     load_ticker_eras,
+    load_venue_tickers,
 )
 
 # Share of *active* rows whose base asset must be identified, per snapshot, set
@@ -53,7 +54,7 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "gateio-spot": 0.72,
     "gateio-perps-usdt": 0.95,
     "gateio-futures-usdt": 0.95,
-    "coinbase": 0.97,
+    "coinbase-spot": 0.97,
 }
 
 
@@ -183,8 +184,8 @@ def test_quote_coverage(snapshots):
         ("okx-spot", "BTC-USDT", "BTC", "USDT", None, "spot-BTC-USDT"),
         ("okx-perps", "BTC-USDT-SWAP", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("hyperliquid-perps", "BTC", "BTC", "USDC", "USDC", "perpetual-BTC-USDC:USDC"),
-        ("coinbase", "BTC-USD", "BTC", "USD", None, "spot-BTC-USD"),
-        ("coinbase", "ETH-EUR", "ETH", "EUR", None, "spot-ETH-EUR"),
+        ("coinbase-spot", "BTC-USD", "BTC", "USD", None, "spot-BTC-USD"),
+        ("coinbase-spot", "ETH-EUR", "ETH", "EUR", None, "spot-ETH-EUR"),
         ("bitget-spot", "BTCUSDT", "BTC", "USDT", None, "spot-BTC-USDT"),
         ("bitget-perps-usdt", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("bitget-perps-coin", "BTCUSD_CM", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
@@ -308,6 +309,7 @@ def test_offline_rebuild_is_a_fixpoint(snapshots, registry):
         ledger=ledger_decisions(MappingStore.load(ledger_path)),
         overrides=load_overrides(DEFAULT_OVERRIDES_PATH),
         ticker_eras=load_ticker_eras(DEFAULT_OVERRIDES_PATH),
+        venue_tickers=load_venue_tickers(DEFAULT_OVERRIDES_PATH),
     )
     assert report.minted == []
     changed = [

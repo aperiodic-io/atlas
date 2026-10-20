@@ -236,7 +236,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `aster-perps` | ✅ **`STABLE`** |
 | `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
-| `coinbase` | ✅ **`STABLE`** |
+| `coinbase` | **`UNSTABLE (BETA)`** |
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
@@ -269,6 +269,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `htx-perps-usdt` | ✅ **`STABLE`** |
 | `mexc-perps` | ✅ **`STABLE`** |
 | `bitget-spot` | ✅ **`STABLE`** |
+| `coinbase-spot` | ✅ **`STABLE`** |
 | `bitget-perps-usdt` | ✅ **`STABLE`** |
 | `bitget-perps-usdc` | ✅ **`STABLE`** |
 | `bitget-perps-coin` | ✅ **`STABLE`** |
@@ -289,12 +290,12 @@ published record joins its Atlas row by `(exchange, internal_id)` without a
 mapping table. Where Tardis carries the same instruments under the same ids,
 hybrid updates merge its history through `tardis_id` (Gate's two perpetual
 families share `gate-io-futures` and are split by settlement suffix; Bitget's
-USDT and USDC perpetuals share `bitget-futures`). Bitget and Gate spot take the
-same scheme (`bitget-spot`, `gateio-spot`, as `okx-spot`) though the producers
-do not stream them yet, and merge Tardis's `bitget` and `gate-io`. The older
-Tardis-named exchanges (`gate-io-futures`, `huobi-dm-linear-swap`,
-`bitget-futures`, `bitget`, `gate-io`, `deribit`, `crypto-com`) remain beta
-parsers. Bybit keeps its existing
+USDT and USDC perpetuals share `bitget-futures`). Bitget, Gate and Coinbase spot
+take the same scheme (`bitget-spot`, `gateio-spot`, `coinbase-spot`, as
+`okx-spot`) though the producers do not stream them yet, and merge Tardis's
+`bitget`, `gate-io` and `coinbase`. The older Tardis-named exchanges
+(`gate-io-futures`, `huobi-dm-linear-swap`, `bitget-futures`, `bitget`,
+`gate-io`, `coinbase`, `deribit`, `crypto-com`) remain beta parsers. Bybit keeps its existing
 `bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
 `bybit-perps-coin` both live in `bybit-perps`).
 
@@ -341,7 +342,6 @@ The repository currently ships precomputed JSON snapshots for:
 - `bybit-perps`
 - `bybit-futures`
 - `grvt-perps` (venue API only; `first_capture` is the venue listing time)
-- `coinbase` (spot)
 - `hyperliquid-spot`
 - `hyperliquid-perps`
 - `lighter-perps`
@@ -359,6 +359,7 @@ The repository currently ships precomputed JSON snapshots for:
 - `htx-perps-usdt`
 - `mexc-perps`
 - `bitget-spot`
+- `coinbase-spot`
 - `bitget-perps-usdt`
 - `bitget-perps-usdc`
 - `bitget-perps-coin`

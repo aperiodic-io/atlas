@@ -69,8 +69,11 @@ resolve:
 | `base_asset_history` | Earlier base assets of an instrument whose ticker changed hands while it traded, as `[{"asset_id": "LUNC", "until": "2022-05-28T00:00:00Z"}]`. |
 | `cmc_id`, `category` | Kept in step with the base asset, for existing consumers. |
 
-`unified_id` ignores the multiplier: it groups economically identical contracts
-across venues. Use `(exchange, original_id)` when you need a per-venue key.
+`unified_id` is a grouping key, not a primary key. It ignores the multiplier,
+so it groups economically identical contracts across venues, and it can match
+several instruments on one venue: `PEPEUSDT` and `1000PEPEUSDT` share
+`perpetual-PEPE-USDT:USDT`, told apart by `base_multiplier`. Use
+`(exchange, original_id)` when you need a per-venue key.
 
 ## How base assets are identified
 
@@ -79,7 +82,7 @@ Each row's base asset is resolved from the strongest evidence available;
 
 | Method | Evidence |
 | --- | --- |
-| `override` | A curated decision in [`overrides.json`](../atlas/data/symbology/overrides.json), including ticker eras (below). |
+| `override` | A curated decision in [`overrides.json`](../atlas/data/symbology/overrides.json), including ticker eras and venue tickers (below). |
 | `cmc_ledger` | An approved decision in the CMC mapping ledger, `atlas/data/cmc_mappings.json` (manual approvals rank above everything but overrides). |
 | `cmc_market_pair` | CoinMarketCap's own exchange listing: for every market it tracks on a venue, CMC publishes the venue's native ticker next to the base and quote CMC IDs. Atlas finds its row for that ticker and checks that the tickers agree. |
 | `venue_majority` | CMC listed this row under another asset than the venue's other markets of the ticker, and the venue's majority decided (see below). The same label marks a legacy `cmc_id` that the venue's concurrent CMC-identified listings refuted. |
@@ -155,6 +158,21 @@ Terra 2.0), and the old asset is recorded in `base_asset_history`, so
 `SecurityMaster.base_asset(exchange, id, at=...)` answers correctly for any
 date.
 
+### Venue tickers
+
+Some tickers belong to different assets on different venues, and the evidence
+from one venue would mislead another. A *venue ticker* in `overrides.json` pins
+what a ticker means on one venue family, as base, quote and margin:
+
+```json
+{"family": "binance", "ticker": "USDP", "cmc_id": 3330, "reason": "..."}
+```
+
+Binance and OKX relisted Paxos's PAX as `USDP` (Pax Dollar) after the 2021
+rename, while Gate's `USDP` is the unrelated USDP Stablecoin (`USDP.USDP`).
+Venue tickers beat every vote and market pair, but a per-row override still
+wins.
+
 ## Quote and margin assets
 
 A quote ticker means what CMC says it means on the venue's live pairs (`USDT`
@@ -225,15 +243,16 @@ Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 `okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget-spot`,
 `bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
 `bitget-futures-coin`, `gateio-spot`, `gateio-perps-usdt`, `gateio-perps-btc`,
-`gateio-futures-usdt` and `coinbase`. Bitget's and Gate's contracts are the
-live-producers venues, and their spot takes the same scheme; the Tardis-named
-`bitget`, `bitget-futures`, `gate-io` and `gate-io-futures` have no snapshot.
+`gateio-futures-usdt` and `coinbase-spot`. Bitget's and Gate's contracts are
+the live-producers venues, and spot venues take the same scheme; the
+Tardis-named `bitget`, `bitget-futures`, `gate-io`, `gate-io-futures` and
+`coinbase` have no snapshot.
 
 ## Coverage
 
 The build of 19 October 2026 holds 2,607 assets: 1,989 crypto,
 519 equity, 25 fiat, 47 index, 26 commodity and 1 unknown. It
-identifies the base asset of 21,110 of 31,716 parsed instrument rows
+identifies the base asset of 21,114 of 31,716 parsed instrument rows
 (10,068 from CMC market pairs), and the quote asset of 31,222 of them.
 
 | Snapshot | Active rows | Active base resolved |
@@ -247,7 +266,7 @@ identifies the base asset of 21,110 of 31,716 parsed instrument rows
 | `okx-spot` | 1,184 | 92.8% |
 | `okx-perps` | 510 | 99.6% |
 | `okx-futures` | 275 | 98.2% |
-| `coinbase` | 515 | 99.2% |
+| `coinbase-spot` | 515 | 99.2% |
 | `bitget-spot` | 3,587 | 17.7% |
 | `bitget-perps-usdt` | 834 | 98.1% |
 | `bitget-perps-usdc` | 49 | 100.0% |

@@ -34,11 +34,11 @@ class TestCoinbaseParser:
         "quote", ["USD", "EUR", "GBP", "USDC", "USDT", "BTC", "ETH", "DAI", "INR", "SGD"]
     )
     def test_tardis_ids_split_on_dash(self, quote: str):
-        assert _iid("coinbase", f"SOL-{quote}", "spot") == f"spot-SOL-{quote}"
+        assert _iid("coinbase-spot", f"SOL-{quote}", "spot") == f"spot-SOL-{quote}"
 
     def test_api_fields_are_authoritative(self):
         assert (
-            _iid("coinbase", "1INCH-EUR", "spot", base_coin="1INCH", quote_coin="EUR")
+            _iid("coinbase-spot", "1INCH-EUR", "spot", base_coin="1INCH", quote_coin="EUR")
             == "spot-1INCH-EUR"
         )
 
