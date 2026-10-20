@@ -108,3 +108,74 @@ def parse_cryptocom_derivative(exchange: str, sd: SymbolData) -> Contract:
         if delivery is None:
             raise SkipSymbol(f"{exchange}: no delivery date in {sd['id']!r}")
     return make_contract(exchange, sd, match.group(1), "USD", "USD", ctype, delivery)
+
+
+# --- Exchange API (cryptocom-spot) ------------------------------------------
+#
+# Spot pairs come from the same instruments endpoint as the derivatives, as
+# `CCY_PAIR` rows whose symbols are Tardis's `crypto-com` spot ids (`BTC_USD`,
+# `1INCH_USDT`, and one venue-suffixed pair, `SHIB_BTC@OEX_HK`). Crypto.com
+# lists only `tradable` instruments and publishes no delisted status or listing
+# time: a pair that stops trading simply disappears, as with the derivatives.
+_CRYPTOCOM_INSTRUMENTS = "https://api.crypto.com/exchange/v1/public/get-instruments"
+
+
+def _cryptocom_instruments(timeout_seconds: int) -> list[dict]:
+    payload = get_json(_CRYPTOCOM_INSTRUMENTS, timeout_seconds)
+    if not isinstance(payload, dict) or payload.get("code") != 0:
+        raise ValueError(f"Crypto.com instruments: unexpected response {str(payload)[:200]!r}")
+    data = (payload.get("result") or {}).get("data")
+    if not isinstance(data, list):
+        raise ValueError("Crypto.com instruments: no `result.data` list in the response")
+    return data
+
+
+def _cryptocom_spot_classes(pairs: list[dict]) -> dict[str, UnderlyingType]:
+    """Class of each base asset as its tagged pairs give it.
+
+    A pair without `product_type` (`SHIB_BTC@OEX_HK`) takes the class the venue
+    gives the same base asset on its other pairs.
+    """
+    classes: dict[str, UnderlyingType] = {}
+    for item in pairs:
+        product_type = item.get("product_type")
+        if product_type in _CRYPTOCOM_PRODUCT_TYPES:
+            classes.setdefault(item["base_ccy"], _CRYPTOCOM_PRODUCT_TYPES[product_type])
+    return classes
+
+
+def _cryptocom_spot_underlying(item: dict, by_base: dict[str, UnderlyingType]) -> UnderlyingType:
+    product_type = item.get("product_type")
+    if product_type:
+        return _CRYPTOCOM_PRODUCT_TYPES.get(product_type, UnderlyingType.unknown)
+    return by_base.get(item["base_ccy"], UnderlyingType.unknown)
+
+
+def fetch_cryptocom_spot(timeout_seconds: int) -> list[dict]:
+    pairs = [
+        item
+        for item in _cryptocom_instruments(timeout_seconds)
+        if item.get("inst_type") == "CCY_PAIR" and item.get("tradable")
+    ]
+    by_base = _cryptocom_spot_classes(pairs)
+    return [
+        {
+            "id": item["symbol"],
+            "type": "spot",
+            "base_coin": item["base_ccy"],
+            "quote_coin": item["quote_ccy"],
+            "underlying": _cryptocom_spot_underlying(item, by_base).value,
+        }
+        for item in pairs
+    ]
+
+
+def parse_cryptocom_spot(exchange: str, sd: SymbolData) -> Contract:
+    """API legs first; Tardis-only rows are `BASE_QUOTE`, maybe `@VENUE`-suffixed."""
+    contract = parse_recorded_legs(exchange, sd)
+    if contract is not None:
+        return contract
+    parts = sd["id"].split("@", 1)[0].split("_")
+    if len(parts) != 2 or not all(parts):
+        raise SkipSymbol(f"{exchange}: expected BASE_QUOTE, got {sd['id']!r}")
+    return make_contract(exchange, sd, parts[0], parts[1], None, ContractType.spot)
