@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
 from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
@@ -18,7 +20,8 @@ from .common import (
 
 
 def parse_gate_io(exchange: str, sd: SymbolData) -> Contract:
-    return parse_underscore_spot(exchange, sd)
+    """API legs first; Tardis-only spot rows are `BASE_QUOTE`."""
+    return parse_recorded_legs(exchange, sd) or parse_underscore_spot(exchange, sd)
 
 
 def parse_gate_io_futures(exchange: str, sd: SymbolData) -> Contract:
@@ -148,3 +151,25 @@ def fetch_gateio_futures_usdt(timeout_seconds: int) -> list[dict]:
 def parse_gateio(exchange: str, sd: SymbolData) -> Contract:
     """Live-producers' Gate venues: API legs first, then the id (Tardis rows)."""
     return parse_recorded_legs(exchange, sd) or parse_gate_io_futures(exchange, sd)
+
+
+# Spot `trade_status`: tradable, or untradable (a halt; MTR_USDT, STG_USDT).
+# Delisted pairs leave the list, which the update detects as disappearance.
+# `delisting_time` (seconds) is set ahead of a scheduled delisting.
+def _gate_spot_symbol(item: dict) -> dict:
+    listed = int(item.get("buy_start") or 0)
+    delisting = int(item.get("delisting_time") or 0)
+    sd = {
+        "id": item["id"],
+        "type": "spot",
+        "base_coin": item["base"],
+        "quote_coin": item["quote"],
+        "first_capture": ms_to_utc_timestamp(listed * 1000) if listed > 0 else None,
+    }
+    if 0 < delisting * 1000 <= datetime.now(UTC).timestamp() * 1000:
+        sd["end_date"] = delisted_end_date(delisting * 1000)
+    return {k: v for k, v in sd.items() if v is not None}
+
+
+def fetch_gate_io_spot(timeout_seconds: int) -> list[dict]:
+    return [_gate_spot_symbol(item) for item in get_json(f"{_GATE_API}/spot/currency_pairs", timeout_seconds)]

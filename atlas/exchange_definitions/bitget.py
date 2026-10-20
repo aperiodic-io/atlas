@@ -6,6 +6,7 @@ from ..types import UnderlyingType
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
 from .common import (
+    KNOWN_QUOTES,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -16,9 +17,18 @@ from .common import (
     split_concat,
 )
 
+# Spot quote assets for Tardis-only rows without API legs. Bitget adds `RLUSD`
+# (tried before `USD`) and `VND`, and has never quoted in `TUSD`, which would
+# otherwise split `USDTUSD` (USDT/USD) as USD/TUSD.
+_SPOT_QUOTES = ["RLUSD", *(q for q in KNOWN_QUOTES if q != "TUSD"), "VND"]
+
 
 def parse_bitget(exchange: str, sd: SymbolData) -> Contract:
-    return parse_concat(exchange, sd)
+    """API legs first; Tardis-only spot rows are concatenated (`BTCUSDT`)."""
+    contract = parse_recorded_legs(exchange, sd)
+    if contract is not None:
+        return contract
+    return parse_concat(exchange, sd, _SPOT_QUOTES)
 
 
 def parse_bitget_futures(exchange: str, sd: SymbolData) -> Contract:
@@ -141,3 +151,27 @@ def parse_bitget_v3(exchange: str, sd: SymbolData) -> Contract:
         ctype = instrument_type(sd)
         return make_contract(exchange, sd, sid[:-4], "USDC", "USDC", ctype)
     return parse_bitget_futures(exchange, sd)
+
+
+def _bitget_spot_symbol(item: dict) -> dict:
+    sd = {
+        "id": item["symbol"],
+        "type": "spot",
+        "base_coin": item["baseCoin"],
+        "quote_coin": item["quoteCoin"],
+        "underlying": _bitget_underlying(item).value,
+        "first_capture": ms_to_utc_timestamp(item.get("launchTime")),
+    }
+    if item.get("status") == _BITGET_DELISTED:
+        sd["end_date"] = delisted_end_date(item.get("offTime"))
+    return {k: v for k, v in sd.items() if v is not None}
+
+
+def fetch_bitget_spot(timeout_seconds: int) -> list[dict]:
+    """Bitget spot, from the same v3 endpoint and statuses as the contracts."""
+    payload = get_json(_BITGET_V3_INSTRUMENTS, timeout_seconds, params={"category": "SPOT"})
+    return [
+        _bitget_spot_symbol(item)
+        for item in payload.get("data") or []
+        if item.get("status") != _BITGET_NOT_YET_LISTED
+    ]

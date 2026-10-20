@@ -402,3 +402,24 @@ def test_hybrid_refresh_of_an_uncovered_venue_uses_the_exchange_api(tmp_path, mo
     (row,) = json.loads((tmp_path / "avantis-perps.json").read_text())
     assert row["internal_id"] == "perpetual-BTC-USDC:USDC"
     assert row["underlying"] == "crypto"
+def test_merge_existing_fields_preserves_symbology_fields() -> None:
+    from atlas.update import LOCALLY_OWNED_FIELDS
+    from integrations.symbology import SYMBOLOGY_FIELDS
+
+    assert set(SYMBOLOGY_FIELDS) <= LOCALLY_OWNED_FIELDS
+    existing = {
+        "BTCUSDT": {
+            "id": "BTCUSDT",
+            "type": "spot",
+            "base_asset_id": "BTC",
+            "quote_asset_id": "USDT",
+            "unified_id": "spot-BTC-USDT",
+            "base_asset_match": "cmc_market_pair",
+            "category": ["Layer 1"],
+        }
+    }
+    incoming = [{"id": "BTCUSDT", "type": "spot", "base_asset_id": "WRONG", "category": None}]
+    merged = _merge_existing_fields(incoming, existing)
+    assert merged[0]["base_asset_id"] == "BTC"
+    assert merged[0]["unified_id"] == "spot-BTC-USDT"
+    assert merged[0]["category"] == ["Layer 1"]
