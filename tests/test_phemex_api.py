@@ -107,6 +107,8 @@ PERP_IDS = {
     "SOXLUSDT": "perpetual-SOXL-USDT:USDT",
     "NAS100USDT": "perpetual-NAS100-USDT:USDT",
     "QQQUSDT": "perpetual-QQQ-USDT:USDT",
+    "EWYUSDT": "perpetual-EWY-USDT:USDT",
+    "KORUUSDT": "perpetual-KORU-USDT:USDT",
     "XAUUSDT": "perpetual-XAU-USDT:USDT",
     "PAXGUSDT": "perpetual-PAXG-USDT:USDT",
     "XTIUSDT": "perpetual-XTI-USDT:USDT",
@@ -289,8 +291,11 @@ class TestPerpUnderlying:
             "AAOIUSDT": "equity",
             "SOXLUSDT": "equity",
             "NAS100USDT": "index",
-            # Phemex files the QQQ ETF under `Indices`.
-            "QQQUSDT": "index",
+            # Phemex files ETFs under `Indices`; its currency names say what
+            # they are, and ETFs are equity securities.
+            "QQQUSDT": "equity",
+            "EWYUSDT": "equity",
+            "KORUUSDT": "equity",
             "XAUUSDT": "commodity",
             "PAXGUSDT": "commodity",
             "XTIUSDT": "commodity",

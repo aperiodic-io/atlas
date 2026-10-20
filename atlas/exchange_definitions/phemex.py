@@ -87,6 +87,12 @@ _TRADFI_GROUPS = {
 # tokenized (`Apple xStock`, `Apple Ondo Tokenized`), and the delisted legacy
 # `GOLDUSD`, priced on a `.GOLD` index Phemex does not describe.
 _TOKENIZED_NAME = re.compile(r"xstock|tokenized", re.IGNORECASE)
+# Phemex files ETFs (QQQ, EWY, KORU, SPYX) under `Indices`; its currency names
+# say what they are ("iShares MSCI South Korea ETF", "Invesco QQQ"), and ETFs
+# are equity securities.
+_ETF_NAME = re.compile(
+    r"\bETF\b|iShares|Invesco|SPDR|Vanguard|Direxion|ProShares|KraneShares", re.IGNORECASE
+)
 
 
 def _phemex_products(timeout_seconds: int) -> dict:
@@ -107,6 +113,10 @@ def _not_yet_listed(item: dict, now: datetime) -> bool:
         return False
     listed = ms_to_datetime(item.get("listTime"))
     return listed is not None and listed > now
+
+
+def _currency_names(data: dict) -> dict[str, str]:
+    return {str(c.get("currency")): str(c.get("name") or "") for c in data.get("currencies") or []}
 
 
 def _flag_upcoming(item: dict, sd: dict, now: datetime) -> dict:
@@ -147,7 +157,7 @@ def _spot_symbol(item: dict, names: dict[str, str]) -> dict:
 
 def fetch_phemex_spot(timeout_seconds: int) -> list[dict]:
     data = _phemex_products(timeout_seconds)
-    names = {str(c.get("currency")): str(c.get("name") or "") for c in data.get("currencies") or []}
+    names = _currency_names(data)
     now = datetime.now(UTC)
     return [
         _flag_upcoming(item, _spot_symbol(item, names), now)
@@ -180,10 +190,13 @@ def _legacy_perp_symbol(item: dict) -> dict:
     })
 
 
-def _linear_underlying(item: dict) -> UnderlyingType:
+def _linear_underlying(item: dict, names: dict[str, str]) -> UnderlyingType:
     subtype = item.get("perpProductSubType")
     if subtype == "TradFi":
-        return _TRADFI_GROUPS.get(item.get("perpProductSubGroup") or "", UnderlyingType.unknown)
+        underlying = _TRADFI_GROUPS.get(item.get("perpProductSubGroup") or "", UnderlyingType.unknown)
+        if underlying == UnderlyingType.index and _ETF_NAME.search(names.get(item["baseCurrency"], "")):
+            return UnderlyingType.equity
+        return underlying
     return _SUBTYPE_CLASSES.get(subtype or "", UnderlyingType.unknown)
 
 
@@ -203,6 +216,7 @@ def _linear_perp_symbol(item: dict, underlying: UnderlyingType) -> dict:
 
 def fetch_phemex_perpetual(timeout_seconds: int) -> list[dict]:
     data = _phemex_products(timeout_seconds)
+    names = _currency_names(data)
     now = datetime.now(UTC)
     rows = [
         _flag_upcoming(item, _legacy_perp_symbol(item), now)
@@ -210,7 +224,7 @@ def fetch_phemex_perpetual(timeout_seconds: int) -> list[dict]:
         if item.get("type") == "Perpetual"
     ]
     rows += [
-        _flag_upcoming(item, _linear_perp_symbol(item, _linear_underlying(item)), now)
+        _flag_upcoming(item, _linear_perp_symbol(item, _linear_underlying(item, names)), now)
         for item in data.get("perpProductsV2") or []
     ]
     rows += [
