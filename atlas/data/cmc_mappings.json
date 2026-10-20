@@ -22215,6 +22215,102 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 6 unreadable of 8123 rows (6 duplicated, total moved by 1 mid-fetch): 0.0739%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1119",
+          "observed_at": "2026-10-20T08:45:42.378422Z",
+          "price": 1.0,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQQQQ",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "EQX Tokenized QQQ",
+            "index": 858,
+            "isCanonical": false,
+            "name": "EQQQQ",
+            "pair": "@1119",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x21ec4a5bea95b95778597ace250543a5",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-20T07:03:00.875000Z",
+        "original_id": "EQQQQ/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-20T08:45:37.831473Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQQQQ"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "tolerated 6 unreadable of 8123 rows (6 duplicated, total moved by 1 mid-fetch): 0.0739%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1120",
+          "observed_at": "2026-10-20T08:45:42.378422Z",
+          "price": 1.0,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQSPY",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "EQX Tokenized SPY",
+            "index": 859,
+            "isCanonical": false,
+            "name": "EQSPY",
+            "pair": "@1120",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x7a1d6d9667e95042d67abf9a61bb67bb",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-20T07:03:00.875000Z",
+        "original_id": "EQSPY/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-20T08:45:37.831473Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQSPY"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -29878,6 +29974,70 @@
       "slug": "",
       "status": "unmapped",
       "symbol": "OTTI"
+    },
+    {
+      "cmc_id": 42013,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 42013,
+            "date_added": "2026-09-06T05:52:24Z",
+            "identity_match": null,
+            "is_active": true,
+            "last_updated": "2026-10-20T08:42:00Z",
+            "name": "PAIR",
+            "price_issue": "Stale Hyperliquid/CMC price comparison for PAIR/USDC.",
+            "price_usd": 0.0011440221431346415,
+            "relative_price_difference": 0.9591420663166199,
+            "slug": "pair"
+          }
+        ],
+        "catalogue_issue": "tolerated 6 unreadable of 8123 rows (6 duplicated, total moved by 1 mid-fetch): 0.0739%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1118",
+          "observed_at": "2026-10-20T08:45:42.378422Z",
+          "price": 0.028,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "PAIR",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "deployerLabel": "pear",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x6b73113ac6d5455c17332098377a4b99ae553237",
+              "evm_extra_wei_decimals": 11
+            },
+            "fullName": null,
+            "index": 293,
+            "isCanonical": false,
+            "name": "PAIR",
+            "pair": "@1118",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xa29869e9df2d282afa5e2c1a6ca091ba",
+            "weiDecimals": 7
+          }
+        ],
+        "price_probe_status": "stale_price",
+        "rationale": "The candidate with cmc_id 42013 and name 'PAIR' directly matches the exchange's base asset 'PAIR/USDC' found in the hyperliquid_assets section, confirming this is the correct mapping. Price evidence disagrees by 95.91%. Holding for review because Hyperliquid price evidence is stale_price."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-20T07:03:00.875000Z",
+        "original_id": "PAIR/USDC"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-10-20T08:45:37.831473Z",
+      "slug": "pair",
+      "status": "uncertain",
+      "symbol": "PAIR"
     },
     {
       "cmc_id": null,
