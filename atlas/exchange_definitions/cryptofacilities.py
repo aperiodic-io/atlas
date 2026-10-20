@@ -10,11 +10,8 @@ from .common import (
     SkipSymbol,
     delisted_end_date,
     parse_utc_timestamp,
-    instrument_type,
     make_contract,
     parse_yymmdd,
-    resolve_margin,
-    split_concat,
     utc_timestamp,
 )
 from .fields import parse_recorded_legs
@@ -23,27 +20,9 @@ from .http import get_json
 CF_ASSET = {"XBT": "BTC"}
 
 
-def parse_cryptofacilities(exchange: str, sd: SymbolData) -> Contract:
-    sid = sd["id"]
-    parts = sid.split("_")
-    if len(parts) < 2:
-        raise SkipSymbol(f"{exchange}: expected at least 2 underscore parts in {sid!r}")
-
-    pair = split_concat(parts[1], ["USD", "EUR", "USDT"])
-    if not pair:
-        raise SkipSymbol(f"{exchange}: cannot split {parts[1]!r} in {sid!r}")
-
-    symbol, denominator = pair
-    symbol = CF_ASSET.get(symbol, symbol)
-    ctype = instrument_type(sd)
-    margin = resolve_margin(symbol, denominator, ctype)
-    delivery = parse_yymmdd(parts[2]) if len(parts) >= 3 else None
-    return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
-
-
 # --- Exchange API (kraken-perps / kraken-futures) -----------------------------
 #
-# Kraken Futures (formerly Crypto Facilities; Tardis `cryptofacilities`) names
+# Kraken Futures (formerly Crypto Facilities) names
 # contracts `<prefix>_<BASE><QUOTE>[_<yymmdd>]`. Prefixes: `PF_`/`FF_`
 # multi-collateral linear perpetuals/futures, quantities in base units, PnL
 # and settlement in USD; `PI_`/`FI_` inverse contracts worth 1 USD each,
@@ -185,7 +164,7 @@ def fetch_kraken_futures(timeout_seconds: int) -> list[dict]:
 
 
 def parse_kraken_derivative(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are parsed from the naming scheme."""
+    """API legs first; history rows are parsed from the naming scheme."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

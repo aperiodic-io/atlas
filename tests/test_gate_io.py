@@ -36,7 +36,7 @@ class TestGateParsers:
             ("XRP_RLUSD", "spot-XRP-RLUSD"),
         ],
     )
-    def test_spot_tardis_ids(self, sid: str, expected: str):
+    def test_spot_history_ids(self, sid: str, expected: str):
         assert _iid("gateio-spot", sid, "spot") == expected
 
     def test_spot_api_fields_are_authoritative(self):
@@ -72,7 +72,7 @@ class TestGateParsers:
         ],
     )
     def test_futures(self, sid: str, type: str, extra: dict, expected: str):
-        assert _iid("gate-io-futures", sid, type, **extra) == expected
+        assert _iid("gateio-perps-usdt" if type == "perpetual" else "gateio-futures-usdt", sid, type, **extra) == expected
 
 
 class TestGateSpotFetcher:

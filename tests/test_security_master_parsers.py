@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, patch
 
 
 from atlas.contracts import ContractType
-from atlas.exchange_definitions import is_beta_exchange
+from atlas.exchanges import get_exchange_fetcher
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.types import UnderlyingType
 
@@ -39,12 +39,6 @@ class TestHelpers:
         with pytest.raises(KeyError):
             parse_contract("binance-spot", {})
 
-    def test_beta_exchange_classification(self):
-        assert is_beta_exchange("binance-spot") is False
-        assert is_beta_exchange("okx-spot") is False
-        assert is_beta_exchange("coinbase") is True
-        assert is_beta_exchange("kraken") is True
-
     @pytest.mark.parametrize(
         "exchange",
         [
@@ -64,10 +58,8 @@ class TestHelpers:
             "cryptocom-futures",
         ],
     )
-    def test_exchanges_with_api_fetchers_are_stable(self, exchange):
-        # The daily update skips beta exchanges, so a venue with its own
-        # fetcher must not be beta or it would never get a snapshot.
-        assert is_beta_exchange(exchange) is False
+    def test_exchanges_have_api_fetchers(self, exchange):
+        assert get_exchange_fetcher(exchange) is not None
 
 
 # ---------------------------------------------------------------------------
@@ -144,128 +136,100 @@ class TestBinanceSpot:
 
 class TestCoinbase:
     def test_btc_usd(self):
-        c = _parse("coinbase", "BTC-USD", "spot")
+        c = _parse("coinbase-spot", "BTC-USD", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin is None
         assert c.instrument_type == ContractType.spot
 
     def test_eth_usdc(self):
-        c = _parse("coinbase", "ETH-USDC", "spot")
+        c = _parse("coinbase-spot", "ETH-USDC", "spot")
         assert c.symbol == "ETH"
         assert c.denominator == "USDC"
         assert c.margin is None
 
     def test_eth_btc(self):
-        c = _parse("coinbase", "ETH-BTC", "spot")
+        c = _parse("coinbase-spot", "ETH-BTC", "spot")
         assert c.symbol == "ETH"
         assert c.denominator == "BTC"
         assert c.margin is None
 
 
 class TestKraken:
-    def test_legacy_8char(self):
-        c = _parse("kraken", "XXBTZUSD", "spot")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin is None
-
     def test_slash_format(self):
-        c = _parse("kraken", "XBT/USD", "spot")
+        c = _parse("kraken-spot", "XBT/USD", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
-
-    def test_modern_concat(self):
-        c = _parse("kraken", "BTCUSDT", "spot")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USDT"
-
-    def test_xeth_xxbt(self):
-        c = _parse("kraken", "XETHXXBT", "spot")
-        assert c.symbol == "ETH"
-        assert c.denominator == "BTC"
-
 
 class TestUpbit:
     def test_krw_btc(self):
         # Upbit format is QUOTE-BASE
-        c = _parse("upbit", "KRW-BTC", "spot")
+        c = _parse("upbit-spot", "KRW-BTC", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "KRW"
         assert c.margin is None
 
     def test_btc_eth(self):
-        c = _parse("upbit", "BTC-ETH", "spot")
+        c = _parse("upbit-spot", "BTC-ETH", "spot")
         assert c.symbol == "ETH"
         assert c.denominator == "BTC"
 
 
 class TestBitstamp:
     def test_lowercase(self):
-        c = _parse("bitstamp", "btcusd", "spot")
+        c = _parse("bitstamp-spot", "btcusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin is None
 
-    def test_lowercase_with_underscore(self):
-        c = _parse("bitstamp", "btc_usd", "spot")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-
-
 class TestPoloniex:
     def test_new_format_base_quote(self):
-        c = _parse("poloniex", "BTC_USDT", "spot")
+        c = _parse("poloniex-spot", "BTC_USDT", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
 
     def test_old_format_quote_base(self):
         # Old Poloniex: QUOTE_BASE where base is not a known quote asset
-        c = _parse("poloniex", "USDT_LINK", "spot")
+        c = _parse("poloniex-spot", "USDT_LINK", "spot")
         assert c.symbol == "LINK"
         assert c.denominator == "USDT"
 
 
 class TestBitfinex:
-    def test_t_prefix_usd(self):
-        c = _parse("bitfinex", "tBTCUSD", "spot")
+    def test_concatenated_pair(self):
+        c = _parse("bitfinex-spot", "BTCUSD", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
 
     def test_ust_normalised_to_usdt(self):
-        c = _parse("bitfinex", "tBTCUST", "spot")
+        c = _parse("bitfinex-spot", "BTCUST", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
 
     def test_colon_separated(self):
-        c = _parse("bitfinex", "tBTC:USD", "spot")
-        assert c.symbol == "BTC"
+        c = _parse("bitfinex-spot", "AAVE:USD", "spot")
+        assert c.symbol == "AAVE"
         assert c.denominator == "USD"
 
     def test_funding_skipped(self):
         with pytest.raises(SkipSymbol):
-            _parse("bitfinex", "fBTC", "spot")
-
-    def test_no_t_prefix_skipped(self):
-        with pytest.raises(SkipSymbol):
-            _parse("bitfinex", "BTCUSD", "spot")
-
+            _parse("bitfinex-spot", "fBTC", "spot")
 
 class TestGemini:
     def test_lowercase(self):
-        c = _parse("gemini", "btcusd", "spot")
+        c = _parse("gemini-spot", "btcusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
 
     def test_gusd(self):
-        c = _parse("gemini", "btcgusd", "spot")
+        c = _parse("gemini-spot", "btcgusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "GUSD"
 
 
 class TestKucoin:
     def test_btc_usdt(self):
-        c = _parse("kucoin", "BTC-USDT", "spot")
+        c = _parse("kucoin-spot", "BTC-USDT", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.instrument_type == ContractType.spot
@@ -282,7 +246,7 @@ class TestOkxSpot:
 
 class TestGateIo:
     def test_spot(self):
-        c = _parse("gate-io", "BTC_USDT", "spot")
+        c = _parse("gateio-spot", "BTC_USDT", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin is None
@@ -371,26 +335,6 @@ class TestBinanceFuturesMarginAsset:
         )
         assert c.margin is None
         assert c.internal_id == "spot-BTC-USDT"
-
-
-class TestBitmexPerp:
-    def test_inverse_xbtusd(self):
-        c = _parse("bitmex", "XBTUSD", "perpetual")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin == "BTC"
-        assert c.instrument_type == ContractType.perpetual
-
-    def test_linear_xbtusdt(self):
-        c = _parse("bitmex", "XBTUSDT", "perpetual")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USDT"
-        assert c.margin == "USDT"
-
-    def test_ethusd(self):
-        c = _parse("bitmex", "ETHUSD", "perpetual")
-        assert c.symbol == "ETH"
-        assert c.denominator == "USD"
 
 
 class TestOkxPerps:
@@ -525,28 +469,28 @@ class TestHyperliquid:
 
 class TestBitfinexDerivatives:
     def test_btc_perpetual(self):
-        c = _parse("bitfinex-derivatives", "BTCF0:USTF0", "perpetual")
+        c = _parse("bitfinex-perps", "BTCF0:USTF0", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
         assert c.instrument_type == ContractType.perpetual
 
     def test_eth_perpetual(self):
-        c = _parse("bitfinex-derivatives", "ETHF0:USTF0", "perpetual")
+        c = _parse("bitfinex-perps", "ETHF0:USTF0", "perpetual")
         assert c.symbol == "ETH"
         assert c.denominator == "USDT"
 
 
 class TestHuobiDmSwap:
     def test_inverse(self):
-        c = _parse("huobi-dm-swap", "BTC-USD", "perpetual")
+        c = _parse("htx-perps-coin", "BTC-USD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.perpetual
 
     def test_linear(self):
-        c = _parse("huobi-dm-linear-swap", "BTC-USDT", "perpetual")
+        c = _parse("htx-perps-usdt", "BTC-USDT", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -554,14 +498,14 @@ class TestHuobiDmSwap:
 
 class TestGateIoFuturesPerp:
     def test_linear(self):
-        c = _parse("gate-io-futures", "BTC_USDT", "perpetual")
+        c = _parse("gateio-perps-usdt", "BTC_USDT", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
         assert c.instrument_type == ContractType.perpetual
 
     def test_inverse(self):
-        c = _parse("gate-io-futures", "BTC_USD", "perpetual")
+        c = _parse("gateio-perps-usdt", "BTC_USD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -601,29 +545,6 @@ class TestBinanceDelivery:
         assert c.symbol == "BTC"
         assert c.instrument_type == ContractType.perpetual
         assert c.delivery_date is None
-
-
-class TestBitmexFuture:
-    def test_cme_month_code_june(self):
-        c = _parse("bitmex", "XBTM25", "future")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin == "BTC"
-        assert c.instrument_type == ContractType.future
-        assert c.delivery_date == datetime(2025, 6, 1)
-
-    def test_cme_month_code_september(self):
-        c = _parse("bitmex", "XBTU25", "future")
-        assert c.delivery_date == datetime(2025, 9, 1)
-
-    def test_cme_month_code_march(self):
-        c = _parse("bitmex", "XBTH26", "future")
-        assert c.delivery_date == datetime(2026, 3, 1)
-
-    def test_eth_future(self):
-        c = _parse("bitmex", "ETHU25", "future")
-        assert c.symbol == "ETH"
-        assert c.delivery_date == datetime(2025, 9, 1)
 
 
 class TestOkexFutures:
@@ -728,7 +649,7 @@ class TestBybitFutures:
 
 class TestDeribit:
     def test_perpetual(self):
-        c = _parse("deribit", "BTC-PERPETUAL", "perpetual")
+        c = _parse("deribit-perps", "BTC-PERPETUAL", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -736,34 +657,22 @@ class TestDeribit:
         assert c.delivery_date is None
 
     def test_future(self):
-        c = _parse("deribit", "BTC-28MAR25", "future")
+        c = _parse("deribit-futures", "BTC-28MAR25", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.future
         assert c.delivery_date == datetime(2025, 3, 28)
 
-    def test_call_option(self):
-        c = _parse("deribit", "BTC-28MAR25-50000-C", "option")
-        assert c.symbol == "BTC"
-        assert c.instrument_type == ContractType.option
-        assert c.delivery_date == datetime(2025, 3, 28)
-
-    def test_put_option(self):
-        c = _parse("deribit", "ETH-28MAR25-2000-P", "option")
-        assert c.symbol == "ETH"
-        assert c.instrument_type == ContractType.option
-        assert c.delivery_date == datetime(2025, 3, 28)
-
     def test_eth_perpetual(self):
-        c = _parse("deribit", "ETH-PERPETUAL", "perpetual")
+        c = _parse("deribit-perps", "ETH-PERPETUAL", "perpetual")
         assert c.symbol == "ETH"
         assert c.instrument_type == ContractType.perpetual
 
 
 class TestHuobiDm:
     def test_rolling_current_week(self):
-        c = _parse("huobi-dm", "BTC_CW", "future")
+        c = _parse("htx-futures-coin", "BTC_CW", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
@@ -771,19 +680,19 @@ class TestHuobiDm:
         assert c.delivery_date is None
 
     def test_rolling_next_quarter(self):
-        c = _parse("huobi-dm", "BTC_NQ", "future")
+        c = _parse("htx-futures-coin", "BTC_NQ", "future")
         assert c.symbol == "BTC"
         assert c.delivery_date is None
 
     def test_dated(self):
-        c = _parse("huobi-dm", "BTC201225", "future")
+        c = _parse("htx-futures-coin", "BTC201225", "future")
         assert c.symbol == "BTC"
         assert c.delivery_date == datetime(2020, 12, 25)
 
 
 class TestGateIoFuturesDated:
     def test_linear(self):
-        c = _parse("gate-io-futures", "BTC_USDT_20250328", "future")
+        c = _parse("gateio-futures-usdt", "BTC_USDT_20250328", "future")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -793,58 +702,36 @@ class TestGateIoFuturesDated:
 
 class TestCryptofacilities:
     def test_perpetual_index(self):
-        c = _parse("cryptofacilities", "PI_XBTUSD", "perpetual")
+        c = _parse("kraken-perps", "PI_XBTUSD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.perpetual
 
     def test_future(self):
-        c = _parse("cryptofacilities", "FI_XBTUSD_210129", "future")
+        c = _parse("kraken-futures", "FI_XBTUSD_210129", "future")
         assert c.symbol == "BTC"
         assert c.instrument_type == ContractType.future
         assert c.delivery_date == datetime(2021, 1, 29)
 
 
-class TestFtx:
-    def test_perpetual(self):
-        c = _parse("ftx", "BTC-PERP", "perpetual")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin == "BTC"
-        assert c.instrument_type == ContractType.perpetual
-
-    def test_spot(self):
-        c = _parse("ftx", "BTC/USD", "spot")
-        assert c.symbol == "BTC"
-        assert c.denominator == "USD"
-        assert c.margin is None
-        assert c.instrument_type == ContractType.spot
-
-    def test_dated_future(self):
-        c = _parse("ftx", "BTC-0325", "future")
-        assert c.symbol == "BTC"
-        assert c.instrument_type == ContractType.future
-        assert c.delivery_date == datetime(2025, 3, 1)
-
-
 class TestPhemex:
     def test_spot_s_prefix(self):
-        c = _parse("phemex", "sBTCUSDT", "spot")
+        c = _parse("phemex-spot", "sBTCUSDT", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin is None
         assert c.instrument_type == ContractType.spot
 
     def test_inverse_perp(self):
-        c = _parse("phemex", "BTCUSD", "perpetual")
+        c = _parse("phemex-perps", "BTCUSD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.perpetual
 
     def test_linear_perp(self):
-        c = _parse("phemex", "BTCUSDT", "perpetual")
+        c = _parse("phemex-perps", "BTCUSDT", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -862,8 +749,8 @@ class TestContractFields:
         assert c.original_id == "BTCUSDT"
 
     def test_exchange_preserved(self):
-        c = _parse("coinbase", "BTC-USD", "spot")
-        assert c.exchange == "coinbase"
+        c = _parse("coinbase-spot", "BTC-USD", "spot")
+        assert c.exchange == "coinbase-spot"
 
     def test_default_contract_size(self):
         c = _parse("binance-spot", "BTCUSDT", "spot")
@@ -875,7 +762,7 @@ class TestContractFields:
         assert c.contract_size == 1.0
 
     def test_symbols_uppercased(self):
-        c = _parse("bitstamp", "btcusd", "spot")
+        c = _parse("bitstamp-spot", "btcusd", "spot")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
 
@@ -1653,12 +1540,9 @@ class TestFetchAvantisPerps:
 class TestRwaVenueRegistry:
     @pytest.mark.parametrize("exchange", ["avantis-perps"])
     def test_refreshed_daily_from_the_exchange_api(self, exchange):
-        # Tardis does not cover this venue: the update must not skip them as
-        # beta, and they need an exchange-API fetcher.
         from atlas.exchanges import get_allowed_types, get_exchange_fetcher
         from atlas.update import EXCHANGES
 
-        assert is_beta_exchange(exchange) is False
         assert get_exchange_fetcher(exchange) is not None
         assert get_allowed_types(exchange) == {"perpetual"}
         assert exchange in EXCHANGES
@@ -1852,9 +1736,8 @@ class TestVariational:
             assert len(fetch_variational_perps(timeout_seconds=5)) == 6
         assert get.call_count == 2
 
-    def test_is_not_beta(self):
-        """A beta exchange would be skipped by the daily update."""
-        assert is_beta_exchange("variational-perps") is False
+    def test_is_refreshed_from_its_api(self):
+        assert get_exchange_fetcher("variational-perps") is not None
 
 
 # ---------------------------------------------------------------------------

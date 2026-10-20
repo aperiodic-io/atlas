@@ -3,41 +3,23 @@ from __future__ import annotations
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract, resolve_margin, split_concat
+from .common import SkipSymbol, make_contract, split_concat
 from .fields import parse_recorded_legs
 from .http import get_json
-
-
-def parse_bitstamp(exchange: str, sd: SymbolData) -> Contract:
-    sid = sd["id"].upper().replace("_", "")
-    quotes = ["USD", "EUR", "BTC", "ETH", "USDT", "GBP", "PAX", "USDC", "USDP"]
-    pair = split_concat(sid, quotes)
-    if pair:
-        symbol, denominator = pair
-        ctype = instrument_type(sd)
-        return make_contract(
-            exchange,
-            sd,
-            symbol,
-            denominator,
-            resolve_margin(symbol, denominator, ctype),
-            ctype,
-        )
-    raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r}")
 
 
 # --- Exchange API (`bitstamp-spot`, `bitstamp-perps`) -----------------------
 #
 # `/api/v2/markets/` lists every market Bitstamp currently has, spot and
 # perpetual (`market_type` SPOT / PERPETUAL), with `market_symbol` equal to the
-# Tardis id (`btcusd`, `btcusd-perp`). Its `trading` status is `Enabled` or
+# id of its history rows (`btcusd`, `btcusd-perp`). Its `trading` status is `Enabled` or
 # `Disabled`; a disabled market is halted, not delisted (Bitstamp drops
 # delisted markets from the list), so both stay listed and no row gets an
 # `end_date` from the venue. Bitstamp publishes no listing time and has no
 # pre-launch state.
 _BITSTAMP_API = "https://www.bitstamp.net/api/v2"
 
-# Quote assets for Tardis-only rows, longest first so `btceurcv` is BTC/EURCV,
+# Quote assets for history rows, longest first so `btceurcv` is BTC/EURCV,
 # `eurceur` EURC/EUR and `ethrlusd` ETH/RLUSD.
 _BITSTAMP_QUOTES = [
     "EURCV",
@@ -74,7 +56,7 @@ _PERP_SUFFIX = "-perp"
 
 
 def parse_bitstamp_api(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `btcusd` or `btcusd-perp`.
+    """API legs first; history rows are `btcusd` or `btcusd-perp`.
 
     Bitstamp perpetuals are linear, USD-settled and quantity is in base units.
     """

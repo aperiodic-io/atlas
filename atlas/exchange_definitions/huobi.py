@@ -18,22 +18,11 @@ from .common import (
     ms_to_utc_timestamp,
     parse_dash,
     parse_yymmdd,
-    resolve_margin,
     split_concat,
     utc_timestamp,
 )
 
 HUOBI_DM_ROLLING = {"CW", "NW", "CQ", "NQ"}
-
-
-def parse_huobi(exchange: str, sd: SymbolData) -> Contract:
-    pair = split_concat(sd["id"].upper())
-    if pair:
-        symbol, denominator = pair
-        ctype = instrument_type(sd)
-        margin = resolve_margin(symbol, denominator, ctype)
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
-    raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r}")
 
 
 def parse_huobi_dm(exchange: str, sd: SymbolData) -> Contract:
@@ -205,7 +194,7 @@ def _htx_coin_row(item: dict, kind: str) -> dict:
 
 
 def fetch_htx_perpetual_coin(timeout_seconds: int) -> list[dict]:
-    """Coin-margined perpetual swaps (`BTC-USD`), Tardis `huobi-dm-swap`."""
+    """Coin-margined perpetual swaps (`BTC-USD`)."""
     items = _htx_contracts("/swap-api/v1/swap_contract_info", timeout_seconds)
     return [_htx_coin_row(item, "perpetual") for item in items]
 
@@ -213,8 +202,8 @@ def fetch_htx_perpetual_coin(timeout_seconds: int) -> list[dict]:
 def fetch_htx_futures_coin(timeout_seconds: int) -> list[dict]:
     """Coin-margined delivery futures, by dated code (`BTC261023`).
 
-    Tardis `huobi-dm` records these only under rolling aliases (`BTC_CW`,
-    `BTC_CQ`), which re-point at a new contract every week or quarter.
+    Not by HTX's rolling aliases (`BTC_CW`, `BTC_CQ`), which re-point at a
+    new contract every week or quarter.
     """
     items = _htx_contracts("/api/v1/contract_contract_info", timeout_seconds)
     return [_htx_coin_row(item, "future") for item in items]
@@ -252,7 +241,7 @@ def fetch_htx_futures_usdt(timeout_seconds: int) -> list[dict]:
 
 
 def parse_htx_coin_swap(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BTC-USD` (coin-margined)."""
+    """API legs first; history rows are `BTC-USD` (coin-margined)."""
     return parse_recorded_legs(exchange, sd) or parse_huobi_dm_swap(exchange, sd)
 
 
@@ -262,7 +251,7 @@ def parse_htx_coin_futures(exchange: str, sd: SymbolData) -> Contract:
 
 
 def parse_htx_usdt_futures(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BTC-USDT-261023`."""
+    """API legs first; history rows are `BTC-USDT-261023`."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract
@@ -316,7 +305,7 @@ def _htx_spot_underlying(currency_tags: str | None, opened_ms: object) -> Underl
 
 
 def fetch_htx_spot(timeout_seconds: int) -> list[dict]:
-    """HTX spot, Tardis `huobi` (lowercase ids, `btcusdt`).
+    """HTX spot (lowercase ids, `btcusdt`).
 
     The symbol list keeps delisted markets (`offline`) indefinitely. `bc` and
     `qc` are the assets' current codes: a market keeps its id when HTX renames
@@ -346,7 +335,7 @@ def fetch_htx_spot(timeout_seconds: int) -> list[dict]:
     return rows
 
 
-# Spot quote assets, longest first, for Tardis-only rows (`btcusdt`).
+# Spot quote assets, longest first, for history rows (`btcusdt`).
 _HTX_SPOT_QUOTES = [
     "EUROC", "PYUSD",
     "USDT", "HUSD", "USDC", "USDD", "TUSD", "USD1", "USTC", "KGST",

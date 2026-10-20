@@ -18,14 +18,14 @@ from .common import (
     split_concat,
 )
 
-# Spot quote assets for Tardis-only rows without API legs. Bitget adds `RLUSD`
+# Spot quote assets for history rows without API legs. Bitget adds `RLUSD`
 # (tried before `USD`) and `VND`, and has never quoted in `TUSD`, which would
 # otherwise split `USDTUSD` (USDT/USD) as USD/TUSD.
 _SPOT_QUOTES = ["RLUSD", *(q for q in KNOWN_QUOTES if q != "TUSD"), "VND"]
 
 
 def parse_bitget(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only spot rows are concatenated (`BTCUSDT`)."""
+    """API legs first; history spot rows are concatenated (`BTCUSDT`)."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract
@@ -146,7 +146,7 @@ def fetch_bitget_futures_coin(timeout_seconds: int) -> list[dict]:
 
 
 def parse_bitget_v3(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BTCUSDT` or USDC `BTCPERP`."""
+    """API legs first; history rows are `BTCUSDT` or USDC `BTCPERP`."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

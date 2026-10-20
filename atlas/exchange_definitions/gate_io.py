@@ -20,7 +20,7 @@ from .common import (
 
 
 def parse_gate_io(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only spot rows are `BASE_QUOTE`."""
+    """API legs first; history spot rows are `BASE_QUOTE`."""
     return parse_recorded_legs(exchange, sd) or parse_underscore_spot(exchange, sd)
 
 
@@ -149,7 +149,7 @@ def fetch_gateio_futures_usdt(timeout_seconds: int) -> list[dict]:
 
 
 def parse_gateio(exchange: str, sd: SymbolData) -> Contract:
-    """Live-producers' Gate venues: API legs first, then the id (Tardis rows)."""
+    """Live-producers' Gate venues: API legs first, then the id (history rows)."""
     return parse_recorded_legs(exchange, sd) or parse_gate_io_futures(exchange, sd)
 
 

@@ -114,7 +114,7 @@ fields. Add `last_seen_at` only where necessary.
 ### 9. CI is red for unrelated live-data drift
 
 The audited Linux job had 131 passed, 4 skipped, and 3 failures in strict live
-Tardis-to-snapshot comparisons for Binance spot, OKX futures, and OKX
+upstream-to-snapshot comparisons for Binance spot, OKX futures, and OKX
 perpetuals. The prototype did not change those tests. Required PR CI should use
 fixtures; strict live equivalence belongs in scheduled monitoring.
 
@@ -624,8 +624,8 @@ Slack.
 - Resolution scope is `binance-futures`; other venues have no `cmc_id` yet.
 - Price evidence compares CMC USD aggregates with Binance USDT last prices, so
   it remains a sanity check, never identity proof.
-- A snapshot row holds one `cmc_id` for its whole life. When Tardis carries a
-  symbol continuously across a ticker handover, as Binance spot `LUNAUSDT`,
+- A snapshot row holds one `cmc_id` for its whole life. When the history on
+  file carries a symbol continuously across a ticker handover, as Binance spot `LUNAUSDT`,
   `LUNABUSD` and `LUNATRY` do across the May 2022 Terra split, the row keeps the
   asset it trades today (Terra 2.0, 20314), and its history before the handover
   belongs to another asset (Terra Classic, 4172).

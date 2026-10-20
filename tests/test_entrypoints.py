@@ -51,4 +51,5 @@ def test_update_cli_runs_as_a_module():
     )
 
     assert result.returncode == 0, result.stderr
-    assert "--source" in result.stdout
+    assert "--accept-missing" in result.stdout
+    assert "--source" not in result.stdout

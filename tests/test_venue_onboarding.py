@@ -2,8 +2,7 @@
 
 They follow the live-producers naming (`bitget-spot`, `gateio-spot`,
 `coinbase-spot`), like Bitget's and Gate's contracts (`bitget-perps-*`,
-`gateio-*`); their Tardis-named exchanges (`bitget`, `gate-io`, `coinbase`) stay
-beta parsers.
+`gateio-*`).
 """
 
 from __future__ import annotations
@@ -16,12 +15,10 @@ from types import SimpleNamespace
 import pytest
 
 from atlas.database import SecurityMaster
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.parsers import parse_contract
-from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
+from atlas.exchanges import get_allowed_types, get_exchange_fetcher
 
 NEW_STABLE_EXCHANGES = ["bitget-spot", "gateio-spot", "coinbase-spot"]
-TARDIS_IDS = {"bitget-spot": "bitget", "gateio-spot": "gate-io", "coinbase-spot": "coinbase"}
 
 
 # ---------------------------------------------------------------------------
@@ -31,22 +28,8 @@ TARDIS_IDS = {"bitget-spot": "bitget", "gateio-spot": "gate-io", "coinbase-spot"
 
 class TestRegistry:
     @pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
-    def test_venue_is_stable(self, exchange: str):
-        assert is_beta_exchange(exchange) is False
-
-    @pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
     def test_venue_has_an_api_fetcher(self, exchange: str):
         assert get_exchange_fetcher(exchange) is not None
-
-    @pytest.mark.parametrize("exchange", NEW_STABLE_EXCHANGES)
-    def test_tardis_ids(self, exchange: str):
-        assert to_tardis_exchange_id(exchange) == TARDIS_IDS[exchange]
-
-    @pytest.mark.parametrize("exchange", ["bitget", "gate-io", "coinbase"])
-    def test_tardis_named_spot_exchanges_stay_beta_parsers(self, exchange: str):
-        assert is_beta_exchange(exchange) is True
-        assert get_exchange_fetcher(exchange) is None
-        assert not (_DATA_DIR / f"{exchange}.json").exists()
 
     @pytest.mark.parametrize(
         ("exchange", "allowed"),
@@ -59,12 +42,8 @@ class TestRegistry:
     def test_allowed_types(self, exchange: str, allowed: set[str]):
         assert get_allowed_types(exchange) == allowed
 
-    def test_other_tardis_only_venues_stay_beta(self):
-        assert is_beta_exchange("kraken") is True
-
-
 # ---------------------------------------------------------------------------
-# Snapshot updates: API-only rows (no Tardis history) need a capture date,
+# Snapshot updates: rows new to the file need a capture date,
 # otherwise SecurityMaster.load() leaves them out of every lookup.
 # ---------------------------------------------------------------------------
 
@@ -79,10 +58,12 @@ class TestRegistry:
 def test_api_only_rows_receive_stable_capture_dates(tmp_path, monkeypatch, exchange, row):
     updater = importlib.import_module("atlas.update")
     monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    tardis_row = {"id": "BTC_USDT" if "gate" in exchange else "BTCUSDT", "type": row["type"],
-                  "availableSince": "2020-01-01T00:00:00.000Z"}
+    history_id = "BTC_USDT" if "gate" in exchange else "BTCUSDT"
+    history = {"id": history_id, "type": row["type"], "first_capture": "2020-01-01T00:00:00.000Z"}
+    (tmp_path / f"{exchange}.json").write_text(json.dumps([history]), encoding="utf-8")
+    listed = {"id": history_id, "type": row["type"]}
     source = SimpleNamespace(
-        fetch_exchange=lambda _exchange: {"availableSymbols": [tardis_row, row.copy()]}
+        fetch_exchange=lambda _exchange: {"availableSymbols": [listed.copy(), row.copy()]}
     )
 
     assert updater.update([exchange], source) == []
@@ -90,7 +71,7 @@ def test_api_only_rows_receive_stable_capture_dates(tmp_path, monkeypatch, excha
     rows = {r["id"]: r for r in json.loads(path.read_text())}
     captured = rows[row["id"]]["first_capture"]
     assert captured
-    assert rows[tardis_row["id"]]["first_capture"] == "2020-01-01T00:00:00.000Z"
+    assert rows[history_id]["first_capture"] == "2020-01-01T00:00:00.000Z"
 
     assert updater.update([exchange], source) == []
     rows = {r["id"]: r for r in json.loads(path.read_text())}
@@ -145,7 +126,7 @@ def test_security_master_resolves_new_venues(exchange: str, original_id: str, in
 
 
 def test_security_master_resolves_api_only_rows():
-    """Rows Tardis does not list (Bitget's tokenized stocks) carry a first_capture."""
+    """Rows new to the file (Bitget's tokenized stocks) carry a first_capture."""
     stock = next(
         row for row in _snapshot("bitget-spot") if row.get("underlying") == "equity" and not row.get("end_date")
     )

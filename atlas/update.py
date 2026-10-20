@@ -3,9 +3,8 @@ from __future__ import annotations
 import json
 import re
 import sys
-from collections.abc import Callable, Collection
+from collections.abc import Collection
 from datetime import UTC, datetime, timedelta
-from functools import partial
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -13,16 +12,13 @@ if __package__ in (None, ""):
 
 from dotenv import load_dotenv
 
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.common import parse_utc_timestamp, utc_timestamp
-from atlas.exchanges import get_allowed_types, get_symbol_filter, is_on_tardis
+from atlas.exchanges import get_allowed_types, get_symbol_filter
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
-    HybridSymbolSource,
     SymbolLifecycle,
     SymbolSource,
-    TardisSymbolSource,
     source_lifecycle,
 )
 
@@ -39,7 +35,7 @@ MIN_NEWLY_MISSING_GUARD = 5
 CONFIRM_MISSING_AFTER = timedelta(hours=12)
 
 # These fields are maintained locally and must not be replaced or removed by
-# exchange or Tardis payloads during a snapshot refresh. The symbology fields
+# exchange payloads during a snapshot refresh. The symbology fields
 # are written by ``integrations/symbology.py``.
 LOCALLY_OWNED_FIELDS = frozenset(
     {
@@ -62,40 +58,17 @@ EXCHANGES = [
     "binance-futures",
     "binance-futures-cm",
     "binance-spot",
-    "bitfinex-derivatives",
-    "bitfinex",
-    "bitget-futures",
-    "bitget",
-    "bitmex",
-    "bitstamp",
     "bybit-spot",
     "bybit-perps",
     "bybit-futures",
-    "coinbase",
-    "crypto-com",
-    "cryptofacilities",
-    "deribit",
-    "ftx",
-    "gate-io-futures",
-    "gate-io",
-    "gemini",
     "grvt-perps",
-    "huobi-dm-linear-swap",
-    "huobi-dm-swap",
-    "huobi-dm",
-    "huobi",
     "hyperliquid-spot",
     "hyperliquid-perps",
-    "kraken",
-    "kucoin",
     "lighter-perps",
     "okx-perps",
     "okx-futures",
     "okx-spot",
     "extended-perps",
-    "phemex",
-    "poloniex",
-    "upbit",
     "pacifica-perps",
     "gateio-spot",
     "gateio-perps-usdt",
@@ -175,29 +148,12 @@ def _merge_symbol(
     return merged
 
 
-def _merge_existing_fields(
-    symbols: list[dict],
-    existing_by_id: dict[str, dict],
-    ignore_metadata: bool | Callable[[dict], bool] = False,
-) -> list[dict]:
+def _merge_existing_fields(symbols: list[dict], existing_by_id: dict[str, dict]) -> list[dict]:
     """
     Keep existing metadata for symbols when the current source does not provide it.
     Source payload values take precedence except for locally owned fields.
-    `ignore_metadata` (for all rows, or per incoming row) drops the lifecycle
-    fields on file so the source's bounds replace them.
     """
-    metadata_keys = {"first_capture", "end_date"}
-    merged_symbols: list[dict] = []
-    for sd in symbols:
-        existing = existing_by_id.get(sd.get("id"))
-        ignore = ignore_metadata(sd) if callable(ignore_metadata) else ignore_metadata
-        existing_values = None if existing is None else {
-            key: value
-            for key, value in existing.items()
-            if not (ignore and key in metadata_keys)
-        }
-        merged_symbols.append(_merge_symbol(existing_values, sd))
-    return merged_symbols
+    return [_merge_symbol(existing_by_id.get(sd.get("id")), sd) for sd in symbols]
 
 
 def _capture_first_seen(symbols: list[dict], captured_at: str) -> None:
@@ -219,7 +175,7 @@ def _delivery_end_date(row: dict, now: datetime) -> str | None:
     """End date for a dated future whose delivery has passed, else None.
 
     Date-only delivery dates cover the whole delivery day, matching the
-    exclusive day bound Tardis used for the rows already on file.
+    exclusive day bound the historical rows on file use.
     """
     raw = row.get("delivery_date")
     if not raw:
@@ -380,22 +336,6 @@ def _normalize_exchange_symbols(exchange: str, symbols: list[dict]) -> list[dict
     return normalized_symbols
 
 
-def _apply_snapshot_metadata(symbols: list[dict]) -> list[dict]:
-    mapped_symbols: list[dict] = []
-    for sd in symbols:
-        mapped = {
-            key: value
-            for key, value in sd.items()
-            if key not in {"availableSince", "availableTo"}
-        }
-        if "availableSince" in sd:
-            mapped["first_capture"] = sd["availableSince"]
-        if "availableTo" in sd:
-            mapped["end_date"] = sd["availableTo"]
-        mapped_symbols.append(mapped)
-    return mapped_symbols
-
-
 def _drop_none_fields(symbols: list[dict], keys: set[str] | None = None) -> list[dict]:
     filtered_symbols: list[dict] = []
     for sd in symbols:
@@ -445,7 +385,6 @@ def _fetch_incoming_symbols(source: SymbolSource, exchange: str) -> list[dict]:
 
 
 def _combine_with_existing_rows(
-    lifecycle: SymbolLifecycle,
     incoming_symbols: list[dict],
     existing_rows: list[dict],
     *,
@@ -454,8 +393,6 @@ def _combine_with_existing_rows(
     captured_at: str,
 ) -> list[dict]:
     """Add back existing rows the source omitted, tracking misses when trusted."""
-    if lifecycle is SymbolLifecycle.REPLACE:
-        return incoming_symbols
     if infer_missing:
         incoming_ids = {sd["id"] for sd in incoming_symbols}
         existing_rows = _close_missing_rows(existing_rows, incoming_ids, now, captured_at)
@@ -465,16 +402,6 @@ def _combine_with_existing_rows(
 def _clear_pending_misses(symbols: list[dict]) -> list[dict]:
     """Drop `missing_since` from rows written by a source that cannot see delistings."""
     return [{k: v for k, v in sd.items() if k != "missing_since"} for sd in symbols]
-
-
-def _replaces_lifecycle_on_file(sd: dict, is_tardis_data: bool) -> bool:
-    """Whether a row's Tardis availability bounds replace the lifecycle on file.
-
-    Hybrid metadata is partial: only rows that actually supplied Tardis bounds
-    replace them. API-only rows must retain their captured instance and
-    approved CMC mapping.
-    """
-    return is_tardis_data and bool(sd.get("first_capture"))
 
 
 def _infers_missing(
@@ -539,19 +466,11 @@ def _build_exchange_rows(
     captured_at = utc_timestamp(now)
     allowed_types = get_allowed_types(exchange) or {"spot", "perpetual", "future"}
     symbol_filter = get_symbol_filter(exchange)
-    is_tardis_data = any("availableSince" in sd for sd in incoming_symbols)
 
     incoming_symbols = _normalize_exchange_symbols(exchange, incoming_symbols)
-    incoming_symbols = _apply_snapshot_metadata(incoming_symbols)
     if complete:
         incoming_symbols = _resolve_reported_lifecycle(incoming_symbols, existing_by_id)
-    incoming_symbols = _merge_existing_fields(
-        incoming_symbols,
-        existing_by_id,
-        ignore_metadata=partial(
-            _replaces_lifecycle_on_file, is_tardis_data=is_tardis_data
-        ),
-    )
+    incoming_symbols = _merge_existing_fields(incoming_symbols, existing_by_id)
     # Only a complete source can say an existing row is still listed.
     _capture_first_seen(
         [sd for sd in incoming_symbols if complete or sd.get("id") not in existing_by_id],
@@ -560,7 +479,6 @@ def _build_exchange_rows(
     incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
 
     symbols = _combine_with_existing_rows(
-        lifecycle,
         incoming_symbols,
         existing_rows,
         infer_missing=infer_missing,
@@ -572,7 +490,7 @@ def _build_exchange_rows(
         symbols = _clear_pending_misses(symbols)
     # Existing rows are retained for historical coverage, but only if they
     # belong to this virtual exchange's product universe. This prevents
-    # shared Tardis feeds from leaking spot/futures into Bybit perpetuals.
+    # rows of another product (spot or futures) from leaking into perpetuals.
     symbols = [
         sd
         for sd in symbols
@@ -608,12 +526,6 @@ def update(
     for exchange in exchanges:
         path = _DATA_DIR / f"{exchange}.json"
         existing_rows = _load_existing_symbols(path)
-        if is_beta_exchange(exchange):
-            print(f"Skipping {exchange} (beta exchange)", flush=True)
-            continue
-        if isinstance(source, TardisSymbolSource) and not is_on_tardis(exchange):
-            print(f"Skipping {exchange} (not on Tardis)", flush=True)
-            continue
         print(f"Fetching {exchange}...", flush=True)
         now = datetime.now(UTC)
         try:
@@ -679,15 +591,6 @@ def parse_args(argv: list[str] | None = None):
             "delistings, overriding the partial-snapshot guard for this run"
         ),
     )
-    parser.add_argument(
-        "--source",
-        choices=["hybrid", "tardis", "exchange"],
-        default="exchange",
-        help=(
-            "Data source mode: exchange (default, direct exchange APIs only), "
-            "hybrid (exchange APIs overlaid on Tardis), tardis (all via Tardis)"
-        ),
-    )
     return parser.parse_args(argv)
 
 
@@ -695,15 +598,7 @@ if __name__ == "__main__":
     load_dotenv()
     args = parse_args()
 
-    exchanges = [e.strip() for e in args.exchanges.split(",") if e.strip()] or EXCHANGES
-    source: SymbolSource
-    if args.source == "tardis":
-        source = TardisSymbolSource()
-    elif args.source == "exchange":
-        source = ExchangeApiSymbolSource()
-    else:
-        source = HybridSymbolSource()
-
-    failed_exchanges = update(exchanges, source=source, accept_missing=args.accept_missing)
+    exchanges = _exchange_list(args.exchanges) or EXCHANGES
+    failed_exchanges = update(exchanges, accept_missing=args.accept_missing)
     if failed_exchanges:
         sys.exit(1)

@@ -7,9 +7,7 @@ import pytest
 from atlas.exchange_definitions.common import ms_to_datetime, parse_utc_timestamp
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
-    HybridSymbolSource,
     SymbolLifecycle,
-    TardisSymbolSource,
 )
 
 updater = importlib.import_module("atlas.update")
@@ -56,22 +54,19 @@ def test_exchange_api_is_the_default_source(data_dir, monkeypatch) -> None:
         ),
     )
     assert updater.update(["binance-spot"]) == []
-    assert updater.parse_args([]).source == "exchange"
 
 
-def test_daily_workflow_uses_exchange_source() -> None:
+def test_daily_workflow_runs_the_update_with_accept_missing() -> None:
     from pathlib import Path
 
-    workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text()
-    assert "python -m atlas.update --source exchange" in workflow
+    workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text(encoding="utf-8")
+    assert "python -m atlas.update --accept-missing" in workflow
     assert '--accept-missing "$ACCEPT_MISSING"' in workflow
     assert "ACCEPT_MISSING: ${{ inputs.accept_missing }}" in workflow
 
 
 def test_sources_declare_how_their_rows_relate_to_the_file() -> None:
     assert ExchangeApiSymbolSource.lifecycle is SymbolLifecycle.COMPLETE
-    assert HybridSymbolSource.lifecycle is SymbolLifecycle.MERGE
-    assert TardisSymbolSource.lifecycle is SymbolLifecycle.REPLACE
 
 
 def test_accept_missing_is_a_comma_separated_exchange_list() -> None:
@@ -353,7 +348,7 @@ def test_partial_sources_never_infer_delistings(data_dir) -> None:
     assert _read(path)["gonebtc"] == _spot("gonebtc")
 
 
-@pytest.mark.parametrize("lifecycle", [None, SymbolLifecycle.MERGE, SymbolLifecycle.REPLACE])
+@pytest.mark.parametrize("lifecycle", [None, SymbolLifecycle.MERGE])
 def test_sources_that_cannot_see_delistings_clear_pending_misses(data_dir, lifecycle) -> None:
     rows = [*LIVE, _spot("flakybtc", missing_since="2026-10-12T02:00:00.000Z")]
     path = _write(data_dir, "binance-spot", [*rows, _spot("gonebtc", missing_since="2026-10-12T02:00:00.000Z")])

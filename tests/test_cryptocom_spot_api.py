@@ -1,7 +1,7 @@
 """Crypto.com spot from the exchange API (`cryptocom-spot`).
 
 Fixtures under `tests/fixtures/cryptocom/` are excerpts of the real
-`public/get-instruments` response and of Tardis's `crypto-com` symbol list,
+`public/get-instruments` response and of the historical `crypto-com` symbol list,
 captured on 2026-10-20. The same endpoint feeds `cryptocom-perps` and
 `cryptocom-futures`, whose behaviour must not change.
 """
@@ -21,13 +21,12 @@ from atlas.exchange_definitions.crypto_com import (
     fetch_cryptocom_futures,
     fetch_cryptocom_perpetual,
     fetch_cryptocom_spot,
-    parse_crypto_com,
     parse_cryptocom_spot,
 )
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "cryptocom"
 INSTRUMENTS = json.loads((_FIXTURES / "instruments.json").read_text(encoding="utf-8"))
-TARDIS = json.loads((_FIXTURES / "tardis.json").read_text(encoding="utf-8"))
+HISTORY = json.loads((_FIXTURES / "history.json").read_text(encoding="utf-8"))
 SLUG = "cryptocom-spot"
 
 
@@ -169,24 +168,24 @@ class TestDerivativesUnchanged:
         assert not spot & derivatives
 
 
-class TestTardisFallback:
-    def test_every_tardis_spot_row_parses(self):
-        for row in TARDIS:
+class TestHistoryFallback:
+    def test_every_history_spot_row_parses(self):
+        for row in HISTORY:
             if row["type"] == "spot":
                 contract = parse_cryptocom_spot(SLUG, {"id": row["id"], "type": "spot"})
                 assert contract.instrument_type == ContractType.spot
 
-    def test_shared_tardis_feed_is_split_by_type(self):
+    def test_shared_history_feed_is_split_by_type(self):
         # `crypto-com` carries spot, perpetuals, futures and options:
         # `cryptocom-spot` keeps only `spot` rows (allowed_types={"spot"}).
-        assert {row["type"] for row in TARDIS} == {"spot", "perpetual"}
+        assert {row["type"] for row in HISTORY} == {"spot", "perpetual"}
 
-    def test_tardis_rows_match_api_rows(self):
+    def test_history_rows_match_api_rows(self):
         api = {i: _internal(sd) for i, sd in _spot().items()}
-        tardis = {row["id"]: _internal({"id": row["id"], "type": "spot"}) for row in TARDIS if row["type"] == "spot"}
-        shared = set(api) & set(tardis)
+        history = {row["id"]: _internal({"id": row["id"], "type": "spot"}) for row in HISTORY if row["type"] == "spot"}
+        shared = set(api) & set(history)
         assert len(shared) == 9
-        assert {i: api[i] for i in shared} == {i: tardis[i] for i in shared}
+        assert {i: api[i] for i in shared} == {i: history[i] for i in shared}
 
     @pytest.mark.parametrize(
         ("sid", "expected"),
@@ -209,7 +208,3 @@ class TestTardisFallback:
             parse_cryptocom_spot(SLUG, {"id": sid, "type": "spot"})
 
 
-def test_legacy_crypto_com_parser_is_unchanged():
-    with pytest.raises(SkipSymbol):
-        parse_crypto_com("crypto-com", {"id": "SHIB_BTC@OEX_HK", "type": "spot"})
-    assert parse_crypto_com("crypto-com", {"id": "BTC_USD", "type": "spot"}).internal_id == "spot-BTC-USD"
