@@ -21,6 +21,7 @@ from .exchange_definitions.bitget import (
     fetch_bitget_perpetual_coin,
     fetch_bitget_perpetual_usdc,
     fetch_bitget_perpetual_usdt,
+    fetch_bitget_spot,
     parse_bitget,
     parse_bitget_futures,
     parse_bitget_v3,
@@ -34,7 +35,7 @@ from .exchange_definitions.bybit import (
     parse_bybit,
     parse_bybit_spot,
 )
-from .exchange_definitions.coinbase import parse_coinbase
+from .exchange_definitions.coinbase import fetch_coinbase_spot, parse_coinbase
 from .exchange_definitions.crypto_com import (
     fetch_cryptocom_futures,
     fetch_cryptocom_perpetual,
@@ -54,6 +55,7 @@ from .exchange_definitions.gate_io import (
     fetch_gateio_futures_usdt,
     fetch_gateio_perpetual_btc,
     fetch_gateio_perpetual_usdt,
+    fetch_gate_io_spot,
     parse_gate_io,
     parse_gate_io_futures,
     parse_gateio,
@@ -163,7 +165,16 @@ def _id_suffix_filter(suffix: str) -> Callable[[dict], bool]:
 
 # live-producers venues. Their Atlas slug is the producer's exchange id, so a
 # consumer joins a published record to its Atlas row without a mapping table.
+# `bitget-spot`, `gateio-spot` and `coinbase-spot` are not streamed yet; they
+# take the slug the producer's scheme gives them (`<venue>-spot`, as `okx-spot`).
 _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
+    "gateio-spot": _define(
+        "gateio-spot",
+        parse_gate_io,
+        tardis_id="gate-io",
+        exchange_fetcher=fetch_gate_io_spot,
+        allowed_types={"spot"},
+    ),
     "gateio-perps-usdt": _define(
         "gateio-perps-usdt",
         parse_gateio,
@@ -202,6 +213,20 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
         on_tardis=False,
         exchange_fetcher=fetch_mexc_perpetual,
         allowed_types={"perpetual"},
+    ),
+    "coinbase-spot": _define(
+        "coinbase-spot",
+        parse_coinbase,
+        tardis_id="coinbase",
+        exchange_fetcher=fetch_coinbase_spot,
+        allowed_types={"spot"},
+    ),
+    "bitget-spot": _define(
+        "bitget-spot",
+        parse_bitget,
+        tardis_id="bitget",
+        exchange_fetcher=fetch_bitget_spot,
+        allowed_types={"spot"},
     ),
     "bitget-perps-usdt": _define(
         "bitget-perps-usdt",

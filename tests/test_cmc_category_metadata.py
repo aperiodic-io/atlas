@@ -3,6 +3,7 @@ from types import SimpleNamespace
 
 from integrations.cmc_category_metadata import (
     CMC_DETAIL_URL,
+    _parse_categories,
     _retry_delay,
     fetch_cmc_categories,
     populate_cmc_categories,
@@ -95,3 +96,19 @@ def test_retry_delay_uses_exponential_backoff_and_is_bounded():
     error = Exception()
     error.response = SimpleNamespace(headers={"Retry-After": "999"})
     assert _retry_delay(error, 0) == 120
+
+
+def test_parse_categories_accepts_memes_industry_tag_only():
+    payload = {
+        "data": {
+            "tags": [
+                {"name": "Memes", "category": "INDUSTRY"},
+                {"name": "DeFi", "category": "INDUSTRY"},
+                {"name": "Payments", "category": "INDUSTRY"},
+                {"name": "Layer 1", "category": "CATEGORY"},
+                {"name": "Memes", "category": "PLATFORM"},
+            ]
+        }
+    }
+
+    assert _parse_categories(payload, 74) == ["Layer 1", "Memes"]

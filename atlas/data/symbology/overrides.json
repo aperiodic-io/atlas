@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "overrides": [],
+  "ticker_eras": [
+    {
+      "ticker": "LUNA",
+      "cmc_id": 4172,
+      "until": "2022-05-28T00:00:00Z",
+      "reason": "Terra's original LUNA traded as LUNA until the May 2022 collapse; it is now Terra Classic (LUNC, CMC 4172). Terra 2.0 (CMC 20314, added 2022-05-26, genesis 2022-05-28) took the LUNA ticker, often on the same exchange instrument."
+    },
+    {
+      "ticker": "UST",
+      "cmc_id": 7129,
+      "until": "2022-05-28T00:00:00Z",
+      "reason": "TerraUSD traded as UST until the May 2022 collapse; exchanges renamed it USTC (TerraClassicUSD, CMC 7129)."
+    }
+  ],
+  "venue_tickers": [
+    {
+      "family": "binance",
+      "ticker": "USDP",
+      "cmc_id": 3330,
+      "reason": "Paxos renamed PAX to Pax Dollar (USDP) in August 2021 and Binance relisted its PAX pairs as USDP on 2021-09-10. Gate's USDP is the unrelated USDP Stablecoin (CMC 8886), which other venues' evidence would otherwise lend Binance."
+    },
+    {
+      "family": "okx",
+      "ticker": "USDP",
+      "cmc_id": 3330,
+      "reason": "OKX delisted its PAX pairs on 2022-04-12 and listed Pax Dollar as USDP on 2022-04-20, after Paxos renamed PAX to USDP. Not the USDP Stablecoin (CMC 8886) that Gate lists."
+    }
+  ]
+}

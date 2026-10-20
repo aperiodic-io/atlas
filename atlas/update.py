@@ -39,8 +39,22 @@ MIN_NEWLY_MISSING_GUARD = 5
 CONFIRM_MISSING_AFTER = timedelta(hours=12)
 
 # These fields are maintained locally and must not be replaced or removed by
-# exchange or Tardis payloads during a snapshot refresh.
-LOCALLY_OWNED_FIELDS = frozenset({"cmc_id", "contract_size_history"})
+# exchange or Tardis payloads during a snapshot refresh. The symbology fields
+# are written by ``integrations/symbology.py``.
+LOCALLY_OWNED_FIELDS = frozenset(
+    {
+        "cmc_id",
+        "category",
+        "contract_size_history",
+        "base_asset_id",
+        "quote_asset_id",
+        "margin_asset_id",
+        "base_multiplier",
+        "base_asset_match",
+        "base_asset_history",
+        "unified_id",
+    }
+)
 
 EXCHANGES = [
     "aster-perps",
@@ -83,6 +97,7 @@ EXCHANGES = [
     "poloniex",
     "upbit",
     "pacifica-perps",
+    "gateio-spot",
     "gateio-perps-usdt",
     "gateio-futures-usdt",
     "gateio-perps-btc",
@@ -91,6 +106,8 @@ EXCHANGES = [
     "bitget-perps-usdt",
     "bitget-perps-usdc",
     "bitget-perps-coin",
+    "bitget-spot",
+    "coinbase-spot",
     "bitget-futures-coin",
     "deribit-perps",
     "deribit-futures",
