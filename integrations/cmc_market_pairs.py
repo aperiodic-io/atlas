@@ -74,7 +74,7 @@ CMC_VENUES: dict[str, CmcVenue] = {
             "bybit",
             {
                 "spot": ("bybit-spot",),
-                "perpetual": ("bybit-perps",),
+                "perpetual": ("bybit-perps-usd", "bybit-perps-coin"),
                 "futures": ("bybit-futures",),
             },
         ),

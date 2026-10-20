@@ -508,6 +508,102 @@ class TestCryptocom:
 
 
 # ---------------------------------------------------------------------------
+# Bybit (producer slugs bybit-perps-usd / bybit-perps-coin)
+# ---------------------------------------------------------------------------
+
+
+def _bybit(symbol, base, quote, settle, contract_type):
+    return {
+        "symbol": symbol,
+        "status": "Trading",
+        "contractType": contract_type,
+        "baseCoin": base,
+        "quoteCoin": quote,
+        "settleCoin": settle,
+    }
+
+
+BYBIT_PAGES = {
+    "linear": [
+        _bybit("BTCUSDT", "BTC", "USDT", "USDT", "LinearPerpetual"),
+        _bybit("BTCPERP", "BTC", "USDC", "USDC", "LinearPerpetual"),
+        _bybit("BTCUSDT-26DEC25", "BTC", "USDT", "USDT", "LinearFutures"),
+    ],
+    "inverse": [
+        _bybit("BTCUSD", "BTC", "USD", "BTC", "InversePerpetual"),
+        _bybit("BTCUSDZ25", "BTC", "USD", "BTC", "InverseFutures"),
+    ],
+}
+
+
+@pytest.fixture
+def bybit_api():
+    from atlas.exchange_definitions import bybit
+
+    def get(url, params, timeout):
+        rows = BYBIT_PAGES[params["category"]] if params.get("status") == "Trading" else []
+        return _response({"result": {"list": rows, "nextPageCursor": ""}})
+
+    bybit.clear_derivatives_cache()
+    with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
+        yield bybit
+    bybit.clear_derivatives_cache()
+
+
+class TestBybit:
+    def test_ids_match_the_producer(self, bybit_api):
+        # live-producers streams one Bybit category per slug: linear (USDT and
+        # USDC perps) as bybit-perps-usd, inverse as bybit-perps-coin.
+        usd = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
+        coin = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
+        assert _ids("bybit-perps-usd", usd) == {
+            "BTCUSDT": "perpetual-BTC-USDT:USDT",
+            "BTCPERP": "perpetual-BTC-USDC:USDC",
+        }
+        assert _ids("bybit-perps-coin", coin) == {"BTCUSD": "perpetual-BTC-USD:BTC"}
+
+    def test_quantity_units(self, bybit_api):
+        (usd, _) = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
+        (coin,) = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
+        assert usd["quantity_unit"] == "base"
+        # Inverse sizes are USD contracts.
+        assert coin["quantity_unit"] == "quote"
+
+    @pytest.mark.parametrize(
+        ("exchange", "kept"),
+        [
+            ("bybit-perps-usd", {"BTCUSDT", "BTCPERP", "1000PEPEUSDT"}),
+            ("bybit-perps-coin", {"BTCUSD", "ETHUSD"}),
+        ],
+    )
+    def test_tardis_rows_split_by_category(self, exchange, kept):
+        # Tardis's `bybit` mixes both categories; its native ids tell them
+        # apart: linear ends in USDT (USDT-settled) or PERP (USDC-settled),
+        # inverse in USD.
+        from atlas.exchanges import get_symbol_filter
+
+        tardis_rows = ["BTCUSDT", "BTCPERP", "1000PEPEUSDT", "BTCUSD", "ETHUSD"]
+        keep = get_symbol_filter(exchange)
+        assert {sid for sid in tardis_rows if keep({"id": sid})} == kept
+
+    def test_snapshots_hold_one_category_each(self):
+        import json
+        from pathlib import Path
+
+        data = Path(__file__).resolve().parents[1] / "atlas" / "data"
+
+        def rows(exchange):
+            return {sd["id"]: sd for sd in json.loads((data / f"{exchange}.json").read_text())}
+
+        usd, coin = rows("bybit-perps-usd"), rows("bybit-perps-coin")
+        assert not usd.keys() & coin.keys()
+        assert {sd["margin"] for sd in usd.values()} <= {"USDT", "USDC"}
+        assert {sd["quantity_unit"] for sd in usd.values()} == {"base"}
+        assert all(sd["margin"] == sd["symbol"] for sd in coin.values())
+        assert {sd["quantity_unit"] for sd in coin.values()} == {"quote"}
+
+
+# ---------------------------------------------------------------------------
 # Registry
 # ---------------------------------------------------------------------------
 
@@ -515,6 +611,8 @@ class TestCryptocom:
 @pytest.mark.parametrize(
     ("exchange", "tardis_id"),
     [
+        ("bybit-perps-usd", "bybit"),
+        ("bybit-perps-coin", "bybit"),
         ("gateio-perps-usdt", "gate-io-futures"),
         ("gateio-perps-btc", "gate-io-futures"),
         ("gateio-futures-usdt", None),

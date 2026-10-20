@@ -42,7 +42,8 @@ from .exchange_definitions.bitstamp import (
 )
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
-    fetch_bybit_perps,
+    fetch_bybit_perps_coin,
+    fetch_bybit_perps_usd,
     fetch_bybit_spot,
     parse_bybit,
     parse_bybit_spot,
@@ -185,17 +186,18 @@ def hyperliquid_filter(sd: dict) -> bool:
     return not re.match(r"^@\d+$", sid)
 
 
-def _id_suffix_filter(suffix: str) -> Callable[[dict], bool]:
+def _id_suffix_filter(*suffixes: str) -> Callable[[dict], bool]:
     """Keep the rows of one settlement family of a shared Tardis feed.
 
     Several live-producers venues read one Tardis exchange: Gate's USDT- and
     BTC-settled perpetuals are both `gate-io-futures` (`BTC_USDT`, `BTC_USD`),
     Bitget's USDT and USDC perpetuals are both `bitget-futures` (`BTCUSDT`,
-    `BTCPERP`).
+    `BTCPERP`), Bybit's linear and inverse perpetuals both `bybit` (`BTCUSDT`,
+    `BTCPERP`, `BTCUSD`).
     """
 
     def matches(sd: dict) -> bool:
-        return str(sd.get("id", "")).endswith(suffix)
+        return str(sd.get("id", "")).endswith(suffixes)
 
     return matches
 
@@ -523,11 +525,22 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_spot,
         allowed_types={"spot"},
     ),
-    "bybit-perps": _define(
-        "bybit-perps",
+    # live-producers streams Bybit's perpetuals as one slug per category:
+    # linear (USDT- and USDC-settled) and inverse.
+    "bybit-perps-usd": _define(
+        "bybit-perps-usd",
         parse_bybit,
         tardis_id="bybit",
-        exchange_fetcher=fetch_bybit_perps,
+        exchange_fetcher=fetch_bybit_perps_usd,
+        symbol_filter=_id_suffix_filter("USDT", "PERP"),
+        allowed_types={"perpetual"},
+    ),
+    "bybit-perps-coin": _define(
+        "bybit-perps-coin",
+        parse_bybit,
+        tardis_id="bybit",
+        exchange_fetcher=fetch_bybit_perps_coin,
+        symbol_filter=_id_suffix_filter("USD"),
         allowed_types={"perpetual"},
     ),
     "bybit-futures": _define(
