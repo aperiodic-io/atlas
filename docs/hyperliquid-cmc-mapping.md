@@ -98,8 +98,8 @@ records Atlas's first committed observation as `first_capture`; it does not clai
 the exchange listing date. Existing captures are preserved. Disappearance/reappearance
 starts a new instance, uncommitted instruments are not assigned invented dates, and
 shallow history is rejected. Tardis refreshes replace recovered dates with their
-own lifecycle metadata. Strict Tardis equivalence compares instruments covered by
-Tardis; Git capture recovery and direct-exchange lifecycles have fixture tests.
+own lifecycle metadata. Git capture recovery and direct-exchange lifecycles have
+fixture tests.
 
 Future daily updates stamp newly observed Hyperliquid API rows with a durable
 `first_capture`. Repeated updates preserve that capture date and CMC ID.
