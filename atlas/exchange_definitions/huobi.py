@@ -9,6 +9,7 @@ from ..types import UnderlyingType
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
 from .common import (
+    upcoming,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -122,9 +123,10 @@ def fetch_htx_perpetual_usdt(timeout_seconds: int) -> list[dict]:
     for item in payload.get("data", []):
         if item.get("business_type") != "swap":
             continue
-        if item.get("contract_status") == _HTX_NOT_YET_LISTED:
-            continue
         code = item["contract_code"]
+        if item.get("contract_status") == _HTX_NOT_YET_LISTED:
+            symbols.append(upcoming({"id": code, "type": "perpetual"}))
+            continue
         base, quote = code.split("-", 1)
         sd = {
             "id": code,
@@ -173,16 +175,13 @@ def _htx_contract_row(item: dict, sd: dict) -> dict:
     """Lifecycle fields shared by every HTX contract (see the status table above)."""
     sd["first_capture"] = _htx_listed_at(item.get("create_date"))
     sd["end_date"] = _htx_end_date(item)
-    return {k: v for k, v in sd.items() if v is not None}
+    sd = {k: v for k, v in sd.items() if v is not None}
+    return upcoming(sd) if item.get("contract_status") == _HTX_NOT_YET_LISTED else sd
 
 
-def _htx_listed_contracts(path: str, timeout_seconds: int, params: dict | None = None) -> list[dict]:
+def _htx_contracts(path: str, timeout_seconds: int, params: dict | None = None) -> list[dict]:
     payload = get_json(f"{_HTX_DM}{path}", timeout_seconds, params=params)
-    return [
-        item
-        for item in _htx_data(payload, path)
-        if item.get("contract_status") != _HTX_NOT_YET_LISTED
-    ]
+    return _htx_data(payload, path)
 
 
 def _htx_coin_row(item: dict, kind: str) -> dict:
@@ -207,7 +206,7 @@ def _htx_coin_row(item: dict, kind: str) -> dict:
 
 def fetch_htx_perpetual_coin(timeout_seconds: int) -> list[dict]:
     """Coin-margined perpetual swaps (`BTC-USD`), Tardis `huobi-dm-swap`."""
-    items = _htx_listed_contracts("/swap-api/v1/swap_contract_info", timeout_seconds)
+    items = _htx_contracts("/swap-api/v1/swap_contract_info", timeout_seconds)
     return [_htx_coin_row(item, "perpetual") for item in items]
 
 
@@ -217,7 +216,7 @@ def fetch_htx_futures_coin(timeout_seconds: int) -> list[dict]:
     Tardis `huobi-dm` records these only under rolling aliases (`BTC_CW`,
     `BTC_CQ`), which re-point at a new contract every week or quarter.
     """
-    items = _htx_listed_contracts("/api/v1/contract_contract_info", timeout_seconds)
+    items = _htx_contracts("/api/v1/contract_contract_info", timeout_seconds)
     return [_htx_coin_row(item, "future") for item in items]
 
 
@@ -227,7 +226,7 @@ def fetch_htx_futures_usdt(timeout_seconds: int) -> list[dict]:
     They share `swap_contract_info` with the perpetuals, which the endpoint
     returns only for `business_type=futures` (or `all`).
     """
-    items = _htx_listed_contracts(
+    items = _htx_contracts(
         "/linear-swap-api/v1/swap_contract_info",
         timeout_seconds,
         params={"business_type": "futures"},
@@ -333,8 +332,6 @@ def fetch_htx_spot(timeout_seconds: int) -> list[dict]:
     rows = []
     for item in symbols:
         state = item.get("state")
-        if state in _HTX_SPOT_NOT_YET_LISTED:
-            continue
         sd = {
             "id": item["sc"],
             "type": "spot",
@@ -344,7 +341,8 @@ def fetch_htx_spot(timeout_seconds: int) -> list[dict]:
             "first_capture": ms_to_utc_timestamp(item.get("toa")),
             "end_date": delisted_end_date() if state == _HTX_SPOT_DELISTED else None,
         }
-        rows.append({k: v for k, v in sd.items() if v is not None})
+        sd = {k: v for k, v in sd.items() if v is not None}
+        rows.append(upcoming(sd) if state in _HTX_SPOT_NOT_YET_LISTED else sd)
     return rows
 
 

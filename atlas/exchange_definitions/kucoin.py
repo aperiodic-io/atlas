@@ -5,7 +5,14 @@ from datetime import UTC, datetime
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, make_contract, ms_to_datetime, ms_to_utc_timestamp, parse_dash
+from .common import (
+    SkipSymbol,
+    make_contract,
+    ms_to_datetime,
+    ms_to_utc_timestamp,
+    parse_dash,
+    upcoming,
+)
 from .fields import parse_recorded_legs
 from .http import get_json
 
@@ -103,9 +110,9 @@ def fetch_kucoin_spot(timeout_seconds: int) -> list[dict]:
     }
     now = datetime.now(UTC)
     return [
-        _kucoin_symbol(item, full_names)
+        upcoming(sd) if _kucoin_not_yet_trading(item, now) else sd
         for item in items
-        if not _kucoin_not_yet_trading(item, now)
+        for sd in [_kucoin_symbol(item, full_names)]
     ]
 
 

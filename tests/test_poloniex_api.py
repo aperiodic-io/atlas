@@ -43,7 +43,7 @@ def _fetch(payload=MARKETS) -> list[dict]:
 
 @pytest.fixture(scope="module")
 def rows() -> dict[str, dict]:
-    return {sd["id"]: sd for sd in _fetch()}
+    return {sd["id"]: sd for sd in _fetch() if not sd.get("upcoming")}
 
 
 def _iid(sd: dict) -> str:
@@ -59,10 +59,14 @@ def _tardis_row(row: dict) -> dict:
 
 
 class TestFetch:
-    def test_universe_leaves_out_markets_not_yet_tradable(self, rows):
+    def test_markets_not_yet_tradable_are_flagged_upcoming(self, rows):
         placeholder = {"COOL_USDT", "GASSOL_USDT"}
         assert all(MARKET[s]["tradableStartTime"] > 4_000_000_000_000 for s in placeholder)
         assert set(rows) == set(MARKET) - placeholder
+        upcoming = [sd for sd in _fetch() if sd.get("upcoming")]
+        assert upcoming == [
+            {"id": sid, "type": "spot", "upcoming": True} for sid in MARKET if sid in placeholder
+        ]
 
     def test_row_shape(self, rows):
         assert rows["A_USDT"] == {
@@ -128,7 +132,7 @@ class TestFetch:
     def test_market_becomes_listed_once_tradable(self):
         listing = {**MARKET["A_USDT"], "tradableStartTime": 1_800_000_000_000}
         with patch.object(poloniex.time, "time", return_value=1_799_999_999.0):
-            assert _fetch([listing]) == []
+            assert _fetch([listing]) == [{"id": "A_USDT", "type": "spot", "upcoming": True}]
         with patch.object(poloniex.time, "time", return_value=1_800_000_000.0):
             assert [sd["id"] for sd in _fetch([listing])] == ["A_USDT"]
 

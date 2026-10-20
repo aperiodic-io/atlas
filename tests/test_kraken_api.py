@@ -283,9 +283,9 @@ class TestKrakenSpotLifecycle:
         end = datetime.fromisoformat(rows["BTC/USD"]["end_date"].replace("Z", "+00:00"))
         assert before <= end <= datetime.now(UTC) + timedelta(seconds=1)
 
-    def test_pair_being_set_up_is_excluded(self):
+    def test_pair_being_set_up_is_flagged_upcoming(self):
         rows = _by_id(_fetch_spot(_with_pair("XXBTZUSD", status="work_in_progress")))
-        assert "BTC/USD" not in rows
+        assert rows["BTC/USD"] == {"id": "BTC/USD", "type": "spot", "upcoming": True}
 
 
 class TestKrakenSpotPayloadShape:
@@ -531,12 +531,12 @@ class TestKrakenDerivativeLifecycle:
         end = datetime.fromisoformat(rows["PF_DOGEUSD"]["end_date"].replace("Z", "+00:00"))
         assert abs(end - datetime.now(UTC)) < timedelta(seconds=5)
 
-    def test_pre_launch_contracts_are_excluded(self):
+    def test_pre_launch_contracts_are_flagged_upcoming(self):
         later = (datetime.now(UTC) + timedelta(days=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
         payload = _with_instrument("PF_DOGEUSD", openingDate=later)
-        ids = {sd["id"] for sd in _fetch_deriv(fetch_kraken_perpetual, payload)}
-        assert "PF_DOGEUSD" not in ids
-        assert "PF_XBTUSD" in ids
+        rows = {sd["id"]: sd for sd in _fetch_deriv(fetch_kraken_perpetual, payload)}
+        assert rows["PF_DOGEUSD"] == {"id": "PF_DOGEUSD", "type": "perpetual", "upcoming": True}
+        assert not rows["PF_XBTUSD"].get("upcoming")
 
 
 class TestKrakenDerivativePayloadShape:

@@ -172,16 +172,20 @@ class TestLifecycle:
         assert next(i for i in SYMBOLS["data"] if i["symbol"] == "POLS-USDT")["st"] is True
         assert "end_date" not in rows["POLS-USDT"]
 
-    def test_pair_not_yet_trading_is_excluded(self):
+    def test_pair_not_yet_trading_is_flagged_upcoming(self):
         future = int((datetime.now(UTC) + timedelta(days=2)).timestamp() * 1000)
-        assert "BTC-USDT" not in _by_id(_fetch(_with("BTC-USDT", tradingStartTime=future)))
+        row = _by_id(_fetch(_with("BTC-USDT", tradingStartTime=future)))["BTC-USDT"]
+        assert row == {"id": "BTC-USDT", "type": "spot", "upcoming": True}
 
-    def test_pair_in_opening_call_auction_is_excluded(self):
-        assert "AVA-USDT" not in _by_id(_fetch(_with("AVA-USDT", callauctionIsEnabled=True)))
+    def test_pair_in_opening_call_auction_is_flagged_upcoming(self):
+        row = _by_id(_fetch(_with("AVA-USDT", callauctionIsEnabled=True)))["AVA-USDT"]
+        assert row == {"id": "AVA-USDT", "type": "spot", "upcoming": True}
 
     def test_pair_that_started_trading_is_kept(self):
         past = int((datetime.now(UTC) - timedelta(minutes=5)).timestamp() * 1000)
-        assert "AVA-USDT" in _by_id(_fetch(_with("AVA-USDT", tradingStartTime=past)))
+        row = _by_id(_fetch(_with("AVA-USDT", tradingStartTime=past)))["AVA-USDT"]
+        assert not row.get("upcoming")
+        assert row["base_coin"] == "AVA"
 
     def test_fetch_never_sets_end_date(self):
         # KuCoin has no delisted status: delisted pairs drop out of the listing.

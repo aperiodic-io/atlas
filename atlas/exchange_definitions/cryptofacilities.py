@@ -6,6 +6,7 @@ from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .common import (
+    upcoming,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -117,7 +118,7 @@ def _millis(value: datetime | None) -> int | None:
 # `postOnly` are trading restrictions; such contracts stay listed) and drops
 # delisted ones. `isExpired` ends a contract at its `lastTradingTime` (or at
 # first sighting without one); an `openingDate` still in the future is a
-# contract not listed yet, excluded.
+# contract not trading yet (`upcoming`).
 def _kraken_derivative_symbol(item: dict) -> dict:
     inverse = item["type"] == "futures_inverse"
     base, quote = item["base"], item["quote"]
@@ -144,11 +145,14 @@ def _kraken_derivative_symbol(item: dict) -> dict:
     return {k: v for k, v in sd.items() if v is not None}
 
 
-def _is_listed_contract(item: dict, now: datetime) -> bool:
-    if item.get("type") not in _API_TYPES:
-        return False
-    if str(item.get("symbol", "")).split("_", 1)[0] not in _PREFIXES:
-        return False
+def _is_contract(item: dict) -> bool:
+    return (
+        item.get("type") in _API_TYPES
+        and str(item.get("symbol", "")).split("_", 1)[0] in _PREFIXES
+    )
+
+
+def _has_opened(item: dict, now: datetime) -> bool:
     opening = _parse_iso(item.get("openingDate"))
     return opening is None or opening <= now
 
@@ -162,11 +166,13 @@ def _fetch_kraken_derivatives(timeout_seconds: int) -> list[dict]:
     if not isinstance(instruments, list) or not instruments:
         raise ValueError("Kraken Futures instruments: expected a non-empty instruments list")
     now = datetime.now(UTC)
-    return [
-        _kraken_derivative_symbol(item)
-        for item in instruments
-        if isinstance(item, dict) and _is_listed_contract(item, now)
-    ]
+    rows = []
+    for item in instruments:
+        if not isinstance(item, dict) or not _is_contract(item):
+            continue
+        sd = _kraken_derivative_symbol(item)
+        rows.append(sd if _has_opened(item, now) else upcoming(sd))
+    return rows
 
 
 def fetch_kraken_perpetual(timeout_seconds: int) -> list[dict]:

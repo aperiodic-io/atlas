@@ -7,6 +7,7 @@ from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .common import (
+    upcoming,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -108,6 +109,10 @@ def _not_yet_listed(item: dict, now: datetime) -> bool:
     return listed is not None and listed > now
 
 
+def _flag_upcoming(item: dict, sd: dict, now: datetime) -> dict:
+    return upcoming(sd) if _not_yet_listed(item, now) else sd
+
+
 def _lifecycle(item: dict) -> dict:
     fields = {"first_capture": ms_to_utc_timestamp(item.get("listTime"))}
     if item.get("status") == _DELISTED:
@@ -145,9 +150,9 @@ def fetch_phemex_spot(timeout_seconds: int) -> list[dict]:
     names = {str(c.get("currency")): str(c.get("name") or "") for c in data.get("currencies") or []}
     now = datetime.now(UTC)
     return [
-        _spot_symbol(item, names)
+        _flag_upcoming(item, _spot_symbol(item, names), now)
         for item in data["products"]
-        if item.get("type") == "Spot" and not _not_yet_listed(item, now)
+        if item.get("type") == "Spot"
     ]
 
 
@@ -200,19 +205,17 @@ def fetch_phemex_perpetual(timeout_seconds: int) -> list[dict]:
     data = _phemex_products(timeout_seconds)
     now = datetime.now(UTC)
     rows = [
-        _legacy_perp_symbol(item)
+        _flag_upcoming(item, _legacy_perp_symbol(item), now)
         for item in data["products"]
-        if item.get("type") == "Perpetual" and not _not_yet_listed(item, now)
+        if item.get("type") == "Perpetual"
     ]
     rows += [
-        _linear_perp_symbol(item, _linear_underlying(item))
+        _flag_upcoming(item, _linear_perp_symbol(item, _linear_underlying(item)), now)
         for item in data.get("perpProductsV2") or []
-        if not _not_yet_listed(item, now)
     ]
     rows += [
-        _linear_perp_symbol(item, UnderlyingType.crypto)
+        _flag_upcoming(item, _linear_perp_symbol(item, UnderlyingType.crypto), now)
         for item in data.get("perpProductsPilot") or []
-        if not _not_yet_listed(item, now)
     ]
     return rows
 

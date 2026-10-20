@@ -4,6 +4,7 @@ from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .common import (
+    upcoming,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -196,9 +197,9 @@ def fetch_kraken_spot(timeout_seconds: int) -> list[dict]:
     rows: dict[str, dict] = {}
     for params in (None, {"aclass_base": _TOKENIZED}):
         for key, pair in _asset_pairs(timeout_seconds, params).items():
-            if pair.get("status") == _NOT_YET_LISTED:
-                continue
             sd = _kraken_spot_symbol(key, pair)
+            if pair.get("status") == _NOT_YET_LISTED:
+                sd = upcoming(sd)
             rows.setdefault(sd["id"], sd)
     return list(rows.values())
 

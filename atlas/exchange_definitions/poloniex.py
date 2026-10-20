@@ -7,6 +7,7 @@ from ..contracts import Contract
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .common import (
+    upcoming,
     SkipSymbol,
     delisted_end_date,
     instrument_type,
@@ -117,4 +118,7 @@ def fetch_poloniex_spot(timeout_seconds: int) -> list[dict]:
     ):
         raise ValueError(f"Poloniex markets: expected a list of markets, got {payload!r:.200}")
     now_ms = int(time.time() * 1000)
-    return [_poloniex_symbol(item) for item in payload if _is_trading(item, now_ms)]
+    return [
+        _poloniex_symbol(item) if _is_trading(item, now_ms) else upcoming(_poloniex_symbol(item))
+        for item in payload
+    ]

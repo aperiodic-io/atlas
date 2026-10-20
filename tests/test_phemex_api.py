@@ -193,8 +193,9 @@ class TestSpotLifecycle:
         rows = _spot()
         assert all("end_date" not in rows[i] for i in listed if i in rows)
 
-    def test_pair_not_yet_listed_is_excluded(self):
-        assert "sBTCUSDT" not in _spot(_with("sBTCUSDT", listTime=_ms(timedelta(days=1))))
+    def test_pair_not_yet_listed_is_flagged_upcoming(self):
+        row = _spot(_with("sBTCUSDT", listTime=_ms(timedelta(days=1))))["sBTCUSDT"]
+        assert row == {"id": "sBTCUSDT", "type": "spot", "upcoming": True}
 
     def test_unknown_status_stays_listed(self):
         row = _spot(_with("sBTCUSDT", status="Suspended"))["sBTCUSDT"]
@@ -331,12 +332,14 @@ class TestPerpLifecycle:
         assert rows["BTCUSDC"]["first_capture"] == "2025-05-20T10:00:00.000Z"
 
     @pytest.mark.parametrize("sid", ["BTCUSD", "BTCUSDT", "DOGEAIPUSD"])
-    def test_contract_not_yet_listed_is_excluded(self, sid):
+    def test_contract_not_yet_listed_is_flagged_upcoming(self, sid):
         payload = _with(sid, listTime=_ms(timedelta(hours=3)), status="Listed")
-        assert sid not in _perps(payload)
+        assert _perps(payload)[sid] == {"id": sid, "type": "perpetual", "upcoming": True}
 
     def test_contract_listed_a_moment_ago_is_kept(self):
-        assert "BTCUSDT" in _perps(_with("BTCUSDT", listTime=_ms(-timedelta(minutes=1))))
+        row = _perps(_with("BTCUSDT", listTime=_ms(-timedelta(minutes=1))))["BTCUSDT"]
+        assert not row.get("upcoming")
+        assert row["margin_asset"] == "USDT"
 
 
 class TestMalformed:

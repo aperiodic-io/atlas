@@ -71,6 +71,13 @@ def _fetch(fetcher, routes: dict[str, object], calls: list | None = None) -> lis
 def _by_id(rows: list[dict]) -> dict[str, dict]:
     return {sd["id"]: sd for sd in rows}
 
+def _listed(rows: dict[str, dict]) -> set[str]:
+    """Ids of rows that trade; pending listings are flagged `upcoming` only."""
+    upcoming = [r for r in rows.values() if r.get("upcoming")]
+    assert all(set(r) == {"id", "type", "upcoming"} for r in upcoming)
+    return {sid for sid, r in rows.items() if not r.get("upcoming")}
+
+
 
 def _with_rows(payload: dict, rows: list[dict]) -> dict:
     return {**payload, "data": rows}
@@ -229,10 +236,10 @@ class TestHtxSpot:
         assert "end_date" not in _by_id(_spot())[sid]
 
     @pytest.mark.parametrize("state", ["pre-online", "not-online"])
-    def test_markets_that_have_not_opened_are_left_out(self, state):
+    def test_markets_that_have_not_opened_are_flagged_upcoming(self, state):
         launch = _variant(SPOT_SYMBOLS, sc="newusdt", bc="new", state=state, toa=4133404800000)
         rows = _by_id(_spot(_with_rows(SPOT_SYMBOLS, [*SPOT_SYMBOLS["data"], launch])))
-        assert "newusdt" not in rows
+        assert rows["newusdt"] == {"id": "newusdt", "type": "spot", "upcoming": True}
         assert "btcusdt" in rows
 
     @pytest.mark.parametrize("state", ["fuse", "transfer-board", "something-new"])
@@ -359,7 +366,8 @@ class TestHtxPerpsCoin:
             _variant(COIN_SWAP, 4, contract_status=2),  # pending listing
         ]
         out = _by_id(_coin_swap(_with_rows(COIN_SWAP, rows)))
-        assert set(out) == {"BTC-USD", "ETH-USD", "XRP-USD", "TRX-USD"}
+        assert _listed(out) == {"BTC-USD", "ETH-USD", "XRP-USD", "TRX-USD"}
+        assert len(out) == 5
         for sid in ("BTC-USD", "ETH-USD", "XRP-USD"):
             assert "end_date" not in out[sid]
         assert out["TRX-USD"]["end_date"] == "2023-11-14T22:13:20.000Z"
@@ -453,7 +461,8 @@ class TestHtxFuturesCoin:
             _variant(COIN_FUTURES, 3, contract_status=3),  # suspended
         ]
         out = _by_id(_coin_futures(_with_rows(COIN_FUTURES, rows)))
-        assert set(out) == {"BTC261023", "BTC231117", "ETH261023"}
+        assert _listed(out) == {"BTC261023", "BTC231117", "ETH261023"}
+        assert len(out) == 4
         assert "end_date" not in out["BTC261023"]
         assert "end_date" not in out["ETH261023"]
         # Delivered: ends at its delivery.
@@ -546,7 +555,8 @@ class TestHtxFuturesUsdt:
             ),
         ]
         out = _by_id(_usdt_futures(_with_rows(USDT_FUTURES, rows)))
-        assert set(out) == {"BTC-USDT-261030", "ETH-USDT-231117"}
+        assert _listed(out) == {"BTC-USDT-261030", "ETH-USDT-231117"}
+        assert len(out) == 3
         assert "end_date" not in out["BTC-USDT-261030"]
         # Settled and past its delivery time.
         assert out["ETH-USDT-231117"]["end_date"] == "2023-11-17T08:00:00.000Z"
