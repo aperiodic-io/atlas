@@ -33,10 +33,13 @@ def parse_gemini(exchange: str, sd: SymbolData) -> Contract:
 _SYMBOLS_URL = "https://api.gemini.com/v1/symbols"
 _DETAILS_URL = "https://api.gemini.com/v1/symbols/details/{}"
 
-# Gemini allows 120 public requests a minute. Requests are started at most
-# every half second, a few in flight at once to hide latency: the ~340 spot
-# markets take about three minutes, the perpetuals a few seconds.
-_REQUEST_INTERVAL_SECONDS = 0.5
+# Gemini allows 120 public requests a minute. Every request (the symbol list
+# included) starts at most every 0.6 seconds, 100 a minute, through one
+# process-wide limiter: `gemini-spot` and `gemini-perps` run back to back and
+# share the budget, and the headroom absorbs `get_json` retries, which are not
+# spaced. A few run at once to hide latency: the ~340 spot markets take about
+# three and a half minutes, the perpetuals a few seconds.
+_REQUEST_INTERVAL_SECONDS = 0.6
 _MAX_WORKERS = 4
 
 # `status`: `open` trades; `cancel_only`, `post_only` and `limit_only` are
@@ -114,39 +117,44 @@ def parse_gemini_api(exchange: str, sd: SymbolData) -> Contract:
 class _RateLimiter:
     """Space request starts at least `interval` seconds apart across threads."""
 
-    def __init__(self, interval: float) -> None:
-        self._interval = interval
+    def __init__(self) -> None:
         self._lock = threading.Lock()
         self._next = 0.0
 
-    def wait(self) -> None:
+    def wait(self, interval: float) -> None:
         with self._lock:
             now = time.monotonic()
             start = max(now, self._next)
-            self._next = start + self._interval
+            self._next = start + interval
         if start > now:
             time.sleep(start - now)
 
 
+_LIMITER = _RateLimiter()
+
+
+def _get(url: str, timeout_seconds: int) -> object:
+    _LIMITER.wait(_REQUEST_INTERVAL_SECONDS)
+    return get_json(url, timeout_seconds)
+
+
 def _fetch_symbols(timeout_seconds: int) -> list[str]:
-    payload = get_json(_SYMBOLS_URL, timeout_seconds)
+    payload = _get(_SYMBOLS_URL, timeout_seconds)
     if not isinstance(payload, list) or not all(isinstance(s, str) for s in payload):
         raise ValueError(f"Gemini symbols: expected a list of tickers, got {payload!r:.200}")
     return payload
 
 
 def _fetch_details(symbols: list[str], timeout_seconds: int) -> list[dict]:
-    limiter = _RateLimiter(_REQUEST_INTERVAL_SECONDS)
-
     def details(symbol: str) -> dict:
-        limiter.wait()
-        payload = get_json(_DETAILS_URL.format(symbol), timeout_seconds)
+        payload = _get(_DETAILS_URL.format(symbol), timeout_seconds)
         if not isinstance(payload, dict) or payload.get("result") == "error" or not all(
             payload.get(key) for key in ("symbol", "base_currency", "quote_currency")
         ):
             raise ValueError(f"Gemini details for {symbol!r}: unexpected payload {payload!r:.200}")
         return payload
 
+    # `map` cancels the queued requests once one fails.
     with ThreadPoolExecutor(max_workers=_MAX_WORKERS) as pool:
         return list(pool.map(details, symbols))
 

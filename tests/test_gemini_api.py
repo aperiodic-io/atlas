@@ -12,6 +12,8 @@ import json
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
+import time
+
 import pytest
 import requests
 
@@ -303,9 +305,9 @@ class TestRateLimiter:
         sleeps: list[float] = []
         monkeypatch.setattr(gemini.time, "monotonic", lambda: clock["now"])
         monkeypatch.setattr(gemini.time, "sleep", sleeps.append)
-        limiter = _RateLimiter(0.5)
+        limiter = _RateLimiter()
         for _ in range(3):
-            limiter.wait()
+            limiter.wait(0.5)
         assert sleeps == [0.5, 1.0]
 
     def test_no_wait_once_the_interval_has_passed(self, monkeypatch):
@@ -313,17 +315,48 @@ class TestRateLimiter:
         sleeps: list[float] = []
         monkeypatch.setattr(gemini.time, "monotonic", lambda: clock["now"])
         monkeypatch.setattr(gemini.time, "sleep", sleeps.append)
-        limiter = _RateLimiter(0.5)
-        limiter.wait()
+        limiter = _RateLimiter()
+        limiter.wait(0.5)
         clock["now"] = 101.0
-        limiter.wait()
+        limiter.wait(0.5)
         assert sleeps == []
 
-    def test_default_interval_respects_the_public_limit(self):
-        # Gemini allows 120 public requests a minute.
+    def test_default_interval_leaves_headroom_under_the_public_limit(self):
+        # Gemini allows 120 public requests a minute; retries are not spaced.
         assert DEFAULT_INTERVAL > 0
-        assert 60 / DEFAULT_INTERVAL <= 120
+        assert 60 / DEFAULT_INTERVAL <= 100
         assert gemini._MAX_WORKERS >= 1
+
+    def test_every_request_of_both_slugs_shares_one_limiter(self, monkeypatch):
+        """Spot and perps run back to back; one budget must cover both."""
+        waits: list[float] = []
+        monkeypatch.setattr(gemini._LIMITER, "wait", waits.append)
+        fake = _Gemini()
+        with patch("atlas.exchange_definitions.http.requests.get", side_effect=fake):
+            fetch_gemini_spot(timeout_seconds=5)
+            fetch_gemini_perpetual(timeout_seconds=5)
+        # `/v1/symbols` included.
+        assert len(waits) == len(fake.urls)
+        assert fake.urls.count("https://api.gemini.com/v1/symbols") == 2
+
+    def test_a_failed_request_cancels_the_queued_ones(self):
+        """A failure surfaces without first running every remaining request."""
+        first = SYMBOLS[0]
+        details = {**DETAILS, first: {"result": "error", "reason": "InvalidSymbol"}}
+        fake = _Gemini(details=details)
+
+        def slow(url, **_kwargs):
+            if first not in url:
+                time.sleep(0.02)
+            return fake(url)
+
+        spot_symbols = [s for s in SYMBOLS if not s.endswith("perp")]
+        assert spot_symbols[0] == first
+        assert len(spot_symbols) > 2 * gemini._MAX_WORKERS
+        with patch("atlas.exchange_definitions.http.requests.get", side_effect=slow), pytest.raises(ValueError):
+            fetch_gemini_spot(timeout_seconds=5)
+        detail_requests = [u for u in fake.urls if "/details/" in u]
+        assert len(detail_requests) < len(spot_symbols)
 
 
 # ---------------------------------------------------------------------------

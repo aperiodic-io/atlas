@@ -361,7 +361,8 @@ have no API left and stay beta, history only.
 - Poloniex history holds v1 `QUOTE_BASE` ids (ended 2022-08-02) next to current
   `BASE_QUOTE` ids; the parser tells them apart by that cut-over.
 - Gemini publishes no bulk details endpoint, so its fetcher reads each symbol's
-  details within Gemini's public rate limit (about three minutes a run).
+  details within Gemini's public rate limit (about three and a half minutes
+  a run).
 
 New rows take the venue's listing time as `first_capture` where it publishes
 one, otherwise their first observation (see [Listing and delisting
