@@ -2960,7 +2960,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "cash:AMZN",
@@ -2985,7 +2986,8 @@
     "denominator": "USDT0",
     "margin": "USDT0",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "crypto"
+    "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "cash:CAR",
@@ -3010,7 +3012,8 @@
     "denominator": "USDT0",
     "margin": "USDT0",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "crypto"
+    "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "cash:EWY",
@@ -3191,7 +3194,8 @@
     "denominator": "USDH",
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "crypto"
+    "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "flx:COIN",
@@ -3528,7 +3532,8 @@
     "denominator": "USDE",
     "margin": "USDE",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "hyna:HYPE",
@@ -3631,7 +3636,8 @@
     "denominator": "USDE",
     "margin": "USDE",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "hyna:SOL",
@@ -3769,7 +3775,8 @@
     "symbol": "IO:H100",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "io:IONQ",
@@ -3793,7 +3800,8 @@
     "internal_id": "perpetual-IO:MOONSHOT-USDC:USDC",
     "symbol": "IO:MOONSHOT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "io:NBIS",
@@ -3841,7 +3849,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "unknown"
+    "underlying": "unknown",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "io:SNDK",
@@ -4071,7 +4080,8 @@
     "denominator": "USDH",
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "km:MU",
@@ -4278,7 +4288,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:BABA",
@@ -4290,7 +4301,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:BMNR",
@@ -4302,7 +4314,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:BVIV",
@@ -4326,7 +4339,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "forex"
+    "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:GLDMINE",
@@ -4338,7 +4352,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:GOLD",
@@ -4350,7 +4365,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:GOOGL",
@@ -4362,7 +4378,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:JPN225",
@@ -4374,7 +4391,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:MU",
@@ -4386,7 +4404,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:NVDA",
@@ -4398,7 +4417,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:PLTR",
@@ -4410,7 +4430,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:RTX",
@@ -4422,7 +4443,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:SEMI",
@@ -4434,7 +4456,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:SILVER",
@@ -4446,7 +4469,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:SMALL2000",
@@ -4470,7 +4494,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:TSLA",
@@ -4482,7 +4507,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:US500",
@@ -4518,7 +4544,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:USOIL",
@@ -4530,7 +4557,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "mkts:USTECH",
@@ -4554,7 +4582,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:10Y",
@@ -4626,7 +4655,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "pre_market"
+    "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:AVGO",
@@ -4662,7 +4692,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:CIEN",
@@ -4734,7 +4765,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "crypto"
+    "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:GDX",
@@ -4770,7 +4802,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:IGV",
@@ -4794,7 +4827,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:IREN",
@@ -4842,7 +4876,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:NET",
@@ -4878,7 +4913,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "crypto",
-    "first_capture": "2026-10-18T00:00:00.000Z"
+    "first_capture": "2026-10-18T00:00:00.000Z",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:RDDT",
@@ -4950,7 +4986,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "para:TER",
@@ -5086,7 +5123,8 @@
     "denominator": "USDH",
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "vntl:INFOTECH",
@@ -5176,7 +5214,8 @@
     "denominator": "USDH",
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "vntl:SOY",
@@ -5251,7 +5290,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-10-04T07:41:55Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:ALUMINIUM",
@@ -5263,7 +5303,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:AMAT",
@@ -5299,7 +5340,8 @@
     "symbol": "XYZ:AMEC",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:AMZN",
@@ -5467,7 +5509,8 @@
     "symbol": "XYZ:CATL",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:CBRS",
@@ -5527,7 +5570,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:COST",
@@ -5647,7 +5691,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "forex"
+    "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:EBAY",
@@ -5815,7 +5860,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:HIMS",
@@ -5875,7 +5921,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:IBM",
@@ -5899,7 +5946,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:INNOLIGHT",
@@ -5910,7 +5958,8 @@
     "symbol": "XYZ:INNOLIGHT",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:INTC",
@@ -5946,7 +5995,8 @@
     "symbol": "XYZ:JIO",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "pre_market"
+    "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:JP225",
@@ -6018,7 +6068,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "forex"
+    "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:KSTR",
@@ -6246,7 +6297,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:NOK",
@@ -6402,7 +6454,8 @@
     "symbol": "XYZ:RELIANCE",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "equity"
+    "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:RIVN",
@@ -6522,7 +6575,8 @@
     "symbol": "XYZ:SNAP",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "unknown"
+    "underlying": "unknown",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:SNDK",
@@ -6654,7 +6708,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:TWST",
@@ -6702,7 +6757,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:URNM",
@@ -6738,7 +6794,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:VOL",
@@ -6750,7 +6807,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "index"
+    "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:WDC",
@@ -6774,7 +6832,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "commodity"
+    "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:XBI",
@@ -6822,7 +6881,8 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
-    "underlying": "pre_market"
+    "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z"
   },
   {
     "id": "xyz:ZHIPU",

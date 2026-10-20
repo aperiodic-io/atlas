@@ -490,6 +490,22 @@
     "first_capture": "2026-03-02T20:39:53+01:00"
   },
   {
+    "id": "EQQQQ/USDC",
+    "type": "spot",
+    "first_capture": "2026-10-20T07:03:00.875Z",
+    "internal_id": "spot-EQQQQ-USDC",
+    "symbol": "EQQQQ",
+    "denominator": "USDC"
+  },
+  {
+    "id": "EQSPY/USDC",
+    "type": "spot",
+    "first_capture": "2026-10-20T07:03:00.875Z",
+    "internal_id": "spot-EQSPY-USDC",
+    "symbol": "EQSPY",
+    "denominator": "USDC"
+  },
+  {
     "id": "EX/USDC",
     "type": "spot",
     "internal_id": "spot-EX-USDC",
@@ -1501,6 +1517,14 @@
     "symbol": "OTTI",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00"
+  },
+  {
+    "id": "PAIR/USDC",
+    "type": "spot",
+    "first_capture": "2026-10-20T07:03:00.875Z",
+    "internal_id": "spot-PAIR-USDC",
+    "symbol": "PAIR",
+    "denominator": "USDC"
   },
   {
     "id": "PANDA/USDC",

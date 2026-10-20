@@ -1455,7 +1455,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-07-13T00:00:00.000Z"
+    "first_capture": "2026-07-13T00:00:00.000Z",
+    "base_coin": "ANTHROPIC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity"
   },
   {
     "id": "ANTUSDT",
@@ -3034,7 +3039,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-06-22T00:00:00.000Z"
+    "first_capture": "2026-06-22T00:00:00.000Z",
+    "base_coin": "BP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "crypto"
   },
   {
     "id": "BRETTUSDT",
@@ -9693,7 +9703,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-08-07T00:00:00.000Z"
+    "first_capture": "2026-08-07T00:00:00.000Z",
+    "base_coin": "MOONSHOT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity"
   },
   {
     "id": "MORPHOUSDT",
@@ -10811,7 +10826,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-07-13T00:00:00.000Z"
+    "first_capture": "2026-07-13T00:00:00.000Z",
+    "base_coin": "OPENAI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity"
   },
   {
     "id": "OPENUSDT",
@@ -11019,7 +11039,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-09-22T00:00:00.000Z"
+    "first_capture": "2026-09-22T00:00:00.000Z",
+    "base_coin": "OURA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity"
   },
   {
     "id": "OUSDT",
@@ -11556,7 +11581,12 @@
     "denominator": "USDT",
     "margin": "USDT",
     "quantity_unit": "base",
-    "first_capture": "2026-09-23T00:00:00.000Z"
+    "first_capture": "2026-09-23T00:00:00.000Z",
+    "base_coin": "POLYMARKET",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity"
   },
   {
     "id": "POLYXUSDT",

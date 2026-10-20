@@ -684,6 +684,18 @@
     "first_capture": "2026-10-19T18:51:22.980Z"
   },
   {
+    "id": "ASTS",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T07:03:27.109Z",
+    "internal_id": "perpetual-ASTS-USDC:USDC",
+    "symbol": "ASTS",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "ATH",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -4569,7 +4581,7 @@
     "symbol": "PROMPT",
     "denominator": "USDC",
     "margin": "USDC",
-    "missing_since": "2026-10-19T18:51:22.980Z"
+    "end_date": "2026-10-19T18:51:22.980Z"
   },
   {
     "id": "PROVE",
