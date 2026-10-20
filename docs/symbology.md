@@ -239,7 +239,8 @@ whose ticker disagrees with the Atlas row (usually a parser split), inference
 conflicts, rejected ticker reuse and the active rows still without an asset.
 
 Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
-`bybit-spot`, `bybit-perps`, `bybit-futures`, `okx-spot`, `okx-perps`,
+`bybit-spot`, `bybit-perps-usd`, `bybit-perps-coin`,
+`bybit-futures`, `okx-spot`, `okx-perps`,
 `okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget-spot`,
 `bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
 `bitget-futures-coin`, `gateio-spot`, `gateio-perps-usdt`, `gateio-perps-btc`,
@@ -261,7 +262,8 @@ identifies the base asset of 21,114 of 31,730 parsed instrument rows
 | `binance-futures` | 794 | 100.0% |
 | `binance-futures-cm` | 30 | 100.0% |
 | `bybit-spot` | 527 | 99.6% |
-| `bybit-perps` | 894 | 99.3% |
+| `bybit-perps-usd` | 872 | 99.3% |
+| `bybit-perps-coin` | 22 | 100.0% |
 | `bybit-futures` | 44 | 100.0% |
 | `okx-spot` | 1,184 | 92.8% |
 | `okx-perps` | 510 | 99.6% |

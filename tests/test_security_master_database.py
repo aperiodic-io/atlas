@@ -164,10 +164,10 @@ def test_security_master_returns_instrument_metadata(tmp_path) -> None:
             "quantity_unit": "quote",
         }
     ]
-    (tmp_path / "bybit-perps.json").write_text(json.dumps(data))
+    (tmp_path / "bybit-perps-coin.json").write_text(json.dumps(data))
 
     metadata = SecurityMaster.load(data_dir=tmp_path).instrument_metadata(
-        "bybit-perps", "BTCUSD"
+        "bybit-perps-coin", "BTCUSD"
     )
 
     assert metadata is not None
@@ -175,7 +175,7 @@ def test_security_master_returns_instrument_metadata(tmp_path) -> None:
     metadata["quantity_unit"] = "base"
     assert (
         SecurityMaster.load(data_dir=tmp_path)
-        .instrument_metadata("bybit-perps", "BTCUSD")["quantity_unit"]
+        .instrument_metadata("bybit-perps-coin", "BTCUSD")["quantity_unit"]
         == "quote"
     )
 

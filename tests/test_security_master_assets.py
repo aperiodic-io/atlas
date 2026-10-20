@@ -82,7 +82,7 @@ def sm(tmp_path: Path) -> SecurityMaster:
     )
     _write(
         tmp_path,
-        "bybit-perps",
+        "bybit-perps-usd",
         [
             {
                 "id": "BTCUSDT",
@@ -122,7 +122,7 @@ def test_instrument_legs(sm):
     assert sm.quote_asset("binance-futures", "btcusdt").asset_id == "USDT"
     assert sm.margin_asset("binance-futures", "btcusdt").asset_id == "USDT"
     assert sm.margin_asset("binance-spot", "btcusdt") is None
-    assert sm.base_asset("bybit-perps", "UNMAPPEDUSDT") is None
+    assert sm.base_asset("bybit-perps-usd", "UNMAPPEDUSDT") is None
     assert sm.base_asset("nope", "nope") is None
 
 
@@ -136,7 +136,7 @@ def test_unified_id_lookups(sm):
     assert sm.unified_id("binance-futures", "1000pepeusdt") == "perpetual-PEPE-USDT:USDT"
     assert sm.by_unified_id("perpetual-BTC-USDT:USDT") == [
         ("binance-futures", "btcusdt"),
-        ("bybit-perps", "BTCUSDT"),
+        ("bybit-perps-usd", "BTCUSDT"),
     ]
     assert sm.by_unified_id("nope") == []
 
@@ -145,10 +145,10 @@ def test_instruments_and_exchanges_for_an_asset(sm):
     assert sm.instruments_for_asset("BTC") == [
         ("binance-futures", "btcusdt"),
         ("binance-spot", "btcusdt"),
-        ("bybit-perps", "BTCUSDT"),
+        ("bybit-perps-usd", "BTCUSDT"),
     ]
-    assert sm.instruments_for_asset("BTC", exchange="bybit-perps") == [("bybit-perps", "BTCUSDT")]
-    assert sm.exchanges_for_asset("BTC") == ["binance-futures", "binance-spot", "bybit-perps"]
+    assert sm.instruments_for_asset("BTC", exchange="bybit-perps-usd") == [("bybit-perps-usd", "BTCUSDT")]
+    assert sm.exchanges_for_asset("BTC") == ["binance-futures", "binance-spot", "bybit-perps-usd"]
     # Historical base assets count too.
     assert sm.instruments_for_asset("LUNC") == [("binance-spot", "lunausdt")]
 
