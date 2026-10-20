@@ -56103,7 +56103,8 @@
     "denominator": "USD",
     "margin": "USD",
     "delivery_date": "2031-08-22T00:00:00",
-    "underlying": "equity"
+    "underlying": "equity",
+    "first_capture": "2026-08-21T02:30:00.218Z"
   },
   {
     "id": "TEST01-USD_UM_XPERP-310815",
@@ -56113,7 +56114,8 @@
     "symbol": "TEST01",
     "denominator": "USD_UM_XPERP",
     "margin": "TEST01",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "missing_since": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TEST011-USD_UM_XPERP-310815",
@@ -56123,7 +56125,8 @@
     "symbol": "TEST011",
     "denominator": "USD_UM_XPERP",
     "margin": "TEST011",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "missing_since": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TEST012-USD_UM_XPERP-310815",
@@ -56133,7 +56136,8 @@
     "symbol": "TEST012",
     "denominator": "USD_UM_XPERP",
     "margin": "TEST012",
-    "delivery_date": "2031-08-15T00:00:00"
+    "delivery_date": "2031-08-15T00:00:00",
+    "missing_since": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TIA-USD_UM_XPERP-310905",

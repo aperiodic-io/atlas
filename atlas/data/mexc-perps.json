@@ -1377,7 +1377,8 @@
     "internal_id": "perpetual-ARGUS-USDT:USDT",
     "symbol": "ARGUS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.706Z"
   },
   {
     "id": "ARIA_USDT",
@@ -2833,7 +2834,7 @@
     "symbol": "BONER",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "BOTSTOCK_USDT",
@@ -3373,7 +3374,8 @@
     "internal_id": "perpetual-CAVASTOCK-USDT:USDT",
     "symbol": "CAVASTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "CBRSSTOCK_USDT",
@@ -3508,7 +3510,8 @@
     "internal_id": "perpetual-CELHSTOCK-USDT:USDT",
     "symbol": "CELHSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "CELO_USDT",
@@ -5083,7 +5086,8 @@
     "internal_id": "perpetual-DTESTOCK-USDT:USDT",
     "symbol": "DTESTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "DUSK_USDT",
@@ -5158,7 +5162,8 @@
     "internal_id": "perpetual-EACC-USDT:USDT",
     "symbol": "EACC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.705Z"
   },
   {
     "id": "EATSTOCK_USDT",
@@ -5173,7 +5178,8 @@
     "internal_id": "perpetual-EATSTOCK-USDT:USDT",
     "symbol": "EATSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "EBAYSTOCK_USDT",
@@ -6149,7 +6155,7 @@
     "symbol": "FONE",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "FORM_USDT",
@@ -6689,7 +6695,8 @@
     "internal_id": "perpetual-GPNSTOCK-USDT:USDT",
     "symbol": "GPNSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.705Z"
   },
   {
     "id": "GPROSTOCK_USDT",
@@ -6885,7 +6892,22 @@
     "symbol": "GSTOCK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
+  },
+  {
+    "id": "GTC_USDT",
+    "type": "perpetual",
+    "base_coin": "GTC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-20T03:43:00Z",
+    "internal_id": "perpetual-GTC-USDT:USDT",
+    "symbol": "GTC",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "GTLBSTOCK_USDT",
@@ -7995,7 +8017,8 @@
     "internal_id": "perpetual-IOTSTOCK-USDT:USDT",
     "symbol": "IOTSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "IOTX_USDT",
@@ -8775,7 +8798,8 @@
     "internal_id": "perpetual-KRMNSTOCK-USDT:USDT",
     "symbol": "KRMNSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.709Z"
   },
   {
     "id": "KRSTOCK_USDT",
@@ -9541,7 +9565,7 @@
     "symbol": "MASKSOL",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "MASK_USDT",
@@ -10052,7 +10076,7 @@
     "symbol": "MOO",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "MORPHO_USDT",
@@ -10383,7 +10407,7 @@
     "symbol": "MUSEBOOK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "MUSTOCK_USD1",
@@ -11479,7 +11503,7 @@
     "symbol": "ORBIO",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "ORCA_USDT",
@@ -11569,7 +11593,8 @@
     "internal_id": "perpetual-OTC-USDT:USDT",
     "symbol": "OTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.705Z"
   },
   {
     "id": "OURASTOCK_USDT",
@@ -11644,7 +11669,8 @@
     "internal_id": "perpetual-PAID-USDT:USDT",
     "symbol": "PAID",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.704Z"
   },
   {
     "id": "PANASONICSTOCK_USDT",
@@ -11689,7 +11715,8 @@
     "internal_id": "perpetual-PAPER-USDT:USDT",
     "symbol": "PAPER",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-10-20T07:03:19.523Z"
   },
   {
     "id": "PARTI_USDT",
@@ -12230,7 +12257,7 @@
     "symbol": "POD",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "POETSTOCK_USDT",
@@ -13656,7 +13683,7 @@
     "symbol": "SHROOM",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "SIGN_USDT",
@@ -14182,7 +14209,7 @@
     "symbol": "SOCK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "SOFISTOCK_USDT",
@@ -14723,7 +14750,7 @@
     "symbol": "STANDARD",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "STAR_USDT",
@@ -14783,7 +14810,8 @@
     "internal_id": "perpetual-STOCKER-USDT:USDT",
     "symbol": "STOCKER",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-20T07:03:19.706Z"
   },
   {
     "id": "STONK_USDT",
@@ -16134,7 +16162,7 @@
     "symbol": "UBIK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
     "id": "UB_USDT",
@@ -18205,6 +18233,6 @@
     "symbol": "ZZZ",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-19T18:51:30.698Z"
+    "end_date": "2026-10-19T18:51:30.698Z"
   }
 ]
