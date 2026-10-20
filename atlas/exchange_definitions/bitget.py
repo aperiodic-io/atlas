@@ -6,6 +6,7 @@ from ..types import UnderlyingType
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
 from .common import (
+    upcoming,
     KNOWN_QUOTES,
     SkipSymbol,
     delisted_end_date,
@@ -90,6 +91,10 @@ _BITGET_NOT_YET_LISTED = "listed"
 _BITGET_DELISTED = "offline"
 
 
+def _bitget_upcoming(item: dict, sd: dict) -> dict:
+    return upcoming(sd) if item.get("status") == _BITGET_NOT_YET_LISTED else sd
+
+
 def _bitget_symbol(item: dict, category: str) -> dict:
     base, quote = item["baseCoin"], item["quoteCoin"]
     coin_margined = category == "COIN-FUTURES"
@@ -117,9 +122,8 @@ def _bitget_symbol(item: dict, category: str) -> dict:
 def _fetch_bitget(category: str, timeout_seconds: int) -> list[dict]:
     payload = get_json(_BITGET_V3_INSTRUMENTS, timeout_seconds, params={"category": category})
     return [
-        _bitget_symbol(item, category)
+        _bitget_upcoming(item, _bitget_symbol(item, category))
         for item in payload.get("data") or []
-        if item.get("status") != _BITGET_NOT_YET_LISTED
     ]
 
 
@@ -171,7 +175,6 @@ def fetch_bitget_spot(timeout_seconds: int) -> list[dict]:
     """Bitget spot, from the same v3 endpoint and statuses as the contracts."""
     payload = get_json(_BITGET_V3_INSTRUMENTS, timeout_seconds, params={"category": "SPOT"})
     return [
-        _bitget_spot_symbol(item)
+        _bitget_upcoming(item, _bitget_spot_symbol(item))
         for item in payload.get("data") or []
-        if item.get("status") != _BITGET_NOT_YET_LISTED
     ]

@@ -423,3 +423,18 @@ def test_merge_existing_fields_preserves_symbology_fields() -> None:
     assert merged[0]["base_asset_id"] == "BTC"
     assert merged[0]["unified_id"] == "spot-BTC-USDT"
     assert merged[0]["category"] == ["Layer 1"]
+
+
+def test_hybrid_keeps_tardis_history_for_an_instrument_the_api_lists_as_upcoming() -> None:
+    """A relaunch the API has not opened yet must not hide its Tardis history."""
+    from atlas.update_sources import HybridSymbolSource
+
+    history = {"id": "BSV-USDT", "type": "spot", "availableSince": "2019-01-01T00:00:00.000Z"}
+    tardis = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [history]})
+    api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [
+        {"id": "BSV-USDT", "type": "spot", "upcoming": True},
+        {"id": "NEW-USDT", "type": "spot", "upcoming": True},
+    ]})
+    rows = HybridSymbolSource(exchange_source=api, tardis_source=tardis).fetch_exchange("kucoin-spot")
+
+    assert rows == {"availableSymbols": [history, {"id": "NEW-USDT", "type": "spot", "upcoming": True}]}

@@ -116,6 +116,25 @@ EXCHANGES = [
     "cryptocom-futures",
     "avantis-perps",
     "variational-perps",
+    "bitfinex-spot",
+    "bitfinex-perps",
+    "bitstamp-spot",
+    "bitstamp-perps",
+    "cryptocom-spot",
+    "gemini-spot",
+    "gemini-perps",
+    "htx-spot",
+    "htx-perps-coin",
+    "htx-futures-coin",
+    "htx-futures-usdt",
+    "kraken-spot",
+    "kraken-perps",
+    "kraken-futures",
+    "kucoin-spot",
+    "phemex-spot",
+    "phemex-perps",
+    "poloniex-spot",
+    "upbit-spot",
 ]
 
 
@@ -481,6 +500,29 @@ def _infers_missing(
     return True
 
 
+def _hold_upcoming(
+    incoming_symbols: list[dict], existing_rows: list[dict]
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """Split off instruments the venue lists but that have not started trading.
+
+    Fetchers flag them `upcoming`. One Atlas has never tracked is not added
+    until it trades. One already on file (a relaunch, or a listing the venue
+    re-staged) is still listed, so it is kept exactly as it is rather than
+    marked missing; only a pending miss is dropped.
+
+    Returns the trading rows, the rows on file to process, and the held rows.
+    """
+    upcoming_ids = {sd.get("id") for sd in incoming_symbols if sd.get("upcoming")}
+    trading = [sd for sd in incoming_symbols if not sd.get("upcoming")]
+    remaining = [row for row in existing_rows if row["id"] not in upcoming_ids]
+    held = [
+        {k: v for k, v in row.items() if k != "missing_since"}
+        for row in existing_rows
+        if row["id"] in upcoming_ids
+    ]
+    return trading, remaining, held
+
+
 def _build_exchange_rows(
     exchange: str,
     lifecycle: SymbolLifecycle,
@@ -491,6 +533,7 @@ def _build_exchange_rows(
     now: datetime,
 ) -> list[dict]:
     """Turn one exchange's fetched rows plus the rows on file into the rows to write."""
+    incoming_symbols, existing_rows, held_rows = _hold_upcoming(incoming_symbols, existing_rows)
     existing_by_id = {row["id"]: row for row in existing_rows}
     complete = lifecycle is SymbolLifecycle.COMPLETE
     captured_at = utc_timestamp(now)
@@ -524,6 +567,7 @@ def _build_exchange_rows(
         now=now,
         captured_at=captured_at,
     )
+    symbols = [*symbols, *held_rows]
     if not complete:
         symbols = _clear_pending_misses(symbols)
     # Existing rows are retained for historical coverage, but only if they
