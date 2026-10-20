@@ -216,7 +216,10 @@ universe, so `first_capture` and `end_date` come from the exchanges:
   have not started trading are not added: Kraken spot `work_in_progress`, Kraken
   Futures before `openingDate`, HTX spot `pre-online`, KuCoin before
   `tradingStartTime` or in its opening call auction, Phemex before `listTime`,
-  Poloniex before `tradableStartTime`.
+  Poloniex before `tradableStartTime`, Bitget `listed`, HTX pending listing.
+  An instrument already on file that the venue lists as not trading yet (a
+  relaunch under the same id) stays exactly as it is, neither closed nor
+  reopened, until it trades.
 - A run that returns nothing for an exchange fails it and leaves its file
   untouched. A run that would newly drop more than 10% of an exchange's open
   instruments (and more than 5) looks like a broken API response: it still
@@ -387,7 +390,11 @@ Bitstamp perpetual `asset_class` and spot `/currencies/` `type`, KuCoin's
 classification and list only crypto (Upbit, Poloniex, HTX coin-margined
 contracts) are `crypto`; Gemini spot is `crypto` except fiat-base pairs
 (`forex`), and Bitfinex perpetuals are classed by the venue's naming
-(`…IX` indices, volatility indices, metals and oil, fiat bases). Conventions across
+(`…IX` indices, volatility indices, metals and oil, fiat bases). HTX tags its ETFs
+(SPY, QQQ, leveraged funds) `indices` alongside real indices, with nothing in
+its metadata to tell them apart, so on HTX (spot and USDT perps alike) they
+are `index`; Phemex, whose currency names identify its ETFs, has them as
+`equity`. Conventions across
 venues: ETFs are `equity`; pre-IPO companies are `pre_market`; crypto and
 cash indices, and treasury yields, are `index`; a venue value Atlas does not
 know is `unknown`, never `crypto`. Venues disagree on tokenized gold
@@ -470,7 +477,7 @@ The repository currently ships precomputed JSON snapshots for:
 
 - Unified parser layer with exchange-specific symbol rules.
 - Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default). An exchange read from its own API is stable.
-- Venues Tardis does not list (`on_tardis=False`, e.g. ApeX, GRVT) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
+- Venues Tardis does not list (`on_tardis=False`: ApeX, GRVT, Extended, Pacifica, Avantis, Variational, the MEXC, WhiteBIT and Bitget coin-margined venues, Gate's USDT futures and HTX's coin-margined futures) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.
