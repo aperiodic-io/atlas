@@ -26,8 +26,8 @@ from atlas.exchange_definitions.crypto_com import (
 )
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "cryptocom"
-INSTRUMENTS = json.loads((_FIXTURES / "instruments.json").read_text())
-TARDIS = json.loads((_FIXTURES / "tardis.json").read_text())
+INSTRUMENTS = json.loads((_FIXTURES / "instruments.json").read_text(encoding="utf-8"))
+TARDIS = json.loads((_FIXTURES / "tardis.json").read_text(encoding="utf-8"))
 SLUG = "cryptocom-spot"
 
 

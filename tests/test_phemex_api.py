@@ -25,8 +25,8 @@ from atlas.exchange_definitions.phemex import (
 )
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "phemex"
-PRODUCTS = json.loads((_FIXTURES / "products_plus.json").read_text())
-TARDIS = json.loads((_FIXTURES / "tardis.json").read_text())
+PRODUCTS = json.loads((_FIXTURES / "products_plus.json").read_text(encoding="utf-8"))
+TARDIS = json.loads((_FIXTURES / "tardis.json").read_text(encoding="utf-8"))
 
 
 def _response(payload: object) -> MagicMock:

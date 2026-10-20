@@ -187,7 +187,7 @@ class TestUpdate:
         """End to end through `update`: API rows written, each with an internal id and a start."""
         import atlas.update as updater
 
-        rows = json.loads((_DATA_DIR / f"{exchange}.json").read_text())
+        rows = json.loads((_DATA_DIR / f"{exchange}.json").read_text(encoding="utf-8"))
         live = [
             {k: v for k, v in row.items() if k not in {"first_capture", "end_date", "missing_since", "internal_id"}}
             for row in rows
@@ -200,13 +200,13 @@ class TestUpdate:
             fetch_exchange=lambda _e: {"availableSymbols": [r.copy() for r in live]},
         )
         assert update([exchange], source) == []
-        written = json.loads((tmp_path / f"{exchange}.json").read_text())
+        written = json.loads((tmp_path / f"{exchange}.json").read_text(encoding="utf-8"))
         assert {r["id"] for r in written} == {r["id"] for r in live}
         assert all(r["internal_id"] and r["first_capture"] for r in written)
 
 
 def _snapshot(exchange: str) -> list[dict]:
-    return json.loads((_DATA_DIR / f"{exchange}.json").read_text())
+    return json.loads((_DATA_DIR / f"{exchange}.json").read_text(encoding="utf-8"))
 
 
 class TestBundledSnapshots:

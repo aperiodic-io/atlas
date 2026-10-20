@@ -35,7 +35,7 @@ FIXTURES = Path(__file__).parent / "fixtures" / "kraken"
 
 
 def _load(name: str):
-    return json.loads((FIXTURES / name).read_text())
+    return json.loads((FIXTURES / name).read_text(encoding="utf-8"))
 
 
 PAIRS = _load("asset_pairs.json")

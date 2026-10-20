@@ -18,8 +18,8 @@ from atlas.exchange_definitions.common import SkipSymbol
 from atlas.exchange_definitions.upbit import fetch_upbit_spot, parse_upbit, parse_upbit_api
 
 FIXTURES = Path(__file__).parent / "fixtures" / "upbit"
-MARKETS = json.loads((FIXTURES / "markets.json").read_text())
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text())
+MARKETS = json.loads((FIXTURES / "markets.json").read_text(encoding="utf-8"))
+TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
 
 
 def _response(payload: object) -> MagicMock:

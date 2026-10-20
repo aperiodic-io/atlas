@@ -24,8 +24,8 @@ from atlas.exchange_definitions.poloniex import (
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "poloniex"
-MARKETS = json.loads((FIXTURES / "markets.json").read_text())
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text())
+MARKETS = json.loads((FIXTURES / "markets.json").read_text(encoding="utf-8"))
+TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
 MARKET = {m["symbol"]: m for m in MARKETS}
 
 

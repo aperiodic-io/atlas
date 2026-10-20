@@ -24,7 +24,7 @@ SLUG = "kucoin-spot"
 
 
 def _load(name: str):
-    return json.loads((_FIXTURES / name).read_text())
+    return json.loads((_FIXTURES / name).read_text(encoding="utf-8"))
 
 
 SYMBOLS = _load("symbols.json")

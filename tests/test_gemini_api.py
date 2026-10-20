@@ -29,9 +29,9 @@ from atlas.exchange_definitions.gemini import (
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "gemini"
-SYMBOLS = json.loads((FIXTURES / "symbols.json").read_text())
-DETAILS = json.loads((FIXTURES / "details.json").read_text())
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text())
+SYMBOLS = json.loads((FIXTURES / "symbols.json").read_text(encoding="utf-8"))
+DETAILS = json.loads((FIXTURES / "details.json").read_text(encoding="utf-8"))
+TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
 # Read before the autouse fixture below zeroes it for the fake API.
 DEFAULT_INTERVAL = gemini._REQUEST_INTERVAL_SECONDS
 
