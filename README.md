@@ -36,7 +36,7 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - lookup by `(exchange, original_id)` -> `internal_id`
   - active-symbol filtering by date window
 - Refreshes snapshot data from:
-  - exchange APIs (default; Binance, Bybit, Hyperliquid, OKX)
+  - exchange APIs (default; every stable exchange in [Supported Exchanges](#supported-exchanges))
   - Tardis
   - hybrid mode (exchange API overlaid on Tardis)
 
@@ -172,7 +172,11 @@ universe, so `first_capture` and `end_date` come from the exchanges:
   (Binance futures and Aster `onboardDate`, Bybit derivatives and Bitget
   `launchTime`, OKX `listTime`, Gate `launch_time`, HTX `create_date`, MEXC
   `openingTime`/`createTime`, Deribit `creation_timestamp`, Extended `createdAt`,
-  Lighter `created_at`, GRVT `create_time`, Pacifica `created_at`), otherwise the
+  Lighter `created_at`, GRVT `create_time`, Pacifica `created_at`, Bitfinex
+  `pub:info:pair` creation time, HTX spot `toa` and contracts `create_date`,
+  Kraken Futures `openingDate`, KuCoin `tradingStartTime`, Phemex `listTime`,
+  Poloniex `tradableStartTime` except on markets migrated from its v1 API, which
+  all report the 2022-07-28 migration), otherwise the
   time a run first saw the instrument. A value already on file is never
   overwritten.
 - `end_date` is set from an explicit exchange signal when there is one: Binance
@@ -186,10 +190,15 @@ universe, so `first_capture` and `end_date` come from the exchanges:
   and HTX delisted/delivered or past its `delivery_time` (the scheduled
   delisting) are dated; Extended `DELISTED`, GRVT `DELISTED`, Lighter
   `inactive`, Avantis `isPairListed: false`, MEXC delivered/offline and Gate
-  `delisted` end at first sighting.
+  `delisted` end at first sighting. Of the venues that were Tardis-only, Phemex
+  `Delisted` (at the delisted milestone of its `timeline`), Kraken Futures
+  `isExpired` (at `lastTradingTime`) and HTX coin-margined and USDT-margined
+  contracts (as HTX USDT perps) are dated; Kraken spot `delisted`, Gemini
+  `closed`, HTX spot `offline` and Poloniex `OFFLINE` end at first sighting.
 - An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
   OKX, Hyperliquid spot, and every venue without a delisted status: ApeX,
-  Pacifica, Variational, Deribit, WhiteBIT, Crypto.com) is marked
+  Pacifica, Variational, Deribit, WhiteBIT, Crypto.com, Bitfinex, Bitstamp,
+  KuCoin, Upbit) is marked
   `missing_since` on the first run that misses
   it. If a run at least 12 hours later still misses it, `end_date` is set to that
   first miss; if it comes back first, the mark is dropped. Expired dated futures
@@ -199,7 +208,18 @@ universe, so `first_capture` and `end_date` come from the exchanges:
   `PreLaunch`/`Delivering`, Bitget `limit_open`/`limit_close`/`restrictedAPI`,
   HTX suspended and settling, MEXC paused and delivering, Gate `delisting` and
   `circuit_breaker`, Extended `PRELISTED`/`REDUCE_ONLY`, ApeX contracts that
-  still trade or show) stay listed.
+  still trade or show, Kraken spot `cancel_only`/`post_only`/`limit_only`/
+  `reduce_only`/`maintenance`, Kraken Futures `suspended`/`postOnly`, Bitstamp
+  `trading: Disabled`, Gemini `cancel_only`/`post_only`/`limit_only`, HTX spot
+  `suspend`/`fuse`, KuCoin `enableTrading: false` and `st`, Upbit
+  warning/caution, Poloniex `PAUSE`/`POST_ONLY`) stay listed. Instruments that
+  have not started trading are not added: Kraken spot `work_in_progress`, Kraken
+  Futures before `openingDate`, HTX spot `pre-online`, KuCoin before
+  `tradingStartTime` or in its opening call auction, Phemex before `listTime`,
+  Poloniex before `tradableStartTime`, Bitget `listed`, HTX pending listing.
+  An instrument already on file that the venue lists as not trading yet (a
+  relaunch under the same id) stays exactly as it is, neither closed nor
+  reopened, until it trades.
 - A run that returns nothing for an exchange fails it and leaves its file
   untouched. A run that would newly drop more than 10% of an exchange's open
   instruments (and more than 5) looks like a broken API response: it still
@@ -225,7 +245,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `binance-spot` | ✅ **`STABLE`** |
 | `binance-futures` | ✅ **`STABLE`** |
 | `binance-futures-cm` | ✅ **`STABLE`** |
-| `bitmex` | **`UNSTABLE (BETA)`** |
+| `bitmex` | **`UNSTABLE (BETA)`** (closed 2026-09-23; history only) |
 | `bitfinex` | **`UNSTABLE (BETA)`** |
 | `bitfinex-derivatives` | **`UNSTABLE (BETA)`** |
 | `bitget` | **`UNSTABLE (BETA)`** |
@@ -240,7 +260,7 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `crypto-com` | **`UNSTABLE (BETA)`** |
 | `cryptofacilities` | **`UNSTABLE (BETA)`** |
 | `deribit` | **`UNSTABLE (BETA)`** |
-| `ftx` | **`UNSTABLE (BETA)`** |
+| `ftx` | **`UNSTABLE (BETA)`** (closed 2022; history only) |
 | `gate-io` | **`UNSTABLE (BETA)`** |
 | `gate-io-futures` | **`UNSTABLE (BETA)`** |
 | `gemini` | **`UNSTABLE (BETA)`** |
@@ -279,6 +299,25 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `whitebit-perps` | ✅ **`STABLE`** |
 | `cryptocom-perps` | ✅ **`STABLE`** |
 | `cryptocom-futures` | ✅ **`STABLE`** |
+| `bitfinex-spot` | ✅ **`STABLE`** |
+| `bitfinex-perps` | ✅ **`STABLE`** |
+| `bitstamp-spot` | ✅ **`STABLE`** |
+| `bitstamp-perps` | ✅ **`STABLE`** |
+| `cryptocom-spot` | ✅ **`STABLE`** |
+| `gemini-spot` | ✅ **`STABLE`** |
+| `gemini-perps` | ✅ **`STABLE`** |
+| `htx-spot` | ✅ **`STABLE`** |
+| `htx-perps-coin` | ✅ **`STABLE`** |
+| `htx-futures-coin` | ✅ **`STABLE`** |
+| `htx-futures-usdt` | ✅ **`STABLE`** |
+| `kraken-spot` | ✅ **`STABLE`** |
+| `kraken-perps` | ✅ **`STABLE`** |
+| `kraken-futures` | ✅ **`STABLE`** |
+| `kucoin-spot` | ✅ **`STABLE`** |
+| `phemex-spot` | ✅ **`STABLE`** |
+| `phemex-perps` | ✅ **`STABLE`** |
+| `poloniex-spot` | ✅ **`STABLE`** |
+| `upbit-spot` | ✅ **`STABLE`** |
 
 An exchange is stable exactly when it has its own exchange-API fetcher.
 
@@ -299,6 +338,35 @@ take the same scheme (`bitget-spot`, `gateio-spot`, `coinbase-spot`, as
 `bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
 `bybit-perps-coin` both live in `bybit-perps`).
 
+### Venues that were Tardis-only
+
+Every other Tardis-named exchange now has stable slugs in the same scheme,
+read from the venue's own API and merged with Tardis history through
+`tardis_id`: Kraken (`kraken-spot`; Kraken Futures, Tardis's
+`cryptofacilities`, as `kraken-perps` and `kraken-futures`), Bitfinex
+(`bitfinex-spot`, `bitfinex-perps`), Bitstamp (`bitstamp-spot`,
+`bitstamp-perps`), Gemini (`gemini-spot`, `gemini-perps`), HTX (`htx-spot`,
+`htx-perps-coin`, `htx-futures-coin`, `htx-futures-usdt`), KuCoin
+(`kucoin-spot`), Phemex (`phemex-spot`, `phemex-perps`), Poloniex
+(`poloniex-spot`), Upbit (`upbit-spot`) and Crypto.com spot (`cryptocom-spot`).
+The Tardis-named exchanges (`kraken`, `cryptofacilities`, `bitfinex`,
+`bitfinex-derivatives`, `bitstamp`, `gemini`, `huobi`, `huobi-dm`,
+`huobi-dm-swap`, `huobi-dm-linear-swap`, `kucoin`, `phemex`, `poloniex`,
+`upbit`, `crypto-com`) remain beta parsers. BitMEX (closed 2026-09-23) and FTX
+have no API left and stay beta, history only.
+
+- Kraken spot ids are Kraken's WebSocket v2 names (`BTC/USD`, `AAPLx/USD`,
+  `AAPLSPV/USD`), which Tardis has recorded since 2026-07-10; its earlier v1
+  names (`XBT/USD`) are kept as history and resolve to the same `internal_id`.
+- `htx-futures-coin` ids are HTX's dated contract codes (`BTC261225`). Tardis's
+  `huobi-dm` lists only rolling aliases (`BTC_CQ`), so the venue is
+  `on_tardis=False`.
+- Poloniex history holds v1 `QUOTE_BASE` ids (ended 2022-08-02) next to current
+  `BASE_QUOTE` ids; the parser tells them apart by that cut-over.
+- Gemini publishes no bulk details endpoint, so its fetcher reads each symbol's
+  details within Gemini's public rate limit (about three and a half minutes
+  a run).
+
 New rows take the venue's listing time as `first_capture` where it publishes
 one, otherwise their first observation (see [Listing and delisting
 dates](#listing-and-delisting-dates)).
@@ -312,7 +380,21 @@ categorise, mostly delisted, come from a curated table in
 `exchange_definitions/hyperliquid.py`), Gate `contract_type` and
 `is_pre_market`, HTX `tradfi_labels`, MEXC trade zones (`conceptPlate`),
 Bitget `symbolType`/`isRwa`, Deribit `underlying_type`, WhiteBIT TradFi
-membership of `/markets`, Crypto.com `product_type`. Conventions across
+membership of `/markets`, Crypto.com `product_type`, Kraken spot
+`aclass_base` (xStocks are equity, fiat-base pairs forex) and Kraken Futures
+`category`, HTX spot base-currency `tags` and USDT contracts `tradfi_labels`,
+Bitfinex `pub:list:pair:securities` (tokenized securities are `unknown`),
+Bitstamp perpetual `asset_class` and spot `/currencies/` `type`, KuCoin's
+`market` zone and xStock currency names, Phemex
+`perpProductSubType`/`perpProductSubGroup`. Venues that publish no
+classification and list only crypto (Upbit, Poloniex, HTX coin-margined
+contracts) are `crypto`; Gemini spot is `crypto` except fiat-base pairs
+(`forex`), and Bitfinex perpetuals are classed by the venue's naming
+(`…IX` indices, volatility indices, metals and oil, fiat bases). HTX tags its ETFs
+(SPY, QQQ, leveraged funds) `indices` alongside real indices, with nothing in
+its metadata to tell them apart, so on HTX (spot and USDT perps alike) they
+are `index`; Phemex, whose currency names identify its ETFs, has them as
+`equity`. Conventions across
 venues: ETFs are `equity`; pre-IPO companies are `pre_market`; crypto and
 cash indices, and treasury yields, are `index`; a venue value Atlas does not
 know is `unknown`, never `crypto`. Venues disagree on tokenized gold
@@ -371,12 +453,31 @@ The repository currently ships precomputed JSON snapshots for:
 - `cryptocom-futures`
 - `extended-perps`
 - `avantis-perps`
+- `bitfinex-spot`
+- `bitfinex-perps`
+- `bitstamp-spot`
+- `bitstamp-perps`
+- `cryptocom-spot`
+- `gemini-spot`
+- `gemini-perps`
+- `htx-spot`
+- `htx-perps-coin`
+- `htx-futures-coin`
+- `htx-futures-usdt`
+- `kraken-spot`
+- `kraken-perps`
+- `kraken-futures`
+- `kucoin-spot`
+- `phemex-spot`
+- `phemex-perps`
+- `poloniex-spot`
+- `upbit-spot`
 
 ## Features
 
 - Unified parser layer with exchange-specific symbol rules.
 - Stable-vs-beta exchange classification (beta exchanges are skipped in `update.py` by default). An exchange read from its own API is stable.
-- Venues Tardis does not list (`on_tardis=False`, e.g. ApeX, GRVT) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
+- Venues Tardis does not list (`on_tardis=False`: ApeX, GRVT, Extended, Pacifica, Avantis, Variational, the MEXC, WhiteBIT and Bitget coin-margined venues, Gate's USDT futures and HTX's coin-margined futures) are skipped by `--source tardis` and read from their API by `--source hybrid`; a new row's `first_capture` is Atlas's first observation.
 - Exchange ID mapping to Tardis IDs (`to_tardis_exchange_id`).
 - Metadata merge logic that preserves previously-known fields when the current source omits them.
 - Date-window filtering over locally stored symbol availability intervals.

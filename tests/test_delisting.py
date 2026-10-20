@@ -364,3 +364,69 @@ def test_sources_that_cannot_see_delistings_clear_pending_misses(data_dir, lifec
     assert updater.update(["binance-spot"], source) == []
 
     assert not any("missing_since" in row for row in _read(path).values())
+
+
+# ---------------------------------------------------------------------------
+# Instruments a venue lists but that have not started trading (`upcoming`)
+# ---------------------------------------------------------------------------
+
+
+def test_upcoming_instrument_we_never_tracked_is_not_added(data_dir) -> None:
+    path = _write(data_dir, "binance-spot", LIVE)
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("newusdt", upcoming=True)])) == []
+
+    assert "newusdt" not in _read(path)
+
+
+def test_upcoming_instrument_on_file_stays_as_it_is(data_dir) -> None:
+    """A relaunch (a new trading start on an id we track) is not a delisting."""
+    relaunched = _spot("bsvusdt", first_capture="2020-01-01T00:00:00.000Z", internal_id="spot-BSV-USDT")
+    path = _write(data_dir, "binance-spot", [*LIVE, relaunched])
+    source = _complete_source([*LIVE, _spot("bsvusdt", upcoming=True, first_capture="2027-01-01T00:00:00.000Z")])
+
+    assert updater.update(["binance-spot"], source) == []
+    assert updater.update(["binance-spot"], source) == []
+
+    assert _read(path)["bsvusdt"] == relaunched
+
+
+def test_upcoming_instrument_clears_a_pending_miss(data_dir) -> None:
+    path = _write(data_dir, "binance-spot", [*LIVE, _spot("bsvusdt", missing_since="2026-10-12T02:00:00.000Z")])
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("bsvusdt", upcoming=True)])) == []
+
+    row = _read(path)["bsvusdt"]
+    assert "missing_since" not in row
+    assert "end_date" not in row
+
+
+def test_upcoming_instrument_keeps_a_recorded_end_date(data_dir) -> None:
+    """A delisted id the venue is preparing to relist stays closed until it trades."""
+    ended = _spot("oldusdt", end_date="2025-01-01T00:00:00.000Z")
+    path = _write(data_dir, "binance-spot", [*LIVE, ended])
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("oldusdt", upcoming=True)])) == []
+
+    assert _read(path)["oldusdt"] == ended
+
+
+def test_upcoming_instruments_count_as_present_for_the_mass_disappearance_guard(data_dir) -> None:
+    rows = [_spot(f"relaunch{i}usdt") for i in range(10)]
+    _write(data_dir, "binance-spot", [*LIVE, *rows])
+    upcoming = [{**row, "upcoming": True} for row in rows]
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, *upcoming])) == []
+
+
+@pytest.mark.parametrize("lifecycle", [SymbolLifecycle.MERGE, SymbolLifecycle.COMPLETE])
+def test_upcoming_flag_is_never_written(data_dir, lifecycle) -> None:
+    path = _write(data_dir, "binance-spot", [*LIVE, _spot("bsvusdt")])
+    source = SimpleNamespace(
+        lifecycle=lifecycle,
+        fetch_exchange=lambda _e: {"availableSymbols": [*map(dict, LIVE), _spot("bsvusdt", upcoming=True)]},
+    )
+
+    assert updater.update(["binance-spot"], source) == []
+
+    assert not any("upcoming" in row for row in _read(path).values())

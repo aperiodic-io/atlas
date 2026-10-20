@@ -49,6 +49,15 @@ def delisted_end_date(delisted_at_ms: object = None) -> str:
     return utc_timestamp(delisted if delisted and delisted <= now else now)
 
 
+def upcoming(sd: dict) -> dict:
+    """Mark a row the venue lists but that has not started trading.
+
+    The updater does not add it, and keeps the row on file (a relaunch) as it
+    is instead of treating its absence as a delisting.
+    """
+    return {"id": sd["id"], "type": sd["type"], "upcoming": True}
+
+
 class SkipSymbol(Exception):
     """Raised by a parser when a symbol is intentionally skipped or unrecognised."""
 

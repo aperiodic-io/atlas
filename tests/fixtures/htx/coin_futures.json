@@ -1,0 +1,135 @@
+{
+ "status": "ok",
+ "data": [
+  {
+   "symbol": "BTC",
+   "contract_code": "BTC261023",
+   "contract_type": "this_week",
+   "contract_size": 100.0,
+   "price_tick": 0.01,
+   "delivery_date": "20261023",
+   "delivery_time": "1792742400000",
+   "create_date": "20261009",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "BTC",
+   "contract_code": "BTC261030",
+   "contract_type": "next_week",
+   "contract_size": 100.0,
+   "price_tick": 0.01,
+   "delivery_date": "20261030",
+   "delivery_time": "1793347200000",
+   "create_date": "20261016",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "BTC",
+   "contract_code": "BTC261225",
+   "contract_type": "quarter",
+   "contract_size": 100.0,
+   "price_tick": 0.01,
+   "delivery_date": "20261225",
+   "delivery_time": "1798185600000",
+   "create_date": "20260911",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "ETH",
+   "contract_code": "ETH261023",
+   "contract_type": "this_week",
+   "contract_size": 10.0,
+   "price_tick": 0.001,
+   "delivery_date": "20261023",
+   "delivery_time": "1792742400000",
+   "create_date": "20261009",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "new",
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "ETH",
+   "contract_code": "ETH261030",
+   "contract_type": "next_week",
+   "contract_size": 10.0,
+   "price_tick": 0.001,
+   "delivery_date": "20261030",
+   "delivery_time": "1793347200000",
+   "create_date": "20261016",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "new",
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "ETH",
+   "contract_code": "ETH261225",
+   "contract_type": "quarter",
+   "contract_size": 10.0,
+   "price_tick": 0.001,
+   "delivery_date": "20261225",
+   "delivery_time": "1798185600000",
+   "create_date": "20260911",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "new",
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "TRX",
+   "contract_code": "TRX261023",
+   "contract_type": "this_week",
+   "contract_size": 10.0,
+   "price_tick": 1e-05,
+   "delivery_date": "20261023",
+   "delivery_time": "1792742400000",
+   "create_date": "20261009",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "common"
+   ]
+  },
+  {
+   "symbol": "TRX",
+   "contract_code": "TRX261030",
+   "contract_type": "next_week",
+   "contract_size": 10.0,
+   "price_tick": 1e-05,
+   "delivery_date": "20261030",
+   "delivery_time": "1793347200000",
+   "create_date": "20261016",
+   "contract_status": 1,
+   "settlement_time": "1792569600000",
+   "labels": [
+    "common"
+   ]
+  }
+ ],
+ "ts": 1792503158203
+}

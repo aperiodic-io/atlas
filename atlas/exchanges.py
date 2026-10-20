@@ -15,7 +15,14 @@ from .exchange_definitions.binance import (
     parse_binance_delivery,
     parse_binance_futures,
 )
-from .exchange_definitions.bitfinex import parse_bitfinex, parse_bitfinex_derivatives
+from .exchange_definitions.bitfinex import (
+    fetch_bitfinex_perpetual,
+    fetch_bitfinex_spot,
+    parse_bitfinex,
+    parse_bitfinex_api,
+    parse_bitfinex_derivatives,
+    parse_bitfinex_perpetual_api,
+)
 from .exchange_definitions.bitget import (
     fetch_bitget_futures_coin,
     fetch_bitget_perpetual_coin,
@@ -27,7 +34,12 @@ from .exchange_definitions.bitget import (
     parse_bitget_v3,
 )
 from .exchange_definitions.bitmex import parse_bitmex
-from .exchange_definitions.bitstamp import parse_bitstamp
+from .exchange_definitions.bitstamp import (
+    fetch_bitstamp_perpetual,
+    fetch_bitstamp_spot,
+    parse_bitstamp,
+    parse_bitstamp_api,
+)
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
     fetch_bybit_perps,
@@ -39,10 +51,17 @@ from .exchange_definitions.coinbase import fetch_coinbase_spot, parse_coinbase
 from .exchange_definitions.crypto_com import (
     fetch_cryptocom_futures,
     fetch_cryptocom_perpetual,
+    fetch_cryptocom_spot,
     parse_crypto_com,
     parse_cryptocom_derivative,
+    parse_cryptocom_spot,
 )
-from .exchange_definitions.cryptofacilities import parse_cryptofacilities
+from .exchange_definitions.cryptofacilities import (
+    fetch_kraken_futures,
+    fetch_kraken_perpetual,
+    parse_cryptofacilities,
+    parse_kraken_derivative,
+)
 from .exchange_definitions.deribit import (
     fetch_deribit_futures,
     fetch_deribit_perpetual,
@@ -60,11 +79,24 @@ from .exchange_definitions.gate_io import (
     parse_gate_io_futures,
     parse_gateio,
 )
-from .exchange_definitions.gemini import parse_gemini
+from .exchange_definitions.gemini import (
+    fetch_gemini_perpetual,
+    fetch_gemini_spot,
+    parse_gemini,
+    parse_gemini_api,
+)
 from .exchange_definitions.grvt import fetch_grvt_perps, parse_grvt
 from .exchange_definitions.huobi import (
+    fetch_htx_futures_coin,
+    fetch_htx_futures_usdt,
+    fetch_htx_perpetual_coin,
     fetch_htx_perpetual_usdt,
+    fetch_htx_spot,
+    parse_htx_coin_futures,
+    parse_htx_coin_swap,
     parse_htx_linear_swap,
+    parse_htx_spot,
+    parse_htx_usdt_futures,
     parse_huobi,
     parse_huobi_dm,
     parse_huobi_dm_linear_swap,
@@ -75,8 +107,8 @@ from .exchange_definitions.hyperliquid import (
     fetch_hyperliquid_spot,
     parse_hyperliquid,
 )
-from .exchange_definitions.kraken import parse_kraken
-from .exchange_definitions.kucoin import parse_kucoin
+from .exchange_definitions.kraken import fetch_kraken_spot, parse_kraken, parse_kraken_spot
+from .exchange_definitions.kucoin import fetch_kucoin_spot, parse_kucoin, parse_kucoin_spot
 from .exchange_definitions.lighter import fetch_lighter_perps, parse_lighter
 from .exchange_definitions.mexc import fetch_mexc_perpetual, parse_mexc
 from .exchange_definitions.okx import (
@@ -88,9 +120,14 @@ from .exchange_definitions.okx import (
     parse_okex_swap,
 )
 from .exchange_definitions.pacifica import fetch_pacifica_perps, parse_pacifica
-from .exchange_definitions.phemex import parse_phemex
-from .exchange_definitions.poloniex import parse_poloniex
-from .exchange_definitions.upbit import parse_upbit
+from .exchange_definitions.phemex import (
+    fetch_phemex_perpetual,
+    fetch_phemex_spot,
+    parse_phemex,
+    parse_phemex_api,
+)
+from .exchange_definitions.poloniex import fetch_poloniex_spot, parse_poloniex, parse_poloniex_api
+from .exchange_definitions.upbit import fetch_upbit_spot, parse_upbit, parse_upbit_api
 from .exchange_definitions.whitebit import fetch_whitebit_perpetual, parse_whitebit
 from .exchange_definitions.variational import fetch_variational_perps, parse_variational
 from .parser_interface import Parser
@@ -298,6 +335,148 @@ _LIVE_PRODUCER_VENUES: dict[str, ExchangeDefinition] = {
 }
 
 
+# Venues that were Tardis-only parsers, now read from their own APIs. Their
+# Tardis-named exchanges (`kraken`, `gemini`, `huobi`, ...) stay beta parsers;
+# BitMEX (closed 2026-09-23) and FTX have no API left and stay beta only.
+_API_VENUES: dict[str, ExchangeDefinition] = {
+    "bitfinex-spot": _define(
+        "bitfinex-spot",
+        parse_bitfinex_api,
+        tardis_id="bitfinex",
+        exchange_fetcher=fetch_bitfinex_spot,
+        allowed_types={"spot"},
+    ),
+    "bitfinex-perps": _define(
+        "bitfinex-perps",
+        parse_bitfinex_perpetual_api,
+        tardis_id="bitfinex-derivatives",
+        exchange_fetcher=fetch_bitfinex_perpetual,
+        allowed_types={"perpetual"},
+    ),
+    "bitstamp-spot": _define(
+        "bitstamp-spot",
+        parse_bitstamp_api,
+        tardis_id="bitstamp",
+        exchange_fetcher=fetch_bitstamp_spot,
+        allowed_types={"spot"},
+    ),
+    "bitstamp-perps": _define(
+        "bitstamp-perps",
+        parse_bitstamp_api,
+        tardis_id="bitstamp",
+        exchange_fetcher=fetch_bitstamp_perpetual,
+        allowed_types={"perpetual"},
+    ),
+    "cryptocom-spot": _define(
+        "cryptocom-spot",
+        parse_cryptocom_spot,
+        tardis_id="crypto-com",
+        exchange_fetcher=fetch_cryptocom_spot,
+        allowed_types={"spot"},
+    ),
+    "gemini-spot": _define(
+        "gemini-spot",
+        parse_gemini_api,
+        tardis_id="gemini",
+        exchange_fetcher=fetch_gemini_spot,
+        allowed_types={"spot"},
+    ),
+    "gemini-perps": _define(
+        "gemini-perps",
+        parse_gemini_api,
+        tardis_id="gemini",
+        exchange_fetcher=fetch_gemini_perpetual,
+        allowed_types={"perpetual"},
+    ),
+    "htx-spot": _define(
+        "htx-spot",
+        parse_htx_spot,
+        tardis_id="huobi",
+        exchange_fetcher=fetch_htx_spot,
+        allowed_types={"spot"},
+    ),
+    "htx-perps-coin": _define(
+        "htx-perps-coin",
+        parse_htx_coin_swap,
+        tardis_id="huobi-dm-swap",
+        exchange_fetcher=fetch_htx_perpetual_coin,
+        allowed_types={"perpetual"},
+    ),
+    # Tardis's `huobi-dm` lists only rolling aliases (`BTC_CQ`), which point at
+    # a new contract every week or quarter; the venue's ids are dated.
+    "htx-futures-coin": _define(
+        "htx-futures-coin",
+        parse_htx_coin_futures,
+        on_tardis=False,
+        exchange_fetcher=fetch_htx_futures_coin,
+        allowed_types={"future"},
+    ),
+    "htx-futures-usdt": _define(
+        "htx-futures-usdt",
+        parse_htx_usdt_futures,
+        tardis_id="huobi-dm-linear-swap",
+        exchange_fetcher=fetch_htx_futures_usdt,
+        allowed_types={"future"},
+    ),
+    "kraken-spot": _define(
+        "kraken-spot",
+        parse_kraken_spot,
+        tardis_id="kraken",
+        exchange_fetcher=fetch_kraken_spot,
+        allowed_types={"spot"},
+    ),
+    "kraken-perps": _define(
+        "kraken-perps",
+        parse_kraken_derivative,
+        tardis_id="cryptofacilities",
+        exchange_fetcher=fetch_kraken_perpetual,
+        allowed_types={"perpetual"},
+    ),
+    "kraken-futures": _define(
+        "kraken-futures",
+        parse_kraken_derivative,
+        tardis_id="cryptofacilities",
+        exchange_fetcher=fetch_kraken_futures,
+        allowed_types={"future"},
+    ),
+    "kucoin-spot": _define(
+        "kucoin-spot",
+        parse_kucoin_spot,
+        tardis_id="kucoin",
+        exchange_fetcher=fetch_kucoin_spot,
+        allowed_types={"spot"},
+    ),
+    "phemex-spot": _define(
+        "phemex-spot",
+        parse_phemex_api,
+        tardis_id="phemex",
+        exchange_fetcher=fetch_phemex_spot,
+        allowed_types={"spot"},
+    ),
+    "phemex-perps": _define(
+        "phemex-perps",
+        parse_phemex_api,
+        tardis_id="phemex",
+        exchange_fetcher=fetch_phemex_perpetual,
+        allowed_types={"perpetual"},
+    ),
+    "poloniex-spot": _define(
+        "poloniex-spot",
+        parse_poloniex_api,
+        tardis_id="poloniex",
+        exchange_fetcher=fetch_poloniex_spot,
+        allowed_types={"spot"},
+    ),
+    "upbit-spot": _define(
+        "upbit-spot",
+        parse_upbit_api,
+        tardis_id="upbit",
+        exchange_fetcher=fetch_upbit_spot,
+        allowed_types={"spot"},
+    ),
+}
+
+
 EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
     "apex-perps": _define(
         "apex-perps",
@@ -445,6 +624,7 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         on_tardis=False,
     ),
     **_LIVE_PRODUCER_VENUES,
+    **_API_VENUES,
     "variational-perps": _define(
         "variational-perps",
         parse_variational,

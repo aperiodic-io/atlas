@@ -114,7 +114,8 @@ class TestBitgetSpotFetcher:
             ],
         )
         by_id = {row["id"]: row for row in rows}
-        assert set(by_id) == {"SWEATUSDT", "OLDUSDT"}
+        assert by_id["NEWUSDT"] == {"id": "NEWUSDT", "type": "spot", "upcoming": True}
+        assert set(by_id) == {"SWEATUSDT", "NEWUSDT", "OLDUSDT"}
         assert "end_date" not in by_id["SWEATUSDT"]
         assert by_id["OLDUSDT"]["end_date"] == "2023-11-14T22:13:20.000Z"
 

@@ -1,0 +1,322 @@
+{
+ "status": "ok",
+ "data": [
+  {
+   "cc": "usdt",
+   "dn": "USDT",
+   "fn": "Tether",
+   "state": "online",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "btc",
+   "dn": "BTC",
+   "fn": "Bitcoin",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "eth",
+   "dn": "ETH",
+   "fn": "Ethereum",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "ht",
+   "dn": "HT",
+   "fn": "Huobi Token",
+   "state": "online",
+   "tags": "exempt"
+  },
+  {
+   "cc": "trx",
+   "dn": "TRX",
+   "fn": "TRON",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "qtum",
+   "dn": "QTUM",
+   "fn": "Qtum Blockchain",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "btm",
+   "dn": "BTM",
+   "fn": "Bytom BTM",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "mtlold",
+   "dn": "MTLOLD",
+   "fn": "Metal",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "hydro",
+   "dn": "HYDRO",
+   "fn": "Hydro Protocol",
+   "state": "offline",
+   "tags": ""
+  },
+  {
+   "cc": "usdc",
+   "dn": "USDC",
+   "fn": "USDC",
+   "state": "online",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "tusd",
+   "dn": "TUSD",
+   "fn": "TRUE USD",
+   "state": "online",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "husd",
+   "dn": "HUSD",
+   "fn": "HUSD",
+   "state": "offline",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "try",
+   "dn": "TRY",
+   "fn": "Turkish Lira",
+   "state": "online",
+   "tags": "fiatassets,fiat,exempt"
+  },
+  {
+   "cc": "btc3l",
+   "dn": "BTC*3",
+   "fn": "",
+   "state": "online",
+   "tags": "etp,nav,activities,holdinglimit"
+  },
+  {
+   "cc": "lunc",
+   "dn": "LUNC",
+   "fn": "Terra classic",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "eth1s",
+   "dn": "ETH*(-1)",
+   "fn": "",
+   "state": "online",
+   "tags": "etp,nav,holdinglimit"
+  },
+  {
+   "cc": "bot",
+   "dn": "BOT",
+   "fn": "BOT",
+   "state": "offline",
+   "tags": "tradfi,stock"
+  },
+  {
+   "cc": "rub",
+   "dn": "RUB",
+   "fn": "Russian Ruble",
+   "state": "online",
+   "tags": "fiatassets,exempt"
+  },
+  {
+   "cc": "gbp",
+   "dn": "GBP",
+   "fn": "Great British Pound",
+   "state": "online",
+   "tags": "fiatassets,exempt"
+  },
+  {
+   "cc": "uah",
+   "dn": "UAH",
+   "fn": "Ukrainian hryvni",
+   "state": "online",
+   "tags": "fiatassets,exempt"
+  },
+  {
+   "cc": "eur",
+   "dn": "EUR",
+   "fn": "Euro",
+   "state": "online",
+   "tags": "fiatassets,exempt"
+  },
+  {
+   "cc": "pol",
+   "dn": "POL",
+   "fn": "Polygon-Ecosystem-Token",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "mir",
+   "dn": "MIR",
+   "fn": "MIR Mirror Protocol",
+   "state": "offline",
+   "tags": ""
+  },
+  {
+   "cc": "nft",
+   "dn": "NFT",
+   "fn": "APENFT",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "brl",
+   "dn": "BRL",
+   "fn": "Brazil Real",
+   "state": "online",
+   "tags": "fiatassets"
+  },
+  {
+   "cc": "ustc",
+   "dn": "USTC",
+   "fn": "USTC",
+   "state": "online",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "stg",
+   "dn": "STG",
+   "fn": "Stargate",
+   "state": "offline",
+   "tags": ""
+  },
+  {
+   "cc": "usdd",
+   "dn": "USDD",
+   "fn": "Decentralized USD",
+   "state": "online",
+   "tags": "stablecoin,exempt"
+  },
+  {
+   "cc": "wmt",
+   "dn": "WMT",
+   "fn": "WMT",
+   "state": "offline",
+   "tags": "tradfi,stock"
+  },
+  {
+   "cc": "euroc",
+   "dn": "EUROC",
+   "fn": "Euro Coin",
+   "state": "online",
+   "tags": "stablecoin"
+  },
+  {
+   "cc": "xaut",
+   "dn": "XAUT",
+   "fn": "XAUT",
+   "state": "online",
+   "tags": "tradfi,stablecoin,commodities"
+  },
+  {
+   "cc": "torn",
+   "dn": "TORN",
+   "fn": "TornadoCash",
+   "state": "online",
+   "tags": "privacycoin"
+  },
+  {
+   "cc": "strx",
+   "dn": "STRX",
+   "fn": "staked TRX",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "pyusd",
+   "dn": "PYUSD",
+   "fn": "PayPal USD",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "gme",
+   "dn": "GME",
+   "fn": "GameStop",
+   "state": "offline",
+   "tags": "tradfi,stock"
+  },
+  {
+   "cc": "wlfi",
+   "dn": "WLFI",
+   "fn": "World Liberty Financial",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "usd1",
+   "dn": "USD1",
+   "fn": "World Liberty Financial USD",
+   "state": "offline",
+   "tags": ""
+  },
+  {
+   "cc": "0g",
+   "dn": "0G",
+   "fn": "0G",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "币安人生",
+   "dn": "币安人生",
+   "fn": "币安人生",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "xag",
+   "dn": "XAG",
+   "fn": "XAG",
+   "state": "offline",
+   "tags": "tradfi,commodities"
+  },
+  {
+   "cc": "kgst",
+   "dn": "KGST",
+   "fn": "KGST",
+   "state": "online",
+   "tags": ""
+  },
+  {
+   "cc": "spx500",
+   "dn": "SPX500",
+   "fn": "SPX500",
+   "state": "offline",
+   "tags": "tradfi,indices"
+  },
+  {
+   "cc": "aapl",
+   "dn": "AAPL",
+   "fn": "AAPL",
+   "state": "offline",
+   "tags": "tradfi,stock"
+  },
+  {
+   "cc": "now",
+   "dn": "NOW",
+   "fn": "NOW",
+   "state": "offline",
+   "tags": "tradfi,stock"
+  },
+  {
+   "cc": "xpt1",
+   "dn": "XPT1",
+   "fn": "XPET",
+   "state": "online",
+   "tags": ""
+  }
+ ],
+ "ts": "1792503464519",
+ "full": 1
+}

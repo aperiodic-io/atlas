@@ -1,0 +1,81 @@
+{
+ "status": "ok",
+ "data": [
+  {
+   "symbol": "BTC",
+   "contract_code": "BTC-USD",
+   "contract_size": 100.0,
+   "price_tick": 0.1,
+   "delivery_time": "",
+   "create_date": "20200325",
+   "contract_status": 1,
+   "settlement_date": "1792512000000",
+   "settlement_period": "8",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "ETH",
+   "contract_code": "ETH-USD",
+   "contract_size": 10.0,
+   "price_tick": 0.01,
+   "delivery_time": "",
+   "create_date": "20200403",
+   "contract_status": 1,
+   "settlement_date": "1792512000000",
+   "settlement_period": "8",
+   "labels": [
+    "new",
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "XRP",
+   "contract_code": "XRP-USD",
+   "contract_size": 10.0,
+   "price_tick": 1e-05,
+   "delivery_time": "",
+   "create_date": "20200410",
+   "contract_status": 1,
+   "settlement_date": "1792512000000",
+   "settlement_period": "8",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  },
+  {
+   "symbol": "TRX",
+   "contract_code": "TRX-USD",
+   "contract_size": 10.0,
+   "price_tick": 1e-06,
+   "delivery_time": "",
+   "create_date": "20200414",
+   "contract_status": 1,
+   "settlement_date": "1792512000000",
+   "settlement_period": "8",
+   "labels": [
+    "common"
+   ]
+  },
+  {
+   "symbol": "DOGE",
+   "contract_code": "DOGE-USD",
+   "contract_size": 10.0,
+   "price_tick": 1e-06,
+   "delivery_time": "",
+   "create_date": "20200812",
+   "contract_status": 1,
+   "settlement_date": "1792512000000",
+   "settlement_period": "8",
+   "labels": [
+    "hot",
+    "common"
+   ]
+  }
+ ],
+ "ts": 1792503157640
+}

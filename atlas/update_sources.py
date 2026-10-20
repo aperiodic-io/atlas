@@ -104,6 +104,9 @@ class HybridSymbolSource:
         # Merge API data: update existing or add new ones
         for api_symbol in api_data.get("availableSymbols", []):
             sid = api_symbol.get("id")
+            if sid in symbols_by_id and api_symbol.get("upcoming"):
+                # Not trading yet (a relaunch): Tardis's history stands.
+                continue
             if sid in symbols_by_id:
                 symbols_by_id[sid].update(api_symbol)
             else:

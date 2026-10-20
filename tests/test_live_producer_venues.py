@@ -450,7 +450,7 @@ def _cdc(symbol, base, inst, product, index, expiry=0, tradable=True):
     }
 
 
-CDC = {"result": {"data": [
+CDC = {"code": 0, "result": {"data": [
     {"symbol": "BTC_USD", "base_ccy": "BTC", "quote_ccy": "USD", "inst_type": "CCY_PAIR", "product_type": "DIGITAL_CURRENCIES", "tradable": True},
     _cdc("BTCUSD-PERP", "BTC", "PERPETUAL_SWAP", "DIGITAL_CURRENCIES", "BTCUSD-INDEX"),
     _cdc("AAPLUSD-PERP", "AAPL", "PERPETUAL_SWAP", "EQUITY", "AAPLUSD-INDEX"),
@@ -490,6 +490,21 @@ class TestCryptocom:
     def test_tardis_rows_parse_from_the_id(self):
         assert parse_contract("cryptocom-perps", {"id": "ETHUSD-PERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:USD"
         assert parse_contract("cryptocom-futures", {"id": "ETHUSD-250328", "type": "future"}).internal_id == "future-ETH-USD:USD-20250328"
+
+    @pytest.mark.parametrize(
+        "payload",
+        [
+            {"code": 10001, "message": "SYS_ERROR"},
+            {"code": 0, "result": {}},
+            [],
+        ],
+    )
+    def test_error_responses_fail_instead_of_emptying_the_venue(self, payload):
+        from atlas.exchange_definitions.crypto_com import fetch_cryptocom_futures, fetch_cryptocom_perpetual
+
+        for fetcher in (fetch_cryptocom_perpetual, fetch_cryptocom_futures):
+            with pytest.raises(ValueError, match=r"Crypto\.com instruments"):
+                _fetch(fetcher, {"/get-instruments": payload})
 
 
 # ---------------------------------------------------------------------------
