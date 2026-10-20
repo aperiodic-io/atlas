@@ -15,7 +15,7 @@ ARC_TO_ATLAS_EXCHANGES: dict[tuple[str, str], tuple[str, ...]] = {
     ("binance", "spot"): ("binance-spot",),
     ("binance", "futures"): ("binance-futures", "binance-futures-cm"),
     ("bybit", "spot"): ("bybit-spot",),
-    ("bybit", "futures"): ("bybit-perps", "bybit-futures"),
+    ("bybit", "futures"): ("bybit-perps", "bybit-perps-usd", "bybit-perps-coin", "bybit-futures"),
     ("okex", "spot"): ("okx-spot",),
     ("okex", "futures"): ("okx-perps", "okx-futures"),
 }

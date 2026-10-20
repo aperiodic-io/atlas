@@ -20,6 +20,7 @@ from atlas import SecurityMaster
 from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchanges import (
     EXCHANGE_DEFINITIONS,
+    VENUE_SPLITS,
     get_allowed_types,
     get_exchange_fetcher,
     get_symbol_filter,
@@ -120,7 +121,8 @@ class TestRegistry:
         assert beta == set(LEGACY_BETA) | set(DEFUNCT) | legacy_with_successor
 
     def test_venues_sharing_a_tardis_feed_do_not_overlap(self):
-        """Two slugs reading one Tardis feed must split it by type or filter."""
+        """Two slugs reading one Tardis feed must split it by type or filter,
+        unless one is declared the union of the others (VENUE_SPLITS)."""
         by_feed: dict[str, list[str]] = {}
         for exchange, definition in EXCHANGE_DEFINITIONS.items():
             if definition.beta or not definition.on_tardis:
@@ -146,6 +148,11 @@ class TestRegistry:
                         if ctype in (get_allowed_types(e) or {"spot", "perpetual", "future"})
                         and (get_symbol_filter(e) or (lambda _r: True))(row)
                     ]
+                    # A union venue shares its rows with exactly one of its splits.
+                    for union, splits in VENUE_SPLITS.items():
+                        if union in owners:
+                            assert len(set(owners) & set(splits)) == 1, (feed, row, owners)
+                            owners.remove(union)
                     assert len(owners) <= 1, (feed, row, owners)
 
 

@@ -286,6 +286,20 @@ def fetch_bybit_perps(timeout_seconds: int) -> list[dict[str, str]]:
     return [s for s in linear + inverse if s["type"] == "perpetual"]
 
 
+def fetch_bybit_perps_usd(timeout_seconds: int) -> list[dict[str, str]]:
+    """The linear perpetuals (USDT- and USDC-settled): live-producers' bybit-perps-usd."""
+    return [
+        s for s in _fetch_bybit_derivatives("linear", timeout_seconds) if s["type"] == "perpetual"
+    ]
+
+
+def fetch_bybit_perps_coin(timeout_seconds: int) -> list[dict[str, str]]:
+    """The inverse perpetuals: live-producers' bybit-perps-coin."""
+    return [
+        s for s in _fetch_bybit_derivatives("inverse", timeout_seconds) if s["type"] == "perpetual"
+    ]
+
+
 def fetch_bybit_futures(timeout_seconds: int) -> list[dict[str, str]]:
     linear = _fetch_bybit_derivatives("linear", timeout_seconds)
     inverse = _fetch_bybit_derivatives("inverse", timeout_seconds)

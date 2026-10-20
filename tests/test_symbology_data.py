@@ -40,6 +40,8 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "binance-futures-cm": 0.98,
     "bybit-spot": 0.97,
     "bybit-perps": 0.97,
+    "bybit-perps-usd": 0.97,
+    "bybit-perps-coin": 0.97,
     "bybit-futures": 0.97,
     "okx-spot": 0.92,
     "okx-perps": 0.97,
