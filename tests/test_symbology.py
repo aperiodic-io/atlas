@@ -116,7 +116,7 @@ def _by_id(rows, exchange, row_id):
 def test_every_symbology_exchange_has_a_family():
     assert set(SYMBOLOGY_EXCHANGES) == set(VENUE_FAMILIES)
     assert {
-        "binance-spot", "bybit-perps", "okx-futures", "hyperliquid-perps",
+        "binance-spot", "bybit-perps-usd", "okx-futures", "hyperliquid-perps",
         "bitget-spot", "bitget-perps-usdt", "gateio-spot", "gateio-perps-usdt", "gateio-futures-usdt", "coinbase-spot",
     } <= set(SYMBOLOGY_EXCHANGES)
 
@@ -426,7 +426,7 @@ def test_quote_tickers_resolve_from_the_venue_tables():
 def test_colliding_tickers_get_qualified_ids_by_usage():
     rows = {
         "binance-futures": [_row("tslausdt", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity")],
-        "bybit-perps": [_row("TSLAUSDT", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        "bybit-perps-usd": [_row("TSLAUSDT", "TSLA", "USDT", "perpetual", margin="USDT", underlying="equity")],
         "hyperliquid-spot": [_row("TSLA/USDC", "TSLA", "USDC")],
     }
     pairs = [
@@ -690,7 +690,7 @@ def test_rows_spanning_an_era_infer_only_from_anchors_after_it():
 
     eras = (TickerEra("LUNA", 4172, _ts("2022-05-28"), "Terra crash"),)
     rows = {
-        "bybit-perps": [
+        "bybit-perps-usd": [
             _row("LUNAUSDT", "LUNA", "USDT", "perpetual", margin="USDT", first="2021-10-11", end="2022-05-13")
         ],
         # CMC's Bybit pair for this row names the wrong asset, so it is unmatched.
@@ -707,7 +707,7 @@ def test_rows_spanning_an_era_infer_only_from_anchors_after_it():
     assert bybit["base_asset_id"] == "LUNA"
     assert bybit["base_asset_match"] == "cross_venue_consensus"
     assert bybit["base_asset_history"] == [{"asset_id": "LUNC", "until": "2022-05-28T00:00:00Z"}]
-    assert rows["bybit-perps"][0]["base_asset_id"] == "LUNC"
+    assert rows["bybit-perps-usd"][0]["base_asset_id"] == "LUNC"
 
 
 def test_legacy_cmc_ids_yield_to_concurrent_strong_anchors_on_the_same_venue():
@@ -794,7 +794,7 @@ def test_ticker_reuse_guard_ignores_listing_dates_of_retired_assets():
 
 def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
     rows = {
-        "bybit-perps": [_row("AALUSDT", "AAL", "USDT", "perpetual", margin="USDT", underlying="equity")],
+        "bybit-perps-usd": [_row("AALUSDT", "AAL", "USDT", "perpetual", margin="USDT", underlying="equity")],
         "gateio-perps-usdt": [
             _row("AAL_USDT", "AAL", "USDT", "perpetual", margin="USDT", underlying="equity"),
             _row("NAS100_USDT", "NAS100", "USDT", "perpetual", margin="USDT", underlying="index"),
@@ -810,7 +810,7 @@ def test_untracked_tradfi_underlyings_get_atlas_reference_assets():
         _pair("bybit", "perpetual", 825, "USDT", 825, "USDT", ticker="NOPE"),
     ]
     _report, registry = _build(rows, pairs)
-    aal = {rows[e][0]["base_asset_id"] for e in ("bybit-perps", "gateio-perps-usdt")}
+    aal = {rows[e][0]["base_asset_id"] for e in ("bybit-perps-usd", "gateio-perps-usdt")}
     assert aal == {"AAL"}
     assert registry.get("AAL").asset_class is AssetClass.equity
     assert registry.get("AAL").cmc_id is None
@@ -984,7 +984,7 @@ def test_contract_multiplier_forms(symbol, ticker, expected):
 def test_price_check_allows_suffix_multipliers_and_order_of_magnitude_noise():
     details = {**DETAILS, 5994: _detail(5994, "SHIB", "Shiba Inu", "shiba-inu")}
     rows = {
-        "bybit-perps": [_row("SHIB1000USDT", "SHIB1000", "USDT", "perpetual", margin="USDT")],
+        "bybit-perps-usd": [_row("SHIB1000USDT", "SHIB1000", "USDT", "perpetual", margin="USDT")],
         "gateio-spot": [_row("ETH_USDT", "ETH", "USDT")],
     }
     pairs = [
@@ -994,7 +994,7 @@ def test_price_check_allows_suffix_multipliers_and_order_of_magnitude_noise():
     ]
     report, _ = _build(rows, pairs, details=details, asset_prices={5994: 0.0000099, 1027: 2.5})
     assert report.pair_price_mismatches == []
-    assert rows["bybit-perps"][0]["base_multiplier"] == 1000
+    assert rows["bybit-perps-usd"][0]["base_multiplier"] == 1000
 
 
 def test_a_venue_outvotes_a_minority_cmc_listing_of_one_ticker():

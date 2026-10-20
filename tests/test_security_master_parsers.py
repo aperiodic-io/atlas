@@ -371,21 +371,21 @@ class TestBybitSpot:
 
 class TestBybitPerps:
     def test_inverse_perp(self):
-        c = _parse("bybit-perps", "BTCUSD", "perpetual")
+        c = _parse("bybit-perps-coin", "BTCUSD", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USD"
         assert c.margin == "BTC"
         assert c.instrument_type == ContractType.perpetual
 
     def test_usdc_linear_perp_with_suffix(self):
-        c = _parse("bybit-perps", "BTCPERP", "perpetual")
+        c = _parse("bybit-perps-usd", "BTCPERP", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDC"
         assert c.margin == "USDC"
 
     def test_api_metadata_overrides_symbol_heuristic(self):
         c = parse_contract(
-            "bybit-perps",
+            "bybit-perps-usd",
             _sd(
                 "BTCPERP",
                 "perpetual",
@@ -400,7 +400,7 @@ class TestBybitPerps:
 
     def test_inverse_quantity_is_quote_denomination(self):
         c = parse_contract(
-            "bybit-perps",
+            "bybit-perps-coin",
             _sd(
                 "BTCUSD",
                 "perpetual",
@@ -414,7 +414,7 @@ class TestBybitPerps:
         assert c.quantity_unit == "quote"
 
     def test_linear_perp(self):
-        c = _parse("bybit-perps", "BTCUSDT", "perpetual")
+        c = _parse("bybit-perps-usd", "BTCUSDT", "perpetual")
         assert c.symbol == "BTC"
         assert c.denominator == "USDT"
         assert c.margin == "USDT"
@@ -916,7 +916,7 @@ class TestFetchBybit:
         return get
 
     def test_derivative_fetch_preserves_mapping_metadata_and_paginates(self):
-        from atlas.exchange_definitions.bybit import fetch_bybit_perps
+        from atlas.exchange_definitions.bybit import fetch_bybit_perps_usd
 
         def perp(symbol, quote):
             return {
@@ -933,7 +933,7 @@ class TestFetchBybit:
             ("linear", "Trading", "next-page"): {"list": [perp("BTCPERP", "USDC")], "nextPageCursor": ""},
         })
         with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
-            assert fetch_bybit_perps(timeout_seconds=5) == [
+            assert fetch_bybit_perps_usd(timeout_seconds=5) == [
                 {
                     "id": "BTCUSDT",
                     "type": "perpetual",
@@ -957,7 +957,7 @@ class TestFetchBybit:
             ]
 
     def test_prelaunch_and_delivering_stay_listed_and_closed_ends_at_delivery_time(self):
-        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps
+        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps_usd
 
         get = self._route({
             ("linear", "Trading", None): {"list": [
@@ -983,7 +983,7 @@ class TestFetchBybit:
             ]},
         })
         with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
-            perp_rows = {sd["id"]: sd for sd in fetch_bybit_perps(timeout_seconds=5)}
+            perp_rows = {sd["id"]: sd for sd in fetch_bybit_perps_usd(timeout_seconds=5)}
             perps = {sid: sd.get("end_date") for sid, sd in perp_rows.items()}
             futures = {sd["id"]: sd for sd in fetch_bybit_futures(timeout_seconds=5)}
 
@@ -1000,7 +1000,7 @@ class TestFetchBybit:
         assert futures["BTC-01DEC23"]["delivery_date"] == "2023-12-01T08:00:00+00:00"
 
     def test_perps_and_futures_download_each_category_and_status_once(self):
-        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps
+        from atlas.exchange_definitions.bybit import fetch_bybit_futures, fetch_bybit_perps_usd
 
         get = self._route({
             ("linear", "Trading", None): {"list": [
@@ -1015,7 +1015,7 @@ class TestFetchBybit:
             return get(url, params, timeout)
 
         with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=counting_get):
-            perps = fetch_bybit_perps(timeout_seconds=5)
+            perps = fetch_bybit_perps_usd(timeout_seconds=5)
             futures = fetch_bybit_futures(timeout_seconds=5)
 
         assert [sd["id"] for sd in perps] == ["BTCUSDT"]

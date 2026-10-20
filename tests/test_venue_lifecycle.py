@@ -487,6 +487,7 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
         "aster-perps", "apex-perps", "avantis-perps", "extended-perps",
         "grvt-perps", "lighter-perps", "pacifica-perps", "variational-perps",
         "gateio-perps-usdt", "gateio-perps-btc", "gateio-futures-usdt",
+        "bybit-perps-usd", "bybit-perps-coin",
         "htx-perps-usdt", "mexc-perps", "bitget-perps-usdt",
         "bitget-perps-usdc", "bitget-perps-coin", "bitget-futures-coin",
         "deribit-perps", "deribit-futures", "whitebit-perps",

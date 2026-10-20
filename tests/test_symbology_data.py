@@ -39,7 +39,8 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "binance-futures": 0.98,
     "binance-futures-cm": 0.98,
     "bybit-spot": 0.97,
-    "bybit-perps": 0.97,
+    "bybit-perps-usd": 0.97,
+    "bybit-perps-coin": 0.97,
     "bybit-futures": 0.97,
     "okx-spot": 0.92,
     "okx-perps": 0.97,
@@ -180,7 +181,7 @@ def test_quote_coverage(snapshots):
         ("binance-futures", "btcusdt", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("binance-futures-cm", "btcusd_perp", "BTC", "USD", "BTC", "perpetual-BTC-USD:BTC"),
         ("bybit-spot", "BTCUSDT", "BTC", "USDT", None, "spot-BTC-USDT"),
-        ("bybit-perps", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("bybit-perps-usd", "BTCUSDT", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("okx-spot", "BTC-USDT", "BTC", "USDT", None, "spot-BTC-USDT"),
         ("okx-perps", "BTC-USDT-SWAP", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
         ("hyperliquid-perps", "BTC", "BTC", "USDC", "USDC", "perpetual-BTC-USDC:USDC"),
@@ -242,7 +243,7 @@ def test_tradfi_underlyings_share_one_asset_across_venues(sm):
         sm.base_asset(exchange, original_id).asset_id
         for exchange, original_id in [
             ("binance-futures", "tslausdt"),
-            ("bybit-perps", "TSLAUSDT"),
+            ("bybit-perps-usd", "TSLAUSDT"),
             ("okx-perps", "TSLA-USDT-SWAP"),
             ("gateio-perps-usdt", "TSLA_USDT"),
             ("hyperliquid-perps", "xyz:TSLA"),
@@ -258,7 +259,7 @@ def test_unified_id_groups_a_contract_across_venues(sm):
     venues = {exchange for exchange, _ in sm.by_unified_id("perpetual-BTC-USDT:USDT")}
     assert {
         "binance-futures",
-        "bybit-perps",
+        "bybit-perps-usd",
         "okx-perps",
         "bitget-perps-usdt",
         "gateio-perps-usdt",

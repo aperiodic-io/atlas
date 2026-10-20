@@ -72,9 +72,9 @@ def test_sources_declare_how_their_rows_relate_to_the_file() -> None:
 def test_accept_missing_is_a_comma_separated_exchange_list() -> None:
     assert updater.parse_args([]).accept_missing == []
     assert updater.parse_args(["--accept-missing", ""]).accept_missing == []
-    assert updater.parse_args(["--accept-missing", "okx-spot, bybit-perps"]).accept_missing == [
+    assert updater.parse_args(["--accept-missing", "okx-spot, bybit-perps-usd"]).accept_missing == [
         "okx-spot",
-        "bybit-perps",
+        "bybit-perps-usd",
     ]
 
 

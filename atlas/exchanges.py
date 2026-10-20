@@ -37,7 +37,8 @@ from .exchange_definitions.bitstamp import (
 )
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
-    fetch_bybit_perps,
+    fetch_bybit_perps_coin,
+    fetch_bybit_perps_usd,
     fetch_bybit_spot,
     parse_bybit,
     parse_bybit_spot,
@@ -382,9 +383,16 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_spot,
         allowed_types={"spot"},
     ),
-    "bybit-perps": _define(
+    # live-producers streams Bybit's perpetuals as one slug per category:
+    # linear (USDT- and USDC-settled) and inverse.
+    "bybit-perps-usd": _define(
         parse_bybit,
-        exchange_fetcher=fetch_bybit_perps,
+        exchange_fetcher=fetch_bybit_perps_usd,
+        allowed_types={"perpetual"},
+    ),
+    "bybit-perps-coin": _define(
+        parse_bybit,
+        exchange_fetcher=fetch_bybit_perps_coin,
         allowed_types={"perpetual"},
     ),
     "bybit-futures": _define(

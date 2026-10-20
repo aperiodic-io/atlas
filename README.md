@@ -248,7 +248,8 @@ BitMEX (closed 2026-09-23) and FTX are no longer supported.
 | `bitstamp-perps` | perpetual |
 | `bitstamp-spot` | spot |
 | `bybit-futures` | future |
-| `bybit-perps` | perpetual |
+| `bybit-perps-coin` | perpetual |
+| `bybit-perps-usd` | perpetual |
 | `bybit-spot` | spot |
 | `coinbase-spot` | spot |
 | `cryptocom-futures` | future |
@@ -295,9 +296,10 @@ exchange id (`gateio-perps-usdt`, `htx-perps-usdt`, ...), so a
 published record joins its Atlas row by `(exchange, internal_id)` without a
 mapping table. Bitget, Gate and Coinbase spot take the same scheme
 (`bitget-spot`, `gateio-spot`, `coinbase-spot`, as `okx-spot`) though the
-producers do not stream them yet. Bybit keeps its existing
-`bybit-perps` / `bybit-futures` (the producer's `bybit-perps-usd` and
-`bybit-perps-coin` both live in `bybit-perps`).
+producers do not stream them yet. Bybit's perpetuals are the producer's
+`bybit-perps-usd` (linear: USDT- and USDC-settled) and `bybit-perps-coin`
+(inverse). They replace `bybit-perps`, which held both: read the two venues
+instead.
 
 ### Other centralised venues
 
@@ -372,7 +374,8 @@ The repository currently ships precomputed JSON snapshots for:
 - `binance-futures`
 - `binance-futures-cm`
 - `bybit-spot`
-- `bybit-perps`
+- `bybit-perps-usd`
+- `bybit-perps-coin`
 - `bybit-futures`
 - `grvt-perps` (venue API only; `first_capture` is the venue listing time)
 - `hyperliquid-spot`
