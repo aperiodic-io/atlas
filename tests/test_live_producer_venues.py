@@ -508,8 +508,7 @@ class TestCryptocom:
 
 
 # ---------------------------------------------------------------------------
-# Bybit (producer slugs bybit-perps-usd / bybit-perps-coin; Atlas also keeps
-# their union, bybit-perps)
+# Bybit (producer slugs bybit-perps-usd / bybit-perps-coin)
 # ---------------------------------------------------------------------------
 
 
@@ -563,13 +562,6 @@ class TestBybit:
         }
         assert _ids("bybit-perps-coin", coin) == {"BTCUSD": "perpetual-BTC-USD:BTC"}
 
-    def test_slugs_split_the_union_exactly(self, bybit_api):
-        # bybit-perps stays the union, so a row is the same in either file.
-        usd = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
-        coin = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
-        union = bybit_api.fetch_bybit_perps(timeout_seconds=5)
-        assert sorted(usd + coin, key=lambda sd: sd["id"]) == sorted(union, key=lambda sd: sd["id"])
-
     def test_quantity_units(self, bybit_api):
         (usd, _) = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
         (coin,) = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
@@ -594,7 +586,7 @@ class TestBybit:
         keep = get_symbol_filter(exchange)
         assert {sid for sid in tardis_rows if keep({"id": sid})} == kept
 
-    def test_snapshots_split_bybit_perps(self):
+    def test_snapshots_hold_one_category_each(self):
         import json
         from pathlib import Path
 
@@ -603,12 +595,12 @@ class TestBybit:
         def rows(exchange):
             return {sd["id"]: sd for sd in json.loads((data / f"{exchange}.json").read_text())}
 
-        union, usd, coin = rows("bybit-perps"), rows("bybit-perps-usd"), rows("bybit-perps-coin")
+        usd, coin = rows("bybit-perps-usd"), rows("bybit-perps-coin")
         assert not usd.keys() & coin.keys()
-        for sid, sd in {**usd, **coin}.items():
-            assert sd["internal_id"] == union[sid]["internal_id"], sid
         assert {sd["margin"] for sd in usd.values()} <= {"USDT", "USDC"}
+        assert {sd["quantity_unit"] for sd in usd.values()} == {"base"}
         assert all(sd["margin"] == sd["symbol"] for sd in coin.values())
+        assert {sd["quantity_unit"] for sd in coin.values()} == {"quote"}
 
 
 # ---------------------------------------------------------------------------

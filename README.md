@@ -254,7 +254,6 @@ Atlas - Crypto Security Master currently contains parsers for the following exch
 | `bybit-spot` | ✅ **`STABLE`** |
 | `apex-perps` | ✅ **`STABLE`** (venue API only) |
 | `aster-perps` | ✅ **`STABLE`** |
-| `bybit-perps` | ✅ **`STABLE`** |
 | `bybit-perps-usd` | ✅ **`STABLE`** |
 | `bybit-perps-coin` | ✅ **`STABLE`** |
 | `bybit-futures` | ✅ **`STABLE`** |
@@ -339,9 +338,8 @@ take the same scheme (`bitget-spot`, `gateio-spot`, `coinbase-spot`, as
 `gate-io`, `coinbase`, `deribit`, `crypto-com`) remain beta parsers. Bybit's perpetuals
 are the producer's `bybit-perps-usd` (linear: USDT- and USDC-settled) and
 `bybit-perps-coin` (inverse), split from Tardis's `bybit` by native id
-(`BTCUSDT`, `BTCPERP` / `BTCUSD`). `bybit-perps` stays as their union
-(`VENUE_SPLITS` in `atlas/exchanges.py`): the same rows, for the consumers
-that read it.
+(`BTCUSDT`, `BTCPERP` / `BTCUSD`). They replace `bybit-perps`, which held
+both: read the two venues instead.
 
 ### Venues that were Tardis-only
 
@@ -426,7 +424,6 @@ The repository currently ships precomputed JSON snapshots for:
 - `binance-futures`
 - `binance-futures-cm`
 - `bybit-spot`
-- `bybit-perps`
 - `bybit-perps-usd`
 - `bybit-perps-coin`
 - `bybit-futures`

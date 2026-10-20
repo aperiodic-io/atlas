@@ -299,16 +299,6 @@ def test_match_market_pairs_reports_conflicting_pairs_for_one_row():
     assert result.conflicts == (("binance-spot", "btcusdt"),)
 
 
-def test_match_market_pairs_claims_the_row_in_every_snapshot_listing_it():
-    # bybit-perps is the union of bybit-perps-usd and bybit-perps-coin: one
-    # pair is evidence for each copy of the row, so the copies resolve alike.
-    row = _row("BTCUSDT", "BTC", "perpetual")
-    rows = {"bybit-perps": [row], "bybit-perps-usd": [dict(row)], "bybit-perps-coin": []}
-    pair = _pair(venue="bybit", category="perpetual", derivativeTickerId="BTCUSDT")
-    result = match_market_pairs([pair], rows)
-    assert set(result.matches) == {("bybit-perps", "BTCUSDT"), ("bybit-perps-usd", "BTCUSDT")}
-
-
 def test_match_market_pairs_tolerates_repeated_identical_pairs():
     rows = {"gateio-futures-usdt": [_row("ETH_USDT_20261023", "ETH", "future")]}
     pair = _pair(

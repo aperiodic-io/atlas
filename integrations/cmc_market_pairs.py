@@ -74,7 +74,7 @@ CMC_VENUES: dict[str, CmcVenue] = {
             "bybit",
             {
                 "spot": ("bybit-spot",),
-                "perpetual": ("bybit-perps", "bybit-perps-usd", "bybit-perps-coin"),
+                "perpetual": ("bybit-perps-usd", "bybit-perps-coin"),
                 "futures": ("bybit-futures",),
             },
         ),
@@ -330,32 +330,6 @@ def fetch_venue_market_pairs(
     return listings
 
 
-def _pair_rows(
-    pair: MarketPair, index: Mapping[tuple[str, str], list[tuple[str, dict]]]
-) -> list[tuple[str, dict]]:
-    """The rows the first native id that hits names, one per snapshot listing it.
-
-    A union snapshot (bybit-perps) and its splits hold the same row, and the
-    pair is evidence for each copy.
-    """
-    venue = CMC_VENUES.get(pair.venue)
-    wanted_type = _CATEGORY_TYPES.get(pair.category)
-    exchanges = venue.exchanges.get(pair.category, ()) if venue else ()
-    for candidate in native_id_candidates(pair):
-        found = []
-        for exchange in exchanges:
-            hits = [
-                hit
-                for hit in index.get((exchange, candidate), [])
-                if hit[1].get("type") == wanted_type
-            ]
-            if hits:
-                found.append(hits[0])
-        if found:
-            return found
-    return []
-
-
 def match_market_pairs(
     pairs: Iterable[MarketPair], rows_by_exchange: Mapping[str, list[dict]]
 ) -> MatchResult:
@@ -371,16 +345,31 @@ def match_market_pairs(
     unmatched: list[MarketPair] = []
     mismatches: list[tuple[tuple[str, str], MarketPair]] = []
     for pair in pairs:
-        found = _pair_rows(pair, index)
-        if not found:
+        venue = CMC_VENUES.get(pair.venue)
+        wanted_type = _CATEGORY_TYPES.get(pair.category)
+        exchanges = venue.exchanges.get(pair.category, ()) if venue else ()
+        found: tuple[str, dict] | None = None
+        for candidate in native_id_candidates(pair):
+            for exchange in exchanges:
+                hits = [
+                    hit
+                    for hit in index.get((exchange, candidate), [])
+                    if hit[1].get("type") == wanted_type
+                ]
+                if hits:
+                    found = hits[0]
+                    break
+            if found:
+                break
+        if found is None:
             unmatched.append(pair)
             continue
-        for exchange, row in found:
-            key = (exchange, row["id"])
-            if not symbols_consistent(str(row.get("symbol") or ""), pair.base_symbol):
-                mismatches.append((key, pair))
-                continue
-            claims[key].append(pair)
+        exchange, row = found
+        key = (exchange, row["id"])
+        if not symbols_consistent(str(row.get("symbol") or ""), pair.base_symbol):
+            mismatches.append((key, pair))
+            continue
+        claims[key].append(pair)
 
     matches: dict[tuple[str, str], MarketPair] = {}
     conflicts: list[tuple[str, str]] = []

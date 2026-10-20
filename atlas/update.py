@@ -69,7 +69,6 @@ EXCHANGES = [
     "bitmex",
     "bitstamp",
     "bybit-spot",
-    "bybit-perps",
     "bybit-perps-usd",
     "bybit-perps-coin",
     "bybit-futures",

@@ -222,8 +222,9 @@ _BYBIT_LISTED_STATUSES = ("Trading", "PreLaunch", "Delivering")
 _BYBIT_DELISTED_STATUS = "Closed"
 
 
-# bybit-perps and bybit-futures are split from the same per-category download,
-# which includes the full paginated Closed history; reuse it within one run.
+# bybit-perps-usd, bybit-perps-coin and bybit-futures are split from the same
+# per-category download, which includes the full paginated Closed history;
+# reuse it within one run.
 _DERIVATIVES_CACHE_SECONDS = 600
 _derivatives_cache: dict[tuple[str, int], tuple[float, list[dict]]] = {}
 
@@ -278,12 +279,6 @@ def _download_bybit_derivatives(
             if cursor is None:
                 break
     return list(symbols.values())
-
-
-def fetch_bybit_perps(timeout_seconds: int) -> list[dict[str, str]]:
-    linear = _fetch_bybit_derivatives("linear", timeout_seconds)
-    inverse = _fetch_bybit_derivatives("inverse", timeout_seconds)
-    return [s for s in linear + inverse if s["type"] == "perpetual"]
 
 
 def fetch_bybit_perps_usd(timeout_seconds: int) -> list[dict[str, str]]:

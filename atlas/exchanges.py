@@ -42,7 +42,6 @@ from .exchange_definitions.bitstamp import (
 )
 from .exchange_definitions.bybit import (
     fetch_bybit_futures,
-    fetch_bybit_perps,
     fetch_bybit_perps_coin,
     fetch_bybit_perps_usd,
     fetch_bybit_spot,
@@ -526,16 +525,8 @@ EXCHANGE_DEFINITIONS: dict[str, ExchangeDefinition] = {
         exchange_fetcher=fetch_bybit_spot,
         allowed_types={"spot"},
     ),
-    "bybit-perps": _define(
-        "bybit-perps",
-        parse_bybit,
-        tardis_id="bybit",
-        exchange_fetcher=fetch_bybit_perps,
-        symbol_filter=_id_suffix_filter("USDT", "PERP", "USD"),
-        allowed_types={"perpetual"},
-    ),
-    # live-producers streams Bybit as one slug per category; bybit-perps
-    # above is their union.
+    # live-producers streams Bybit's perpetuals as one slug per category:
+    # linear (USDT- and USDC-settled) and inverse.
     "bybit-perps-usd": _define(
         "bybit-perps-usd",
         parse_bybit,
@@ -691,14 +682,6 @@ def get_exchange_fetcher(exchange: str) -> ExchangeFetcher | None:
     if definition is None:
         return None
     return definition.exchange_fetcher
-
-
-# Venues that are the union of other venues on the same Tardis feed. Bybit's
-# perpetuals were one venue before live-producers split them by category; the
-# union stays for the consumers that read it, and holds exactly its splits' rows.
-VENUE_SPLITS: dict[str, tuple[str, ...]] = {
-    "bybit-perps": ("bybit-perps-usd", "bybit-perps-coin"),
-}
 
 
 def get_symbol_filter(exchange: str) -> Callable[[dict], bool] | None:

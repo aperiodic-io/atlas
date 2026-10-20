@@ -90,7 +90,6 @@ VENUE_FAMILIES: dict[str, str] = {
     "binance-futures": "binance",
     "binance-futures-cm": "binance",
     "bybit-spot": "bybit",
-    "bybit-perps": "bybit",
     "bybit-perps-usd": "bybit",
     "bybit-perps-coin": "bybit",
     "bybit-futures": "bybit",
