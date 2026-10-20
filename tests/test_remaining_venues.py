@@ -174,9 +174,9 @@ class TestRouting:
         monkeypatch.setitem(
             EXCHANGE_DEFINITIONS,
             "htx-futures-coin",
-            replace(definition, exchange_fetcher=lambda t: [row]),
+            replace(definition, exchange_fetcher=lambda _t: [row]),
         )
-        tardis = SimpleNamespace(fetch_exchange=lambda e: pytest.fail("Tardis must not be read"))
+        tardis = SimpleNamespace(fetch_exchange=lambda _e: pytest.fail("Tardis must not be read"))
         source = HybridSymbolSource(tardis_source=tardis)
         assert source.fetch_exchange("htx-futures-coin") == {"availableSymbols": [row]}
 
@@ -268,6 +268,8 @@ class TestBundledSnapshots:
 @pytest.mark.parametrize(
     ("exchange", "original_id", "internal_id"),
     [
+        ("kraken-spot", "BTC/USD", "spot-BTC-USD"),
+        # Tardis recorded Kraken's WebSocket v1 names before 2026-07-10.
         ("kraken-spot", "XBT/USD", "spot-BTC-USD"),
         ("kraken-perps", "PF_XBTUSD", "perpetual-BTC-USD:USD"),
         ("kraken-perps", "PI_XBTUSD", "perpetual-BTC-USD:BTC"),

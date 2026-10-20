@@ -1,0 +1,7382 @@
+[
+  {
+    "id": "1INCH:USD",
+    "type": "spot",
+    "first_capture": "2021-05-11T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-1INCH-USD",
+    "symbol": "1INCH",
+    "denominator": "USD"
+  },
+  {
+    "id": "1INCH:UST",
+    "type": "spot",
+    "first_capture": "2021-05-11T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-1INCH-USDT",
+    "symbol": "1INCH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AAABBB",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-04-15T00:00:00.000Z",
+    "internal_id": "spot-AAA-BBB",
+    "symbol": "AAA",
+    "denominator": "BBB"
+  },
+  {
+    "id": "AAVE:USD",
+    "type": "spot",
+    "base_coin": "AAVE",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-02-05T00:00:00.000Z",
+    "internal_id": "spot-AAVE-USD",
+    "symbol": "AAVE",
+    "denominator": "USD"
+  },
+  {
+    "id": "AAVE:UST",
+    "type": "spot",
+    "base_coin": "AAVE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-02-05T00:00:00.000Z",
+    "internal_id": "spot-AAVE-USDT",
+    "symbol": "AAVE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ADABTC",
+    "type": "spot",
+    "base_coin": "ADA",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-08-06T00:00:00.000Z",
+    "internal_id": "spot-ADA-BTC",
+    "symbol": "ADA",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ADAUSD",
+    "type": "spot",
+    "base_coin": "ADA",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-08-06T00:00:00.000Z",
+    "internal_id": "spot-ADA-USD",
+    "symbol": "ADA",
+    "denominator": "USD"
+  },
+  {
+    "id": "ADAUST",
+    "type": "spot",
+    "base_coin": "ADA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-08-06T00:00:00.000Z",
+    "internal_id": "spot-ADA-USDT",
+    "symbol": "ADA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AIOZ:USD",
+    "type": "spot",
+    "first_capture": "2024-06-11T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-AIOZ-USD",
+    "symbol": "AIOZ",
+    "denominator": "USD"
+  },
+  {
+    "id": "AIOZ:UST",
+    "type": "spot",
+    "first_capture": "2024-06-11T00:00:00.000Z",
+    "end_date": "2024-06-12T00:00:00.000Z",
+    "internal_id": "spot-AIOZ-USDT",
+    "symbol": "AIOZ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AIXUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-AIX-USD",
+    "symbol": "AIX",
+    "denominator": "USD"
+  },
+  {
+    "id": "AIXUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-AIX-USDT",
+    "symbol": "AIX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALBT:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ALBT-USD",
+    "symbol": "ALBT",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALBT:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-ALBT-USDT",
+    "symbol": "ALBT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALGBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-ALGO-BTC",
+    "symbol": "ALGO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ALGUSD",
+    "type": "spot",
+    "base_coin": "ALGO",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-ALGO-USD",
+    "symbol": "ALGO",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALGUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-ALGO-USDT",
+    "symbol": "ALGO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALKN:USD",
+    "type": "spot",
+    "base_coin": "ALKN",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "spot-ALKN-USD",
+    "symbol": "ALKN",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALT11M2507:USD",
+    "type": "spot",
+    "first_capture": "2024-08-23T00:00:00.000Z",
+    "end_date": "2025-07-05T00:00:00.000Z",
+    "internal_id": "spot-ALT11M2507-USD",
+    "symbol": "ALT11M2507",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALT11M2507:UST",
+    "type": "spot",
+    "first_capture": "2024-08-23T00:00:00.000Z",
+    "end_date": "2025-07-05T00:00:00.000Z",
+    "internal_id": "spot-ALT11M2507-USDT",
+    "symbol": "ALT11M2507",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALT11M250830:USD",
+    "type": "spot",
+    "first_capture": "2024-10-10T00:00:00.000Z",
+    "end_date": "2025-11-01T00:00:00.000Z",
+    "internal_id": "spot-ALT11M250830-USD",
+    "symbol": "ALT11M250830",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALT11M250830:UST",
+    "type": "spot",
+    "first_capture": "2024-10-10T00:00:00.000Z",
+    "end_date": "2025-11-01T00:00:00.000Z",
+    "internal_id": "spot-ALT11M250830-USDT",
+    "symbol": "ALT11M250830",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALT11M251029:USD",
+    "type": "spot",
+    "first_capture": "2024-12-13T00:00:00.000Z",
+    "end_date": "2025-11-15T00:00:00.000Z",
+    "internal_id": "spot-ALT11M251029-USD",
+    "symbol": "ALT11M251029",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALT11M251029:UST",
+    "type": "spot",
+    "first_capture": "2024-12-13T00:00:00.000Z",
+    "end_date": "2025-11-15T00:00:00.000Z",
+    "internal_id": "spot-ALT11M251029-USDT",
+    "symbol": "ALT11M251029",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ALT2612:USD",
+    "type": "spot",
+    "base_coin": "ALT2612",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2024-02-01T00:00:00.000Z",
+    "internal_id": "spot-ALT2612-USD",
+    "symbol": "ALT2612",
+    "denominator": "USD"
+  },
+  {
+    "id": "ALT2612:UST",
+    "type": "spot",
+    "base_coin": "ALT2612",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2024-02-01T00:00:00.000Z",
+    "internal_id": "spot-ALT2612-USDT",
+    "symbol": "ALT2612",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AMPBTC",
+    "type": "spot",
+    "first_capture": "2020-07-30T00:00:00.000Z",
+    "end_date": "2024-08-28T00:00:00.000Z",
+    "internal_id": "spot-AMPL-BTC",
+    "symbol": "AMPL",
+    "denominator": "BTC"
+  },
+  {
+    "id": "AMPUSD",
+    "type": "spot",
+    "first_capture": "2020-07-30T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-AMPL-USD",
+    "symbol": "AMPL",
+    "denominator": "USD"
+  },
+  {
+    "id": "AMPUST",
+    "type": "spot",
+    "first_capture": "2020-07-30T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-AMPL-USDT",
+    "symbol": "AMPL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ANCUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ANC-USD",
+    "symbol": "ANC",
+    "denominator": "USD"
+  },
+  {
+    "id": "ANCUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-ANC-USDT",
+    "symbol": "ANC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ANTBTC",
+    "type": "spot",
+    "first_capture": "2021-02-23T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-ANT-BTC",
+    "symbol": "ANT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ANTETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-ANT-ETH",
+    "symbol": "ANT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ANTUSD",
+    "type": "spot",
+    "first_capture": "2021-02-23T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-ANT-USD",
+    "symbol": "ANT",
+    "denominator": "USD"
+  },
+  {
+    "id": "APENFT:USD",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-APENFT-USD",
+    "symbol": "APENFT",
+    "denominator": "USD"
+  },
+  {
+    "id": "APENFT:UST",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-APENFT-USDT",
+    "symbol": "APENFT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "APEUSD",
+    "type": "spot",
+    "first_capture": "2022-03-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-APE-USD",
+    "symbol": "APE",
+    "denominator": "USD"
+  },
+  {
+    "id": "APEUST",
+    "type": "spot",
+    "first_capture": "2022-03-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-APE-USDT",
+    "symbol": "APE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "APPUSD",
+    "type": "spot",
+    "first_capture": "2024-01-12T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-APP-USD",
+    "symbol": "APP",
+    "denominator": "USD"
+  },
+  {
+    "id": "APPUST",
+    "type": "spot",
+    "first_capture": "2024-01-12T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-APP-USDT",
+    "symbol": "APP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "APTUSD",
+    "type": "spot",
+    "base_coin": "APT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "internal_id": "spot-APT-USD",
+    "symbol": "APT",
+    "denominator": "USD"
+  },
+  {
+    "id": "APTUST",
+    "type": "spot",
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-APT-USDT",
+    "symbol": "APT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ARBUSD",
+    "type": "spot",
+    "base_coin": "ARB",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-03-23T00:00:00.000Z",
+    "internal_id": "spot-ARB-USD",
+    "symbol": "ARB",
+    "denominator": "USD"
+  },
+  {
+    "id": "ARBUST",
+    "type": "spot",
+    "base_coin": "ARB",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-03-23T00:00:00.000Z",
+    "internal_id": "spot-ARB-USDT",
+    "symbol": "ARB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ATHUSD",
+    "type": "spot",
+    "first_capture": "2024-06-10T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-ATH-USD",
+    "symbol": "ATH",
+    "denominator": "USD"
+  },
+  {
+    "id": "ATHUST",
+    "type": "spot",
+    "first_capture": "2024-06-10T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-ATH-USDT",
+    "symbol": "ATH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ATLAS:USD",
+    "type": "spot",
+    "first_capture": "2022-06-02T00:00:00.000Z",
+    "end_date": "2023-10-06T00:00:00.000Z",
+    "internal_id": "spot-ATLAS-USD",
+    "symbol": "ATLAS",
+    "denominator": "USD"
+  },
+  {
+    "id": "ATLAS:UST",
+    "type": "spot",
+    "first_capture": "2022-06-02T00:00:00.000Z",
+    "end_date": "2023-10-06T00:00:00.000Z",
+    "internal_id": "spot-ATLAS-USDT",
+    "symbol": "ATLAS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ATOBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-ATOM-BTC",
+    "symbol": "ATOM",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ATOETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-ATOM-ETH",
+    "symbol": "ATOM",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ATOUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-ATOM-USD",
+    "symbol": "ATOM",
+    "denominator": "USD"
+  },
+  {
+    "id": "ATOUST",
+    "type": "spot",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-ATOM-USDT",
+    "symbol": "ATOM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AUSDT:USD",
+    "type": "spot",
+    "first_capture": "2024-06-17T00:00:00.000Z",
+    "end_date": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-AUSDT-USD",
+    "symbol": "AUSDT",
+    "denominator": "USD"
+  },
+  {
+    "id": "AUSDT:UST",
+    "type": "spot",
+    "first_capture": "2024-06-17T00:00:00.000Z",
+    "end_date": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-AUSDT-USDT",
+    "symbol": "AUSDT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AVAX:BTC",
+    "type": "spot",
+    "base_coin": "AVAX",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2021-10-04T00:00:00.000Z",
+    "internal_id": "spot-AVAX-BTC",
+    "symbol": "AVAX",
+    "denominator": "BTC"
+  },
+  {
+    "id": "AVAX:USD",
+    "type": "spot",
+    "base_coin": "AVAX",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-09-23T00:00:00.000Z",
+    "internal_id": "spot-AVAX-USD",
+    "symbol": "AVAX",
+    "denominator": "USD"
+  },
+  {
+    "id": "AVAX:UST",
+    "type": "spot",
+    "base_coin": "AVAX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-09-23T00:00:00.000Z",
+    "internal_id": "spot-AVAX-USDT",
+    "symbol": "AVAX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AXSUSD",
+    "type": "spot",
+    "first_capture": "2021-09-21T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-AXS-USD",
+    "symbol": "AXS",
+    "denominator": "USD"
+  },
+  {
+    "id": "AXSUST",
+    "type": "spot",
+    "first_capture": "2021-09-21T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-AXS-USDT",
+    "symbol": "AXS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AZERO:USD",
+    "type": "spot",
+    "first_capture": "2024-03-07T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-AZERO-USD",
+    "symbol": "AZERO",
+    "denominator": "USD"
+  },
+  {
+    "id": "AZERO:UST",
+    "type": "spot",
+    "first_capture": "2024-03-07T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-AZERO-USDT",
+    "symbol": "AZERO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "B21X:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-B21X-USD",
+    "symbol": "B21X",
+    "denominator": "USD"
+  },
+  {
+    "id": "B21X:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-B21X-USDT",
+    "symbol": "B21X",
+    "denominator": "USDT"
+  },
+  {
+    "id": "B2MUSD",
+    "type": "spot",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-B2M-USD",
+    "symbol": "B2M",
+    "denominator": "USD"
+  },
+  {
+    "id": "B2MUST",
+    "type": "spot",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-B2M-USDT",
+    "symbol": "B2M",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BABBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-11-16T00:00:00.000Z",
+    "internal_id": "spot-BCH-BTC",
+    "symbol": "BCH",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BABUSD",
+    "type": "spot",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "end_date": "2020-11-16T00:00:00.000Z",
+    "internal_id": "spot-BCH-USD",
+    "symbol": "BCH",
+    "denominator": "USD"
+  },
+  {
+    "id": "BABUST",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-11-16T00:00:00.000Z",
+    "internal_id": "spot-BCH-USDT",
+    "symbol": "BCH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BALUSD",
+    "type": "spot",
+    "first_capture": "2020-10-04T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BAL-USD",
+    "symbol": "BAL",
+    "denominator": "USD"
+  },
+  {
+    "id": "BALUST",
+    "type": "spot",
+    "first_capture": "2020-10-04T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-BAL-USDT",
+    "symbol": "BAL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BAND:USD",
+    "type": "spot",
+    "first_capture": "2020-09-24T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-BAND-USD",
+    "symbol": "BAND",
+    "denominator": "USD"
+  },
+  {
+    "id": "BAND:UST",
+    "type": "spot",
+    "first_capture": "2020-09-24T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-BAND-USDT",
+    "symbol": "BAND",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BATBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-BAT-BTC",
+    "symbol": "BAT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BATETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-BAT-ETH",
+    "symbol": "BAT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "BATUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-BAT-USD",
+    "symbol": "BAT",
+    "denominator": "USD"
+  },
+  {
+    "id": "BATUST",
+    "type": "spot",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-BAT-USDT",
+    "symbol": "BAT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BCHABC:USD",
+    "type": "spot",
+    "first_capture": "2020-11-15T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-XEC-USD",
+    "symbol": "XEC",
+    "denominator": "USD"
+  },
+  {
+    "id": "BCHBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BCH-BTC",
+    "symbol": "BCH",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BCHETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BCH-ETH",
+    "symbol": "BCH",
+    "denominator": "ETH"
+  },
+  {
+    "id": "BCHN:USD",
+    "type": "spot",
+    "base_coin": "BCH",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-11-15T00:00:00.000Z",
+    "internal_id": "spot-BCH-USD",
+    "symbol": "BCH",
+    "denominator": "USD"
+  },
+  {
+    "id": "BCHUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BCH-USD",
+    "symbol": "BCH",
+    "denominator": "USD"
+  },
+  {
+    "id": "BEST:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-BEST-USD",
+    "symbol": "BEST",
+    "denominator": "USD"
+  },
+  {
+    "id": "BFTBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BFT-BTC",
+    "symbol": "BFT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BFTETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BFT-ETH",
+    "symbol": "BFT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "BFTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-BFT-USD",
+    "symbol": "BFT",
+    "denominator": "USD"
+  },
+  {
+    "id": "BGBUSD",
+    "type": "spot",
+    "first_capture": "2023-04-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BGB-USD",
+    "symbol": "BGB",
+    "denominator": "USD"
+  },
+  {
+    "id": "BGBUST",
+    "type": "spot",
+    "first_capture": "2023-04-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BGB-USDT",
+    "symbol": "BGB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BLAST:USD",
+    "type": "spot",
+    "first_capture": "2024-06-24T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-BLAST-USD",
+    "symbol": "BLAST",
+    "denominator": "USD"
+  },
+  {
+    "id": "BLAST:UST",
+    "type": "spot",
+    "first_capture": "2024-06-24T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-BLAST-USDT",
+    "symbol": "BLAST",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BLUR:USD",
+    "type": "spot",
+    "first_capture": "2023-02-24T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BLUR-USD",
+    "symbol": "BLUR",
+    "denominator": "USD"
+  },
+  {
+    "id": "BLUR:UST",
+    "type": "spot",
+    "first_capture": "2023-02-24T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BLUR-USDT",
+    "symbol": "BLUR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BMIUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-BMI-USD",
+    "symbol": "BMI",
+    "denominator": "USD"
+  },
+  {
+    "id": "BMIUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-BMI-USDT",
+    "symbol": "BMI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BMN2:BTC",
+    "type": "spot",
+    "base_coin": "BMN2",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2025-08-17T00:00:00.000Z",
+    "internal_id": "spot-BMN2-BTC",
+    "symbol": "BMN2",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BMN2:USD",
+    "type": "spot",
+    "base_coin": "BMN2",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2025-08-17T00:00:00.000Z",
+    "internal_id": "spot-BMN2-USD",
+    "symbol": "BMN2",
+    "denominator": "USD"
+  },
+  {
+    "id": "BMNBTC",
+    "type": "spot",
+    "first_capture": "2022-03-01T00:00:00.000Z",
+    "end_date": "2024-07-13T00:00:00.000Z",
+    "internal_id": "spot-BMN-BTC",
+    "symbol": "BMN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BMNUSD",
+    "type": "spot",
+    "first_capture": "2022-03-01T00:00:00.000Z",
+    "end_date": "2024-07-13T00:00:00.000Z",
+    "internal_id": "spot-BMN-USD",
+    "symbol": "BMN",
+    "denominator": "USD"
+  },
+  {
+    "id": "BNTBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BNT-BTC",
+    "symbol": "BNT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BNTETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-BNT-ETH",
+    "symbol": "BNT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "BNTUSD",
+    "type": "spot",
+    "first_capture": "2020-12-28T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-BNT-USD",
+    "symbol": "BNT",
+    "denominator": "USD"
+  },
+  {
+    "id": "BOBA:USD",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-BOBA-USD",
+    "symbol": "BOBA",
+    "denominator": "USD"
+  },
+  {
+    "id": "BOBA:UST",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-BOBA-USDT",
+    "symbol": "BOBA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BONK:USD",
+    "type": "spot",
+    "first_capture": "2023-12-22T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-BONK-USD",
+    "symbol": "BONK",
+    "denominator": "USD"
+  },
+  {
+    "id": "BONK:UST",
+    "type": "spot",
+    "first_capture": "2023-12-22T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-BONK-USDT",
+    "symbol": "BONK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BOOUSD",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-BOO-USD",
+    "symbol": "BOO",
+    "denominator": "USD"
+  },
+  {
+    "id": "BOOUST",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-BOO-USDT",
+    "symbol": "BOO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BORG:BTC",
+    "type": "spot",
+    "first_capture": "2023-10-18T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BORG-BTC",
+    "symbol": "BORG",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BORG:USD",
+    "type": "spot",
+    "first_capture": "2023-10-18T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BORG-USD",
+    "symbol": "BORG",
+    "denominator": "USD"
+  },
+  {
+    "id": "BORG:UST",
+    "type": "spot",
+    "first_capture": "2023-10-18T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BORG-USDT",
+    "symbol": "BORG",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BOSON:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-BOSON-USD",
+    "symbol": "BOSON",
+    "denominator": "USD"
+  },
+  {
+    "id": "BOSON:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-BOSON-USDT",
+    "symbol": "BOSON",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BRISE:USD",
+    "type": "spot",
+    "first_capture": "2023-03-31T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-BRISE-USD",
+    "symbol": "BRISE",
+    "denominator": "USD"
+  },
+  {
+    "id": "BRISE:UST",
+    "type": "spot",
+    "first_capture": "2023-03-31T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-BRISE-USDT",
+    "symbol": "BRISE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BSVBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-BSV-BTC",
+    "symbol": "BSV",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BSVUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-BSV-USD",
+    "symbol": "BSV",
+    "denominator": "USD"
+  },
+  {
+    "id": "BTC:CNHT",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-BTC-CNHT",
+    "symbol": "BTC",
+    "denominator": "CNHT"
+  },
+  {
+    "id": "BTC:EURQ",
+    "type": "spot",
+    "first_capture": "2025-04-15T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BTC-EURQ",
+    "symbol": "BTC",
+    "denominator": "EURQ"
+  },
+  {
+    "id": "BTC:EURR",
+    "type": "spot",
+    "first_capture": "2025-04-15T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BTC-EURR",
+    "symbol": "BTC",
+    "denominator": "EURR"
+  },
+  {
+    "id": "BTC:MXNT",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-BTC-MXNT",
+    "symbol": "BTC",
+    "denominator": "MXNT"
+  },
+  {
+    "id": "BTC:USDQ",
+    "type": "spot",
+    "first_capture": "2025-02-20T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BTC-USDQ",
+    "symbol": "BTC",
+    "denominator": "USDQ"
+  },
+  {
+    "id": "BTC:USDR",
+    "type": "spot",
+    "first_capture": "2025-02-11T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-BTC-USDR",
+    "symbol": "BTC",
+    "denominator": "USDR"
+  },
+  {
+    "id": "BTC:XAUT",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "XAUT",
+    "underlying": "crypto",
+    "first_capture": "2021-10-01T00:00:00.000Z",
+    "internal_id": "spot-BTC-XAUT",
+    "symbol": "BTC",
+    "denominator": "XAUT"
+  },
+  {
+    "id": "BTCEUR",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-BTC-EUR",
+    "symbol": "BTC",
+    "denominator": "EUR"
+  },
+  {
+    "id": "BTCEUT",
+    "type": "spot",
+    "first_capture": "2021-07-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-BTC-EURT",
+    "symbol": "BTC",
+    "denominator": "EURT"
+  },
+  {
+    "id": "BTCGBP",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "GBP",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-BTC-GBP",
+    "symbol": "BTC",
+    "denominator": "GBP"
+  },
+  {
+    "id": "BTCJPY",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-BTC-JPY",
+    "symbol": "BTC",
+    "denominator": "JPY"
+  },
+  {
+    "id": "BTCMIM",
+    "type": "spot",
+    "first_capture": "2021-10-28T00:00:00.000Z",
+    "end_date": "2024-08-28T00:00:00.000Z",
+    "internal_id": "spot-BTC-MIM",
+    "symbol": "BTC",
+    "denominator": "MIM"
+  },
+  {
+    "id": "BTCTRY",
+    "type": "spot",
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "end_date": "2026-03-06T00:00:00.000Z",
+    "internal_id": "spot-BTC-TRY",
+    "symbol": "BTC",
+    "denominator": "TRY"
+  },
+  {
+    "id": "BTCUSD",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-BTC-USD",
+    "symbol": "BTC",
+    "denominator": "USD"
+  },
+  {
+    "id": "BTCUST",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2019-09-13T00:00:00.000Z",
+    "internal_id": "spot-BTC-USDT",
+    "symbol": "BTC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BTCXCH",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-05-20T00:00:00.000Z",
+    "internal_id": "spot-BTC-XCHF",
+    "symbol": "BTC",
+    "denominator": "XCHF"
+  },
+  {
+    "id": "BTGBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-BTG-BTC",
+    "symbol": "BTG",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BTGUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-BTG-USD",
+    "symbol": "BTG",
+    "denominator": "USD"
+  },
+  {
+    "id": "BTSE:USD",
+    "type": "spot",
+    "first_capture": "2020-06-17T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-BTSE-USD",
+    "symbol": "BTSE",
+    "denominator": "USD"
+  },
+  {
+    "id": "BTTBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-BTT-BTC",
+    "symbol": "BTT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BTTUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-BTT-USD",
+    "symbol": "BTT",
+    "denominator": "USD"
+  },
+  {
+    "id": "BXNUSD",
+    "type": "spot",
+    "first_capture": "2024-04-02T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-BXN-USD",
+    "symbol": "BXN",
+    "denominator": "USD"
+  },
+  {
+    "id": "BXNUST",
+    "type": "spot",
+    "first_capture": "2024-04-02T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-BXN-USDT",
+    "symbol": "BXN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CALCPB:BTC",
+    "type": "spot",
+    "base_coin": "CALCPB",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CALCPB-BTC",
+    "symbol": "CALCPB",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CALCPB:USD",
+    "type": "spot",
+    "base_coin": "CALCPB",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CALCPB-USD",
+    "symbol": "CALCPB",
+    "denominator": "USD"
+  },
+  {
+    "id": "CALCPB:UST",
+    "type": "spot",
+    "base_coin": "CALCPB",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CALCPB-USDT",
+    "symbol": "CALCPB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CCDBTC",
+    "type": "spot",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2023-10-06T00:00:00.000Z",
+    "internal_id": "spot-CCD-BTC",
+    "symbol": "CCD",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CCDUSD",
+    "type": "spot",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-CCD-USD",
+    "symbol": "CCD",
+    "denominator": "USD"
+  },
+  {
+    "id": "CCDUST",
+    "type": "spot",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-CCD-USDT",
+    "symbol": "CCD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CELO:USD",
+    "type": "spot",
+    "base_coin": "CELO",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-02-15T00:00:00.000Z",
+    "internal_id": "spot-CELO-USD",
+    "symbol": "CELO",
+    "denominator": "USD"
+  },
+  {
+    "id": "CELO:UST",
+    "type": "spot",
+    "base_coin": "CELO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-02-15T00:00:00.000Z",
+    "internal_id": "spot-CELO-USDT",
+    "symbol": "CELO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CELUSD",
+    "type": "spot",
+    "first_capture": "2021-03-25T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-CEL-USD",
+    "symbol": "CEL",
+    "denominator": "USD"
+  },
+  {
+    "id": "CELUST",
+    "type": "spot",
+    "first_capture": "2021-03-25T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-CEL-USDT",
+    "symbol": "CEL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CH100:BTC",
+    "type": "spot",
+    "base_coin": "CH100",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CH100-BTC",
+    "symbol": "CH100",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CH100:USD",
+    "type": "spot",
+    "base_coin": "CH100",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CH100-USD",
+    "symbol": "CH100",
+    "denominator": "USD"
+  },
+  {
+    "id": "CH100:UST",
+    "type": "spot",
+    "base_coin": "CH100",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CH100-USDT",
+    "symbol": "CH100",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CHEX:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-CHEX-USD",
+    "symbol": "CHEX",
+    "denominator": "USD"
+  },
+  {
+    "id": "CHSB:BTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-10-19T00:00:00.000Z",
+    "internal_id": "spot-CHSB-BTC",
+    "symbol": "CHSB",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CHSB:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-10-19T00:00:00.000Z",
+    "internal_id": "spot-CHSB-USD",
+    "symbol": "CHSB",
+    "denominator": "USD"
+  },
+  {
+    "id": "CHSB:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-10-19T00:00:00.000Z",
+    "internal_id": "spot-CHSB-USDT",
+    "symbol": "CHSB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CHZUSD",
+    "type": "spot",
+    "base_coin": "CHZ",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-12-28T00:00:00.000Z",
+    "internal_id": "spot-CHZ-USD",
+    "symbol": "CHZ",
+    "denominator": "USD"
+  },
+  {
+    "id": "CHZUST",
+    "type": "spot",
+    "base_coin": "CHZ",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-12-28T00:00:00.000Z",
+    "internal_id": "spot-CHZ-USDT",
+    "symbol": "CHZ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CLOBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-CLO-BTC",
+    "symbol": "CLO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CLOUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-CLO-USD",
+    "symbol": "CLO",
+    "denominator": "USD"
+  },
+  {
+    "id": "CMSTR:BTC",
+    "type": "spot",
+    "base_coin": "CMSTR",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMSTR-BTC",
+    "symbol": "CMSTR",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CMSTR:USD",
+    "type": "spot",
+    "base_coin": "CMSTR",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMSTR-USD",
+    "symbol": "CMSTR",
+    "denominator": "USD"
+  },
+  {
+    "id": "CMSTR:UST",
+    "type": "spot",
+    "base_coin": "CMSTR",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMSTR-USDT",
+    "symbol": "CMSTR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CMTPL:BTC",
+    "type": "spot",
+    "base_coin": "CMTPL",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMTPL-BTC",
+    "symbol": "CMTPL",
+    "denominator": "BTC"
+  },
+  {
+    "id": "CMTPL:USD",
+    "type": "spot",
+    "base_coin": "CMTPL",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMTPL-USD",
+    "symbol": "CMTPL",
+    "denominator": "USD"
+  },
+  {
+    "id": "CMTPL:UST",
+    "type": "spot",
+    "base_coin": "CMTPL",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-CMTPL-USDT",
+    "symbol": "CMTPL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CNH:CNHT",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-CNH-CNHT",
+    "symbol": "CNH",
+    "denominator": "CNHT"
+  },
+  {
+    "id": "CNHT:USD",
+    "type": "spot",
+    "first_capture": "2024-10-21T00:00:00.000Z",
+    "end_date": "2026-09-24T00:00:00.000Z",
+    "internal_id": "spot-CNHT-USD",
+    "symbol": "CNHT",
+    "denominator": "USD"
+  },
+  {
+    "id": "COMP:USD",
+    "type": "spot",
+    "first_capture": "2020-08-28T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-COMP-USD",
+    "symbol": "COMP",
+    "denominator": "USD"
+  },
+  {
+    "id": "COMP:UST",
+    "type": "spot",
+    "first_capture": "2020-08-28T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-COMP-USDT",
+    "symbol": "COMP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CONV:USD",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-CONV-USD",
+    "symbol": "CONV",
+    "denominator": "USD"
+  },
+  {
+    "id": "CONV:UST",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-CONV-USDT",
+    "symbol": "CONV",
+    "denominator": "USDT"
+  },
+  {
+    "id": "COQUSD",
+    "type": "spot",
+    "first_capture": "2024-03-28T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-COQ-USD",
+    "symbol": "COQ",
+    "denominator": "USD"
+  },
+  {
+    "id": "COQUST",
+    "type": "spot",
+    "first_capture": "2024-04-11T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-COQ-USDT",
+    "symbol": "COQ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CRVUSD",
+    "type": "spot",
+    "base_coin": "CRV",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-12-01T00:00:00.000Z",
+    "internal_id": "spot-CRV-USD",
+    "symbol": "CRV",
+    "denominator": "USD"
+  },
+  {
+    "id": "CRVUST",
+    "type": "spot",
+    "base_coin": "CRV",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-12-01T00:00:00.000Z",
+    "internal_id": "spot-CRV-USDT",
+    "symbol": "CRV",
+    "denominator": "USDT"
+  },
+  {
+    "id": "CSXETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-CSX-ETH",
+    "symbol": "CSX",
+    "denominator": "ETH"
+  },
+  {
+    "id": "CTKUSD",
+    "type": "spot",
+    "first_capture": "2021-02-21T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-CTK-USD",
+    "symbol": "CTK",
+    "denominator": "USD"
+  },
+  {
+    "id": "CTKUST",
+    "type": "spot",
+    "first_capture": "2021-02-21T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-CTK-USDT",
+    "symbol": "CTK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DADBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-DAD-BTC",
+    "symbol": "DAD",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DADETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-DAD-ETH",
+    "symbol": "DAD",
+    "denominator": "ETH"
+  },
+  {
+    "id": "DADUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-DAD-USD",
+    "symbol": "DAD",
+    "denominator": "USD"
+  },
+  {
+    "id": "DAIBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-DAI-BTC",
+    "symbol": "DAI",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DAIETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-DAI-ETH",
+    "symbol": "DAI",
+    "denominator": "ETH"
+  },
+  {
+    "id": "DAIUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-DAI-USD",
+    "symbol": "DAI",
+    "denominator": "USD"
+  },
+  {
+    "id": "DATBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-DATA-BTC",
+    "symbol": "DATA",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DATUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-DATA-USD",
+    "symbol": "DATA",
+    "denominator": "USD"
+  },
+  {
+    "id": "DCRUSD",
+    "type": "spot",
+    "first_capture": "2021-08-05T00:00:00.000Z",
+    "end_date": "2022-03-15T00:00:00.000Z",
+    "internal_id": "spot-DCR-USD",
+    "symbol": "DCR",
+    "denominator": "USD"
+  },
+  {
+    "id": "DGBBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-DGB-BTC",
+    "symbol": "DGB",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DGBUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-DGB-USD",
+    "symbol": "DGB",
+    "denominator": "USD"
+  },
+  {
+    "id": "DOGBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-DOG-BTC",
+    "symbol": "DOG",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DOGE:BTC",
+    "type": "spot",
+    "base_coin": "DOGE",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "internal_id": "spot-DOGE-BTC",
+    "symbol": "DOGE",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DOGE:USD",
+    "type": "spot",
+    "base_coin": "DOGE",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-04-21T00:00:00.000Z",
+    "internal_id": "spot-DOGE-USD",
+    "symbol": "DOGE",
+    "denominator": "USD"
+  },
+  {
+    "id": "DOGE:UST",
+    "type": "spot",
+    "base_coin": "DOGE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-04-21T00:00:00.000Z",
+    "internal_id": "spot-DOGE-USDT",
+    "symbol": "DOGE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DOGUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-DOG-USD",
+    "symbol": "DOG",
+    "denominator": "USD"
+  },
+  {
+    "id": "DOGUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-DOG-USDT",
+    "symbol": "DOG",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DOPUSD",
+    "type": "spot",
+    "first_capture": "2024-07-04T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-DOP-USD",
+    "symbol": "DOP",
+    "denominator": "USD"
+  },
+  {
+    "id": "DOPUST",
+    "type": "spot",
+    "first_capture": "2024-07-04T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-DOP-USDT",
+    "symbol": "DOP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DORA:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-DORA-USD",
+    "symbol": "DORA",
+    "denominator": "USD"
+  },
+  {
+    "id": "DORA:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-DORA-USDT",
+    "symbol": "DORA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DOTBTC",
+    "type": "spot",
+    "first_capture": "2021-01-19T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-DOT-BTC",
+    "symbol": "DOT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DOTUSD",
+    "type": "spot",
+    "base_coin": "DOT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-08-18T00:00:00.000Z",
+    "internal_id": "spot-DOT-USD",
+    "symbol": "DOT",
+    "denominator": "USD"
+  },
+  {
+    "id": "DOTUST",
+    "type": "spot",
+    "base_coin": "DOT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-08-18T00:00:00.000Z",
+    "internal_id": "spot-DOT-USDT",
+    "symbol": "DOT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DSHBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-DASH-BTC",
+    "symbol": "DASH",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DSHUSD",
+    "type": "spot",
+    "base_coin": "DASH",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-DASH-USD",
+    "symbol": "DASH",
+    "denominator": "USD"
+  },
+  {
+    "id": "DUSK:BTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-DUSK-BTC",
+    "symbol": "DUSK",
+    "denominator": "BTC"
+  },
+  {
+    "id": "DUSK:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-DUSK-USD",
+    "symbol": "DUSK",
+    "denominator": "USD"
+  },
+  {
+    "id": "DVFUSD",
+    "type": "spot",
+    "first_capture": "2021-12-21T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-DVF-USD",
+    "symbol": "DVF",
+    "denominator": "USD"
+  },
+  {
+    "id": "DVFUST",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-DVF-USDT",
+    "symbol": "DVF",
+    "denominator": "USDT"
+  },
+  {
+    "id": "DYMUSD",
+    "type": "spot",
+    "first_capture": "2024-02-07T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-DYM-USD",
+    "symbol": "DYM",
+    "denominator": "USD"
+  },
+  {
+    "id": "DYMUST",
+    "type": "spot",
+    "first_capture": "2024-02-07T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-DYM-USDT",
+    "symbol": "DYM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EDOBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-EDO-BTC",
+    "symbol": "EDO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "EDOETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-EDO-ETH",
+    "symbol": "EDO",
+    "denominator": "ETH"
+  },
+  {
+    "id": "EDOUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-EDO-USD",
+    "symbol": "EDO",
+    "denominator": "USD"
+  },
+  {
+    "id": "EGLD:USD",
+    "type": "spot",
+    "first_capture": "2020-09-15T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-EGLD-USD",
+    "symbol": "EGLD",
+    "denominator": "USD"
+  },
+  {
+    "id": "EGLD:UST",
+    "type": "spot",
+    "first_capture": "2020-09-15T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-EGLD-USDT",
+    "symbol": "EGLD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EIGEN:USD",
+    "type": "spot",
+    "first_capture": "2024-09-30T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-EIGEN-USD",
+    "symbol": "EIGEN",
+    "denominator": "USD"
+  },
+  {
+    "id": "EIGEN:UST",
+    "type": "spot",
+    "first_capture": "2024-09-30T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-EIGEN-USDT",
+    "symbol": "EIGEN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ENAUSD",
+    "type": "spot",
+    "base_coin": "ENA",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-04-02T00:00:00.000Z",
+    "internal_id": "spot-ENA-USD",
+    "symbol": "ENA",
+    "denominator": "USD"
+  },
+  {
+    "id": "ENAUST",
+    "type": "spot",
+    "base_coin": "ENA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-04-02T00:00:00.000Z",
+    "internal_id": "spot-ENA-USDT",
+    "symbol": "ENA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ENJETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ENJ-ETH",
+    "symbol": "ENJ",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ENJUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-ENJ-USD",
+    "symbol": "ENJ",
+    "denominator": "USD"
+  },
+  {
+    "id": "EOSBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-EOS-BTC",
+    "symbol": "EOS",
+    "denominator": "BTC"
+  },
+  {
+    "id": "EOSDT:USD",
+    "type": "spot",
+    "first_capture": "2020-10-09T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-EOSDT-USD",
+    "symbol": "EOSDT",
+    "denominator": "USD"
+  },
+  {
+    "id": "EOSDT:UST",
+    "type": "spot",
+    "first_capture": "2020-10-08T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-EOSDT-USDT",
+    "symbol": "EOSDT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EOSETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-EOS-ETH",
+    "symbol": "EOS",
+    "denominator": "ETH"
+  },
+  {
+    "id": "EOSEUR",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-EOS-EUR",
+    "symbol": "EOS",
+    "denominator": "EUR"
+  },
+  {
+    "id": "EOSGBP",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-EOS-GBP",
+    "symbol": "EOS",
+    "denominator": "GBP"
+  },
+  {
+    "id": "EOSJPY",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-EOS-JPY",
+    "symbol": "EOS",
+    "denominator": "JPY"
+  },
+  {
+    "id": "EOSUSD",
+    "type": "spot",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-EOS-USD",
+    "symbol": "EOS",
+    "denominator": "USD"
+  },
+  {
+    "id": "EOSUST",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-EOS-USDT",
+    "symbol": "EOS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ESSUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-ESS-USD",
+    "symbol": "ESS",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETCBTC",
+    "type": "spot",
+    "base_coin": "ETC",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ETC-BTC",
+    "symbol": "ETC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ETCUSD",
+    "type": "spot",
+    "base_coin": "ETC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ETC-USD",
+    "symbol": "ETC",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETCUST",
+    "type": "spot",
+    "base_coin": "ETC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "internal_id": "spot-ETC-USDT",
+    "symbol": "ETC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ETH2X:ETH",
+    "type": "spot",
+    "base_coin": "ETH2",
+    "quote_coin": "ETH",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-ETH2-ETH",
+    "symbol": "ETH2",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ETH2X:USD",
+    "type": "spot",
+    "base_coin": "ETH2",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-01-21T00:00:00.000Z",
+    "internal_id": "spot-ETH2-USD",
+    "symbol": "ETH2",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETH2X:UST",
+    "type": "spot",
+    "base_coin": "ETH2",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-01-21T00:00:00.000Z",
+    "internal_id": "spot-ETH2-USDT",
+    "symbol": "ETH2",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ETH:MXNT",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-ETH-MXNT",
+    "symbol": "ETH",
+    "denominator": "MXNT"
+  },
+  {
+    "id": "ETH:XAUT",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "XAUT",
+    "underlying": "crypto",
+    "first_capture": "2021-10-01T00:00:00.000Z",
+    "internal_id": "spot-ETH-XAUT",
+    "symbol": "ETH",
+    "denominator": "XAUT"
+  },
+  {
+    "id": "ETHBTC",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ETH-BTC",
+    "symbol": "ETH",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ETHEUR",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ETH-EUR",
+    "symbol": "ETH",
+    "denominator": "EUR"
+  },
+  {
+    "id": "ETHEUT",
+    "type": "spot",
+    "first_capture": "2021-09-16T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-ETH-EURT",
+    "symbol": "ETH",
+    "denominator": "EURT"
+  },
+  {
+    "id": "ETHGBP",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "GBP",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ETH-GBP",
+    "symbol": "ETH",
+    "denominator": "GBP"
+  },
+  {
+    "id": "ETHJPY",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ETH-JPY",
+    "symbol": "ETH",
+    "denominator": "JPY"
+  },
+  {
+    "id": "ETHS:USD",
+    "type": "spot",
+    "first_capture": "2022-08-22T00:00:00.000Z",
+    "end_date": "2022-09-15T00:00:00.000Z",
+    "internal_id": "spot-ETHS-USD",
+    "symbol": "ETHS",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETHUSD",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-ETH-USD",
+    "symbol": "ETH",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETHUST",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2019-09-13T00:00:00.000Z",
+    "internal_id": "spot-ETH-USDT",
+    "symbol": "ETH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ETHW:USD",
+    "type": "spot",
+    "first_capture": "2022-08-22T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-ETHW-USD",
+    "symbol": "ETHW",
+    "denominator": "USD"
+  },
+  {
+    "id": "ETHW:UST",
+    "type": "spot",
+    "first_capture": "2022-09-16T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-ETHW-USDT",
+    "symbol": "ETHW",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ETPBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-ETP-BTC",
+    "symbol": "ETP",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ETPETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-ETP-ETH",
+    "symbol": "ETP",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ETPUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-ETP-USD",
+    "symbol": "ETP",
+    "denominator": "USD"
+  },
+  {
+    "id": "EURQ:EUR",
+    "type": "spot",
+    "base_coin": "EURQ",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2025-04-15T00:00:00.000Z",
+    "internal_id": "spot-EURQ-EUR",
+    "symbol": "EURQ",
+    "denominator": "EUR"
+  },
+  {
+    "id": "EURQ:USD",
+    "type": "spot",
+    "base_coin": "EURQ",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-11-18T00:00:00.000Z",
+    "internal_id": "spot-EURQ-USD",
+    "symbol": "EURQ",
+    "denominator": "USD"
+  },
+  {
+    "id": "EURQ:UST",
+    "type": "spot",
+    "base_coin": "EURQ",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-11-18T00:00:00.000Z",
+    "internal_id": "spot-EURQ-USDT",
+    "symbol": "EURQ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EURR:EUR",
+    "type": "spot",
+    "base_coin": "EURR",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2025-04-15T00:00:00.000Z",
+    "internal_id": "spot-EURR-EUR",
+    "symbol": "EURR",
+    "denominator": "EUR"
+  },
+  {
+    "id": "EURR:USD",
+    "type": "spot",
+    "base_coin": "EURR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-01-14T00:00:00.000Z",
+    "internal_id": "spot-EURR-USD",
+    "symbol": "EURR",
+    "denominator": "USD"
+  },
+  {
+    "id": "EURR:UST",
+    "type": "spot",
+    "base_coin": "EURR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-01-14T00:00:00.000Z",
+    "internal_id": "spot-EURR-USDT",
+    "symbol": "EURR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EURUST",
+    "type": "spot",
+    "base_coin": "EUR",
+    "quote_coin": "USDT",
+    "underlying": "forex",
+    "first_capture": "2021-09-16T00:00:00.000Z",
+    "internal_id": "spot-EUR-USDT",
+    "symbol": "EUR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EUSETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-EURS-ETH",
+    "symbol": "EURS",
+    "denominator": "ETH"
+  },
+  {
+    "id": "EUSUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-EURS-USD",
+    "symbol": "EURS",
+    "denominator": "USD"
+  },
+  {
+    "id": "EUT:MXNT",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-EURT-MXNT",
+    "symbol": "EURT",
+    "denominator": "MXNT"
+  },
+  {
+    "id": "EUTEUR",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-EURT-EUR",
+    "symbol": "EURT",
+    "denominator": "EUR"
+  },
+  {
+    "id": "EUTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-EURT-USD",
+    "symbol": "EURT",
+    "denominator": "USD"
+  },
+  {
+    "id": "EUTUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-EURT-USDT",
+    "symbol": "EURT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "EXRD:BTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-EXRD-BTC",
+    "symbol": "EXRD",
+    "denominator": "BTC"
+  },
+  {
+    "id": "EXRD:USD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-EXRD-USD",
+    "symbol": "EXRD",
+    "denominator": "USD"
+  },
+  {
+    "id": "FBTUSD",
+    "type": "spot",
+    "first_capture": "2022-07-19T00:00:00.000Z",
+    "end_date": "2024-02-09T00:00:00.000Z",
+    "internal_id": "spot-FBT-USD",
+    "symbol": "FBT",
+    "denominator": "USD"
+  },
+  {
+    "id": "FBTUST",
+    "type": "spot",
+    "first_capture": "2022-07-19T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-FBT-USDT",
+    "symbol": "FBT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FCLUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-FCL-USD",
+    "symbol": "FCL",
+    "denominator": "USD"
+  },
+  {
+    "id": "FCLUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-FCL-USDT",
+    "symbol": "FCL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FETUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-FET-USD",
+    "symbol": "FET",
+    "denominator": "USD"
+  },
+  {
+    "id": "FETUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-FET-USDT",
+    "symbol": "FET",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FILUSD",
+    "type": "spot",
+    "base_coin": "FIL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "internal_id": "spot-FIL-USD",
+    "symbol": "FIL",
+    "denominator": "USD"
+  },
+  {
+    "id": "FILUST",
+    "type": "spot",
+    "base_coin": "FIL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "internal_id": "spot-FIL-USDT",
+    "symbol": "FIL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FLOKI:USD",
+    "type": "spot",
+    "first_capture": "2023-05-05T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-FLOKI-USD",
+    "symbol": "FLOKI",
+    "denominator": "USD"
+  },
+  {
+    "id": "FLOKI:UST",
+    "type": "spot",
+    "first_capture": "2023-05-05T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-FLOKI-USDT",
+    "symbol": "FLOKI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FLRUSD",
+    "type": "spot",
+    "first_capture": "2023-01-10T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-FLR-USD",
+    "symbol": "FLR",
+    "denominator": "USD"
+  },
+  {
+    "id": "FLRUST",
+    "type": "spot",
+    "first_capture": "2023-01-10T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-FLR-USDT",
+    "symbol": "FLR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FORTH:USD",
+    "type": "spot",
+    "first_capture": "2021-05-17T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-FORTH-USD",
+    "symbol": "FORTH",
+    "denominator": "USD"
+  },
+  {
+    "id": "FORTH:UST",
+    "type": "spot",
+    "first_capture": "2021-05-17T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-FORTH-USDT",
+    "symbol": "FORTH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FTMUSD",
+    "type": "spot",
+    "first_capture": "2021-06-23T00:00:00.000Z",
+    "end_date": "2025-02-14T00:00:00.000Z",
+    "internal_id": "spot-FTM-USD",
+    "symbol": "FTM",
+    "denominator": "USD"
+  },
+  {
+    "id": "FTMUST",
+    "type": "spot",
+    "first_capture": "2021-06-23T00:00:00.000Z",
+    "end_date": "2025-02-14T00:00:00.000Z",
+    "internal_id": "spot-FTM-USDT",
+    "symbol": "FTM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FTTUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-11-30T00:00:00.000Z",
+    "internal_id": "spot-FTT-USD",
+    "symbol": "FTT",
+    "denominator": "USD"
+  },
+  {
+    "id": "FTTUST",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-11-30T00:00:00.000Z",
+    "internal_id": "spot-FTT-USDT",
+    "symbol": "FTT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "FUNBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-FUN-BTC",
+    "symbol": "FUN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "FUNUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-FUN-USD",
+    "symbol": "FUN",
+    "denominator": "USD"
+  },
+  {
+    "id": "GALA:USD",
+    "type": "spot",
+    "first_capture": "2022-03-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-GALA-USD",
+    "symbol": "GALA",
+    "denominator": "USD"
+  },
+  {
+    "id": "GALA:UST",
+    "type": "spot",
+    "first_capture": "2022-03-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-GALA-USDT",
+    "symbol": "GALA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GBPEUT",
+    "type": "spot",
+    "first_capture": "2022-02-17T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-GBP-EURT",
+    "symbol": "GBP",
+    "denominator": "EURT"
+  },
+  {
+    "id": "GBPUST",
+    "type": "spot",
+    "base_coin": "GBP",
+    "quote_coin": "USDT",
+    "underlying": "forex",
+    "first_capture": "2022-02-17T00:00:00.000Z",
+    "internal_id": "spot-GBP-USDT",
+    "symbol": "GBP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GMMT:USD",
+    "type": "spot",
+    "first_capture": "2024-02-08T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-GMMT-USD",
+    "symbol": "GMMT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GMMT:UST",
+    "type": "spot",
+    "first_capture": "2024-02-08T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-GMMT-USDT",
+    "symbol": "GMMT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GMTUSD",
+    "type": "spot",
+    "first_capture": "2022-05-24T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-GMT-USD",
+    "symbol": "GMT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GMTUST",
+    "type": "spot",
+    "first_capture": "2022-05-24T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-GMT-USDT",
+    "symbol": "GMT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GNOETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-GNO-ETH",
+    "symbol": "GNO",
+    "denominator": "ETH"
+  },
+  {
+    "id": "GNOUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-GNO-USD",
+    "symbol": "GNO",
+    "denominator": "USD"
+  },
+  {
+    "id": "GNTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-GNT-USD",
+    "symbol": "GNT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GOCUSD",
+    "type": "spot",
+    "first_capture": "2023-06-07T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-GOC-USD",
+    "symbol": "GOC",
+    "denominator": "USD"
+  },
+  {
+    "id": "GOCUST",
+    "type": "spot",
+    "first_capture": "2023-06-07T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-GOC-USDT",
+    "symbol": "GOC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GOMINING:USD",
+    "type": "spot",
+    "base_coin": "GOMINING",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-12-14T00:00:00.000Z",
+    "internal_id": "spot-GOMINING-USD",
+    "symbol": "GOMINING",
+    "denominator": "USD"
+  },
+  {
+    "id": "GOMINING:UST",
+    "type": "spot",
+    "base_coin": "GOMINING",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-12-14T00:00:00.000Z",
+    "internal_id": "spot-GOMINING-USDT",
+    "symbol": "GOMINING",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GOTEUR",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-03-18T00:00:00.000Z",
+    "internal_id": "spot-GOT-EUR",
+    "symbol": "GOT",
+    "denominator": "EUR"
+  },
+  {
+    "id": "GOTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-GOT-USD",
+    "symbol": "GOT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GPTUSD",
+    "type": "spot",
+    "first_capture": "2023-03-10T00:00:00.000Z",
+    "end_date": "2023-05-17T00:00:00.000Z",
+    "internal_id": "spot-GPT-USD",
+    "symbol": "GPT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GPTUST",
+    "type": "spot",
+    "first_capture": "2023-03-10T00:00:00.000Z",
+    "end_date": "2023-05-17T00:00:00.000Z",
+    "internal_id": "spot-GPT-USDT",
+    "symbol": "GPT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GRTUSD",
+    "type": "spot",
+    "first_capture": "2021-07-21T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-GRT-USD",
+    "symbol": "GRT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GRTUST",
+    "type": "spot",
+    "first_capture": "2021-07-21T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-GRT-USDT",
+    "symbol": "GRT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GSTUSD",
+    "type": "spot",
+    "first_capture": "2022-05-24T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-GST-USD",
+    "symbol": "GST",
+    "denominator": "USD"
+  },
+  {
+    "id": "GSTUST",
+    "type": "spot",
+    "first_capture": "2022-05-24T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-GST-USDT",
+    "symbol": "GST",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GTXUSD",
+    "type": "spot",
+    "first_capture": "2020-06-26T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-GT-USD",
+    "symbol": "GT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GTXUST",
+    "type": "spot",
+    "first_capture": "2020-06-26T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-GT-USDT",
+    "symbol": "GT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GUNUSD",
+    "type": "spot",
+    "base_coin": "GUN",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-03-31T00:00:00.000Z",
+    "internal_id": "spot-GUN-USD",
+    "symbol": "GUN",
+    "denominator": "USD"
+  },
+  {
+    "id": "GUNUST",
+    "type": "spot",
+    "base_coin": "GUN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-03-31T00:00:00.000Z",
+    "internal_id": "spot-GUN-USDT",
+    "symbol": "GUN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "GXTUSD",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-GXT-USD",
+    "symbol": "GXT",
+    "denominator": "USD"
+  },
+  {
+    "id": "GXTUST",
+    "type": "spot",
+    "first_capture": "2022-07-07T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-GXT-USDT",
+    "symbol": "GXT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HECUSD",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-HEC-USD",
+    "symbol": "HEC",
+    "denominator": "USD"
+  },
+  {
+    "id": "HECUST",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-HEC-USDT",
+    "symbol": "HEC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HEZUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-HEZ-USD",
+    "symbol": "HEZ",
+    "denominator": "USD"
+  },
+  {
+    "id": "HEZUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-HEZ-USDT",
+    "symbol": "HEZ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HILSV:USD",
+    "type": "spot",
+    "first_capture": "2024-05-14T00:00:00.000Z",
+    "end_date": "2025-11-15T00:00:00.000Z",
+    "internal_id": "spot-HILSV-USD",
+    "symbol": "HILSV",
+    "denominator": "USD"
+  },
+  {
+    "id": "HIXBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-HIX-BTC",
+    "symbol": "HIX",
+    "denominator": "BTC"
+  },
+  {
+    "id": "HIXUSD",
+    "type": "spot",
+    "first_capture": "2022-03-10T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-HIX-USD",
+    "symbol": "HIX",
+    "denominator": "USD"
+  },
+  {
+    "id": "HIXUST",
+    "type": "spot",
+    "first_capture": "2022-03-10T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-HIX-USDT",
+    "symbol": "HIX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HMSTR:USD",
+    "type": "spot",
+    "first_capture": "2024-09-24T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-HMSTR-USD",
+    "symbol": "HMSTR",
+    "denominator": "USD"
+  },
+  {
+    "id": "HMSTR:UST",
+    "type": "spot",
+    "first_capture": "2024-09-24T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-HMSTR-USDT",
+    "symbol": "HMSTR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HMTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-HMT-USD",
+    "symbol": "HMT",
+    "denominator": "USD"
+  },
+  {
+    "id": "HMTUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-HMT-USDT",
+    "symbol": "HMT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HTXDAO:USD",
+    "type": "spot",
+    "first_capture": "2025-01-16T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-HTXDAO-USD",
+    "symbol": "HTXDAO",
+    "denominator": "USD"
+  },
+  {
+    "id": "HTXDAO:UST",
+    "type": "spot",
+    "first_capture": "2025-01-16T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-HTXDAO-USDT",
+    "symbol": "HTXDAO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HTXUSD",
+    "type": "spot",
+    "first_capture": "2022-11-24T00:00:00.000Z",
+    "end_date": "2025-01-17T00:00:00.000Z",
+    "internal_id": "spot-HTX-USD",
+    "symbol": "HTX",
+    "denominator": "USD"
+  },
+  {
+    "id": "HTXUST",
+    "type": "spot",
+    "first_capture": "2022-11-24T00:00:00.000Z",
+    "end_date": "2025-01-17T00:00:00.000Z",
+    "internal_id": "spot-HTX-USDT",
+    "symbol": "HTX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "HYPE:USD",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-09-02T00:00:00.000Z",
+    "internal_id": "spot-HYPE-USD",
+    "symbol": "HYPE",
+    "denominator": "USD"
+  },
+  {
+    "id": "HYPE:UST",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-09-02T00:00:00.000Z",
+    "internal_id": "spot-HYPE-USDT",
+    "symbol": "HYPE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ICEUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-12-13T00:00:00.000Z",
+    "internal_id": "spot-ICE-USD",
+    "symbol": "ICE",
+    "denominator": "USD"
+  },
+  {
+    "id": "ICPBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-ICP-BTC",
+    "symbol": "ICP",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ICPUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ICP-USD",
+    "symbol": "ICP",
+    "denominator": "USD"
+  },
+  {
+    "id": "ICPUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ICP-USDT",
+    "symbol": "ICP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "IDXBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ID-BTC",
+    "symbol": "ID",
+    "denominator": "BTC"
+  },
+  {
+    "id": "IDXUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-ID-USD",
+    "symbol": "ID",
+    "denominator": "USD"
+  },
+  {
+    "id": "IDXUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-ID-USDT",
+    "symbol": "ID",
+    "denominator": "USDT"
+  },
+  {
+    "id": "INJUSD",
+    "type": "spot",
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-INJ-USD",
+    "symbol": "INJ",
+    "denominator": "USD"
+  },
+  {
+    "id": "INJUST",
+    "type": "spot",
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-INJ-USDT",
+    "symbol": "INJ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "INTETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-INT-ETH",
+    "symbol": "INT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "INTUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-INT-USD",
+    "symbol": "INT",
+    "denominator": "USD"
+  },
+  {
+    "id": "IOTBTC",
+    "type": "spot",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-IOTA-BTC",
+    "symbol": "IOTA",
+    "denominator": "BTC"
+  },
+  {
+    "id": "IOTETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-IOTA-ETH",
+    "symbol": "IOTA",
+    "denominator": "ETH"
+  },
+  {
+    "id": "IOTEUR",
+    "type": "spot",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-IOTA-EUR",
+    "symbol": "IOTA",
+    "denominator": "EUR"
+  },
+  {
+    "id": "IOTGBP",
+    "type": "spot",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-IOTA-GBP",
+    "symbol": "IOTA",
+    "denominator": "GBP"
+  },
+  {
+    "id": "IOTJPY",
+    "type": "spot",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-IOTA-JPY",
+    "symbol": "IOTA",
+    "denominator": "JPY"
+  },
+  {
+    "id": "IOTUSD",
+    "type": "spot",
+    "base_coin": "IOTA",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-10-17T00:00:00.000Z",
+    "internal_id": "spot-IOTA-USD",
+    "symbol": "IOTA",
+    "denominator": "USD"
+  },
+  {
+    "id": "IQXBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-IQ-BTC",
+    "symbol": "IQ",
+    "denominator": "BTC"
+  },
+  {
+    "id": "IQXUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-IQ-USD",
+    "symbol": "IQ",
+    "denominator": "USD"
+  },
+  {
+    "id": "IQXUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-IQ-USDT",
+    "symbol": "IQ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JASMY:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JASMY-USD",
+    "symbol": "JASMY",
+    "denominator": "USD"
+  },
+  {
+    "id": "JASMY:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JASMY-USDT",
+    "symbol": "JASMY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JPYUST",
+    "type": "spot",
+    "first_capture": "2022-02-17T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-JPY-USDT",
+    "symbol": "JPY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JSTBTC",
+    "type": "spot",
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-JST-BTC",
+    "symbol": "JST",
+    "denominator": "BTC"
+  },
+  {
+    "id": "JSTUSD",
+    "type": "spot",
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JST-USD",
+    "symbol": "JST",
+    "denominator": "USD"
+  },
+  {
+    "id": "JSTUST",
+    "type": "spot",
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JST-USDT",
+    "symbol": "JST",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JUPUSD",
+    "type": "spot",
+    "first_capture": "2024-01-31T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-JUP-USD",
+    "symbol": "JUP",
+    "denominator": "USD"
+  },
+  {
+    "id": "JUPUST",
+    "type": "spot",
+    "first_capture": "2024-01-31T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-JUP-USDT",
+    "symbol": "JUP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JUSTICE:USD",
+    "type": "spot",
+    "first_capture": "2024-09-10T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JUSTICE-USD",
+    "symbol": "JUSTICE",
+    "denominator": "USD"
+  },
+  {
+    "id": "JUSTICE:UST",
+    "type": "spot",
+    "first_capture": "2024-09-10T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-JUSTICE-USDT",
+    "symbol": "JUSTICE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JXXUSD",
+    "type": "spot",
+    "first_capture": "2025-01-21T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-JXX-USD",
+    "symbol": "JXX",
+    "denominator": "USD"
+  },
+  {
+    "id": "JXXUST",
+    "type": "spot",
+    "first_capture": "2025-01-21T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-JXX-USDT",
+    "symbol": "JXX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KAIA:USD",
+    "type": "spot",
+    "base_coin": "KAIA",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-03-10T00:00:00.000Z",
+    "internal_id": "spot-KAIA-USD",
+    "symbol": "KAIA",
+    "denominator": "USD"
+  },
+  {
+    "id": "KAIA:UST",
+    "type": "spot",
+    "base_coin": "KAIA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-03-10T00:00:00.000Z",
+    "internal_id": "spot-KAIA-USDT",
+    "symbol": "KAIA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KAIUSD",
+    "type": "spot",
+    "first_capture": "2022-01-12T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-KAI-USD",
+    "symbol": "KAI",
+    "denominator": "USD"
+  },
+  {
+    "id": "KAIUST",
+    "type": "spot",
+    "first_capture": "2022-01-12T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-KAI-USDT",
+    "symbol": "KAI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KANUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-KAN-USD",
+    "symbol": "KAN",
+    "denominator": "USD"
+  },
+  {
+    "id": "KANUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-KAN-USDT",
+    "symbol": "KAN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KARATE:USD",
+    "type": "spot",
+    "first_capture": "2023-05-12T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-KARATE-USD",
+    "symbol": "KARATE",
+    "denominator": "USD"
+  },
+  {
+    "id": "KARATE:UST",
+    "type": "spot",
+    "first_capture": "2023-05-12T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-KARATE-USDT",
+    "symbol": "KARATE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KAVA:USD",
+    "type": "spot",
+    "first_capture": "2023-07-13T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-KAVA-USD",
+    "symbol": "KAVA",
+    "denominator": "USD"
+  },
+  {
+    "id": "KAVA:UST",
+    "type": "spot",
+    "first_capture": "2023-07-13T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-KAVA-USDT",
+    "symbol": "KAVA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KMNO:USD",
+    "type": "spot",
+    "first_capture": "2024-10-07T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-KMNO-USD",
+    "symbol": "KMNO",
+    "denominator": "USD"
+  },
+  {
+    "id": "KMNO:UST",
+    "type": "spot",
+    "first_capture": "2024-10-07T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-KMNO-USDT",
+    "symbol": "KMNO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KNCBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-KNC-BTC",
+    "symbol": "KNC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "KNCETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-KNC-ETH",
+    "symbol": "KNC",
+    "denominator": "ETH"
+  },
+  {
+    "id": "KNCUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-KNC-USD",
+    "symbol": "KNC",
+    "denominator": "USD"
+  },
+  {
+    "id": "KSMUSD",
+    "type": "spot",
+    "first_capture": "2020-09-16T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-KSM-USD",
+    "symbol": "KSM",
+    "denominator": "USD"
+  },
+  {
+    "id": "KSMUST",
+    "type": "spot",
+    "first_capture": "2020-09-16T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-KSM-USDT",
+    "symbol": "KSM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LAIUSD",
+    "type": "spot",
+    "first_capture": "2023-05-17T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-LAI-USD",
+    "symbol": "LAI",
+    "denominator": "USD"
+  },
+  {
+    "id": "LAIUST",
+    "type": "spot",
+    "first_capture": "2023-05-17T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-LAI-USDT",
+    "symbol": "LAI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LDOUSD",
+    "type": "spot",
+    "first_capture": "2023-04-14T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-LDO-USD",
+    "symbol": "LDO",
+    "denominator": "USD"
+  },
+  {
+    "id": "LDOUST",
+    "type": "spot",
+    "first_capture": "2023-04-14T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-LDO-USDT",
+    "symbol": "LDO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LEOBTC",
+    "type": "spot",
+    "base_coin": "LEO",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-LEO-BTC",
+    "symbol": "LEO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LEOEOS",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-05-20T00:00:00.000Z",
+    "internal_id": "spot-LEO-EOS",
+    "symbol": "LEO",
+    "denominator": "EOS"
+  },
+  {
+    "id": "LEOETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-LEO-ETH",
+    "symbol": "LEO",
+    "denominator": "ETH"
+  },
+  {
+    "id": "LEOUSD",
+    "type": "spot",
+    "base_coin": "LEO",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-LEO-USD",
+    "symbol": "LEO",
+    "denominator": "USD"
+  },
+  {
+    "id": "LEOUST",
+    "type": "spot",
+    "base_coin": "LEO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-LEO-USDT",
+    "symbol": "LEO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LIFIII:USD",
+    "type": "spot",
+    "base_coin": "LIF3",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "internal_id": "spot-LIF3-USD",
+    "symbol": "LIF3",
+    "denominator": "USD"
+  },
+  {
+    "id": "LIFIII:UST",
+    "type": "spot",
+    "base_coin": "LIF3",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-01-25T00:00:00.000Z",
+    "internal_id": "spot-LIF3-USDT",
+    "symbol": "LIF3",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LINK:USD",
+    "type": "spot",
+    "base_coin": "LINK",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-08-21T00:00:00.000Z",
+    "internal_id": "spot-LINK-USD",
+    "symbol": "LINK",
+    "denominator": "USD"
+  },
+  {
+    "id": "LINK:UST",
+    "type": "spot",
+    "base_coin": "LINK",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-08-21T00:00:00.000Z",
+    "internal_id": "spot-LINK-USDT",
+    "symbol": "LINK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LRCBTC",
+    "type": "spot",
+    "first_capture": "2020-07-25T00:00:00.000Z",
+    "end_date": "2021-04-24T00:00:00.000Z",
+    "internal_id": "spot-LRC-BTC",
+    "symbol": "LRC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LRCETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-LRC-ETH",
+    "symbol": "LRC",
+    "denominator": "ETH"
+  },
+  {
+    "id": "LRCUSD",
+    "type": "spot",
+    "first_capture": "2020-07-25T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-LRC-USD",
+    "symbol": "LRC",
+    "denominator": "USD"
+  },
+  {
+    "id": "LTCBTC",
+    "type": "spot",
+    "base_coin": "LTC",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-LTC-BTC",
+    "symbol": "LTC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LTCUSD",
+    "type": "spot",
+    "base_coin": "LTC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-LTC-USD",
+    "symbol": "LTC",
+    "denominator": "USD"
+  },
+  {
+    "id": "LTCUST",
+    "type": "spot",
+    "base_coin": "LTC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-LTC-USDT",
+    "symbol": "LTC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LUNA2:USD",
+    "type": "spot",
+    "first_capture": "2022-05-28T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-LUNA-USD",
+    "symbol": "LUNA",
+    "denominator": "USD"
+  },
+  {
+    "id": "LUNA2:UST",
+    "type": "spot",
+    "first_capture": "2022-05-28T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-LUNA-USDT",
+    "symbol": "LUNA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LUNA:BTC",
+    "type": "spot",
+    "first_capture": "2021-08-11T00:00:00.000Z",
+    "end_date": "2022-05-27T00:00:00.000Z",
+    "internal_id": "spot-LUNC-BTC",
+    "symbol": "LUNC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LUNA:ETH",
+    "type": "spot",
+    "first_capture": "2022-02-10T00:00:00.000Z",
+    "end_date": "2022-05-27T00:00:00.000Z",
+    "internal_id": "spot-LUNC-ETH",
+    "symbol": "LUNC",
+    "denominator": "ETH"
+  },
+  {
+    "id": "LUNA:USD",
+    "type": "spot",
+    "first_capture": "2021-04-16T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-LUNC-USD",
+    "symbol": "LUNC",
+    "denominator": "USD"
+  },
+  {
+    "id": "LUNA:UST",
+    "type": "spot",
+    "first_capture": "2021-04-16T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-LUNC-USDT",
+    "symbol": "LUNC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "LUXO:USD",
+    "type": "spot",
+    "first_capture": "2022-04-28T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-LUXO-USD",
+    "symbol": "LUXO",
+    "denominator": "USD"
+  },
+  {
+    "id": "LYMBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-LYM-BTC",
+    "symbol": "LYM",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LYMETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-LYM-ETH",
+    "symbol": "LYM",
+    "denominator": "ETH"
+  },
+  {
+    "id": "LYMUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-LYM-USD",
+    "symbol": "LYM",
+    "denominator": "USD"
+  },
+  {
+    "id": "LYMUST",
+    "type": "spot",
+    "first_capture": "2024-03-21T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-LYM-USDT",
+    "symbol": "LYM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MANEKI:USD",
+    "type": "spot",
+    "first_capture": "2024-10-01T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MANEKI-USD",
+    "symbol": "MANEKI",
+    "denominator": "USD"
+  },
+  {
+    "id": "MANEKI:UST",
+    "type": "spot",
+    "first_capture": "2024-10-01T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MANEKI-USDT",
+    "symbol": "MANEKI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MATIC:BTC",
+    "type": "spot",
+    "first_capture": "2021-09-21T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MATIC-BTC",
+    "symbol": "MATIC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "MATIC:USD",
+    "type": "spot",
+    "first_capture": "2021-09-21T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MATIC-USD",
+    "symbol": "MATIC",
+    "denominator": "USD"
+  },
+  {
+    "id": "MATIC:UST",
+    "type": "spot",
+    "first_capture": "2021-09-21T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MATIC-USDT",
+    "symbol": "MATIC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MEME:USD",
+    "type": "spot",
+    "first_capture": "2024-01-11T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-MEME-USD",
+    "symbol": "MEME",
+    "denominator": "USD"
+  },
+  {
+    "id": "MEME:UST",
+    "type": "spot",
+    "first_capture": "2024-01-11T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-MEME-USDT",
+    "symbol": "MEME",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MEWUSD",
+    "type": "spot",
+    "first_capture": "2024-07-02T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-MEW-USD",
+    "symbol": "MEW",
+    "denominator": "USD"
+  },
+  {
+    "id": "MEWUST",
+    "type": "spot",
+    "first_capture": "2024-07-02T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-MEW-USDT",
+    "symbol": "MEW",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MIMUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-MIM-USD",
+    "symbol": "MIM",
+    "denominator": "USD"
+  },
+  {
+    "id": "MIMUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-MIM-USDT",
+    "symbol": "MIM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MIRUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-MIR-USD",
+    "symbol": "MIR",
+    "denominator": "USD"
+  },
+  {
+    "id": "MIRUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-MIR-USDT",
+    "symbol": "MIR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MKRBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2021-04-24T00:00:00.000Z",
+    "internal_id": "spot-MKR-BTC",
+    "symbol": "MKR",
+    "denominator": "BTC"
+  },
+  {
+    "id": "MKRDAI",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-MKR-DAI",
+    "symbol": "MKR",
+    "denominator": "DAI"
+  },
+  {
+    "id": "MKRUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-09-05T00:00:00.000Z",
+    "internal_id": "spot-MKR-USD",
+    "symbol": "MKR",
+    "denominator": "USD"
+  },
+  {
+    "id": "MKRUST",
+    "type": "spot",
+    "first_capture": "2021-11-09T00:00:00.000Z",
+    "end_date": "2025-09-05T00:00:00.000Z",
+    "internal_id": "spot-MKR-USDT",
+    "symbol": "MKR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MLNETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-MLN-ETH",
+    "symbol": "MLN",
+    "denominator": "ETH"
+  },
+  {
+    "id": "MLNUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-MLN-USD",
+    "symbol": "MLN",
+    "denominator": "USD"
+  },
+  {
+    "id": "MNABTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-MANA-BTC",
+    "symbol": "MANA",
+    "denominator": "BTC"
+  },
+  {
+    "id": "MNAETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-MANA-ETH",
+    "symbol": "MANA",
+    "denominator": "ETH"
+  },
+  {
+    "id": "MNAUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MANA-USD",
+    "symbol": "MANA",
+    "denominator": "USD"
+  },
+  {
+    "id": "MNTUSD",
+    "type": "spot",
+    "base_coin": "MNT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-08-26T00:00:00.000Z",
+    "internal_id": "spot-MNT-USD",
+    "symbol": "MNT",
+    "denominator": "USD"
+  },
+  {
+    "id": "MNTUST",
+    "type": "spot",
+    "base_coin": "MNT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-08-26T00:00:00.000Z",
+    "internal_id": "spot-MNT-USDT",
+    "symbol": "MNT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MOBUSD",
+    "type": "spot",
+    "first_capture": "2021-04-02T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-MOB-USD",
+    "symbol": "MOB",
+    "denominator": "USD"
+  },
+  {
+    "id": "MOBUST",
+    "type": "spot",
+    "first_capture": "2021-04-02T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-MOB-USDT",
+    "symbol": "MOB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MODE:USD",
+    "type": "spot",
+    "first_capture": "2024-05-06T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-MODE-USD",
+    "symbol": "MODE",
+    "denominator": "USD"
+  },
+  {
+    "id": "MODE:UST",
+    "type": "spot",
+    "first_capture": "2024-05-06T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-MODE-USDT",
+    "symbol": "MODE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MPCUSD",
+    "type": "spot",
+    "first_capture": "2024-03-19T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MPC-USD",
+    "symbol": "MPC",
+    "denominator": "USD"
+  },
+  {
+    "id": "MPCUST",
+    "type": "spot",
+    "first_capture": "2024-03-19T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-MPC-USDT",
+    "symbol": "MPC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MXNT:USD",
+    "type": "spot",
+    "base_coin": "MXNT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "internal_id": "spot-MXNT-USD",
+    "symbol": "MXNT",
+    "denominator": "USD"
+  },
+  {
+    "id": "NEAR:USD",
+    "type": "spot",
+    "base_coin": "NEAR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-04-12T00:00:00.000Z",
+    "internal_id": "spot-NEAR-USD",
+    "symbol": "NEAR",
+    "denominator": "USD"
+  },
+  {
+    "id": "NEAR:UST",
+    "type": "spot",
+    "base_coin": "NEAR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-04-12T00:00:00.000Z",
+    "internal_id": "spot-NEAR-USDT",
+    "symbol": "NEAR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NEOBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-NEO-BTC",
+    "symbol": "NEO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "NEOETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-NEO-ETH",
+    "symbol": "NEO",
+    "denominator": "ETH"
+  },
+  {
+    "id": "NEOEUR",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-NEO-EUR",
+    "symbol": "NEO",
+    "denominator": "EUR"
+  },
+  {
+    "id": "NEOGBP",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-NEO-GBP",
+    "symbol": "NEO",
+    "denominator": "GBP"
+  },
+  {
+    "id": "NEOJPY",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-NEO-JPY",
+    "symbol": "NEO",
+    "denominator": "JPY"
+  },
+  {
+    "id": "NEOUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-NEO-USD",
+    "symbol": "NEO",
+    "denominator": "USD"
+  },
+  {
+    "id": "NEOUST",
+    "type": "spot",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-NEO-USDT",
+    "symbol": "NEO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NEXO:BTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-NEXO-BTC",
+    "symbol": "NEXO",
+    "denominator": "BTC"
+  },
+  {
+    "id": "NEXO:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-NEXO-USD",
+    "symbol": "NEXO",
+    "denominator": "USD"
+  },
+  {
+    "id": "NEXO:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-NEXO-USDT",
+    "symbol": "NEXO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NIOETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-NIO-ETH",
+    "symbol": "NIO",
+    "denominator": "ETH"
+  },
+  {
+    "id": "NIOUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-NIO-USD",
+    "symbol": "NIO",
+    "denominator": "USD"
+  },
+  {
+    "id": "NOMUSD",
+    "type": "spot",
+    "first_capture": "2023-03-15T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-NOM-USD",
+    "symbol": "NOM",
+    "denominator": "USD"
+  },
+  {
+    "id": "NOMUST",
+    "type": "spot",
+    "first_capture": "2023-03-15T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-NOM-USDT",
+    "symbol": "NOM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NOTUSD",
+    "type": "spot",
+    "first_capture": "2024-05-14T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-NOT-USD",
+    "symbol": "NOT",
+    "denominator": "USD"
+  },
+  {
+    "id": "NOTUST",
+    "type": "spot",
+    "first_capture": "2024-05-14T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-NOT-USDT",
+    "symbol": "NOT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NXRA:USD",
+    "type": "spot",
+    "first_capture": "2023-02-23T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-NXRA-USD",
+    "symbol": "NXRA",
+    "denominator": "USD"
+  },
+  {
+    "id": "NYMUSD",
+    "type": "spot",
+    "base_coin": "NYM",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-10-08T00:00:00.000Z",
+    "internal_id": "spot-NYM-USD",
+    "symbol": "NYM",
+    "denominator": "USD"
+  },
+  {
+    "id": "NYMUST",
+    "type": "spot",
+    "base_coin": "NYM",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-10-08T00:00:00.000Z",
+    "internal_id": "spot-NYM-USDT",
+    "symbol": "NYM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "OCEAN:USD",
+    "type": "spot",
+    "first_capture": "2021-05-28T00:00:00.000Z",
+    "end_date": "2024-07-03T00:00:00.000Z",
+    "internal_id": "spot-OCEAN-USD",
+    "symbol": "OCEAN",
+    "denominator": "USD"
+  },
+  {
+    "id": "OCEAN:UST",
+    "type": "spot",
+    "first_capture": "2021-05-28T00:00:00.000Z",
+    "end_date": "2024-07-03T00:00:00.000Z",
+    "internal_id": "spot-OCEAN-USDT",
+    "symbol": "OCEAN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ODEUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-05-07T00:00:00.000Z",
+    "internal_id": "spot-ODE-USD",
+    "symbol": "ODE",
+    "denominator": "USD"
+  },
+  {
+    "id": "OGNUSD",
+    "type": "spot",
+    "first_capture": "2023-02-13T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-OGN-USD",
+    "symbol": "OGN",
+    "denominator": "USD"
+  },
+  {
+    "id": "OGNUST",
+    "type": "spot",
+    "first_capture": "2023-02-13T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-OGN-USDT",
+    "symbol": "OGN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "OKBBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-08-21T00:00:00.000Z",
+    "internal_id": "spot-OKB-BTC",
+    "symbol": "OKB",
+    "denominator": "BTC"
+  },
+  {
+    "id": "OKBUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2021-03-28T00:00:00.000Z",
+    "internal_id": "spot-OKB-USD",
+    "symbol": "OKB",
+    "denominator": "USD"
+  },
+  {
+    "id": "OKBUST",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2021-03-28T00:00:00.000Z",
+    "internal_id": "spot-OKB-USDT",
+    "symbol": "OKB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "OMGBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-OMG-BTC",
+    "symbol": "OMG",
+    "denominator": "BTC"
+  },
+  {
+    "id": "OMGDAI",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-OMG-DAI",
+    "symbol": "OMG",
+    "denominator": "DAI"
+  },
+  {
+    "id": "OMGETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-OMG-ETH",
+    "symbol": "OMG",
+    "denominator": "ETH"
+  },
+  {
+    "id": "OMGUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-OMG-USD",
+    "symbol": "OMG",
+    "denominator": "USD"
+  },
+  {
+    "id": "OMNUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-OMNI-USD",
+    "symbol": "OMNI",
+    "denominator": "USD"
+  },
+  {
+    "id": "ONEUSD",
+    "type": "spot",
+    "first_capture": "2023-02-01T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-ONE-USD",
+    "symbol": "ONE",
+    "denominator": "USD"
+  },
+  {
+    "id": "ONEUST",
+    "type": "spot",
+    "first_capture": "2023-02-01T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-ONE-USDT",
+    "symbol": "ONE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "OPXUSD",
+    "type": "spot",
+    "base_coin": "OP",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-07-27T00:00:00.000Z",
+    "internal_id": "spot-OP-USD",
+    "symbol": "OP",
+    "denominator": "USD"
+  },
+  {
+    "id": "OPXUST",
+    "type": "spot",
+    "base_coin": "OP",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-07-27T00:00:00.000Z",
+    "internal_id": "spot-OP-USDT",
+    "symbol": "OP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ORSUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-03-15T00:00:00.000Z",
+    "internal_id": "spot-ORS-USD",
+    "symbol": "ORS",
+    "denominator": "USD"
+  },
+  {
+    "id": "OXYUSD",
+    "type": "spot",
+    "first_capture": "2021-05-07T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-OXY-USD",
+    "symbol": "OXY",
+    "denominator": "USD"
+  },
+  {
+    "id": "OXYUST",
+    "type": "spot",
+    "first_capture": "2021-05-07T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-OXY-USDT",
+    "symbol": "OXY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PASETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-PASS-ETH",
+    "symbol": "PASS",
+    "denominator": "ETH"
+  },
+  {
+    "id": "PASUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-PASS-USD",
+    "symbol": "PASS",
+    "denominator": "USD"
+  },
+  {
+    "id": "PAXUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-PAX-USD",
+    "symbol": "PAX",
+    "denominator": "USD"
+  },
+  {
+    "id": "PAXUST",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-PAX-USDT",
+    "symbol": "PAX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PEPE:USD",
+    "type": "spot",
+    "base_coin": "PEPE",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-05-24T00:00:00.000Z",
+    "internal_id": "spot-PEPE-USD",
+    "symbol": "PEPE",
+    "denominator": "USD"
+  },
+  {
+    "id": "PEPE:UST",
+    "type": "spot",
+    "base_coin": "PEPE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-05-24T00:00:00.000Z",
+    "internal_id": "spot-PEPE-USDT",
+    "symbol": "PEPE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PLANETS:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-PLANETS-USD",
+    "symbol": "PLANETS",
+    "denominator": "USD"
+  },
+  {
+    "id": "PLANETS:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-PLANETS-USDT",
+    "symbol": "PLANETS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PLUUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-PLU-USD",
+    "symbol": "PLU",
+    "denominator": "USD"
+  },
+  {
+    "id": "PNGUSD",
+    "type": "spot",
+    "first_capture": "2022-01-12T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-PNG-USD",
+    "symbol": "PNG",
+    "denominator": "USD"
+  },
+  {
+    "id": "PNGUST",
+    "type": "spot",
+    "first_capture": "2022-01-12T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-PNG-USDT",
+    "symbol": "PNG",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PNKETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-PNK-ETH",
+    "symbol": "PNK",
+    "denominator": "ETH"
+  },
+  {
+    "id": "PNKUSD",
+    "type": "spot",
+    "base_coin": "PNK",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-PNK-USD",
+    "symbol": "PNK",
+    "denominator": "USD"
+  },
+  {
+    "id": "POLC:BTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-POLC-BTC",
+    "symbol": "POLC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "POLC:USD",
+    "type": "spot",
+    "first_capture": "2022-03-10T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-POLC-USD",
+    "symbol": "POLC",
+    "denominator": "USD"
+  },
+  {
+    "id": "POLC:UST",
+    "type": "spot",
+    "first_capture": "2022-03-10T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-POLC-USDT",
+    "symbol": "POLC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "POLIS:USD",
+    "type": "spot",
+    "first_capture": "2022-06-02T00:00:00.000Z",
+    "end_date": "2023-10-06T00:00:00.000Z",
+    "internal_id": "spot-POLIS-USD",
+    "symbol": "POLIS",
+    "denominator": "USD"
+  },
+  {
+    "id": "POLIS:UST",
+    "type": "spot",
+    "first_capture": "2022-06-02T00:00:00.000Z",
+    "end_date": "2023-10-06T00:00:00.000Z",
+    "internal_id": "spot-POLIS-USDT",
+    "symbol": "POLIS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "POLUSD",
+    "type": "spot",
+    "base_coin": "POL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-09-02T00:00:00.000Z",
+    "internal_id": "spot-POL-USD",
+    "symbol": "POL",
+    "denominator": "USD"
+  },
+  {
+    "id": "POLUST",
+    "type": "spot",
+    "base_coin": "POL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-09-02T00:00:00.000Z",
+    "internal_id": "spot-POL-USDT",
+    "symbol": "POL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PORTAL:USD",
+    "type": "spot",
+    "first_capture": "2024-05-21T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-PORTAL-USD",
+    "symbol": "PORTAL",
+    "denominator": "USD"
+  },
+  {
+    "id": "PORTAL:UST",
+    "type": "spot",
+    "first_capture": "2024-05-21T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-PORTAL-USDT",
+    "symbol": "PORTAL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PRMX:USD",
+    "type": "spot",
+    "first_capture": "2023-04-06T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-PRMX-USD",
+    "symbol": "PRMX",
+    "denominator": "USD"
+  },
+  {
+    "id": "PRMX:UST",
+    "type": "spot",
+    "first_capture": "2023-04-06T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-PRMX-USDT",
+    "symbol": "PRMX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "QRDO:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-QRDO-USD",
+    "symbol": "QRDO",
+    "denominator": "USD"
+  },
+  {
+    "id": "QRDO:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-QRDO-USDT",
+    "symbol": "QRDO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "QSHUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-03-15T00:00:00.000Z",
+    "internal_id": "spot-QASH-USD",
+    "symbol": "QASH",
+    "denominator": "USD"
+  },
+  {
+    "id": "QTFBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-QTF-BTC",
+    "symbol": "QTF",
+    "denominator": "BTC"
+  },
+  {
+    "id": "QTFUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-QTF-USD",
+    "symbol": "QTF",
+    "denominator": "USD"
+  },
+  {
+    "id": "QTMBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-QTUM-BTC",
+    "symbol": "QTUM",
+    "denominator": "BTC"
+  },
+  {
+    "id": "QTMETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-QTUM-ETH",
+    "symbol": "QTUM",
+    "denominator": "ETH"
+  },
+  {
+    "id": "QTMUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-QTUM-USD",
+    "symbol": "QTUM",
+    "denominator": "USD"
+  },
+  {
+    "id": "RBTBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-RBTC-BTC",
+    "symbol": "RBTC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "RBTUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-11-10T00:00:00.000Z",
+    "internal_id": "spot-RBTC-USD",
+    "symbol": "RBTC",
+    "denominator": "USD"
+  },
+  {
+    "id": "REEF:USD",
+    "type": "spot",
+    "first_capture": "2021-07-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-REEF-USD",
+    "symbol": "REEF",
+    "denominator": "USD"
+  },
+  {
+    "id": "REEF:UST",
+    "type": "spot",
+    "first_capture": "2021-07-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-REEF-USDT",
+    "symbol": "REEF",
+    "denominator": "USDT"
+  },
+  {
+    "id": "REPBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-REP-BTC",
+    "symbol": "REP",
+    "denominator": "BTC"
+  },
+  {
+    "id": "REPETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-REP-ETH",
+    "symbol": "REP",
+    "denominator": "ETH"
+  },
+  {
+    "id": "REPUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-REP-USD",
+    "symbol": "REP",
+    "denominator": "USD"
+  },
+  {
+    "id": "REQBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-REQ-BTC",
+    "symbol": "REQ",
+    "denominator": "BTC"
+  },
+  {
+    "id": "REQETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-REQ-ETH",
+    "symbol": "REQ",
+    "denominator": "ETH"
+  },
+  {
+    "id": "REQUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-REQ-USD",
+    "symbol": "REQ",
+    "denominator": "USD"
+  },
+  {
+    "id": "RIFUSD",
+    "type": "spot",
+    "first_capture": "2021-01-07T00:00:00.000Z",
+    "end_date": "2021-03-28T00:00:00.000Z",
+    "internal_id": "spot-RIF-USD",
+    "symbol": "RIF",
+    "denominator": "USD"
+  },
+  {
+    "id": "RLCBTC",
+    "type": "spot",
+    "first_capture": "2020-09-03T00:00:00.000Z",
+    "end_date": "2021-01-15T00:00:00.000Z",
+    "internal_id": "spot-RLC-BTC",
+    "symbol": "RLC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "RLCUSD",
+    "type": "spot",
+    "first_capture": "2020-09-03T00:00:00.000Z",
+    "end_date": "2021-01-15T00:00:00.000Z",
+    "internal_id": "spot-RLC-USD",
+    "symbol": "RLC",
+    "denominator": "USD"
+  },
+  {
+    "id": "RLSUSD",
+    "type": "spot",
+    "base_coin": "RLS",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-01-14T00:00:00.000Z",
+    "internal_id": "spot-RLS-USD",
+    "symbol": "RLS",
+    "denominator": "USD"
+  },
+  {
+    "id": "RLSUST",
+    "type": "spot",
+    "base_coin": "RLS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-01-14T00:00:00.000Z",
+    "internal_id": "spot-RLS-USDT",
+    "symbol": "RLS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "RLYUSD",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-RLY-USD",
+    "symbol": "RLY",
+    "denominator": "USD"
+  },
+  {
+    "id": "RLYUST",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-RLY-USDT",
+    "symbol": "RLY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ROSE:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ROSE-USD",
+    "symbol": "ROSE",
+    "denominator": "USD"
+  },
+  {
+    "id": "ROSE:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-ROSE-USDT",
+    "symbol": "ROSE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "RRTBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-RRT-BTC",
+    "symbol": "RRT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "RRTUSD",
+    "type": "spot",
+    "base_coin": "RRT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-RRT-USD",
+    "symbol": "RRT",
+    "denominator": "USD"
+  },
+  {
+    "id": "SANBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-03-18T00:00:00.000Z",
+    "internal_id": "spot-SAN-BTC",
+    "symbol": "SAN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "SAND:USD",
+    "type": "spot",
+    "first_capture": "2022-05-11T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-SAND-USD",
+    "symbol": "SAND",
+    "denominator": "USD"
+  },
+  {
+    "id": "SAND:UST",
+    "type": "spot",
+    "first_capture": "2022-05-11T00:00:00.000Z",
+    "end_date": "2025-07-17T00:00:00.000Z",
+    "internal_id": "spot-SAND-USDT",
+    "symbol": "SAND",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SANETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-03-18T00:00:00.000Z",
+    "internal_id": "spot-SAN-ETH",
+    "symbol": "SAN",
+    "denominator": "ETH"
+  },
+  {
+    "id": "SANUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-SAN-USD",
+    "symbol": "SAN",
+    "denominator": "USD"
+  },
+  {
+    "id": "SCROLL:USD",
+    "type": "spot",
+    "first_capture": "2024-10-21T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-SCROLL-USD",
+    "symbol": "SCROLL",
+    "denominator": "USD"
+  },
+  {
+    "id": "SCROLL:UST",
+    "type": "spot",
+    "first_capture": "2024-10-21T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-SCROLL-USDT",
+    "symbol": "SCROLL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SEIUSD",
+    "type": "spot",
+    "base_coin": "SEI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-08-15T00:00:00.000Z",
+    "internal_id": "spot-SEI-USD",
+    "symbol": "SEI",
+    "denominator": "USD"
+  },
+  {
+    "id": "SEIUST",
+    "type": "spot",
+    "base_coin": "SEI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-08-15T00:00:00.000Z",
+    "internal_id": "spot-SEI-USDT",
+    "symbol": "SEI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SENATE:USD",
+    "type": "spot",
+    "first_capture": "2022-03-31T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SENATE-USD",
+    "symbol": "SENATE",
+    "denominator": "USD"
+  },
+  {
+    "id": "SENATE:UST",
+    "type": "spot",
+    "first_capture": "2022-03-31T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-SENATE-USDT",
+    "symbol": "SENATE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SENBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-SEN-BTC",
+    "symbol": "SEN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "SENETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-SEN-ETH",
+    "symbol": "SEN",
+    "denominator": "ETH"
+  },
+  {
+    "id": "SENUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-SEN-USD",
+    "symbol": "SEN",
+    "denominator": "USD"
+  },
+  {
+    "id": "SGBUSD",
+    "type": "spot",
+    "first_capture": "2022-01-28T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SGB-USD",
+    "symbol": "SGB",
+    "denominator": "USD"
+  },
+  {
+    "id": "SGBUST",
+    "type": "spot",
+    "first_capture": "2022-01-28T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SGB-USDT",
+    "symbol": "SGB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SHFT:BTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-SHFT-BTC",
+    "symbol": "SHFT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "SHFT:USD",
+    "type": "spot",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-SHFT-USD",
+    "symbol": "SHFT",
+    "denominator": "USD"
+  },
+  {
+    "id": "SHFT:UST",
+    "type": "spot",
+    "first_capture": "2022-04-07T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-SHFT-USDT",
+    "symbol": "SHFT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SHIB:USD",
+    "type": "spot",
+    "base_coin": "SHIB",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-28T00:00:00.000Z",
+    "internal_id": "spot-SHIB-USD",
+    "symbol": "SHIB",
+    "denominator": "USD"
+  },
+  {
+    "id": "SHIB:UST",
+    "type": "spot",
+    "base_coin": "SHIB",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-10-28T00:00:00.000Z",
+    "internal_id": "spot-SHIB-USDT",
+    "symbol": "SHIB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SHMUSD",
+    "type": "spot",
+    "first_capture": "2025-05-12T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SHM-USD",
+    "symbol": "SHM",
+    "denominator": "USD"
+  },
+  {
+    "id": "SHMUST",
+    "type": "spot",
+    "first_capture": "2025-05-12T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SHM-USDT",
+    "symbol": "SHM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SIDUS:USD",
+    "type": "spot",
+    "first_capture": "2022-03-31T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SIDUS-USD",
+    "symbol": "SIDUS",
+    "denominator": "USD"
+  },
+  {
+    "id": "SIDUS:UST",
+    "type": "spot",
+    "first_capture": "2022-03-31T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-SIDUS-USDT",
+    "symbol": "SIDUS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SKYUSD",
+    "type": "spot",
+    "base_coin": "SKY",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-09-04T00:00:00.000Z",
+    "internal_id": "spot-SKY-USD",
+    "symbol": "SKY",
+    "denominator": "USD"
+  },
+  {
+    "id": "SKYUST",
+    "type": "spot",
+    "base_coin": "SKY",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-09-04T00:00:00.000Z",
+    "internal_id": "spot-SKY-USDT",
+    "symbol": "SKY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SMRUSD",
+    "type": "spot",
+    "first_capture": "2022-10-06T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SMR-USD",
+    "symbol": "SMR",
+    "denominator": "USD"
+  },
+  {
+    "id": "SMRUST",
+    "type": "spot",
+    "first_capture": "2022-10-06T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-SMR-USDT",
+    "symbol": "SMR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SNTBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-SNT-BTC",
+    "symbol": "SNT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "SNTETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-SNT-ETH",
+    "symbol": "SNT",
+    "denominator": "ETH"
+  },
+  {
+    "id": "SNTUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-SNT-USD",
+    "symbol": "SNT",
+    "denominator": "USD"
+  },
+  {
+    "id": "SNXUSD",
+    "type": "spot",
+    "first_capture": "2020-09-26T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-SNX-USD",
+    "symbol": "SNX",
+    "denominator": "USD"
+  },
+  {
+    "id": "SNXUST",
+    "type": "spot",
+    "first_capture": "2020-09-26T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-SNX-USDT",
+    "symbol": "SNX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SOLBTC",
+    "type": "spot",
+    "base_coin": "SOL",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2021-10-04T00:00:00.000Z",
+    "internal_id": "spot-SOL-BTC",
+    "symbol": "SOL",
+    "denominator": "BTC"
+  },
+  {
+    "id": "SOLUSD",
+    "type": "spot",
+    "base_coin": "SOL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-02-25T00:00:00.000Z",
+    "internal_id": "spot-SOL-USD",
+    "symbol": "SOL",
+    "denominator": "USD"
+  },
+  {
+    "id": "SOLUST",
+    "type": "spot",
+    "base_coin": "SOL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-02-25T00:00:00.000Z",
+    "internal_id": "spot-SOL-USDT",
+    "symbol": "SOL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SONIC:USD",
+    "type": "spot",
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SONIC-USD",
+    "symbol": "SONIC",
+    "denominator": "USD"
+  },
+  {
+    "id": "SONIC:UST",
+    "type": "spot",
+    "first_capture": "2025-02-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SONIC-USDT",
+    "symbol": "SONIC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SPEC:USD",
+    "type": "spot",
+    "first_capture": "2024-05-02T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SPEC-USD",
+    "symbol": "SPEC",
+    "denominator": "USD"
+  },
+  {
+    "id": "SPEC:UST",
+    "type": "spot",
+    "first_capture": "2024-05-02T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SPEC-USDT",
+    "symbol": "SPEC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SPELL:MIM",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-SPELL-MIM",
+    "symbol": "SPELL",
+    "denominator": "MIM"
+  },
+  {
+    "id": "SPELL:USD",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SPELL-USD",
+    "symbol": "SPELL",
+    "denominator": "USD"
+  },
+  {
+    "id": "SPELL:UST",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SPELL-USDT",
+    "symbol": "SPELL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SRMUSD",
+    "type": "spot",
+    "first_capture": "2021-12-01T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-SRM-USD",
+    "symbol": "SRM",
+    "denominator": "USD"
+  },
+  {
+    "id": "SRMUST",
+    "type": "spot",
+    "first_capture": "2021-12-01T00:00:00.000Z",
+    "end_date": "2022-12-30T00:00:00.000Z",
+    "internal_id": "spot-SRM-USDT",
+    "symbol": "SRM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "STABLE:USD",
+    "type": "spot",
+    "base_coin": "STABLE",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-12-08T00:00:00.000Z",
+    "internal_id": "spot-STABLE-USD",
+    "symbol": "STABLE",
+    "denominator": "USD"
+  },
+  {
+    "id": "STABLE:UST",
+    "type": "spot",
+    "base_coin": "STABLE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-12-08T00:00:00.000Z",
+    "internal_id": "spot-STABLE-USDT",
+    "symbol": "STABLE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "STGUSD",
+    "type": "spot",
+    "base_coin": "STG",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2022-04-26T00:00:00.000Z",
+    "internal_id": "spot-STG-USD",
+    "symbol": "STG",
+    "denominator": "USD"
+  },
+  {
+    "id": "STGUST",
+    "type": "spot",
+    "base_coin": "STG",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2022-04-26T00:00:00.000Z",
+    "internal_id": "spot-STG-USDT",
+    "symbol": "STG",
+    "denominator": "USDT"
+  },
+  {
+    "id": "STJBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-STORJ-BTC",
+    "symbol": "STORJ",
+    "denominator": "BTC"
+  },
+  {
+    "id": "STJETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-STORJ-ETH",
+    "symbol": "STORJ",
+    "denominator": "ETH"
+  },
+  {
+    "id": "STJUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-STORJ-USD",
+    "symbol": "STORJ",
+    "denominator": "USD"
+  },
+  {
+    "id": "STRCST:BTC",
+    "type": "spot",
+    "base_coin": "STRCST",
+    "quote_coin": "BTC",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-STRCST-BTC",
+    "symbol": "STRCST",
+    "denominator": "BTC"
+  },
+  {
+    "id": "STRCST:USD",
+    "type": "spot",
+    "base_coin": "STRCST",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-STRCST-USD",
+    "symbol": "STRCST",
+    "denominator": "USD"
+  },
+  {
+    "id": "STRCST:UST",
+    "type": "spot",
+    "base_coin": "STRCST",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "internal_id": "spot-STRCST-USDT",
+    "symbol": "STRCST",
+    "denominator": "USDT"
+  },
+  {
+    "id": "STRK:USD",
+    "type": "spot",
+    "first_capture": "2024-02-20T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-STRK-USD",
+    "symbol": "STRK",
+    "denominator": "USD"
+  },
+  {
+    "id": "STRK:UST",
+    "type": "spot",
+    "first_capture": "2024-02-20T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-STRK-USDT",
+    "symbol": "STRK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "STXUSD",
+    "type": "spot",
+    "base_coin": "STX",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-04-09T00:00:00.000Z",
+    "internal_id": "spot-STX-USD",
+    "symbol": "STX",
+    "denominator": "USD"
+  },
+  {
+    "id": "STXUST",
+    "type": "spot",
+    "base_coin": "STX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-04-09T00:00:00.000Z",
+    "internal_id": "spot-STX-USDT",
+    "symbol": "STX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SUIUSD",
+    "type": "spot",
+    "base_coin": "SUI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-05-03T00:00:00.000Z",
+    "internal_id": "spot-SUI-USD",
+    "symbol": "SUI",
+    "denominator": "USD"
+  },
+  {
+    "id": "SUIUST",
+    "type": "spot",
+    "base_coin": "SUI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-05-03T00:00:00.000Z",
+    "internal_id": "spot-SUI-USDT",
+    "symbol": "SUI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SUKU:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-SUKU-USD",
+    "symbol": "SUKU",
+    "denominator": "USD"
+  },
+  {
+    "id": "SUKU:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-SUKU-USDT",
+    "symbol": "SUKU",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SUNUSD",
+    "type": "spot",
+    "base_coin": "SUN",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "internal_id": "spot-SUN-USD",
+    "symbol": "SUN",
+    "denominator": "USD"
+  },
+  {
+    "id": "SUNUST",
+    "type": "spot",
+    "base_coin": "SUN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-01-23T00:00:00.000Z",
+    "internal_id": "spot-SUN-USDT",
+    "symbol": "SUN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SUSHI:USD",
+    "type": "spot",
+    "first_capture": "2021-01-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SUSHI-USD",
+    "symbol": "SUSHI",
+    "denominator": "USD"
+  },
+  {
+    "id": "SUSHI:UST",
+    "type": "spot",
+    "first_capture": "2021-01-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SUSHI-USDT",
+    "symbol": "SUSHI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SWEAT:USD",
+    "type": "spot",
+    "first_capture": "2022-09-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SWEAT-USD",
+    "symbol": "SWEAT",
+    "denominator": "USD"
+  },
+  {
+    "id": "SWEAT:UST",
+    "type": "spot",
+    "first_capture": "2022-09-13T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-SWEAT-USDT",
+    "symbol": "SWEAT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SXXUSD",
+    "type": "spot",
+    "first_capture": "2022-01-28T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-SXX-USD",
+    "symbol": "SXX",
+    "denominator": "USD"
+  },
+  {
+    "id": "SXXUST",
+    "type": "spot",
+    "first_capture": "2022-01-28T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-SXX-USDT",
+    "symbol": "SXX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TAIKO:USD",
+    "type": "spot",
+    "first_capture": "2024-06-04T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-TAIKO-USD",
+    "symbol": "TAIKO",
+    "denominator": "USD"
+  },
+  {
+    "id": "TAIKO:UST",
+    "type": "spot",
+    "first_capture": "2024-06-04T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-TAIKO-USDT",
+    "symbol": "TAIKO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TENET:USD",
+    "type": "spot",
+    "first_capture": "2023-05-25T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-TENET-USD",
+    "symbol": "TENET",
+    "denominator": "USD"
+  },
+  {
+    "id": "TENET:UST",
+    "type": "spot",
+    "first_capture": "2023-05-25T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-TENET-USDT",
+    "symbol": "TENET",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TERRAUST:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-USTC-USD",
+    "symbol": "USTC",
+    "denominator": "USD"
+  },
+  {
+    "id": "TERRAUST:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-USTC-USDT",
+    "symbol": "USTC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "THETA:USD",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-THETA-USD",
+    "symbol": "THETA",
+    "denominator": "USD"
+  },
+  {
+    "id": "THETA:UST",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-THETA-USDT",
+    "symbol": "THETA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TIAUSD",
+    "type": "spot",
+    "first_capture": "2023-11-16T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TIA-USD",
+    "symbol": "TIA",
+    "denominator": "USD"
+  },
+  {
+    "id": "TIAUST",
+    "type": "spot",
+    "first_capture": "2023-11-16T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TIA-USDT",
+    "symbol": "TIA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TITAN1:GBP",
+    "type": "spot",
+    "base_coin": "TITAN1",
+    "quote_coin": "GBP",
+    "underlying": "unknown",
+    "first_capture": "2024-12-31T00:00:00.000Z",
+    "internal_id": "spot-TITAN1-GBP",
+    "symbol": "TITAN1",
+    "denominator": "GBP"
+  },
+  {
+    "id": "TITAN1:USD",
+    "type": "spot",
+    "base_coin": "TITAN1",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2024-12-31T00:00:00.000Z",
+    "internal_id": "spot-TITAN1-USD",
+    "symbol": "TITAN1",
+    "denominator": "USD"
+  },
+  {
+    "id": "TITAN2:GBP",
+    "type": "spot",
+    "base_coin": "TITAN2",
+    "quote_coin": "GBP",
+    "underlying": "unknown",
+    "first_capture": "2024-12-31T00:00:00.000Z",
+    "internal_id": "spot-TITAN2-GBP",
+    "symbol": "TITAN2",
+    "denominator": "GBP"
+  },
+  {
+    "id": "TITAN2:USD",
+    "type": "spot",
+    "base_coin": "TITAN2",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2024-12-31T00:00:00.000Z",
+    "internal_id": "spot-TITAN2-USD",
+    "symbol": "TITAN2",
+    "denominator": "USD"
+  },
+  {
+    "id": "TITAN4:GBP",
+    "type": "spot",
+    "base_coin": "TITAN4",
+    "quote_coin": "GBP",
+    "underlying": "unknown",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "spot-TITAN4-GBP",
+    "symbol": "TITAN4",
+    "denominator": "GBP"
+  },
+  {
+    "id": "TITAN4:USD",
+    "type": "spot",
+    "base_coin": "TITAN4",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2026-06-12T00:00:00.000Z",
+    "internal_id": "spot-TITAN4-USD",
+    "symbol": "TITAN4",
+    "denominator": "USD"
+  },
+  {
+    "id": "TLOS:USD",
+    "type": "spot",
+    "first_capture": "2021-11-12T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-TLOS-USD",
+    "symbol": "TLOS",
+    "denominator": "USD"
+  },
+  {
+    "id": "TLOS:UST",
+    "type": "spot",
+    "first_capture": "2021-11-12T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-TLOS-USDT",
+    "symbol": "TLOS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TOKEN:USD",
+    "type": "spot",
+    "first_capture": "2024-04-04T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TOKEN-USD",
+    "symbol": "TOKEN",
+    "denominator": "USD"
+  },
+  {
+    "id": "TOKEN:UST",
+    "type": "spot",
+    "first_capture": "2024-04-04T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TOKEN-USDT",
+    "symbol": "TOKEN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TOMI:USD",
+    "type": "spot",
+    "first_capture": "2023-08-31T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-TOMI-USD",
+    "symbol": "TOMI",
+    "denominator": "USD"
+  },
+  {
+    "id": "TOMI:UST",
+    "type": "spot",
+    "first_capture": "2023-08-31T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-TOMI-USDT",
+    "symbol": "TOMI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TONUSD",
+    "type": "spot",
+    "base_coin": "TON",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-04-07T00:00:00.000Z",
+    "internal_id": "spot-TON-USD",
+    "symbol": "TON",
+    "denominator": "USD"
+  },
+  {
+    "id": "TONUST",
+    "type": "spot",
+    "base_coin": "TON",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-04-07T00:00:00.000Z",
+    "internal_id": "spot-TON-USDT",
+    "symbol": "TON",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TRADE:USD",
+    "type": "spot",
+    "first_capture": "2022-01-24T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-TRADE-USD",
+    "symbol": "TRADE",
+    "denominator": "USD"
+  },
+  {
+    "id": "TRADE:UST",
+    "type": "spot",
+    "first_capture": "2022-01-24T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-TRADE-USDT",
+    "symbol": "TRADE",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TREEB:USD",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-11-24T00:00:00.000Z",
+    "internal_id": "spot-TREEB-USD",
+    "symbol": "TREEB",
+    "denominator": "USD"
+  },
+  {
+    "id": "TREEB:UST",
+    "type": "spot",
+    "first_capture": "2022-10-20T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-TREEB-USDT",
+    "symbol": "TREEB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TRXBTC",
+    "type": "spot",
+    "base_coin": "TRX",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-TRX-BTC",
+    "symbol": "TRX",
+    "denominator": "BTC"
+  },
+  {
+    "id": "TRXETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-TRX-ETH",
+    "symbol": "TRX",
+    "denominator": "ETH"
+  },
+  {
+    "id": "TRXEUR",
+    "type": "spot",
+    "base_coin": "TRX",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-TRX-EUR",
+    "symbol": "TRX",
+    "denominator": "EUR"
+  },
+  {
+    "id": "TRXGBP",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-TRX-GBP",
+    "symbol": "TRX",
+    "denominator": "GBP"
+  },
+  {
+    "id": "TRXJPY",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-TRX-JPY",
+    "symbol": "TRX",
+    "denominator": "JPY"
+  },
+  {
+    "id": "TRXUSD",
+    "type": "spot",
+    "base_coin": "TRX",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-TRX-USD",
+    "symbol": "TRX",
+    "denominator": "USD"
+  },
+  {
+    "id": "TRXUST",
+    "type": "spot",
+    "base_coin": "TRX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "internal_id": "spot-TRX-USDT",
+    "symbol": "TRX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TRYUST",
+    "type": "spot",
+    "first_capture": "2022-10-19T00:00:00.000Z",
+    "end_date": "2026-03-06T00:00:00.000Z",
+    "internal_id": "spot-TRY-USDT",
+    "symbol": "TRY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TSDUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TUSD-USD",
+    "symbol": "TUSD",
+    "denominator": "USD"
+  },
+  {
+    "id": "TSDUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-TUSD-USDT",
+    "symbol": "TUSD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TURBO:USD",
+    "type": "spot",
+    "first_capture": "2024-07-30T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-TURBO-USD",
+    "symbol": "TURBO",
+    "denominator": "USD"
+  },
+  {
+    "id": "TURBO:UST",
+    "type": "spot",
+    "first_capture": "2024-07-30T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-TURBO-USDT",
+    "symbol": "TURBO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "UDCUSD",
+    "type": "spot",
+    "base_coin": "USDC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-USDC-USD",
+    "symbol": "USDC",
+    "denominator": "USD"
+  },
+  {
+    "id": "UDCUST",
+    "type": "spot",
+    "base_coin": "USDC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-USDC-USDT",
+    "symbol": "USDC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "UNIUSD",
+    "type": "spot",
+    "base_coin": "UNI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-09-19T00:00:00.000Z",
+    "internal_id": "spot-UNI-USD",
+    "symbol": "UNI",
+    "denominator": "USD"
+  },
+  {
+    "id": "UNIUST",
+    "type": "spot",
+    "base_coin": "UNI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-09-19T00:00:00.000Z",
+    "internal_id": "spot-UNI-USDT",
+    "symbol": "UNI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "UOPUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-05-07T00:00:00.000Z",
+    "internal_id": "spot-UOP-USD",
+    "symbol": "UOP",
+    "denominator": "USD"
+  },
+  {
+    "id": "UOPUST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-05-07T00:00:00.000Z",
+    "internal_id": "spot-UOP-USDT",
+    "symbol": "UOP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "UOSBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-UOS-BTC",
+    "symbol": "UOS",
+    "denominator": "BTC"
+  },
+  {
+    "id": "UOSUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-UOS-USD",
+    "symbol": "UOS",
+    "denominator": "USD"
+  },
+  {
+    "id": "USAT:USD",
+    "type": "spot",
+    "base_coin": "USAT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-01-27T00:00:00.000Z",
+    "internal_id": "spot-USAT-USD",
+    "symbol": "USAT",
+    "denominator": "USD"
+  },
+  {
+    "id": "USAT:UST",
+    "type": "spot",
+    "base_coin": "USAT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-01-27T00:00:00.000Z",
+    "internal_id": "spot-USAT-USDT",
+    "symbol": "USAT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDF:USD",
+    "type": "spot",
+    "base_coin": "USDF",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-05-12T00:00:00.000Z",
+    "internal_id": "spot-USDF-USD",
+    "symbol": "USDF",
+    "denominator": "USD"
+  },
+  {
+    "id": "USDF:UST",
+    "type": "spot",
+    "base_coin": "USDF",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-05-12T00:00:00.000Z",
+    "internal_id": "spot-USDF-USDT",
+    "symbol": "USDF",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDQ:USD",
+    "type": "spot",
+    "base_coin": "USDQ",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-11-18T00:00:00.000Z",
+    "internal_id": "spot-USDQ-USD",
+    "symbol": "USDQ",
+    "denominator": "USD"
+  },
+  {
+    "id": "USDQ:UST",
+    "type": "spot",
+    "base_coin": "USDQ",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-11-18T00:00:00.000Z",
+    "internal_id": "spot-USDQ-USDT",
+    "symbol": "USDQ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDR:USD",
+    "type": "spot",
+    "base_coin": "USDR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-01-14T00:00:00.000Z",
+    "internal_id": "spot-USDR-USD",
+    "symbol": "USDR",
+    "denominator": "USD"
+  },
+  {
+    "id": "USDR:UST",
+    "type": "spot",
+    "base_coin": "USDR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-01-14T00:00:00.000Z",
+    "internal_id": "spot-USDR-USDT",
+    "symbol": "USDR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "UST:CNHT",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-USDT-CNHT",
+    "symbol": "USDT",
+    "denominator": "CNHT"
+  },
+  {
+    "id": "UST:MXNT",
+    "type": "spot",
+    "first_capture": "2022-06-17T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-USDT-MXNT",
+    "symbol": "USDT",
+    "denominator": "MXNT"
+  },
+  {
+    "id": "USTBL:USD",
+    "type": "spot",
+    "base_coin": "USTBL",
+    "quote_coin": "USD",
+    "underlying": "unknown",
+    "first_capture": "2024-11-30T00:00:00.000Z",
+    "internal_id": "spot-USTBL-USD",
+    "symbol": "USTBL",
+    "denominator": "USD"
+  },
+  {
+    "id": "USTBL:UST",
+    "type": "spot",
+    "base_coin": "USTBL",
+    "quote_coin": "USDT",
+    "underlying": "unknown",
+    "first_capture": "2024-11-30T00:00:00.000Z",
+    "internal_id": "spot-USTBL-USDT",
+    "symbol": "USTBL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USTUSD",
+    "type": "spot",
+    "base_coin": "USDT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-USDT-USD",
+    "symbol": "USDT",
+    "denominator": "USD"
+  },
+  {
+    "id": "UTKBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-UTK-BTC",
+    "symbol": "UTK",
+    "denominator": "BTC"
+  },
+  {
+    "id": "UTKETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-UTK-ETH",
+    "symbol": "UTK",
+    "denominator": "ETH"
+  },
+  {
+    "id": "UTKUSD",
+    "type": "spot",
+    "first_capture": "2020-11-27T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-UTK-USD",
+    "symbol": "UTK",
+    "denominator": "USD"
+  },
+  {
+    "id": "UXLINK:USD",
+    "type": "spot",
+    "first_capture": "2024-07-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-UXLINK-USD",
+    "symbol": "UXLINK",
+    "denominator": "USD"
+  },
+  {
+    "id": "UXLINK:UST",
+    "type": "spot",
+    "first_capture": "2024-07-17T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-UXLINK-USDT",
+    "symbol": "UXLINK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VEEBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VEE-BTC",
+    "symbol": "VEE",
+    "denominator": "BTC"
+  },
+  {
+    "id": "VEEETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VEE-ETH",
+    "symbol": "VEE",
+    "denominator": "ETH"
+  },
+  {
+    "id": "VEEUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-VEE-USD",
+    "symbol": "VEE",
+    "denominator": "USD"
+  },
+  {
+    "id": "VELAR:USD",
+    "type": "spot",
+    "first_capture": "2024-05-28T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-VELAR-USD",
+    "symbol": "VELAR",
+    "denominator": "USD"
+  },
+  {
+    "id": "VELAR:UST",
+    "type": "spot",
+    "first_capture": "2024-05-28T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-VELAR-USDT",
+    "symbol": "VELAR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VELO:USD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-VELO-USD",
+    "symbol": "VELO",
+    "denominator": "USD"
+  },
+  {
+    "id": "VELO:UST",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-VELO-USDT",
+    "symbol": "VELO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VENBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VEN-BTC",
+    "symbol": "VEN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "VENETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VEN-ETH",
+    "symbol": "VEN",
+    "denominator": "ETH"
+  },
+  {
+    "id": "VENUSD",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VEN-USD",
+    "symbol": "VEN",
+    "denominator": "USD"
+  },
+  {
+    "id": "VETBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-VET-BTC",
+    "symbol": "VET",
+    "denominator": "BTC"
+  },
+  {
+    "id": "VETETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-VET-ETH",
+    "symbol": "VET",
+    "denominator": "ETH"
+  },
+  {
+    "id": "VETUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-VET-USD",
+    "symbol": "VET",
+    "denominator": "USD"
+  },
+  {
+    "id": "VETUST",
+    "type": "spot",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-VET-USDT",
+    "symbol": "VET",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VRAUSD",
+    "type": "spot",
+    "first_capture": "2022-06-07T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-VRA-USD",
+    "symbol": "VRA",
+    "denominator": "USD"
+  },
+  {
+    "id": "VRAUST",
+    "type": "spot",
+    "first_capture": "2022-06-07T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-VRA-USDT",
+    "symbol": "VRA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VSYBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-08-20T00:00:00.000Z",
+    "internal_id": "spot-VSYS-BTC",
+    "symbol": "VSYS",
+    "denominator": "BTC"
+  },
+  {
+    "id": "VSYUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-VSYS-USD",
+    "symbol": "VSYS",
+    "denominator": "USD"
+  },
+  {
+    "id": "WAVES:USD",
+    "type": "spot",
+    "first_capture": "2021-07-22T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-WAVES-USD",
+    "symbol": "WAVES",
+    "denominator": "USD"
+  },
+  {
+    "id": "WAVES:UST",
+    "type": "spot",
+    "first_capture": "2021-07-22T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-WAVES-USDT",
+    "symbol": "WAVES",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WAXETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-WAXP-ETH",
+    "symbol": "WAXP",
+    "denominator": "ETH"
+  },
+  {
+    "id": "WAXUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-WAXP-USD",
+    "symbol": "WAXP",
+    "denominator": "USD"
+  },
+  {
+    "id": "WBTBTC",
+    "type": "spot",
+    "base_coin": "WBTC",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2023-01-11T00:00:00.000Z",
+    "internal_id": "spot-WBTC-BTC",
+    "symbol": "WBTC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "WBTUSD",
+    "type": "spot",
+    "base_coin": "WBTC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-WBTC-USD",
+    "symbol": "WBTC",
+    "denominator": "USD"
+  },
+  {
+    "id": "WHBT:USD",
+    "type": "spot",
+    "base_coin": "WBT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2023-06-01T00:00:00.000Z",
+    "internal_id": "spot-WBT-USD",
+    "symbol": "WBT",
+    "denominator": "USD"
+  },
+  {
+    "id": "WHBT:UST",
+    "type": "spot",
+    "base_coin": "WBT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2023-06-01T00:00:00.000Z",
+    "internal_id": "spot-WBT-USDT",
+    "symbol": "WBT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WIFUSD",
+    "type": "spot",
+    "first_capture": "2024-02-08T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-WIF-USD",
+    "symbol": "WIF",
+    "denominator": "USD"
+  },
+  {
+    "id": "WIFUST",
+    "type": "spot",
+    "first_capture": "2024-02-08T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-WIF-USDT",
+    "symbol": "WIF",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WILD:USD",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2025-02-25T00:00:00.000Z",
+    "internal_id": "spot-WILD-USD",
+    "symbol": "WILD",
+    "denominator": "USD"
+  },
+  {
+    "id": "WILD:UST",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-WILD-USDT",
+    "symbol": "WILD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WLOXLM",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-WLO-XLM",
+    "symbol": "WLO",
+    "denominator": "XLM"
+  },
+  {
+    "id": "WMINIMA:USD",
+    "type": "spot",
+    "first_capture": "2023-03-21T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-WMINIMA-USD",
+    "symbol": "WMINIMA",
+    "denominator": "USD"
+  },
+  {
+    "id": "WMINIMA:UST",
+    "type": "spot",
+    "first_capture": "2023-03-21T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-WMINIMA-USDT",
+    "symbol": "WMINIMA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WNCG:USD",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-WNCG-USD",
+    "symbol": "WNCG",
+    "denominator": "USD"
+  },
+  {
+    "id": "WNCG:UST",
+    "type": "spot",
+    "first_capture": "2021-11-22T00:00:00.000Z",
+    "end_date": "2022-12-23T00:00:00.000Z",
+    "internal_id": "spot-WNCG-USDT",
+    "symbol": "WNCG",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WOOUSD",
+    "type": "spot",
+    "first_capture": "2022-01-24T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-WOO-USD",
+    "symbol": "WOO",
+    "denominator": "USD"
+  },
+  {
+    "id": "WOOUST",
+    "type": "spot",
+    "first_capture": "2022-01-24T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-WOO-USDT",
+    "symbol": "WOO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "WXXUSD",
+    "type": "spot",
+    "first_capture": "2024-04-06T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-WXX-USD",
+    "symbol": "WXX",
+    "denominator": "USD"
+  },
+  {
+    "id": "WXXUST",
+    "type": "spot",
+    "first_capture": "2024-04-06T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-WXX-USDT",
+    "symbol": "WXX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XAUT:BTC",
+    "type": "spot",
+    "base_coin": "XAUT",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XAUT-BTC",
+    "symbol": "XAUT",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XAUT:USD",
+    "type": "spot",
+    "base_coin": "XAUT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XAUT-USD",
+    "symbol": "XAUT",
+    "denominator": "USD"
+  },
+  {
+    "id": "XAUT:UST",
+    "type": "spot",
+    "base_coin": "XAUT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XAUT-USDT",
+    "symbol": "XAUT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XCAD:USD",
+    "type": "spot",
+    "first_capture": "2022-11-24T00:00:00.000Z",
+    "end_date": "2024-11-06T00:00:00.000Z",
+    "internal_id": "spot-XCAD-USD",
+    "symbol": "XCAD",
+    "denominator": "USD"
+  },
+  {
+    "id": "XCHUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-07-13T00:00:00.000Z",
+    "internal_id": "spot-XCHF-USD",
+    "symbol": "XCHF",
+    "denominator": "USD"
+  },
+  {
+    "id": "XCNUSD",
+    "type": "spot",
+    "first_capture": "2022-09-22T00:00:00.000Z",
+    "end_date": "2024-02-10T00:00:00.000Z",
+    "internal_id": "spot-XCN-USD",
+    "symbol": "XCN",
+    "denominator": "USD"
+  },
+  {
+    "id": "XCNUST",
+    "type": "spot",
+    "first_capture": "2022-09-22T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-XCN-USDT",
+    "symbol": "XCN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XDCUSD",
+    "type": "spot",
+    "base_coin": "XDC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-XDC-USD",
+    "symbol": "XDC",
+    "denominator": "USD"
+  },
+  {
+    "id": "XDCUST",
+    "type": "spot",
+    "base_coin": "XDC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "internal_id": "spot-XDC-USDT",
+    "symbol": "XDC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XLMBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2026-07-04T00:00:00.000Z",
+    "internal_id": "spot-XLM-BTC",
+    "symbol": "XLM",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XLMETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-06-14T00:00:00.000Z",
+    "internal_id": "spot-XLM-ETH",
+    "symbol": "XLM",
+    "denominator": "ETH"
+  },
+  {
+    "id": "XLMEUR",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-XLM-EUR",
+    "symbol": "XLM",
+    "denominator": "EUR"
+  },
+  {
+    "id": "XLMGBP",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-XLM-GBP",
+    "symbol": "XLM",
+    "denominator": "GBP"
+  },
+  {
+    "id": "XLMJPY",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XLM-JPY",
+    "symbol": "XLM",
+    "denominator": "JPY"
+  },
+  {
+    "id": "XLMUSD",
+    "type": "spot",
+    "base_coin": "XLM",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XLM-USD",
+    "symbol": "XLM",
+    "denominator": "USD"
+  },
+  {
+    "id": "XLMUST",
+    "type": "spot",
+    "base_coin": "XLM",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2021-02-03T00:00:00.000Z",
+    "internal_id": "spot-XLM-USDT",
+    "symbol": "XLM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XMRBTC",
+    "type": "spot",
+    "base_coin": "XMR",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XMR-BTC",
+    "symbol": "XMR",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XMRUSD",
+    "type": "spot",
+    "base_coin": "XMR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XMR-USD",
+    "symbol": "XMR",
+    "denominator": "USD"
+  },
+  {
+    "id": "XMRUST",
+    "type": "spot",
+    "base_coin": "XMR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-12-18T00:00:00.000Z",
+    "internal_id": "spot-XMR-USDT",
+    "symbol": "XMR",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XPLUSD",
+    "type": "spot",
+    "base_coin": "XPL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2025-09-24T00:00:00.000Z",
+    "internal_id": "spot-XPL-USD",
+    "symbol": "XPL",
+    "denominator": "USD"
+  },
+  {
+    "id": "XPLUST",
+    "type": "spot",
+    "base_coin": "XPL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-09-24T00:00:00.000Z",
+    "internal_id": "spot-XPL-USDT",
+    "symbol": "XPL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XRAETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XRA-ETH",
+    "symbol": "XRA",
+    "denominator": "ETH"
+  },
+  {
+    "id": "XRAUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-XRA-USD",
+    "symbol": "XRA",
+    "denominator": "USD"
+  },
+  {
+    "id": "XRDBTC",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-XRD-BTC",
+    "symbol": "XRD",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XRDUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-XRD-USD",
+    "symbol": "XRD",
+    "denominator": "USD"
+  },
+  {
+    "id": "XRPBTC",
+    "type": "spot",
+    "base_coin": "XRP",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-XRP-BTC",
+    "symbol": "XRP",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XRPUSD",
+    "type": "spot",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2019-05-23T00:00:00.000Z",
+    "internal_id": "spot-XRP-USD",
+    "symbol": "XRP",
+    "denominator": "USD"
+  },
+  {
+    "id": "XRPUST",
+    "type": "spot",
+    "base_coin": "XRP",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2020-12-18T00:00:00.000Z",
+    "internal_id": "spot-XRP-USDT",
+    "symbol": "XRP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XSNUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-05-07T00:00:00.000Z",
+    "internal_id": "spot-XSN-USD",
+    "symbol": "XSN",
+    "denominator": "USD"
+  },
+  {
+    "id": "XTPUSD",
+    "type": "spot",
+    "first_capture": "2024-01-18T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-XTP-USD",
+    "symbol": "XTP",
+    "denominator": "USD"
+  },
+  {
+    "id": "XTPUST",
+    "type": "spot",
+    "first_capture": "2024-01-18T00:00:00.000Z",
+    "end_date": "2025-05-16T00:00:00.000Z",
+    "internal_id": "spot-XTP-USDT",
+    "symbol": "XTP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XTZBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-XTZ-BTC",
+    "symbol": "XTZ",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XTZUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2026-03-05T00:00:00.000Z",
+    "internal_id": "spot-XTZ-USD",
+    "symbol": "XTZ",
+    "denominator": "USD"
+  },
+  {
+    "id": "XTZUST",
+    "type": "spot",
+    "first_capture": "2021-09-14T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-XTZ-USDT",
+    "symbol": "XTZ",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XVGBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2020-10-24T00:00:00.000Z",
+    "internal_id": "spot-XVG-BTC",
+    "symbol": "XVG",
+    "denominator": "BTC"
+  },
+  {
+    "id": "XVGETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XVG-ETH",
+    "symbol": "XVG",
+    "denominator": "ETH"
+  },
+  {
+    "id": "XVGEUR",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XVG-EUR",
+    "symbol": "XVG",
+    "denominator": "EUR"
+  },
+  {
+    "id": "XVGGBP",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XVG-GBP",
+    "symbol": "XVG",
+    "denominator": "GBP"
+  },
+  {
+    "id": "XVGJPY",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-XVG-JPY",
+    "symbol": "XVG",
+    "denominator": "JPY"
+  },
+  {
+    "id": "XVGUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-XVG-USD",
+    "symbol": "XVG",
+    "denominator": "USD"
+  },
+  {
+    "id": "YFIUSD",
+    "type": "spot",
+    "first_capture": "2020-10-03T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-YFI-USD",
+    "symbol": "YFI",
+    "denominator": "USD"
+  },
+  {
+    "id": "YFIUST",
+    "type": "spot",
+    "first_capture": "2020-10-03T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-YFI-USDT",
+    "symbol": "YFI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "YGGETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-YEED-ETH",
+    "symbol": "YEED",
+    "denominator": "ETH"
+  },
+  {
+    "id": "YGGUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2022-02-01T00:00:00.000Z",
+    "internal_id": "spot-YEED-USD",
+    "symbol": "YEED",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZCNBTC",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ZCN-BTC",
+    "symbol": "ZCN",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ZCNETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ZCN-ETH",
+    "symbol": "ZCN",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ZCNUSD",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ZCN-USD",
+    "symbol": "ZCN",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZECBTC",
+    "type": "spot",
+    "base_coin": "ZEC",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ZEC-BTC",
+    "symbol": "ZEC",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ZECUSD",
+    "type": "spot",
+    "base_coin": "ZEC",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "internal_id": "spot-ZEC-USD",
+    "symbol": "ZEC",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZECUST",
+    "type": "spot",
+    "base_coin": "ZEC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-11-26T00:00:00.000Z",
+    "internal_id": "spot-ZEC-USDT",
+    "symbol": "ZEC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ZETA:USD",
+    "type": "spot",
+    "first_capture": "2024-02-01T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-ZETA-USD",
+    "symbol": "ZETA",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZETA:UST",
+    "type": "spot",
+    "first_capture": "2024-02-01T00:00:00.000Z",
+    "end_date": "2024-12-06T00:00:00.000Z",
+    "internal_id": "spot-ZETA-USDT",
+    "symbol": "ZETA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ZILBTC",
+    "type": "spot",
+    "first_capture": "2021-03-16T00:00:00.000Z",
+    "end_date": "2023-05-31T00:00:00.000Z",
+    "internal_id": "spot-ZIL-BTC",
+    "symbol": "ZIL",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ZILETH",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ZIL-ETH",
+    "symbol": "ZIL",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ZILUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2024-08-24T00:00:00.000Z",
+    "internal_id": "spot-ZIL-USD",
+    "symbol": "ZIL",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZKXUSD",
+    "type": "spot",
+    "first_capture": "2024-06-14T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ZKX-USD",
+    "symbol": "ZKX",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZKXUST",
+    "type": "spot",
+    "first_capture": "2024-06-14T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ZKX-USDT",
+    "symbol": "ZKX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ZMTUSD",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-ZMT-USD",
+    "symbol": "ZMT",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZMTUST",
+    "type": "spot",
+    "first_capture": "2021-12-16T00:00:00.000Z",
+    "end_date": "2023-07-12T00:00:00.000Z",
+    "internal_id": "spot-ZMT-USDT",
+    "symbol": "ZMT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ZROUSD",
+    "type": "spot",
+    "base_coin": "ZRO",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2024-06-18T00:00:00.000Z",
+    "internal_id": "spot-ZRO-USD",
+    "symbol": "ZRO",
+    "denominator": "USD"
+  },
+  {
+    "id": "ZROUST",
+    "type": "spot",
+    "base_coin": "ZRO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-06-18T00:00:00.000Z",
+    "internal_id": "spot-ZRO-USDT",
+    "symbol": "ZRO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "ZRXBTC",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ZRX-BTC",
+    "symbol": "ZRX",
+    "denominator": "BTC"
+  },
+  {
+    "id": "ZRXDAI",
+    "type": "spot",
+    "first_capture": "2024-06-05T00:00:00.000Z",
+    "end_date": "2024-06-06T00:00:00.000Z",
+    "internal_id": "spot-ZRX-DAI",
+    "symbol": "ZRX",
+    "denominator": "DAI"
+  },
+  {
+    "id": "ZRXETH",
+    "type": "spot",
+    "first_capture": "2021-10-29T00:00:00.000Z",
+    "end_date": "2023-03-08T00:00:00.000Z",
+    "internal_id": "spot-ZRX-ETH",
+    "symbol": "ZRX",
+    "denominator": "ETH"
+  },
+  {
+    "id": "ZRXUSD",
+    "type": "spot",
+    "first_capture": "2020-05-27T00:00:00.000Z",
+    "end_date": "2025-11-30T00:00:00.000Z",
+    "internal_id": "spot-ZRX-USD",
+    "symbol": "ZRX",
+    "denominator": "USD"
+  }
+]
