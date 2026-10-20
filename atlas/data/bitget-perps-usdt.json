@@ -3986,7 +3986,9 @@
     "internal_id": "perpetual-BP-USDT:USDT",
     "symbol": "BP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "BRETTUSDT",
@@ -5887,7 +5889,9 @@
     "internal_id": "perpetual-CSTOCK-USDT:USDT",
     "symbol": "CSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "CTCUSDT",
@@ -12918,17 +12922,17 @@
     "margin": "USDT",
     "cmc_id": 2348,
     "category": [],
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MDT-USDT:USDT",
     "base_coin": "MDT",
     "quote_coin": "USDT",
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown"
+    "underlying": "unknown",
+    "base_asset_id": "MDT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MDT-USDT:USDT"
   },
   {
     "id": "MEGAUSDT",
@@ -14028,7 +14032,9 @@
     "internal_id": "perpetual-NANYA-USDT:USDT",
     "symbol": "NANYA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "NAORISUSDT",
@@ -21322,7 +21328,9 @@
     "internal_id": "perpetual-TWASX-USDT:USDT",
     "symbol": "TWASX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "TWDELTAUSDT",
@@ -21337,7 +21345,9 @@
     "internal_id": "perpetual-TWDELTA-USDT:USDT",
     "symbol": "TWDELTA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "TWLOUSDT",
@@ -21402,7 +21412,9 @@
     "internal_id": "perpetual-TWTSM-USDT:USDT",
     "symbol": "TWTSM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "TWUMCUSDT",
@@ -21417,7 +21429,9 @@
     "internal_id": "perpetual-TWUMC-USDT:USDT",
     "symbol": "TWUMC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "TXNUSDT",
@@ -22245,7 +22259,9 @@
     "internal_id": "perpetual-VLO-USDT:USDT",
     "symbol": "VLO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "VOOUSDT",
@@ -22423,7 +22439,9 @@
     "internal_id": "perpetual-WALSIN-USDT:USDT",
     "symbol": "WALSIN",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "WALUSDT",
@@ -22639,7 +22657,9 @@
     "internal_id": "perpetual-WINBOND-USDT:USDT",
     "symbol": "WINBOND",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "WLDUSDT",
@@ -23478,7 +23498,9 @@
     "internal_id": "perpetual-YAGEO-USDT:USDT",
     "symbol": "YAGEO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "YALAUSDT",

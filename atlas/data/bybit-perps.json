@@ -2241,16 +2241,16 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39496,
-    "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANTHROPIC-USDT:USDT",
     "base_coin": "ANTHROPIC",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "equity"
+    "underlying": "equity",
+    "base_asset_id": "ANTHROPIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANTHROPIC-USDT:USDT"
   },
   {
     "id": "ANTUSDT",
@@ -4768,13 +4768,13 @@
     "margin": "USDT",
     "quantity_unit": "base",
     "first_capture": "2026-06-22T00:00:00.000Z",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
     "base_coin": "BP",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "crypto"
+    "underlying": "crypto",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "BRETTUSDT",
@@ -15192,16 +15192,16 @@
       "Tokenized Stock"
     ],
     "cmc_id": 42356,
-    "base_asset_id": "MOONSHOT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MOONSHOT-USDT:USDT",
     "base_coin": "MOONSHOT",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "equity"
+    "underlying": "equity",
+    "base_asset_id": "MOONSHOT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MOONSHOT-USDT:USDT"
   },
   {
     "id": "MORPHOUSDT",
@@ -16958,16 +16958,16 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39485,
-    "base_asset_id": "OPENAI",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-OPENAI-USDT:USDT",
     "base_coin": "OPENAI",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "equity"
+    "underlying": "equity",
+    "base_asset_id": "OPENAI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OPENAI-USDT:USDT"
   },
   {
     "id": "OPENUSDT",
@@ -17289,16 +17289,16 @@
       "Tokenized Stock"
     ],
     "cmc_id": 42363,
-    "base_asset_id": "OURA",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-OURA-USDT:USDT",
     "base_coin": "OURA",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "equity"
+    "underlying": "equity",
+    "base_asset_id": "OURA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OURA-USDT:USDT"
   },
   {
     "id": "OUSDT",
@@ -18141,16 +18141,16 @@
       "DeFi"
     ],
     "cmc_id": 42339,
-    "base_asset_id": "POLYMARKET",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-POLYMARKET-USDT:USDT",
     "base_coin": "POLYMARKET",
     "quote_coin": "USDT",
     "settle_coin": "USDT",
     "contract_size": 1.0,
-    "underlying": "equity"
+    "underlying": "equity",
+    "base_asset_id": "POLYMARKET",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-POLYMARKET-USDT:USDT"
   },
   {
     "id": "POLYXUSDT",

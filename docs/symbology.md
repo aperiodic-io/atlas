@@ -250,10 +250,10 @@ Tardis-named `bitget`, `bitget-futures`, `gate-io`, `gate-io-futures` and
 
 ## Coverage
 
-The build of 19 October 2026 holds 2,607 assets: 1,989 crypto,
+The build of 20 October 2026 holds 2,607 assets: 1,989 crypto,
 519 equity, 25 fiat, 47 index, 26 commodity and 1 unknown. It
-identifies the base asset of 21,114 of 31,716 parsed instrument rows
-(10,068 from CMC market pairs), and the quote asset of 31,222 of them.
+identifies the base asset of 21,114 of 31,730 parsed instrument rows
+(10,068 from CMC market pairs), and the quote asset of 31,236 of them.
 
 | Snapshot | Active rows | Active base resolved |
 | --- | ---: | ---: |
@@ -268,16 +268,16 @@ identifies the base asset of 21,114 of 31,716 parsed instrument rows
 | `okx-futures` | 275 | 98.2% |
 | `coinbase-spot` | 515 | 99.2% |
 | `bitget-spot` | 3,587 | 17.7% |
-| `bitget-perps-usdt` | 834 | 98.1% |
+| `bitget-perps-usdt` | 846 | 96.8% |
 | `bitget-perps-usdc` | 49 | 100.0% |
 | `bitget-perps-coin` | 20 | 100.0% |
 | `bitget-futures-coin` | 4 | 100.0% |
 | `gateio-spot` | 2,203 | 73.6% |
-| `gateio-perps-usdt` | 1,047 | 97.3% |
+| `gateio-perps-usdt` | 1,048 | 97.3% |
 | `gateio-perps-btc` | 1 | 100.0% |
 | `gateio-futures-usdt` | 30 | 100.0% |
-| `hyperliquid-perps` | 400 | 94.0% |
-| `hyperliquid-spot` | 333 | 35.7% |
+| `hyperliquid-perps` | 340 | 96.8% |
+| `hyperliquid-spot` | 336 | 35.4% |
 
 The gaps are assets CMC does not track: Bitget's 3,000 tokenized stocks, Gate's
 leveraged tokens (`ADA3L`, `ADA3S`), Hyperliquid's HIP-1 spot tokens and

@@ -4760,12 +4760,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "USA500",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-USA500-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-USA500-USDC:USDC"
   },
   {
     "id": "cash:AMZN",
@@ -4801,9 +4801,9 @@
     "margin": "USDT0",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDT0",
-    "margin_asset_id": "USDT0",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDT0"
   },
   {
     "id": "cash:CAR",
@@ -4831,9 +4831,9 @@
     "margin": "USDT0",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDT0",
-    "margin_asset_id": "USDT0",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDT0"
   },
   {
     "id": "cash:EWY",
@@ -5127,9 +5127,9 @@
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDH",
-    "margin_asset_id": "USDH",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDH"
   },
   {
     "id": "flx:COIN",
@@ -5600,12 +5600,12 @@
       "DeFi"
     ],
     "cmc_id": 39344,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "XAU",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDE",
     "margin_asset_id": "USDE",
-    "unified_id": "perpetual-XAU-USDE:USDE",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-XAU-USDE:USDE"
   },
   {
     "id": "hyna:HYPE",
@@ -5727,12 +5727,12 @@
       "DeFi"
     ],
     "cmc_id": 39343,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "XAG",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDE",
     "margin_asset_id": "USDE",
-    "unified_id": "perpetual-XAG-USDE:USDE",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-XAG-USDE:USDE"
   },
   {
     "id": "hyna:SOL",
@@ -5917,12 +5917,12 @@
     "category": [
       "DeFi"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "H100",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-H100-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-H100-USDC:USDC"
   },
   {
     "id": "io:IONQ",
@@ -5957,9 +5957,9 @@
     "symbol": "IO:MOONSHOT",
     "denominator": "USDC",
     "margin": "USDC",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "io:NBIS",
@@ -6022,9 +6022,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "unknown",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "io:SNDK",
@@ -6395,12 +6395,12 @@
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "JPN225",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDH",
     "margin_asset_id": "USDH",
-    "unified_id": "perpetual-JPN225-USDH:USDH",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-JPN225-USDH:USDH"
   },
   {
     "id": "km:MU",
@@ -6710,12 +6710,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39491,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "AAPL",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-AAPL-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-AAPL-USDC:USDC"
   },
   {
     "id": "mkts:BABA",
@@ -6733,12 +6733,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39486,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "BABA",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-BABA-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-BABA-USDC:USDC"
   },
   {
     "id": "mkts:BMNR",
@@ -6756,12 +6756,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39670,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "BMNR",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-BMNR-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-BMNR-USDC:USDC"
   },
   {
     "id": "mkts:BVIV",
@@ -6791,9 +6791,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "mkts:GLDMINE",
@@ -6806,12 +6806,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "GLDMINE",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-GLDMINE-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-GLDMINE-USDC:USDC"
   },
   {
     "id": "mkts:GOLD",
@@ -6828,12 +6828,12 @@
       "DeFi"
     ],
     "cmc_id": 39344,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "XAU",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-XAU-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-XAU-USDC:USDC"
   },
   {
     "id": "mkts:GOOGL",
@@ -6851,12 +6851,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39470,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "GOOGL",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-GOOGL-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-GOOGL-USDC:USDC"
   },
   {
     "id": "mkts:JPN225",
@@ -6869,12 +6869,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "JPN225",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-JPN225-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-JPN225-USDC:USDC"
   },
   {
     "id": "mkts:MU",
@@ -6892,12 +6892,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39469,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "MU",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-MU-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-MU-USDC:USDC"
   },
   {
     "id": "mkts:NVDA",
@@ -6915,12 +6915,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 38153,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "NVDA",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-NVDA-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-NVDA-USDC:USDC"
   },
   {
     "id": "mkts:PLTR",
@@ -6938,12 +6938,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39475,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "PLTR",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-PLTR-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-PLTR-USDC:USDC"
   },
   {
     "id": "mkts:RTX",
@@ -6956,12 +6956,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "RTX.EQUITY",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-RTX.EQUITY-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-RTX.EQUITY-USDC:USDC"
   },
   {
     "id": "mkts:SEMI",
@@ -6974,12 +6974,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "SEMI",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-SEMI-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-SEMI-USDC:USDC"
   },
   {
     "id": "mkts:SILVER",
@@ -6996,12 +6996,12 @@
       "DeFi"
     ],
     "cmc_id": 39343,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "XAG",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-XAG-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-XAG-USDC:USDC"
   },
   {
     "id": "mkts:SMALL2000",
@@ -7036,12 +7036,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 40864,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "0700",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-0700-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-0700-USDC:USDC"
   },
   {
     "id": "mkts:TSLA",
@@ -7059,12 +7059,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 38152,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "TSLA",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-TSLA-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-TSLA-USDC:USDC"
   },
   {
     "id": "mkts:US500",
@@ -7115,12 +7115,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "USENERGY",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-USENERGY-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-USENERGY-USDC:USDC"
   },
   {
     "id": "mkts:USOIL",
@@ -7133,12 +7133,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "USOIL",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-USOIL-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-USOIL-USDC:USDC"
   },
   {
     "id": "mkts:USTECH",
@@ -7173,12 +7173,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 39929,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "1810",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-1810-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-1810-USDC:USDC"
   },
   {
     "id": "para:10Y",
@@ -7278,9 +7278,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "para:AVGO",
@@ -7334,12 +7334,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "CAMBRICON.CAMBRICON_TECHNOLOGIES_CORP_LTD_DERIVATIVES",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-CAMBRICON.CAMBRICON_TECHNOLOGIES_CORP_LTD_DERIVATIVES-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-CAMBRICON.CAMBRICON_TECHNOLOGIES_CORP_LTD_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "para:CIEN",
@@ -7457,9 +7457,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "crypto",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "para:GDX",
@@ -7520,12 +7520,12 @@
     "category": [
       "DeFi"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "H100",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-H100-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-H100-USDC:USDC"
   },
   {
     "id": "para:IGV",
@@ -7555,12 +7555,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "INNOLIGHT",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-INNOLIGHT-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-INNOLIGHT-USDC:USDC"
   },
   {
     "id": "para:IREN",
@@ -7639,12 +7639,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "NAVER",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-NAVER-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-NAVER-USDC:USDC"
   },
   {
     "id": "para:NET",
@@ -7696,12 +7696,12 @@
     "category": [
       "DeFi"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "PAPER",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-PAPER-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-PAPER-USDC:USDC"
   },
   {
     "id": "para:RDDT",
@@ -7828,12 +7828,12 @@
       "Tokenized Stock"
     ],
     "cmc_id": 40864,
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "0700",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-0700-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-0700-USDC:USDC"
   },
   {
     "id": "para:TER",
@@ -8030,12 +8030,12 @@
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "GOLDJM",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDH",
     "margin_asset_id": "USDH",
-    "unified_id": "perpetual-GOLDJM-USDH:USDH",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-GOLDJM-USDH:USDH"
   },
   {
     "id": "vntl:INFOTECH",
@@ -8153,12 +8153,12 @@
     "margin": "USDH",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "SILVERJM",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDH",
     "margin_asset_id": "USDH",
-    "unified_id": "perpetual-SILVERJM-USDH:USDH",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-SILVERJM-USDH:USDH"
   },
   {
     "id": "vntl:SOY",
@@ -8271,12 +8271,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "ACN",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-ACN-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-ACN-USDC:USDC"
   },
   {
     "id": "xyz:ALUMINIUM",
@@ -8289,12 +8289,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "ALUMINIUM",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-ALUMINIUM-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-ALUMINIUM-USDC:USDC"
   },
   {
     "id": "xyz:AMAT",
@@ -8351,12 +8351,12 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "AMEC",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-AMEC-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-AMEC-USDC:USDC"
   },
   {
     "id": "xyz:AMZN",
@@ -8654,12 +8654,12 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "CATL",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-CATL-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-CATL-USDC:USDC"
   },
   {
     "id": "xyz:CBRS",
@@ -8758,12 +8758,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "CORN.COMMODITY",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-CORN.COMMODITY-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-CORN.COMMODITY-USDC:USDC"
   },
   {
     "id": "xyz:COST",
@@ -8971,9 +8971,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "xyz:EBAY",
@@ -9255,12 +9255,12 @@
     "category": [
       "DeFi"
     ],
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "H100",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-H100-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-H100-USDC:USDC"
   },
   {
     "id": "xyz:HIMS",
@@ -9356,12 +9356,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "IBIDEN",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-IBIDEN-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-IBIDEN-USDC:USDC"
   },
   {
     "id": "xyz:IBM",
@@ -9396,12 +9396,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "IBOV",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-IBOV-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-IBOV-USDC:USDC"
   },
   {
     "id": "xyz:INNOLIGHT",
@@ -9413,12 +9413,12 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "INNOLIGHT",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-INNOLIGHT-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-INNOLIGHT-USDC:USDC"
   },
   {
     "id": "xyz:INTC",
@@ -9475,9 +9475,9 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "xyz:JP225",
@@ -9590,9 +9590,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "forex",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "xyz:KSTR",
@@ -9995,12 +9995,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "NIFTY",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-NIFTY-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-NIFTY-USDC:USDC"
   },
   {
     "id": "xyz:NOK",
@@ -10275,12 +10275,12 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "RELIANCE",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-RELIANCE-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-RELIANCE-USDC:USDC"
   },
   {
     "id": "xyz:RIVN",
@@ -10488,9 +10488,9 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "unknown",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "xyz:SNDK",
@@ -10721,12 +10721,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "TTF",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-TTF-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-TTF-USDC:USDC"
   },
   {
     "id": "xyz:TWST",
@@ -10805,12 +10805,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "URANIUM",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-URANIUM-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-URANIUM-USDC:USDC"
   },
   {
     "id": "xyz:URNM",
@@ -10865,12 +10865,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "VIX",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-VIX-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-VIX-USDC:USDC"
   },
   {
     "id": "xyz:VOL",
@@ -10883,12 +10883,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "VOL",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-VOL-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-VOL-USDC:USDC"
   },
   {
     "id": "xyz:WDC",
@@ -10923,12 +10923,12 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "commodity",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "WHEAT",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-WHEAT-USDC:USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "unified_id": "perpetual-WHEAT-USDC:USDC"
   },
   {
     "id": "xyz:XBI",
@@ -11005,9 +11005,9 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "pre_market",
+    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "end_date": "2026-10-20T07:03:06.549Z"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "xyz:ZHIPU",

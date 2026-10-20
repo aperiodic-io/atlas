@@ -695,7 +695,8 @@
     "first_capture": "2026-10-20T07:03:00.875Z",
     "internal_id": "spot-EQQQQ-USDC",
     "symbol": "EQQQQ",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
   },
   {
     "id": "EQSPY/USDC",
@@ -703,7 +704,8 @@
     "first_capture": "2026-10-20T07:03:00.875Z",
     "internal_id": "spot-EQSPY-USDC",
     "symbol": "EQSPY",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
   },
   {
     "id": "EX/USDC",
@@ -2123,7 +2125,8 @@
     "first_capture": "2026-10-20T07:03:00.875Z",
     "internal_id": "spot-PAIR-USDC",
     "symbol": "PAIR",
-    "denominator": "USDC"
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
   },
   {
     "id": "PANDA/USDC",
