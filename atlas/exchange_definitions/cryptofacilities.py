@@ -9,6 +9,7 @@ from .common import (
     upcoming,
     SkipSymbol,
     delisted_end_date,
+    parse_utc_timestamp,
     instrument_type,
     make_contract,
     parse_yymmdd,
@@ -17,7 +18,7 @@ from .common import (
     utc_timestamp,
 )
 from .fields import parse_recorded_legs
-from .http import get_json, iso_from_millis
+from .http import get_json
 
 CF_ASSET = {"XBT": "BTC"}
 
@@ -101,13 +102,13 @@ def _kraken_underlying(item: dict) -> UnderlyingType:
 
 
 def _parse_iso(value: object) -> datetime | None:
+    """A venue timestamp, or None when it is missing or unreadable."""
     if not isinstance(value, str) or not value:
         return None
     try:
-        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parse_utc_timestamp(value)
     except ValueError:
         return None
-    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
 
 
 def _millis(value: datetime | None) -> int | None:
@@ -139,7 +140,7 @@ def _kraken_derivative_symbol(item: dict) -> dict:
         "first_capture": utc_timestamp(opening) if opening else None,
     }
     if ctype == ContractType.future:
-        sd["delivery_date"] = iso_from_millis(_millis(last_trading))
+        sd["delivery_date"] = last_trading.isoformat().replace("+00:00", "Z") if last_trading else None
     if item.get("isExpired"):
         sd["end_date"] = delisted_end_date(_millis(last_trading))
     return {k: v for k, v in sd.items() if v is not None}
