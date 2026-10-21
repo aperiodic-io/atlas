@@ -1009,8 +1009,16 @@
     "symbol": "AI16Z",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 34026,
+    "category": [
+      "AI Agents",
+      "Memes"
+    ],
+    "base_asset_id": "AI16Z",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AI16Z-USDT:USDT"
   },
   {
     "id": "AIAUSDT",
@@ -1417,8 +1425,15 @@
     "symbol": "ALPHA",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 7232,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ALPHA",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ALPHA-USDT:USDT"
   },
   {
     "id": "ALPINEUSDT",
@@ -2935,8 +2950,16 @@
     "symbol": "BADGER",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 7859,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "BADGER",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BADGER-USDT:USDT"
   },
   {
     "id": "BAKEUSDT",
@@ -3885,8 +3908,17 @@
     "symbol": "BOB",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 38970,
+    "category": [
+      "DeFi",
+      "DApp",
+      "Interoperability"
+    ],
+    "base_asset_id": "BOB",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BOB-USDT:USDT"
   },
   {
     "id": "BOMBUSDT",
@@ -6955,8 +6987,13 @@
     "symbol": "DUCK",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35298,
+    "category": [],
+    "base_asset_id": "DUCK",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DUCK-USDT:USDT"
   },
   {
     "id": "DXYZUSDT",
@@ -7336,8 +7373,16 @@
     "symbol": "EOS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EOS-USDT:USDT"
   },
   {
     "id": "EPICUSDT",
@@ -8066,8 +8111,16 @@
     "symbol": "FLM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 7150,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "FLM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FLM-USDT:USDT"
   },
   {
     "id": "FLNCUSDT",
@@ -8359,8 +8412,15 @@
     "symbol": "FOXY",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 30591,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "FOXY",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FOXY-USDT:USDT"
   },
   {
     "id": "FRAGUSDT",
@@ -8407,8 +8467,16 @@
     "symbol": "FTM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FTM-USDT:USDT"
   },
   {
     "id": "FTNUSDT",
@@ -8580,8 +8648,15 @@
     "symbol": "FXS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 6953,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "FRAX",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FRAX-USDT:USDT"
   },
   {
     "id": "GALAUSDT",
@@ -9106,8 +9181,17 @@
     "symbol": "GODS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 10631,
+    "category": [
+      "Play To Earn",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "GODS",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GODS-USDT:USDT"
   },
   {
     "id": "GOOGLUSDT",
@@ -10644,8 +10728,16 @@
     "symbol": "IP",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35626,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "DATA",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DATA-USDT:USDT"
   },
   {
     "id": "IRENUSDT",
@@ -11863,8 +11955,13 @@
     "symbol": "LAUNCHCOIN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35487,
+    "category": [],
+    "base_asset_id": "LAUNCHCOIN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-LAUNCHCOIN-USDT:USDT"
   },
   {
     "id": "LAUSDT",
@@ -13054,8 +13151,13 @@
     "symbol": "MEMEFI",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 33464,
+    "category": [],
+    "base_asset_id": "MEMEFI",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MEMEFI-USDT:USDT"
   },
   {
     "id": "MEMEUSDT",
@@ -13382,8 +13484,18 @@
     "symbol": "MKR",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1518,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "MKR",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MKR-USDT:USDT"
   },
   {
     "id": "MLNUSDT",
@@ -14179,8 +14291,15 @@
     "symbol": "NC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 34971,
+    "category": [
+      "DApp"
+    ],
+    "base_asset_id": "NC",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NC-USDT:USDT"
   },
   {
     "id": "NDX100USDT",
@@ -14744,8 +14863,16 @@
     "symbol": "NTRN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 26680,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "NTRN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NTRN-USDT:USDT"
   },
   {
     "id": "NULSUSDT",
@@ -15035,8 +15162,17 @@
     "symbol": "OM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 6536,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "DAO"
+    ],
+    "base_asset_id": "OM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OM-USDT:USDT"
   },
   {
     "id": "ONDOUSDT",
@@ -18756,8 +18892,15 @@
     "symbol": "SLERF",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 37758,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "SLERF",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SLERF-USDT:USDT"
   },
   {
     "id": "SLPUSDT",
@@ -19988,8 +20131,15 @@
     "symbol": "SUNDOG",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 32717,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "SUNDOG",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SUNDOG-USDT:USDT"
   },
   {
     "id": "SUNUSDT",

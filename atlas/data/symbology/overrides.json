@@ -1,6 +1,607 @@
 {
   "schema_version": 1,
-  "overrides": [],
+  "overrides": [
+    {
+      "exchange": "okx-perps",
+      "original_id": "RNDR-USDT-SWAP",
+      "cmc_id": 5690,
+      "reason": "Render traded as RNDR until its 2024 migration to RENDER (CMC 5690); OKX delisted the RNDR perpetual on 2024-07-10, as Binance did its RNDR markets, which CMC files under 5690."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "RNDR",
+      "cmc_id": 5690,
+      "reason": "Render traded as RNDR until its 2024 migration to RENDER (CMC 5690); Hyperliquid kept the RNDR perpetual until it was delisted."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FXS-USDT-SWAP",
+      "cmc_id": 6953,
+      "reason": "Frax Share (FXS) was renamed FRAX in 2025 and keeps CMC 6953; OKX's FXS perpetual traded alongside Binance's FXS markets, which CMC files under 6953."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "FXS",
+      "cmc_id": 6953,
+      "reason": "Frax Share (FXS) was renamed FRAX in 2025 and keeps CMC 6953; Hyperliquid's FXS perpetual traded alongside Binance's FXS markets, which CMC files under 6953."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "MATIC-USDT-SWAP",
+      "cmc_id": 3890,
+      "reason": "Polygon's MATIC (CMC 3890), delisted on its migration to POL in September 2024; it traded alongside Binance's MATIC markets, which CMC files under 3890."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "MATIC",
+      "cmc_id": 3890,
+      "reason": "Polygon's MATIC (CMC 3890), kept by Hyperliquid after the 2024 migration to POL until it was delisted. POL is a different CMC asset."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FTM-USDT-SWAP",
+      "cmc_id": 3513,
+      "reason": "Fantom's FTM (CMC 3513), delisted on its migration to Sonic (S); it traded alongside Binance's FTM markets, which CMC files under 3513."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "FTM",
+      "cmc_id": 3513,
+      "reason": "Fantom's FTM (CMC 3513), kept by Hyperliquid after the migration to Sonic (S) until it was delisted. S is a different CMC asset."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "EOS-USDT-SWAP",
+      "cmc_id": 1765,
+      "reason": "EOS (CMC 1765), delisted on its May 2025 rebrand to Vaulta; it traded alongside Binance's EOS markets, which CMC files under 1765."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "EOS-USD-SWAP",
+      "cmc_id": 1765,
+      "reason": "EOS (CMC 1765) inverse perpetual, delisted on its May 2025 rebrand to Vaulta; it traded alongside Binance's EOS markets, which CMC files under 1765."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "TON-USD-SWAP",
+      "cmc_id": 11419,
+      "reason": "Toncoin (CMC 11419, since renamed Gram) inverse perpetual; every other venue's concurrent TON market resolves to 11419."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "TONCOIN-USDT-SWAP",
+      "cmc_id": 11419,
+      "reason": "Toncoin traded as TONCOIN on OKX in 2021-2022 before exchanges settled on TON; CMC 11419 (since renamed Gram) is the only asset with that name."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "AGIX-USDT-SWAP",
+      "cmc_id": 2424,
+      "reason": "SingularityNET's AGIX (CMC 2424), delisted for the 2024 ASI token merger; it traded alongside Binance's AGIX markets, which CMC files under 2424."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "OM-USDT-SWAP",
+      "cmc_id": 6536,
+      "reason": "MANTRA's OM (CMC 6536, MANTRA (old)); it traded alongside Binance's OM markets, which CMC files under 6536."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "OM",
+      "cmc_id": 6536,
+      "reason": "MANTRA's OM (CMC 6536, MANTRA (old)). CMC still lists this delisted Hyperliquid market under 6536, but its stale price fails the pair price check."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "AI16Z-USDT-SWAP",
+      "cmc_id": 34026,
+      "reason": "ai16z (CMC 34026, since migrated to elizaOS); it traded alongside Binance's AI16Z market, which CMC files under 34026."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "AI16Z",
+      "cmc_id": 34026,
+      "reason": "ai16z (CMC 34026). CMC still lists this delisted Hyperliquid market under 34026, but its stale price fails the pair price check after the elizaOS migration."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "LAUNCHCOIN-USDT-SWAP",
+      "cmc_id": 35487,
+      "reason": "Launch Coin on Believe (CMC 35487), the only CMC asset trading as LAUNCHCOIN, listed by OKX and Hyperliquid in May-June 2025."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "LAUNCHCOIN",
+      "cmc_id": 35487,
+      "reason": "Launch Coin on Believe (CMC 35487). CMC still lists this delisted Hyperliquid market under 35487, but its stale price fails the pair price check."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ALPHA-USDT-SWAP",
+      "cmc_id": 7232,
+      "reason": "Alpha Venture DAO (now Stella, CMC 7232); it traded alongside Binance's ALPHA markets, which CMC files under 7232."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ANC-USDT-SWAP",
+      "cmc_id": 8857,
+      "reason": "Anchor Protocol (CMC 8857), delisted in the May 2022 Terra collapse; it traded alongside Binance's ANC markets, which CMC files under 8857."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ANT-USDT-SWAP",
+      "cmc_id": 1680,
+      "reason": "Aragon (CMC 1680); it traded alongside Binance's ANT markets, which CMC files under 1680."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FLM-USDT-SWAP",
+      "cmc_id": 7150,
+      "reason": "Flamingo (CMC 7150); it traded alongside Binance's FLM markets, which CMC files under 7150."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FRONT-USDT-SWAP",
+      "cmc_id": 5893,
+      "reason": "Frontier (CMC 5893); it traded alongside Binance's FRONT markets, which CMC files under 5893."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "KLAY-USDT-SWAP",
+      "cmc_id": 4256,
+      "reason": "Klaytn (CMC 4256), delisted on its 2024 merger into Kaia; it traded alongside Binance's KLAY markets, which CMC files under 4256."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "OMG-USDT-SWAP",
+      "cmc_id": 1808,
+      "reason": "OMG Network (CMC 1808); it traded alongside Binance's OMG markets, which CMC files under 1808."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SRM-USDT-SWAP",
+      "cmc_id": 6187,
+      "reason": "Serum (CMC 6187), delisted after the FTX collapse; it traded alongside Binance's SRM markets, which CMC files under 6187."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "GAL-USDT-SWAP",
+      "cmc_id": 11877,
+      "reason": "Galxe's GAL (CMC 11877), delisted on its July 2024 migration to Gravity (G); it traded alongside Binance's GAL markets, which CMC files under 11877. The Galatasaray fan token is not listed on OKX."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "MEMEFI-USDT-SWAP",
+      "cmc_id": 33464,
+      "reason": "MemeFi (CMC 33464, added 2024-11-22), listed by OKX the same day; Binance's concurrent MEMEFI market is filed under 33464."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SLERF-USDT-SWAP",
+      "cmc_id": 37758,
+      "reason": "SLERF (CMC 37758, added 2024-03-18); Binance's concurrent SLERF market is filed under 37758."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "LOOM",
+      "cmc_id": 2588,
+      "reason": "Loom Network (CMC 2588), the only CMC asset trading as LOOM; Binance's LOOM markets are filed under 2588."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "NTRN",
+      "cmc_id": 26680,
+      "reason": "Neutron (CMC 26680), the only CMC asset trading as NTRN; Binance's concurrent NTRN markets are filed under 26680."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "AIDOGE-USDT-SWAP",
+      "cmc_id": 24477,
+      "reason": "ArbDoge AI (CMC 24477, added 2023-04-17), listed by OKX in May 2023; Gate's AIDOGE market is filed under 24477."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "BONE-USDT-SWAP",
+      "cmc_id": 11865,
+      "reason": "Bone ShibaSwap (CMC 11865); Gate's concurrent BONE market is filed under 11865."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "BZZ-USDT-SWAP",
+      "cmc_id": 10293,
+      "reason": "Swarm (CMC 10293, added 2021-06-05), listed by OKX in June 2021; Gate's BZZ market is filed under 10293."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "CEL-USDT-SWAP",
+      "cmc_id": 2700,
+      "reason": "Celsius (CMC 2700); Gate's concurrent CEL market is filed under 2700."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "DOME-USDT-SWAP",
+      "cmc_id": 16432,
+      "reason": "Everdome (CMC 16432, now HumainWeb3), listed by OKX in March 2022; Gate's DOME market is filed under 16432."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "DUCK-USDT-SWAP",
+      "cmc_id": 35298,
+      "reason": "DuckChain (CMC 35298, added 2025-01-17), listed by OKX at its January 2025 launch; Gate's DUCK market is filed under 35298."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FOXY-USDT-SWAP",
+      "cmc_id": 30591,
+      "reason": "Foxy (CMC 30591, added 2024-04-12), listed by OKX the same day; Gate's FOXY market is filed under 30591."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "GODS-USDT-SWAP",
+      "cmc_id": 10631,
+      "reason": "Gods Unchained (CMC 10631); Coinbase's concurrent GODS market is filed under 10631."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "NC-USDT-SWAP",
+      "cmc_id": 34971,
+      "reason": "Nodepay (CMC 34971, added 2024-12-31), listed by OKX in January 2025; Gate's NC market is filed under 34971."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "NYM-USDT-SWAP",
+      "cmc_id": 17591,
+      "reason": "Nym (CMC 17591); Gate's, Bybit's and Bitget's NYM markets are filed under 17591."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "PIGGY-USDT-SWAP",
+      "cmc_id": 38711,
+      "reason": "Piggycell (CMC 38711, added 2025-10-17), listed by OKX in October 2025; Gate's PIGGY market is filed under 38711."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "RACA-USDT-SWAP",
+      "cmc_id": 11346,
+      "reason": "Radio Caca (CMC 11346); Gate's concurrent RACA market is filed under 11346."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "RSS3-USDT-SWAP",
+      "cmc_id": 17917,
+      "reason": "RSS3 (CMC 17917, added 2022-02-07), listed by OKX in February 2022; Gate's RSS3 market is filed under 17917."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SUNDOG-USDT-SWAP",
+      "cmc_id": 32717,
+      "reason": "SUNDOG (CMC 32717); Gate's concurrent SUNDOG market is filed under 32717."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SWEAT-USDT-SWAP",
+      "cmc_id": 21351,
+      "reason": "Sweat Economy (CMC 21351, added 2022-09-13), listed by OKX in September 2022; Bitget's SWEAT market is filed under 21351."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "WNCG-USDT-SWAP",
+      "cmc_id": 11222,
+      "reason": "Wrapped NCG, Nine Chronicles (CMC 11222); Gate's WNCG markets are filed under 11222."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ZEUS-USDT-SWAP",
+      "cmc_id": 30391,
+      "reason": "Zeus Network (CMC 30391, added 2024-04-04), listed by OKX the next day; Gate's ZEUS market is filed under 30391."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ELON-USDT-SWAP",
+      "cmc_id": 9436,
+      "reason": "Dogelon Mars (CMC 9436), listed by OKX in November 2021; the other ELON asset, Echelon (CMC 39525), was only added in 2026."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "MAX-USDT-SWAP",
+      "cmc_id": 32506,
+      "reason": "Matr1x (MAX, CMC 32506, added 2024-08-02), listed by OKX on 2024-08-06. Neither MAX Exchange Token nor the 2025 Mastercard xStock trades on OKX's perpetuals."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "BLOCK-USDT-SWAP",
+      "cmc_id": 30433,
+      "reason": "BlockGames (BLOCK, CMC 30433, now BlockProtocol), added to CMC on 2024-04-11, the day OKX listed the BLOCK perpetual."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "BTM-USDT-SWAP",
+      "cmc_id": 1866,
+      "reason": "Bytom (BTM, CMC 1866, now BytomDAO), which OKX listed from its 2020 perpetual launch."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "BUZZ-USDT-SWAP",
+      "cmc_id": 35188,
+      "reason": "Hive AI (BUZZ, CMC 35188, added 2025-01-13), listed by OKX two weeks later. The other BUZZ asset, BUZZCoin (CMC 1962), is a 2017 coin no major venue lists."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "CONV-USDT-SWAP",
+      "cmc_id": 8716,
+      "reason": "Convergence (CONV, CMC 8716, added 2021-03-08), listed by OKX in April 2021."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "CQT-USDT-SWAP",
+      "cmc_id": 7411,
+      "reason": "Covalent (CQT, CMC 7411, since migrated to CXT), listed by OKX in August 2021."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "DMAIL-USDT-SWAP",
+      "cmc_id": 19779,
+      "reason": "DMAIL Network (CMC 19779), added to CMC on 2024-01-30, the day OKX listed the DMAIL perpetual."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "EFI-USDT-SWAP",
+      "cmc_id": 8985,
+      "reason": "Efinity Token (EFI, CMC 8985), the only CMC asset trading as EFI, listed by OKX in August 2021."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "FITFI-USDT-SWAP",
+      "cmc_id": 19778,
+      "reason": "Step App (FITFI, CMC 19778, added 2022-04-26), the only CMC asset trading as FITFI, listed by OKX in May 2022."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "GFT-USDT-SWAP",
+      "cmc_id": 2289,
+      "reason": "Gifto (CMC 2289), which renamed its ticker from GTO to GFT in 2022, listed by OKX in its February 2023 rally. Game Fantasy Token (CMC 14275, also GFT) is an IoTeX token no major venue lists."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "J-USDT-SWAP",
+      "cmc_id": 35167,
+      "reason": "Jambo (J, CMC 35167, added 2025-01-10), the only CMC asset trading as J, listed by OKX in January 2025."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "KISHU-USDT-SWAP",
+      "cmc_id": 9386,
+      "reason": "Kishu Inu (CMC 9386), the only CMC asset trading as KISHU."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "LON-USDT-SWAP",
+      "cmc_id": 8083,
+      "reason": "Tokenlon Network Token (LON, CMC 8083), the only CMC asset trading as LON."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "LOOKS-USDT-SWAP",
+      "cmc_id": 17081,
+      "reason": "LooksRare (LOOKS, CMC 17081, added 2022-01-10), the only CMC asset trading as LOOKS, listed by OKX in February 2022."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "MIR-USDT-SWAP",
+      "cmc_id": 7857,
+      "reason": "Mirror Protocol (MIR, CMC 7857), delisted in the May 2022 Terra collapse. The other MIR asset, MIR Token (CMC 23566), was only added in 2023."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "MSN-USDT-SWAP",
+      "cmc_id": 27026,
+      "reason": "Meson Network (MSN, CMC 27026), listed by OKX at its April 2024 token launch."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SOS-USDT-SWAP",
+      "cmc_id": 16463,
+      "reason": "OpenDAO (SOS, CMC 16463, added 2021-12-24), listed by OKX later that month. The other SOS asset, Solana Swap (CMC 33110), was only added in 2024."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "STARL-USDT-SWAP",
+      "cmc_id": 10821,
+      "reason": "Starlink (STARL, CMC 10821, added 2021-07-10), the STARL metaverse token, listed by OKX in November 2021. The other StarLink, CMC 8530, trades as SLNV2."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "SWRV-USDT-SWAP",
+      "cmc_id": 6901,
+      "reason": "Swerve (SWRV, CMC 6901, added 2020-09-05), listed by OKX the following week."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "TORN-USDT-SWAP",
+      "cmc_id": 8049,
+      "reason": "Tornado Cash (TORN, CMC 8049), the only CMC asset trading as TORN, delisted after the 2022 sanctions."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ULTI-USDT-SWAP",
+      "cmc_id": 31504,
+      "reason": "Ultiverse (ULTI, CMC 31504, added 2024-06-03), the only CMC asset trading as ULTI, listed by OKX that week."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "UMEE-USDT-SWAP",
+      "cmc_id": 16389,
+      "reason": "Umee (CMC 16389, since renamed UX Chain), listed by OKX in February 2022."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "VENOM-USDT-SWAP",
+      "cmc_id": 22059,
+      "reason": "Venom (CMC 22059), the only CMC asset trading as VENOM, listed by OKX at its March 2024 launch."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "VRA-USDT-SWAP",
+      "cmc_id": 3816,
+      "reason": "Verasity (VRA, CMC 3816), the only CMC asset trading as VRA."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "WNXM-USDT-SWAP",
+      "cmc_id": 5939,
+      "reason": "Wrapped NXM (CMC 5939), the only CMC asset trading as WNXM."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "WSM-USDT-SWAP",
+      "cmc_id": 28179,
+      "reason": "Wall Street Memes (WSM, CMC 28179, added 2023-09-26), the only CMC asset trading as WSM, listed by OKX in October 2023."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "X-USDT-SWAP",
+      "cmc_id": 33108,
+      "reason": "X Empire (X, CMC 33108), added to CMC on 2024-10-24, the day before OKX listed the X perpetual."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "YFV-USDT-SWAP",
+      "cmc_id": 6698,
+      "reason": "YFValue (YFV, CMC 6698, added 2020-08-24), listed by OKX in September 2020."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "ZERO-USDT-SWAP",
+      "cmc_id": 31076,
+      "reason": "ZeroLend (ZERO, CMC 31076), added to CMC on 2024-05-06, the day OKX listed the ZERO perpetual."
+    },
+    {
+      "exchange": "okx-perps",
+      "original_id": "GF-USDT-SWAP",
+      "cmc_id": 15585,
+      "reason": "GuildFi (GF, CMC 15585), delisted on its 2024 migration to Zentry. The other GF asset, GoldFinger (CMC 39679), was only added in 2026."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "CANTO",
+      "cmc_id": 21516,
+      "reason": "Canto (CANTO, CMC 21516), the Canto chain's token."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "FRIEND",
+      "cmc_id": 31056,
+      "reason": "Friend.tech (CMC 31056), the only CMC asset trading as FRIEND."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "HPOS",
+      "cmc_id": 25220,
+      "reason": "HarryPotterObamaSonic10Inu (ERC-20), CMC 25220, whose CMC ticker is BITCOIN; HPOS is the name venues list it under."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "JELLY",
+      "cmc_id": 35537,
+      "reason": "Jelly-My-Jelly (JELLYJELLY, CMC 35537), added to CMC on 2025-01-30, the day Hyperliquid listed the JELLY perpetual."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "OX",
+      "cmc_id": 29530,
+      "reason": "OX Coin (OX.FUN, CMC 29530), the only CMC asset trading as OX."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "PANDORA",
+      "cmc_id": 29291,
+      "reason": "Pandora (CMC 29291), the only CMC asset trading as PANDORA."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "RLB",
+      "cmc_id": 15271,
+      "reason": "Rollbit Coin (CMC 15271), the only CMC asset trading as RLB."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "SHIA",
+      "cmc_id": 27922,
+      "reason": "Shiba Saga (SHIA, CMC 27922), the only CMC asset trading as SHIA."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "UNIBOT",
+      "cmc_id": 27009,
+      "reason": "UniBot (CMC 27009), the only CMC asset trading as UNIBOT."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "kDOGS",
+      "cmc_id": 32698,
+      "reason": "1,000 DOGS (CMC 32698), the Telegram DOGS token; the other DOGS asset, Dogs Token (CMC 17965), is a defunct 2022 token."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "hyna:IP",
+      "cmc_id": 35626,
+      "reason": "Story's IP (CMC 35626, now Data Network) on the HyENA dex; CMC files every venue's IP market under 35626."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "hyna:XPL",
+      "cmc_id": 36645,
+      "reason": "Plasma (XPL, CMC 36645) on the HyENA dex, which lists major tokens; the other XPL asset, Pulse (CMC 37668), is a small token."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "hyna:LIT",
+      "cmc_id": 39125,
+      "reason": "Lighter (LIT, CMC 39125) on the HyENA dex, listed days before Lighter's token launch and replaced by hyna:LIGHTER. Litentry, the older LIT, had been renamed Heima (HEI)."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "hyna:BASED",
+      "cmc_id": 39812,
+      "reason": "Based (CMC 39812, added 2026-03-28), the only CMC asset trading as BASED, listed by the HyENA dex days later."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "cash:BTC",
+      "cmc_id": 1,
+      "reason": "Bitcoin on the cash dex, whose other markets are the majors and US equities."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "cash:ETH",
+      "cmc_id": 1027,
+      "reason": "Ethereum on the cash dex, whose other markets are the majors and US equities."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "flx:BTC",
+      "cmc_id": 1,
+      "reason": "Bitcoin on the flx dex, which also lists XMR and USDE."
+    },
+    {
+      "exchange": "hyperliquid-perps",
+      "original_id": "flx:USDE",
+      "cmc_id": 29470,
+      "reason": "Ethena USDe (CMC 29470) on the flx dex."
+    },
+    {
+      "exchange": "binance-futures",
+      "original_id": "bobusdt",
+      "cmc_id": 38970,
+      "reason": "BOB (Build on Bitcoin, CMC 38970), added to CMC on 2025-11-20, the day before Binance listed BOBUSDT. BOBUSDT closed at 0.0108 on 2025-12-01, against 0.0111 for CMC 38970 and about zero for Build On BNB (CMC 34422)."
+    },
+    {
+      "exchange": "binance-futures",
+      "original_id": "damusdt",
+      "cmc_id": 37638,
+      "reason": "Reservoir (DAM, CMC 37638). DAMUSDT closed at 0.0784 and 0.0591 on 2025-09-29 and 2025-09-30, as CMC 37638 did."
+    }
+  ],
   "ticker_eras": [
     {
       "ticker": "LUNA",

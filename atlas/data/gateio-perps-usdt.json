@@ -832,8 +832,16 @@
     "symbol": "AGIX",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 2424,
+    "category": [
+      "Generative AI",
+      "AI Agents"
+    ],
+    "base_asset_id": "AGIX",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AGIX-USDT:USDT"
   },
   {
     "id": "AGI_USDT",
@@ -956,8 +964,16 @@
     "symbol": "AI16Z",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 34026,
+    "category": [
+      "AI Agents",
+      "Memes"
+    ],
+    "base_asset_id": "AI16Z",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AI16Z-USDT:USDT"
   },
   {
     "id": "AIA_USDT",
@@ -1569,8 +1585,15 @@
     "symbol": "ALPHA",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 7232,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ALPHA",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ALPHA-USDT:USDT"
   },
   {
     "id": "ALPINE_USDT",
@@ -1859,8 +1882,13 @@
     "symbol": "ANC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 8857,
+    "category": [],
+    "base_asset_id": "ANC",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANC-USDT:USDT"
   },
   {
     "id": "ANDURIL_USDT",
@@ -2051,8 +2079,15 @@
     "symbol": "ANT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1680,
+    "category": [
+      "DAO"
+    ],
+    "base_asset_id": "ANT",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANT-USDT:USDT"
   },
   {
     "id": "APD_USDT",
@@ -9660,8 +9695,16 @@
     "symbol": "EOS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EOS-USDT:USDT"
   },
   {
     "id": "EPIC_USDT",
@@ -10593,8 +10636,16 @@
     "symbol": "FLM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 7150,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "FLM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FLM-USDT:USDT"
   },
   {
     "id": "FLNC_USDT",
@@ -11129,8 +11180,16 @@
     "symbol": "FRONT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 5893,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "FRONT",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FRONT-USDT:USDT"
   },
   {
     "id": "FSLR_USDT",
@@ -11161,8 +11220,16 @@
     "symbol": "FTM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FTM-USDT:USDT"
   },
   {
     "id": "FTN_USDT",
@@ -11364,8 +11431,13 @@
     "symbol": "GAL",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 11877,
+    "category": [],
+    "base_asset_id": "GAL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GAL-USDT:USDT"
   },
   {
     "id": "GARI_USDT",
@@ -14440,8 +14512,16 @@
     "symbol": "IP",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35626,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "DATA",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DATA-USDT:USDT"
   },
   {
     "id": "IQ50_USDT",
@@ -15550,8 +15630,15 @@
     "symbol": "KLAY",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 4256,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "KLAY",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KLAY-USDT:USDT"
   },
   {
     "id": "KMNO_USDT",
@@ -15953,8 +16040,13 @@
     "symbol": "LAUNCHCOIN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35487,
+    "category": [],
+    "base_asset_id": "LAUNCHCOIN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-LAUNCHCOIN-USDT:USDT"
   },
   {
     "id": "LAVA_USDT",
@@ -16523,8 +16615,15 @@
     "symbol": "LOOM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 2588,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LOOM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-LOOM-USDT:USDT"
   },
   {
     "id": "LOT_USDT",
@@ -17217,8 +17316,16 @@
     "symbol": "MATIC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MATIC-USDT:USDT"
   },
   {
     "id": "MAT_USDT",
@@ -17614,8 +17721,13 @@
     "symbol": "MEMEFI",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 33464,
+    "category": [],
+    "base_asset_id": "MEMEFI",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MEMEFI-USDT:USDT"
   },
   {
     "id": "MEMES_USDT",
@@ -18121,8 +18233,18 @@
     "symbol": "MKR",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1518,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "MKR",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MKR-USDT:USDT"
   },
   {
     "id": "MLN_USDT",
@@ -19444,7 +19566,7 @@
       "Memes"
     ],
     "base_asset_id": "NEIRO",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NEIRO-USDT:USDT"
@@ -20098,8 +20220,16 @@
     "symbol": "NTRN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 26680,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "NTRN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NTRN-USDT:USDT"
   },
   {
     "id": "NULS_USDT",
@@ -20543,8 +20673,15 @@
     "symbol": "OMG",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OMG-USDT:USDT"
   },
   {
     "id": "OMNI_USDT",
@@ -20555,8 +20692,16 @@
     "symbol": "OMNI",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 30315,
+    "category": [
+      "Layer 1",
+      "Interoperability"
+    ],
+    "base_asset_id": "OMNI",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OMNI-USDT:USDT"
   },
   {
     "id": "OM_USDT",
@@ -20567,8 +20712,17 @@
     "symbol": "OM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 6536,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "DAO"
+    ],
+    "base_asset_id": "OM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OM-USDT:USDT"
   },
   {
     "id": "ONDO_USDT",
@@ -24116,8 +24270,18 @@
     "symbol": "RNDR",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 5690,
+    "category": [
+      "DeFi",
+      "Generative AI",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "RENDER",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-RENDER-USDT:USDT"
   },
   {
     "id": "ROAM_USDT",
@@ -25628,8 +25792,15 @@
     "symbol": "SLERF",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 37758,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "SLERF",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SLERF-USDT:USDT"
   },
   {
     "id": "SLN_USDT",
@@ -26722,8 +26893,17 @@
     "symbol": "SRM",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 6187,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "SRM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SRM-USDT:USDT"
   },
   {
     "id": "SSPC_USDT",
@@ -26949,7 +27129,7 @@
     "cmc_id": 18934,
     "category": [],
     "base_asset_id": "STG",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-STG-USDT:USDT"
@@ -27468,8 +27648,17 @@
     "symbol": "SWEAT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 21351,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "SWEAT",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SWEAT-USDT:USDT"
   },
   {
     "id": "SWELL_USDT",

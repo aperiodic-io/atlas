@@ -161,7 +161,16 @@
     "symbol": "EOS",
     "denominator": "USD",
     "margin": "EOS",
-    "quote_asset_id": "USD"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "EOS",
+    "unified_id": "perpetual-EOS-USD:EOS"
   },
   {
     "id": "ETC_USD",
