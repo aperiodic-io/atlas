@@ -98064,7 +98064,7 @@
     ],
     "cmc_id": 40549,
     "base_asset_id": "SMCI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-SMCI-USD:USD-20310926"
@@ -99387,6 +99387,7 @@
     "delivery_date": "2031-08-22T00:00:00",
     "underlying": "equity",
     "first_capture": "2026-08-21T02:30:00.218Z",
+    "missing_since": "2026-10-21T06:57:18.098Z",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD"
   },
@@ -99399,7 +99400,7 @@
     "denominator": "USD_UM_XPERP",
     "margin": "TEST01",
     "delivery_date": "2031-08-15T00:00:00",
-    "missing_since": "2026-10-20T07:03:07.332Z"
+    "end_date": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TEST011-USD_UM_XPERP-310815",
@@ -99410,7 +99411,7 @@
     "denominator": "USD_UM_XPERP",
     "margin": "TEST011",
     "delivery_date": "2031-08-15T00:00:00",
-    "missing_since": "2026-10-20T07:03:07.332Z"
+    "end_date": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TEST012-USD_UM_XPERP-310815",
@@ -99421,7 +99422,7 @@
     "denominator": "USD_UM_XPERP",
     "margin": "TEST012",
     "delivery_date": "2031-08-15T00:00:00",
-    "missing_since": "2026-10-20T07:03:07.332Z"
+    "end_date": "2026-10-20T07:03:07.332Z"
   },
   {
     "id": "TIA-USD_UM_XPERP-310905",
@@ -107563,7 +107564,7 @@
     ],
     "cmc_id": 39990,
     "base_asset_id": "WDC",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-WDC-USD:USD-20310829"
