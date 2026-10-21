@@ -8,77 +8,18 @@ from ..parser_interface import SymbolData
 from ..types import UnderlyingType
 from .common import (
     SkipSymbol,
-    instrument_type,
     make_contract,
     ms_to_utc_timestamp,
-    resolve_margin,
-    split_concat,
 )
 from .fields import parse_recorded_legs
 from .http import get_json
 
 
-def parse_bitfinex(exchange: str, sd: SymbolData) -> Contract:
-    sid = sd["id"]
-    if sid.startswith("f"):
-        raise SkipSymbol(f"{exchange}: funding symbol {sid!r} skipped")
-    if not sid.startswith("t"):
-        raise SkipSymbol(f"{exchange}: expected 't' prefix in {sid!r}")
-
-    pair_str = sid[1:]
-    ctype = instrument_type(sd)
-
-    if ":" in pair_str:
-        symbol, denominator = pair_str.split(":", 1)
-        denominator = "USDT" if denominator == "UST" else denominator
-        margin = resolve_margin(symbol, denominator, ctype)
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
-
-    quotes = [
-        "USDT",
-        "UST",
-        "USD",
-        "BTC",
-        "ETH",
-        "EOS",
-        "EUR",
-        "GBP",
-        "JPY",
-        "CNHT",
-        "XAUT",
-    ]
-    pair = split_concat(pair_str, quotes)
-    if pair:
-        symbol, denominator = pair
-        denominator = "USDT" if denominator == "UST" else denominator
-        margin = resolve_margin(symbol, denominator, ctype)
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
-
-    raise SkipSymbol(f"{exchange}: cannot split {sid!r}")
-
-
-def parse_bitfinex_derivatives(exchange: str, sd: SymbolData) -> Contract:
-    match = re.match(r"^([A-Z]+)F0:([A-Z]+)F0$", sd["id"])
-    if match:
-        symbol = match.group(1)
-        denominator = "USDT" if match.group(2) == "UST" else match.group(2)
-        return make_contract(
-            exchange,
-            sd,
-            symbol,
-            denominator,
-            denominator,
-            instrument_type(sd),
-        )
-    raise SkipSymbol(f"{exchange}: cannot parse derivative {sd['id']!r}")
-
-
 # --- Exchange API (`bitfinex-spot`, `bitfinex-perps`) -----------------------
 #
-# Bitfinex publishes its markets as `conf` lists. Tardis ids are the trading
+# Bitfinex publishes its markets as `conf` lists. Atlas ids are the trading
 # symbols without the `t` prefix: spot `BTCUSD` (two three-letter codes) or
-# `AAVE:USD` (longer codes, colon-separated), perpetuals `BTCF0:USTF0`. The
-# legacy parsers above expect the `t` prefix and stay as they are.
+# `AAVE:USD` (longer codes, colon-separated), perpetuals `BTCF0:USTF0`.
 #
 # Bitfinex reports no per-pair status: the `pub:list:pair:*` lists are the
 # pairs currently on the venue, and a delisted pair simply leaves them (the
@@ -89,10 +30,10 @@ _BITFINEX_CONF = "https://api-pub.bitfinex.com/v2/conf"
 
 # Bitfinex currency codes -> common tickers. From Bitfinex's own
 # `pub:map:currency:sym` (ALG->ALGO, UST->USDt, WBT->WBTC, WHBT->WBT, ...) and,
-# for codes of delisted pairs only Tardis still knows, ccxt's Bitfinex
+# for codes of delisted pairs only the history on file knows, ccxt's Bitfinex
 # `commonCurrencies`. Deliberately not followed from Bitfinex's map: TON->GRAM
 # (Toncoin trades as TON) and EOS->A (the Vaulta rebrand; Bitfinex's EOS pairs
-# traded as EOS). A static table so that a Tardis-only row of a pair gets the
+# traded as EOS). A static table so that a history row of a pair gets the
 # same internal_id its API row did.
 _BITFINEX_ALIASES = {
     "ALG": "ALGO",
@@ -190,12 +131,12 @@ def _bitfinex_perp_contract(exchange: str, sd: SymbolData) -> Contract:
 
 
 def parse_bitfinex_api(exchange: str, sd: SymbolData) -> Contract:
-    """`bitfinex-spot`: API legs first; Tardis-only rows parse the pair id."""
+    """`bitfinex-spot`: API legs first; history rows parse the pair id."""
     return parse_recorded_legs(exchange, sd) or _bitfinex_spot_contract(exchange, sd)
 
 
 def parse_bitfinex_perpetual_api(exchange: str, sd: SymbolData) -> Contract:
-    """`bitfinex-perps`: API legs first; Tardis-only rows parse `BASEF0:SETTLEF0`."""
+    """`bitfinex-perps`: API legs first; history rows parse `BASEF0:SETTLEF0`."""
     return parse_recorded_legs(exchange, sd) or _bitfinex_perp_contract(exchange, sd)
 
 
@@ -231,8 +172,8 @@ def _listing_times(key: str, timeout_seconds: int) -> dict[str, Any]:
 
     Each entry is `[pair, [created_ms, null, null, min_size, max_size, ...]]`.
     Bitfinex documents the leading field only as a placeholder, but it is the
-    pair's creation time (it matches Tardis's `availableSince` for every pair
-    Tardis has seen listed); `null` on some securities pairs.
+    pair's creation time (it matches the recorded listing date of every pair
+    in the history on file); `null` on some securities pairs.
     """
     times = {}
     for entry in _conf(key, timeout_seconds):

@@ -18,26 +18,11 @@ from .common import (
 from .fields import parse_recorded_legs
 from .http import get_json
 
-POLONIEX_OLD_QUOTES = {"USDT", "BTC", "ETH", "TRX", "BNB", "USDC"}
-
-
-def parse_poloniex(exchange: str, sd: SymbolData) -> Contract:
-    parts = sd["id"].split("_")
-    if len(parts) != 2:
-        raise SkipSymbol(f"{exchange}: expected 2 underscore parts in {sd['id']!r}")
-
-    a, b = parts
-    ctype = instrument_type(sd)
-    if a in POLONIEX_OLD_QUOTES and b not in POLONIEX_OLD_QUOTES:
-        return make_contract(exchange, sd, b, a, None, ctype)
-    return make_contract(exchange, sd, a, b, None, ctype)
-
-
 # --- Exchange API (poloniex-spot) ----------------------------------------------
 #
 # Poloniex's v1 API named markets `QUOTE_BASE` (`USDT_BTC`, `BTC_ETH`); its
 # current API, live since 2022-08-02, names them `BASE_QUOTE` (`BTC_USDT`,
-# `ETH_BTC`). Tardis kept both: every `QUOTE_BASE` id stopped on 2022-08-02
+# `ETH_BTC`). The history on file holds both: every `QUOTE_BASE` id stopped on 2022-08-02
 # and every `BASE_QUOTE` id started then. The two can't be told apart from the
 # id alone when both legs are quote assets (`BTC_ETH` is ETH/BTC, `BTC_BNB`
 # is BTC/BNB), so a row's end date decides.
@@ -52,12 +37,12 @@ _V1_QUOTES = {"USDT", "BTC", "ETH", "TRX", "BNB", "USDC", "USDD", "TUSD", "USDJ"
 # drops delisted markets from `/markets`. `OFFLINE`, the state its
 # `/currencies` uses for delisted assets, ends a market at first sighting
 # should it ever appear. A market whose `tradableStartTime` is still ahead has
-# not started trading (some carry placeholder times in 2099) and is left out.
+# not started trading (some carry placeholder times in 2099): it is `upcoming`.
 _POLONIEX_DELISTED = "OFFLINE"
 
 
 def _ended(sd: SymbolData) -> datetime | None:
-    raw = sd.get("end_date") or sd.get("availableTo")
+    raw = sd.get("end_date")
     if not isinstance(raw, str):
         return None
     try:
@@ -74,7 +59,7 @@ def _is_quote_base(sd: SymbolData, first: str, second: str) -> bool:
 
 
 def parse_poloniex_api(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BASE_QUOTE`, or v1 `QUOTE_BASE`."""
+    """API legs first; history rows are `BASE_QUOTE`, or v1 `QUOTE_BASE`."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

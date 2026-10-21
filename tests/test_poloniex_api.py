@@ -3,7 +3,7 @@
 Fixtures are excerpts of real responses captured on 2026-10-20:
 `markets.json` from `/markets` (NORMAL and PAUSE markets, markets migrated
 from the v1 API, later listings, and paused markets whose tradable start is a
-2099 placeholder) and `tardis.json` Tardis's Poloniex symbol list for the
+2099 placeholder) and `history.json` the historical Poloniex symbol list for the
 same markets plus v1-era `QUOTE_BASE` ids.
 """
 
@@ -19,13 +19,12 @@ from atlas.exchange_definitions import poloniex
 from atlas.exchange_definitions.common import SkipSymbol
 from atlas.exchange_definitions.poloniex import (
     fetch_poloniex_spot,
-    parse_poloniex,
     parse_poloniex_api,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "poloniex"
 MARKETS = json.loads((FIXTURES / "markets.json").read_text(encoding="utf-8"))
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
+HISTORY = json.loads((FIXTURES / "history.json").read_text(encoding="utf-8"))
 MARKET = {m["symbol"]: m for m in MARKETS}
 
 
@@ -50,8 +49,8 @@ def _iid(sd: dict) -> str:
     return parse_poloniex_api("poloniex-spot", sd).internal_id
 
 
-def _tardis_row(row: dict) -> dict:
-    """A Tardis row as the snapshot holds it (availability mapped to dates)."""
+def _history_row(row: dict) -> dict:
+    """A History row as the snapshot holds it (availability mapped to dates)."""
     sd = {"id": row["id"], "type": row["type"], "first_capture": row["availableSince"]}
     if "availableTo" in row:
         sd["end_date"] = row["availableTo"]
@@ -78,10 +77,10 @@ class TestFetch:
             "first_capture": "2025-05-31T15:00:00.000Z",
         }
 
-    def test_ids_are_the_tardis_ids(self, rows):
-        tardis_ids = {s["id"] for s in TARDIS}
-        # Paused markets that never traded are unknown to Tardis.
-        assert set(rows) - tardis_ids == {"EPIC_USDT", "BOBOOLD_USDT"}
+    def test_ids_are_the_history_ids(self, rows):
+        history_ids = {s["id"] for s in HISTORY}
+        # Paused markets that never traded have no history.
+        assert set(rows) - history_ids == {"EPIC_USDT", "BOBOOLD_USDT"}
 
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
@@ -163,7 +162,7 @@ class TestMalformedPayloads:
             _fetch(payload)
 
 
-class TestTardisFallback:
+class TestHistoryFallback:
     @pytest.mark.parametrize(
         ("sid", "end_date", "internal_id"),
         [
@@ -197,10 +196,6 @@ class TestTardisFallback:
             sd["end_date"] = end_date
         assert _iid(sd) == internal_id
 
-    def test_raw_tardis_availability_is_read_too(self):
-        sd = {"id": "BTC_ETH", "type": "spot", "availableTo": "2022-08-02T00:00:00.000Z"}
-        assert _iid(sd) == "spot-ETH-BTC"
-
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
         [
@@ -218,12 +213,12 @@ class TestTardisFallback:
         with pytest.raises(SkipSymbol):
             parse_poloniex_api("poloniex-spot", {"id": sid, "type": "spot"})
 
-    def test_every_tardis_fixture_row_parses(self):
-        for row in TARDIS:
-            parse_poloniex_api("poloniex-spot", _tardis_row(row))
+    def test_every_history_fixture_row_parses(self):
+        for row in HISTORY:
+            parse_poloniex_api("poloniex-spot", _history_row(row))
 
     def test_v1_ids_map_onto_their_current_market(self):
-        by_id = {row["id"]: _iid(_tardis_row(row)) for row in TARDIS}
+        by_id = {row["id"]: _iid(_history_row(row)) for row in HISTORY}
         for old, new in [
             ("USDT_BTC", "BTC_USDT"),
             ("BTC_ETH", "ETH_BTC"),
@@ -241,11 +236,11 @@ class TestTardisFallback:
             assert by_id[old] == by_id[new], old
 
     def test_fallback_matches_api_rows(self, rows):
-        tardis = {row["id"]: row for row in TARDIS}
-        overlap = set(rows) & set(tardis)
+        history = {row["id"]: row for row in HISTORY}
+        overlap = set(rows) & set(history)
         assert len(overlap) == len(rows) - 2
         for sid in overlap:
-            assert _iid(_tardis_row(tardis[sid])) == _iid(rows[sid]), sid
+            assert _iid(_history_row(history[sid])) == _iid(rows[sid]), sid
 
     def test_api_legs_win_over_the_id(self):
         sd = {"id": "BTC_ETH", "type": "spot", "base_coin": "BTC", "quote_coin": "ETH",
@@ -253,9 +248,3 @@ class TestTardisFallback:
         assert _iid(sd) == "spot-BTC-ETH"
 
 
-class TestLegacyParserUnchanged:
-    def test_quote_base(self):
-        assert parse_poloniex("poloniex", {"id": "USDT_LINK", "type": "spot"}).internal_id == "spot-LINK-USDT"
-
-    def test_base_quote(self):
-        assert parse_poloniex("poloniex", {"id": "BTC_USDT", "type": "spot"}).internal_id == "spot-BTC-USDT"

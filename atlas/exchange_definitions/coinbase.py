@@ -14,7 +14,7 @@ _HEADERS = {"User-Agent": "atlas-security-master", "Accept": "application/json"}
 
 
 def parse_coinbase(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BASE-QUOTE`."""
+    """API legs first; history rows are `BASE-QUOTE`."""
     return parse_recorded_legs(exchange, sd) or parse_dash(exchange, sd)
 
 

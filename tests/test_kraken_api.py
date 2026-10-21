@@ -3,9 +3,9 @@
 Fixtures under `tests/fixtures/kraken/` are excerpts of real responses
 captured on 2026-10-20: Kraken spot `AssetPairs` (crypto/fiat and
 `aclass_base=tokenized_asset`), Kraken Futures `/derivatives/api/v3/instruments`
-(margin tables dropped), and the Tardis symbol lists of `kraken` and
-`cryptofacilities`. Each fetcher must reproduce the Tardis symbol id of an
-instrument byte for byte, so Tardis history and API rows merge, and a Tardis-only
+(margin tables dropped), and the history symbol lists of `kraken` and
+`cryptofacilities`. Each fetcher must reproduce the history symbol id of an
+instrument byte for byte, so history and API rows merge, and a history
 row must parse to the same internal_id as the API row of its instrument.
 """
 
@@ -41,8 +41,8 @@ def _load(name: str):
 PAIRS = _load("asset_pairs.json")
 TOKENIZED = _load("asset_pairs_tokenized.json")
 INSTRUMENTS = _load("futures_instruments.json")
-TARDIS_SPOT = _load("tardis_kraken.json")
-TARDIS_DERIV = _load("tardis_cryptofacilities.json")
+HISTORY_SPOT = _load("history_kraken.json")
+HISTORY_DERIV = _load("history_cryptofacilities.json")
 
 
 def _response(payload: object) -> MagicMock:
@@ -112,7 +112,7 @@ def _with_instrument(symbol: str, **changes) -> dict:
 
 
 class TestKrakenV2Symbol:
-    """Tardis records Kraken spot from WebSocket v2 since 2026-07-10.
+    """Kraken spot ids are WebSocket v2 symbols (history since 2026-07-10 uses them).
 
     v2 names BTC and DOGE where REST `wsname` (the v1 name) says XBT and XDG,
     and lists each xStock under both its `x` name and its `SPV` pair key.
@@ -148,7 +148,7 @@ class TestKrakenV2Symbol:
 
 
 class TestKrakenSpotFetch:
-    def test_ids_are_the_tardis_websocket_v2_symbols(self):
+    def test_ids_are_the_history_websocket_v2_symbols(self):
         rows = _fetch_spot()
         ids = {sd["id"] for sd in rows}
         assert ids == {
@@ -159,11 +159,11 @@ class TestKrakenSpotFetch:
         }
         assert len(rows) == len(ids)
 
-    def test_ids_present_in_tardis_are_identical(self):
-        tardis_ids = {row["id"] for row in TARDIS_SPOT}
+    def test_ids_present_in_history_are_identical(self):
+        history_ids = {row["id"] for row in HISTORY_SPOT}
         api_ids = {sd["id"] for sd in _fetch_spot()}
-        # AUSD/EUR (post-only, newly listed) has not reached Tardis yet.
-        assert api_ids - tardis_ids == {"AUSD/EUR"}
+        # AUSD/EUR (post-only, newly listed) is not in the history yet.
+        assert api_ids - history_ids == {"AUSD/EUR"}
 
     def test_requests_currency_and_tokenized_universes(self):
         get = _spot_get()
@@ -309,12 +309,12 @@ class TestKrakenSpotPayloadShape:
             _fetch_spot(tokenized={"error": ["EGeneral:Internal error"]})
 
 
-class TestKrakenSpotTardisFallback:
+class TestKrakenSpotHistoryFallback:
     @pytest.mark.parametrize(
         ("sid", "expected"),
         [
             ("BTC/USD", "spot-BTC-USD"),
-            # WebSocket v1 names (Tardis until 2026-07-10).
+            # WebSocket v1 names (History until 2026-07-10).
             ("XBT/USD", "spot-BTC-USD"),
             ("ETH/XBT", "spot-ETH-BTC"),
             ("XDG/USD", "spot-DOGE-USD"),
@@ -332,11 +332,11 @@ class TestKrakenSpotTardisFallback:
             ("XDG/USD:BTNL", "spot-DOGE-USD"),
         ],
     )
-    def test_tardis_ids(self, sid, expected):
+    def test_history_ids(self, sid, expected):
         assert _spot_iid({"id": sid, "type": "spot"}) == expected
 
-    def test_every_tardis_row_parses(self):
-        for row in TARDIS_SPOT:
+    def test_every_history_row_parses(self):
+        for row in HISTORY_SPOT:
             assert parse_kraken_spot("kraken-spot", row).internal_id.startswith("spot-")
 
     @pytest.mark.parametrize("sid", ["BTCUSD", "BTC/", "/USD", "A/B/C", ""])
@@ -344,12 +344,12 @@ class TestKrakenSpotTardisFallback:
         with pytest.raises(SkipSymbol):
             parse_kraken_spot("kraken-spot", {"id": sid, "type": "spot"})
 
-    def test_tardis_rows_match_api_rows(self):
+    def test_history_rows_match_api_rows(self):
         api = {sd["id"]: _spot_iid(sd) for sd in _fetch_spot()}
-        tardis = {row["id"]: _spot_iid(row) for row in TARDIS_SPOT}
-        shared = api.keys() & tardis.keys()
+        history = {row["id"]: _spot_iid(row) for row in HISTORY_SPOT}
+        shared = api.keys() & history.keys()
         assert len(shared) >= 20
-        assert {i: tardis[i] for i in shared} == {i: api[i] for i in shared}
+        assert {i: history[i] for i in shared} == {i: api[i] for i in shared}
 
     def test_renamed_v1_rows_match_v2_api_rows(self):
         api = {sd["id"]: _spot_iid(sd) for sd in _fetch_spot()}
@@ -358,7 +358,7 @@ class TestKrakenSpotTardisFallback:
 
 
 # ---------------------------------------------------------------------------
-# kraken-perps / kraken-futures (Kraken Futures, Tardis `cryptofacilities`)
+# kraken-perps / kraken-futures (Kraken Futures)
 # ---------------------------------------------------------------------------
 
 
@@ -377,10 +377,10 @@ class TestKrakenDerivativeFetch:
         assert [sd["id"] for sd in rows] == ["FF_XBTUSD_261225", "FI_XBTUSD_261225", "FF_ETHUSD_261023"]
         assert all(sd["type"] == "future" for sd in rows)
 
-    def test_every_api_id_is_a_tardis_id(self):
-        tardis_ids = {row["id"] for row in TARDIS_DERIV}
+    def test_every_api_id_is_a_history_id(self):
+        history_ids = {row["id"] for row in HISTORY_DERIV}
         rows = _fetch_deriv(fetch_kraken_perpetual) + _fetch_deriv(fetch_kraken_futures)
-        assert {sd["id"] for sd in rows} <= tardis_ids
+        assert {sd["id"] for sd in rows} <= history_ids
 
     def test_internal_ids(self):
         perps = {sd["id"]: _deriv_iid(sd) for sd in _fetch_deriv(fetch_kraken_perpetual)}
@@ -555,7 +555,7 @@ class TestKrakenDerivativePayloadShape:
             _fetch_deriv(fetch_kraken_perpetual, payload)
 
 
-class TestKrakenDerivativeTardisFallback:
+class TestKrakenDerivativeHistoryFallback:
     @pytest.mark.parametrize(
         ("sid", "ctype", "expected"),
         [
@@ -573,7 +573,7 @@ class TestKrakenDerivativeTardisFallback:
             ("FV_XRPXBT_190628", "future", "future-XRP-BTC:BTC-20190628"),
         ],
     )
-    def test_tardis_ids(self, sid, ctype, expected):
+    def test_history_ids(self, sid, ctype, expected):
         assert _deriv_iid({"id": sid, "type": ctype}) == expected
 
     def test_quantity_units_from_the_naming_scheme(self):
@@ -585,8 +585,8 @@ class TestKrakenDerivativeTardisFallback:
         assert unit("FI_XBTUSD_191227", "future") == "quote"
         assert unit("FV_XRPXBT_190628", "future") == "base"
 
-    def test_every_non_option_tardis_row_parses(self):
-        for row in TARDIS_DERIV:
+    def test_every_non_option_history_row_parses(self):
+        for row in HISTORY_DERIV:
             if row["type"] == "option":
                 continue
             parse_kraken_derivative("kraken-perps", row)
@@ -607,9 +607,9 @@ class TestKrakenDerivativeTardisFallback:
         with pytest.raises(SkipSymbol):
             parse_kraken_derivative("kraken-perps", {"id": sid, "type": ctype})
 
-    def test_tardis_rows_match_api_rows(self):
+    def test_history_rows_match_api_rows(self):
         rows = _fetch_deriv(fetch_kraken_perpetual) + _fetch_deriv(fetch_kraken_futures)
         api = {sd["id"]: _deriv_iid(sd) for sd in rows}
-        tardis = {row["id"]: _deriv_iid(row) for row in TARDIS_DERIV if row["id"] in api}
-        assert len(tardis) == len(api)
-        assert tardis == api
+        history = {row["id"]: _deriv_iid(row) for row in HISTORY_DERIV if row["id"] in api}
+        assert len(history) == len(api)
+        assert history == api

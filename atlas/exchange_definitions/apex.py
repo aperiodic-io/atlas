@@ -13,7 +13,7 @@ listed (tradeable and shown) contract of both lists under
 ``symbol = baseTokenId`` and ``denominator = settleAssetId`` (USDT), settled in
 that token, so the Atlas ID is ``perpetual-<base>-USDT:USDT``.
 
-Tardis does not cover ApeX Omni: this API is the only source.
+This API is the venue's only source.
 """
 
 from __future__ import annotations

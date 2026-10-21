@@ -96,7 +96,7 @@ def _assert_recent(timestamp: str) -> None:
 
 
 def _fallback(parser, exchange: str, sd: dict) -> str:
-    """The internal_id a Tardis-only row (id and type only) gets."""
+    """The internal_id a history row (id and type only) gets."""
     return parser(exchange, {"id": sd["id"], "type": sd["type"]}).internal_id
 
 
@@ -119,11 +119,11 @@ class TestHtxSpot:
         _spot(calls=calls)
         assert [url for url, _ in calls] == [SPOT_SYMBOLS_URL, SPOT_CURRENCIES_URL]
 
-    def test_every_fixture_row_is_returned_with_its_tardis_id(self):
+    def test_every_fixture_row_is_returned_with_its_history_id(self):
         rows = _spot()
         assert [sd["id"] for sd in rows] == [item["sc"] for item in SPOT_SYMBOLS["data"]]
         assert all(sd["type"] == "spot" for sd in rows)
-        # Tardis `huobi` ids are the lowercase symbol codes.
+        # History `huobi` ids are the lowercase symbol codes.
         assert all(sd["id"] == sd["id"].lower() for sd in rows)
 
     @pytest.mark.parametrize(
@@ -178,7 +178,7 @@ class TestHtxSpot:
     def test_renamed_assets_take_the_venues_current_codes(self, sid, internal_id):
         rows = _by_id(_spot())
         assert parse_htx_spot("htx-spot", rows[sid]).internal_id == internal_id
-        # A Tardis-only row of the same market reads the same.
+        # A history row of the same market reads the same.
         assert _fallback(parse_htx_spot, "htx-spot", rows[sid]) == internal_id
 
     def test_legs_are_uppercase_venue_codes(self):
@@ -281,7 +281,7 @@ class TestHtxSpot:
         with pytest.raises(ValueError):
             _spot(currencies={"status": "error", "err-msg": "busy"})
 
-    def test_tardis_fallback_equals_the_api_row_for_every_fixture_market(self):
+    def test_history_fallback_equals_the_api_row_for_every_fixture_market(self):
         mismatches = {
             sd["id"]: (parse_htx_spot("htx-spot", sd).internal_id, _fallback(parse_htx_spot, "htx-spot", sd))
             for sd in _spot()
@@ -291,7 +291,7 @@ class TestHtxSpot:
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
         [
-            # Tardis-only markets the API no longer lists.
+            # history markets the API no longer lists.
             ("maticusdt", "spot-MATIC-USDT"),
             ("paxhusd", "spot-PAX-HUSD"),
             ("btttrx", "spot-BTT-TRX"),
@@ -301,10 +301,10 @@ class TestHtxSpot:
             ("我踏马来了usdt", "spot-我踏马来了-USDT"),
         ],
     )
-    def test_tardis_only_ids(self, sid, internal_id):
+    def test_history_only_ids(self, sid, internal_id):
         assert parse_htx_spot("htx-spot", {"id": sid, "type": "spot"}).internal_id == internal_id
 
-    def test_unsplittable_tardis_id_is_skipped(self):
+    def test_unsplittable_history_id_is_skipped(self):
         with pytest.raises(SkipSymbol):
             parse_htx_spot("htx-spot", {"id": "nothing", "type": "spot"})
 
@@ -346,12 +346,12 @@ class TestHtxPerpsCoin:
         assert contract.quantity_unit == "quote"
         assert parse_htx_coin_swap("htx-perps-coin", rows["DOGE-USD"]).internal_id == "perpetual-DOGE-USD:DOGE"
 
-    def test_tardis_fallback_equals_the_api_row(self):
+    def test_history_fallback_equals_the_api_row(self):
         for sd in _coin_swap():
             assert _fallback(parse_htx_coin_swap, "htx-perps-coin", sd) == parse_htx_coin_swap(
                 "htx-perps-coin", sd
             ).internal_id
-        # A Tardis-only (delisted) swap.
+        # A history (delisted) swap.
         assert (
             parse_htx_coin_swap("htx-perps-coin", {"id": "YFII-USD", "type": "perpetual"}).internal_id
             == "perpetual-YFII-USD:YFII"
@@ -469,7 +469,7 @@ class TestHtxFuturesCoin:
         assert out["BTC231117"]["end_date"] == "2023-11-17T08:00:00.000Z"
 
     def test_rolling_aliases_are_not_dated(self):
-        # Tardis `huobi-dm` only has aliases; they still parse but carry no date.
+        # History `huobi-dm` only has aliases; they still parse but carry no date.
         contract = parse_htx_coin_futures("htx-futures-coin", {"id": "BTC_CQ", "type": "future"})
         assert contract.delivery_date is None
 
@@ -568,11 +568,11 @@ class TestHtxFuturesUsdt:
             ("DOSE-USDT-250103", "future-DOSE-USDT:USDT-20250103"),
         ],
     )
-    def test_tardis_only_ids(self, sid, internal_id):
+    def test_history_only_ids(self, sid, internal_id):
         assert parse_htx_usdt_futures("htx-futures-usdt", {"id": sid, "type": "future"}).internal_id == internal_id
 
     @pytest.mark.parametrize("sid", ["BTC-USDT", "BTC-USDT-CW", "BTC-USDT-261399"])
-    def test_unparseable_tardis_ids_are_skipped(self, sid):
+    def test_unparseable_history_ids_are_skipped(self, sid):
         with pytest.raises(SkipSymbol):
             parse_htx_usdt_futures("htx-futures-usdt", {"id": sid, "type": "future"})
 

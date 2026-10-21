@@ -1,7 +1,7 @@
 """KuCoin spot from the exchange API (`kucoin-spot`).
 
 Fixtures under `tests/fixtures/kucoin/` are excerpts of the real
-`/api/v2/symbols` and `/api/v3/currencies` responses and of Tardis's `kucoin`
+`/api/v2/symbols` and `/api/v3/currencies` responses and of the historical `kucoin`
 symbol list, captured on 2026-10-20.
 """
 
@@ -17,7 +17,7 @@ import pytest
 
 from atlas.contracts import ContractType
 from atlas.exchange_definitions.common import SkipSymbol
-from atlas.exchange_definitions.kucoin import fetch_kucoin_spot, parse_kucoin, parse_kucoin_spot
+from atlas.exchange_definitions.kucoin import fetch_kucoin_spot, parse_kucoin_spot
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "kucoin"
 SLUG = "kucoin-spot"
@@ -29,7 +29,7 @@ def _load(name: str):
 
 SYMBOLS = _load("symbols.json")
 CURRENCIES = _load("currencies.json")
-TARDIS = _load("tardis.json")
+HISTORY = _load("history.json")
 
 
 def _response(payload: object) -> MagicMock:
@@ -68,7 +68,7 @@ def _internal(sd: dict) -> str:
 
 
 class TestFetch:
-    def test_every_listed_pair_is_returned_with_its_tardis_id(self):
+    def test_every_listed_pair_is_returned_with_its_history_id(self):
         rows = _fetch()
         assert [sd["id"] for sd in rows] == [item["symbol"] for item in SYMBOLS["data"]]
         assert all(sd["type"] == "spot" for sd in rows)
@@ -212,18 +212,18 @@ class TestMalformed:
             _fetch(currencies={"code": "429000", "msg": "too many requests"})
 
 
-class TestTardisFallback:
-    def test_every_tardis_row_parses(self):
-        for row in TARDIS:
+class TestHistoryFallback:
+    def test_every_history_row_parses(self):
+        for row in HISTORY:
             contract = parse_kucoin_spot(SLUG, {"id": row["id"], "type": row["type"]})
             assert contract.instrument_type == ContractType.spot
 
-    def test_tardis_rows_match_api_rows(self):
+    def test_history_rows_match_api_rows(self):
         api = {sd["id"]: _internal(sd) for sd in _fetch()}
-        tardis = {row["id"]: _internal({"id": row["id"], "type": "spot"}) for row in TARDIS}
-        shared = set(api) & set(tardis)
+        history = {row["id"]: _internal({"id": row["id"], "type": "spot"}) for row in HISTORY}
+        shared = set(api) & set(history)
         assert shared == {"BTC-USDT", "ETH-BTC", "BTC-EUR", "SOL-KCS", "BTC-USD1"}
-        assert {i: api[i] for i in shared} == {i: tardis[i] for i in shared}
+        assert {i: api[i] for i in shared} == {i: history[i] for i in shared}
 
     def test_renamed_asset_codes_map_to_their_tickers(self):
         # KuCoin renamed `BCHSV-USDT` to `BSV-USDT` on 2026-09-22.
@@ -251,5 +251,3 @@ class TestTardisFallback:
         assert parse_kucoin_spot(SLUG, {"id": "BCHSV-USDT", "type": "spot"}).original_id == "BCHSV-USDT"
 
 
-def test_legacy_kucoin_parser_is_unchanged():
-    assert parse_kucoin("kucoin", {"id": "BCHSV-USDT", "type": "spot"}).internal_id == "spot-BCHSV-USDT"

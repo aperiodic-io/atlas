@@ -19,7 +19,7 @@ def parse_upbit(exchange: str, sd: SymbolData) -> Contract:
 # --- Exchange API (upbit-spot) -------------------------------------------------
 #
 # `/v1/market/all` lists every market Upbit trades as `QUOTE-BASE` (`KRW-BTC`,
-# `BTC-0G`, `USDT-BREV`), the Tardis id. Upbit publishes no market status,
+# `BTC-0G`, `USDT-BREV`), the Atlas id. Upbit publishes no market status,
 # listing time or delisting time: a delisted market simply leaves the list.
 # Markets under an investment warning or caution (`market_event.warning`,
 # `market_event.caution`, formerly `market_warning`) still trade and stay
@@ -28,7 +28,7 @@ _MARKETS_URL = "https://api.upbit.com/v1/market/all"
 
 
 def parse_upbit_api(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `QUOTE-BASE`."""
+    """API legs first; history rows are `QUOTE-BASE`."""
     return parse_recorded_legs(exchange, sd) or parse_upbit(exchange, sd)
 
 

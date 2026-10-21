@@ -12,15 +12,9 @@ from .common import (
     delisted_end_date,
     instrument_type,
     make_contract,
-    parse_concat,
 )
 from .fields import parse_recorded_legs
 from .http import get_json
-
-
-def parse_gemini(exchange: str, sd: SymbolData) -> Contract:
-    quotes = ["USDT", "GUSD", "USDC", "USD", "BTC", "ETH", "DAI"]
-    return parse_concat(exchange, sd, quotes)
 
 
 # --- Exchange API (gemini-spot, gemini-perps) ---------------------------------
@@ -28,7 +22,7 @@ def parse_gemini(exchange: str, sd: SymbolData) -> Contract:
 # `/v1/symbols` lists every market as a lowercase ticker (`btcusd`,
 # `btcgusdperp`); base, quote, product type and status come only from
 # `/v1/symbols/details/<symbol>`, one request per market (there is no bulk
-# details endpoint: `/v1/symbols/details/ALL` is a 400 `InvalidSymbol`). Tardis
+# details endpoint: `/v1/symbols/details/ALL` is a 400 `InvalidSymbol`). Atlas
 # ids are the details' uppercase `symbol` (`BTCUSD`, `BTCGUSDPERP`).
 _SYMBOLS_URL = "https://api.gemini.com/v1/symbols"
 _DETAILS_URL = "https://api.gemini.com/v1/symbols/details/{}"
@@ -54,7 +48,7 @@ _GEMINI_CLOSED = "closed"
 # say otherwise.
 _GEMINI_FIAT = {"USD", "EUR", "GBP", "SGD", "AUD", "CAD", "CHF", "HKD", "JPY"}
 
-# Quote assets for Tardis-only spot ids, longest and most specific first so
+# Quote assets for history spot ids, longest and most specific first so
 # `BTCRLUSD` is BTC/RLUSD and `BTCGUSD` BTC/GUSD, not BTCRL/USD or BTCG/USD.
 _SPOT_QUOTES = [
     "RLUSD",
@@ -76,8 +70,8 @@ _SPOT_QUOTES = [
 # Perpetuals are `<BASE><SETTLE>PERP`, settled in GUSD or USDC.
 _PERP_QUOTES = ["GUSD", "USDC"]
 # Gemini assets ending in `G`, whose dollar markets (`PAXGUSD`) read as a
-# GUSD market (PAX/GUSD) otherwise. Every such asset in Tardis's Gemini
-# history; API rows carry their own legs.
+# GUSD market (PAX/GUSD) otherwise. Every such asset in Gemini's history
+# on file; API rows carry their own legs.
 _G_BASES = {"PAXG", "USDG", "MOODENG", "WCFG"}
 
 
@@ -94,7 +88,7 @@ def _split_gemini(sid: str, quotes: list[str]) -> tuple[str, str] | None:
 
 
 def parse_gemini_api(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BTCUSD` spot or `BTCGUSDPERP` perps."""
+    """API legs first; history rows are `BTCUSD` spot or `BTCGUSDPERP` perps."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

@@ -2,7 +2,7 @@
 
 Fixtures are excerpts of real responses captured on 2026-10-20:
 `markets.json` from `/v1/market/all?is_details=true` (including markets
-under an investment warning and caution) and `tardis.json` Tardis's Upbit
+under an investment warning and caution) and `history.json` the historical Upbit
 symbol list for the same and some delisted markets.
 """
 
@@ -19,7 +19,7 @@ from atlas.exchange_definitions.upbit import fetch_upbit_spot, parse_upbit, pars
 
 FIXTURES = Path(__file__).parent / "fixtures" / "upbit"
 MARKETS = json.loads((FIXTURES / "markets.json").read_text(encoding="utf-8"))
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
+HISTORY = json.loads((FIXTURES / "history.json").read_text(encoding="utf-8"))
 
 
 def _response(payload: object) -> MagicMock:
@@ -56,10 +56,10 @@ class TestFetch:
     def test_universe_is_every_market(self, rows):
         assert set(rows) == {m["market"] for m in MARKETS}
 
-    def test_ids_are_the_tardis_ids(self, rows):
-        tardis_ids = {s["id"] for s in TARDIS}
-        # KRW-MPLX was listed after Tardis's symbol list was taken.
-        assert set(rows) - tardis_ids == {"KRW-MPLX"}
+    def test_ids_are_the_history_ids(self, rows):
+        history_ids = {s["id"] for s in HISTORY}
+        # KRW-MPLX was listed after the historical symbol list was taken.
+        assert set(rows) - history_ids == {"KRW-MPLX"}
 
     def test_row_shape(self, rows):
         assert rows["KRW-BTC"] == {
@@ -128,7 +128,7 @@ class TestMalformedPayloads:
             _fetch([{"market": market}])
 
 
-class TestTardisFallback:
+class TestHistoryFallback:
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
         [
@@ -146,13 +146,13 @@ class TestTardisFallback:
         with pytest.raises(SkipSymbol):
             parse_upbit_api("upbit-spot", {"id": sid, "type": "spot"})
 
-    def test_every_tardis_fixture_row_parses(self):
-        for row in TARDIS:
+    def test_every_history_fixture_row_parses(self):
+        for row in HISTORY:
             parse_upbit_api("upbit-spot", {"id": row["id"], "type": row["type"]})
 
     def test_fallback_matches_api_rows(self, rows):
-        tardis_ids = {s["id"] for s in TARDIS}
-        overlap = set(rows) & tardis_ids
+        history_ids = {s["id"] for s in HISTORY}
+        overlap = set(rows) & history_ids
         assert len(overlap) == len(rows) - 1
         for sid in overlap:
             assert _iid({"id": sid, "type": "spot"}) == _iid(rows[sid]), sid

@@ -14,9 +14,8 @@ from unittest.mock import MagicMock, patch
 import pytest
 import requests
 
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.aster import aster_symbols, fetch_aster_perps
-from atlas.exchanges import get_allowed_types, get_exchange_fetcher, to_tardis_exchange_id
+from atlas.exchanges import get_allowed_types, get_exchange_fetcher
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
@@ -29,14 +28,9 @@ def _by_id() -> dict[str, dict]:
 
 
 def test_registered_for_the_daily_update_with_its_own_fetcher():
-    # The update skips beta exchanges; Aster's API is its only full source, so
-    # it must be maintained (not beta) and refreshed by the daily job.
     assert EXCHANGE in EXCHANGES
-    assert not is_beta_exchange(EXCHANGE)
     assert get_exchange_fetcher(EXCHANGE) is fetch_aster_perps
     assert get_allowed_types(EXCHANGE) == {"perpetual"}
-    # Tardis lists Aster as aster-futures (same lower-cased ids).
-    assert to_tardis_exchange_id(EXCHANGE) == "aster-futures"
 
 
 def test_fetcher_keeps_every_perpetual_and_drops_unlisted_ones():
@@ -108,7 +102,7 @@ def test_listing_and_delisting_times_come_from_the_venue():
     }
 
 
-def test_tardis_only_rows_parse_without_asset_fields():
+def test_history_only_rows_parse_without_asset_fields():
     for sid, internal_id in [
         ("btcusdt", "perpetual-BTC-USDT:USDT"),
         ("btcusd1", "perpetual-BTC-USD1:USD1"),

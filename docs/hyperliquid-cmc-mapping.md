@@ -97,15 +97,12 @@ Remove `--dry-run` from the resolver to persist reviewed results. The recovery
 records Atlas's first committed observation as `first_capture`; it does not claim
 the exchange listing date. Existing captures are preserved. Disappearance/reappearance
 starts a new instance, uncommitted instruments are not assigned invented dates, and
-shallow history is rejected. Tardis refreshes replace recovered dates with their
-own lifecycle metadata. Git capture recovery and direct-exchange lifecycles have
+shallow history is rejected. Git capture recovery and direct-exchange lifecycles have
 fixture tests.
 
 Future daily updates stamp newly observed Hyperliquid API rows with a durable
-`first_capture`. Repeated updates preserve that capture date and CMC ID.
-Partial hybrid Tardis/API responses clear
-lifecycle fields only for rows actually supplying Tardis bounds, so the
-scheduled new-symbol resolver can continue mapping future direct-API listings.
+`first_capture`. Repeated updates preserve that capture date and CMC ID, so the scheduled
+new-symbol resolver can continue mapping future direct-API listings.
 
 Recovery added captures to 59 perpetual and 329 spot rows. The backfill scans all
 863 existing rows, retaining every instrument and its lifecycle. Non-crypto builder

@@ -1,10 +1,9 @@
-"""The venues that were Tardis-only parsers now have exchange-API fetchers.
+"""The centralised venues outside the live producers, read from their own APIs.
 
-Each Tardis-named beta exchange (`kraken`, `gemini`, `huobi`, ...) gets stable
-slugs in the live-producers scheme (`kraken-spot`, `gemini-perps`,
-`htx-spot`, ...), read from the venue's own API and merged with Tardis history
-through `tardis_id`. The Tardis-named slugs stay beta parsers. BitMEX (closed
-on 2026-09-23) and FTX have no API left, so they stay beta only.
+Kraken, Bitfinex, Bitstamp, Gemini, HTX, KuCoin, Phemex, Poloniex, Upbit and
+Crypto.com spot have stable slugs in the live-producers scheme (`kraken-spot`,
+`gemini-perps`, `htx-spot`, ...), with their history bundled. BitMEX (closed
+on 2026-09-23) and FTX have no API left and are not registered.
 """
 
 from __future__ import annotations
@@ -17,65 +16,39 @@ from types import SimpleNamespace
 import pytest
 
 from atlas import SecurityMaster
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchanges import (
     EXCHANGE_DEFINITIONS,
     get_allowed_types,
     get_exchange_fetcher,
-    get_symbol_filter,
-    is_on_tardis,
-    to_tardis_exchange_id,
 )
 from atlas.parsers import parse_contract
 from atlas.update import EXCHANGES, update
-from atlas.update_sources import ExchangeApiSymbolSource, HybridSymbolSource, TardisSymbolSource
+from atlas.update_sources import ExchangeApiSymbolSource
 
 _DATA_DIR = Path(__file__).resolve().parents[1] / "atlas" / "data"
 
-# slug -> (Tardis id or None when Tardis has no compatible listing, allowed types)
-NEW_VENUES: dict[str, tuple[str | None, set[str]]] = {
-    "bitfinex-spot": ("bitfinex", {"spot"}),
-    "bitfinex-perps": ("bitfinex-derivatives", {"perpetual"}),
-    "bitstamp-spot": ("bitstamp", {"spot"}),
-    "bitstamp-perps": ("bitstamp", {"perpetual"}),
-    "cryptocom-spot": ("crypto-com", {"spot"}),
-    "gemini-spot": ("gemini", {"spot"}),
-    "gemini-perps": ("gemini", {"perpetual"}),
-    "htx-spot": ("huobi", {"spot"}),
-    "htx-perps-coin": ("huobi-dm-swap", {"perpetual"}),
-    # Tardis's `huobi-dm` lists only rolling aliases (`BTC_CQ`), not contracts.
-    "htx-futures-coin": (None, {"future"}),
-    "htx-futures-usdt": ("huobi-dm-linear-swap", {"future"}),
-    "kraken-spot": ("kraken", {"spot"}),
-    "kraken-perps": ("cryptofacilities", {"perpetual"}),
-    "kraken-futures": ("cryptofacilities", {"future"}),
-    "kucoin-spot": ("kucoin", {"spot"}),
-    "phemex-spot": ("phemex", {"spot"}),
-    "phemex-perps": ("phemex", {"perpetual"}),
-    "poloniex-spot": ("poloniex", {"spot"}),
-    "upbit-spot": ("upbit", {"spot"}),
+# slug -> allowed instrument types
+NEW_VENUES: dict[str, set[str]] = {
+    "bitfinex-spot": {"spot"},
+    "bitfinex-perps": {"perpetual"},
+    "bitstamp-spot": {"spot"},
+    "bitstamp-perps": {"perpetual"},
+    "cryptocom-spot": {"spot"},
+    "gemini-spot": {"spot"},
+    "gemini-perps": {"perpetual"},
+    "htx-spot": {"spot"},
+    "htx-perps-coin": {"perpetual"},
+    "htx-futures-coin": {"future"},
+    "htx-futures-usdt": {"future"},
+    "kraken-spot": {"spot"},
+    "kraken-perps": {"perpetual"},
+    "kraken-futures": {"future"},
+    "kucoin-spot": {"spot"},
+    "phemex-spot": {"spot"},
+    "phemex-perps": {"perpetual"},
+    "poloniex-spot": {"spot"},
+    "upbit-spot": {"spot"},
 }
-
-LEGACY_BETA = [
-    "bitfinex",
-    "bitfinex-derivatives",
-    "bitstamp",
-    "crypto-com",
-    "cryptofacilities",
-    "gemini",
-    "huobi",
-    "huobi-dm",
-    "huobi-dm-swap",
-    "huobi-dm-linear-swap",
-    "kraken",
-    "kucoin",
-    "phemex",
-    "poloniex",
-    "upbit",
-]
-
-# No live API remains for these.
-DEFUNCT = ["bitmex", "ftx"]
 
 
 class TestRegistry:
@@ -83,71 +56,18 @@ class TestRegistry:
     def test_new_venue_is_stable_with_a_fetcher(self, exchange):
         assert exchange in EXCHANGE_DEFINITIONS
         assert get_exchange_fetcher(exchange) is not None
-        assert is_beta_exchange(exchange) is False
 
     @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
     def test_new_venue_is_refreshed_by_default(self, exchange):
         assert exchange in EXCHANGES
 
     @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
-    def test_tardis_link(self, exchange):
-        tardis_id, _ = NEW_VENUES[exchange]
-        if tardis_id is None:
-            assert is_on_tardis(exchange) is False
-        else:
-            assert is_on_tardis(exchange) is True
-            assert to_tardis_exchange_id(exchange) == tardis_id
-
-    @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
     def test_allowed_types(self, exchange):
-        assert get_allowed_types(exchange) == NEW_VENUES[exchange][1]
-
-    @pytest.mark.parametrize("exchange", LEGACY_BETA + DEFUNCT)
-    def test_tardis_named_exchanges_stay_beta_parsers(self, exchange):
-        assert is_beta_exchange(exchange) is True
-        assert get_exchange_fetcher(exchange) is None
-        assert not (_DATA_DIR / f"{exchange}.json").exists()
+        assert get_allowed_types(exchange) == NEW_VENUES[exchange]
 
     def test_every_registered_exchange_is_in_the_default_run_once(self):
         assert len(EXCHANGES) == len(set(EXCHANGES))
         assert set(EXCHANGES) == set(EXCHANGE_DEFINITIONS)
-
-    def test_only_defunct_and_tardis_named_exchanges_are_beta(self):
-        beta = {e for e in EXCHANGE_DEFINITIONS if is_beta_exchange(e)}
-        legacy_with_successor = {
-            "bitget", "bitget-futures", "coinbase", "deribit", "gate-io", "gate-io-futures",
-        }
-        assert beta == set(LEGACY_BETA) | set(DEFUNCT) | legacy_with_successor
-
-    def test_venues_sharing_a_tardis_feed_do_not_overlap(self):
-        """Two slugs reading one Tardis feed must split it by type or filter."""
-        by_feed: dict[str, list[str]] = {}
-        for exchange, definition in EXCHANGE_DEFINITIONS.items():
-            if definition.beta or not definition.on_tardis:
-                continue
-            by_feed.setdefault(definition.tardis_id, []).append(exchange)
-        probes = {
-            "spot": ["BTCUSDT", "BTC_USDT", "BTC-USDT", "XBT/USD", "btcusd", "sBTCUSDT", "KRW-BTC"],
-            "perpetual": [
-                "BTCUSDT", "BTC_USDT", "BTC-USDT", "BTC-USD", "PF_XBTUSD", "PI_XBTUSD",
-                "btcusd-perp", "BTCGUSDPERP", "BTCPERP", "BTCF0:USTF0",
-            ],
-            "future": ["BTC-USDT-261023", "FF_ETHUSD_261023", "BTC-26DEC26", "BTCUSD-261127"],
-        }
-        for feed, exchanges in by_feed.items():
-            if len(exchanges) < 2:
-                continue
-            for ctype, ids in probes.items():
-                for sid in ids:
-                    row = {"id": sid, "type": ctype}
-                    owners = [
-                        e
-                        for e in exchanges
-                        if ctype in (get_allowed_types(e) or {"spot", "perpetual", "future"})
-                        and (get_symbol_filter(e) or (lambda _r: True))(row)
-                    ]
-                    assert len(owners) <= 1, (feed, row, owners)
-
 
 class TestRouting:
     @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
@@ -163,23 +83,6 @@ class TestRouting:
             "availableSymbols": []
         }
         assert calls == [7]
-
-    def test_tardis_source_refuses_the_venue_tardis_cannot_list(self):
-        with pytest.raises(ValueError, match="does not list"):
-            TardisSymbolSource().fetch_exchange("htx-futures-coin")
-
-    def test_hybrid_source_reads_only_the_api_for_the_venue_tardis_cannot_list(self, monkeypatch):
-        definition = EXCHANGE_DEFINITIONS["htx-futures-coin"]
-        row = {"id": "BTC261225", "type": "future"}
-        monkeypatch.setitem(
-            EXCHANGE_DEFINITIONS,
-            "htx-futures-coin",
-            replace(definition, exchange_fetcher=lambda _t: [row]),
-        )
-        tardis = SimpleNamespace(fetch_exchange=lambda _e: pytest.fail("Tardis must not be read"))
-        source = HybridSymbolSource(tardis_source=tardis)
-        assert source.fetch_exchange("htx-futures-coin") == {"availableSymbols": [row]}
-
 
 class TestUpdate:
     @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
@@ -214,7 +117,7 @@ class TestBundledSnapshots:
     def test_snapshot_is_bundled_and_fully_mapped(self, exchange):
         rows = _snapshot(exchange)
         assert rows
-        assert {row["type"] for row in rows} <= NEW_VENUES[exchange][1]
+        assert {row["type"] for row in rows} <= NEW_VENUES[exchange]
         assert [row["id"] for row in rows if not row.get("internal_id")] == []
         assert [row["id"] for row in rows if not row.get("first_capture")] == []
         assert len({row["id"] for row in rows}) == len(rows)
@@ -233,7 +136,7 @@ class TestBundledSnapshots:
     def test_open_rows_come_from_the_venue_api(self, exchange):
         """Every open row was seen by the fetcher (it carries the venue's legs).
 
-        Tardis history the API no longer lists is either closed or pending
+        History the API no longer lists is either closed or pending
         confirmation (`missing_since`) by the next daily run.
         """
         open_rows = [
@@ -244,7 +147,7 @@ class TestBundledSnapshots:
 
     @pytest.mark.parametrize("exchange", sorted(NEW_VENUES))
     def test_derivatives_carry_margin_and_size(self, exchange):
-        if NEW_VENUES[exchange][1] == {"spot"}:
+        if NEW_VENUES[exchange] == {"spot"}:
             pytest.skip("spot")
         for row in _snapshot(exchange):
             assert row.get("margin"), row["id"]
@@ -269,7 +172,7 @@ class TestBundledSnapshots:
     ("exchange", "original_id", "internal_id"),
     [
         ("kraken-spot", "BTC/USD", "spot-BTC-USD"),
-        # Tardis recorded Kraken's WebSocket v1 names before 2026-07-10.
+        # History before 2026-07-10 holds Kraken's WebSocket v1 names.
         ("kraken-spot", "XBT/USD", "spot-BTC-USD"),
         ("kraken-perps", "PF_XBTUSD", "perpetual-BTC-USD:USD"),
         ("kraken-perps", "PI_XBTUSD", "perpetual-BTC-USD:BTC"),

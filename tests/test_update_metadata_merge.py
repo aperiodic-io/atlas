@@ -6,32 +6,11 @@ from atlas.update import (
     _merge_missing_rows,
     _matches_exchange_constraints,
 )
-from atlas.update import _apply_snapshot_metadata
 import json
 import importlib
 import io
 from contextlib import redirect_stdout
 from types import SimpleNamespace
-
-
-def test_apply_snapshot_metadata_preserves_existing_lifecycle_fields() -> None:
-    symbols = [
-        {
-            "id": "OLDUSDT",
-            "availableSince": "2024-01-01T00:00:00.000Z",
-            "availableTo": "2025-01-01T00:00:00.000Z",
-        }
-    ]
-
-    mapped = _apply_snapshot_metadata(symbols)
-
-    assert mapped == [
-        {
-            "id": "OLDUSDT",
-            "first_capture": "2024-01-01T00:00:00.000Z",
-            "end_date": "2025-01-01T00:00:00.000Z",
-        }
-    ]
 
 
 def test_merge_existing_fields_keeps_metadata_when_source_missing() -> None:
@@ -42,7 +21,7 @@ def test_merge_existing_fields_keeps_metadata_when_source_missing() -> None:
             "type": "spot",
             "first_capture": "2020-01-01T00:00:00.000Z",
             "end_date": None,
-            "custom_metadata": "from-tardis",
+            "custom_metadata": "from-history",
         }
     }
 
@@ -51,7 +30,7 @@ def test_merge_existing_fields_keeps_metadata_when_source_missing() -> None:
     assert "first_capture" not in symbols[0]
     assert "custom_metadata" not in symbols[0]
     assert merged[0]["first_capture"] == "2020-01-01T00:00:00.000Z"
-    assert merged[0]["custom_metadata"] == "from-tardis"
+    assert merged[0]["custom_metadata"] == "from-history"
 
 
 def test_merge_existing_fields_does_not_override_source_values() -> None:
@@ -68,12 +47,6 @@ def test_merge_existing_fields_does_not_override_source_values() -> None:
 
     assert symbols[0]["first_capture"] == "2024-01-01T00:00:00.000Z"
     assert merged[0]["first_capture"] == "2024-01-01T00:00:00.000Z"
-
-
-def test_tardis_refresh_replaces_recovered_capture_date() -> None:
-    existing = {"HYPE/USDC": {"id": "HYPE/USDC", "first_capture": "2026-01-01T00:00:00Z"}}
-    rows = _merge_existing_fields([{"id": "HYPE/USDC", "first_capture": "2025-01-01T00:00:00Z"}], existing, ignore_metadata=True)
-    assert rows == [{"id": "HYPE/USDC", "first_capture": "2025-01-01T00:00:00Z"}]
 
 
 def test_direct_refresh_retains_capture_date_until_replaced() -> None:
@@ -95,29 +68,6 @@ def test_new_direct_hyperliquid_rows_receive_stable_capture_dates(tmp_path, monk
     assert "first_capture_source" not in original
     assert updater.update(["hyperliquid-spot"], source) == []
     assert json.loads(path.read_text())[0]["first_capture"] == original["first_capture"]
-
-
-def test_partial_tardis_refresh_preserves_direct_capture_instances(tmp_path, monkeypatch) -> None:
-    updater = importlib.import_module("atlas.update")
-    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    path = tmp_path / "hyperliquid-spot.json"
-    path.write_text(json.dumps([
-        {"id": "HYPE/USDC", "type": "spot", "first_capture": "2026-03-01T00:00:00Z", "cmc_id": 32196},
-        {"id": "HFUN/USDC", "type": "spot", "first_capture": "2026-03-01T00:00:00Z", "cmc_id": 34624},
-    ]))
-    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
-        {"id": "HYPE/USDC", "type": "spot", "availableSince": "2025-01-01T00:00:00Z"},
-        {"id": "HFUN/USDC", "type": "spot"},
-        {"id": "NEW/USDC", "type": "spot"},
-    ]})
-    assert updater.update(["hyperliquid-spot"], source) == []
-    rows = {row["id"]: row for row in json.loads(path.read_text())}
-    assert rows["HYPE/USDC"]["first_capture"] == "2025-01-01T00:00:00Z"
-    assert rows["HFUN/USDC"]["first_capture"] == "2026-03-01T00:00:00Z"
-    assert rows["HYPE/USDC"]["cmc_id"] == 32196
-    assert rows["HFUN/USDC"]["cmc_id"] == 34624
-    assert rows["NEW/USDC"]["first_capture"]
-    assert all("first_capture_source" not in row for row in rows.values())
 
 
 def test_update_progress_supports_ascii_terminals(tmp_path, monkeypatch) -> None:
@@ -176,28 +126,6 @@ def test_merge_symbol_supports_other_protected_fields() -> None:
     )
 
     assert merged["review_status"] == "approved"
-
-
-def test_merge_existing_fields_can_skip_existing_metadata() -> None:
-    symbols = [{"id": "BTCUSDT", "type": "spot"}]
-    existing_by_id = {
-        "BTCUSDT": {
-            "id": "BTCUSDT",
-            "type": "spot",
-            "first_capture": "2020-01-01T00:00:00.000Z",
-            "end_date": "2024-01-01T00:00:00.000Z",
-            "custom_metadata": "from-tardis",
-        }
-    }
-
-    merged = _merge_existing_fields(symbols, existing_by_id, ignore_metadata=True)
-
-    assert "first_capture" not in symbols[0]
-    assert "end_date" not in symbols[0]
-    assert "custom_metadata" not in symbols[0]
-    assert "first_capture" not in merged[0]
-    assert "end_date" not in merged[0]
-    assert merged[0]["custom_metadata"] == "from-tardis"
 
 
 def test_product_constraints_remove_stale_cross_product_rows() -> None:
@@ -297,8 +225,8 @@ def test_append_contract_size_change_omits_history_field_when_unchanged_from_exi
 
 
 def test_new_direct_rows_receive_capture_dates_on_every_exchange(tmp_path, monkeypatch) -> None:
-    # SecurityMaster.load drops rows without first_capture, so a venue Tardis
-    # does not cover would otherwise be invisible to lookups.
+    # SecurityMaster.load drops rows without first_capture, so a row new to the
+    # file would otherwise be invisible to lookups.
     updater = importlib.import_module("atlas.update")
     monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
     source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
@@ -312,96 +240,6 @@ def test_new_direct_rows_receive_capture_dates_on_every_exchange(tmp_path, monke
     assert json.loads(path.read_text())[0]["first_capture"] == original["first_capture"]
 
 
-def test_partial_tardis_refresh_keeps_direct_capture_on_every_exchange(tmp_path, monkeypatch) -> None:
-    updater = importlib.import_module("atlas.update")
-    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    path = tmp_path / "gateio-perps-usdt.json"
-    path.write_text(json.dumps([
-        {"id": "BTC_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
-        {"id": "NEW_USDT", "type": "perpetual", "first_capture": "2026-03-01T00:00:00Z"},
-    ]))
-    source = SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": [
-        {"id": "BTC_USDT", "type": "perpetual", "availableSince": "2020-01-01T00:00:00Z"},
-        {"id": "NEW_USDT", "type": "perpetual"},
-    ]})
-    assert updater.update(["gateio-perps-usdt"], source) == []
-    rows = {row["id"]: row for row in json.loads(path.read_text())}
-    assert rows["BTC_USDT"]["first_capture"] == "2020-01-01T00:00:00Z"
-    assert rows["NEW_USDT"]["first_capture"] == "2026-03-01T00:00:00Z"
-
-
-def test_tardis_source_refuses_exchanges_tardis_does_not_cover() -> None:
-    # Tardis's "mexc" is MEXC spot; mexc-perps must never read it, and a
-    # Tardis-only refresh must fail loudly instead of writing an empty file.
-    import pytest
-
-    from atlas.exchanges import is_on_tardis
-    from atlas.update_sources import HybridSymbolSource, TardisSymbolSource
-
-    assert not is_on_tardis("mexc-perps")
-    with pytest.raises(ValueError, match="Tardis"):
-        TardisSymbolSource().fetch_exchange("mexc-perps")
-
-    api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [{"id": "BTC_USDT"}]})
-    hybrid = HybridSymbolSource(exchange_source=api)
-    assert hybrid.fetch_exchange("mexc-perps") == {"availableSymbols": [{"id": "BTC_USDT"}]}
-def test_tardis_refresh_of_an_uncovered_venue_keeps_the_snapshot(tmp_path, monkeypatch) -> None:
-    # Tardis answers an exchange it does not cover with an error object, not
-    # a symbol list. A Tardis-sourced refresh replaces the snapshot wholesale,
-    # so reading that as "no symbols" would wipe e.g. Avantis' snapshot; it
-    # must fail the exchange instead.
-    updater = importlib.import_module("atlas.update")
-    sources = importlib.import_module("atlas.update_sources")
-    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    monkeypatch.setattr(
-        sources,
-        "_fetch_exchange",
-        lambda _exchange: {"code": 100, "message": "Invalid 'exchange' param provided"},
-    )
-    path = tmp_path / "avantis-perps.json"
-    rows = [{"id": "0", "type": "perpetual", "base_coin": "BTC", "quote_coin": "USD", "settle_coin": "USDC"}]
-    path.write_text(json.dumps(rows))
-
-    # Avantis is marked off-Tardis, so a Tardis-only update skips it untouched.
-    assert updater.update(["avantis-perps"], sources.TardisSymbolSource()) == []
-    assert json.loads(path.read_text()) == rows
-    # An exchange Tardis does list but answers with an error object fails
-    # instead of being refreshed to an empty snapshot.
-    import pytest
-
-    with pytest.raises(ValueError, match="no symbol list"):
-        sources.TardisSymbolSource().fetch_exchange("gateio-perps-usdt")
-
-
-def test_hybrid_refresh_of_an_uncovered_venue_uses_the_exchange_api(tmp_path, monkeypatch) -> None:
-    updater = importlib.import_module("atlas.update")
-    sources = importlib.import_module("atlas.update_sources")
-    monkeypatch.setattr(updater, "_DATA_DIR", tmp_path)
-    monkeypatch.setattr(
-        sources,
-        "_fetch_exchange",
-        lambda _exchange: {"code": 100, "message": "Invalid 'exchange' param provided"},
-    )
-    api_rows = [
-        {
-            "id": "0",
-            "type": "perpetual",
-            "contract_size": 1.0,
-            "base_coin": "BTC",
-            "quote_coin": "USD",
-            "settle_coin": "USDC",
-            "margin_asset": "USDC",
-            "underlying": "crypto",
-        }
-    ]
-    source = sources.HybridSymbolSource(
-        exchange_source=SimpleNamespace(fetch_exchange=lambda _exchange: {"availableSymbols": api_rows})
-    )
-
-    assert updater.update(["avantis-perps"], source) == []
-    (row,) = json.loads((tmp_path / "avantis-perps.json").read_text())
-    assert row["internal_id"] == "perpetual-BTC-USDC:USDC"
-    assert row["underlying"] == "crypto"
 def test_merge_existing_fields_preserves_symbology_fields() -> None:
     from atlas.update import LOCALLY_OWNED_FIELDS
     from integrations.symbology import SYMBOLOGY_FIELDS
@@ -425,16 +263,3 @@ def test_merge_existing_fields_preserves_symbology_fields() -> None:
     assert merged[0]["category"] == ["Layer 1"]
 
 
-def test_hybrid_keeps_tardis_history_for_an_instrument_the_api_lists_as_upcoming() -> None:
-    """A relaunch the API has not opened yet must not hide its Tardis history."""
-    from atlas.update_sources import HybridSymbolSource
-
-    history = {"id": "BSV-USDT", "type": "spot", "availableSince": "2019-01-01T00:00:00.000Z"}
-    tardis = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [history]})
-    api = SimpleNamespace(fetch_exchange=lambda _e: {"availableSymbols": [
-        {"id": "BSV-USDT", "type": "spot", "upcoming": True},
-        {"id": "NEW-USDT", "type": "spot", "upcoming": True},
-    ]})
-    rows = HybridSymbolSource(exchange_source=api, tardis_source=tardis).fetch_exchange("kucoin-spot")
-
-    assert rows == {"availableSymbols": [history, {"id": "NEW-USDT", "type": "spot", "upcoming": True}]}
