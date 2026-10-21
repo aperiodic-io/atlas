@@ -5484,6 +5484,7 @@
     "cmc_id": 23751,
     "category": [],
     "first_capture": "2023-12-21T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "ARTY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -7768,7 +7769,13 @@
     "symbol": "BALL",
     "denominator": "USDT",
     "first_capture": "2024-12-18T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "missing_since": "2026-10-21T06:57:22.263Z",
+    "cmc_id": 32586,
+    "category": [],
+    "base_asset_id": "BALL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BALL-USDT"
   },
   {
     "id": "BAL_ETH",
@@ -20626,6 +20633,7 @@
       "DAO"
     ],
     "first_capture": "2022-06-08T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "DORA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21622,6 +21630,7 @@
       "Staking"
     ],
     "first_capture": "2025-07-02T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "ECHO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -23989,6 +23998,7 @@
     "cmc_id": 29635,
     "category": [],
     "first_capture": "2024-01-23T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "EVO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -27407,6 +27417,7 @@
     "symbol": "GAMEVIRTUAL",
     "denominator": "USDT",
     "first_capture": "2024-12-26T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -28378,6 +28389,7 @@
       "AI Agents"
     ],
     "first_capture": "2022-06-08T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "GLQ",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -30811,6 +30823,7 @@
     "cmc_id": 35720,
     "category": [],
     "first_capture": "2024-12-09T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "HEU",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -33874,6 +33887,7 @@
     "symbol": "IRIS",
     "denominator": "USDT",
     "first_capture": "2020-10-26T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -40097,6 +40111,7 @@
       "AI Agents"
     ],
     "first_capture": "2025-09-17T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "MAIGA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -41462,6 +41477,7 @@
     "cmc_id": 2303,
     "category": [],
     "first_capture": "2022-06-08T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "MED",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -42176,6 +42192,7 @@
       "Real World Assets Protocols"
     ],
     "first_capture": "2024-11-28T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "MGT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -42797,6 +42814,7 @@
     "cmc_id": 33989,
     "category": [],
     "first_capture": "2024-11-05T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "MLP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -43460,6 +43478,7 @@
     "cmc_id": 15312,
     "category": [],
     "first_capture": "2022-06-08T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "MOOO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -51693,6 +51712,7 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2024-06-13T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "PIRATE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -52880,6 +52900,7 @@
     "cmc_id": 38451,
     "category": [],
     "first_capture": "2025-09-16T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "PORTALS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -58583,6 +58604,7 @@
       "DeFi"
     ],
     "first_capture": "2022-06-08T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "SBR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -61989,6 +62011,7 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2025-05-23T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "SOPH.SOPHIAVERSE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -66674,6 +66697,7 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2025-01-27T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "TICO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -68597,6 +68621,7 @@
     "cmc_id": 39147,
     "category": [],
     "first_capture": "2025-12-20T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "TTD",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -70251,7 +70276,7 @@
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2022-02-18T00:00:00.000Z",
     "base_asset_id": "USDT",
-    "base_asset_match": "cross_venue_consensus"
+    "base_asset_match": "venue_lineage"
   },
   {
     "id": "USDT_TRY",
@@ -70264,7 +70289,7 @@
     "first_capture": "2022-07-29T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
     "base_asset_id": "USDT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "TRY",
     "unified_id": "spot-USDT-TRY"
   },
@@ -70279,9 +70304,8 @@
     "base_coin": "USDT",
     "quote_coin": "USD",
     "first_capture": "2021-08-08T00:00:00.000Z",
-    "end_date": "2024-08-27T00:00:00.000Z",
     "base_asset_id": "USDT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "unified_id": "spot-USDT-USD"
   },
@@ -70296,7 +70320,7 @@
     "first_capture": "2023-07-04T00:00:00.000Z",
     "end_date": "2023-07-05T00:00:00.000Z",
     "base_asset_id": "USDT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDC",
     "unified_id": "spot-USDT-USDC"
   },
@@ -74776,6 +74800,7 @@
       "DeFi"
     ],
     "first_capture": "2024-11-21T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "XFI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -76233,6 +76258,7 @@
       "Privacy"
     ],
     "first_capture": "2024-06-18T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:22.263Z",
     "base_asset_id": "XZK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

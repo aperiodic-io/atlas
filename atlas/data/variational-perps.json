@@ -3048,6 +3048,18 @@
     "first_capture": "2026-10-19T18:51:22.980Z"
   },
   {
+    "id": "IONQ",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T06:57:38.079Z",
+    "internal_id": "perpetual-IONQ-USDC:USDC",
+    "symbol": "IONQ",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "IOST",
     "type": "perpetual",
     "contract_size": 1.0,
