@@ -15039,22 +15039,15 @@
     "symbol": "NEIROETH",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 32521,
     "contract_size": 1.0,
     "underlying": "crypto",
-    "category": [
-      "Memes"
-    ],
     "margin_asset": "USDT",
     "first_capture": "2024-09-06T00:00:00.000Z",
     "end_date": "2025-09-27T00:00:00.000Z",
     "base_coin": "NEIROETH",
     "quote_coin": "USDT",
-    "base_asset_id": "NEIRO",
-    "base_asset_match": "snapshot_cmc_id",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-NEIRO-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "neirousdt",
