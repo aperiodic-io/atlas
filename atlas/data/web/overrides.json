@@ -1,0 +1,1994 @@
+{
+ "schema_version": 1,
+ "blocked_hosts": [
+  "arweave.net",
+  "backed.fi",
+  "bio.site",
+  "biosites.com",
+  "bscscan.com",
+  "bstocks.finance",
+  "coingecko.com",
+  "coinmarketcap.com",
+  "dexscreener.com",
+  "discord.com",
+  "discord.gg",
+  "etherscan.io",
+  "facebook.com",
+  "farcaster.xyz",
+  "flap.sh",
+  "four.meme",
+  "gitbook.io",
+  "github.com",
+  "google.com",
+  "instagram.com",
+  "linkedin.com",
+  "linktr.ee",
+  "medium.com",
+  "notion.site",
+  "onelink.me",
+  "pools.trade",
+  "pools.xyz",
+  "pump.fun",
+  "reddit.com",
+  "socios.com",
+  "solscan.io",
+  "stonkfun.xyz",
+  "t.me",
+  "telegram.me",
+  "telegram.org",
+  "tiktok.com",
+  "tonscan.org",
+  "tonviewer.com",
+  "twitter.com",
+  "warpcast.com",
+  "wikipedia.org",
+  "x.com",
+  "xstocks.fi",
+  "youtube.com"
+ ],
+ "aliases": {
+  "ALUMINUM": "ALUMINIUM",
+  "ANTH": "ANTHROPIC",
+  "ANTHROP": "ANTHROPIC",
+  "ANTHROPICIPO": "ANTHROPIC",
+  "ASE": "ASX",
+  "BABAHK": "BABA",
+  "BRENT": "BZ",
+  "COINBASE": "COIN",
+  "EURUSD": "EUR",
+  "FASTRETAILING": "FASTRETAIL",
+  "GBPUSD": "GBP",
+  "HYUNDAIUSD": "005380",
+  "JPMUFG": "MUFG",
+  "JPSONY": "SONY",
+  "KBFIN": "KBFG",
+  "KBONK": "BONK",
+  "KIMI": "MOONSHOT",
+  "KPEPE": "PEPE",
+  "KRCOMP": "KOSPI",
+  "KSHIB": "SHIB",
+  "LENOVO": "HK0992",
+  "LENOVOHKD": "HK0992",
+  "MINIMAXHKD": "MINIMAX",
+  "NANYATECH": "NANYA",
+  "NASDAQ100": "NAS100",
+  "NGAS": "NATGAS",
+  "NVIDIA": "NVDA",
+  "OAI": "OPENAI",
+  "OPENAIIPO": "OPENAI",
+  "ORACLE": "ORCL",
+  "QUANT": "QNT",
+  "ROBINHOOD": "HOOD",
+  "SAMSUNGUSD": "005930",
+  "SHEINHKD": "SHEIN",
+  "SKHYNIXUSD": "000660",
+  "TENCENTHKD": "0700",
+  "TESLA": "TSLA",
+  "TONCOIN": "GRAM",
+  "TOYOTA": "TM",
+  "TSMC": "TSM",
+  "TWDELTA": "DELTAELEC",
+  "TWTSM": "TSM",
+  "TWUMC": "UMC",
+  "UKOIL": "BZ",
+  "US10Y": "10Y",
+  "USDCAD": "CAD",
+  "USDCHF": "CHF",
+  "USDCNH": "CNH",
+  "USDHKD": "HKD",
+  "USDJPY": "JPY",
+  "USDKRW": "KRW",
+  "USDSEK": "SEK",
+  "USDSGD": "SGD",
+  "VISA": "V",
+  "WENDYS": "WEN",
+  "WTIOIL": "WTI",
+  "XBR": "BZ",
+  "XIAOMIHKD": "1810",
+  "XNG": "NATGAS",
+  "ZHIPUHKD": "ZHIPU"
+ },
+ "entries": {
+  "00": {
+   "domain": "p00ls.io",
+   "reason": "00 Token is P00LS' token"
+  },
+  "000660": {
+   "asset_class": "equity",
+   "name": "SK Hynix",
+   "domain": "skhynix.com",
+   "wikipedia": "SK_Hynix",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "005930": {
+   "asset_class": "equity",
+   "name": "Samsung Electronics",
+   "domain": "samsung.com",
+   "wikipedia": "Samsung_Electronics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "009540": {
+   "domain": "hd-ksoe.com",
+   "reason": "hdksoe.co.kr redirects to the company's hd-ksoe.com"
+  },
+  "0700": {
+   "asset_class": "equity",
+   "name": "Tencent",
+   "domain": "tencent.com",
+   "wikipedia": "Tencent",
+   "reason": "Hong Kong code 0700: the Tokyo-shaped Wikidata query would find a Japanese company"
+  },
+  "0G": {
+   "domain": "0gfoundation.ai",
+   "reason": "the 0G Foundation's site"
+  },
+  "1810": {
+   "asset_class": "equity",
+   "name": "Xiaomi",
+   "domain": "mi.com",
+   "wikipedia": "Xiaomi",
+   "reason": "Hong Kong code 1810: the Tokyo-shaped Wikidata query would find a Japanese company"
+  },
+  "9984": {
+   "asset_class": "equity",
+   "name": "SoftBank Group",
+   "domain": "group.softbank",
+   "wikipedia": "SoftBank_Group",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "ADVANTEST": {
+   "asset_class": "equity",
+   "name": "Advantest",
+   "domain": "advantest.com",
+   "wikipedia": "Advantest",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "AI16Z": {
+   "domain": "elizaresearch.ai",
+   "reason": "ai16z became elizaOS; elizaos.ai redirects here"
+  },
+  "AJINOMOTO": {
+   "asset_class": "equity",
+   "name": "Ajinomoto",
+   "domain": "ajinomoto.com",
+   "wikipedia": "Ajinomoto",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "AKESO": {
+   "asset_class": "equity",
+   "name": "Akeso",
+   "domain": "akesobio.com",
+   "wikipedia": "Akeso",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "ALL": {
+   "domain": null,
+   "reason": "Binance's ALL Composite Index contract: binance.com is the exchange's site"
+  },
+  "ALUMINIUM": {
+   "asset_class": "commodity",
+   "name": "Aluminium",
+   "domain": null,
+   "wikipedia": "Aluminium",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "AMD": {
+   "domain": "amd.com",
+   "reason": "Wikidata lists no usable website for AMD"
+  },
+  "ANTA": {
+   "asset_class": "equity",
+   "name": "Anta Sports",
+   "domain": "anta.com",
+   "wikipedia": "Anta_Sports",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "ANTHROPIC": {
+   "asset_class": "pre_market",
+   "name": "Anthropic",
+   "domain": "anthropic.com",
+   "wikipedia": "Anthropic",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "APLD": {
+   "asset_class": "equity",
+   "name": "Applied Digital",
+   "domain": "applieddigital.com",
+   "wikipedia": null,
+   "reason": "Wikidata lists no usable website"
+  },
+  "AR": {
+   "wikipedia": null,
+   "reason": "'Arweave' on en.wikipedia only redirects to Odysee; Arweave has no article of its own"
+  },
+  "ARCC": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Wikidata files ARCC under Ares Management; Ares Capital's own site (arescapitalcorp.com) forwards to its manager's ares.com"
+  },
+  "ARDR": {
+   "wikipedia": null,
+   "reason": "the website match gave Nxt, Ardor's predecessor by the same team"
+  },
+  "ARX.EQUITY": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Wikidata's ARX is Aeroflex (acquired 2014); ARX now trades as Accelerant Holdings"
+  },
+  "ASX": {
+   "asset_class": "equity",
+   "name": "ASE Technology Holding",
+   "domain": "aseglobal.com",
+   "wikipedia": null,
+   "reason": "ASE Technology's ADR; Wikidata lists no usable website"
+  },
+  "AUD": {
+   "asset_class": "forex",
+   "name": "Australian dollar",
+   "domain": null,
+   "wikipedia": "Australian_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "AUS200": {
+   "asset_class": "index",
+   "name": "S&P/ASX 200",
+   "domain": null,
+   "wikipedia": "S&P/ASX_200",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "AVA.AVA_SOL": {
+   "domain": null,
+   "reason": "AVA is an agent token on Holoworld: holoworld.com is HOLO's site"
+  },
+  "AXTI": {
+   "domain": "axt.com",
+   "reason": "Wikidata's website is not axt.com"
+  },
+  "BADGER": {
+   "domain": "badger.com",
+   "reason": "badger.finance is dead; BadgerDAO moved to badger.com"
+  },
+  "BAT": {
+   "wikipedia": null,
+   "reason": "the website match gave the Brave browser's article; its views are not the token's"
+  },
+  "BBSOL": {
+   "domain": null,
+   "reason": "bybit.com is the exchange's site, not this staked-SOL product's"
+  },
+  "BETH": {
+   "domain": null,
+   "reason": "Binance's beacon ETH: ethereum.org's popularity is ETH's"
+  },
+  "BFUSD": {
+   "domain": null,
+   "reason": "a Binance product page: binance.com's popularity is BNB's"
+  },
+  "BGB": {
+   "wikipedia": null,
+   "reason": "the Bitget article's views are the exchange's, not its token's"
+  },
+  "BKNG": {
+   "asset_class": "equity",
+   "name": "Booking Holdings",
+   "domain": "booking.com",
+   "wikipedia": "Booking_Holdings",
+   "reason": "Booking Holdings' flagship consumer site is booking.com (bookingholdings.com is corporate); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "BNSOL": {
+   "domain": null,
+   "reason": "Binance staked SOL: its site is a binance.com page, whose popularity is BNB's"
+  },
+  "BNT": {
+   "domain": "bancor.network",
+   "reason": "CMC lists Carbon DeFi (a Bancor product) first; bancor.network is Bancor's site"
+  },
+  "BRKB": {
+   "asset_class": "equity",
+   "name": "Berkshire Hathaway",
+   "domain": "berkshirehathaway.com",
+   "wikipedia": "Berkshire_Hathaway",
+   "reason": "class B ticker, not a Wikidata ticker"
+  },
+  "BRL": {
+   "asset_class": "forex",
+   "name": "Brazilian real",
+   "domain": null,
+   "wikipedia": "Brazilian_real",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "BTCDOM": {
+   "domain": null,
+   "reason": "a Binance index contract, not an asset with a website"
+  },
+  "BUBBLE": {
+   "domain": "imaginaryones.com",
+   "reason": "Bubble is Imaginary Ones' token"
+  },
+  "BYD": {
+   "asset_class": "equity",
+   "name": "BYD Company",
+   "domain": "byd.com",
+   "wikipedia": "BYD_Company",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "BZ": {
+   "asset_class": "commodity",
+   "name": "Brent crude",
+   "domain": null,
+   "wikipedia": "Brent_Crude",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "CAD": {
+   "asset_class": "forex",
+   "name": "Canadian dollar",
+   "domain": null,
+   "wikipedia": "Canadian_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "CAMBRICON.CAMBRICON_TECHNOLOGIES_CORP_LTD_DERIVATIVES": {
+   "asset_class": "equity",
+   "name": "Cambricon Technologies",
+   "domain": "cambricon.com",
+   "wikipedia": "Cambricon_Technologies",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "CATL": {
+   "asset_class": "equity",
+   "name": "CATL",
+   "domain": "catl.com",
+   "wikipedia": "CATL",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "CCL": {
+   "domain": "carnival.com",
+   "reason": "Carnival Corporation's flagship cruise line site is carnival.com (carnivalcorp.com is corporate); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "CHECK": {
+   "domain": "anichess.com",
+   "reason": "Checkmate is Anichess's token"
+  },
+  "CHF": {
+   "asset_class": "forex",
+   "name": "Swiss franc",
+   "domain": null,
+   "wikipedia": "Swiss_franc",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "CIFR": {
+   "asset_class": "equity",
+   "name": "Cipher Mining",
+   "domain": "cipherdigital.com",
+   "wikipedia": null,
+   "reason": "Cipher Mining rebranded as Cipher Digital"
+  },
+  "CL": {
+   "asset_class": "commodity",
+   "name": "WTI crude oil",
+   "domain": null,
+   "wikipedia": "West_Texas_Intermediate",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "CMCSA": {
+   "domain": "xfinity.com",
+   "reason": "Comcast's consumer site is xfinity.com (Wikidata lists the investor site cmcsa.com); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "CMOC": {
+   "asset_class": "equity",
+   "name": "CMOC",
+   "domain": "cmoc.com",
+   "wikipedia": "CMOC",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "CMT": {
+   "domain": null,
+   "reason": "Atlas's CMT is CyberMiles (OKX 2021-2023); the symbol match picked Comet, whose site is now a review site"
+  },
+  "CNH": {
+   "asset_class": "forex",
+   "name": "Renminbi",
+   "domain": null,
+   "wikipedia": "Renminbi",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "COHR": {
+   "asset_class": "equity",
+   "name": "Coherent Corp.",
+   "domain": "coherent.com",
+   "wikipedia": "Coherent_Corp.",
+   "reason": "Wikidata lists no usable website"
+  },
+  "COOK": {
+   "domain": null,
+   "reason": "mETH Protocol's token: mantle.xyz's popularity is MNT's"
+  },
+  "COREUM": {
+   "same_project_as": "TX",
+   "reason": "Coreum rebranded as TX; coreum.com redirects to tx.org"
+  },
+  "CORN.COMMODITY": {
+   "asset_class": "commodity",
+   "name": "Corn",
+   "domain": null,
+   "wikipedia": "Maize",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "CORZ": {
+   "asset_class": "equity",
+   "name": "Core Scientific",
+   "domain": "corescientific.com",
+   "wikipedia": "Core_Scientific",
+   "reason": "Wikidata lists no usable website"
+  },
+  "CRCL": {
+   "asset_class": "equity",
+   "name": "Circle Internet Group",
+   "domain": "circle.com",
+   "wikipedia": "Circle_Internet_Group",
+   "reason": "Wikidata lists no usable website"
+  },
+  "CRDO": {
+   "asset_class": "equity",
+   "name": "Credo Technology Group",
+   "domain": "credosemi.com",
+   "wikipedia": null,
+   "reason": "Wikidata lists no usable website"
+  },
+  "CRVUSD": {
+   "domain": null,
+   "reason": "Curve's stablecoin: curve.finance's popularity is CRV's"
+  },
+  "CRWV": {
+   "asset_class": "equity",
+   "name": "CoreWeave",
+   "domain": "coreweave.com",
+   "wikipedia": "CoreWeave",
+   "reason": "Wikidata lists no usable website"
+  },
+  "CVS": {
+   "domain": "cvs.com",
+   "reason": "CVS Health's consumer site is cvs.com (cvshealth.com is corporate); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "CXMT": {
+   "asset_class": "equity",
+   "name": "ChangXin Memory Technologies",
+   "domain": "cxmt.com",
+   "wikipedia": "ChangXin_Memory_Technologies",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "DAI": {
+   "domain": null,
+   "reason": "Dai is MakerDAO's stablecoin: makerdao.com's popularity is MKR's"
+  },
+  "DELL": {
+   "asset_class": "equity",
+   "name": "Dell Technologies",
+   "domain": "dell.com",
+   "wikipedia": "Dell_Technologies",
+   "reason": "Wikidata lists several sites; dell.com is the brand"
+  },
+  "DELTAELEC": {
+   "asset_class": "equity",
+   "name": "Delta Electronics",
+   "domain": "deltaww.com",
+   "wikipedia": "Delta_Electronics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "DIEM": {
+   "domain": null,
+   "reason": "Diem is a token of Venice: venice.ai is VVV's site"
+  },
+  "DISCO": {
+   "asset_class": "equity",
+   "name": "Disco Corporation",
+   "domain": "disco.co.jp",
+   "wikipedia": "Disco_Corporation",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "DOME": {
+   "domain": null,
+   "reason": "humainassets.ai is a creative agency's site, not the token's"
+  },
+  "DOOSENER": {
+   "asset_class": "equity",
+   "name": "Doosan Enerbility",
+   "domain": "doosanenerbility.com",
+   "wikipedia": "Doosan_Enerbility",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "DRAM": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "an ETF: its website is the fund issuer's"
+  },
+  "DXY": {
+   "asset_class": "forex",
+   "name": "U.S. Dollar Index",
+   "domain": null,
+   "wikipedia": "U.S._Dollar_Index",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "EGL1": {
+   "domain": "eagles.land",
+   "reason": "EGL1's site"
+  },
+  "ELIZAOS": {
+   "domain": "elizaresearch.ai",
+   "same_project_as": "AI16Z",
+   "reason": "ai16z renamed elizaOS; one project"
+  },
+  "ETHDYDX": {
+   "same_project_as": "DYDX",
+   "reason": "dYdX's legacy ERC-20 token; one project"
+  },
+  "EUR": {
+   "asset_class": "forex",
+   "name": "Euro",
+   "domain": null,
+   "wikipedia": "Euro",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "EURC": {
+   "domain": null,
+   "reason": "Circle's euro coin: circle.com's popularity is USDC's"
+  },
+  "FANUC": {
+   "asset_class": "equity",
+   "name": "FANUC",
+   "domain": "fanuc.co.jp",
+   "wikipedia": "FANUC",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "FASTRETAIL": {
+   "asset_class": "equity",
+   "name": "Fast Retailing",
+   "domain": "fastretailing.com",
+   "wikipedia": "Fast_Retailing",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "FIRE": {
+   "domain": null,
+   "reason": "fireprotocol.io now redirects to an unrelated DEX listing"
+  },
+  "FIWA": {
+   "domain": null,
+   "reason": "defiwarrior.io now redirects to an unrelated personal site"
+  },
+  "FLNC": {
+   "asset_class": "equity",
+   "name": "Fluence Energy",
+   "domain": "fluenceenergy.com",
+   "wikipedia": null,
+   "reason": "Wikidata lists no usable website"
+  },
+  "FLY.EQUITY": {
+   "asset_class": "equity",
+   "name": "Firefly Aerospace",
+   "domain": "fireflyspace.com",
+   "wikipedia": "Firefly_Aerospace",
+   "reason": "the FLY equity; Atlas's FLY is an unrelated coin"
+  },
+  "FRONG": {
+   "domain": null,
+   "reason": "its site is a token launchpad"
+  },
+  "FUJIKURA": {
+   "asset_class": "equity",
+   "name": "Fujikura",
+   "domain": "fujikura.co.jp",
+   "wikipedia": "Fujikura",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "FURUKAWA": {
+   "asset_class": "equity",
+   "name": "Furukawa Electric",
+   "domain": "furukawaelectric.com",
+   "wikipedia": "Furukawa_Electric",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it; furukawa.co.jp redirects to furukawaelectric.com"
+  },
+  "GAS": {
+   "domain": null,
+   "reason": "Neo's gas token: neo.org's popularity is NEO's"
+  },
+  "GBP": {
+   "asset_class": "forex",
+   "name": "Pound sterling",
+   "domain": null,
+   "wikipedia": "Pound_sterling",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "GEELY": {
+   "asset_class": "equity",
+   "name": "Geely",
+   "domain": "geely.com",
+   "wikipedia": "Geely",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "GENSCRIPT": {
+   "asset_class": "equity",
+   "name": "GenScript",
+   "domain": "genscript.com",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "GER40": {
+   "asset_class": "index",
+   "name": "DAX",
+   "domain": null,
+   "wikipedia": "DAX",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "GIGADEV": {
+   "asset_class": "equity",
+   "name": "GigaDevice",
+   "domain": "gigadevice.com",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "GIGADEVICE": {
+   "asset_class": "equity",
+   "name": "GigaDevice",
+   "domain": "gigadevice.com",
+   "same_project_as": "GIGADEV",
+   "reason": "two Atlas assets for GigaDevice"
+  },
+  "GMT": {
+   "domain": "stepn.com",
+   "reason": "GMT is STEPN's token"
+  },
+  "GNT": {
+   "asset_class": "crypto",
+   "name": "Golem",
+   "domain": "golem.network",
+   "reason": "Atlas's GNT is Golem (Binance/Coinbase/OKX 2019-2022, migrated to GLM, same project); CMC's GNT is now GreenTrust (2021). golem.network checked 2026-10-20",
+   "same_project_as": "GLM"
+  },
+  "GOOG": {
+   "domain": "google.com",
+   "own_platform": true,
+   "same_project_as": "GOOGL",
+   "reason": "Alphabet's class C shares; google.com as for GOOGL"
+  },
+  "GOOGL": {
+   "domain": "google.com",
+   "own_platform": true,
+   "reason": "Alphabet's flagship consumer site is google.com (abc.xyz is a holding page); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "GRAM": {
+   "wikipedia": "TON_(blockchain)",
+   "reason": "Toncoin, renamed Gram on CMC; Wikidata links no article by CMC slug"
+  },
+  "GST": {
+   "domain": null,
+   "reason": "STEPN's in-game token: stepn.com's popularity is GMT's"
+  },
+  "GT": {
+   "domain": "gatechain.io",
+   "reason": "GateToken's chain site"
+  },
+  "GTBTC": {
+   "domain": null,
+   "reason": "a Gate product: gate.com's popularity is the exchange's"
+  },
+  "GTETH": {
+   "domain": null,
+   "reason": "a Gate product: gate.com's popularity is the exchange's"
+  },
+  "GUSD": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Gemini's stablecoin: gemini.com and its article are the exchange's"
+  },
+  "GUSD.GUSD": {
+   "domain": null,
+   "reason": "a Gate product: gate.com's popularity is the exchange's"
+  },
+  "HANWHAAERO": {
+   "asset_class": "equity",
+   "name": "Hanwha Aerospace",
+   "domain": "hanwhaaerospace.com",
+   "wikipedia": "Hanwha_Aerospace",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "HBAR": {
+   "wikipedia": "Hedera_(distributed_ledger)",
+   "reason": "Wikidata links no article by CMC slug"
+  },
+  "HITACHI": {
+   "asset_class": "equity",
+   "name": "Hitachi",
+   "domain": "hitachi.com",
+   "wikipedia": "Hitachi",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "HK0992": {
+   "asset_class": "equity",
+   "name": "Lenovo",
+   "domain": "lenovo.com",
+   "wikipedia": "Lenovo",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "HK50": {
+   "asset_class": "index",
+   "name": "Hang Seng Index",
+   "domain": null,
+   "wikipedia": "Hang_Seng_Index",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "HKD": {
+   "asset_class": "forex",
+   "name": "Hong Kong dollar",
+   "domain": null,
+   "wikipedia": "Hong_Kong_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "HMTT": {
+   "domain": null,
+   "reason": "hypememetoken.com now serves an unrelated ranch's site"
+  },
+  "HO": {
+   "asset_class": "commodity",
+   "name": "Heating oil",
+   "domain": null,
+   "wikipedia": "Heating_oil",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "HPQ": {
+   "asset_class": "equity",
+   "name": "HP Inc.",
+   "domain": "hp.com",
+   "wikipedia": "HP_Inc.",
+   "reason": "Wikidata lists no usable website"
+  },
+  "HTZ": {
+   "asset_class": "equity",
+   "name": "Hertz Global Holdings",
+   "domain": "hertz.com",
+   "wikipedia": "Hertz_Global_Holdings",
+   "reason": "Wikidata lists no usable website"
+  },
+  "IBIDEN": {
+   "asset_class": "equity",
+   "name": "Ibiden",
+   "domain": "ibiden.com",
+   "wikipedia": "Ibiden",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "IBOV": {
+   "asset_class": "index",
+   "name": "Ibovespa",
+   "domain": null,
+   "wikipedia": "Índice_Bovespa",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "ICNT": {
+   "domain": "icn.global",
+   "reason": "Impossible Cloud Network's site"
+  },
+  "INNOLUX": {
+   "asset_class": "equity",
+   "name": "Innolux",
+   "domain": "innolux.com",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "INNOVENT": {
+   "asset_class": "equity",
+   "name": "Innovent Biologics",
+   "domain": "innoventbio.com",
+   "wikipedia": "Innovent_Biologics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "IONQ": {
+   "domain": "ionq.com",
+   "reason": "Wikidata lists no usable website"
+  },
+  "ITG": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Wikidata's ITG is Investment Technology Group, acquired by Virtu in 2019; not the ticker's current company"
+  },
+  "JFI": {
+   "domain": null,
+   "reason": "jackpool.finance now redirects to an unrelated card comparison site"
+  },
+  "JIO": {
+   "asset_class": "pre_market",
+   "name": "Jio Platforms",
+   "domain": "jio.com",
+   "wikipedia": "Jio",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "JOE": {
+   "domain": "lfj.gg",
+   "reason": "Trader Joe rebranded as LFJ"
+  },
+  "JPM": {
+   "domain": "chase.com",
+   "reason": "JPMorgan Chase's consumer bank site is chase.com (jpmorganchase.com is corporate); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "JPN225": {
+   "asset_class": "index",
+   "name": "Nikkei 225",
+   "domain": null,
+   "wikipedia": "Nikkei_225",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "JPY": {
+   "asset_class": "forex",
+   "name": "Japanese yen",
+   "domain": null,
+   "wikipedia": "Japanese_yen",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "KALSHI": {
+   "asset_class": "pre_market",
+   "name": "Kalshi",
+   "domain": "kalshi.com",
+   "wikipedia": "Kalshi",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "KBFG": {
+   "asset_class": "equity",
+   "name": "KB Financial Group",
+   "domain": "kbfg.com",
+   "wikipedia": "KB_Financial_Group",
+   "reason": "KB Financial's ADR trades as KB"
+  },
+  "KCS": {
+   "wikipedia": null,
+   "reason": "the KuCoin article's views are the exchange's, not its token's"
+  },
+  "KEYENCE": {
+   "asset_class": "equity",
+   "name": "Keyence",
+   "domain": "keyence.com",
+   "wikipedia": "Keyence",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "KIA": {
+   "asset_class": "equity",
+   "name": "Kia",
+   "domain": "kia.com",
+   "wikipedia": "Kia",
+   "reason": "Korean company traded under its name"
+  },
+  "KIOXIA": {
+   "asset_class": "equity",
+   "name": "Kioxia",
+   "domain": "kioxia.com",
+   "wikipedia": "Kioxia",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "KITEAI": {
+   "domain": null,
+   "reason": "kiteai.tech now serves an unrelated game"
+  },
+  "KO": {
+   "domain": "coca-cola.com",
+   "reason": "The Coca-Cola Company's flagship brand site is coca-cola.com (coca-colacompany.com is corporate); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "KOKUSAI": {
+   "asset_class": "equity",
+   "name": "Kokusai Electric",
+   "domain": "kokusai-electric.com",
+   "wikipedia": "Kokusai_Electric",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "KOSPI": {
+   "asset_class": "index",
+   "name": "KOSPI",
+   "domain": null,
+   "wikipedia": "KOSPI",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "KRW": {
+   "asset_class": "forex",
+   "name": "South Korean won",
+   "domain": null,
+   "wikipedia": "South_Korean_won",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "KS200": {
+   "asset_class": "index",
+   "name": "KOSPI 200",
+   "domain": null,
+   "wikipedia": "KOSPI_200",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "KTOS": {
+   "domain": "kratosdefense.com",
+   "reason": "Wikidata's website is not the company's"
+  },
+  "KUAISHOU": {
+   "asset_class": "equity",
+   "name": "Kuaishou",
+   "domain": "kuaishou.com",
+   "wikipedia": "Kuaishou",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "LARGAN": {
+   "asset_class": "equity",
+   "name": "Largan Precision",
+   "domain": "largan.com.tw",
+   "wikipedia": "Largan_Precision",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "LASERTEC": {
+   "asset_class": "equity",
+   "name": "Lasertec",
+   "domain": "lasertec.co.jp",
+   "wikipedia": "Lasertec",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "LAUNCH": {
+   "domain": null,
+   "reason": "superlauncher.io now fronts an unrelated domain"
+  },
+  "LAZR": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "luminartech.com now forwards to MicroVision; Luminar's listing has ended"
+  },
+  "LEAD": {
+   "asset_class": "commodity",
+   "name": "Lead",
+   "domain": null,
+   "wikipedia": "Lead",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "LEO": {
+   "domain": "bitfinex.com",
+   "reason": "an exchange token's site is its exchange; the Bitfinex article's views are the exchange's, not its token's",
+   "wikipedia": null
+  },
+  "LF": {
+   "domain": "lflabs.fund",
+   "reason": "LF Labs' site"
+  },
+  "LGELECTRONICS": {
+   "asset_class": "equity",
+   "name": "LG Electronics",
+   "domain": "lg.com",
+   "wikipedia": "LG_Electronics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "LIME": {
+   "domain": "imem.app",
+   "reason": "iMe Lab's messenger"
+  },
+  "LIN": {
+   "asset_class": "equity",
+   "name": "Linde plc",
+   "domain": "linde.com",
+   "wikipedia": "Linde_plc",
+   "reason": "Wikidata lists no usable website"
+  },
+  "LRC": {
+   "domain": null,
+   "reason": "loopring.org serves slot-machine spam and loopring.io is down"
+  },
+  "MAKO": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Wikidata's MAKO is MAKO Surgical, acquired by Stryker in 2013; the ticker Bitget tokenises today is not that company"
+  },
+  "MANTRA": {
+   "same_project_as": "OM",
+   "reason": "MANTRA renamed OM to MANTRA; one project"
+  },
+  "MARA": {
+   "domain": "mara.com",
+   "reason": "Marathon Digital renamed MARA Holdings"
+  },
+  "MAX": {
+   "domain": "maicoin.com",
+   "reason": "MAX Exchange's token; MAX is MaiCoin's exchange"
+  },
+  "ME": {
+   "domain": "mefoundation.com",
+   "reason": "the ME Foundation issues Magic Eden's token"
+  },
+  "MEDIATEK": {
+   "asset_class": "equity",
+   "name": "MediaTek",
+   "domain": "mediatek.com",
+   "wikipedia": "MediaTek",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "MEITU": {
+   "asset_class": "equity",
+   "name": "Meitu",
+   "domain": "meitu.com",
+   "wikipedia": "Meitu",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "MEITUAN": {
+   "asset_class": "equity",
+   "name": "Meituan",
+   "domain": "meituan.com",
+   "wikipedia": "Meituan",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "META": {
+   "domain": "facebook.com",
+   "own_platform": true,
+   "reason": "Meta's flagship consumer site is facebook.com (meta.com sells hardware); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "MFT": {
+   "same_project_as": "HIFI",
+   "reason": "Mainframe (MFT) rebranded as Hifi (HIFI); one project"
+  },
+  "MICRODUCK": {
+   "domain": null,
+   "reason": "its site is the Pons launchpad (PONS's)"
+  },
+  "MIDEA": {
+   "asset_class": "equity",
+   "name": "Midea Group",
+   "domain": "midea.com",
+   "wikipedia": "Midea_Group",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "MINIMAX": {
+   "asset_class": "equity",
+   "name": "MiniMax",
+   "domain": "minimax.io",
+   "wikipedia": "MiniMax_Group",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "MNST": {
+   "domain": "monsterenergy.com",
+   "reason": "Monster Beverage's flagship brand site is monsterenergy.com (monsterbevcorp.com is investor relations); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "MOB": {
+   "domain": "sentz.foundation",
+   "reason": "MobileCoin rebranded as Sentz"
+  },
+  "MOONSHOT": {
+   "asset_class": "pre_market",
+   "name": "Moonshot AI",
+   "domain": "moonshot.ai",
+   "wikipedia": "Moonshot_AI",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "MORE": {
+   "domain": null,
+   "reason": "moreprivate.club now forwards to morebrand.co, an unrelated brand that does not mention the coin"
+  },
+  "MOUTAI": {
+   "asset_class": "equity",
+   "name": "Kweichow Moutai",
+   "domain": "moutaichina.com",
+   "wikipedia": "Kweichow_Moutai",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it; moutaichina.com is Kweichow Moutai's site (answered at www. on 2026-10-21; the apex has no DNS record)"
+  },
+  "MOVR": {
+   "domain": null,
+   "reason": "moonbeam.network's popularity is GLMR's"
+  },
+  "MRK": {
+   "domain": "merck.com",
+   "reason": "Wikidata lists msd.com (Merck outside North America)"
+  },
+  "MSTR": {
+   "domain": "strategy.com",
+   "reason": "MicroStrategy rebranded as Strategy (strategy.com)"
+  },
+  "MUBARAK": {
+   "domain": null,
+   "reason": "mubarak-cto.com now serves an unrelated dental society's site"
+  },
+  "MUFG": {
+   "asset_class": "equity",
+   "name": "Mitsubishi UFJ Financial Group",
+   "domain": "mufg.jp",
+   "wikipedia": "MUFG",
+   "reason": "ADR; Wikidata lists no usable website"
+  },
+  "MURATA": {
+   "asset_class": "equity",
+   "name": "Murata Manufacturing",
+   "domain": "murata.com",
+   "wikipedia": "Murata_Manufacturing",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "MUSE": {
+   "domain": "nft20.io",
+   "reason": "Muse DAO runs NFT20"
+  },
+  "MX": {
+   "domain": "mexc.com",
+   "reason": "an exchange token's site is its exchange"
+  },
+  "NANYA": {
+   "asset_class": "equity",
+   "name": "Nanya Technology",
+   "domain": "nanya.com",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "NAS100": {
+   "asset_class": "index",
+   "name": "Nasdaq-100",
+   "domain": null,
+   "wikipedia": "Nasdaq-100",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NATGAS": {
+   "asset_class": "commodity",
+   "name": "Natural gas",
+   "domain": null,
+   "wikipedia": "Natural_gas",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NAVER": {
+   "asset_class": "equity",
+   "name": "Naver",
+   "domain": "navercorp.com",
+   "wikipedia": "Naver_Corporation",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "NDX100": {
+   "asset_class": "index",
+   "name": "Nasdaq-100",
+   "domain": null,
+   "wikipedia": "Nasdaq-100",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NEC": {
+   "asset_class": "equity",
+   "name": "NEC",
+   "domain": "nec.com",
+   "wikipedia": "NEC",
+   "reason": "Japanese company traded under its name"
+  },
+  "NETEASE": {
+   "asset_class": "equity",
+   "name": "NetEase",
+   "domain": "netease.com",
+   "wikipedia": "NetEase",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "NEURALINK": {
+   "asset_class": "pre_market",
+   "name": "Neuralink",
+   "domain": "neuralink.com",
+   "wikipedia": "Neuralink",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "NFLX": {
+   "domain": "netflix.com",
+   "reason": "Wikidata lists several country sites"
+  },
+  "NG": {
+   "asset_class": "commodity",
+   "name": "Natural gas",
+   "domain": null,
+   "wikipedia": "Natural_gas",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NI225": {
+   "asset_class": "index",
+   "name": "Nikkei 225",
+   "domain": null,
+   "wikipedia": "Nikkei_225",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NICKEL": {
+   "asset_class": "commodity",
+   "name": "Nickel",
+   "domain": null,
+   "wikipedia": "Nickel",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NIFTY": {
+   "asset_class": "index",
+   "name": "NIFTY 50",
+   "domain": null,
+   "wikipedia": "NIFTY_50",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "NINTENDO": {
+   "asset_class": "equity",
+   "name": "Nintendo",
+   "domain": "nintendo.com",
+   "wikipedia": "Nintendo",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "NPXS": {
+   "same_project_as": "PUNDIX",
+   "reason": "Pundi X redenominated NPXS as PUNDIX; one project"
+  },
+  "NU.EQUITY": {
+   "asset_class": "equity",
+   "name": "Nu Holdings (Nubank)",
+   "domain": "nubank.com.br",
+   "wikipedia": "Nubank",
+   "reason": "the NU equity; Atlas's NU is an unrelated coin"
+  },
+  "NXPC": {
+   "domain": "msu.io",
+   "reason": "NEXPACE is MapleStory Universe's token"
+  },
+  "NZD": {
+   "asset_class": "forex",
+   "name": "New Zealand dollar",
+   "domain": null,
+   "wikipedia": "New_Zealand_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "OKB": {
+   "domain": "okx.com",
+   "reason": "an exchange token's site is its exchange; the OKX article's views are the exchange's, not its token's",
+   "wikipedia": null
+  },
+  "OPENAI": {
+   "asset_class": "pre_market",
+   "name": "OpenAI",
+   "domain": "openai.com",
+   "wikipedia": "OpenAI",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "ORDS": {
+   "domain": null,
+   "reason": "ordiswap.fi now serves unrelated stock-market content"
+  },
+  "ORT": {
+   "domain": null,
+   "reason": "xreators.com now forwards to NAVER's Grafolio, a different product"
+  },
+  "OURA": {
+   "asset_class": "pre_market",
+   "name": "Oura",
+   "domain": "ouraring.com",
+   "wikipedia": "Oura_Health",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "OVR": {
+   "domain": "overthereality.ai",
+   "reason": "OVER's site"
+  },
+  "PANASONIC": {
+   "asset_class": "equity",
+   "name": "Panasonic",
+   "domain": "panasonic.com",
+   "wikipedia": "Panasonic",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "PCI": {
+   "domain": "payprotocol.io",
+   "reason": "Paycoin is PayProtocol's token"
+  },
+  "PENG": {
+   "domain": "penguinsolutions.com",
+   "reason": "Wikidata lists no usable website"
+  },
+  "PERP": {
+   "domain": "perp.com",
+   "reason": "Perpetual Protocol's site (CMC lists none); perp.com answered 2026-10-21 as Perp.com"
+  },
+  "PI": {
+   "domain": "minepi.com",
+   "reason": "Pi Network's site"
+  },
+  "PINS": {
+   "domain": "pinterest.com",
+   "wikipedia": "Pinterest",
+   "reason": "Wikidata's Pinterest Inc. item lists only pinterest.de; the company's site is pinterest.com (checked 2026-10-21)"
+  },
+  "POL": {
+   "same_project_as": "MATIC",
+   "reason": "Polygon renamed MATIC to POL; one project"
+  },
+  "POLYMARKET": {
+   "asset_class": "pre_market",
+   "name": "Polymarket",
+   "domain": "polymarket.com",
+   "wikipedia": "Polymarket",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "PONS": {
+   "domain": "ponsfamily.com",
+   "reason": "CMC's pons.family is dead; ponsfamily.com is the Pons launchpad"
+  },
+  "POPMART": {
+   "asset_class": "equity",
+   "name": "Pop Mart",
+   "domain": "popmart.com",
+   "wikipedia": "Pop_Mart",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "PUMP": {
+   "domain": "pump.fun",
+   "own_platform": true,
+   "reason": "PUMP is pump.fun's own token: the launchpad's site is the asset's (pump.fun stays blocked for the tokens it launches)"
+  },
+  "PURR.PURR": {
+   "domain": null,
+   "reason": "a Hyperliquid meme token: hyperliquid.xyz's popularity is HYPE's"
+  },
+  "PWT": {
+   "domain": null,
+   "reason": "pandainu.io now redirects to an unrelated personal site"
+  },
+  "PYPL": {
+   "asset_class": "equity",
+   "name": "PayPal",
+   "domain": "paypal.com",
+   "wikipedia": "PayPal",
+   "reason": "Wikidata lists no usable website"
+  },
+  "QBTS": {
+   "asset_class": "equity",
+   "name": "D-Wave Quantum",
+   "domain": "dwavequantum.com",
+   "wikipedia": "D-Wave_Systems",
+   "reason": "Wikidata lists no usable website"
+  },
+  "QNTX": {
+   "asset_class": "pre_market",
+   "name": "Quantinuum",
+   "domain": "quantinuum.com",
+   "wikipedia": "Quantinuum",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "QQQ": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "an ETF: its website is the fund issuer's"
+  },
+  "RDDT": {
+   "domain": "reddit.com",
+   "own_platform": true,
+   "reason": "Reddit's site is reddit.com (redditinc.com is the corporate page); consumer brand: the company's flagship consumer site, where the public goes, rather than its corporate site"
+  },
+  "RE": {
+   "domain": "re.xyz",
+   "reason": "Re's site; the name is too short to match"
+  },
+  "REACT": {
+   "same_project_as": "PRQ",
+   "reason": "PARSIQ (PRQ) became Reactive Network (REACT); one project"
+  },
+  "RECRUIT": {
+   "asset_class": "equity",
+   "name": "Recruit Holdings",
+   "domain": "recruit-holdings.com",
+   "wikipedia": "Recruit_(company)",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "RELIANCE": {
+   "asset_class": "equity",
+   "name": "Reliance Industries",
+   "domain": "ril.com",
+   "wikipedia": "Reliance_Industries",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "RENESAS": {
+   "asset_class": "equity",
+   "name": "Renesas Electronics",
+   "domain": "renesas.com",
+   "wikipedia": "Renesas_Electronics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "RGTI": {
+   "asset_class": "equity",
+   "name": "Rigetti Computing",
+   "domain": "rigetti.com",
+   "wikipedia": "Rigetti_Computing",
+   "reason": "Wikidata lists no usable website"
+  },
+  "RKLB": {
+   "asset_class": "equity",
+   "name": "Rocket Lab",
+   "domain": "rocketlabcorp.com",
+   "wikipedia": "Rocket_Lab",
+   "reason": "Rocket Lab's site (rocketlabusa.com moved to rocketlabcorp.com); Wikidata lists no usable website"
+  },
+  "RSC": {
+   "domain": "researchhub.com",
+   "reason": "ResearchCoin is ResearchHub's token"
+  },
+  "RUG": {
+   "domain": null,
+   "reason": "rug.fm now redirects to decrypt.co, a news site"
+  },
+  "RUM": {
+   "domain": "rumble.com",
+   "reason": "RUM is Rumble; CMC calls it Rum Group"
+  },
+  "RWUSD": {
+   "domain": null,
+   "reason": "a Binance Earn product: binance.com's popularity is BNB's"
+  },
+  "SAMSUNGEM": {
+   "asset_class": "equity",
+   "name": "Samsung Electro-Mechanics",
+   "domain": "samsungsem.com",
+   "wikipedia": "Samsung_Electro-Mechanics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SBR": {
+   "domain": null,
+   "reason": "saberdao.io now redirects to an unrelated personal site"
+  },
+  "SEK": {
+   "asset_class": "forex",
+   "name": "Swedish krona",
+   "domain": null,
+   "wikipedia": "Swedish_krona",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SENSETIME": {
+   "asset_class": "equity",
+   "name": "SenseTime",
+   "domain": "sensetime.com",
+   "wikipedia": "SenseTime",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SGD": {
+   "asset_class": "forex",
+   "name": "Singapore dollar",
+   "domain": null,
+   "wikipedia": "Singapore_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SHEIN": {
+   "asset_class": "equity",
+   "name": "Shein",
+   "domain": "shein.com",
+   "wikipedia": "Shein",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SHIB": {
+   "domain": "shib.io",
+   "reason": "SHIB's own site (shibatoken.com redirects to it); Shiba's side tokens such as TREAT list it too"
+  },
+  "SHINETSU": {
+   "asset_class": "equity",
+   "name": "Shin-Etsu Chemical",
+   "domain": "shinetsu.co.jp",
+   "wikipedia": "Shin-Etsu_Chemical",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SHLD": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "an ETF: its website is the fund issuer's"
+  },
+  "SKHY": {
+   "asset_class": "equity",
+   "name": "SK Hynix",
+   "domain": "skhynix.com",
+   "wikipedia": "SK_Hynix",
+   "reason": "SK Hynix under a US-style ticker no exchange lists; Wikidata's ticker query finds nothing"
+  },
+  "SKINNOV": {
+   "asset_class": "equity",
+   "name": "SK Innovation",
+   "domain": "skinnovation.com",
+   "wikipedia": "SK_Innovation",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SKR": {
+   "domain": null,
+   "reason": "solanamobile.com is Solana Mobile's (the company's) site, not its Seeker token's"
+  },
+  "SLP": {
+   "domain": null,
+   "reason": "Axie Infinity's in-game token: axieinfinity.com's popularity is AXS's"
+  },
+  "SLRS": {
+   "domain": null,
+   "reason": "solrise.finance now redirects to Solflare, a different product"
+  },
+  "SMALL2000": {
+   "asset_class": "index",
+   "name": "Russell 2000",
+   "domain": null,
+   "wikipedia": "Russell_2000_Index",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SMIC": {
+   "asset_class": "equity",
+   "name": "Semiconductor Manufacturing International Corporation",
+   "domain": "smics.com",
+   "wikipedia": "Semiconductor_Manufacturing_International_Corporation",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SNFT": {
+   "domain": null,
+   "reason": "a fan token on Bitci: bitci.com is the platform's"
+  },
+  "SNOW": {
+   "asset_class": "equity",
+   "name": "Snowflake Inc.",
+   "domain": "snowflake.com",
+   "wikipedia": "Snowflake_Inc.",
+   "reason": "Wikidata lists no usable website"
+  },
+  "SOLO": {
+   "asset_class": "crypto",
+   "name": "Sologenic",
+   "domain": "sologenic.org",
+   "reason": "Atlas's SOLO (Bybit spot from 2022) is Sologenic; the dominant-symbol match picked Solomon (CMC 2025). sologenic.org checked 2026-10-20"
+  },
+  "SOXX": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "an ETF: its website is the fund issuer's"
+  },
+  "SOY": {
+   "asset_class": "commodity",
+   "name": "Soybean",
+   "domain": null,
+   "wikipedia": "Soybean",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SP500": {
+   "asset_class": "index",
+   "name": "S&P 500",
+   "domain": null,
+   "wikipedia": "S&P_500",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SPACEX.PRE_MARKET": {
+   "asset_class": "pre_market",
+   "name": "SpaceX",
+   "domain": "spacex.com",
+   "wikipedia": "SpaceX",
+   "reason": "pre-IPO SpaceX contracts; Atlas's SPACEX is a PreStocks token (its site is the issuer's)"
+  },
+  "SPELL": {
+   "domain": "abracadabra.money",
+   "reason": "Spell is Abracadabra's token"
+  },
+  "SPS": {
+   "domain": "splinterlands.com",
+   "reason": "Splintershards is Splinterlands' token"
+  },
+  "SPX500": {
+   "asset_class": "index",
+   "name": "S&P 500",
+   "domain": null,
+   "wikipedia": "S&P_500",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "SSBIOLOGICS": {
+   "asset_class": "equity",
+   "name": "Samsung Biologics",
+   "domain": "samsungbiologics.com",
+   "wikipedia": "Samsung_Biologics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "STARL": {
+   "domain": null,
+   "reason": "starlproject.com now redirects to a spam site"
+  },
+  "STONKS": {
+   "domain": "msx.com",
+   "reason": "MyStonks rebranded as MSX"
+  },
+  "STRC": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "Strategy's preferred stock: strategy.com's popularity is MSTR's"
+  },
+  "SUNGROW": {
+   "asset_class": "equity",
+   "name": "Sungrow",
+   "domain": "sungrowpower.com",
+   "wikipedia": "Sungrow",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SUSD": {
+   "domain": null,
+   "reason": "Synthetix's stablecoin: synthetix.io's popularity is SNX's"
+  },
+  "TAIYOYUDEN": {
+   "asset_class": "equity",
+   "name": "Taiyo Yuden",
+   "domain": "yuden.co.jp",
+   "wikipedia": "Taiyo_Yuden",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "TAKEDA": {
+   "asset_class": "equity",
+   "name": "Takeda Pharmaceutical",
+   "domain": "takeda.com",
+   "wikipedia": "Takeda_Pharmaceutical_Company",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "TATE": {
+   "domain": null,
+   "reason": "jointherealworld.com is Andrew Tate's course business, not the Tate Terminal token's site"
+  },
+  "TENCENT": {
+   "asset_class": "equity",
+   "name": "Tencent",
+   "domain": "tencent.com",
+   "wikipedia": "Tencent",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "THALES": {
+   "domain": "overtime.io",
+   "reason": "Thales rebranded as Overtime; thalesmarket.io redirects there"
+  },
+  "TOKYOEL": {
+   "asset_class": "equity",
+   "name": "Tokyo Electron",
+   "domain": "tel.com",
+   "wikipedia": "Tokyo_Electron",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "TRR": {
+   "domain": null,
+   "reason": "terrancoin.com now redirects to a spam site"
+  },
+  "TRY": {
+   "asset_class": "forex",
+   "name": "Turkish lira",
+   "domain": null,
+   "wikipedia": "Turkish_lira",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "TSEM": {
+   "domain": "towersemi.com",
+   "reason": "Wikidata's website is not towersemi.com"
+  },
+  "TWLO": {
+   "domain": "twilio.com",
+   "reason": "Wikidata lists no usable website"
+  },
+  "TXRH": {
+   "domain": "texasroadhouse.com",
+   "reason": "Wikidata lists a menu fan site; Texas Roadhouse's site is texasroadhouse.com (answered 2026-10-21 behind a security check titled Texas Roadhouse)"
+  },
+  "UK100": {
+   "asset_class": "index",
+   "name": "FTSE 100",
+   "domain": null,
+   "wikipedia": "FTSE_100_Index",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "UNH": {
+   "domain": "unitedhealthgroup.com",
+   "reason": "Wikidata lists uhc.com (a subsidiary)"
+  },
+  "UNIMICRON": {
+   "asset_class": "equity",
+   "name": "Unimicron",
+   "domain": "unimicron.com",
+   "wikipedia": "Unimicron",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "UNITREE": {
+   "asset_class": "equity",
+   "name": "Unitree Robotics",
+   "domain": "unitree.com",
+   "wikipedia": "Unitree_Robotics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "UNO": {
+   "domain": null,
+   "reason": "Gate's UNO pairs are most likely Uno Re, not Unobtanium (a 2013 coin, CMC's only UNO); unverifiable, so no site"
+  },
+  "URANIUM": {
+   "asset_class": "commodity",
+   "name": "Uranium",
+   "domain": null,
+   "wikipedia": "Uranium",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "US100": {
+   "asset_class": "index",
+   "name": "Nasdaq-100",
+   "domain": null,
+   "wikipedia": "Nasdaq-100",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "US2000": {
+   "asset_class": "index",
+   "name": "Russell 2000",
+   "domain": null,
+   "wikipedia": "Russell_2000_Index",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "US30": {
+   "asset_class": "index",
+   "name": "Dow Jones Industrial Average",
+   "domain": null,
+   "wikipedia": "Dow_Jones_Industrial_Average",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USA100": {
+   "asset_class": "index",
+   "name": "Nasdaq-100",
+   "domain": null,
+   "wikipedia": "Nasdaq-100",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USA500": {
+   "asset_class": "index",
+   "name": "S&P 500",
+   "domain": null,
+   "wikipedia": "S&P_500",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USD1": {
+   "domain": null,
+   "reason": "World Liberty Financial's stablecoin: the site's popularity is WLFI's",
+   "wikipedia": null
+  },
+  "USDBRL": {
+   "asset_class": "forex",
+   "name": "Brazilian real",
+   "domain": null,
+   "wikipedia": "Brazilian_real",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USDC": {
+   "domain": null,
+   "reason": "circle.com is Circle Internet Group's site (CRCL); issuer sites are not their stablecoins'"
+  },
+  "USDH": {
+   "domain": "nativemarkets.com",
+   "reason": "USDH is issued by Native Markets"
+  },
+  "USDP": {
+   "domain": null,
+   "reason": "Pax Dollar's site is its issuer's, Paxos"
+  },
+  "USDPT": {
+   "domain": null,
+   "reason": "Western Union's token: westernunion.com is the company's"
+  },
+  "USOIL": {
+   "asset_class": "commodity",
+   "name": "WTI crude oil",
+   "domain": null,
+   "wikipedia": "West_Texas_Intermediate",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USTECH": {
+   "asset_class": "index",
+   "name": "Nasdaq-100",
+   "domain": null,
+   "wikipedia": "Nasdaq-100",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "VATRENI": {
+   "domain": null,
+   "reason": "a fan token: the football federation's site is not the token's"
+  },
+  "VIX": {
+   "asset_class": "index",
+   "name": "VIX",
+   "domain": null,
+   "wikipedia": "VIX",
+   "reason": "index: no website of its own; ranked through its Wikipedia article only"
+  },
+  "VLR": {
+   "same_project_as": "PSP",
+   "reason": "ParaSwap (PSP) rebranded as Velora (VLR); one project"
+  },
+  "VTHO": {
+   "domain": null,
+   "reason": "VeChain's gas token: vechain.org's popularity is VET's"
+  },
+  "WARS": {
+   "domain": null,
+   "reason": "Ripio's stablecoin: ripio.com is the company's"
+  },
+  "WBETH": {
+   "domain": null,
+   "reason": "Binance wrapped staked ETH: binance.com's popularity is BNB's"
+  },
+  "WBRL": {
+   "domain": null,
+   "reason": "Ripio's stablecoin: ripio.com is the company's"
+  },
+  "WEETH": {
+   "domain": null,
+   "reason": "ether.fi's wrapped eETH: ether.fi's popularity is ETHFI's"
+  },
+  "WEN": {
+   "asset_class": "equity",
+   "name": "Wendy's",
+   "domain": "wendys.com",
+   "wikipedia": "Wendy's",
+   "reason": "Wikidata lists no usable website"
+  },
+  "WHEAT": {
+   "asset_class": "commodity",
+   "name": "Wheat",
+   "domain": null,
+   "wikipedia": "Wheat",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "WINBOND": {
+   "asset_class": "equity",
+   "name": "Winbond Electronics",
+   "domain": "winbond.com",
+   "wikipedia": "Winbond",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "WLD": {
+   "domain": "world.org",
+   "reason": "Worldcoin rebranded as World; worldcoin.org redirects to world.org"
+  },
+  "WLFI": {
+   "wikipedia": "World_Liberty_Financial",
+   "reason": "the article is WLFI's, not its stablecoin USD1's"
+  },
+  "WTI": {
+   "asset_class": "commodity",
+   "name": "West Texas Intermediate",
+   "domain": null,
+   "wikipedia": "West_Texas_Intermediate",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "WUXIAPPTEC": {
+   "asset_class": "equity",
+   "name": "WuXi AppTec",
+   "domain": "wuxiapptec.com",
+   "wikipedia": "WuXi_AppTec",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "WUXIBIO": {
+   "asset_class": "equity",
+   "name": "WuXi Biologics",
+   "domain": "wuxibiologics.com",
+   "wikipedia": "WuXi_Biologics",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "XAG": {
+   "asset_class": "commodity",
+   "name": "Silver",
+   "domain": null,
+   "wikipedia": "Silver",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XAL": {
+   "asset_class": "commodity",
+   "name": "Aluminium",
+   "domain": null,
+   "wikipedia": "Aluminium",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XAU": {
+   "asset_class": "commodity",
+   "name": "Gold",
+   "domain": null,
+   "wikipedia": "Gold",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XAUT": {
+   "domain": null,
+   "wikipedia": null,
+   "reason": "gold.tether.to is Tether's site (tether.to), whose popularity is USDT's"
+  },
+  "XCU": {
+   "asset_class": "commodity",
+   "name": "Copper",
+   "domain": null,
+   "wikipedia": "Copper",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XIAOMI": {
+   "asset_class": "equity",
+   "name": "Xiaomi",
+   "domain": "mi.com",
+   "wikipedia": "Xiaomi",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "XL1": {
+   "domain": null,
+   "reason": "xyo.network's popularity is XYO's"
+  },
+  "XLM": {
+   "wikipedia": "Stellar_(payment_network)",
+   "reason": "Wikidata links no article by CMC slug"
+  },
+  "XNI": {
+   "asset_class": "commodity",
+   "name": "Nickel",
+   "domain": null,
+   "wikipedia": "Nickel",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XPB": {
+   "asset_class": "commodity",
+   "name": "Lead",
+   "domain": null,
+   "wikipedia": "Lead",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XPD": {
+   "asset_class": "commodity",
+   "name": "Palladium",
+   "domain": null,
+   "wikipedia": "Palladium",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XPT": {
+   "asset_class": "commodity",
+   "name": "Platinum",
+   "domain": null,
+   "wikipedia": "Platinum",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "XRP": {
+   "wikipedia": "XRP_Ledger",
+   "reason": "Wikidata links no article by CMC slug"
+  },
+  "XSGD": {
+   "domain": null,
+   "reason": "StraitsX's SGD stablecoin; straitsx.com is the issuer's site"
+  },
+  "XU3O8": {
+   "domain": "uranium.io",
+   "reason": "xU3O8 is uranium.io's token"
+  },
+  "YAGEO": {
+   "asset_class": "equity",
+   "name": "Yageo",
+   "domain": "yageogroup.com",
+   "wikipedia": "Yageo",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it; yageo.com redirects to yageogroup.com"
+  },
+  "YMTC": {
+   "asset_class": "pre_market",
+   "name": "Yangtze Memory Technologies",
+   "domain": "ymtc.com",
+   "wikipedia": "Yangtze_Memory_Technologies",
+   "reason": "pre-IPO company: no exchange listing for Wikidata's ticker query"
+  },
+  "ZHIPU": {
+   "asset_class": "equity",
+   "name": "Zhipu AI",
+   "domain": "z.ai",
+   "wikipedia": "Z.ai",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "ZIJINMINING": {
+   "asset_class": "equity",
+   "name": "Zijin Mining",
+   "domain": "zijinmining.com",
+   "wikipedia": "Zijin_Mining",
+   "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "ZINC": {
+   "asset_class": "commodity",
+   "name": "Zinc",
+   "domain": null,
+   "wikipedia": "Zinc",
+   "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
+  },
+  "ZLW": {
+   "domain": null,
+   "reason": "zelwin.com now forwards to Zelwin Agency, a design agency, not the token's project"
+  },
+  "ZZZ": {
+   "domain": null,
+   "reason": "its site is the Pons launchpad (PONS's)"
+  }
+ }
+}
