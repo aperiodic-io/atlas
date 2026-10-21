@@ -5,13 +5,9 @@ import re
 from ..contracts import Contract, ContractType
 from ..parser_interface import SymbolData
 from ..types import UnderlyingType
-from .common import SkipSymbol, instrument_type, make_contract, parse_underscore_spot, parse_yymmdd
+from .common import SkipSymbol, instrument_type, make_contract, parse_yymmdd
 from .fields import parse_recorded_legs
 from .http import get_json, iso_from_millis
-
-
-def parse_crypto_com(exchange: str, sd: SymbolData) -> Contract:
-    return parse_underscore_spot(exchange, sd)
 
 
 # --- Exchange API (live-producers' cryptocom-perps / cryptocom-futures) --
@@ -107,7 +103,7 @@ _CRYPTOCOM_DERIVATIVE_ID = re.compile(r"^([A-Z0-9]+)USD-(PERP|\d{6})$")
 
 
 def parse_cryptocom_derivative(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BTCUSD-PERP` / `BTCUSD-261127`."""
+    """API legs first; history rows are `BTCUSD-PERP` / `BTCUSD-261127`."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract
@@ -126,7 +122,7 @@ def parse_cryptocom_derivative(exchange: str, sd: SymbolData) -> Contract:
 # --- Exchange API (cryptocom-spot) ------------------------------------------
 #
 # Spot pairs come from the same instruments endpoint as the derivatives, as
-# `CCY_PAIR` rows whose symbols are Tardis's `crypto-com` spot ids (`BTC_USD`,
+# `CCY_PAIR` rows whose symbols are the spot history's ids (`BTC_USD`,
 # `1INCH_USDT`, and one venue-suffixed pair, `SHIB_BTC@OEX_HK`). Crypto.com
 # lists only `tradable` instruments and publishes no delisted status or listing
 # time: a pair that stops trading simply disappears, as with the derivatives.
@@ -150,7 +146,7 @@ def fetch_cryptocom_spot(timeout_seconds: int) -> list[dict]:
 
 
 def parse_cryptocom_spot(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BASE_QUOTE`, maybe `@VENUE`-suffixed."""
+    """API legs first; history rows are `BASE_QUOTE`, maybe `@VENUE`-suffixed."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

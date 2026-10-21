@@ -222,8 +222,8 @@ def venue_margin(
     ``resolve_margin`` can only guess from a whitelist of known linear quote
     assets, so every stablecoin the whitelist has not caught up with is read as
     an inverse contract. A venue that names the margin asset per symbol is
-    authoritative; fall back to the heuristic when it does not (Tardis-sourced
-    rows carry no such field).
+    authoritative; fall back to the heuristic when it does not (history rows
+    recorded before a fetcher carry no such field).
     """
     if ctype == ContractType.spot:
         return None

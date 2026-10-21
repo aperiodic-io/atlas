@@ -65,8 +65,7 @@ def _mexc_symbol(item: dict) -> dict:
         "contract_size": float(item.get("contractSize") or 1.0),
         "quantity_unit": "quote" if inverse else "base",
         "underlying": mexc_underlying(item).value,
-        # Tardis does not cover MEXC futures, so the venue's own listing time
-        # is the only listing date there is.
+        # The venue's own listing time.
         "first_capture": iso_from_millis(item.get("openingTime"))
         or iso_from_millis(item.get("createTime")),
     }

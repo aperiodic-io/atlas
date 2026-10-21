@@ -3,7 +3,7 @@
 Fixtures under `tests/fixtures/bitstamp/` are excerpts of the real
 `/api/v2/markets/` and `/api/v2/currencies/` payloads captured on 2026-10-20
 (every perpetual, a spread of spot markets incl. the one `Disabled` market) and
-the Tardis `bitstamp` symbol ids of that day. Tardis's `bitstamp` feed carries
+the history `bitstamp` symbol ids of that day. The history's `bitstamp` feed carries
 both spot (`btcusd`) and perpetuals (`btcusd-perp`).
 """
 
@@ -19,7 +19,6 @@ import pytest
 from atlas.exchange_definitions.bitstamp import (
     fetch_bitstamp_perpetual,
     fetch_bitstamp_spot,
-    parse_bitstamp,
     parse_bitstamp_api,
 )
 from atlas.exchange_definitions.common import SkipSymbol
@@ -153,9 +152,9 @@ class TestPerps:
         assert len(perps) == 20
         assert all(sid.endswith("-perp") for sid in perps)
 
-    def test_ids_are_tardis_ids(self, perps):
-        tardis = _load("tardis_bitstamp_ids.json")
-        assert set(perps) == {sid for sid in tardis["active"] if sid.endswith("-perp")}
+    def test_ids_are_history_ids(self, perps):
+        history = _load("history_bitstamp_ids.json")
+        assert set(perps) == {sid for sid in history["active"] if sid.endswith("-perp")}
 
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
@@ -244,21 +243,21 @@ class TestMalformed:
 
 
 # ---------------------------------------------------------------------------
-# Tardis fallback
+# History fallback
 # ---------------------------------------------------------------------------
 
 
-def _tardis_rows() -> list[dict]:
-    tardis = _load("tardis_bitstamp_ids.json")
+def _history_rows() -> list[dict]:
+    history = _load("history_bitstamp_ids.json")
     return [
         {"id": sid, "type": "perpetual" if sid.endswith("-perp") else "spot"}
-        for sid in tardis["active"] + tardis["delisted"]
+        for sid in history["active"] + history["delisted"]
     ]
 
 
-class TestTardisFallback:
-    def test_every_tardis_id_parses(self):
-        rows = _tardis_rows()
+class TestHistoryFallback:
+    def test_every_history_id_parses(self):
+        rows = _history_rows()
         assert len(rows) == 436
         for sd in rows:
             exchange = PERPS if sd["type"] == "perpetual" else SPOT
@@ -298,5 +297,3 @@ class TestTardisFallback:
         with pytest.raises(SkipSymbol):
             parse_bitstamp_api(SPOT, {"id": sid, "type": kind})
 
-    def test_legacy_parser_untouched(self):
-        assert parse_bitstamp("bitstamp", {"id": "btcusd", "type": "spot"}).internal_id == "spot-BTC-USD"

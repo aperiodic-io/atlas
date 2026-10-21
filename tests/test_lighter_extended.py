@@ -20,7 +20,6 @@ import requests
 
 from atlas.contracts import ContractType
 from atlas.database import SecurityMaster
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.extended import (
     extended_symbols,
     extended_underlying,
@@ -34,7 +33,6 @@ from atlas.exchange_definitions.lighter import (
 from atlas.exchanges import (
     get_allowed_types,
     get_exchange_fetcher,
-    to_tardis_exchange_id,
 )
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.types import UnderlyingType
@@ -57,15 +55,8 @@ def _iid(exchange: str, sd: dict) -> str:
 class TestRegistration:
     @pytest.mark.parametrize("exchange", ["lighter-perps", "extended-perps"])
     def test_stable_perpetual_only_with_an_api_fetcher(self, exchange):
-        # Beta exchanges are skipped by update(); these have no other source.
-        assert is_beta_exchange(exchange) is False
         assert get_allowed_types(exchange) == {"perpetual"}
         assert get_exchange_fetcher(exchange) is not None
-
-    def test_lighter_reads_tardis_under_its_tardis_id(self):
-        # Tardis archives Lighter as "lighter", keyed by the same market ids.
-        assert to_tardis_exchange_id("lighter-perps") == "lighter"
-
 
 class TestLighter:
     symbols = lighter_symbols(_payload("lighter_order_book_details.json"))
@@ -275,7 +266,7 @@ def test_exchange_source_update_writes_a_loadable_snapshot(
     original_id,
     internal_id,
 ):
-    """The --source exchange path: rows carry an internal_id and a first_capture
+    """The update path: rows carry an internal_id and a first_capture
     (their first observation), without which SecurityMaster would not index
     them; a second run keeps that first observation."""
     updater = importlib.import_module("atlas.update")

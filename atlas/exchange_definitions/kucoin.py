@@ -10,21 +10,16 @@ from .common import (
     make_contract,
     ms_to_datetime,
     ms_to_utc_timestamp,
-    parse_dash,
     upcoming,
 )
 from .fields import parse_recorded_legs
 from .http import get_json
 
 
-def parse_kucoin(exchange: str, sd: SymbolData) -> Contract:
-    return parse_dash(exchange, sd)
-
-
 # --- Exchange API (kucoin-spot) ---------------------------------------------
 #
-# KuCoin spot symbols are `BASE-QUOTE` (`BTC-USDT`), byte-identical to Tardis's
-# `kucoin` ids. `/api/v2/symbols` lists only the pairs KuCoin still carries: a
+# KuCoin spot symbols are `BASE-QUOTE` (`BTC-USDT`), byte-identical to the history
+# rows' ids. `/api/v2/symbols` lists only the pairs KuCoin still carries: a
 # delisted pair simply disappears (KuCoin publishes no delisted status), so the
 # updater's missing-row confirmation closes it.
 #
@@ -117,7 +112,7 @@ def fetch_kucoin_spot(timeout_seconds: int) -> list[dict]:
 
 
 def parse_kucoin_spot(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are `BASE-QUOTE` under KuCoin's codes."""
+    """API legs first; history rows are `BASE-QUOTE` under KuCoin's codes."""
     contract = parse_recorded_legs(exchange, sd)
     if contract is not None:
         return contract

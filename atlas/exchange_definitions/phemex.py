@@ -10,35 +10,13 @@ from .common import (
     upcoming,
     SkipSymbol,
     delisted_end_date,
-    instrument_type,
     make_contract,
     ms_to_datetime,
     ms_to_utc_timestamp,
-    resolve_margin,
     split_concat,
 )
 from .fields import parse_recorded_legs
 from .http import get_json
-
-
-def parse_phemex(exchange: str, sd: SymbolData) -> Contract:
-    sid = sd["id"]
-    ctype = instrument_type(sd)
-
-    if sid.startswith("s"):
-        pair = split_concat(sid[1:])
-        if pair:
-            symbol, denominator = pair
-            return make_contract(exchange, sd, symbol, denominator, None, ctype)
-        raise SkipSymbol(f"{exchange}: cannot split {sid!r} (s-prefixed spot)")
-
-    pair = split_concat(sid, ["USDT", "USDC", "USD", "BTC", "ETH"])
-    if pair:
-        symbol, denominator = pair
-        margin = resolve_margin(symbol, denominator, ctype)
-        return make_contract(exchange, sd, symbol, denominator, margin, ctype)
-
-    raise SkipSymbol(f"{exchange}: cannot parse {sid!r}")
 
 
 # --- Exchange API (phemex-spot, phemex-perps) -------------------------------
@@ -46,7 +24,7 @@ def parse_phemex(exchange: str, sd: SymbolData) -> Contract:
 # `/public/products-plus` lists every product Phemex ever had, delisted ones
 # included, each with a `timeline` of epoch-ms milestones:
 # [orders open, trading opens (= `listTime`), cancel-only, delisting starts,
-# delisted]; unset milestones are 0. Symbols are Tardis's `phemex` ids:
+# delisted]; unset milestones are 0. Symbols are the ids history rows use:
 #
 # - spot (`products`, type `Spot`): `sBTCUSDT`, `s1000BONKUSDT`.
 # - legacy contracts (`products`, type `Perpetual`): inverse `BTCUSD` and
@@ -234,7 +212,7 @@ def fetch_phemex_perpetual(timeout_seconds: int) -> list[dict]:
     return rows
 
 
-# Spot quote assets Phemex has used, for Tardis-only rows (`sIRENPUSD` quotes
+# Spot quote assets Phemex has used, for history rows (`sIRENPUSD` quotes
 # Phemex's pilot dollar PUSD). No spot pair quotes plain USD, so `PUSD` is
 # never a misread `...P` / `USD`.
 _SPOT_QUOTES = ["USDT", "USDC", "USDQ", "USDR", "PUSD", "TRY", "BRZ", "BTC", "ETH"]
@@ -248,7 +226,7 @@ _LEGACY_PUSD_LOOKALIKES = frozenset(
 
 
 def parse_phemex_api(exchange: str, sd: SymbolData) -> Contract:
-    """API legs first; Tardis-only rows are parsed from the Phemex id.
+    """API legs first; history rows are parsed from the Phemex id.
 
     `sBTCUSDT` spot; linear `BTCUSDT` / `AAVEUSDC` / `u1000PEPEUSDT`; inverse
     `BTCUSD` and `cETHUSD`; any other `...USD` is the USD-settled legacy book

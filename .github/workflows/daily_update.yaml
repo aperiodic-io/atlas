@@ -41,7 +41,7 @@ jobs:
       - name: run-update
         env:
           ACCEPT_MISSING: ${{ inputs.accept_missing }}
-        run: uv run python -m atlas.update --source exchange --accept-missing "$ACCEPT_MISSING"
+        run: uv run python -m atlas.update --accept-missing "$ACCEPT_MISSING"
 
       # Resolve Atlas asset IDs (base/quote/margin, unified_id) for new and
       # changed rows from CoinMarketCap's exchange market pairs. It runs even if

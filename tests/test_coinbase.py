@@ -33,7 +33,7 @@ class TestCoinbaseParser:
     @pytest.mark.parametrize(
         "quote", ["USD", "EUR", "GBP", "USDC", "USDT", "BTC", "ETH", "DAI", "INR", "SGD"]
     )
-    def test_tardis_ids_split_on_dash(self, quote: str):
+    def test_history_ids_split_on_dash(self, quote: str):
         assert _iid("coinbase-spot", f"SOL-{quote}", "spot") == f"spot-SOL-{quote}"
 
     def test_api_fields_are_authoritative(self):

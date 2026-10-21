@@ -2,7 +2,7 @@
 
 Fixtures under `tests/fixtures/phemex/` are excerpts (trimmed to the fields
 the fetchers read) of the real `/public/products-plus` response and of
-Tardis's `phemex` symbol list, captured on 2026-10-20.
+the historical `phemex` symbol list, captured on 2026-10-20.
 """
 
 from __future__ import annotations
@@ -20,13 +20,12 @@ from atlas.exchange_definitions.common import SkipSymbol, parse_utc_timestamp
 from atlas.exchange_definitions.phemex import (
     fetch_phemex_perpetual,
     fetch_phemex_spot,
-    parse_phemex,
     parse_phemex_api,
 )
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "phemex"
 PRODUCTS = json.loads((_FIXTURES / "products_plus.json").read_text(encoding="utf-8"))
-TARDIS = json.loads((_FIXTURES / "tardis.json").read_text(encoding="utf-8"))
+HISTORY = json.loads((_FIXTURES / "history.json").read_text(encoding="utf-8"))
 
 
 def _response(payload: object) -> MagicMock:
@@ -372,18 +371,18 @@ class TestMalformed:
         assert "BTCUSDT" in rows
 
 
-class TestTardisFallback:
-    def test_every_tardis_row_parses(self):
-        for row in TARDIS:
+class TestHistoryFallback:
+    def test_every_history_row_parses(self):
+        for row in HISTORY:
             slug = "phemex-spot" if row["type"] == "spot" else "phemex-perps"
             contract = parse_phemex_api(slug, {"id": row["id"], "type": row["type"]})
             assert contract.instrument_type.value == row["type"]
 
-    def test_tardis_rows_match_api_rows(self):
+    def test_history_rows_match_api_rows(self):
         api = {**{i: _internal("phemex-spot", sd) for i, sd in _spot().items()},
                **{i: _internal("phemex-perps", sd) for i, sd in _perps().items()}}
         shared = 0
-        for row in TARDIS:
+        for row in HISTORY:
             if row["id"] in api:
                 shared += 1
                 assert _internal("phemex", {"id": row["id"], "type": row["type"]}) == api[row["id"]], row["id"]
@@ -432,7 +431,3 @@ class TestTardisFallback:
         assert parse_phemex_api("phemex", {"id": "sBTCUSDT", "type": "spot"}).instrument_type == ContractType.spot
 
 
-def test_legacy_phemex_parser_is_unchanged():
-    # The Tardis-named `phemex` slug keeps its heuristic margins.
-    assert parse_phemex("phemex", {"id": "ETHUSD", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:ETH"
-    assert parse_phemex("phemex", {"id": "BTCUSD", "type": "perpetual"}).internal_id == "perpetual-BTC-USD:BTC"

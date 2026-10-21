@@ -245,9 +245,7 @@ Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 `bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
 `bitget-futures-coin`, `gateio-spot`, `gateio-perps-usdt`, `gateio-perps-btc`,
 `gateio-futures-usdt` and `coinbase-spot`. Bitget's and Gate's contracts are
-the live-producers venues, and spot venues take the same scheme; the
-Tardis-named `bitget`, `bitget-futures`, `gate-io`, `gate-io-futures` and
-`coinbase` have no snapshot.
+the live-producers venues, and spot venues take the same scheme.
 
 ## Coverage
 

@@ -3,7 +3,7 @@
 Fixtures under `tests/fixtures/bitfinex/` are the real `conf` payloads captured
 on 2026-10-20 (`pub:list:pair:exchange`, `pub:info:pair`,
 `pub:list:pair:securities`, `pub:list:pair:futures`, `pub:info:pair:futures`)
-and the Tardis symbol ids of `bitfinex` / `bitfinex-derivatives` on that day.
+and the history symbol ids of `bitfinex` / `bitfinex-derivatives` on that day.
 """
 
 from __future__ import annotations
@@ -17,9 +17,7 @@ import pytest
 from atlas.exchange_definitions.bitfinex import (
     fetch_bitfinex_perpetual,
     fetch_bitfinex_spot,
-    parse_bitfinex,
     parse_bitfinex_api,
-    parse_bitfinex_derivatives,
     parse_bitfinex_perpetual_api,
 )
 from atlas.exchange_definitions.common import SkipSymbol
@@ -96,10 +94,10 @@ class TestSpotUniverse:
         assert set(spot) == set(listed) - paper
         assert len(spot) == 180
 
-    def test_ids_are_tardis_ids(self, spot):
-        # Tardis ids drop the `t` prefix of Bitfinex trading symbols.
-        tardis = _load("tardis_bitfinex_ids.json")
-        assert set(spot) == set(tardis["active"])
+    def test_ids_are_history_ids(self, spot):
+        # History ids drop the `t` prefix of Bitfinex trading symbols.
+        history = _load("history_bitfinex_ids.json")
+        assert set(spot) == set(history["active"])
         assert not any(sid.startswith("t") and sid[1:] in spot for sid in spot)
 
     def test_rows_are_spot_without_derivative_fields(self, spot):
@@ -223,14 +221,14 @@ class TestSpotMalformed:
 
 
 # ---------------------------------------------------------------------------
-# Spot Tardis fallback
+# Spot history fallback
 # ---------------------------------------------------------------------------
 
 
-class TestSpotTardisFallback:
-    def test_every_tardis_id_parses(self):
-        tardis = _load("tardis_bitfinex_ids.json")
-        for sid in tardis["active"] + tardis["delisted"]:
+class TestSpotHistoryFallback:
+    def test_every_history_id_parses(self):
+        history = _load("history_bitfinex_ids.json")
+        for sid in history["active"] + history["delisted"]:
             contract = parse_bitfinex_api(SPOT, {"id": sid, "type": "spot"})
             assert contract.symbol, sid
             assert contract.denominator, sid
@@ -272,17 +270,6 @@ class TestSpotTardisFallback:
             parse_bitfinex_api(SPOT, {"id": sid, "type": "spot"})
 
 
-class TestLegacyParsersUntouched:
-    def test_legacy_spot_parser_still_demands_t_prefix(self):
-        with pytest.raises(SkipSymbol):
-            parse_bitfinex("bitfinex", {"id": "BTCUSD", "type": "spot"})
-        assert parse_bitfinex("bitfinex", {"id": "tBTCUST", "type": "spot"}).internal_id == "spot-BTC-USDT"
-
-    def test_legacy_derivatives_parser(self):
-        contract = parse_bitfinex_derivatives("bitfinex-derivatives", {"id": "BTCF0:USTF0", "type": "perpetual"})
-        assert contract.internal_id == "perpetual-BTC-USDT:USDT"
-
-
 # ---------------------------------------------------------------------------
 # Perpetuals
 # ---------------------------------------------------------------------------
@@ -294,8 +281,8 @@ class TestPerpUniverse:
         assert set(perps) == {pid for pid in listed if not pid.startswith("TEST")}
         assert len(perps) == 80
 
-    def test_ids_are_tardis_ids(self, perps):
-        assert set(perps) == set(_load("tardis_bitfinex_derivatives_ids.json")["active"])
+    def test_ids_are_history_ids(self, perps):
+        assert set(perps) == set(_load("history_bitfinex_derivatives_ids.json")["active"])
 
     def test_rows_are_linear_perpetuals(self, perps):
         for sd in perps.values():
@@ -388,10 +375,10 @@ class TestPerpMalformed:
             _fetch(fetch_bitfinex_perpetual, _routes(**{"pub:list:pair:futures": [["BTC:UST"]]}))
 
 
-class TestPerpTardisFallback:
-    def test_every_tardis_id_parses(self):
-        tardis = _load("tardis_bitfinex_derivatives_ids.json")
-        for sid in tardis["active"] + tardis["delisted"]:
+class TestPerpHistoryFallback:
+    def test_every_history_id_parses(self):
+        history = _load("history_bitfinex_derivatives_ids.json")
+        for sid in history["active"] + history["delisted"]:
             contract = parse_bitfinex_perpetual_api(PERPS, {"id": sid, "type": "perpetual"})
             assert contract.margin == contract.denominator, sid
 

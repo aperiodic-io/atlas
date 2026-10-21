@@ -2,8 +2,8 @@
 
 Fixtures are excerpts of real responses captured on 2026-10-20:
 `symbols.json` from `/v1/symbols`, `details.json` the matching
-`/v1/symbols/details/<symbol>` responses keyed by symbol, and `tardis.json`
-Tardis's Gemini symbol list for the same and some delisted markets.
+`/v1/symbols/details/<symbol>` responses keyed by symbol, and `history.json`
+the historical Gemini symbol list for the same and some delisted markets.
 """
 
 from __future__ import annotations
@@ -24,14 +24,13 @@ from atlas.exchange_definitions.gemini import (
     _RateLimiter,
     fetch_gemini_perpetual,
     fetch_gemini_spot,
-    parse_gemini,
     parse_gemini_api,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "gemini"
 SYMBOLS = json.loads((FIXTURES / "symbols.json").read_text(encoding="utf-8"))
 DETAILS = json.loads((FIXTURES / "details.json").read_text(encoding="utf-8"))
-TARDIS = json.loads((FIXTURES / "tardis.json").read_text(encoding="utf-8"))
+HISTORY = json.loads((FIXTURES / "history.json").read_text(encoding="utf-8"))
 # Read before the autouse fixture below zeroes it for the fake API.
 DEFAULT_INTERVAL = gemini._REQUEST_INTERVAL_SECONDS
 
@@ -100,9 +99,9 @@ class TestSpotFetch:
         spot_symbols = {s.upper() for s in SYMBOLS if not s.endswith("perp")}
         assert set(spot) == spot_symbols
 
-    def test_ids_are_the_uppercase_tardis_ids(self, spot):
-        tardis_ids = {s["id"] for s in TARDIS}
-        assert set(spot) <= tardis_ids
+    def test_ids_are_the_uppercase_history_ids(self, spot):
+        history_ids = {s["id"] for s in HISTORY}
+        assert set(spot) <= history_ids
         assert all(sid == sid.upper() for sid in spot)
 
     def test_rows_are_spot_with_venue_legs(self, spot):
@@ -360,15 +359,15 @@ class TestRateLimiter:
 
 
 # ---------------------------------------------------------------------------
-# Tardis-id fallback
+# History-id fallback
 # ---------------------------------------------------------------------------
 
 
-def _tardis(sid: str, kind: str = "spot") -> dict:
+def _history(sid: str, kind: str = "spot") -> dict:
     return {"id": sid, "type": kind}
 
 
-class TestTardisFallback:
+class TestHistoryFallback:
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
         [
@@ -401,7 +400,7 @@ class TestTardisFallback:
         ],
     )
     def test_spot_ids(self, sid, internal_id):
-        assert _iid(_tardis(sid)) == internal_id
+        assert _iid(_history(sid)) == internal_id
 
     @pytest.mark.parametrize(
         ("sid", "internal_id"),
@@ -414,38 +413,38 @@ class TestTardisFallback:
         ],
     )
     def test_perp_ids(self, sid, internal_id):
-        assert parse_gemini_api("gemini-perps", _tardis(sid, "perpetual")).internal_id == internal_id
+        assert parse_gemini_api("gemini-perps", _history(sid, "perpetual")).internal_id == internal_id
 
     def test_lowercase_ids_parse_too(self):
-        assert _iid(_tardis("btcgusd")) == "spot-BTC-GUSD"
+        assert _iid(_history("btcgusd")) == "spot-BTC-GUSD"
 
     @pytest.mark.parametrize(
         "sd",
         [
-            _tardis("BTCPERP", "perpetual"),
-            _tardis("BTCUSDTPERP", "perpetual"),
-            _tardis("BTCUSD", "perpetual"),
-            _tardis("XYZ"),
-            _tardis("USD"),
-            _tardis("BTCUSD", "option"),
+            _history("BTCPERP", "perpetual"),
+            _history("BTCUSDTPERP", "perpetual"),
+            _history("BTCUSD", "perpetual"),
+            _history("XYZ"),
+            _history("USD"),
+            _history("BTCUSD", "option"),
         ],
     )
     def test_unparseable_ids_are_skipped(self, sd):
         with pytest.raises(SkipSymbol):
             parse_gemini_api("gemini-spot", sd)
 
-    def test_every_tardis_fixture_row_parses(self):
-        for row in TARDIS:
+    def test_every_history_fixture_row_parses(self):
+        for row in HISTORY:
             parse_gemini_api("gemini", {"id": row["id"], "type": row["type"]})
 
     def test_fallback_matches_api_rows(self, spot, perps):
         rows = {**spot, **perps}
-        tardis = {row["id"]: row for row in TARDIS}
-        overlap = set(rows) & set(tardis)
+        history = {row["id"]: row for row in HISTORY}
+        overlap = set(rows) & set(history)
         assert len(overlap) == len(rows)
         for sid in overlap:
             api = parse_gemini_api("gemini-spot", rows[sid])
-            fallback = parse_gemini_api("gemini-spot", _tardis(sid, tardis[sid]["type"]))
+            fallback = parse_gemini_api("gemini-spot", _history(sid, history[sid]["type"]))
             assert fallback.internal_id == api.internal_id, sid
 
     def test_api_legs_win_over_the_id(self):
@@ -453,7 +452,3 @@ class TestTardisFallback:
         assert _iid(sd) == "spot-PAX-GUSD"
 
 
-class TestLegacyParserUnchanged:
-    def test_legacy_parser_still_splits_lowercase_ids(self):
-        contract = parse_gemini("gemini", {"id": "btcgusd", "type": "spot"})
-        assert contract.internal_id == "spot-BTC-GUSD"

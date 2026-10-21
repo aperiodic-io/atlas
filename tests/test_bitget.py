@@ -60,7 +60,7 @@ class TestBitgetSpotParser:
             ("USDTUSD", "spot-USDT-USD"),
         ],
     )
-    def test_tardis_only_rows_split_on_bitget_quotes(self, sid: str, expected: str):
+    def test_history_only_rows_split_on_bitget_quotes(self, sid: str, expected: str):
         assert _iid("bitget-spot", sid, "spot") == expected
 
 

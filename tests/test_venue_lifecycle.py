@@ -497,7 +497,7 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
 def test_daily_update_refreshes_the_venue(exchange):
     # The daily update is what applies these signals; a venue it skips never
     # sees a delisting.
-    from atlas.exchange_definitions import is_beta_exchange
+    from atlas.exchanges import get_exchange_fetcher
 
     assert exchange in updater.EXCHANGES
-    assert not is_beta_exchange(exchange)
+    assert get_exchange_fetcher(exchange) is not None
