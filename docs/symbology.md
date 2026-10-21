@@ -116,6 +116,13 @@ CMC's own listings are checked before they are used:
   `SOL_USDC`, filed under Wrapped Solana, follows Gate's other SOL markets).
   A tie is left as CMC lists it and reported. In practice these are 1:1 twins:
   dYdX and the bridged ethDYDX.
+* **Delisted markets are checked twice.** CMC keeps listing some markets a
+  venue has delisted: Hyperliquid keeps delisted perpetuals in its universe
+  (`MKR`, `hyna:BTC`). Such a pair identifies the delisted row when no active
+  row trades the ticker, but only if the asset's own ticker matches the row's,
+  since CMC's base ticker for these is often just the venue's (it files
+  `vntl:ANTHROPIC` under OpenAI), and only if CMC added the asset before the
+  row stopped trading.
 
 Three safeguards hold back a wrong inference:
 
@@ -288,9 +295,12 @@ rebuild reproduces it exactly.
 
 ## Limitations
 
-* CMC lists only live markets, so a delisted instrument is identified only
-  through evidence recorded while it traded, a venue lineage or a cross-venue
-  consensus. Long-dead tickers no live listing shares stay unresolved.
+* CMC lists mostly live markets, so a delisted instrument is identified only
+  through evidence recorded while it traded, a market CMC still lists, a venue
+  lineage or a cross-venue consensus. Tickers no other venue identified while
+  they traded need a curated override; `overrides.json` holds those for the
+  delisted USD perpetuals of OKX, Hyperliquid and Binance, each with its
+  evidence, and `tests/test_symbology_data.py` lists the few left unresolved.
 * Crypto assets CMC does not track (Hyperliquid HIP-1 tokens, Bitget's tokenized
   stocks, leveraged tokens) have no asset yet. The registry already holds assets
   without a CMC ID (the TradFi reference assets), so minting these from another

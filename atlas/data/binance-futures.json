@@ -4017,8 +4017,17 @@
     "end_date": "2026-04-29T00:00:00.000Z",
     "base_coin": "BOB",
     "quote_coin": "USDT",
+    "cmc_id": 38970,
+    "category": [
+      "DeFi",
+      "DApp",
+      "Interoperability"
+    ],
+    "base_asset_id": "BOB",
+    "base_asset_match": "override",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BOB-USDT:USDT"
   },
   {
     "id": "bomeusdc",
@@ -6817,8 +6826,16 @@
     "end_date": "2026-04-30T00:00:00.000Z",
     "base_coin": "DAM",
     "quote_coin": "USDT",
+    "cmc_id": 37638,
+    "category": [
+      "DeFi",
+      "Lending & Borrowing"
+    ],
+    "base_asset_id": "DAM",
+    "base_asset_match": "override",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DAM-USDT:USDT"
   },
   {
     "id": "darusdt",

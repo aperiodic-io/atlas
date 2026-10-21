@@ -321,3 +321,85 @@ def test_offline_rebuild_is_a_fixpoint(snapshots, registry):
     ]
     assert changed == []
     assert [a.to_json() for a in rebuilt_registry] == [a.to_json() for a in registry]
+
+
+@pytest.mark.parametrize(
+    ("exchange", "original_id", "base", "unified"),
+    [
+        # Renamed or migrated tickers, kept by the venue until delisting.
+        ("okx-perps", "MATIC-USDT-SWAP", "MATIC", "perpetual-MATIC-USDT:USDT"),
+        ("okx-perps", "RNDR-USDT-SWAP", "RENDER", "perpetual-RENDER-USDT:USDT"),
+        ("okx-perps", "FXS-USDT-SWAP", "FRAX", "perpetual-FRAX-USDT:USDT"),
+        ("okx-perps", "TON-USD-SWAP", "GRAM", "perpetual-GRAM-USD:GRAM"),
+        ("okx-perps", "EOS-USD-SWAP", "EOS", "perpetual-EOS-USD:EOS"),
+        ("hyperliquid-perps", "RNDR", "RENDER", "perpetual-RENDER-USDC:USDC"),
+        ("hyperliquid-perps", "FTM", "FTM", "perpetual-FTM-USDC:USDC"),
+        # Shared tickers: the asset the venue actually listed.
+        ("okx-perps", "ELON-USDT-SWAP", "ELON.DOGELON", "perpetual-ELON.DOGELON-USDT:USDT"),
+        ("okx-perps", "MAX-USDT-SWAP", "MAX.MATR1X", "perpetual-MAX.MATR1X-USDT:USDT"),
+        ("binance-futures", "bobusdt", "BOB", "perpetual-BOB-USDT:USDT"),
+        # CMC still lists these delisted Hyperliquid markets.
+        ("hyperliquid-perps", "MKR", "MKR", "perpetual-MKR-USDC:USDC"),
+        ("hyperliquid-perps", "hyna:BTC", "BTC", "perpetual-BTC-USDE:USDE"),
+        # The perpetual's identity reaches the venue's spot rows through lineage.
+        ("okx-spot", "MATIC-USDT", "MATIC", "spot-MATIC-USDT"),
+        ("okx-spot", "RNDR-USDT", "RENDER", "spot-RENDER-USDT"),
+    ],
+)
+def test_delisted_usd_perpetuals(sm, exchange, original_id, base, unified):
+    assert sm.base_asset(exchange, original_id).asset_id == base
+    assert sm.unified_id(exchange, original_id) == unified
+
+
+def test_delisted_multiplier_perpetual(sm):
+    assert sm.base_asset("hyperliquid-perps", "kDOGS").asset_id == "DOGS"
+    assert sm.instrument_metadata("hyperliquid-perps", "kDOGS")["base_multiplier"] == 1000
+
+
+def test_a_misfiled_delisted_cmc_market_is_not_used(sm):
+    # CMC files Hyperliquid's delisted vntl:ANTHROPIC under OpenAI (Derivatives).
+    assert sm.base_asset("hyperliquid-perps", "vntl:ANTHROPIC") is None
+
+
+# Crypto perpetuals quoted in a US dollar stablecoin, delisted by the review of
+# 2026-10-21, that no evidence identifies. Each is either not a single token or
+# one Atlas cannot tell from a namesake without the venue's price history.
+UNRESOLVED_DELISTED_USD_PERPETUALS = {
+    "okx-perps": {
+        "DORA-USDT-SWAP",  # Dora Factory's old (CMC 8800) or migrated (CMC 27966) token
+        "FUN-USDT-SWAP",  # Sport.Fun or FUNToken: venues disagree, no OKX price history
+        "GPT-USDT-SWAP",  # CryptoGPT, QnA3.AI and ArbGPT all traded as GPT in 2024
+        "LEND-USDT-SWAP",  # ETHLend, mid-migration to AAVE at 100 LEND per AAVE
+        "NEIROETH-USDT-SWAP",  # one of two Ethereum Neiro tokens; the evidence names CMC 32521 without telling them apart
+        "SPACEX-USDT-SWAP",  # a pre-IPO SpaceX contract or a SpaceX token; the venue does not say which
+        "TEST01-USDT-SWAP",  # OKX's own test listing
+    },
+    "hyperliquid-perps": {
+        "NEIROETH",  # as on OKX
+        "NFTI",  # Hyperliquid's NFT index, not a token
+    },
+    "binance-futures": {
+        "bluebirdusdt",  # Binance's BLUEBIRD (Twitter ecosystem) index
+        "dotecousdt",  # Binance's DOT ecosystem index
+        "footballusdt",  # Binance's football fan token index
+    },
+}
+USD_STABLECOINS = {"USD", "USDT", "USDC", "USDE", "USDH", "USDT0"}
+REVIEWED_UNTIL = "2026-10-21"
+
+
+def test_delisted_usd_perpetuals_are_identified_or_known(snapshots):
+    unresolved = defaultdict(set)
+    for exchange in UNRESOLVED_DELISTED_USD_PERPETUALS:
+        for row in snapshots[exchange]:
+            if (
+                row.get("type") == "perpetual"
+                and row.get("quote_asset_id") in USD_STABLECOINS
+                and row.get("underlying") in (None, "crypto")
+                and row.get("end_date")
+                and row["end_date"][:10] <= REVIEWED_UNTIL
+                and not row.get("base_asset_id")
+            ):
+                unresolved[exchange].add(row["id"])
+    for exchange, known in UNRESOLVED_DELISTED_USD_PERPETUALS.items():
+        assert unresolved[exchange] <= known, exchange
