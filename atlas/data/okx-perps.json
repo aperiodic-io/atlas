@@ -441,6 +441,8 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2021-09-07T00:00:00.000Z",
+    "category": [],
+    "cmc_id": 11568,
     "contract_size_history": [
       {
         "effective_from": "2021-09-07T00:00:00Z",
@@ -455,8 +457,6 @@
         "value": 1.0
       }
     ],
-    "category": [],
-    "cmc_id": 11568,
     "base_asset_id": "AGLD",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -838,6 +838,13 @@
     "contract_size": 0.1,
     "underlying": "crypto",
     "first_capture": "2022-03-17T00:00:00.000Z",
+    "category": [
+      "Collectibles & NFTs",
+      "DAO",
+      "Metaverse",
+      "Memes"
+    ],
+    "cmc_id": 18876,
     "contract_size_history": [
       {
         "effective_from": "2022-03-17T00:00:00Z",
@@ -852,13 +859,6 @@
         "value": 0.1
       }
     ],
-    "category": [
-      "Collectibles & NFTs",
-      "DAO",
-      "Metaverse",
-      "Memes"
-    ],
-    "cmc_id": 18876,
     "base_asset_id": "APE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -2300,19 +2300,9 @@
     "symbol": "BTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_size": 0.01,
+    "contract_size": 0.0001,
     "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z",
-    "contract_size_history": [
-      {
-        "effective_from": "2019-12-04T00:00:00Z",
-        "value": 0.0001
-      },
-      {
-        "effective_from": "2020-03-20T08:00:00Z",
-        "value": 0.01
-      }
-    ],
     "category": [
       "Layer 1"
     ],
@@ -2333,6 +2323,10 @@
     "contract_size": 0.01,
     "underlying": "crypto",
     "first_capture": "2019-12-04T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
     "contract_size_history": [
       {
         "effective_from": "2019-12-04T00:00:00Z",
@@ -2343,10 +2337,6 @@
         "value": 0.01
       }
     ],
-    "category": [
-      "Layer 1"
-    ],
-    "cmc_id": 1,
     "base_asset_id": "BTC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -3086,6 +3076,27 @@
     "unified_id": "perpetual-CRM-USDT:USDT"
   },
   {
+    "id": "CRML-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-20T09:15:00.000Z",
+    "internal_id": "perpetual-CRML-USDT:USDT",
+    "symbol": "CRML",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42377,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CRML",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CRML-USDT:USDT"
+  },
+  {
     "id": "CRO-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-CRO-USDT:USDT",
@@ -3326,6 +3337,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CVC-USDT:USDT"
+  },
+  {
+    "id": "CVNA-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-20T09:30:00.000Z",
+    "internal_id": "perpetual-CVNA-USDT:USDT",
+    "symbol": "CVNA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42372,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CVNA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CVNA-USDT:USDT"
   },
   {
     "id": "CVX-USDT-SWAP",
@@ -4179,19 +4211,9 @@
     "symbol": "ETH",
     "denominator": "USDC",
     "margin": "USDC",
-    "contract_size": 0.1,
+    "contract_size": 0.001,
     "first_capture": "2022-10-18T00:00:00.000Z",
     "end_date": "2025-12-12T00:00:00.000Z",
-    "contract_size_history": [
-      {
-        "effective_from": "2019-12-04T00:00:00Z",
-        "value": 0.001
-      },
-      {
-        "effective_from": "2020-03-19T08:00:00Z",
-        "value": 0.1
-      }
-    ],
     "category": [
       "Layer 1",
       "Smart Contracts"
@@ -4213,6 +4235,11 @@
     "contract_size": 0.1,
     "underlying": "crypto",
     "first_capture": "2019-12-04T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
     "contract_size_history": [
       {
         "effective_from": "2019-12-04T00:00:00Z",
@@ -4223,11 +4250,6 @@
         "value": 0.1
       }
     ],
-    "category": [
-      "Layer 1",
-      "Smart Contracts"
-    ],
-    "cmc_id": 1027,
     "base_asset_id": "ETH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -7685,6 +7707,27 @@
     "unified_id": "perpetual-MOVR-USDT:USDT"
   },
   {
+    "id": "MP-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-20T09:45:00.000Z",
+    "internal_id": "perpetual-MP-USDT:USDT",
+    "symbol": "MP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42380,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MP-USDT:USDT"
+  },
+  {
     "id": "MRK-USDT-SWAP",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10167,6 +10210,27 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "RUM-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-20T09:00:00.000Z",
+    "internal_id": "perpetual-RUM-USDT:USDT",
+    "symbol": "RUM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42373,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RUM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-RUM-USDT:USDT"
+  },
+  {
     "id": "RVN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-RVN-USDT:USDT",
@@ -11789,7 +11853,7 @@
     "symbol": "TEST01",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-20T07:03:06.961Z",
+    "end_date": "2026-10-20T07:03:06.961Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -12336,6 +12400,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-TWLO-USDT:USDT"
+  },
+  {
+    "id": "TWST-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-20T10:00:00.000Z",
+    "internal_id": "perpetual-TWST-USDT:USDT",
+    "symbol": "TWST",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42371,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TWST",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TWST-USDT:USDT"
   },
   {
     "id": "TXN-USDT-SWAP",

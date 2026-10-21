@@ -3588,9 +3588,8 @@
     "quote_coin": "RLUSD",
     "underlying": "crypto",
     "first_capture": "2025-06-05T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z",
     "base_asset_id": "BTC",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "RLUSD",
     "unified_id": "spot-BTC-RLUSD"
   },
@@ -4791,9 +4790,8 @@
     "quote_coin": "USDT",
     "underlying": "crypto",
     "first_capture": "2024-11-08T00:00:00.000Z",
-    "end_date": "2026-09-03T00:00:00.000Z",
     "base_asset_id": "CRO",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-CRO-USDT"
   },
@@ -4945,7 +4943,6 @@
     "cmc_id": 36396,
     "category": [],
     "first_capture": "2025-06-05T00:00:00.000Z",
-    "end_date": "2026-10-17T00:00:00.000Z",
     "base_asset_id": "CUDIS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -6391,9 +6388,8 @@
     "quote_coin": "RLUSD",
     "underlying": "crypto",
     "first_capture": "2025-06-05T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z",
     "base_asset_id": "ETH",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "RLUSD",
     "unified_id": "spot-ETH-RLUSD"
   },
@@ -14900,6 +14896,7 @@
     "symbol": "RACVA",
     "denominator": "USDT",
     "first_capture": "2026-10-16T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:33.879Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -17388,6 +17385,7 @@
     "symbol": "RATKR",
     "denominator": "USDT",
     "first_capture": "2026-10-19T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:33.879Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -33986,7 +33984,6 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-06-10T00:00:00.000Z",
-    "end_date": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "RLITE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -34615,9 +34612,8 @@
     "quote_coin": "USDC",
     "underlying": "crypto",
     "first_capture": "2025-05-29T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z",
     "base_asset_id": "RLUSD",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-RLUSD-USDC"
   },
@@ -36649,7 +36645,6 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-06-02T00:00:00.000Z",
-    "end_date": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "RMU",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -38838,7 +38833,6 @@
     "symbol": "RON",
     "denominator": "USDT",
     "first_capture": "2024-11-08T00:00:00.000Z",
-    "end_date": "2026-06-06T00:00:00.000Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -41595,7 +41589,6 @@
     "symbol": "RRAM",
     "denominator": "USDT",
     "first_capture": "2026-07-15T00:00:00.000Z",
-    "end_date": "2026-08-07T00:00:00.000Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -44545,7 +44538,6 @@
       "Tokenized Stock"
     ],
     "first_capture": "2026-06-07T00:00:00.000Z",
-    "end_date": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "RSNDK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -44857,8 +44849,15 @@
     "symbol": "RSOXL",
     "denominator": "USDT",
     "first_capture": "2026-06-09T00:00:00.000Z",
-    "end_date": "2026-09-04T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 40600,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RSOXL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RSOXL-USDT"
   },
   {
     "id": "RSOXQUSDT",
@@ -53698,8 +53697,16 @@
     "quote_coin": "USDT",
     "underlying": "crypto",
     "first_capture": "2024-11-08T00:00:00.000Z",
-    "end_date": "2026-10-09T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 21351,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "SWEAT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SWEAT-USDT"
   },
   {
     "id": "SWELLUSDT",
@@ -55213,7 +55220,6 @@
       "DeFi"
     ],
     "first_capture": "2025-01-24T00:00:00.000Z",
-    "end_date": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "USDS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -55992,7 +55998,6 @@
       "Privacy"
     ],
     "first_capture": "2024-12-30T00:00:00.000Z",
-    "end_date": "2026-10-16T00:00:00.000Z",
     "base_asset_id": "WEETH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -56197,9 +56202,8 @@
     "quote_coin": "USD1",
     "underlying": "crypto",
     "first_capture": "2025-09-01T00:00:00.000Z",
-    "end_date": "2025-10-14T00:00:00.000Z",
     "base_asset_id": "WLFI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD1",
     "unified_id": "spot-WLFI-USD1"
   },
@@ -56685,9 +56689,8 @@
     "quote_coin": "RLUSD",
     "underlying": "crypto",
     "first_capture": "2025-06-05T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z",
     "base_asset_id": "XRP",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "RLUSD",
     "unified_id": "spot-XRP-RLUSD"
   },

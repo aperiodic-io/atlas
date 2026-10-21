@@ -1802,6 +1802,17 @@
     "unified_id": "spot-AWE-USD"
   },
   {
+    "id": "AXIS-USD",
+    "type": "spot",
+    "base_coin": "AXIS",
+    "quote_coin": "USD",
+    "first_capture": "2026-10-21T06:57:34.567Z",
+    "internal_id": "spot-AXIS-USD",
+    "symbol": "AXIS",
+    "denominator": "USD",
+    "quote_asset_id": "USD"
+  },
+  {
     "id": "AXL-USD",
     "type": "spot",
     "base_coin": "AXL",
@@ -2503,6 +2514,7 @@
       "Layer 2"
     ],
     "first_capture": "2024-06-26T00:00:00.000Z",
+    "missing_since": "2026-10-21T06:57:34.567Z",
     "base_asset_id": "BLAST",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",

@@ -1,0 +1,241 @@
+name: web-domain-map
+
+# Keeps atlas/data/web/domain_map.json current: maps new Atlas
+# assets, re-verifies a rolling slice of homepages, and proposes the result in
+# one labelled pull request (docs/web-domain-map.md).
+on:
+  schedule:
+    # After daily-update (02:00 UTC) and cmc-new-symbol-mapping (03:30 UTC).
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "resolve = rebuild and open/update the PR · preview = rebuild and report only · offline = rebuild from the committed caches (no network) and report"
+        required: false
+        type: choice
+        default: resolve
+        options:
+          - resolve
+          - preview
+          - offline
+      homepage-refresh:
+        description: "Homepages re-checked beyond new and failing ones"
+        required: false
+        default: "300"
+      coingecko:
+        description: "CoinGecko cross-checks (keyless API: keep it small)"
+        required: false
+        default: "30"
+      accept-large-change:
+        description: "Propose the map even though it loses more than max(20, 2%) of its entries or domains (only after checking the losses are real, not an outage)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: web-domain-map
+  cancel-in-progress: false
+
+env:
+  PR_LABEL: web-domain-map
+  PR_BRANCH: automation/web-domain-map
+  DATA_DIR: atlas/data/web
+
+jobs:
+  build-map:
+    # The same runner the CMC jobs use: CoinMarketCap's data-api is called here too.
+    runs-on: ubicloud-standard-2
+    # A normal run takes 10-15 minutes (per-host pacing: CMC 1 s, Wikidata 5 s,
+    # CoinGecko 12 s; homepages 16 at a time, one request per host).
+    timeout-minutes: 60
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: carry-caches-from-the-open-pr
+        id: prepare
+        run: |
+          set -euo pipefail
+          echo "REPORT_PATH=${RUNNER_TEMP}/web-domain-map-report.md" >> "$GITHUB_ENV"
+          echo "SUMMARY_PATH=${RUNNER_TEMP}/web-domain-map-summary.json" >> "$GITHUB_ENV"
+          mode="${{ inputs.mode || 'resolve' }}"
+          # Only main proposes: a dispatch on a feature branch must not
+          # overwrite the bot PR with that branch's code.
+          if [ "${mode}" = "resolve" ] && [ "${GITHUB_REF}" != "refs/heads/main" ]; then
+            echo "::notice::resolve runs only on main; this run is a preview"
+            mode="preview"
+          fi
+          echo "mode=${mode}" >> "$GITHUB_OUTPUT"
+          # The bot branch is rebuilt from main on every run. Its caches are
+          # newer than main's while the PR waits for review; start from them so
+          # the rolling refresh moves on instead of redoing the same slice.
+          if git fetch origin "${PR_BRANCH}" 2>/dev/null; then
+            git checkout FETCH_HEAD -- "${DATA_DIR}/cache" || true
+            echo "Using the caches of ${PR_BRANCH}"
+          fi
+
+      - name: build-and-verify
+        id: build
+        env:
+          MODE: ${{ steps.prepare.outputs.mode }}
+          HOMEPAGE_REFRESH: ${{ inputs.homepage-refresh || '300' }}
+          COINGECKO: ${{ inputs.coingecko || '30' }}
+          ACCEPT_LARGE_CHANGE: ${{ inputs.accept-large-change && 'true' || 'false' }}
+        run: |
+          set -euo pipefail
+          extra_args=""
+          if [ "${MODE}" = "offline" ]; then
+            extra_args="--offline"
+          fi
+          if [ "${ACCEPT_LARGE_CHANGE}" = "true" ]; then
+            extra_args="${extra_args} --accept-large-change"
+          fi
+          # Exit code 3: the rebuild loses too much to be proposed (an outage,
+          # most likely). The step fails, nothing is pushed, Slack is told.
+          # The Public Suffix List is an extra; `uv run` syncs the project env.
+          uv run --extra web python -m integrations.web \
+            --homepage-refresh "${HOMEPAGE_REFRESH}" \
+            --coingecko "${COINGECKO}" \
+            --report-path "${REPORT_PATH}" \
+            --summary-path "${SUMMARY_PATH}" \
+            ${extra_args}
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+
+          with open(os.environ["SUMMARY_PATH"]) as summary_file:
+              summary = json.load(summary_file)
+          for key, value in summary.items():
+              print(f"{key}={json.dumps(value) if not isinstance(value, str) else value}")
+          PY
+
+      # The bot's pushes do not trigger tests.yaml: validate the map here.
+      - name: validate-map
+        if: steps.prepare.outputs.mode == 'resolve'
+        run: uv run --extra web --extra tests pytest -q tests/test_web_data.py tests/test_web_domain.py
+
+      - name: commit-and-push
+        id: push
+        if: steps.prepare.outputs.mode == 'resolve'
+        env:
+          HAS_CHANGES: ${{ steps.build.outputs.has_changes }}
+          ADDED: ${{ steps.build.outputs.added }}
+          REMOVED: ${{ steps.build.outputs.removed }}
+          CHANGED: ${{ steps.build.outputs.changed }}
+          FLAGGED: ${{ steps.build.outputs.newly_flagged }}
+        run: |
+          set -euo pipefail
+          echo "pushed=false" >> "$GITHUB_OUTPUT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "${PR_BRANCH}"
+          git add "${DATA_DIR}"
+          if git diff --cached --quiet; then
+            echo "No map or cache changes to propose"
+            exit 0
+          fi
+          if [ "${HAS_CHANGES}" != "true" ]; then
+            # Only caches and check dates moved: propose them about weekly, so
+            # the rolling refresh is not lost but no daily PR is opened for it.
+            last="$(git log -1 --format=%ct origin/main -- "${DATA_DIR}/cache" 2>/dev/null || echo 0)"
+            age_days=$(( ( $(date +%s) - ${last:-0} ) / 86400 ))
+            if [ "${age_days}" -lt 7 ]; then
+              echo "Only caches changed and main's are ${age_days} day(s) old; not proposing"
+              exit 0
+            fi
+          fi
+          git commit \
+            --message "chore(data): refresh the web domain map" \
+            --message "added=${ADDED} removed=${REMOVED} changed=${CHANGED} newly_flagged=${FLAGGED}"
+          # The branch is the bot's: it is rebuilt from main on every run.
+          for attempt in 1 2 3 4; do
+            if git push --force origin "${PR_BRANCH}"; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep $((2 ** attempt))
+          done
+          echo "::error::could not push ${PR_BRANCH}"
+          exit 1
+
+      - name: open-or-update-pull-request
+        id: pr
+        if: steps.push.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: ${{ github.ref_name }}
+          HAS_CHANGES: ${{ steps.build.outputs.has_changes }}
+          ADDED: ${{ steps.build.outputs.added }}
+          REMOVED: ${{ steps.build.outputs.removed }}
+          CHANGED: ${{ steps.build.outputs.changed }}
+          FLAGGED: ${{ steps.build.outputs.newly_flagged }}
+        run: |
+          set -euo pipefail
+          if [ "${HAS_CHANGES}" = "true" ]; then
+            title="chore(data): web domain map (+${ADDED} / -${REMOVED} / ~${CHANGED}, ${FLAGGED} newly flagged)"
+          else
+            title="chore(data): web domain map (re-verified, no domain changes)"
+          fi
+          gh label create "${PR_LABEL}" \
+            --color "0E8A16" \
+            --description "Web domain map refresh" \
+            || true
+          number="$(gh pr list --state open --head "${PR_BRANCH}" --json number --jq '.[0].number // empty')"
+          if [ -n "${number}" ]; then
+            # REST rather than `gh pr edit`, which fails on repositories that
+            # once had classic projects.
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${number}" \
+              -f title="${title}" -F body=@"${REPORT_PATH}" > /dev/null
+            url="$(gh pr view "${number}" --json url --jq .url)"
+          else
+            url="$(gh pr create \
+              --base "${BASE_BRANCH}" \
+              --head "${PR_BRANCH}" \
+              --title "${title}" \
+              --body-file "${REPORT_PATH}" \
+              --label "${PR_LABEL}")"
+          fi
+          echo "url=${url}" >> "$GITHUB_OUTPUT"
+          echo "Pull request: ${url}"
+
+      - name: warn-on-upstream-errors
+        if: steps.build.outputs.upstream_errors != '' && steps.build.outputs.upstream_errors != '0'
+        run: |
+          echo "::warning::${{ steps.build.outputs.upstream_errors }} upstream error(s): the affected rows kept their cached values (see the report)"
+
+      - name: job-summary
+        if: always()
+        env:
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          if [ -f "${REPORT_PATH:-}" ]; then
+            cat "${REPORT_PATH}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -n "${PR_URL}" ]; then
+            printf '\nPull request: %s\n' "${PR_URL}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: notify-slack-on-failure
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          uv run python integrations/slack_notify.py --text ":x: atlas web-domain-map workflow failed — ${RUN_URL}"

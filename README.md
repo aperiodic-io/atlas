@@ -511,6 +511,7 @@ configuration and review process.
 - `integrations/cmc_market_pairs.py`: CoinMarketCap exchange market pairs and their match to Atlas rows.
 - `integrations/cmc_asset_details.py`: per-asset CoinMarketCap metadata (names, tickers, categories).
 - `integrations/symbology.py`: the unified symbology build.
+- `atlas/data/web/domain_map.json`: each asset's verified website domain and Wikipedia article (`atlas.web.load_domain_map()`), built by `integrations/web` and refreshed daily; see [`docs/web-domain-map.md`](docs/web-domain-map.md).
 
 ## Testing
 
