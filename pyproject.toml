@@ -45,7 +45,14 @@ Source = "https://github.com/aperiodic-io/atlas"
 
 [project.optional-dependencies]
 quality = ["ruff==0.14.1", "pre-commit~=2.20.0"]
-tests = ["pytest==8.2.2", "pytest-cov==5.0.0", "pytest-xdist==3.6.1"]
+tests = [
+  "pytest==8.2.2",
+  "pytest-cov==5.0.0",
+  "pytest-xdist==3.6.1",
+  "publicsuffixlist==1.1.0.20261018",
+]
+# integrations/web: the offline Public Suffix List of the domain map.
+web = ["publicsuffixlist==1.1.0.20261018"]
 
 
 # bumpver command: ``bumpver update --patch``
@@ -87,10 +94,13 @@ exclude = [
   "/.pre-commit-config.yaml",
   "/.gitignore",
   "/tests",
+  "/atlas/data/web/cache",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = ["atlas"]
+# The domain map's build caches are for the scheduled job, not for consumers.
+exclude = ["/atlas/data/web/cache"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
