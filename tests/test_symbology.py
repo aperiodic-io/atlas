@@ -1320,3 +1320,52 @@ def test_load_venue_tickers_rejects_duplicates(tmp_path):
     path.write_text(json.dumps({"schema_version": 1, "overrides": [], "venue_tickers": [entry, entry]}))
     with pytest.raises(ValueError):
         load_venue_tickers(path)
+
+
+def test_a_pair_cmc_still_lists_identifies_a_delisted_row():
+    # Hyperliquid keeps delisted perpetuals in its universe and CMC keeps
+    # listing them; the pair is direct evidence, kept after CMC drops it.
+    details = {**DETAILS, 1518: _detail(1518, "MKR", "Maker", "maker")}
+    rows = {
+        "hyperliquid-perps": [
+            _row("MKR", "MKR", "USDC", "perpetual", margin="USDC", first="2024-10-29", end="2025-09-06"),
+            _row("hyna:MKR", "HYNA:MKR", "USDE", "perpetual", margin="USDE", first="2026-01-01", end="2026-02-01"),
+        ]
+    }
+    pairs = [
+        _pair("hyperliquid", "perpetual", 1518, "MKR", 3408, "USDC", url="https://app.hyperliquid.xyz/trade/MKR"),
+        _pair("hyperliquid", "perpetual", 1518, "hyna:MKR", 3408, "USDE", url="https://app.hyperliquid.xyz/trade/hyna:MKR"),
+    ]
+    _, registry = _build(rows, pairs, details=details)
+    for row_id in ("MKR", "hyna:MKR"):
+        row = _by_id(rows, "hyperliquid-perps", row_id)
+        assert (row["base_asset_id"], row["base_asset_match"]) == ("MKR", "cmc_market_pair")
+    first = json.dumps(rows)
+    _build(rows, registry=registry, details=details)
+    assert json.dumps(rows) == first
+
+
+def test_a_delisted_rows_pair_must_name_an_asset_of_its_ticker():
+    # CMC files Hyperliquid's delisted vntl:ANTHROPIC under OpenAI
+    # (Derivatives). Its base ticker is the venue's own, so it is not enough.
+    details = {**DETAILS, 39485: _detail(39485, "OPENAI", "OpenAI (Derivatives)", "openai-derivatives")}
+    row = _row(
+        "vntl:ANTHROPIC", "VNTL:ANTHROPIC", "USDH", "perpetual", margin="USDH",
+        first="2025-12-02", end="2026-06-16", underlying="pre_market",
+    )
+    rows = {"hyperliquid-perps": [row]}
+    pair = _pair(
+        "hyperliquid", "perpetual", 39485, "vntl:ANTHROPIC", 3408, "USDH",
+        url="https://app.hyperliquid.xyz/trade/vntl:ANTHROPIC",
+    )
+    report, _ = _build(rows, [pair], details=details)
+    assert "base_asset_id" not in row
+    assert ("hyperliquid-perps", "vntl:ANTHROPIC", "vntl:ANTHROPIC", 39485) in report.pair_symbol_mismatches
+
+
+def test_a_delisted_rows_pair_must_name_an_asset_that_existed_then():
+    rows = {"hyperliquid-perps": [_row("NEW", "NEW", "USDC", "perpetual", margin="USDC", end="2024-06-01")]}
+    pair = _pair("hyperliquid", "perpetual", 9000, "NEW", 3408, "USDC", url="https://app.hyperliquid.xyz/trade/NEW")
+    report, _ = _build(rows, [pair])
+    assert "base_asset_id" not in rows["hyperliquid-perps"][0]
+    assert ("hyperliquid-perps", "NEW", 9000) in report.rejected_reused_tickers

@@ -1920,7 +1920,15 @@
     "denominator": "TRY",
     "first_capture": "2023-11-26T00:00:00.000Z",
     "end_date": "2024-07-02T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 2424,
+    "category": [
+      "Generative AI",
+      "AI Agents"
+    ],
+    "base_asset_id": "AGIX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-AGIX-TRY"
   },
   {
     "id": "AGIX_USDT",
@@ -1930,7 +1938,15 @@
     "denominator": "USDT",
     "first_capture": "2023-01-30T00:00:00.000Z",
     "end_date": "2024-07-02T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 2424,
+    "category": [
+      "Generative AI",
+      "AI Agents"
+    ],
+    "base_asset_id": "AGIX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-AGIX-USDT"
   },
   {
     "id": "AGI_TRY",
@@ -2091,7 +2107,15 @@
     "denominator": "TRY",
     "first_capture": "2025-03-14T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 34026,
+    "category": [
+      "AI Agents",
+      "Memes"
+    ],
+    "base_asset_id": "AI16Z",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-AI16Z-TRY"
   },
   {
     "id": "AI16Z_USDT",
@@ -2101,7 +2125,15 @@
     "denominator": "USDT",
     "first_capture": "2024-11-21T00:00:00.000Z",
     "end_date": "2025-11-08T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 34026,
+    "category": [
+      "AI Agents",
+      "Memes"
+    ],
+    "base_asset_id": "AI16Z",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-AI16Z-USDT"
   },
   {
     "id": "AI3_USDT",
@@ -3463,7 +3495,14 @@
     "denominator": "ETH",
     "first_capture": "2021-01-08T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 7232,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ALPHA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-ALPHA-ETH"
   },
   {
     "id": "ALPHA_TRY",
@@ -3473,7 +3512,14 @@
     "denominator": "TRY",
     "first_capture": "2024-12-27T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 7232,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ALPHA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-ALPHA-TRY"
   },
   {
     "id": "ALPHA_USDT",
@@ -3483,7 +3529,14 @@
     "denominator": "USDT",
     "first_capture": "2021-01-08T00:00:00.000Z",
     "end_date": "2026-05-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 7232,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ALPHA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ALPHA-USDT"
   },
   {
     "id": "ALPHR_ETH",
@@ -4083,7 +4136,12 @@
     "denominator": "USDT",
     "first_capture": "2021-03-19T00:00:00.000Z",
     "end_date": "2025-06-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 8857,
+    "category": [],
+    "base_asset_id": "ANC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ANC-USDT"
   },
   {
     "id": "ANDR_USDT",
@@ -4326,7 +4384,14 @@
     "denominator": "USDT",
     "first_capture": "2020-10-26T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 1680,
+    "category": [
+      "DAO"
+    ],
+    "base_asset_id": "ANT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ANT-USDT"
   },
   {
     "id": "AOG_USDT",
@@ -22900,7 +22965,15 @@
     "denominator": "BTC",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2025-01-09T00:00:00.000Z",
-    "quote_asset_id": "BTC"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "BTC",
+    "unified_id": "spot-EOS-BTC"
   },
   {
     "id": "EOS_CNYX",
@@ -22909,7 +22982,14 @@
     "symbol": "EOS",
     "denominator": "CNYX",
     "first_capture": "2020-07-01T00:00:00.000Z",
-    "end_date": "2020-07-09T00:00:00.000Z"
+    "end_date": "2020-07-09T00:00:00.000Z",
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus"
   },
   {
     "id": "EOS_ETH",
@@ -22919,7 +22999,15 @@
     "denominator": "ETH",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2025-01-09T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-EOS-ETH"
   },
   {
     "id": "EOS_TRY",
@@ -22929,7 +23017,15 @@
     "denominator": "TRY",
     "first_capture": "2022-07-29T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-EOS-TRY"
   },
   {
     "id": "EOS_USDC",
@@ -22939,7 +23035,15 @@
     "denominator": "USDC",
     "first_capture": "2024-08-02T00:00:00.000Z",
     "end_date": "2025-05-27T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-EOS-USDC"
   },
   {
     "id": "EOS_USDT",
@@ -22949,7 +23053,15 @@
     "denominator": "USDT",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2025-05-27T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 1765,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "EOS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EOS-USDT"
   },
   {
     "id": "EPIC_USDT",
@@ -25282,7 +25394,15 @@
     "denominator": "ETH",
     "first_capture": "2020-12-11T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 7150,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "FLM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-FLM-ETH"
   },
   {
     "id": "FLM_TRY",
@@ -25292,7 +25412,15 @@
     "denominator": "TRY",
     "first_capture": "2023-09-06T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 7150,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "FLM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-FLM-TRY"
   },
   {
     "id": "FLM_USDT",
@@ -25302,7 +25430,15 @@
     "denominator": "USDT",
     "first_capture": "2020-12-11T00:00:00.000Z",
     "end_date": "2026-05-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 7150,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "FLM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FLM-USDT"
   },
   {
     "id": "FLNCG_USDT",
@@ -26389,7 +26525,15 @@
     "denominator": "ETH",
     "first_capture": "2020-11-27T00:00:00.000Z",
     "end_date": "2024-08-29T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 5893,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "FRONT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-FRONT-ETH"
   },
   {
     "id": "FRONT_TRY",
@@ -26399,7 +26543,15 @@
     "denominator": "TRY",
     "first_capture": "2023-09-25T00:00:00.000Z",
     "end_date": "2024-08-29T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 5893,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "FRONT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-FRONT-TRY"
   },
   {
     "id": "FRONT_USDC",
@@ -26409,7 +26561,15 @@
     "denominator": "USDC",
     "first_capture": "2024-08-02T00:00:00.000Z",
     "end_date": "2024-08-29T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 5893,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "FRONT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-FRONT-USDC"
   },
   {
     "id": "FRONT_USDT",
@@ -26419,7 +26579,15 @@
     "denominator": "USDT",
     "first_capture": "2020-11-27T00:00:00.000Z",
     "end_date": "2024-08-29T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 5893,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "FRONT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FRONT-USDT"
   },
   {
     "id": "FRR_USDT",
@@ -26519,7 +26687,15 @@
     "denominator": "ETH",
     "first_capture": "2020-09-23T00:00:00.000Z",
     "end_date": "2025-01-08T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-FTM-ETH"
   },
   {
     "id": "FTM_TRY",
@@ -26529,7 +26705,15 @@
     "denominator": "TRY",
     "first_capture": "2022-08-09T00:00:00.000Z",
     "end_date": "2025-01-08T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-FTM-TRY"
   },
   {
     "id": "FTM_USD",
@@ -26539,7 +26723,15 @@
     "denominator": "USD",
     "first_capture": "2021-09-09T00:00:00.000Z",
     "end_date": "2023-07-04T00:00:00.000Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-FTM-USD"
   },
   {
     "id": "FTM_USDC",
@@ -26549,7 +26741,15 @@
     "denominator": "USDC",
     "first_capture": "2024-08-02T00:00:00.000Z",
     "end_date": "2025-01-08T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-FTM-USDC"
   },
   {
     "id": "FTM_USDT",
@@ -26559,7 +26759,15 @@
     "denominator": "USDT",
     "first_capture": "2020-09-23T00:00:00.000Z",
     "end_date": "2025-01-08T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 3513,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "FTM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FTM-USDT"
   },
   {
     "id": "FTN_TRY",
@@ -26974,7 +27182,14 @@
     "denominator": "ETH",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2025-01-09T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 6953,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "FRAX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-FRAX-ETH"
   },
   {
     "id": "FXS_USDT",
@@ -26984,7 +27199,14 @@
     "denominator": "USDT",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2025-06-07T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 6953,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "FRAX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FRAX-USDT"
   },
   {
     "id": "FX_ETH",
@@ -27344,7 +27566,12 @@
     "denominator": "TRY",
     "first_capture": "2024-07-12T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 11877,
+    "category": [],
+    "base_asset_id": "GAL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-GAL-TRY"
   },
   {
     "id": "GAL_USDT",
@@ -27354,7 +27581,12 @@
     "denominator": "USDT",
     "first_capture": "2022-05-05T00:00:00.000Z",
     "end_date": "2024-07-16T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 11877,
+    "category": [],
+    "base_asset_id": "GAL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GAL-USDT"
   },
   {
     "id": "GAME2_USDT",
@@ -33797,7 +34029,15 @@
     "denominator": "TRY",
     "first_capture": "2025-02-23T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 35626,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "DATA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-DATA-TRY"
   },
   {
     "id": "IP_USDT",
@@ -33807,7 +34047,15 @@
     "denominator": "USDT",
     "first_capture": "2025-02-13T00:00:00.000Z",
     "end_date": "2026-07-01T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 35626,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "DATA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-DATA-USDT"
   },
   {
     "id": "IQ50_USDT",
@@ -35966,7 +36214,14 @@
     "denominator": "USDT",
     "first_capture": "2022-01-31T00:00:00.000Z",
     "end_date": "2024-10-27T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 4256,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "KLAY",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KLAY-USDT"
   },
   {
     "id": "KLIMA_USDT",
@@ -37064,7 +37319,12 @@
     "denominator": "USDT",
     "first_capture": "2025-05-16T00:00:00.000Z",
     "end_date": "2025-10-27T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 35487,
+    "category": [],
+    "base_asset_id": "LAUNCHCOIN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-LAUNCHCOIN-USDT"
   },
   {
     "id": "LAVAELYSIUM_USDT",
@@ -38867,7 +39127,14 @@
     "denominator": "TRY",
     "first_capture": "2023-09-30T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 2588,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LOOM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-LOOM-TRY"
   },
   {
     "id": "LOOM_USDT",
@@ -38877,7 +39144,14 @@
     "denominator": "USDT",
     "first_capture": "2023-09-25T00:00:00.000Z",
     "end_date": "2025-11-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 2588,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LOOM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-LOOM-USDT"
   },
   {
     "id": "LOON_ETH",
@@ -40719,7 +40993,15 @@
     "denominator": "ETH",
     "first_capture": "2021-01-07T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-MATIC-ETH"
   },
   {
     "id": "MATIC_TRY",
@@ -40729,7 +41011,15 @@
     "denominator": "TRY",
     "first_capture": "2023-09-07T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-MATIC-TRY"
   },
   {
     "id": "MATIC_USD",
@@ -40739,7 +41029,15 @@
     "denominator": "USD",
     "first_capture": "2021-08-09T00:00:00.000Z",
     "end_date": "2023-07-04T00:00:00.000Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-MATIC-USD"
   },
   {
     "id": "MATIC_USDC",
@@ -40749,7 +41047,15 @@
     "denominator": "USDC",
     "first_capture": "2023-07-04T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-MATIC-USDC"
   },
   {
     "id": "MATIC_USDT",
@@ -40759,7 +41065,15 @@
     "denominator": "USDT",
     "first_capture": "2021-01-07T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 3890,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "MATIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MATIC-USDT"
   },
   {
     "id": "MATR1X_USDT",
@@ -41585,7 +41899,12 @@
     "denominator": "USDT",
     "first_capture": "2024-11-22T00:00:00.000Z",
     "end_date": "2026-07-09T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 33464,
+    "category": [],
+    "base_asset_id": "MEMEFI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MEMEFI-USDT"
   },
   {
     "id": "MEMERUNE_USDT",
@@ -42714,7 +43033,17 @@
     "denominator": "ETH",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 1518,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "MKR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-MKR-ETH"
   },
   {
     "id": "MKR_TRY",
@@ -42724,7 +43053,17 @@
     "denominator": "TRY",
     "first_capture": "2022-08-04T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 1518,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "MKR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-MKR-TRY"
   },
   {
     "id": "MKR_USDT",
@@ -42734,7 +43073,17 @@
     "denominator": "USDT",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2025-09-16T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 1518,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "MKR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MKR-USDT"
   },
   {
     "id": "MLC_USDT",
@@ -44310,7 +44659,15 @@
     "quote_coin": "USDT",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 5919,
+    "category": [
+      "DeFi",
+      "Interoperability"
+    ],
+    "base_asset_id": "MTRG",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MTRG-USDT"
   },
   {
     "id": "MTR_USDT",
@@ -44322,7 +44679,15 @@
     "quote_coin": "USDT",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 6627,
+    "category": [
+      "DeFi",
+      "Interoperability"
+    ],
+    "base_asset_id": "MTR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MTR-USDT"
   },
   {
     "id": "MTS_ETH",
@@ -45645,7 +46010,7 @@
     "first_capture": "2024-09-16T00:00:00.000Z",
     "end_date": "2025-12-05T00:00:00.000Z",
     "base_asset_id": "NEIRO",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-NEIRO-USDT"
   },
@@ -47115,7 +47480,15 @@
     "denominator": "TRY",
     "first_capture": "2023-11-23T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 26680,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "NTRN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-NTRN-TRY"
   },
   {
     "id": "NTRN_USDT",
@@ -47125,7 +47498,15 @@
     "denominator": "USDT",
     "first_capture": "2023-10-10T00:00:00.000Z",
     "end_date": "2026-05-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 26680,
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "NTRN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-NTRN-USDT"
   },
   {
     "id": "NU3L_USDT",
@@ -48237,7 +48618,14 @@
     "denominator": "BTC",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2026-02-21T00:00:00.000Z",
-    "quote_asset_id": "BTC"
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "BTC",
+    "unified_id": "spot-OMG-BTC"
   },
   {
     "id": "OMG_ETH",
@@ -48247,7 +48635,14 @@
     "denominator": "ETH",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-OMG-ETH"
   },
   {
     "id": "OMG_TRY",
@@ -48257,7 +48652,14 @@
     "denominator": "TRY",
     "first_capture": "2022-08-08T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-OMG-TRY"
   },
   {
     "id": "OMG_USD",
@@ -48267,7 +48669,14 @@
     "denominator": "USD",
     "first_capture": "2021-09-09T00:00:00.000Z",
     "end_date": "2023-07-04T00:00:00.000Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-OMG-USD"
   },
   {
     "id": "OMG_USDT",
@@ -48277,7 +48686,14 @@
     "denominator": "USDT",
     "first_capture": "2020-07-01T00:00:00.000Z",
     "end_date": "2026-02-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 1808,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "OMG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-OMG-USDT"
   },
   {
     "id": "OMI_ETH",
@@ -48336,7 +48752,15 @@
     "denominator": "TRY",
     "first_capture": "2024-04-17T00:00:00.000Z",
     "end_date": "2025-04-22T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 30315,
+    "category": [
+      "Layer 1",
+      "Interoperability"
+    ],
+    "base_asset_id": "OMNI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-OMNI-TRY"
   },
   {
     "id": "OMNI_USDC",
@@ -48346,7 +48770,15 @@
     "denominator": "USDC",
     "first_capture": "2024-08-02T00:00:00.000Z",
     "end_date": "2025-09-18T00:00:00.000Z",
-    "quote_asset_id": "USDC"
+    "cmc_id": 30315,
+    "category": [
+      "Layer 1",
+      "Interoperability"
+    ],
+    "base_asset_id": "OMNI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-OMNI-USDC"
   },
   {
     "id": "OMNI_USDT",
@@ -48356,7 +48788,15 @@
     "denominator": "USDT",
     "first_capture": "2024-04-17T00:00:00.000Z",
     "end_date": "2025-09-18T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 30315,
+    "category": [
+      "Layer 1",
+      "Interoperability"
+    ],
+    "base_asset_id": "OMNI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-OMNI-USDT"
   },
   {
     "id": "OMN_USDT",
@@ -48376,7 +48816,16 @@
     "denominator": "ETH",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2025-01-09T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 6536,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "DAO"
+    ],
+    "base_asset_id": "OM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-OM-ETH"
   },
   {
     "id": "OM_TRY",
@@ -48386,7 +48835,16 @@
     "denominator": "TRY",
     "first_capture": "2024-07-04T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 6536,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "DAO"
+    ],
+    "base_asset_id": "OM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-OM-TRY"
   },
   {
     "id": "OM_USDT",
@@ -48396,7 +48854,16 @@
     "denominator": "USDT",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2026-03-03T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 6536,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "DAO"
+    ],
+    "base_asset_id": "OM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-OM-USDT"
   },
   {
     "id": "ONC_ETH",
@@ -57117,7 +57584,17 @@
     "denominator": "ETH",
     "first_capture": "2022-01-31T00:00:00.000Z",
     "end_date": "2024-07-17T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 5690,
+    "category": [
+      "DeFi",
+      "Generative AI",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "RENDER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-RENDER-ETH"
   },
   {
     "id": "RNDR_TRY",
@@ -57127,7 +57604,17 @@
     "denominator": "TRY",
     "first_capture": "2023-10-14T00:00:00.000Z",
     "end_date": "2024-07-17T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 5690,
+    "category": [
+      "DeFi",
+      "Generative AI",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "RENDER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-RENDER-TRY"
   },
   {
     "id": "RNDR_USDT",
@@ -57137,7 +57624,17 @@
     "denominator": "USDT",
     "first_capture": "2021-03-25T00:00:00.000Z",
     "end_date": "2024-07-17T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 5690,
+    "category": [
+      "DeFi",
+      "Generative AI",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "RENDER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RENDER-USDT"
   },
   {
     "id": "RNDX_USDT",
@@ -60630,7 +61127,14 @@
     "denominator": "USDT",
     "first_capture": "2024-03-18T00:00:00.000Z",
     "end_date": "2026-05-28T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 37758,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "SLERF",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SLERF-USDT"
   },
   {
     "id": "SLF_TRY",
@@ -63026,7 +63530,16 @@
     "denominator": "ETH",
     "first_capture": "2020-09-02T00:00:00.000Z",
     "end_date": "2025-01-09T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 6187,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "SRM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-SRM-ETH"
   },
   {
     "id": "SRM_TRY",
@@ -63046,7 +63559,16 @@
     "denominator": "USD",
     "first_capture": "2021-08-09T00:00:00.000Z",
     "end_date": "2023-07-04T00:00:00.000Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 6187,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "SRM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-SRM-USD"
   },
   {
     "id": "SRM_USDT",
@@ -63056,7 +63578,16 @@
     "denominator": "USDT",
     "first_capture": "2020-08-13T00:00:00.000Z",
     "end_date": "2026-02-16T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 6187,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "SRM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SRM-USDT"
   },
   {
     "id": "SRP_USDT",
@@ -63474,7 +64005,7 @@
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
     "base_asset_id": "STG",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "ETH",
     "unified_id": "spot-STG-ETH"
   },
@@ -63491,7 +64022,7 @@
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2026-10-09T00:00:00.000Z",
     "base_asset_id": "STG",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-STG-USDT"
   },
@@ -65119,7 +65650,16 @@
     "denominator": "USDT",
     "first_capture": "2022-09-13T00:00:00.000Z",
     "end_date": "2026-07-23T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 21351,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "SWEAT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SWEAT-USDT"
   },
   {
     "id": "SWELL_TRY",
@@ -67389,7 +67929,14 @@
     "denominator": "ETH",
     "first_capture": "2023-03-13T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "quote_asset_id": "ETH"
+    "cmc_id": 11419,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "GRAM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "ETH",
+    "unified_id": "spot-GRAM-ETH"
   },
   {
     "id": "TON_TRY",
@@ -67399,7 +67946,14 @@
     "denominator": "TRY",
     "first_capture": "2024-04-11T00:00:00.000Z",
     "end_date": "2025-04-23T00:00:00.000Z",
-    "quote_asset_id": "TRY"
+    "cmc_id": 11419,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "GRAM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-GRAM-TRY"
   },
   {
     "id": "TON_USDT",
@@ -68578,7 +69132,14 @@
     "denominator": "USDT",
     "first_capture": "2024-06-27T00:00:00.000Z",
     "end_date": "2026-01-27T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 35647,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "TST",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-TST-USDT"
   },
   {
     "id": "TSUGT_USDT",

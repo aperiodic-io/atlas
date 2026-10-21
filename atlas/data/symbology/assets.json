@@ -4551,6 +4551,7 @@
     "Memes"
    ],
    "aliases": [
+    "HPOS",
     "HPOS10I"
    ],
    "status": "active",
@@ -4666,6 +4667,17 @@
    "status": "active",
    "cmc_date_added": "2026-09-22T04:36:37Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "BLOCK",
+   "ticker": "BLOCK",
+   "name": "BlockProtocol",
+   "asset_class": "crypto",
+   "cmc_id": 30433,
+   "cmc_slug": "blockgames",
+   "status": "untracked",
+   "cmc_date_added": "2024-04-11T11:56:46Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "BLSH",
@@ -5529,6 +5541,22 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "BTM",
+   "ticker": "BTM",
+   "name": "BytomDAO",
+   "asset_class": "crypto",
+   "cmc_id": 1866,
+   "cmc_slug": "bytom",
+   "categories": [
+    "DeFi",
+    "Real World Assets Protocols",
+    "Smart Contracts"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2017-08-08T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "BTR",
    "ticker": "BTR",
    "name": "Bitlayer",
@@ -5688,6 +5716,17 @@
    "status": "active",
    "cmc_date_added": "2021-09-07T19:22:55Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "BUZZ",
+   "ticker": "BUZZ",
+   "name": "Hive AI",
+   "asset_class": "crypto",
+   "cmc_id": 35188,
+   "cmc_slug": "hive-ai",
+   "status": "active",
+   "cmc_date_added": "2025-01-13T05:40:35Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "BVIV",
@@ -5968,6 +6007,21 @@
    "status": "active",
    "cmc_date_added": "2025-08-26T11:08:47Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CANTO",
+   "ticker": "CANTO",
+   "name": "CANTO",
+   "asset_class": "crypto",
+   "cmc_id": 21516,
+   "cmc_slug": "canto",
+   "categories": [
+    "DeFi",
+    "Real World Assets Protocols"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2022-08-22T12:47:13Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "CAP",
@@ -7046,6 +7100,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "CONV",
+   "ticker": "CONV",
+   "name": "Convergence",
+   "asset_class": "crypto",
+   "cmc_id": 8716,
+   "cmc_slug": "convergence",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2021-03-08T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "COOK",
    "ticker": "COOK",
    "name": "mETH Protocol",
@@ -7256,6 +7324,20 @@
    "status": "active",
    "cmc_date_added": "2021-10-10T08:04:07Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CQT",
+   "ticker": "CQT",
+   "name": "Covalent",
+   "asset_class": "crypto",
+   "cmc_id": 7411,
+   "cmc_slug": "covalent",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2020-10-14T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "CRCL",
@@ -8190,6 +8272,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DAM",
+   "ticker": "DAM",
+   "name": "Reservoir",
+   "asset_class": "crypto",
+   "cmc_id": 37638,
+   "cmc_slug": "reservoir",
+   "categories": [
+    "DeFi",
+    "Lending & Borrowing"
+   ],
+   "status": "active",
+   "cmc_date_added": "2025-08-06T22:22:32Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "DAO",
    "ticker": "DAO",
    "name": "DAO Maker",
@@ -8848,6 +8945,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DMAIL",
+   "ticker": "DMAIL",
+   "name": "DMAIL Network",
+   "asset_class": "crypto",
+   "cmc_id": 19779,
+   "cmc_slug": "dmail-network",
+   "categories": [
+    "Privacy"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2024-01-30T09:30:18Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "DMC",
    "ticker": "DMC",
    "name": "DeLorean",
@@ -9426,6 +9537,21 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "EFI",
+   "ticker": "EFI",
+   "name": "Efinity Token",
+   "asset_class": "crypto",
+   "cmc_id": 8985,
+   "cmc_slug": "efinity",
+   "categories": [
+    "Collectibles & NFTs",
+    "Metaverse"
+   ],
+   "status": "active",
+   "cmc_date_added": "2021-03-29T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "EGAME",
@@ -10472,6 +10598,23 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "FITFI",
+   "ticker": "FITFI",
+   "name": "Step App",
+   "asset_class": "crypto",
+   "cmc_id": 19778,
+   "cmc_slug": "step-app",
+   "categories": [
+    "DeFi",
+    "DApp",
+    "Collectibles & NFTs",
+    "DAO"
+   ],
+   "status": "active",
+   "cmc_date_added": "2022-04-26T07:24:11Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "FIWA",
    "ticker": "FIWA",
    "name": "DeFi Warrior (FIWA)",
@@ -10929,6 +11072,17 @@
    "status": "active",
    "cmc_date_added": "2020-09-08T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "FRIEND",
+   "ticker": "FRIEND",
+   "name": "Friend.tech",
+   "asset_class": "crypto",
+   "cmc_id": 31056,
+   "cmc_slug": "friend-tech",
+   "status": "active",
+   "cmc_date_added": "2024-05-03T09:13:58Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "FROGGIE",
@@ -11535,6 +11689,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "GF.GUILDFI",
+   "ticker": "GF",
+   "name": "GuildFi",
+   "asset_class": "crypto",
+   "cmc_id": 15585,
+   "cmc_slug": "guildfi",
+   "categories": [
+    "Play To Earn"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2021-12-05T00:18:20Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "GFI",
    "ticker": "GFI",
    "name": "Goldfinch",
@@ -11555,6 +11723,17 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GFT",
+   "ticker": "GFT",
+   "name": "Gifto",
+   "asset_class": "crypto",
+   "cmc_id": 2289,
+   "cmc_slug": "gifto",
+   "status": "active",
+   "cmc_date_added": "2017-12-18T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "GGLL",
@@ -12271,7 +12450,8 @@
     "Layer 1"
    ],
    "aliases": [
-    "TON"
+    "TON",
+    "TONCOIN"
    ],
    "status": "active",
    "cmc_date_added": "2021-08-26T13:40:22Z",
@@ -14646,6 +14826,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "J",
+   "ticker": "J",
+   "name": "Jambo",
+   "asset_class": "crypto",
+   "cmc_id": 35167,
+   "cmc_slug": "jambo",
+   "status": "active",
+   "cmc_date_added": "2025-01-10T11:16:10Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "JANET",
    "ticker": "JANET",
    "name": "Janet",
@@ -14724,6 +14915,9 @@
    "cmc_slug": "jelly-my-jelly",
    "categories": [
     "Memes"
+   ],
+   "aliases": [
+    "JELLY"
    ],
    "status": "active",
    "cmc_date_added": "2025-01-30T08:23:28Z",
@@ -15356,6 +15550,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "KISHU",
+   "ticker": "KISHU",
+   "name": "Kishu Inu",
+   "asset_class": "crypto",
+   "cmc_id": 9386,
+   "cmc_slug": "kishu-inu",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2021-04-20T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "KITE",
    "ticker": "KITE",
    "name": "Kite",
@@ -15951,6 +16159,17 @@
    "status": "active",
    "cmc_date_added": "2021-04-18T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "LAUNCHCOIN",
+   "ticker": "LAUNCHCOIN",
+   "name": "Launch Coin on Believe",
+   "asset_class": "crypto",
+   "cmc_id": 35487,
+   "cmc_slug": "launch-coin-on-believe",
+   "status": "active",
+   "cmc_date_added": "2025-01-27T06:31:18Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "LAVA",
@@ -16606,6 +16825,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "LON",
+   "ticker": "LON",
+   "name": "Tokenlon Network Token",
+   "asset_class": "crypto",
+   "cmc_id": 8083,
+   "cmc_slug": "tokenlon-network-token",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-12-23T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "LONG",
    "ticker": "LONG",
    "name": "Belong",
@@ -16629,6 +16862,20 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "LOOKS",
+   "ticker": "LOOKS",
+   "name": "LooksRare",
+   "asset_class": "crypto",
+   "cmc_id": 17081,
+   "cmc_slug": "looksrare",
+   "categories": [
+    "Collectibles & NFTs"
+   ],
+   "status": "active",
+   "cmc_date_added": "2022-01-10T10:44:52Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "LOOM",
@@ -17443,6 +17690,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MAX.MATR1X",
+   "ticker": "MAX",
+   "name": "Matr1x",
+   "asset_class": "crypto",
+   "cmc_id": 32506,
+   "cmc_slug": "matr1x",
+   "status": "untracked",
+   "cmc_date_added": "2024-08-02T05:10:43Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "MAY",
    "ticker": "MAY",
    "name": "Mayflower AI",
@@ -18132,6 +18390,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MIR",
+   "ticker": "MIR",
+   "name": "Mirror Protocol",
+   "asset_class": "crypto",
+   "cmc_id": 7857,
+   "cmc_slug": "mirror-protocol",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-12-04T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "MIRA",
    "ticker": "MIRA",
    "name": "Mira",
@@ -18787,6 +19059,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MSN",
+   "ticker": "MSN",
+   "name": "Meson Network",
+   "asset_class": "crypto",
+   "cmc_id": 27026,
+   "cmc_slug": "meson-network",
+   "status": "untracked",
+   "cmc_date_added": "2023-06-16T09:24:01Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "MSOL",
    "ticker": "MSOL",
    "name": "Marinade Staked SOL",
@@ -18905,6 +19188,36 @@
    "status": "active",
    "cmc_date_added": "2017-07-09T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MTR",
+   "ticker": "MTR",
+   "name": "Meter Stable",
+   "asset_class": "crypto",
+   "cmc_id": 6627,
+   "cmc_slug": "meter-stable",
+   "categories": [
+    "DeFi",
+    "Interoperability"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-08-17T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
+   "asset_id": "MTRG",
+   "ticker": "MTRG",
+   "name": "Meter Governance",
+   "asset_class": "crypto",
+   "cmc_id": 5919,
+   "cmc_slug": "meter-governance",
+   "categories": [
+    "DeFi",
+    "Interoperability"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-07-27T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "MTV",
@@ -21337,6 +21650,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "OX",
+   "ticker": "OX",
+   "name": "OX Coin",
+   "asset_class": "crypto",
+   "cmc_id": 29530,
+   "cmc_slug": "ox-coin",
+   "status": "active",
+   "cmc_date_added": "2024-02-26T05:06:30Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "OXT",
    "ticker": "OXT",
    "name": "Orchid",
@@ -21490,6 +21814,20 @@
    "status": "active",
    "cmc_date_added": "2021-03-08T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "PANDORA",
+   "ticker": "PANDORA",
+   "name": "Pandora",
+   "asset_class": "crypto",
+   "cmc_id": 29291,
+   "cmc_slug": "pandora-coin",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2024-02-05T17:13:36Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "PANW",
@@ -24770,6 +25108,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "RLB",
+   "ticker": "RLB",
+   "name": "Rollbit Coin",
+   "asset_class": "crypto",
+   "cmc_id": 15271,
+   "cmc_slug": "rollbit-coin",
+   "status": "active",
+   "cmc_date_added": "2021-11-29T06:53:35Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "RLC",
    "ticker": "RLC",
    "name": "iExec RLC",
@@ -26462,6 +26811,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SHIA",
+   "ticker": "SHIA",
+   "name": "Shiba Saga",
+   "asset_class": "crypto",
+   "cmc_id": 27922,
+   "cmc_slug": "shiba-saga",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2023-08-25T03:05:39Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "SHIB",
    "ticker": "SHIB",
    "name": "Shiba Inu",
@@ -27515,6 +27878,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SOS",
+   "ticker": "SOS",
+   "name": "OpenDAO",
+   "asset_class": "crypto",
+   "cmc_id": 16463,
+   "cmc_slug": "opendao",
+   "status": "active",
+   "cmc_date_added": "2021-12-24T11:16:54Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "SOSO",
    "ticker": "SOSO",
    "name": "SoSoValue",
@@ -28183,6 +28557,20 @@
    "status": "active",
    "cmc_date_added": "2025-08-13T06:18:32Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "STARL",
+   "ticker": "STARL",
+   "name": "Starlink",
+   "asset_class": "crypto",
+   "cmc_id": 10821,
+   "cmc_slug": "star-link",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2021-07-10T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "STBL",
@@ -28867,6 +29255,21 @@
    "status": "active",
    "cmc_date_added": "2024-08-30T04:18:47Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SWRV",
+   "ticker": "SWRV",
+   "name": "Swerve",
+   "asset_class": "crypto",
+   "cmc_id": 6901,
+   "cmc_slug": "swerve",
+   "categories": [
+    "DeFi",
+    "DAO"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2020-09-05T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "SXP",
@@ -29683,6 +30086,21 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "TORN",
+   "ticker": "TORN",
+   "name": "Tornado Cash",
+   "asset_class": "crypto",
+   "cmc_id": 8049,
+   "cmc_slug": "torn",
+   "categories": [
+    "DAO",
+    "Privacy"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-12-18T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "TOSHI",
@@ -30668,6 +31086,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ULTI",
+   "ticker": "ULTI",
+   "name": "Ultiverse",
+   "asset_class": "crypto",
+   "cmc_id": 31504,
+   "cmc_slug": "ultiverse",
+   "status": "active",
+   "cmc_date_added": "2024-06-03T15:53:14Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "ULTIMA",
    "ticker": "ULTIMA",
    "name": "Ultima",
@@ -30806,6 +31235,20 @@
    "status": "active",
    "cmc_date_added": "2020-09-17T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "UNIBOT",
+   "ticker": "UNIBOT",
+   "name": "UniBot",
+   "asset_class": "crypto",
+   "cmc_id": 27009,
+   "cmc_slug": "unibot-eth",
+   "categories": [
+    "AI Applications"
+   ],
+   "status": "active",
+   "cmc_date_added": "2023-06-16T05:43:09Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "UNIS",
@@ -31464,6 +31907,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "UX",
+   "ticker": "UX",
+   "name": "UX Chain",
+   "asset_class": "crypto",
+   "cmc_id": 16389,
+   "cmc_slug": "ux",
+   "aliases": [
+    "UMEE"
+   ],
+   "status": "active",
+   "cmc_date_added": "2021-12-23T03:57:49Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "UXLINK",
    "ticker": "UXLINK",
    "name": "UXLINK",
@@ -31666,6 +32123,21 @@
    "status": "active",
    "cmc_date_added": "2021-08-26T22:25:37Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "VENOM",
+   "ticker": "VENOM",
+   "name": "Venom",
+   "asset_class": "crypto",
+   "cmc_id": 22059,
+   "cmc_slug": "venom",
+   "categories": [
+    "DeFi",
+    "DAO"
+   ],
+   "status": "active",
+   "cmc_date_added": "2022-10-04T05:33:38Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "VERONA",
@@ -31963,6 +32435,23 @@
    "status": "active",
    "cmc_date_added": "2021-11-19T05:45:39Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "VRA",
+   "ticker": "VRA",
+   "name": "Verasity",
+   "asset_class": "crypto",
+   "cmc_id": 3816,
+   "cmc_slug": "verasity",
+   "categories": [
+    "DeFi",
+    "Staking",
+    "Collectibles & NFTs",
+    "Metaverse"
+   ],
+   "status": "active",
+   "cmc_date_added": "2019-04-03T00:00:00Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "VRT",
@@ -32714,6 +33203,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "WNXM",
+   "ticker": "WNXM",
+   "name": "Wrapped NXM",
+   "asset_class": "crypto",
+   "cmc_id": 5939,
+   "cmc_slug": "wrapped-nxm",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2020-07-28T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "WOD",
    "ticker": "WOD",
    "name": "World of Dypians",
@@ -32845,6 +33348,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "WSM",
+   "ticker": "WSM",
+   "name": "Wall Street Memes",
+   "asset_class": "crypto",
+   "cmc_id": 28179,
+   "cmc_slug": "wall-street-memes",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2023-09-26T13:54:45Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "WTI",
    "ticker": "WTI",
    "name": "WTI",
@@ -32898,6 +33415,17 @@
    "status": "active",
    "cmc_date_added": "2022-03-03T06:08:06Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "X",
+   "ticker": "X",
+   "name": "X Empire",
+   "asset_class": "crypto",
+   "cmc_id": 33108,
+   "cmc_slug": "x-empire",
+   "status": "active",
+   "cmc_date_added": "2024-10-24T12:02:59Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "XAG",
@@ -33910,6 +34438,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "YFV",
+   "ticker": "YFV",
+   "name": "YFValue",
+   "asset_class": "crypto",
+   "cmc_id": 6698,
+   "cmc_slug": "yfvalue",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "inactive",
+   "cmc_date_added": "2020-08-24T00:00:00Z",
+   "minted_at": "2026-10-21"
+  },
+  {
    "asset_id": "YGG",
    "ticker": "YGG",
    "name": "Yield Guild Games",
@@ -33979,6 +34521,20 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "YZY",
+   "ticker": "YZY",
+   "name": "YZY MONEY",
+   "asset_class": "crypto",
+   "cmc_id": 38151,
+   "cmc_slug": "yzy",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2025-08-21T02:17:55Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "ZAMA",
@@ -34126,6 +34682,21 @@
    "status": "active",
    "cmc_date_added": "2024-11-19T16:27:39Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ZERO",
+   "ticker": "ZERO",
+   "name": "ZeroLend",
+   "asset_class": "crypto",
+   "cmc_id": 31076,
+   "cmc_slug": "zerolend",
+   "categories": [
+    "DeFi",
+    "Lending & Borrowing"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2024-05-06T04:06:51Z",
+   "minted_at": "2026-10-21"
   },
   {
    "asset_id": "ZEST",

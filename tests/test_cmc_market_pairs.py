@@ -266,14 +266,50 @@ def test_match_market_pairs_finds_rows_by_native_id_and_type():
 def test_match_market_pairs_prefers_the_active_row():
     rows = {
         "okx-spot": [
+            # A different asset once listed under the same ID; picking it
+            # would read as a symbol mismatch.
+            _row("BTC-USDT", "BTCX", end_date="2020-01-01T00:00:00Z", first_capture="2019-01-01T00:00:00Z"),
+            _row("BTC-USDT", "BTC", first_capture="2021-01-01T00:00:00Z"),
+        ],
+    }
+    pair = _pair(venue="okx", marketUrl="https://www.okx.com/trade-spot/btc-usdt")
+    result = match_market_pairs([pair], rows)
+    assert result.matches == {("okx-spot", "BTC-USDT"): pair}
+    assert result.symbol_mismatches == ()
+
+
+def test_match_market_pairs_falls_back_to_a_delisted_row():
+    # Hyperliquid keeps delisted perpetuals in its universe and CMC keeps
+    # tracking them, so a pair no active row trades is the delisted row's.
+    rows = {
+        "hyperliquid-perps": [
+            _row("MKR", "MKR", "perpetual", first_capture="2024-10-29T00:00:00Z", end_date="2025-09-06T00:00:00Z"),
+        ],
+        "hyperliquid-spot": [_row("MKR", "MKR")],
+    }
+    pair = _pair(
+        venue="hyperliquid",
+        category="perpetual",
+        marketPair="MKR/USDC",
+        marketUrl="https://app.hyperliquid.xyz/trade/MKR",
+        baseSymbol="MKR",
+        baseCurrencyId=1518,
+    )
+    result = match_market_pairs([pair], rows)
+    assert result.matches == {("hyperliquid-perps", "MKR"): pair}
+    assert result.unmatched == ()
+
+
+def test_match_market_pairs_tries_the_last_delisted_row_first():
+    rows = {
+        "okx-spot": [
+            _row("BTC-USDT", "BTCX", end_date="2018-01-01T00:00:00Z", first_capture="2017-01-01T00:00:00Z"),
             _row("BTC-USDT", "BTC", end_date="2020-01-01T00:00:00Z", first_capture="2019-01-01T00:00:00Z"),
         ],
     }
     pair = _pair(venue="okx", marketUrl="https://www.okx.com/trade-spot/btc-usdt")
-    # A pair that only matches a delisted row is still reported, but flagged.
     result = match_market_pairs([pair], rows)
-    assert result.matches == {}
-    assert result.unmatched == (pair,)
+    assert result.matches == {("okx-spot", "BTC-USDT"): pair}
 
 
 def test_match_market_pairs_reports_a_symbol_mismatch():

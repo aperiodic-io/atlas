@@ -73,6 +73,7 @@ from integrations.cmc_market_pairs import (
     MatchResult,
     fetch_venue_market_pairs,
     match_market_pairs,
+    symbols_consistent,
 )
 from integrations.cmc_mappings import MappingStore
 
@@ -1251,6 +1252,7 @@ def build_symbology(
     pair_matches, rejected_pairs = _price_checked(
         instruments, pair_matches, asset_prices or {}, facts, registry, report
     )
+    pair_matches = _delisted_pairs_checked(instruments, pair_matches, facts, registry, report)
     resolutions = resolve_base_assets(
         instruments,
         pair_matches,
@@ -1390,10 +1392,7 @@ def _price_checked(
     rejected: set[tuple[str, str, int]] = set()
 
     def tickers(cmc_id: int) -> set[str]:
-        names = {facts[cmc_id].symbol} if cmc_id in facts else set()
-        if (asset := registry.by_cmc_id(cmc_id)) is not None:
-            names |= {asset.ticker, *asset.aliases}
-        return names
+        return _asset_tickers(cmc_id, facts, registry)
 
     for key, pair in pair_matches.items():
         reference = asset_prices.get(pair.base_cmc_id)
@@ -1415,6 +1414,50 @@ def _price_checked(
             report.pair_price_mismatches.append((key[0], key[1], pair.base_cmc_id, ratio))
             rejected.add((key[0], key[1], pair.base_cmc_id))
     return checked, frozenset(rejected)
+
+
+def _asset_tickers(
+    cmc_id: int, facts: Mapping[int, CmcAssetDetail], registry: AssetRegistry
+) -> set[str]:
+    """Every ticker an asset is known by: CMC's, Atlas's and its venue aliases."""
+    names = {facts[cmc_id].symbol} if cmc_id in facts else set()
+    if (asset := registry.by_cmc_id(cmc_id)) is not None:
+        names |= {asset.ticker, *asset.aliases}
+    return names
+
+
+def _delisted_pairs_checked(
+    instruments: Iterable[Instrument],
+    pair_matches: Mapping[tuple[str, str], MarketPair],
+    facts: Mapping[int, CmcAssetDetail],
+    registry: AssetRegistry,
+    report: SymbologyReport,
+) -> dict[tuple[str, str], MarketPair]:
+    """Keep a CMC pair on a delisted row only if it can be that row's market.
+
+    CMC keeps tracking some markets a venue has delisted (Hyperliquid keeps
+    delisted perpetuals in its universe), and such a pair identifies the row.
+    Its base ticker is often just the venue's own, so the asset's ticker must
+    agree with the row's too: CMC files Hyperliquid's delisted
+    ``vntl:ANTHROPIC`` under OpenAI (Derivatives). An asset CMC added only
+    after the row stopped trading is a later project reusing the ticker.
+    """
+    by_key = {instrument.key: instrument for instrument in instruments}
+    checked: dict[tuple[str, str], MarketPair] = {}
+    for key, pair in pair_matches.items():
+        instrument = by_key.get(key)
+        if instrument is None or instrument.active:
+            checked[key] = pair
+            continue
+        tickers = _asset_tickers(pair.base_cmc_id, facts, registry)
+        if not any(symbols_consistent(instrument.symbol, ticker) for ticker in tickers):
+            report.pair_symbol_mismatches.append((*key, pair.base_symbol, pair.base_cmc_id))
+            continue
+        if _listed_after_ended(instrument, pair.base_cmc_id, facts):
+            report.rejected_reused_tickers.append((*key, pair.base_cmc_id))
+            continue
+        checked[key] = pair
+    return checked
 
 
 def _registry_facts(registry: AssetRegistry) -> dict[int, CmcAssetDetail]:

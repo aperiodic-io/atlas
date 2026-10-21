@@ -7,8 +7,11 @@ ticker or a price: CMC has already decided which asset ``BTCUSDT`` on Binance
 trades, and Atlas only has to find its own row for that native ticker.
 
 The endpoint is CMC's keyless website API. It lists *currently* tracked markets
-only, so it identifies active instruments; delisted rows are resolved from
-these anchors by ``integrations/symbology.py``.
+only, so it mostly identifies active instruments; delisted rows are resolved
+from these anchors by ``integrations/symbology.py``. CMC keeps tracking some
+markets a venue has delisted (Hyperliquid keeps delisted perpetuals in its
+universe), and such a pair identifies the delisted row when no active row
+trades that ticker.
 """
 
 from __future__ import annotations
@@ -333,34 +336,28 @@ def fetch_venue_market_pairs(
 def match_market_pairs(
     pairs: Iterable[MarketPair], rows_by_exchange: Mapping[str, list[dict]]
 ) -> MatchResult:
-    """Attach each CMC pair to the active Atlas row trading its native ticker."""
+    """Attach each CMC pair to the Atlas row trading its native ticker.
+
+    An active row is preferred. A pair no active row trades falls back to the
+    delisted row of that ticker that traded last: CMC still tracks the market,
+    so it is that row's. ``integrations/symbology.py`` checks such pairs harder.
+    """
     index: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
+    delisted: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
     for exchange, rows in rows_by_exchange.items():
         for row in rows:
-            if row.get("end_date") or not isinstance(row.get("id"), str):
+            if not isinstance(row.get("id"), str):
                 continue
-            index[(exchange, row["id"].upper())].append((exchange, row))
+            target = delisted if row.get("end_date") else index
+            target[(exchange, row["id"].upper())].append((exchange, row))
+    for listings in delisted.values():
+        listings.sort(key=lambda hit: str(hit[1]["end_date"]), reverse=True)
 
     claims: dict[tuple[str, str], list[MarketPair]] = defaultdict(list)
     unmatched: list[MarketPair] = []
     mismatches: list[tuple[tuple[str, str], MarketPair]] = []
     for pair in pairs:
-        venue = CMC_VENUES.get(pair.venue)
-        wanted_type = _CATEGORY_TYPES.get(pair.category)
-        exchanges = venue.exchanges.get(pair.category, ()) if venue else ()
-        found: tuple[str, dict] | None = None
-        for candidate in native_id_candidates(pair):
-            for exchange in exchanges:
-                hits = [
-                    hit
-                    for hit in index.get((exchange, candidate), [])
-                    if hit[1].get("type") == wanted_type
-                ]
-                if hits:
-                    found = hits[0]
-                    break
-            if found:
-                break
+        found = _find_row(pair, index) or _find_row(pair, delisted)
         if found is None:
             unmatched.append(pair)
             continue
@@ -384,6 +381,21 @@ def match_market_pairs(
         symbol_mismatches=tuple(mismatches),
         conflicts=tuple(sorted(conflicts)),
     )
+
+
+def _find_row(
+    pair: MarketPair, rows_by_id: Mapping[tuple[str, str], list[tuple[str, dict]]]
+) -> tuple[str, dict] | None:
+    """The first row of the pair's type trading one of its native tickers."""
+    venue = CMC_VENUES.get(pair.venue)
+    wanted_type = _CATEGORY_TYPES.get(pair.category)
+    exchanges = venue.exchanges.get(pair.category, ()) if venue else ()
+    for candidate in native_id_candidates(pair):
+        for exchange in exchanges:
+            for hit in rows_by_id.get((exchange, candidate), []):
+                if hit[1].get("type") == wanted_type:
+                    return hit
+    return None
 
 
 def _get_page(
