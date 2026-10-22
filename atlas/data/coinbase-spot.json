@@ -1817,7 +1817,12 @@
     "internal_id": "spot-AXIS-USD",
     "symbol": "AXIS",
     "denominator": "USD",
-    "quote_asset_id": "USD"
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-AXIS-USD"
   },
   {
     "id": "AXL-USD",
@@ -2521,7 +2526,7 @@
       "Layer 2"
     ],
     "first_capture": "2024-06-26T00:00:00.000Z",
-    "missing_since": "2026-10-21T06:57:34.567Z",
+    "end_date": "2026-10-21T06:57:34.567Z",
     "base_asset_id": "BLAST",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",

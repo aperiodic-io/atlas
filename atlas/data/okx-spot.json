@@ -18185,12 +18185,7 @@
     "denominator": "USD",
     "first_capture": "2025-03-13T00:00:00.000Z",
     "end_date": "2025-06-21T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USD",
-    "unified_id": "spot-MDT-USD"
+    "quote_asset_id": "USD"
   },
   {
     "id": "MDT-USDC",
@@ -18200,12 +18195,7 @@
     "denominator": "USDC",
     "first_capture": "2024-10-10T00:00:00.000Z",
     "end_date": "2025-03-14T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDC",
-    "unified_id": "spot-MDT-USDC"
+    "quote_asset_id": "USDC"
   },
   {
     "id": "MDT-USDT",
@@ -18215,12 +18205,7 @@
     "denominator": "USDT",
     "first_capture": "2021-03-10T00:00:00.000Z",
     "end_date": "2025-06-21T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-MDT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "ME-EUR",
@@ -34843,7 +34828,7 @@
     "denominator": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-12T00:00:00.000Z",
-    "missing_since": "2026-10-21T06:57:18.545Z",
+    "end_date": "2026-10-21T06:57:18.545Z",
     "quote_asset_id": "USDC"
   },
   {
@@ -34854,7 +34839,7 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-07T00:00:00.000Z",
-    "missing_since": "2026-10-21T06:57:18.545Z",
+    "end_date": "2026-10-21T06:57:18.545Z",
     "quote_asset_id": "USDT"
   },
   {

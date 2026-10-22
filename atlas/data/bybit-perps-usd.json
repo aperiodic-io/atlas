@@ -3321,6 +3321,28 @@
     "unified_id": "perpetual-AWE-USDT:USDT"
   },
   {
+    "id": "AXISUSDT",
+    "type": "perpetual",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T13:04:43.000Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AXIS-USDT:USDT"
+  },
+  {
     "id": "AXLUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AXL-USDT:USDT",
@@ -3534,11 +3556,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-04T00:00:00.000Z",
-    "base_asset_id": "BAC",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42619,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BAC-USDT:USDT"
+    "unified_id": "perpetual-BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "BADGERUSDT",
@@ -14202,13 +14229,8 @@
     "quantity_unit": "base",
     "first_capture": "2023-06-30T00:00:00.000Z",
     "end_date": "2025-07-05T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MDT-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "MEGAUSDT",

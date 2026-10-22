@@ -5637,6 +5637,25 @@
     "unified_id": "future-AVNT-USD:USD-20310815"
   },
   {
+    "id": "AXIS-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-21T14:30:00.186Z",
+    "internal_id": "future-AXIS-USD:USD-20311024",
+    "symbol": "AXIS",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-AXIS-USD:USD-20311024"
+  },
+  {
     "id": "AXS-USD_UM_XPERP-311010",
     "type": "future",
     "contract_size": 0.1,
@@ -5722,6 +5741,30 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-BASED-USD:USD-20310704"
+  },
+  {
+    "id": "BAT-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-22T07:00:00.213Z",
+    "internal_id": "future-BAT-USD:USD-20311024",
+    "symbol": "BAT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 1697,
+    "category": [
+      "DeFi",
+      "Staking",
+      "Smart Contracts",
+      "Interoperability"
+    ],
+    "base_asset_id": "BAT",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-BAT-USD:USD-20311024"
   },
   {
     "id": "BCH-USD-190405",
@@ -35272,6 +35315,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "future-DOGS-USDT:USDT-20250207"
+  },
+  {
+    "id": "DOOD-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 1000.0,
+    "first_capture": "2026-10-21T08:00:00.182Z",
+    "internal_id": "future-DOOD-USD:USD-20311024",
+    "symbol": "DOOD",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 35747,
+    "category": [
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "DOOD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-DOOD-USD:USD-20311024"
   },
   {
     "id": "DOS-USD_UM_XPERP-310815",
@@ -89913,6 +89977,28 @@
     "unified_id": "future-LITE-USD:USD-20310815"
   },
   {
+    "id": "LLY-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-21T08:30:00.166Z",
+    "internal_id": "future-LLY-USD:USD-20311024",
+    "symbol": "LLY",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 39509,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LLY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-LLY-USD:USD-20311024"
+  },
+  {
     "id": "LTC-USD-190405",
     "type": "future",
     "internal_id": "future-LTC-USD:LTC-20190405",
@@ -103675,7 +103761,7 @@
     "delivery_date": "2031-08-22T00:00:00",
     "underlying": "equity",
     "first_capture": "2026-08-21T02:30:00.218Z",
-    "missing_since": "2026-10-21T06:57:18.098Z",
+    "end_date": "2026-10-21T06:57:18.098Z",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD"
   },

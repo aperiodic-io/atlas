@@ -2372,6 +2372,19 @@
     "margin": "USDC"
   },
   {
+    "id": "4647",
+    "type": "perpetual",
+    "base_asset": "TUR30",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "underlying": "pre_market",
+    "first_capture": "2026-10-21T10:22:04.398Z",
+    "internal_id": "perpetual-TUR30-USDC:USDC",
+    "symbol": "TUR30",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "47",
     "type": "perpetual",
     "base_asset": "PENGU",

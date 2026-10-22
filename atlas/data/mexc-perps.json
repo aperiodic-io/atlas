@@ -3408,6 +3408,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CBSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CBSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-CBSTOCK-USDT:USDT",
+    "symbol": "CBSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CCISTOCK_USDT",
     "type": "perpetual",
     "base_coin": "CCISTOCK",
@@ -6623,6 +6638,21 @@
     "margin": "USDT"
   },
   {
+    "id": "GMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "GMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:52:00Z",
+    "internal_id": "perpetual-GMSTOCK-USDT:USDT",
+    "symbol": "GMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "GMT_USDT",
     "type": "perpetual",
     "base_coin": "GMT",
@@ -8546,6 +8576,21 @@
     "margin": "USDT"
   },
   {
+    "id": "KIMCHI_USDT",
+    "type": "perpetual",
+    "base_coin": "KIMCHI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T15:35:00Z",
+    "internal_id": "perpetual-KIMCHI-USDT:USDT",
+    "symbol": "KIMCHI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KIMISTOCK_USDT",
     "type": "perpetual",
     "base_coin": "KIMISTOCK",
@@ -10304,6 +10349,21 @@
     "margin": "USDT"
   },
   {
+    "id": "MSCISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MSCISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-MSCISTOCK-USDT:USDT",
+    "symbol": "MSCISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MSFTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "MSFTSTOCK",
@@ -11006,6 +11066,21 @@
     "first_capture": "2023-06-21T10:02:36Z",
     "internal_id": "perpetual-NMR-USDT:USDT",
     "symbol": "NMR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "NOCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NOCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-NOCSTOCK-USDT:USDT",
+    "symbol": "NOCSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -12511,6 +12586,21 @@
     "first_capture": "2023-10-24T10:57:05Z",
     "internal_id": "perpetual-POWR-USDT:USDT",
     "symbol": "POWR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "PREDICT_USDT",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T03:27:00Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
     "denominator": "USDT",
     "margin": "USDT"
   },

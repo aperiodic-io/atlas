@@ -1812,6 +1812,18 @@
     "first_capture": "2026-10-19T18:51:22.980Z"
   },
   {
+    "id": "CVNA",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T07:00:53.780Z",
+    "internal_id": "perpetual-CVNA-USDC:USDC",
+    "symbol": "CVNA",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "CVX",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -6598,6 +6610,18 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-10-19T18:51:22.980Z"
+  },
+  {
+    "id": "ZCSH",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T07:00:53.780Z",
+    "internal_id": "perpetual-ZCSH-USDC:USDC",
+    "symbol": "ZCSH",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "ZEC",

@@ -10138,6 +10138,25 @@
     "unified_id": "spot-BONK-USDT"
   },
   {
+    "id": "botbusdt",
+    "type": "spot",
+    "base_coin": "BOTB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-BOTB-USDT",
+    "symbol": "BOTB",
+    "denominator": "USDT",
+    "cmc_id": 42613,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BOTB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BOTB-USDT"
+  },
+  {
     "id": "bqxbtc",
     "type": "spot",
     "internal_id": "spot-BQX-BTC",
@@ -10238,6 +10257,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-BREV-USDT"
+  },
+  {
+    "id": "brkbbusdt",
+    "type": "spot",
+    "base_coin": "BRKBB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-BRKBB-USDT",
+    "symbol": "BRKBB",
+    "denominator": "USDT",
+    "cmc_id": 42612,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BRKBB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BRKBB-USDT"
   },
   {
     "id": "broccoli714usdc",
@@ -10755,6 +10793,24 @@
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
     "unified_id": "spot-BTCST-USDT"
+  },
+  {
+    "id": "btcthb",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "THB",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-BTC-THB",
+    "symbol": "BTC",
+    "denominator": "THB",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "THB",
+    "unified_id": "spot-BTC-THB"
   },
   {
     "id": "btctry",
@@ -27784,6 +27840,25 @@
     "unified_id": "spot-KSM-USDT"
   },
   {
+    "id": "kstrbusdt",
+    "type": "spot",
+    "base_coin": "KSTRB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-KSTRB-USDT",
+    "symbol": "KSTRB",
+    "denominator": "USDT",
+    "cmc_id": 42615,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "KSTRB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KSTRB-USDT"
+  },
+  {
     "id": "labnb",
     "type": "spot",
     "internal_id": "spot-LA-BNB",
@@ -31466,7 +31541,7 @@
     "category": [],
     "cmc_id": 2348,
     "base_asset_id": "MDT",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "BTC",
     "unified_id": "spot-MDT-BTC"
   },
@@ -31481,7 +31556,7 @@
     "category": [],
     "cmc_id": 2348,
     "base_asset_id": "MDT",
-    "base_asset_match": "venue_lineage"
+    "base_asset_match": "cross_venue_consensus"
   },
   {
     "id": "mdtusdt",
@@ -31494,7 +31569,7 @@
     "category": [],
     "cmc_id": 2348,
     "base_asset_id": "MDT",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "unified_id": "spot-MDT-USDT"
   },
@@ -48613,6 +48688,25 @@
     "unified_id": "spot-TLM-USDT"
   },
   {
+    "id": "tmfbusdt",
+    "type": "spot",
+    "base_coin": "TMFB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-TMFB-USDT",
+    "symbol": "TMFB",
+    "denominator": "USDT",
+    "cmc_id": 42611,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TMFB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-TMFB-USDT"
+  },
+  {
     "id": "tnsrbtc",
     "type": "spot",
     "internal_id": "spot-TNSR-BTC",
@@ -51522,6 +51616,22 @@
     "unified_id": "spot-USDT-RUB"
   },
   {
+    "id": "usdtthb",
+    "type": "spot",
+    "base_coin": "USDT",
+    "quote_coin": "THB",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-USDT-THB",
+    "symbol": "USDT",
+    "denominator": "THB",
+    "cmc_id": 825,
+    "category": [],
+    "base_asset_id": "USDT",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "THB",
+    "unified_id": "spot-USDT-THB"
+  },
+  {
     "id": "usdttry",
     "type": "spot",
     "internal_id": "spot-USDT-TRY",
@@ -52643,6 +52753,25 @@
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
     "unified_id": "spot-VOXEL-USDT"
+  },
+  {
+    "id": "vstbusdt",
+    "type": "spot",
+    "base_coin": "VSTB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-22T07:00:23.311Z",
+    "internal_id": "spot-VSTB-USDT",
+    "symbol": "VSTB",
+    "denominator": "USDT",
+    "cmc_id": 42614,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "VSTB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-VSTB-USDT"
   },
   {
     "id": "vthobnb",

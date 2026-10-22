@@ -13229,6 +13229,17 @@
     "denominator": "USD"
   },
   {
+    "id": "NEXO/USD",
+    "type": "spot",
+    "base_coin": "NEXO",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T07:04:31.523Z",
+    "internal_id": "spot-NEXO-USD",
+    "symbol": "NEXO",
+    "denominator": "USD"
+  },
+  {
     "id": "NFLXSPV/USD",
     "type": "spot",
     "base_coin": "NFLXx",

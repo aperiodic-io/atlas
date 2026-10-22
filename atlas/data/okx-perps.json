@@ -1442,6 +1442,24 @@
     "unified_id": "perpetual-AVNT-USDT:USDT"
   },
   {
+    "id": "AXIS-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "crypto",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-21T14:00:00.000Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AXIS-USDT:USDT"
+  },
+  {
     "id": "AXS-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AXS-USDT:USDT",

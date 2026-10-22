@@ -521,6 +521,26 @@
     "unified_id": "perpetual-AAVE-USDT:USDT"
   },
   {
+    "id": "ABBVUSDT",
+    "type": "perpetual",
+    "base_coin": "ABBV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T09:59:08.682Z",
+    "internal_id": "perpetual-ABBV-USDT:USDT",
+    "symbol": "ABBV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ABBV",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ABBV-USDT:USDT"
+  },
+  {
     "id": "ABNBUSDT",
     "type": "perpetual",
     "base_coin": "ABNB",
@@ -534,11 +554,16 @@
     "symbol": "ABNB",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "ABNB",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42637,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABNB-USDT:USDT"
+    "unified_id": "perpetual-ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK-USDT:USDT"
   },
   {
     "id": "ACEUSDT",
@@ -2690,6 +2715,28 @@
     "unified_id": "perpetual-AWE-USDT:USDT"
   },
   {
+    "id": "AXISUSDT",
+    "type": "perpetual",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T10:01:30.016Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AXIS-USDT:USDT"
+  },
+  {
     "id": "AXLUSDT",
     "type": "perpetual",
     "base_coin": "AXL",
@@ -2935,11 +2982,16 @@
     "symbol": "BAC",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "BAC",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42619,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BAC-USDT:USDT"
+    "unified_id": "perpetual-BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "BADGERUSDT",
@@ -4759,11 +4811,16 @@
     "symbol": "CEG",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "CEG",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CEG-USDT:USDT"
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "CELOUSDT",
@@ -7063,6 +7120,31 @@
     "unified_id": "perpetual-DYM-USDT:USDT"
   },
   {
+    "id": "EBAYUSDT",
+    "type": "perpetual",
+    "base_coin": "EBAY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T09:59:18.667Z",
+    "internal_id": "perpetual-EBAY-USDT:USDT",
+    "symbol": "EBAY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39953,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EBAY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EBAY-USDT:USDT"
+  },
+  {
     "id": "ECHOUSDT",
     "type": "perpetual",
     "base_coin": "ECHO",
@@ -7402,7 +7484,7 @@
     "category": [
       "Real World Assets Protocols"
     ],
-    "missing_since": "2026-10-21T06:57:32.860Z",
+    "end_date": "2026-10-21T06:57:32.860Z",
     "base_asset_id": "EPIC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -7874,14 +7956,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-15T00:00:00.000Z",
     "internal_id": "perpetual-FASTRETAILING-USDT:USDT",
     "symbol": "FASTRETAILING",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "FASTRETAILING",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FASTRETAILING-USDT:USDT"
   },
   {
     "id": "FCXUSDT",
@@ -9793,6 +9878,26 @@
     "unified_id": "perpetual-HIVE-USDT:USDT"
   },
   {
+    "id": "HLTUSDT",
+    "type": "perpetual",
+    "base_coin": "HLT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T09:59:11.071Z",
+    "internal_id": "perpetual-HLT-USDT:USDT",
+    "symbol": "HLT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "HLT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-HLT-USDT:USDT"
+  },
+  {
     "id": "HMSTRUSDT",
     "type": "perpetual",
     "first_capture": "2024-11-08T00:00:00.000Z",
@@ -10200,6 +10305,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"
+  },
+  {
+    "id": "IBKRUSDT",
+    "type": "perpetual",
+    "base_coin": "IBKR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T09:59:15.583Z",
+    "internal_id": "perpetual-IBKR-USDT:USDT",
+    "symbol": "IBKR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42620,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "IBMUSDT",
@@ -11098,14 +11228,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "perpetual-JPMUFG-USDT:USDT",
     "symbol": "JPMUFG",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "JPMUFG",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-JPMUFG-USDT:USDT"
   },
   {
     "id": "JPMUSDT",
@@ -11140,14 +11273,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "perpetual-JPSONY-USDT:USDT",
     "symbol": "JPSONY",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "JPSONY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-JPSONY-USDT:USDT"
   },
   {
     "id": "JSTUSDT",
@@ -11383,17 +11519,14 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "equity",
+    "underlying": "unknown",
     "first_capture": "2026-10-12T00:00:00.000Z",
     "internal_id": "perpetual-KBFG-USDT:USDT",
     "symbol": "KBFG",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "KBFG",
-    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-KBFG-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "KDAUSDT",
@@ -13035,19 +13168,14 @@
     "symbol": "MDT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 2348,
-    "category": [],
     "base_coin": "MDT",
     "quote_coin": "USDT",
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
     "underlying": "unknown",
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MDT-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "MEGAUSDT",
@@ -13816,6 +13944,26 @@
     "unified_id": "perpetual-MRVLON-USDT:USDT"
   },
   {
+    "id": "MSCIUSDT",
+    "type": "perpetual",
+    "base_coin": "MSCI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T09:59:13.345Z",
+    "internal_id": "perpetual-MSCI-USDT:USDT",
+    "symbol": "MSCI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MSCI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MSCI-USDT:USDT"
+  },
+  {
     "id": "MSFTUSDT",
     "type": "perpetual",
     "base_coin": "MSFT",
@@ -13986,14 +14134,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "perpetual-MURATA-USDT:USDT",
     "symbol": "MURATA",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "MURATA",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MURATA-USDT:USDT"
   },
   {
     "id": "MUSDT",
@@ -14157,14 +14308,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:16.789Z",
     "internal_id": "perpetual-NANYA-USDT:USDT",
     "symbol": "NANYA",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "NANYA",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NANYA-USDT:USDT"
   },
   {
     "id": "NAORISUSDT",
@@ -20500,14 +20654,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "perpetual-TAIYOYUDEN-USDT:USDT",
     "symbol": "TAIYOYUDEN",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TAIYOYUDEN",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TAIYOYUDEN-USDT:USDT"
   },
   {
     "id": "TAKEUSDT",
@@ -21044,14 +21201,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "perpetual-TOYOTA-USDT:USDT",
     "symbol": "TOYOTA",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TOYOTA",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TOYOTA-USDT:USDT"
   },
   {
     "id": "TQQQUSDT",
@@ -21500,14 +21660,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:24.210Z",
     "internal_id": "perpetual-TWASX-USDT:USDT",
     "symbol": "TWASX",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TWASX",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TWASX-USDT:USDT"
   },
   {
     "id": "TWDELTAUSDT",
@@ -21517,14 +21680,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:26.654Z",
     "internal_id": "perpetual-TWDELTA-USDT:USDT",
     "symbol": "TWDELTA",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TWDELTA",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TWDELTA-USDT:USDT"
   },
   {
     "id": "TWLOUSDT",
@@ -21584,14 +21750,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:21.958Z",
     "internal_id": "perpetual-TWTSM-USDT:USDT",
     "symbol": "TWTSM",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TWTSM",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TWTSM-USDT:USDT"
   },
   {
     "id": "TWUMCUSDT",
@@ -21601,14 +21770,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:19.104Z",
     "internal_id": "perpetual-TWUMC-USDT:USDT",
     "symbol": "TWUMC",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "TWUMC",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TWUMC-USDT:USDT"
   },
   {
     "id": "TXNUSDT",
@@ -22611,14 +22783,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:05.213Z",
     "internal_id": "perpetual-WALSIN-USDT:USDT",
     "symbol": "WALSIN",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "WALSIN",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-WALSIN-USDT:USDT"
   },
   {
     "id": "WALUSDT",
@@ -22829,14 +23004,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:14.512Z",
     "internal_id": "perpetual-WINBOND-USDT:USDT",
     "symbol": "WINBOND",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "WINBOND",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-WINBOND-USDT:USDT"
   },
   {
     "id": "WLDUSDT",
@@ -23670,14 +23848,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-14T09:35:07.514Z",
     "internal_id": "perpetual-YAGEO-USDT:USDT",
     "symbol": "YAGEO",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "YAGEO",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-YAGEO-USDT:USDT"
   },
   {
     "id": "YALAUSDT",

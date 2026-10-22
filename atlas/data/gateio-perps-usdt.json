@@ -383,11 +383,16 @@
     "symbol": "ABNB",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "ABNB",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42637,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABNB-USDT:USDT"
+    "unified_id": "perpetual-ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK-USDT:USDT"
   },
   {
     "id": "ACA_USDT",
@@ -3183,6 +3188,28 @@
     "unified_id": "perpetual-AWE-USDT:USDT"
   },
   {
+    "id": "AXIS_USDT",
+    "type": "perpetual",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T13:10:00.000Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AXIS-USDT:USDT"
+  },
+  {
     "id": "AXS_USDT",
     "type": "perpetual",
     "base_coin": "AXS",
@@ -3410,11 +3437,16 @@
     "symbol": "BAC",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "BAC",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42619,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BAC-USDT:USDT"
+    "unified_id": "perpetual-BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "BADGER_USDT",
@@ -6171,11 +6203,16 @@
     "symbol": "CEG",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "CEG",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CEG-USDT:USDT"
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "CELO_USDT",
@@ -13826,14 +13863,22 @@
     "margin_asset": "USDT",
     "contract_size": 0.1,
     "quantity_unit": "base",
-    "underlying": "crypto",
+    "underlying": "equity",
     "first_capture": "2026-10-21T09:00:00.000Z",
     "internal_id": "perpetual-IBKR-USDT:USDT",
     "symbol": "IBKR",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42620,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "IBM_USDT",
@@ -15511,6 +15556,23 @@
     "end_date": "2025-02-18T00:00:00.000Z",
     "internal_id": "perpetual-KIMA-USDT:USDT",
     "symbol": "KIMA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
+    "id": "KIMCHI_USDT",
+    "type": "perpetual",
+    "base_coin": "KIMCHI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 100.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T06:21:16.000Z",
+    "internal_id": "perpetual-KIMCHI-USDT:USDT",
+    "symbol": "KIMCHI",
     "denominator": "USDT",
     "margin": "USDT",
     "quote_asset_id": "USDT",
@@ -22757,6 +22819,28 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PRCL-USDT:USDT"
+  },
+  {
+    "id": "PREDICT_USDT",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "pre_market",
+    "first_capture": "2026-10-21T14:50:19.000Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42642,
+    "category": [],
+    "base_asset_id": "PREDICT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PREDICT-USDT:USDT"
   },
   {
     "id": "PRIME_USDT",
@@ -30569,14 +30653,17 @@
     "margin_asset": "USDT",
     "contract_size": 0.01,
     "quantity_unit": "base",
-    "underlying": "crypto",
+    "underlying": "equity",
     "first_capture": "2026-10-21T09:00:00.000Z",
     "internal_id": "perpetual-VLO-USDT:USDT",
     "symbol": "VLO",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "VLO",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-VLO-USDT:USDT"
   },
   {
     "id": "VMPX_USDT",
