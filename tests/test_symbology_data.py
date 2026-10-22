@@ -382,6 +382,7 @@ UNRESOLVED_DELISTED_USD_PERPETUALS = {
         "bluebirdusdt",  # Binance's BLUEBIRD (Twitter ecosystem) index
         "dotecousdt",  # Binance's DOT ecosystem index
         "footballusdt",  # Binance's football fan token index
+        "neiroethusdt",  # as OKX's NEIROETH-USDT-SWAP; its price is not Neiro's (CMC 32521)
     },
 }
 USD_STABLECOINS = {"USD", "USDT", "USDC", "USDE", "USDH", "USDT0"}

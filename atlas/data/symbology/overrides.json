@@ -600,6 +600,24 @@
       "original_id": "damusdt",
       "cmc_id": 37638,
       "reason": "Reservoir (DAM, CMC 37638). DAMUSDT closed at 0.0784 and 0.0591 on 2025-09-29 and 2025-09-30, as CMC 37638 did."
+    },
+    {
+      "exchange": "binance-futures",
+      "original_id": "neiroethusdt",
+      "cmc_id": null,
+      "reason": "Neiro Ethereum (NEIROETH, ~$0.087 in June 2025, as OKX's NEIROETH-USDT-SWAP) is not Neiro (CMC 32521, ~$0.0004 on Binance's and OKX's NEIRO books); the row's cmc_id put the two in one asset. The registry has no asset for Neiro Ethereum."
+    },
+    {
+      "exchange": "binance-spot",
+      "original_id": "datausdt",
+      "cmc_id": null,
+      "reason": "Streamr's DATA (2020-2026, ~$0.014 in June 2025) is not Data Network (CMC 35626, formerly Story's IP, ~$3.5), which took the DATA ticker in 2026-07; a cross-venue consensus on the ticker put the two in one asset. The registry has no asset for Streamr."
+    },
+    {
+      "exchange": "binance-spot",
+      "original_id": "databtc",
+      "cmc_id": null,
+      "reason": "Streamr's DATA, as datausdt: not Data Network (CMC 35626)."
     }
   ],
   "ticker_eras": [

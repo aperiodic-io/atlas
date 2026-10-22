@@ -14859,15 +14859,7 @@
     "denominator": "BTC",
     "first_capture": "2020-05-19T00:00:00.000Z",
     "end_date": "2025-10-18T00:00:00.000Z",
-    "category": [
-      "Layer 1",
-      "Smart Contracts"
-    ],
-    "cmc_id": 35626,
-    "base_asset_id": "DATA",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "BTC",
-    "unified_id": "spot-DATA-BTC"
+    "quote_asset_id": "BTC"
   },
   {
     "id": "databusd",
@@ -14896,15 +14888,7 @@
     "denominator": "USDT",
     "first_capture": "2020-05-19T00:00:00.000Z",
     "end_date": "2026-02-14T00:00:00.000Z",
-    "category": [
-      "Layer 1",
-      "Smart Contracts"
-    ],
-    "cmc_id": 35626,
-    "base_asset_id": "DATA",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-DATA-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "dcrbtc",
