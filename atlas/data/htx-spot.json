@@ -1850,6 +1850,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "axisusdt",
+    "type": "spot",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T13:30:00.000Z",
+    "internal_id": "spot-AXIS-USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT"
+  },
+  {
     "id": "axsbtc",
     "type": "spot",
     "base_coin": "AXS",

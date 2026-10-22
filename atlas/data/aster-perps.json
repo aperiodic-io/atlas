@@ -95,7 +95,8 @@
     "symbol": "1000NEX",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-23T00:00:00.000Z"
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "1000pepeusdt",
@@ -1093,6 +1094,20 @@
     "first_capture": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "axisusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "AXIS",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T15:15:00.000Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "axlusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -1189,7 +1204,8 @@
     "symbol": "B3",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-23T00:00:00.000Z"
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "babausdt",
@@ -1540,7 +1556,8 @@
     "symbol": "BLEND",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-23T00:00:00.000Z"
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "blessusdt",
@@ -6020,6 +6037,20 @@
     "first_capture": "2026-09-13T00:00:00.000Z"
   },
   {
+    "id": "predictusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "PREDICT",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
+    "first_capture": "2026-10-21T12:00:00.000Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "prlusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -7183,7 +7214,8 @@
     "symbol": "STONKBROKER",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-30T00:00:00.000Z"
+    "first_capture": "2026-08-30T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "stonksusdt",
@@ -7702,7 +7734,8 @@
     "symbol": "TROLL",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-23T00:00:00.000Z"
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "trumpusdt",
@@ -8346,7 +8379,8 @@
     "symbol": "XCN",
     "denominator": "USDT",
     "margin": "USDT",
-    "first_capture": "2026-08-23T00:00:00.000Z"
+    "first_capture": "2026-08-23T00:00:00.000Z",
+    "end_date": "2026-10-21T09:00:00.000Z"
   },
   {
     "id": "xcuusdt",

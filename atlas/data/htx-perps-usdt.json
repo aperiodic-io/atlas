@@ -4218,6 +4218,21 @@
     "margin": "USDT"
   },
   {
+    "id": "IBKR-USDT",
+    "type": "perpetual",
+    "base_coin": "IBKR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T00:00:00.000Z",
+    "internal_id": "perpetual-IBKR-USDT:USDT",
+    "symbol": "IBKR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "IBM-USDT",
     "type": "perpetual",
     "base_coin": "IBM",
@@ -4521,11 +4536,16 @@
     "id": "JCT-USDT",
     "type": "perpetual",
     "first_capture": "2025-11-11T00:00:00.000Z",
-    "end_date": "2026-02-13T00:00:00.000Z",
     "internal_id": "perpetual-JCT-USDT:USDT",
     "symbol": "JCT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "base_coin": "JCT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 100.0,
+    "quantity_unit": "base",
+    "underlying": "crypto"
   },
   {
     "id": "JD-USDT",
@@ -5404,6 +5424,21 @@
     "first_capture": "2026-09-03T00:00:00.000Z",
     "internal_id": "perpetual-MDB-USDT:USDT",
     "symbol": "MDB",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MDT-USDT",
+    "type": "perpetual",
+    "base_coin": "MDT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T00:00:00.000Z",
+    "internal_id": "perpetual-MDT-USDT:USDT",
+    "symbol": "MDT",
     "denominator": "USDT",
     "margin": "USDT"
   },

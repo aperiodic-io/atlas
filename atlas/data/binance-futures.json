@@ -3019,11 +3019,16 @@
     "symbol": "BAC",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "BAC",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42619,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BAC-USDT:USDT"
+    "unified_id": "perpetual-BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "badgerusdt",
@@ -5485,11 +5490,16 @@
     "symbol": "CEG",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "CEG",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CEG-USDT:USDT"
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "celousdt",
@@ -11330,11 +11340,16 @@
     "symbol": "IBKR",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "IBKR",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42620,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-IBKR-USDT:USDT"
+    "unified_id": "perpetual-IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "ibmusdt",
@@ -13889,19 +13904,22 @@
     "symbol": "MDT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 2348,
+    "cmc_id": 42621,
     "contract_size": 1.0,
     "underlying": "equity",
-    "category": [],
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "margin_asset": "USDT",
     "first_capture": "2023-06-30T00:00:00.000Z",
     "base_coin": "MDT",
     "quote_coin": "USDT",
-    "base_asset_id": "MDT",
-    "base_asset_match": "snapshot_cmc_id",
+    "base_asset_id": "MDT.MEDTRONIC_PLC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MDT-USDT:USDT"
+    "unified_id": "perpetual-MDT.MEDTRONIC_PLC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "megausdt",

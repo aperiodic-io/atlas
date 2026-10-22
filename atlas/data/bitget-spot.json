@@ -2078,6 +2078,23 @@
     "unified_id": "spot-AWE-USDT"
   },
   {
+    "id": "AXISUSDT",
+    "type": "spot",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T13:00:00.000Z",
+    "internal_id": "spot-AXIS-USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "cmc_id": 42525,
+    "category": [],
+    "base_asset_id": "AXIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-AXIS-USDT"
+  },
+  {
     "id": "AXLUSDT",
     "type": "spot",
     "base_coin": "AXL",
@@ -11031,14 +11048,9 @@
     "internal_id": "spot-MDT-USDT",
     "symbol": "MDT",
     "denominator": "USDT",
-    "cmc_id": 2348,
-    "category": [],
     "first_capture": "2024-11-08T00:00:00.000Z",
     "end_date": "2025-12-20T00:00:00.000Z",
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-MDT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "MEGAUSDT",
@@ -15056,7 +15068,7 @@
     "symbol": "RACVA",
     "denominator": "USDT",
     "first_capture": "2026-10-16T00:00:00.000Z",
-    "missing_since": "2026-10-21T06:57:33.879Z",
+    "end_date": "2026-10-21T06:57:33.879Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -17545,7 +17557,7 @@
     "symbol": "RATKR",
     "denominator": "USDT",
     "first_capture": "2026-10-19T00:00:00.000Z",
-    "missing_since": "2026-10-21T06:57:33.879Z",
+    "end_date": "2026-10-21T06:57:33.879Z",
     "quote_asset_id": "USDT"
   },
   {
