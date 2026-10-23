@@ -160,6 +160,14 @@ def _normalize_binance_underlying_type(raw_type: str | None) -> UnderlyingType:
     return _BINANCE_UNDERLYING_TYPE_MAP.get(raw_type or "", UnderlyingType.unknown)
 
 
+def _price_filter_tick(item: dict) -> float | None:
+    """The instrument's tick size (PRICE_FILTER ``tickSize``), if the venue gives one."""
+    for f in item.get("filters") or []:
+        if f.get("filterType") == "PRICE_FILTER" and f.get("tickSize") is not None:
+            return float(f["tickSize"])
+    return None
+
+
 def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
     payload = requests.get(
         "https://fapi.binance.com/fapi/v1/exchangeInfo", timeout=timeout_seconds
@@ -172,6 +180,8 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
             item,
         )
         sd["contract_size"] = 1.0
+        if (tick := _price_filter_tick(item)) is not None:
+            sd["tick_size"] = tick
         if margin_asset := item.get("marginAsset"):
             sd["margin_asset"] = margin_asset
         sd["underlying"] = _normalize_binance_underlying_type(

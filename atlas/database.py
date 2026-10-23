@@ -93,6 +93,28 @@ class SecurityMaster:
         registry = AssetRegistry.load(registry_path or data_dir / _REGISTRY_RELATIVE_PATH)
         return cls(internal_id_map, symbol_windows, contract_index, metadata_map, registry)
 
+    def tick_size(
+        self, exchange: str, original_id: str, at: datetime | None = None
+    ) -> float | None:
+        """An instrument's tick size, optionally as of ``at``.
+
+        Venues re-tick contracts in place; ``tick_size_history`` records each
+        tick with the time it took effect (or, when found by the daily
+        refresh, was first seen). Before the first entry the tick is unknown.
+        """
+        row = self._metadata_map.get((exchange, original_id))
+        if row is None:
+            return None
+        if at is None:
+            return row.get("tick_size")
+        moment = at.replace(tzinfo=UTC) if at.tzinfo is None else at
+        tick = None
+        for entry in row.get("tick_size_history") or []:
+            if parse_utc_timestamp(entry["effective_from"]) > moment:
+                break
+            tick = entry["value"]
+        return tick
+
     def by_exchange_and_original_id(
         self, exchange: str, original_id: str
     ) -> str | None:
