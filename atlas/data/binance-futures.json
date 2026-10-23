@@ -1126,6 +1126,17 @@
     "first_capture": "2025-05-20T00:00:00.000Z",
     "base_coin": "AGT",
     "quote_coin": "USDT",
+    "tick_size": 1e-05,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-21T04:00:35.977Z",
+        "value": 1e-06
+      },
+      {
+        "effective_from": "2026-10-22T06:30:00.000Z",
+        "value": 1e-05
+      }
+    ],
     "base_asset_id": "AGT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -2062,6 +2073,17 @@
     "first_capture": "2025-10-23T00:00:00.000Z",
     "base_coin": "APR",
     "quote_coin": "USDT",
+    "tick_size": 1e-05,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 0.0001
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 1e-05
+      }
+    ],
     "base_asset_id": "APR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -3460,6 +3482,17 @@
     "first_capture": "2025-11-12T00:00:00.000Z",
     "base_coin": "BEAT",
     "quote_coin": "USDT",
+    "tick_size": 1e-05,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 0.0001
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 1e-05
+      }
+    ],
     "base_asset_id": "BEAT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -3624,6 +3657,17 @@
     "first_capture": "2026-05-07T00:00:00.000Z",
     "base_coin": "BILL",
     "quote_coin": "USDT",
+    "tick_size": 1e-06,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-21T04:00:35.977Z",
+        "value": 1e-05
+      },
+      {
+        "effective_from": "2026-10-22T06:30:00.000Z",
+        "value": 1e-06
+      }
+    ],
     "base_asset_id": "BILL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -4261,6 +4305,17 @@
     "first_capture": "2025-03-21T00:00:00.000Z",
     "base_coin": "BR",
     "quote_coin": "USDT",
+    "tick_size": 0.0001,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-21T04:00:35.977Z",
+        "value": 1e-05
+      },
+      {
+        "effective_from": "2026-10-22T06:30:00.000Z",
+        "value": 0.0001
+      }
+    ],
     "base_asset_id": "BR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -6471,6 +6526,17 @@
     "base_coin": "CSOPSAMSUNG2L",
     "cmc_id": 41076,
     "quote_coin": "USDT",
+    "tick_size": 0.001,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 0.01
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 0.001
+      }
+    ],
     "base_asset_id": "CSOPSAMSUNG2L",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -8095,6 +8161,17 @@
     "first_capture": "2025-07-29T00:00:00.000Z",
     "base_coin": "ESPORTS",
     "quote_coin": "USDT",
+    "tick_size": 1e-06,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-21T04:00:35.977Z",
+        "value": 1e-05
+      },
+      {
+        "effective_from": "2026-10-22T06:30:00.000Z",
+        "value": 1e-06
+      }
+    ],
     "base_asset_id": "ESPORTS",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -9358,6 +9435,17 @@
     "first_capture": "2026-05-18T00:00:00.000Z",
     "base_coin": "FLNC",
     "quote_coin": "USDT",
+    "tick_size": 0.001,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 0.01
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 0.001
+      }
+    ],
     "base_asset_id": "FLNC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11504,6 +11592,17 @@
     "first_capture": "2025-07-04T00:00:00.000Z",
     "base_coin": "IDOL",
     "quote_coin": "USDT",
+    "tick_size": 1e-06,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-21T04:00:35.977Z",
+        "value": 1e-05
+      },
+      {
+        "effective_from": "2026-10-22T06:30:00.000Z",
+        "value": 1e-06
+      }
+    ],
     "base_asset_id": "IDOL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -18084,6 +18183,17 @@
     "first_capture": "2026-02-27T00:00:00.000Z",
     "base_coin": "ROBO",
     "quote_coin": "USDT",
+    "tick_size": 1e-06,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 1e-05
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 1e-06
+      }
+    ],
     "base_asset_id": "ROBO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -18204,6 +18314,17 @@
     "base_coin": "RUM",
     "cmc_id": 42373,
     "quote_coin": "USDT",
+    "tick_size": 0.001,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 0.01
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 0.001
+      }
+    ],
     "base_asset_id": "RUM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -23211,6 +23332,17 @@
     "first_capture": "2025-09-12T00:00:00.000Z",
     "base_coin": "XPIN",
     "quote_coin": "USDT",
+    "tick_size": 1e-07,
+    "tick_size_history": [
+      {
+        "effective_from": "2026-10-14T02:00:07.740Z",
+        "value": 1e-06
+      },
+      {
+        "effective_from": "2026-10-15T06:30:00.000Z",
+        "value": 1e-07
+      }
+    ],
     "base_asset_id": "XPIN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

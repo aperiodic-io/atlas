@@ -30,6 +30,7 @@ Atlas - Crypto Security Master is a Python securities master for crypto venues. 
   - `type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
   - `underlying` (`crypto`, `commodity`, `equity`, `index`, `forex`, `pre_market`, `unknown`), when supplied by the venue
   - `contract_size` (when available from source metadata)
+  - `tick_size` and `tick_size_history` (Binance USDⓈ-M futures): every tick an instrument has had, so `sm.tick_size("binance-futures", "brusdt", at=...)` returns the one in effect then. A re-tick found by the daily refresh is dated when it was first seen; known re-ticks are seeded with the venue's announced time
   - `delivery_date` (for dated contracts)
   - `internal_id` string
 - Loads local securities-master snapshots and supports:
