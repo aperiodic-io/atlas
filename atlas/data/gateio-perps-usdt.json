@@ -8684,6 +8684,26 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "DHR_USDT",
+    "type": "perpetual",
+    "base_coin": "DHR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:00:00.000Z",
+    "internal_id": "perpetual-DHR-USDT:USDT",
+    "symbol": "DHR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "DHR",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DHR-USDT:USDT"
+  },
+  {
     "id": "DHX_USDT",
     "type": "perpetual",
     "first_capture": "2023-07-17T00:00:00.000Z",
@@ -13199,6 +13219,26 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "HLT_USDT",
+    "type": "perpetual",
+    "base_coin": "HLT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:00:00.000Z",
+    "internal_id": "perpetual-HLT-USDT:USDT",
+    "symbol": "HLT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "HLT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-HLT-USDT:USDT"
+  },
+  {
     "id": "HMSTR_USDT",
     "type": "perpetual",
     "base_coin": "HMSTR",
@@ -15575,8 +15615,15 @@
     "symbol": "KIMCHI",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42641,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "KIMCHI",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KIMCHI-USDT:USDT"
   },
   {
     "id": "KIMI_USDT",
@@ -18986,6 +19033,26 @@
     "unified_id": "perpetual-MRVL-USDT:USDT"
   },
   {
+    "id": "MSCI_USDT",
+    "type": "perpetual",
+    "base_coin": "MSCI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:00:00.000Z",
+    "internal_id": "perpetual-MSCI-USDT:USDT",
+    "symbol": "MSCI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MSCI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MSCI-USDT:USDT"
+  },
+  {
     "id": "MSFT_USDT",
     "type": "perpetual",
     "base_coin": "MSFT",
@@ -19313,6 +19380,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MVLL-USDT:USDT"
+  },
+  {
+    "id": "MXL_USDT",
+    "type": "perpetual",
+    "base_coin": "MXL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:00:00.000Z",
+    "internal_id": "perpetual-MXL-USDT:USDT",
+    "symbol": "MXL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MXL.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MXL.EQUITY-USDT:USDT"
   },
   {
     "id": "MYRIA_USDT",

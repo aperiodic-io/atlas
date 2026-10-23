@@ -8822,6 +8822,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DHR",
+   "ticker": "DHR",
+   "name": "DHR",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-23"
+  },
+  {
    "asset_id": "DHRX",
    "ticker": "DHRX",
    "name": "Danaher tokenized stock (xStock)",
@@ -15660,6 +15668,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "KIMCHI",
+   "ticker": "KIMCHI",
+   "name": "Aura Final Boss",
+   "asset_class": "crypto",
+   "cmc_id": 42641,
+   "cmc_slug": "aura-final-boss",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-21T14:10:16Z",
+   "minted_at": "2026-10-23"
+  },
+  {
    "asset_id": "KIOXIA",
    "ticker": "KIOXIA",
    "name": "Kioxia Holdings Corp (Derivatives)",
@@ -19593,6 +19615,25 @@
    "status": "active",
    "cmc_date_added": "2019-09-24T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MXL",
+   "ticker": "MXL",
+   "name": "MaxLinear Tokenized Stock (Robinhood)",
+   "asset_class": "crypto",
+   "cmc_id": 40772,
+   "cmc_slug": "maxlinear-tokenized-stock-robinhood",
+   "status": "active",
+   "cmc_date_added": "2026-08-04T07:32:01Z",
+   "minted_at": "2026-10-23"
+  },
+  {
+   "asset_id": "MXL.EQUITY",
+   "ticker": "MXL",
+   "name": "MXL",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-23"
   },
   {
    "asset_id": "MXN",

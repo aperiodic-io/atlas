@@ -3904,6 +3904,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CMISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CMISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-CMISTOCK-USDT:USDT",
+    "symbol": "CMISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CNPY_USDT",
     "type": "perpetual",
     "base_coin": "CNPY",
@@ -7345,6 +7360,21 @@
     "margin": "USDT"
   },
   {
+    "id": "HLTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HLTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T12:58:00Z",
+    "internal_id": "perpetual-HLTSTOCK-USDT:USDT",
+    "symbol": "HLTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HMSTR_USDT",
     "type": "perpetual",
     "base_coin": "HMSTR",
@@ -9714,6 +9744,21 @@
     "first_capture": "2025-07-25T11:40:17Z",
     "internal_id": "perpetual-MCDSTOCK-USDT:USDT",
     "symbol": "MCDSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MCHPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MCHPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-MCHPSTOCK-USDT:USDT",
+    "symbol": "MCHPSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -13430,6 +13475,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RT_USDT",
+    "type": "perpetual",
+    "base_coin": "RT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T12:10:00Z",
+    "internal_id": "perpetual-RT-USDT:USDT",
+    "symbol": "RT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RUNE_USDT",
     "type": "perpetual",
     "base_coin": "RUNE",
@@ -14703,6 +14763,21 @@
     "first_capture": "2021-12-07T02:57:20Z",
     "internal_id": "perpetual-SPELL-USDT:USDT",
     "symbol": "SPELL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SPGISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SPGISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-SPGISTOCK-USDT:USDT",
+    "symbol": "SPGISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -16295,6 +16370,21 @@
     "first_capture": "2025-11-06T11:10:00Z",
     "internal_id": "perpetual-UAI-USDT:USDT",
     "symbol": "UAI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "UALSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "UALSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T12:56:00Z",
+    "internal_id": "perpetual-UALSTOCK-USDT:USDT",
+    "symbol": "UALSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

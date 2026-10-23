@@ -5761,7 +5761,7 @@
       "Interoperability"
     ],
     "base_asset_id": "BAT",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-BAT-USD:USD-20311024"
@@ -13244,7 +13244,7 @@
     ],
     "cmc_id": 40064,
     "base_asset_id": "BE",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-BE-USD:USD-20310829"
@@ -34762,6 +34762,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-BTC-USD:USD-20310404"
+  },
+  {
+    "id": "BTW-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T08:30:00.171Z",
+    "internal_id": "future-BTW-USD:USD-20311024",
+    "symbol": "BTW",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 39158,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "BTW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-BTW-USD:USD-20311024"
   },
   {
     "id": "BZ-USD_UM_XPERP-310509",
@@ -83566,6 +83587,28 @@
     "unified_id": "future-HYPE-USD:USD-20310523"
   },
   {
+    "id": "IBM-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T16:30:00.267Z",
+    "internal_id": "future-IBM-USD:USD-20311024",
+    "symbol": "IBM",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 39634,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-IBM-USD:USD-20311024"
+  },
+  {
     "id": "ICP-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 1.0,
@@ -100979,6 +101022,27 @@
     "unified_id": "future-META-USD:USD-20310613"
   },
   {
+    "id": "MEW-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 1000.0,
+    "first_capture": "2026-10-22T07:15:00.151Z",
+    "internal_id": "future-MEW-USD:USD-20311024",
+    "symbol": "MEW",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 30126,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "MEW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-MEW-USD:USD-20311024"
+  },
+  {
     "id": "MINA-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 1.0,
@@ -101646,6 +101710,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OURA-USD:USD-20311010"
+  },
+  {
+    "id": "PANW-USD_UM_XPERP-311024",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T09:45:00.147Z",
+    "internal_id": "future-PANW-USD:USD-20311024",
+    "symbol": "PANW",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-24T00:00:00",
+    "cmc_id": 40199,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PANW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-PANW-USD:USD-20311024"
   },
   {
     "id": "PARTI-USD_UM_XPERP-311010",
