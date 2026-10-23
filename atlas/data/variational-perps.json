@@ -1272,6 +1272,18 @@
     "first_capture": "2026-10-19T18:51:22.980Z"
   },
   {
+    "id": "BSP",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T06:53:06.447Z",
+    "internal_id": "perpetual-BSP-USDC:USDC",
+    "symbol": "BSP",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "BTC",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -2914,6 +2926,18 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-10-19T18:51:22.980Z"
+  },
+  {
+    "id": "IBKR",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T06:53:06.447Z",
+    "internal_id": "perpetual-IBKR-USDC:USDC",
+    "symbol": "IBKR",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "IBM",

@@ -565,6 +565,22 @@
     "margin": "USD"
   },
   {
+    "id": "BTCUSD-270129",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "delivery_date": "2027-01-29T08:00:00+00:00",
+    "first_capture": "2026-10-23T06:53:04.846Z",
+    "internal_id": "future-BTC-USD:USD-20270129",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "BTCUSD-270326",
     "type": "future",
     "base_coin": "BTC",
@@ -1157,6 +1173,22 @@
     "delivery_date": "2026-12-25T08:00:00+00:00",
     "first_capture": "2026-03-20T00:00:00.000Z",
     "internal_id": "future-ETH-USD:USD-20261225",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "ETHUSD-270129",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "delivery_date": "2027-01-29T08:00:00+00:00",
+    "first_capture": "2026-10-23T06:53:04.846Z",
+    "internal_id": "future-ETH-USD:USD-20270129",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "USD"

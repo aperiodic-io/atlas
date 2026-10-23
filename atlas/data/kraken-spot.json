@@ -17063,6 +17063,17 @@
     "denominator": "USD"
   },
   {
+    "id": "SFI/USD",
+    "type": "spot",
+    "base_coin": "SFI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T06:56:42.303Z",
+    "internal_id": "spot-SFI-USD",
+    "symbol": "SFI",
+    "denominator": "USD"
+  },
+  {
     "id": "SGB/EUR",
     "type": "spot",
     "base_coin": "SGB",

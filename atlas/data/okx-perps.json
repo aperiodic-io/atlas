@@ -162,6 +162,22 @@
     "unified_id": "perpetual-AAVE-USDT:USDT"
   },
   {
+    "id": "ABBV-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T09:15:00.000Z",
+    "internal_id": "perpetual-ABBV-USDT:USDT",
+    "symbol": "ABBV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ABBV",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ABBV-USDT:USDT"
+  },
+  {
     "id": "ACE-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-ACE-USDT:USDT",
@@ -769,6 +785,22 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-AMD-USDT:USDT"
+  },
+  {
+    "id": "AMGN-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T09:30:00.000Z",
+    "internal_id": "perpetual-AMGN-USDT:USDT",
+    "symbol": "AMGN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "AMGN",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMGN-USDT:USDT"
   },
   {
     "id": "AMZN-USDT-SWAP",
@@ -2499,6 +2531,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-BTT-USDT:USDT"
+  },
+  {
+    "id": "BTW-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "crypto",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T08:00:00.000Z",
+    "internal_id": "perpetual-BTW-USDT:USDT",
+    "symbol": "BTW",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39158,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "BTW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BTW-USDT:USDT"
   },
   {
     "id": "BUZZ-USDT-SWAP",
@@ -5043,6 +5095,22 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GAS-USDT:USDT"
+  },
+  {
+    "id": "GE-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T08:45:00.000Z",
+    "internal_id": "perpetual-GE-USDT:USDT",
+    "symbol": "GE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "GE",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GE-USDT:USDT"
   },
   {
     "id": "GEV-USDT-SWAP",
@@ -8754,6 +8822,27 @@
     "unified_id": "perpetual-NVDL-USDT:USDT"
   },
   {
+    "id": "NVO-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T09:00:00.000Z",
+    "internal_id": "perpetual-NVO-USDT:USDT",
+    "symbol": "NVO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40104,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NVO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NVO-USDT:USDT"
+  },
+  {
     "id": "NXPC-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-NXPC-USDT:USDT",
@@ -9324,14 +9413,14 @@
     "margin": "USDT",
     "contract_size": 1.0,
     "first_capture": "2026-06-08T00:00:00.000Z",
-    "end_date": "2026-06-25T00:00:00.000Z",
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
     "cmc_id": 40199,
+    "underlying": "equity",
     "base_asset_id": "PANW",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PANW-USDT:USDT"
@@ -13464,6 +13553,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-VRT-USDT:USDT"
+  },
+  {
+    "id": "VST-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-22T08:30:00.000Z",
+    "internal_id": "perpetual-VST-USDT:USDT",
+    "symbol": "VST",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 41870,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "VST",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-VST-USDT:USDT"
   },
   {
     "id": "VVV-USDT-SWAP",

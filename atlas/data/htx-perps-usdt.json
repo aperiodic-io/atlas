@@ -1000,6 +1000,21 @@
     "margin": "USDT"
   },
   {
+    "id": "AXIS-USDT",
+    "type": "perpetual",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T00:00:00.000Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AXL-USDT",
     "type": "perpetual",
     "first_capture": "2025-06-11T00:00:00.000Z",
@@ -2142,6 +2157,21 @@
     "end_date": "2022-12-08T00:00:00.000Z",
     "internal_id": "perpetual-CLV-USDT:USDT",
     "symbol": "CLV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CMCSA-USDT",
+    "type": "perpetual",
+    "base_coin": "CMCSA",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T00:00:00.000Z",
+    "internal_id": "perpetual-CMCSA-USDT:USDT",
+    "symbol": "CMCSA",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -4421,11 +4451,16 @@
     "id": "IOST-USDT",
     "type": "perpetual",
     "first_capture": "2021-01-20T00:00:00.000Z",
-    "end_date": "2022-11-04T00:00:00.000Z",
     "internal_id": "perpetual-IOST-USDT:USDT",
     "symbol": "IOST",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "base_coin": "IOST",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1000.0,
+    "quantity_unit": "base",
+    "underlying": "crypto"
   },
   {
     "id": "IOTA-USDT",

@@ -31943,6 +31943,16 @@
     "unified_id": "spot-AAPLX-USDT"
   },
   {
+    "id": "XACN-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T06:00:00.000Z",
+    "internal_id": "spot-XACN-USDT",
+    "symbol": "XACN",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XADBE-USDT",
     "type": "spot",
     "internal_id": "spot-XADBE-USDT",
@@ -32197,6 +32207,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-AVGOX-USDT"
+  },
+  {
+    "id": "XAXTI-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T06:30:00.000Z",
+    "internal_id": "spot-XAXTI-USDT",
+    "symbol": "XAXTI",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XBB-USDT",
@@ -35167,6 +35187,24 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-VRTX-USDT"
+  },
+  {
+    "id": "XWDC-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T09:00:00.000Z",
+    "internal_id": "spot-XWDC-USDC",
+    "symbol": "XWDC",
+    "denominator": "USDC",
+    "cmc_id": 41905,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "WDCX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-WDCX-USDC"
   },
   {
     "id": "XWDC-USDT",

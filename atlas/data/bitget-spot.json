@@ -46434,6 +46434,18 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "RT1USDT",
+    "type": "spot",
+    "base_coin": "RT1",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T13:10:00.000Z",
+    "internal_id": "spot-RT1-USDT",
+    "symbol": "RT1",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "RTACUSDT",
     "type": "spot",
     "base_coin": "rTAC",

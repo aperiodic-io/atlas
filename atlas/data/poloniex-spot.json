@@ -5796,6 +5796,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "DEXE_USDT",
+    "type": "spot",
+    "base_coin": "DEXE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T09:00:00.000Z",
+    "internal_id": "spot-DEXE-USDT",
+    "symbol": "DEXE",
+    "denominator": "USDT"
+  },
+  {
     "id": "DFA_USDT",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -9756,6 +9767,17 @@
     "end_date": "2025-02-19T00:00:00.000Z",
     "internal_id": "spot-JARVIS-USDT",
     "symbol": "JARVIS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "JASMY_USDT",
+    "type": "spot",
+    "base_coin": "JASMY",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T10:00:00.000Z",
+    "internal_id": "spot-JASMY-USDT",
+    "symbol": "JASMY",
     "denominator": "USDT"
   },
   {
@@ -14344,6 +14366,17 @@
     "end_date": "2024-10-15T00:00:00.000Z",
     "internal_id": "spot-PFCC-USDT",
     "symbol": "PFCC",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PHA_USDT",
+    "type": "spot",
+    "base_coin": "PHA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T08:00:00.000Z",
+    "internal_id": "spot-PHA-USDT",
+    "symbol": "PHA",
     "denominator": "USDT"
   },
   {

@@ -7909,6 +7909,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "sPONSUSDT",
+    "type": "spot",
+    "base_coin": "PONS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T09:00:00.000Z",
+    "internal_id": "spot-PONS-USDT",
+    "symbol": "PONS",
+    "denominator": "USDT"
+  },
+  {
     "id": "sPOPCATUSDT",
     "type": "spot",
     "base_coin": "POPCAT",
