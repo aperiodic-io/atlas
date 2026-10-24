@@ -33189,6 +33189,55 @@
     {
       "cmc_id": null,
       "evidence": {
+        "candidates": [],
+        "catalogue_issue": "tolerated 7 unreadable of 8112 rows (1 unparseable, 6 duplicated, total moved by 1 mid-fetch): 0.0863%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1154",
+          "observed_at": "2026-10-24T08:19:08.977922Z",
+          "price": 0.001312,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "SL",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "sl",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "SASEUL",
+            "index": 870,
+            "isCanonical": false,
+            "name": "SL",
+            "pair": "@1154",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xb7cd6c85fcf8b649aaa159b374cfda6e",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-24T06:49:16.861000Z",
+        "original_id": "SL/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-24T08:19:04.388788Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "SL"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
         "candidates": [
           {
             "cmc_id": 36020,
