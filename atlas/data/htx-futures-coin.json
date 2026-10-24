@@ -13,7 +13,8 @@
     "internal_id": "future-BTC-USD:BTC-20261023",
     "symbol": "BTC",
     "denominator": "USD",
-    "margin": "BTC"
+    "margin": "BTC",
+    "end_date": "2026-10-23T08:00:00.000Z"
   },
   {
     "id": "BTC261030",
@@ -27,6 +28,22 @@
     "delivery_date": "2026-10-30T08:00:00+00:00",
     "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "future-BTC-USD:BTC-20261030",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC"
+  },
+  {
+    "id": "BTC261106",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "BTC",
+    "contract_size": 100.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "delivery_date": "2026-11-06T08:00:00+00:00",
+    "first_capture": "2026-10-23T00:00:00.000Z",
+    "internal_id": "future-BTC-USD:BTC-20261106",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "BTC"
@@ -61,7 +78,8 @@
     "internal_id": "future-ETH-USD:ETH-20261023",
     "symbol": "ETH",
     "denominator": "USD",
-    "margin": "ETH"
+    "margin": "ETH",
+    "end_date": "2026-10-23T08:00:00.000Z"
   },
   {
     "id": "ETH261030",
@@ -75,6 +93,22 @@
     "delivery_date": "2026-10-30T08:00:00+00:00",
     "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "future-ETH-USD:ETH-20261030",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH"
+  },
+  {
+    "id": "ETH261106",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "ETH",
+    "contract_size": 10.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "delivery_date": "2026-11-06T08:00:00+00:00",
+    "first_capture": "2026-10-23T00:00:00.000Z",
+    "internal_id": "future-ETH-USD:ETH-20261106",
     "symbol": "ETH",
     "denominator": "USD",
     "margin": "ETH"
@@ -109,7 +143,8 @@
     "internal_id": "future-TRX-USD:TRX-20261023",
     "symbol": "TRX",
     "denominator": "USD",
-    "margin": "TRX"
+    "margin": "TRX",
+    "end_date": "2026-10-23T08:00:00.000Z"
   },
   {
     "id": "TRX261030",
@@ -123,6 +158,22 @@
     "delivery_date": "2026-10-30T08:00:00+00:00",
     "first_capture": "2026-10-16T00:00:00.000Z",
     "internal_id": "future-TRX-USD:TRX-20261030",
+    "symbol": "TRX",
+    "denominator": "USD",
+    "margin": "TRX"
+  },
+  {
+    "id": "TRX261106",
+    "type": "future",
+    "base_coin": "TRX",
+    "quote_coin": "USD",
+    "margin_asset": "TRX",
+    "contract_size": 10.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "delivery_date": "2026-11-06T08:00:00+00:00",
+    "first_capture": "2026-10-23T00:00:00.000Z",
+    "internal_id": "future-TRX-USD:TRX-20261106",
     "symbol": "TRX",
     "denominator": "USD",
     "margin": "TRX"

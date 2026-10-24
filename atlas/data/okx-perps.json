@@ -171,11 +171,16 @@
     "symbol": "ABBV",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "ABBV",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42650,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABBV-USDT:USDT"
+    "unified_id": "perpetual-ABBV.ABBVIBE_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "ACE-USDT-SWAP",
@@ -796,11 +801,16 @@
     "symbol": "AMGN",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "AMGN",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42651,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGN.AMGEN_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMGN-USDT:USDT"
+    "unified_id": "perpetual-AMGN.AMGEN_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMZN-USDT-SWAP",
@@ -5106,11 +5116,16 @@
     "symbol": "GE",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "GE",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42649,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GE-USDT:USDT"
+    "unified_id": "perpetual-GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "GEV-USDT-SWAP",

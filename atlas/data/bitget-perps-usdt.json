@@ -534,11 +534,16 @@
     "symbol": "ABBV",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "ABBV",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42650,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABBV-USDT:USDT"
+    "unified_id": "perpetual-ABBV.ABBVIBE_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "ABNBUSDT",
@@ -1592,11 +1597,16 @@
     "symbol": "AMGN",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "AMGN",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42651,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGN.AMGEN_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMGN-USDT:USDT"
+    "unified_id": "perpetual-AMGN.AMGEN_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMKRUSDT",
@@ -5981,6 +5991,26 @@
     "margin": "USDT",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "CSXUSDT",
+    "type": "perpetual",
+    "base_coin": "CSX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:26:45.119Z",
+    "internal_id": "perpetual-CSX-USDT:USDT",
+    "symbol": "CSX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "CSX",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CSX-USDT:USDT"
   },
   {
     "id": "CTCUSDT",
@@ -16183,6 +16213,26 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "PGUSDT",
+    "type": "perpetual",
+    "base_coin": "PG",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:26:42.303Z",
+    "internal_id": "perpetual-PG-USDT:USDT",
+    "symbol": "PG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "PG",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PG-USDT:USDT"
+  },
+  {
     "id": "PHAUSDT",
     "type": "perpetual",
     "base_coin": "PHA",
@@ -19822,6 +19872,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SPK-USDT:USDT"
+  },
+  {
+    "id": "SPOTUSDT",
+    "type": "perpetual",
+    "base_coin": "SPOT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:26:47.503Z",
+    "internal_id": "perpetual-SPOT-USDT:USDT",
+    "symbol": "SPOT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "SPOT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SPOT-USDT:USDT"
   },
   {
     "id": "SPXUSDT",

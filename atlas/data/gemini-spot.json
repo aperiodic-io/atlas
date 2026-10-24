@@ -3229,6 +3229,17 @@
     "denominator": "USD"
   },
   {
+    "id": "NEARUSD",
+    "type": "spot",
+    "base_coin": "NEAR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-10-24T06:49:51.888Z",
+    "internal_id": "spot-NEAR-USD",
+    "symbol": "NEAR",
+    "denominator": "USD"
+  },
+  {
     "id": "NMRUSD",
     "type": "spot",
     "first_capture": "2021-11-15T00:00:00.000Z",

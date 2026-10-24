@@ -1662,6 +1662,31 @@
     "unified_id": "future-BTC-USDT:USDT-20260313"
   },
   {
+    "id": "BTCUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-BTC-USDT:USDT-20261113",
+    "symbol": "BTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-BTC-USDT:USDT-20261113"
+  },
+  {
     "id": "BTCUSDT-14AUG26",
     "type": "future",
     "base_coin": "BTC",
@@ -2224,6 +2249,7 @@
       "Layer 1"
     ],
     "cmc_id": 1,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "BTC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -3551,6 +3577,31 @@
     "unified_id": "future-DOGE-USDT:USDT-20260313"
   },
   {
+    "id": "DOGEUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "DOGE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-DOGE-USDT:USDT-20261113",
+    "symbol": "DOGE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-DOGE-USDT:USDT-20261113"
+  },
+  {
     "id": "DOGEUSDT-14AUG26",
     "type": "future",
     "base_coin": "DOGE",
@@ -3913,6 +3964,7 @@
       "Memes"
     ],
     "cmc_id": 74,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "DOGE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -5965,6 +6017,32 @@
     "unified_id": "future-ETH-USDT:USDT-20260313"
   },
   {
+    "id": "ETHUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-ETH-USDT:USDT-20261113",
+    "symbol": "ETH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-ETH-USDT:USDT-20261113"
+  },
+  {
     "id": "ETHUSDT-14AUG26",
     "type": "future",
     "base_coin": "ETH",
@@ -6554,6 +6632,7 @@
       "Smart Contracts"
     ],
     "cmc_id": 1027,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "ETH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -7585,6 +7664,32 @@
     "unified_id": "future-HYPE-USDT:USDT-20260911"
   },
   {
+    "id": "HYPEUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-HYPE-USDT:USDT-20261113",
+    "symbol": "HYPE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-HYPE-USDT:USDT-20261113"
+  },
+  {
     "id": "HYPEUSDT-14AUG26",
     "type": "future",
     "base_coin": "HYPE",
@@ -7712,6 +7817,7 @@
       "Layer 1"
     ],
     "cmc_id": 32196,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "HYPE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -8320,6 +8426,31 @@
     "unified_id": "future-MNT-USDT:USDT-20260313"
   },
   {
+    "id": "MNTUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "MNT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-MNT-USDT:USDT-20261113",
+    "symbol": "MNT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 27075,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "MNT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-MNT-USDT:USDT-20261113"
+  },
+  {
     "id": "MNTUSDT-14AUG26",
     "type": "future",
     "base_coin": "MNT",
@@ -8682,6 +8813,7 @@
       "Layer 2"
     ],
     "cmc_id": 27075,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "MNT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -10044,6 +10176,31 @@
     "unified_id": "future-SOL-USDT:USDT-20260313"
   },
   {
+    "id": "SOLUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "SOL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-SOL-USDT:USDT-20261113",
+    "symbol": "SOL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-SOL-USDT:USDT-20261113"
+  },
+  {
     "id": "SOLUSDT-14AUG26",
     "type": "future",
     "base_coin": "SOL",
@@ -10606,6 +10763,7 @@
       "Layer 1"
     ],
     "cmc_id": 5426,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "SOL",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11402,6 +11560,31 @@
     "unified_id": "future-XAUT-USDT:USDT-20260612"
   },
   {
+    "id": "XAUTUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "XAUT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-XAUT-USDT:USDT-20261113",
+    "symbol": "XAUT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 5176,
+    "category": [
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "XAUT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-XAUT-USDT:USDT-20261113"
+  },
+  {
     "id": "XAUTUSDT-14AUG26",
     "type": "future",
     "base_coin": "XAUT",
@@ -11624,6 +11807,7 @@
       "Real World Assets Protocols"
     ],
     "cmc_id": 5176,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "XAUT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -12294,6 +12478,29 @@
     "unified_id": "future-XRP-USDT:USDT-20260313"
   },
   {
+    "id": "XRPUSDT-13NOV26",
+    "type": "future",
+    "base_coin": "XRP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-XRP-USDT:USDT-20261113",
+    "symbol": "XRP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "future-XRP-USDT:USDT-20261113"
+  },
+  {
     "id": "XRPUSDT-14AUG26",
     "type": "future",
     "base_coin": "XRP",
@@ -12622,6 +12829,7 @@
     "first_capture": "2026-10-02T00:00:00.000Z",
     "category": [],
     "cmc_id": 52,
+    "end_date": "2026-10-23T08:00:00.000Z",
     "base_asset_id": "XRP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

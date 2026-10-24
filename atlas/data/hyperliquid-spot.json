@@ -1719,7 +1719,7 @@
     ],
     "cmc_id": 1214,
     "base_asset_id": "LSK",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-LSK-USDC"
   },
@@ -2692,6 +2692,15 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "unified_id": "spot-SKHYX-USDC"
+  },
+  {
+    "id": "SL/USDC",
+    "type": "spot",
+    "first_capture": "2026-10-24T06:49:16.861Z",
+    "internal_id": "spot-SL-USDC",
+    "symbol": "SL",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
   },
   {
     "id": "SLAY/USDC",

@@ -2075,11 +2075,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-31T00:00:00.000Z",
-    "base_asset_id": "AMGN",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42651,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGN.AMGEN_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMGN-USDT:USDT"
+    "unified_id": "perpetual-AMGN.AMGEN_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMZNUSDT",
@@ -3369,6 +3374,26 @@
     "unified_id": "perpetual-AXL-USDT:USDT"
   },
   {
+    "id": "AXPUSDT",
+    "type": "perpetual",
+    "base_coin": "AXP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:21:59.000Z",
+    "internal_id": "perpetual-AXP-USDT:USDT",
+    "symbol": "AXP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "AXP",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AXP-USDT:USDT"
+  },
+  {
     "id": "AXSUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AXS-USDT:USDT",
@@ -3814,6 +3839,28 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-BAT-USDT:USDT"
+  },
+  {
+    "id": "BAUSDT",
+    "type": "perpetual",
+    "base_coin": "BA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:26:19.000Z",
+    "internal_id": "perpetual-BA-USDT:USDT",
+    "symbol": "BA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40742,
+    "category": [],
+    "base_asset_id": "BA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BA-USDT:USDT"
   },
   {
     "id": "BBUSDT",
@@ -6416,6 +6463,31 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "CRMLUSDT",
+    "type": "perpetual",
+    "base_coin": "CRML",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:24:27.000Z",
+    "internal_id": "perpetual-CRML-USDT:USDT",
+    "symbol": "CRML",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42377,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CRML",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CRML-USDT:USDT"
+  },
+  {
     "id": "CRMUSDT",
     "type": "perpetual",
     "base_coin": "CRM",
@@ -6657,6 +6729,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CSOPSKHYNIX2L-USDT:USDT"
+  },
+  {
+    "id": "CSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "CSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:20:35.000Z",
+    "internal_id": "perpetual-CSTOCK-USDT:USDT",
+    "symbol": "CSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "CSTOCK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CSTOCK-USDT:USDT"
   },
   {
     "id": "CTCUSDT",
@@ -9747,11 +9839,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-31T00:00:00.000Z",
-    "base_asset_id": "GE",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42649,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GE-USDT:USDT"
+    "unified_id": "perpetual-GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "GEVUSDT",
@@ -11320,6 +11417,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"
+  },
+  {
+    "id": "IBKRUSDT",
+    "type": "perpetual",
+    "base_coin": "IBKR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:17:49.000Z",
+    "internal_id": "perpetual-IBKR-USDT:USDT",
+    "symbol": "IBKR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42620,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "IBMUSDT",
@@ -14238,6 +14360,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MDB-USDT:USDT"
+  },
+  {
+    "id": "MDTSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "MDTSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-23T10:22:48.000Z",
+    "internal_id": "perpetual-MDTSTOCK-USDT:USDT",
+    "symbol": "MDTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MDTSTOCK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MDTSTOCK-USDT:USDT"
   },
   {
     "id": "MDTUSDT",

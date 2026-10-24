@@ -28347,6 +28347,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "TEST002-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:55:00.000Z",
+    "internal_id": "spot-TEST002-USDT",
+    "symbol": "TEST002",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "THETA-BTC",
     "type": "spot",
     "internal_id": "spot-THETA-BTC",
@@ -31950,7 +31960,15 @@
     "internal_id": "spot-XACN-USDT",
     "symbol": "XACN",
     "denominator": "USDT",
-    "quote_asset_id": "USDT"
+    "cmc_id": 37012,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ACNX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ACNX-USDT"
   },
   {
     "id": "XADBE-USDT",
@@ -32481,6 +32499,16 @@
     "unified_id": "spot-COINX-USDT"
   },
   {
+    "id": "XCOST-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T07:00:00.000Z",
+    "internal_id": "spot-XCOST-USDT",
+    "symbol": "XCOST",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XCRCL-USDC",
     "type": "spot",
     "internal_id": "spot-XCRCL-USDC",
@@ -32591,6 +32619,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-CSCOX-USDT"
+  },
+  {
+    "id": "XDDOG-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T07:30:00.000Z",
+    "internal_id": "spot-XDDOG-USDT",
+    "symbol": "XDDOG",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XDELL-USDT",
@@ -32994,6 +33032,26 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XGS-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T08:00:00.000Z",
+    "internal_id": "spot-XGS-USDT",
+    "symbol": "XGS",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XGTLB-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T08:30:00.000Z",
+    "internal_id": "spot-XGTLB-USDT",
+    "symbol": "XGTLB",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XHIMS-USDT",
     "type": "spot",
     "internal_id": "spot-XHIMS-USDT",
@@ -33055,6 +33113,16 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-18T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XHUT-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:00:00.000Z",
+    "internal_id": "spot-XHUT-USDT",
+    "symbol": "XHUT",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {
@@ -33212,6 +33280,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-JNJX-USDT"
+  },
+  {
+    "id": "XJPM-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T09:30:00.000Z",
+    "internal_id": "spot-XJPM-USDT",
+    "symbol": "XJPM",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XKLAC-USDT",
@@ -34848,7 +34926,6 @@
     "denominator": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-12T00:00:00.000Z",
-    "end_date": "2026-10-21T06:57:18.545Z",
     "quote_asset_id": "USDC"
   },
   {
@@ -34859,7 +34936,6 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-07T00:00:00.000Z",
-    "end_date": "2026-10-21T06:57:18.545Z",
     "quote_asset_id": "USDT"
   },
   {
