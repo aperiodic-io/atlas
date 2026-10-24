@@ -42,6 +42,7 @@ LOCALLY_OWNED_FIELDS = frozenset(
         "cmc_id",
         "category",
         "contract_size_history",
+        "tick_size_history",
         "base_asset_id",
         "quote_asset_id",
         "margin_asset_id",
@@ -121,6 +122,23 @@ def _append_contract_size_change(sd: dict, new_size: float, effective_from: str)
     if len(history) > 1:
         result["contract_size_history"] = history
     return result
+
+
+def _record_tick_size(sd: dict, captured_at: str) -> dict:
+    """Append the row's `tick_size` to its history when it differs from the last one.
+
+    Unlike `contract_size_history`, the first value seen is kept too, so the
+    tick a re-tick replaces is never lost. Each `effective_from` is when Atlas
+    first saw that tick, which can trail the venue's change by up to a refresh
+    interval.
+    """
+    tick = sd.get("tick_size")
+    if tick is None:
+        return sd
+    history = list(sd.get("tick_size_history") or [])
+    if history and history[-1]["value"] == tick:
+        return sd
+    return {**sd, "tick_size_history": [*history, {"effective_from": captured_at, "value": tick}]}
 
 
 def _load_existing_symbols(path: Path) -> list[dict]:
@@ -478,6 +496,7 @@ def _build_exchange_rows(
         captured_at,
     )
     incoming_symbols = [_enrich(exchange, sd) for sd in incoming_symbols]
+    incoming_symbols = [_record_tick_size(sd, captured_at) for sd in incoming_symbols]
 
     symbols = _combine_with_existing_rows(
         incoming_symbols,
