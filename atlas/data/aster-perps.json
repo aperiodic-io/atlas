@@ -1814,6 +1814,20 @@
     "first_capture": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "btcusdc",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "BTC",
+    "quote_asset": "USDC",
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T14:00:00.000Z",
+    "internal_id": "perpetual-BTC-USDC:USDC",
+    "symbol": "BTC",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "btcusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -2991,6 +3005,20 @@
     "first_capture": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "ethusdc",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "ETH",
+    "quote_asset": "USDC",
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T14:00:00.000Z",
+    "internal_id": "perpetual-ETH-USDC:USDC",
+    "symbol": "ETH",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "ethusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -3997,6 +4025,20 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "iostusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "IOST",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T16:05:00.000Z",
+    "internal_id": "perpetual-IOST-USDT:USDT",
+    "symbol": "IOST",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "iotxusdt",
@@ -6939,6 +6981,20 @@
     "denominator": "USD1",
     "margin": "USD1",
     "first_capture": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "solusdc",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "SOL",
+    "quote_asset": "USDC",
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-10-23T14:00:00.000Z",
+    "internal_id": "perpetual-SOL-USDC:USDC",
+    "symbol": "SOL",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "solusdt",

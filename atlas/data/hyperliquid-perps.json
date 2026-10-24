@@ -9863,8 +9863,16 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "pre_market",
+    "cmc_id": 42595,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "JIO",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-JIO-USDC:USDC"
   },
   {
     "id": "xyz:JP225",

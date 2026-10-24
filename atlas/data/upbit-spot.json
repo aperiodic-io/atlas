@@ -5195,6 +5195,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-BMT",
+    "type": "spot",
+    "base_coin": "BMT",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-10-24T06:53:28.303Z",
+    "internal_id": "spot-BMT-KRW",
+    "symbol": "BMT",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-BONK",
     "type": "spot",
     "first_capture": "2024-11-20T00:00:00.000Z",

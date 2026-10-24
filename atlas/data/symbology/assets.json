@@ -538,6 +538,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
+   "ticker": "ABBV",
+   "name": "AbbVie Inc (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42650,
+   "cmc_slug": "abbvibe-inc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-23T07:08:51Z",
+   "minted_at": "2026-10-24"
+  },
+  {
    "asset_id": "ABBVX",
    "ticker": "ABBVX",
    "name": "AbbVie tokenized stock (xStock)",
@@ -748,6 +763,9 @@
    "categories": [
     "DeFi",
     "Tokenized Stock"
+   ],
+   "aliases": [
+    "XACN"
    ],
    "status": "active",
    "cmc_date_added": "2025-09-18T14:10:29Z",
@@ -1990,6 +2008,21 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "AMGN.AMGEN_INC_DERIVATIVES",
+   "ticker": "AMGN",
+   "name": "Amgen Inc (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42651,
+   "cmc_slug": "amgen-inc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-23T07:11:09Z",
+   "minted_at": "2026-10-24"
   },
   {
    "asset_id": "AMKR",
@@ -3455,6 +3488,14 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "AXP",
+   "ticker": "AXP",
+   "name": "AXP",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-24"
   },
   {
    "asset_id": "AXS",
@@ -7886,6 +7927,22 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "CSTOCK",
+   "ticker": "CSTOCK",
+   "name": "CSTOCK",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-24"
+  },
+  {
+   "asset_id": "CSX",
+   "ticker": "CSX",
+   "name": "CSX",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-24"
+  },
+  {
    "asset_id": "CT",
    "ticker": "CT",
    "name": "Concrete",
@@ -11667,6 +11724,21 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES",
+   "ticker": "GE",
+   "name": "General Electric Company (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42649,
+   "cmc_slug": "general-electric-company-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-23T07:05:45Z",
+   "minted_at": "2026-10-24"
   },
   {
    "asset_id": "GEELY",
@@ -18079,6 +18151,14 @@
    "minted_at": "2026-10-22"
   },
   {
+   "asset_id": "MDTSTOCK",
+   "ticker": "MDTSTOCK",
+   "name": "MDTSTOCK",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-24"
+  },
+  {
    "asset_id": "ME",
    "ticker": "ME",
    "name": "Magic Eden",
@@ -22230,6 +22310,17 @@
    "status": "active",
    "cmc_date_added": "2023-05-18T18:29:06Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "PEARL",
+   "ticker": "PEARL",
+   "name": "Pearl (pearlresearch.ai)",
+   "asset_class": "crypto",
+   "cmc_id": 41876,
+   "cmc_slug": "pearlresearch",
+   "status": "active",
+   "cmc_date_added": "2026-08-18T17:42:05Z",
+   "minted_at": "2026-10-24"
   },
   {
    "asset_id": "PEIPEI",
