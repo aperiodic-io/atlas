@@ -52183,7 +52183,14 @@
     "denominator": "USDT",
     "first_capture": "2024-06-13T00:00:00.000Z",
     "end_date": "2026-10-21T06:57:22.263Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 31704,
+    "category": [
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "PIRATE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-PIRATE-USDT"
   },
   {
     "id": "PIT_USDT",
