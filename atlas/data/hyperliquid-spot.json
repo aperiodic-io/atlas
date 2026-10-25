@@ -3018,7 +3018,12 @@
     "internal_id": "spot-TBC-USDC",
     "symbol": "TBC",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 38361,
+    "category": [],
+    "base_asset_id": "TBC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-TBC-USDC"
   },
   {
     "id": "TEST/USDC",

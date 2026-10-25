@@ -28763,7 +28763,12 @@
     "symbol": "GMRT",
     "denominator": "USDT",
     "first_capture": "2025-02-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 35595,
+    "category": [],
+    "base_asset_id": "GMRT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GMRT-USDT"
   },
   {
     "id": "GMRX_USDT",
@@ -52176,16 +52181,9 @@
     "internal_id": "spot-PIRATE-USDT",
     "symbol": "PIRATE",
     "denominator": "USDT",
-    "cmc_id": 31704,
-    "category": [
-      "Collectibles & NFTs"
-    ],
     "first_capture": "2024-06-13T00:00:00.000Z",
     "end_date": "2026-10-21T06:57:22.263Z",
-    "base_asset_id": "PIRATE",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-PIRATE-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "PIT_USDT",
@@ -61753,7 +61751,12 @@
     "symbol": "SNFT1",
     "denominator": "USDT",
     "first_capture": "2022-10-10T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 12398,
+    "category": [],
+    "base_asset_id": "SNFT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SNFT-USDT"
   },
   {
     "id": "SNFT_USDT",
@@ -72017,6 +72020,7 @@
     "first_capture": "2022-01-31T00:00:00.000Z",
     "base_coin": "VLX",
     "quote_coin": "USDT",
+    "missing_since": "2026-10-25T07:13:10.954Z",
     "quote_asset_id": "USDT"
   },
   {
