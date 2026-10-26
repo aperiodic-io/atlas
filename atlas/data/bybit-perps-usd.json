@@ -15619,13 +15619,16 @@
     "symbol": "MXL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40772,
-    "category": [],
-    "base_asset_id": "MXL",
+    "cmc_id": 42284,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MXL.MAXLINEAR_INC_DERIVATIVES",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MXL-USDT:USDT"
+    "unified_id": "perpetual-MXL.MAXLINEAR_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "MYRIAUSDT",

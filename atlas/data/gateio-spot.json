@@ -10147,15 +10147,8 @@
     "internal_id": "spot-BLAST-USDT",
     "symbol": "BLAST",
     "denominator": "USDT",
-    "cmc_id": 28480,
-    "category": [
-      "Layer 2"
-    ],
     "first_capture": "2024-06-26T00:00:00.000Z",
-    "base_asset_id": "BLAST",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-BLAST-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "BLAZE_USDT",
@@ -28763,12 +28756,7 @@
     "symbol": "GMRT",
     "denominator": "USDT",
     "first_capture": "2025-02-13T00:00:00.000Z",
-    "cmc_id": 35595,
-    "category": [],
-    "base_asset_id": "GMRT",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-GMRT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "GMRX_USDT",
@@ -46487,16 +46475,8 @@
     "internal_id": "spot-NFLXON-USDT",
     "symbol": "NFLXON",
     "denominator": "USDT",
-    "cmc_id": 38032,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
     "first_capture": "2025-09-03T00:00:00.000Z",
-    "base_asset_id": "NFLXON",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-NFLXON-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "NFLXX_USDT",
@@ -52183,14 +52163,7 @@
     "denominator": "USDT",
     "first_capture": "2024-06-13T00:00:00.000Z",
     "end_date": "2026-10-21T06:57:22.263Z",
-    "cmc_id": 31704,
-    "category": [
-      "Collectibles & NFTs"
-    ],
-    "base_asset_id": "PIRATE",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-PIRATE-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "PIT_USDT",
@@ -72027,7 +72000,7 @@
     "first_capture": "2022-01-31T00:00:00.000Z",
     "base_coin": "VLX",
     "quote_coin": "USDT",
-    "missing_since": "2026-10-25T07:13:10.954Z",
+    "end_date": "2026-10-25T07:13:10.954Z",
     "quote_asset_id": "USDT"
   },
   {

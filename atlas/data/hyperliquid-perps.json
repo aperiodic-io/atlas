@@ -682,15 +682,8 @@
     "underlying": "crypto",
     "first_capture": "2024-10-29T00:00:00.000Z",
     "end_date": "2026-05-26T00:00:00.000Z",
-    "category": [
-      "Layer 2"
-    ],
-    "cmc_id": 28480,
-    "base_asset_id": "BLAST",
-    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "unified_id": "perpetual-BLAST-USDC:USDC"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "BLUR",

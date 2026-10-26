@@ -4472,15 +4472,8 @@
     "symbol": "BLAST",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 28480,
-    "category": [
-      "Layer 2"
-    ],
-    "base_asset_id": "BLAST",
-    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BLAST-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "BLEND_USDT",
@@ -19418,13 +19411,16 @@
     "symbol": "MXL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40772,
-    "category": [],
-    "base_asset_id": "MXL",
+    "cmc_id": 42284,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MXL.MAXLINEAR_INC_DERIVATIVES",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MXL-USDT:USDT"
+    "unified_id": "perpetual-MXL.MAXLINEAR_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "MYRIA_USDT",
@@ -19945,16 +19941,8 @@
     "symbol": "NFLXON",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38032,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "NFLXON",
-    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-NFLXON-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "NFLX_USDT",
@@ -22289,15 +22277,8 @@
     "symbol": "PIRATE",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 31704,
-    "category": [
-      "Collectibles & NFTs"
-    ],
-    "base_asset_id": "PIRATE",
-    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-PIRATE-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "PIXEL_USDT",
