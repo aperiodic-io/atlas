@@ -33555,6 +33555,26 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XMARA-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T06:00:00.000Z",
+    "internal_id": "spot-XMARA-USDT",
+    "symbol": "XMARA",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XMCD-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T06:30:00.000Z",
+    "internal_id": "spot-XMCD-USDT",
+    "symbol": "XMCD",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XMETA-USDC",
     "type": "spot",
     "internal_id": "spot-XMETA-USDC",
@@ -33661,6 +33681,16 @@
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "unified_id": "spot-XMR-USDT"
+  },
+  {
+    "id": "XMRK-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T07:00:00.000Z",
+    "internal_id": "spot-XMRK-USDT",
+    "symbol": "XMRK",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XMRVL-USDC",

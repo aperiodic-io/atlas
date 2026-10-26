@@ -730,6 +730,30 @@
     "unified_id": "perpetual-AAVE-USDT:USDT"
   },
   {
+    "id": "abbvusdt",
+    "type": "perpetual",
+    "base_coin": "ABBV",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:15:00.000Z",
+    "internal_id": "perpetual-ABBV-USDT:USDT",
+    "symbol": "ABBV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42650,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ABBV.ABBVIBE_INC_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "aceusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -7825,6 +7849,25 @@
     "unified_id": "perpetual-EGLD-USDT:USDT"
   },
   {
+    "id": "eidousdt",
+    "type": "perpetual",
+    "base_coin": "EIDO",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:00:00.000Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "EIDO",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EIDO-USDT:USDT"
+  },
+  {
     "id": "eigenusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -8053,6 +8096,25 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EPT-USDT:USDT"
+  },
+  {
+    "id": "eqtusdt",
+    "type": "perpetual",
+    "base_coin": "EQT",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:05:00.000Z",
+    "internal_id": "perpetual-EQT-USDT:USDT",
+    "symbol": "EQT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "EQT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EQT-USDT:USDT"
   },
   {
     "id": "erausdt",
@@ -17064,6 +17126,27 @@
     "unified_id": "perpetual-POWR-USDT:USDT"
   },
   {
+    "id": "predictusdt",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
+    "first_capture": "2026-10-25T08:15:00.000Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42642,
+    "category": [],
+    "base_asset_id": "PREDICT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PREDICT-USDT:USDT"
+  },
+  {
     "id": "prlusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -19889,6 +19972,25 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-STG-USDT:USDT"
+  },
+  {
+    "id": "stmusdt",
+    "type": "perpetual",
+    "base_coin": "STM",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:10:00.000Z",
+    "internal_id": "perpetual-STM-USDT:USDT",
+    "symbol": "STM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "STM",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-STM-USDT:USDT"
   },
   {
     "id": "stmxusdt",

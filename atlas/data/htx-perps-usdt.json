@@ -110,6 +110,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ABBV-USDT",
+    "type": "perpetual",
+    "base_coin": "ABBV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-26T00:00:00.000Z",
+    "internal_id": "perpetual-ABBV-USDT:USDT",
+    "symbol": "ABBV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ACE-USDT",
     "type": "perpetual",
     "base_coin": "ACE",
@@ -6879,6 +6894,21 @@
     "end_date": "2023-11-13T00:00:00.000Z",
     "internal_id": "perpetual-PERP-USDT:USDT",
     "symbol": "PERP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "PG-USDT",
+    "type": "perpetual",
+    "base_coin": "PG",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-26T00:00:00.000Z",
+    "internal_id": "perpetual-PG-USDT:USDT",
+    "symbol": "PG",
     "denominator": "USDT",
     "margin": "USDT"
   },
