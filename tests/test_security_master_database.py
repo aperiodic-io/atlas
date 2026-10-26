@@ -80,6 +80,29 @@ def test_okx_perps_snapshot_keeps_delisted_usdc_contract_sizes() -> None:
     assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
 
 
+def test_okx_perps_snapshot_keeps_delisted_unified_margin_contract_sizes() -> None:
+    """OKX's USD-margined `*-USD_UM-SWAP` perps are delisted, so the instruments endpoint no
+    longer returns them and no snapshot would ever fill their size. Without it open interest
+    prices at one coin a contract. Sizes are those of the same underlying's dated
+    unified-margin futures (`BTC-USD_UM-261030` and kin), not the USDT swaps': ETH is 0.001
+    here against 0.1 on `ETH-USDT-SWAP`, SOL 0.1 against 1."""
+    rows = json.loads(
+        (Path(__file__).resolve().parents[1] / "atlas" / "data" / "okx-perps.json").read_text()
+    )
+    by_id = {row["id"]: row for row in rows}
+
+    expected = {
+        "BTC-USD_UM-SWAP": 0.01,
+        "ETH-USD_UM-SWAP": 0.001,
+        "SOL-USD_UM-SWAP": 0.1,
+        "XAU-USD_UM-SWAP": 0.001,
+    }
+    for symbol_id, size in expected.items():
+        assert by_id[symbol_id]["contract_size"] == size, symbol_id
+        assert "contract_size_history" not in by_id[symbol_id], symbol_id
+        assert by_id[symbol_id]["end_date"], symbol_id
+
+
 def test_symbol_ids_includes_mid_window_listing(tmp_path: Path) -> None:
     _write_exchange(
         tmp_path,
