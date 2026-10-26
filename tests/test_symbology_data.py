@@ -42,7 +42,9 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "bybit-perps-usd": 0.97,
     "bybit-perps-coin": 0.97,
     "bybit-futures": 0.97,
-    "okx-spot": 0.92,
+    # ~90 tokenized stocks (`XCOST-USDT`, ...) listed since August that CMC has no market
+    # pairs for yet; they resolve once CMC maps them.
+    "okx-spot": 0.91,
     "okx-perps": 0.97,
     "okx-futures": 0.97,
     "hyperliquid-perps": 0.92,

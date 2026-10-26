@@ -30,6 +30,21 @@ from atlas.exchange_definitions.huobi import (
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "htx"
+CAPTURED_AT = datetime(2026, 10, 20, 12, tzinfo=UTC)
+
+
+@pytest.fixture(autouse=True)
+def _clock_at_capture(monkeypatch):
+    """The fixtures' dated futures (`*261023`) are future deliveries as of their capture.
+    Parsing reads the clock to tell a delivered contract from a pending one, so without
+    this the tests fail the day the first one is delivered."""
+
+    class _CapturedDatetime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return CAPTURED_AT if tz is None else CAPTURED_AT.astimezone(tz)
+
+    monkeypatch.setattr("atlas.exchange_definitions.huobi.datetime", _CapturedDatetime)
 
 
 def _load(name: str) -> dict:

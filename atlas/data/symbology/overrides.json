@@ -590,6 +590,12 @@
       "reason": "Ethena USDe (CMC 29470) on the flx dex."
     },
     {
+      "exchange": "hyperliquid-perps",
+      "original_id": "BLAST",
+      "cmc_id": 28480,
+      "reason": "Blast (BLAST, CMC 28480), the Blast L2 token, is the only CMC asset with this ticker and the one Bybit's BLASTUSDT resolves to. Hyperliquid's BLAST perpetual (2024-10-29 to 2026-05-26) was delisted before CMC's market pairs, which only cover live markets, could match it."
+    },
+    {
       "exchange": "binance-futures",
       "original_id": "bobusdt",
       "cmc_id": 38970,
