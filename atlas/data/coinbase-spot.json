@@ -2523,7 +2523,14 @@
     "denominator": "USD",
     "first_capture": "2024-06-26T00:00:00.000Z",
     "end_date": "2026-10-21T06:57:34.567Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 28480,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "BLAST",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-BLAST-USD"
   },
   {
     "id": "BLEND-USD",

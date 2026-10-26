@@ -3038,7 +3038,14 @@
     "denominator": "USDT",
     "first_capture": "2024-11-08T00:00:00.000Z",
     "end_date": "2026-09-12T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 28480,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "BLAST",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BLAST-USDT"
   },
   {
     "id": "BLENDUSDT",
