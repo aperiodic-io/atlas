@@ -2530,6 +2530,19 @@
     "margin": "USDC"
   },
   {
+    "id": "5628",
+    "type": "perpetual",
+    "base_asset": "XTEN",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "underlying": "pre_market",
+    "first_capture": "2026-10-26T12:59:14.852Z",
+    "internal_id": "perpetual-XTEN-USDC:USDC",
+    "symbol": "XTEN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "57",
     "type": "perpetual",
     "base_asset": "PROVE",

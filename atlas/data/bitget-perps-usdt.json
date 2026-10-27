@@ -7306,6 +7306,23 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "EIDOUSDT",
+    "type": "perpetual",
+    "base_coin": "EIDO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-26T09:29:10.915Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "EIGENUSDT",
     "type": "perpetual",
     "base_coin": "EIGEN",
@@ -7554,6 +7571,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EPT-USDT:USDT"
+  },
+  {
+    "id": "EQTUSDT",
+    "type": "perpetual",
+    "base_coin": "EQT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-26T09:29:05.547Z",
+    "internal_id": "perpetual-EQT-USDT:USDT",
+    "symbol": "EQT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42677,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EQT.EQT_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EQT.EQT_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "ERAUSDT",
@@ -10024,6 +10065,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-HOME-USDT:USDT"
+  },
+  {
+    "id": "HONHAIUSDT",
+    "type": "perpetual",
+    "base_coin": "HONHAI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-22T10:37:27.670Z",
+    "internal_id": "perpetual-HONHAI-USDT:USDT",
+    "symbol": "HONHAI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "HOODUSDT",
@@ -13221,6 +13279,23 @@
     "contract_size": 1.0,
     "quantity_unit": "base",
     "underlying": "unknown",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
+    "id": "MEDIATEKUSDT",
+    "type": "perpetual",
+    "base_coin": "MEDIATEK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-22T10:37:25.394Z",
+    "internal_id": "perpetual-MEDIATEK-USDT:USDT",
+    "symbol": "MEDIATEK",
+    "denominator": "USDT",
+    "margin": "USDT",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -20132,6 +20207,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-STG-USDT:USDT"
+  },
+  {
+    "id": "STMUSDT",
+    "type": "perpetual",
+    "base_coin": "STM",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-26T09:29:07.837Z",
+    "internal_id": "perpetual-STM-USDT:USDT",
+    "symbol": "STM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42678,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "STM.STMICROELECTRONICS_NV_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-STM.STMICROELECTRONICS_NV_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "STMXUSDT",

@@ -83316,6 +83316,28 @@
     "unified_id": "future-GALA-USD:USD-20310822"
   },
   {
+    "id": "GEV-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-26T08:30:00.279Z",
+    "internal_id": "future-GEV-USD:USD-20311031",
+    "symbol": "GEV",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "cmc_id": 40035,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GEV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-GEV-USD:USD-20311031"
+  },
+  {
     "id": "GLW-USD_UM_XPERP-310926",
     "type": "future",
     "contract_size": 1.0,
@@ -101413,6 +101435,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-NOT-USD:USD-20310905"
+  },
+  {
+    "id": "NOW-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-26T08:45:00.239Z",
+    "internal_id": "future-NOW-USD:USD-20311031",
+    "symbol": "NOW",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "cmc_id": 40111,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NOW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-NOW-USD:USD-20311031"
   },
   {
     "id": "NVDA-USD_UM_XPERP-310613",

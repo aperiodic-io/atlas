@@ -1008,6 +1008,31 @@
     "unified_id": "perpetual-AAVE-USDT:USDT"
   },
   {
+    "id": "ABBVUSDT",
+    "type": "perpetual",
+    "base_coin": "ABBV",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:01:54.000Z",
+    "internal_id": "perpetual-ABBV-USDT:USDT",
+    "symbol": "ABBV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42650,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ABBV.ABBVIBE_INC_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "ACEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-ACE-USDT:USDT",
@@ -1449,6 +1474,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-AGLD-USDT:USDT"
+  },
+  {
+    "id": "AGPUUSDT",
+    "type": "perpetual",
+    "base_coin": "AGPU",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:05:51.000Z",
+    "internal_id": "perpetual-AGPU-USDT:USDT",
+    "symbol": "AGPU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40951,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AGPU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AGPU-USDT:USDT"
   },
   {
     "id": "AGTUSDT",
@@ -18364,6 +18414,28 @@
     "unified_id": "perpetual-PRCL-USDT:USDT"
   },
   {
+    "id": "PREDICTUSDT",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-26T09:13:55.000Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42642,
+    "category": [],
+    "base_asset_id": "PREDICT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PREDICT-USDT:USDT"
+  },
+  {
     "id": "PRIMEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-PRIME-USDT:USDT",
@@ -23521,6 +23593,31 @@
     "end_date": "2026-07-28T00:00:00.000Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "TTMIUSDT",
+    "type": "perpetual",
+    "base_coin": "TTMI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:02:54.000Z",
+    "internal_id": "perpetual-TTMI-USDT:USDT",
+    "symbol": "TTMI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40125,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTMI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TTMI-USDT:USDT"
   },
   {
     "id": "TTWOUSDT",

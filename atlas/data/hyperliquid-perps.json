@@ -4723,6 +4723,20 @@
     "unified_id": "perpetual-XRP-USDC:USDC"
   },
   {
+    "id": "XTEN",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-10-27T07:12:40.952Z",
+    "internal_id": "perpetual-XTEN-USDC:USDC",
+    "symbol": "XTEN",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
+  },
+  {
     "id": "YGG",
     "type": "perpetual",
     "internal_id": "perpetual-YGG-USDC:USDC",
@@ -8769,6 +8783,20 @@
     "unified_id": "perpetual-AMZN-USDC:USDC"
   },
   {
+    "id": "xyz:ANT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "pre_market",
+    "first_capture": "2026-10-27T07:12:40.952Z",
+    "internal_id": "perpetual-XYZ:ANT-USDC:USDC",
+    "symbol": "XYZ:ANT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
+  },
+  {
     "id": "xyz:ARM",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:ARM-USDC:USDC",
@@ -10390,12 +10418,15 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "index",
-    "end_date": "2026-10-20T07:03:06.549Z",
-    "base_asset_id": "NIFTY",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42686,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "NIFTY.NIFTY_50_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-NIFTY-USDC:USDC"
+    "unified_id": "perpetual-NIFTY.NIFTY_50_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "xyz:NOK",
@@ -10670,7 +10701,6 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
-    "end_date": "2026-10-20T07:03:06.549Z",
     "base_asset_id": "RELIANCE",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",

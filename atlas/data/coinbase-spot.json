@@ -11373,6 +11373,22 @@
     "quote_asset_id": "USD"
   },
   {
+    "id": "RITUAL-USD",
+    "type": "spot",
+    "base_coin": "RITUAL",
+    "quote_coin": "USD",
+    "first_capture": "2026-10-27T07:13:02.391Z",
+    "internal_id": "spot-RITUAL-USD",
+    "symbol": "RITUAL",
+    "denominator": "USD",
+    "cmc_id": 42310,
+    "category": [],
+    "base_asset_id": "RITUAL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-RITUAL-USD"
+  },
+  {
     "id": "RLC-BTC",
     "type": "spot",
     "internal_id": "spot-RLC-BTC",

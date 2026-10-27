@@ -33693,6 +33693,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XMRNA-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T07:30:00.000Z",
+    "internal_id": "spot-XMRNA-USDT",
+    "symbol": "XMRNA",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XMRVL-USDC",
     "type": "spot",
     "internal_id": "spot-XMRVL-USDC",
@@ -33859,6 +33869,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XNET-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T08:00:00.000Z",
+    "internal_id": "spot-XNET-USDT",
+    "symbol": "XNET",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XNFLX-USDC",
     "type": "spot",
     "underlying": "equity",
@@ -33893,6 +33913,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-NFLXX-USDT"
+  },
+  {
+    "id": "XNKE-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T08:30:00.000Z",
+    "internal_id": "spot-XNKE-USDT",
+    "symbol": "XNKE",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XNO-USD",
@@ -33990,6 +34020,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-NVDAX-USDT"
+  },
+  {
+    "id": "XOKLO-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:00:00.000Z",
+    "internal_id": "spot-XOKLO-USDT",
+    "symbol": "XOKLO",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XOKTA-USDT",
@@ -34239,6 +34279,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XPYPL-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:30:00.000Z",
+    "internal_id": "spot-XPYPL-USDT",
+    "symbol": "XPYPL",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XQCOM-USDT",
     "type": "spot",
     "internal_id": "spot-XQCOM-USDT",
@@ -34350,6 +34400,16 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XRIOT-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T06:00:00.000Z",
+    "internal_id": "spot-XRIOT-USDT",
+    "symbol": "XRIOT",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {
@@ -34747,6 +34807,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XSOFI-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T06:30:00.000Z",
+    "internal_id": "spot-XSOFI-USDT",
+    "symbol": "XSOFI",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XSONY-USDT",
     "type": "spot",
     "internal_id": "spot-XSONY-USDT",
@@ -34929,6 +34999,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-STRCX-USDT"
+  },
+  {
+    "id": "XTEAM-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:00:00.000Z",
+    "internal_id": "spot-XTEAM-USDT",
+    "symbol": "XTEAM",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XTER-USDT",

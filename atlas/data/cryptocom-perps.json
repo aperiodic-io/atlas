@@ -90,6 +90,21 @@
     "margin": "USD"
   },
   {
+    "id": "ACNUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "ACN",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-ACN-USD:USD",
+    "symbol": "ACN",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "ACTUSD-PERP",
     "type": "perpetual",
     "base_coin": "ACT",
@@ -1112,6 +1127,21 @@
     "first_capture": "2022-11-01T00:00:00.000Z",
     "internal_id": "perpetual-BTC-USD:USD",
     "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "BWETUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "BWET",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-BWET-USD:USD",
+    "symbol": "BWET",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -2379,6 +2409,21 @@
     "end_date": "2024-07-16T00:00:00.000Z",
     "internal_id": "perpetual-GAL-USD:USD",
     "symbol": "GAL",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "GDXUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "GDX",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-GDX-USD:USD",
+    "symbol": "GDX",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -3680,6 +3725,21 @@
     "margin": "USD"
   },
   {
+    "id": "MCDUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "MCD",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-MCD-USD:USD",
+    "symbol": "MCD",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "MDBUSD-PERP",
     "type": "perpetual",
     "base_coin": "MDB",
@@ -3905,6 +3965,21 @@
     "margin": "USD"
   },
   {
+    "id": "MRKUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "MRK",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-MRK-USD:USD",
+    "symbol": "MRK",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "MRNAUSD-PERP",
     "type": "perpetual",
     "base_coin": "MRNA",
@@ -3961,6 +4036,21 @@
     "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-MSTR-USD:USD",
     "symbol": "MSTR",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "MSTUUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "MSTU",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-MSTU-USD:USD",
+    "symbol": "MSTU",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -4076,6 +4166,21 @@
     "first_capture": "2026-05-27T00:00:00.000Z",
     "internal_id": "perpetual-NFLX-USD:USD",
     "symbol": "NFLX",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "NKEUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "NKE",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-NKE-USD:USD",
+    "symbol": "NKE",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -5167,6 +5272,21 @@
     "end_date": "2022-11-29T00:00:00.000Z",
     "internal_id": "perpetual-SC-USD:USD",
     "symbol": "SC",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "SECZUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "SECZ",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:13:03.123Z",
+    "internal_id": "perpetual-SECZ-USD:USD",
+    "symbol": "SECZ",
     "denominator": "USD",
     "margin": "USD"
   },

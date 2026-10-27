@@ -10153,7 +10153,7 @@
       "Layer 2"
     ],
     "base_asset_id": "BLAST",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-BLAST-USDT"
   },
@@ -46483,7 +46483,15 @@
     "symbol": "NFLXON",
     "denominator": "USDT",
     "first_capture": "2025-09-03T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 38032,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NFLXON",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-NFLXON-USDT"
   },
   {
     "id": "NFLXX_USDT",

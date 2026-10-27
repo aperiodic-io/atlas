@@ -452,6 +452,21 @@
     "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
+    "id": "ADPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ADPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:28:00Z",
+    "internal_id": "perpetual-ADPSTOCK-USDT:USDT",
+    "symbol": "ADPSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ADVANTESTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "ADVANTESTSTOCK",
@@ -5347,6 +5362,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EIDO_USDT",
+    "type": "perpetual",
+    "base_coin": "EIDO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:30:00Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EIGEN_USDT",
     "type": "perpetual",
     "base_coin": "EIGEN",
@@ -5406,6 +5436,36 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-24T06:49:45.472Z"
+  },
+  {
+    "id": "ELVSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ELVSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:25:00Z",
+    "internal_id": "perpetual-ELVSTOCK-USDT:USDT",
+    "symbol": "ELVSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "EMRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EMRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:27:00Z",
+    "internal_id": "perpetual-EMRSTOCK-USDT:USDT",
+    "symbol": "EMRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "ENA_USD1",
@@ -5540,6 +5600,21 @@
     "first_capture": "2025-03-13T08:17:06Z",
     "internal_id": "perpetual-EPIC-USDT:USDT",
     "symbol": "EPIC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "EQTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EQTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T08:43:00Z",
+    "internal_id": "perpetual-EQTSTOCK-USDT:USDT",
+    "symbol": "EQTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -13371,6 +13446,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RITUAL_USDT",
+    "type": "perpetual",
+    "base_coin": "RITUAL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-26T16:18:00Z",
+    "internal_id": "perpetual-RITUAL-USDT:USDT",
+    "symbol": "RITUAL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RIVER_USDT",
     "type": "perpetual",
     "base_coin": "RIVER",
@@ -15132,6 +15222,21 @@
     "margin": "USDT"
   },
   {
+    "id": "STMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "STMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-07-16T12:00:00Z",
+    "internal_id": "perpetual-STMSTOCK-USDT:USDT",
+    "symbol": "STMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "STOCKER_USDT",
     "type": "perpetual",
     "base_coin": "STOCKER",
@@ -15429,6 +15534,21 @@
     "first_capture": "2025-05-02T08:45:00Z",
     "internal_id": "perpetual-SXT-USDT:USDT",
     "symbol": "SXT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SYKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SYKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:28:00Z",
+    "internal_id": "perpetual-SYKSTOCK-USDT:USDT",
+    "symbol": "SYKSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -18302,7 +18422,7 @@
     "symbol": "ZC",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-26T07:21:20.075Z"
+    "end_date": "2026-10-26T07:21:20.075Z"
   },
   {
     "id": "ZEC_USD1",

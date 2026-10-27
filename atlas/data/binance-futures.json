@@ -748,7 +748,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "ABBV.ABBVIBE_INC_DERIVATIVES",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ABBV.ABBVIBE_INC_DERIVATIVES-USDT:USDT"
@@ -8110,11 +8110,15 @@
     "symbol": "EQT",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "EQT",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42677,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EQT.EQT_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-EQT-USDT:USDT"
+    "unified_id": "perpetual-EQT.EQT_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "erausdt",
@@ -19986,11 +19990,16 @@
     "symbol": "STM",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "STM",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42678,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "STM.STMICROELECTRONICS_NV_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-STM-USDT:USDT"
+    "unified_id": "perpetual-STM.STMICROELECTRONICS_NV_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "stmxusdt",
