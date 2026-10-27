@@ -15127,6 +15127,39 @@
       "symbol": "XRP"
     },
     {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "tolerated 4 unreadable of 8091 rows (1 unparseable, 3 duplicated, total moved by 1 mid-fetch): 0.0494%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "XTEN",
+          "observed_at": "2026-10-27T09:13:55.148812Z",
+          "price": 0.28293,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-perps"
+        },
+        "exchange_symbol": "XTEN",
+        "hyperliquid_assets": [
+          {}
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-perps",
+        "first_capture": "2026-10-27T07:12:40.952000Z",
+        "original_id": "XTEN"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-27T09:13:49.444220Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XTEN"
+    },
+    {
       "cmc_id": 10688,
       "evidence": {
         "candidates": [
