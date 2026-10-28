@@ -8613,6 +8613,20 @@
     "first_capture": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "xtenusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "XTEN",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
+    "first_capture": "2026-10-27T09:45:00.000Z",
+    "internal_id": "perpetual-XTEN-USDT:USDT",
+    "symbol": "XTEN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ybusdt",
     "type": "perpetual",
     "contract_size": 1.0,

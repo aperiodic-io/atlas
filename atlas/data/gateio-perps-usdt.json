@@ -9893,7 +9893,7 @@
       "DeFi"
     ],
     "base_asset_id": "EQT.EQT_CORPORATION_DERIVATIVES",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EQT.EQT_CORPORATION_DERIVATIVES-USDT:USDT"
@@ -27461,15 +27461,8 @@
     "symbol": "STONKS",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 35718,
-    "category": [
-      "Memes"
-    ],
-    "base_asset_id": "STONKS",
-    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-STONKS-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "STONK_USDT",
@@ -29511,7 +29504,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "TTMI",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-TTMI-USDT:USDT"

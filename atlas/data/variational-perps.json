@@ -408,6 +408,18 @@
     "first_capture": "2026-10-19T18:51:22.980Z"
   },
   {
+    "id": "AMC",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-28T07:52:02.463Z",
+    "internal_id": "perpetual-AMC-USDC:USDC",
+    "symbol": "AMC",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "AMD",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -862,6 +874,18 @@
     "denominator": "USDC",
     "margin": "USDC",
     "first_capture": "2026-10-19T18:51:22.980Z"
+  },
+  {
+    "id": "BAC",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-28T07:52:02.463Z",
+    "internal_id": "perpetual-BAC-USDC:USDC",
+    "symbol": "BAC",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "BAN",

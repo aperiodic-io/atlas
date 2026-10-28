@@ -5697,7 +5697,8 @@
     "first_capture": "2026-08-27T00:00:00.000Z",
     "internal_id": "spot-DIAM-USDT",
     "symbol": "DIAM",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-10-28T07:55:38.499Z"
   },
   {
     "id": "DIGI-USDT",
@@ -14118,6 +14119,17 @@
     "end_date": "2026-02-14T00:00:00.000Z",
     "internal_id": "spot-NAM-USDT",
     "symbol": "NAM",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NAORIS-USDT",
+    "type": "spot",
+    "base_coin": "NAORIS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-27T10:00:00.000Z",
+    "internal_id": "spot-NAORIS-USDT",
+    "symbol": "NAORIS",
     "denominator": "USDT"
   },
   {

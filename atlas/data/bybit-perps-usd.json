@@ -8118,6 +8118,26 @@
     "unified_id": "perpetual-EGLD-USDT:USDT"
   },
   {
+    "id": "EIDOUSDT",
+    "type": "perpetual",
+    "base_coin": "EIDO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-27T09:26:57.000Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "EIDO",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EIDO-USDT:USDT"
+  },
+  {
     "id": "EIGENPERP",
     "type": "perpetual",
     "internal_id": "perpetual-EIGEN-USDC:USDC",
@@ -8408,6 +8428,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EPT-USDT:USDT"
+  },
+  {
+    "id": "EQTUSDT",
+    "type": "perpetual",
+    "base_coin": "EQT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-27T09:27:43.000Z",
+    "internal_id": "perpetual-EQT-USDT:USDT",
+    "symbol": "EQT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42677,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EQT.EQT_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EQT.EQT_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "ERAUSDT",
@@ -22036,6 +22080,31 @@
     "unified_id": "perpetual-STG-USDT:USDT"
   },
   {
+    "id": "STMUSDT",
+    "type": "perpetual",
+    "base_coin": "STM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-27T09:28:28.000Z",
+    "internal_id": "perpetual-STM-USDT:USDT",
+    "symbol": "STM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42678,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "STM.STMICROELECTRONICS_NV_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-STM.STMICROELECTRONICS_NV_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "STMXUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-STMX-USDT:USDT",
@@ -24452,6 +24521,7 @@
       "DeFi"
     ],
     "cmc_id": 20435,
+    "end_date": "2026-10-27T09:00:00.000Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

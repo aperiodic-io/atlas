@@ -57314,6 +57314,22 @@
     "unified_id": "spot-RITE-USDT"
   },
   {
+    "id": "RITUAL_USDT",
+    "type": "spot",
+    "base_coin": "RITUAL",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-27T13:00:00.000Z",
+    "internal_id": "spot-RITUAL-USDT",
+    "symbol": "RITUAL",
+    "denominator": "USDT",
+    "cmc_id": 42310,
+    "category": [],
+    "base_asset_id": "RITUAL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RITUAL-USDT"
+  },
+  {
     "id": "RIVER3L_USDT",
     "type": "spot",
     "base_coin": "RIVER3L",

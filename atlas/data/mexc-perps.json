@@ -3330,6 +3330,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CARTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CARTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-CARTSTOCK-USDT:USDT",
+    "symbol": "CARTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CARV_USDT",
     "type": "perpetual",
     "base_coin": "CARV",
@@ -3943,6 +3958,21 @@
     "first_capture": "2026-08-19T12:26:00Z",
     "internal_id": "perpetual-CMESTOCK-USDT:USDT",
     "symbol": "CMESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CMGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CMGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-CMGSTOCK-USDT:USDT",
+    "symbol": "CMGSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6487,6 +6517,21 @@
     "first_capture": "2021-09-16T09:11:54Z",
     "internal_id": "perpetual-GALA-USDT:USDT",
     "symbol": "GALA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "GANG_USDT",
+    "type": "perpetual",
+    "base_coin": "GANG",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 100.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-GANG-USDT:USDT",
+    "symbol": "GANG",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -13626,6 +13671,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RRCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RRCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-RRCSTOCK-USDT:USDT",
+    "symbol": "RRCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RSR_USDT",
     "type": "perpetual",
     "base_coin": "RSR",
@@ -16831,6 +16891,21 @@
     "margin": "USDT"
   },
   {
+    "id": "UPSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "UPSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-UPSSTOCK-USDT:USDT",
+    "symbol": "UPSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "UP_USDT",
     "type": "perpetual",
     "base_coin": "UP",
@@ -17113,7 +17188,8 @@
     "internal_id": "perpetual-VELODROME-USDT:USDT",
     "symbol": "VELODROME",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-10-28T07:51:56.910Z"
   },
   {
     "id": "VELO_USDT",
@@ -18240,6 +18316,21 @@
     "first_capture": "2020-06-19T09:30:58Z",
     "internal_id": "perpetual-XRP-USDT:USDT",
     "symbol": "XRP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XTEN_USDT",
+    "type": "perpetual",
+    "base_coin": "XTEN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T06:33:00Z",
+    "internal_id": "perpetual-XTEN-USDT:USDT",
+    "symbol": "XTEN",
     "denominator": "USDT",
     "margin": "USDT"
   },

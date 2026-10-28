@@ -4604,6 +4604,28 @@
     "unified_id": "future-AI-USD:USD-20310704"
   },
   {
+    "id": "ALAB-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T09:00:00.179Z",
+    "internal_id": "future-ALAB-USD:USD-20311031",
+    "symbol": "ALAB",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "cmc_id": 40517,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ALAB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-ALAB-USD:USD-20311031"
+  },
+  {
     "id": "ALGO-USD_UM_XPERP-310711",
     "type": "future",
     "contract_size": 10.0,
@@ -4910,6 +4932,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-ARX-USD:USD-20310627"
+  },
+  {
+    "id": "ASML-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T08:30:00.274Z",
+    "internal_id": "future-ASML-USD:USD-20311031",
+    "symbol": "ASML",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "cmc_id": 39677,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ASML",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-ASML-USD:USD-20311031"
   },
   {
     "id": "ASTER-USD_UM_XPERP-310829",
@@ -83566,6 +83610,27 @@
     "unified_id": "future-HOOD-USD:USD-20310801"
   },
   {
+    "id": "HUMA-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 100.0,
+    "first_capture": "2026-10-27T08:00:00.197Z",
+    "internal_id": "future-HUMA-USD:USD-20311031",
+    "symbol": "HUMA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "cmc_id": 36576,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "HUMA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-HUMA-USD:USD-20311031"
+  },
+  {
     "id": "HYPE-USDT-250606",
     "type": "future",
     "internal_id": "future-HYPE-USDT:USDT-20250606",
@@ -101564,6 +101629,23 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OL-USD:USD-20310912"
+  },
+  {
+    "id": "ON-USD_UM_XPERP-311031",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T08:45:00.223Z",
+    "internal_id": "future-ON-USD:USD-20311031",
+    "symbol": "ON",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-10-31T00:00:00",
+    "base_asset_id": "ON.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-ON.EQUITY-USD:USD-20311031"
   },
   {
     "id": "ONDO-USD_UM_XPERP-310620",

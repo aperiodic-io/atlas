@@ -4733,8 +4733,13 @@
     "symbol": "XTEN",
     "denominator": "USDC",
     "margin": "USDC",
+    "cmc_id": 42688,
+    "category": [],
+    "base_asset_id": "XTEN",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XTEN-USDC:USDC"
   },
   {
     "id": "YGG",
@@ -6379,6 +6384,28 @@
     "unified_id": "perpetual-NBIS-USDC:USDC"
   },
   {
+    "id": "io:NVDA",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T07:51:36.509Z",
+    "internal_id": "perpetual-IO:NVDA-USDC:USDC",
+    "symbol": "IO:NVDA",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 38153,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NVDA",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NVDA-USDC:USDC"
+  },
+  {
     "id": "io:OAI",
     "type": "perpetual",
     "internal_id": "perpetual-IO:OAI-USDC:USDC",
@@ -7681,7 +7708,6 @@
     "margin": "USDC",
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "pre_market",
-    "end_date": "2026-10-20T07:03:06.549Z",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC"
   },
@@ -9890,7 +9916,7 @@
     "symbol": "XYZ:JIO",
     "denominator": "USDC",
     "margin": "USDC",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "cmc_id": 42595,
     "category": [
       "DeFi",

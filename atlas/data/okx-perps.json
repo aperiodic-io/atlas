@@ -1633,6 +1633,27 @@
     "unified_id": "perpetual-BABYDOGE-USDT:USDT"
   },
   {
+    "id": "BAC-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T10:15:00.000Z",
+    "internal_id": "perpetual-BAC-USDT:USDT",
+    "symbol": "BAC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42619,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BAC.BANK_OF_AMERICA_CORPORATION_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "BADGER-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BADGER-USDT:USDT",
@@ -2782,6 +2803,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CC-USDT:USDT"
+  },
+  {
+    "id": "CEG-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T10:00:00.000Z",
+    "internal_id": "perpetual-CEG-USDT:USDT",
+    "symbol": "CEG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "CEL-USDT-SWAP",
@@ -5910,6 +5952,27 @@
     "unified_id": "perpetual-005380-USDT:USDT"
   },
   {
+    "id": "IBKR-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T10:30:00.000Z",
+    "internal_id": "perpetual-IBKR-USDT:USDT",
+    "symbol": "IBKR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42620,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IBKR.INTERACTIVE_BROKERS_GROUP_INC_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "IBM-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-IBM-USDT:USDT",
@@ -8131,6 +8194,22 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MP-USDT:USDT"
+  },
+  {
+    "id": "MPWR-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-27T10:45:00.000Z",
+    "internal_id": "perpetual-MPWR-USDT:USDT",
+    "symbol": "MPWR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MPWR",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MPWR-USDT:USDT"
   },
   {
     "id": "MRK-USDT-SWAP",

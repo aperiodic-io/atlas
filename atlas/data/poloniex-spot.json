@@ -2245,6 +2245,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "BIGTITTYCOIN_USDT",
+    "type": "spot",
+    "base_coin": "BIGTITTYCOIN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-27T08:00:00.000Z",
+    "internal_id": "spot-BIGTITTYCOIN-USDT",
+    "symbol": "BIGTITTYCOIN",
+    "denominator": "USDT"
+  },
+  {
     "id": "BIGTROUT_USDT",
     "type": "spot",
     "base_coin": "BIGTROUT",
@@ -13723,6 +13734,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "ONESOL_USDT",
+    "type": "spot",
+    "base_coin": "ONESOL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2025-09-19T14:00:00.000Z",
+    "internal_id": "spot-ONESOL-USDT",
+    "symbol": "ONESOL",
+    "denominator": "USDT"
+  },
+  {
     "id": "ONE_USDT",
     "type": "spot",
     "base_coin": "ONE",
@@ -13731,7 +13753,8 @@
     "first_capture": "2025-09-19T00:00:00.000Z",
     "internal_id": "spot-ONE-USDT",
     "symbol": "ONE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-10-28T07:55:39.473Z"
   },
   {
     "id": "ONSTON_USDT",

@@ -1085,6 +1085,21 @@
     "margin": "USDT"
   },
   {
+    "id": "BA-USDT",
+    "type": "perpetual",
+    "base_coin": "BA",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T00:00:00.000Z",
+    "internal_id": "perpetual-BA-USDT:USDT",
+    "symbol": "BA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BABA-USDT",
     "type": "perpetual",
     "base_coin": "BABA",

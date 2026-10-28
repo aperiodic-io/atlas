@@ -10074,14 +10074,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-22T10:37:27.670Z",
     "internal_id": "perpetual-HONHAI-USDT:USDT",
     "symbol": "HONHAI",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "HONHAI",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-HONHAI-USDT:USDT"
   },
   {
     "id": "HOODUSDT",
@@ -13290,14 +13293,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-10-22T10:37:25.394Z",
     "internal_id": "perpetual-MEDIATEK-USDT:USDT",
     "symbol": "MEDIATEK",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "MEDIATEK",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MEDIATEK-USDT:USDT"
   },
   {
     "id": "MEGAUSDT",
@@ -22612,6 +22618,7 @@
     "category": [
       "DeFi"
     ],
+    "missing_since": "2026-10-28T07:51:57.125Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

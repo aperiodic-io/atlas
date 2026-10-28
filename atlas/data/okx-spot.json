@@ -28354,6 +28354,7 @@
     "internal_id": "spot-TEST002-USDT",
     "symbol": "TEST002",
     "denominator": "USDT",
+    "missing_since": "2026-10-28T07:51:42.987Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -35011,6 +35012,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XTEM-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T07:30:00.000Z",
+    "internal_id": "spot-XTEM-USDT",
+    "symbol": "XTEM",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XTER-USDT",
     "type": "spot",
     "internal_id": "spot-XTER-USDT",
@@ -35189,6 +35200,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XTXN-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T08:00:00.000Z",
+    "internal_id": "spot-XTXN-USDT",
+    "symbol": "XTXN",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XTZ-BTC",
     "type": "spot",
     "internal_id": "spot-XTZ-BTC",
@@ -35357,6 +35378,26 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XV-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T08:30:00.000Z",
+    "internal_id": "spot-XV-USDT",
+    "symbol": "XV",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XVICR-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T09:00:00.000Z",
+    "internal_id": "spot-XVICR-USDT",
+    "symbol": "XVICR",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XVRT-USDT",
     "type": "spot",
     "internal_id": "spot-XVRT-USDT",
@@ -35421,6 +35462,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XWMT-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T09:30:00.000Z",
+    "internal_id": "spot-XWMT-USDT",
+    "symbol": "XWMT",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XXBI-USDT",
     "type": "spot",
     "internal_id": "spot-XXBI-USDT",
@@ -35457,6 +35508,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-XLEX-USDT"
+  },
+  {
+    "id": "XXOM-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T10:00:00.000Z",
+    "internal_id": "spot-XXOM-USDT",
+    "symbol": "XXOM",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XZM-USDT",

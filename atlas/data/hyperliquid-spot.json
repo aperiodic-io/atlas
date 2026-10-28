@@ -2781,7 +2781,12 @@
     "internal_id": "spot-SL-USDC",
     "symbol": "SL",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 31687,
+    "category": [],
+    "base_asset_id": "SL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-SL-USDC"
   },
   {
     "id": "SLAY/USDC",

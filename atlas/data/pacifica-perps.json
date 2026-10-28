@@ -923,6 +923,19 @@
     "margin": "USDC"
   },
   {
+    "id": "XTEN",
+    "type": "perpetual",
+    "base_asset": "XTEN",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T00:08:45.845Z",
+    "internal_id": "perpetual-XTEN-USDC:USDC",
+    "symbol": "XTEN",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "ZEC",
     "type": "perpetual",
     "base_asset": "ZEC",

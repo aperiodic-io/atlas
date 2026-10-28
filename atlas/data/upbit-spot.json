@@ -6892,6 +6892,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-NIL",
+    "type": "spot",
+    "base_coin": "NIL",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T07:55:39.835Z",
+    "internal_id": "spot-NIL-KRW",
+    "symbol": "NIL",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-NMR",
     "type": "spot",
     "base_coin": "NMR",

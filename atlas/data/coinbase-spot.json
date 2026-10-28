@@ -12475,6 +12475,25 @@
     "unified_id": "spot-SQD-USD"
   },
   {
+    "id": "STABLE-USD",
+    "type": "spot",
+    "base_coin": "STABLE",
+    "quote_coin": "USD",
+    "first_capture": "2026-10-28T07:51:59.410Z",
+    "internal_id": "spot-STABLE-USD",
+    "symbol": "STABLE",
+    "denominator": "USD",
+    "cmc_id": 38892,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "STABLE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-STABLE-USD"
+  },
+  {
     "id": "STG-USD",
     "type": "spot",
     "base_coin": "STG",
