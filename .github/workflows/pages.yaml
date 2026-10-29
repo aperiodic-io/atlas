@@ -1,0 +1,56 @@
+name: publish-pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "atlas/data/**/*.json"
+      - ".github/workflows/pages.yaml"
+  # The update jobs push with GITHUB_TOKEN, which does not trigger push workflows.
+  workflow_run:
+    workflows: [daily-update, symbology-refresh]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: stage-jsons
+        run: |
+          mkdir _site
+          rsync -a --include='*/' --include='*.json' --exclude='*' atlas/data/ _site/
+          touch _site/.nojekyll
+          python3 - <<'EOF'
+          import html, pathlib
+          site = pathlib.Path("_site")
+          files = sorted(p.relative_to(site).as_posix() for p in site.rglob("*.json"))
+          links = "\n".join(f'<li><a href="{html.escape(f)}">{html.escape(f)}</a></li>' for f in files)
+          (site / "index.html").write_text(f"<!doctype html><title>atlas data</title><h1>atlas data</h1><ul>\n{links}\n</ul>\n")
+          EOF
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
