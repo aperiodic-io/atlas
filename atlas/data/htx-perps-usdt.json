@@ -4668,6 +4668,21 @@
     "margin": "USDT"
   },
   {
+    "id": "JIO-USDT",
+    "type": "perpetual",
+    "base_coin": "JIO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T00:00:00.000Z",
+    "internal_id": "perpetual-JIO-USDT:USDT",
+    "symbol": "JIO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JNJ-USDT",
     "type": "perpetual",
     "base_coin": "JNJ",
@@ -7150,6 +7165,21 @@
     "end_date": "2026-06-12T00:00:00.000Z",
     "internal_id": "perpetual-POWER-USDT:USDT",
     "symbol": "POWER",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "PREDICT-USDT",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T00:00:00.000Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
     "denominator": "USDT",
     "margin": "USDT"
   },

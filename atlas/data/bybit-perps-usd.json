@@ -8131,11 +8131,15 @@
     "symbol": "EIDO",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "EIDO",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42676,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-EIDO-USDT:USDT"
+    "unified_id": "perpetual-EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "EIGENPERP",

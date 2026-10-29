@@ -4167,6 +4167,25 @@
     "unified_id": "spot-API3-USDT"
   },
   {
+    "id": "appbusdt",
+    "type": "spot",
+    "base_coin": "APPB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:56:40.341Z",
+    "internal_id": "spot-APPB-USDT",
+    "symbol": "APPB",
+    "denominator": "USDT",
+    "cmc_id": 42683,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "APPB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-APPB-USDT"
+  },
+  {
     "id": "appcbtc",
     "type": "spot",
     "internal_id": "spot-APPC-BTC",
@@ -10313,6 +10332,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-BROCCOLI-USDT"
+  },
+  {
+    "id": "bspbusdt",
+    "type": "spot",
+    "base_coin": "BSPB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:56:40.341Z",
+    "internal_id": "spot-BSPB-USDT",
+    "symbol": "BSPB",
+    "denominator": "USDT",
+    "cmc_id": 42682,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BSPB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BSPB-USDT"
   },
   {
     "id": "bswbnb",
@@ -17975,7 +18013,7 @@
     "first_capture": "2025-03-18T00:00:00.000Z",
     "base_coin": "EPIC",
     "quote_coin": "USDC",
-    "missing_since": "2026-10-28T07:51:28.641Z",
+    "end_date": "2026-10-28T07:51:28.641Z",
     "base_asset_id": "EPIC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
@@ -17994,7 +18032,7 @@
     "first_capture": "2025-03-13T00:00:00.000Z",
     "base_coin": "EPIC",
     "quote_coin": "USDT",
-    "missing_since": "2026-10-28T07:51:28.641Z",
+    "end_date": "2026-10-28T07:51:28.641Z",
     "base_asset_id": "EPIC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21887,6 +21925,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-GENIUS-USDT"
+  },
+  {
+    "id": "gevbusdt",
+    "type": "spot",
+    "base_coin": "GEVB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:56:40.341Z",
+    "internal_id": "spot-GEVB-USDT",
+    "symbol": "GEVB",
+    "denominator": "USDT",
+    "cmc_id": 42681,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GEVB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GEVB-USDT"
   },
   {
     "id": "gftbusd",
@@ -31527,12 +31584,7 @@
     "denominator": "BTC",
     "first_capture": "2021-03-04T00:00:00.000Z",
     "end_date": "2025-03-08T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "BTC",
-    "unified_id": "spot-MDT-BTC"
+    "quote_asset_id": "BTC"
   },
   {
     "id": "mdtbusd",
@@ -31541,11 +31593,7 @@
     "symbol": "MDT",
     "denominator": "BUSD",
     "first_capture": "2021-12-24T00:00:00.000Z",
-    "end_date": "2023-09-16T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus"
+    "end_date": "2023-09-16T00:00:00.000Z"
   },
   {
     "id": "mdtusdt",
@@ -31555,12 +31603,7 @@
     "denominator": "USDT",
     "first_capture": "2021-03-04T00:00:00.000Z",
     "end_date": "2026-04-24T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 2348,
-    "base_asset_id": "MDT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-MDT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "mdxbnb",
@@ -40155,7 +40198,7 @@
     "first_capture": "2021-08-13T00:00:00.000Z",
     "base_coin": "QUICK",
     "quote_coin": "USDT",
-    "missing_since": "2026-10-28T07:51:28.641Z",
+    "end_date": "2026-10-28T07:51:28.641Z",
     "base_asset_id": "QUICK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -44171,6 +44214,25 @@
     "unified_id": "spot-SIGN-USDT"
   },
   {
+    "id": "skddbusdt",
+    "type": "spot",
+    "base_coin": "SKDDB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:56:40.341Z",
+    "internal_id": "spot-SKDDB-USDT",
+    "symbol": "SKDDB",
+    "denominator": "USDT",
+    "cmc_id": 42680,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SKDDB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SKDDB-USDT"
+  },
+  {
     "id": "skhybusdt",
     "type": "spot",
     "internal_id": "spot-SKHYB-USDT",
@@ -44288,6 +44350,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-SKL-USDT"
+  },
+  {
+    "id": "skuubusdt",
+    "type": "spot",
+    "base_coin": "SKUUB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:56:40.341Z",
+    "internal_id": "spot-SKUUB-USDT",
+    "symbol": "SKUUB",
+    "denominator": "USDT",
+    "cmc_id": 42684,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SKUUB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SKUUB-USDT"
   },
   {
     "id": "skybtc",

@@ -13753,8 +13753,7 @@
     "first_capture": "2025-09-19T00:00:00.000Z",
     "internal_id": "spot-ONE-USDT",
     "symbol": "ONE",
-    "denominator": "USDT",
-    "missing_since": "2026-10-28T07:55:39.473Z"
+    "denominator": "USDT"
   },
   {
     "id": "ONSTON_USDT",
@@ -15250,6 +15249,17 @@
     "first_capture": "2025-01-07T00:00:00.000Z",
     "internal_id": "spot-PYTHIA-USDT",
     "symbol": "PYTHIA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PYTH_USDT",
+    "type": "spot",
+    "base_coin": "PYTH",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T07:00:00.000Z",
+    "internal_id": "spot-PYTH-USDT",
+    "symbol": "PYTH",
     "denominator": "USDT"
   },
   {
@@ -18153,6 +18163,17 @@
     "end_date": "2026-04-16T00:00:00.000Z",
     "internal_id": "spot-TALK-USDT",
     "symbol": "TALK",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TAO_USDT",
+    "type": "spot",
+    "base_coin": "TAO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T09:30:00.000Z",
+    "internal_id": "spot-TAO-USDT",
+    "symbol": "TAO",
     "denominator": "USDT"
   },
   {

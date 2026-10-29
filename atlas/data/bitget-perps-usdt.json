@@ -5255,6 +5255,23 @@
     "unified_id": "perpetual-CLSK-USDT:USDT"
   },
   {
+    "id": "CLSUSDT",
+    "type": "perpetual",
+    "base_coin": "CLS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T11:12:40.653Z",
+    "internal_id": "perpetual-CLS-USDT:USDT",
+    "symbol": "CLS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "CLUSDT",
     "type": "perpetual",
     "base_coin": "CL",
@@ -6390,6 +6407,23 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "DASHSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "DASHSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T11:12:45.817Z",
+    "internal_id": "perpetual-DASHSTOCK-USDT:USDT",
+    "symbol": "DASHSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "DASHUSDT",
     "type": "perpetual",
     "base_coin": "DASH",
@@ -7319,8 +7353,15 @@
     "symbol": "EIDO",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42676,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "EIGENUSDT",
@@ -11071,6 +11112,23 @@
     "unified_id": "perpetual-ISRG-USDT:USDT"
   },
   {
+    "id": "ITUBUSDT",
+    "type": "perpetual",
+    "base_coin": "ITUB",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T11:12:48.236Z",
+    "internal_id": "perpetual-ITUB-USDT:USDT",
+    "symbol": "ITUB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "IWMUSDT",
     "type": "perpetual",
     "base_coin": "IWM",
@@ -11222,7 +11280,7 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "equity",
+    "underlying": "unknown",
     "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "perpetual-JIO-USDT:USDT",
     "symbol": "JIO",
@@ -15169,6 +15227,28 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "NUUSDT",
+    "type": "perpetual",
+    "base_coin": "NU",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T11:12:43.296Z",
+    "internal_id": "perpetual-NU-USDT:USDT",
+    "symbol": "NU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40775,
+    "category": [],
+    "base_asset_id": "NU.NU_TOKENIZED_STOCK_ROBINHOOD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NU.NU_TOKENIZED_STOCK_ROBINHOOD-USDT:USDT"
+  },
+  {
     "id": "NVDAUSDT",
     "type": "perpetual",
     "base_coin": "NVDA",
@@ -16067,6 +16147,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PAXG-USDT:USDT"
+  },
+  {
+    "id": "PBRUSDT",
+    "type": "perpetual",
+    "base_coin": "PBR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-28T11:12:50.464Z",
+    "internal_id": "perpetual-PBR-USDT:USDT",
+    "symbol": "PBR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "PCVXUSDT",
@@ -22618,7 +22715,7 @@
     "category": [
       "DeFi"
     ],
-    "missing_since": "2026-10-28T07:51:57.125Z",
+    "end_date": "2026-10-28T07:51:57.125Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

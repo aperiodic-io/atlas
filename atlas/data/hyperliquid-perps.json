@@ -10727,11 +10727,16 @@
     "denominator": "USDC",
     "margin": "USDC",
     "underlying": "equity",
-    "base_asset_id": "RELIANCE",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42695,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RELIANCE.RELIANCE_INDUSTRIES_LTD_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-RELIANCE-USDC:USDC"
+    "unified_id": "perpetual-RELIANCE.RELIANCE_INDUSTRIES_LTD_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "xyz:RIVN",

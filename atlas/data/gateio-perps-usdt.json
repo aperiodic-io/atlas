@@ -9541,11 +9541,15 @@
     "symbol": "EIDO",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "EIDO",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42676,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-EIDO-USDT:USDT"
+    "unified_id": "perpetual-EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "EIGEN_USDT",
@@ -15061,7 +15065,7 @@
     "margin_asset": "USDT",
     "contract_size": 0.1,
     "quantity_unit": "base",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
     "internal_id": "perpetual-JIO-USDT:USDT",
     "symbol": "JIO",
@@ -17801,7 +17805,7 @@
     "quantity_unit": "base",
     "underlying": "equity",
     "base_asset_id": "MDT.MEDTRONIC_PLC_DERIVATIVES",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MDT.MEDTRONIC_PLC_DERIVATIVES-USDT:USDT"
@@ -30568,6 +30572,7 @@
     "category": [
       "DeFi"
     ],
+    "missing_since": "2026-10-29T07:56:58.783Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

@@ -5698,7 +5698,7 @@
     "internal_id": "spot-DIAM-USDT",
     "symbol": "DIAM",
     "denominator": "USDT",
-    "missing_since": "2026-10-28T07:55:38.499Z"
+    "end_date": "2026-10-28T07:55:38.499Z"
   },
   {
     "id": "DIGI-USDT",
@@ -17600,6 +17600,17 @@
     "first_capture": "2025-07-16T00:00:00.000Z",
     "internal_id": "spot-RION-USDT",
     "symbol": "RION",
+    "denominator": "USDT"
+  },
+  {
+    "id": "RITUAL-USDT",
+    "type": "spot",
+    "base_coin": "RITUAL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T10:00:00.000Z",
+    "internal_id": "spot-RITUAL-USDT",
+    "symbol": "RITUAL",
     "denominator": "USDT"
   },
   {

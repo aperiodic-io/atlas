@@ -28354,7 +28354,7 @@
     "internal_id": "spot-TEST002-USDT",
     "symbol": "TEST002",
     "denominator": "USDT",
-    "missing_since": "2026-10-28T07:51:42.987Z",
+    "end_date": "2026-10-28T07:51:42.987Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -29840,6 +29840,21 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-USD1-USDT"
+  },
+  {
+    "id": "USDC-AED",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T07:30:00.000Z",
+    "internal_id": "spot-USDC-AED",
+    "symbol": "USDC",
+    "denominator": "AED",
+    "cmc_id": 3408,
+    "category": [],
+    "base_asset_id": "USDC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "AED",
+    "unified_id": "spot-USDC-AED"
   },
   {
     "id": "USDC-AUD",

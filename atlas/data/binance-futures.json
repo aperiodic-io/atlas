@@ -7861,11 +7861,15 @@
     "symbol": "EIDO",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "EIDO",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42676,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-EIDO-USDT:USDT"
+    "unified_id": "perpetual-EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "eigenusdt",
@@ -22246,6 +22250,7 @@
     "first_capture": "2024-12-13T00:00:00.000Z",
     "base_coin": "VELODROME",
     "quote_coin": "USDT",
+    "end_date": "2026-10-28T09:00:00.000Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

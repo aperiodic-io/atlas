@@ -13930,6 +13930,28 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "CBRS3L_USDT",
+    "type": "spot",
+    "base_coin": "CBRS3L",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:00:00.000Z",
+    "internal_id": "spot-CBRS3L-USDT",
+    "symbol": "CBRS3L",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "CBRS3S_USDT",
+    "type": "spot",
+    "base_coin": "CBRS3S",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:00:00.000Z",
+    "internal_id": "spot-CBRS3S-USDT",
+    "symbol": "CBRS3S",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "CBRSG_USDT",
     "type": "spot",
     "base_coin": "CBRSG",
@@ -41640,14 +41662,9 @@
     "internal_id": "spot-MDT-BTC",
     "symbol": "MDT",
     "denominator": "BTC",
-    "cmc_id": 2348,
-    "category": [],
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "base_asset_id": "MDT",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "BTC",
-    "unified_id": "spot-MDT-BTC"
+    "quote_asset_id": "BTC"
   },
   {
     "id": "MDT_ETH",
@@ -41655,14 +41672,9 @@
     "internal_id": "spot-MDT-ETH",
     "symbol": "MDT",
     "denominator": "ETH",
-    "cmc_id": 2348,
-    "category": [],
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2024-12-27T00:00:00.000Z",
-    "base_asset_id": "MDT",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "ETH",
-    "unified_id": "spot-MDT-ETH"
+    "quote_asset_id": "ETH"
   },
   {
     "id": "MDT_USDT",
@@ -62731,6 +62743,28 @@
     "symbol": "SOXLG",
     "denominator": "USDT",
     "first_capture": "2026-07-09T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "SOXS3L_USDT",
+    "type": "spot",
+    "base_coin": "SOXS3L",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:00:00.000Z",
+    "internal_id": "spot-SOXS3L-USDT",
+    "symbol": "SOXS3L",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "SOXS3S_USDT",
+    "type": "spot",
+    "base_coin": "SOXS3S",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-29T07:00:00.000Z",
+    "internal_id": "spot-SOXS3S-USDT",
+    "symbol": "SOXS3S",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {
