@@ -105,7 +105,14 @@
     "symbol": "ANSEM",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 40588,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "ANSEM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ANSEM-USDC"
   },
   {
     "id": "ANT/USDC",
@@ -960,7 +967,14 @@
     "symbol": "FUN",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 38647,
+    "category": [
+      "DApp"
+    ],
+    "base_asset_id": "FUN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-FUN-USDC"
   },
   {
     "id": "FUND/USDC",
@@ -2216,7 +2230,12 @@
     "internal_id": "spot-PAIR-USDC",
     "symbol": "PAIR",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42013,
+    "category": [],
+    "base_asset_id": "PAIR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-PAIR-USDC"
   },
   {
     "id": "PANDA/USDC",
@@ -2990,7 +3009,12 @@
     "symbol": "STAR",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 37743,
+    "category": [],
+    "base_asset_id": "STAR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-STAR-USDC"
   },
   {
     "id": "STEEL/USDC",

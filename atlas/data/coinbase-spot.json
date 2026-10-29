@@ -8748,7 +8748,15 @@
     "symbol": "META",
     "denominator": "USD",
     "first_capture": "2026-05-26T00:00:00.000Z",
-    "quote_asset_id": "USD"
+    "cmc_id": 39513,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "META",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-META-USD"
   },
   {
     "id": "METIS-USD",

@@ -763,12 +763,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
-    "cmc_id": 42009,
-    "base_asset_id": "AMC",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 42322,
+    "base_asset_id": "AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMC-USDT:USDT"
+    "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMD-USDT-SWAP",
@@ -3697,7 +3697,7 @@
     ],
     "cmc_id": 35626,
     "base_asset_id": "DATA",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-DATA-USDT:USDT"
@@ -5246,7 +5246,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "GIGADEV",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GIGADEV-USDT:USDT"
@@ -11197,13 +11197,16 @@
     "margin": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-06T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40727,
-    "base_asset_id": "SHOP",
-    "base_asset_match": "cmc_market_pair",
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "cmc_id": 41871,
+    "base_asset_id": "SHOP.SHOPIFY_INC_DERIVATIES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SHOP-USDT:USDT"
+    "unified_id": "perpetual-SHOP.SHOPIFY_INC_DERIVATIES-USDT:USDT"
   },
   {
     "id": "SIGN-USDT-SWAP",
@@ -14432,13 +14435,16 @@
     "margin": "USDT",
     "underlying": "equity",
     "first_capture": "2026-09-10T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40741,
-    "base_asset_id": "XOM",
-    "base_asset_match": "cmc_market_pair",
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "cmc_id": 42374,
+    "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-XOM-USDT:USDT"
+    "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "XPD-USDT-SWAP",

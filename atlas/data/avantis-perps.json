@@ -12,7 +12,17 @@
     "symbol": "ETH",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ETH-USDC:USDC"
   },
   {
     "id": "1",
@@ -27,7 +37,16 @@
     "symbol": "BTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BTC-USDC:USDC"
   },
   {
     "id": "10",
@@ -42,7 +61,16 @@
     "symbol": "SEI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 23149,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SEI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SEI-USDC:USDC"
   },
   {
     "id": "100",
@@ -57,7 +85,17 @@
     "symbol": "MU",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39469,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MU",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MU-USDC:USDC"
   },
   {
     "id": "101",
@@ -72,7 +110,17 @@
     "symbol": "SNDK",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39507,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SNDK",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SNDK-USDC:USDC"
   },
   {
     "id": "102",
@@ -87,7 +135,17 @@
     "symbol": "CBRS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39931,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CBRS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CBRS-USDC:USDC"
   },
   {
     "id": "103",
@@ -102,7 +160,16 @@
     "symbol": "EWY",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39654,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWY",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EWY-USDC:USDC"
   },
   {
     "id": "104",
@@ -117,7 +184,17 @@
     "symbol": "BABA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39486,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BABA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BABA-USDC:USDC"
   },
   {
     "id": "105",
@@ -132,7 +209,17 @@
     "symbol": "SPCX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39501,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SPCX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SPCX-USDC:USDC"
   },
   {
     "id": "106",
@@ -147,7 +234,17 @@
     "symbol": "CRCL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 38154,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CRCL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CRCL-USDC:USDC"
   },
   {
     "id": "107",
@@ -162,7 +259,17 @@
     "symbol": "MRVL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39946,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MRVL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MRVL-USDC:USDC"
   },
   {
     "id": "108",
@@ -177,7 +284,17 @@
     "symbol": "MSTR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39473,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MSTR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MSTR-USDC:USDC"
   },
   {
     "id": "109",
@@ -192,7 +309,17 @@
     "symbol": "BB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40105,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BB.BLACKBERRY_LTD_DERIVATIVES",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BB.BLACKBERRY_LTD_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "11",
@@ -207,7 +334,12 @@
     "symbol": "EUR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EURUSD-USDC:USDC"
   },
   {
     "id": "110",
@@ -222,7 +354,17 @@
     "symbol": "PLTR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39475,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PLTR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PLTR-USDC:USDC"
   },
   {
     "id": "111",
@@ -237,7 +379,17 @@
     "symbol": "AVGO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39871,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AVGO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AVGO-USDC:USDC"
   },
   {
     "id": "112",
@@ -252,7 +404,17 @@
     "symbol": "NFLX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39479,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NFLX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NFLX-USDC:USDC"
   },
   {
     "id": "113",
@@ -267,7 +429,16 @@
     "symbol": "CRWV",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39497,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "CRWV",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CRWV-USDC:USDC"
   },
   {
     "id": "114",
@@ -282,7 +453,17 @@
     "symbol": "SKHYNIX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39500,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "000660",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-000660-USDC:USDC"
   },
   {
     "id": "115",
@@ -297,7 +478,9 @@
     "symbol": "ETH_UPSIDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
   },
   {
     "id": "116",
@@ -312,7 +495,9 @@
     "symbol": "BTC_UPSIDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
   },
   {
     "id": "117",
@@ -327,7 +512,9 @@
     "symbol": "SOL_UPSIDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
   },
   {
     "id": "118",
@@ -342,7 +529,9 @@
     "symbol": "XRP_UPSIDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
   },
   {
     "id": "119",
@@ -357,7 +546,9 @@
     "symbol": "HYPE_UPSIDE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC"
   },
   {
     "id": "12",
@@ -372,7 +563,12 @@
     "symbol": "USDJPY",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDJPY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDJPY-USDC:USDC"
   },
   {
     "id": "120",
@@ -387,7 +583,17 @@
     "symbol": "LLY",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39509,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LLY",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LLY-USDC:USDC"
   },
   {
     "id": "121",
@@ -402,7 +608,17 @@
     "symbol": "BE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40064,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BE-USDC:USDC"
   },
   {
     "id": "122",
@@ -417,7 +633,17 @@
     "symbol": "LITE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39944,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LITE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LITE-USDC:USDC"
   },
   {
     "id": "123",
@@ -432,7 +658,17 @@
     "symbol": "STRC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40557,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "STRC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-STRC-USDC:USDC"
   },
   {
     "id": "124",
@@ -447,7 +683,17 @@
     "symbol": "DELL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40088,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DELL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DELL-USDC:USDC"
   },
   {
     "id": "125",
@@ -462,7 +708,17 @@
     "symbol": "NBIS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40021,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NBIS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NBIS-USDC:USDC"
   },
   {
     "id": "126",
@@ -477,7 +733,17 @@
     "symbol": "IREN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40117,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IREN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-IREN-USDC:USDC"
   },
   {
     "id": "127",
@@ -492,7 +758,17 @@
     "symbol": "ARM",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39994,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ARM",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ARM-USDC:USDC"
   },
   {
     "id": "128",
@@ -507,7 +783,17 @@
     "symbol": "MRNA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 41887,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MRNA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MRNA-USDC:USDC"
   },
   {
     "id": "129",
@@ -522,7 +808,17 @@
     "symbol": "RKLB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39948,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RKLB",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-RKLB-USDC:USDC"
   },
   {
     "id": "13",
@@ -537,7 +833,12 @@
     "symbol": "GBP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "GBPUSD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GBPUSD-USDC:USDC"
   },
   {
     "id": "130",
@@ -552,7 +853,17 @@
     "symbol": "WDC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39990,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "WDC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WDC-USDC:USDC"
   },
   {
     "id": "131",
@@ -567,7 +878,17 @@
     "symbol": "NOW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40111,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NOW",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NOW-USDC:USDC"
   },
   {
     "id": "132",
@@ -582,7 +903,16 @@
     "symbol": "CASHCAT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40809,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "CASHCAT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CASHCAT-USDC:USDC"
   },
   {
     "id": "133",
@@ -597,7 +927,14 @@
     "symbol": "PONS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40938,
+    "category": [],
+    "base_asset_id": "PONS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PONS-USDC:USDC"
   },
   {
     "id": "134",
@@ -612,7 +949,16 @@
     "symbol": "VVV",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 35509,
+    "category": [
+      "AI Applications"
+    ],
+    "base_asset_id": "VVV",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VVV-USDC:USDC"
   },
   {
     "id": "135",
@@ -627,7 +973,17 @@
     "symbol": "AMGN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 42651,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGN.AMGEN_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AMGN.AMGEN_INC_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "136",
@@ -642,7 +998,17 @@
     "symbol": "CSCO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39631,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CSCO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CSCO-USDC:USDC"
   },
   {
     "id": "137",
@@ -657,7 +1023,17 @@
     "symbol": "KLAC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40548,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "KLAC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-KLAC-USDC:USDC"
   },
   {
     "id": "138",
@@ -672,7 +1048,17 @@
     "symbol": "LRCX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40547,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LRCX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LRCX-USDC:USDC"
   },
   {
     "id": "139",
@@ -687,7 +1073,16 @@
     "symbol": "TXN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40682,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "TXN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TXN-USDC:USDC"
   },
   {
     "id": "14",
@@ -702,7 +1097,12 @@
     "symbol": "USDCAD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDCAD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDCAD-USDC:USDC"
   },
   {
     "id": "140",
@@ -717,7 +1117,17 @@
     "symbol": "PANW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40199,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PANW",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PANW-USDC:USDC"
   },
   {
     "id": "141",
@@ -732,7 +1142,17 @@
     "symbol": "APP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39629,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "APP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-APP-USDC:USDC"
   },
   {
     "id": "142",
@@ -747,7 +1167,17 @@
     "symbol": "ALAB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40517,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ALAB",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ALAB-USDC:USDC"
   },
   {
     "id": "143",
@@ -762,7 +1192,17 @@
     "symbol": "DDOG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 41970,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DDOG.DATADOG_INC_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "144",
@@ -777,7 +1217,17 @@
     "symbol": "CEG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "145",
@@ -792,7 +1242,17 @@
     "symbol": "SNPS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 42533,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SNPS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SNPS-USDC:USDC"
   },
   {
     "id": "146",
@@ -807,7 +1267,12 @@
     "symbol": "CDNS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "CDNS",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CDNS-USDC:USDC"
   },
   {
     "id": "147",
@@ -822,7 +1287,12 @@
     "symbol": "MPWR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "MPWR",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MPWR-USDC:USDC"
   },
   {
     "id": "148",
@@ -837,7 +1307,12 @@
     "symbol": "FTNT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "FTNT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-FTNT-USDC:USDC"
   },
   {
     "id": "149",
@@ -852,7 +1327,17 @@
     "symbol": "ADBE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40115,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ADBE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ADBE-USDC:USDC"
   },
   {
     "id": "15",
@@ -867,7 +1352,12 @@
     "symbol": "USDCHF",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDCHF",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDCHF-USDC:USDC"
   },
   {
     "id": "150",
@@ -882,7 +1372,12 @@
     "symbol": "INTU",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "INTU.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-INTU.EQUITY-USDC:USDC"
   },
   {
     "id": "151",
@@ -897,7 +1392,12 @@
     "symbol": "ADI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "ADI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ADI-USDC:USDC"
   },
   {
     "id": "152",
@@ -912,7 +1412,16 @@
     "symbol": "TER",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40680,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "TER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TER-USDC:USDC"
   },
   {
     "id": "153",
@@ -927,7 +1436,12 @@
     "symbol": "NXPI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "NXPI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NXPI-USDC:USDC"
   },
   {
     "id": "154",
@@ -942,7 +1456,17 @@
     "symbol": "SHOP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 41871,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SHOP.SHOPIFY_INC_DERIVATIES",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SHOP.SHOPIFY_INC_DERIVATIES-USDC:USDC"
   },
   {
     "id": "155",
@@ -957,7 +1481,12 @@
     "symbol": "WDAY",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "WDAY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WDAY-USDC:USDC"
   },
   {
     "id": "156",
@@ -972,7 +1501,12 @@
     "symbol": "ADSK",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "ADSK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ADSK-USDC:USDC"
   },
   {
     "id": "157",
@@ -987,7 +1521,12 @@
     "symbol": "MCHP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "MCHP",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MCHP-USDC:USDC"
   },
   {
     "id": "158",
@@ -1002,7 +1541,12 @@
     "symbol": "BKNG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "BKNG",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BKNG-USDC:USDC"
   },
   {
     "id": "159",
@@ -1017,7 +1561,17 @@
     "symbol": "MELI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 42700,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELI.MERCADOLIBRE_INC_DERIVATIVE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MELI.MERCADOLIBRE_INC_DERIVATIVE-USDC:USDC"
   },
   {
     "id": "16",
@@ -1032,7 +1586,12 @@
     "symbol": "USDSEK",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDSEK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDSEK-USDC:USDC"
   },
   {
     "id": "160",
@@ -1047,7 +1606,17 @@
     "symbol": "ISRG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40228,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ISRG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ISRG-USDC:USDC"
   },
   {
     "id": "161",
@@ -1062,7 +1631,12 @@
     "symbol": "TMUS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "TMUS",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TMUS-USDC:USDC"
   },
   {
     "id": "162",
@@ -1077,7 +1651,12 @@
     "symbol": "ABNB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "ABNB",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ABNB-USDC:USDC"
   },
   {
     "id": "163",
@@ -1092,7 +1671,12 @@
     "symbol": "DASH",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "DASH.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DASH.EQUITY-USDC:USDC"
   },
   {
     "id": "164",
@@ -1107,7 +1691,17 @@
     "symbol": "PDD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39861,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PDD",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PDD-USDC:USDC"
   },
   {
     "id": "165",
@@ -1122,7 +1716,17 @@
     "symbol": "PYPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40941,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PYPL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PYPL-USDC:USDC"
   },
   {
     "id": "166",
@@ -1137,7 +1741,17 @@
     "symbol": "TTWO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40679,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTWO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TTWO-USDC:USDC"
   },
   {
     "id": "167",
@@ -1152,7 +1766,17 @@
     "symbol": "WMT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40015,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "WMT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WMT-USDC:USDC"
   },
   {
     "id": "168",
@@ -1167,7 +1791,12 @@
     "symbol": "GILD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "GILD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GILD-USDC:USDC"
   },
   {
     "id": "169",
@@ -1182,7 +1811,12 @@
     "symbol": "VRTX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "VRTX.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VRTX.EQUITY-USDC:USDC"
   },
   {
     "id": "17",
@@ -1197,7 +1831,12 @@
     "symbol": "AUD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "AUDUSD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AUDUSD-USDC:USDC"
   },
   {
     "id": "170",
@@ -1212,7 +1851,12 @@
     "symbol": "REGN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "REGN",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-REGN-USDC:USDC"
   },
   {
     "id": "171",
@@ -1227,7 +1871,12 @@
     "symbol": "LIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "LIN",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LIN-USDC:USDC"
   },
   {
     "id": "172",
@@ -1242,7 +1891,12 @@
     "symbol": "ADP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "ADP.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ADP.EQUITY-USDC:USDC"
   },
   {
     "id": "173",
@@ -1257,7 +1911,12 @@
     "symbol": "HON",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "HON",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HON-USDC:USDC"
   },
   {
     "id": "174",
@@ -1272,7 +1931,16 @@
     "symbol": "USELESS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 36828,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "USELESS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USELESS-USDC:USDC"
   },
   {
     "id": "175",
@@ -1287,7 +1955,17 @@
     "symbol": "STX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40230,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "STX.SEAGATE_TECHNOLOGY_HOLDINGS_PLC_DERIVATIVES",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-STX.SEAGATE_TECHNOLOGY_HOLDINGS_PLC_DERIVATIVES-USDC:USDC"
   },
   {
     "id": "176",
@@ -1302,7 +1980,12 @@
     "symbol": "AXON",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "AXON",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AXON-USDC:USDC"
   },
   {
     "id": "177",
@@ -1317,7 +2000,17 @@
     "symbol": "VST",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 41870,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "VST",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VST-USDC:USDC"
   },
   {
     "id": "178",
@@ -1332,7 +2025,17 @@
     "symbol": "ANET",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 42324,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANET",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ANET-USDC:USDC"
   },
   {
     "id": "179",
@@ -1347,7 +2050,17 @@
     "symbol": "UBER",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39997,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "UBER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-UBER-USDC:USDC"
   },
   {
     "id": "18",
@@ -1362,7 +2075,12 @@
     "symbol": "NZD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "NZDUSD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NZDUSD-USDC:USDC"
   },
   {
     "id": "180",
@@ -1377,7 +2095,12 @@
     "symbol": "BA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "BA.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BA.EQUITY-USDC:USDC"
   },
   {
     "id": "181",
@@ -1392,7 +2115,17 @@
     "symbol": "SOFI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40888,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SOFI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SOFI-USDC:USDC"
   },
   {
     "id": "182",
@@ -1407,7 +2140,12 @@
     "symbol": "GRAB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "GRAB",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GRAB-USDC:USDC"
   },
   {
     "id": "183",
@@ -1422,7 +2160,17 @@
     "symbol": "ASTS",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40108,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ASTS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ASTS-USDC:USDC"
   },
   {
     "id": "184",
@@ -1437,7 +2185,17 @@
     "symbol": "BOT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 40584,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BOT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BOT-USDC:USDC"
   },
   {
     "id": "185",
@@ -1452,7 +2210,12 @@
     "symbol": "035420KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "035420",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-035420-USDC:USDC"
   },
   {
     "id": "186",
@@ -1467,7 +2230,12 @@
     "symbol": "004020KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "004020",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-004020-USDC:USDC"
   },
   {
     "id": "187",
@@ -1482,7 +2250,17 @@
     "symbol": "005380KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39573,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "005380",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-005380-USDC:USDC"
   },
   {
     "id": "188",
@@ -1497,7 +2275,17 @@
     "symbol": "005930KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39503,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "005930",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-005930-USDC:USDC"
   },
   {
     "id": "189",
@@ -1512,7 +2300,12 @@
     "symbol": "005940KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "005940",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-005940-USDC:USDC"
   },
   {
     "id": "19",
@@ -1527,7 +2320,12 @@
     "symbol": "USDSGD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDSGD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDSGD-USDC:USDC"
   },
   {
     "id": "190",
@@ -1542,7 +2340,12 @@
     "symbol": "009150KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "009150",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-009150-USDC:USDC"
   },
   {
     "id": "191",
@@ -1557,7 +2360,12 @@
     "symbol": "009540KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "009540",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-009540-USDC:USDC"
   },
   {
     "id": "192",
@@ -1572,7 +2380,12 @@
     "symbol": "011200KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "011200",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-011200-USDC:USDC"
   },
   {
     "id": "193",
@@ -1587,7 +2400,12 @@
     "symbol": "034730KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "034730",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-034730-USDC:USDC"
   },
   {
     "id": "194",
@@ -1602,7 +2420,12 @@
     "symbol": "035720KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "035720",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-035720-USDC:USDC"
   },
   {
     "id": "195",
@@ -1617,7 +2440,12 @@
     "symbol": "042700KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "042700",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-042700-USDC:USDC"
   },
   {
     "id": "196",
@@ -1632,7 +2460,12 @@
     "symbol": "051910KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "051910",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-051910-USDC:USDC"
   },
   {
     "id": "197",
@@ -1647,7 +2480,12 @@
     "symbol": "066570KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "066570",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-066570-USDC:USDC"
   },
   {
     "id": "198",
@@ -1662,7 +2500,12 @@
     "symbol": "259960KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "259960",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-259960-USDC:USDC"
   },
   {
     "id": "199",
@@ -1677,7 +2520,12 @@
     "symbol": "272210KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "272210",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-272210-USDC:USDC"
   },
   {
     "id": "2",
@@ -1692,7 +2540,16 @@
     "symbol": "SOL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SOL-USDC:USDC"
   },
   {
     "id": "20",
@@ -1707,7 +2564,16 @@
     "symbol": "XAG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39343,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XAG",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XAG-USDC:USDC"
   },
   {
     "id": "200",
@@ -1722,7 +2588,12 @@
     "symbol": "373220KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "373220",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-373220-USDC:USDC"
   },
   {
     "id": "201",
@@ -1737,7 +2608,12 @@
     "symbol": "069500KRW",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "069500",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-069500-USDC:USDC"
   },
   {
     "id": "21",
@@ -1752,7 +2628,16 @@
     "symbol": "XAU",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39344,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XAU",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XAU-USDC:USDC"
   },
   {
     "id": "25",
@@ -1767,7 +2652,16 @@
     "symbol": "WIF",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 28752,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "WIF",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WIF-USDC:USDC"
   },
   {
     "id": "26",
@@ -1782,7 +2676,19 @@
     "symbol": "RENDER",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 5690,
+    "category": [
+      "DeFi",
+      "Generative AI",
+      "Collectibles & NFTs",
+      "Metaverse"
+    ],
+    "base_asset_id": "RENDER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-RENDER-USDC:USDC"
   },
   {
     "id": "27",
@@ -1797,7 +2703,16 @@
     "symbol": "WLD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 13502,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLD",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WLD-USDC:USDC"
   },
   {
     "id": "3",
@@ -1812,7 +2727,17 @@
     "symbol": "BNB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 1839,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "BNB",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BNB-USDC:USDC"
   },
   {
     "id": "30",
@@ -1827,7 +2752,17 @@
     "symbol": "PENDLE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 9481,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "PENDLE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PENDLE-USDC:USDC"
   },
   {
     "id": "31",
@@ -1842,7 +2777,16 @@
     "symbol": "ONDO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 21159,
+    "category": [
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "ONDO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ONDO-USDC:USDC"
   },
   {
     "id": "36",
@@ -1857,7 +2801,16 @@
     "symbol": "ENA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 30171,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ENA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ENA-USDC:USDC"
   },
   {
     "id": "37",
@@ -1872,7 +2825,16 @@
     "symbol": "AERO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 29270,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AERO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AERO-USDC:USDC"
   },
   {
     "id": "38",
@@ -1887,7 +2849,17 @@
     "symbol": "ETHFI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 29814,
+    "category": [
+      "DeFi",
+      "Staking"
+    ],
+    "base_asset_id": "ETHFI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ETHFI-USDC:USDC"
   },
   {
     "id": "39",
@@ -1902,7 +2874,16 @@
     "symbol": "JUP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 29210,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "JUP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-JUP-USDC:USDC"
   },
   {
     "id": "4",
@@ -1917,7 +2898,18 @@
     "symbol": "ARB",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 11841,
+    "category": [
+      "Layer 2",
+      "DApp",
+      "DAO"
+    ],
+    "base_asset_id": "ARB",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ARB-USDC:USDC"
   },
   {
     "id": "40",
@@ -1932,7 +2924,16 @@
     "symbol": "REZ",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 30843,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "REZ",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-REZ-USDC:USDC"
   },
   {
     "id": "41",
@@ -1947,7 +2948,20 @@
     "symbol": "LINK",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LINK-USDC:USDC"
   },
   {
     "id": "42",
@@ -1962,7 +2976,17 @@
     "symbol": "LDO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 8000,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "LDO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LDO-USDC:USDC"
   },
   {
     "id": "43",
@@ -1977,7 +3001,17 @@
     "symbol": "NEAR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 6535,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "NEAR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NEAR-USDC:USDC"
   },
   {
     "id": "44",
@@ -1992,7 +3026,19 @@
     "symbol": "INJ",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 7226,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy"
+    ],
+    "base_asset_id": "INJ",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-INJ-USDC:USDC"
   },
   {
     "id": "46",
@@ -2007,7 +3053,17 @@
     "symbol": "ZRO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 26997,
+    "category": [
+      "DeFi",
+      "Interoperability"
+    ],
+    "base_asset_id": "ZRO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ZRO-USDC:USDC"
   },
   {
     "id": "48",
@@ -2022,7 +3078,18 @@
     "symbol": "AAVE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 7278,
+    "category": [
+      "DeFi",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "AAVE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AAVE-USDC:USDC"
   },
   {
     "id": "49",
@@ -2037,7 +3104,16 @@
     "symbol": "SUI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 20947,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SUI",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SUI-USDC:USDC"
   },
   {
     "id": "5",
@@ -2052,7 +3128,16 @@
     "symbol": "DOGE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DOGE-USDC:USDC"
   },
   {
     "id": "50",
@@ -2067,7 +3152,18 @@
     "symbol": "TAO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 22974,
+    "category": [
+      "Layer 1",
+      "Generative AI",
+      "DAO"
+    ],
+    "base_asset_id": "TAO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TAO-USDC:USDC"
   },
   {
     "id": "51",
@@ -2082,7 +3178,16 @@
     "symbol": "EIGEN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 30494,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIGEN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EIGEN-USDC:USDC"
   },
   {
     "id": "59",
@@ -2097,7 +3202,14 @@
     "symbol": "XRP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XRP-USDC:USDC"
   },
   {
     "id": "6",
@@ -2112,7 +3224,18 @@
     "symbol": "AVAX",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AVAX-USDC:USDC"
   },
   {
     "id": "60",
@@ -2127,7 +3250,16 @@
     "symbol": "TRUMP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 35336,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "TRUMP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TRUMP-USDC:USDC"
   },
   {
     "id": "61",
@@ -2142,7 +3274,16 @@
     "symbol": "FARTCOIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 33597,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "FARTCOIN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-FARTCOIN-USDC:USDC"
   },
   {
     "id": "62",
@@ -2157,7 +3298,17 @@
     "symbol": "HYPE",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HYPE-USDC:USDC"
   },
   {
     "id": "63",
@@ -2172,7 +3323,16 @@
     "symbol": "BERA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 24647,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BERA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BERA-USDC:USDC"
   },
   {
     "id": "64",
@@ -2187,7 +3347,14 @@
     "symbol": "KAITO",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 35763,
+    "category": [],
+    "base_asset_id": "KAITO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-KAITO-USDC:USDC"
   },
   {
     "id": "66",
@@ -2202,7 +3369,12 @@
     "symbol": "USDCNH",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "USDCNH",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDCNH-USDC:USDC"
   },
   {
     "id": "7",
@@ -2217,7 +3389,16 @@
     "symbol": "OP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 11840,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "OP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-OP-USDC:USDC"
   },
   {
     "id": "71",
@@ -2232,7 +3413,17 @@
     "symbol": "PENGU",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 34466,
+    "category": [
+      "Collectibles & NFTs",
+      "Memes"
+    ],
+    "base_asset_id": "PENGU",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PENGU-USDC:USDC"
   },
   {
     "id": "72",
@@ -2247,7 +3438,18 @@
     "symbol": "VIRTUAL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 29420,
+    "category": [
+      "Generative AI",
+      "Metaverse",
+      "AI Agents"
+    ],
+    "base_asset_id": "VIRTUAL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VIRTUAL-USDC:USDC"
   },
   {
     "id": "75",
@@ -2262,7 +3464,14 @@
     "symbol": "PUMP",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 36507,
+    "category": [],
+    "base_asset_id": "PUMP",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PUMP-USDC:USDC"
   },
   {
     "id": "78",
@@ -2277,7 +3486,16 @@
     "symbol": "US500",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39732,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "SPY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SPY-USDC:USDC"
   },
   {
     "id": "79",
@@ -2292,7 +3510,12 @@
     "symbol": "US100",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "US100",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-US100-USDC:USDC"
   },
   {
     "id": "8",
@@ -2307,7 +3530,16 @@
     "symbol": "POL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 28321,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "POL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-POL-USDC:USDC"
   },
   {
     "id": "80",
@@ -2322,7 +3554,17 @@
     "symbol": "COIN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39483,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "COIN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-COIN-USDC:USDC"
   },
   {
     "id": "81",
@@ -2337,7 +3579,17 @@
     "symbol": "NVDA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 38153,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NVDA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NVDA-USDC:USDC"
   },
   {
     "id": "82",
@@ -2352,7 +3604,17 @@
     "symbol": "AAPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39491,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AAPL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AAPL-USDC:USDC"
   },
   {
     "id": "83",
@@ -2367,7 +3629,17 @@
     "symbol": "AMZN",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39471,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMZN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AMZN-USDC:USDC"
   },
   {
     "id": "84",
@@ -2382,7 +3654,17 @@
     "symbol": "MSFT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39495,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MSFT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MSFT-USDC:USDC"
   },
   {
     "id": "85",
@@ -2397,7 +3679,17 @@
     "symbol": "META",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39513,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "META",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-META-USDC:USDC"
   },
   {
     "id": "86",
@@ -2412,7 +3704,17 @@
     "symbol": "TSLA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 38152,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TSLA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TSLA-USDC:USDC"
   },
   {
     "id": "87",
@@ -2427,7 +3729,12 @@
     "symbol": "GOOG",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "base_asset_id": "GOOG",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GOOG-USDC:USDC"
   },
   {
     "id": "88",
@@ -2442,7 +3749,16 @@
     "symbol": "AVNT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 38299,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AVNT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AVNT-USDC:USDC"
   },
   {
     "id": "89",
@@ -2457,7 +3773,16 @@
     "symbol": "ASTER",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 36341,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ASTER",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ASTER-USDC:USDC"
   },
   {
     "id": "9",
@@ -2472,7 +3797,16 @@
     "symbol": "TIA",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 22861,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "TIA",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TIA-USDC:USDC"
   },
   {
     "id": "90",
@@ -2487,7 +3821,16 @@
     "symbol": "XPL",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 36645,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "XPL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XPL-USDC:USDC"
   },
   {
     "id": "91",
@@ -2502,7 +3845,17 @@
     "symbol": "HOOD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39478,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "HOOD",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HOOD-USDC:USDC"
   },
   {
     "id": "92",
@@ -2517,7 +3870,17 @@
     "symbol": "ZEC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 1437,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "ZEC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ZEC-USDC:USDC"
   },
   {
     "id": "93",
@@ -2532,7 +3895,17 @@
     "symbol": "XMR",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 328,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "XMR",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XMR-USDC:USDC"
   },
   {
     "id": "94",
@@ -2547,7 +3920,18 @@
     "symbol": "MON",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 30495,
+    "category": [
+      "DeFi",
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "MON",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MON-USDC:USDC"
   },
   {
     "id": "95",
@@ -2562,7 +3946,16 @@
     "symbol": "LIT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39125,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LIT",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LIT-USDC:USDC"
   },
   {
     "id": "96",
@@ -2577,7 +3970,16 @@
     "symbol": "WTI",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39487,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "CL",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CL-USDC:USDC"
   },
   {
     "id": "97",
@@ -2592,7 +3994,16 @@
     "symbol": "BRENT",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39804,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "BZ",
+    "base_asset_match": "override",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BZ-USDC:USDC"
   },
   {
     "id": "98",
@@ -2607,7 +4018,17 @@
     "symbol": "AMD",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39489,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMD",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AMD-USDC:USDC"
   },
   {
     "id": "99",
@@ -2622,6 +4043,16 @@
     "symbol": "INTC",
     "denominator": "USDC",
     "margin": "USDC",
-    "first_capture": "2026-10-19T18:51:18.139Z"
+    "first_capture": "2026-10-19T18:51:18.139Z",
+    "cmc_id": 39472,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "INTC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-INTC-USDC:USDC"
   }
 ]

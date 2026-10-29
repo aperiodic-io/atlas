@@ -388,16 +388,11 @@
     "symbol": "ABNB",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 42637,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ABNB",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK-USDT:USDT"
+    "unified_id": "perpetual-ABNB-USDT:USDT"
   },
   {
     "id": "ACA_USDT",
@@ -1860,13 +1855,16 @@
     "symbol": "AMZN",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40718,
-    "category": [],
-    "base_asset_id": "AMZN.AMAZON_TOKENIZED_STOCK_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39471,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMZN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMZN.AMAZON_TOKENIZED_STOCK_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-AMZN-USDT:USDT"
   },
   {
     "id": "AMZU_USDT",
@@ -1919,16 +1917,8 @@
     "symbol": "ANDURIL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 37695,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "ANDURIL",
-    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANDURIL-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "ANET_USDT",
@@ -2074,16 +2064,16 @@
     "symbol": "ANTHROPIC",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 37693,
+    "cmc_id": 39496,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "ANTHROPIC.ANTHROPIC_TOKENIZED_STOCK_PRESTOCKS",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ANTHROPIC",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANTHROPIC.ANTHROPIC_TOKENIZED_STOCK_PRESTOCKS-USDT:USDT"
+    "unified_id": "perpetual-ANTHROPIC-USDT:USDT"
   },
   {
     "id": "ANT_USDT",
@@ -3765,8 +3755,13 @@
     "symbol": "BAS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 37387,
+    "category": [],
+    "base_asset_id": "BAS",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BAS-USDT:USDT"
   },
   {
     "id": "BATON_USDT",
@@ -3826,13 +3821,11 @@
     "symbol": "BA",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40742,
-    "category": [],
-    "base_asset_id": "BA",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "BA.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BA-USDT:USDT"
+    "unified_id": "perpetual-BA.EQUITY-USDT:USDT"
   },
   {
     "id": "BBL_USDT",
@@ -6891,13 +6884,11 @@
     "symbol": "CLSK",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40751,
-    "category": [],
-    "base_asset_id": "CLSK",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "CLSK.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CLSK-USDT:USDT"
+    "unified_id": "perpetual-CLSK.EQUITY-USDT:USDT"
   },
   {
     "id": "CLS_USDT",
@@ -7155,13 +7146,16 @@
     "symbol": "COIN",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40722,
-    "category": [],
-    "base_asset_id": "COIN.COINBASE_TOKENIZED_STOCK_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39483,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "COIN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-COIN.COINBASE_TOKENIZED_STOCK_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-COIN-USDT:USDT"
   },
   {
     "id": "COLLECT_USDT",
@@ -8435,13 +8429,16 @@
     "symbol": "DDOG",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40715,
-    "category": [],
-    "base_asset_id": "DDOG",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 41970,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-DDOG-USDT:USDT"
+    "unified_id": "perpetual-DDOG.DATADOG_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "DEAI_USDT",
@@ -8831,7 +8828,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "DIS",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-DIS-USDT:USDT"
@@ -10178,8 +10175,11 @@
     "symbol": "EURUSD",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EURUSD-USDT:USDT"
   },
   {
     "id": "EVAA_USDT",
@@ -11732,8 +11732,11 @@
     "symbol": "GBPUSD",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "GBPUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GBPUSD-USDT:USDT"
   },
   {
     "id": "GDX_USDT",
@@ -12476,13 +12479,16 @@
     "symbol": "GOOGL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40757,
-    "category": [],
-    "base_asset_id": "GOOGL.ALPHABET_CLASS_A_TOKENIZED_STOCK_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39470,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GOOGL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GOOGL.ALPHABET_CLASS_A_TOKENIZED_STOCK_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-GOOGL-USDT:USDT"
   },
   {
     "id": "GORK_USDT",
@@ -14555,13 +14561,11 @@
     "symbol": "INTU",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40734,
-    "category": [],
-    "base_asset_id": "INTU",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "INTU.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-INTU-USDT:USDT"
+    "unified_id": "perpetual-INTU.EQUITY-USDT:USDT"
   },
   {
     "id": "INTW_USDT",
@@ -17136,13 +17140,11 @@
     "symbol": "LULU",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40756,
-    "category": [],
-    "base_asset_id": "LULU",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "LULU.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-LULU-USDT:USDT"
+    "unified_id": "perpetual-LULU.EQUITY-USDT:USDT"
   },
   {
     "id": "LUMIA_USDT",
@@ -20611,13 +20613,11 @@
     "contract_size": 0.1,
     "quantity_unit": "base",
     "underlying": "equity",
-    "cmc_id": 40775,
-    "category": [],
-    "base_asset_id": "NU.NU_TOKENIZED_STOCK_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "NU.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-NU.NU_TOKENIZED_STOCK_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-NU.EQUITY-USDT:USDT"
   },
   {
     "id": "NVDAX_USDT",
@@ -23714,13 +23714,15 @@
     "symbol": "QQQ",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40686,
-    "category": [],
-    "base_asset_id": "QQQ.INVESCO_QQQ_TOKENIZED_ETF_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39517,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "QQQ",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-QQQ.INVESCO_QQQ_TOKENIZED_ETF_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-QQQ-USDT:USDT"
   },
   {
     "id": "QRDO_USDT",
@@ -25755,13 +25757,16 @@
     "symbol": "SHOP",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40727,
-    "category": [],
-    "base_asset_id": "SHOP",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 41871,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SHOP.SHOPIFY_INC_DERIVATIES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SHOP-USDT:USDT"
+    "unified_id": "perpetual-SHOP.SHOPIFY_INC_DERIVATIES-USDT:USDT"
   },
   {
     "id": "SHROOM_USDT",
@@ -26379,7 +26384,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
@@ -26895,13 +26900,11 @@
     "symbol": "SOXX",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40719,
-    "category": [],
-    "base_asset_id": "SOXX",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "SOXX.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SOXX-USDT:USDT"
+    "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
   },
   {
     "id": "SO_USDT",
@@ -27216,13 +27219,15 @@
     "symbol": "SPY",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40694,
-    "category": [],
-    "base_asset_id": "SPY.SPDR_SP_500_TRUST_TOKENIZED_ETF_ROBINHOOD",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39732,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "SPY",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SPY.SPDR_SP_500_TRUST_TOKENIZED_ETF_ROBINHOOD-USDT:USDT"
+    "unified_id": "perpetual-SPY-USDT:USDT"
   },
   {
     "id": "SQD_USDT",
@@ -27455,8 +27460,13 @@
     "symbol": "STAR",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 37743,
+    "category": [],
+    "base_asset_id": "STAR",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-STAR-USDT:USDT"
   },
   {
     "id": "STBL_USDT",
@@ -30381,7 +30391,7 @@
       "DeFi"
     ],
     "base_asset_id": "USDBRL",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-USDBRL-USDT:USDT"
@@ -32497,13 +32507,16 @@
     "symbol": "XOM",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40741,
-    "category": [],
-    "base_asset_id": "XOM",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 42374,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-XOM-USDT:USDT"
+    "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "XPB_USDT",

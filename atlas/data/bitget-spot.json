@@ -39000,7 +39000,15 @@
     "symbol": "RONIN",
     "denominator": "USDT",
     "first_capture": "2026-06-05T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 14101,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "RON",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RON-USDT"
   },
   {
     "id": "RONONUSDT",
