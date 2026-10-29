@@ -3,9 +3,6 @@ name: publish-pages
 on:
   push:
     branches: [main]
-    paths:
-      - "atlas/data/**/*.json"
-      - ".github/workflows/pages.yaml"
   # The update jobs push with GITHUB_TOKEN, which does not trigger push workflows.
   workflow_run:
     workflows: [daily-update, symbology-refresh]
