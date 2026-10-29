@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas: open security master for RWA and crypto perpetuals</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{base_url}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Atlas: one ID for every real-world asset on every venue">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{base_url}}">
+<meta property="og:site_name" content="Atlas by Aperiodic">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atlas: open security master for RWA and crypto perpetuals">
+<meta name="twitter:description" content="{{description}}">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Mona+Sans:wdth,wght@75..125,200..900&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="catalog/instruments.json" as="fetch" crossorigin>
+<script>
+  (function () {
+    var theme = null;
+    try { theme = new URLSearchParams(location.search).get("theme") || localStorage.getItem("atlas-theme"); } catch (e) {}
+    if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<script type="application/ld+json">{{json_ld}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="./" aria-label="Atlas home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="16" cy="16" rx="6" ry="13" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 16h26" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="3" class="brand-dot"/></svg>
+      <span class="brand-name">atlas</span>
+      <span class="brand-by">by Aperiodic</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#classes">Asset classes</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#symbology">Symbology</a>
+      <a href="#quick-start">Quick start</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="icon-button" id="theme-toggle" aria-label="Toggle colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="button button-primary button-sm" href="{{repo_url}}">GitHub <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Atlas · Open source · MIT · Updated {{generated_day}}</p>
+      <h1>One ID for every real-world asset, on every venue.</h1>
+      <p class="lede">Atlas is a free, open-source security master for <strong>real-world-asset and crypto perpetuals</strong>. It maps every equity, commodity, FX, index, pre-IPO and crypto contract on {{venue_groups}} CEX and DEX venues (Hyperliquid HIP-3, Avantis, Lighter, GRVT, Aster, Variational, Binance, Bybit, OKX and more) to one normalized ID and one Atlas asset. It keeps the delisted contracts, and it refreshes itself every day.</p>
+      <form class="hero-search" action="./#catalogue" method="get" role="search" data-hero-search>
+        <label class="sr-only" for="hero-q">Search instruments</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hero-q" name="q" type="search" placeholder="Search {{instruments}} instruments: TSLA, XAU, xyz:NVDA, EURUSD, btcusdt…" autocomplete="off" spellcheck="false">
+        <button type="submit" class="button button-primary">Search</button>
+      </form>
+      <div class="hero-actions">
+        <a class="button button-ghost" href="#quick-start">Quick start</a>
+        <a class="button button-ghost" href="{{repo_url}}">View on GitHub</a>
+        <a class="button button-ghost" href="files.html">Raw data files</a>
+      </div>
+      <div class="stats">{{stats}}</div>
+    </div>
+  </section>
+
+  <section class="section" id="names">
+    <div class="container split">
+      <div>
+        <p class="kicker">The problem</p>
+        <h2>Same market, different names</h2>
+        <p>Real-world assets have tickers, ISINs and exchanges of record. Their perpetuals do not. Every venue invents its own scheme: one names {{example_ticker}} by ticker, another by a numeric market index, a third behind a deployer's <code>dex:</code> prefix. The same ticker can also mean a stock on one venue and an unrelated token on the next.</p>
+        <p>Join them by hand and the code works until it silently doesn't. Atlas does the mapping once, in the open, for everyone: each contract gets an Atlas ID, and each asset an Atlas asset ID that is the same on every venue.</p>
+      </div>
+      <div>{{example}}</div>
+    </div>
+  </section>
+
+  <section class="section" id="classes">
+    <div class="container">
+      <p class="kicker">RWA first, crypto too</p>
+      <h2>Every asset class the venues list</h2>
+      <p class="section-lede">Each contract carries the asset class its venue declares. Click an asset to see every venue that lists it.</p>
+      <div class="class-grid">{{classes}}</div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <p class="kicker">Why it matters</p>
+      <h2>Reference data for markets that never had any</h2>
+      <div class="card-grid">{{why}}</div>
+    </div>
+  </section>
+
+  <section class="section catalogue" id="catalogue">
+    <div class="container">
+      <p class="kicker">Catalogue</p>
+      <h2>Search {{instruments}} instruments</h2>
+      <p class="section-lede">Search by ticker, native ID, Atlas ID, unified ID or asset ID. Filter by asset class, venue, type and status. Everything runs in your browser on the published snapshot.</p>
+      <div class="search-panel" data-catalogue>
+        <div class="search-row">
+          <label class="search-box">
+            <span class="sr-only">Search instruments</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="q" type="search" placeholder="TSLA, gold, xyz:NVDA, perpetual-BTC-USDT:USDT…" autocomplete="off" spellcheck="false">
+            <kbd aria-hidden="true">/</kbd>
+          </label>
+          <label class="select"><span class="sr-only">Venue</span><select id="venue"><option value="">All venues</option></select></label>
+          <label class="select"><span class="sr-only">Type</span><select id="type"><option value="">All types</option><option value="perpetual">Perpetual</option><option value="future">Dated future</option><option value="spot">Spot</option></select></label>
+          <label class="select"><span class="sr-only">Status</span><select id="status"><option value="">Live and delisted</option><option value="active">Live</option><option value="delisted">Delisted</option></select></label>
+        </div>
+        <div class="filter-row" role="group" aria-label="Asset class">{{class_filters}}<button type="button" class="text-button" id="reset">Reset</button></div>
+        <div class="result-meta" aria-live="polite"><span id="count">Loading the catalogue…</span><span id="pager-top" class="pager"></span></div>
+        <div class="table-wrap">
+          <table class="results">
+            <thead><tr><th>Venue</th><th>Native ID</th><th>Atlas ID</th><th>Asset</th><th>Class</th><th>Listed</th></tr></thead>
+            <tbody id="results"><tr><td colspan="6" class="muted">The catalogue loads with JavaScript. Browse the <a href="#coverage">venue pages</a> or the <a href="files.html">raw files</a> without it.</td></tr></tbody>
+          </table>
+        </div>
+        <div class="result-foot"><span id="pager" class="pager"></span><a class="text-link" id="download" href="catalog/instruments.json">Download the catalogue (JSON)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="coverage">
+    <div class="container">
+      <p class="kicker">Coverage</p>
+      <h2>{{venue_count}} venue snapshots, ordered by live RWA contracts</h2>
+      <p class="section-lede">Bars show each venue's instruments by asset class: <span class="inline-legend"><span class="dot cls-equity"></span>equities <span class="dot cls-commodity"></span>commodities <span class="dot cls-forex"></span>FX <span class="dot cls-index"></span>indices <span class="dot cls-pre_market"></span>pre-IPO <span class="dot cls-crypto"></span>crypto <span class="dot cls-unknown"></span>unclassified</span></p>
+      <div class="venue-grid">{{coverage}}</div>
+      <noscript>{{venue_table}}</noscript>
+    </div>
+  </section>
+
+  <section class="section" id="symbology">
+    <div class="container split">
+      <div>
+        <p class="kicker">The symbology</p>
+        <h2>Two IDs: the contract and the asset</h2>
+        <p>The <strong>Atlas ID</strong> (<code>internal_id</code>) names the contract as the venue lists it. It is lossless, so it maps back to the venue's own instrument.</p>
+        <pre class="formula"><code>&lt;type&gt;-&lt;symbol&gt;-&lt;denominator&gt;[:&lt;margin&gt;][-&lt;yyyymmdd&gt;]</code></pre>
+        <p>The <strong>unified ID</strong> writes the same contract in Atlas asset IDs, so it reads the same on every venue. Hyperliquid's <code>xyz:TSLA</code> and Bybit's <code>TSLAUSDT</code> both trade the asset <code>TSLA</code>.</p>
+        <dl class="defs">
+          <div><dt>type</dt><dd><code>spot</code>, <code>perpetual</code> or <code>future</code>.</dd></div>
+          <div><dt>symbol</dt><dd>The base as the venue lists it. <code>1000PEPE</code> stays <code>1000PEPE</code>, and a HIP-3 dex keeps its prefix.</dd></div>
+          <div><dt>denominator</dt><dd>The quote or settlement currency the price is in.</dd></div>
+          <div><dt>:margin</dt><dd>The collateral asset. Derivatives only; it tells linear from inverse.</dd></div>
+          <div><dt>-yyyymmdd</dt><dd>The delivery date. Dated futures only.</dd></div>
+          <div><dt>underlying</dt><dd><code>equity</code>, <code>commodity</code>, <code>forex</code>, <code>index</code>, <code>pre_market</code> or <code>crypto</code>, from the venue's own metadata.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <div class="table-wrap">
+          <table class="compare">
+            <thead><tr><th>Venue</th><th>Native ID</th><th>Atlas ID</th></tr></thead>
+            <tbody>
+              <tr><td>Hyperliquid HIP-3</td><td><code>xyz:TSLA</code></td><td><code>perpetual-XYZ:TSLA-USDC:USDC</code></td></tr>
+              <tr><td>Avantis</td><td><code>11</code> (pair index)</td><td><code>perpetual-EUR-USDC:USDC</code></td></tr>
+              <tr><td>Extended</td><td><code>XAU-USD</code></td><td><code>perpetual-XAU-USD:USD</code></td></tr>
+              <tr><td>Bybit inverse</td><td><code>BTCUSD</code></td><td><code>perpetual-BTC-USD:BTC</code></td></tr>
+              <tr><td>Bybit futures</td><td><code>BTCUSDT-27MAR26</code></td><td><code>future-BTC-USDT:USDT-20260327</code></td></tr>
+              <tr><td>Binance spot</td><td><code>BTCUSDT</code></td><td><code>spot-BTC-USDT</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted small">Each record also holds the contract size, margin asset, asset class, the Atlas asset IDs of every leg and the listing window: <code>first_capture</code> and, once it stops trading, <code>end_date</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quick-start">
+    <div class="container split">
+      <div>
+        <p class="kicker">Quick start</p>
+        <h2>Local lookups, no key</h2>
+        <p>Python 3.12 or later. The snapshots ship with the package, so every lookup is a local dictionary read with no network call.</p>
+        <div class="code-block">
+          <div class="code-head"><span>shell</span><button type="button" class="copy" data-copy="pip install git+https://github.com/aperiodic-io/atlas">Copy</button></div>
+          <pre><code>pip install git+https://github.com/aperiodic-io/atlas</code></pre>
+        </div>
+        <p>Prefer plain data? Every snapshot is published as JSON next to this page, for example <a href="data/avantis-perps.json"><code>data/avantis-perps.json</code></a>, and the whole catalogue as <a href="catalog/instruments.json"><code>catalog/instruments.json</code></a>.</p>
+      </div>
+      <div class="code-block">
+        <div class="code-head"><span>example.py</span><button type="button" class="copy" data-copy-target="example-code">Copy</button></div>
+<pre><code id="example-code"><span class="tok-k">from</span> atlas <span class="tok-k">import</span> SecurityMaster
+
+sm = SecurityMaster.load()  <span class="tok-c"># bundled snapshots, no network</span>
+
+<span class="tok-c"># One stock, three venues, three native names</span>
+sm.base_asset(<span class="tok-s">"hyperliquid-perps"</span>, <span class="tok-s">"xyz:TSLA"</span>).asset_id   <span class="tok-c"># 'TSLA'</span>
+sm.base_asset(<span class="tok-s">"bybit-perps-usd"</span>, <span class="tok-s">"TSLAUSDT"</span>).asset_id   <span class="tok-c"># 'TSLA'</span>
+sm.base_asset(<span class="tok-s">"binance-futures"</span>, <span class="tok-s">"tslausdt"</span>).asset_id   <span class="tok-c"># 'TSLA'</span>
+
+<span class="tok-c"># Every venue that lists Tesla, live or delisted</span>
+sm.exchanges_for_asset(<span class="tok-s">"TSLA"</span>)
+
+<span class="tok-c"># Gold is XAU, whatever the venue calls it</span>
+sm.base_asset(<span class="tok-s">"hyperliquid-perps"</span>, <span class="tok-s">"xyz:GOLD"</span>).asset_id   <span class="tok-c"># 'XAU'</span>
+
+<span class="tok-c"># The full record: class, contract size, margin, listing window</span>
+sm.instrument_metadata(<span class="tok-s">"avantis-perps"</span>, <span class="tok-s">"11"</span>)
+<span class="tok-c"># {'symbol': 'EUR', 'underlying': 'forex', 'margin': 'USDC', ...}</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pipeline">
+    <div class="container">
+      <p class="kicker">Kept up to date, in public</p>
+      <h2>A daily pipeline you can read</h2>
+      <ol class="steps">
+        <li><span class="step-n">01</span><h3>Fetch</h3><p>Every day at 02:00 UTC a GitHub Action reads each venue's whole current universe from that venue's own public API, for centralized and decentralized venues alike.</p></li>
+        <li><span class="step-n">02</span><h3>Merge</h3><p>New listings are parsed into Atlas IDs. Delistings get an end date, and fields a source stops sending are kept, not wiped.</p></li>
+        <li><span class="step-n">03</span><h3>Resolve</h3><p>Each contract is matched to an Atlas asset. The evidence is CoinMarketCap's own venue listings, venue lineage and cross-venue consensus, with reference assets for stocks, commodities and indices.</p></li>
+        <li><span class="step-n">04</span><h3>Publish</h3><p>The snapshots are committed to git, the tests guard every parser, and this site rebuilds from the new data.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <p class="brand-name">atlas</p>
+      <p class="muted small">Open-source security master for RWA and crypto perpetuals. MIT licensed. Built and maintained by <a href="{{aperiodic_url}}">Aperiodic</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="{{repo_url}}">GitHub</a>
+      <a href="files.html">Data files</a>
+      <a href="catalog/instruments.json">Catalogue JSON</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+    <p class="muted small">Snapshot built {{generated_at}}.</p>
+  </div>
+</footer>
+
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-head">
+    <div><p class="eyebrow" id="drawer-kicker">Asset</p><h2 id="drawer-title"></h2><p class="muted" id="drawer-sub"></p></div>
+    <button type="button" class="icon-button" id="drawer-close" aria-label="Close">×</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+<script src="app.js" defer></script>
+</body>
+</html>

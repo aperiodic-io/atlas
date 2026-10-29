@@ -30,18 +30,14 @@ jobs:
         with:
           ref: main
 
-      - name: stage-jsons
-        run: |
-          mkdir _site
-          rsync -a --include='*/' --include='*.json' --exclude='*' atlas/data/ _site/
-          touch _site/.nojekyll
-          python3 - <<'EOF'
-          import html, pathlib
-          site = pathlib.Path("_site")
-          files = sorted(p.relative_to(site).as_posix() for p in site.rglob("*.json"))
-          links = "\n".join(f'<li><a href="{html.escape(f)}">{html.escape(f)}</a></li>' for f in files)
-          (site / "index.html").write_text(f"<!doctype html><title>atlas data</title><h1>atlas data</h1><ul>\n{links}\n</ul>\n")
-          EOF
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Landing page, searchable catalogue and venue pages, plus every snapshot
+      # JSON at data/<file> and at its old root path. Standard library only.
+      - name: build-site
+        run: python3 site/build.py --data atlas/data --out _site
 
       - uses: actions/configure-pages@v5
 
