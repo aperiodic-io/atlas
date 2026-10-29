@@ -20,7 +20,7 @@ import re
 import time
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Protocol
 from urllib.parse import unquote, urlparse
@@ -53,10 +53,17 @@ _TICKER_ALIASES = {"XBT": "BTC"}
 
 @dataclass(frozen=True)
 class CmcVenue:
-    """A CMC exchange and the Atlas snapshots its market categories cover."""
+    """A CMC exchange and the Atlas snapshots its market categories cover.
+
+    ``symbol_fields`` names, per snapshot, a row field holding the venue's
+    market symbol when its native ID is something CMC never shows: Lighter
+    keys markets by index (``1``), CMC by symbol (``BTC_USDC``, ``/trade/BTC``).
+    A row is found by its native ID first and by this field only failing that.
+    """
 
     slug: str
     exchanges: Mapping[str, tuple[str, ...]]
+    symbol_fields: Mapping[str, str] = field(default_factory=dict)
 
     def __hash__(self) -> int:
         return hash(self.slug)
@@ -110,6 +117,18 @@ CMC_VENUES: dict[str, CmcVenue] = {
                 "futures": ("gateio-futures-usdt",),
             },
         ),
+        # DeFi / RWA perpetual venues. CMC does not track Avantis.
+        CmcVenue("aster-pro", {"perpetual": ("aster-perps",)}),
+        CmcVenue(
+            "lighter",
+            {"perpetual": ("lighter-perps",)},
+            symbol_fields={"lighter-perps": "base_asset"},
+        ),
+        CmcVenue("grvt", {"perpetual": ("grvt-perps",)}),
+        CmcVenue("extended", {"perpetual": ("extended-perps",)}),
+        CmcVenue("apex-omni", {"perpetual": ("apex-perps",)}),
+        CmcVenue("pacifica", {"perpetual": ("pacifica-perps",)}),
+        CmcVenue("variational", {"perpetual": ("variational-perps",)}),
     )
 }
 
@@ -342,22 +361,38 @@ def match_market_pairs(
     delisted row of that ticker that traded last: CMC still tracks the market,
     so it is that row's. ``integrations/symbology.py`` checks such pairs harder.
     """
+    symbol_fields = {
+        exchange: name
+        for venue in CMC_VENUES.values()
+        for exchange, name in venue.symbol_fields.items()
+    }
     index: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
     delisted: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
+    by_symbol: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
+    delisted_by_symbol: dict[tuple[str, str], list[tuple[str, dict]]] = defaultdict(list)
     for exchange, rows in rows_by_exchange.items():
+        symbol_field = symbol_fields.get(exchange)
         for row in rows:
             if not isinstance(row.get("id"), str):
                 continue
-            target = delisted if row.get("end_date") else index
-            target[(exchange, row["id"].upper())].append((exchange, row))
-    for listings in delisted.values():
+            ended = bool(row.get("end_date"))
+            (delisted if ended else index)[(exchange, row["id"].upper())].append((exchange, row))
+            if symbol_field and isinstance(symbol := row.get(symbol_field), str) and symbol:
+                target = delisted_by_symbol if ended else by_symbol
+                target[(exchange, symbol.upper())].append((exchange, row))
+    for listings in (*delisted.values(), *delisted_by_symbol.values()):
         listings.sort(key=lambda hit: str(hit[1]["end_date"]), reverse=True)
 
     claims: dict[tuple[str, str], list[MarketPair]] = defaultdict(list)
     unmatched: list[MarketPair] = []
     mismatches: list[tuple[tuple[str, str], MarketPair]] = []
     for pair in pairs:
-        found = _find_row(pair, index) or _find_row(pair, delisted)
+        found = (
+            _find_row(pair, index)
+            or _find_row(pair, by_symbol)
+            or _find_row(pair, delisted)
+            or _find_row(pair, delisted_by_symbol)
+        )
         if found is None:
             unmatched.append(pair)
             continue

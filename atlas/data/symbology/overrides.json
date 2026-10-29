@@ -652,6 +652,78 @@
       "ticker": "USDP",
       "cmc_id": 3330,
       "reason": "OKX delisted its PAX pairs on 2022-04-12 and listed Pax Dollar as USDP on 2022-04-20, after Paxos renamed PAX to USDP. Not the USDP Stablecoin (CMC 8886) that Gate lists."
+    },
+    {
+      "family": "apex",
+      "ticker": "MON",
+      "cmc_id": 30495,
+      "reason": "CoinMarketCap files ApeX's MON perpetual under MoneyByte (CMC 5066), a 2014 coin whose CMC price is set by these same misfiled markets. The venue's MON is Monad (CMC 30495): it trades at Monad's price, as MON does on Binance, Bybit, OKX and Lighter."
+    },
+    {
+      "family": "extended",
+      "ticker": "MON",
+      "cmc_id": 30495,
+      "reason": "CoinMarketCap files Extended's MON perpetual under MoneyByte (CMC 5066), a 2014 coin whose CMC price is set by these same misfiled markets. The venue's MON is Monad (CMC 30495): Extended's market metadata describes MON-USD as \"Monad\"."
+    },
+    {
+      "family": "grvt",
+      "ticker": "MON",
+      "cmc_id": 30495,
+      "reason": "CoinMarketCap files GRVT's MON perpetual under MoneyByte (CMC 5066), a 2014 coin whose CMC price is set by these same misfiled markets. The venue's MON is Monad (CMC 30495): it trades at Monad's price, as MON does on Binance, Bybit, OKX and Lighter."
+    },
+    {
+      "family": "pacifica",
+      "ticker": "MON",
+      "cmc_id": 30495,
+      "reason": "CoinMarketCap files Pacifica's MON perpetual under MoneyByte (CMC 5066), a 2014 coin whose CMC price is set by these same misfiled markets. The venue's MON is Monad (CMC 30495): it trades at Monad's price, as MON does on Binance, Bybit, OKX and Lighter."
+    },
+    {
+      "family": "variational",
+      "ticker": "USTC",
+      "cmc_id": 7129,
+      "reason": "CMC files Variational's USTC under Terra Classic USD (Wormhole) (CMC 15610), the bridged 1:1 twin. Every other venue's USTC is TerraClassicUSD (CMC 7129), which Variational's oracle prices."
+    },
+    {
+      "family": "apex",
+      "ticker": "ORACLE",
+      "cmc_id": 39482,
+      "reason": "ApeX lists Oracle Corp as ORACLEUSDT (equity). It is the stock other venues list as ORCL: Oracle Corp (Derivatives)."
+    },
+    {
+      "family": "variational",
+      "ticker": "VISA",
+      "cmc_id": 40014,
+      "reason": "Variational lists Visa Inc as VISA (equity). It is the stock other venues list as V: Visa Inc (Derivatives)."
+    },
+    {
+      "family": "avantis",
+      "ticker": "BRENT",
+      "cmc_id": 39804,
+      "reason": "Avantis lists Brent crude as BRENT (commodity). It is the commodity other venues list as BZ / BRENTOIL: Brent Oil (Derivatives)."
+    },
+    {
+      "family": "extended",
+      "ticker": "XBR",
+      "cmc_id": 39804,
+      "reason": "Extended lists Brent crude under its spot-FX code XBR (commodity). It is Brent Oil (Derivatives), BZ elsewhere."
+    },
+    {
+      "family": "extended",
+      "ticker": "XNG",
+      "cmc_id": 39464,
+      "reason": "Extended lists natural gas as XNG (commodity). It is Natural Gas (Derivatives), NATGAS elsewhere."
+    },
+    {
+      "family": "extended",
+      "ticker": "ANTHROP",
+      "cmc_id": 39496,
+      "reason": "Extended lists Anthropic's pre-IPO perpetual as ANTHROP; its market metadata describes it as \"Anthropic (pre-IPO)\" and it trades at Anthropic (Derivatives)'s price, ANTHROPIC on every other venue."
+    },
+    {
+      "family": "extended",
+      "ticker": "QUANT",
+      "cmc_id": 3155,
+      "reason": "Extended lists Quant as QUANT; its market metadata describes it as \"Quant\" and it trades at Quant (QNT)'s price."
     }
   ]
 }

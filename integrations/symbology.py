@@ -109,6 +109,15 @@ VENUE_FAMILIES: dict[str, str] = {
     "gateio-perps-btc": "gate",
     "gateio-futures-usdt": "gate",
     "coinbase-spot": "coinbase",
+    # DeFi / RWA perpetual venues: each lists its own tickers.
+    "aster-perps": "aster",
+    "avantis-perps": "avantis",
+    "variational-perps": "variational",
+    "lighter-perps": "lighter",
+    "grvt-perps": "grvt",
+    "extended-perps": "extended",
+    "apex-perps": "apex",
+    "pacifica-perps": "pacifica",
 }
 SYMBOLOGY_EXCHANGES: tuple[str, ...] = tuple(VENUE_FAMILIES)
 
@@ -163,6 +172,31 @@ FIAT_CMC_IDS: dict[str, tuple[int, str]] = {
     "PEN": (2822, "Peruvian Sol"), "VND": (2823, "Vietnamese Dong"),
     "UAH": (2824, "Ukrainian Hryvnia"), "KZT": (3551, "Kazakhstani Tenge"),
 }
+
+
+# Currency codes a forex perpetual's ticker is built from: CMC's fiat list plus
+# the offshore yuan, which venues quote but CMC does not list.
+FOREX_CURRENCIES = frozenset(FIAT_CMC_IDS) | {"CNH"}
+# The currencies the market quotes against the dollar as ``<CCY>USD``; every
+# other is quoted ``USD<CCY>`` (Hyperliquid's ``xyz:JPY`` trades near 158).
+_QUOTED_BEFORE_USD = frozenset({"EUR", "GBP", "AUD", "NZD"})
+
+
+def forex_pair(symbol: str) -> str | None:
+    """The currency pair, in market convention, a forex ticker tracks.
+
+    Venues spell one rate as the base currency (``EUR``), the pair
+    (``EURUSD``), a HIP-3 ticker (``xyz:EUR``) or, for dollar-based pairs, the
+    quoted currency alone (``JPY`` is ``USDJPY``). Anything else -- an index
+    such as ``DXY``, a stablecoin -- is not a pair.
+    """
+    ticker = sanitize_ticker(symbol.split(":", 1)[-1])
+    if ticker in FOREX_CURRENCIES and ticker != "USD":
+        return f"{ticker}USD" if ticker in _QUOTED_BEFORE_USD else f"USD{ticker}"
+    base, quote = ticker[:3], ticker[3:]
+    if len(ticker) == 6 and base != quote and {base, quote} <= FOREX_CURRENCIES:
+        return ticker
+    return None
 
 
 def fiat_detail(code: str) -> CmcAssetDetail | None:
@@ -328,6 +362,8 @@ class SymbologyReport:
     # (exchange, id, CMC ID the pair named, pair price / asset price)
     pair_price_mismatches: list[tuple[str, str, int, float]] = field(default_factory=list)
     pair_conflicts: list[tuple[str, str]] = field(default_factory=list)
+    # (exchange, id, CMC ID) of pairs naming a token for a TradFi underlying.
+    pair_token_wrappers: list[tuple[str, str, int]] = field(default_factory=list)
     pairs_unmatched: Counter = field(default_factory=Counter)
     pairs_total: Counter = field(default_factory=Counter)
 
@@ -353,6 +389,7 @@ class SymbologyReport:
             "pair_symbol_mismatches": len(self.pair_symbol_mismatches),
             "pair_price_mismatches": len(self.pair_price_mismatches),
             "pair_conflicts": len(self.pair_conflicts),
+            "pair_token_wrappers": len(self.pair_token_wrappers),
             "per_exchange": {
                 exchange: {
                     "rows": self.rows[exchange],
@@ -574,6 +611,25 @@ def resolve_base_assets(
         same_family=False,
         spanning=spanning,
     )
+    # A multiplied ticker only one venue lists (GRVT's KBONK, Lighter's
+    # 1000NOT) is its unit ticker's asset, when other venues agree on that.
+    unresolved = [
+        instrument
+        for instrument in unresolved
+        if instrument.key not in resolutions and _unit_ticker(instrument) is not None
+    ]
+    _infer(
+        unresolved,
+        instruments,
+        resolutions,
+        details,
+        report,
+        method=Match.cross_venue,
+        group_key=lambda instrument: (instrument.symbol,),
+        lookup_key=lambda instrument: (_unit_ticker(instrument),),
+        same_family=False,
+        spanning=spanning,
+    )
     _attach_era_history(resolutions, spanning)
     # Keep one entry per row that inference left unresolved.
     report.lineage_conflicts = list(
@@ -696,6 +752,34 @@ def _anchor_index(
         if resolution is not None and resolution.method in methods:
             anchors_by_group[group_key(instrument)].append(instrument)
     return anchors_by_group
+
+
+_LETTER_MULTIPLIER_PREFIX = re.compile(r"K([A-Z][A-Z0-9]{3,})")
+# Venues whose upper-case native IDs carry a ``K`` multiplier (GRVT's
+# ``KBONK_USDT_Perp``). Elsewhere only a lower-case ``k`` is one (``kBONK``).
+_UPPER_K_MULTIPLIER_FAMILIES = frozenset({"grvt"})
+
+
+def _unit_ticker(instrument: Instrument) -> str | None:
+    """The ticker a multiplied derivative scales: ``kBONK`` and ``1000BONK`` are BONK.
+
+    Spot markets trade tokens under their own tickers (Klink Finance is
+    ``KLINK``), so only derivatives are read. A letter prefix counts where the
+    venue writes one, and needs four characters after it, so ``KNOT`` is not
+    read as 1,000 NOT.
+    """
+    symbol = instrument.symbol
+    if instrument.type == "spot" or ":" in symbol:
+        return None
+    if (match := _NUMERIC_MULTIPLIER_PREFIX.fullmatch(symbol)) is not None:
+        return match.group(2)
+    venue_writes_k = (
+        instrument.original_id.startswith("k")
+        or instrument.family in _UPPER_K_MULTIPLIER_FAMILIES
+    )
+    if venue_writes_k and (match := _LETTER_MULTIPLIER_PREFIX.fullmatch(symbol)) is not None:
+        return match.group(1)
+    return None
 
 
 def _lineage_key(instrument: Instrument) -> tuple:
@@ -901,13 +985,20 @@ def _infer(
     group_key,
     same_family: bool,
     spanning: Mapping[tuple[str, str], list[TickerEra]] | None = None,
+    lookup_key=None,
 ) -> None:
+    """Infer each unresolved row's asset from the anchors in its group.
+
+    Anchors are grouped by ``group_key``; a row looks up its group by
+    ``lookup_key`` when the two differ (a multiplied ticker and its unit).
+    """
+    lookup_key = lookup_key or group_key
     anchors_by_group = _anchor_index(instruments, resolutions, DIRECT_MATCHES, group_key)
     inferred: dict[tuple[str, str], BaseResolution] = {}
     for instrument in unresolved:
         votes = _consensus_votes(
             instrument,
-            anchors_by_group.get(group_key(instrument), ()),
+            anchors_by_group.get(lookup_key(instrument), ()),
             resolutions,
             same_family=same_family,
             spanning=spanning,
@@ -950,8 +1041,27 @@ def _wraps_declared_underlying(instrument: Instrument, detail: CmcAssetDetail | 
 
 
 def is_reference_detail(detail: CmcAssetDetail) -> bool:
-    """Whether a CMC asset is the reference price of a TradFi asset, not a token."""
-    return detail.name.endswith("(Derivatives)") or "TradFi Assets (Derivatives)" in detail.tags
+    """Whether a CMC asset is the reference price of a TradFi asset, not a token.
+
+    CMC names them ``Tesla (Derivatives)`` and, since late 2026, also in the
+    singular: ``MercadoLibre Inc (Derivative)``.
+    """
+    return (
+        _REFERENCE_NAME.search(detail.name) is not None
+        or "TradFi Assets (Derivatives)" in detail.tags
+    )
+
+
+_REFERENCE_NAME = re.compile(r"\(Derivatives?\)$")
+
+
+def is_tokenized_security(detail: CmcAssetDetail) -> bool:
+    """Whether a CMC asset is a token wrapping a stock or fund (Ondo's AAPLON)."""
+    return not is_reference_detail(detail) and (
+        "tokenized" in detail.name.lower()
+        or "Tokenized Stock" in detail.categories
+        or "Tokenized Stock" in detail.tags
+    )
 
 
 def _cmc_id_at(resolution: BaseResolution, instrument: Instrument) -> int:
@@ -1196,6 +1306,8 @@ def ensure_assets(
             continue
         asset_class = classify_asset(detail, underlyings.get(cmc_id, Counter()))
         status = "active" if detail.status in ("", "active") else detail.status
+        if existing is None and (native := _native_twin(registry, detail)) is not None:
+            existing = registry.adopt_cmc_id(native.asset_id, cmc_id)
         if existing is None:
             asset = registry.mint(
                 ticker=detail.symbol,
@@ -1219,6 +1331,22 @@ def ensure_assets(
                 status=status,
                 cmc_date_added=_iso_or_none(detail.date_added) or existing.cmc_date_added,
             )
+
+
+def _native_twin(registry: AssetRegistry, detail: CmcAssetDetail) -> Asset | None:
+    """The Atlas-native reference asset a newly tracked CMC reference asset is.
+
+    Only an unambiguous twin is adopted: one native asset of a TradFi class
+    whose ticker or alias is the CMC ticker.
+    """
+    if not is_reference_detail(detail):
+        return None
+    natives = [
+        asset
+        for asset in registry.find_by_ticker(detail.symbol)
+        if asset.cmc_id is None and asset.asset_class in _NATIVE_CLASSES
+    ]
+    return natives[0] if len(natives) == 1 else None
 
 
 # ---------------------------------------------------------------------------
@@ -1246,6 +1374,14 @@ def build_symbology(
         _record_pair_diagnostics(report, pair_result)
 
     instruments = instruments_from_rows(rows_by_exchange)
+    # A forex perpetual tracks a rate, whatever currency or token a listing
+    # names: it takes the pair's reference asset and is evidence for nothing.
+    forex = {
+        instrument.key
+        for instrument in instruments
+        if _forex_pair_of(instrument) is not None and instrument.key not in (overrides or {})
+    }
+    base_instruments = [instrument for instrument in instruments if instrument.key not in forex]
     # The guards need each candidate's listing date, status and kind; fall back
     # to what the registry recorded so an offline rebuild decides the same way.
     facts = {**_registry_facts(registry), **details}
@@ -1253,8 +1389,10 @@ def build_symbology(
         instruments, pair_matches, asset_prices or {}, facts, registry, report
     )
     pair_matches = _delisted_pairs_checked(instruments, pair_matches, facts, registry, report)
+    pair_matches, wrappers = _token_wrappers_checked(instruments, pair_matches, facts, report)
+    rejected_pairs |= wrappers
     resolutions = resolve_base_assets(
-        instruments,
+        base_instruments,
         pair_matches,
         ledger or {},
         overrides or {},
@@ -1460,6 +1598,56 @@ def _delisted_pairs_checked(
     return checked
 
 
+def _token_wrappers_checked(
+    instruments: Iterable[Instrument],
+    pair_matches: Mapping[tuple[str, str], MarketPair],
+    facts: Mapping[int, CmcAssetDetail],
+    report: SymbologyReport,
+) -> tuple[dict[tuple[str, str], MarketPair], frozenset[tuple[str, str, int]]]:
+    """Drop CMC pairs that file a TradFi derivative under a tokenized stock.
+
+    CMC files some venues' stock perpetuals under a tokenized-security wrapper
+    (Extended's AST SpaceMobile under Robinhood's token, Bitget's AAPLUSDT
+    under Ondo's AAPLON). A derivative whose venue declares a TradFi
+    underlying tracks the reference price, which is resolved without the
+    pair. A venue that lists a token under the token's own decorated ticker
+    trades the token: Gate's ``FUTUON_USDT`` is Ondo's FUTUON, and no stock is
+    called FUTUON. Spot markets trade the token itself, and other tokens a
+    venue classes as TradFi (tokenized gold, pre-launch tokens) are kept.
+    """
+    by_key = {instrument.key: instrument for instrument in instruments}
+    checked: dict[tuple[str, str], MarketPair] = {}
+    rejected: set[tuple[str, str, int]] = set()
+    for key, pair in pair_matches.items():
+        instrument = by_key.get(key)
+        detail = facts.get(pair.base_cmc_id)
+        if (
+            instrument is not None
+            and instrument.type != "spot"
+            and instrument.row.get("underlying") in _NOT_A_TOKEN_UNDERLYINGS
+            and detail is not None
+            and is_tokenized_security(detail)
+            and not _lists_the_decorated_token(instrument, detail)
+        ):
+            report.pair_token_wrappers.append((*key, pair.base_cmc_id))
+            rejected.add((*key, pair.base_cmc_id))
+            continue
+        checked[key] = pair
+    return checked, frozenset(rejected)
+
+
+# Issuers whose tokens carry a decorated ticker (Ondo's ``AAPLON``, xStock's
+# ``TQQQX``). Robinhood's and Backpack's take the stock's own ticker (``QUBT``).
+_DECORATING_ISSUERS = ("(ondo)", "(xstock)")
+
+
+def _lists_the_decorated_token(instrument: Instrument, detail: CmcAssetDetail) -> bool:
+    """Whether a venue lists a stock token under the token's own decorated ticker."""
+    return any(issuer in detail.name.lower() for issuer in _DECORATING_ISSUERS) and (
+        sanitize_ticker(reference_ticker(instrument.symbol)) == sanitize_ticker(detail.symbol)
+    )
+
+
 def _registry_facts(registry: AssetRegistry) -> dict[int, CmcAssetDetail]:
     """What the registry remembers about each CMC asset, shaped like CMC details."""
     facts: dict[int, CmcAssetDetail] = {}
@@ -1526,11 +1714,13 @@ def _reference_asset(
     without a CMC ID is minted, once, and found again on later runs. Spot rows
     are tokens wrapping such an asset, not the asset, and are left alone.
     """
+    if (pair := _forex_pair_of(instrument)) is not None:
+        return _forex_asset(registry, pair, report)
     underlying = instrument.row.get("underlying")
     if instrument.type == "spot" or underlying not in _NON_CRYPTO_UNDERLYINGS:
         return None
     asset_class = AssetClass(underlying)
-    ticker = instrument.symbol.split(":", 1)[-1]
+    ticker = reference_ticker(instrument.symbol)
     if not sanitize_ticker(ticker) or _TEST_MARKET_TICKER.fullmatch(ticker.upper()):
         return None
     candidates = registry.find_by_ticker(ticker)
@@ -1555,8 +1745,64 @@ def _reference_asset(
     return asset
 
 
+# Venue spellings that decorate a reference ticker: Extended's 24/5 session
+# markets (``AAPL_24_5``) and Avantis' won-priced Korean listings, which keep
+# the price currency in the ticker (``005930KRW``).
+_SESSION_SUFFIX = re.compile(r"(.+)_24_5")
+_KRW_PRICED_KRX_CODE = re.compile(r"(\d{6})KRW")
+
+
+def reference_ticker(symbol: str) -> str:
+    """The ticker of the TradFi asset a venue symbol tracks."""
+    ticker = symbol.split(":", 1)[-1]
+    for pattern in (_SESSION_SUFFIX, _KRW_PRICED_KRX_CODE):
+        if (match := pattern.fullmatch(ticker)) is not None:
+            return match.group(1)
+    return ticker
+
+
+def _forex_pair_of(instrument: Instrument) -> str | None:
+    """The pair a forex derivative tracks; spot rows are tokens, not the rate."""
+    if instrument.type == "spot" or instrument.row.get("underlying") != "forex":
+        return None
+    return forex_pair(instrument.symbol)
+
+
+def _forex_asset(registry: AssetRegistry, pair: str, report: SymbologyReport) -> Asset:
+    """The asset of a currency pair: CMC's reference rate if it tracks one
+    (``USDBRL``), otherwise an Atlas-native asset minted once."""
+    candidates = [
+        asset
+        for asset in registry.find_by_ticker(pair)
+        if asset.asset_class in _REFERENCE_CLASSES or asset.asset_class is AssetClass.forex
+    ]
+    tracked = [asset for asset in candidates if asset.cmc_id is not None]
+    native = [
+        asset for asset in candidates if asset.cmc_id is None and asset.asset_class is AssetClass.forex
+    ]
+    if len(tracked) == 1:
+        asset = tracked[0]
+        if asset.asset_class is not AssetClass.forex:
+            asset = registry.update(asset.asset_id, asset_class=AssetClass.forex)
+        return asset
+    if native:
+        return native[0]
+    asset = registry.mint(
+        ticker=pair,
+        name=f"{pair[:3]}/{pair[3:]}",
+        asset_class=AssetClass.forex,
+        qualifier=AssetClass.forex.value,
+    )
+    report.minted.append(asset.asset_id)
+    return asset
+
+
 _REFERENCE_CLASSES = frozenset(
     {AssetClass.equity, AssetClass.commodity, AssetClass.index, AssetClass.unknown}
+)
+# Classes of the reference assets Atlas mints itself.
+_NATIVE_CLASSES = frozenset(
+    {AssetClass.equity, AssetClass.commodity, AssetClass.index, AssetClass.forex}
 )
 
 
@@ -1721,6 +1967,11 @@ def render_report(report: SymbologyReport, registry: AssetRegistry, limit: int =
         "CMC pairs priced unlike the asset they name (not used)",
         report.pair_price_mismatches,
         lambda e: f"`{e[0]}` `{e[1]}`: {asset_name(e[2])} at {e[3]:.3g}x its price",
+    )
+    section(
+        "CMC pairs naming a token for a TradFi underlying (not used)",
+        report.pair_token_wrappers,
+        lambda e: f"`{e[0]}` `{e[1]}`: {asset_name(e[2])}",
     )
     section(
         "Rows claimed by conflicting CMC pairs (not used)",

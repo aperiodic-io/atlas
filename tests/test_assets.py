@@ -238,3 +238,21 @@ def test_registry_round_trips_non_ascii_names_as_utf8(tmp_path, monkeypatch):
     registry.save()
     assert "Złoty".encode() in path.read_bytes()
     assert AssetRegistry.load(path).get("PLN").name == "Polish Złoty"
+
+
+def test_adopt_cmc_id_gives_a_native_asset_its_cmc_identity():
+    registry = AssetRegistry()
+    registry.mint(ticker="MELI", name="MELI", asset_class=AssetClass.equity)
+    adopted = registry.adopt_cmc_id("MELI", 42700)
+    assert adopted.asset_id == "MELI"
+    assert registry.by_cmc_id(42700).asset_id == "MELI"
+
+
+def test_adopt_cmc_id_never_replaces_a_cmc_identity_or_steals_one():
+    registry = AssetRegistry()
+    registry.mint(ticker="BTC", name="Bitcoin", asset_class=AssetClass.crypto, cmc_id=1)
+    registry.mint(ticker="MELI", name="MELI", asset_class=AssetClass.equity)
+    with pytest.raises(ValueError):
+        registry.adopt_cmc_id("BTC", 2)
+    with pytest.raises(ValueError):
+        registry.adopt_cmc_id("MELI", 1)

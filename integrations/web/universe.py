@@ -47,7 +47,7 @@ _COMPATIBLE = {
     "pre_market": frozenset({"equity"}),
     "commodity": frozenset({"commodity"}),
     "index": frozenset({"index"}),
-    "forex": frozenset({"fiat", "unknown"}),
+    "forex": frozenset({"forex", "fiat", "unknown"}),
 }
 
 
