@@ -27636,6 +27636,57 @@
     {
       "cmc_id": null,
       "evidence": {
+        "candidates": [],
+        "catalogue_issue": "tolerated 5 unreadable of 8115 rows (1 unparseable, 4 duplicated, total moved by 1 mid-fetch): 0.0616%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1121",
+          "observed_at": "2026-10-21T08:46:19.266450Z",
+          "price": 0.1,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "LZCC",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x7d73496d792fa2c8144788e88217fa4e9a7e18ea",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "Canton Coin",
+            "index": 1255,
+            "isCanonical": false,
+            "name": "LZCC",
+            "pair": "@1121",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x73404db72c0b2613c83f3c529d68639f",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-21T06:57:12.152000Z",
+        "original_id": "LZCC/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-21T08:46:15.093937Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "LZCC"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
         "candidates": [
           {
             "cmc_id": 27964,
