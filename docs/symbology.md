@@ -1,10 +1,12 @@
 # Unified symbology
 
 Atlas gives every asset one stable, descriptive string ID and points every leg
-of every instrument at it, so the same asset reads the same on every exchange:
-Binance `btcusdt`, OKX `BTC-USDT`, Coinbase `BTC-USD` and Hyperliquid `BTC` all
-have the base asset `BTC`. Two different assets that share a ticker never share
-an ID.
+of every instrument at it, so the same asset reads the same on every venue.
+Tesla's perpetual is `xyz:TSLA` on Hyperliquid, market `112` on Lighter, pair
+`86` on Avantis, `tslausdt` on Aster and `TSLA_USDT_Perp` on GRVT. All of them
+have the base asset `TSLA`, the stock. Bitcoin is `btcusdt` on Binance and
+`BTC-USDT` on OKX, and both have the base asset `BTC`. Two different assets that
+share a ticker never share an ID: `SPX` the S&P 500 is not SPX6900 the memecoin.
 
 ## Asset IDs
 
@@ -44,11 +46,17 @@ The registry lives in [`atlas/data/symbology/assets.json`](../atlas/data/symbolo
 }
 ```
 
-`asset_class` is one of `crypto`, `fiat`, `equity`, `commodity`, `index`,
-`unknown`. Equities, commodities and indices are the *reference assets* that
-TradFi perpetuals track: Tesla perpetuals on Binance, Bybit, OKX, Gate and
-Hyperliquid all have base asset `TSLA` (an `equity`), and Binance's `XAUUSDT`
-has gold (a `commodity`). Tokenized wrappers are separate `crypto` assets.
+`asset_class` is one of `equity`, `commodity`, `index`, `forex`, `crypto`,
+`fiat`, `unknown`. Equities, commodities, indices and currency pairs are the
+*reference assets* that real-world-asset perpetuals track. Tesla perpetuals on
+15 venues all have base asset `TSLA` (an `equity`), gold perpetuals have `XAU`
+(a `commodity`), and every venue's euro perpetual has `EURUSD` (a `forex` pair).
+Tokenized wrappers (Ondo's `AAPLON`, Robinhood's stock tokens) are separate
+`crypto` assets; a perpetual on the stock is never one of them.
+
+A reference asset Atlas minted before CoinMarketCap tracked it adopts the CMC
+ID once CMC lists it. `MELI` stays `MELI` and gains MercadoLibre's CMC ID,
+rather than CMC's listing becoming a second asset.
 
 The CoinMarketCap ID is an attribute of an asset, not its identity, so the
 registry can be resolved against other providers later without renumbering.
@@ -84,12 +92,12 @@ Each row's base asset is resolved from the strongest evidence available;
 | --- | --- |
 | `override` | A curated decision in [`overrides.json`](../atlas/data/symbology/overrides.json), including ticker eras and venue tickers (below). |
 | `cmc_ledger` | An approved decision in the CMC mapping ledger, `atlas/data/cmc_mappings.json` (manual approvals rank above everything but overrides). |
-| `cmc_market_pair` | CoinMarketCap's own exchange listing: for every market it tracks on a venue, CMC publishes the venue's native ticker next to the base and quote CMC IDs. Atlas finds its row for that ticker and checks that the tickers agree. |
+| `cmc_market_pair` | CoinMarketCap's own exchange listing: for every market it tracks on a venue, CMC publishes the venue's native ticker next to the base and quote CMC IDs. Atlas finds its row for that ticker and checks that the tickers agree. Lighter addresses markets by index (`112`), so its rows are found by market symbol instead. |
 | `venue_majority` | CMC listed this row under another asset than the venue's other markets of the ticker, and the venue's majority decided (see below). The same label marks a legacy `cmc_id` that the venue's concurrent CMC-identified listings refuted. |
 | `snapshot_cmc_id` | A `cmc_id` the row carried from an earlier mapping run. |
 | `venue_lineage` | The same ticker on the same exchange, listed at an overlapping time, is identified, and every such listing agrees. An exchange does not list two assets under one ticker at once. |
-| `cross_venue_consensus` | Other exchanges list the ticker at an overlapping time; each venue votes for the asset its identified listings agree on, and one asset holds at least 75% of the votes, from two or more venues. |
-| `venue_reference` | The venue declares the derivative's underlying an equity, index or commodity CMC does not track (`AAL`, `NAS100`); its Atlas reference asset is reused, or minted once without a CMC ID. |
+| `cross_venue_consensus` | Other exchanges list the ticker at an overlapping time; each venue votes for the asset its identified listings agree on, and one asset holds at least 75% of the votes, from two or more venues. This is how Avantis, which CMC does not track, is identified. A multiplied ticker only one venue lists (GRVT's `KBONK`, Lighter's `1000NOT`) takes the consensus of its unit ticker (`BONK`, `NOT`); a letter prefix needs four characters after it, so `KNOT` is not read as 1,000 NOT. |
+| `venue_reference` | The venue declares the derivative's underlying an equity, index or commodity CMC does not track (`AAL`, `NAS100`); its Atlas reference asset is reused, or minted once without a CMC ID. Venue decorations are stripped first: Extended's 24/5 sessions (`AAPL_24_5` → `AAPL`) and Avantis' won-priced Korean listings (`005930KRW` → `005930`). Forex perpetuals always take their currency pair (below). |
 
 On Hyperliquid, HIP-3 perpetuals (`cash:ETH`, `flx:ETH`) learn from each other
 but never from the main dex: deployers reuse tickers (`para:STX` is Seagate, not
@@ -116,6 +124,17 @@ CMC's own listings are checked before they are used:
   `SOL_USDC`, filed under Wrapped Solana, follows Gate's other SOL markets).
   A tie is left as CMC lists it and reported. In practice these are 1:1 twins:
   dYdX and the bridged ethDYDX.
+* **Stock perpetuals are not stock tokens.** CMC files some venues' stock
+  perpetuals under a tokenized-stock wrapper: Bitget's `AAPLUSDT` under Ondo's
+  `AAPLON`, Extended's `ASTS-USD` under Robinhood's AST SpaceMobile token. A
+  derivative whose venue declares a TradFi underlying ignores such a pair and
+  resolves to the reference asset. Robinhood's and Backpack's tokens take the
+  stock's own ticker, so a perpetual on `QUBT` is the stock even before any
+  venue identified it (`QUBT.EQUITY`). A venue that lists a token under the
+  token's own decorated ticker trades the token and keeps the pair: Gate's
+  `FUTUON_USDT` is Ondo's FUTUON, its `TQQQX_USDT` the xStock. Spot markets
+  trade the token itself and keep it, as do tokens a venue classes as TradFi
+  that wrap no stock (tokenized gold, Binance's pre-launch `PREDICT`).
 * **Delisted markets are checked twice.** CMC keeps listing some markets a
   venue has delisted: Hyperliquid keeps delisted perpetuals in its universe
   (`MKR`, `hyna:BTC`). Such a pair identifies the delisted row when no active
@@ -132,8 +151,10 @@ Three safeguards hold back a wrong inference:
 * **Wrappers.** A derivative whose venue declares a TradFi underlying is never
   inferred to be a token that wraps it (an Ondo stock token); it gets the
   reference asset. Forex and pre-IPO (`pre_market`) contracts are never
-  inferred to be a same-ticker token either, and get no reference asset.
-  Venues' own test listings (`TEST002`) get no asset at all.
+  inferred to be a same-ticker token either. Pre-IPO contracts get no Atlas
+  reference asset of their own (venues spell them `ANTHROPIC`, `ANTHROP`,
+  `ANTH`); CMC's references and curated pins identify them. Venues' own test
+  listings (`TEST002`) get no asset at all.
 * **Withdrawn evidence.** When today's price check rejects the CMC listing a
   row's `cmc_id` came from, and nothing else identifies the row, the build
   drops that `cmc_id`. A `cmc_id` that predates symbology is never dropped.
@@ -180,6 +201,26 @@ rename, while Gate's `USDP` is the unrelated USDP Stablecoin (`USDP.USDP`).
 Venue tickers beat every vote and market pair, but a per-row override still
 wins.
 
+The DeFi venues need a few. CMC files `MON` on ApeX, Extended, GRVT and
+Pacifica under MoneyByte, a 2014 coin whose CMC price these misfiled markets
+set, so no price check catches it; they are Monad. Venues also spell some
+references their own way: ApeX `ORACLE` is `ORCL`, Variational `VISA` is `V`,
+Avantis `BRENT` and Extended `XBR` are Brent (`BZ`), Extended `XNG` is natural
+gas and `ANTHROP` is Anthropic.
+
+### Forex pairs
+
+A forex perpetual tracks an exchange rate, so its base asset is the currency
+pair in market convention: a `forex` asset such as `EURUSD` or `USDJPY`.
+Venues spell one rate as the base currency (`EUR`), the pair (`EURUSD`), a
+HIP-3 ticker (`xyz:EUR`) or, for dollar-based pairs, the quoted currency
+alone. Hyperliquid's `xyz:JPY` trades near 158, so it is `USDJPY`. EUR, GBP,
+AUD and NZD are quoted `<CCY>USD`; every other currency is `USD<CCY>`. When
+CoinMarketCap tracks the rate (`USDBRL`), its asset is reused. Forex rows take
+no other evidence: a CMC listing of the euro or a euro stablecoin is ignored.
+A forex row that is not a currency pair (`DXY`) stays unresolved. Spot rows
+are tokens, not the rate.
+
 ## Quote and margin assets
 
 A quote ticker means what CMC says it means on the venue's live pairs (`USDT`
@@ -210,6 +251,9 @@ from atlas import SecurityMaster
 
 sm = SecurityMaster.load()
 
+sm.base_asset("lighter-perps", "112")              # Asset(asset_id='TSLA', ...)
+sm.base_asset("hyperliquid-perps", "xyz:JPY")      # Asset(asset_id='USDJPY', ...)
+sm.instruments(underlying="forex", exchange="avantis-perps")
 sm.base_asset("binance-futures", "1000pepeusdt")   # Asset(asset_id='PEPE', ...)
 sm.unified_id("hyperliquid-perps", "kPEPE")        # 'perpetual-PEPE-USDC:USDC'
 sm.by_unified_id("perpetual-BTC-USDT:USDT")        # [('binance-futures', 'btcusdt'), ...]
@@ -223,7 +267,7 @@ sm.base_asset("binance-spot", "lunausdt", at=datetime(2022, 1, 1))  # LUNC
 ## Building it
 
 ```bash
-# Fetch CMC market pairs for the 7 venues, fetch details for new assets, write
+# Fetch CMC market pairs for the 14 venues CMC tracks, fetch details for new assets, write
 python -m integrations.symbology --report-path report.md
 
 # Report only
@@ -251,47 +295,60 @@ Supported snapshots: `binance-spot`, `binance-futures`, `binance-futures-cm`,
 `okx-futures`, `hyperliquid-spot`, `hyperliquid-perps`, `bitget-spot`,
 `bitget-perps-usdt`, `bitget-perps-usdc`, `bitget-perps-coin`,
 `bitget-futures-coin`, `gateio-spot`, `gateio-perps-usdt`, `gateio-perps-btc`,
-`gateio-futures-usdt` and `coinbase-spot`. Bitget's and Gate's contracts are
-the live-producers venues, and spot venues take the same scheme.
+`gateio-futures-usdt`, `coinbase-spot`, and the DeFi / RWA perpetual venues
+`aster-perps`, `avantis-perps`, `variational-perps`, `lighter-perps`,
+`grvt-perps`, `extended-perps`, `apex-perps` and `pacifica-perps`. Each DeFi
+venue is its own ticker namespace. CMC tracks all of them but Avantis (as
+`aster-pro`, `lighter`, `grvt`, `extended`, `apex-omni`, `pacifica`,
+`variational`).
 
 ## Coverage
 
-The build of 20 October 2026 holds 2,607 assets: 1,989 crypto,
-519 equity, 25 fiat, 47 index, 26 commodity and 1 unknown. It
-identifies the base asset of 21,114 of 31,730 parsed instrument rows
-(10,068 from CMC market pairs), and the quote asset of 31,236 of them.
+The build of 29 October 2026 holds 2,788 assets: 2,066 crypto, 604 equity,
+53 index, 27 commodity, 25 fiat and 13 forex. It identifies the base asset
+of 24,663 of 34,339 parsed instrument rows (12,162 from CMC market pairs), and
+the quote asset of 33,845 of them.
 
 | Snapshot | Active rows | Active base resolved |
 | --- | ---: | ---: |
-| `binance-spot` | 1,380 | 100.0% |
-| `binance-futures` | 794 | 100.0% |
+| `aster-perps` | 602 | 100.0% |
+| `avantis-perps` | 175 | 97.1% |
+| `variational-perps` | 566 | 98.9% |
+| `lighter-perps` | 213 | 98.6% |
+| `grvt-perps` | 184 | 100.0% |
+| `extended-perps` | 354 | 99.4% |
+| `apex-perps` | 130 | 100.0% |
+| `pacifica-perps` | 78 | 100.0% |
+| `hyperliquid-perps` | 348 | 96.8% |
+| `hyperliquid-spot` | 347 | 36.0% |
+| `binance-spot` | 1,385 | 100.0% |
+| `binance-futures` | 799 | 100.0% |
 | `binance-futures-cm` | 30 | 100.0% |
 | `bybit-spot` | 527 | 99.6% |
-| `bybit-perps-usd` | 872 | 99.3% |
+| `bybit-perps-usd` | 888 | 99.9% |
 | `bybit-perps-coin` | 22 | 100.0% |
 | `bybit-futures` | 44 | 100.0% |
-| `okx-spot` | 1,184 | 92.8% |
-| `okx-perps` | 510 | 99.6% |
-| `okx-futures` | 275 | 98.2% |
-| `coinbase-spot` | 515 | 99.2% |
-| `bitget-spot` | 3,587 | 17.7% |
-| `bitget-perps-usdt` | 846 | 96.8% |
+| `okx-spot` | 1,212 | 91.0% |
+| `okx-perps` | 526 | 99.8% |
+| `okx-futures` | 285 | 99.6% |
+| `coinbase-spot` | 517 | 99.4% |
+| `bitget-spot` | 3,594 | 17.9% |
+| `bitget-perps-usdt` | 866 | 97.6% |
 | `bitget-perps-usdc` | 49 | 100.0% |
 | `bitget-perps-coin` | 20 | 100.0% |
 | `bitget-futures-coin` | 4 | 100.0% |
-| `gateio-spot` | 2,203 | 73.6% |
-| `gateio-perps-usdt` | 1,048 | 97.3% |
+| `gateio-spot` | 2,187 | 73.5% |
+| `gateio-perps-usdt` | 1,066 | 97.6% |
 | `gateio-perps-btc` | 1 | 100.0% |
 | `gateio-futures-usdt` | 30 | 100.0% |
-| `hyperliquid-perps` | 340 | 96.8% |
-| `hyperliquid-spot` | 336 | 35.4% |
 
 The gaps are assets CMC does not track: Bitget's 3,000 tokenized stocks, Gate's
 leveraged tokens (`ADA3L`, `ADA3S`), Hyperliquid's HIP-1 spot tokens and
-HIP-3 pre-IPO markets, and OKX's xStocks. `tests/test_symbology_data.py` holds
-each snapshot's coverage to a floor just below these numbers. The same test
-module also checks that the bundled data is consistent and that an offline
-rebuild reproduces it exactly.
+HIP-3 pre-IPO markets, OKX's xStocks, Avantis' structured `*_UPSIDE` markets
+and a handful of pre-IPO names only one venue lists. `tests/test_symbology_data.py`
+holds each snapshot's coverage to a floor just below these numbers. The same
+test module also checks that the bundled data is consistent and that an
+offline rebuild reproduces it exactly.
 
 ## Limitations
 

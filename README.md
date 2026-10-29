@@ -13,507 +13,211 @@
      
 ```
 
-# Atlas - Crypto Security Master
+# Atlas: the open security master for real-world-asset and crypto perpetuals
 
-> Built and maintained by **[Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)**. Atlas is the open-source securities master behind Aperiodic's crypto market data and research. [Check out Aperiodic →](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)
+> Built and maintained by **[Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)**. Atlas is the open-source security master behind Aperiodic's RWA and crypto market data. [Check out Aperiodic →](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)
 
-Atlas - Crypto Security Master is a Python securities master for crypto venues. It normalizes exchange-native instrument IDs into a consistent `Contract` model and builds a fast lookup map (`internal_id`) from precomputed JSON snapshots.
+**[Search the catalogue →](https://aperiodic-io.github.io/atlas/)**
 
-**Daily updates:** snapshot JSONs are refreshed automatically every day via GitHub Actions, and committed back to this repository.
+Stocks, gold, oil, FX, indices and pre-IPO companies now trade as perpetuals on
+DeFi venues like Hyperliquid, Avantis, Lighter, GRVT, Aster, Variational,
+Extended, ApeX and Pacifica, and on centralised exchanges like Binance, Bybit,
+OKX, Bitget and Gate. No two venues name a market the same way. Atlas gives
+every contract one ID and every underlying asset one ID, the same on every
+venue, and keeps the contracts that were delisted.
 
-## What It Does
+- **7,000+ live RWA contracts**: equities, commodities, FX, indices and pre-IPO,
+  next to every crypto spot, perpetual and futures market.
+- **57,000+ instruments** on 28 venues (56 snapshots), **30,000+ of them
+  delisted** with the date they stopped trading.
+- **One asset registry**: `TSLA` is Tesla on all 15 venues that list it.
+- **Plain JSON in git, refreshed daily** from each venue's own API. No key, no
+  network at lookup time.
 
-- Normalizes instrument metadata across exchanges into:
-  - `symbol` (base)
-  - `denominator` (quote / settlement)
-  - `margin` (for derivatives)
-  - `type` (`spot`, `perpetual`, `future`, `option`, `unknown`)
-  - `underlying` (`crypto`, `commodity`, `equity`, `index`, `forex`, `pre_market`, `unknown`), when supplied by the venue
-  - `contract_size` (when available from source metadata)
-  - `delivery_date` (for dated contracts)
-  - `internal_id` string
-- Loads local securities-master snapshots and supports:
-  - lookup by `(exchange, original_id)` -> `internal_id`
-  - active-symbol filtering by date window
-- Refreshes snapshot data from:
-  - each exchange's own API (every exchange in [Supported Exchanges](#supported-exchanges))
+## Install
 
-## Symbology
-
-Atlas uses a normalized `internal_id` format:
-
-`<type>-<symbol>-<denominator>[:<margin>][-<delivery_yyyymmdd>]`
-
-- Spot omits margin and delivery date.
-- Perpetual includes margin, but no delivery date.
-- Dated futures include both margin and delivery date.
-
-Examples:
-
-- Spot: `btcusdt` (Binance spot) -> `spot-BTC-USDT`
-- Perpetual: `btcusdt` (Binance futures) -> `perpetual-BTC-USDT:USDT`
-- Future: `BTCUSDT-27MAR26` (Bybit futures) -> `future-BTC-USDT:USDT-20260327`
-- Hyperliquid HIP-3 perpetual: `flx:TSLA` -> `perpetual-FLX:TSLA-USDH:USDH` (the `<dex>:` prefix stays in the symbol; denominator and margin are the dex's collateral token, e.g. USDC, USDH, USDE or USDT0)
-- Lighter perpetual: market `96` (`EURUSD`) -> `perpetual-EUR-USDC:USDC` (the numeric market id is the original id; a USD-quoted FX pair is named by its base, other pairs keep the full ticker: `USDJPY` -> `perpetual-USDJPY-USDC:USDC`)
-- Extended perpetual: `SPX500m-USD` -> `perpetual-SPX500M-USD:USD` (the asset as Extended names it, settled in its USD collateral)
-
-### Unified symbology: Atlas asset IDs
-
-`internal_id` is built from each venue's own tickers. On top of it, Atlas gives
-every **asset** one stable, descriptive string ID of its own -- `BTC`, `ETH`,
-`USDT`, `USD`, `PEPE`, `TSLA` -- and points every instrument leg at it:
-
-| Field | Example (`1000PEPEUSDT` on Binance futures) |
-| --- | --- |
-| `base_asset_id` | `PEPE` |
-| `base_multiplier` | `1000` |
-| `quote_asset_id` | `USDT` |
-| `margin_asset_id` | `USDT` |
-| `unified_id` | `perpetual-PEPE-USDT:USDT` (the same on Bybit, OKX, Bitget and Gate; `kPEPE` on Hyperliquid is `perpetual-PEPE-USDC:USDC`) |
-| `base_asset_match` | `cmc_market_pair` (how the asset was identified) |
-
-Asset IDs are the bare ticker when it is free, and `<TICKER>.<QUALIFIER>` when
-another asset already holds the ticker (`TSLA` is Tesla the stock that
-perpetuals track; Hyperliquid's tokenized Tesla is
-`TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID`). Once minted, an ID never changes. The
-registry, [`atlas/data/symbology/assets.json`](atlas/data/symbology/assets.json),
-records each asset's name, class (`crypto`, `fiat`, `equity`, `commodity`,
-`index`), categories and CoinMarketCap ID. The CMC ID is an attribute, not the
-identity.
-
-Identification is seeded from CoinMarketCap's own exchange listings across
-Binance, OKX, Bybit, Hyperliquid, Bitget, Gate and Coinbase. Each venue ticker
-CMC tracks comes with its base and quote assets. Delisted rows are resolved
-through overlapping listings on the same venue, then a unanimous consensus
-across venues, and are guarded against ticker reuse. See
-[`docs/symbology.md`](docs/symbology.md).
-
-```python
-from datetime import datetime
-from atlas import SecurityMaster
-
-sm = SecurityMaster.load()
-sm.base_asset("binance-futures", "1000pepeusdt").asset_id   # 'PEPE'
-sm.by_unified_id("perpetual-BTC-USDT:USDT")                 # every venue's BTC/USDT perp
-sm.assets_in_category("Memes")
-sm.base_asset("binance-spot", "lunausdt", at=datetime(2022, 1, 1)).asset_id  # 'LUNC'
-```
-
-## Installation
-
-Python 3.12+ is required.
+Python 3.12+.
 
 ```bash
-pip install -e .
+pip install git+https://github.com/aperiodic-io/atlas
 ```
 
-## Quick Start
+The snapshots ship with the package, so every lookup is a local dictionary read.
 
-### Parse a single symbol
+## What it does, in five examples
+
+### 1. One Tesla, nine spellings
+
+Each venue names its Tesla perpetual differently. Lighter and Avantis use a
+bare number:
+
+| Venue | Native ID | Atlas ID (`internal_id`) | Atlas asset |
+| --- | --- | --- | --- |
+| Hyperliquid (HIP-3) | `xyz:TSLA` | `perpetual-XYZ:TSLA-USDC:USDC` | `TSLA` |
+| Lighter | `112` | `perpetual-TSLA-USDC:USDC` | `TSLA` |
+| Avantis | `86` | `perpetual-TSLA-USDC:USDC` | `TSLA` |
+| Aster | `tslausdt` | `perpetual-TSLA-USDT:USDT` | `TSLA` |
+| GRVT | `TSLA_USDT_Perp` | `perpetual-TSLA-USDT:USDT` | `TSLA` |
+| Binance | `tslausdt` | `perpetual-TSLA-USDT:USDT` | `TSLA` |
 
 ```python
-from atlas.parsers import parse_contract
-
-symbol_data = {"id": "BTCUSDT", "type": "spot"}
-contract = parse_contract("binance-spot", symbol_data)
-
-print(contract.internal_id)  # spot-BTC-USDT
-```
-
-### Load the local securities master
-
-```python
-from datetime import datetime
 from atlas import SecurityMaster
 
 sm = SecurityMaster.load()
 
-iid = sm.by_exchange_and_original_id("binance-spot", "BTCUSDT")
-print(iid)
+sm.base_asset("lighter-perps", "112").asset_id        # 'TSLA'
+sm.base_asset("avantis-perps", "86").asset_id         # 'TSLA'
+sm.asset("TSLA")                                      # Tesla (Derivatives), equity
+sm.exchanges_for_asset("TSLA")                        # 15 venues, DEX and CEX
+sm.by_unified_id("perpetual-TSLA-USDC:USDC")          # every USDC-settled Tesla perp:
+# [('avantis-perps', '86'), ('hyperliquid-perps', 'mkts:TSLA'),
+#  ('hyperliquid-perps', 'xyz:TSLA'), ('lighter-perps', '112'),
+#  ('pacifica-perps', 'TSLA'), ('variational-perps', 'TSLA')]
+```
 
-exchanges = sm.exchanges_for_original_id("BTCUSDT")
-print(exchanges)
+### 2. A ticker is not an asset
 
-exchanges = sm.exchanges_for_contract("BTC", "USDT", "USDT")
-print(exchanges)
+`SPX` is the S&P 500 to an equity trader, and SPX6900, a memecoin, on Aster,
+Lighter, ApeX, Extended and Variational. `MON` on four DEXs is filed by
+CoinMarketCap under a 2014 coin called MoneyByte; it is Monad. Atlas resolves
+identity from evidence (venue metadata, CoinMarketCap's own exchange listings,
+price checks, cross-venue consensus, curated pins), never from the ticker alone:
 
-active = sm.symbol_ids(
-    exchange="binance-spot",
-    first_capture=datetime(2024, 1, 1),
-    end_date=datetime(2024, 1, 31),
+```python
+sm.base_asset("aster-perps", "spxusdt").name          # 'SPX6900'
+sm.base_asset("hyperliquid-perps", "xyz:SP500").asset_class   # AssetClass.index
+sm.base_asset("extended-perps", "MON-USD").name       # 'Monad'
+sm.base_asset("bitget-perps-usdt", "AAPLUSDT").asset_id
+# 'AAPL': the stock, not Ondo's AAPLON token that CMC files the market under
+```
+
+### 3. Every RWA contract trading on a given day
+
+Filter by the asset class the venue declares, by venue, and by listing window:
+
+```python
+from datetime import datetime
+
+rwa = sm.instruments(
+    underlying=["equity", "commodity", "forex", "index", "pre_market"],
+    active_at=datetime(2026, 10, 29),
 )
-print(len(active))
+len(rwa)                                              # 7,493
+
+sm.instruments(exchange="lighter-perps", underlying="forex")
+# EURUSD, GBPUSD, AUDUSD, NZDUSD, USDJPY, USDCAD, USDCHF, USDHKD, USDKRW perps
 ```
 
-### Update local snapshots
+### 4. FX has conventions; Atlas keeps them
+
+Venues write the euro as `EUR`, `EURUSD`, `EUR-USD` or `xyz:EUR`, and the yen
+as `USDJPY` or a bare `JPY` quoted at ~158 yen per dollar. Atlas maps each to
+one currency-pair asset in market convention:
+
+```python
+sm.base_asset("pacifica-perps", "EURUSD").asset_id    # 'EURUSD'
+sm.base_asset("hyperliquid-perps", "xyz:JPY").asset_id  # 'USDJPY'
+sm.instruments_for_asset("EURUSD")                    # Avantis, Bybit, Extended, Gate,
+                                                      # Hyperliquid, Lighter, Pacifica
+```
+
+### 5. Backtests that remember the dead
+
+Exchange APIs only list what trades today. Atlas keeps every delisted contract
+with its listing window, including 280 delisted RWA contracts such as Lighter's
+SpaceX pre-IPO perpetual (8 May to 19 June 2026):
+
+```python
+sm.instrument_metadata("lighter-perps", "173")
+# {'symbol': 'SPACEX', 'underlying': 'pre_market',
+#  'first_capture': '2026-05-08T00:00:00.000Z', 'end_date': '2026-06-19T00:00:00.000Z', ...}
+
+# Every Aster market that traded at any point in September 2026
+sm.symbol_ids("aster-perps", datetime(2026, 9, 1), datetime(2026, 9, 30))
+```
+
+## The data model
+
+Every instrument row in `atlas/data/<venue>.json` carries:
+
+| Field | Example (Lighter market `112`) | |
+| --- | --- | --- |
+| `id` | `112` | the venue's native ID |
+| `internal_id` | `perpetual-TSLA-USDC:USDC` | `<type>-<symbol>-<denominator>[:<margin>][-<yyyymmdd>]` in the venue's tickers |
+| `underlying` | `equity` | `equity`, `commodity`, `forex`, `index`, `pre_market`, `crypto` or `unknown`, as the venue declares it |
+| `base_asset_id` | `TSLA` | the Atlas asset the contract tracks |
+| `quote_asset_id`, `margin_asset_id` | `USDC`, `USDC` | the quote and settlement assets |
+| `unified_id` | `perpetual-TSLA-USDC:USDC` | `internal_id` written in Atlas asset IDs: the same contract reads the same on every venue |
+| `base_multiplier` | (`1000` for `kBONK`) | units of the asset per unit of the ticker |
+| `contract_size`, `delivery_date` | `1.0` | contract specs |
+| `first_capture`, `end_date` | `2026-04-17T…`, — | the listing window; `end_date` only once delisted |
+
+`internal_id` types are `spot`, `perpetual` and `future`. Spot has no margin;
+dated futures add the delivery date (`future-BTC-USDT:USDT-20260327`).
+
+The asset registry, [`atlas/data/symbology/assets.json`](atlas/data/symbology/assets.json),
+holds 2,700+ assets. Each has a stable ID (`TSLA`, `XAU`, `EURUSD`, `BTC`), a
+name, a class (`equity`, `commodity`, `index`, `forex`, `crypto`, `fiat`), its
+CoinMarketCap ID where CMC tracks it, and Atlas categories. IDs never change
+once minted; a ticker two assets share gets a qualified ID
+(`TSLA.TESLA_TOKENIZED_STOCK_HYPERLIQUID` is Hyperliquid's Tesla token, not the
+stock). See [`docs/symbology.md`](docs/symbology.md).
+
+## Coverage
+
+**DeFi / RWA venues:** Hyperliquid (perps incl. HIP-3 dexes, spot), Avantis,
+Lighter, GRVT, Aster, Variational, Extended, ApeX Omni, Pacifica.
+
+**Centralised venues:** Binance (spot, USDⓈ-M, COIN-M), Bybit, OKX, Bitget,
+Gate, HTX, MEXC, Deribit, WhiteBIT, Crypto.com, Kraken, Bitfinex, Bitstamp,
+Gemini, KuCoin, Phemex, Poloniex, Upbit, Coinbase.
+
+The venue slugs match [live-producers](https://github.com/aperiodic-io/live-producers),
+so a streamed record joins its Atlas row by `(exchange, original_id)`.
+[`docs/venues.md`](docs/venues.md) lists every snapshot, each venue's ID
+scheme, and where its listing dates and asset classes come from.
+
+## How it stays current
+
+Every day at 02:00 UTC a GitHub Action:
+
+1. **Fetches** each venue's whole instrument list from its own API.
+2. **Merges** it: new listings get Atlas IDs, delistings an `end_date`, and a
+   venue whose response looks broken is left untouched.
+3. **Resolves symbology**: every row's base, quote and margin asset, from
+   CoinMarketCap's exchange listings, the venue's declared asset class,
+   cross-venue consensus and curated overrides
+   ([`overrides.json`](atlas/data/symbology/overrides.json)).
+4. **Commits** the snapshots, and republishes the
+   [catalogue](https://aperiodic-io.github.io/atlas/) and its raw JSON.
 
 ```bash
-# Every exchange, from its own API (what the daily workflow runs)
-python3 -m atlas.update
-
-# Restrict to selected exchanges
-python3 -m atlas.update --exchanges binance-spot,okx-spot
+python -m atlas.update                         # refresh every venue
+python -m atlas.update --exchanges lighter-perps,avantis-perps
+python -m integrations.symbology --report-path report.md
+python site/build.py --data atlas/data --out _site   # build the catalogue site
 ```
 
-#### Listing and delisting dates
+## Documentation
 
-Each fetch is treated as the exchange's whole current
-universe, so `first_capture` and `end_date` come from the exchanges:
+- [`docs/symbology.md`](docs/symbology.md): asset IDs, `unified_id`, and how each
+  asset is identified.
+- [`docs/venues.md`](docs/venues.md): venues, listing and delisting dates,
+  asset-class sources, CoinMarketCap IDs, limitations.
+- [`docs/cmc-id-mapping.md`](docs/cmc-id-mapping.md): the CoinMarketCap ID ledger
+  for new crypto listings.
+- [`docs/web-domain-map.md`](docs/web-domain-map.md): each asset's verified website
+  and Wikipedia article.
 
-- `first_capture` is the exchange listing time where one is published
-  (Binance futures and Aster `onboardDate`, Bybit derivatives and Bitget
-  `launchTime`, OKX `listTime`, Gate `launch_time`, HTX `create_date`, MEXC
-  `openingTime`/`createTime`, Deribit `creation_timestamp`, Extended `createdAt`,
-  Lighter `created_at`, GRVT `create_time`, Pacifica `created_at`, Bitfinex
-  `pub:info:pair` creation time, HTX spot `toa` and contracts `create_date`,
-  Kraken Futures `openingDate`, KuCoin `tradingStartTime`, Phemex `listTime`,
-  Poloniex `tradableStartTime` except on markets migrated from its v1 API, which
-  all report the 2022-07-28 migration), otherwise the
-  time a run first saw the instrument. A value already on file is never
-  overwritten.
-- `end_date` is set from an explicit exchange signal when there is one: Binance
-  futures `SETTLING`/`CLOSE`/`DELIVERED` (at `deliveryDate`, or the run time if
-  that has not passed yet), Bybit derivatives `Closed` (at `deliveryTime`), and
-  Hyperliquid `isDelisted` (at first sighting, as Hyperliquid publishes no time).
-  Hyperliquid also keeps no candle or funding history for delisted HIP-3 perps,
-  so HIP-3 perps already delisted when this tracking started end on the first
-  run that saw the flag. Of the live-producers venues, Aster
-  `SETTLING`/`CLOSE`/`DELIVERED` (as Binance), Bitget `offline` (at `offTime`)
-  and HTX delisted/delivered or past its `delivery_time` (the scheduled
-  delisting) are dated; Extended `DELISTED`, GRVT `DELISTED`, Lighter
-  `inactive`, Avantis `isPairListed: false`, MEXC delivered/offline and Gate
-  `delisted` end at first sighting. Of the other centralised venues, Phemex
-  `Delisted` (at the delisted milestone of its `timeline`), Kraken Futures
-  `isExpired` (at `lastTradingTime`) and HTX coin-margined and USDT-margined
-  contracts (as HTX USDT perps) are dated; Kraken spot `delisted`, Gemini
-  `closed`, HTX spot `offline` and Poloniex `OFFLINE` end at first sighting.
-- An instrument that simply disappears (Binance spot and COIN-M, Bybit spot,
-  OKX, Hyperliquid spot, and every venue without a delisted status: ApeX,
-  Pacifica, Variational, Deribit, WhiteBIT, Crypto.com, Bitfinex, Bitstamp,
-  KuCoin, Upbit) is marked
-  `missing_since` on the first run that misses
-  it. If a run at least 12 hours later still misses it, `end_date` is set to that
-  first miss; if it comes back first, the mark is dropped. Expired dated futures
-  end at delivery straight away.
-- Halted, suspended and pre-market instruments (Binance spot `HALT`, Binance
-  futures pending/delivering statuses, OKX `suspend`, Bybit
-  `PreLaunch`/`Delivering`, Bitget `limit_open`/`limit_close`/`restrictedAPI`,
-  HTX suspended and settling, MEXC paused and delivering, Gate `delisting` and
-  `circuit_breaker`, Extended `PRELISTED`/`REDUCE_ONLY`, ApeX contracts that
-  still trade or show, Kraken spot `cancel_only`/`post_only`/`limit_only`/
-  `reduce_only`/`maintenance`, Kraken Futures `suspended`/`postOnly`, Bitstamp
-  `trading: Disabled`, Gemini `cancel_only`/`post_only`/`limit_only`, HTX spot
-  `suspend`/`fuse`, KuCoin `enableTrading: false` and `st`, Upbit
-  warning/caution, Poloniex `PAUSE`/`POST_ONLY`) stay listed. Instruments that
-  have not started trading are not added: Kraken spot `work_in_progress`, Kraken
-  Futures before `openingDate`, HTX spot `pre-online`, KuCoin before
-  `tradingStartTime` or in its opening call auction, Phemex before `listTime`,
-  Poloniex before `tradableStartTime`, Bitget `listed`, HTX pending listing.
-  An instrument already on file that the venue lists as not trading yet (a
-  relaunch under the same id) stays exactly as it is, neither closed nor
-  reopened, until it trades.
-- A run that returns nothing for an exchange fails it and leaves its file
-  untouched. A run that would newly drop more than 10% of an exchange's open
-  instruments (and more than 5) looks like a broken API response: it still
-  updates the instruments it returned, but marks nothing missing and fails the
-  exchange. If the instruments really were delisted, rerun with
-  `--accept-missing <exchange>` (or the `accept_missing` input when dispatching
-  the daily workflow by hand).
-- `SecurityMaster` ignores `missing_since`, so a row stays tradable until its
-  `end_date` is set.
-- An existing `end_date` is never overwritten, a relisted instrument has its
-  `end_date` cleared, and delisted instruments that were never on file are not
-  added.
+## Project layout
 
-## Supported Exchanges
-
-Every exchange below is read from its own API and refreshed by the daily update.
-BitMEX (closed 2026-09-23) and FTX are no longer supported.
-
-| Exchange ID | Instruments |
-| --- | --- |
-| `apex-perps` | perpetual |
-| `aster-perps` | perpetual |
-| `avantis-perps` | perpetual |
-| `binance-futures` | perpetual, future |
-| `binance-futures-cm` | perpetual, future |
-| `binance-spot` | spot |
-| `bitfinex-perps` | perpetual |
-| `bitfinex-spot` | spot |
-| `bitget-futures-coin` | future |
-| `bitget-perps-coin` | perpetual |
-| `bitget-perps-usdc` | perpetual |
-| `bitget-perps-usdt` | perpetual |
-| `bitget-spot` | spot |
-| `bitstamp-perps` | perpetual |
-| `bitstamp-spot` | spot |
-| `bybit-futures` | future |
-| `bybit-perps-coin` | perpetual |
-| `bybit-perps-usd` | perpetual |
-| `bybit-spot` | spot |
-| `coinbase-spot` | spot |
-| `cryptocom-futures` | future |
-| `cryptocom-perps` | perpetual |
-| `cryptocom-spot` | spot |
-| `deribit-futures` | future |
-| `deribit-perps` | perpetual |
-| `extended-perps` | perpetual |
-| `gateio-futures-usdt` | future |
-| `gateio-perps-btc` | perpetual |
-| `gateio-perps-usdt` | perpetual |
-| `gateio-spot` | spot |
-| `gemini-perps` | perpetual |
-| `gemini-spot` | spot |
-| `grvt-perps` | perpetual |
-| `htx-futures-coin` | future |
-| `htx-futures-usdt` | future |
-| `htx-perps-coin` | perpetual |
-| `htx-perps-usdt` | perpetual |
-| `htx-spot` | spot |
-| `hyperliquid-perps` | perpetual |
-| `hyperliquid-spot` | spot |
-| `kraken-futures` | future |
-| `kraken-perps` | perpetual |
-| `kraken-spot` | spot |
-| `kucoin-spot` | spot |
-| `lighter-perps` | perpetual |
-| `mexc-perps` | perpetual |
-| `okx-futures` | future |
-| `okx-perps` | perpetual |
-| `okx-spot` | spot |
-| `pacifica-perps` | perpetual |
-| `phemex-perps` | perpetual |
-| `phemex-spot` | spot |
-| `poloniex-spot` | spot |
-| `upbit-spot` | spot |
-| `variational-perps` | perpetual |
-| `whitebit-perps` | perpetual |
-
-### live-producers venues
-
-The venues the live producers stream are registered under the producer's own
-exchange id (`gateio-perps-usdt`, `htx-perps-usdt`, ...), so a
-published record joins its Atlas row by `(exchange, internal_id)` without a
-mapping table. Bitget, Gate and Coinbase spot take the same scheme
-(`bitget-spot`, `gateio-spot`, `coinbase-spot`, as `okx-spot`) though the
-producers do not stream them yet. Bybit's perpetuals are the producer's
-`bybit-perps-usd` (linear: USDT- and USDC-settled) and `bybit-perps-coin`
-(inverse). They replace `bybit-perps`, which held both: read the two venues
-instead.
-
-### Other centralised venues
-
-The other centralised venues take the same scheme: Kraken (`kraken-spot`;
-Kraken Futures as `kraken-perps` and `kraken-futures`), Bitfinex
-(`bitfinex-spot`, `bitfinex-perps`), Bitstamp (`bitstamp-spot`,
-`bitstamp-perps`), Gemini (`gemini-spot`, `gemini-perps`), HTX (`htx-spot`,
-`htx-perps-coin`, `htx-futures-coin`, `htx-futures-usdt`), KuCoin
-(`kucoin-spot`), Phemex (`phemex-spot`, `phemex-perps`), Poloniex
-(`poloniex-spot`), Upbit (`upbit-spot`) and Crypto.com spot (`cryptocom-spot`).
-
-- Kraken spot ids are Kraken's WebSocket v2 names (`BTC/USD`, `AAPLx/USD`,
-  `AAPLSPV/USD`); history before 2026-07-10 holds v1 names (`XBT/USD`), which
-  resolve to the same `internal_id`.
-- `htx-futures-coin` ids are HTX's dated contract codes (`BTC261225`), not its
-  rolling aliases (`BTC_CQ`).
-- Poloniex history holds v1 `QUOTE_BASE` ids (ended 2022-08-02) next to current
-  `BASE_QUOTE` ids; the parser tells them apart by that cut-over.
-- Gemini publishes no bulk details endpoint, so its fetcher reads each symbol's
-  details within Gemini's public rate limit (about three and a half minutes
-  a run).
-
-New rows take the venue's listing time as `first_capture` where it publishes
-one, otherwise their first observation (see [Listing and delisting
-dates](#listing-and-delisting-dates)).
-
-### Underlying classification
-
-Every exchange fetcher sets `underlying` from the venue's own metadata:
-Binance `underlyingType`, Bybit `symbolType`, OKX `instCategory`, Hyperliquid
-`perpCategories` (main-dex perps are crypto; HIP-3 assets the venue does not
-categorise, mostly delisted, come from a curated table in
-`exchange_definitions/hyperliquid.py`), Gate `contract_type` and
-`is_pre_market`, HTX `tradfi_labels`, MEXC trade zones (`conceptPlate`),
-Bitget `symbolType`/`isRwa`, Deribit `underlying_type`, WhiteBIT TradFi
-membership of `/markets`, Crypto.com `product_type`, Kraken spot
-`aclass_base` (xStocks are equity, fiat-base pairs forex) and Kraken Futures
-`category`, HTX spot base-currency `tags` and USDT contracts `tradfi_labels`,
-Bitfinex `pub:list:pair:securities` (tokenized securities are `unknown`),
-Bitstamp perpetual `asset_class` and spot `/currencies/` `type`, KuCoin's
-`market` zone and xStock currency names, Phemex
-`perpProductSubType`/`perpProductSubGroup`. Venues that publish no
-classification and list only crypto (Upbit, Poloniex, HTX coin-margined
-contracts) are `crypto`; Gemini spot is `crypto` except fiat-base pairs
-(`forex`), and Bitfinex perpetuals are classed by the venue's naming
-(`…IX` indices, volatility indices, metals and oil, fiat bases). HTX tags its ETFs
-(SPY, QQQ, leveraged funds) `indices` alongside real indices, with nothing in
-its metadata to tell them apart, so on HTX (spot and USDT perps alike) they
-are `index`; Phemex, whose currency names identify its ETFs, has them as
-`equity`. Conventions across
-venues: ETFs are `equity`; pre-IPO companies are `pre_market`; crypto and
-cash indices, and treasury yields, are `index`; a venue value Atlas does not
-know is `unknown`, never `crypto`. Venues disagree on tokenized gold
-(PAXG, XAUT): Binance and Bybit call it crypto, MEXC and Bitget commodity;
-Atlas follows each venue. History rows delisted before a fetcher saw them
-carry no `underlying`.
-
-Avantis (Veranta) is an oracle-priced RWA perp venue: each row's `underlying`
-comes from the venue's category metadata (the price-feed asset type, falling
-back to the pair group). Its `original_id` is what the venue addresses a market
-by (the pair index), and a non-USD quote is kept in the symbol (`USDJPY`,
-`005930KRW`). Avantis settles in USDC. See the module docstring in
-`atlas/exchange_definitions/avantis.py`.
-
-### Bundled Snapshot Coverage
-
-The repository currently ships precomputed JSON snapshots for:
-
-- `apex-perps`
-- `aster-perps`
-- `binance-spot`
-- `binance-futures`
-- `binance-futures-cm`
-- `bybit-spot`
-- `bybit-perps-usd`
-- `bybit-perps-coin`
-- `bybit-futures`
-- `grvt-perps` (venue API only; `first_capture` is the venue listing time)
-- `hyperliquid-spot`
-- `hyperliquid-perps`
-- `lighter-perps`
-- `okx-spot`
-- `okx-perps`
-- `okx-futures`
-- `pacifica-perps` (DeFi perpetual venue, with the settlement token as denominator and margin, the
-  venue's listing time as `first_capture`, and `underlying` from the venue's
-  market categories)
-- `gateio-spot`
-- `gateio-perps-usdt`
-- `gateio-futures-usdt`
-- `gateio-perps-btc`
-- `htx-perps-usdt`
-- `mexc-perps`
-- `bitget-spot`
-- `coinbase-spot`
-- `bitget-perps-usdt`
-- `bitget-perps-usdc`
-- `bitget-perps-coin`
-- `bitget-futures-coin`
-- `deribit-perps`
-- `deribit-futures`
-- `whitebit-perps`
-- `cryptocom-perps`
-- `cryptocom-futures`
-- `extended-perps`
-- `avantis-perps`
-- `bitfinex-spot`
-- `bitfinex-perps`
-- `bitstamp-spot`
-- `bitstamp-perps`
-- `cryptocom-spot`
-- `gemini-spot`
-- `gemini-perps`
-- `htx-spot`
-- `htx-perps-coin`
-- `htx-futures-coin`
-- `htx-futures-usdt`
-- `kraken-spot`
-- `kraken-perps`
-- `kraken-futures`
-- `kucoin-spot`
-- `phemex-spot`
-- `phemex-perps`
-- `poloniex-spot`
-- `upbit-spot`
-
-## Features
-
-- Unified parser layer with exchange-specific symbol rules.
-- Every exchange read from its own API; a new row's `first_capture` is the venue's listing time, or Atlas's first observation where the venue publishes none.
-- Metadata merge logic that preserves previously-known fields when the current source omits them.
-- Date-window filtering over locally stored symbol availability intervals.
-- CoinMarketCap ID enrichment for newly listed Binance assets, with confident matches written to snapshots and ambiguous ones raised for review.
-- Unified symbology: Atlas-minted asset IDs for every instrument's base, quote and margin assets, plus a venue-independent `unified_id`, across the top 7 exchanges.
-- Atlas asset categories (promoted from CoinMarketCap's allow-listed tags, including Memes) on every asset.
-
-## CoinMarketCap IDs
-
-Snapshot rows carry a `cmc_id` identifying the underlying asset, plus its
-Atlas `category` list. Many exchange instruments may share one `cmc_id` — it names an
-asset, not a contract — and `atlas/update.py` treats the field as locally owned,
-so a snapshot refresh never overwrites it. The symbology build
-(`python -m integrations.symbology`, run daily) keeps `cmc_id` and `category` in
-step with each row's `base_asset_id`, and resolves every listing CoinMarketCap
-tracks on the seven supported venues from CMC's own exchange market pairs.
-
-New `binance-futures` listings are resolved automatically by the
-`cmc-new-symbol-mapping` workflow, which runs daily after the snapshot update:
-
-```bash
-# Resolve symbols first listed in the last 60 days
-python integrations/cmc_new_symbol_mapping.py --new-within-days 60
-
-# Offline staleness check: coverage only, no network, no writes
-python integrations/cmc_new_symbol_mapping.py --coverage-only --new-within-days 60
-
-# Check the LLM endpoint is usable, in seconds
-python integrations/cmc_new_symbol_mapping.py --check-llm
-
-# Deterministic evidence only, no LLM adjudication
-python integrations/cmc_new_symbol_mapping.py --no-llm
-
-# Resolve only these tickers, ignoring age and any prior decision
-python integrations/cmc_new_symbol_mapping.py --symbols PEPE,CHEEMS
-```
-
-The workflow exposes these as one `mode` input (`resolve`, `preview`,
-`coverage`, `check-llm`) and one `days` window.
-
-Only crypto assets are in scope: rows whose `underlying` is `equity`, `index`,
-`commodity`, `forex` or `pre_market` are skipped, since a tokenized equity's CMC ID would
-name the wrapper rather than the asset. Rows with no `underlying` (legacy crypto)
-and `unknown` are still resolved.
-
-A ticker and an agreeing price never approve a mapping on their own. Approval
-needs identity evidence — an exact match between the Binance asset name and the
-CMC project name or slug — or an existing mapping on a same-ticker instrument
-that was listed at the same time. An LLM disambiguates between candidates that
-already carry name evidence, choosing *among the fetched candidates only*.
-Confident matches are written to the snapshots; everything else is reported for
-review. Every decision — candidates, price
-evidence and rationale — is recorded per instrument instance in
-`atlas/data/cmc_mappings.json`, and each run opens its own pull request covering
-both the confident and the uncertain matches. See
-[`docs/cmc-id-mapping.md`](docs/cmc-id-mapping.md) for the decision ladder,
-configuration and review process.
-
-## Limitations
-
-- No options mapping in the securities master map:
-  - `update.py` ingests only `spot`, `perpetual`, and `future` from source metadata.
-  - Option contracts are not fetched or mapped.
-- Instruments without a derived `internal_id` (for example options, combos, or unrecognized formats) are intentionally absent from `SecurityMaster` lookups.
-- History starts at what the bundled snapshots hold: a venue added later starts from the instruments its API lists at that time.
-
-## Project Layout
-
-- `atlas/contracts.py`: normalized `Contract` model.
-- `atlas/exchanges.py`: exchange registry (parser + API fetcher).
-- `atlas/parsers.py`: parse entrypoint (`parse_contract`).
-- `atlas/database.py`: load/query local securities master snapshots.
-- `atlas/update.py`: snapshot updater CLI.
-- `atlas/data/*.json`: generated per-exchange snapshot files.
-- `integrations/cmc_new_symbol_mapping.py`: CMC ID resolution for new Binance symbols.
-- `integrations/cmc_mappings.py`: versioned per-instrument CMC decision store.
-- `atlas/assets.py`: the asset registry and asset-ID minting.
-- `atlas/categories.py`: the Atlas asset category taxonomy.
-- `atlas/data/symbology/assets.json`: the asset registry; `overrides.json` holds curated decisions and ticker eras.
-- `integrations/cmc_market_pairs.py`: CoinMarketCap exchange market pairs and their match to Atlas rows.
-- `integrations/cmc_asset_details.py`: per-asset CoinMarketCap metadata (names, tickers, categories).
-- `integrations/symbology.py`: the unified symbology build.
-- `atlas/data/web/domain_map.json`: each asset's verified website domain and Wikipedia article (`atlas.web.load_domain_map()`), built by `integrations/web` and refreshed daily; see [`docs/web-domain-map.md`](docs/web-domain-map.md).
-
-## Testing
+- `atlas/`: the library: `SecurityMaster` (`database.py`), the asset registry
+  (`assets.py`), one fetcher and parser per venue (`exchange_definitions/`), and
+  the updater (`update.py`).
+- `atlas/data/`: the snapshots, the asset registry and the curated overrides.
+- `integrations/`: symbology (`symbology.py`, `cmc_market_pairs.py`), CMC ID
+  mapping, the web domain map.
+- `site/`: the GitHub Pages catalogue, built from the snapshots.
 
 ```bash
 pytest tests/
