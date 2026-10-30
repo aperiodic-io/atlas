@@ -14228,6 +14228,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "PENGU_USDT",
+    "type": "spot",
+    "base_coin": "PENGU",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:30:00.000Z",
+    "internal_id": "spot-PENGU-USDT",
+    "symbol": "PENGU",
+    "denominator": "USDT"
+  },
+  {
     "id": "PENG_USDT",
     "type": "spot",
     "base_coin": "PENG",
@@ -15011,6 +15022,17 @@
     "end_date": "2023-06-22T00:00:00.000Z",
     "internal_id": "spot-PRINTS-USDT",
     "symbol": "PRINTS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PRIORS_USDT",
+    "type": "spot",
+    "base_coin": "PRIORS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-10-30T07:00:00.000Z",
+    "internal_id": "spot-PRIORS-USDT",
+    "symbol": "PRIORS",
     "denominator": "USDT"
   },
   {

@@ -6406,6 +6406,23 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "CETUS-EUR",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T09:00:00.000Z",
+    "internal_id": "spot-CETUS-EUR",
+    "symbol": "CETUS",
+    "denominator": "EUR",
+    "cmc_id": 25114,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "CETUS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "EUR",
+    "unified_id": "spot-CETUS-EUR"
+  },
+  {
     "id": "CETUS-USD",
     "type": "spot",
     "internal_id": "spot-CETUS-USD",
@@ -29852,7 +29869,7 @@
     "cmc_id": 3408,
     "category": [],
     "base_asset_id": "USDC",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "AED",
     "unified_id": "spot-USDC-AED"
   },
@@ -30486,6 +30503,7 @@
       "DeFi"
     ],
     "cmc_id": 20435,
+    "missing_since": "2026-10-30T07:59:33.281Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "EUR",
@@ -30520,6 +30538,7 @@
       "DeFi"
     ],
     "cmc_id": 20435,
+    "missing_since": "2026-10-30T07:59:33.281Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",

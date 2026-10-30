@@ -102,6 +102,7 @@
     "category": [
       "Layer 1"
     ],
+    "missing_since": "2026-10-30T07:59:47.843Z",
     "base_asset_id": "NEX",
     "base_asset_match": "cmc_market_pair",
     "base_multiplier": 10000,
@@ -8030,6 +8031,30 @@
     "unified_id": "perpetual-EWY-USDT:USDT"
   },
   {
+    "id": "EWZSUSDT",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-29T10:18:49.936Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EWZS-USDT:USDT"
+  },
+  {
     "id": "EWZUSDT",
     "type": "perpetual",
     "base_coin": "EWZ",
@@ -8691,6 +8716,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-FTM-USDT:USDT"
+  },
+  {
+    "id": "FTNTUSDT",
+    "type": "perpetual",
+    "base_coin": "FTNT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-29T10:18:46.810Z",
+    "internal_id": "perpetual-FTNT-USDT:USDT",
+    "symbol": "FTNT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "FTNUSDT",
@@ -13450,11 +13492,16 @@
     "symbol": "MELI",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "MELI",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42700,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELI.MERCADOLIBRE_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MELI-USDT:USDT"
+    "unified_id": "perpetual-MELI.MERCADOLIBRE_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "MEMEFIUSDT",
@@ -16030,11 +16077,16 @@
     "symbol": "OXY",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "OXY.EQUITY",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42696,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-OXY.EQUITY-USDT:USDT"
+    "unified_id": "perpetual-OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "PANWUSDT",
@@ -16377,6 +16429,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PEPON-USDT:USDT"
+  },
+  {
+    "id": "PFEUSDT",
+    "type": "perpetual",
+    "base_coin": "PFE",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-10-29T10:18:44.705Z",
+    "internal_id": "perpetual-PFE-USDT:USDT",
+    "symbol": "PFE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "PFVSUSDT",
@@ -19457,11 +19534,16 @@
     "symbol": "SMR",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "SMR",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42698,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SMR-USDT:USDT"
+    "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "SNDKUSDT",

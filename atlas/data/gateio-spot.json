@@ -30238,6 +30238,17 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "GTSOL_USDT",
+    "type": "spot",
+    "base_coin": "GTSOL",
+    "quote_coin": "USDT",
+    "first_capture": "2026-10-30T10:00:00.000Z",
+    "internal_id": "spot-GTSOL-USDT",
+    "symbol": "GTSOL",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "GT_BTC",
     "type": "spot",
     "base_coin": "GT",

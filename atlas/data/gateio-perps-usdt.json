@@ -4243,6 +4243,26 @@
     "unified_id": "perpetual-BICO-USDT:USDT"
   },
   {
+    "id": "BIDU_USDT",
+    "type": "perpetual",
+    "base_coin": "BIDU",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-BIDU-USDT:USDT",
+    "symbol": "BIDU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "BIDU",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BIDU-USDT:USDT"
+  },
+  {
     "id": "BID_USDT",
     "type": "perpetual",
     "first_capture": "2025-03-20T00:00:00.000Z",
@@ -10290,6 +10310,30 @@
     "unified_id": "perpetual-EWY-USDT:USDT"
   },
   {
+    "id": "EWZS_USDT",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EWZS-USDT:USDT"
+  },
+  {
     "id": "EWZ_USDT",
     "type": "perpetual",
     "base_coin": "EWZ",
@@ -11385,6 +11429,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-FTM-USDT:USDT"
+  },
+  {
+    "id": "FTNT_USDT",
+    "type": "perpetual",
+    "base_coin": "FTNT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-FTNT-USDT:USDT",
+    "symbol": "FTNT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "FTNT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FTNT-USDT:USDT"
   },
   {
     "id": "FTN_USDT",
@@ -14862,6 +14926,26 @@
     "unified_id": "perpetual-ISRG-USDT:USDT"
   },
   {
+    "id": "ITUB_USDT",
+    "type": "perpetual",
+    "base_coin": "ITUB",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-ITUB-USDT:USDT",
+    "symbol": "ITUB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ITUB",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ITUB-USDT:USDT"
+  },
+  {
     "id": "IVV_USDT",
     "type": "perpetual",
     "base_coin": "IVV",
@@ -17897,11 +17981,16 @@
     "symbol": "MELI",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "MELI",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42700,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELI.MERCADOLIBRE_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MELI-USDT:USDT"
+    "unified_id": "perpetual-MELI.MERCADOLIBRE_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "MELON_USDT",
@@ -22213,11 +22302,16 @@
     "symbol": "PFE",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "PFE",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-PFE-USDT:USDT"
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "PFVS_USDT",
@@ -26264,6 +26358,31 @@
     "margin": "USDT",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "SMR_USDT",
+    "type": "perpetual",
+    "base_coin": "SMR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-SMR-USDT:USDT",
+    "symbol": "SMR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42698,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "SNAP_USDT",
@@ -30572,7 +30691,7 @@
     "category": [
       "DeFi"
     ],
-    "missing_since": "2026-10-29T07:56:58.783Z",
+    "end_date": "2026-10-29T07:56:58.783Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

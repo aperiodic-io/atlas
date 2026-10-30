@@ -1784,6 +1784,30 @@
     "unified_id": "perpetual-AMD-USDT:USDT"
   },
   {
+    "id": "amgnusdt",
+    "type": "perpetual",
+    "base_coin": "AMGN",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:20:00.000Z",
+    "internal_id": "perpetual-AMGN-USDT:USDT",
+    "symbol": "AMGN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42701,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGN.AMGEN_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMGN.AMGEN_INC_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "amznusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -9091,6 +9115,29 @@
     "unified_id": "perpetual-EWY-USDT:USDT"
   },
   {
+    "id": "ewzsusdt",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:05:00.000Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EWZS-USDT:USDT"
+  },
+  {
     "id": "ewzusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -14062,6 +14109,30 @@
     "unified_id": "perpetual-MELANIA-USDT:USDT"
   },
   {
+    "id": "meliusdt",
+    "type": "perpetual",
+    "base_coin": "MELI",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:30:00.000Z",
+    "internal_id": "perpetual-MELI-USDT:USDT",
+    "symbol": "MELI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42700,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELI.MERCADOLIBRE_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MELI.MERCADOLIBRE_INC_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "memefiusdt",
     "type": "perpetual",
     "internal_id": "perpetual-MEMEFI-USDT:USDT",
@@ -16348,6 +16419,30 @@
     "unified_id": "perpetual-OXT-USDT:USDT"
   },
   {
+    "id": "oxyusdt",
+    "type": "perpetual",
+    "base_coin": "OXY",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:15:00.000Z",
+    "internal_id": "perpetual-OXY-USDT:USDT",
+    "symbol": "OXY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42696,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "panwusdt",
     "type": "perpetual",
     "internal_id": "perpetual-PANW-USDT:USDT",
@@ -16634,6 +16729,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PERP-USDT:USDT"
+  },
+  {
+    "id": "pfeusdt",
+    "type": "perpetual",
+    "base_coin": "PFE",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:25:00.000Z",
+    "internal_id": "perpetual-PFE-USDT:USDT",
+    "symbol": "PFE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "pharosusdt",
@@ -19182,6 +19301,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SMH-USDT:USDT"
+  },
+  {
+    "id": "smrusdt",
+    "type": "perpetual",
+    "base_coin": "SMR",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:10:00.000Z",
+    "internal_id": "perpetual-SMR-USDT:USDT",
+    "symbol": "SMR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42698,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "sndkusdt",

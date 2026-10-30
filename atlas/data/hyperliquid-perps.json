@@ -7444,6 +7444,7 @@
     "margin_asset": "USDC",
     "underlying": "index",
     "first_capture": "2026-08-26T00:00:00.000Z",
+    "end_date": "2026-10-30T07:59:31.986Z",
     "base_asset_id": "SMALL2000",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
@@ -7511,6 +7512,7 @@
       "DeFi"
     ],
     "cmc_id": 39732,
+    "end_date": "2026-10-30T07:59:31.986Z",
     "base_asset_id": "SPY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
@@ -7528,6 +7530,7 @@
     "margin_asset": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-26T00:00:00.000Z",
+    "end_date": "2026-10-30T07:59:31.986Z",
     "base_asset_id": "USBOND",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
@@ -7581,6 +7584,7 @@
     "margin_asset": "USDC",
     "underlying": "index",
     "first_capture": "2026-07-01T00:00:00.000Z",
+    "end_date": "2026-10-30T07:59:31.986Z",
     "base_asset_id": "USTECH",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
@@ -8045,11 +8049,16 @@
     "margin_asset": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-24T00:00:00.000Z",
-    "base_asset_id": "MELI",
+    "cmc_id": 42700,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELI.MERCADOLIBRE_INC_DERIVATIVE",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-MELI-USDC:USDC"
+    "unified_id": "perpetual-MELI.MERCADOLIBRE_INC_DERIVATIVE-USDC:USDC"
   },
   {
     "id": "para:NAVER",
@@ -9844,6 +9853,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-IBOV-USDC:USDC"
+  },
+  {
+    "id": "xyz:ICE",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T07:59:27.646Z",
+    "internal_id": "perpetual-XYZ:ICE-USDC:USDC",
+    "symbol": "XYZ:ICE",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42704,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ICE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ICE-USDC:USDC"
   },
   {
     "id": "xyz:INNOLIGHT",

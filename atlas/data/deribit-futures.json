@@ -286,6 +286,22 @@
     "delivery_date": "2026-05-13T00:00:00"
   },
   {
+    "id": "AVAX_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "AVAX",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-AVAX-USDC:USDC-20261113",
+    "symbol": "AVAX",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "AVAX_USDC-13OCT26",
     "type": "future",
     "first_capture": "2026-10-11T00:00:00.000Z",
@@ -1718,7 +1734,8 @@
     "internal_id": "future-AVAX-USDC:USDC-20261029",
     "symbol": "AVAX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "AVAX_USDC-29SEP26",
@@ -1922,6 +1939,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-31T00:00:00"
+  },
+  {
+    "id": "AVAX_USDC-31OCT26",
+    "type": "future",
+    "base_coin": "AVAX",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-10-31T08:00:00+00:00",
+    "internal_id": "future-AVAX-USDC:USDC-20261031",
+    "symbol": "AVAX",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "AVAX_USDC-3APR26",
@@ -4565,6 +4598,22 @@
     "delivery_date": "2026-05-20T00:00:00"
   },
   {
+    "id": "BTC-20NOV26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "BTC",
+    "contract_size": 10.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-20T08:00:00+00:00",
+    "internal_id": "future-BTC-USD:BTC-20261120",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC"
+  },
+  {
     "id": "BTC-20OCT23",
     "type": "future",
     "first_capture": "2023-10-06T00:00:00.000Z",
@@ -6272,6 +6321,22 @@
     "delivery_date": "2023-12-29T00:00:00"
   },
   {
+    "id": "BTC-29JAN27",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "BTC",
+    "contract_size": 10.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2027-01-29T08:00:00+00:00",
+    "internal_id": "future-BTC-USD:BTC-20270129",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC"
+  },
+  {
     "id": "BTC-29JUL22",
     "type": "future",
     "first_capture": "2022-05-27T00:00:00.000Z",
@@ -6362,7 +6427,8 @@
     "internal_id": "future-BTC-USD:BTC-20261029",
     "symbol": "BTC",
     "denominator": "USD",
-    "margin": "BTC"
+    "margin": "BTC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "BTC-29SEP23",
@@ -6517,6 +6583,22 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2026-05-02T00:00:00"
+  },
+  {
+    "id": "BTC-2NOV26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "BTC",
+    "contract_size": 10.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-02T08:00:00+00:00",
+    "internal_id": "future-BTC-USD:BTC-20261102",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC"
   },
   {
     "id": "BTC-2OCT26",
@@ -8833,6 +8915,22 @@
     "delivery_date": "2026-05-13T00:00:00"
   },
   {
+    "id": "BTC_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-BTC-USDC:USDC-20261113",
+    "symbol": "BTC",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "BTC_USDC-13OCT26",
     "type": "future",
     "first_capture": "2026-10-09T00:00:00.000Z",
@@ -10353,7 +10451,8 @@
     "internal_id": "future-BTC-USDC:USDC-20261029",
     "symbol": "BTC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "BTC_USDC-29SEP26",
@@ -10420,6 +10519,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-02T00:00:00"
+  },
+  {
+    "id": "BTC_USDC-2NOV26",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-02T08:00:00+00:00",
+    "internal_id": "future-BTC-USDC:USDC-20261102",
+    "symbol": "BTC",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "BTC_USDC-2OCT26",
@@ -13227,6 +13342,22 @@
     "delivery_date": "2026-05-20T00:00:00"
   },
   {
+    "id": "ETH-20NOV26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "ETH",
+    "contract_size": 1.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-20T08:00:00+00:00",
+    "internal_id": "future-ETH-USD:ETH-20261120",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH"
+  },
+  {
     "id": "ETH-20OCT23",
     "type": "future",
     "first_capture": "2023-10-06T00:00:00.000Z",
@@ -14923,6 +15054,22 @@
     "delivery_date": "2023-12-29T00:00:00"
   },
   {
+    "id": "ETH-29JAN27",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "ETH",
+    "contract_size": 1.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2027-01-29T08:00:00+00:00",
+    "internal_id": "future-ETH-USD:ETH-20270129",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH"
+  },
+  {
     "id": "ETH-29JUL22",
     "type": "future",
     "first_capture": "2022-05-27T00:00:00.000Z",
@@ -15013,7 +15160,8 @@
     "internal_id": "future-ETH-USD:ETH-20261029",
     "symbol": "ETH",
     "denominator": "USD",
-    "margin": "ETH"
+    "margin": "ETH",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "ETH-29SEP23",
@@ -15168,6 +15316,22 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2026-05-02T00:00:00"
+  },
+  {
+    "id": "ETH-2NOV26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "ETH",
+    "contract_size": 1.0,
+    "quantity_unit": "quote",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:10.000Z",
+    "delivery_date": "2026-11-02T08:00:00+00:00",
+    "internal_id": "future-ETH-USD:ETH-20261102",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH"
   },
   {
     "id": "ETH-2OCT26",
@@ -16978,6 +17142,22 @@
     "delivery_date": "2026-05-13T00:00:00"
   },
   {
+    "id": "ETH_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-ETH-USDC:USDC-20261113",
+    "symbol": "ETH",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "ETH_USDC-13OCT26",
     "type": "future",
     "first_capture": "2026-10-09T00:00:00.000Z",
@@ -18498,7 +18678,8 @@
     "internal_id": "future-ETH-USDC:USDC-20261029",
     "symbol": "ETH",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "ETH_USDC-29SEP26",
@@ -18565,6 +18746,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-02T00:00:00"
+  },
+  {
+    "id": "ETH_USDC-2NOV26",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-11-02T08:00:00+00:00",
+    "internal_id": "future-ETH-USDC:USDC-20261102",
+    "symbol": "ETH",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "ETH_USDC-2OCT26",
@@ -19449,6 +19646,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-07-13T00:00:00"
+  },
+  {
+    "id": "HYPE_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-HYPE-USDC:USDC-20261113",
+    "symbol": "HYPE",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "HYPE_USDC-13OCT26",
@@ -20388,7 +20601,8 @@
     "internal_id": "future-HYPE-USDC:USDC-20261029",
     "symbol": "HYPE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "HYPE_USDC-29SEP26",
@@ -20526,6 +20740,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-07-31T00:00:00"
+  },
+  {
+    "id": "HYPE_USDC-31OCT26",
+    "type": "future",
+    "base_coin": "HYPE",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-10-31T08:00:00+00:00",
+    "internal_id": "future-HYPE-USDC:USDC-20261031",
+    "symbol": "HYPE",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "HYPE_USDC-3AUG26",
@@ -21598,6 +21828,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-13T00:00:00"
+  },
+  {
+    "id": "SOL_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "SOL",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-SOL-USDC:USDC-20261113",
+    "symbol": "SOL",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "SOL_USDC-13OCT26",
@@ -23032,7 +23278,8 @@
     "internal_id": "future-SOL-USDC:USDC-20261029",
     "symbol": "SOL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "SOL_USDC-29SEP26",
@@ -23236,6 +23483,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-31T00:00:00"
+  },
+  {
+    "id": "SOL_USDC-31OCT26",
+    "type": "future",
+    "base_coin": "SOL",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-10-31T08:00:00+00:00",
+    "internal_id": "future-SOL-USDC:USDC-20261031",
+    "symbol": "SOL",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "SOL_USDC-3APR26",
@@ -24077,6 +24340,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-13T00:00:00"
+  },
+  {
+    "id": "TRX_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "TRX",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 2.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:12.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-TRX-USDC:USDC-20261113",
+    "symbol": "TRX",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "TRX_USDC-13OCT26",
@@ -25511,7 +25790,8 @@
     "internal_id": "future-TRX-USDC:USDC-20261029",
     "symbol": "TRX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "TRX_USDC-29SEP26",
@@ -25715,6 +25995,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-31T00:00:00"
+  },
+  {
+    "id": "TRX_USDC-31OCT26",
+    "type": "future",
+    "base_coin": "TRX",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 2.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:11.000Z",
+    "delivery_date": "2026-10-31T08:00:00+00:00",
+    "internal_id": "future-TRX-USDC:USDC-20261031",
+    "symbol": "TRX",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "TRX_USDC-3APR26",
@@ -26556,6 +26852,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-13T00:00:00"
+  },
+  {
+    "id": "XRP_USDC-13NOV26",
+    "type": "future",
+    "base_coin": "XRP",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:12.000Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-XRP-USDC:USDC-20261113",
+    "symbol": "XRP",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "XRP_USDC-13OCT26",
@@ -27990,7 +28302,8 @@
     "internal_id": "future-XRP-USDC:USDC-20261029",
     "symbol": "XRP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-29T08:00:00.000Z"
   },
   {
     "id": "XRP_USDC-29SEP26",
@@ -28194,6 +28507,22 @@
     "denominator": "USDC",
     "margin": "USDC",
     "delivery_date": "2026-05-31T00:00:00"
+  },
+  {
+    "id": "XRP_USDC-31OCT26",
+    "type": "future",
+    "base_coin": "XRP",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T08:00:12.000Z",
+    "delivery_date": "2026-10-31T08:00:00+00:00",
+    "internal_id": "future-XRP-USDC:USDC-20261031",
+    "symbol": "XRP",
+    "denominator": "USDC",
+    "margin": "USDC"
   },
   {
     "id": "XRP_USDC-3APR26",
