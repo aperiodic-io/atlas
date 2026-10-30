@@ -167,6 +167,18 @@ def test_pages_are_rendered_and_link_the_app(site):
     assert "Sitemap: https://example.test/atlas/sitemap.xml" in (out / "robots.txt").read_text()
 
 
+def test_header_byline_links_to_aperiodic(site):
+    # "by Aperiodic" sends visitors to aperiodic.io; it must be its own link, not
+    # nested inside the Atlas home link (nested anchors are invalid HTML).
+    out, _stats = site
+    byline = f'<a class="brand-by" href="{build.esc(build.APERIODIC_URL)}">by Aperiodic</a>'
+    for page in (out / "index.html", out / "venues" / "lighter-perps.html"):
+        html = page.read_text()
+        assert byline in html, page.name
+        home = html[html.index('aria-label="Atlas home"') :]
+        assert home.index("</a>") < home.index("by Aperiodic"), page.name
+
+
 def test_raw_snapshots_published_at_data_and_legacy_root(site, data_dir):
     out, _ = site
     for relative in ("lighter-perps.json", "cmc_mappings.json", "symbology/assets.json"):
