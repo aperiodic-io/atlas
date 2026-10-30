@@ -8,6 +8,7 @@ from typing import Any
 import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
+
 # Some venues (Kraken Futures behind Cloudflare) answer the CI runner with 503
 # for several seconds at a time, so back off for ~30s in total before giving up.
 @retry(
