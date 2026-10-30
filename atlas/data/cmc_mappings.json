@@ -20648,6 +20648,54 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 5 unreadable of 8127 rows (5 duplicated, total moved by 1 mid-fetch): 0.0615%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1117",
+          "observed_at": "2026-10-19T09:10:27.144623Z",
+          "price": 9.5,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "BYQYS",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "BYQYS",
+            "index": 1273,
+            "isCanonical": false,
+            "name": "BYQYS",
+            "pair": "@1117",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x09c9c5971dd28c23a28b1e39e794fcce",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-19T07:14:13.761741Z",
+        "original_id": "BYQYS/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-19T09:10:22.787222Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "BYQYS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
