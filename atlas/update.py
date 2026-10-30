@@ -568,6 +568,15 @@ def _exchange_list(value: str) -> list[str]:
     return [e.strip() for e in value.split(",") if e.strip()]
 
 
+def select_exchanges(include: str, exclude: str) -> list[str]:
+    """The exchanges a run refreshes: `include` (default all) minus `exclude`."""
+    excluded = _exchange_list(exclude)
+    unknown = [e for e in excluded if e not in EXCHANGES]
+    if unknown:
+        raise ValueError(f"Cannot exclude unknown exchange(s): {', '.join(unknown)}")
+    return [e for e in _exchange_list(include) or EXCHANGES if e not in excluded]
+
+
 def parse_args(argv: list[str] | None = None):
     import argparse
 
@@ -582,6 +591,12 @@ def parse_args(argv: list[str] | None = None):
         type=str,
         default="",
         help="Comma-separated list of exchanges (default: all)",
+    )
+    parser.add_argument(
+        "--exclude",
+        type=str,
+        default="",
+        help="Comma-separated exchanges to skip (for runners that cannot reach them)",
     )
     parser.add_argument(
         "--accept-missing",
@@ -599,7 +614,7 @@ if __name__ == "__main__":
     load_dotenv()
     args = parse_args()
 
-    exchanges = _exchange_list(args.exchanges) or EXCHANGES
+    exchanges = select_exchanges(args.exchanges, args.exclude)
     failed_exchanges = update(exchanges, accept_missing=args.accept_missing)
     if failed_exchanges:
         sys.exit(1)
