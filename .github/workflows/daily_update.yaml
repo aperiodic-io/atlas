@@ -18,8 +18,58 @@ concurrency:
   group: symbology
   cancel-in-progress: false
 
+# Kraken Futures answers the Ubicloud runner with 503 while Binance and Bybit
+# refuse GitHub-hosted runners (403 / no symbols), so each side runs where it
+# can reach its venues. The Kraken job goes first and pushes; the main job then
+# checks out its snapshots and resolves symbology for every exchange.
+env:
+  KRAKEN_EXCHANGES: kraken-perps,kraken-futures
+
 jobs:
+  update-kraken:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: setup-uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: install-dependencies
+        run: |
+          uv pip install --system -e .
+
+      - name: run-update
+        env:
+          ACCEPT_MISSING: ${{ inputs.accept_missing }}
+        run: |
+          uv run python -m atlas.update \
+            --exchanges "$KRAKEN_EXCHANGES" --accept-missing "$ACCEPT_MISSING"
+
+      - name: commit-updated-jsons
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add atlas/data/*.json
+          if git diff --cached --quiet; then
+            echo "No JSON changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): daily Kraken futures update"
+          git pull --rebase
+          git push
+
   update-security-master:
+    needs: update-kraken
+    # Run even if the Kraken job failed: the other exchanges don't depend on it.
+    if: ${{ !cancelled() }}
     runs-on: ubicloud-standard-2
 
     steps:
@@ -41,7 +91,9 @@ jobs:
       - name: run-update
         env:
           ACCEPT_MISSING: ${{ inputs.accept_missing }}
-        run: uv run python -m atlas.update --accept-missing "$ACCEPT_MISSING"
+        run: |
+          uv run python -m atlas.update \
+            --exclude "$KRAKEN_EXCHANGES" --accept-missing "$ACCEPT_MISSING"
 
       # Resolve Atlas asset IDs (base/quote/margin, unified_id) for new and
       # changed rows from CoinMarketCap's exchange market pairs. It runs even if
@@ -70,8 +122,13 @@ jobs:
           git pull --rebase
           git push
 
+  notify-slack-on-failure:
+    needs: [update-kraken, update-security-master]
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+
+    steps:
       - name: notify-slack-on-failure
-        if: failure()
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

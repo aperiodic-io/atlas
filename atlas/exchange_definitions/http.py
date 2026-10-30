@@ -9,10 +9,12 @@ import requests
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 
+# Some venues (Kraken Futures behind Cloudflare) answer the CI runner with 503
+# for several seconds at a time, so back off for ~30s in total before giving up.
 @retry(
     retry=retry_if_exception_type((requests.RequestException, ValueError)),
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=1, max=4),
+    stop=stop_after_attempt(6),
+    wait=wait_exponential(multiplier=1, min=1, max=16),
     reraise=True,
 )
 def get_json(url: str, timeout_seconds: int, params: dict | None = None) -> Any:

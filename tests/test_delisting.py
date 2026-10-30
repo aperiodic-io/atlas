@@ -60,9 +60,10 @@ def test_daily_workflow_runs_the_update_with_accept_missing() -> None:
     from pathlib import Path
 
     workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text(encoding="utf-8")
-    assert "python -m atlas.update --accept-missing" in workflow
-    assert '--accept-missing "$ACCEPT_MISSING"' in workflow
-    assert "ACCEPT_MISSING: ${{ inputs.accept_missing }}" in workflow
+    # One update per runner (Kraken, then everything else); both take the override.
+    assert workflow.count("python -m atlas.update") == 2
+    assert workflow.count('--accept-missing "$ACCEPT_MISSING"') == 2
+    assert workflow.count("ACCEPT_MISSING: ${{ inputs.accept_missing }}") == 2
 
 
 def test_sources_declare_how_their_rows_relate_to_the_file() -> None:
