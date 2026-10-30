@@ -32,8 +32,16 @@
     "symbol": "10000000AIDOGE",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 24477,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "AIDOGE",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 10000000,
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AIDOGE-USDT:USDT"
   },
   {
     "id": "1000000BOBUSDT",
@@ -464,16 +472,16 @@
     "symbol": "AAPL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38037,
+    "cmc_id": 39491,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "AAPLON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "AAPL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AAPLON-USDT:USDT"
+    "unified_id": "perpetual-AAPL-USDT:USDT"
   },
   {
     "id": "AAPUUSDT",
@@ -560,16 +568,11 @@
     "symbol": "ABNB",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 42637,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ABNB",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ABNB.AIRBNB_TOKENIZED_STOCK_BACKPACK-USDT:USDT"
+    "unified_id": "perpetual-ABNB-USDT:USDT"
   },
   {
     "id": "ACEUSDT",
@@ -1548,16 +1551,16 @@
     "symbol": "AMC",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 42009,
+    "cmc_id": 42322,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "AMC",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMC-USDT:USDT"
+    "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMDUSDT",
@@ -1660,16 +1663,16 @@
     "symbol": "AMZN",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38083,
+    "cmc_id": 39471,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "AMZNON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "AMZN",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMZNON-USDT:USDT"
+    "unified_id": "perpetual-AMZN-USDT:USDT"
   },
   {
     "id": "AMZUUSDT",
@@ -2092,16 +2095,16 @@
     "symbol": "ARM",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38059,
+    "cmc_id": 39994,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "ARMON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ARM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ARMON-USDT:USDT"
+    "unified_id": "perpetual-ARM-USDT:USDT"
   },
   {
     "id": "ARPAUSDT",
@@ -2210,16 +2213,16 @@
     "symbol": "ASML",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38050,
+    "cmc_id": 39677,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "ASMLON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ASML",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ASMLON-USDT:USDT"
+    "unified_id": "perpetual-ASML-USDT:USDT"
   },
   {
     "id": "ASPUSDT",
@@ -2943,16 +2946,16 @@
     "symbol": "BABA",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38076,
+    "cmc_id": 39486,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "BABAON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "BABA",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BABAON-USDT:USDT"
+    "unified_id": "perpetual-BABA-USDT:USDT"
   },
   {
     "id": "BABYUSDT",
@@ -3255,13 +3258,11 @@
     "symbol": "BA",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40742,
-    "category": [],
-    "base_asset_id": "BA",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "BA.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BA-USDT:USDT"
+    "unified_id": "perpetual-BA.EQUITY-USDT:USDT"
   },
   {
     "id": "BBSTOCKUSDT",
@@ -4082,8 +4083,13 @@
     "symbol": "BP",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 39686,
+    "category": [],
+    "base_asset_id": "BP",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BP-USDT:USDT"
   },
   {
     "id": "BRETTUSDT",
@@ -5247,13 +5253,11 @@
     "symbol": "CLSK",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40751,
-    "category": [],
-    "base_asset_id": "CLSK",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "CLSK.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CLSK-USDT:USDT"
+    "unified_id": "perpetual-CLSK.EQUITY-USDT:USDT"
   },
   {
     "id": "CLSUSDT",
@@ -5942,16 +5946,16 @@
     "symbol": "CSCO",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38070,
+    "cmc_id": 39631,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "CSCOON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "CSCO",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CSCOON-USDT:USDT"
+    "unified_id": "perpetual-CSCO-USDT:USDT"
   },
   {
     "id": "CSOPSK2LHKDUSDT",
@@ -6508,13 +6512,16 @@
     "symbol": "DDOG",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40715,
-    "category": [],
-    "base_asset_id": "DDOG",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 41970,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-DDOG-USDT:USDT"
+    "unified_id": "perpetual-DDOG.DATADOG_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "DEEPUSDT",
@@ -8847,16 +8854,16 @@
     "symbol": "FUTU",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38090,
+    "cmc_id": 40046,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "FUTUON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "FUTU",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-FUTUON-USDT:USDT"
+    "unified_id": "perpetual-FUTU-USDT:USDT"
   },
   {
     "id": "FWDIUSDT",
@@ -9045,16 +9052,16 @@
     "symbol": "GE",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38085,
+    "cmc_id": 42649,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "GEON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GEON-USDT:USDT"
+    "unified_id": "perpetual-GE.GENERAL_ELECTRIC_COMPANY_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "GEVUSDT",
@@ -9299,16 +9306,16 @@
     "symbol": "GME",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 37997,
+    "cmc_id": 39928,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "GMEON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "GME",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GMEON-USDT:USDT"
+    "unified_id": "perpetual-GME-USDT:USDT"
   },
   {
     "id": "GMMEMEUSDT",
@@ -9463,16 +9470,16 @@
     "symbol": "GOOGL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38001,
+    "cmc_id": 39470,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "GOOGLON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "GOOGL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-GOOGLON-USDT:USDT"
+    "unified_id": "perpetual-GOOGL-USDT:USDT"
   },
   {
     "id": "GORKUSDT",
@@ -10536,16 +10543,16 @@
     "symbol": "IBM",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38018,
+    "cmc_id": 39634,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "IBMON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "IBM",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-IBMON-USDT:USDT"
+    "unified_id": "perpetual-IBM-USDT:USDT"
   },
   {
     "id": "ICNTUSDT",
@@ -10837,16 +10844,16 @@
     "symbol": "INTC",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38035,
+    "cmc_id": 39472,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "INTCON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "INTC",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-INTCON-USDT:USDT"
+    "unified_id": "perpetual-INTC-USDT:USDT"
   },
   {
     "id": "INTWUSDT",
@@ -11264,16 +11271,11 @@
     "symbol": "JD",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38052,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "JDON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "JD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-JDON-USDT:USDT"
+    "unified_id": "perpetual-JD-USDT:USDT"
   },
   {
     "id": "JELLYJELLYUSDT",
@@ -12651,16 +12653,16 @@
     "symbol": "LLY",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38043,
+    "cmc_id": 39509,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "LLYON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "LLY",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-LLYON-USDT:USDT"
+    "unified_id": "perpetual-LLY-USDT:USDT"
   },
   {
     "id": "LMTUSDT",
@@ -13335,13 +13337,16 @@
     "symbol": "MCD",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38049,
-    "category": [],
-    "base_asset_id": "MCDON",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 42406,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MCD",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MCDON-USDT:USDT"
+    "unified_id": "perpetual-MCD-USDT:USDT"
   },
   {
     "id": "MDBUSDT",
@@ -13583,16 +13588,16 @@
     "symbol": "META",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38065,
+    "cmc_id": 39513,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "METAON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "META",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-METAON-USDT:USDT"
+    "unified_id": "perpetual-META-USDT:USDT"
   },
   {
     "id": "METISUSDT",
@@ -14165,16 +14170,16 @@
     "symbol": "MRVL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38089,
+    "cmc_id": 39946,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "MRVLON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "MRVL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MRVLON-USDT:USDT"
+    "unified_id": "perpetual-MRVL-USDT:USDT"
   },
   {
     "id": "MSCIUSDT",
@@ -14210,16 +14215,16 @@
     "symbol": "MSFT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38086,
+    "cmc_id": 39495,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "MSFTON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "MSFT",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MSFTON-USDT:USDT"
+    "unified_id": "perpetual-MSFT-USDT:USDT"
   },
   {
     "id": "MSFUUSDT",
@@ -14255,16 +14260,16 @@
     "symbol": "MSTR",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38092,
+    "cmc_id": 39473,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "MSTRON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "MSTR",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-MSTRON-USDT:USDT"
+    "unified_id": "perpetual-MSTR-USDT:USDT"
   },
   {
     "id": "MSTUUSDT",
@@ -15895,16 +15900,16 @@
     "symbol": "ORCL",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38009,
+    "cmc_id": 39482,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "ORCLON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "ORCL",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ORCLON-USDT:USDT"
+    "unified_id": "perpetual-ORCL-USDT:USDT"
   },
   {
     "id": "ORDERUSDT",
@@ -16419,16 +16424,11 @@
     "symbol": "PEP",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38015,
-    "category": [
-      "DeFi",
-      "Tokenized Stock"
-    ],
-    "base_asset_id": "PEPON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "PEP",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-PEPON-USDT:USDT"
+    "unified_id": "perpetual-PEP-USDT:USDT"
   },
   {
     "id": "PFEUSDT",
@@ -16662,16 +16662,16 @@
     "symbol": "PLTR",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38073,
+    "cmc_id": 39475,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "PLTRON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "PLTR",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-PLTRON-USDT:USDT"
+    "unified_id": "perpetual-PLTR-USDT:USDT"
   },
   {
     "id": "PLUMEUSDT",
@@ -17511,13 +17511,15 @@
     "symbol": "QQQ",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38094,
-    "category": [],
-    "base_asset_id": "QQQON",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39517,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "QQQ",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-QQQON-USDT:USDT"
+    "unified_id": "perpetual-QQQ-USDT:USDT"
   },
   {
     "id": "QTUMUSDT",
@@ -17558,13 +17560,11 @@
     "symbol": "QUBT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40744,
-    "category": [],
-    "base_asset_id": "QUBT",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "QUBT.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-QUBT-USDT:USDT"
+    "unified_id": "perpetual-QUBT.EQUITY-USDT:USDT"
   },
   {
     "id": "QUICKUSDT",
@@ -17762,16 +17762,16 @@
     "symbol": "RDDT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38053,
+    "cmc_id": 39633,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "RDDTON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "RDDT",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-RDDTON-USDT:USDT"
+    "unified_id": "perpetual-RDDT-USDT:USDT"
   },
   {
     "id": "RDNTUSDT",
@@ -18891,13 +18891,11 @@
     "symbol": "SGOV",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40781,
-    "category": [],
-    "base_asset_id": "SGOV",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "SGOV.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SGOV-USDT:USDT"
+    "unified_id": "perpetual-SGOV.EQUITY-USDT:USDT"
   },
   {
     "id": "SHAZUSDT",
@@ -19043,13 +19041,16 @@
     "symbol": "SHOP",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40727,
-    "category": [],
-    "base_asset_id": "SHOP",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 41871,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SHOP.SHOPIFY_INC_DERIVATIES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SHOP-USDT:USDT"
+    "unified_id": "perpetual-SHOP.SHOPIFY_INC_DERIVATIES-USDT:USDT"
   },
   {
     "id": "SIGNUSDT",
@@ -19964,13 +19965,11 @@
     "symbol": "SOXX",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40719,
-    "category": [],
-    "base_asset_id": "SOXX",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "SOXX.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SOXX-USDT:USDT"
+    "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
   },
   {
     "id": "SP500USDT",
@@ -22333,16 +22332,16 @@
     "symbol": "UNH",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 38039,
+    "cmc_id": 39630,
     "category": [
       "DeFi",
       "Tokenized Stock"
     ],
-    "base_asset_id": "UNHON",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "UNH",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-UNHON-USDT:USDT"
+    "unified_id": "perpetual-UNH-USDT:USDT"
   },
   {
     "id": "UNITASUSDT",
@@ -23980,13 +23979,16 @@
     "symbol": "XOM",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40741,
-    "category": [],
-    "base_asset_id": "XOM",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 42374,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-XOM-USDT:USDT"
+    "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "XPDUSDT",

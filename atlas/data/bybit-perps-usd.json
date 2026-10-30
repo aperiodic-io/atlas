@@ -33,8 +33,16 @@
     "quantity_unit": "base",
     "first_capture": "2024-03-05T00:00:00.000Z",
     "end_date": "2025-04-29T00:00:00.000Z",
+    "cmc_id": 24477,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "AIDOGE",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 10000000,
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AIDOGE-USDT:USDT"
   },
   {
     "id": "1000000BABYDOGEUSDT",
@@ -75,8 +83,16 @@
     "quantity_unit": "base",
     "first_capture": "2024-11-25T00:00:00.000Z",
     "end_date": "2026-05-30T00:00:00.000Z",
+    "cmc_id": 33280,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "CHEEMS",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 1000000,
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CHEEMS-USDT:USDT"
   },
   {
     "id": "1000000MOGUSDT",
@@ -203,8 +219,16 @@
     "quantity_unit": "base",
     "first_capture": "2022-01-24T00:00:00.000Z",
     "end_date": "2024-09-19T00:00:00.000Z",
+    "cmc_id": 9816,
+    "category": [
+      "Collectibles & NFTs"
+    ],
+    "base_asset_id": "NFT",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 10000,
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NFT-USDT:USDT"
   },
   {
     "id": "10000QUBICUSDT",
@@ -216,8 +240,17 @@
     "quantity_unit": "base",
     "first_capture": "2024-12-24T00:00:00.000Z",
     "end_date": "2026-05-16T00:00:00.000Z",
+    "cmc_id": 29169,
+    "category": [
+      "Layer 1",
+      "Generative AI"
+    ],
+    "base_asset_id": "QUBIC",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 10000,
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-QUBIC-USDT:USDT"
   },
   {
     "id": "10000SATSUSDT",
@@ -2079,12 +2112,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
-    "cmc_id": 42009,
-    "base_asset_id": "AMC",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 42322,
+    "base_asset_id": "AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AMC-USDT:USDT"
+    "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "AMDSTOCKUSDT",
@@ -3904,13 +3937,11 @@
     "symbol": "BA",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 40742,
-    "category": [],
-    "base_asset_id": "BA",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "BA.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-BA-USDT:USDT"
+    "unified_id": "perpetual-BA.EQUITY-USDT:USDT"
   },
   {
     "id": "BBUSDT",
@@ -3957,7 +3988,7 @@
     ],
     "cmc_id": 40105,
     "base_asset_id": "BB.BLACKBERRY_LTD_DERIVATIVES",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-BB.BLACKBERRY_LTD_DERIVATIVES-USDT:USDT"
@@ -4809,8 +4840,13 @@
     "settle_coin": "USDT",
     "contract_size": 1.0,
     "underlying": "crypto",
+    "cmc_id": 39686,
+    "category": [],
+    "base_asset_id": "BP",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BP-USDT:USDT"
   },
   {
     "id": "BRETTUSDT",
@@ -6022,13 +6058,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-04T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40751,
-    "base_asset_id": "CLSK",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "CLSK.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-CLSK-USDT:USDT"
+    "unified_id": "perpetual-CLSK.EQUITY-USDT:USDT"
   },
   {
     "id": "CLUSDT",
@@ -7305,13 +7339,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-18T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40715,
-    "base_asset_id": "DDOG",
-    "base_asset_match": "cmc_market_pair",
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "cmc_id": 41970,
+    "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-DDOG-USDT:USDT"
+    "unified_id": "perpetual-DDOG.DATADOG_INC_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "DEEPUSDT",
@@ -8764,8 +8801,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-08T00:00:00.000Z",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EURUSD-USDT:USDT"
   },
   {
     "id": "EVAAUSDT",
@@ -9858,8 +9898,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-08T00:00:00.000Z",
+    "base_asset_id": "GBPUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GBPUSD-USDT:USDT"
   },
   {
     "id": "GDXUSDT",
@@ -11938,13 +11981,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-25T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40734,
-    "base_asset_id": "INTU",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "INTU.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-INTU-USDT:USDT"
+    "unified_id": "perpetual-INTU.EQUITY-USDT:USDT"
   },
   {
     "id": "INTWUSDT",
@@ -13841,13 +13882,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-10-08T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40756,
-    "base_asset_id": "LULU",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "LULU.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-LULU-USDT:USDT"
+    "unified_id": "perpetual-LULU.EQUITY-USDT:USDT"
   },
   {
     "id": "LUMIAUSDT",
@@ -19833,8 +19872,16 @@
     "contract_size": 1.0,
     "underlying": "crypto",
     "first_capture": "2025-02-13T00:00:00.000Z",
+    "cmc_id": 14101,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "RON",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-RON-USDT:USDT"
   },
   {
     "id": "RONUSDT",
@@ -20669,13 +20716,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-05T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40727,
-    "base_asset_id": "SHOP",
-    "base_asset_match": "cmc_market_pair",
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "cmc_id": 41871,
+    "base_asset_id": "SHOP.SHOPIFY_INC_DERIVATIES",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SHOP-USDT:USDT"
+    "unified_id": "perpetual-SHOP.SHOPIFY_INC_DERIVATIES-USDT:USDT"
   },
   {
     "id": "SIGNUSDT",
@@ -21612,13 +21662,11 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-21T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40719,
-    "base_asset_id": "SOXX",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_id": "SOXX.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SOXX-USDT:USDT"
+    "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
   },
   {
     "id": "SPACEUSDT",
@@ -21680,12 +21728,12 @@
       "DeFi",
       "Tokenized Stock"
     ],
-    "cmc_id": 37656,
-    "base_asset_id": "SPACEX",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 39501,
+    "base_asset_id": "SPCX",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-SPACEX-USDT:USDT"
+    "unified_id": "perpetual-SPCX-USDT:USDT"
   },
   {
     "id": "SPECUSDT",
@@ -22331,7 +22379,7 @@
     ],
     "cmc_id": 40230,
     "base_asset_id": "STX.SEAGATE_TECHNOLOGY_HOLDINGS_PLC_DERIVATIVES",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-STX.SEAGATE_TECHNOLOGY_HOLDINGS_PLC_DERIVATIVES-USDT:USDT"
@@ -24313,8 +24361,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-08T00:00:00.000Z",
+    "base_asset_id": "USDJPY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-USDJPY-USDT:USDT"
   },
   {
     "id": "USELESSUSDT",
@@ -25995,13 +26046,16 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-03T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 40741,
-    "base_asset_id": "XOM",
-    "base_asset_match": "cmc_market_pair",
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "cmc_id": 42374,
+    "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-XOM-USDT:USDT"
+    "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "XPINUSDT",

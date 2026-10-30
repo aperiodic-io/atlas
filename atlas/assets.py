@@ -51,6 +51,9 @@ class AssetClass(StrEnum):
     equity = "equity"
     commodity = "commodity"
     index = "index"
+    # A currency pair's exchange rate (``EURUSD``, ``USDJPY``): what a forex
+    # perpetual tracks. The currencies themselves are ``fiat``.
+    forex = "forex"
     unknown = "unknown"
 
 
@@ -286,6 +289,23 @@ class AssetRegistry:
         updated = replace(current, **changes)
         self._assets[asset_id] = updated
         return updated
+
+    def adopt_cmc_id(self, asset_id: str, cmc_id: int) -> Asset:
+        """Give an Atlas-native asset the CMC ID of the asset it is.
+
+        For a reference asset Atlas minted before CoinMarketCap tracked it:
+        the asset keeps its ID and gains the CMC identity, rather than CMC's
+        listing becoming a second asset. An asset that has a CMC ID keeps it.
+        """
+        current = self._assets[asset_id]
+        if current.cmc_id is not None:
+            raise ValueError(f"{asset_id} already has CMC ID {current.cmc_id}")
+        if cmc_id in self._by_cmc_id:
+            raise ValueError(f"CMC ID {cmc_id} is already registered as {self._by_cmc_id[cmc_id]}")
+        adopted = replace(current, cmc_id=cmc_id)
+        self._assets[asset_id] = adopted
+        self._by_cmc_id[cmc_id] = asset_id
+        return adopted
 
     def add_aliases(self, asset_id: str, aliases: Iterable[str]) -> Asset:
         current = self._assets[asset_id]

@@ -5319,11 +5319,15 @@
     "underlying": "commodity",
     "first_capture": "2026-03-11T00:00:00.000Z",
     "end_date": "2026-07-01T00:00:00.000Z",
-    "base_asset_id": "WTI",
+    "cmc_id": 39487,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "CL",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT0",
     "margin_asset_id": "USDT0",
-    "unified_id": "perpetual-WTI-USDT0:USDT0"
+    "unified_id": "perpetual-CL-USDT0:USDT0"
   },
   {
     "id": "flx:BTC",
@@ -6748,8 +6752,11 @@
     "underlying": "forex",
     "first_capture": "2026-04-23T00:00:00.000Z",
     "end_date": "2026-06-17T00:00:00.000Z",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDH",
-    "margin_asset_id": "USDH"
+    "margin_asset_id": "USDH",
+    "unified_id": "perpetual-EURUSD-USDH:USDH"
   },
   {
     "id": "km:GLDMINE",
@@ -7222,8 +7229,11 @@
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "forex",
     "end_date": "2026-10-20T07:03:06.549Z",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EURUSD-USDC:USDC"
   },
   {
     "id": "mkts:GLDMINE",
@@ -9459,8 +9469,11 @@
     "margin_asset": "USDC",
     "underlying": "forex",
     "first_capture": "2025-12-23T00:00:00.000Z",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EURUSD-USDC:USDC"
   },
   {
     "id": "xyz:EWJ",
@@ -9557,8 +9570,11 @@
     "margin_asset": "USDC",
     "underlying": "forex",
     "first_capture": "2026-05-18T00:00:00.000Z",
+    "base_asset_id": "GBPUSD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GBPUSD-USDC:USDC"
   },
   {
     "id": "xyz:GEV",
@@ -9991,8 +10007,11 @@
     "margin_asset": "USDC",
     "underlying": "forex",
     "first_capture": "2025-12-23T00:00:00.000Z",
+    "base_asset_id": "USDJPY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDJPY-USDC:USDC"
   },
   {
     "id": "xyz:KIOXIA",
@@ -10071,8 +10090,11 @@
     "first_capture": "2026-09-28T12:18:41Z",
     "underlying": "forex",
     "end_date": "2026-10-20T07:03:06.549Z",
+    "base_asset_id": "USDKRW",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDKRW-USDC:USDC"
   },
   {
     "id": "xyz:KSTR",

@@ -10,7 +10,14 @@
     "internal_id": "perpetual-2Z-USDC:USDC",
     "symbol": "2Z",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 38515,
+    "category": [],
+    "base_asset_id": "2Z",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-2Z-USDC:USDC"
   },
   {
     "id": "AAVE",
@@ -23,7 +30,18 @@
     "internal_id": "perpetual-AAVE-USDC:USDC",
     "symbol": "AAVE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 7278,
+    "category": [
+      "DeFi",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "AAVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AAVE-USDC:USDC"
   },
   {
     "id": "ADA",
@@ -36,7 +54,18 @@
     "internal_id": "perpetual-ADA-USDC:USDC",
     "symbol": "ADA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 2010,
+    "category": [
+      "Layer 1",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ADA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ADA-USDC:USDC"
   },
   {
     "id": "ARB",
@@ -49,7 +78,18 @@
     "internal_id": "perpetual-ARB-USDC:USDC",
     "symbol": "ARB",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 11841,
+    "category": [
+      "Layer 2",
+      "DApp",
+      "DAO"
+    ],
+    "base_asset_id": "ARB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ARB-USDC:USDC"
   },
   {
     "id": "ASTER",
@@ -62,7 +102,16 @@
     "internal_id": "perpetual-ASTER-USDC:USDC",
     "symbol": "ASTER",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 36341,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ASTER",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ASTER-USDC:USDC"
   },
   {
     "id": "AVAX",
@@ -75,7 +124,18 @@
     "internal_id": "perpetual-AVAX-USDC:USDC",
     "symbol": "AVAX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AVAX-USDC:USDC"
   },
   {
     "id": "BCH",
@@ -88,7 +148,16 @@
     "internal_id": "perpetual-BCH-USDC:USDC",
     "symbol": "BCH",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1831,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BCH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BCH-USDC:USDC"
   },
   {
     "id": "BNB",
@@ -101,7 +170,17 @@
     "internal_id": "perpetual-BNB-USDC:USDC",
     "symbol": "BNB",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1839,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "BNB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BNB-USDC:USDC"
   },
   {
     "id": "BP",
@@ -114,7 +193,14 @@
     "internal_id": "perpetual-BP-USDC:USDC",
     "symbol": "BP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39686,
+    "category": [],
+    "base_asset_id": "BP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BP-USDC:USDC"
   },
   {
     "id": "BTC",
@@ -127,7 +213,16 @@
     "internal_id": "perpetual-BTC-USDC:USDC",
     "symbol": "BTC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BTC-USDC:USDC"
   },
   {
     "id": "CHIP",
@@ -140,7 +235,14 @@
     "internal_id": "perpetual-CHIP-USDC:USDC",
     "symbol": "CHIP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39870,
+    "category": [],
+    "base_asset_id": "CHIP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CHIP-USDC:USDC"
   },
   {
     "id": "CL",
@@ -153,7 +255,16 @@
     "internal_id": "perpetual-CL-USDC:USDC",
     "symbol": "CL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39487,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "CL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CL-USDC:USDC"
   },
   {
     "id": "COPPER",
@@ -166,7 +277,16 @@
     "internal_id": "perpetual-COPPER-USDC:USDC",
     "symbol": "COPPER",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39467,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XCU",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XCU-USDC:USDC"
   },
   {
     "id": "CRCL",
@@ -179,7 +299,17 @@
     "internal_id": "perpetual-CRCL-USDC:USDC",
     "symbol": "CRCL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 38154,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CRCL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CRCL-USDC:USDC"
   },
   {
     "id": "CRV",
@@ -192,7 +322,17 @@
     "internal_id": "perpetual-CRV-USDC:USDC",
     "symbol": "CRV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 6538,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "CRV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-CRV-USDC:USDC"
   },
   {
     "id": "DOGE",
@@ -205,7 +345,16 @@
     "internal_id": "perpetual-DOGE-USDC:USDC",
     "symbol": "DOGE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DOGE-USDC:USDC"
   },
   {
     "id": "DRAM",
@@ -218,7 +367,16 @@
     "internal_id": "perpetual-DRAM-USDC:USDC",
     "symbol": "DRAM",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39945,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "DRAM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-DRAM-USDC:USDC"
   },
   {
     "id": "ENA",
@@ -231,7 +389,16 @@
     "internal_id": "perpetual-ENA-USDC:USDC",
     "symbol": "ENA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 30171,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "ENA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ENA-USDC:USDC"
   },
   {
     "id": "ETH",
@@ -244,7 +411,17 @@
     "internal_id": "perpetual-ETH-USDC:USDC",
     "symbol": "ETH",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ETH-USDC:USDC"
   },
   {
     "id": "EURUSD",
@@ -257,7 +434,12 @@
     "internal_id": "perpetual-EUR-USDC:USDC",
     "symbol": "EUR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "base_asset_id": "EURUSD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EURUSD-USDC:USDC"
   },
   {
     "id": "FARTCOIN",
@@ -270,7 +452,16 @@
     "internal_id": "perpetual-FARTCOIN-USDC:USDC",
     "symbol": "FARTCOIN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 33597,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "FARTCOIN",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-FARTCOIN-USDC:USDC"
   },
   {
     "id": "GOOGL",
@@ -283,7 +474,17 @@
     "internal_id": "perpetual-GOOGL-USDC:USDC",
     "symbol": "GOOGL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39470,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GOOGL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GOOGL-USDC:USDC"
   },
   {
     "id": "HOOD",
@@ -296,7 +497,17 @@
     "internal_id": "perpetual-HOOD-USDC:USDC",
     "symbol": "HOOD",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39478,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "HOOD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HOOD-USDC:USDC"
   },
   {
     "id": "HYPE",
@@ -309,7 +520,17 @@
     "internal_id": "perpetual-HYPE-USDC:USDC",
     "symbol": "HYPE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HYPE-USDC:USDC"
   },
   {
     "id": "ICP",
@@ -322,7 +543,17 @@
     "internal_id": "perpetual-ICP-USDC:USDC",
     "symbol": "ICP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 8916,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ICP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ICP-USDC:USDC"
   },
   {
     "id": "JUP",
@@ -335,7 +566,16 @@
     "internal_id": "perpetual-JUP-USDC:USDC",
     "symbol": "JUP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 29210,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "JUP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-JUP-USDC:USDC"
   },
   {
     "id": "KAITO",
@@ -348,7 +588,14 @@
     "internal_id": "perpetual-KAITO-USDC:USDC",
     "symbol": "KAITO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 35763,
+    "category": [],
+    "base_asset_id": "KAITO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-KAITO-USDC:USDC"
   },
   {
     "id": "LDO",
@@ -361,7 +608,17 @@
     "internal_id": "perpetual-LDO-USDC:USDC",
     "symbol": "LDO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 8000,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "LDO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LDO-USDC:USDC"
   },
   {
     "id": "LINK",
@@ -374,7 +631,20 @@
     "internal_id": "perpetual-LINK-USDC:USDC",
     "symbol": "LINK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LINK-USDC:USDC"
   },
   {
     "id": "LIT",
@@ -387,7 +657,16 @@
     "internal_id": "perpetual-LIT-USDC:USDC",
     "symbol": "LIT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39125,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LIT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LIT-USDC:USDC"
   },
   {
     "id": "LTC",
@@ -400,7 +679,17 @@
     "internal_id": "perpetual-LTC-USDC:USDC",
     "symbol": "LTC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 2,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "LTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-LTC-USDC:USDC"
   },
   {
     "id": "MEGA",
@@ -413,7 +702,16 @@
     "internal_id": "perpetual-MEGA-USDC:USDC",
     "symbol": "MEGA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 38770,
+    "category": [
+      "Layer 2"
+    ],
+    "base_asset_id": "MEGA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MEGA-USDC:USDC"
   },
   {
     "id": "META",
@@ -426,7 +724,17 @@
     "internal_id": "perpetual-META-USDC:USDC",
     "symbol": "META",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39513,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "META",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-META-USDC:USDC"
   },
   {
     "id": "MON",
@@ -439,7 +747,18 @@
     "internal_id": "perpetual-MON-USDC:USDC",
     "symbol": "MON",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 30495,
+    "category": [
+      "DeFi",
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "MON",
+    "base_asset_match": "override",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MON-USDC:USDC"
   },
   {
     "id": "MSTR",
@@ -452,7 +771,17 @@
     "internal_id": "perpetual-MSTR-USDC:USDC",
     "symbol": "MSTR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39473,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MSTR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MSTR-USDC:USDC"
   },
   {
     "id": "MU",
@@ -465,7 +794,17 @@
     "internal_id": "perpetual-MU-USDC:USDC",
     "symbol": "MU",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39469,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MU-USDC:USDC"
   },
   {
     "id": "NATGAS",
@@ -478,7 +817,16 @@
     "internal_id": "perpetual-NATGAS-USDC:USDC",
     "symbol": "NATGAS",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39464,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "NATGAS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NATGAS-USDC:USDC"
   },
   {
     "id": "NEAR",
@@ -491,7 +839,17 @@
     "internal_id": "perpetual-NEAR-USDC:USDC",
     "symbol": "NEAR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 6535,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "NEAR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NEAR-USDC:USDC"
   },
   {
     "id": "NVDA",
@@ -504,7 +862,17 @@
     "internal_id": "perpetual-NVDA-USDC:USDC",
     "symbol": "NVDA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 38153,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NVDA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-NVDA-USDC:USDC"
   },
   {
     "id": "PAXG",
@@ -517,7 +885,16 @@
     "internal_id": "perpetual-PAXG-USDC:USDC",
     "symbol": "PAXG",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 4705,
+    "category": [
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "PAXG",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PAXG-USDC:USDC"
   },
   {
     "id": "PENGU",
@@ -530,7 +907,17 @@
     "internal_id": "perpetual-PENGU-USDC:USDC",
     "symbol": "PENGU",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 34466,
+    "category": [
+      "Collectibles & NFTs",
+      "Memes"
+    ],
+    "base_asset_id": "PENGU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PENGU-USDC:USDC"
   },
   {
     "id": "PIPPIN",
@@ -543,7 +930,16 @@
     "internal_id": "perpetual-PIPPIN-USDC:USDC",
     "symbol": "PIPPIN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 35053,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "PIPPIN",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PIPPIN-USDC:USDC"
   },
   {
     "id": "PLATINUM",
@@ -556,7 +952,16 @@
     "internal_id": "perpetual-PLATINUM-USDC:USDC",
     "symbol": "PLATINUM",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39460,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XPT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XPT-USDC:USDC"
   },
   {
     "id": "PLTR",
@@ -569,7 +974,17 @@
     "internal_id": "perpetual-PLTR-USDC:USDC",
     "symbol": "PLTR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39475,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PLTR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PLTR-USDC:USDC"
   },
   {
     "id": "PONS",
@@ -582,7 +997,14 @@
     "internal_id": "perpetual-PONS-USDC:USDC",
     "symbol": "PONS",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 40938,
+    "category": [],
+    "base_asset_id": "PONS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PONS-USDC:USDC"
   },
   {
     "id": "PUMP",
@@ -595,7 +1017,14 @@
     "internal_id": "perpetual-PUMP-USDC:USDC",
     "symbol": "PUMP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 36507,
+    "category": [],
+    "base_asset_id": "PUMP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PUMP-USDC:USDC"
   },
   {
     "id": "SAMSUNG",
@@ -608,7 +1037,17 @@
     "internal_id": "perpetual-SAMSUNG-USDC:USDC",
     "symbol": "SAMSUNG",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39503,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "005930",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-005930-USDC:USDC"
   },
   {
     "id": "SKHYNIX",
@@ -621,7 +1060,17 @@
     "internal_id": "perpetual-SKHYNIX-USDC:USDC",
     "symbol": "SKHYNIX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39500,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "000660",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-000660-USDC:USDC"
   },
   {
     "id": "SNDK",
@@ -634,7 +1083,17 @@
     "internal_id": "perpetual-SNDK-USDC:USDC",
     "symbol": "SNDK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39507,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SNDK",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SNDK-USDC:USDC"
   },
   {
     "id": "SOL",
@@ -647,7 +1106,16 @@
     "internal_id": "perpetual-SOL-USDC:USDC",
     "symbol": "SOL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SOL-USDC:USDC"
   },
   {
     "id": "SP500",
@@ -660,7 +1128,16 @@
     "internal_id": "perpetual-SP500-USDC:USDC",
     "symbol": "SP500",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39474,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "SP500",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SP500-USDC:USDC"
   },
   {
     "id": "SPCX",
@@ -673,7 +1150,17 @@
     "internal_id": "perpetual-SPCX-USDC:USDC",
     "symbol": "SPCX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39501,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SPCX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SPCX-USDC:USDC"
   },
   {
     "id": "STRK",
@@ -686,7 +1173,19 @@
     "internal_id": "perpetual-STRK-USDC:USDC",
     "symbol": "STRK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 22691,
+    "category": [
+      "Layer 2",
+      "Smart Contracts",
+      "DApp",
+      "Privacy"
+    ],
+    "base_asset_id": "STRK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-STRK-USDC:USDC"
   },
   {
     "id": "SUI",
@@ -699,7 +1198,16 @@
     "internal_id": "perpetual-SUI-USDC:USDC",
     "symbol": "SUI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 20947,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SUI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SUI-USDC:USDC"
   },
   {
     "id": "TAO",
@@ -712,7 +1220,18 @@
     "internal_id": "perpetual-TAO-USDC:USDC",
     "symbol": "TAO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 22974,
+    "category": [
+      "Layer 1",
+      "Generative AI",
+      "DAO"
+    ],
+    "base_asset_id": "TAO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TAO-USDC:USDC"
   },
   {
     "id": "TRUMP",
@@ -725,7 +1244,16 @@
     "internal_id": "perpetual-TRUMP-USDC:USDC",
     "symbol": "TRUMP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 35336,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "TRUMP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TRUMP-USDC:USDC"
   },
   {
     "id": "TSLA",
@@ -738,7 +1266,17 @@
     "internal_id": "perpetual-TSLA-USDC:USDC",
     "symbol": "TSLA",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 38152,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TSLA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TSLA-USDC:USDC"
   },
   {
     "id": "UNI",
@@ -751,7 +1289,17 @@
     "internal_id": "perpetual-UNI-USDC:USDC",
     "symbol": "UNI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 7083,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "UNI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-UNI-USDC:USDC"
   },
   {
     "id": "URNM",
@@ -764,7 +1312,16 @@
     "internal_id": "perpetual-URNM-USDC:USDC",
     "symbol": "URNM",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39516,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "URNM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-URNM-USDC:USDC"
   },
   {
     "id": "USDJPY",
@@ -777,7 +1334,12 @@
     "internal_id": "perpetual-USDJPY-USDC:USDC",
     "symbol": "USDJPY",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "base_asset_id": "USDJPY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USDJPY-USDC:USDC"
   },
   {
     "id": "USELESS",
@@ -790,7 +1352,16 @@
     "internal_id": "perpetual-USELESS-USDC:USDC",
     "symbol": "USELESS",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 36828,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "USELESS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-USELESS-USDC:USDC"
   },
   {
     "id": "VIRTUAL",
@@ -803,7 +1374,18 @@
     "internal_id": "perpetual-VIRTUAL-USDC:USDC",
     "symbol": "VIRTUAL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 29420,
+    "category": [
+      "Generative AI",
+      "Metaverse",
+      "AI Agents"
+    ],
+    "base_asset_id": "VIRTUAL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VIRTUAL-USDC:USDC"
   },
   {
     "id": "VVV",
@@ -816,7 +1398,16 @@
     "internal_id": "perpetual-VVV-USDC:USDC",
     "symbol": "VVV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 35509,
+    "category": [
+      "AI Applications"
+    ],
+    "base_asset_id": "VVV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VVV-USDC:USDC"
   },
   {
     "id": "WIF",
@@ -829,7 +1420,16 @@
     "internal_id": "perpetual-WIF-USDC:USDC",
     "symbol": "WIF",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 28752,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "WIF",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WIF-USDC:USDC"
   },
   {
     "id": "WLD",
@@ -842,7 +1442,16 @@
     "internal_id": "perpetual-WLD-USDC:USDC",
     "symbol": "WLD",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 13502,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WLD-USDC:USDC"
   },
   {
     "id": "WLFI",
@@ -855,7 +1464,16 @@
     "internal_id": "perpetual-WLFI-USDC:USDC",
     "symbol": "WLFI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 33251,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "WLFI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-WLFI-USDC:USDC"
   },
   {
     "id": "XAG",
@@ -868,7 +1486,16 @@
     "internal_id": "perpetual-XAG-USDC:USDC",
     "symbol": "XAG",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39343,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XAG",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XAG-USDC:USDC"
   },
   {
     "id": "XAU",
@@ -881,7 +1508,16 @@
     "internal_id": "perpetual-XAU-USDC:USDC",
     "symbol": "XAU",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 39344,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XAU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XAU-USDC:USDC"
   },
   {
     "id": "XMR",
@@ -894,7 +1530,17 @@
     "internal_id": "perpetual-XMR-USDC:USDC",
     "symbol": "XMR",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 328,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "XMR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XMR-USDC:USDC"
   },
   {
     "id": "XPL",
@@ -907,7 +1553,16 @@
     "internal_id": "perpetual-XPL-USDC:USDC",
     "symbol": "XPL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 36645,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "XPL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XPL-USDC:USDC"
   },
   {
     "id": "XRP",
@@ -920,7 +1575,14 @@
     "internal_id": "perpetual-XRP-USDC:USDC",
     "symbol": "XRP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XRP-USDC:USDC"
   },
   {
     "id": "XTEN",
@@ -933,7 +1595,14 @@
     "internal_id": "perpetual-XTEN-USDC:USDC",
     "symbol": "XTEN",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 42688,
+    "category": [],
+    "base_asset_id": "XTEN",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-XTEN-USDC:USDC"
   },
   {
     "id": "ZEC",
@@ -946,7 +1615,17 @@
     "internal_id": "perpetual-ZEC-USDC:USDC",
     "symbol": "ZEC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 1437,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "ZEC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ZEC-USDC:USDC"
   },
   {
     "id": "ZK",
@@ -959,7 +1638,17 @@
     "internal_id": "perpetual-ZK-USDC:USDC",
     "symbol": "ZK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 24091,
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "base_asset_id": "ZK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ZK-USDC:USDC"
   },
   {
     "id": "ZRO",
@@ -972,7 +1661,17 @@
     "internal_id": "perpetual-ZRO-USDC:USDC",
     "symbol": "ZRO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 26997,
+    "category": [
+      "DeFi",
+      "Interoperability"
+    ],
+    "base_asset_id": "ZRO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ZRO-USDC:USDC"
   },
   {
     "id": "kBONK",
@@ -985,7 +1684,17 @@
     "internal_id": "perpetual-KBONK-USDC:USDC",
     "symbol": "KBONK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 23095,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "BONK",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 1000,
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-BONK-USDC:USDC"
   },
   {
     "id": "kPEPE",
@@ -998,7 +1707,17 @@
     "internal_id": "perpetual-KPEPE-USDC:USDC",
     "symbol": "KPEPE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 24478,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "PEPE",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 1000,
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PEPE-USDC:USDC"
   },
   {
     "id": "kSHIB",
@@ -1011,6 +1730,16 @@
     "internal_id": "perpetual-KSHIB-USDC:USDC",
     "symbol": "KSHIB",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "cmc_id": 5994,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "SHIB",
+    "base_asset_match": "cross_venue_consensus",
+    "base_multiplier": 1000,
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SHIB-USDC:USDC"
   }
 ]

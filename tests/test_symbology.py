@@ -121,6 +121,387 @@ def test_every_symbology_exchange_has_a_family():
     } <= set(SYMBOLOGY_EXCHANGES)
 
 
+DEFI_RWA_VENUES = (
+    "aster-perps",
+    "avantis-perps",
+    "variational-perps",
+    "lighter-perps",
+    "grvt-perps",
+    "extended-perps",
+    "apex-perps",
+    "pacifica-perps",
+)
+
+
+def test_defi_rwa_venues_are_symbology_exchanges_with_their_own_namespace():
+    assert set(DEFI_RWA_VENUES) <= set(SYMBOLOGY_EXCHANGES)
+    families = [VENUE_FAMILIES[exchange] for exchange in DEFI_RWA_VENUES]
+    assert len(set(families)) == len(families)
+    assert not set(families) & {
+        family for exchange, family in VENUE_FAMILIES.items() if exchange not in DEFI_RWA_VENUES
+    }
+
+
+def _perp(row_id, symbol, settle, underlying, **extra):
+    return _row(row_id, symbol, settle, "perpetual", margin=settle, underlying=underlying, **extra)
+
+
+def test_forex_perpetuals_share_one_currency_pair_asset_across_venues():
+    # Venues spell one rate four ways: the base currency (EUR), the pair
+    # (EURUSD), a HIP-3 dex ticker, and the USD-based pair (USDJPY, or a bare
+    # JPY that Hyperliquid quotes as yen per dollar).
+    rows = {
+        "avantis-perps": [_perp("11", "EUR", "USDC", "forex"), _perp("12", "USDJPY", "USDC", "forex")],
+        "lighter-perps": [_perp("96", "EUR", "USDC", "forex", base_asset="EUR")],
+        "bybit-perps-usd": [_perp("EURUSDUSDT", "EURUSD", "USDT", "forex")],
+        "hyperliquid-perps": [
+            _perp("xyz:EUR", "XYZ:EUR", "USDC", "forex"),
+            _perp("xyz:JPY", "XYZ:JPY", "USDC", "forex"),
+            _perp("BTC", "BTC", "USDC", "crypto"),
+        ],
+        "extended-perps": [_perp("USDJPY-USD", "USDJPY", "USD", "forex")],
+    }
+    # Evidence that USDC means USDC, so the forex rows' unified IDs resolve.
+    pairs = [_pair("hyperliquid", "perpetual", 1, "BTC", 3408, "USDC", url="https://x/trade/BTC")]
+    _, registry = _build(rows, pairs)
+
+    eur = [
+        _by_id(rows, "avantis-perps", "11"),
+        _by_id(rows, "lighter-perps", "96"),
+        _by_id(rows, "bybit-perps-usd", "EURUSDUSDT"),
+        _by_id(rows, "hyperliquid-perps", "xyz:EUR"),
+    ]
+    assert {row["base_asset_id"] for row in eur} == {"EURUSD"}
+    assert {row["base_asset_match"] for row in eur} == {"venue_reference"}
+    jpy = [
+        _by_id(rows, "avantis-perps", "12"),
+        _by_id(rows, "hyperliquid-perps", "xyz:JPY"),
+        _by_id(rows, "extended-perps", "USDJPY-USD"),
+    ]
+    assert {row["base_asset_id"] for row in jpy} == {"USDJPY"}
+    for asset_id, name in (("EURUSD", "EUR/USD"), ("USDJPY", "USD/JPY")):
+        asset = registry.get(asset_id)
+        assert asset.asset_class is AssetClass.forex
+        assert asset.cmc_id is None
+        assert asset.name == name
+    assert _by_id(rows, "avantis-perps", "11")["unified_id"] == "perpetual-EURUSD-USDC:USDC"
+    # Rebuilding finds the pairs again rather than minting new ones.
+    before = len(registry)
+    _build(rows, pairs, registry=registry)
+    assert len(registry) == before
+
+
+def test_forex_rows_ignore_a_cmc_listing_of_the_currency_or_a_token():
+    details = {
+        **DETAILS,
+        2790: _detail(2790, "EUR", "Euro", "euro", kind="fiat"),
+        20641: _detail(20641, "EURC", "EURC", "euro-coin"),
+    }
+    rows = {"lighter-perps": [_perp("96", "EUR", "USDC", "forex", base_asset="EUR")]}
+    pairs = [
+        _pair("lighter", "perpetual", 2790, "EUR", 3408, "USDC", url="https://app.lighter.xyz/trade/EUR")
+    ]
+    _build(rows, pairs, details=details)
+    assert rows["lighter-perps"][0]["base_asset_id"] == "EURUSD"
+    assert "cmc_id" not in rows["lighter-perps"][0]
+
+
+@pytest.mark.parametrize("symbol", ["DXY", "XYZ:DXY", "EURUSDT", "USDUSD", "OPENAI"])
+def test_forex_rows_that_are_not_a_currency_pair_stay_unresolved(symbol):
+    rows = {"hyperliquid-perps": [_perp(symbol.lower(), symbol, "USDC", "forex")]}
+    _build(rows)
+    assert "base_asset_id" not in rows["hyperliquid-perps"][0]
+
+
+def test_forex_spot_rows_are_tokens_not_the_rate():
+    rows = {"coinbase-spot": [_row("EUR-USD", "EUR", "USD", underlying="forex")]}
+    _build(rows)
+    assert rows["coinbase-spot"][0].get("base_asset_id") != "EURUSD"
+
+
+def test_a_venue_cmc_does_not_track_is_identified_by_the_venues_it_does():
+    # Avantis is not on CMC. Its TSLA and BTC markets take the asset every
+    # identified venue agrees on, and its equity class keeps TSLA a reference.
+    rows = {
+        "avantis-perps": [
+            _perp("100", "TSLA", "USDC", "equity"),
+            _perp("1", "BTC", "USDC", "crypto"),
+        ],
+        "aster-perps": [_perp("tslausdt", "TSLA", "USDT", "equity"), _perp("btcusdt", "BTC", "USDT", "crypto")],
+        "grvt-perps": [
+            _perp("TSLA_USDT_Perp", "TSLA", "USDT", "equity"),
+            _perp("BTC_USDT_Perp", "BTC", "USDT", "crypto"),
+        ],
+    }
+    pairs = [
+        _pair("aster-pro", "perpetual", 38152, "TSLA", 825, "USDT", ticker="TSLAUSDT"),
+        _pair("aster-pro", "perpetual", 1, "BTC", 825, "USDT", ticker="BTCUSDT"),
+        _pair("grvt", "perpetual", 38152, "TSLA", 825, "USDT", ticker="TSLA_USDT_Perp"),
+        _pair("grvt", "perpetual", 1, "BTC", 825, "USDT", ticker="BTC_USDT_Perp"),
+    ]
+    _build(rows, pairs)
+    tsla = _by_id(rows, "avantis-perps", "100")
+    btc = _by_id(rows, "avantis-perps", "1")
+    assert (tsla["base_asset_id"], tsla["base_asset_match"]) == ("TSLA", "cross_venue_consensus")
+    assert (btc["base_asset_id"], btc["base_asset_match"]) == ("BTC", "cross_venue_consensus")
+    assert _by_id(rows, "aster-perps", "tslausdt")["base_asset_match"] == "cmc_market_pair"
+    assert _by_id(rows, "grvt-perps", "TSLA_USDT_Perp")["unified_id"] == "perpetual-TSLA-USDT:USDT"
+
+
+def test_a_native_reference_asset_adopts_its_cmc_id_once_cmc_tracks_it():
+    # Atlas minted MELI before CMC tracked MercadoLibre; when CMC starts to,
+    # the asset keeps its ID and gains the CMC identity instead of a twin.
+    registry = AssetRegistry()
+    registry.mint(ticker="MELI", name="MELI", asset_class=AssetClass.equity, qualifier="equity")
+    details = {
+        **DETAILS,
+        42700: _detail(42700, "MELI", "MercadoLibre Inc (Derivative)", "mercadolibre-inc-derivative"),
+    }
+    rows = {
+        "bybit-perps-usd": [_perp("MELIUSDT", "MELI", "USDT", "equity")],
+        "hyperliquid-perps": [_perp("para:MELI", "PARA:MELI", "USDC", "equity")],
+    }
+    pairs = [_pair("bybit", "perpetual", 42700, "MELI", 825, "USDT", ticker="MELIUSDT")]
+    _build(rows, pairs, registry=registry, details=details)
+
+    meli = registry.get("MELI")
+    assert meli.cmc_id == 42700
+    assert meli.name == "MercadoLibre Inc (Derivative)"
+    assert meli.asset_class is AssetClass.equity
+    assert [asset.asset_id for asset in registry.find_by_ticker("MELI")] == ["MELI"]
+    assert rows["bybit-perps-usd"][0]["base_asset_id"] == "MELI"
+    assert rows["bybit-perps-usd"][0]["cmc_id"] == 42700
+    assert rows["hyperliquid-perps"][0]["base_asset_id"] == "MELI"
+
+
+def test_cmc_reference_assets_named_derivative_in_the_singular_are_references():
+    from integrations.symbology import is_reference_detail
+
+    assert is_reference_detail(_detail(42700, "MELI", "MercadoLibre Inc (Derivative)"))
+    assert is_reference_detail(_detail(38152, "TSLA", "Tesla (Derivatives)"))
+    assert not is_reference_detail(_detail(1, "BTC", "Bitcoin"))
+
+
+def test_a_tradfi_row_ignores_a_cmc_listing_that_names_a_token_wrapper():
+    # CMC files Extended's AST SpaceMobile perpetual under Robinhood's stock
+    # token; another venue already identified the stock.
+    registry = AssetRegistry()
+    registry.mint(ticker="ASTS", name="ASTS", asset_class=AssetClass.equity, qualifier="equity")
+    details = {
+        **DETAILS,
+        40500: _detail(40500, "ASTS", "AST SpaceMobile Tokenized Stock (Robinhood)", "asts-rh"),
+    }
+    rows = {"extended-perps": [_perp("ASTS-USD", "ASTS", "USD", "equity")]}
+    pairs = [_pair("extended", "perpetual", 40500, "ASTS", 2781, "USD", ticker="ASTS-USD")]
+    report, registry = _build(rows, pairs, registry=registry, details=details)
+    row = rows["extended-perps"][0]
+    assert "cmc_id" not in row
+    assert registry.by_cmc_id(40500) is None
+    assert ("extended-perps", "ASTS-USD", 40500) in report.pair_token_wrappers
+    assert (row["base_asset_id"], row["base_asset_match"]) == ("ASTS", "venue_reference")
+
+
+def test_a_stock_perpetual_sharing_a_bare_ticker_with_a_token_gets_the_stock():
+    # Robinhood's tokens take the stock's own ticker: Bitget's QUBTUSDT
+    # perpetual is the stock, even with no reference asset minted yet.
+    details = {
+        **DETAILS,
+        40744: _detail(40744, "QUBT", "Quantum Computing Tokenized Stock (Robinhood)", "qubt-rh"),
+    }
+    rows = {"bitget-perps-usdt": [_perp("QUBTUSDT", "QUBT", "USDT", "equity")]}
+    pairs = [_pair("bitget", "perpetual", 40744, "QUBT", 825, "USDT", ticker="QUBTUSDT_UMCBL")]
+    report, registry = _build(rows, pairs, details=details)
+    row = rows["bitget-perps-usdt"][0]
+    assert row["base_asset_match"] == "venue_reference"
+    assert registry.get(row["base_asset_id"]).asset_class is AssetClass.equity
+    assert registry.by_cmc_id(40744) is None
+    assert report.pair_token_wrappers == [("bitget-perps-usdt", "QUBTUSDT", 40744)]
+
+
+@pytest.mark.parametrize(
+    ("ticker", "detail"),
+    [
+        ("FUTUON", _detail(38090, "FUTUON", "Futu Tokenized Stock (Ondo)", "futu-ondo")),
+        ("TQQQX", _detail(37044, "TQQQX", "TQQQ tokenized ETF (xStock)", "tqqqx")),
+    ],
+)
+def test_a_perpetual_on_a_decorated_token_ticker_keeps_its_cmc_listing(ticker, detail):
+    # Gate's FUTUON_USDT trades Ondo's FUTUON token under the token's own
+    # ticker, and no stock is called FUTUON: it is the token.
+    details = {**DETAILS, detail.cmc_id: detail}
+    rows = {"gateio-perps-usdt": [_perp(f"{ticker}_USDT", ticker, "USDT", "equity")]}
+    pairs = [_pair("gate", "perpetual", detail.cmc_id, ticker, 825, "USDT", ticker=f"{ticker}_USDT")]
+    report, registry = _build(rows, pairs, details=details)
+    row = rows["gateio-perps-usdt"][0]
+    assert (row["base_asset_id"], row["cmc_id"]) == (ticker, detail.cmc_id)
+    assert report.pair_token_wrappers == []
+    assert [asset.asset_id for asset in registry.find_by_ticker(ticker)] == [ticker]
+
+
+@pytest.mark.parametrize(
+    ("exchange", "row", "detail"),
+    [
+        # A spot market trades the token itself.
+        (
+            "bitget-spot",
+            _row("RAAPLUSDT", "RAAPL", "USDT", underlying="equity"),
+            _detail(40598, "RAAPL", "Apple Tokenized Stock (Bitget)", "raapl"),
+        ),
+        # Tokenized gold perpetuals track the token, whatever class the venue gives them.
+        (
+            "bitget-perps-usdt",
+            _perp("PAXGUSDT", "PAXG", "USDT", "commodity"),
+            _detail(4705, "PAXG", "PAX Gold", "pax-gold"),
+        ),
+        # Binance's pre-market perpetuals are tokens before their launch.
+        (
+            "binance-futures",
+            _perp("predictusdt", "PREDICT", "USDT", "pre_market"),
+            _detail(42642, "PREDICT", "Predict", "predict"),
+        ),
+        (
+            "binance-futures",
+            _perp("btcdomusdt", "BTCDOM", "USDT", "index"),
+            _detail(10634, "BTCDOM", "Bitcoin Dominance", "btcdom"),
+        ),
+    ],
+)
+def test_a_cmc_listing_of_a_token_that_is_no_stock_wrapper_is_kept(exchange, row, detail):
+    venue = {"bitget-spot": "bitget", "bitget-perps-usdt": "bitget", "binance-futures": "binance"}[exchange]
+    category = "spot" if row["type"] == "spot" else "perpetual"
+    rows = {exchange: [row]}
+    pairs = [_pair(venue, category, detail.cmc_id, detail.symbol, 825, "USDT", ticker=row["id"].upper())]
+    report, _ = _build(rows, pairs, details={**DETAILS, detail.cmc_id: detail})
+    assert rows[exchange][0]["cmc_id"] == detail.cmc_id
+    assert report.pair_token_wrappers == []
+
+
+def test_a_crypto_row_keeps_a_cmc_listing_of_a_token():
+    rows = {"aster-perps": [_perp("btcusdt", "BTC", "USDT", "crypto")]}
+    pairs = [_pair("aster-pro", "perpetual", 1, "BTC", 825, "USDT", ticker="BTCUSDT")]
+    report, _ = _build(rows, pairs)
+    assert rows["aster-perps"][0]["base_asset_match"] == "cmc_market_pair"
+    assert report.pair_token_wrappers == []
+
+
+def test_forex_rows_reuse_a_cmc_tracked_pair_and_class_it_forex():
+    registry = AssetRegistry()
+    registry.mint(
+        ticker="USDBRL",
+        name="1 US Dollar (USD) to Brazil Real (BRL) (Derivatives)",
+        asset_class=AssetClass.unknown,
+        cmc_id=42335,
+        cmc_slug="usd-brl",
+    )
+    rows = {
+        "binance-futures": [_perp("usdbrlusdt", "USDBRL", "USDT", "forex")],
+        "gateio-perps-usdt": [_perp("USDBRL_USDT", "USDBRL", "USDT", "forex")],
+    }
+    _build(rows, registry=registry)
+    assert {rows[e][0]["base_asset_id"] for e in rows} == {"USDBRL"}
+    assert {rows[e][0]["cmc_id"] for e in rows} == {42335}
+    assert registry.get("USDBRL").asset_class is AssetClass.forex
+    assert len(registry.find_by_ticker("USDBRL")) == 1
+
+
+@pytest.mark.parametrize(
+    ("exchange", "row_id", "symbol", "expected"),
+    [
+        # Extended's 24/5 session markets on US stocks.
+        ("extended-perps", "AAPL_24_5-USD", "AAPL_24_5", "AAPL"),
+        # Avantis keeps a non-USD price currency in the ticker.
+        ("avantis-perps", "188", "005930KRW", "005930"),
+    ],
+)
+def test_venue_spellings_of_an_equity_ticker_resolve_to_the_equity(exchange, row_id, symbol, expected):
+    registry = AssetRegistry()
+    registry.mint(ticker="AAPL", name="Apple Inc (Derivatives)", asset_class=AssetClass.equity, cmc_id=39491)
+    registry.mint(
+        ticker="005930",
+        name="Samsung Electronics Co Ltd (Derivatives)",
+        asset_class=AssetClass.equity,
+        cmc_id=39503,
+    )
+    rows = {exchange: [_perp(row_id, symbol, "USDC", "equity")]}
+    _build(rows, registry=registry)
+    assert rows[exchange][0]["base_asset_id"] == expected
+    assert rows[exchange][0]["base_asset_match"] == "venue_reference"
+
+
+def test_a_multiplied_ticker_takes_the_asset_venues_agree_its_unit_ticker_means():
+    # GRVT's KBONK, Extended's kFLOKI and Lighter's 1000NOT are listed nowhere
+    # else under those tickers; the unit tickers are identified on two venues.
+    details = {
+        **DETAILS,
+        23095: _detail(23095, "BONK", "Bonk", "bonk"),
+        28850: _detail(28850, "NOT", "Notcoin", "notcoin"),
+    }
+    rows = {
+        "binance-futures": [
+            _perp("bonkusdt", "BONK", "USDT", "crypto"),
+            _perp("notusdt", "NOT", "USDT", "crypto"),
+        ],
+        "okx-perps": [
+            _perp("BONK-USDT-SWAP", "BONK", "USDT", "crypto"),
+            _perp("NOT-USDT-SWAP", "NOT", "USDT", "crypto"),
+        ],
+        "grvt-perps": [_perp("KBONK_USDT_Perp", "KBONK", "USDT", "crypto")],
+        "lighter-perps": [_perp("172", "1000NOT", "USDC", "crypto", base_asset="1000NOT")],
+    }
+    pairs = [
+        _pair("binance", "perpetual", 23095, "BONK", 825, "USDT", ticker="BONKUSDT"),
+        _pair("binance", "perpetual", 28850, "NOT", 825, "USDT", ticker="NOTUSDT"),
+        _pair("okx", "perpetual", 23095, "BONK", 825, "USDT", ticker="BONK-USDT-SWAP"),
+        _pair("okx", "perpetual", 28850, "NOT", 825, "USDT", ticker="NOT-USDT-SWAP"),
+    ]
+    _build(rows, pairs, details=details)
+    kbonk = rows["grvt-perps"][0]
+    assert (kbonk["base_asset_id"], kbonk["base_multiplier"]) == ("BONK", 1000)
+    assert kbonk["base_asset_match"] == "cross_venue_consensus"
+    thousand_not = rows["lighter-perps"][0]
+    assert (thousand_not["base_asset_id"], thousand_not["base_multiplier"]) == ("NOT", 1000)
+
+
+@pytest.mark.parametrize(
+    ("exchange", "row"),
+    [
+        # Klink Finance, a spot token, is not 1,000 Chainlink.
+        ("gateio-spot", _row("KLINK_USDT", "KLINK", "USDT", end="2026-09-17")),
+        # Only venues that write a K multiplier use it: Bybit's KLINK is not one.
+        ("bybit-perps-usd", _perp("KLINKUSDT", "KLINK", "USDT", "crypto")),
+    ],
+)
+def test_a_k_ticker_is_a_multiplier_only_where_the_venue_writes_one(exchange, row):
+    details = {**DETAILS, 1975: _detail(1975, "LINK", "Chainlink", "chainlink")}
+    rows = {
+        exchange: [row],
+        "binance-futures": [_perp("linkusdt", "LINK", "USDT", "crypto")],
+        "okx-perps": [_perp("LINK-USDT-SWAP", "LINK", "USDT", "crypto")],
+    }
+    pairs = [
+        _pair("binance", "perpetual", 1975, "LINK", 825, "USDT", ticker="LINKUSDT"),
+        _pair("okx", "perpetual", 1975, "LINK", 825, "USDT", ticker="LINK-USDT-SWAP"),
+    ]
+    _build(rows, pairs, details=details)
+    assert "base_asset_id" not in rows[exchange][0]
+
+
+def test_a_multiplier_lookalike_with_a_short_rest_is_not_scaled():
+    # KNOT is not 1,000 NOT: a letter prefix needs a four-character ticker after it.
+    details = {**DETAILS, 28850: _detail(28850, "NOT", "Notcoin", "notcoin")}
+    rows = {
+        "binance-futures": [_perp("notusdt", "NOT", "USDT", "crypto")],
+        "okx-perps": [_perp("NOT-USDT-SWAP", "NOT", "USDT", "crypto")],
+        "extended-perps": [_perp("kNOT-USD", "KNOT", "USD", "crypto")],
+    }
+    pairs = [
+        _pair("binance", "perpetual", 28850, "NOT", 825, "USDT", ticker="NOTUSDT"),
+        _pair("okx", "perpetual", 28850, "NOT", 825, "USDT", ticker="NOT-USDT-SWAP"),
+    ]
+    _build(rows, pairs, details=details)
+    assert "base_asset_id" not in rows["extended-perps"][0]
+
+
 def test_market_pair_resolves_base_quote_and_unified_id():
     rows = {
         "binance-spot": [_row("btcusdt", "BTC", "USDT")],

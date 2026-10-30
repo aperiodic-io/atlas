@@ -168,6 +168,64 @@ def test_parse_market_pair_tolerates_missing_optional_fields():
             "BTC_USDT",
         ),
         ("gate", "futures", {"derivativeTickerId": "ETH_USDT_20261023"}, "ETH_USDT_20261023"),
+        # DeFi / RWA perpetual venues, as CMC lists them.
+        (
+            "aster-pro",
+            "perpetual",
+            {
+                "derivativeTickerId": "TSLAUSDT",
+                "marketUrl": "https://www.asterdex.com/en/futures/v1/TSLAUSDT?ref=2b57B1",
+            },
+            "TSLAUSDT",
+        ),
+        (
+            "grvt",
+            "perpetual",
+            {
+                "derivativeTickerId": "TSLA_USDT_Perp",
+                "marketUrl": "https://grvt.io/exchange/perpetual/TSLA-USDT?ref=11Q559V",
+            },
+            "TSLA_USDT_PERP",
+        ),
+        (
+            "extended",
+            "perpetual",
+            {
+                "derivativeTickerId": "XAU-USD",
+                "marketUrl": "https://app.extended.exchange/",
+                "quoteSymbol": "USD",
+            },
+            "XAU-USD",
+        ),
+        (
+            "apex-omni",
+            "perpetual",
+            {
+                "derivativeTickerId": "BTCUSDT",
+                "marketUrl": "https://omni.apex.exchange/trade/BTCUSDT?referralCode=x",
+            },
+            "BTCUSDT",
+        ),
+        (
+            "pacifica",
+            "perpetual",
+            {
+                "derivativeTickerId": "TSLA-USD",
+                "marketUrl": "https://app.pacifica.fi/trade/TSLA",
+                "quoteSymbol": "USD",
+            },
+            "TSLA",
+        ),
+        (
+            "variational",
+            "perpetual",
+            {
+                "derivativeTickerId": "TSLA-PERP",
+                "marketUrl": "https://omni.variational.io/perpetual/TSLA",
+                "quoteSymbol": "USDC",
+            },
+            "TSLA",
+        ),
     ],
 )
 def test_native_id_candidates_include_the_atlas_id(venue, category, overrides, expected):
@@ -261,6 +319,54 @@ def test_match_market_pairs_finds_rows_by_native_id_and_type():
     assert result.matches[("binance-spot", "btcusdt")].category == "spot"
     assert result.matches[("binance-futures", "btcusdt")].category == "perpetual"
     assert result.unmatched == ()
+
+
+def test_match_market_pairs_finds_lighter_rows_by_market_symbol():
+    """Lighter's native ID is a market index; CMC knows the market by its symbol."""
+    rows = {
+        "lighter-perps": [
+            _row("1", "BTC", "perpetual", base_asset="BTC"),
+            _row("3", "TSLA", "perpetual", base_asset="TSLA"),
+        ]
+    }
+    pair = _pair(
+        venue="lighter",
+        category="perpetual",
+        marketPair="TSLA/USDC",
+        derivativeTickerId="TSLA_USDC",
+        marketUrl="https://app.lighter.xyz/trade/TSLA",
+        baseSymbol="TSLA",
+        baseCurrencyId=38152,
+        quoteSymbol="USDC",
+        quoteCurrencyId=3408,
+    )
+
+    result = match_market_pairs([pair], rows)
+
+    assert set(result.matches) == {("lighter-perps", "3")}
+    assert result.matches[("lighter-perps", "3")].base_cmc_id == 38152
+
+
+def test_match_market_pairs_prefers_a_native_id_over_a_market_symbol():
+    """The market-symbol index is a fallback: a row whose native ID matches wins."""
+    rows = {
+        "lighter-perps": [
+            _row("TSLA", "TSLA", "perpetual", base_asset="OTHER"),
+            _row("7", "TSLA", "perpetual", base_asset="TSLA"),
+        ]
+    }
+    pair = _pair(
+        venue="lighter",
+        category="perpetual",
+        derivativeTickerId="TSLA_USDC",
+        marketUrl="https://app.lighter.xyz/trade/TSLA",
+        baseSymbol="TSLA",
+        quoteSymbol="USDC",
+    )
+
+    result = match_market_pairs([pair], rows)
+
+    assert set(result.matches) == {("lighter-perps", "TSLA")}
 
 
 def test_match_market_pairs_prefers_the_active_row():
@@ -376,6 +482,13 @@ def test_every_venue_maps_categories_to_known_exchanges():
         "coinbase-exchange",
         "bitget",
         "gate",
+        "aster-pro",
+        "lighter",
+        "grvt",
+        "extended",
+        "apex-omni",
+        "pacifica",
+        "variational",
     }
     for venue in CMC_VENUES.values():
         for exchanges in venue.exchanges.values():

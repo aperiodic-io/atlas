@@ -28,11 +28,20 @@
    ],
    "aliases": [
     "SKHX",
-    "SKHYNIX"
+    "SKHYNIX",
+    "SKHYNIXUSD"
    ],
    "status": "active",
    "cmc_date_added": "2026-01-30T08:50:41Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "004020",
+   "ticker": "004020",
+   "name": "004020",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "005380",
@@ -46,7 +55,8 @@
     "Tokenized Stock"
    ],
    "aliases": [
-    "HYUNDAI"
+    "HYUNDAI",
+    "HYUNDAIUSD"
    ],
    "status": "active",
    "cmc_date_added": "2026-02-12T05:35:28Z",
@@ -65,11 +75,100 @@
    ],
    "aliases": [
     "SAMSUNG",
+    "SAMSUNGUSD",
     "SMSN"
    ],
    "status": "active",
    "cmc_date_added": "2026-01-30T05:33:41Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "005940",
+   "ticker": "005940",
+   "name": "005940",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "009150",
+   "ticker": "009150",
+   "name": "009150",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "009540",
+   "ticker": "009540",
+   "name": "009540",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "011200",
+   "ticker": "011200",
+   "name": "011200",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "034730",
+   "ticker": "034730",
+   "name": "034730",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "035420",
+   "ticker": "035420",
+   "name": "035420",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "035720",
+   "ticker": "035720",
+   "name": "035720",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "042700",
+   "ticker": "042700",
+   "name": "042700",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "051910",
+   "ticker": "051910",
+   "name": "051910",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "066570",
+   "ticker": "066570",
+   "name": "066570",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "069500",
+   "ticker": "069500",
+   "name": "069500",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "0700",
@@ -171,6 +270,22 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "259960",
+   "ticker": "259960",
+   "name": "259960",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "272210",
+   "ticker": "272210",
+   "name": "272210",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "2Y",
    "ticker": "2Y",
    "name": "2Y",
@@ -196,6 +311,14 @@
    "asset_class": "index",
    "status": "active",
    "minted_at": "2026-10-19"
+  },
+  {
+   "asset_id": "373220",
+   "ticker": "373220",
+   "name": "373220",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "3KDS",
@@ -928,6 +1051,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ADP.EQUITY",
+   "ticker": "ADP",
+   "name": "ADP",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "ADSK",
    "ticker": "ADSK",
    "name": "ADSK",
@@ -1190,6 +1321,20 @@
    "status": "active",
    "cmc_date_added": "2026-04-28T22:00:41Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "AI.ARTIFICIAL_INU_AI",
+   "ticker": "AI",
+   "name": "Artificial Inu",
+   "asset_class": "crypto",
+   "cmc_id": 40925,
+   "cmc_slug": "artificial-inu-ai",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-07-28T05:29:46Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "AI.SLEEPLESS_AI",
@@ -1685,6 +1830,9 @@
    "cmc_slug": "allora",
    "categories": [
     "AI Agents"
+   ],
+   "aliases": [
+    "ALLORA"
    ],
    "status": "active",
    "cmc_date_added": "2025-11-10T01:35:52Z",
@@ -2291,6 +2439,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ANT.EQUITY",
+   "ticker": "ANT",
+   "name": "ANT",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "ANTA",
    "ticker": "ANTA",
    "name": "ANTA",
@@ -2322,6 +2478,9 @@
    "categories": [
     "DeFi",
     "Tokenized Stock"
+   ],
+   "aliases": [
+    "ANTHROP"
    ],
    "status": "active",
    "cmc_date_added": "2026-05-07T08:17:11Z",
@@ -2467,6 +2626,17 @@
    "status": "active",
    "cmc_date_added": "2026-07-06T08:52:42Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "APM",
+   "ticker": "APM",
+   "name": "apM Fashion",
+   "asset_class": "crypto",
+   "cmc_id": 42294,
+   "cmc_slug": "apm-fashion",
+   "status": "active",
+   "cmc_date_added": "2026-09-14T08:59:22Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "APP",
@@ -3017,6 +3187,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ASTEROID",
+   "ticker": "ASTEROID",
+   "name": "Asteroid Shiba",
+   "asset_class": "crypto",
+   "cmc_id": 39880,
+   "cmc_slug": "asteroid-shiba",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-04-19T02:38:14Z",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "ASTR",
    "ticker": "ASTR",
    "name": "Astar",
@@ -3239,6 +3423,14 @@
    "status": "active",
    "cmc_date_added": "2025-11-24T11:38:10Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "AUDUSD",
+   "ticker": "AUDUSD",
+   "name": "AUD/USD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "AURA",
@@ -3686,6 +3878,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "BA.EQUITY",
+   "ticker": "BA",
+   "name": "BA",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "BABA",
    "ticker": "BABA",
    "name": "Alibaba Group Holding Limited (Derivatives)",
@@ -3756,7 +3956,8 @@
     "Staking"
    ],
    "aliases": [
-    "BABY1"
+    "BABY1",
+    "BABYL"
    ],
    "status": "active",
    "cmc_date_added": "2024-07-15T10:03:41Z",
@@ -4059,6 +4260,9 @@
    "categories": [
     "Layer 1",
     "Real World Assets Protocols"
+   ],
+   "aliases": [
+    "BBIT"
    ],
    "status": "active",
    "cmc_date_added": "2024-05-13T10:01:10Z",
@@ -5728,6 +5932,9 @@
    "asset_class": "crypto",
    "cmc_id": 36277,
    "cmc_slug": "bitlayer",
+   "aliases": [
+    "BTR0"
+   ],
    "status": "active",
    "cmc_date_added": "2025-04-16T06:10:54Z",
    "minted_at": "2026-10-14"
@@ -6026,7 +6233,9 @@
     "DeFi"
    ],
    "aliases": [
-    "BRENTOIL"
+    "BRENT",
+    "BRENTOIL",
+    "XBR"
    ],
    "status": "active",
    "cmc_date_added": "2026-03-24T09:35:24Z",
@@ -6215,6 +6424,14 @@
    "status": "active",
    "cmc_date_added": "2021-04-19T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CAR",
+   "ticker": "CAR",
+   "name": "CAR",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "CARAT",
@@ -6471,6 +6688,22 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CDNS",
+   "ticker": "CDNS",
+   "name": "CDNS",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "CDW",
+   "ticker": "CDW",
+   "name": "CDW",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "CEG",
@@ -6931,6 +7164,9 @@
    "categories": [
     "DeFi"
    ],
+   "aliases": [
+    "WTI"
+   ],
    "status": "active",
    "cmc_date_added": "2026-01-30T05:34:35Z",
    "minted_at": "2026-10-14"
@@ -7018,6 +7254,14 @@
    "status": "active",
    "cmc_date_added": "2026-08-04T07:31:51Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CLSK.EQUITY",
+   "ticker": "CLSK",
+   "name": "CLSK",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "CMCSA",
@@ -8512,6 +8756,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DASH.EQUITY",
+   "ticker": "DASH",
+   "name": "DASH",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "DATA",
    "ticker": "DATA",
    "name": "Data Network",
@@ -8983,6 +9235,14 @@
    "status": "active",
    "cmc_date_added": "2020-08-04T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "DIA.EQUITY",
+   "ticker": "DIA",
+   "name": "DIA",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "DIAM",
@@ -10203,6 +10463,9 @@
    "categories": [
     "Interoperability"
    ],
+   "aliases": [
+    "ESPRESSO"
+   ],
    "status": "active",
    "cmc_date_added": "2026-02-12T11:00:00Z",
    "minted_at": "2026-10-14"
@@ -10363,6 +10626,14 @@
    "status": "active",
    "cmc_date_added": "2024-08-26T07:13:12Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "EURUSD",
+   "ticker": "EURUSD",
+   "name": "EUR/USD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "EUV",
@@ -10567,6 +10838,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "FANG",
+   "ticker": "FANG",
+   "name": "FANG",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "FAR",
    "ticker": "FAR",
    "name": "FAR Labs",
@@ -10724,6 +11003,9 @@
    "asset_class": "crypto",
    "cmc_id": 38482,
    "cmc_slug": "falcon-finance-ff",
+   "aliases": [
+    "FF0"
+   ],
    "status": "active",
    "cmc_date_added": "2025-09-23T04:16:56Z",
    "minted_at": "2026-10-14"
@@ -11814,6 +12096,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "GBPUSD",
+   "ticker": "GBPUSD",
+   "name": "GBP/USD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "GD",
    "ticker": "GD",
    "name": "GD",
@@ -11866,6 +12156,14 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GEHC",
+   "ticker": "GEHC",
+   "name": "GEHC",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "GEMS",
@@ -12599,6 +12897,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "GOOG",
+   "ticker": "GOOG",
+   "name": "GOOG",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "GOOGL",
    "ticker": "GOOGL",
    "name": "Alphabet Inc (Derivatives)",
@@ -12741,6 +13047,14 @@
    "status": "active",
    "cmc_date_added": "2023-04-07T04:03:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GRAB",
+   "ticker": "GRAB",
+   "name": "GRAB",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "GRAL",
@@ -12918,6 +13232,20 @@
    "status": "active",
    "cmc_date_added": "2021-12-22T01:37:42Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "GSTOCK",
+   "ticker": "GSTOCK",
+   "name": "Gstock",
+   "asset_class": "crypto",
+   "cmc_id": 42337,
+   "cmc_slug": "gstock",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-21T03:06:50Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "GT",
@@ -13708,6 +14036,22 @@
    "status": "active",
    "cmc_date_added": "2023-06-14T07:15:12Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "HON",
+   "ticker": "HON",
+   "name": "HON",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "HONA",
+   "ticker": "HONA",
+   "name": "HONA",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "HONEY",
@@ -14783,6 +15127,14 @@
    "status": "active",
    "cmc_date_added": "2026-08-04T07:31:44Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "INTU.EQUITY",
+   "ticker": "INTU",
+   "name": "INTU",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "INTW",
@@ -16218,6 +16570,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "KRCOMP",
+   "ticker": "KRCOMP",
+   "name": "KRCOMP",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "KRL",
    "ticker": "KRL",
    "name": "Kryll",
@@ -16433,6 +16793,9 @@
    "asset_class": "crypto",
    "cmc_id": 36510,
    "cmc_slug": "lagrange",
+   "aliases": [
+    "LAGRANGE"
+   ],
    "status": "active",
    "cmc_date_added": "2025-05-15T07:24:08Z",
    "minted_at": "2026-10-14"
@@ -16758,6 +17121,9 @@
    "asset_class": "crypto",
    "cmc_id": 38506,
    "cmc_slug": "bitlight",
+   "aliases": [
+    "BITLIGHT"
+   ],
    "status": "active",
    "cmc_date_added": "2025-09-25T12:04:36Z",
    "minted_at": "2026-10-14"
@@ -17478,6 +17844,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "LULU.EQUITY",
+   "ticker": "LULU",
+   "name": "LULU",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "LUMIA",
    "ticker": "LUMIA",
    "name": "Lumia",
@@ -17934,6 +18308,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MARS",
+   "ticker": "MARS",
+   "name": "Marscoin",
+   "asset_class": "crypto",
+   "cmc_id": 154,
+   "cmc_slug": "marscoin",
+   "status": "active",
+   "cmc_date_added": "2014-02-24T00:00:00Z",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "MARSCOIN",
    "ticker": "MARSCOIN",
    "name": "MarsCoin",
@@ -17987,6 +18372,20 @@
    "status": "active",
    "cmc_date_added": "2021-02-21T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MASK.NULLMASK",
+   "ticker": "MASK",
+   "name": "Nullmask",
+   "asset_class": "crypto",
+   "cmc_id": 42401,
+   "cmc_slug": "nullmask",
+   "aliases": [
+    "NULLMASK"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-10-04T21:15:22Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "MAT",
@@ -18083,6 +18482,20 @@
    "status": "active",
    "cmc_date_added": "2020-07-14T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MAX.GIGGLE_MASCOT",
+   "ticker": "MAX",
+   "name": "Giggle Mascot",
+   "asset_class": "crypto",
+   "cmc_id": 42248,
+   "cmc_slug": "giggle-mascot",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-08T07:07:01Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "MAX.MASTERCARD_TOKENIZED_STOCK_XSTOCK",
@@ -18469,6 +18882,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MEME.A_MEME_COIN",
+   "ticker": "MEME",
+   "name": "A Meme Coin",
+   "asset_class": "crypto",
+   "cmc_id": 42007,
+   "cmc_slug": "a-meme-coin",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-04T10:57:20Z",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "MEMEFI",
    "ticker": "MEMEFI",
    "name": "MemeFi",
@@ -18528,6 +18955,9 @@
    "categories": [
     "DeFi",
     "DApp"
+   ],
+   "aliases": [
+    "METEORA"
    ],
    "status": "active",
    "cmc_date_added": "2025-09-10T23:40:19Z",
@@ -20074,6 +20504,9 @@
    "categories": [
     "DeFi"
    ],
+   "aliases": [
+    "XNG"
+   ],
    "status": "active",
    "cmc_date_added": "2026-01-28T10:57:29Z",
    "minted_at": "2026-10-14"
@@ -20329,6 +20762,7 @@
     "Memes"
    ],
    "aliases": [
+    "1NEIRO",
     "NEIROCTO",
     "NEIROETH"
    ],
@@ -21304,6 +21738,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "NXPI",
+   "ticker": "NXPI",
+   "name": "NXPI",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "NXT",
    "ticker": "NXT",
    "name": "NXT",
@@ -21338,6 +21780,14 @@
    "status": "active",
    "cmc_date_added": "2022-01-24T08:30:07Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "NZDUSD",
+   "ticker": "NZDUSD",
+   "name": "NZD/USD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "O",
@@ -21448,6 +21898,14 @@
    "status": "active",
    "cmc_date_added": "2023-04-05T08:18:03Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ODFL",
+   "ticker": "ODFL",
+   "name": "ODFL",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "OFC",
@@ -21936,6 +22394,9 @@
    "categories": [
     "DeFi",
     "Tokenized Stock"
+   ],
+   "aliases": [
+    "ORACLE"
    ],
    "status": "active",
    "cmc_date_added": "2026-01-29T10:38:50Z",
@@ -24202,6 +24663,9 @@
     "Real World Assets Protocols",
     "Interoperability"
    ],
+   "aliases": [
+    "QUANT"
+   ],
    "status": "active",
    "cmc_date_added": "2018-08-10T00:00:00Z",
    "minted_at": "2026-10-14"
@@ -24423,6 +24887,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "QUBT.EQUITY",
+   "ticker": "QUBT",
+   "name": "QUBT",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "QUICK",
    "ticker": "QUICK",
    "name": "Quickswap [New]",
@@ -24529,6 +25001,20 @@
    "status": "active",
    "cmc_date_added": "2021-02-19T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "RAIL",
+   "ticker": "RAIL",
+   "name": "Railgun",
+   "asset_class": "crypto",
+   "cmc_id": 10854,
+   "cmc_slug": "railgun",
+   "categories": [
+    "Privacy"
+   ],
+   "status": "active",
+   "cmc_date_added": "2021-07-12T00:00:00Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "RAIN",
@@ -27124,6 +27610,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SDEV",
+   "ticker": "SDEV",
+   "name": "Stablecoin Development Corp (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42410,
+   "cmc_slug": "stablecoin-development-corp-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-05-05T10:48:42Z",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "SDEX",
    "ticker": "SDEX",
    "name": "SmarDex",
@@ -27245,6 +27746,9 @@
    "asset_class": "crypto",
    "cmc_id": 38868,
    "cmc_slug": "sentient",
+   "aliases": [
+    "SENTIENT"
+   ],
    "status": "active",
    "cmc_date_added": "2026-01-22T10:00:00Z",
    "minted_at": "2026-10-14"
@@ -27298,6 +27802,14 @@
    "status": "active",
    "cmc_date_added": "2026-08-04T07:32:05Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SGOV.EQUITY",
+   "ticker": "SGOV",
+   "name": "SGOV",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "SGR",
@@ -27858,6 +28370,9 @@
    "asset_class": "crypto",
    "cmc_id": 39377,
    "cmc_slug": "solana-mobile-seeker",
+   "aliases": [
+    "SKRS"
+   ],
    "status": "active",
    "cmc_date_added": "2026-01-16T07:46:14Z",
    "minted_at": "2026-10-14"
@@ -28686,6 +29201,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "SOXX.EQUITY",
+   "ticker": "SOXX",
+   "name": "SOXX",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "SOY",
    "ticker": "SOY",
    "name": "SOY",
@@ -28781,6 +29304,9 @@
    "categories": [
     "DeFi",
     "Tokenized Stock"
+   ],
+   "aliases": [
+    "SPACEX"
    ],
    "status": "active",
    "cmc_date_added": "2026-01-30T05:40:28Z",
@@ -28955,6 +29481,14 @@
    "asset_class": "index",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SPX500M",
+   "ticker": "SPX500M",
+   "name": "SPX500M",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "SPXL",
@@ -29307,6 +29841,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "STLD",
+   "ticker": "STLD",
+   "name": "STLD",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "STM",
    "ticker": "STM",
    "name": "STM",
@@ -29403,6 +29945,20 @@
    "status": "active",
    "cmc_date_added": "2025-02-12T05:09:02Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "STONKS.STONKSBNB",
+   "ticker": "STONKS",
+   "name": "Stonks (stonksbnb.com)",
+   "asset_class": "crypto",
+   "cmc_id": 42035,
+   "cmc_slug": "stonksbnb",
+   "categories": [
+    "Memes"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-07T09:49:16Z",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "STORJ",
@@ -30143,6 +30699,9 @@
    "asset_class": "crypto",
    "cmc_id": 38175,
    "cmc_slug": "overtake",
+   "aliases": [
+    "OVERTAKE"
+   ],
    "status": "active",
    "cmc_date_added": "2025-08-24T12:53:21Z",
    "minted_at": "2026-10-14"
@@ -30307,6 +30866,14 @@
    "status": "active",
    "cmc_date_added": "2026-01-30T05:01:06Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "TECH100M",
+   "ticker": "TECH100M",
+   "name": "TECH100M",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "TEL",
@@ -31430,6 +31997,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "TTD.EQUITY",
+   "ticker": "TTD",
+   "name": "TTD",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "TTF",
    "ticker": "TTF",
    "name": "TTF",
@@ -31560,6 +32135,9 @@
    "cmc_slug": "tutorial",
    "categories": [
     "Memes"
+   ],
+   "aliases": [
+    "TUTORIAL"
    ],
    "status": "active",
    "cmc_date_added": "2025-02-26T10:44:14Z",
@@ -32099,6 +32677,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "URA",
+   "ticker": "URA",
+   "name": "URA",
+   "asset_class": "commodity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "URANIUM",
    "ticker": "URANIUM",
    "name": "URANIUM",
@@ -32152,6 +32738,22 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-19"
+  },
+  {
+   "asset_id": "US100.INDEX",
+   "ticker": "US100",
+   "name": "US100",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "US10Y",
+   "ticker": "US10Y",
+   "name": "US10Y",
+   "asset_class": "index",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "US2000",
@@ -32259,7 +32861,7 @@
    "asset_id": "USDBRL",
    "ticker": "USDBRL",
    "name": "1 US Dollar (USD) to Brazil Real (BRL) (Derivatives)",
-   "asset_class": "unknown",
+   "asset_class": "forex",
    "cmc_id": 42335,
    "cmc_slug": "1-us-dollar-to-brazil-real-derivatives",
    "categories": [
@@ -32279,6 +32881,30 @@
    "status": "active",
    "cmc_date_added": "2018-10-08T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USDCAD",
+   "ticker": "USDCAD",
+   "name": "USD/CAD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "USDCHF",
+   "ticker": "USDCHF",
+   "name": "USD/CHF",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "USDCNH",
+   "ticker": "USDCNH",
+   "name": "USD/CNH",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "USDD",
@@ -32377,6 +33003,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "USDHKD",
+   "ticker": "USDHKD",
+   "name": "USD/HKD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "USDHL",
    "ticker": "USDHL",
    "name": "Hyper USD",
@@ -32386,6 +33020,22 @@
    "status": "active",
    "cmc_date_added": "2025-09-09T13:47:45Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USDJPY",
+   "ticker": "USDJPY",
+   "name": "USD/JPY",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "USDKRW",
+   "ticker": "USDKRW",
+   "name": "USD/KRW",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "USDP",
@@ -32450,6 +33100,22 @@
    "status": "active",
    "cmc_date_added": "2022-01-14T04:28:57Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "USDSEK",
+   "ticker": "USDSEK",
+   "name": "USD/SEK",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "USDSGD",
+   "ticker": "USDSGD",
+   "name": "USD/SGD",
+   "asset_class": "forex",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "USDT",
@@ -32674,6 +33340,9 @@
     "DeFi",
     "Tokenized Stock"
    ],
+   "aliases": [
+    "VISA"
+   ],
    "status": "active",
    "cmc_date_added": "2026-01-29T01:38:26Z",
    "minted_at": "2026-10-14"
@@ -32711,6 +33380,9 @@
    "cmc_slug": "vana",
    "categories": [
     "Layer 1"
+   ],
+   "aliases": [
+    "VANATOKEN"
    ],
    "status": "active",
    "cmc_date_added": "2024-12-13T12:20:10Z",
@@ -33227,6 +33899,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "VRTX.EQUITY",
+   "ticker": "VRTX",
+   "name": "VRTX",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "VRTXSTOCK",
    "ticker": "VRTXSTOCK",
    "name": "VRTXSTOCK",
@@ -33601,6 +34281,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "WDAY",
+   "ticker": "WDAY",
+   "name": "WDAY",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "WDC",
    "ticker": "WDC",
    "name": "Western Digital Corp (Derivatives)",
@@ -33771,6 +34459,9 @@
    "cmc_slug": "humidifi",
    "categories": [
     "DeFi"
+   ],
+   "aliases": [
+    "HUMIDIFI"
    ],
    "status": "active",
    "cmc_date_added": "2025-12-03T14:40:45Z",
@@ -34477,6 +35168,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "XEL",
+   "ticker": "XEL",
+   "name": "XEL",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
+  },
+  {
    "asset_id": "XELS",
    "ticker": "XELS",
    "name": "XELS",
@@ -35106,6 +35805,14 @@
    "status": "active",
    "cmc_date_added": "2018-05-22T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "XYZSPCXORCLPX",
+   "ticker": "XYZSPCX_ORCLPX",
+   "name": "XYZSPCX_ORCLPX",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-10-30"
   },
   {
    "asset_id": "XZK",

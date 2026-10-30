@@ -58,6 +58,17 @@ ACTIVE_BASE_COVERAGE_FLOORS = {
     "gateio-perps-usdt": 0.95,
     "gateio-futures-usdt": 0.95,
     "coinbase-spot": 0.97,
+    # DeFi / RWA perpetual venues. Avantis is not on CMC and lists structured
+    # `*_UPSIDE` products; Lighter and Variational a few pre-IPO and one-off
+    # tickers no other venue lists.
+    "apex-perps": 0.98,
+    "aster-perps": 0.98,
+    "avantis-perps": 0.95,
+    "extended-perps": 0.97,
+    "grvt-perps": 0.98,
+    "lighter-perps": 0.96,
+    "pacifica-perps": 0.97,
+    "variational-perps": 0.97,
 }
 
 
@@ -201,6 +212,23 @@ def test_quote_coverage(snapshots):
         # Multiplier contracts point at the underlying asset.
         ("binance-futures", "1000pepeusdt", "PEPE", "USDT", "USDT", "perpetual-PEPE-USDT:USDT"),
         ("hyperliquid-perps", "kPEPE", "PEPE", "USDC", "USDC", "perpetual-PEPE-USDC:USDC"),
+        # DeFi / RWA perpetual venues, each in its own native ID scheme.
+        ("aster-perps", "btcusdt", "BTC", "USDT", "USDT", "perpetual-BTC-USDT:USDT"),
+        ("aster-perps", "xauusd1", "XAU", "USD1", "USD1", "perpetual-XAU-USD1:USD1"),
+        ("lighter-perps", "1", "BTC", "USDC", "USDC", "perpetual-BTC-USDC:USDC"),
+        ("grvt-perps", "TSLA_USDT_Perp", "TSLA", "USDT", "USDT", "perpetual-TSLA-USDT:USDT"),
+        ("extended-perps", "BTC-USD", "BTC", "USD", "USD", "perpetual-BTC-USD:USD"),
+        ("apex-perps", "AAPLUSDT", "AAPL", "USDT", "USDT", "perpetual-AAPL-USDT:USDT"),
+        ("pacifica-perps", "XAU", "XAU", "USDC", "USDC", "perpetual-XAU-USDC:USDC"),
+        ("variational-perps", "ANTHROPIC", "ANTHROPIC", "USDC", "USDC", "perpetual-ANTHROPIC-USDC:USDC"),
+        # Avantis keys markets by pair index and is not on CMC.
+        ("avantis-perps", "0", "ETH", "USDC", "USDC", "perpetual-ETH-USDC:USDC"),
+        # Forex perpetuals share one currency-pair asset in market convention.
+        ("avantis-perps", "11", "EURUSD", "USDC", "USDC", "perpetual-EURUSD-USDC:USDC"),
+        ("hyperliquid-perps", "xyz:JPY", "USDJPY", "USDC", "USDC", "perpetual-USDJPY-USDC:USDC"),
+        # Venue spellings of one equity.
+        ("extended-perps", "AAPL_24_5-USD", "AAPL", "USD", "USD", "perpetual-AAPL-USD:USD"),
+        ("avantis-perps", "188", "005930", "USDC", "USDC", "perpetual-005930-USDC:USDC"),
     ],
 )
 def test_known_instruments(sm, exchange, original_id, base, quote, margin, unified):
@@ -255,6 +283,79 @@ def test_tradfi_underlyings_share_one_asset_across_venues(sm):
     assert sm.asset("TSLA").asset_class is AssetClass.equity
     gold = sm.base_asset("binance-futures", "xauusdt")
     assert gold.asset_class is AssetClass.commodity
+
+
+DEFI_RWA_VENUES = (
+    "aster-perps",
+    "avantis-perps",
+    "variational-perps",
+    "lighter-perps",
+    "grvt-perps",
+    "extended-perps",
+    "apex-perps",
+    "pacifica-perps",
+)
+
+
+@pytest.mark.parametrize(
+    ("ticker", "asset_id", "asset_class"),
+    [
+        ("TSLA", "TSLA", AssetClass.equity),
+        ("XAU", "XAU", AssetClass.commodity),
+        ("BTC", "BTC", AssetClass.crypto),
+    ],
+)
+def test_every_defi_rwa_venue_lists_one_asset_per_reference(sm, ticker, asset_id, asset_class):
+    listed = {
+        exchange: {
+            sm.instrument_metadata(exchange, oid).get("base_asset_id")
+            for _, oid in sm.instruments(exchange=exchange)
+            if sm.instrument_metadata(exchange, oid).get("symbol") == ticker
+            and not sm.instrument_metadata(exchange, oid).get("end_date")
+        }
+        for exchange in DEFI_RWA_VENUES
+    }
+    listed = {exchange: ids for exchange, ids in listed.items() if ids}
+    assert len(listed) >= 6
+    assert set().union(*listed.values()) == {asset_id}
+    assert sm.asset(asset_id).asset_class is asset_class
+
+
+def test_forex_pairs_are_forex_assets_across_venues(sm):
+    eur = {exchange for exchange, _ in sm.instruments_for_asset("EURUSD")}
+    assert {"avantis-perps", "lighter-perps", "extended-perps", "pacifica-perps", "hyperliquid-perps"} <= eur
+    for pair in ("EURUSD", "GBPUSD", "USDJPY"):
+        assert sm.asset(pair).asset_class is AssetClass.forex
+    assert sm.asset("USDBRL").cmc_id is not None  # CMC's own reference rate, reused
+
+
+@pytest.mark.parametrize(
+    ("exchange", "original_id", "cmc_id"),
+    [
+        # CMC files these under MoneyByte; they are Monad.
+        ("apex-perps", "MONUSDT", 30495),
+        ("extended-perps", "MON-USD", 30495),
+        ("grvt-perps", "MON_USDT_Perp", 30495),
+        ("pacifica-perps", "MON", 30495),
+        ("variational-perps", "USTC", 7129),
+        ("apex-perps", "ORACLEUSDT", 39482),
+        ("variational-perps", "VISA", 40014),
+        ("extended-perps", "ANTHROP-USD", 39496),
+    ],
+)
+def test_curated_venue_tickers(sm, exchange, original_id, cmc_id):
+    assert sm.base_asset(exchange, original_id).cmc_id == cmc_id
+
+
+def test_equity_perpetuals_are_never_a_tokenized_stock(sm, registry):
+    """A stock perpetual tracks the stock, not Ondo's or Robinhood's token of it."""
+    wrapped = []
+    for exchange in [*DEFI_RWA_VENUES, "bitget-perps-usdt", "bybit-perps-usd", "okx-perps"]:
+        for _, oid in sm.instruments(exchange=exchange, underlying="equity"):
+            asset = registry.get(sm.instrument_metadata(exchange, oid).get("base_asset_id") or "")
+            if asset is not None and "tokenized" in asset.name.lower():
+                wrapped.append((exchange, oid, asset.asset_id))
+    assert wrapped == []
 
 
 def test_unified_id_groups_a_contract_across_venues(sm):

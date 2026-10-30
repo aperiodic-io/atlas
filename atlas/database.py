@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Iterable
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -11,6 +12,12 @@ from .categories import ASSET_CATEGORIES
 
 _DATA_DIR = Path(__file__).parent / "data"
 _REGISTRY_RELATIVE_PATH = Path("symbology") / "assets.json"
+
+
+def _as_set(value: str | Iterable[str] | None) -> set[str] | None:
+    if value is None:
+        return None
+    return {value} if isinstance(value, str) else set(value)
 
 
 class SecurityMaster:
@@ -155,6 +162,42 @@ class SecurityMaster:
             ):
                 ids.append(symbol_id)
         return ids
+
+    def instruments(
+        self,
+        underlying: str | Iterable[str] | None = None,
+        exchange: str | Iterable[str] | None = None,
+        instrument_type: str | None = None,
+        active_at: datetime | None = None,
+    ) -> list[tuple[str, str]]:
+        """Every ``(exchange, original_id)`` matching all the given filters.
+
+        ``underlying`` is the venue's asset class (``equity``, ``commodity``,
+        ``forex``, ``index``, ``pre_market``, ``crypto``, ``unknown``); a row the
+        venue does not classify matches none. ``active_at`` keeps instruments
+        listed at that moment: on or after ``first_capture``, before ``end_date``.
+        """
+        classes = _as_set(underlying)
+        exchanges = _as_set(exchange)
+        moment = None
+        if active_at is not None:
+            moment = active_at.replace(tzinfo=UTC) if active_at.tzinfo is None else active_at
+        matches = []
+        for key in self._internal_id_map:
+            row = self._metadata_map[key]
+            if exchanges is not None and key[0] not in exchanges:
+                continue
+            if classes is not None and row.get("underlying") not in classes:
+                continue
+            if instrument_type is not None and row.get("type") != instrument_type:
+                continue
+            if moment is not None:
+                start = parse_utc_timestamp(row.get("first_capture"))
+                end = parse_utc_timestamp(row.get("end_date"))
+                if start is None or start > moment or (end is not None and end <= moment):
+                    continue
+            matches.append(key)
+        return sorted(matches)
 
     # -- Assets ---------------------------------------------------------------
 

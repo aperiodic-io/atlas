@@ -222,3 +222,86 @@ def test_security_master_ignores_non_exchange_json_files(tmp_path: Path) -> None
     )
 
     assert symbols == ["BTCUSDT"]
+
+
+def _rwa_universe(tmp_path: Path) -> SecurityMaster:
+    def perp(row_id, symbol, underlying, first="2026-01-01", end=None, **extra):
+        row = {
+            "id": row_id,
+            "type": "perpetual",
+            "symbol": symbol,
+            "denominator": "USDC",
+            "margin": "USDC",
+            "underlying": underlying,
+            "first_capture": f"{first}T00:00:00.000Z",
+            "internal_id": f"perpetual-{symbol}-USDC:USDC",
+            **extra,
+        }
+        if end:
+            row["end_date"] = f"{end}T00:00:00.000Z"
+        return row
+
+    _write_exchange(
+        tmp_path,
+        "lighter-perps",
+        [
+            perp("3", "TSLA", "equity", base_asset_id="TSLA"),
+            perp("96", "EUR", "forex", base_asset_id="EURUSD"),
+            perp("1", "BTC", "crypto", base_asset_id="BTC"),
+            perp("173", "SPACEX", "pre_market", first="2026-05-08", end="2026-06-19"),
+        ],
+    )
+    _write_exchange(
+        tmp_path,
+        "avantis-perps",
+        [perp("100", "TSLA", "equity", base_asset_id="TSLA"), perp("20", "XAG", "commodity")],
+    )
+    _write_exchange(
+        tmp_path,
+        "binance-spot",
+        [
+            {
+                "id": "btcusdt",
+                "type": "spot",
+                "symbol": "BTC",
+                "denominator": "USDT",
+                "first_capture": "2019-01-01T00:00:00.000Z",
+                "internal_id": "spot-BTC-USDT",
+            }
+        ],
+    )
+    return SecurityMaster.load(data_dir=tmp_path)
+
+
+def test_instruments_filters_by_underlying_asset_class(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+
+    assert sm.instruments(underlying="equity") == [("avantis-perps", "100"), ("lighter-perps", "3")]
+    assert sm.instruments(underlying=["forex", "commodity"]) == [
+        ("avantis-perps", "20"),
+        ("lighter-perps", "96"),
+    ]
+    # A row without a venue classification is not RWA.
+    assert ("binance-spot", "btcusdt") not in sm.instruments(underlying="crypto")
+
+
+def test_instruments_filters_by_exchange_type_and_trading_date(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+
+    assert sm.instruments(exchange="lighter-perps", active_at=datetime(2026, 6, 1)) == [
+        ("lighter-perps", "1"),
+        ("lighter-perps", "173"),
+        ("lighter-perps", "3"),
+        ("lighter-perps", "96"),
+    ]
+    # Delisted on 2026-06-19: not trading after it.
+    assert ("lighter-perps", "173") not in sm.instruments(active_at=datetime(2026, 7, 1))
+    assert sm.instruments(instrument_type="spot") == [("binance-spot", "btcusdt")]
+    assert sm.instruments(exchange=["avantis-perps", "binance-spot"], underlying="equity") == [
+        ("avantis-perps", "100")
+    ]
+
+
+def test_instruments_with_no_filter_is_every_instrument(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+    assert len(sm.instruments()) == len(sm) == 7
