@@ -117,11 +117,12 @@ strong { font-weight: 650; }
   border-bottom: 1px solid var(--border);
 }
 .header-row { display: flex; align-items: center; gap: 24px; height: 60px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand, .brand-home { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand-mark { width: 26px; height: 26px; }
 .brand-dot { fill: var(--signal); }
 .brand-name { font-stretch: 125%; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; margin: 0; }
-.brand-by { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted-foreground); transform: translateY(1px); }
+.brand-by { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted-foreground); text-decoration: none; transform: translateY(1px); transition: color 0.2s var(--ease); }
+.brand-by:hover { color: var(--foreground); }
 .nav { display: flex; gap: 22px; margin-inline: auto; }
 .nav a { font-size: 0.875rem; font-weight: 500; color: var(--muted-foreground); text-decoration: none; transition: color 0.2s var(--ease); }
 .nav a:hover { color: var(--foreground); }
