@@ -35,7 +35,7 @@ def test_gives_up_on_a_persistent_failure():
     with (
         patch(
             "atlas.exchange_definitions.http.requests.get",
-            side_effect=lambda *a, **k: _response(503),
+            return_value=_response(503),
         ),
         patch.object(get_json.retry, "sleep", lambda _: None),
         pytest.raises(requests.HTTPError),
