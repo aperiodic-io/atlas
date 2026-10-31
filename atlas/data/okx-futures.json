@@ -25362,6 +25362,7 @@
       "Layer 1"
     ],
     "cmc_id": 1,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "BTC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
@@ -25472,6 +25473,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "BTC",
     "unified_id": "future-BTC-USD:BTC-20270924"
+  },
+  {
+    "id": "BTC-USD-271231",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 100.0,
+    "first_capture": "2026-10-30T08:10:00.572Z",
+    "internal_id": "future-BTC-USD:BTC-20271231",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "BTC",
+    "delivery_date": "2027-12-31T00:00:00",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20271231"
   },
   {
     "id": "BTC-USDC-230224",
@@ -34717,6 +34739,7 @@
       "Layer 1"
     ],
     "cmc_id": 1,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "BTC",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USD",
@@ -34785,6 +34808,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-BTC-USD:USD-20270326"
+  },
+  {
+    "id": "BTC-USD_UM-270625",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 0.01,
+    "first_capture": "2026-10-30T08:10:00.461Z",
+    "internal_id": "future-BTC-USD:USD-20270625",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2027-06-25T00:00:00",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-BTC-USD:USD-20270625"
   },
   {
     "id": "BTC-USD_UM_XPERP-310404",
@@ -70048,6 +70092,7 @@
       "Smart Contracts"
     ],
     "cmc_id": 1027,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "ETH",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
@@ -70163,6 +70208,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "ETH",
     "unified_id": "future-ETH-USD:ETH-20270924"
+  },
+  {
+    "id": "ETH-USD-271231",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 10.0,
+    "first_capture": "2026-10-30T08:10:00.580Z",
+    "internal_id": "future-ETH-USD:ETH-20271231",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "ETH",
+    "delivery_date": "2027-12-31T00:00:00",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20271231"
   },
   {
     "id": "ETH-USDC-230224",
@@ -79471,6 +79538,7 @@
       "Smart Contracts"
     ],
     "cmc_id": 1027,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "ETH",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USD",
@@ -79542,6 +79610,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-ETH-USD:USD-20270326"
+  },
+  {
+    "id": "ETH-USD_UM-270625",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 0.001,
+    "first_capture": "2026-10-30T08:10:00.463Z",
+    "internal_id": "future-ETH-USD:USD-20270625",
+    "symbol": "ETH",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2027-06-25T00:00:00",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-ETH-USD:USD-20270625"
   },
   {
     "id": "ETH-USD_UM_XPERP-310404",
@@ -101750,7 +101840,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OPENAI-USD:USD-20310905"
@@ -103585,6 +103675,7 @@
       "Layer 1"
     ],
     "cmc_id": 5426,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "SOL",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USD",
@@ -103653,6 +103744,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-SOL-USD:USD-20270326"
+  },
+  {
+    "id": "SOL-USD_UM-270625",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 0.1,
+    "first_capture": "2026-10-30T08:10:00.474Z",
+    "internal_id": "future-SOL-USD:USD-20270625",
+    "symbol": "SOL",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2027-06-25T00:00:00",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-SOL-USD:USD-20270625"
   },
   {
     "id": "SOL-USD_UM_XPERP-310404",
@@ -112820,6 +112932,7 @@
       "DeFi"
     ],
     "cmc_id": 39344,
+    "end_date": "2026-10-31T00:00:00.000Z",
     "base_asset_id": "XAU",
     "base_asset_match": "venue_lineage",
     "quote_asset_id": "USD",
@@ -112888,6 +113001,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-XAU-USD:USD-20270326"
+  },
+  {
+    "id": "XAU-USD_UM-270625",
+    "type": "future",
+    "underlying": "commodity",
+    "contract_size": 0.001,
+    "first_capture": "2026-10-30T08:10:00.456Z",
+    "internal_id": "future-XAU-USD:USD-20270625",
+    "symbol": "XAU",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2027-06-25T00:00:00",
+    "cmc_id": 39344,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XAU",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-XAU-USD:USD-20270625"
   },
   {
     "id": "XAU-USD_UM_XPERP-310502",

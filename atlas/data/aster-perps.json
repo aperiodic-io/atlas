@@ -848,8 +848,13 @@
     "margin": "USDT",
     "first_capture": "2026-09-01T00:00:00.000Z",
     "end_date": "2026-10-30T04:00:00.000Z",
+    "cmc_id": 40957,
+    "category": [],
+    "base_asset_id": "AIW3",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AIW3-USDT:USDT"
   },
   {
     "id": "akeusdt",

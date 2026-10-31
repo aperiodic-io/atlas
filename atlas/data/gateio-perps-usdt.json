@@ -27594,8 +27594,15 @@
     "symbol": "STONKS",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 35718,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "STONKS",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-STONKS-USDT:USDT"
   },
   {
     "id": "STONK_USDT",

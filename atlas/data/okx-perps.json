@@ -1956,6 +1956,22 @@
     "unified_id": "perpetual-BICO-USDT:USDT"
   },
   {
+    "id": "BIDU-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-30T08:45:00.000Z",
+    "internal_id": "perpetual-BIDU-USDT:USDT",
+    "symbol": "BIDU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "BIDU",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BIDU-USDT:USDT"
+  },
+  {
     "id": "BIGTIME-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-BIGTIME-USDT:USDT",
@@ -5270,6 +5286,22 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GIGGLE-USDT:USDT"
+  },
+  {
+    "id": "GILD-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-30T09:00:00.000Z",
+    "internal_id": "perpetual-GILD-USDT:USDT",
+    "symbol": "GILD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "GILD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GILD-USDT:USDT"
   },
   {
     "id": "GLM-USDT-SWAP",
@@ -9338,7 +9370,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -9565,6 +9597,27 @@
     "unified_id": "perpetual-PARTI-USDT:USDT"
   },
   {
+    "id": "PDD-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-30T08:30:00.000Z",
+    "internal_id": "perpetual-PDD-USDT:USDT",
+    "symbol": "PDD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39861,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PDD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PDD-USDT:USDT"
+  },
+  {
     "id": "PENDLE-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-PENDLE-USDT:USDT",
@@ -9706,6 +9759,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PERP-USDT:USDT"
+  },
+  {
+    "id": "PFE-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-10-30T09:15:00.000Z",
+    "internal_id": "perpetual-PFE-USDT:USDT",
+    "symbol": "PFE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "PI-USDT-SWAP",

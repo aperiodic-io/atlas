@@ -6446,6 +6446,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T14:00:00Z",
+    "internal_id": "perpetual-FSTOCK-USDT:USDT",
+    "symbol": "FSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FTNTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "FTNTSTOCK",
@@ -7774,6 +7789,21 @@
     "margin": "USDT"
   },
   {
+    "id": "HWMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HWMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T14:00:00Z",
+    "internal_id": "perpetual-HWMSTOCK-USDT:USDT",
+    "symbol": "HWMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HYPER_USDT",
     "type": "perpetual",
     "base_coin": "HYPER",
@@ -7935,6 +7965,21 @@
     "first_capture": "2026-01-30T07:28:00Z",
     "internal_id": "perpetual-IBMSTOCK-USDT:USDT",
     "symbol": "IBMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ICESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ICESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:59:00Z",
+    "internal_id": "perpetual-ICESTOCK-USDT:USDT",
+    "symbol": "ICESTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8175,6 +8220,21 @@
     "first_capture": "2026-10-02T01:48:00Z",
     "internal_id": "perpetual-INNOVENTSTOCK-USDT:USDT",
     "symbol": "INNOVENTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "INSMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "INSMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:58:00Z",
+    "internal_id": "perpetual-INSMSTOCK-USDT:USDT",
+    "symbol": "INSMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -9517,6 +9577,21 @@
     "margin": "USDT"
   },
   {
+    "id": "LNGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "LNGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:58:00Z",
+    "internal_id": "perpetual-LNGSTOCK-USDT:USDT",
+    "symbol": "LNGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LONGXIA_USDT",
     "type": "perpetual",
     "base_coin": "LONGXIA",
@@ -10327,7 +10402,8 @@
     "internal_id": "perpetual-MITO-USDT:USDT",
     "symbol": "MITO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-10-31T07:56:18.409Z"
   },
   {
     "id": "MITSUBISHISTOCK_USDT",

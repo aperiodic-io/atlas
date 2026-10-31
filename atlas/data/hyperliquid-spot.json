@@ -2180,6 +2180,20 @@
     "quote_asset_id": "USDC"
   },
   {
+    "id": "ONE/USDC",
+    "type": "spot",
+    "first_capture": "2026-10-31T07:55:57.452Z",
+    "internal_id": "spot-ONE-USDC",
+    "symbol": "ONE",
+    "denominator": "USDC",
+    "cmc_id": 37166,
+    "category": [],
+    "base_asset_id": "ONE.CROSS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ONE.CROSS-USDC"
+  },
+  {
     "id": "ONEAR/USDC",
     "type": "spot",
     "internal_id": "spot-ONEAR-USDC",

@@ -4384,6 +4384,26 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "BKNGUSDT",
+    "type": "perpetual",
+    "base_coin": "BKNG",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:41:37.000Z",
+    "internal_id": "perpetual-BKNG-USDT:USDT",
+    "symbol": "BKNG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "BKNG",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BKNG-USDT:USDT"
+  },
+  {
     "id": "BLASTUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-BLAST-USDT:USDT",
@@ -8446,6 +8466,7 @@
       "Real World Assets Protocols"
     ],
     "cmc_id": 8615,
+    "end_date": "2026-10-30T09:00:00.000Z",
     "base_asset_id": "EPIC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -8902,6 +8923,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EWY-USDT:USDT"
+  },
+  {
+    "id": "EWZSUSDT",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:43:49.000Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EWZS-USDT:USDT"
   },
   {
     "id": "EWZUSDT",
@@ -14980,6 +15025,7 @@
       "DeFi"
     ],
     "cmc_id": 38204,
+    "end_date": "2026-10-30T09:00:00.000Z",
     "base_asset_id": "MITO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -17451,6 +17497,31 @@
     "unified_id": "perpetual-OXT-USDT:USDT"
   },
   {
+    "id": "OXYUSDT",
+    "type": "perpetual",
+    "base_coin": "OXY",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:34:33.000Z",
+    "internal_id": "perpetual-OXY-USDT:USDT",
+    "symbol": "OXY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42696,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "PANWUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-PANW-USDT:USDT",
@@ -18669,6 +18740,7 @@
     "first_capture": "2025-09-03T00:00:00.000Z",
     "category": [],
     "cmc_id": 37372,
+    "end_date": "2026-10-30T09:00:00.000Z",
     "base_asset_id": "PTB",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21177,6 +21249,31 @@
     "unified_id": "perpetual-SMIC-USDT:USDT"
   },
   {
+    "id": "SMRUSDT",
+    "type": "perpetual",
+    "base_coin": "SMR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:32:36.000Z",
+    "internal_id": "perpetual-SMR-USDT:USDT",
+    "symbol": "SMR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42698,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "SNDKUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-SNDK-USDT:USDT",
@@ -23194,6 +23291,7 @@
       "Lending & Borrowing"
     ],
     "cmc_id": 39798,
+    "end_date": "2026-10-30T09:00:00.000Z",
     "base_asset_id": "TMX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -25805,6 +25903,26 @@
     "unified_id": "perpetual-XLF-USDT:USDT"
   },
   {
+    "id": "XLIUSDT",
+    "type": "perpetual",
+    "base_coin": "XLI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:42:54.000Z",
+    "internal_id": "perpetual-XLI-USDT:USDT",
+    "symbol": "XLI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "XLI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-XLI-USDT:USDT"
+  },
+  {
     "id": "XLKUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-XLK-USDT:USDT",
@@ -26126,6 +26244,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XPL-USDT:USDT"
+  },
+  {
+    "id": "XPUSDT",
+    "type": "perpetual",
+    "base_coin": "XP",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-10-30T08:31:39.000Z",
+    "internal_id": "perpetual-XP-USDT:USDT",
+    "symbol": "XP",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "XP",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-XP-USDT:USDT"
   },
   {
     "id": "XRDUSDT",
