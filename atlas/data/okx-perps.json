@@ -907,7 +907,7 @@
     ],
     "cmc_id": 39496,
     "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ANTHROPIC-USDT:USDT"
@@ -1965,8 +1965,13 @@
     "symbol": "BIDU",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42734,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "BIDU",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-BIDU-USDT:USDT"
@@ -5297,8 +5302,13 @@
     "symbol": "GILD",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42735,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "GILD",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GILD-USDT:USDT"
@@ -9370,7 +9380,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -14147,11 +14157,16 @@
     "symbol": "WUXIBIO",
     "denominator": "USDT",
     "margin": "USDT",
-    "base_asset_id": "WUXIBIO",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42733,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "2269HK",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-WUXIBIO-USDT:USDT"
+    "unified_id": "perpetual-2269HK-USDT:USDT"
   },
   {
     "id": "X-USDT-SWAP",

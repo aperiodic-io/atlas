@@ -10157,8 +10157,13 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-31T00:00:00.000Z",
+    "cmc_id": 42735,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "GILD",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GILD-USDT:USDT"

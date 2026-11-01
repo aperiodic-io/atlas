@@ -270,6 +270,24 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "2269HK",
+   "ticker": "2269.HK",
+   "name": "WuXi Biologics (Cayman) Inc (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42733,
+   "cmc_slug": "wuxi-biologics-cayman-inc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "WUXIBIO"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-23T04:34:25Z",
+   "minted_at": "2026-11-01"
+  },
+  {
    "asset_id": "259960",
    "ticker": "259960",
    "name": "259960",
@@ -4726,9 +4744,16 @@
   {
    "asset_id": "BIDU",
    "ticker": "BIDU",
-   "name": "BIDU",
+   "name": "Baidu Inc (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42734,
+   "cmc_slug": "baidu-inc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-09-23T04:34:25Z",
    "minted_at": "2026-10-30"
   },
   {
@@ -12439,9 +12464,16 @@
   {
    "asset_id": "GILD",
    "ticker": "GILD",
-   "name": "GILD",
+   "name": "Gilead Sciences, Inc (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42735,
+   "cmc_slug": "gilead-sciences-inc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-09-23T04:34:25Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -34761,6 +34793,17 @@
    "status": "active",
    "cmc_date_added": "2025-02-20T06:36:44Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "WOW",
+   "ticker": "WOW",
+   "name": "WOWswap",
+   "asset_class": "crypto",
+   "cmc_id": 8605,
+   "cmc_slug": "wowswap",
+   "status": "active",
+   "cmc_date_added": "2021-02-26T00:00:00Z",
+   "minted_at": "2026-11-01"
   },
   {
    "asset_id": "WPAY",

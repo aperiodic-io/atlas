@@ -28782,7 +28782,12 @@
     "symbol": "GMRT",
     "denominator": "USDT",
     "first_capture": "2025-02-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 35595,
+    "category": [],
+    "base_asset_id": "GMRT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GMRT-USDT"
   },
   {
     "id": "GMRX_USDT",
@@ -50342,6 +50347,7 @@
       "DeFi"
     ],
     "first_capture": "2021-03-16T00:00:00.000Z",
+    "missing_since": "2026-11-01T08:38:02.699Z",
     "base_asset_id": "OXY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -71837,7 +71843,12 @@
     "symbol": "VIC",
     "denominator": "USDT",
     "first_capture": "2023-11-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 2570,
+    "category": [],
+    "base_asset_id": "VIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-VIC-USDT"
   },
   {
     "id": "VIDYX_ETH",

@@ -6849,7 +6849,8 @@
     "internal_id": "perpetual-GMBSC-USDT:USDT",
     "symbol": "GMBSC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-11-01T08:38:13.168Z"
   },
   {
     "id": "GMESTOCK_USDT",
@@ -10403,7 +10404,7 @@
     "symbol": "MITO",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-31T07:56:18.409Z"
+    "end_date": "2026-10-31T07:56:18.409Z"
   },
   {
     "id": "MITSUBISHISTOCK_USDT",
