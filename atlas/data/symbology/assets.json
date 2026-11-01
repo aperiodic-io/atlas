@@ -5214,10 +5214,10 @@
   {
    "asset_id": "BNC",
    "ticker": "BNC",
-   "name": "CEA Industries Inc (Derivatives)",
+   "name": "BNB Standard Corporation (Derivatives)",
    "asset_class": "equity",
    "cmc_id": 40828,
-   "cmc_slug": "cea-industries-inc-derivaties",
+   "cmc_slug": "bnb-standard-corporation-derivatives",
    "categories": [
     "DeFi",
     "Tokenized Stock"
@@ -19435,7 +19435,7 @@
    "asset_class": "crypto",
    "cmc_id": 33989,
    "cmc_slug": "matrix-layer-protocol",
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2024-11-15T07:05:43Z",
    "minted_at": "2026-10-14"
   },
@@ -19669,7 +19669,7 @@
    "asset_class": "crypto",
    "cmc_id": 15312,
    "cmc_slug": "hashtagger-com",
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2021-11-29T17:18:13Z",
    "minted_at": "2026-10-14"
   },
@@ -20126,7 +20126,7 @@
     "DeFi",
     "Interoperability"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2020-08-17T00:00:00Z",
    "minted_at": "2026-10-21"
   },
@@ -20141,7 +20141,7 @@
     "DeFi",
     "Interoperability"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2020-07-27T00:00:00Z",
    "minted_at": "2026-10-21"
   },
@@ -31146,7 +31146,7 @@
    "categories": [
     "Collectibles & NFTs"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2025-01-28T12:38:00Z",
    "minted_at": "2026-10-14"
   },
@@ -33583,7 +33583,9 @@
    "cmc_id": 32089,
    "cmc_slug": "verona",
    "categories": [
-    "Layer 1"
+    "Layer 1",
+    "Privacy",
+    "AI Agents"
    ],
    "status": "active",
    "cmc_date_added": "2024-12-05T11:30:10Z",
