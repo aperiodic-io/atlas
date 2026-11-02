@@ -6850,7 +6850,7 @@
     "symbol": "GMBSC",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-01T08:38:13.168Z"
+    "end_date": "2026-11-01T08:38:13.168Z"
   },
   {
     "id": "GMESTOCK_USDT",
@@ -11682,7 +11682,8 @@
     "internal_id": "perpetual-OFC-USDT:USDT",
     "symbol": "OFC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-11-02T08:47:35.394Z"
   },
   {
     "id": "OGN_USDT",

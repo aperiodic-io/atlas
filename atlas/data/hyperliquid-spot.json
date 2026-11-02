@@ -1412,6 +1412,15 @@
     "quote_asset_id": "USDC"
   },
   {
+    "id": "HYBR/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-02T08:47:15.706Z",
+    "internal_id": "spot-HYBR-USDC",
+    "symbol": "HYBR",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "HYENA/USDC",
     "type": "spot",
     "internal_id": "spot-HYENA-USDC",
@@ -3847,12 +3856,7 @@
     "symbol": "WOW",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "cmc_id": 8605,
-    "category": [],
-    "base_asset_id": "WOW",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDC",
-    "unified_id": "spot-WOW-USDC"
+    "quote_asset_id": "USDC"
   },
   {
     "id": "WOWBIT/USDC",

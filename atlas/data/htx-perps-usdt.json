@@ -3302,6 +3302,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EWZS-USDT",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-02T00:00:00.000Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "F-USDT",
     "type": "perpetual",
     "first_capture": "2025-10-22T00:00:00.000Z",
@@ -5878,6 +5893,21 @@
     "margin": "USDT"
   },
   {
+    "id": "MPWR-USDT",
+    "type": "perpetual",
+    "base_coin": "MPWR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-02T00:00:00.000Z",
+    "internal_id": "perpetual-MPWR-USDT:USDT",
+    "symbol": "MPWR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MRK-USDT",
     "type": "perpetual",
     "base_coin": "MRK",
@@ -6364,6 +6394,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NU-USDT",
+    "type": "perpetual",
+    "base_coin": "NU",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-02T00:00:00.000Z",
+    "internal_id": "perpetual-NU-USDT:USDT",
+    "symbol": "NU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NVDA-USDT",
     "type": "perpetual",
     "base_coin": "NVDA",
@@ -6775,6 +6820,21 @@
     "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-OUST-USDT:USDT",
     "symbol": "OUST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "OXY-USDT",
+    "type": "perpetual",
+    "base_coin": "OXY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-02T00:00:00.000Z",
+    "internal_id": "perpetual-OXY-USDT:USDT",
+    "symbol": "OXY",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8213,6 +8273,21 @@
     "first_capture": "2026-09-04T00:00:00.000Z",
     "internal_id": "perpetual-SMIC-USDT:USDT",
     "symbol": "SMIC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SMR-USDT",
+    "type": "perpetual",
+    "base_coin": "SMR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-02T00:00:00.000Z",
+    "internal_id": "perpetual-SMR-USDT:USDT",
+    "symbol": "SMR",
     "denominator": "USDT",
     "margin": "USDT"
   },
