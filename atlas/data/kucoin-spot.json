@@ -1188,6 +1188,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "AMZNX-USDT",
+    "type": "spot",
+    "base_coin": "AMZNX",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T10:00:00.000Z",
+    "internal_id": "spot-AMZNX-USDT",
+    "symbol": "AMZNX",
+    "denominator": "USDT"
+  },
+  {
     "id": "ANALOS-USDT",
     "type": "spot",
     "first_capture": "2023-12-26T00:00:00.000Z",
@@ -4455,6 +4466,17 @@
     "end_date": "2023-05-27T00:00:00.000Z",
     "internal_id": "spot-COCOS-USDT",
     "symbol": "COCOS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "COINX-USDT",
+    "type": "spot",
+    "base_coin": "COINX",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T10:00:00.000Z",
+    "internal_id": "spot-COINX-USDT",
+    "symbol": "COINX",
     "denominator": "USDT"
   },
   {
@@ -10336,6 +10358,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "INTCX-USDT",
+    "type": "spot",
+    "base_coin": "INTCX",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T11:00:00.000Z",
+    "internal_id": "spot-INTCX-USDT",
+    "symbol": "INTCX",
+    "denominator": "USDT"
+  },
+  {
     "id": "INX-USDT",
     "type": "spot",
     "base_coin": "INX",
@@ -13173,6 +13206,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "METAX-USDT",
+    "type": "spot",
+    "base_coin": "METAX",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T10:00:00.000Z",
+    "internal_id": "spot-METAX-USDT",
+    "symbol": "METAX",
+    "denominator": "USDT"
+  },
+  {
     "id": "METIS-USDT",
     "type": "spot",
     "base_coin": "METIS",
@@ -14846,10 +14890,12 @@
     "id": "NVDAX-USDT",
     "type": "spot",
     "first_capture": "2025-07-18T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z",
     "internal_id": "spot-NVDAX-USDT",
     "symbol": "NVDAX",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "base_coin": "NVDAX",
+    "quote_coin": "USDT",
+    "underlying": "equity"
   },
   {
     "id": "NVG8-USDT",
@@ -17043,7 +17089,7 @@
     "type": "spot",
     "base_coin": "QNT",
     "quote_coin": "USDT",
-    "underlying": "crypto",
+    "underlying": "unknown",
     "first_capture": "2022-08-16T00:00:00.000Z",
     "internal_id": "spot-QNT-USDT",
     "symbol": "QNT",
@@ -20891,7 +20937,7 @@
     "type": "spot",
     "base_coin": "TRAC",
     "quote_coin": "USDT",
-    "underlying": "crypto",
+    "underlying": "unknown",
     "first_capture": "2023-02-10T00:00:00.000Z",
     "internal_id": "spot-TRAC-USDT",
     "symbol": "TRAC",

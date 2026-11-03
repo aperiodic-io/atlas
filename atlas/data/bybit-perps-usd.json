@@ -1293,6 +1293,11 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-19T00:00:00.000Z",
+    "cmc_id": 42773,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "ADI",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
@@ -16906,16 +16911,8 @@
     "quantity_unit": "base",
     "first_capture": "2024-04-17T00:00:00.000Z",
     "end_date": "2025-09-25T00:00:00.000Z",
-    "cmc_id": 30315,
-    "category": [
-      "Layer 1",
-      "Interoperability"
-    ],
-    "base_asset_id": "OMNI",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-OMNI-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "OMUSDT",
@@ -17891,8 +17888,13 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-30T00:00:00.000Z",
+    "cmc_id": 42774,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "PEP",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-PEP-USDT:USDT"
@@ -21764,8 +21766,12 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-21T00:00:00.000Z",
+    "cmc_id": 42766,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "SOXX.EQUITY",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
@@ -26175,7 +26181,7 @@
     ],
     "cmc_id": 42374,
     "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"

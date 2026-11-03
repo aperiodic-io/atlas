@@ -75,6 +75,21 @@
     "margin": "USD"
   },
   {
+    "id": "ABBVUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "ABBV",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-ABBV-USD:USD",
+    "symbol": "ABBV",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "ACHUSD-PERP",
     "type": "perpetual",
     "base_coin": "ACH",
@@ -785,6 +800,21 @@
     "margin": "USD"
   },
   {
+    "id": "BACUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "BAC",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-BAC-USD:USD",
+    "symbol": "BAC",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "BALUSD-PERP",
     "type": "perpetual",
     "first_capture": "2022-11-01T00:00:00.000Z",
@@ -1251,6 +1281,21 @@
     "margin": "USD"
   },
   {
+    "id": "CEGUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "CEG",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-CEG-USD:USD",
+    "symbol": "CEG",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "CELOUSD-PERP",
     "type": "perpetual",
     "base_coin": "CELO",
@@ -1502,6 +1547,21 @@
     "first_capture": "2026-08-18T00:00:00.000Z",
     "internal_id": "perpetual-CRDO-USD:USD",
     "symbol": "CRDO",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "CRMLUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "CRML",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-CRML-USD:USD",
+    "symbol": "CRML",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -2633,6 +2693,21 @@
     "margin": "USD"
   },
   {
+    "id": "GSUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "GS",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-GS-USD:USD",
+    "symbol": "GS",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "GTCUSD-PERP",
     "type": "perpetual",
     "first_capture": "2022-11-01T00:00:00.000Z",
@@ -2929,6 +3004,21 @@
     "first_capture": "2026-07-10T00:00:00.000Z",
     "internal_id": "perpetual-HYUNDAI-USD:USD",
     "symbol": "HYUNDAI",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "IBKRUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "IBKR",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-IBKR-USD:USD",
+    "symbol": "IBKR",
     "denominator": "USD",
     "margin": "USD"
   },
@@ -3965,6 +4055,21 @@
     "margin": "USD"
   },
   {
+    "id": "MPUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "MP",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-MP-USD:USD",
+    "symbol": "MP",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
     "id": "MRKUSD-PERP",
     "type": "perpetual",
     "base_coin": "MRK",
@@ -4747,7 +4852,8 @@
     "internal_id": "perpetual-PONKE-USD:USD",
     "symbol": "PONKE",
     "denominator": "USD",
-    "margin": "USD"
+    "margin": "USD",
+    "missing_since": "2026-11-03T08:57:15.409Z"
   },
   {
     "id": "PONSUSD-PERP",
@@ -5162,6 +5268,21 @@
     "end_date": "2022-12-06T00:00:00.000Z",
     "internal_id": "perpetual-RSR-USD:USD",
     "symbol": "RSR",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "RUMUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "RUM",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:57:15.409Z",
+    "internal_id": "perpetual-RUM-USD:USD",
+    "symbol": "RUM",
     "denominator": "USD",
     "margin": "USD"
   },

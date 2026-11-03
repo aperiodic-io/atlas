@@ -7083,6 +7083,17 @@
     "denominator": "USDC"
   },
   {
+    "id": "EURCV/USD",
+    "type": "spot",
+    "base_coin": "EURCV",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-03T09:00:54.008Z",
+    "internal_id": "spot-EURCV-USD",
+    "symbol": "EURCV",
+    "denominator": "USD"
+  },
+  {
     "id": "EUROP/EUR",
     "type": "spot",
     "base_coin": "EUROP",

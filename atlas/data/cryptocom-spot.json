@@ -434,7 +434,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-ALGO-BTC",
     "symbol": "ALGO",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "ALGO_USD",
@@ -1290,7 +1291,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-BCH-BTC",
     "symbol": "BCH",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "BCH_USD",
@@ -1868,7 +1870,8 @@
     "first_capture": "2023-11-09T00:00:00.000Z",
     "internal_id": "spot-CDCETH-ETH",
     "symbol": "CDCETH",
-    "denominator": "ETH"
+    "denominator": "ETH",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "CDCETH_USD",
@@ -2303,7 +2306,8 @@
     "first_capture": "2023-09-28T00:00:00.000Z",
     "internal_id": "spot-CRO-PYUSD",
     "symbol": "CRO",
-    "denominator": "PYUSD"
+    "denominator": "PYUSD",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "CRO_USC",
@@ -5401,7 +5405,8 @@
     "first_capture": "2024-02-26T00:00:00.000Z",
     "internal_id": "spot-LCRO-CRO",
     "symbol": "LCRO",
-    "denominator": "CRO"
+    "denominator": "CRO",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "LCRO_USD",
@@ -5543,7 +5548,8 @@
     "first_capture": "2025-03-07T00:00:00.000Z",
     "internal_id": "spot-LION-CRO",
     "symbol": "LION",
-    "denominator": "CRO"
+    "denominator": "CRO",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "LION_USD",
@@ -6517,10 +6523,12 @@
     "id": "NEAR_BTC",
     "type": "spot",
     "first_capture": "2022-06-01T00:00:00.000Z",
-    "end_date": "2023-04-26T00:00:00.000Z",
     "internal_id": "spot-NEAR-BTC",
     "symbol": "NEAR",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "base_coin": "NEAR",
+    "quote_coin": "BTC",
+    "underlying": "crypto"
   },
   {
     "id": "NEAR_USD",
@@ -8710,7 +8718,8 @@
     "first_capture": "2024-03-22T00:00:00.000Z",
     "internal_id": "spot-SOL-ETH",
     "symbol": "SOL",
-    "denominator": "ETH"
+    "denominator": "ETH",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "SOL_EUR",
@@ -8732,7 +8741,8 @@
     "first_capture": "2024-08-29T00:00:00.000Z",
     "internal_id": "spot-SOL-PYUSD",
     "symbol": "SOL",
-    "denominator": "PYUSD"
+    "denominator": "PYUSD",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "SOL_USD",
@@ -9642,10 +9652,12 @@
     "id": "UNI_BTC",
     "type": "spot",
     "first_capture": "2022-06-01T00:00:00.000Z",
-    "end_date": "2023-05-11T00:00:00.000Z",
     "internal_id": "spot-UNI-BTC",
     "symbol": "UNI",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "base_coin": "UNI",
+    "quote_coin": "BTC",
+    "underlying": "crypto"
   },
   {
     "id": "UNI_USD",
@@ -10452,7 +10464,8 @@
     "first_capture": "2023-09-28T00:00:00.000Z",
     "internal_id": "spot-XRP-PYUSD",
     "symbol": "XRP",
-    "denominator": "PYUSD"
+    "denominator": "PYUSD",
+    "missing_since": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "XRP_USD",

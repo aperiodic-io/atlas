@@ -36642,6 +36642,17 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "KOR_USDT",
+    "type": "spot",
+    "base_coin": "KOR",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-04T14:00:00.000Z",
+    "internal_id": "spot-KOR-USDT",
+    "symbol": "KOR",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "KOS_USDT",
     "type": "spot",
     "internal_id": "spot-KOS-USDT",
@@ -48775,15 +48786,7 @@
     "denominator": "TRY",
     "first_capture": "2024-04-17T00:00:00.000Z",
     "end_date": "2025-04-22T00:00:00.000Z",
-    "cmc_id": 30315,
-    "category": [
-      "Layer 1",
-      "Interoperability"
-    ],
-    "base_asset_id": "OMNI",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "TRY",
-    "unified_id": "spot-OMNI-TRY"
+    "quote_asset_id": "TRY"
   },
   {
     "id": "OMNI_USDC",
@@ -48793,15 +48796,7 @@
     "denominator": "USDC",
     "first_capture": "2024-08-02T00:00:00.000Z",
     "end_date": "2025-09-18T00:00:00.000Z",
-    "cmc_id": 30315,
-    "category": [
-      "Layer 1",
-      "Interoperability"
-    ],
-    "base_asset_id": "OMNI",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDC",
-    "unified_id": "spot-OMNI-USDC"
+    "quote_asset_id": "USDC"
   },
   {
     "id": "OMNI_USDT",
@@ -48811,15 +48806,7 @@
     "denominator": "USDT",
     "first_capture": "2024-04-17T00:00:00.000Z",
     "end_date": "2025-09-18T00:00:00.000Z",
-    "cmc_id": 30315,
-    "category": [
-      "Layer 1",
-      "Interoperability"
-    ],
-    "base_asset_id": "OMNI",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-OMNI-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "OMN_USDT",

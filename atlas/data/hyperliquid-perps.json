@@ -2983,16 +2983,8 @@
     "underlying": "crypto",
     "first_capture": "2024-10-29T00:00:00.000Z",
     "end_date": "2025-09-26T00:00:00.000Z",
-    "cmc_id": 30315,
-    "category": [
-      "Layer 1",
-      "Interoperability"
-    ],
-    "base_asset_id": "OMNI",
-    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC",
-    "unified_id": "perpetual-OMNI-USDC:USDC"
+    "margin_asset_id": "USDC"
   },
   {
     "id": "ONDO",
@@ -6227,6 +6219,28 @@
     "quote_asset_id": "USDE",
     "margin_asset_id": "USDE",
     "unified_id": "perpetual-ZEC-USDE:USDE"
+  },
+  {
+    "id": "io:AAPL",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T08:56:54.135Z",
+    "internal_id": "perpetual-IO:AAPL-USDC:USDC",
+    "symbol": "IO:AAPL",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 39491,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AAPL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AAPL-USDC:USDC"
   },
   {
     "id": "io:ANTH",
