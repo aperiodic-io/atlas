@@ -30556,7 +30556,7 @@
       "DeFi"
     ],
     "cmc_id": 20435,
-    "missing_since": "2026-11-03T08:57:00.291Z",
+    "end_date": "2026-11-03T08:57:00.291Z",
     "base_asset_id": "VELO.VELODROME_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -33246,6 +33246,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XIREN-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T08:30:00.000Z",
+    "internal_id": "spot-XIREN-USDC",
+    "symbol": "XIREN",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "XIREN-USDT",
     "type": "spot",
     "internal_id": "spot-XIREN-USDT",
@@ -35082,6 +35092,7 @@
     "denominator": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-12T00:00:00.000Z",
+    "missing_since": "2026-11-04T08:31:10.872Z",
     "quote_asset_id": "USDC"
   },
   {
@@ -35092,6 +35103,7 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-07T00:00:00.000Z",
+    "missing_since": "2026-11-04T08:31:10.872Z",
     "quote_asset_id": "USDT"
   },
   {

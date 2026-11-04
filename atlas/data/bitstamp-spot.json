@@ -2903,6 +2903,28 @@
     "denominator": "USD"
   },
   {
+    "id": "senteur",
+    "type": "spot",
+    "base_coin": "SENT",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:31:27.762Z",
+    "internal_id": "spot-SENT-EUR",
+    "symbol": "SENT",
+    "denominator": "EUR"
+  },
+  {
+    "id": "sentusd",
+    "type": "spot",
+    "base_coin": "SENT",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:31:27.762Z",
+    "internal_id": "spot-SENT-USD",
+    "symbol": "SENT",
+    "denominator": "USD"
+  },
+  {
     "id": "seur",
     "type": "spot",
     "base_coin": "S",

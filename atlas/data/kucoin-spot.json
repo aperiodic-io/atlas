@@ -10129,6 +10129,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "IDOL-USDT",
+    "type": "spot",
+    "base_coin": "IDOL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-03T10:00:00.000Z",
+    "internal_id": "spot-IDOL-USDT",
+    "symbol": "IDOL",
+    "denominator": "USDT"
+  },
+  {
     "id": "IDOS-USDT",
     "type": "spot",
     "base_coin": "IDOS",

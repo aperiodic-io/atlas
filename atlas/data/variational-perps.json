@@ -3709,7 +3709,7 @@
       "DeFi"
     ],
     "base_asset_id": "DRV",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-DRV-USDC:USDC"
@@ -9787,6 +9787,28 @@
     "unified_id": "perpetual-SQD-USDC:USDC"
   },
   {
+    "id": "SQQQ",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:31:27.222Z",
+    "internal_id": "perpetual-SQQQ-USDC:USDC",
+    "symbol": "SQQQ",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40561,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SQQQ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SQQQ-USDC:USDC"
+  },
+  {
     "id": "SSV",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10257,6 +10279,27 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-TAO-USDC:USDC"
+  },
+  {
+    "id": "TBT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:31:27.222Z",
+    "internal_id": "perpetual-TBT-USDC:USDC",
+    "symbol": "TBT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40912,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "TBT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TBT-USDC:USDC"
   },
   {
     "id": "TER",

@@ -3904,6 +3904,17 @@
     "denominator": "EURC"
   },
   {
+    "id": "BTC/EURCV",
+    "type": "spot",
+    "base_coin": "BTC",
+    "quote_coin": "EURCV",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:35:03.150Z",
+    "internal_id": "spot-BTC-EURCV",
+    "symbol": "BTC",
+    "denominator": "EURCV"
+  },
+  {
     "id": "BTC/EUROP",
     "type": "spot",
     "base_coin": "BTC",
@@ -6754,6 +6765,17 @@
     "denominator": "EURC"
   },
   {
+    "id": "ETH/EURCV",
+    "type": "spot",
+    "base_coin": "ETH",
+    "quote_coin": "EURCV",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:35:03.150Z",
+    "internal_id": "spot-ETH-EURCV",
+    "symbol": "ETH",
+    "denominator": "EURCV"
+  },
+  {
     "id": "ETH/EUROP",
     "type": "spot",
     "base_coin": "ETH",
@@ -7083,6 +7105,17 @@
     "denominator": "USDC"
   },
   {
+    "id": "EURCV/EUR",
+    "type": "spot",
+    "base_coin": "EURCV",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:35:03.150Z",
+    "internal_id": "spot-EURCV-EUR",
+    "symbol": "EURCV",
+    "denominator": "EUR"
+  },
+  {
     "id": "EURCV/USD",
     "type": "spot",
     "base_coin": "EURCV",
@@ -7092,6 +7125,17 @@
     "internal_id": "spot-EURCV-USD",
     "symbol": "EURCV",
     "denominator": "USD"
+  },
+  {
+    "id": "EURCV/USDC",
+    "type": "spot",
+    "base_coin": "EURCV",
+    "quote_coin": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:35:03.150Z",
+    "internal_id": "spot-EURCV-USDC",
+    "symbol": "EURCV",
+    "denominator": "USDC"
   },
   {
     "id": "EUROP/EUR",
@@ -10623,6 +10667,17 @@
     "first_capture": "2025-05-13T00:00:00.000Z",
     "internal_id": "spot-KOBAN-USD",
     "symbol": "KOBAN",
+    "denominator": "USD"
+  },
+  {
+    "id": "KOR/USD",
+    "type": "spot",
+    "base_coin": "KOR",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T08:35:03.150Z",
+    "internal_id": "spot-KOR-USD",
+    "symbol": "KOR",
     "denominator": "USD"
   },
   {

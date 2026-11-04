@@ -435,7 +435,7 @@
     "internal_id": "spot-ALGO-BTC",
     "symbol": "ALGO",
     "denominator": "BTC",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "ALGO_USD",
@@ -1292,7 +1292,7 @@
     "internal_id": "spot-BCH-BTC",
     "symbol": "BCH",
     "denominator": "BTC",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "BCH_USD",
@@ -1871,7 +1871,7 @@
     "internal_id": "spot-CDCETH-ETH",
     "symbol": "CDCETH",
     "denominator": "ETH",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "CDCETH_USD",
@@ -2307,7 +2307,7 @@
     "internal_id": "spot-CRO-PYUSD",
     "symbol": "CRO",
     "denominator": "PYUSD",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "CRO_USC",
@@ -3293,7 +3293,8 @@
     "first_capture": "2025-07-16T00:00:00.000Z",
     "internal_id": "spot-ES-USD",
     "symbol": "ES",
-    "denominator": "USD"
+    "denominator": "USD",
+    "missing_since": "2026-11-04T08:31:27.969Z"
   },
   {
     "id": "ETC_BTC",
@@ -5406,7 +5407,7 @@
     "internal_id": "spot-LCRO-CRO",
     "symbol": "LCRO",
     "denominator": "CRO",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "LCRO_USD",
@@ -5549,7 +5550,7 @@
     "internal_id": "spot-LION-CRO",
     "symbol": "LION",
     "denominator": "CRO",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "LION_USD",
@@ -5824,7 +5825,8 @@
     "first_capture": "2025-03-13T00:00:00.000Z",
     "internal_id": "spot-LVVA-USD",
     "symbol": "LVVA",
-    "denominator": "USD"
+    "denominator": "USD",
+    "missing_since": "2026-11-04T08:31:27.969Z"
   },
   {
     "id": "LYX_USD",
@@ -8719,7 +8721,7 @@
     "internal_id": "spot-SOL-ETH",
     "symbol": "SOL",
     "denominator": "ETH",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "SOL_EUR",
@@ -8742,7 +8744,7 @@
     "internal_id": "spot-SOL-PYUSD",
     "symbol": "SOL",
     "denominator": "PYUSD",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "SOL_USD",
@@ -9952,7 +9954,8 @@
     "first_capture": "2022-11-01T00:00:00.000Z",
     "internal_id": "spot-VRA-USD",
     "symbol": "VRA",
-    "denominator": "USD"
+    "denominator": "USD",
+    "missing_since": "2026-11-04T08:31:27.969Z"
   },
   {
     "id": "VRA_USDT",
@@ -9963,7 +9966,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-VRA-USDT",
     "symbol": "VRA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-04T08:31:27.969Z"
   },
   {
     "id": "VTHO_USD",
@@ -10465,7 +10469,7 @@
     "internal_id": "spot-XRP-PYUSD",
     "symbol": "XRP",
     "denominator": "PYUSD",
-    "missing_since": "2026-11-03T08:57:18.220Z"
+    "end_date": "2026-11-03T08:57:18.220Z"
   },
   {
     "id": "XRP_USD",

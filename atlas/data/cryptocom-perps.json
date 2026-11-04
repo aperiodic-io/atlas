@@ -4853,7 +4853,7 @@
     "symbol": "PONKE",
     "denominator": "USD",
     "margin": "USD",
-    "missing_since": "2026-11-03T08:57:15.409Z"
+    "end_date": "2026-11-03T08:57:15.409Z"
   },
   {
     "id": "PONSUSD-PERP",
@@ -6529,7 +6529,8 @@
     "internal_id": "perpetual-VRA-USD:USD",
     "symbol": "VRA",
     "denominator": "USD",
-    "margin": "USD"
+    "margin": "USD",
+    "missing_since": "2026-11-04T08:31:25.454Z"
   },
   {
     "id": "VRTUSD-PERP",

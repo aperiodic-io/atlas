@@ -1757,6 +1757,31 @@
     "unified_id": "perpetual-AIXBT-USDT:USDT"
   },
   {
+    "id": "AKAMUSDT",
+    "type": "perpetual",
+    "base_coin": "AKAM",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-03T10:28:25.000Z",
+    "internal_id": "perpetual-AKAM-USDT:USDT",
+    "symbol": "AKAM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42407,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AKAM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AKAM-USDT:USDT"
+  },
+  {
     "id": "AKEUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AKE-USDT:USDT",
@@ -5624,6 +5649,31 @@
     "end_date": "2024-10-11T00:00:00.000Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "CEGUSDT",
+    "type": "perpetual",
+    "base_coin": "CEG",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-03T10:21:17.000Z",
+    "internal_id": "perpetual-CEG-USDT:USDT",
+    "symbol": "CEG",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42618,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CEG.CONSTELLATION_ENERGY_CORP_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "CELOUSDT",
@@ -17920,6 +17970,31 @@
     "unified_id": "perpetual-PERP-USDT:USDT"
   },
   {
+    "id": "PFEUSDT",
+    "type": "perpetual",
+    "base_coin": "PFE",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-03T10:23:22.000Z",
+    "internal_id": "perpetual-PFE-USDT:USDT",
+    "symbol": "PFE",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDT:USDT"
+  },
+  {
     "id": "PGUSDT",
     "type": "perpetual",
     "base_coin": "PG",
@@ -24386,6 +24461,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-USD1-USDT:USDT"
+  },
+  {
+    "id": "USDBRLUSDT",
+    "type": "perpetual",
+    "base_coin": "USDBRL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "forex",
+    "first_capture": "2026-11-03T10:34:53.000Z",
+    "internal_id": "perpetual-USDBRL-USDT:USDT",
+    "symbol": "USDBRL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42335,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "USDBRL",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-USDBRL-USDT:USDT"
   },
   {
     "id": "USDCUSDT",

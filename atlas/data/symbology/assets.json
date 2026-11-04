@@ -18312,6 +18312,9 @@
     "DeFi",
     "Tokenized Stock"
    ],
+   "aliases": [
+    "MA"
+   ],
    "status": "active",
    "cmc_date_added": "2025-09-03T10:55:14Z",
    "minted_at": "2026-10-14"
@@ -20229,9 +20232,16 @@
   {
    "asset_id": "MURATA",
    "ticker": "MURATA",
-   "name": "MURATA",
+   "name": "Murata Manufacturing Co Ltd (Derivatives)",
    "asset_class": "equity",
-   "status": "active",
+   "cmc_id": 42778,
+   "cmc_slug": "murata-manufacturing-co-ltd-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2026-11-04T04:01:21Z",
    "minted_at": "2026-10-22"
   },
   {

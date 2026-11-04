@@ -1040,6 +1040,21 @@
     "margin": "USDT"
   },
   {
+    "id": "AXP-USDT",
+    "type": "perpetual",
+    "base_coin": "AXP",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T00:00:00.000Z",
+    "internal_id": "perpetual-AXP-USDT:USDT",
+    "symbol": "AXP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AXS-USDT",
     "type": "perpetual",
     "first_capture": "2021-08-04T00:00:00.000Z",
@@ -6369,6 +6384,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NOC-USDT",
+    "type": "perpetual",
+    "base_coin": "NOC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T00:00:00.000Z",
+    "internal_id": "perpetual-NOC-USDT:USDT",
+    "symbol": "NOC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NOK-USDT",
     "type": "perpetual",
     "base_coin": "NOK",
@@ -8549,7 +8579,8 @@
     "internal_id": "perpetual-SOXX-USDT:USDT",
     "symbol": "SOXX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:00:00.000Z"
   },
   {
     "id": "SPACE-USDT",
@@ -9403,6 +9434,21 @@
     "end_date": "2025-11-21T00:00:00.000Z",
     "internal_id": "perpetual-TST-USDT:USDT",
     "symbol": "TST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TTMI-USDT",
+    "type": "perpetual",
+    "base_coin": "TTMI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T00:00:00.000Z",
+    "internal_id": "perpetual-TTMI-USDT:USDT",
+    "symbol": "TTMI",
     "denominator": "USDT",
     "margin": "USDT"
   },
