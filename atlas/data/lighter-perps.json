@@ -3166,7 +3166,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "KIOXIA",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-KIOXIA-USDC:USDC"
@@ -3189,7 +3189,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "KORU",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-KORU-USDC:USDC"
@@ -4824,6 +4824,29 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-PYTH-USDC:USDC"
+  },
+  {
+    "id": "7829",
+    "type": "perpetual",
+    "base_asset": "IREN",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-04T17:52:34.881Z",
+    "internal_id": "perpetual-IREN-USDC:USDC",
+    "symbol": "IREN",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40117,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IREN",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-IREN-USDC:USDC"
   },
   {
     "id": "79",

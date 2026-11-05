@@ -555,7 +555,7 @@
     "symbol": "AGENCY",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "AGI_USDT",
@@ -571,7 +571,7 @@
     "symbol": "AGI",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "AGLD_USDT",
@@ -1220,7 +1220,7 @@
     "symbol": "APEX",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "APE_USDT",
@@ -3652,7 +3652,7 @@
     "symbol": "CENT",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "CETUS_USDT",
@@ -3893,7 +3893,7 @@
     "symbol": "CLAUS",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "CLO_USDT",
@@ -4705,7 +4705,7 @@
     "symbol": "DARK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "DASHSTOCK_USDT",
@@ -6246,6 +6246,21 @@
     "margin": "USDC"
   },
   {
+    "id": "FISVSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FISVSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FISVSTOCK-USDT:USDT",
+    "symbol": "FISVSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FIXSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "FIXSTOCK",
@@ -6381,6 +6396,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FNSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FNSTOCK-USDT:USDT",
+    "symbol": "FNSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FOGO_USDT",
     "type": "perpetual",
     "base_coin": "FOGO",
@@ -6483,6 +6513,21 @@
     "first_capture": "2026-07-13T10:50:00Z",
     "internal_id": "perpetual-FRMISTOCK-USDT:USDT",
     "symbol": "FRMISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FSLRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FSLRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FSLRSTOCK-USDT:USDT",
+    "symbol": "FSLRSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8609,7 +8654,7 @@
     "symbol": "JEANPHIL",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "JELLYJELLY_USDT",
@@ -9234,7 +9279,7 @@
     "base_coin": "KOR",
     "quote_coin": "USDT",
     "margin_asset": "USDT",
-    "contract_size": 1.0,
+    "contract_size": 10.0,
     "quantity_unit": "base",
     "underlying": "crypto",
     "first_capture": "2026-11-04T14:10:00Z",
@@ -9770,6 +9815,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-25T07:13:20.721Z"
+  },
+  {
+    "id": "LSCCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "LSCCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-LSCCSTOCK-USDT:USDT",
+    "symbol": "LSCCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "LSK_USDT",
@@ -10734,7 +10794,7 @@
     "symbol": "MPLX",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "MPSTOCK_USDT",
@@ -13826,6 +13886,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RKTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RKTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-RKTSTOCK-USDT:USDT",
+    "symbol": "RKTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RLC_USDT",
     "type": "perpetual",
     "base_coin": "RLC",
@@ -15224,7 +15299,8 @@
     "internal_id": "perpetual-SOXX-USDT:USDT",
     "symbol": "SOXX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-05T08:54:08.238Z"
   },
   {
     "id": "SPACE_USDT",
@@ -15633,7 +15709,7 @@
     "symbol": "STORJ",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "STO_USDT",
@@ -17770,7 +17846,7 @@
     "symbol": "WANGCHAI",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "WAVES_USDT",
@@ -17907,7 +17983,7 @@
     "symbol": "WHUF",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "WIF_USDC",
@@ -18795,7 +18871,7 @@
     "symbol": "ZCAT",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-04T08:31:23.066Z"
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "ZC_USDT",

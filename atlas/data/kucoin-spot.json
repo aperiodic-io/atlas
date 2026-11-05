@@ -1274,7 +1274,8 @@
     "first_capture": "2025-10-17T00:00:00.000Z",
     "internal_id": "spot-ANOME-USDT",
     "symbol": "ANOME",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "ANSEM-USDT",
@@ -1786,7 +1787,8 @@
     "first_capture": "2022-08-16T00:00:00.000Z",
     "internal_id": "spot-ATA-USDT",
     "symbol": "ATA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "ATEM-USDT",
@@ -2658,7 +2660,8 @@
     "first_capture": "2024-02-20T00:00:00.000Z",
     "internal_id": "spot-BCUT-USDT",
     "symbol": "BCUT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "BDX-BTC",
@@ -3671,7 +3674,8 @@
     "first_capture": "2025-07-08T00:00:00.000Z",
     "internal_id": "spot-BULLA-USDT",
     "symbol": "BULLA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "BUN-USDT",
@@ -4101,7 +4105,8 @@
     "first_capture": "2025-06-26T00:00:00.000Z",
     "internal_id": "spot-CESS-USDT",
     "symbol": "CESS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "CETUS-USDT",
@@ -4517,7 +4522,8 @@
     "first_capture": "2025-10-27T00:00:00.000Z",
     "internal_id": "spot-COMMON-USDT",
     "symbol": "COMMON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "COMP-USDT",
@@ -5186,7 +5192,8 @@
     "first_capture": "2025-01-27T00:00:00.000Z",
     "internal_id": "spot-D-USDT",
     "symbol": "D",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "DAG-BTC",
@@ -5962,7 +5969,8 @@
     "first_capture": "2025-04-24T00:00:00.000Z",
     "internal_id": "spot-DOLO-USDT",
     "symbol": "DOLO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "DOMIN-USDT",
@@ -6310,7 +6318,8 @@
     "first_capture": "2025-07-02T00:00:00.000Z",
     "internal_id": "spot-ECHO-USDT",
     "symbol": "ECHO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "ECOX-USDT",
@@ -6941,7 +6950,8 @@
     "first_capture": "2025-07-16T00:00:00.000Z",
     "internal_id": "spot-ES-USDT",
     "symbol": "ES",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "ESE-USDT",
@@ -7352,7 +7362,8 @@
     "first_capture": "2024-12-20T00:00:00.000Z",
     "internal_id": "spot-EYWA-USDT",
     "symbol": "EYWA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "F-USDT",
@@ -8231,7 +8242,8 @@
     "first_capture": "2025-07-30T00:00:00.000Z",
     "internal_id": "spot-GAIA-USDT",
     "symbol": "GAIA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "GAIN-USDT",
@@ -9591,7 +9603,8 @@
     "first_capture": "2024-10-10T00:00:00.000Z",
     "internal_id": "spot-HIPPO-USDT",
     "symbol": "HIPPO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "HIPUNKS-USDT",
@@ -10419,7 +10432,8 @@
     "first_capture": "2026-03-24T00:00:00.000Z",
     "internal_id": "spot-ION-USDT",
     "symbol": "ION",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "IOST-BTC",
@@ -11465,6 +11479,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "KOR-USDT",
+    "type": "spot",
+    "base_coin": "KOR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T14:00:00.000Z",
+    "internal_id": "spot-KOR-USDT",
+    "symbol": "KOR",
+    "denominator": "USDT"
+  },
+  {
     "id": "KORI-USDT",
     "type": "spot",
     "first_capture": "2025-08-29T00:00:00.000Z",
@@ -11640,7 +11665,8 @@
     "first_capture": "2023-05-22T00:00:00.000Z",
     "internal_id": "spot-LADYS-USDT",
     "symbol": "LADYS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "LAI-USDT",
@@ -14723,7 +14749,8 @@
     "first_capture": "2026-03-05T00:00:00.000Z",
     "internal_id": "spot-NOON-USDT",
     "symbol": "NOON",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "NORD-BTC",
@@ -16120,7 +16147,8 @@
     "first_capture": "2025-10-28T00:00:00.000Z",
     "internal_id": "spot-PIGGY-USDT",
     "symbol": "PIGGY",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "PIKA-USDT",
@@ -18137,7 +18165,8 @@
     "first_capture": "2024-01-19T00:00:00.000Z",
     "internal_id": "spot-SAROS-USDT",
     "symbol": "SAROS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "SATS-USDT",
@@ -19884,7 +19913,8 @@
     "first_capture": "2024-09-03T00:00:00.000Z",
     "internal_id": "spot-SUNDOG-USDT",
     "symbol": "SUNDOG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "SUP-USDT",
@@ -19895,7 +19925,8 @@
     "first_capture": "2025-08-05T00:00:00.000Z",
     "internal_id": "spot-SUP-USDT",
     "symbol": "SUP",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "SUPER-BTC",
@@ -21474,7 +21505,8 @@
     "first_capture": "2024-12-10T00:00:00.000Z",
     "internal_id": "spot-U2U-USDT",
     "symbol": "U2U",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "UAI-USDT",
@@ -22180,7 +22212,8 @@
     "first_capture": "2026-10-13T00:00:00.000Z",
     "internal_id": "spot-VAYLA-USDT",
     "symbol": "VAYLA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "VCORE-USDT",
@@ -23949,7 +23982,8 @@
     "first_capture": "2025-01-08T00:00:00.000Z",
     "internal_id": "spot-XTER-USDT",
     "symbol": "XTER",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-05T08:57:47.910Z"
   },
   {
     "id": "XTM-USDT",

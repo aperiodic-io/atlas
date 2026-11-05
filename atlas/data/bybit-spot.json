@@ -7462,6 +7462,22 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "KORUSDT",
+    "type": "spot",
+    "base_coin": "KOR",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-05T08:53:44.600Z",
+    "internal_id": "spot-KOR-USDT",
+    "symbol": "KOR",
+    "denominator": "USDT",
+    "cmc_id": 42772,
+    "category": [],
+    "base_asset_id": "KOR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KOR-USDT"
+  },
+  {
     "id": "KRLUSDT",
     "type": "spot",
     "internal_id": "spot-KRL-USDT",

@@ -9463,7 +9463,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -9662,7 +9662,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OXY.OCCIDENTAL_PETROLEUM_CORPORATION_DERIVATIVE-USDT:USDT"
@@ -11660,6 +11660,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SMH-USDT:USDT"
+  },
+  {
+    "id": "SMR-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-04T08:45:00.000Z",
+    "internal_id": "perpetual-SMR-USDT:USDT",
+    "symbol": "SMR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42698,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
   },
   {
     "id": "SNDK-USDT-SWAP",

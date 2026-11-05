@@ -9741,6 +9741,23 @@
     "unified_id": "spot-KOMA-USDT"
   },
   {
+    "id": "KORUSDT",
+    "type": "spot",
+    "base_coin": "KOR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T14:00:00.000Z",
+    "internal_id": "spot-KOR-USDT",
+    "symbol": "KOR",
+    "denominator": "USDT",
+    "cmc_id": 42772,
+    "category": [],
+    "base_asset_id": "KOR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KOR-USDT"
+  },
+  {
     "id": "KP3RUSDT",
     "type": "spot",
     "internal_id": "spot-KP3R-USDT",
@@ -20872,6 +20889,7 @@
     "symbol": "RCBZ",
     "denominator": "USDT",
     "first_capture": "2026-10-19T00:00:00.000Z",
+    "missing_since": "2026-11-05T08:54:09.225Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -31782,7 +31800,7 @@
     "symbol": "RINDV",
     "denominator": "USDT",
     "first_capture": "2026-09-11T09:01:59.539Z",
-    "missing_since": "2026-11-04T08:31:24.248Z",
+    "end_date": "2026-11-04T08:31:24.248Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -34052,6 +34070,7 @@
     "symbol": "RKVUE",
     "denominator": "USDT",
     "first_capture": "2026-10-18T00:00:00.000Z",
+    "missing_since": "2026-11-05T08:54:09.225Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -35425,6 +35444,7 @@
     "symbol": "RLXP",
     "denominator": "USDT",
     "first_capture": "2026-10-16T00:00:00.000Z",
+    "missing_since": "2026-11-05T08:54:09.225Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -42583,6 +42603,7 @@
     "symbol": "RRAMP",
     "denominator": "USDT",
     "first_capture": "2026-10-16T00:00:00.000Z",
+    "missing_since": "2026-11-05T08:54:09.225Z",
     "quote_asset_id": "USDT"
   },
   {

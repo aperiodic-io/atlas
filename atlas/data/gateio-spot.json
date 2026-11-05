@@ -36650,7 +36650,12 @@
     "internal_id": "spot-KOR-USDT",
     "symbol": "KOR",
     "denominator": "USDT",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42772,
+    "category": [],
+    "base_asset_id": "KOR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KOR-USDT"
   },
   {
     "id": "KOS_USDT",

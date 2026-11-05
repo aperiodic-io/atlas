@@ -797,6 +797,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-CARDS",
+    "type": "spot",
+    "base_coin": "CARDS",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-05T08:57:49.581Z",
+    "internal_id": "spot-CARDS-BTC",
+    "symbol": "CARDS",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-CARV",
     "type": "spot",
     "base_coin": "CARV",
@@ -5314,6 +5325,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-CARDS",
+    "type": "spot",
+    "base_coin": "CARDS",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-11-05T08:57:49.581Z",
+    "internal_id": "spot-CARDS-KRW",
+    "symbol": "CARDS",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-CARV",
     "type": "spot",
     "base_coin": "CARV",
@@ -9038,6 +9060,17 @@
     "first_capture": "2026-08-06T00:00:00.000Z",
     "internal_id": "spot-CAP-USDT",
     "symbol": "CAP",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDT-CARDS",
+    "type": "spot",
+    "base_coin": "CARDS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-05T08:57:49.581Z",
+    "internal_id": "spot-CARDS-USDT",
+    "symbol": "CARDS",
     "denominator": "USDT"
   },
   {

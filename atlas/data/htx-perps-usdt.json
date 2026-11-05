@@ -3587,6 +3587,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FTNT-USDT",
+    "type": "perpetual",
+    "base_coin": "FTNT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-05T00:00:00.000Z",
+    "internal_id": "perpetual-FTNT-USDT:USDT",
+    "symbol": "FTNT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FTT-USDT",
     "type": "perpetual",
     "first_capture": "2021-09-14T00:00:00.000Z",

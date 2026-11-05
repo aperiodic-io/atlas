@@ -4993,7 +4993,7 @@
     ],
     "cmc_id": 40108,
     "base_asset_id": "ASTS",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-ASTS-USD:USD-20310926"
@@ -83516,6 +83516,28 @@
     "unified_id": "future-GOOGL-USD:USD-20310613"
   },
   {
+    "id": "GPRO-USD_UM_XPERP-311107",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-04T09:00:00.185Z",
+    "internal_id": "future-GPRO-USD:USD-20311107",
+    "symbol": "GPRO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-07T00:00:00",
+    "cmc_id": 41982,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GPRO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-GPRO-USD:USD-20311107"
+  },
+  {
     "id": "GRAM-USD_UM_XPERP-310620",
     "type": "future",
     "internal_id": "future-GRAM-USD:USD-20310620",
@@ -101840,7 +101862,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OPENAI-USD:USD-20310905"
@@ -103953,7 +103975,7 @@
     ],
     "cmc_id": 39732,
     "base_asset_id": "SPY",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-SPY-USD:USD-20310613"
@@ -112134,6 +112156,27 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-US100-USD:USD-20311010"
+  },
+  {
+    "id": "US500-USD_UM_XPERP-311107",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-04T09:15:00.175Z",
+    "internal_id": "future-US500-USD:USD-20311107",
+    "symbol": "US500",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-07T00:00:00",
+    "cmc_id": 39732,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "SPY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-SPY-USD:USD-20311107"
   },
   {
     "id": "USAR-USD_UM_XPERP-310926",

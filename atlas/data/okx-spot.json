@@ -32175,6 +32175,24 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XASML-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T09:00:00.000Z",
+    "internal_id": "spot-XASML-USDC",
+    "symbol": "XASML",
+    "denominator": "USDC",
+    "cmc_id": 40184,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ASMLX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ASMLX-USDC"
+  },
+  {
     "id": "XASML-USDT",
     "type": "spot",
     "internal_id": "spot-XASML-USDT",
@@ -33253,7 +33271,15 @@
     "internal_id": "spot-XIREN-USDC",
     "symbol": "XIREN",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 40162,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IRENX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-IRENX-USDC"
   },
   {
     "id": "XIREN-USDT",
@@ -35092,7 +35118,7 @@
     "denominator": "USDC",
     "underlying": "equity",
     "first_capture": "2026-08-12T00:00:00.000Z",
-    "missing_since": "2026-11-04T08:31:10.872Z",
+    "end_date": "2026-11-04T08:31:10.872Z",
     "quote_asset_id": "USDC"
   },
   {
@@ -35103,7 +35129,7 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-07T00:00:00.000Z",
-    "missing_since": "2026-11-04T08:31:10.872Z",
+    "end_date": "2026-11-04T08:31:10.872Z",
     "quote_asset_id": "USDT"
   },
   {
