@@ -467,6 +467,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ADSKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ADSKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-ADSKSTOCK-USDT:USDT",
+    "symbol": "ADSKSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ADVANTESTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "ADVANTESTSTOCK",
@@ -3336,6 +3351,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CARDS_USDT",
+    "type": "perpetual",
+    "base_coin": "CARDS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2025-09-03T06:12:00Z",
+    "internal_id": "perpetual-CARDS-USDT:USDT",
+    "symbol": "CARDS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CARTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "CARTSTOCK",
@@ -5279,6 +5309,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-20T07:03:19.709Z"
+  },
+  {
+    "id": "DUOLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DUOLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-DUOLSTOCK-USDT:USDT",
+    "symbol": "DUOLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DUSK_USDT",
@@ -8126,6 +8171,21 @@
     "first_capture": "2025-06-11T10:07:00Z",
     "internal_id": "perpetual-IDOL-USDT:USDT",
     "symbol": "IDOL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "IDXXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "IDXXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-IDXXSTOCK-USDT:USDT",
+    "symbol": "IDXXSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -14520,6 +14580,21 @@
     "end_date": "2026-10-19T18:51:30.698Z"
   },
   {
+    "id": "SHWSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SHWSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-SHWSTOCK-USDT:USDT",
+    "symbol": "SHWSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SIGN_USDT",
     "type": "perpetual",
     "base_coin": "SIGN",
@@ -15299,8 +15374,7 @@
     "internal_id": "perpetual-SOXX-USDT:USDT",
     "symbol": "SOXX",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-05T08:54:08.238Z"
+    "margin": "USDT"
   },
   {
     "id": "SPACE_USDT",
@@ -16505,6 +16579,21 @@
     "first_capture": "2024-11-28T03:24:00Z",
     "internal_id": "perpetual-TOSHI-USDT:USDT",
     "symbol": "TOSHI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TOSTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TOSTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-TOSTSTOCK-USDT:USDT",
+    "symbol": "TOSTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

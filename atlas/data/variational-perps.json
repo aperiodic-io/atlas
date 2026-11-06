@@ -6573,7 +6573,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "MARA",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-MARA-USDC:USDC"
@@ -6681,7 +6681,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "MCD",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-MCD-USDC:USDC"

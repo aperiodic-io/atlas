@@ -922,7 +922,8 @@
     "internal_id": "perpetual-ASX-USDT:USDT",
     "symbol": "ASX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-06T08:00:00.000Z"
   },
   {
     "id": "AT-USDT",
@@ -1612,7 +1613,8 @@
     "internal_id": "perpetual-BOME-USDT:USDT",
     "symbol": "BOME",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-06T08:00:00.000Z"
   },
   {
     "id": "BONK-USDT",
@@ -1933,7 +1935,8 @@
     "internal_id": "perpetual-CASHCAT-USDT:USDT",
     "symbol": "CASHCAT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-06T08:00:00.000Z"
   },
   {
     "id": "CAT-USDT",
@@ -8587,15 +8590,14 @@
     "base_coin": "SOXX",
     "quote_coin": "USDT",
     "margin_asset": "USDT",
-    "contract_size": 0.001,
+    "contract_size": 0.01,
     "quantity_unit": "base",
     "underlying": "equity",
     "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "perpetual-SOXX-USDT:USDT",
     "symbol": "SOXX",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-04T08:00:00.000Z"
+    "margin": "USDT"
   },
   {
     "id": "SPACE-USDT",
@@ -10255,6 +10257,21 @@
     "end_date": "2025-08-06T00:00:00.000Z",
     "internal_id": "perpetual-WOO-USDT:USDT",
     "symbol": "WOO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "WUXIBIO-USDT",
+    "type": "perpetual",
+    "base_coin": "WUXIBIO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-06T00:00:00.000Z",
+    "internal_id": "perpetual-WUXIBIO-USDT:USDT",
+    "symbol": "WUXIBIO",
     "denominator": "USDT",
     "margin": "USDT"
   },

@@ -2513,6 +2513,22 @@
     "unified_id": "spot-QQQX-USDC"
   },
   {
+    "id": "QTC/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-06T08:53:03.859Z",
+    "internal_id": "spot-QTC-USDC",
+    "symbol": "QTC",
+    "denominator": "USDC",
+    "cmc_id": 42523,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "QTC.QUANTUS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-QTC.QUANTUS-USDC"
+  },
+  {
     "id": "QUANT/USDC",
     "type": "spot",
     "internal_id": "spot-QUANT-USDC",

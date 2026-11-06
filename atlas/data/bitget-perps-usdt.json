@@ -12063,6 +12063,23 @@
     "unified_id": "perpetual-KLAC-USDT:USDT"
   },
   {
+    "id": "KMBUSDT",
+    "type": "perpetual",
+    "base_coin": "KMB",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-05T10:24:35.352Z",
+    "internal_id": "perpetual-KMB-USDT:USDT",
+    "symbol": "KMB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "KMNOUSDT",
     "type": "perpetual",
     "base_coin": "KMNO",
@@ -14500,6 +14517,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MSTU-USDT:USDT"
+  },
+  {
+    "id": "MSUSDT",
+    "type": "perpetual",
+    "base_coin": "MS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-05T10:24:33.218Z",
+    "internal_id": "perpetual-MS-USDT:USDT",
+    "symbol": "MS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "MTLUSDT",
@@ -18124,8 +18158,16 @@
     "symbol": "RELIANCE",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42695,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RELIANCE.RELIANCE_INDUSTRIES_LTD_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-RELIANCE.RELIANCE_INDUSTRIES_LTD_DERIVATIVES-USDT:USDT"
   },
   {
     "id": "RENDERUSDT",
