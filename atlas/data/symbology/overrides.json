@@ -596,6 +596,12 @@
       "reason": "Blast (BLAST, CMC 28480), the Blast L2 token, is the only CMC asset with this ticker and the one Bybit's BLASTUSDT resolves to. Hyperliquid's BLAST perpetual (2024-10-29 to 2026-05-26) was delisted before CMC's market pairs, which only cover live markets, could match it."
     },
     {
+      "exchange": "hyperliquid-perps",
+      "original_id": "OMNI",
+      "cmc_id": 30315,
+      "reason": "Omni Network (OMNI, CMC 30315). CMC filed this Hyperliquid market under 30315 while it listed it (cmc_mappings.json), and Binance's and Kraken's OMNI perpetuals, also 30315, were delisted the same week (2025-09-23 to 2025-09-26). The market pair that identified it left CMC after 2026-11-02."
+    },
+    {
       "exchange": "binance-futures",
       "original_id": "bobusdt",
       "cmc_id": 38970,

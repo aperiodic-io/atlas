@@ -2983,8 +2983,16 @@
     "underlying": "crypto",
     "first_capture": "2024-10-29T00:00:00.000Z",
     "end_date": "2025-09-26T00:00:00.000Z",
+    "cmc_id": 30315,
+    "category": [
+      "Layer 1",
+      "Interoperability"
+    ],
+    "base_asset_id": "OMNI",
+    "base_asset_match": "override",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-OMNI-USDC:USDC"
   },
   {
     "id": "ONDO",
