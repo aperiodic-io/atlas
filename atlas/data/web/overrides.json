@@ -95,10 +95,7 @@
   "USDCAD": "CAD",
   "USDCHF": "CHF",
   "USDCNH": "CNH",
-  "USDHKD": "HKD",
   "USDJPY": "JPY",
-  "USDKRW": "KRW",
-  "USDSEK": "SEK",
   "USDSGD": "SGD",
   "VISA": "V",
   "WENDYS": "WEN",
@@ -733,13 +730,6 @@
    "wikipedia": "Hang_Seng_Index",
    "reason": "index: no website of its own; ranked through its Wikipedia article only"
   },
-  "HKD": {
-   "asset_class": "forex",
-   "name": "Hong Kong dollar",
-   "domain": null,
-   "wikipedia": "Hong_Kong_dollar",
-   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
-  },
   "HMTT": {
    "domain": null,
    "reason": "hypememetoken.com now serves an unrelated ranch's site"
@@ -898,13 +888,6 @@
    "domain": null,
    "wikipedia": "KOSPI",
    "reason": "index: no website of its own; ranked through its Wikipedia article only"
-  },
-  "KRW": {
-   "asset_class": "forex",
-   "name": "South Korean won",
-   "domain": null,
-   "wikipedia": "South_Korean_won",
-   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
   },
   "KS200": {
    "asset_class": "index",
@@ -1198,7 +1181,7 @@
    "wikipedia": "Nickel",
    "reason": "commodity: no website of its own; ranked through its Wikipedia article only"
   },
-  "NIFTY": {
+  "NIFTY.NIFTY_50_DERIVATIVES": {
    "asset_class": "index",
    "name": "NIFTY 50",
    "domain": null,
@@ -1227,7 +1210,7 @@
    "domain": "msu.io",
    "reason": "NEXPACE is MapleStory Universe's token"
   },
-  "NZD": {
+  "NZDUSD": {
    "asset_class": "forex",
    "name": "New Zealand dollar",
    "domain": null,
@@ -1374,7 +1357,7 @@
    "wikipedia": "Recruit_(company)",
    "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
   },
-  "RELIANCE": {
+  "RELIANCE.RELIANCE_INDUSTRIES_LTD_DERIVATIVES": {
    "asset_class": "equity",
    "name": "Reliance Industries",
    "domain": "ril.com",
@@ -1428,13 +1411,6 @@
   "SBR": {
    "domain": null,
    "reason": "saberdao.io now redirects to an unrelated personal site"
-  },
-  "SEK": {
-   "asset_class": "forex",
-   "name": "Swedish krona",
-   "domain": null,
-   "wikipedia": "Swedish_krona",
-   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
   },
   "SENSETIME": {
    "asset_class": "equity",
@@ -1530,7 +1506,7 @@
    "domain": "sologenic.org",
    "reason": "Atlas's SOLO (Bybit spot from 2022) is Sologenic; the dominant-symbol match picked Solomon (CMC 2025). sologenic.org checked 2026-10-20"
   },
-  "SOXX": {
+  "SOXX.EQUITY": {
    "domain": null,
    "wikipedia": null,
    "reason": "an ETF: its website is the fund issuer's"
@@ -1549,12 +1525,12 @@
    "wikipedia": "S&P_500",
    "reason": "index: no website of its own; ranked through its Wikipedia article only"
   },
-  "SPACEX.PRE_MARKET": {
+  "SPCX": {
    "asset_class": "pre_market",
    "name": "SpaceX",
    "domain": "spacex.com",
    "wikipedia": "SpaceX",
-   "reason": "pre-IPO SpaceX contracts; Atlas's SPACEX is a PreStocks token (its site is the issuer's)"
+   "reason": "pre-IPO SpaceX contracts (Atlas SPCX); Atlas's SPACEX is a PreStocks token (its site is the issuer's)"
   },
   "SPELL": {
    "domain": "abracadabra.money",
@@ -1752,6 +1728,20 @@
    "domain": "nativemarkets.com",
    "reason": "USDH is issued by Native Markets"
   },
+  "USDHKD": {
+   "asset_class": "forex",
+   "name": "Hong Kong dollar",
+   "domain": null,
+   "wikipedia": "Hong_Kong_dollar",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
+  "USDKRW": {
+   "asset_class": "forex",
+   "name": "South Korean won",
+   "domain": null,
+   "wikipedia": "South_Korean_won",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
+  },
   "USDP": {
    "domain": null,
    "reason": "Pax Dollar's site is its issuer's, Paxos"
@@ -1759,6 +1749,13 @@
   "USDPT": {
    "domain": null,
    "reason": "Western Union's token: westernunion.com is the company's"
+  },
+  "USDSEK": {
+   "asset_class": "forex",
+   "name": "Swedish krona",
+   "domain": null,
+   "wikipedia": "Swedish_krona",
+   "reason": "currency: no website of its own; ranked through its Wikipedia article only"
   },
   "USOIL": {
    "asset_class": "commodity",

@@ -531,6 +531,62 @@ def test_a_large_drop_is_not_proposed_without_acknowledgement() -> None:
     assert report.large_change(old, lost_domains)
 
 
+def test_a_renamed_key_is_not_a_loss() -> None:
+    # Why: Atlas minted ``LULU`` for a Robinhood token, so the Lululemon perps
+    # became ``LULU.EQUITY``; such renames pushed an ordinary run past the
+    # guard (83 "losses" on 2026-11-06, a dozen of them renames).
+    old = _map(
+        [
+            {"ticker": "LULU", "domain": "lululemon.com", "atlas_symbols": ["LULU"]},
+            {
+                "ticker": "HKD",
+                "wikipedia": "Hong_Kong_dollar",
+                "atlas_symbols": ["USDHKD"],
+            },
+        ]
+    )
+    renamed = _map(
+        [
+            {
+                "ticker": "LULU",
+                "asset_id": "LULU.EQUITY",
+                "domain": "lululemon.com",
+                "atlas_symbols": ["LULU", "RLULU"],
+            },
+            {
+                "ticker": "USDHKD",
+                "asset_id": "USDHKD",
+                "wikipedia": "Hong_Kong_dollar",
+                "atlas_symbols": ["USDHKD"],
+            },
+        ]
+    )
+    assert report.losses(old, renamed) == 0
+
+
+def test_a_new_key_on_other_contracts_or_another_site_does_not_hide_a_loss() -> None:
+    old = _map(
+        [
+            {"ticker": "A", "domain": "a.io", "atlas_symbols": ["A"]},
+            {"ticker": "B", "domain": "b.io", "atlas_symbols": ["B"]},
+        ]
+    )
+    new = _map(
+        [
+            # Same site, other contracts: not A's rename.
+            {"ticker": "Z", "domain": "a.io", "atlas_symbols": ["Z"]},
+            # Same contracts, another site: B's site was lost.
+            {
+                "ticker": "B2",
+                "asset_id": "B.EQUITY",
+                "domain": "b2.io",
+                "atlas_symbols": ["B"],
+            },
+        ]
+    )
+    assert report.losses(old, new) == 2
+
+
 def test_a_map_that_only_changed_dates_is_not_rewritten() -> None:
     # Why: a daily PR whose only change is generated_at and check dates is noise.
     e = {
@@ -606,3 +662,13 @@ def test_a_sites_article_goes_only_to_an_asset_it_is_about() -> None:
     lookups = {"DAI": build.Lookup(name="Dai", domain="makerdao.com")}
     build.fill_domain_articles(lookups, {"DAI": 30}, articles)
     assert lookups["DAI"].wikipedia == "Dai_(cryptocurrency)"
+
+
+def test_the_cli_help_renders() -> None:
+    # Why: a bare ``%`` in a help string is a ValueError on Python 3.14's
+    # argparse, which broke every local run of ``python -m integrations.web``.
+    from integrations.web.__main__ import main
+
+    with pytest.raises(SystemExit) as exit_info:
+        main(["--help"])
+    assert exit_info.value.code == 0

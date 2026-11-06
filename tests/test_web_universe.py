@@ -175,3 +175,20 @@ def test_aliases_route_unresolved_symbols_and_classes_map_to_the_map_vocabulary(
     assert universe.assets["TSLA"].symbols == {"TESLA"}
     # An Atlas asset of class unknown takes the class its venues declare.
     assert universe.assets["USDBRL"].asset_class == "forex"
+
+
+def test_every_committed_override_names_an_asset_of_the_universe() -> None:
+    # Why: Atlas re-keyed HKD to USDHKD, NIFTY to NIFTY.NIFTY_50_DERIVATIVES
+    # and others; the overrides kept the old keys, matched nothing, and those
+    # assets silently left the map (only a warning in the bot PR said so).
+    from integrations.web.build import Paths
+    from integrations.web.overrides import load_overrides
+    from integrations.web.universe import load_registry, load_snapshots
+
+    paths = Paths()
+    overrides = load_overrides(paths.overrides)
+    universe = build_universe(
+        load_registry(paths.registry), load_snapshots(paths.data), overrides.aliases
+    )
+    known = set(universe.assets) | set(universe.unresolved)
+    assert sorted(set(overrides.entries) - known) == []
