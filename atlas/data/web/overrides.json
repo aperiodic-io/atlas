@@ -790,6 +790,10 @@
    "domain": "ionq.com",
    "reason": "Wikidata lists no usable website"
   },
+  "IREN": {
+   "domain": "iren.com",
+   "reason": "IREN Ltd (formerly Iris Energy) is at iren.com; a single 502 Bad Gateway on 2026-10-29 was read as a placeholder page and unmapped it."
+  },
   "ITG": {
    "domain": null,
    "wikipedia": null,
@@ -1418,6 +1422,10 @@
    "domain": "sensetime.com",
    "wikipedia": "SenseTime",
    "reason": "non-US company traded under its name: Wikidata's ticker query cannot reach it"
+  },
+  "SG": {
+   "domain": "socialgood.inc",
+   "reason": "SocialGood (CMC 6245). Since the app's discontinuation (2026-10-16) socialgood.inc redirects to the company's help-centre notice on socialgood.zendesk.com; Zendesk's domain is the host's, not the asset's."
   },
   "SGD": {
    "asset_class": "forex",

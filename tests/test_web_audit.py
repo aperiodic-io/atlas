@@ -347,6 +347,39 @@ def test_a_run_where_many_homepages_fail_is_the_runner_not_the_sites() -> None:
     assert build.discount_outage(one_bad, previous)["d0.io"].failures == 1
 
 
+def test_dead_sites_failing_again_are_not_an_outage() -> None:
+    # Why: every run retries the domains whose last check failed. On
+    # 2026-11-06, 81 of 87 such retries failed again (the sites are dead) while
+    # 12% of the healthy sample did: 30% overall, "an outage", every run since
+    # 2026-10-28. No second strike was ever recorded, so dead sites stayed
+    # mapped and kept tipping the next run. Only domains that were fine before
+    # can tell a runner outage from dead sites.
+    def unreachable(failures: int) -> verify.Check:
+        return verify.Check(
+            "unreachable", NEXT_DAY, failures=failures, failed=NEXT_DAY[:10]
+        )
+
+    healthy = {
+        f"ok{i}.io": verify.Check("ok", DAY, 200, f"ok{i}.io", "OK") for i in range(10)
+    }
+    retries = {f"dead{i}.io": unreachable(1) for i in range(5)}
+    previous = {**healthy, **retries}
+    fresh = {d: verify.Check("ok", NEXT_DAY, 200, d, "OK") for d in healthy}
+    fresh["ok0.io"] = unreachable(1)
+    fresh.update({d: unreachable(2) for d in retries})
+    kept = build.discount_outage(fresh, previous)
+    assert all(kept[d].dead for d in retries)
+    assert kept["ok0.io"].failures == 1
+
+    # When the healthy domains fail too, it is the runner: nothing counts,
+    # the retries' strikes included.
+    for d in list(healthy)[:5]:
+        fresh[d] = unreachable(1)
+    kept = build.discount_outage(fresh, previous)
+    assert all(kept[d] is previous[d] for d in retries)
+    assert kept["ok0.io"] is previous["ok0.io"]
+
+
 def test_homepage_redirects_are_followed_one_host_at_a_time() -> None:
     # Why: many dead domains forward to one parking or hosting host; requests
     # must queue per host instead of hitting it with every worker at once.
