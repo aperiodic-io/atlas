@@ -65,7 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         "--accept-large-change",
         action="store_true",
         help="write the map even when it loses more than "
-        f"max({report.LARGE_CHANGE_ENTRIES}, {report.LARGE_CHANGE_SHARE:.0%}) entries or domains",
+        f"max({report.LARGE_CHANGE_ENTRIES}, {report.LARGE_CHANGE_SHARE * 100:.0f}%%) entries or domains",
     )
     parser.add_argument("--report-path", type=Path)
     parser.add_argument("--summary-path", type=Path)

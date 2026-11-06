@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from typing import Any
 
 LIST_LIMIT = 60
@@ -158,14 +158,32 @@ LARGE_CHANGE_ENTRIES = 20
 LARGE_CHANGE_SHARE = 0.02
 
 
+def _renamed(entry: Mapping[str, Any], added: Iterable[Mapping[str, Any]]) -> bool:
+    """Whether a new key carries ``entry`` on: the same domain and article, on
+    some of the same Atlas contracts (Atlas re-keyed the asset, e.g. ``LULU``
+    to ``LULU.EQUITY`` once a token took the bare ID)."""
+    symbols = set(entry.get("atlas_symbols") or ())
+    return any(
+        symbols & set(e.get("atlas_symbols") or ())
+        and e.get("domain") == entry.get("domain")
+        and e.get("wikipedia") == entry.get("wikipedia")
+        for e in added
+    )
+
+
 def losses(old: Mapping[str, Any] | None, new: Mapping[str, Any]) -> int:
-    """Entries of ``old`` that are gone, or whose domain no entry has any more."""
+    """Entries of ``old`` that are gone (not merely re-keyed), or whose domain
+    no entry has any more."""
+    before = {_key(e) for e in (old or {}).get("entries", [])}
     after = {_key(e): e for e in new["entries"]}
+    added = [e for k, e in after.items() if k not in before]
     domains = {e.get("domain") for e in new["entries"]} - {None}
     lost = 0
     for entry in (old or {}).get("entries", []):
         now = after.get(_key(entry))
-        if now is None or (entry.get("domain") and entry["domain"] not in domains):
+        if (now is None and not _renamed(entry, added)) or (
+            entry.get("domain") and entry["domain"] not in domains
+        ):
             lost += 1
     return lost
 
