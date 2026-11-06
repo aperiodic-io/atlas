@@ -1096,16 +1096,29 @@ def _look_up(run: _Run, crypto_ids: Mapping[str, tuple[int, str]]) -> None:
 def discount_outage(
     fresh: Mapping[str, verify.Check], previous: Mapping[str, verify.Check]
 ) -> dict[str, verify.Check]:
-    """The checks to record. When more than ``OUTAGE_SHARE`` of a run's checks
-    failed, the runner (its network, DNS) is the likelier culprit than the
-    sites: the failures are not recorded and the previous rows stand."""
+    """The checks to record. When more than ``OUTAGE_SHARE`` of the domains
+    that were fine before failed, the runner (its network, DNS) is the likelier
+    culprit than the sites: no failure is recorded and the previous rows stand.
+
+    Domains whose last check already failed are left out of that share: they
+    are retried every run, are mostly dead, and failing again says nothing
+    about the runner (81 of 87 did on 2026-11-06, which alone read as an
+    outage every night)."""
 
     def failed(domain: str, check: verify.Check) -> bool:
         before = previous.get(domain)
         return check.failures > (before.failures if before else 0)
 
+    def was_fine(domain: str) -> bool:
+        before = previous.get(domain)
+        return before is None or before.failures == 0
+
     failing = [d for d, c in fresh.items() if failed(d, c)]
-    if len(fresh) < OUTAGE_MIN_CHECKS or len(failing) <= OUTAGE_SHARE * len(fresh):
+    judged = [d for d in fresh if was_fine(d)]
+    failing_judged = [d for d in failing if was_fine(d)]
+    if len(judged) < OUTAGE_MIN_CHECKS or len(failing_judged) <= OUTAGE_SHARE * len(
+        judged
+    ):
         return dict(fresh)
     kept = {d: c for d, c in fresh.items() if d not in failing}
     kept.update({d: previous[d] for d in failing if d in previous})
