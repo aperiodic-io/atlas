@@ -1415,6 +1415,23 @@
     "internal_id": "future-ETH-USD:USD-20261106",
     "symbol": "ETH",
     "denominator": "USD",
+    "margin": "USD",
+    "end_date": "2026-11-06T08:00:00.000Z"
+  },
+  {
+    "id": "FF_ETHUSD_261113",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-06T08:00:15.868Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-ETH-USD:USD-20261113",
+    "symbol": "ETH",
+    "denominator": "USD",
     "margin": "USD"
   },
   {
@@ -3288,6 +3305,23 @@
     "first_capture": "2026-10-30T08:04:23.974Z",
     "delivery_date": "2026-11-06T08:00:00+00:00",
     "internal_id": "future-BTC-USD:USD-20261106",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "USD",
+    "end_date": "2026-11-06T08:00:00.000Z"
+  },
+  {
+    "id": "FF_XBTUSD_261113",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-06T08:00:16.051Z",
+    "delivery_date": "2026-11-13T08:00:00+00:00",
+    "internal_id": "future-BTC-USD:USD-20261113",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "USD"
