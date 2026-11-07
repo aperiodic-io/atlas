@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-07T08:10:33Z",
-  "atlas_source": "b4a8505b94713c20f7516fa28873e0e157fba2c9",
+  "generated_at": "2026-11-07T11:16:04Z",
+  "atlas_source": "277797172bc35e447982d3fa3daf47c47334b68d",
   "entries": [
     {
       "ticker": "$MVRK",
@@ -23,7 +23,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -473,7 +473,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -572,7 +572,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -648,7 +648,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -915,7 +915,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -1019,7 +1019,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -5616,7 +5616,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -5906,7 +5906,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -9164,7 +9164,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -9357,7 +9357,8 @@
         "evidence": [
           "cmc_website",
           "bot_blocked_403",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-28"
       }
@@ -10986,7 +10987,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -11312,7 +11313,7 @@
       "atlas_symbols": [
         "AVAX"
       ],
-      "atlas_contracts": 377,
+      "atlas_contracts": 378,
       "cmc_id": 5805,
       "method": "atlas_cmc_id",
       "verification": {
@@ -13451,7 +13452,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -13653,7 +13654,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -14247,12 +14248,15 @@
       "cmc_id": 372,
       "method": "cmc_symbol_unique",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-25"
       }
@@ -15325,7 +15329,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-04"
       }
@@ -15821,7 +15826,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -18957,7 +18962,7 @@
         "HYNA:BTC",
         "UBTC"
       ],
-      "atlas_contracts": 2582,
+      "atlas_contracts": 2584,
       "cmc_id": 1,
       "method": "atlas_cmc_id",
       "verification": {
@@ -20711,6 +20716,7 @@
           "homepage_ok",
           "name_in_domain",
           "name_in_title",
+          "coingecko_agrees",
           "wikipedia_article"
         ],
         "checked": "2026-10-25"
@@ -21982,12 +21988,15 @@
       "cmc_id": 37263,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "redirect",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_redirect",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "coingecko_disagrees:canton.network"
         ],
         "redirected_from": "sync.global",
         "checked": "2026-10-29"
@@ -22663,7 +22672,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-04"
       }
@@ -23595,7 +23605,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-27"
       }
@@ -33416,11 +33427,14 @@
       "cmc_id": 32698,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain"
+        ],
+        "flags": [
+          "coingecko_disagrees:t.me"
         ],
         "checked": "2026-10-31"
       }
@@ -34457,14 +34471,16 @@
     },
     {
       "ticker": "DUOL",
+      "asset_id": "DUOL",
       "asset_class": "equity",
       "name": "Duolingo Inc",
       "domain": "duolingo.com",
       "atlas_symbols": [
+        "DUOL",
         "DUOLSTOCK",
         "RDUOL"
       ],
-      "atlas_contracts": 2,
+      "atlas_contracts": 3,
       "wikidata": "Q124637557",
       "method": "wikidata_ticker",
       "verification": {
@@ -35211,7 +35227,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-06"
       }
@@ -35258,7 +35275,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -35613,7 +35630,7 @@
           "name_in_domain",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -35688,7 +35705,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -36219,9 +36236,10 @@
         "ka": "Emcor"
       },
       "atlas_symbols": [
+        "EMESTOCK",
         "REME"
       ],
-      "atlas_contracts": 1,
+      "atlas_contracts": 2,
       "wikidata": "Q5370289",
       "method": "wikidata_ticker",
       "verification": {
@@ -37713,7 +37731,7 @@
         "HYNA:ETH",
         "UETH"
       ],
-      "atlas_contracts": 2533,
+      "atlas_contracts": 2535,
       "cmc_id": 1027,
       "method": "atlas_cmc_id",
       "verification": {
@@ -40139,7 +40157,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40551,7 +40569,7 @@
         "FISVSTOCK",
         "RFISV"
       ],
-      "atlas_contracts": 3,
+      "atlas_contracts": 4,
       "wikidata": "Q1420513",
       "method": "wikidata_ticker",
       "verification": {
@@ -43240,7 +43258,8 @@
         "evidence": [
           "cmc_website",
           "homepage_ok",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-07"
       }
@@ -45331,7 +45350,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-07"
       }
@@ -45356,7 +45376,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50095,7 +50115,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50798,6 +50818,7 @@
       "wikipedia_sitelinks": {
         "af": "Harley-Davidson",
         "ar": "هارلي ديفيدسون",
+        "ast": "Harley-Davidson",
         "azb": "هارلی-دیویدسن",
         "bg": "Harley-Davidson",
         "bjn": "Harley-Davidson",
@@ -51271,7 +51292,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52623,7 +52644,7 @@
         "HYNA:HYPE",
         "HYPE"
       ],
-      "atlas_contracts": 230,
+      "atlas_contracts": 231,
       "cmc_id": 32196,
       "method": "atlas_cmc_id",
       "verification": {
@@ -53313,7 +53334,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54706,7 +54727,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54743,7 +54764,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54788,9 +54809,10 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54870,7 +54892,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54891,9 +54913,10 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55015,7 +55038,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55214,7 +55237,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55271,7 +55294,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55321,7 +55344,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55344,7 +55367,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55388,7 +55411,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55411,7 +55434,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55549,7 +55572,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55879,7 +55902,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55940,7 +55963,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56138,7 +56161,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56256,7 +56279,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56330,7 +56353,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56352,7 +56375,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56409,7 +56432,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56695,7 +56718,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56727,7 +56750,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56750,7 +56773,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56857,6 +56880,7 @@
         "sr": "JPMorgan Chase",
         "sv": "J.P. Morgan Chase",
         "te": "జెపిమోర్గాన్ ఛేజ్",
+        "tg": "JPMorgan Chase",
         "th": "เจพีมอร์แกนเชส",
         "tr": "JPMorgan Chase",
         "uk": "JPMorgan Chase",
@@ -57068,7 +57092,6 @@
         "ro": "Yen",
         "roa-tara": "Yen giappunise",
         "ru": "Иена",
-        "rue": "Японьскый єн",
         "sah": "Йена",
         "sat": "ᱡᱟᱯᱟᱱᱤ ᱭᱮᱱ",
         "sd": "جاپاني ين",
@@ -57143,7 +57166,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57190,7 +57213,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57235,7 +57258,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57278,7 +57301,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57341,7 +57364,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57364,7 +57387,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57489,7 +57512,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57511,7 +57534,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57534,7 +57557,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57557,7 +57580,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57578,7 +57601,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57601,7 +57624,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57623,7 +57646,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57646,7 +57669,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57812,7 +57835,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57835,7 +57858,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57894,7 +57917,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57917,7 +57940,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58001,7 +58024,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58097,7 +58120,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58171,7 +58194,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58230,7 +58253,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58272,7 +58295,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58426,7 +58449,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58447,7 +58470,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58508,7 +58531,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58539,7 +58562,7 @@
         "eu": "Kia Motors",
         "fa": "کیا موتورز",
         "fi": "Kia Motors",
-        "fr": "Kia Motors",
+        "fr": "Kia Corporation",
         "frr": "Kia Motors",
         "gl": "Kia Motors",
         "ha": "Kia Motors",
@@ -58610,7 +58633,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58633,7 +58656,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58656,7 +58679,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58752,7 +58775,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58890,12 +58913,11 @@
         "status": "ok",
         "evidence": [
           "wikidata_website",
-          "homepage_ok",
+          "bot_blocked_403",
           "name_in_domain",
-          "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58940,7 +58962,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59029,7 +59051,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59111,28 +59133,6 @@
       }
     },
     {
-      "ticker": "KMD",
-      "asset_class": "crypto",
-      "name": "Komodo",
-      "domain": "komodoplatform.com",
-      "atlas_symbols": [
-        "KMD"
-      ],
-      "atlas_contracts": 9,
-      "cmc_id": 1521,
-      "method": "cmc_symbol_unique",
-      "verification": {
-        "status": "ok",
-        "evidence": [
-          "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
-        ],
-        "checked": "2026-10-24"
-      }
-    },
-    {
       "ticker": "KMI",
       "asset_class": "equity",
       "name": "Kinder Morgan",
@@ -59185,7 +59185,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59299,29 +59299,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
-      }
-    },
-    {
-      "ticker": "KNIGHT",
-      "asset_class": "crypto",
-      "name": "KnightSwap",
-      "domain": "knightswap.financial",
-      "atlas_symbols": [
-        "KNIGHT"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 15841,
-      "method": "cmc_symbol_unique",
-      "verification": {
-        "status": "ok",
-        "evidence": [
-          "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
-        ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59343,7 +59321,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59409,7 +59387,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59597,7 +59575,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59625,7 +59603,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59648,7 +59626,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59671,7 +59649,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59718,7 +59696,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59845,7 +59823,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59923,7 +59901,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59945,7 +59923,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60015,7 +59993,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60161,7 +60139,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60247,7 +60225,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60311,11 +60289,10 @@
         "status": "ok",
         "evidence": [
           "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
+          "bot_blocked_403",
+          "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60433,7 +60410,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60586,7 +60563,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60711,7 +60688,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60758,12 +60735,15 @@
       "cmc_id": 25023,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-24"
       }
@@ -60788,7 +60768,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60911,7 +60891,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60941,7 +60921,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61020,7 +61000,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61042,7 +61022,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61064,7 +61044,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-26"
       }
@@ -61160,11 +61141,10 @@
         "status": "ok",
         "evidence": [
           "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
+          "bot_blocked_403",
+          "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61234,7 +61214,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61778,7 +61758,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61882,7 +61862,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61981,7 +61961,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62183,7 +62163,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62225,7 +62205,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62312,7 +62292,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62335,7 +62315,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62380,7 +62360,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62407,7 +62387,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62430,7 +62410,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62456,7 +62436,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62478,7 +62458,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62529,7 +62509,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62552,7 +62532,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62641,7 +62621,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62697,7 +62677,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62793,7 +62773,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62816,7 +62796,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62839,7 +62819,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62862,7 +62842,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62916,7 +62896,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63000,7 +62980,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63022,7 +63002,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63093,7 +63073,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63160,7 +63140,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63257,7 +63237,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63378,7 +63358,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63424,7 +63404,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63590,7 +63570,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63662,7 +63642,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63710,7 +63690,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63814,7 +63794,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63838,7 +63818,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -63890,7 +63870,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64020,7 +64000,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64098,7 +64078,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64189,7 +64169,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64531,7 +64511,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64553,7 +64533,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64623,7 +64603,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64813,7 +64793,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64836,7 +64816,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64907,7 +64887,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64989,7 +64969,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65231,7 +65211,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65254,7 +65234,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65323,7 +65303,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65368,7 +65348,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65441,7 +65421,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65510,7 +65490,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65533,7 +65513,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65578,7 +65558,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65600,7 +65580,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65698,7 +65678,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65745,7 +65725,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65844,7 +65824,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65960,7 +65940,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65983,7 +65963,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66074,7 +66054,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66097,7 +66077,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66166,7 +66146,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66212,7 +66192,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66274,7 +66254,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66297,7 +66277,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66343,7 +66323,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66359,12 +66339,15 @@
       "cmc_id": 42033,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-24"
       }
@@ -66388,7 +66371,7 @@
           "name_in_domain",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66588,7 +66571,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66689,7 +66672,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66820,7 +66803,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66842,7 +66825,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -66943,7 +66926,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67028,7 +67011,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67130,7 +67113,7 @@
         "flags": [
           "coingecko_disagrees:magiceden.io"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67152,7 +67135,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67175,7 +67158,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67238,7 +67221,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67285,7 +67268,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67306,9 +67289,10 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67343,7 +67327,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67386,7 +67370,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67409,7 +67393,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67455,7 +67439,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67500,7 +67484,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67523,7 +67507,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67568,7 +67552,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67590,7 +67574,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67613,7 +67597,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67636,7 +67620,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67705,7 +67689,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67727,7 +67711,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -67933,7 +67917,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68000,7 +67984,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68043,9 +68027,10 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68090,7 +68075,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68113,7 +68098,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68312,7 +68297,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68526,7 +68511,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68548,7 +68533,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68592,7 +68577,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68725,7 +68710,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68747,7 +68732,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68855,7 +68840,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68878,7 +68863,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68974,7 +68959,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68997,7 +68982,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69020,7 +69005,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69096,7 +69081,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69203,7 +69188,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69225,7 +69210,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69270,7 +69255,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69362,7 +69347,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69414,7 +69399,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69472,7 +69457,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69609,7 +69594,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69631,7 +69616,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69653,7 +69638,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69780,7 +69765,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69803,7 +69788,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69851,7 +69836,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69925,7 +69910,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69947,7 +69932,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70013,7 +69998,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70036,7 +70021,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70081,7 +70066,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70128,7 +70113,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70263,7 +70248,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70342,7 +70327,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70401,9 +70386,10 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70424,7 +70410,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70454,7 +70440,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70543,7 +70529,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70575,7 +70561,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70710,7 +70696,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70783,7 +70769,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71005,7 +70991,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71304,7 +71290,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71689,7 +71675,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71738,7 +71724,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71788,7 +71774,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71843,7 +71829,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71922,7 +71908,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71945,7 +71931,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72058,7 +72044,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72114,7 +72100,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72189,7 +72175,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72261,7 +72247,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72338,7 +72324,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72405,7 +72391,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72455,7 +72441,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72598,7 +72584,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72621,7 +72607,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72666,7 +72652,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72689,7 +72675,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72712,7 +72698,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72757,7 +72743,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72780,7 +72766,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72803,7 +72789,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72825,7 +72811,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73042,7 +73028,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73065,7 +73051,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73118,7 +73104,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73220,7 +73206,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73243,7 +73229,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73362,6 +73348,29 @@
       }
     },
     {
+      "ticker": "NBOT",
+      "asset_id": "NBOT",
+      "asset_class": "crypto",
+      "name": "Naka Bodhi Token",
+      "domain": "nakachain.org",
+      "atlas_symbols": [
+        "NBOT"
+      ],
+      "atlas_contracts": 2,
+      "cmc_id": 4047,
+      "method": "atlas_cmc_id",
+      "verification": {
+        "status": "ok",
+        "evidence": [
+          "cmc_website",
+          "bot_blocked_403",
+          "name_in_domain",
+          "coingecko_agrees"
+        ],
+        "checked": "2026-11-07"
+      }
+    },
+    {
       "ticker": "NBR",
       "asset_class": "equity",
       "name": "Nabors Industries",
@@ -73407,10 +73416,11 @@
         "status": "ok",
         "evidence": [
           "cmc_website",
-          "bot_blocked_403",
-          "name_in_domain"
+          "homepage_ok",
+          "name_in_domain",
+          "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73738,7 +73748,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73885,7 +73895,7 @@
         "flags": [
           "coingecko_disagrees:neiro.community"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73930,7 +73940,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -74007,7 +74017,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -74082,7 +74092,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -76734,7 +76744,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -77439,7 +77449,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -77884,7 +77894,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -78111,7 +78121,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -79418,7 +79428,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -79737,7 +79747,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-07"
       }
@@ -80761,10 +80772,9 @@
       },
       "atlas_symbols": [
         "OSCR",
-        "ROSCR",
-        "XOSCR"
+        "ROSCR"
       ],
-      "atlas_contracts": 3,
+      "atlas_contracts": 2,
       "wikidata": "Q24204297",
       "method": "wikidata_ticker",
       "verification": {
@@ -82941,7 +82951,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -84376,7 +84386,7 @@
           "override",
           "homepage_ok"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -85799,7 +85809,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -86180,7 +86190,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -87373,7 +87383,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-26"
       }
@@ -90903,7 +90914,8 @@
         "evidence": [
           "cmc_website",
           "bot_blocked_403",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-29"
       }
@@ -91157,7 +91169,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -95568,7 +95580,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -95624,6 +95636,28 @@
           "wikipedia_article"
         ],
         "checked": "2026-11-02"
+      }
+    },
+    {
+      "ticker": "SEED",
+      "asset_class": "crypto",
+      "name": "SEED",
+      "domain": "playseedgo.com",
+      "atlas_symbols": [
+        "SEED"
+      ],
+      "atlas_contracts": 1,
+      "cmc_id": 33468,
+      "method": "cmc_symbol_unique",
+      "verification": {
+        "status": "ok",
+        "evidence": [
+          "cmc_website",
+          "homepage_ok",
+          "name_in_domain",
+          "name_in_title"
+        ],
+        "checked": "2026-11-07"
       }
     },
     {
@@ -96542,7 +96576,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -99314,7 +99348,8 @@
           "homepage_ok",
           "same_brand_redirect:status.app",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-29"
       }
@@ -99635,7 +99670,7 @@
         "SOL",
         "USOL"
       ],
-      "atlas_contracts": 608,
+      "atlas_contracts": 609,
       "cmc_id": 5426,
       "method": "atlas_cmc_id",
       "verification": {
@@ -100928,7 +100963,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-26"
       }
@@ -102448,7 +102484,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -103043,7 +103079,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-26"
       }
@@ -104205,7 +104242,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -107964,9 +108001,10 @@
         "zh-yue": "Tapestry"
       },
       "atlas_symbols": [
-        "RTPR"
+        "RTPR",
+        "TPRSTOCK"
       ],
-      "atlas_contracts": 1,
+      "atlas_contracts": 2,
       "wikidata": "Q56273715",
       "method": "wikidata_ticker",
       "verification": {
@@ -109144,7 +109182,7 @@
       "atlas_symbols": [
         "TRX"
       ],
-      "atlas_contracts": 735,
+      "atlas_contracts": 736,
       "cmc_id": 1958,
       "method": "atlas_cmc_id",
       "verification": {
@@ -110625,9 +110663,10 @@
         "ja": "タイラー・テクノロジーズ"
       },
       "atlas_symbols": [
-        "RTYL"
+        "RTYL",
+        "TYLSTOCK"
       ],
-      "atlas_contracts": 1,
+      "atlas_contracts": 2,
       "wikidata": "Q48802335",
       "method": "wikidata_ticker",
       "verification": {
@@ -111805,7 +111844,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -113571,7 +113610,7 @@
           "override",
           "homepage_ok"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -117712,7 +117751,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-27"
       }
@@ -117786,7 +117826,8 @@
           "homepage_ok",
           "same_brand_redirect:walletconnect.com",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-30"
       }
@@ -118120,7 +118161,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -120138,7 +120179,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -120217,7 +120258,8 @@
         "evidence": [
           "cmc_website",
           "homepage_redirect",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "redirected_from": "woo.org",
         "checked": "2026-10-29"
@@ -122178,7 +122220,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -122725,7 +122767,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -122910,7 +122952,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -123404,7 +123446,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-25"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -124487,7 +124529,7 @@
         "HYNA:XRP",
         "XRP"
       ],
-      "atlas_contracts": 1104,
+      "atlas_contracts": 1105,
       "cmc_id": 52,
       "method": "atlas_cmc_id",
       "verification": {
@@ -124991,9 +125033,10 @@
         "zh": "Block公司"
       },
       "atlas_symbols": [
-        "RXYZ"
+        "RXYZ",
+        "XYZSTOCK"
       ],
-      "atlas_contracts": 1,
+      "atlas_contracts": 2,
       "wikidata": "Q110778747",
       "method": "wikidata_ticker",
       "verification": {
@@ -126027,7 +126070,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-07"
       }
@@ -127026,7 +127070,7 @@
         "flags": [
           "coingecko_disagrees:layerzero.network"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -127140,9 +127184,10 @@
         "zh": "硕腾"
       },
       "atlas_symbols": [
-        "RZTS"
+        "RZTS",
+        "ZTSSTOCK"
       ],
-      "atlas_contracts": 1,
+      "atlas_contracts": 2,
       "wikidata": "Q8073337",
       "method": "wikidata_ticker",
       "verification": {
@@ -127706,6 +127751,7 @@
     "ARX.EQUITY": "override: Wikidata's ARX is Aeroflex (acquired 2014); ARX now trades as Accelerant Holdings",
     "ARXS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ASD": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "ASELS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ASHR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ASI": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ASIC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -128341,7 +128387,7 @@
     "CAPS": "ternoa.com: placeholder page (Deployment Paused)",
     "CAPY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-07-09)",
     "CARAT": "alaskagoldrush.io: unreachable on 2 days in a row",
-    "CARD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "CARD": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "CARDS.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-04-04)",
     "CARE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "CART.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130508,6 +130554,7 @@
     "KLRA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "KLUB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KMA": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "KMD": "komodoplatform.com: CoinMarketCap symbol match whose homepage could not be read",
     "KMON": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KMTS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "KMTUY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -130517,6 +130564,7 @@
     "KNF": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "KNFT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KNGL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "KNIGHT": "knightswap.financial: parking page (lander.parity.domains)",
     "KNJ": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KNOB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KNSA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131335,7 +131383,6 @@
     "NBISB": "Nebius Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "NBISG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NBISX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "NBOT": "nakachain.org: gambling content that does not name the asset (Canadian Online Casino Sites - Top Rated CA Casinos)",
     "NBP": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NBS": "Atlas has no asset for these 6 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NBTX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131677,6 +131724,7 @@
     "ORT": "override: xreators.com now forwards to NAVER's Grafolio, a different product",
     "ORTB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "OSBC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "OSCRX": "Oscar Health Inc tokenized stock (xStock): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "OSIS": "ambiguous Wikidata ticker: Q7073021, Q7572694",
     "OSK.CRYPTO": "Atlas has no asset for these 4 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2021-10-26)",
     "OSKY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132023,7 +132071,7 @@
     "PUMP3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PUMPAI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PUMPOLD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "PUNCH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2495 (パンチ) and 7578 (Punch Monkey)",
+    "PUNCH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2569 (パンチ) and 7435 (Punch Monkey)",
     "PUNDU": "pundu.io: parking lander (a script sends visitors to /lander)",
     "PUNKAI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PUP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
@@ -132091,7 +132139,7 @@
     "QTCON": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "QTF": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "QTLX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "QTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 5159 (QToken) and 7408 (Quanto)",
+    "QTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 5911 (QToken) and 7241 (Quanto)",
     "QTUM3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "QTUM3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "QTWO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132304,7 +132352,7 @@
     "ROSE3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ROSE3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ROSN": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "ROSS": "rossonsol.com: CoinMarketCap symbol match whose homepage could not be read",
+    "ROSS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ROSX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ROUP": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ROUTE": "Atlas has no asset for these 6 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132461,7 +132509,7 @@
     "SDEV": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SDL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2022-11-08)",
     "SDN": "Atlas has no asset for these 11 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SDOGE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 3 coins, best ranks 5341 (SolDoge) and 6500 (SDOGE)",
+    "SDOGE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 3 coins, best ranks 5723 (SolDoge) and 6266 (SDOGE)",
     "SDS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SE": "ambiguous Wikidata ticker: Q7575161, Q93520415",
     "SEAL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132472,7 +132520,6 @@
     "SECZ": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SECZ.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's SECZ is Atlas asset SECZ, which symbology did not assign these contracts to",
     "SECZB": "Securitize Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
-    "SEED": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3222 (SEED) and 6351 (SEED NFT Marketplace)",
     "SEELE": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SEEU": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SEI.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132564,7 +132611,7 @@
     "SHOPNEXT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHOPX": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHREK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "SHROOM.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3030 (Niftyx Protocol) and 6615 (Shroomates)",
+    "SHROOM.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3010 (Niftyx Protocol) and 6393 (Shroomates)",
     "SHROOMROB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHRUBETH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHTDY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132684,7 +132731,7 @@
     "SML": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SMNNY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SMOLE": "smolecoin.com: CoinMarketCap symbol match whose homepage could not be read",
-    "SMR.CRYPTO": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "SMR.CRYPTO": "Atlas has no asset for these 3 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2022-12-05)",
     "SMRX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SMTX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SMTY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132781,7 +132828,7 @@
     "SPACEXIPO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SPAIN35IX": "no source for index (overrides only)",
     "SPAY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SPC": "Atlas has no asset for these 3 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 1506 (SpaceChain) and 7570 (Space)",
+    "SPC": "Atlas has no asset for these 3 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 1580 (SpaceChain) and 7426 (Space)",
     "SPCEX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SPCH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SPCT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-06-07)",
@@ -132826,7 +132873,7 @@
     "SPON": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SPONGE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-07-07)",
     "SPOODY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SPORE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2507 (Spore) and 7104 (Spore.fun)",
+    "SPORE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2548 (Spore) and 6922 (Spore.fun)",
     "SPRT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SPSB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SPSM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132994,7 +133041,7 @@
     "SUNNED": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SUNNY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SUNOLD": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SUNPEPE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "SUNPEPE": "sunpepe.meme: CoinMarketCap symbol match whose homepage could not be read",
     "SUNPUNK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SUNRATS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SUNWUKONG": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133079,7 +133126,7 @@
     "TBTC": "Atlas has no asset for these 7 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2021-01-23)",
     "TBULL": "tbullcoin.com: placeholder page (Account Suspended)",
     "TCBX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "TCC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2646 (The ChampCoin) and 4523 (TCryptochicks)",
+    "TCC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2715 (The ChampCoin) and 4448 (TCryptochicks)",
     "TCEHY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TCNH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TCNT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133101,7 +133148,7 @@
     "TEND": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TENET": "Atlas has no asset for these 7 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TERM": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "TERMINUS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2371 (TERMINUS) and 6900 (Terminus)",
+    "TERMINUS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2364 (TERMINUS) and 6709 (Terminus)",
     "TERX": "Teradyne, Inc. tokenized stock (xStock): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "TERX.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TEST": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
@@ -133221,7 +133268,7 @@
     "TOS": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TOSHI3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TOSHI3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "TOTAKEKE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3373 (Dark Cheems) and 7362 (Totakeke)",
+    "TOTAKEKE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3340 (Dark Cheems) and 7197 (Totakeke)",
     "TOTAL2": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TOTHESUN": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TOTM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
