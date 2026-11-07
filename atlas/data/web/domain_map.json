@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T13:28:39Z",
+  "generated_at": "2026-11-07T08:10:33Z",
   "atlas_source": "b4a8505b94713c20f7516fa28873e0e157fba2c9",
   "entries": [
     {
@@ -239,7 +239,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -982,7 +982,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-06"
       }
@@ -1177,7 +1178,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -2285,7 +2286,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -3504,7 +3505,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -4322,12 +4323,15 @@
       "cmc_id": 11568,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "coingecko_disagrees:lootproject.com"
         ],
         "checked": "2026-10-28"
       }
@@ -4801,7 +4805,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -7843,7 +7847,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-03"
       }
@@ -7890,7 +7895,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -8137,12 +8142,15 @@
       "cmc_id": 35577,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-20"
       }
@@ -9505,8 +9513,9 @@
           "name_in_domain"
         ],
         "flags": [
-          "not_checked"
-        ]
+          "unreachable"
+        ],
+        "checked": "2026-11-07"
       }
     },
     {
@@ -9686,7 +9695,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -9832,12 +9841,15 @@
       "wikidata": "Q4809155",
       "method": "wikidata_ticker",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "wikidata_website",
           "homepage_ok",
           "name_in_domain",
           "wikipedia_article"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-20"
       }
@@ -9880,7 +9892,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -12377,7 +12389,8 @@
           "wikipedia_article"
         ],
         "flags": [
-          "http_409"
+          "http_409",
+          "unreachable"
         ],
         "checked": "2026-10-20"
       }
@@ -13115,11 +13128,14 @@
       "cmc_id": 5728,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "bot_blocked_429",
           "name_in_domain"
+        ],
+        "flags": [
+          "coingecko_disagrees:balancer.finance"
         ],
         "checked": "2026-10-28"
       }
@@ -13179,7 +13195,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -13981,7 +13997,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -15721,7 +15737,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-04"
       }
@@ -15876,7 +15893,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -15907,7 +15924,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -16051,7 +16068,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -16374,7 +16391,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -16665,7 +16682,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-04"
       }
@@ -17225,7 +17243,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -17352,7 +17370,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -18366,11 +18384,10 @@
         "status": "ok",
         "evidence": [
           "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
+          "bot_blocked_403",
+          "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -19011,7 +19028,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -19453,7 +19470,7 @@
           "override",
           "homepage_ok"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -20071,30 +20088,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-11-04"
-      }
-    },
-    {
-      "ticker": "BYN",
-      "asset_id": "BYN",
-      "asset_class": "crypto",
-      "name": "NBX",
-      "domain": "nbx.exchange",
-      "atlas_symbols": [
-        "BYN"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 9134,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -21928,7 +21921,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -22718,7 +22711,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -23000,7 +22993,8 @@
         "evidence": [
           "cmc_website",
           "homepage_ok",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-05"
       }
@@ -23299,13 +23293,16 @@
       "cmc_id": 23054,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "same_brand_redirect:cheelee.us",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-20"
       }
@@ -28857,30 +28854,6 @@
       }
     },
     {
-      "ticker": "CTK",
-      "asset_id": "CTK",
-      "asset_class": "crypto",
-      "name": "Shentu",
-      "domain": "shentu.technology",
-      "atlas_symbols": [
-        "CTK"
-      ],
-      "atlas_contracts": 15,
-      "cmc_id": 4807,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "CTP",
       "asset_id": "CTP",
       "asset_class": "crypto",
@@ -29239,7 +29212,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-11-04"
       }
@@ -34438,7 +34412,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -34978,6 +34952,7 @@
         "th": "อีเบย์",
         "tl": "EBay",
         "tr": "EBay",
+        "tum": "EBay",
         "uk": "EBay",
         "ur": "ای بے",
         "uz": "EBay",
@@ -36165,7 +36140,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -36480,7 +36455,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -37422,7 +37397,6 @@
         "cs": "Elbit Systems",
         "da": "Elbit Systems",
         "de": "Elbit Systems",
-        "es": "Elbit Systems",
         "fa": "البیت سیستمز",
         "fi": "Elbit Systems",
         "fr": "Elbit Systems",
@@ -37520,7 +37494,8 @@
       "domain": "elastic.co",
       "wikipedia": "Elastic_(company)",
       "wikipedia_sitelinks": {
-        "fr": "Elastic NV"
+        "fr": "Elastic NV",
+        "he": "אלסטיק"
       },
       "atlas_symbols": [
         "RESTC"
@@ -38992,6 +38967,7 @@
         "ast": "Ford Motor Company",
         "az": "Ford",
         "azb": "فورد موتور شیرکتی",
+        "bcl": "Ford Motor Company",
         "be": "Ford Motor Company",
         "be-tarask": "Ford Motor Company",
         "bg": "Форд Мотър Къмпани",
@@ -39091,6 +39067,7 @@
         "vi": "Ford",
         "wuu": "福特汽车",
         "yi": "פארד מאטאר",
+        "zea": "Ford Motor Company",
         "zh": "福特汽车",
         "zh-min-nan": "Ford",
         "zh-yue": "福特汽車"
@@ -39134,7 +39111,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -39303,7 +39280,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -39320,12 +39297,15 @@
       "cmc_id": 33597,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
           "name_in_title"
+        ],
+        "flags": [
+          "coingecko_disagrees:infinitebackrooms.com"
         ],
         "checked": "2026-11-06"
       }
@@ -39427,7 +39407,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -39502,7 +39482,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -39969,7 +39949,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40322,7 +40302,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40345,7 +40325,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40415,7 +40395,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40460,31 +40440,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
-      }
-    },
-    {
-      "ticker": "FIR",
-      "asset_id": "FIR",
-      "asset_class": "crypto",
-      "name": "Fireverse",
-      "domain": "fireverseai.com",
-      "atlas_symbols": [
-        "FIR"
-      ],
-      "atlas_contracts": 3,
-      "cmc_id": 37600,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40506,7 +40462,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40796,7 +40752,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40874,7 +40830,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40899,7 +40855,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40952,7 +40908,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -40978,7 +40934,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41002,7 +40958,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41025,7 +40981,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41138,7 +41094,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41160,7 +41116,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41265,7 +41221,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41288,7 +41244,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41311,7 +41267,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41612,7 +41568,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41658,7 +41614,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41728,7 +41684,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41775,7 +41731,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41862,7 +41818,7 @@
       "ticker": "FOX.EQUITY",
       "asset_class": "equity",
       "name": "Fox Corporation",
-      "domain": "fox.com",
+      "domain": "foxcorporation.com",
       "wikipedia": "Fox_Corporation",
       "wikipedia_sitelinks": {
         "ar": "شركة فوكس",
@@ -41904,16 +41860,15 @@
       "wikidata": "Q60238941",
       "method": "wikidata_ticker",
       "verification": {
-        "status": "redirect",
+        "status": "ok",
         "evidence": [
           "wikidata_website",
-          "homepage_redirect",
+          "homepage_ok",
           "name_in_domain",
           "name_in_title",
           "wikipedia_article"
         ],
-        "redirected_from": "foxcorporation.com",
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -41921,7 +41876,7 @@
       "asset_id": "FOXA",
       "asset_class": "equity",
       "name": "Fox Corporation",
-      "domain": "fox.com",
+      "domain": "foxcorporation.com",
       "wikipedia": "Fox_Corporation",
       "wikipedia_sitelinks": {
         "ar": "شركة فوكس",
@@ -41965,15 +41920,15 @@
       "wikidata": "Q60238941",
       "method": "wikidata_ticker",
       "verification": {
-        "status": "redirect",
+        "status": "ok",
         "evidence": [
           "wikidata_website",
-          "homepage_redirect",
+          "homepage_ok",
           "name_in_domain",
+          "name_in_title",
           "wikipedia_article"
         ],
-        "redirected_from": "foxcorporation.com",
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42027,7 +41982,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42076,7 +42031,7 @@
         "flags": [
           "coingecko_disagrees:frax.finance"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42131,7 +42086,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42180,7 +42135,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42260,7 +42215,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42283,7 +42238,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42382,7 +42337,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42468,7 +42423,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42566,7 +42521,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42676,7 +42631,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42711,7 +42666,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42733,7 +42688,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42949,7 +42904,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -42983,7 +42938,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43073,7 +43028,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43222,7 +43177,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43244,7 +43199,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43287,7 +43242,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43311,7 +43266,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43335,7 +43290,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43445,7 +43400,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43490,7 +43445,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43513,7 +43468,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43730,7 +43685,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -43982,7 +43937,7 @@
         "flags": [
           "atlas_name_differs:General Electric Company"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44033,7 +43988,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44078,7 +44033,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44152,7 +44107,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44269,7 +44224,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44291,7 +44246,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44390,7 +44345,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44535,7 +44490,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44558,7 +44513,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44631,7 +44586,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44664,7 +44619,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44713,7 +44668,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -44857,6 +44812,7 @@
         "fr": "Graham Holdings",
         "ja": "グラハム・ホールディングス",
         "no": "Graham Holdings Company",
+        "pt": "Graham Holdings",
         "ro": "The Washington Post Company",
         "ur": "گراہم ہولڈنگز",
         "zh": "格雷厄姆控股公司"
@@ -44920,7 +44876,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45004,7 +44960,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45099,6 +45055,7 @@
         "arz": "جيلياد ساينسز",
         "azb": "قیلیاد",
         "ca": "Gilead Sciences",
+        "ceb": "Mga Siyensya sa Gilead",
         "cs": "Gilead Sciences",
         "da": "Gilead Sciences",
         "de": "Gilead Sciences",
@@ -45143,7 +45100,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45193,7 +45150,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45302,7 +45259,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45376,7 +45333,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45508,7 +45465,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45867,7 +45824,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45890,7 +45847,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45936,7 +45893,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -45981,7 +45938,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46004,7 +45961,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46057,7 +46014,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46080,7 +46037,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46102,7 +46059,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46214,7 +46171,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46281,7 +46238,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46304,7 +46261,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46327,7 +46284,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46404,7 +46361,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46858,7 +46815,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46881,7 +46838,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -46956,7 +46913,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47004,7 +46961,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47183,7 +47140,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47228,7 +47185,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47414,7 +47371,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47576,7 +47533,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47657,6 +47614,7 @@
         "sr": "Goldman Sachs",
         "sv": "Goldman Sachs",
         "ta": "கோல்ட்மேன் சாக்ஸ்",
+        "tg": "Голдман Сакс",
         "th": "โกลด์แมนแซกส์",
         "tr": "Goldman Sachs",
         "uk": "Goldman Sachs",
@@ -47680,13 +47638,12 @@
         "status": "ok",
         "evidence": [
           "wikidata_website",
-          "homepage_ok",
+          "bot_blocked_403",
           "atlas_name_agrees",
           "name_in_domain",
-          "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47809,7 +47766,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47880,7 +47837,7 @@
           "override",
           "homepage_ok"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47927,7 +47884,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -47990,7 +47947,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48089,7 +48046,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48112,7 +48069,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48244,7 +48201,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48338,7 +48295,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48361,7 +48318,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48436,7 +48393,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48548,7 +48505,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48643,7 +48600,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48677,7 +48634,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48699,7 +48656,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -48937,7 +48894,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49246,7 +49203,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49268,7 +49225,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49313,7 +49270,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49412,7 +49369,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49456,31 +49413,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
-      }
-    },
-    {
-      "ticker": "HERO",
-      "asset_id": "HERO",
-      "asset_class": "crypto",
-      "name": "Metahero",
-      "domain": "metahero.io",
-      "atlas_symbols": [
-        "HERO"
-      ],
-      "atlas_contracts": 6,
-      "cmc_id": 10778,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49503,7 +49436,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49548,7 +49481,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49571,7 +49504,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49594,7 +49527,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49617,7 +49550,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49706,30 +49639,6 @@
       }
     },
     {
-      "ticker": "HIBS",
-      "asset_id": "HIBS",
-      "asset_class": "crypto",
-      "name": "Hiblocks",
-      "domain": "hiblocks.io",
-      "atlas_symbols": [
-        "HIBS"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 6470,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "HIFI",
       "asset_id": "HIFI",
       "asset_class": "crypto",
@@ -49749,7 +49658,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49804,7 +49713,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49925,7 +49834,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -49948,7 +49857,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50032,7 +49941,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50055,7 +49964,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50078,8 +49987,9 @@
           "wikipedia_article"
         ],
         "flags": [
-          "not_checked"
-        ]
+          "unreachable"
+        ],
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50261,7 +50171,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50691,7 +50601,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50714,7 +50624,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50820,7 +50730,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50843,7 +50753,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -50877,30 +50787,6 @@
           "override",
           "wikipedia_article"
         ]
-      }
-    },
-    {
-      "ticker": "HOD",
-      "asset_id": "HOD",
-      "asset_class": "crypto",
-      "name": "HoDooi.com",
-      "domain": "hodooi.com",
-      "atlas_symbols": [
-        "HOD"
-      ],
-      "atlas_contracts": 3,
-      "cmc_id": 10412,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -50997,7 +50883,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51043,7 +50929,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51202,7 +51088,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51241,7 +51127,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51264,7 +51150,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51273,7 +51159,7 @@
       "asset_class": "equity",
       "name": "Robinhood",
       "domain": "robinhood.com",
-      "wikipedia": "Robinhood_Markets",
+      "wikipedia": "Robinhood_(company)",
       "wikipedia_sitelinks": {
         "ar": "تطبيق روبن هود (شركة)",
         "bg": "Robinhood",
@@ -51340,7 +51226,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51363,7 +51249,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51408,7 +51294,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51431,7 +51317,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51477,7 +51363,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51499,7 +51385,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51522,7 +51408,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51582,7 +51468,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51605,7 +51491,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51650,7 +51536,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -51733,7 +51619,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52002,7 +51888,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52058,7 +51944,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52167,7 +52053,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52223,7 +52109,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52246,7 +52132,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52269,7 +52155,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52579,7 +52465,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52684,28 +52570,6 @@
       }
     },
     {
-      "ticker": "HXD",
-      "asset_class": "crypto",
-      "name": "Honeyland",
-      "domain": "honey.land",
-      "atlas_symbols": [
-        "HXD"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 23707,
-      "method": "cmc_symbol_unique",
-      "verification": {
-        "status": "ok",
-        "evidence": [
-          "cmc_website",
-          "homepage_ok",
-          "name_in_domain",
-          "name_in_title"
-        ],
-        "checked": "2026-10-23"
-      }
-    },
-    {
       "ticker": "HXL",
       "asset_class": "equity",
       "name": "Hexcel",
@@ -52771,7 +52635,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52794,7 +52658,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52840,7 +52704,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -52932,7 +52796,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53063,7 +52927,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53260,7 +53124,7 @@
           "override",
           "homepage_ok"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53284,7 +53148,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53334,7 +53198,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53472,7 +53336,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53682,7 +53546,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53757,7 +53621,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53801,7 +53665,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53846,7 +53710,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -53999,7 +53863,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54022,7 +53886,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54066,7 +53930,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54092,7 +53956,7 @@
         "flags": [
           "coingecko_disagrees:imx.community"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54115,7 +53979,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54219,7 +54083,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54349,7 +54213,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54404,7 +54268,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54428,7 +54292,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54448,7 +54312,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54473,7 +54337,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54520,7 +54384,7 @@
           "name_in_title",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54748,7 +54612,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -54820,7 +54684,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55003,6 +54867,7 @@
           "homepage_ok",
           "name_in_domain",
           "name_in_title",
+          "coingecko_agrees",
           "wikipedia_article"
         ],
         "checked": "2026-10-24"
@@ -55128,7 +54993,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55238,7 +55103,7 @@
           "homepage_ok",
           "name_in_domain"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -55300,6 +55165,7 @@
       "asset_id": "IREN",
       "asset_class": "equity",
       "name": "IREN",
+      "domain": "iren.com",
       "wikipedia": "IREN",
       "wikipedia_sitelinks": {
         "de": "IREN",
@@ -55314,13 +55180,16 @@
       ],
       "atlas_contracts": 18,
       "wikidata": "Q138585043",
-      "method": "wikidata_ticker",
+      "method": "override",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
-          "wikidata_website",
-          "atlas_name_agrees",
+          "override",
+          "name_in_domain",
           "wikipedia_article"
+        ],
+        "flags": [
+          "override_domain_suspect:iren.com: placeholder page (502 Bad Gateway)"
         ],
         "checked": "2026-10-29"
       }
@@ -56115,7 +55984,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -56157,7 +56026,8 @@
         "evidence": [
           "cmc_website",
           "bot_blocked_403",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-29"
       }
@@ -56650,7 +56520,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -57270,7 +57140,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-24"
       }
@@ -57817,7 +57688,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -58970,7 +58841,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -59070,30 +58941,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-10-24"
-      }
-    },
-    {
-      "ticker": "KLAY",
-      "asset_id": "KLAY",
-      "asset_class": "crypto",
-      "name": "Klaytn",
-      "domain": "klaytn.foundation",
-      "atlas_symbols": [
-        "KLAY"
-      ],
-      "atlas_contracts": 22,
-      "cmc_id": 4256,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -59197,11 +59044,14 @@
       "cmc_id": 35091,
       "method": "cmc_symbol_unique",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_title"
+        ],
+        "flags": [
+          "unreachable"
         ],
         "checked": "2026-10-22"
       }
@@ -59426,7 +59276,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60050,7 +59900,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -60200,7 +60050,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61118,30 +60968,6 @@
       }
     },
     {
-      "ticker": "LATINA",
-      "asset_id": "LATINA",
-      "asset_class": "crypto",
-      "name": "Latina Coin",
-      "domain": "latina.meme",
-      "atlas_symbols": [
-        "LATINA"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 37578,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LAUR",
       "asset_class": "equity",
       "name": "Laureate Education",
@@ -61316,7 +61142,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -61859,31 +61685,6 @@
       }
     },
     {
-      "ticker": "LEVER",
-      "asset_id": "LEVER",
-      "asset_class": "crypto",
-      "name": "LeverFi",
-      "domain": "leverfi.io",
-      "atlas_symbols": [
-        "1000LEVER",
-        "LEVER"
-      ],
-      "atlas_contracts": 16,
-      "cmc_id": 20873,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LEVI",
       "asset_class": "equity",
       "name": "Levi Strauss & Co.",
@@ -62253,30 +62054,6 @@
       }
     },
     {
-      "ticker": "LIGO",
-      "asset_id": "LIGO",
-      "asset_class": "crypto",
-      "name": "LIGO",
-      "domain": "ligo.network",
-      "atlas_symbols": [
-        "LIGO"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 29081,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LII",
       "asset_class": "equity",
       "name": "Lennox International",
@@ -62309,30 +62086,6 @@
       }
     },
     {
-      "ticker": "LIKE",
-      "asset_id": "LIKE",
-      "asset_class": "crypto",
-      "name": "LIKE",
-      "domain": "w.ink",
-      "atlas_symbols": [
-        "LIKE"
-      ],
-      "atlas_contracts": 4,
-      "cmc_id": 10891,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "coingecko_agrees"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LIME",
       "asset_id": "LIME",
       "asset_class": "crypto",
@@ -62351,7 +62104,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -62434,30 +62187,6 @@
       }
     },
     {
-      "ticker": "LINA",
-      "asset_id": "LINA",
-      "asset_class": "crypto",
-      "name": "Linear Finance",
-      "domain": "linear.finance",
-      "atlas_symbols": [
-        "LINA"
-      ],
-      "atlas_contracts": 20,
-      "cmc_id": 7102,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LIND",
       "asset_class": "equity",
       "name": "Lindblad Expeditions Holdings Inc.",
@@ -62493,7 +62222,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-24"
       }
@@ -63326,30 +63056,6 @@
       }
     },
     {
-      "ticker": "LOA",
-      "asset_id": "LOA",
-      "asset_class": "crypto",
-      "name": "League of Ancients",
-      "domain": "leagueofancients.com",
-      "atlas_symbols": [
-        "LOA"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 15870,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "LOB",
       "asset_class": "equity",
       "name": "Live Oak Bank",
@@ -63552,30 +63258,6 @@
           "name_in_title"
         ],
         "checked": "2026-10-24"
-      }
-    },
-    {
-      "ticker": "LOKA",
-      "asset_id": "LOKA",
-      "asset_class": "crypto",
-      "name": "League of Kingdoms Arena",
-      "domain": "leagueofkingdoms.com",
-      "atlas_symbols": [
-        "LOKA"
-      ],
-      "atlas_contracts": 20,
-      "cmc_id": 17145,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -64153,7 +63835,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-24"
       }
@@ -64483,7 +64166,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64563,11 +64246,14 @@
       "cmc_id": 20314,
       "method": "atlas_cmc_id",
       "verification": {
-        "status": "ok",
+        "status": "flagged",
         "evidence": [
           "cmc_website",
           "homepage_ok",
           "name_in_domain"
+        ],
+        "flags": [
+          "coingecko_disagrees:phoenix.money"
         ],
         "checked": "2026-10-26"
       }
@@ -64647,7 +64333,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -64694,7 +64380,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -65425,30 +65111,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-10-29"
-      }
-    },
-    {
-      "ticker": "MA.CRYPTO",
-      "asset_id": "MA",
-      "asset_class": "crypto",
-      "name": "Mind AI",
-      "domain": "mind-ai.io",
-      "atlas_symbols": [
-        "MA"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 35614,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -68513,7 +68175,7 @@
           "homepage_ok",
           "coingecko_agrees"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -68627,7 +68289,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -69787,7 +69449,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70489,7 +70151,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -70598,7 +70260,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-24"
       }
@@ -71268,7 +70931,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -71738,7 +71401,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -72719,7 +72382,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -73922,7 +73585,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -76200,7 +75863,8 @@
         "evidence": [
           "cmc_website",
           "homepage_ok",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-25"
       }
@@ -76717,7 +76381,8 @@
           "cmc_website",
           "homepage_redirect",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees_before_redirect"
         ],
         "redirected_from": "notco.in",
         "checked": "2026-10-29"
@@ -77532,7 +77197,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -78564,30 +78229,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-11-01"
-      }
-    },
-    {
-      "ticker": "NYAN",
-      "asset_id": "NYAN",
-      "asset_class": "crypto",
-      "name": "Nyan Heroes",
-      "domain": "nyanheroes.com",
-      "atlas_symbols": [
-        "NYAN"
-      ],
-      "atlas_contracts": 7,
-      "cmc_id": 13140,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -80098,7 +79739,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -81032,30 +80673,6 @@
       }
     },
     {
-      "ticker": "ORION",
-      "asset_id": "ORION",
-      "asset_class": "crypto",
-      "name": "Orion Money",
-      "domain": "orion.money",
-      "atlas_symbols": [
-        "ORION"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 12115,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "ORLY",
       "asset_class": "equity",
       "name": "O'Reilly Auto Parts",
@@ -81160,7 +80777,7 @@
           "name_in_title",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -81585,30 +81202,6 @@
       }
     },
     {
-      "ticker": "OVO",
-      "asset_id": "OVO",
-      "asset_class": "crypto",
-      "name": "OVO",
-      "domain": "ovo.space",
-      "atlas_symbols": [
-        "OVO"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 23970,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "OVR",
       "asset_id": "OVR",
       "asset_class": "crypto",
@@ -81930,30 +81523,6 @@
       }
     },
     {
-      "ticker": "P",
-      "asset_id": "P",
-      "asset_class": "crypto",
-      "name": "PoP Planet",
-      "domain": "popp.club",
-      "atlas_symbols": [
-        "P"
-      ],
-      "atlas_contracts": 5,
-      "cmc_id": 38538,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "P2P",
       "asset_class": "crypto",
       "name": "Sentinel",
@@ -82103,7 +81672,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -83658,7 +83227,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -87428,7 +86997,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -88590,7 +88159,7 @@
           "atlas_name_agrees",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -90051,7 +89620,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-30"
       }
@@ -91014,30 +90584,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-11-02"
-      }
-    },
-    {
-      "ticker": "RECT",
-      "asset_id": "RECT",
-      "asset_class": "crypto",
-      "name": "ReflectionAI",
-      "domain": "reflectionai.app",
-      "atlas_symbols": [
-        "RECT"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 33803,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -92105,7 +91651,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -92304,7 +91850,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -92807,7 +92353,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -93544,7 +93090,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -95735,7 +95281,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -96567,21 +96113,23 @@
       "ticker": "SG",
       "asset_class": "crypto",
       "name": "SocialGood",
-      "domain": "zendesk.com",
+      "domain": "socialgood.inc",
       "atlas_symbols": [
         "SG"
       ],
       "atlas_contracts": 1,
       "cmc_id": 6245,
-      "method": "cmc_symbol_unique",
+      "method": "override",
       "verification": {
-        "status": "redirect",
+        "status": "flagged",
         "evidence": [
-          "cmc_website",
-          "homepage_redirect",
+          "override",
+          "name_in_domain",
           "name_in_title"
         ],
-        "redirected_from": "socialgood.inc",
+        "flags": [
+          "override_redirects:zendesk.com"
+        ],
         "checked": "2026-11-06"
       }
     },
@@ -96675,30 +96223,6 @@
           "override",
           "wikipedia_article"
         ]
-      }
-    },
-    {
-      "ticker": "SGR",
-      "asset_id": "SGR",
-      "asset_class": "crypto",
-      "name": "Schrodinger",
-      "domain": "schrodingernft.ai",
-      "atlas_symbols": [
-        "SGR"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 30881,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -96830,30 +96354,6 @@
           "name_in_title"
         ],
         "checked": "2026-10-26"
-      }
-    },
-    {
-      "ticker": "SHDW",
-      "asset_id": "SHDW",
-      "asset_class": "crypto",
-      "name": "Shadow Token",
-      "domain": "shdwdrive.com",
-      "atlas_symbols": [
-        "SHDW"
-      ],
-      "atlas_contracts": 4,
-      "cmc_id": 16868,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -97165,30 +96665,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-10-26"
-      }
-    },
-    {
-      "ticker": "SHIB2.0",
-      "asset_id": "SHIB20",
-      "asset_class": "crypto",
-      "name": "Shib2.0",
-      "domain": "shib2.vip",
-      "atlas_symbols": [
-        "SHIB2"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 27507,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -98147,7 +97623,8 @@
         "evidence": [
           "cmc_website",
           "bot_blocked_429",
-          "name_in_domain"
+          "name_in_domain",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-29"
       }
@@ -101377,7 +100854,7 @@
           "name_in_domain",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -101862,30 +101339,6 @@
           "coingecko_agrees"
         ],
         "checked": "2026-10-29"
-      }
-    },
-    {
-      "ticker": "SRM",
-      "asset_id": "SRM",
-      "asset_class": "crypto",
-      "name": "Serum",
-      "domain": "projectserum.com",
-      "atlas_symbols": [
-        "SRM"
-      ],
-      "atlas_contracts": 42,
-      "cmc_id": 6187,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -102676,7 +102129,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -102740,7 +102193,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -104385,7 +103838,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -105481,30 +104934,6 @@
       }
     },
     {
-      "ticker": "TAUR",
-      "asset_id": "TAUR",
-      "asset_class": "crypto",
-      "name": "Marnotaur",
-      "domain": "marnotaur.com",
-      "atlas_symbols": [
-        "TAUR"
-      ],
-      "atlas_contracts": 1,
-      "cmc_id": 11421,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "TAVA",
       "asset_class": "crypto",
       "name": "ALTAVA",
@@ -106184,7 +105613,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -107898,7 +107327,7 @@
           "homepage_ok",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -109511,7 +108940,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -109558,7 +108987,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-24"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -109913,7 +109342,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -110341,30 +109770,6 @@
       }
     },
     {
-      "ticker": "TTD.CRYPTO",
-      "asset_id": "TTD",
-      "asset_class": "crypto",
-      "name": "TradeTide",
-      "domain": "tradetide.cc",
-      "atlas_symbols": [
-        "TTD"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 39147,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "TTEK",
       "asset_class": "equity",
       "name": "Tetra Tech",
@@ -110626,30 +110031,6 @@
           "name_in_title"
         ],
         "checked": "2026-10-27"
-      }
-    },
-    {
-      "ticker": "TURT",
-      "asset_id": "TURT",
-      "asset_class": "crypto",
-      "name": "TurtSat",
-      "domain": "turtsat.io",
-      "atlas_symbols": [
-        "TURT"
-      ],
-      "atlas_contracts": 4,
-      "cmc_id": 28826,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -112724,7 +112105,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-20"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -112863,30 +112244,6 @@
           "wikipedia_article"
         ],
         "checked": "2026-11-03"
-      }
-    },
-    {
-      "ticker": "UNN",
-      "asset_id": "UNN",
-      "asset_class": "crypto",
-      "name": "UNION Protocol Governance Token",
-      "domain": "unn.finance",
-      "atlas_symbols": [
-        "UNN"
-      ],
-      "atlas_contracts": 2,
-      "cmc_id": 8056,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
       }
     },
     {
@@ -114170,7 +113527,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -116043,30 +115400,6 @@
       }
     },
     {
-      "ticker": "VIDT",
-      "asset_id": "VIDT",
-      "asset_class": "crypto",
-      "name": "VIDT DAO",
-      "domain": "vidt-dao.com",
-      "atlas_symbols": [
-        "VIDT"
-      ],
-      "atlas_contracts": 11,
-      "cmc_id": 22710,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "VINU",
       "asset_id": "VINU",
       "asset_class": "crypto",
@@ -116526,7 +115859,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -118714,7 +118047,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -118963,7 +118296,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -123370,7 +122703,7 @@
           "homepage_ok",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -123781,7 +123114,7 @@
           "coingecko_agrees",
           "wikipedia_article"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -125589,30 +124922,6 @@
       }
     },
     {
-      "ticker": "XYM",
-      "asset_id": "XYM",
-      "asset_class": "crypto",
-      "name": "Symbol",
-      "domain": "symbol.dev",
-      "atlas_symbols": [
-        "XYM"
-      ],
-      "atlas_contracts": 9,
-      "cmc_id": 8677,
-      "method": "atlas_cmc_id",
-      "verification": {
-        "status": "flagged",
-        "evidence": [
-          "cmc_website",
-          "name_in_domain"
-        ],
-        "flags": [
-          "unreachable"
-        ],
-        "checked": "2026-10-20"
-      }
-    },
-    {
       "ticker": "XYO",
       "asset_id": "XYO",
       "asset_class": "crypto",
@@ -126014,7 +125323,8 @@
           "cmc_website",
           "homepage_ok",
           "name_in_domain",
-          "name_in_title"
+          "name_in_title",
+          "coingecko_agrees"
         ],
         "checked": "2026-10-27"
       }
@@ -126234,7 +125544,7 @@
         "flags": [
           "unreachable"
         ],
-        "checked": "2026-10-22"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -126719,7 +126029,7 @@
           "name_in_domain",
           "name_in_title"
         ],
-        "checked": "2026-10-23"
+        "checked": "2026-11-07"
       }
     },
     {
@@ -128283,7 +127593,7 @@
     "ANIME3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ANIME3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ANIP": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "ANK": "applenetwork.io: unreachable on 2 days in a row",
+    "ANK": "applenetwork.io: unreachable on 3 days in a row",
     "ANLOG": "Atlas has no asset for these 7 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ANML": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ANRO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -128652,7 +127962,7 @@
     "BEAT3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BEATS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "BEB": "Bloom Energy Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
-    "BEBE": "bebeeth.com: unreachable on 2 days in a row",
+    "BEBE": "bebeeth.com: unreachable on 3 days in a row",
     "BEER": "beercoin.wtf: parking lander (a script sends visitors to /lander)",
     "BEERSOL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BEES": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -128822,7 +128132,7 @@
     "BOBOETH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BOBOOLD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BOBS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "BODEN": "bodenonsol.xyz: unreachable on 2 days in a row",
+    "BODEN": "bodenonsol.xyz: unreachable on 3 days in a row",
     "BOE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "BOG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-10-22)",
     "BOLT": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 6167 (Huebel Bolt) and 6623 (BOLT)",
@@ -128840,7 +128150,7 @@
     "BOO": "Atlas has no asset for these 6 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BOOST": "boost.gg: placeholder page (Site Not Found | Framer)",
     "BOOT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "BORED": "boredtoken.io: unreachable on 2 days in a row",
+    "BORED": "boredtoken.io: unreachable on 3 days in a row",
     "BORK": "bork.community: CoinMarketCap symbol match whose homepage could not be read",
     "BORR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "BOSS": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2250 (Boss Token) and 3261 (Ibiza Final Boss)",
@@ -128908,7 +128218,7 @@
     "BSVBULL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BSW3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BSW3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "BSWAP": "baseswap.fi: unreachable on 2 days in a row",
+    "BSWAP": "baseswap.fi: unreachable on 3 days in a row",
     "BSX.CRYPTO": "Atlas has no asset for these 3 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2022-10-10)",
     "BTBTX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "BTC1S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -128994,6 +128304,7 @@
     "BYD.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's BYD is Atlas asset BYD, which symbology did not assign these contracts to",
     "BYDDY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "BYIN": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "BYN": "nbx.exchange: unreachable on 2 days in a row",
     "BYPASS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "BYQYS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "BZ.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: CoinMarketCap's BZ is Atlas asset BZ, which symbology did not assign these contracts to",
@@ -129252,7 +128563,7 @@
     "COMPUP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "CONL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "CONL.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "CONV": "conv.finance: unreachable on 2 days in a row",
+    "CONV": "conv.finance: unreachable on 3 days in a row",
     "COOHA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "COOK": "override: mETH Protocol's token: mantle.xyz's popularity is MNT's",
     "COOK.COOK_PROTOCOL": "cook.finance: unreachable on 2 days in a row",
@@ -129274,7 +128585,7 @@
     "CORL": "coraldex.finance: unreachable on 2 days in a row",
     "CORN.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2020-11-03)",
     "CORZX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "COST.CRYPTO": "costcodogsol.xyz: unreachable on 2 days in a row",
+    "COST.CRYPTO": "costcodogsol.xyz: unreachable on 3 days in a row",
     "COSTG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "COT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2709 (Cosplay Token) and 3343 (CoTrader)",
     "COTI3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -129372,6 +128683,7 @@
     "CTBI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "CTD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "CTI": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "CTK": "shentu.technology: unreachable on 2 days in a row",
     "CTKB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "CTOK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "CTOS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -129446,7 +128758,7 @@
     "DAOLITY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DAOT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DAPANG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "DAPP": "liquidapps.io: CoinMarketCap symbol match whose homepage could not be read",
+    "DAPP": "liquidapps.io: unreachable on 2 days in a row",
     "DAPPT": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DAPPX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DAR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -129496,7 +128808,7 @@
     "DEFY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DEGEN3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DEGEN3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "DEGENAI": "ai16z.ai: unreachable on 2 days in a row",
+    "DEGENAI": "ai16z.ai: unreachable on 3 days in a row",
     "DEGO": "dego.finance: unreachable on 2 days in a row",
     "DEHUB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DEI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -129640,7 +128952,7 @@
     "DORK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DORKL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DORM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "DOS.CRYPTO": "dos.network: unreachable on 2 days in a row",
+    "DOS.CRYPTO": "dos.network: unreachable on 3 days in a row",
     "DOSE": "Atlas has no asset for these 71 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DOSOLD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DOT2L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -129697,7 +129009,7 @@
     "DUCK.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3369 (Duck DAO (DLP Duck Token)) and 6539 (DuckCoin)",
     "DUCK2": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DUCKE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "DUCKY": "duckycoin.vip: unreachable on 2 days in a row",
+    "DUCKY": "duckycoin.vip: unreachable on 3 days in a row",
     "DUKO": "dukocoin.com: placeholder page (Домен не прилинкован ни к одной из директорий на сервере!)",
     "DUMMY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "DUNE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -129740,7 +129052,7 @@
     "EARTH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "EASY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "EBPTC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "EBULL": "ethereumbull.com: unreachable on 2 days in a row",
+    "EBULL": "ethereumbull.com: unreachable on 3 days in a row",
     "EC.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ECG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ECH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -129873,12 +129185,12 @@
     "EQZ": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ERAS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ERD": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "ERIC.CRYPTO": "ericoneth.com: unreachable on 2 days in a row",
+    "ERIC.CRYPTO": "ericoneth.com: unreachable on 3 days in a row",
     "ERN": "ethernity.io: CoinMarketCap symbol match whose homepage could not be read",
     "ERO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "EROC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "EROK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "ERSDL": "residualtoken.com: unreachable on 2 days in a row",
+    "ERSDL": "residualtoken.com: unreachable on 3 days in a row",
     "ESCC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ESD": "emptyset.finance: hijacked: spam page (situs)",
     "ESE.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -130080,11 +129392,12 @@
     "FINE": "Atlas has no asset for these 3 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3774 (Refinable) and 6366 (Fine)",
     "FINK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FIONA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "FIR": "fireverseai.com: unreachable on 2 days in a row",
     "FIRE": "override: fireprotocol.io now redirects to an unrelated DEX listing",
     "FISH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 5255 (Polycat Finance) and 6517 (TON FISH MEMECOIN)",
     "FISHW": "fishwar.io: parking lander (a script sends visitors to /lander)",
     "FISI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "FIST": "fstswap.finance: unreachable on 2 days in a row",
+    "FIST": "fstswap.finance: unreachable on 3 days in a row",
     "FITFI3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FITFI3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FIU": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130135,16 +129448,16 @@
     "FO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FOAM": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FOCAI": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "FODL": "fodl.finance: CoinMarketCap symbol match whose homepage could not be read",
+    "FODL": "fodl.finance: unreachable on 2 days in a row",
     "FOF": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FOFARTRON": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FOIL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "FOMO": "fomosolana.com: unreachable on 2 days in a row",
+    "FOMO": "fomosolana.com: unreachable on 3 days in a row",
     "FOMOBASE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FON": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-08-11)",
     "FOOM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FOOTBALL": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "FOR.CRYPTO": "for.tube: CoinMarketCap symbol match whose homepage could not be read",
+    "FOR.CRYPTO": "for.tube: unreachable on 2 days in a row",
     "FORA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FORESTPLUS": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FORK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130160,7 +129473,7 @@
     "FOXA.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FPFT": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FPS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "FPS.CRYPTO": "w3w.game: CoinMarketCap symbol match whose homepage could not be read",
+    "FPS.CRYPTO": "w3w.game: unreachable on 2 days in a row",
     "FPX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "FRA": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130170,7 +129483,7 @@
     "FRBK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FRBT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "FRCT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "FRED": "fredtrx.com: unreachable on 2 days in a row",
+    "FRED": "fredtrx.com: unreachable on 3 days in a row",
     "FREE": "freerossdao.com: hijacked: spam page (hiburan)",
     "FREEDOG": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "FREEDOMOFMONEY": "CoinMarketCap 39713: no website off blocked hosts (https://x.com/i/communities/2006340148670390736)",
@@ -130258,7 +129571,7 @@
     "FZC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "G7": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GABC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "GAIA.CRYPTO": "gaiaworld.com: CoinMarketCap symbol match whose homepage could not be read",
+    "GAIA.CRYPTO": "gaiaworld.com: unreachable on 2 days in a row",
     "GAL.GALATASARAY_FAN_TOKEN": "Galatasaray Fan Token: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "GAL3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GAL3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130327,7 +129640,7 @@
     "GEON": "General Electric Tokenized Stock (Ondo): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "GERMANY30IX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GERMANY40IX": "no source for index (overrides only)",
-    "GET": "getcommunity.ai: CoinMarketCap symbol match whose homepage could not be read",
+    "GET": "getcommunity.ai: unreachable on 2 days in a row",
     "GETA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GEVB": "GE Vernova Inc Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "GEVX": "GE Vernova Inc. tokenized stock (xStock): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
@@ -130335,7 +129648,7 @@
     "GF.GUILDFI": "guildfi.com: placeholder page (404: NOT_FOUND)",
     "GFL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "GFS.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "GFT": "gifto.io: unreachable on 2 days in a row",
+    "GFT": "gifto.io: unreachable on 3 days in a row",
     "GG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-02-27)",
     "GGG.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GGLL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -130356,7 +129669,7 @@
     "GIGGLEMAX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GIGS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GIII": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "GIKO": "gikocatcoin.club: CoinMarketCap symbol match whose homepage could not be read",
+    "GIKO": "gikocatcoin.club: unreachable on 2 days in a row",
     "GIL.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GINNAN": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3119 (Ginnan The Cat) and 6848 (Ginnan Doge's Brother)",
     "GINOA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130419,7 +129732,7 @@
     "GNX": "Atlas has no asset for these 5 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-04-25)",
     "GO.CRYPTO": "Atlas has no asset for these 8 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GO4": "gameonforge.com: hijacked: spam page (official indonesia)",
-    "GOAL": "topgoal.io: CoinMarketCap symbol match whose homepage could not be read",
+    "GOAL": "topgoal.io: unreachable on 2 days in a row",
     "GOAT": "goatchan.xyz: parking page (lander.parity.domains)",
     "GOAT3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GOAT3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130429,7 +129742,7 @@
     "GOD": "bitcoingod.org: unreachable on 2 days in a row",
     "GODL": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GODZ": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "GOF": "golff.finance: CoinMarketCap symbol match whose homepage could not be read",
+    "GOF": "golff.finance: unreachable on 2 days in a row",
     "GOFX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GOLC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GOLD": "ambiguous Wikidata ticker: Q1961738, Q808908",
@@ -130511,7 +129824,7 @@
     "GST3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GST3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "GSTOCKBSC": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "GSTS": "gunstar.io: CoinMarketCap symbol match whose homepage could not be read",
+    "GSTS": "gunstar.io: unreachable on 2 days in a row",
     "GTBTC": "override: a Gate product: gate.com's popularity is the exchange's",
     "GTETH": "override: a Gate product: gate.com's popularity is the exchange's",
     "GTH": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130564,13 +129877,13 @@
     "HAPPY": "Atlas has no asset for these 7 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-08-02)",
     "HAPPYSOL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HAR": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "HARAMBE": "harambeonsol.com: hijacked, redirects to groupon.africa.com, a gambling page (betting,casino,slot)",
+    "HARAMBE": "harambeonsol.com: CoinMarketCap symbol match whose homepage could not be read",
     "HARD": "Atlas has no asset for these 7 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HARRY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HASI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HAT": "tophat.one: hijacked: spam page (slot)",
     "HAWK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "HAWKTUAH": "hawktuah.vip: unreachable on 2 days in a row",
+    "HAWKTUAH": "hawktuah.vip: unreachable on 3 days in a row",
     "HAY": "CoinMarketCap 28263 lists no website",
     "HBAR3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HBAR3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130600,9 +129913,10 @@
     "HENGRUI": "not a US ticker or KRX/Tokyo code (overrides only)",
     "HEPS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HER": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "HERO": "metahero.io: unreachable on 2 days in a row",
     "HESAY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HESM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "HEZ": "hermez.io: unreachable on 2 days in a row",
+    "HEZ": "hermez.io: unreachable on 3 days in a row",
     "HFWA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HGG": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130615,6 +129929,7 @@
     "HIBEANZ": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIBIKI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIBIRDS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "HIBS": "hiblocks.io: unreachable on 2 days in a row",
     "HICLONEX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HICOOLCATS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HID": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130625,7 +129940,7 @@
     "HIFLUF": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIFRIENDS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIGAZERS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "HIGHER": "aimhigher.net: unreachable on 2 days in a row",
+    "HIGHER": "aimhigher.net: unreachable on 3 days in a row",
     "HILSV": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIMAYC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HIMEEBITS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130670,6 +129985,7 @@
     "HNTAI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HOBBES": "hobbescat.com: CoinMarketCap symbol match whose homepage could not be read",
     "HOCPY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "HOD": "hodooi.com: unreachable on 2 days in a row",
     "HODL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-04-01)",
     "HODLSOL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HOLD.HOLDCOIN": "CoinMarketCap 33463: no website off blocked hosts (https://t.me/theHoldCoinBot)",
@@ -130697,11 +130013,11 @@
     "HOPE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HOPE.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "HOPPYETH2": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "HORD": "hord.fi: CoinMarketCap symbol match whose homepage could not be read",
+    "HORD": "hord.fi: unreachable on 2 days in a row",
     "HORIZON": "not a US ticker or KRX/Tokyo code (overrides only)",
     "HORSY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "HOS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "HOTCROSS": "hotcross.com: CoinMarketCap symbol match whose homepage could not be read",
+    "HOTCROSS": "hotcross.com: unreachable on 2 days in a row",
     "HPB": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HPEB": "Hewlett Packard Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "HPENGU": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
@@ -130748,6 +130064,7 @@
     "HWKN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "HWTR": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "HXA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "HXD": "honey.land: placeholder page (Deployment Paused)",
     "HYBR": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "HYC": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "HYCO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -130921,7 +130238,7 @@
     "IPOR": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "IPUNKS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "IPV": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "IQ50": "iq50.wtf: CoinMarketCap symbol match whose homepage could not be read",
+    "IQ50": "iq50.wtf: unreachable on 2 days in a row",
     "IQLT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "IQMM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "IQMX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131093,7 +130410,7 @@
     "KABOSUETH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KABY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KACE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "KACY": "markkacy.lol: unreachable on 2 days in a row",
+    "KACY": "markkacy.lol: unreachable on 3 days in a row",
     "KAGI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KAI1": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KAIA3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131105,7 +130422,7 @@
     "KALM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KALT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KAMA": "kama.lol: CoinMarketCap symbol match whose homepage could not be read",
-    "KANGO": "kango.run: unreachable on 2 days in a row",
+    "KANGO": "kango.run: unreachable on 3 days in a row",
     "KAOOY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "KAP": "kap.gg: parking page (domain parked)",
     "KAR": "karura.network: CoinMarketCap symbol match whose homepage could not be read",
@@ -131182,7 +130499,8 @@
     "KLACX.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "KLAP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KLAR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "KLAUS": "klausoneth.com: CoinMarketCap symbol match whose homepage could not be read",
+    "KLAUS": "klausoneth.com: unreachable on 2 days in a row",
+    "KLAY": "klaytn.foundation: unreachable on 2 days in a row",
     "KLAY3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KLAY3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "KLMN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131290,6 +130608,7 @@
     "LARIX": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LARRY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LASR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "LATINA": "latina.meme: unreachable on 2 days in a row",
     "LATTE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LAUNCH": "override: superlauncher.io now fronts an unrelated domain",
     "LAUNCHCOIN": "believe.app: placeholder page (Deployment Paused)",
@@ -131340,10 +130659,11 @@
     "LENOVO": "not a US ticker or KRX/Tokyo code (overrides only)",
     "LENOVOHKD": "not a US ticker or KRX/Tokyo code (overrides only)",
     "LESTER": "lester.vip: placeholder page (Site Not Found | Framer)",
-    "LET": "linkeye.com: CoinMarketCap symbol match whose homepage could not be read",
+    "LET": "linkeye.com: unreachable on 2 days in a row",
     "LETTALL": "not a US ticker or KRX/Tokyo code (overrides only)",
     "LEU": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LEV": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "LEVER": "leverfi.io: unreachable on 2 days in a row",
     "LFT": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LFTO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LFW": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131364,11 +130684,14 @@
     "LIFE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LIFE.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3689 (Life Crypto) and 7157 (Life)",
     "LIFEFORM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "LIGO": "ligo.network: unreachable on 2 days in a row",
+    "LIKE": "w.ink: unreachable on 2 days in a row",
     "LILA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LILAK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "LILPUMP": "lilpump.fun: unreachable on 2 days in a row",
+    "LILPUMP": "lilpump.fun: unreachable on 3 days in a row",
     "LIME.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LIN.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "LINA": "linear.finance: unreachable on 2 days in a row",
     "LINADOWN": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LINAUP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LING": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131406,7 +130729,7 @@
     "LITEX.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LITH": "lith.finance: gambling content that does not name the asset (Best Payout Online Casinos Canada - Online Casino Rankings U)",
     "LITT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "LIVE": "wink.org: CoinMarketCap symbol match whose homepage could not be read",
+    "LIVE": "wink.org: unreachable on 2 days in a row",
     "LIVN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LIY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LKFN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131432,6 +130755,7 @@
     "LNGX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LNTH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LNVGY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "LOA": "leagueofancients.com: unreachable on 2 days in a row",
     "LOAF": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LOAR": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LOBSTER_2": "CoinMarketCap 39671: no website off blocked hosts (https://x.com/i/communities/2027552765266870491)",
@@ -131440,6 +130764,7 @@
     "LOCKIN": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-03-22)",
     "LOE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LOGT": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "LOKA": "leagueofkingdoms.com: unreachable on 2 days in a row",
     "LOKA3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LOKA3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LOL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2022-07-30)",
@@ -131457,10 +130782,10 @@
     "LOOP": "getloop.network: parking page (afternic)",
     "LOOT": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LORA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "LOVE": "love.game: CoinMarketCap symbol match whose homepage could not be read",
+    "LOVE": "love.game: unreachable on 2 days in a row",
     "LOVELY": "lovely.finance: CoinMarketCap symbol match whose homepage could not be read",
     "LOVESNOOPY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "LOWB": "losercoin.org: CoinMarketCap symbol match whose homepage could not be read",
+    "LOWB": "losercoin.org: unreachable on 2 days in a row",
     "LPG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "LPM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "LPOOL": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131539,6 +130864,7 @@
     "LZCC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "LZM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "M3M3": "meteora.ag: the domain is MET's (one domain, one asset)",
+    "MA": "mind-ai.io: unreachable on 2 days in a row",
     "MAAS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MACHO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MAF": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131567,7 +130893,7 @@
     "MANA3S": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MAND": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MANE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "MANEKI": "manekineko.world: CoinMarketCap symbol match whose homepage could not be read",
+    "MANEKI": "manekineko.world: unreachable on 2 days in a row",
     "MANLET": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MANYU": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 1402 (Manyu (manyushiba.com)) and 3141 (littlemanyu)",
     "MANYUETH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131593,7 +130919,7 @@
     "MAT.CRYPTO": "mymasterwar.com: hijacked: spam page (situs)",
     "MATCH": "matchinggame.vip: parking page (lander.parity.domains)",
     "MATCH.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2022-11-29)",
-    "MATES": "moemate.gg: unreachable on 2 days in a row",
+    "MATES": "moemate.gg: unreachable on 3 days in a row",
     "MATIC2L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MATIC2S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MATIC3L": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131627,7 +130953,7 @@
     "MCHB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MCHI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MCO.CRYPTO": "Atlas has no asset for these 11 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "MCOIN": "m20chain.com: unreachable on 2 days in a row",
+    "MCOIN": "m20chain.com: unreachable on 3 days in a row",
     "MCONTENT": "myco.io: CoinMarketCap symbol match without identity evidence",
     "MCPOS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MCRN": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131792,7 +131118,7 @@
     "MNDY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MNEMO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MNET": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "MNGO": "mango.markets: CoinMarketCap symbol match whose homepage could not be read",
+    "MNGO": "mango.markets: unreachable on 2 days in a row",
     "MNRY": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MNST.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MNY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131810,7 +131136,7 @@
     "MOFI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MOGACC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MOJITO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "MOJO": "mojocoin.org: CoinMarketCap symbol match whose homepage could not be read",
+    "MOJO": "mojocoin.org: unreachable on 2 days in a row",
     "MOLT": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 3072 (Monkey Cult) and 4484 (Moltbook)",
     "MOMA": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MOMO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -131896,7 +131222,7 @@
     "MSGK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MSGS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MSI.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "MSN": "meson.network: unreachable on 2 days in a row",
+    "MSN": "meson.network: unreachable on 3 days in a row",
     "MSOL": "marinade.finance: the domain is MNDE's (one domain, one asset)",
     "MSP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MSTAR": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -131942,7 +131268,7 @@
     "MUDOL2": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MUG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MULL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "MULTI": "multichain.org: CoinMarketCap symbol match whose homepage could not be read",
+    "MULTI": "multichain.org: unreachable on 2 days in a row",
     "MUMU": "Atlas has no asset for these 3 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 2886 (Mumu the Bull (mumu.ing)) and 5280 (Mumu (mumucommunity.vip))",
     "MUNCAT": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MUNCH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
@@ -131969,13 +131295,13 @@
     "MWD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MWH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MXC": "Atlas has no asset for these 17 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "MXM": "maxxmxm.com: CoinMarketCap symbol match whose homepage could not be read",
+    "MXM": "maxxmxm.com: unreachable on 2 days in a row",
     "MXNT": "tether.to: the domain is USDT's (one domain, one asset)",
     "MXT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MXW": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MY": "metya.com: hijacked: affiliate or adult spam (dating app)",
     "MYE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "MYID": "okglobalcoinsg.com: unreachable on 2 days in a row",
+    "MYID": "okglobalcoinsg.com: CoinMarketCap symbol match without identity evidence",
     "MYRG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "MYT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "MZTI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132045,7 +131371,7 @@
     "NETX.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "NEUR": "neur.sh: placeholder page (404: NOT_FOUND)",
     "NEURA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "NEVER": "neversol.xyz: CoinMarketCap symbol match whose homepage could not be read",
+    "NEVER": "neversol.xyz: unreachable on 2 days in a row",
     "NEW": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NEWP": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "NEXA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132065,7 +131391,7 @@
     "NFTD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NFTFI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NFTI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "NFTL": "nftlotteryticket.com: CoinMarketCap symbol match whose homepage could not be read",
+    "NFTL": "nftlotteryticket.com: unreachable on 2 days in a row",
     "NFTX": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NFTY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NG.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132134,7 +131460,7 @@
     "NPT": "Atlas has no asset for these 3 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-06-27)",
     "NRFB": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NRIX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "NRV": "nerve.fi: CoinMarketCap symbol match whose homepage could not be read",
+    "NRV": "nerve.fi: unreachable on 2 days in a row",
     "NSBT": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NSC": "ambiguous Wikidata ticker: Q1321054, Q20858163",
     "NSRGY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132152,7 +131478,7 @@
     "NU3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NU3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NUCLEAR": "no source for index (overrides only)",
-    "NURA": "nura.gg: unreachable on 2 days in a row",
+    "NURA": "nura.gg: unreachable on 3 days in a row",
     "NUSTOCK": "not a US ticker or KRX/Tokyo code (overrides only)",
     "NUTX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "NUVB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132186,6 +131512,7 @@
     "NXS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "NXT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "NXT.CRYPTO": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "NYAN": "nyanheroes.com: unreachable on 2 days in a row",
     "NYAX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "NYZO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "O3": "Atlas has no asset for these 7 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132218,7 +131545,7 @@
     "OG": "OG Fan Token: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "OGC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "OGC.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "OGGY": "oggyinu.com: unreachable on 2 days in a row",
+    "OGGY": "oggyinu.com: unreachable on 3 days in a row",
     "OGLG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "OGO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "OGV": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132340,8 +131667,9 @@
     "ORDS": "override: ordiswap.fi now serves unrelated stock-market content",
     "ORFY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ORIC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "ORION": "orion.money: unreachable on 2 days in a row",
     "ORKA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "ORN": "orion.xyz: CoinMarketCap symbol match whose homepage could not be read",
+    "ORN": "orion.xyz: unreachable on 2 days in a row",
     "ORNG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ORNJ": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ORRF": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132362,9 +131690,11 @@
     "OURA.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's OURA is Atlas asset OURA, which symbology did not assign these contracts to",
     "OURAX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "OVER": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-02-14)",
+    "OVO": "ovo.space: unreachable on 2 days in a row",
     "OVPP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-11-19)",
     "OXEN": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "OXF": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "P": "popp.club: unreachable on 2 days in a row",
     "P.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PAA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PACE": "3space.art: unreachable on 2 days in a row",
@@ -132396,7 +131726,7 @@
     "PATEX": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PATH.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's PATH is Atlas asset PATH, which symbology did not assign these contracts to",
     "PATK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "PATRIOT": "patriotoneth.org: CoinMarketCap symbol match whose homepage could not be read",
+    "PATRIOT": "patriotoneth.org: unreachable on 2 days in a row",
     "PAVE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PAW": "Atlas has no asset for these 4 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-04-26)",
     "PAWS": "paws.community: CoinMarketCap symbol match whose homepage could not be read",
@@ -132420,7 +131750,7 @@
     "PDDB": "PDD Holdings Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "PDEX": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PDM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "PEANUT": "peanutcto.xyz: unreachable on 2 days in a row",
+    "PEANUT": "peanutcto.xyz: unreachable on 3 days in a row",
     "PEARL.CRYPTO": "Atlas has no asset for these 6 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2020-11-02)",
     "PEB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PEBO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132466,7 +131796,7 @@
     "PERX": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PET": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PETOSHI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "PEW": "pepeinamemesworld.com: CoinMarketCap symbol match whose homepage could not be read",
+    "PEW": "pepeinamemesworld.com: unreachable on 2 days in a row",
     "PFCC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PFE.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's PFE is Atlas asset PFE.PFIZER_INC_DERIVATIVE, which symbology did not assign these contracts to",
     "PFEX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132504,7 +131834,7 @@
     "PI5L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PI5S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PIAS": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "PICA": "picasso.xyz: CoinMarketCap symbol match whose homepage could not be read",
+    "PICA": "picasso.xyz: unreachable on 2 days in a row",
     "PICKL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "PICKLE": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PICS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132618,7 +131948,7 @@
     "PORTUMA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PORTX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "POSEIDON": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "POT": "potcoin.com: CoinMarketCap symbol match whose homepage could not be read",
+    "POT": "potcoin.com: unreachable on 2 days in a row",
     "POWER.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-03-11)",
     "POWERCHIP": "not a US ticker or KRX/Tokyo code (overrides only)",
     "POWERLOOM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132658,7 +131988,7 @@
     "PROSPER": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "PRS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PRSU": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "PRT": "parrot.fi: CoinMarketCap symbol match whose homepage could not be read",
+    "PRT": "parrot.fi: unreachable on 2 days in a row",
     "PRVA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "PRX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-06-10)",
     "PSB": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132740,7 +132070,7 @@
     "QNT3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "QNTB": "Quantinuum Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "QNTG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "QOM": "qompredator.finance: CoinMarketCap symbol match whose homepage could not be read",
+    "QOM": "qompredator.finance: unreachable on 2 days in a row",
     "QQQ": "override: an ETF: its website is the fund issuer's",
     "QQQ.INDEX": "no source for index (overrides only)",
     "QQQ.INVESCO_QQQ_TRUST_TOKENIZED_ETF_HYPERLIQUID": "Invesco QQQ Trust Tokenized ETF (Hyperliquid): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
@@ -132852,10 +132182,11 @@
     "RDVT": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "REACH": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REAL.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 3 coins, best ranks 753 (RealLink) and 1956 (Defactor)",
-    "REALIS": "realisworlds.com: unreachable on 2 days in a row",
+    "REALIS": "realisworlds.com: unreachable on 3 days in a row",
     "REALIUM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REALM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REAP": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "RECT": "reflectionai.app: unreachable on 2 days in a row",
     "REDSTONE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REDTOKEN": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REDX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132870,7 +132201,7 @@
     "REMILIA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "REMX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "RENA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "RENBTC": "renproject.io: CoinMarketCap symbol match whose homepage could not be read",
+    "RENBTC": "renproject.io: unreachable on 2 days in a row",
     "REPL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "REPV2": "Atlas has no asset for these 8 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RES": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -132895,7 +132226,7 @@
     "RGT": "Atlas has no asset for these 8 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RHHBY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "RHOOD": "Robinhood Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
-    "RIBBIT": "ribbitcoineth.com: unreachable on 2 days in a row",
+    "RIBBIT": "ribbitcoineth.com: unreachable on 3 days in a row",
     "RIBM": "IBM Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "RICE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 1839 (RICE AI) and 5814 (Rice Wallet)",
     "RICH": "getrichsol.net: gambling content that does not name the asset (New York Online Gambling - Best NY Online Casino Sites)",
@@ -132922,7 +132253,7 @@
     "RIVER3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RIVNX": "Rivian Automotive tokenized stock (xStock): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "RIVUS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "RIZZMAS": "rizzmas.lol: CoinMarketCap symbol match whose homepage could not be read",
+    "RIZZMAS": "rizzmas.lol: unreachable on 2 days in a row",
     "RJOBY": "Joby Aviation Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "RKC": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RKLB3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -132966,7 +132297,7 @@
     "ROKX": "Rockwell Automation tokenized stock (xStock): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "ROND": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RONDS": "Ondas Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
-    "ROOK": "rook.fi: CoinMarketCap symbol match whose homepage could not be read",
+    "ROOK": "rook.fi: unreachable on 2 days in a row",
     "ROOM": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RORCL": "Oracle Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "ROSA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133023,7 +132354,7 @@
     "RUNI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "RUSAR": "USA Rare Earth ETF Tokenized Stock (Reality): a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "RUSHB": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "RVC": "revenuecoin.io: CoinMarketCap symbol match whose homepage could not be read",
+    "RVC": "revenuecoin.io: unreachable on 2 days in a row",
     "RVLV": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "RVMD": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "RVN3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133082,7 +132413,7 @@
     "SAVG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SAVM": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SAY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SB": "snowbank.finance: CoinMarketCap symbol match whose homepage could not be read",
+    "SB": "snowbank.finance: unreachable on 2 days in a row",
     "SBCF": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SBE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SBET": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133121,7 +132452,7 @@
     "SCLP": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SCNSOL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SCPT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SCRAT": "scrat.meme: CoinMarketCap symbol match whose homepage could not be read",
+    "SCRAT": "scrat.meme: unreachable on 2 days in a row",
     "SCREAM": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SCROLL": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SCY": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133173,7 +132504,7 @@
     "SFBS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SFD": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SFIL": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SFM.CRYPTO": "safemoon.meme: CoinMarketCap symbol match whose homepage could not be read",
+    "SFM.CRYPTO": "safemoon.meme: unreachable on 2 days in a row",
     "SFT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SFTBY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SFTY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133187,6 +132518,7 @@
     "SGOL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SGOV.EQUITY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SGOVX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "SGR": "schrodingernft.ai: unreachable on 2 days in a row",
     "SH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SHA": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHAPE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133197,15 +132529,17 @@
     "SHAZB": "SharonAI Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "SHAZX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SHC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "SHDW": "shdwdrive.com: unreachable on 2 days in a row",
     "SHDW1": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHECY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SHEEP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "SHEGEN": "shegen.wtf: unreachable on 2 days in a row",
+    "SHEGEN": "shegen.wtf: unreachable on 3 days in a row",
     "SHEINHKD": "not a US ticker or KRX/Tokyo code (overrides only)",
     "SHENHUA": "not a US ticker or KRX/Tokyo code (overrides only)",
     "SHEPE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHG": "ambiguous Wikidata ticker: Q487230, Q491325",
+    "SHIB20": "shib2.vip: unreachable on 2 days in a row",
     "SHIB2L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHIB2S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SHIB3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133341,7 +132675,7 @@
     "SMCW": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SMG.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SMH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "SMH.CRYPTO": "spacemesh.io: CoinMarketCap symbol match whose homepage could not be read",
+    "SMH.CRYPTO": "spacemesh.io: unreachable on 2 days in a row",
     "SMHB": "VanEck Semiconductor ETF Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "SMHG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SMHX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133359,7 +132693,7 @@
     "SN44": "scorevision.io: placeholder page (Deployment Paused)",
     "SN8": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SNAKEAI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "SNAKES": "snakes-solana.com: unreachable on 2 days in a row",
+    "SNAKES": "snakes-solana.com: unreachable on 3 days in a row",
     "SNAP.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2024-05-16)",
     "SNDK3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SNDK3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133408,7 +132742,7 @@
     "SOLICE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SOLR": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SOLS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "SOLS.CRYPTO": "spl20.io: CoinMarketCap symbol match whose homepage could not be read",
+    "SOLS.CRYPTO": "spl20.io: unreachable on 2 days in a row",
     "SOLVE": "tuumio.com: CoinMarketCap symbol match whose homepage could not be read",
     "SOL_UPSIDE": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SOMLY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133540,6 +132874,7 @@
     "SRBP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SRCE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "SRG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "SRM": "projectserum.com: unreachable on 2 days in a row",
     "SRM3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SRM3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SRP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133566,7 +132901,7 @@
     "STACKS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STAG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "STAGE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "STAKE": "xdaichain.com: unreachable on 2 days in a row",
+    "STAKE": "xdaichain.com: unreachable on 3 days in a row",
     "STAMP": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STANDARD": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STARDOGE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133619,7 +132954,7 @@
     "STRK3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STRK3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STRL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "STRONG": "strongblock.io: CoinMarketCap symbol match whose homepage could not be read",
+    "STRONG": "strongblock.io: unreachable on 2 days in a row",
     "STRP": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "STRUMP": "supertrumpcoin.io: hijacked: spam page (kenali platform)",
     "STSOL": "lido.fi: the domain is LDO's (one domain, one asset)",
@@ -133687,7 +133022,7 @@
     "SWOP": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SWP": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SWRAY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "SWRV": "swerve.fi: unreachable on 2 days in a row",
+    "SWRV": "swerve.fi: unreachable on 3 days in a row",
     "SWTH": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SXCH": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "SXP3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133712,7 +133047,7 @@
     "SZN": "Atlas has no asset for these 2 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-05-18)",
     "T23": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "T2T2": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "TABOO": "taboo.io: CoinMarketCap symbol match whose homepage could not be read",
+    "TABOO": "taboo.io: unreachable on 2 days in a row",
     "TAI": "Atlas has no asset for these 14 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2020-11-01)",
     "TAIJI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TAIYOYUDEN.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -133726,12 +133061,13 @@
     "TAO3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TAOCAT": "masa.ai: placeholder page (Deployment Paused)",
     "TAPROOT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "TAPS": "tapswap.ai: CoinMarketCap symbol match whose homepage could not be read",
+    "TAPS": "tapswap.ai: unreachable on 2 days in a row",
     "TAPT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TARI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TARS": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TATE": "override: jointherealworld.com is Andrew Tate's course business, not the Tate Terminal token's site",
     "TAUM": "orbitau.io: CoinMarketCap symbol match whose homepage could not be read",
+    "TAUR": "marnotaur.com: unreachable on 2 days in a row",
     "TBANK": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TBBB": "Q125886451 has no usable website or English article",
     "TBBK": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133750,7 +133086,7 @@
     "TCP": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TCS.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TDX": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "TEA.CRYPTO": "tea-fi.com: unreachable on 2 days in a row",
+    "TEA.CRYPTO": "tea-fi.com: unreachable on 3 days in a row",
     "TEAFI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TECH100M": "no source for index (overrides only)",
     "TECL": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -133999,6 +133335,7 @@
     "TTAM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TTAN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TTC.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 2 coins, best ranks 4712 (Tongtongcoin) and 5043 (Tao Te Ching)",
+    "TTD": "tradetide.cc: unreachable on 2 days in a row",
     "TTDKY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TTF": "no source for commodity (overrides only)",
     "TTI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -134007,12 +133344,13 @@
     "TTNDY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TTT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TUC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
-    "TULIP": "tulip.garden: CoinMarketCap symbol match whose homepage could not be read",
+    "TULIP": "tulip.garden: unreachable on 2 days in a row",
     "TUNA": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-09-28)",
     "TUNGSTEN": "not a US ticker or KRX/Tokyo code (overrides only)",
     "TUR30": "not a US ticker or KRX/Tokyo code (overrides only)",
     "TURBO3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TURBO3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "TURT": "turtsat.io: unreachable on 2 days in a row",
     "TUYA": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "TVK": "Atlas has no asset for these 12 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "TVTX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -134101,7 +133439,7 @@
     "UNICY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "UNIDOWN": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNILAYER": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "UNIO": "uniocoin.io: CoinMarketCap symbol match whose homepage could not be read",
+    "UNIO": "uniocoin.io: unreachable on 2 days in a row",
     "UNISTAKE": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNISUI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNITE": "Atlas has no asset for these 6 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134109,6 +133447,7 @@
     "UNITREE3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNITREE3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNIUP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "UNN": "unn.finance: unreachable on 2 days in a row",
     "UNO": "override: Gate's UNO pairs are most likely Uno Re, not Unobtanium (a 2013 coin, CMC's only UNO); unverifiable, so no site",
     "UNQ": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UNT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2023-09-08)",
@@ -134170,7 +133509,7 @@
     "USDSGD": "no source for forex (overrides only)",
     "USDSUI": "sui.io: the domain is SUI's (one domain, one asset)",
     "USDTB.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2020-10-05)",
-    "USDU": "ultracoin.info: unreachable on 2 days in a row",
+    "USDU": "ultracoin.info: unreachable on 3 days in a row",
     "USDWON": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "USDXL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "USEDCAR": "usedcaronsolana.com: CoinMarketCap symbol match whose homepage could not be read",
@@ -134207,7 +133546,7 @@
     "UVXY": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "UVXYB": "ProShares Ultra VIX Short-Term Futures ETF  Tokenized bStocks: a tokenised stock, pre-IPO or fan token's website is its issuer's or club's",
     "UWLD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
-    "UX": "ux.xyz: unreachable on 2 days in a row",
+    "UX": "ux.xyz: lands on atom.com",
     "UXLINKOLD": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "UXPL": "Atlas has no asset for these 2 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
     "V.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: reused symbol: every CoinMarketCap coin with it was added after Atlas first listed the ticker or after its contracts ended (2025-01-14)",
@@ -134274,6 +133613,7 @@
     "VICR.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's VICR is Atlas asset VICR, which symbology did not assign these contracts to",
     "VID": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "VIDAX": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
+    "VIDT": "vidt-dao.com: unreachable on 2 days in a row",
     "VIDY": "Atlas has no asset for these 3 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "VIDYX": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "VIG": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -134374,14 +133714,14 @@
     "WABI": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "WAG": "waggle.network: parking page (lander.parity.domains)",
     "WAGYU": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "WALLI": "wallitelli.ai: unreachable on 2 days in a row",
+    "WALLI": "wallitelli.ai: unreachable on 3 days in a row",
     "WALSIN": "not a US ticker or KRX/Tokyo code (overrides only)",
     "WALTER": "walterdogsolana.com: hijacked, redirects to joblessyuva.com, a gambling page (maxwin,situs,slot)",
     "WAMPL": "ampleforth.org: the domain is FORTH's (one domain, one asset)",
     "WANGCHAI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "WANGSU": "not a US ticker or KRX/Tokyo code (overrides only)",
     "WANKO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "WAP": "wapcoin.wtf: unreachable on 2 days in a row",
+    "WAP": "wapcoin.wtf: unreachable on 3 days in a row",
     "WAR": "Atlas has no asset for these 7 crypto contracts; symbol fallback: ambiguous CoinMarketCap symbol: 3 coins, best ranks 2210 (WAR) and 4994 (Warrior Coin)",
     "WARS": "override: Ripio's stablecoin: ripio.com is the company's",
     "WAS": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134546,7 +133886,7 @@
     "XCU3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "XCU3S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "XCUR": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "XD": "xdogecoin.net: unreachable on 2 days in a row",
+    "XD": "xdogecoin.net: unreachable on 3 days in a row",
     "XDEFI": "Atlas has no asset for these 5 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "XDOT": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "XE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
@@ -134670,6 +134010,7 @@
     "XUNCE": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "XXI": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "XY": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
+    "XYM": "symbol.dev: unreachable on 2 days in a row",
     "XYZSPCXORCLPX": "not a US ticker or KRX/Tokyo code (overrides only)",
     "XZO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "Y2K": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134709,7 +134050,7 @@
     "YMM": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "YOFC": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "YONGDING": "not a US ticker or KRX/Tokyo code (overrides only)",
-    "YOOSHI": "yooshi.io: CoinMarketCap symbol match whose homepage could not be read",
+    "YOOSHI": "yooshi.io: unreachable on 2 days in a row",
     "YOP": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "YORI": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "YOU.CRYPTO": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134732,7 +134073,7 @@
     "ZBIO": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ZC": "zipcoin.cash: placeholder page (an empty page)",
     "ZCAT": "CoinMarketCap 42031: no website off blocked hosts (https://www.stonkfun.xyz/token/HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR)",
-    "ZCHF": "frankencoin.com: unreachable on 2 days in a row",
+    "ZCHF": "frankencoin.com: unreachable on 3 days in a row",
     "ZCSH": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ZCSH.CRYPTO": "Atlas has no asset for these 1 crypto contracts; symbol fallback: CoinMarketCap's ZCSH is Atlas asset ZCSH, which symbology did not assign these contracts to",
     "ZEC1": "Atlas has no asset for these 1 crypto contracts; symbol fallback: Hyperliquid spot only: its HIP-1 tickers are not matched by symbol",
@@ -134740,7 +134081,7 @@
     "ZEC3S": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZEC5L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZEC5S": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "ZEE": "zeroswap.io: CoinMarketCap symbol match whose homepage could not be read",
+    "ZEE": "zeroswap.io: unreachable on 2 days in a row",
     "ZEEP": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZELIX": "Atlas has no asset for these 4 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZEN3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134751,7 +134092,7 @@
     "ZEUSCC8": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZEUSETH": "Atlas has no asset for these 2 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "ZEUSPEPEDOG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
-    "ZF": "zkswap.finance: CoinMarketCap symbol match whose homepage could not be read",
+    "ZF": "zkswap.finance: unreachable on 2 days in a row",
     "ZGN": "no current Wikidata listing on the queried exchanges (ETFs: NYSE Arca)",
     "ZHENDING": "not a US ticker or KRX/Tokyo code (overrides only)",
     "ZHIPU3L": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
@@ -134829,7 +134170,7 @@
     "翻身币": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "草根文化": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol",
     "雪球": "xueqiu.live: CoinMarketCap symbol match without identity evidence",
-    "黑马": "heimabsc.com: CoinMarketCap symbol match whose homepage could not be read",
+    "黑马": "heimabsc.com: unreachable on 2 days in a row",
     "龙LONG": "Atlas has no asset for these 1 crypto contracts; symbol fallback: no CoinMarketCap coin with this symbol"
   }
 }
