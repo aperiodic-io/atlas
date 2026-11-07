@@ -34175,7 +34175,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42784,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "OSCRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-OSCRX-USDT"
   },
   {
     "id": "XOUST-USDT",

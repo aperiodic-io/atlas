@@ -24209,8 +24209,12 @@
     "symbol": "XLV",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42783,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "XLV",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLV-USDT:USDT"

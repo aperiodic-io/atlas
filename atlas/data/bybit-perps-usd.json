@@ -8034,6 +8034,26 @@
     "unified_id": "perpetual-DUCK-USDT:USDT"
   },
   {
+    "id": "DUOLUSDT",
+    "type": "perpetual",
+    "base_coin": "DUOL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-06T09:13:03.000Z",
+    "internal_id": "perpetual-DUOL-USDT:USDT",
+    "symbol": "DUOL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "DUOL",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DUOL-USDT:USDT"
+  },
+  {
     "id": "DUSKUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-DUSK-USDT:USDT",
@@ -9325,6 +9345,26 @@
     "unified_id": "perpetual-FIS-USDT:USDT"
   },
   {
+    "id": "FISVUSDT",
+    "type": "perpetual",
+    "base_coin": "FISV",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-06T09:11:05.000Z",
+    "internal_id": "perpetual-FISV-USDT:USDT",
+    "symbol": "FISV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "FISV",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FISV-USDT:USDT"
+  },
+  {
     "id": "FITFIUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-FITFI-USDT:USDT",
@@ -9554,6 +9594,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-FLY.EQUITY-USDT:USDT"
+  },
+  {
+    "id": "FNUSDT",
+    "type": "perpetual",
+    "base_coin": "FN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-06T09:12:11.000Z",
+    "internal_id": "perpetual-FN-USDT:USDT",
+    "symbol": "FN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "FN",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FN-USDT:USDT"
   },
   {
     "id": "FOGOUSDT",
@@ -26170,8 +26230,12 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-21T00:00:00.000Z",
+    "cmc_id": 42783,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "XLV",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLV-USDT:USDT"

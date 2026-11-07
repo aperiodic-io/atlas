@@ -3140,6 +3140,17 @@
     "unified_id": "spot-CAP-USD"
   },
   {
+    "id": "CARD-USD",
+    "type": "spot",
+    "base_coin": "CARD",
+    "quote_coin": "USD",
+    "first_capture": "2026-11-07T08:14:18.009Z",
+    "internal_id": "spot-CARD-USD",
+    "symbol": "CARD",
+    "denominator": "USD",
+    "quote_asset_id": "USD"
+  },
+  {
     "id": "CBETH-ETH",
     "type": "spot",
     "base_coin": "CBETH",

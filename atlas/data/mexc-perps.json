@@ -5583,6 +5583,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EMESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EMESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:59:00Z",
+    "internal_id": "perpetual-EMESTOCK-USDT:USDT",
+    "symbol": "EMESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EMRSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "EMRSTOCK",
@@ -16628,6 +16643,21 @@
     "margin": "USDT"
   },
   {
+    "id": "TPRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TPRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:58:00Z",
+    "internal_id": "perpetual-TPRSTOCK-USDT:USDT",
+    "symbol": "TPRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TQQQ_USDT",
     "type": "perpetual",
     "base_coin": "TQQQ",
@@ -17075,6 +17105,21 @@
     "first_capture": "2026-04-28T06:40:00Z",
     "internal_id": "perpetual-TXNSTOCK-USDT:USDT",
     "symbol": "TXNSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TYLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TYLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T11:00:00Z",
+    "internal_id": "perpetual-TYLSTOCK-USDT:USDT",
+    "symbol": "TYLSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -18842,6 +18887,21 @@
     "margin": "USDT"
   },
   {
+    "id": "XYZSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "XYZSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-03T10:37:00Z",
+    "internal_id": "perpetual-XYZSTOCK-USDT:USDT",
+    "symbol": "XYZSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "YAGEOSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "YAGEOSTOCK",
@@ -19275,6 +19335,21 @@
     "first_capture": "2026-09-02T10:10:00Z",
     "internal_id": "perpetual-ZSSTOCK-USDT:USDT",
     "symbol": "ZSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ZTSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ZTSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:58:00Z",
+    "internal_id": "perpetual-ZTSSTOCK-USDT:USDT",
+    "symbol": "ZTSSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

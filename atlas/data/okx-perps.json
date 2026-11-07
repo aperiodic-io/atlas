@@ -928,7 +928,7 @@
     ],
     "cmc_id": 39496,
     "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ANTHROPIC-USDT:USDT"
@@ -4261,6 +4261,26 @@
     "unified_id": "perpetual-EGLD-USDT:USDT"
   },
   {
+    "id": "EIDO-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-06T09:15:00.000Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42676,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EIDO.ISHARES_MSCI_INDONESIA_ETF_DERIVATIVES-USDT:USDT"
+  },
+  {
     "id": "EIGEN-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-EIGEN-USDT:USDT",
@@ -4707,6 +4727,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-EWZ-USDT:USDT"
+  },
+  {
+    "id": "EWZS-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-06T09:30:00.000Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-EWZS-USDT:USDT"
   },
   {
     "id": "F-USDT-SWAP",
@@ -9463,7 +9503,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -14639,6 +14679,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLM-USDT:USDT"
+  },
+  {
+    "id": "XLV-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-06T09:00:00.000Z",
+    "internal_id": "perpetual-XLV-USDT:USDT",
+    "symbol": "XLV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42783,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XLV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-XLV-USDT:USDT"
   },
   {
     "id": "XMR-USD-SWAP",
