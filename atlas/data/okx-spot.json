@@ -32349,6 +32349,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XBSP-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T08:00:00.000Z",
+    "internal_id": "spot-XBSP-USDC",
+    "symbol": "XBSP",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "XBSP-USDT",
     "type": "spot",
     "internal_id": "spot-XBSP-USDT",

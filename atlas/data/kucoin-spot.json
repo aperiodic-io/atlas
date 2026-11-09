@@ -3132,6 +3132,17 @@
     "end_date": "2026-11-06T08:57:06.801Z"
   },
   {
+    "id": "BNCOLD-USDT",
+    "type": "spot",
+    "base_coin": "BNCOLD",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T09:00:00.000Z",
+    "internal_id": "spot-BNCOLD-USDT",
+    "symbol": "BNCOLD",
+    "denominator": "USDT"
+  },
+  {
     "id": "BNKR-USDT",
     "type": "spot",
     "base_coin": "BNKR",
@@ -5727,8 +5738,7 @@
     "first_capture": "2026-08-27T00:00:00.000Z",
     "internal_id": "spot-DIAM-USDT",
     "symbol": "DIAM",
-    "denominator": "USDT",
-    "end_date": "2026-10-28T07:55:38.499Z"
+    "denominator": "USDT"
   },
   {
     "id": "DIGI-USDT",

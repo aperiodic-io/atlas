@@ -19896,6 +19896,18 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "RBRKBUSDT",
+    "type": "spot",
+    "base_coin": "rBRKB",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T07:38:41.883Z",
+    "internal_id": "spot-RBRKB-USDT",
+    "symbol": "RBRKB",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "RBRKRUSDT",
     "type": "spot",
     "base_coin": "rBRKR",

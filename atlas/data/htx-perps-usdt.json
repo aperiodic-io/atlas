@@ -10476,6 +10476,21 @@
     "margin": "USDT"
   },
   {
+    "id": "XLV-USDT",
+    "type": "perpetual",
+    "base_coin": "XLV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T00:00:00.000Z",
+    "internal_id": "perpetual-XLV-USDT:USDT",
+    "symbol": "XLV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "XMR-USDT",
     "type": "perpetual",
     "base_coin": "XMR",
@@ -10512,6 +10527,21 @@
     "first_capture": "2026-08-26T00:00:00.000Z",
     "internal_id": "perpetual-XOM-USDT:USDT",
     "symbol": "XOM",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XP-USDT",
+    "type": "perpetual",
+    "base_coin": "XP",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T00:00:00.000Z",
+    "internal_id": "perpetual-XP-USDT:USDT",
+    "symbol": "XP",
     "denominator": "USDT",
     "margin": "USDT"
   },

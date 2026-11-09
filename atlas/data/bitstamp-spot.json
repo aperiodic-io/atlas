@@ -1634,6 +1634,28 @@
     "denominator": "USD"
   },
   {
+    "id": "grameur",
+    "type": "spot",
+    "base_coin": "GRAM",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T11:14:24.626Z",
+    "internal_id": "spot-GRAM-EUR",
+    "symbol": "GRAM",
+    "denominator": "EUR"
+  },
+  {
+    "id": "gramusd",
+    "type": "spot",
+    "base_coin": "GRAM",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T11:14:24.626Z",
+    "internal_id": "spot-GRAM-USD",
+    "symbol": "GRAM",
+    "denominator": "USD"
+  },
+  {
     "id": "grteur",
     "type": "spot",
     "base_coin": "GRT",
@@ -3346,7 +3368,8 @@
     "first_capture": "2025-10-09T00:00:00.000Z",
     "internal_id": "spot-TON-EUR",
     "symbol": "TON",
-    "denominator": "EUR"
+    "denominator": "EUR",
+    "missing_since": "2026-11-09T11:14:24.626Z"
   },
   {
     "id": "tonusd",
@@ -3357,7 +3380,8 @@
     "first_capture": "2025-10-09T00:00:00.000Z",
     "internal_id": "spot-TON-USD",
     "symbol": "TON",
-    "denominator": "USD"
+    "denominator": "USD",
+    "missing_since": "2026-11-09T11:14:24.626Z"
   },
   {
     "id": "traceur",

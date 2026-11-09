@@ -34174,6 +34174,23 @@
     "unified_id": "perpetual-NIU_LAI-USDT:USDT"
   },
   {
+    "id": "\u725b\u903c_USDT",
+    "type": "perpetual",
+    "base_coin": "\u725b\u903c",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1000.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T06:24:26.000Z",
+    "internal_id": "perpetual-\u725b\u903c-USDT:USDT",
+    "symbol": "\u725b\u903c",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
+  },
+  {
     "id": "\u8001\u5b50_USDT",
     "type": "perpetual",
     "first_capture": "2026-01-10T00:00:00.000Z",

@@ -5186,6 +5186,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "CRCL_USDT",
+    "type": "spot",
+    "base_coin": "CRCL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T09:20:00.000Z",
+    "internal_id": "spot-CRCL-USDT",
+    "symbol": "CRCL",
+    "denominator": "USDT"
+  },
+  {
     "id": "CREO_USDT",
     "type": "spot",
     "base_coin": "CREO",
@@ -17233,6 +17244,17 @@
     "first_capture": "2026-06-30T00:00:00.000Z",
     "internal_id": "spot-SPCX69-USDT",
     "symbol": "SPCX69",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SPCX_USDT",
+    "type": "spot",
+    "base_coin": "SPCX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T08:30:00.000Z",
+    "internal_id": "spot-SPCX-USDT",
+    "symbol": "SPCX",
     "denominator": "USDT"
   },
   {

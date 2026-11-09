@@ -101120,6 +101120,28 @@
     "unified_id": "future-LTC-USD:USD-20310404"
   },
   {
+    "id": "LUNR-USD_UM_XPERP-311114",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-09T08:30:00.254Z",
+    "internal_id": "future-LUNR-USD:USD-20311114",
+    "symbol": "LUNR",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-14T00:00:00",
+    "cmc_id": 40107,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LUNR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-LUNR-USD:USD-20311114"
+  },
+  {
     "id": "MAJOR-USDT-250516",
     "type": "future",
     "internal_id": "future-MAJOR-USDT:USDT-20250516",
@@ -101136,6 +101158,28 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "future-MAJOR-USDT:USDT-20250516"
+  },
+  {
+    "id": "MARA-USD_UM_XPERP-311114",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-09T08:45:00.131Z",
+    "internal_id": "future-MARA-USD:USD-20311114",
+    "symbol": "MARA",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-14T00:00:00",
+    "cmc_id": 41945,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MARA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-MARA-USD:USD-20311114"
   },
   {
     "id": "ME-USDT-250523",
