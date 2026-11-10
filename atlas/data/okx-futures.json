@@ -35321,6 +35321,28 @@
     "unified_id": "future-DATA-USD:USD-20311003"
   },
   {
+    "id": "DDOG-USD_UM_XPERP-311114",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-10T08:45:00.185Z",
+    "internal_id": "future-DDOG-USD:USD-20311114",
+    "symbol": "DDOG",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-14T00:00:00",
+    "cmc_id": 41970,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-DDOG.DATADOG_INC_DERIVATIVES-USD:USD-20311114"
+  },
+  {
     "id": "DELL-USD_UM_XPERP-310822",
     "type": "future",
     "contract_size": 1.0,
@@ -101823,6 +101845,28 @@
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-ONDO-USD:USD-20310620"
+  },
+  {
+    "id": "ONDS-USD_UM_XPERP-311114",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-10T08:30:00.248Z",
+    "internal_id": "future-ONDS-USD:USD-20311114",
+    "symbol": "ONDS",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-14T00:00:00",
+    "cmc_id": 40118,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ONDS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-ONDS-USD:USD-20311114"
   },
   {
     "id": "ONE-USD_UM_XPERP-311003",

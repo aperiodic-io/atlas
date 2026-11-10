@@ -10424,6 +10424,27 @@
     "unified_id": "perpetual-MU-USDC:USDC"
   },
   {
+    "id": "xyz:MUU",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T09:08:21.263Z",
+    "internal_id": "perpetual-XYZ:MUU-USDC:USDC",
+    "symbol": "XYZ:MUU",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40675,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "MUU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-MUU-USDC:USDC"
+  },
+  {
     "id": "xyz:NATGAS",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:NATGAS-USDC:USDC",
@@ -11280,6 +11301,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-TTF-USDC:USDC"
+  },
+  {
+    "id": "xyz:TTWO",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T09:08:21.263Z",
+    "internal_id": "perpetual-XYZ:TTWO-USDC:USDC",
+    "symbol": "XYZ:TTWO",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40679,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTWO",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TTWO-USDC:USDC"
   },
   {
     "id": "xyz:TWST",

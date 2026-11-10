@@ -5186,7 +5186,8 @@
     "internal_id": "perpetual-DOPE-USDT:USDT",
     "symbol": "DOPE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-11-10T09:08:41.063Z"
   },
   {
     "id": "DOS_USDT",
@@ -6366,6 +6367,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FLOAT_USDT",
+    "type": "perpetual",
+    "base_coin": "FLOAT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T12:23:00Z",
+    "internal_id": "perpetual-FLOAT-USDT:USDT",
+    "symbol": "FLOAT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FLOCK_USDT",
     "type": "perpetual",
     "base_coin": "FLOCK",
@@ -6603,6 +6619,21 @@
     "first_capture": "2026-10-30T14:00:00Z",
     "internal_id": "perpetual-FSTOCK-USDT:USDT",
     "symbol": "FSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FTAISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FTAISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-FTAISTOCK-USDT:USDT",
+    "symbol": "FTAISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -11669,6 +11700,21 @@
     "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
+    "id": "NIUBI_USDT",
+    "type": "perpetual",
+    "base_coin": "NIUBI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T12:23:00Z",
+    "internal_id": "perpetual-NIUBI-USDT:USDT",
+    "symbol": "NIUBI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NIULAI_USDT",
     "type": "perpetual",
     "base_coin": "NIULAI",
@@ -11801,6 +11847,21 @@
     "first_capture": "2025-12-23T06:45:00Z",
     "internal_id": "perpetual-NOWSTOCK-USDT:USDT",
     "symbol": "NOWSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "NRGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NRGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-NRGSTOCK-USDT:USDT",
+    "symbol": "NRGSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -14182,6 +14243,21 @@
     "first_capture": "2022-03-10T03:29:56Z",
     "internal_id": "perpetual-RUNE-USDT:USDT",
     "symbol": "RUNE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "RVMDSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RVMDSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-RVMDSTOCK-USDT:USDT",
+    "symbol": "RVMDSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -17602,8 +17678,7 @@
     "internal_id": "perpetual-USTOCK-USDT:USDT",
     "symbol": "USTOCK",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-03T08:57:12.829Z"
+    "margin": "USDT"
   },
   {
     "id": "USUAL_USDT",

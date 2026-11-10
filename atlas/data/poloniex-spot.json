@@ -292,6 +292,18 @@
     "first_capture": "2024-01-26T00:00:00.000Z",
     "internal_id": "spot-AERODROME-USDT",
     "symbol": "AERODROME",
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:13:25.737Z"
+  },
+  {
+    "id": "AERO_USDT",
+    "type": "spot",
+    "base_coin": "AERO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2024-01-26T14:00:00.000Z",
+    "internal_id": "spot-AERO-USDT",
+    "symbol": "AERO",
     "denominator": "USDT"
   },
   {
@@ -12734,6 +12746,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "MSTR_USDT",
+    "type": "spot",
+    "base_coin": "MSTR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T07:00:00.000Z",
+    "internal_id": "spot-MSTR-USDT",
+    "symbol": "MSTR",
+    "denominator": "USDT"
+  },
+  {
     "id": "MTA_USDT",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -19379,6 +19402,17 @@
     "internal_id": "spot-XTZ-TRX",
     "symbol": "XTZ",
     "denominator": "TRX"
+  },
+  {
+    "id": "TSLA_USDT",
+    "type": "spot",
+    "base_coin": "TSLA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T07:30:00.000Z",
+    "internal_id": "spot-TSLA-USDT",
+    "symbol": "TSLA",
+    "denominator": "USDT"
   },
   {
     "id": "TST_USDT",

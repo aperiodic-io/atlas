@@ -146,7 +146,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-ACH-USDT",
     "symbol": "ACH",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:09:49.606Z"
   },
   {
     "id": "ACS_USD",
@@ -830,7 +831,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-AR-USDT",
     "symbol": "AR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:09:49.606Z"
   },
   {
     "id": "ASTR_USD",
@@ -1056,7 +1058,8 @@
     "first_capture": "2025-09-22T00:00:00.000Z",
     "internal_id": "spot-AVNT-USDT",
     "symbol": "AVNT",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:09:49.606Z"
   },
   {
     "id": "AXIS_USD",
@@ -1464,7 +1467,7 @@
     "internal_id": "spot-BLEND-USD",
     "symbol": "BLEND",
     "denominator": "USD",
-    "missing_since": "2026-11-09T11:14:24.923Z"
+    "end_date": "2026-11-09T11:14:24.923Z"
   },
   {
     "id": "BLUR_USD",
@@ -5593,7 +5596,8 @@
     "first_capture": "2024-01-11T00:00:00.000Z",
     "internal_id": "spot-LMWR-USDT",
     "symbol": "LMWR",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:09:49.606Z"
   },
   {
     "id": "LOAF_USD",
@@ -6951,7 +6955,8 @@
     "first_capture": "2022-06-01T00:00:00.000Z",
     "internal_id": "spot-ONE-USDT",
     "symbol": "ONE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-10T09:09:49.606Z"
   },
   {
     "id": "ONG_USD",
@@ -10176,7 +10181,7 @@
     "internal_id": "spot-WET-USD",
     "symbol": "WET",
     "denominator": "USD",
-    "missing_since": "2026-11-09T11:14:24.923Z"
+    "end_date": "2026-11-09T11:14:24.923Z"
   },
   {
     "id": "WIF_USD",

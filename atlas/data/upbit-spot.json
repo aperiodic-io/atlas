@@ -1840,6 +1840,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-HYPE",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T09:13:26.100Z",
+    "internal_id": "spot-HYPE-BTC",
+    "symbol": "HYPE",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-HYPER",
     "type": "spot",
     "base_coin": "HYPER",
@@ -6166,6 +6177,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-HYPE",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T09:13:26.100Z",
+    "internal_id": "spot-HYPE-KRW",
+    "symbol": "HYPE",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-HYPER",
     "type": "spot",
     "base_coin": "HYPER",
@@ -9672,6 +9694,17 @@
     "first_capture": "2025-07-25T00:00:00.000Z",
     "internal_id": "spot-HUMA-USDT",
     "symbol": "HUMA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDT-HYPE",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T09:13:26.100Z",
+    "internal_id": "spot-HYPE-USDT",
+    "symbol": "HYPE",
     "denominator": "USDT"
   },
   {

@@ -5256,6 +5256,21 @@
     "margin": "USDT"
   },
   {
+    "id": "LNG-USDT",
+    "type": "perpetual",
+    "base_coin": "LNG",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T00:00:00.000Z",
+    "internal_id": "perpetual-LNG-USDT:USDT",
+    "symbol": "LNG",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LOOKS-USDT",
     "type": "perpetual",
     "first_capture": "2022-01-19T00:00:00.000Z",

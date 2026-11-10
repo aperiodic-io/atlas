@@ -12533,6 +12533,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "mstrusdt",
+    "type": "spot",
+    "base_coin": "MSTR",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T09:00:00.000Z",
+    "internal_id": "spot-MSTR-USDT",
+    "symbol": "MSTR",
+    "denominator": "USDT"
+  },
+  {
     "id": "mtabtc",
     "type": "spot",
     "base_coin": "MTA",
