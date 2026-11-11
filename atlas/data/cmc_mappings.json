@@ -39303,6 +39303,55 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 1 unreadable of 7990 rows (1 duplicated, total moved by 1 mid-fetch): 0.0125%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1189",
+          "observed_at": "2026-11-11T11:18:18.631966Z",
+          "price": 580.51,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "XMR2",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "belu",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "XMR - Beluga",
+            "index": 1333,
+            "isCanonical": false,
+            "name": "XMR2",
+            "pair": "@1189",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x5f0c311fab64ce729122ed14d39c7332",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-11T08:46:30.744000Z",
+        "original_id": "XMR2/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-11T11:18:14.679257Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XMR2"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
