@@ -512,6 +512,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "aerousdt",
+    "type": "spot",
+    "base_coin": "AERO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T12:00:00.000Z",
+    "internal_id": "spot-AERO-USDT",
+    "symbol": "AERO",
+    "denominator": "USDT"
+  },
+  {
     "id": "aethusdtusdt",
     "type": "spot",
     "base_coin": "AETHUSDT",
@@ -18809,6 +18820,17 @@
     "first_capture": "2019-11-19T00:00:00.000Z",
     "internal_id": "spot-TRX-USDT",
     "symbol": "TRX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "tslausdt",
+    "type": "spot",
+    "base_coin": "TSLA",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T10:00:00.000Z",
+    "internal_id": "spot-TSLA-USDT",
+    "symbol": "TSLA",
     "denominator": "USDT"
   },
   {

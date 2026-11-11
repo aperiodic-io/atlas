@@ -32043,6 +32043,24 @@
     "unified_id": "spot-ADBEX-USDT"
   },
   {
+    "id": "XADI-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T06:00:00.000Z",
+    "internal_id": "spot-XADI-USDT",
+    "symbol": "XADI",
+    "denominator": "USDT",
+    "cmc_id": 42793,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ADIX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ADIX-USDT"
+  },
+  {
     "id": "XAEHR-USDT",
     "type": "spot",
     "internal_id": "spot-XAEHR-USDT",
@@ -32125,6 +32143,24 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-AMDX-USDT"
+  },
+  {
+    "id": "XAMGN-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T06:30:00.000Z",
+    "internal_id": "spot-XAMGN-USDT",
+    "symbol": "XAMGN",
+    "denominator": "USDT",
+    "cmc_id": 42795,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AMGNX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-AMGNX-USDT"
   },
   {
     "id": "XAMZN-USDC",
@@ -32309,6 +32345,24 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XBAC-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T07:00:00.000Z",
+    "internal_id": "spot-XBAC-USDT",
+    "symbol": "XBAC",
+    "denominator": "USDT",
+    "cmc_id": 37019,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BACX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BACX-USDT"
+  },
+  {
     "id": "XBB-USDT",
     "type": "spot",
     "internal_id": "spot-XBB-USDT",
@@ -32327,6 +32381,24 @@
     "underlying": "equity",
     "first_capture": "2026-08-13T00:00:00.000Z",
     "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XBIDU-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T07:30:00.000Z",
+    "internal_id": "spot-XBIDU-USDT",
+    "symbol": "XBIDU",
+    "denominator": "USDT",
+    "cmc_id": 42796,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BIDUX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-BIDUX-USDT"
   },
   {
     "id": "XBMNR-USDT",
@@ -34203,7 +34275,15 @@
     "internal_id": "spot-XORCL-USDC",
     "symbol": "XORCL",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 37059,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ORCLX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ORCLX-USDC"
   },
   {
     "id": "XORCL-USDT",

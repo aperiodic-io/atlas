@@ -4752,7 +4752,7 @@
     ],
     "cmc_id": 39496,
     "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-ANTHROPIC-USD:USD-20310912"
@@ -35337,7 +35337,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "DDOG.DATADOG_INC_DERIVATIVES",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-DDOG.DATADOG_INC_DERIVATIVES-USD:USD-20311114"

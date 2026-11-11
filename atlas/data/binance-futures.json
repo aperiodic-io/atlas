@@ -11397,6 +11397,30 @@
     "unified_id": "perpetual-HYPER-USDT:USDT"
   },
   {
+    "id": "hypeusdc",
+    "type": "perpetual",
+    "base_coin": "HYPE",
+    "quote_coin": "USDC",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-16T08:30:00.000Z",
+    "internal_id": "perpetual-HYPE-USDC:USDC",
+    "symbol": "HYPE",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HYPE-USDC:USDC"
+  },
+  {
     "id": "hypeusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -21524,6 +21548,29 @@
     "end_date": "2023-08-11T00:00:00.000Z",
     "base_asset_id": "TRX",
     "base_asset_match": "snapshot_cmc_id"
+  },
+  {
+    "id": "trxusdc",
+    "type": "perpetual",
+    "base_coin": "TRX",
+    "quote_coin": "USDC",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-16T08:35:00.000Z",
+    "internal_id": "perpetual-TRX-USDC:USDC",
+    "symbol": "TRX",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 1958,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "TRX",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TRX-USDC:USDC"
   },
   {
     "id": "trxusdt",

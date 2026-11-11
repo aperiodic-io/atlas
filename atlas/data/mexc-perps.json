@@ -947,8 +947,7 @@
     "internal_id": "perpetual-ALNYSTOCK-USDT:USDT",
     "symbol": "ALNYSTOCK",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-10-24T06:49:45.472Z"
+    "margin": "USDT"
   },
   {
     "id": "ALPINE_USDT",
@@ -5187,7 +5186,7 @@
     "symbol": "DOPE",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-10T09:08:41.063Z"
+    "end_date": "2026-11-10T09:08:41.063Z"
   },
   {
     "id": "DOS_USDT",
@@ -5750,6 +5749,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EQIXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EQIXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-EQIXSTOCK-USDT:USDT",
+    "symbol": "EQIXSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EQTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "EQTSTOCK",
@@ -6079,6 +6093,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-11-03T08:57:12.829Z"
+  },
+  {
+    "id": "FANGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FANGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-FANGSTOCK-USDT:USDT",
+    "symbol": "FANGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FANUCSTOCK_USDT",
@@ -13511,6 +13540,21 @@
     "margin": "USDT"
   },
   {
+    "id": "PYBOBO_USDT",
+    "type": "perpetual",
+    "base_coin": "PYBOBO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10000.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2025-11-21T10:10:00Z",
+    "internal_id": "perpetual-PYBOBO-USDT:USDT",
+    "symbol": "PYBOBO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "PYPLSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "PYPLSTOCK",
@@ -18056,6 +18100,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-11-04T08:31:23.066Z"
+  },
+  {
+    "id": "WATSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "WATSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-WATSTOCK-USDT:USDT",
+    "symbol": "WATSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "WAVES_USDT",

@@ -15000,6 +15000,7 @@
     "symbol": "RACHV",
     "denominator": "USDT",
     "first_capture": "2026-10-18T00:00:00.000Z",
+    "missing_since": "2026-11-11T08:46:53.157Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -42538,6 +42539,18 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "RQUITUSDT",
+    "type": "spot",
+    "base_coin": "rQUIT",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-09T10:05:15.012Z",
+    "internal_id": "spot-RQUIT-USDT",
+    "symbol": "RQUIT",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "RQUREUSDT",
     "type": "spot",
     "base_coin": "rQURE",
@@ -47554,6 +47567,7 @@
     "symbol": "RTCBI",
     "denominator": "USDT",
     "first_capture": "2026-09-11T09:01:57.535Z",
+    "missing_since": "2026-11-11T08:46:53.157Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -49244,6 +49258,18 @@
     "symbol": "RTW",
     "denominator": "USDT",
     "first_capture": "2026-09-07T07:23:16.099Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "RTXCPUSDT",
+    "type": "spot",
+    "base_coin": "rTXCP",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T02:56:07.024Z",
+    "internal_id": "spot-RTXCP-USDT",
+    "symbol": "RTXCP",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {

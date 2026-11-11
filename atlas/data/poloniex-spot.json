@@ -293,7 +293,7 @@
     "internal_id": "spot-AERODROME-USDT",
     "symbol": "AERODROME",
     "denominator": "USDT",
-    "missing_since": "2026-11-10T09:13:25.737Z"
+    "end_date": "2026-11-10T09:13:25.737Z"
   },
   {
     "id": "AERO_USDT",
@@ -13460,10 +13460,12 @@
     "id": "NVDA_USDT",
     "type": "spot",
     "first_capture": "2024-05-15T00:00:00.000Z",
-    "end_date": "2025-11-19T00:00:00.000Z",
     "internal_id": "spot-NVDA-USDT",
     "symbol": "NVDA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "base_coin": "NVDA",
+    "quote_coin": "USDT",
+    "underlying": "crypto"
   },
   {
     "id": "NVIR_USDT",
@@ -16908,6 +16910,17 @@
     "end_date": "2025-02-19T00:00:00.000Z",
     "internal_id": "spot-SKATECAT-USDT",
     "symbol": "SKATECAT",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SKHY_USDT",
+    "type": "spot",
+    "base_coin": "SKHY",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T08:00:00.000Z",
+    "internal_id": "spot-SKHY-USDT",
+    "symbol": "SKHY",
     "denominator": "USDT"
   },
   {
@@ -26184,6 +26197,17 @@
     "first_capture": "2026-08-17T00:00:00.000Z",
     "internal_id": "spot-\u725b\u6765-USDT",
     "symbol": "\u725b\u6765",
+    "denominator": "USDT"
+  },
+  {
+    "id": "\u725b\u903c_USDT",
+    "type": "spot",
+    "base_coin": "\u725b\u903c",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-10T10:00:00.000Z",
+    "internal_id": "spot-\u725b\u903c-USDT",
+    "symbol": "\u725b\u903c",
     "denominator": "USDT"
   },
   {

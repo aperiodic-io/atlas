@@ -4459,11 +4459,16 @@
     "id": "INIT-USDT",
     "type": "perpetual",
     "first_capture": "2025-04-24T00:00:00.000Z",
-    "end_date": "2025-11-21T00:00:00.000Z",
     "internal_id": "perpetual-INIT-USDT:USDT",
     "symbol": "INIT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "base_coin": "INIT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto"
   },
   {
     "id": "INJ-USDT",
@@ -10216,6 +10221,21 @@
     "margin": "USDT"
   },
   {
+    "id": "WINBOND-USDT",
+    "type": "perpetual",
+    "base_coin": "WINBOND",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T00:00:00.000Z",
+    "internal_id": "perpetual-WINBOND-USDT:USDT",
+    "symbol": "WINBOND",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "WLD-USDT",
     "type": "perpetual",
     "base_coin": "WLD",
@@ -10637,6 +10657,21 @@
     "end_date": "2023-10-27T00:00:00.000Z",
     "internal_id": "perpetual-XVG-USDT:USDT",
     "symbol": "XVG",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "YAGEO-USDT",
+    "type": "perpetual",
+    "base_coin": "YAGEO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T00:00:00.000Z",
+    "internal_id": "perpetual-YAGEO-USDT:USDT",
+    "symbol": "YAGEO",
     "denominator": "USDT",
     "margin": "USDT"
   },
