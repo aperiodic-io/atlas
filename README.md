@@ -17,7 +17,7 @@
 
 > Built and maintained by **[Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)**. Atlas is the open-source security master behind Aperiodic's RWA and crypto market data. [Check out Aperiodic →](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)
 
-**[Search the catalogue →](https://aperiodic-io.github.io/atlas/)**
+**[Search the catalogue →](https://aperiodic-io.github.io/atlas/)** · **[Browse every perp A–Z on aperiodic.io →](https://aperiodic.io/markets/all-perps?utm_source=github&utm_medium=readme&utm_campaign=atlas)**
 
 Stocks, gold, oil, FX, indices and pre-IPO companies now trade as perpetuals on
 DeFi venues like Hyperliquid, Avantis, Lighter, GRVT, Aster, Variational,
@@ -226,6 +226,10 @@ pytest tests/
 ## About Aperiodic
 
 Atlas is open-sourced by [Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas). If Atlas is useful to you, take a look at what else we build at [aperiodic.io](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas), and give this repo a ⭐ so more people find it.
+
+Every perp Aperiodic serves on Binance, OKX and Hyperliquid has a free page of
+its order flow, spread, depth, funding and open interest, each contract named
+by its Atlas ID: [every perp, A–Z](https://aperiodic.io/markets/all-perps?utm_source=github&utm_medium=readme&utm_campaign=atlas).
 
 ## License
 
