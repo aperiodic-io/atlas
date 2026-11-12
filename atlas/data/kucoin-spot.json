@@ -14082,6 +14082,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "MTX-USDT",
+    "type": "spot",
+    "base_coin": "MTX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T11:00:00.000Z",
+    "internal_id": "spot-MTX-USDT",
+    "symbol": "MTX",
+    "denominator": "USDT"
+  },
+  {
     "id": "MUBARAK-USDT",
     "type": "spot",
     "base_coin": "MUBARAK",

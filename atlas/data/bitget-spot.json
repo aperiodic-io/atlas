@@ -8687,15 +8687,8 @@
     "internal_id": "spot-IAG-USDT",
     "symbol": "IAG",
     "denominator": "USDT",
-    "cmc_id": 11078,
-    "category": [
-      "DApp"
-    ],
     "first_capture": "2024-11-08T00:00:00.000Z",
-    "base_asset_id": "IAG",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-IAG-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "IAUONUSDT",
@@ -11795,6 +11788,18 @@
     "denominator": "USDT",
     "first_capture": "2025-01-06T00:00:00.000Z",
     "end_date": "2025-04-11T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "MTXUSDT",
+    "type": "spot",
+    "base_coin": "MTX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T11:00:00.000Z",
+    "internal_id": "spot-MTX-USDT",
+    "symbol": "MTX",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {
@@ -15000,7 +15005,7 @@
     "symbol": "RACHV",
     "denominator": "USDT",
     "first_capture": "2026-10-18T00:00:00.000Z",
-    "missing_since": "2026-11-11T08:46:53.157Z",
+    "end_date": "2026-11-11T08:46:53.157Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -47567,7 +47572,7 @@
     "symbol": "RTCBI",
     "denominator": "USDT",
     "first_capture": "2026-09-11T09:01:57.535Z",
-    "missing_since": "2026-11-11T08:46:53.157Z",
+    "end_date": "2026-11-11T08:46:53.157Z",
     "quote_asset_id": "USDT"
   },
   {

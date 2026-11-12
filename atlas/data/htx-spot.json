@@ -9481,6 +9481,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "intcusdt",
+    "type": "spot",
+    "base_coin": "INTC",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T09:00:00.000Z",
+    "internal_id": "spot-INTC-USDT",
+    "symbol": "INTC",
+    "denominator": "USDT"
+  },
+  {
     "id": "invusdt",
     "type": "spot",
     "base_coin": "INV",
@@ -13616,6 +13627,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "nvdausdt",
+    "type": "spot",
+    "base_coin": "NVDA",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T09:00:00.000Z",
+    "internal_id": "spot-NVDA-USDT",
+    "symbol": "NVDA",
+    "denominator": "USDT"
+  },
+  {
     "id": "nxpcusdt",
     "type": "spot",
     "base_coin": "NXPC",
@@ -16687,6 +16709,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "skhyusdt",
+    "type": "spot",
+    "base_coin": "SKHY",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:00:00.000Z",
+    "internal_id": "spot-SKHY-USDT",
+    "symbol": "SKHY",
+    "denominator": "USDT"
+  },
+  {
     "id": "sklbtc",
     "type": "spot",
     "base_coin": "SKL",
@@ -19656,7 +19689,8 @@
     "first_capture": "2024-12-17T00:00:00.000Z",
     "internal_id": "spot-VELODROME-USDT",
     "symbol": "VELODROME",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "end_date": "2026-11-12T09:14:14.565Z"
   },
   {
     "id": "velousdt",

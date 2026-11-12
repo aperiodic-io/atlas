@@ -2764,6 +2764,21 @@
     "margin": "USDT"
   },
   {
+    "id": "DHR-USDT",
+    "type": "perpetual",
+    "base_coin": "DHR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T00:00:00.000Z",
+    "internal_id": "perpetual-DHR-USDT:USDT",
+    "symbol": "DHR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DIS-USDT",
     "type": "perpetual",
     "base_coin": "DIS",
@@ -4202,6 +4217,21 @@
     "first_capture": "2026-07-23T00:00:00.000Z",
     "internal_id": "perpetual-HK1810-USDT:USDT",
     "symbol": "HK1810",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "HLT-USDT",
+    "type": "perpetual",
+    "base_coin": "HLT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T00:00:00.000Z",
+    "internal_id": "perpetual-HLT-USDT:USDT",
+    "symbol": "HLT",
     "denominator": "USDT",
     "margin": "USDT"
   },

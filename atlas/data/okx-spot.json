@@ -905,6 +905,74 @@
     "unified_id": "spot-AERGO-USDT"
   },
   {
+    "id": "AERO-EUR",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T13:00:00.000Z",
+    "internal_id": "spot-AERO-EUR",
+    "symbol": "AERO",
+    "denominator": "EUR",
+    "cmc_id": 29270,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AERO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "EUR",
+    "unified_id": "spot-AERO-EUR"
+  },
+  {
+    "id": "AERO-TRY",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T13:00:00.000Z",
+    "internal_id": "spot-AERO-TRY",
+    "symbol": "AERO",
+    "denominator": "TRY",
+    "cmc_id": 29270,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AERO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "TRY",
+    "unified_id": "spot-AERO-TRY"
+  },
+  {
+    "id": "AERO-USDC",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T13:00:00.000Z",
+    "internal_id": "spot-AERO-USDC",
+    "symbol": "AERO",
+    "denominator": "USDC",
+    "cmc_id": 29270,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AERO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-AERO-USDC"
+  },
+  {
+    "id": "AERO-USDT",
+    "type": "spot",
+    "underlying": "crypto",
+    "first_capture": "2026-11-11T13:00:00.000Z",
+    "internal_id": "spot-AERO-USDT",
+    "symbol": "AERO",
+    "denominator": "USDT",
+    "cmc_id": 29270,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AERO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-AERO-USDT"
+  },
+  {
     "id": "AEVO-EUR",
     "type": "spot",
     "internal_id": "spot-AEVO-EUR",
@@ -32497,6 +32565,24 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XCEG-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T06:00:00.000Z",
+    "internal_id": "spot-XCEG-USDT",
+    "symbol": "XCEG",
+    "denominator": "USDT",
+    "cmc_id": 40055,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CEGX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-CEGX-USDT"
+  },
+  {
     "id": "XCGNX-USDT",
     "type": "spot",
     "internal_id": "spot-XCGNX-USDT",
@@ -32773,6 +32859,24 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-CSCOX-USDT"
+  },
+  {
+    "id": "XCVNA-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T06:30:00.000Z",
+    "internal_id": "spot-XCVNA-USDT",
+    "symbol": "XCVNA",
+    "denominator": "USDT",
+    "cmc_id": 42801,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CVNAX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-CVNAX-USDT"
   },
   {
     "id": "XDDOG-USDT",
@@ -33056,6 +33160,24 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XFLEX-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T07:00:00.000Z",
+    "internal_id": "spot-XFLEX-USDT",
+    "symbol": "XFLEX",
+    "denominator": "USDT",
+    "cmc_id": 42802,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "FLEXX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FLEXX-USDT"
+  },
+  {
     "id": "XFLNC-USDT",
     "type": "spot",
     "internal_id": "spot-XFLNC-USDT",
@@ -33084,6 +33206,24 @@
     "underlying": "equity",
     "first_capture": "2026-10-12T00:00:00.000Z",
     "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XGE-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T07:30:00.000Z",
+    "internal_id": "spot-XGE-USDT",
+    "symbol": "XGE",
+    "denominator": "USDT",
+    "cmc_id": 42807,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GEX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GEX-USDT"
   },
   {
     "id": "XGEV-USDT",

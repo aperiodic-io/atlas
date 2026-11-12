@@ -711,6 +711,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "AMD_USDT",
+    "type": "spot",
+    "base_coin": "AMD",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T07:30:00.000Z",
+    "internal_id": "spot-AMD-USDT",
+    "symbol": "AMD",
+    "denominator": "USDT"
+  },
+  {
     "id": "AMO_USDT",
     "type": "spot",
     "base_coin": "AMO",
@@ -8679,6 +8690,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "GOOGL_USDT",
+    "type": "spot",
+    "base_coin": "GOOGL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T08:00:00.000Z",
+    "internal_id": "spot-GOOGL-USDT",
+    "symbol": "GOOGL",
+    "denominator": "USDT"
+  },
+  {
     "id": "GOONC_USDT",
     "type": "spot",
     "first_capture": "2025-05-14T00:00:00.000Z",
@@ -9460,6 +9482,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "HYPE_USDT",
+    "type": "spot",
+    "base_coin": "HYPE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T09:00:00.000Z",
+    "internal_id": "spot-HYPE-USDT",
+    "symbol": "HYPE",
+    "denominator": "USDT"
+  },
+  {
     "id": "IBOSS_USDT",
     "type": "spot",
     "first_capture": "2024-05-09T00:00:00.000Z",
@@ -9631,6 +9664,17 @@
     "end_date": "2026-02-07T00:00:00.000Z",
     "internal_id": "spot-INS-USDT",
     "symbol": "INS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "INTC_USDT",
+    "type": "spot",
+    "base_coin": "INTC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T07:00:00.000Z",
+    "internal_id": "spot-INTC-USDT",
+    "symbol": "INTC",
     "denominator": "USDT"
   },
   {
@@ -12157,6 +12201,17 @@
     "first_capture": "2024-07-19T00:00:00.000Z",
     "internal_id": "spot-MIGGLES-USDT",
     "symbol": "MIGGLES",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MIHAO_USDT",
+    "type": "spot",
+    "base_coin": "MIHAO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T08:30:00.000Z",
+    "internal_id": "spot-MIHAO-USDT",
+    "symbol": "MIHAO",
     "denominator": "USDT"
   },
   {
