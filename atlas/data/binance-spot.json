@@ -35017,14 +35017,7 @@
     "denominator": "AUD",
     "first_capture": "2021-10-29T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "AUD",
-    "unified_id": "spot-NU-AUD"
+    "quote_asset_id": "AUD"
   },
   {
     "id": "nubnb",
@@ -35034,14 +35027,7 @@
     "denominator": "BNB",
     "first_capture": "2021-06-04T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "BNB",
-    "unified_id": "spot-NU-BNB"
+    "quote_asset_id": "BNB"
   },
   {
     "id": "nubtc",
@@ -35051,14 +35037,7 @@
     "denominator": "BTC",
     "first_capture": "2021-06-04T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "BTC",
-    "unified_id": "spot-NU-BTC"
+    "quote_asset_id": "BTC"
   },
   {
     "id": "nubusd",
@@ -35067,13 +35046,7 @@
     "symbol": "NU",
     "denominator": "BUSD",
     "first_capture": "2021-06-04T00:00:00.000Z",
-    "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage"
+    "end_date": "2022-02-17T00:00:00.000Z"
   },
   {
     "id": "nulsbtc",
@@ -35122,14 +35095,7 @@
     "denominator": "RUB",
     "first_capture": "2021-10-29T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "RUB",
-    "unified_id": "spot-NU-RUB"
+    "quote_asset_id": "RUB"
   },
   {
     "id": "nuusdt",
@@ -35139,14 +35105,7 @@
     "denominator": "USDT",
     "first_capture": "2021-06-04T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z",
-    "category": [
-      "Privacy"
-    ],
-    "cmc_id": 4761,
-    "base_asset_id": "NU",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-NU-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "nvdabusdt",

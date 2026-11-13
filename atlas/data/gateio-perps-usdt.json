@@ -810,6 +810,7 @@
     "symbol": "AGENCY",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -937,6 +938,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "AGRIPPA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -4118,6 +4120,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "BEN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -7306,6 +7309,7 @@
     "symbol": "COOL",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -9412,6 +9416,7 @@
     "symbol": "EACC",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -10494,6 +10499,7 @@
     "symbol": "FATCOIN",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -11152,7 +11158,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-12T09:10:24.834Z",
+    "end_date": "2026-11-12T09:10:24.834Z",
     "base_asset_id": "FLYBRAIN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11428,6 +11434,11 @@
     "symbol": "FRHC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42804,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "FRHC",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
@@ -12668,6 +12679,7 @@
     "symbol": "GP",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -13701,6 +13713,7 @@
     "margin": "USDT",
     "cmc_id": 41983,
     "category": [],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "HOOKR",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -15923,6 +15936,7 @@
     "symbol": "KIMI",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -18489,6 +18503,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "MICRODUCK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -20803,6 +20818,11 @@
     "contract_size": 0.1,
     "quantity_unit": "base",
     "underlying": "equity",
+    "cmc_id": 42803,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "NU.EQUITY",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
@@ -22896,6 +22916,7 @@
     "margin": "USDT",
     "cmc_id": 42398,
     "category": [],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "POD",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -23405,6 +23426,7 @@
     "margin": "USDT",
     "cmc_id": 41991,
     "category": [],
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "base_asset_id": "PROLOGUE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -27146,6 +27168,7 @@
     "symbol": "SPACEHOOD",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -27596,6 +27619,7 @@
     "symbol": "STAMP",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -28022,6 +28046,7 @@
     "symbol": "SUE",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-13T09:01:00.087Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },

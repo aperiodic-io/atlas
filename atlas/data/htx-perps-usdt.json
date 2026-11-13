@@ -3435,6 +3435,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FISV-USDT",
+    "type": "perpetual",
+    "base_coin": "FISV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T00:00:00.000Z",
+    "internal_id": "perpetual-FISV-USDT:USDT",
+    "symbol": "FISV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FITFI-USDT",
     "type": "perpetual",
     "first_capture": "2022-05-24T00:00:00.000Z",
@@ -3520,6 +3535,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FN-USDT",
+    "type": "perpetual",
+    "base_coin": "FN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T00:00:00.000Z",
+    "internal_id": "perpetual-FN-USDT:USDT",
+    "symbol": "FN",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FOGO-USDT",
     "type": "perpetual",
     "first_capture": "2026-01-15T00:00:00.000Z",
@@ -3571,6 +3601,21 @@
     "first_capture": "2026-10-08T00:00:00.000Z",
     "internal_id": "perpetual-FOXA-USDT:USDT",
     "symbol": "FOXA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FRHC-USDT",
+    "type": "perpetual",
+    "base_coin": "FRHC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T00:00:00.000Z",
+    "internal_id": "perpetual-FRHC-USDT:USDT",
+    "symbol": "FRHC",
     "denominator": "USDT",
     "margin": "USDT"
   },

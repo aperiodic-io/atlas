@@ -60,6 +60,21 @@
     "margin": "USDC"
   },
   {
+    "id": "AAOI_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "AAOI",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:32.000Z",
+    "internal_id": "perpetual-AAOI-USDC:USDC",
+    "symbol": "AAOI",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "AAPL_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "AAPL",
@@ -401,6 +416,21 @@
     "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "perpetual-BILL-USDC:USDC",
     "symbol": "BILL",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "BMNR_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "BMNR",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:39.000Z",
+    "internal_id": "perpetual-BMNR-USDC:USDC",
+    "symbol": "BMNR",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -1675,6 +1705,21 @@
     "margin": "USDC"
   },
   {
+    "id": "RKLB_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "RKLB",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:24:01.000Z",
+    "internal_id": "perpetual-RKLB-USDC:USDC",
+    "symbol": "RKLB",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "ROBO_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "ROBO",
@@ -2071,6 +2116,21 @@
     "first_capture": "2026-09-14T00:00:00.000Z",
     "internal_id": "perpetual-VVV-USDC:USDC",
     "symbol": "VVV",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "WDC_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "WDC",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:46.000Z",
+    "internal_id": "perpetual-WDC-USDC:USDC",
+    "symbol": "WDC",
     "denominator": "USDC",
     "margin": "USDC"
   },

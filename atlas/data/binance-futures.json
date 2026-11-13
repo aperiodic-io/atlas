@@ -9721,8 +9721,13 @@
     "symbol": "FRHC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42804,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "FRHC",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-FRHC-USDT:USDT"
@@ -15685,9 +15690,10 @@
     "symbol": "NU",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 4761,
+    "cmc_id": 42803,
     "category": [
-      "Privacy"
+      "DeFi",
+      "Tokenized Stock"
     ],
     "first_capture": "2021-10-21T00:00:00.000Z",
     "base_coin": "NU",
@@ -15695,11 +15701,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "equity",
-    "base_asset_id": "NU",
-    "base_asset_match": "snapshot_cmc_id",
+    "base_asset_id": "NU.EQUITY",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-NU-USDT:USDT"
+    "unified_id": "perpetual-NU.EQUITY-USDT:USDT"
   },
   {
     "id": "nvdausdt",

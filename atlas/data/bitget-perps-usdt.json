@@ -8747,6 +8747,31 @@
     "unified_id": "perpetual-FRAX-USDT:USDT"
   },
   {
+    "id": "FRHCUSDT",
+    "type": "perpetual",
+    "base_coin": "FRHC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:19:44.203Z",
+    "internal_id": "perpetual-FRHC-USDT:USDT",
+    "symbol": "FRHC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42804,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "FRHC",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FRHC-USDT:USDT"
+  },
+  {
     "id": "FTMUSDT",
     "type": "perpetual",
     "first_capture": "2024-11-08T00:00:00.000Z",

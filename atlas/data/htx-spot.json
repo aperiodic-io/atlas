@@ -912,6 +912,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "amdusdt",
+    "type": "spot",
+    "base_coin": "AMD",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T09:30:00.000Z",
+    "internal_id": "spot-AMD-USDT",
+    "symbol": "AMD",
+    "denominator": "USDT"
+  },
+  {
     "id": "ampusdt",
     "type": "spot",
     "base_coin": "AMP",
@@ -2521,6 +2532,17 @@
     "first_capture": "2022-06-08T00:00:00.000Z",
     "internal_id": "spot-BETH-USDT",
     "symbol": "BETH",
+    "denominator": "USDT"
+  },
+  {
+    "id": "beusdt",
+    "type": "spot",
+    "base_coin": "BE",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T07:30:00.000Z",
+    "internal_id": "spot-BE-USDT",
+    "symbol": "BE",
     "denominator": "USDT"
   },
   {
@@ -8304,6 +8326,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "googlusdt",
+    "type": "spot",
+    "base_coin": "GOOGL",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T10:00:00.000Z",
+    "internal_id": "spot-GOOGL-USDT",
+    "symbol": "GOOGL",
+    "denominator": "USDT"
+  },
+  {
     "id": "gorkusdt",
     "type": "spot",
     "base_coin": "GORK",
@@ -12531,6 +12564,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "mrnausdt",
+    "type": "spot",
+    "base_coin": "MRNA",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T08:00:00.000Z",
+    "internal_id": "spot-MRNA-USDT",
+    "symbol": "MRNA",
+    "denominator": "USDT"
+  },
+  {
     "id": "mrsusdt",
     "type": "spot",
     "base_coin": "MRS",
@@ -12962,6 +13006,17 @@
     "first_capture": "2024-02-07T00:00:00.000Z",
     "internal_id": "spot-NAVX-USDT",
     "symbol": "NAVX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "nbisusdt",
+    "type": "spot",
+    "base_coin": "NBIS",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T07:00:00.000Z",
+    "internal_id": "spot-NBIS-USDT",
+    "symbol": "NBIS",
     "denominator": "USDT"
   },
   {

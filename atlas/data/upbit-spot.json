@@ -3571,6 +3571,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-SANC",
+    "type": "spot",
+    "base_coin": "SANC",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:04:52.159Z",
+    "internal_id": "spot-SANC-BTC",
+    "symbol": "SANC",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-SAND",
     "type": "spot",
     "base_coin": "SAND",
@@ -7564,6 +7575,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-SANC",
+    "type": "spot",
+    "base_coin": "SANC",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:04:52.159Z",
+    "internal_id": "spot-SANC-KRW",
+    "symbol": "SANC",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-SAND",
     "type": "spot",
     "base_coin": "SAND",
@@ -10755,6 +10777,17 @@
     "first_capture": "2025-06-26T00:00:00.000Z",
     "internal_id": "spot-SAHARA-USDT",
     "symbol": "SAHARA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDT-SANC",
+    "type": "spot",
+    "base_coin": "SANC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:04:52.159Z",
+    "internal_id": "spot-SANC-USDT",
+    "symbol": "SANC",
     "denominator": "USDT"
   },
   {

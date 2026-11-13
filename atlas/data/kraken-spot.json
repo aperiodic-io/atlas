@@ -14469,6 +14469,17 @@
     "denominator": "USDC"
   },
   {
+    "id": "PEARL/USD",
+    "type": "spot",
+    "base_coin": "PEARL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:04:50.352Z",
+    "internal_id": "spot-PEARL-USD",
+    "symbol": "PEARL",
+    "denominator": "USD"
+  },
+  {
     "id": "PENDLE/EUR",
     "type": "spot",
     "base_coin": "PENDLE",

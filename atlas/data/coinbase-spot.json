@@ -10105,6 +10105,22 @@
     "unified_id": "spot-PAXG-USD"
   },
   {
+    "id": "PEARL-USD",
+    "type": "spot",
+    "base_coin": "PEARL",
+    "quote_coin": "USD",
+    "first_capture": "2026-11-13T09:01:10.820Z",
+    "internal_id": "spot-PEARL-USD",
+    "symbol": "PEARL",
+    "denominator": "USD",
+    "cmc_id": 41876,
+    "category": [],
+    "base_asset_id": "PEARL",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USD",
+    "unified_id": "spot-PEARL-USD"
+  },
+  {
     "id": "PENDLE-USD",
     "type": "spot",
     "base_coin": "PENDLE",

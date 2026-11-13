@@ -33101,7 +33101,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42850,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWJX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWJX-USDT"
   },
   {
     "id": "XEWT-USDT",
@@ -33111,7 +33119,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42851,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWTX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWTX-USDT"
   },
   {
     "id": "XEWY-USDC",
@@ -33157,7 +33173,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42852,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWZX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWZX-USDT"
   },
   {
     "id": "XFLEX-USDT",
@@ -33242,6 +33266,24 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-GEVX-USDT"
+  },
+  {
+    "id": "XGILD-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T06:00:00.000Z",
+    "internal_id": "spot-XGILD-USDT",
+    "symbol": "XGILD",
+    "denominator": "USDT",
+    "cmc_id": 42808,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GILDX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-GILDX-USDT"
   },
   {
     "id": "XGLW-USDT",
@@ -33418,6 +33460,24 @@
     "symbol": "XHUT",
     "denominator": "USDT",
     "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XIBKR-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T06:30:00.000Z",
+    "internal_id": "spot-XIBKR-USDT",
+    "symbol": "XIBKR",
+    "denominator": "USDT",
+    "cmc_id": 42809,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBKRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-IBKRX-USDT"
   },
   {
     "id": "XIBM-USDT",
@@ -33864,7 +33924,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42853,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "LYTEX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-LYTEX-USDT"
   },
   {
     "id": "XMARA-USDT",
@@ -33921,6 +33989,42 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-METAX-USDT"
+  },
+  {
+    "id": "XMP-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T07:00:00.000Z",
+    "internal_id": "spot-XMP-USDT",
+    "symbol": "XMP",
+    "denominator": "USDT",
+    "cmc_id": 42810,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MPX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MPX-USDT"
+  },
+  {
+    "id": "XMPWR-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-13T07:30:00.000Z",
+    "internal_id": "spot-XMPWR-USDT",
+    "symbol": "XMPWR",
+    "denominator": "USDT",
+    "cmc_id": 42811,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MPWRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MPWRX-USDT"
   },
   {
     "id": "XMR-BTC",
@@ -34479,7 +34583,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42841,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PENGX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-PENGX-USDT"
   },
   {
     "id": "XPL-EUR",
@@ -34632,7 +34744,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42842,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PURRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-PURRX-USDT"
   },
   {
     "id": "XPYPL-USDT",
@@ -34736,7 +34856,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42855,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RAMX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RAMX-USDT"
   },
   {
     "id": "XRDDT-USDT",
@@ -34756,7 +34884,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42843,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RDWX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-RDWX-USDT"
   },
   {
     "id": "XRIOT-USDT",
@@ -35038,7 +35174,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42844,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SHOPX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SHOPX-USDT"
   },
   {
     "id": "XSIMO-USDT",
@@ -35048,7 +35192,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42845,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SIMOX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SIMOX-USDT"
   },
   {
     "id": "XSKDD-USDT",
@@ -35216,7 +35368,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-13T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42847,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SONYX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SONYX-USDT"
   },
   {
     "id": "XSOXL-USDC",
@@ -35272,7 +35432,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42854,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SPCHX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SPCHX-USDT"
   },
   {
     "id": "XSPCX-USDC",
@@ -35488,7 +35656,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42848,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TSEMX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-TSEMX-USDT"
   },
   {
     "id": "XTSLA-USDC",
@@ -35570,7 +35746,15 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-10-14T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 42849,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTMIX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-TTMIX-USDT"
   },
   {
     "id": "XTTWO-USDT",

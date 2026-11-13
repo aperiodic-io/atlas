@@ -3872,7 +3872,12 @@
     "symbol": "WOW",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 8605,
+    "category": [],
+    "base_asset_id": "WOW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-WOW-USDC"
   },
   {
     "id": "WOWBIT/USDC",
