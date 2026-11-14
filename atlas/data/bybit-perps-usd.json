@@ -850,6 +850,7 @@
       "Memes"
     ],
     "cmc_id": 42249,
+    "end_date": "2026-11-13T09:00:00.000Z",
     "base_asset_id": "4STOCK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -1464,6 +1465,7 @@
       "Generative AI"
     ],
     "cmc_id": 24007,
+    "end_date": "2026-11-13T09:00:00.000Z",
     "base_asset_id": "AGI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -10987,6 +10989,7 @@
       "Memes"
     ],
     "cmc_id": 38679,
+    "end_date": "2026-11-13T09:00:00.000Z",
     "base_asset_id": "HAJIMI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11934,6 +11937,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IDEX-USDT:USDT"
+  },
+  {
+    "id": "IDOLUSDT",
+    "type": "perpetual",
+    "base_coin": "IDOL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:43:35.000Z",
+    "internal_id": "perpetual-IDOL-USDT:USDT",
+    "symbol": "IDOL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 36775,
+    "category": [
+      "AI Applications"
+    ],
+    "base_asset_id": "IDOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IDOL-USDT:USDT"
   },
   {
     "id": "IDUSDT",
@@ -17525,6 +17552,28 @@
     "end_date": "2024-10-18T00:00:00.000Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "OROCHIUSDT",
+    "type": "perpetual",
+    "base_coin": "OROCHI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:45:10.000Z",
+    "internal_id": "perpetual-OROCHI-USDT:USDT",
+    "symbol": "OROCHI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 38750,
+    "category": [],
+    "base_asset_id": "ON",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ON-USDT:USDT"
   },
   {
     "id": "OSMOUSDT",
