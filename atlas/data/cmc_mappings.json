@@ -25647,6 +25647,57 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 1 unreadable of 8049 rows (1 duplicated, total moved by 1 mid-fetch): 0.0124%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1187",
+          "observed_at": "2026-11-02T11:31:11.500553Z",
+          "price": 0.00054,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "HYBR",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x067b0c72aa4c6bd3bfefff443c536dcd6a25a9c8",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "HYBRA",
+            "index": 394,
+            "isCanonical": false,
+            "name": "HYBR",
+            "pair": "@1187",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xa2fbfbcf015a5f5d766bf3b469063be8",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-02T08:47:15.706000Z",
+        "original_id": "HYBR/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-02T11:31:07.813846Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "HYBR"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
