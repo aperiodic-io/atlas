@@ -360,7 +360,8 @@
     "internal_id": "perpetual-ANTHROPICX-USD:USD",
     "symbol": "ANTHROPICX",
     "denominator": "USD",
-    "margin": "USD"
+    "margin": "USD",
+    "missing_since": "2026-11-14T08:29:37.055Z"
   },
   {
     "id": "PF_ANTUSD",
@@ -372,6 +373,21 @@
     "denominator": "USD",
     "margin": "USD",
     "quantity_unit": "base"
+  },
+  {
+    "id": "PF_ANTXUSD",
+    "type": "perpetual",
+    "base_coin": "ANTx",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "pre_market",
+    "first_capture": "2026-11-13T12:29:18.000Z",
+    "internal_id": "perpetual-ANTX-USD:USD",
+    "symbol": "ANTX",
+    "denominator": "USD",
+    "margin": "USD"
   },
   {
     "id": "PF_APEUSD",
