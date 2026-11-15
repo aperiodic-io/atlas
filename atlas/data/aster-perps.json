@@ -11626,6 +11626,27 @@
     "unified_id": "perpetual-SOON-USDT:USDT"
   },
   {
+    "id": "sophusdt",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "base_asset": "SOPH",
+    "quote_asset": "USDT",
+    "margin_asset": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-14T21:35:00.000Z",
+    "internal_id": "perpetual-SOPH-USDT:USDT",
+    "symbol": "SOPH",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 32087,
+    "category": [],
+    "base_asset_id": "SOPH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SOPH-USDT:USDT"
+  },
+  {
     "id": "soxlusd1",
     "type": "perpetual",
     "contract_size": 1.0,
