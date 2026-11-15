@@ -22248,6 +22248,55 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 1 unreadable of 7966 rows (1 duplicated, total moved by 1 mid-fetch): 0.0126%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1190",
+          "observed_at": "2026-11-15T11:19:42.082606Z",
+          "price": 1.0,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQANT",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "EQX Tokenized ANT",
+            "index": 1335,
+            "isCanonical": false,
+            "name": "EQANT",
+            "pair": "@1190",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x1247a62c5c066fe47b0ee8db7b1b9136",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-15T08:45:39.370000Z",
+        "original_id": "EQANT/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-15T11:19:37.662547Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQANT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
