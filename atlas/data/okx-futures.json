@@ -112145,6 +112145,28 @@
     "unified_id": "future-TSM-USD:USD-20310926"
   },
   {
+    "id": "TTWO-USD_UM_XPERP-311121",
+    "type": "future",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-16T08:30:00.208Z",
+    "internal_id": "future-TTWO-USD:USD-20311121",
+    "symbol": "TTWO",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-21T00:00:00",
+    "cmc_id": 40679,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTWO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-TTWO-USD:USD-20311121"
+  },
+  {
     "id": "UB-USD_UM_XPERP-310627",
     "type": "future",
     "internal_id": "future-UB-USD:USD-20310627",

@@ -11439,7 +11439,7 @@
       "Layer 1"
     ],
     "base_asset_id": "HYPE",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-HYPE-USDC:USDC"
@@ -21596,7 +21596,7 @@
       "Layer 1"
     ],
     "base_asset_id": "TRX",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-TRX-USDC:USDC"

@@ -2357,6 +2357,7 @@
     "settle_coin": "USDT",
     "contract_size": 1.0,
     "underlying": "equity",
+    "missing_since": "2026-11-16T08:56:54.746Z",
     "base_asset_id": "ANTHROPIC",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
@@ -2372,16 +2373,16 @@
     "margin": "USDT",
     "quantity_unit": "base",
     "first_capture": "2021-12-17T00:00:00.000Z",
-    "end_date": "2024-07-26T00:00:00.000Z",
-    "cmc_id": 1680,
-    "category": [
-      "DAO"
-    ],
-    "base_asset_id": "ANT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_coin": "ANT",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANT-USDT:USDT"
+    "unified_id": "perpetual-ANT.EQUITY-USDT:USDT"
   },
   {
     "id": "APEPERP",

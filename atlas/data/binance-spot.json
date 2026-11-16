@@ -51249,6 +51249,22 @@
     "unified_id": "spot-USDC-RON"
   },
   {
+    "id": "usdcthb",
+    "type": "spot",
+    "base_coin": "USDC",
+    "quote_coin": "THB",
+    "first_capture": "2026-11-16T08:56:53.724Z",
+    "internal_id": "spot-USDC-THB",
+    "symbol": "USDC",
+    "denominator": "THB",
+    "cmc_id": 3408,
+    "category": [],
+    "base_asset_id": "USDC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "THB",
+    "unified_id": "spot-USDC-THB"
+  },
+  {
     "id": "usdctry",
     "type": "spot",
     "internal_id": "spot-USDC-TRY",

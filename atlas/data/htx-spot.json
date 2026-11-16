@@ -15425,6 +15425,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "qqqusdt",
+    "type": "spot",
+    "base_coin": "QQQ",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T07:00:00.000Z",
+    "internal_id": "spot-QQQ-USDT",
+    "symbol": "QQQ",
+    "denominator": "USDT"
+  },
+  {
     "id": "qrdousdt",
     "type": "spot",
     "base_coin": "QRDO",
@@ -17302,6 +17313,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "soxlusdt",
+    "type": "spot",
+    "base_coin": "SOXL",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T08:00:00.000Z",
+    "internal_id": "spot-SOXL-USDT",
+    "symbol": "SOXL",
+    "denominator": "USDT"
+  },
+  {
     "id": "sparkletusdt",
     "type": "spot",
     "base_coin": "SPARKLET",
@@ -18664,6 +18686,17 @@
     "end_date": "2025-01-08T00:00:00.000Z",
     "internal_id": "spot-TPY-USDT",
     "symbol": "TPY",
+    "denominator": "USDT"
+  },
+  {
+    "id": "tqqqusdt",
+    "type": "spot",
+    "base_coin": "TQQQ",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T07:30:00.000Z",
+    "internal_id": "spot-TQQQ-USDT",
+    "symbol": "TQQQ",
     "denominator": "USDT"
   },
   {

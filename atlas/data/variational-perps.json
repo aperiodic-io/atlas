@@ -4227,6 +4227,27 @@
     "unified_id": "perpetual-EWZ-USDC:USDC"
   },
   {
+    "id": "EWZS",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T08:57:21.540Z",
+    "internal_id": "perpetual-EWZS-USDC:USDC",
+    "symbol": "EWZS",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42697,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "EWZS",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-EWZS-USDC:USDC"
+  },
+  {
     "id": "F",
     "type": "perpetual",
     "contract_size": 1.0,

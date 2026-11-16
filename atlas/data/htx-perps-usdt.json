@@ -2950,6 +2950,21 @@
     "margin": "USDT"
   },
   {
+    "id": "DUOL-USDT",
+    "type": "perpetual",
+    "base_coin": "DUOL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-16T00:00:00.000Z",
+    "internal_id": "perpetual-DUOL-USDT:USDT",
+    "symbol": "DUOL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DUSK-USDT",
     "type": "perpetual",
     "first_capture": "2024-04-18T00:00:00.000Z",
@@ -4992,6 +5007,21 @@
     "first_capture": "2026-06-23T00:00:00.000Z",
     "internal_id": "perpetual-KLAC-USDT:USDT",
     "symbol": "KLAC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "KMB-USDT",
+    "type": "perpetual",
+    "base_coin": "KMB",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-16T00:00:00.000Z",
+    "internal_id": "perpetual-KMB-USDT:USDT",
+    "symbol": "KMB",
     "denominator": "USDT",
     "margin": "USDT"
   },

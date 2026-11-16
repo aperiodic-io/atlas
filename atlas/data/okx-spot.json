@@ -35757,6 +35757,16 @@
     "unified_id": "spot-TTMIX-USDT"
   },
   {
+    "id": "XTTWO-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T08:00:00.000Z",
+    "internal_id": "spot-XTTWO-USDC",
+    "symbol": "XTTWO",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "XTTWO-USDT",
     "type": "spot",
     "internal_id": "spot-XTTWO-USDT",

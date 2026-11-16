@@ -22642,6 +22642,17 @@
     "denominator": "USD"
   },
   {
+    "id": "XLA/USD",
+    "type": "spot",
+    "base_coin": "XLA",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-16T09:00:57.227Z",
+    "internal_id": "spot-XLA-USD",
+    "symbol": "XLA",
+    "denominator": "USD"
+  },
+  {
     "id": "XLESPV/USD",
     "type": "spot",
     "base_coin": "XLEx",
