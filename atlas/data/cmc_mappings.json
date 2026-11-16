@@ -39303,6 +39303,58 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 2 unreadable of 7965 rows (2 duplicated, total moved by 1 mid-fetch): 0.0251%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1191",
+          "observed_at": "2026-11-16T11:51:31.050269Z",
+          "price": 502.73,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "XMRN",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "nh",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xcb0e319f9e21221083023e3bc46bddee77c69b8f",
+              "evm_extra_wei_decimals": 3
+            },
+            "fullName": "XMR - noiho.xyz",
+            "index": 1336,
+            "isCanonical": false,
+            "name": "XMRN",
+            "pair": "@1191",
+            "quote": "USDC",
+            "szDecimals": 4,
+            "tokenId": "0x31df97a61018272e68e73cbb8ddfe9de",
+            "weiDecimals": 9
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-16T08:56:58.119000Z",
+        "original_id": "XMRN/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-16T11:51:27.315046Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XMRN"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
