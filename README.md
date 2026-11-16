@@ -15,8 +15,6 @@
 
 # Atlas: the open security master for real-world-asset and crypto perpetuals
 
-> Built and maintained by **[Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)**. Atlas is the open-source security master behind Aperiodic's RWA and crypto market data. [Check out Aperiodic →](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)
-
 **[Search the catalogue →](https://aperiodic-io.github.io/atlas/)** · **[Browse every perp A–Z on aperiodic.io →](https://aperiodic.io/markets/all-perps?utm_source=github&utm_medium=readme&utm_campaign=atlas)**
 
 Stocks, gold, oil, FX, indices and pre-IPO companies now trade as perpetuals on
@@ -26,11 +24,16 @@ OKX, Bitget and Gate. No two venues name a market the same way. Atlas gives
 every contract one ID and every underlying asset one ID, the same on every
 venue, and keeps the contracts that were delisted.
 
+Atlas is the security master behind [Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas)'s
+market data. Aperiodic names every contract it serves by its Atlas ID, runs the
+daily refresh, and is committed to keeping Atlas open and current for the long
+term.
+
 - **7,000+ live RWA contracts**: equities, commodities, FX, indices and pre-IPO,
   next to every crypto spot, perpetual and futures market.
 - **57,000+ instruments** on 28 venues (56 snapshots), **30,000+ of them
   delisted** with the date they stopped trading.
-- **One asset registry**: `TSLA` is Tesla on all 15 venues that list it.
+- **One asset registry**: `TSLA` is Tesla on all 14 venues that list it.
 - **Plain JSON in git, refreshed daily** from each venue's own API. No key, no
   network at lookup time.
 
@@ -68,7 +71,7 @@ sm = SecurityMaster.load()
 sm.base_asset("lighter-perps", "112").asset_id        # 'TSLA'
 sm.base_asset("avantis-perps", "86").asset_id         # 'TSLA'
 sm.asset("TSLA")                                      # Tesla (Derivatives), equity
-sm.exchanges_for_asset("TSLA")                        # 15 venues, DEX and CEX
+sm.exchanges_for_asset("TSLA")                        # 15 snapshots on 14 venues, DEX and CEX
 sm.by_unified_id("perpetual-TSLA-USDC:USDC")          # every USDC-settled Tesla perp:
 # [('avantis-perps', '86'), ('hyperliquid-perps', 'mkts:TSLA'),
 #  ('hyperliquid-perps', 'xyz:TSLA'), ('lighter-perps', '112'),
@@ -124,7 +127,7 @@ sm.instruments_for_asset("EURUSD")                    # Avantis, Bybit, Extended
 ### 5. Backtests that remember the dead
 
 Exchange APIs only list what trades today. Atlas keeps every delisted contract
-with its listing window, including 280 delisted RWA contracts such as Lighter's
+with its listing window, including 300+ delisted RWA contracts such as Lighter's
 SpaceX pre-IPO perpetual (8 May to 19 June 2026):
 
 ```python
@@ -223,13 +226,33 @@ python site/build.py --data atlas/data --out _site   # build the catalogue site
 pytest tests/
 ```
 
-## About Aperiodic
+## Contributing
 
-Atlas is open-sourced by [Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas). If Atlas is useful to you, take a look at what else we build at [aperiodic.io](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas), and give this repo a ⭐ so more people find it.
+Atlas is open source under the MIT License, and contributions are welcome: bug
+reports, questions, fixes and new venues.
 
-Every perp Aperiodic serves on Binance, OKX and Hyperliquid has a free page of
-its order flow, spread, depth, funding and open interest, each contract named
-by its Atlas ID: [every perp, A–Z](https://aperiodic.io/markets/all-perps?utm_source=github&utm_medium=readme&utm_campaign=atlas).
+The most useful issue is a contract Atlas gets wrong: a ticker matched to the
+wrong asset, a delisted market with no `end_date`, an asset class read wrong.
+Give the venue, the native ID and what the contract really is, with a link to
+the venue's own page for it if there is one. Most fixes are one entry, with its
+reason, in [`overrides.json`](atlas/data/symbology/overrides.json). A venue
+that lists perps and is missing here is the next most useful.
+
+For a pull request, write the failing test first and run `pytest tests/`. CI
+runs the tests on every push.
+
+Atlas was built at [Aperiodic](https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas), a market data
+company that uses it on its own data and maintains it here, in the open. Every
+perp Aperiodic serves on Binance, OKX and Hyperliquid has a free page of its
+order flow, spread, depth, funding and open interest, each contract named by its
+Atlas ID: [every perp, A–Z](https://aperiodic.io/markets/all-perps?utm_source=github&utm_medium=readme&utm_campaign=atlas).
+
+<a href="https://aperiodic.io/?utm_source=github&utm_medium=readme&utm_campaign=atlas">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/aperiodic-dark.svg">
+    <img alt="Aperiodic: microstructure, liquidity and flow metrics, and the Cost, Depth and Impact indices, for RWA and crypto perps, point in time, as Parquet. aperiodic.io" src="brand/aperiodic.svg" width="800">
+  </picture>
+</a>
 
 ## License
 
