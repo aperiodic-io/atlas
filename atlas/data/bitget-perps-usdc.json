@@ -722,6 +722,31 @@
     "unified_id": "perpetual-HBAR-USDC:USDC"
   },
   {
+    "id": "HYPEPERP",
+    "type": "perpetual",
+    "base_coin": "HYPE",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T02:22:45.137Z",
+    "internal_id": "perpetual-HYPE-USDC:USDC",
+    "symbol": "HYPE",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HYPE-USDC:USDC"
+  },
+  {
     "id": "IPPERP",
     "type": "perpetual",
     "first_capture": "2025-03-04T00:00:00.000Z",

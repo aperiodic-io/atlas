@@ -32385,6 +32385,24 @@
     "unified_id": "spot-XAUT-USDT"
   },
   {
+    "id": "XAVGO-USDC",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T08:00:00.000Z",
+    "internal_id": "spot-XAVGO-USDC",
+    "symbol": "XAVGO",
+    "denominator": "USDC",
+    "cmc_id": 37021,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AVGOX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-AVGOX-USDC"
+  },
+  {
     "id": "XAVGO-USDT",
     "type": "spot",
     "internal_id": "spot-XAVGO-USDT",
@@ -34456,6 +34474,16 @@
     "unified_id": "spot-NVDLX-USDT"
   },
   {
+    "id": "XNVO-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T06:00:00.000Z",
+    "internal_id": "spot-XNVO-USDT",
+    "symbol": "XNVO",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XOKLO-USDT",
     "type": "spot",
     "underlying": "equity",
@@ -34576,6 +34604,26 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XPANW-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T06:30:00.000Z",
+    "internal_id": "spot-XPANW-USDT",
+    "symbol": "XPANW",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XPDD-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T07:00:00.000Z",
+    "internal_id": "spot-XPDD-USDT",
+    "symbol": "XPDD",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XPENG-USDT",
     "type": "spot",
     "internal_id": "spot-XPENG-USDT",
@@ -34592,6 +34640,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-PENGX-USDT"
+  },
+  {
+    "id": "XPEP-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T07:30:00.000Z",
+    "internal_id": "spot-XPEP-USDT",
+    "symbol": "XPEP",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XPL-EUR",
@@ -35764,7 +35822,15 @@
     "internal_id": "spot-XTTWO-USDC",
     "symbol": "XTTWO",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42858,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TTWOX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-TTWOX-USDC"
   },
   {
     "id": "XTTWO-USDT",

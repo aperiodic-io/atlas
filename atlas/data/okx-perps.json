@@ -6554,11 +6554,11 @@
     "margin": "USDT",
     "contract_size": 1000.0,
     "first_capture": "2025-11-20T00:00:00.000Z",
-    "end_date": "2026-01-25T00:00:00.000Z",
     "category": [],
     "cmc_id": 38909,
+    "underlying": "crypto",
     "base_asset_id": "JCT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-JCT-USDT:USDT"
@@ -9503,7 +9503,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -14757,7 +14757,7 @@
     ],
     "cmc_id": 42374,
     "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"

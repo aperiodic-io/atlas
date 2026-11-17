@@ -2033,6 +2033,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "ANSEM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -2088,20 +2089,18 @@
     "id": "ANT_USDT",
     "type": "perpetual",
     "first_capture": "2020-08-13T00:00:00.000Z",
-    "end_date": "2024-08-17T00:00:00.000Z",
     "internal_id": "perpetual-ANT-USDT:USDT",
     "symbol": "ANT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 1680,
-    "category": [
-      "DAO"
-    ],
-    "base_asset_id": "ANT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_coin": "ANT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "pre_market",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANT-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "APD_USDT",
@@ -5164,6 +5163,7 @@
     "margin": "USDT",
     "cmc_id": 42025,
     "category": [],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "BREW",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -8625,6 +8625,7 @@
     "margin": "USDT",
     "cmc_id": 41953,
     "category": [],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "DELTA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -9771,6 +9772,7 @@
     "symbol": "EMBER",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -11019,6 +11021,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "FLORK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11275,6 +11278,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "FONE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -14554,6 +14558,7 @@
     "category": [
       "Real World Assets Protocols"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "INDEX.THE_INDEX_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -15469,6 +15474,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "JUGGERNAUT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -16463,6 +16469,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "LAPTOP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -19080,6 +19087,7 @@
     "symbol": "MOO",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -19274,6 +19282,7 @@
     "contract_size": 10.0,
     "quantity_unit": "base",
     "underlying": "crypto",
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "MPLX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21592,6 +21601,7 @@
     "category": [
       "DeFi"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "ORBIO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -26148,6 +26158,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "SI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -29291,6 +29302,7 @@
     "symbol": "TOLLY",
     "denominator": "USDT",
     "margin": "USDT",
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -32831,6 +32843,7 @@
     "category": [
       "Layer 1"
     ],
+    "missing_since": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "XNO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -32879,7 +32892,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XOM.EXXONMOBIL_HOLDINGS_CORPORATION_DERIVATIVES-USDT:USDT"

@@ -10587,6 +10587,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "KORU_USDT",
+    "type": "spot",
+    "base_coin": "KORU",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T05:30:00.000Z",
+    "internal_id": "spot-KORU-USDT",
+    "symbol": "KORU",
+    "denominator": "USDT"
+  },
+  {
     "id": "KP3R_USDT",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -17204,6 +17215,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "SNXX_USDT",
+    "type": "spot",
+    "base_coin": "SNXX",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T06:00:00.000Z",
+    "internal_id": "spot-SNXX-USDT",
+    "symbol": "SNXX",
+    "denominator": "USDT"
+  },
+  {
     "id": "SNX_BTC",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -17370,6 +17392,17 @@
     "first_capture": "2026-11-16T06:00:00.000Z",
     "internal_id": "spot-SOXL-USDT",
     "symbol": "SOXL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SOXS_USDT",
+    "type": "spot",
+    "base_coin": "SOXS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T05:00:00.000Z",
+    "internal_id": "spot-SOXS-USDT",
+    "symbol": "SOXS",
     "denominator": "USDT"
   },
   {

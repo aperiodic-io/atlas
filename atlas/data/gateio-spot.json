@@ -4331,6 +4331,28 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "ANT3L_USDT",
+    "type": "spot",
+    "base_coin": "ANT3L",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-18T07:00:00.000Z",
+    "internal_id": "spot-ANT3L-USDT",
+    "symbol": "ANT3L",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "ANT3S_USDT",
+    "type": "spot",
+    "base_coin": "ANT3S",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-18T07:00:00.000Z",
+    "internal_id": "spot-ANT3S-USDT",
+    "symbol": "ANT3S",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "ANTFUN_USDT",
     "type": "spot",
     "base_coin": "ANTFUN",
@@ -33356,6 +33378,17 @@
     "denominator": "USDT",
     "first_capture": "2022-06-08T00:00:00.000Z",
     "end_date": "2024-12-20T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "INFI_USDT",
+    "type": "spot",
+    "base_coin": "INFI",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-17T15:30:00.000Z",
+    "internal_id": "spot-INFI-USDT",
+    "symbol": "INFI",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {

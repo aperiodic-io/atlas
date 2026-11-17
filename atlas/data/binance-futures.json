@@ -1969,7 +1969,11 @@
       "DAO"
     ],
     "first_capture": "2021-12-27T00:00:00.000Z",
-    "end_date": "2024-04-02T00:00:00.000Z",
+    "base_coin": "ANT",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "pre_market",
     "base_asset_id": "ANT",
     "base_asset_match": "snapshot_cmc_id",
     "quote_asset_id": "USDT",

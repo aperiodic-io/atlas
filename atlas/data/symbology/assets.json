@@ -10011,6 +10011,20 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "DXY",
+   "ticker": "DXY",
+   "name": "U.S. Dollar Index (Derivatives)",
+   "asset_class": "index",
+   "cmc_id": 42768,
+   "cmc_slug": "us-dollar-index-derivatives",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-03T03:11:30Z",
+   "minted_at": "2026-11-17"
+  },
+  {
    "asset_id": "DXYZ",
    "ticker": "DXYZ",
    "name": "DXYZ",
@@ -32755,6 +32769,24 @@
    "status": "active",
    "cmc_date_added": "2026-07-02T11:50:39Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "TTWOX",
+   "ticker": "TTWOx",
+   "name": "TAKE-TWO INTERACTIVE SOFTWARE tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42858,
+   "cmc_slug": "take-two-interactive-software-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XTTWO"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-17"
   },
   {
    "asset_id": "TUNE",

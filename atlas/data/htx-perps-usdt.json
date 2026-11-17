@@ -648,11 +648,16 @@
     "id": "ANT-USDT",
     "type": "perpetual",
     "first_capture": "2022-06-17T00:00:00.000Z",
-    "end_date": "2022-09-28T00:00:00.000Z",
     "internal_id": "perpetual-ANT-USDT:USDT",
     "symbol": "ANT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "base_coin": "ANT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto"
   },
   {
     "id": "ANTHROPIC-USDT",
@@ -6107,6 +6112,21 @@
     "first_capture": "2026-05-15T00:00:00.000Z",
     "internal_id": "perpetual-MRVL-USDT:USDT",
     "symbol": "MRVL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MS-USDT",
+    "type": "perpetual",
+    "base_coin": "MS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T00:00:00.000Z",
+    "internal_id": "perpetual-MS-USDT:USDT",
+    "symbol": "MS",
     "denominator": "USDT",
     "margin": "USDT"
   },

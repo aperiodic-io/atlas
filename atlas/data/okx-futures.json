@@ -83982,6 +83982,25 @@
     "unified_id": "future-IRYS-USD:USD-20310530"
   },
   {
+    "id": "JCT-USD_UM_XPERP-311121",
+    "type": "future",
+    "underlying": "crypto",
+    "contract_size": 1000.0,
+    "first_capture": "2026-11-16T12:00:00.270Z",
+    "internal_id": "future-JCT-USD:USD-20311121",
+    "symbol": "JCT",
+    "denominator": "USD",
+    "margin": "USD",
+    "delivery_date": "2031-11-21T00:00:00",
+    "cmc_id": 38909,
+    "category": [],
+    "base_asset_id": "JCT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "USD",
+    "unified_id": "future-JCT-USD:USD-20311121"
+  },
+  {
     "id": "JTO-USD_UM_XPERP-310725",
     "type": "future",
     "contract_size": 1.0,
@@ -101950,7 +101969,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OPENAI-USD:USD-20310905"

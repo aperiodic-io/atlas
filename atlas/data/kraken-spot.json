@@ -9679,6 +9679,17 @@
     "denominator": "USD"
   },
   {
+    "id": "INFI/USD",
+    "type": "spot",
+    "base_coin": "INFI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T10:08:01.471Z",
+    "internal_id": "spot-INFI-USD",
+    "symbol": "INFI",
+    "denominator": "USD"
+  },
+  {
     "id": "INIT/EUR",
     "type": "spot",
     "base_coin": "INIT",
@@ -22640,6 +22651,17 @@
     "internal_id": "spot-XL1-USD",
     "symbol": "XL1",
     "denominator": "USD"
+  },
+  {
+    "id": "XLA/EUR",
+    "type": "spot",
+    "base_coin": "XLA",
+    "quote_coin": "EUR",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T10:08:01.471Z",
+    "internal_id": "spot-XLA-EUR",
+    "symbol": "XLA",
+    "denominator": "EUR"
   },
   {
     "id": "XLA/USD",
