@@ -2339,6 +2339,26 @@
     "unified_id": "perpetual-ANKR-USDT:USDT"
   },
   {
+    "id": "ANTAUSDT",
+    "type": "perpetual",
+    "base_coin": "ANTA",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-17T11:34:18.000Z",
+    "internal_id": "perpetual-ANTA-USDT:USDT",
+    "symbol": "ANTA",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ANTA",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANTA-USDT:USDT"
+  },
+  {
     "id": "ANTHROPICUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-ANTHROPIC-USDT:USDT",
@@ -2378,8 +2398,13 @@
     "settle_coin": "USDT",
     "contract_size": 1.0,
     "underlying": "equity",
+    "cmc_id": 42868,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "ANT.EQUITY",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ANT.EQUITY-USDT:USDT"
@@ -10373,6 +10398,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-GLW-USDT:USDT"
+  },
+  {
+    "id": "GLXYUSDT",
+    "type": "perpetual",
+    "base_coin": "GLXY",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-17T11:35:39.000Z",
+    "internal_id": "perpetual-GLXY-USDT:USDT",
+    "symbol": "GLXY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "GLXY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-GLXY-USDT:USDT"
   },
   {
     "id": "GMESTOCKUSDT",
@@ -23495,6 +23540,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-TMF-USDT:USDT"
+  },
+  {
+    "id": "TMOUSDT",
+    "type": "perpetual",
+    "base_coin": "TMO",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-17T11:43:22.000Z",
+    "internal_id": "perpetual-TMO-USDT:USDT",
+    "symbol": "TMO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "TMO",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TMO-USDT:USDT"
   },
   {
     "id": "TMXUSDT",

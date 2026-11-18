@@ -1116,7 +1116,7 @@
     "symbol": "AMZU",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-17T10:04:19.505Z"
+    "end_date": "2026-11-17T10:04:19.505Z"
   },
   {
     "id": "ANETSTOCK_USDT",
@@ -1191,8 +1191,7 @@
     "internal_id": "perpetual-ANTHROPIC-USDT:USDT",
     "symbol": "ANTHROPIC",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-17T10:04:19.660Z"
+    "margin": "USDT"
   },
   {
     "id": "AONSTOCK_USDT",
@@ -3993,6 +3992,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-CLSTOCK-USDT:USDT",
+    "symbol": "CLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CLXSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "CLXSTOCK",
@@ -4763,6 +4777,21 @@
     "margin": "USDT"
   },
   {
+    "id": "DANGOTESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DANGOTESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "pre_market",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-DANGOTESTOCK-USDT:USDT",
+    "symbol": "DANGOTESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DARK_USDT",
     "type": "perpetual",
     "base_coin": "DARK",
@@ -5353,6 +5382,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-20T07:03:19.709Z"
+  },
+  {
+    "id": "DUKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DUKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-DUKSTOCK-USDT:USDT",
+    "symbol": "DUKSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DUOLSTOCK_USDT",
@@ -17261,6 +17305,21 @@
     "first_capture": "2026-03-03T07:54:00Z",
     "internal_id": "perpetual-TSMSTOCK-USDT:USDT",
     "symbol": "TSMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TSNSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TSNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:26:00Z",
+    "internal_id": "perpetual-TSNSTOCK-USDT:USDT",
+    "symbol": "TSNSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

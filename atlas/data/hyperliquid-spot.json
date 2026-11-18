@@ -121,7 +121,15 @@
     "symbol": "ANT",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42868,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ANT.EQUITY-USDC"
   },
   {
     "id": "ANZ/USDC",
@@ -721,7 +729,15 @@
     "internal_id": "spot-EQANT-USDC",
     "symbol": "EQANT",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42869,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EQANT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-EQANT-USDC"
   },
   {
     "id": "EQGOOG/USDC",

@@ -841,6 +841,28 @@
     "unified_id": "perpetual-ANKR-USDC:USDC"
   },
   {
+    "id": "ANT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-18T09:41:39.446Z",
+    "internal_id": "perpetual-ANT-USDC:USDC",
+    "symbol": "ANT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42868,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ANT.EQUITY-USDC:USDC"
+  },
+  {
     "id": "ANTHROPIC",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -856,9 +878,9 @@
       "DeFi",
       "Tokenized Stock"
     ],
-    "missing_since": "2026-11-17T10:04:24.967Z",
+    "end_date": "2026-11-17T10:04:24.967Z",
     "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-ANTHROPIC-USDC:USDC"

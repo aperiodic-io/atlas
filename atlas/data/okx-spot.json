@@ -32545,6 +32545,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XBWET-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T07:00:00.000Z",
+    "internal_id": "spot-XBWET-USDT",
+    "symbol": "XBWET",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XBX-USDT",
     "type": "spot",
     "internal_id": "spot-XBX-USDT",
@@ -32895,6 +32905,16 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-CVNAX-USDT"
+  },
+  {
+    "id": "XCYPH-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T07:30:00.000Z",
+    "internal_id": "spot-XCYPH-USDT",
+    "symbol": "XCYPH",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
   },
   {
     "id": "XDDOG-USDT",
@@ -34652,6 +34672,16 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XPFE-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T06:00:00.000Z",
+    "internal_id": "spot-XPFE-USDT",
+    "symbol": "XPFE",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XPL-EUR",
     "type": "spot",
     "internal_id": "spot-XPL-EUR",
@@ -35850,6 +35880,16 @@
     "denominator": "USDT",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XTWST-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T06:30:00.000Z",
+    "internal_id": "spot-XTWST-USDT",
+    "symbol": "XTWST",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {

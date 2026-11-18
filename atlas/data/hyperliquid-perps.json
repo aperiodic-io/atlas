@@ -6373,6 +6373,28 @@
     "unified_id": "perpetual-H100-USDC:USDC"
   },
   {
+    "id": "io:INTC",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:40:12.922Z",
+    "internal_id": "perpetual-IO:INTC-USDC:USDC",
+    "symbol": "IO:INTC",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 39472,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "INTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-INTC-USDC:USDC"
+  },
+  {
     "id": "io:IONQ",
     "type": "perpetual",
     "internal_id": "perpetual-IO:IONQ-USDC:USDC",
@@ -8046,6 +8068,8 @@
     "margin_asset": "USDC",
     "underlying": "equity",
     "first_capture": "2026-09-02T00:00:00.000Z",
+    "cmc_id": 42877,
+    "category": [],
     "base_asset_id": "IGV",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",

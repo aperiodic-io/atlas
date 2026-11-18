@@ -2033,7 +2033,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "ANSEM",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -2099,8 +2099,16 @@
     "contract_size": 0.01,
     "quantity_unit": "base",
     "underlying": "pre_market",
+    "cmc_id": 42868,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANT.EQUITY-USDT:USDT"
   },
   {
     "id": "APD_USDT",
@@ -4196,6 +4204,7 @@
     "margin": "USDT",
     "cmc_id": 34830,
     "category": [],
+    "missing_since": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "BGSC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -4956,6 +4965,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "BONER",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -5163,7 +5173,7 @@
     "margin": "USDT",
     "cmc_id": 42025,
     "category": [],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "BREW",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -8625,7 +8635,7 @@
     "margin": "USDT",
     "cmc_id": 41953,
     "category": [],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "DELTA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -9772,7 +9782,7 @@
     "symbol": "EMBER",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -11021,7 +11031,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "FLORK",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11278,7 +11288,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "FONE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -11473,6 +11483,7 @@
     "category": [
       "Memes"
     ],
+    "missing_since": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "FRONG",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -14558,7 +14569,7 @@
     "category": [
       "Real World Assets Protocols"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "INDEX.THE_INDEX_FINANCE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -15474,7 +15485,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "JUGGERNAUT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -16469,7 +16480,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "LAPTOP",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -19087,7 +19098,7 @@
     "symbol": "MOO",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -19282,7 +19293,7 @@
     "contract_size": 10.0,
     "quantity_unit": "base",
     "underlying": "crypto",
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "MPLX",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21601,7 +21612,7 @@
     "category": [
       "DeFi"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "ORBIO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -21949,6 +21960,7 @@
     "margin": "USDT",
     "cmc_id": 42366,
     "category": [],
+    "missing_since": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "PAID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -23885,7 +23897,7 @@
     "margin_asset": "USDT",
     "contract_size": 0.1,
     "quantity_unit": "base",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "first_capture": "2026-05-29T00:00:00.000Z",
     "internal_id": "perpetual-QNTX-USDT:USDT",
     "symbol": "QNTX",
@@ -26158,7 +26170,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "SI",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -29302,7 +29314,7 @@
     "symbol": "TOLLY",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
   },
@@ -32843,7 +32855,7 @@
     "category": [
       "Layer 1"
     ],
-    "missing_since": "2026-11-17T10:04:10.082Z",
+    "end_date": "2026-11-17T10:04:10.082Z",
     "base_asset_id": "XNO",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",

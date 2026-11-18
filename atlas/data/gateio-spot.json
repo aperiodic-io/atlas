@@ -4379,6 +4379,7 @@
     "symbol": "ANTHROPIC3L",
     "denominator": "USDT",
     "first_capture": "2026-06-05T00:00:00.000Z",
+    "missing_since": "2026-11-18T09:40:21.930Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -4390,6 +4391,7 @@
     "symbol": "ANTHROPIC3S",
     "denominator": "USDT",
     "first_capture": "2026-06-05T00:00:00.000Z",
+    "missing_since": "2026-11-18T09:40:21.930Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -4400,14 +4402,7 @@
     "denominator": "USDT",
     "first_capture": "2020-10-26T00:00:00.000Z",
     "end_date": "2024-09-11T00:00:00.000Z",
-    "cmc_id": 1680,
-    "category": [
-      "DAO"
-    ],
-    "base_asset_id": "ANT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-ANT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "AOG_USDT",

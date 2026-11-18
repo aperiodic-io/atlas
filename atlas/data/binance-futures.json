@@ -1951,8 +1951,9 @@
     "first_capture": "2026-06-02T00:00:00.000Z",
     "base_coin": "ANTHROPIC",
     "quote_coin": "USDT",
+    "end_date": "2026-11-17T11:00:00.000Z",
     "base_asset_id": "ANTHROPIC",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ANTHROPIC-USDT:USDT"
@@ -1964,9 +1965,10 @@
     "symbol": "ANT",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 1680,
+    "cmc_id": 42868,
     "category": [
-      "DAO"
+      "DeFi",
+      "Tokenized Stock"
     ],
     "first_capture": "2021-12-27T00:00:00.000Z",
     "base_coin": "ANT",
@@ -1974,11 +1976,11 @@
     "contract_size": 1.0,
     "margin_asset": "USDT",
     "underlying": "pre_market",
-    "base_asset_id": "ANT",
-    "base_asset_match": "snapshot_cmc_id",
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-ANT-USDT:USDT"
+    "unified_id": "perpetual-ANT.EQUITY-USDT:USDT"
   },
   {
     "id": "apebusd",
@@ -2344,6 +2346,25 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ARPA-USDT:USDT"
+  },
+  {
+    "id": "artyusdt",
+    "type": "perpetual",
+    "base_coin": "ARTY",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:40:00.000Z",
+    "internal_id": "perpetual-ARTY-USDT:USDT",
+    "symbol": "ARTY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ARTY.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ARTY.EQUITY-USDT:USDT"
   },
   {
     "id": "arusdt",
@@ -5502,6 +5523,25 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CBRS-USDT:USDT"
+  },
+  {
+    "id": "ccjusdt",
+    "type": "perpetual",
+    "base_coin": "CCJ",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:50:00.000Z",
+    "internal_id": "perpetual-CCJ-USDT:USDT",
+    "symbol": "CCJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "CCJ",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CCJ-USDT:USDT"
   },
   {
     "id": "ccusdt",
@@ -9006,6 +9046,25 @@
     "unified_id": "perpetual-ETHW-USDT:USDT"
   },
   {
+    "id": "etnusdt",
+    "type": "perpetual",
+    "base_coin": "ETN",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:55:00.000Z",
+    "internal_id": "perpetual-ETN-USDT:USDT",
+    "symbol": "ETN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ETN.EQUITY",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ETN.EQUITY-USDT:USDT"
+  },
+  {
     "id": "eulusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -11497,6 +11556,25 @@
     "unified_id": "perpetual-005380-USDT:USDT"
   },
   {
+    "id": "ibitusdt",
+    "type": "perpetual",
+    "base_coin": "IBIT",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:45:00.000Z",
+    "internal_id": "perpetual-IBIT-USDT:USDT",
+    "symbol": "IBIT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "IBIT",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IBIT-USDT:USDT"
+  },
+  {
     "id": "ibkrusdt",
     "type": "perpetual",
     "base_coin": "IBKR",
@@ -11699,6 +11777,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ID-USDT:USDT"
+  },
+  {
+    "id": "igvusdt",
+    "type": "perpetual",
+    "base_coin": "IGV",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:35:00.000Z",
+    "internal_id": "perpetual-IGV-USDT:USDT",
+    "symbol": "IGV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42877,
+    "category": [],
+    "base_asset_id": "IGV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IGV-USDT:USDT"
   },
   {
     "id": "ilvusdt",
@@ -19796,6 +19895,29 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SOXS-USDT:USDT"
+  },
+  {
+    "id": "soxxusdt",
+    "type": "perpetual",
+    "base_coin": "SOXX",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T09:30:00.000Z",
+    "internal_id": "perpetual-SOXX-USDT:USDT",
+    "symbol": "SOXX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42766,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "SOXX.EQUITY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
   },
   {
     "id": "spaceusdt",

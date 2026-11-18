@@ -10305,6 +10305,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "INFI-USDT",
+    "type": "spot",
+    "base_coin": "INFI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-17T15:30:00.000Z",
+    "internal_id": "spot-INFI-USDT",
+    "symbol": "INFI",
+    "denominator": "USDT"
+  },
+  {
     "id": "INFOFI-USDT",
     "type": "spot",
     "first_capture": "2025-06-30T00:00:00.000Z",

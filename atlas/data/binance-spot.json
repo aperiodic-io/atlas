@@ -3736,14 +3736,7 @@
     "denominator": "BNB",
     "first_capture": "2021-02-23T00:00:00.000Z",
     "end_date": "2024-01-06T00:00:00.000Z",
-    "category": [
-      "DAO"
-    ],
-    "cmc_id": 1680,
-    "base_asset_id": "ANT",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "BNB",
-    "unified_id": "spot-ANT-BNB"
+    "quote_asset_id": "BNB"
   },
   {
     "id": "antbtc",
@@ -3753,14 +3746,7 @@
     "denominator": "BTC",
     "first_capture": "2021-02-23T00:00:00.000Z",
     "end_date": "2024-02-21T00:00:00.000Z",
-    "category": [
-      "DAO"
-    ],
-    "cmc_id": 1680,
-    "base_asset_id": "ANT",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "BTC",
-    "unified_id": "spot-ANT-BTC"
+    "quote_asset_id": "BTC"
   },
   {
     "id": "antbusd",
@@ -3769,13 +3755,7 @@
     "symbol": "ANT",
     "denominator": "BUSD",
     "first_capture": "2021-03-04T00:00:00.000Z",
-    "end_date": "2023-09-23T00:00:00.000Z",
-    "category": [
-      "DAO"
-    ],
-    "cmc_id": 1680,
-    "base_asset_id": "ANT",
-    "base_asset_match": "venue_lineage"
+    "end_date": "2023-09-23T00:00:00.000Z"
   },
   {
     "id": "antusdt",
@@ -3785,14 +3765,7 @@
     "denominator": "USDT",
     "first_capture": "2021-02-23T00:00:00.000Z",
     "end_date": "2024-02-21T00:00:00.000Z",
-    "category": [
-      "DAO"
-    ],
-    "cmc_id": 1680,
-    "base_asset_id": "ANT",
-    "base_asset_match": "venue_lineage",
-    "quote_asset_id": "USDT",
-    "unified_id": "spot-ANT-USDT"
+    "quote_asset_id": "USDT"
   },
   {
     "id": "anybtc",
@@ -51260,7 +51233,7 @@
     "cmc_id": 3408,
     "category": [],
     "base_asset_id": "USDC",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "THB",
     "unified_id": "spot-USDC-THB"
   },

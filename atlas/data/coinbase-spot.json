@@ -1035,14 +1035,7 @@
     "denominator": "USD",
     "first_capture": "2022-12-08T00:00:00.000Z",
     "end_date": "2024-01-06T00:00:00.000Z",
-    "cmc_id": 1680,
-    "category": [
-      "DAO"
-    ],
-    "base_asset_id": "ANT",
-    "base_asset_match": "cross_venue_consensus",
-    "quote_asset_id": "USD",
-    "unified_id": "spot-ANT-USD"
+    "quote_asset_id": "USD"
   },
   {
     "id": "APE-EUR",
@@ -9409,7 +9402,7 @@
       "Interoperability"
     ],
     "first_capture": "2024-04-29T00:00:00.000Z",
-    "missing_since": "2026-11-17T10:04:21.292Z",
+    "end_date": "2026-11-17T10:04:21.292Z",
     "base_asset_id": "NEON",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
@@ -13042,7 +13035,7 @@
     "cmc_id": 38602,
     "category": [],
     "first_capture": "2025-10-08T00:00:00.000Z",
-    "missing_since": "2026-11-17T10:04:21.292Z",
+    "end_date": "2026-11-17T10:04:21.292Z",
     "base_asset_id": "SYND",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
