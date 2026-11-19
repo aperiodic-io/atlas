@@ -5314,6 +5314,28 @@
     "unified_id": "perpetual-WET-USDC:USDC"
   },
   {
+    "id": "HUT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:47:41.654Z",
+    "internal_id": "perpetual-HUT-USDC:USDC",
+    "symbol": "HUT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42325,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "HUT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-HUT-USDC:USDC"
+  },
+  {
     "id": "HYPE",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -8138,6 +8160,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-PEOPLE-USDC:USDC"
+  },
+  {
+    "id": "PFE",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:47:41.654Z",
+    "internal_id": "perpetual-PFE-USDC:USDC",
+    "symbol": "PFE",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42699,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PFE.PFIZER_INC_DERIVATIVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PFE.PFIZER_INC_DERIVATIVE-USDC:USDC"
   },
   {
     "id": "PHA",
@@ -11308,6 +11352,50 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-V-USDC:USDC"
+  },
+  {
+    "id": "VKTX",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:47:41.654Z",
+    "internal_id": "perpetual-VKTX-USDC:USDC",
+    "symbol": "VKTX",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42405,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "VKTX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VKTX-USDC:USDC"
+  },
+  {
+    "id": "VRT",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:47:41.654Z",
+    "internal_id": "perpetual-VRT-USDC:USDC",
+    "symbol": "VRT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40089,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "VRT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VRT-USDC:USDC"
   },
   {
     "id": "VVV",

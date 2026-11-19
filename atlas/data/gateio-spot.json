@@ -4371,6 +4371,17 @@
     "unified_id": "spot-ANTFUN-USDT"
   },
   {
+    "id": "ANTG_USDT",
+    "type": "spot",
+    "base_coin": "ANTG",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T15:30:00.000Z",
+    "internal_id": "spot-ANTG-USDT",
+    "symbol": "ANTG",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "ANTHROPIC3L_USDT",
     "type": "spot",
     "base_coin": "ANTHROPIC3L",
@@ -4379,7 +4390,7 @@
     "symbol": "ANTHROPIC3L",
     "denominator": "USDT",
     "first_capture": "2026-06-05T00:00:00.000Z",
-    "missing_since": "2026-11-18T09:40:21.930Z",
+    "end_date": "2026-11-18T09:40:21.930Z",
     "quote_asset_id": "USDT"
   },
   {
@@ -4391,7 +4402,7 @@
     "symbol": "ANTHROPIC3S",
     "denominator": "USDT",
     "first_capture": "2026-06-05T00:00:00.000Z",
-    "missing_since": "2026-11-18T09:40:21.930Z",
+    "end_date": "2026-11-18T09:40:21.930Z",
     "quote_asset_id": "USDT"
   },
   {

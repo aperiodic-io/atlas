@@ -19374,6 +19374,44 @@
     "quote_asset_id": "BTC"
   },
   {
+    "id": "ewjbusdt",
+    "type": "spot",
+    "base_coin": "EWJB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-EWJB-USDT",
+    "symbol": "EWJB",
+    "denominator": "USDT",
+    "cmc_id": 42863,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWJB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWJB-USDT"
+  },
+  {
+    "id": "ewtbusdt",
+    "type": "spot",
+    "base_coin": "EWTB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-EWTB-USDT",
+    "symbol": "EWTB",
+    "denominator": "USDT",
+    "cmc_id": 42866,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWTB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWTB-USDT"
+  },
+  {
     "id": "ewybusdt",
     "type": "spot",
     "internal_id": "spot-EWYB-USDT",
@@ -19391,6 +19429,44 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-EWYB-USDT"
+  },
+  {
+    "id": "ewzbusdt",
+    "type": "spot",
+    "base_coin": "EWZB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-EWZB-USDT",
+    "symbol": "EWZB",
+    "denominator": "USDT",
+    "cmc_id": 42861,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWZB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWZB-USDT"
+  },
+  {
+    "id": "ewzsbusdt",
+    "type": "spot",
+    "base_coin": "EWZSB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-EWZSB-USDT",
+    "symbol": "EWZSB",
+    "denominator": "USDT",
+    "cmc_id": 42864,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "EWZSB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-EWZSB-USDT"
   },
   {
     "id": "ezbtc",
@@ -26326,6 +26402,25 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "iwmbusdt",
+    "type": "spot",
+    "base_coin": "IWMB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-IWMB-USDT",
+    "symbol": "IWMB",
+    "denominator": "USDT",
+    "cmc_id": 42865,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IWMB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-IWMB-USDT"
+  },
+  {
     "id": "jasmybnb",
     "type": "spot",
     "internal_id": "spot-JASMY-BNB",
@@ -31732,6 +31827,25 @@
     "unified_id": "spot-MEGA-USDT"
   },
   {
+    "id": "melibusdt",
+    "type": "spot",
+    "base_coin": "MELIB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-MELIB-USDT",
+    "symbol": "MELIB",
+    "denominator": "USDT",
+    "cmc_id": 42859,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MELIB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MELIB-USDT"
+  },
+  {
     "id": "memebnb",
     "type": "spot",
     "internal_id": "spot-MEME-BNB",
@@ -35020,6 +35134,25 @@
     "denominator": "BUSD",
     "first_capture": "2021-06-04T00:00:00.000Z",
     "end_date": "2022-02-17T00:00:00.000Z"
+  },
+  {
+    "id": "nubusdt",
+    "type": "spot",
+    "base_coin": "NUB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T09:47:10.848Z",
+    "internal_id": "spot-NUB-USDT",
+    "symbol": "NUB",
+    "denominator": "USDT",
+    "cmc_id": 42862,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NUB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-NUB-USDT"
   },
   {
     "id": "nulsbtc",

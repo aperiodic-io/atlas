@@ -11089,6 +11089,7 @@
       "Real World Assets Protocols"
     ],
     "cmc_id": 2577,
+    "missing_since": "2026-11-19T09:47:20.564Z",
     "base_asset_id": "RVN",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -12080,7 +12081,7 @@
       "DeFi"
     ],
     "base_asset_id": "SOXX.EQUITY",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SOXX.EQUITY-USDT:USDT"
@@ -12288,8 +12289,12 @@
     "symbol": "SSPC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42887,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "SSPC",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SSPC-USDT:USDT"
@@ -14683,8 +14688,12 @@
     "symbol": "XLF",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42886,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "XLF",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLF-USDT:USDT"

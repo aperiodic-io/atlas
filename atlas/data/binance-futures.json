@@ -2360,8 +2360,10 @@
     "symbol": "ARTY",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42878,
+    "category": [],
     "base_asset_id": "ARTY.EQUITY",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ARTY.EQUITY-USDT:USDT"
@@ -5537,8 +5539,13 @@
     "symbol": "CCJ",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42881,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "CCJ",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CCJ-USDT:USDT"
@@ -9058,8 +9065,13 @@
     "symbol": "ETN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42880,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "ETN.EQUITY",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ETN.EQUITY-USDT:USDT"
@@ -11568,8 +11580,10 @@
     "symbol": "IBIT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42879,
+    "category": [],
     "base_asset_id": "IBIT",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"

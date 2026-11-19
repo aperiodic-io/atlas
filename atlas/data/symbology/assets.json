@@ -3089,9 +3089,12 @@
   {
    "asset_id": "ARTY.EQUITY",
    "ticker": "ARTY",
-   "name": "ARTY",
+   "name": "iShares Future AI & Tech ETF (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42878,
+   "cmc_slug": "ishares-future-ai-tech-etf-derivatives",
    "status": "active",
+   "cmc_date_added": "2026-11-18T09:05:16Z",
    "minted_at": "2026-11-18"
   },
   {
@@ -6783,9 +6786,16 @@
   {
    "asset_id": "CCJ",
    "ticker": "CCJ",
-   "name": "CCJ",
+   "name": "Cameco Corp (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42881,
+   "cmc_slug": "cameco-corp-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-11-18T09:17:19Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -10781,9 +10791,16 @@
   {
    "asset_id": "ETN.EQUITY",
    "ticker": "ETN",
-   "name": "ETN",
+   "name": "Eaton Corporation PLC (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42880,
+   "cmc_slug": "eaton-corporation-plc-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-11-18T09:17:19Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -10924,6 +10941,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "EWJB",
+   "ticker": "EWJB",
+   "name": "iShares MSCI Japan ETF Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42863,
+   "cmc_slug": "ishares-msci-japan-etf-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:30:48Z",
+   "minted_at": "2026-11-19"
+  },
+  {
    "asset_id": "EWJX",
    "ticker": "EWJx",
    "name": "iShares MSCI Japan tokenized ETF (xStock)",
@@ -10954,6 +10986,21 @@
    "status": "active",
    "cmc_date_added": "2026-05-22T04:27:14Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "EWTB",
+   "ticker": "EWTB",
+   "name": "iShares MSCI Taiwan ETF Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42866,
+   "cmc_slug": "ishares-msci-taiwan-etf-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:14:54Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "EWTX",
@@ -11035,6 +11082,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "EWZB",
+   "ticker": "EWZB",
+   "name": "iShares MSCI Brazil ETF Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42861,
+   "cmc_slug": "ishares-msci-brazil-etf-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:25:57Z",
+   "minted_at": "2026-11-19"
+  },
+  {
    "asset_id": "EWZS",
    "ticker": "EWZS",
    "name": "iShares MSCI Brazil Small-Cap ETF (Derivative)",
@@ -11047,6 +11109,21 @@
    "status": "active",
    "cmc_date_added": "2026-10-29T11:02:02Z",
    "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "EWZSB",
+   "ticker": "EWZSB",
+   "name": "iShares MSCI Brazil Small-Cap ETF Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42864,
+   "cmc_slug": "ishares-msci-brazil-small-cap-etf-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:17:30Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "EWZX",
@@ -14903,9 +14980,12 @@
   {
    "asset_id": "IBIT",
    "ticker": "IBIT",
-   "name": "IBIT",
+   "name": "iShares Bitcoin Trust ETF (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42879,
+   "cmc_slug": "ishares-bitcoin-trust-etf-derivatives",
    "status": "active",
+   "cmc_date_added": "2026-11-18T09:11:09Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -15861,6 +15941,21 @@
    "status": "active",
    "cmc_date_added": "2026-01-30T05:41:11Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "IWMB",
+   "ticker": "IWMB",
+   "name": "iShares Russell 2000 Index Fund Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42865,
+   "cmc_slug": "ishares-russell-2000-index-fund-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:20:32Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "IWMX",
@@ -17046,6 +17141,24 @@
    "status": "active",
    "cmc_date_added": "2026-10-19T13:41:11Z",
    "minted_at": "2026-10-22"
+  },
+  {
+   "asset_id": "KSTRX",
+   "ticker": "KSTRx",
+   "name": "KraneShares China T & S STAR 50 Index tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42890,
+   "cmc_slug": "kraneshares-china-t-s-star-50-index-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XKSTR"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "KT",
@@ -19296,6 +19409,21 @@
    "minted_at": "2026-10-30"
   },
   {
+   "asset_id": "MELIB",
+   "ticker": "MELIB",
+   "name": "MercadoLibre Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42859,
+   "cmc_slug": "mercadolibre-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:07:05Z",
+   "minted_at": "2026-11-19"
+  },
+  {
    "asset_id": "MEME",
    "ticker": "MEME",
    "name": "Memecoin",
@@ -19703,6 +19831,24 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MINIMAXX",
+   "ticker": "MINIMAXx",
+   "name": "MiniMax tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42888,
+   "cmc_slug": "minimax-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XMINIMAX"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "MIR",
@@ -20541,6 +20687,24 @@
    "status": "active",
    "cmc_date_added": "2026-09-23T04:34:25Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "MSTUX",
+   "ticker": "MSTUx",
+   "name": "T-REX 2X Long MSTR Daily Target tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42892,
+   "cmc_slug": "t-rex-2x-long-mstr-daily-target-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XMSTU"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-19T09:43:57Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "MTL",
@@ -22035,6 +22199,21 @@
    "status": "active",
    "cmc_date_added": "2026-08-04T07:32:02Z",
    "minted_at": "2026-10-21"
+  },
+  {
+   "asset_id": "NUB",
+   "ticker": "NUB",
+   "name": "Nu Holdings Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42862,
+   "cmc_slug": "nu-holdings-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:10:58Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "NUCLEAR",
@@ -30434,9 +30613,15 @@
   {
    "asset_id": "SSPC",
    "ticker": "SSPC",
-   "name": "SSPC",
+   "name": "Leverage Shares 2X Short SPCX Daily ETF (Derivatives)",
    "asset_class": "equity",
-   "status": "active",
+   "cmc_id": 42887,
+   "cmc_slug": "leverage-shares-2x-short-spcx-daily-etf-derivatives",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2026-11-19T03:34:36Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -36095,9 +36280,15 @@
   {
    "asset_id": "XLF",
    "ticker": "XLF",
-   "name": "XLF",
+   "name": "State Street Financial Sel Sec SPDR ETF (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42886,
+   "cmc_slug": "state-street-financial-sel-sec-spdr-etf-derivatives",
+   "categories": [
+    "DeFi"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-11-19T03:31:57Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -37161,6 +37352,24 @@
    "status": "active",
    "cmc_date_added": "2022-10-07T17:49:26Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ZJINNOX",
+   "ticker": "ZJINNOx",
+   "name": "Zhongji Innolight tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42889,
+   "cmc_slug": "zhongji-innolight-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XZHONGJI"
+   ],
+   "status": "untracked",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-19"
   },
   {
    "asset_id": "ZK",

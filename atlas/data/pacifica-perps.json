@@ -68,6 +68,29 @@
     "unified_id": "perpetual-ADA-USDC:USDC"
   },
   {
+    "id": "ANT",
+    "type": "perpetual",
+    "base_asset": "ANT",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T00:09:19.191Z",
+    "internal_id": "perpetual-ANT-USDC:USDC",
+    "symbol": "ANT",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42868,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANT.EQUITY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-ANT.EQUITY-USDC:USDC"
+  },
+  {
     "id": "ARB",
     "type": "perpetual",
     "base_asset": "ARB",

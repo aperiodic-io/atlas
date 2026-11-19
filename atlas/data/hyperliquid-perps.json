@@ -6417,6 +6417,28 @@
     "unified_id": "perpetual-IONQ-USDC:USDC"
   },
   {
+    "id": "io:META",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:47:15.387Z",
+    "internal_id": "perpetual-IO:META-USDC:USDC",
+    "symbol": "IO:META",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 39513,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "META",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-META-USDC:USDC"
+  },
+  {
     "id": "io:MOONSHOT",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10748,6 +10770,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-XPD-USDC:USDC"
+  },
+  {
+    "id": "xyz:PANW",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "unknown",
+    "first_capture": "2026-11-19T09:47:15.387Z",
+    "internal_id": "perpetual-XYZ:PANW-USDC:USDC",
+    "symbol": "XYZ:PANW",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40199,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PANW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PANW-USDC:USDC"
   },
   {
     "id": "xyz:PLATINUM",

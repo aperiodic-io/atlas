@@ -1296,6 +1296,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-EIGEN",
+    "type": "spot",
+    "base_coin": "EIGEN",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-EIGEN-BTC",
+    "symbol": "EIGEN",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-ELF",
     "type": "spot",
     "base_coin": "ELF",
@@ -3462,6 +3473,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-REQ",
+    "type": "spot",
+    "base_coin": "REQ",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-REQ-BTC",
+    "symbol": "REQ",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-RESOLV",
     "type": "spot",
     "first_capture": "2025-09-19T00:00:00.000Z",
@@ -3923,10 +3945,12 @@
     "id": "BTC-STRK",
     "type": "spot",
     "first_capture": "2021-03-31T00:00:00.000Z",
-    "end_date": "2024-02-17T00:00:00.000Z",
     "internal_id": "spot-STRK-BTC",
     "symbol": "STRK",
-    "denominator": "BTC"
+    "denominator": "BTC",
+    "base_coin": "STRK",
+    "quote_coin": "BTC",
+    "underlying": "crypto"
   },
   {
     "id": "BTC-STX",
@@ -4189,6 +4213,17 @@
     "end_date": "2024-11-09T00:00:00.000Z",
     "internal_id": "spot-UPP-BTC",
     "symbol": "UPP",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BTC-US",
+    "type": "spot",
+    "base_coin": "US",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-US-BTC",
+    "symbol": "US",
     "denominator": "BTC"
   },
   {
@@ -9406,6 +9441,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "USDT-EIGEN",
+    "type": "spot",
+    "base_coin": "EIGEN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-EIGEN-USDT",
+    "symbol": "EIGEN",
+    "denominator": "USDT"
+  },
+  {
     "id": "USDT-ELSA",
     "type": "spot",
     "base_coin": "ELSA",
@@ -10702,6 +10748,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "USDT-REQ",
+    "type": "spot",
+    "base_coin": "REQ",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-REQ-USDT",
+    "symbol": "REQ",
+    "denominator": "USDT"
+  },
+  {
     "id": "USDT-RESOLV",
     "type": "spot",
     "first_capture": "2025-09-19T00:00:00.000Z",
@@ -10961,6 +11018,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "USDT-STRK",
+    "type": "spot",
+    "base_coin": "STRK",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-STRK-USDT",
+    "symbol": "STRK",
+    "denominator": "USDT"
+  },
+  {
     "id": "USDT-SUN",
     "type": "spot",
     "base_coin": "SUN",
@@ -11134,6 +11202,17 @@
     "first_capture": "2026-05-13T00:00:00.000Z",
     "internal_id": "spot-UP2-USDT",
     "symbol": "UP2",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDT-US",
+    "type": "spot",
+    "base_coin": "US",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T09:51:19.282Z",
+    "internal_id": "spot-US-USDT",
+    "symbol": "US",
     "denominator": "USDT"
   },
   {

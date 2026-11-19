@@ -851,6 +851,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ARTY-USDT",
+    "type": "perpetual",
+    "base_coin": "ARTY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T00:00:00.000Z",
+    "internal_id": "perpetual-ARTY-USDT:USDT",
+    "symbol": "ARTY",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ARX-USDT",
     "type": "perpetual",
     "first_capture": "2026-06-24T00:00:00.000Z",
@@ -1454,8 +1469,7 @@
     "internal_id": "perpetual-BITO-USDT:USDT",
     "symbol": "BITO",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-18T08:00:00.000Z"
+    "margin": "USDT"
   },
   {
     "id": "BKNG-USDT",
@@ -2002,6 +2016,21 @@
     "end_date": "2026-04-03T00:00:00.000Z",
     "internal_id": "perpetual-CC-USDT:USDT",
     "symbol": "CC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CCJ-USDT",
+    "type": "perpetual",
+    "base_coin": "CCJ",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T00:00:00.000Z",
+    "internal_id": "perpetual-CCJ-USDT:USDT",
+    "symbol": "CCJ",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -3253,6 +3282,21 @@
     "end_date": "2023-01-13T00:00:00.000Z",
     "internal_id": "perpetual-ETHW-USDT:USDT",
     "symbol": "ETHW",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ETNSTOCK-USDT",
+    "type": "perpetual",
+    "base_coin": "ETNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T00:00:00.000Z",
+    "internal_id": "perpetual-ETNSTOCK-USDT:USDT",
+    "symbol": "ETNSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -4514,6 +4558,21 @@
     "end_date": "2024-07-12T00:00:00.000Z",
     "internal_id": "perpetual-ID-USDT:USDT",
     "symbol": "ID",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "IGV-USDT",
+    "type": "perpetual",
+    "base_coin": "IGV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T00:00:00.000Z",
+    "internal_id": "perpetual-IGV-USDT:USDT",
+    "symbol": "IGV",
     "denominator": "USDT",
     "margin": "USDT"
   },

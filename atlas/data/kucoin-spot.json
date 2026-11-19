@@ -162,6 +162,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "AAPLON-USDT",
+    "type": "spot",
+    "base_coin": "AAPLON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T10:00:00.000Z",
+    "internal_id": "spot-AAPLON-USDT",
+    "symbol": "AAPLON",
+    "denominator": "USDT"
+  },
+  {
     "id": "AAPLX-USDT",
     "type": "spot",
     "base_coin": "AAPLX",
@@ -1185,6 +1196,17 @@
     "end_date": "2025-07-19T00:00:00.000Z",
     "internal_id": "spot-AMU-USDT",
     "symbol": "AMU",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AMZNON-USDT",
+    "type": "spot",
+    "base_coin": "AMZNON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T10:00:00.000Z",
+    "internal_id": "spot-AMZNON-USDT",
+    "symbol": "AMZNON",
     "denominator": "USDT"
   },
   {
@@ -8832,6 +8854,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "GOOGLON-USDT",
+    "type": "spot",
+    "base_coin": "GOOGLON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:00:00.000Z",
+    "internal_id": "spot-GOOGLON-USDT",
+    "symbol": "GOOGLON",
+    "denominator": "USDT"
+  },
+  {
     "id": "GORK-USDT",
     "type": "spot",
     "first_capture": "2025-05-05T00:00:00.000Z",
@@ -13980,6 +14013,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "MSFTON-USDT",
+    "type": "spot",
+    "base_coin": "MSFTON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T09:00:00.000Z",
+    "internal_id": "spot-MSFTON-USDT",
+    "symbol": "MSFTON",
+    "denominator": "USDT"
+  },
+  {
     "id": "MSN-USDT",
     "type": "spot",
     "first_capture": "2024-04-29T00:00:00.000Z",
@@ -14956,6 +15000,17 @@
     "first_capture": "2025-09-21T00:00:00.000Z",
     "internal_id": "spot-NUMI-USDT",
     "symbol": "NUMI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "NVDAON-USDT",
+    "type": "spot",
+    "base_coin": "NVDAON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:00:00.000Z",
+    "internal_id": "spot-NVDAON-USDT",
+    "symbol": "NVDAON",
     "denominator": "USDT"
   },
   {

@@ -33740,6 +33740,24 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "XKSTR-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T07:00:00.000Z",
+    "internal_id": "spot-XKSTR-USDT",
+    "symbol": "XKSTR",
+    "denominator": "USDT",
+    "cmc_id": 42890,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "KSTRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-KSTRX-USDT"
+  },
+  {
     "id": "XLITE-USDC",
     "type": "spot",
     "internal_id": "spot-XLITE-USDC",
@@ -34029,6 +34047,24 @@
     "unified_id": "spot-METAX-USDT"
   },
   {
+    "id": "XMINIMAX-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T06:00:00.000Z",
+    "internal_id": "spot-XMINIMAX-USDT",
+    "symbol": "XMINIMAX",
+    "denominator": "USDT",
+    "cmc_id": 42888,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MINIMAXX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MINIMAXX-USDT"
+  },
+  {
     "id": "XMP-USDT",
     "type": "spot",
     "underlying": "equity",
@@ -34245,6 +34281,24 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-MSTRX-USDT"
+  },
+  {
+    "id": "XMSTU-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T07:30:00.000Z",
+    "internal_id": "spot-XMSTU-USDT",
+    "symbol": "XMSTU",
+    "denominator": "USDT",
+    "cmc_id": 42892,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MSTUX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-MSTUX-USDT"
   },
   {
     "id": "XMU-USDC",
@@ -35217,6 +35271,16 @@
     "unified_id": "spot-XRP-USDT"
   },
   {
+    "id": "XSECZ-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T08:00:00.000Z",
+    "internal_id": "spot-XSECZ-USDT",
+    "symbol": "XSECZ",
+    "denominator": "USDT",
+    "quote_asset_id": "USDT"
+  },
+  {
     "id": "XSHAZ-USDT",
     "type": "spot",
     "internal_id": "spot-XSHAZ-USDT",
@@ -35706,6 +35770,16 @@
     "underlying": "equity",
     "first_capture": "2026-08-07T00:00:00.000Z",
     "end_date": "2026-11-04T08:31:10.872Z",
+    "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XTLT-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T08:30:00.000Z",
+    "internal_id": "spot-XTLT-USDT",
+    "symbol": "XTLT",
+    "denominator": "USDT",
     "quote_asset_id": "USDT"
   },
   {
@@ -36211,6 +36285,24 @@
     "symbol": "XXOM",
     "denominator": "USDT",
     "quote_asset_id": "USDT"
+  },
+  {
+    "id": "XZHONGJI-USDT",
+    "type": "spot",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T06:30:00.000Z",
+    "internal_id": "spot-XZHONGJI-USDT",
+    "symbol": "XZHONGJI",
+    "denominator": "USDT",
+    "cmc_id": 42889,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ZJINNOX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ZJINNOX-USDT"
   },
   {
     "id": "XZM-USDT",

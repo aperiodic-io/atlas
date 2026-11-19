@@ -2183,6 +2183,28 @@
     "unified_id": "perpetual-ARQQ-USDT:USDT"
   },
   {
+    "id": "ARTYUSDT",
+    "type": "perpetual",
+    "base_coin": "ARTY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-18T11:27:03.321Z",
+    "internal_id": "perpetual-ARTY-USDT:USDT",
+    "symbol": "ARTY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42878,
+    "category": [],
+    "base_asset_id": "ARTY.EQUITY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ARTY.EQUITY-USDT:USDT"
+  },
+  {
     "id": "ARUSDT",
     "type": "perpetual",
     "base_coin": "AR",
@@ -4809,6 +4831,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CBRS-USDT:USDT"
+  },
+  {
+    "id": "CCJUSDT",
+    "type": "perpetual",
+    "base_coin": "CCJ",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-18T11:27:06.991Z",
+    "internal_id": "perpetual-CCJ-USDT:USDT",
+    "symbol": "CCJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42881,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "CCJ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-CCJ-USDT:USDT"
   },
   {
     "id": "CCLUSDT",
@@ -7908,8 +7955,13 @@
     "symbol": "ETN",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42880,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "ETN.EQUITY",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ETN.EQUITY-USDT:USDT"
@@ -10657,8 +10709,10 @@
     "symbol": "IBIT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42879,
+    "category": [],
     "base_asset_id": "IBIT",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"
@@ -10843,6 +10897,28 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ID-USDT:USDT"
+  },
+  {
+    "id": "IGVUSDT",
+    "type": "perpetual",
+    "base_coin": "IGV",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-18T11:27:09.223Z",
+    "internal_id": "perpetual-IGV-USDT:USDT",
+    "symbol": "IGV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42877,
+    "category": [],
+    "base_asset_id": "IGV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IGV-USDT:USDT"
   },
   {
     "id": "IKAUSDT",
@@ -15111,6 +15187,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NEIRO-USDT:USDT"
+  },
+  {
+    "id": "NEMUSDT",
+    "type": "perpetual",
+    "base_coin": "NEM",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-18T11:27:00.415Z",
+    "internal_id": "perpetual-NEM-USDT:USDT",
+    "symbol": "NEM",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "NEONUSDT",
@@ -20651,6 +20744,10 @@
     "symbol": "SSPC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42887,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "SSPC",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",

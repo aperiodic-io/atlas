@@ -2220,12 +2220,15 @@
     "internal_id": "spot-ONE-USDC",
     "symbol": "ONE",
     "denominator": "USDC",
-    "cmc_id": 37166,
-    "category": [],
-    "base_asset_id": "ONE.CROSS",
-    "base_asset_match": "cmc_market_pair",
+    "cmc_id": 3945,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ONE",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDC",
-    "unified_id": "spot-ONE.CROSS-USDC"
+    "unified_id": "spot-ONE-USDC"
   },
   {
     "id": "ONEAR/USDC",

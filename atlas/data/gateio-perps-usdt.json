@@ -2079,6 +2079,7 @@
       "DeFi",
       "Tokenized Stock"
     ],
+    "missing_since": "2026-11-19T09:47:25.285Z",
     "base_asset_id": "ANTHROPIC",
     "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
@@ -4204,7 +4205,7 @@
     "margin": "USDT",
     "cmc_id": 34830,
     "category": [],
-    "missing_since": "2026-11-18T09:40:24.009Z",
+    "end_date": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "BGSC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -4965,7 +4966,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-18T09:40:24.009Z",
+    "end_date": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "BONER",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -6182,8 +6183,13 @@
     "symbol": "CCJ",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42881,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "CCJ",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-CCJ-USDT:USDT"
@@ -8460,6 +8466,23 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-DBR-USDT:USDT"
+  },
+  {
+    "id": "DCTY_USDT",
+    "type": "perpetual",
+    "base_coin": "DCTY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 100.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T04:20:28.000Z",
+    "internal_id": "perpetual-DCTY-USDT:USDT",
+    "symbol": "DCTY",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT"
   },
   {
     "id": "DDOG_USDT",
@@ -11483,7 +11506,7 @@
     "category": [
       "Memes"
     ],
-    "missing_since": "2026-11-18T09:40:24.009Z",
+    "end_date": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "FRONG",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -14193,8 +14216,10 @@
     "symbol": "IBIT",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42879,
+    "category": [],
     "base_asset_id": "IBIT",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"
@@ -21960,7 +21985,7 @@
     "margin": "USDT",
     "cmc_id": 42366,
     "category": [],
-    "missing_since": "2026-11-18T09:40:24.009Z",
+    "end_date": "2026-11-18T09:40:24.009Z",
     "base_asset_id": "PAID",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -27592,6 +27617,10 @@
     "symbol": "SSPC",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42887,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "SSPC",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
@@ -32692,8 +32721,12 @@
     "symbol": "XLF",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42886,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "XLF",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLF-USDT:USDT"

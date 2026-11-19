@@ -11787,8 +11787,10 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-09-16T00:00:00.000Z",
+    "cmc_id": 42879,
+    "category": [],
     "base_asset_id": "IBIT",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-IBIT-USDT:USDT"
@@ -22380,6 +22382,10 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-07-29T00:00:00.000Z",
+    "cmc_id": 42887,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "SSPC",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
@@ -26209,8 +26215,12 @@
     "contract_size": 1.0,
     "underlying": "equity",
     "first_capture": "2026-07-21T00:00:00.000Z",
+    "cmc_id": 42886,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "XLF",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-XLF-USDT:USDT"
