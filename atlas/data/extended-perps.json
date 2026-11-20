@@ -615,7 +615,7 @@
     "base_asset": "ANTHROP",
     "margin_asset": "USD",
     "contract_size": 1.0,
-    "underlying": "pre_market",
+    "underlying": "equity",
     "first_capture": "2026-10-14T22:14:15.166575Z",
     "internal_id": "perpetual-ANTHROP-USD:USD",
     "symbol": "ANTHROP",
@@ -2229,7 +2229,7 @@
       "DeFi"
     ],
     "base_asset_id": "CT",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "perpetual-CT-USD:USD"

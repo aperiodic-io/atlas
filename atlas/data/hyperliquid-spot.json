@@ -132,6 +132,15 @@
     "unified_id": "spot-ANT.EQUITY-USDC"
   },
   {
+    "id": "ANTX/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-20T09:35:04.206Z",
+    "internal_id": "spot-ANTX-USDC",
+    "symbol": "ANTX",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "ANZ/USDC",
     "type": "spot",
     "internal_id": "spot-ANZ-USDC",
@@ -1538,12 +1547,7 @@
     "symbol": "ISLAND",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "category": [],
-    "cmc_id": 34794,
-    "base_asset_id": "ISLAND",
-    "base_asset_match": "cmc_market_pair",
-    "quote_asset_id": "USDC",
-    "unified_id": "spot-ISLAND-USDC"
+    "quote_asset_id": "USDC"
   },
   {
     "id": "IZEC/USDC",
@@ -2220,15 +2224,12 @@
     "internal_id": "spot-ONE-USDC",
     "symbol": "ONE",
     "denominator": "USDC",
-    "cmc_id": 3945,
-    "category": [
-      "Layer 1",
-      "Smart Contracts"
-    ],
-    "base_asset_id": "ONE",
-    "base_asset_match": "cross_venue_consensus",
+    "cmc_id": 37166,
+    "category": [],
+    "base_asset_id": "ONE.CROSS",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "unified_id": "spot-ONE-USDC"
+    "unified_id": "spot-ONE.CROSS-USDC"
   },
   {
     "id": "ONEAR/USDC",

@@ -5632,6 +5632,21 @@
     "margin": "USDT"
   },
   {
+    "id": "MAGS-USDT",
+    "type": "perpetual",
+    "base_coin": "MAGS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T00:00:00.000Z",
+    "internal_id": "perpetual-MAGS-USDT:USDT",
+    "symbol": "MAGS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MANA-USDT",
     "type": "perpetual",
     "first_capture": "2021-01-29T00:00:00.000Z",
@@ -6304,7 +6319,8 @@
     "internal_id": "perpetual-MUBARAK-USDT:USDT",
     "symbol": "MUBARAK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-20T08:00:00.000Z"
   },
   {
     "id": "MUU-USDT",
@@ -7792,7 +7808,8 @@
     "internal_id": "perpetual-RAY-USDT:USDT",
     "symbol": "RAY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-20T08:00:00.000Z"
   },
   {
     "id": "RDDT-USDT",
@@ -8566,7 +8583,7 @@
     "base_coin": "SNDK",
     "quote_coin": "USDT",
     "margin_asset": "USDT",
-    "contract_size": 0.001,
+    "contract_size": 0.01,
     "quantity_unit": "base",
     "underlying": "equity",
     "first_capture": "2026-04-21T00:00:00.000Z",
@@ -10663,6 +10680,21 @@
     "first_capture": "2026-05-20T00:00:00.000Z",
     "internal_id": "perpetual-XLE-USDT:USDT",
     "symbol": "XLE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XLF-USDT",
+    "type": "perpetual",
+    "base_coin": "XLF",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T00:00:00.000Z",
+    "internal_id": "perpetual-XLF-USDT:USDT",
+    "symbol": "XLF",
     "denominator": "USDT",
     "margin": "USDT"
   },

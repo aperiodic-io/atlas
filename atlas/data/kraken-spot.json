@@ -1468,6 +1468,28 @@
     "denominator": "BTC"
   },
   {
+    "id": "ANTSPV/USD",
+    "type": "spot",
+    "base_coin": "ANTx",
+    "quote_coin": "USD",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T09:39:07.312Z",
+    "internal_id": "spot-ANTX-USD",
+    "symbol": "ANTX",
+    "denominator": "USD"
+  },
+  {
+    "id": "ANTx/USD",
+    "type": "spot",
+    "base_coin": "ANTx",
+    "quote_coin": "USD",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T09:39:07.312Z",
+    "internal_id": "spot-ANTX-USD",
+    "symbol": "ANTX",
+    "denominator": "USD"
+  },
+  {
     "id": "APE/EUR",
     "type": "spot",
     "base_coin": "APE",
@@ -3007,6 +3029,17 @@
     "first_capture": "2026-08-14T00:00:00.000Z",
     "internal_id": "spot-BEX-USD",
     "symbol": "BEX",
+    "denominator": "USD"
+  },
+  {
+    "id": "BFI/USD",
+    "type": "spot",
+    "base_coin": "BFI",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T09:39:07.312Z",
+    "internal_id": "spot-BFI-USD",
+    "symbol": "BFI",
     "denominator": "USD"
   },
   {

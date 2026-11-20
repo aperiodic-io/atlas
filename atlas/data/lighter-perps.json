@@ -3904,8 +3904,15 @@
     "symbol": "VARIATIONAL",
     "denominator": "USDC",
     "margin": "USDC",
+    "cmc_id": 42899,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "VARIATIONAL",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-VARIATIONAL-USDC:USDC"
   },
   {
     "id": "4099",

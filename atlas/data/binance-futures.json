@@ -1760,6 +1760,25 @@
     "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
   },
   {
+    "id": "amdlusdt",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T09:35:00.000Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "AMDL",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMDL-USDT:USDT"
+  },
+  {
     "id": "amdusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -1975,7 +1994,7 @@
     "quote_coin": "USDT",
     "contract_size": 1.0,
     "margin_asset": "USDT",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "base_asset_id": "ANT.EQUITY",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -12332,6 +12351,30 @@
     "unified_id": "perpetual-JELLYJELLY-USDT:USDT"
   },
   {
+    "id": "jnjusdt",
+    "type": "perpetual",
+    "base_coin": "JNJ",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T09:30:00.000Z",
+    "internal_id": "perpetual-JNJ-USDT:USDT",
+    "symbol": "JNJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40820,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "JNJ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-JNJ-USDT:USDT"
+  },
+  {
     "id": "joeusdt",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -15586,6 +15629,25 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NIL-USDT:USDT"
+  },
+  {
+    "id": "niousdt",
+    "type": "perpetual",
+    "base_coin": "NIO",
+    "quote_coin": "USDT",
+    "contract_size": 1.0,
+    "margin_asset": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T09:40:00.000Z",
+    "internal_id": "perpetual-NIO-USDT:USDT",
+    "symbol": "NIO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "NIO",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NIO-USDT:USDT"
   },
   {
     "id": "nkeusdt",

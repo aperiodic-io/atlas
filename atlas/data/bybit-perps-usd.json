@@ -2836,6 +2836,26 @@
     "unified_id": "perpetual-ARPA-USDT:USDT"
   },
   {
+    "id": "ARTYSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "ARTYSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:32:14.000Z",
+    "internal_id": "perpetual-ARTYSTOCK-USDT:USDT",
+    "symbol": "ARTYSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ARTYSTOCK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ARTYSTOCK-USDT:USDT"
+  },
+  {
     "id": "ARUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-AR-USDT:USDT",
@@ -8910,6 +8930,31 @@
     "unified_id": "perpetual-ETHW-USDT:USDT"
   },
   {
+    "id": "ETNUSDT",
+    "type": "perpetual",
+    "base_coin": "ETN",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:30:45.000Z",
+    "internal_id": "perpetual-ETN-USDT:USDT",
+    "symbol": "ETN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42880,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ETN.EQUITY",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ETN.EQUITY-USDT:USDT"
+  },
+  {
     "id": "EULUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-EUL-USDT:USDT",
@@ -12044,6 +12089,28 @@
     "end_date": "2024-01-01T00:00:00.000Z",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "IGVUSDT",
+    "type": "perpetual",
+    "base_coin": "IGV",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:29:37.000Z",
+    "internal_id": "perpetual-IGV-USDT:USDT",
+    "symbol": "IGV",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42877,
+    "category": [],
+    "base_asset_id": "IGV",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-IGV-USDT:USDT"
   },
   {
     "id": "ILVUSDT",

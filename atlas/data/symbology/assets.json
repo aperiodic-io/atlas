@@ -1187,6 +1187,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "AEP",
+   "ticker": "AEP",
+   "name": "AEP",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "AERGO",
    "ticker": "AERGO",
    "name": "Aergo",
@@ -2155,6 +2163,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "AMDL",
+   "ticker": "AMDL",
+   "name": "AMDL",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "AMDON",
    "ticker": "AMDon",
    "name": "AMD Tokenized Stock (Ondo)",
@@ -2526,6 +2542,21 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ANTB",
+   "ticker": "ANTB",
+   "name": "Anthropic Tokenized bStocks",
+   "asset_class": "crypto",
+   "cmc_id": 42860,
+   "cmc_slug": "anthropic-tokenized-bstocks",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-16T12:28:02Z",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "ANTFUN",
    "ticker": "ANTFUN",
    "name": "AntFun",
@@ -2538,6 +2569,14 @@
    "status": "active",
    "cmc_date_added": "2025-12-10T02:27:31Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ANTH",
+   "ticker": "ANTH",
+   "name": "ANTH",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "ANTHROPIC",
@@ -2571,6 +2610,39 @@
    "status": "active",
    "cmc_date_added": "2025-08-11T06:16:15Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "ANTON",
+   "ticker": "ANTon",
+   "name": "Anthropic Tokenized Stock (Ondo)",
+   "asset_class": "crypto",
+   "cmc_id": 42874,
+   "cmc_slug": "anthropic-tokenized-stock-ondo",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-18T03:28:53Z",
+   "minted_at": "2026-11-20"
+  },
+  {
+   "asset_id": "ANTX",
+   "ticker": "ANTx",
+   "name": "Anthropic tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42885,
+   "cmc_slug": "anthropic-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XANT"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "ANZ",
@@ -3096,6 +3168,14 @@
    "status": "active",
    "cmc_date_added": "2026-11-18T09:05:16Z",
    "minted_at": "2026-11-18"
+  },
+  {
+   "asset_id": "ARTYSTOCK",
+   "ticker": "ARTYSTOCK",
+   "name": "ARTYSTOCK",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "ARW",
@@ -5036,6 +5116,14 @@
    "asset_class": "equity",
    "status": "active",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "BKR",
+   "ticker": "BKR",
+   "name": "BKR",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "BLAST",
@@ -8402,6 +8490,14 @@
    "status": "active",
    "cmc_date_added": "2026-09-08T22:17:44Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "CTAS",
+   "ticker": "CTAS",
+   "name": "CTAS",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "CTC",
@@ -19256,6 +19352,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MDLZ",
+   "ticker": "MDLZ",
+   "name": "MDLZ",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "MDT",
    "ticker": "MDT",
    "name": "Measurable Data Token",
@@ -21443,6 +21547,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "NEM",
+   "ticker": "NEM",
+   "name": "NEM",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "NEO",
    "ticker": "NEO",
    "name": "Neo",
@@ -22400,6 +22512,24 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "NVOX",
+   "ticker": "NVOX",
+   "name": "Novo Nordisk tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 37058,
+   "cmc_slug": "novo-nordisk-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XNVO"
+   ],
+   "status": "active",
+   "cmc_date_added": "2025-07-01T18:40:23Z",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "NVS",
    "ticker": "NVS",
    "name": "NVS",
@@ -23180,6 +23310,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ORLY",
+   "ticker": "ORLY",
+   "name": "ORLY",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "ORO",
    "ticker": "ORO",
    "name": "Operon Origins",
@@ -23554,6 +23692,24 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "PANWX",
+   "ticker": "PANWX",
+   "name": "Palo Alto Networks tokenized stock(xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 40082,
+   "cmc_slug": "palo-alto-networks-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XPANW"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-07-17T06:24:02Z",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "PAPARAZZI",
    "ticker": "PAPARAZZI",
    "name": "Paparazzi Token",
@@ -23694,6 +23850,24 @@
    "status": "active",
    "cmc_date_added": "2026-09-29T10:19:28Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "PDDX",
+   "ticker": "PDDx",
+   "name": "PDD Holdings Inc tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42895,
+   "cmc_slug": "pdd-holdings-inc-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XPDD"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "PEAQ",
@@ -23963,6 +24137,9 @@
     "DeFi",
     "Tokenized Stock"
    ],
+   "aliases": [
+    "XPEP"
+   ],
    "status": "active",
    "cmc_date_added": "2025-07-01T18:40:46Z",
    "minted_at": "2026-10-14"
@@ -24011,6 +24188,24 @@
    "status": "active",
    "cmc_date_added": "2026-10-29T11:02:46Z",
    "minted_at": "2026-10-30"
+  },
+  {
+   "asset_id": "PFEX",
+   "ticker": "PFEX",
+   "name": "Pfizer tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 37063,
+   "cmc_slug": "pfizer-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XPFE"
+   ],
+   "status": "active",
+   "cmc_date_added": "2025-07-01T18:40:54Z",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "PG",
@@ -27463,6 +27658,14 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "ROST",
+   "ticker": "ROST",
+   "name": "ROST",
+   "asset_class": "equity",
+   "status": "active",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "RPL",
    "ticker": "RPL",
    "name": "Rocket Pool",
@@ -28473,6 +28676,24 @@
    "status": "active",
    "cmc_date_added": "2026-10-07T06:06:38Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "SECZX",
+   "ticker": "SECZx",
+   "name": "Securitize Corp tokenized stock (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42893,
+   "cmc_slug": "securitize-corp-tokenized-stock-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XSECZ"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-06-08T15:32:52Z",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "SEDA",
@@ -32130,6 +32351,24 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "TLTX",
+   "ticker": "TLTx",
+   "name": "iShares 20+ Year Treasury Bond tokenized ETF (xStock)",
+   "asset_class": "crypto",
+   "cmc_id": 42894,
+   "cmc_slug": "ishares-20-year-treasury-bond-tokenized-etf-xstock",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "XTLT"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-19T10:23:06Z",
+   "minted_at": "2026-11-20"
+  },
+  {
    "asset_id": "TM",
    "ticker": "TM",
    "name": "TM",
@@ -34384,6 +34623,20 @@
    "status": "active",
    "cmc_date_added": "2023-09-21T17:22:55Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "VARIATIONAL",
+   "ticker": "VARIATIONAL",
+   "name": "Variational (Derivatives)",
+   "asset_class": "unknown",
+   "cmc_id": 42899,
+   "cmc_slug": "variational-derivatives",
+   "categories": [
+    "DeFi"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-11-20T02:48:12Z",
+   "minted_at": "2026-11-20"
   },
   {
    "asset_id": "VATRENI",

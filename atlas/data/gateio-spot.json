@@ -4406,6 +4406,44 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "ANTON_USDT",
+    "type": "spot",
+    "base_coin": "ANTON",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T18:00:00.000Z",
+    "internal_id": "spot-ANTON-USDT",
+    "symbol": "ANTON",
+    "denominator": "USDT",
+    "cmc_id": 42874,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANTON",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ANTON-USDT"
+  },
+  {
+    "id": "ANTX_USDT",
+    "type": "spot",
+    "base_coin": "ANTX",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-19T19:40:00.000Z",
+    "internal_id": "spot-ANTX-USDT",
+    "symbol": "ANTX",
+    "denominator": "USDT",
+    "cmc_id": 42885,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANTX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ANTX-USDT"
+  },
+  {
     "id": "ANT_USDT",
     "type": "spot",
     "internal_id": "spot-ANT-USDT",

@@ -13299,6 +13299,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "METAON-USDT",
+    "type": "spot",
+    "base_coin": "METAON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T10:00:00.000Z",
+    "internal_id": "spot-METAON-USDT",
+    "symbol": "METAON",
+    "denominator": "USDT"
+  },
+  {
     "id": "METAX-USDT",
     "type": "spot",
     "base_coin": "METAX",
@@ -14166,6 +14177,17 @@
     "end_date": "2026-03-05T00:00:00.000Z",
     "internal_id": "spot-MUBI-USDT",
     "symbol": "MUBI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MUON-USDT",
+    "type": "spot",
+    "base_coin": "MUON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:00:00.000Z",
+    "internal_id": "spot-MUON-USDT",
+    "symbol": "MUON",
     "denominator": "USDT"
   },
   {
@@ -17235,6 +17257,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "QQQON-USDT",
+    "type": "spot",
+    "base_coin": "QQQON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:00:00.000Z",
+    "internal_id": "spot-QQQON-USDT",
+    "symbol": "QQQON",
+    "denominator": "USDT"
+  },
+  {
     "id": "QRDO-ETH",
     "type": "spot",
     "first_capture": "2022-08-16T00:00:00.000Z",
@@ -18593,7 +18626,8 @@
     "first_capture": "2026-05-08T00:00:00.000Z",
     "internal_id": "spot-SHARE-USDT",
     "symbol": "SHARE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-20T09:39:07.506Z"
   },
   {
     "id": "SHELL-USDT",
@@ -19442,6 +19476,17 @@
     "first_capture": "2024-12-04T00:00:00.000Z",
     "internal_id": "spot-SPX-USDT",
     "symbol": "SPX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SPYON-USDT",
+    "type": "spot",
+    "base_coin": "SPYON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:00:00.000Z",
+    "internal_id": "spot-SPYON-USDT",
+    "symbol": "SPYON",
     "denominator": "USDT"
   },
   {
@@ -21383,6 +21428,17 @@
     "first_capture": "2022-08-16T00:00:00.000Z",
     "internal_id": "spot-TRX-USDT",
     "symbol": "TRX",
+    "denominator": "USDT"
+  },
+  {
+    "id": "TSLAON-USDT",
+    "type": "spot",
+    "base_coin": "TSLAON",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T10:00:00.000Z",
+    "internal_id": "spot-TSLAON-USDT",
+    "symbol": "TSLAON",
     "denominator": "USDT"
   },
   {

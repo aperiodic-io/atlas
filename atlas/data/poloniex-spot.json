@@ -12420,6 +12420,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "MMTSUI_USDT",
+    "type": "spot",
+    "base_coin": "MMTSUI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T07:00:00.000Z",
+    "internal_id": "spot-MMTSUI-USDT",
+    "symbol": "MMTSUI",
+    "denominator": "USDT"
+  },
+  {
     "id": "MMT_USDT",
     "type": "spot",
     "first_capture": "2023-07-05T00:00:00.000Z",

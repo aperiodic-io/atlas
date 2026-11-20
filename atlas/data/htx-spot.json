@@ -12321,6 +12321,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "mmtusdt",
+    "type": "spot",
+    "base_coin": "MMT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T12:00:00.000Z",
+    "internal_id": "spot-MMT-USDT",
+    "symbol": "MMT",
+    "denominator": "USDT"
+  },
+  {
     "id": "mndeusdt",
     "type": "spot",
     "base_coin": "MNDE",
