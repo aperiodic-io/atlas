@@ -19199,6 +19199,70 @@
       "symbol": "ANT"
     },
     {
+      "cmc_id": 42885,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 42885,
+            "date_added": "2026-06-08T15:32:52Z",
+            "identity_match": null,
+            "is_active": true,
+            "last_updated": "2026-11-20T11:57:48.078000Z",
+            "name": "Anthropic tokenized stock (xStock)",
+            "price_issue": "Hyperliquid price contradicts CMC for ANTX/USDC.",
+            "price_usd": 89.78534765179015,
+            "relative_price_difference": 0.14153709392724678,
+            "slug": "anthropic-tokenized-stock-xstock"
+          }
+        ],
+        "catalogue_issue": "tolerated 3 unreadable of 7950 rows (3 duplicated, total moved by 1 mid-fetch): 0.0377%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "low",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1192",
+          "observed_at": "2026-11-20T11:58:40.313692Z",
+          "price": 104.5885,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "ANTX",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xabec6aeab037b77c09a2a99264f9c81a35b02649",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "Wrapped Anthropic xStock",
+            "index": 1338,
+            "isCanonical": false,
+            "name": "ANTX",
+            "pair": "@1192",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x62b49ad298b4b4e1a25724612f9da220",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "price_mismatch",
+        "rationale": "The exchange ticker ANTX aligns with the Anthropic tokenized stock (xStock) candidate, but the asset is wrapped and the price probe mismatched, so the match is only weakly supported. Price evidence disagrees by 14.15%. Holding for review because Hyperliquid price evidence is price_mismatch."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-20T09:35:04.206000Z",
+        "original_id": "ANTX/USDC"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-11-20T11:58:36.061770Z",
+      "slug": "anthropic-tokenized-stock-xstock",
+      "status": "uncertain",
+      "symbol": "ANTX"
+    },
+    {
       "cmc_id": null,
       "evidence": {
         "candidates": [
