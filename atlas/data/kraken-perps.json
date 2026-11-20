@@ -382,7 +382,7 @@
     "margin_asset": "USD",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "first_capture": "2026-11-13T12:29:18.000Z",
     "internal_id": "perpetual-ANTX-USD:USD",
     "symbol": "ANTX",
@@ -2900,7 +2900,7 @@
     "symbol": "KAVA",
     "denominator": "USD",
     "margin": "USD",
-    "missing_since": "2026-11-19T09:46:26.270Z"
+    "end_date": "2026-11-19T09:46:26.270Z"
   },
   {
     "id": "PF_KDAUSD",
