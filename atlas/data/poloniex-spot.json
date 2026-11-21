@@ -14576,6 +14576,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "PIEVERSE_USDT",
+    "type": "spot",
+    "base_coin": "PIEVERSE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T12:00:00.000Z",
+    "internal_id": "spot-PIEVERSE-USDT",
+    "symbol": "PIEVERSE",
+    "denominator": "USDT"
+  },
+  {
     "id": "PIGEON_USDT",
     "type": "spot",
     "base_coin": "PIGEON",
@@ -24675,6 +24686,17 @@
     "end_date": "2026-08-21T00:00:00.000Z",
     "internal_id": "spot-VVAIFU-USDT",
     "symbol": "VVAIFU",
+    "denominator": "USDT"
+  },
+  {
+    "id": "VVV_USDT",
+    "type": "spot",
+    "base_coin": "VVV",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T12:30:00.000Z",
+    "internal_id": "spot-VVV-USDT",
+    "symbol": "VVV",
     "denominator": "USDT"
   },
   {

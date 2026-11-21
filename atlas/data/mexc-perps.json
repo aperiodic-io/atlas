@@ -1027,6 +1027,21 @@
     "margin": "USDT"
   },
   {
+    "id": "AMDL_USDT",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T13:00:00Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AMDSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "AMDSTOCK",
@@ -3323,7 +3338,8 @@
     "internal_id": "perpetual-CAD-USDT:USDT",
     "symbol": "CAD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "missing_since": "2026-11-21T09:07:47.132Z"
   },
   {
     "id": "CAHSTOCK_USDT",
@@ -3895,6 +3911,21 @@
     "first_capture": "2026-09-08T13:46:00Z",
     "internal_id": "perpetual-CIFRSTOCK-USDT:USDT",
     "symbol": "CIFRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T13:00:00Z",
+    "internal_id": "perpetual-CISTOCK-USDT:USDT",
+    "symbol": "CISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -11980,8 +12011,7 @@
     "internal_id": "perpetual-NIOSTOCK-USDT:USDT",
     "symbol": "NIOSTOCK",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-11-03T08:57:12.829Z"
+    "margin": "USDT"
   },
   {
     "id": "NIUBI_USDT",

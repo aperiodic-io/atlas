@@ -1340,6 +1340,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "ANTX-USDT",
+    "type": "spot",
+    "base_coin": "ANTX",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T14:30:00.000Z",
+    "internal_id": "spot-ANTX-USDT",
+    "symbol": "ANTX",
+    "denominator": "USDT"
+  },
+  {
     "id": "ANYONE-USDT",
     "type": "spot",
     "base_coin": "ANYONE",
@@ -18627,7 +18638,7 @@
     "internal_id": "spot-SHARE-USDT",
     "symbol": "SHARE",
     "denominator": "USDT",
-    "missing_since": "2026-11-20T09:39:07.506Z"
+    "end_date": "2026-11-20T09:39:07.506Z"
   },
   {
     "id": "SHELL-USDT",

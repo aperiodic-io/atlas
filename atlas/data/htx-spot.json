@@ -14732,6 +14732,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "pieverseusdt",
+    "type": "spot",
+    "base_coin": "PIEVERSE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T13:00:00.000Z",
+    "internal_id": "spot-PIEVERSE-USDT",
+    "symbol": "PIEVERSE",
+    "denominator": "USDT"
+  },
+  {
     "id": "pingusdt",
     "type": "spot",
     "base_coin": "PING",
@@ -20125,6 +20136,17 @@
     "end_date": "2022-11-26T00:00:00.000Z",
     "internal_id": "spot-VVS-USDT",
     "symbol": "VVS",
+    "denominator": "USDT"
+  },
+  {
+    "id": "vvvusdt",
+    "type": "spot",
+    "base_coin": "VVV",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T13:30:00.000Z",
+    "internal_id": "spot-VVV-USDT",
+    "symbol": "VVV",
     "denominator": "USDT"
   },
   {

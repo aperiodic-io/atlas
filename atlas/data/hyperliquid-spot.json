@@ -138,7 +138,15 @@
     "internal_id": "spot-ANTX-USDC",
     "symbol": "ANTX",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42885,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ANTX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ANTX-USDC"
   },
   {
     "id": "ANZ/USDC",
@@ -1547,7 +1555,12 @@
     "symbol": "ISLAND",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 34794,
+    "category": [],
+    "base_asset_id": "ISLAND",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ISLAND-USDC"
   },
   {
     "id": "IZEC/USDC",

@@ -3086,6 +3086,24 @@
     "unified_id": "spot-CITY-USDT"
   },
   {
+    "id": "CLEARUSDT",
+    "type": "spot",
+    "base_coin": "CLEAR",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-21T09:07:22.821Z",
+    "internal_id": "spot-CLEAR-USDT",
+    "symbol": "CLEAR",
+    "denominator": "USDT",
+    "cmc_id": 42884,
+    "category": [
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "CLEAR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-CLEAR-USDT"
+  },
+  {
     "id": "CLOUDUSDT",
     "type": "spot",
     "internal_id": "spot-CLOUD-USDT",
@@ -13960,7 +13978,7 @@
     "base_coin": "USDC",
     "cmc_id": 3408,
     "quote_coin": "BRL",
-    "missing_since": "2026-11-20T09:35:00.584Z",
+    "end_date": "2026-11-20T09:35:00.584Z",
     "base_asset_id": "USDC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "BRL",
@@ -14136,7 +14154,7 @@
     "base_coin": "USDT",
     "cmc_id": 825,
     "quote_coin": "BRL",
-    "missing_since": "2026-11-20T09:35:00.584Z",
+    "end_date": "2026-11-20T09:35:00.584Z",
     "base_asset_id": "USDT",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "BRL",

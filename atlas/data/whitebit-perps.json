@@ -4680,6 +4680,21 @@
     "margin": "USDT"
   },
   {
+    "id": "SNDKX_PERP",
+    "type": "perpetual",
+    "base_coin": "SNDKX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-21T09:07:49.278Z",
+    "internal_id": "perpetual-SNDKX-USDT:USDT",
+    "symbol": "SNDKX",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SNDK_PERP",
     "type": "perpetual",
     "base_coin": "SNDK",
@@ -4693,7 +4708,7 @@
     "symbol": "SNDK",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-11-20T09:35:28.757Z"
+    "end_date": "2026-11-20T09:35:28.757Z"
   },
   {
     "id": "SNX_PERP",

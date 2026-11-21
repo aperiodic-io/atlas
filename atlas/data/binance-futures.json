@@ -1772,8 +1772,12 @@
     "symbol": "AMDL",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42900,
+    "category": [
+      "DeFi"
+    ],
     "base_asset_id": "AMDL",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-AMDL-USDT:USDT"
@@ -15643,8 +15647,13 @@
     "symbol": "NIO",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42901,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "NIO",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NIO-USDT:USDT"

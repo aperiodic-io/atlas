@@ -1568,6 +1568,30 @@
     "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
   },
   {
+    "id": "AMDLUSDT",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-20T10:49:12.649Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42900,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AMDL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMDL-USDT:USDT"
+  },
+  {
     "id": "AMDUSDT",
     "type": "perpetual",
     "base_coin": "AMD",
@@ -11648,6 +11672,31 @@
     "unified_id": "perpetual-JMKE-USDT:USDT"
   },
   {
+    "id": "JNJUSDT",
+    "type": "perpetual",
+    "base_coin": "JNJ",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "unknown",
+    "first_capture": "2026-11-20T10:49:14.995Z",
+    "internal_id": "perpetual-JNJ-USDT:USDT",
+    "symbol": "JNJ",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40820,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "JNJ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-JNJ-USDT:USDT"
+  },
+  {
     "id": "JOBYUSDT",
     "type": "perpetual",
     "base_coin": "JOBY",
@@ -15426,8 +15475,13 @@
     "symbol": "NIO",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42901,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "NIO",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NIO-USDT:USDT"

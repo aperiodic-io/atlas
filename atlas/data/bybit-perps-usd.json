@@ -1723,15 +1723,8 @@
     "quantity_unit": "base",
     "first_capture": "2024-01-17T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
-    "cmc_id": 28846,
-    "category": [
-      "Generative AI"
-    ],
-    "base_asset_id": "AI.SLEEPLESS_AI",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AI.SLEEPLESS_AI-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "AIXBTUSDT",
@@ -2150,6 +2143,30 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-AMC.AMC_NTERTAINMENT_HOLDINGS_INC_DERIVATIVES-USDT:USDT"
+  },
+  {
+    "id": "AMDLUSDT",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-20T10:07:02.000Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42900,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AMDL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMDL-USDT:USDT"
   },
   {
     "id": "AMDSTOCKUSDT",
@@ -13902,6 +13919,26 @@
     "unified_id": "perpetual-LIT-USDT:USDT"
   },
   {
+    "id": "LIUSDT",
+    "type": "perpetual",
+    "base_coin": "LI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-20T10:06:08.000Z",
+    "internal_id": "perpetual-LI-USDT:USDT",
+    "symbol": "LI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "LI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-LI-USDT:USDT"
+  },
+  {
     "id": "LLYUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-LLY-USDT:USDT",
@@ -16547,6 +16584,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NIL-USDT:USDT"
+  },
+  {
+    "id": "NIOSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "NIOSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-20T10:07:55.000Z",
+    "internal_id": "perpetual-NIOSTOCK-USDT:USDT",
+    "symbol": "NIOSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "NIOSTOCK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NIOSTOCK-USDT:USDT"
   },
   {
     "id": "NIULAIUSDT",

@@ -4487,6 +4487,25 @@
     "quote_asset_id": "USDT"
   },
   {
+    "id": "CLEARUSDT",
+    "type": "spot",
+    "base_coin": "CLEAR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-20T14:00:00.000Z",
+    "internal_id": "spot-CLEAR-USDT",
+    "symbol": "CLEAR",
+    "denominator": "USDT",
+    "cmc_id": 42884,
+    "category": [
+      "Real World Assets Protocols"
+    ],
+    "base_asset_id": "CLEAR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-CLEAR-USDT"
+  },
+  {
     "id": "CLOREUSDT",
     "type": "spot",
     "internal_id": "spot-CLORE-USDT",
@@ -10805,6 +10824,7 @@
       "DAO"
     ],
     "first_capture": "2026-03-06T00:00:00.000Z",
+    "missing_since": "2026-11-21T09:07:48.246Z",
     "base_asset_id": "MANTRA",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
