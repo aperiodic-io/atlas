@@ -6379,7 +6379,7 @@
    "asset_class": "crypto",
    "cmc_id": 4703,
    "cmc_slug": "bonuscloud",
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2019-09-24T00:00:00Z",
    "minted_at": "2026-10-14"
   },
@@ -7485,11 +7485,14 @@
   },
   {
    "asset_id": "CLOUD",
-   "ticker": "CLOUD",
+   "ticker": "SANC",
    "name": "Sanctum",
    "asset_class": "crypto",
    "cmc_id": 32299,
    "cmc_slug": "sanctum-cloud",
+   "aliases": [
+    "CLOUD"
+   ],
    "status": "active",
    "cmc_date_added": "2024-07-19T11:45:07Z",
    "minted_at": "2026-10-14"
@@ -21198,7 +21201,7 @@
    "categories": [
     "Memes"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2024-10-23T07:26:07Z",
    "minted_at": "2026-10-14"
   },
@@ -25374,7 +25377,7 @@
    "categories": [
     "DeFi"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2025-12-30T07:33:30Z",
    "minted_at": "2026-10-14"
   },
@@ -25811,7 +25814,7 @@
    "categories": [
     "Privacy"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2022-01-15T02:08:52Z",
    "minted_at": "2026-10-14"
   },
@@ -26212,7 +26215,7 @@
    "asset_class": "crypto",
    "cmc_id": 3194,
    "cmc_slug": "dprating",
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2018-08-20T00:00:00Z",
    "minted_at": "2026-10-14"
   },
@@ -32730,7 +32733,7 @@
    "categories": [
     "Privacy"
    ],
-   "status": "active",
+   "status": "untracked",
    "cmc_date_added": "2024-07-15T15:45:49Z",
    "minted_at": "2026-10-14"
   },
@@ -37663,7 +37666,7 @@
    "aliases": [
     "XZHONGJI"
    ],
-   "status": "untracked",
+   "status": "active",
    "cmc_date_added": "2026-06-08T15:32:52Z",
    "minted_at": "2026-11-19"
   },
