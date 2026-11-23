@@ -12947,6 +12947,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "MU_USDT",
+    "type": "spot",
+    "base_coin": "MU",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-23T05:30:00.000Z",
+    "internal_id": "spot-MU-USDT",
+    "symbol": "MU",
+    "denominator": "USDT"
+  },
+  {
     "id": "MVL_USDT",
     "type": "spot",
     "base_coin": "MVL",
@@ -15615,6 +15626,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "RAXOL_USDT",
+    "type": "spot",
+    "base_coin": "RAXOL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-23T10:00:00.000Z",
+    "internal_id": "spot-RAXOL-USDT",
+    "symbol": "RAXOL",
+    "denominator": "USDT"
+  },
+  {
     "id": "RAY_USDT",
     "type": "spot",
     "base_coin": "RAY",
@@ -17173,6 +17195,17 @@
     "first_capture": "2025-01-06T00:00:00.000Z",
     "internal_id": "spot-SNAI-USDT",
     "symbol": "SNAI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SNDK_USDT",
+    "type": "spot",
+    "base_coin": "SNDK",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-23T05:00:00.000Z",
+    "internal_id": "spot-SNDK-USDT",
+    "symbol": "SNDK",
     "denominator": "USDT"
   },
   {

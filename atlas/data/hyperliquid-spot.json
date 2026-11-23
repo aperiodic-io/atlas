@@ -1449,6 +1449,15 @@
     "quote_asset_id": "USDC"
   },
   {
+    "id": "HXMR/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-23T10:12:15.897Z",
+    "internal_id": "spot-HXMR-USDC",
+    "symbol": "HXMR",
+    "denominator": "USDC",
+    "quote_asset_id": "USDC"
+  },
+  {
     "id": "HYBR/USDC",
     "type": "spot",
     "first_capture": "2026-11-02T08:47:15.706Z",
@@ -2021,6 +2030,15 @@
     "symbol": "MONAD",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
+    "quote_asset_id": "USDC"
+  },
+  {
+    "id": "MONTRA/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-23T10:12:15.897Z",
+    "internal_id": "spot-MONTRA-USDC",
+    "symbol": "MONTRA",
+    "denominator": "USDC",
     "quote_asset_id": "USDC"
   },
   {

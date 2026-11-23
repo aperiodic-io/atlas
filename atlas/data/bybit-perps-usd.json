@@ -1723,15 +1723,8 @@
     "quantity_unit": "base",
     "first_capture": "2024-01-17T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
-    "cmc_id": 28846,
-    "category": [
-      "Generative AI"
-    ],
-    "base_asset_id": "AI.SLEEPLESS_AI",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AI.SLEEPLESS_AI-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "AIXBTUSDT",
@@ -15777,6 +15770,26 @@
     "unified_id": "perpetual-MP-USDT:USDT"
   },
   {
+    "id": "MPWRUSDT",
+    "type": "perpetual",
+    "base_coin": "MPWR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-23T09:19:25.000Z",
+    "internal_id": "perpetual-MPWR-USDT:USDT",
+    "symbol": "MPWR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "MPWR",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MPWR-USDT:USDT"
+  },
+  {
     "id": "MRKUSDT",
     "type": "perpetual",
     "base_coin": "MRK",
@@ -17004,6 +17017,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NXPC-USDT:USDT"
+  },
+  {
+    "id": "NXPIUSDT",
+    "type": "perpetual",
+    "base_coin": "NXPI",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-23T09:21:09.000Z",
+    "internal_id": "perpetual-NXPI-USDT:USDT",
+    "symbol": "NXPI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "NXPI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NXPI-USDT:USDT"
   },
   {
     "id": "NYANUSDT",
@@ -21670,6 +21703,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
+  },
+  {
+    "id": "SMTCUSDT",
+    "type": "perpetual",
+    "base_coin": "SMTC",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-23T09:23:16.000Z",
+    "internal_id": "perpetual-SMTC-USDT:USDT",
+    "symbol": "SMTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "SMTC",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMTC-USDT:USDT"
   },
   {
     "id": "SNDKUSDT",
