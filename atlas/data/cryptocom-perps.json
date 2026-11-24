@@ -5648,8 +5648,7 @@
     "internal_id": "perpetual-SNDK-USD:USD",
     "symbol": "SNDK",
     "denominator": "USD",
-    "margin": "USD",
-    "end_date": "2026-11-17T10:04:22.243Z"
+    "margin": "USD"
   },
   {
     "id": "SNEKUSD-PERP",
@@ -6383,6 +6382,21 @@
     "first_capture": "2026-10-06T00:00:00.000Z",
     "internal_id": "perpetual-TWST-USD:USD",
     "symbol": "TWST",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "TXNUSD-PERP",
+    "type": "perpetual",
+    "base_coin": "TXN",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:57:18.998Z",
+    "internal_id": "perpetual-TXN-USD:USD",
+    "symbol": "TXN",
     "denominator": "USD",
     "margin": "USD"
   },

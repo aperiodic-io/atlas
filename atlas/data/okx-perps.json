@@ -514,6 +514,27 @@
     "unified_id": "perpetual-AGLD-USDT:USDT"
   },
   {
+    "id": "AGPU-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-24T09:00:00.000Z",
+    "internal_id": "perpetual-AGPU-USDT:USDT",
+    "symbol": "AGPU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40951,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "AGPU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AGPU-USDT:USDT"
+  },
+  {
     "id": "AI-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-AI-USDT:USDT",
@@ -811,6 +832,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-AMD-USDT:USDT"
+  },
+  {
+    "id": "AMDL-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-24T09:45:00.000Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42900,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AMDL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMDL-USDT:USDT"
   },
   {
     "id": "AMGN-USDT-SWAP",
@@ -3846,6 +3887,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-DGB-USDT:USDT"
+  },
+  {
+    "id": "DJT-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-24T09:15:00.000Z",
+    "internal_id": "perpetual-DJT-USDT:USDT",
+    "symbol": "DJT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 41918,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DJT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DJT-USDT:USDT"
   },
   {
     "id": "DKNG-USDT-SWAP",
@@ -7090,6 +7152,26 @@
     "unified_id": "perpetual-KSTR-USDT:USDT"
   },
   {
+    "id": "KWEB-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-24T09:30:00.000Z",
+    "internal_id": "perpetual-KWEB-USDT:USDT",
+    "symbol": "KWEB",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42934,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "KWEB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KWEB-USDT:USDT"
+  },
+  {
     "id": "LA-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-LA-USDT:USDT",
@@ -9503,7 +9585,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "cmc_market_pair",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-OPENAI-USDT:USDT"
@@ -13658,11 +13740,16 @@
     "margin": "USDT",
     "underlying": "equity",
     "first_capture": "2026-09-10T00:00:00.000Z",
-    "base_asset_id": "US100",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42522,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NDX",
+    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-US100-USDT:USDT"
+    "unified_id": "perpetual-NDX-USDT:USDT"
   },
   {
     "id": "US500-USDT-SWAP",

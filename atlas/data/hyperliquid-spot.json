@@ -2039,7 +2039,12 @@
     "internal_id": "spot-MONTRA-USDC",
     "symbol": "MONTRA",
     "denominator": "USDC",
-    "quote_asset_id": "USDC"
+    "cmc_id": 42931,
+    "category": [],
+    "base_asset_id": "MONTRA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-MONTRA-USDC"
   },
   {
     "id": "MSFT/USDC",

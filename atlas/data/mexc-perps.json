@@ -5882,6 +5882,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ENTGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ENTGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-12T14:00:00Z",
+    "internal_id": "perpetual-ENTGSTOCK-USDT:USDT",
+    "symbol": "ENTGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EOGSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "EOGSTOCK",
@@ -6500,6 +6515,21 @@
     "denominator": "USDC",
     "margin": "USDC",
     "end_date": "2026-11-12T09:10:34.109Z"
+  },
+  {
+    "id": "FIONA_USDT",
+    "type": "perpetual",
+    "base_coin": "FIONA",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T06:17:00Z",
+    "internal_id": "perpetual-FIONA-USDT:USDT",
+    "symbol": "FIONA",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FISVSTOCK_USDT",
@@ -15483,6 +15513,21 @@
     "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
+    "id": "SMTCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SMTCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-19T12:25:00Z",
+    "internal_id": "perpetual-SMTCSTOCK-USDT:USDT",
+    "symbol": "SMTCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SNDKSTOCK_USD1",
     "type": "perpetual",
     "base_coin": "SNDKSTOCK",
@@ -17488,6 +17533,21 @@
     "margin": "USDT"
   },
   {
+    "id": "TTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:30:00Z",
+    "internal_id": "perpetual-TTSTOCK-USDT:USDT",
+    "symbol": "TTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TTWOSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "TTWOSTOCK",
@@ -18455,6 +18515,21 @@
     "margin": "USDT"
   },
   {
+    "id": "VT_USDT",
+    "type": "perpetual",
+    "base_coin": "VT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-23T10:56:00Z",
+    "internal_id": "perpetual-VT-USDT:USDT",
+    "symbol": "VT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "VUG_USDT",
     "type": "perpetual",
     "base_coin": "VUG",
@@ -18481,6 +18556,21 @@
     "first_capture": "2025-01-28T01:52:35Z",
     "internal_id": "perpetual-VVV-USDT:USDT",
     "symbol": "VVV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "VXX_USDT",
+    "type": "perpetual",
+    "base_coin": "VXX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:30:00Z",
+    "internal_id": "perpetual-VXX-USDT:USDT",
+    "symbol": "VXX",
     "denominator": "USDT",
     "margin": "USDT"
   },

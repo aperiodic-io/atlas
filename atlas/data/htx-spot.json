@@ -17066,6 +17066,17 @@
     "denominator": "ETH"
   },
   {
+    "id": "sndkusdt",
+    "type": "spot",
+    "base_coin": "SNDK",
+    "quote_coin": "USDT",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T10:00:00.000Z",
+    "internal_id": "spot-SNDK-USDT",
+    "symbol": "SNDK",
+    "denominator": "USDT"
+  },
+  {
     "id": "snekusdt",
     "type": "spot",
     "base_coin": "SNEK",

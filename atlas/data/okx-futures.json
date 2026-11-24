@@ -101969,7 +101969,7 @@
     ],
     "cmc_id": 39485,
     "base_asset_id": "OPENAI",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
     "unified_id": "future-OPENAI-USD:USD-20310905"
@@ -112280,11 +112280,16 @@
     "delivery_date": "2031-10-10T00:00:00",
     "underlying": "equity",
     "first_capture": "2026-10-08T00:00:00.000Z",
-    "base_asset_id": "US100",
-    "base_asset_match": "venue_reference",
+    "cmc_id": 42522,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NDX",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
     "margin_asset_id": "USD",
-    "unified_id": "future-US100-USD:USD-20311010"
+    "unified_id": "future-NDX-USD:USD-20311010"
   },
   {
     "id": "US500-USD_UM_XPERP-311107",

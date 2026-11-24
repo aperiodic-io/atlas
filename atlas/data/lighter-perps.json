@@ -2132,11 +2132,16 @@
     "symbol": "US100",
     "denominator": "USDC",
     "margin": "USDC",
-    "base_asset_id": "US100.INDEX",
+    "cmc_id": 42522,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NDX",
     "base_asset_match": "venue_reference",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-US100.INDEX-USDC:USDC"
+    "unified_id": "perpetual-NDX-USDC:USDC"
   },
   {
     "id": "182",

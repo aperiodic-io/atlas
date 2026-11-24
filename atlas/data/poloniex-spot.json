@@ -9734,6 +9734,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "IRYS_USDT",
+    "type": "spot",
+    "base_coin": "IRYS",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T06:30:00.000Z",
+    "internal_id": "spot-IRYS-USDT",
+    "symbol": "IRYS",
+    "denominator": "USDT"
+  },
+  {
     "id": "IVEX_USDT",
     "type": "spot",
     "first_capture": "2024-09-27T00:00:00.000Z",
@@ -10479,6 +10490,17 @@
     "first_capture": "2022-08-02T00:00:00.000Z",
     "internal_id": "spot-KLV-USDT",
     "symbol": "KLV",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KMNO_USDT",
+    "type": "spot",
+    "base_coin": "KMNO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T06:00:00.000Z",
+    "internal_id": "spot-KMNO-USDT",
+    "symbol": "KMNO",
     "denominator": "USDT"
   },
   {
@@ -14252,6 +14274,17 @@
     "end_date": "2025-11-29T00:00:00.000Z",
     "internal_id": "spot-PAW-USDT",
     "symbol": "PAW",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PAXG_USDT",
+    "type": "spot",
+    "base_coin": "PAXG",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T05:00:00.000Z",
+    "internal_id": "spot-PAXG-USDT",
+    "symbol": "PAXG",
     "denominator": "USDT"
   },
   {

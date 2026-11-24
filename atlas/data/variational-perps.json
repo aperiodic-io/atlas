@@ -8400,6 +8400,28 @@
     "unified_id": "perpetual-POPCAT-USDC:USDC"
   },
   {
+    "id": "POPMART",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:57:22.616Z",
+    "internal_id": "perpetual-POPMART-USDC:USDC",
+    "symbol": "POPMART",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 39958,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "POPMART",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-POPMART-USDC:USDC"
+  },
+  {
     "id": "PORTAL",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10364,7 +10386,7 @@
       "Smart Contracts",
       "DApp"
     ],
-    "missing_since": "2026-11-23T10:12:40.125Z",
+    "end_date": "2026-11-23T10:12:40.125Z",
     "base_asset_id": "TAC",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",

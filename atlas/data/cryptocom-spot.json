@@ -8135,6 +8135,17 @@
     "denominator": "USD"
   },
   {
+    "id": "RITUAL_USD",
+    "type": "spot",
+    "base_coin": "RITUAL",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T11:57:23.342Z",
+    "internal_id": "spot-RITUAL-USD",
+    "symbol": "RITUAL",
+    "denominator": "USD"
+  },
+  {
     "id": "RLC_USD",
     "type": "spot",
     "base_coin": "RLC",

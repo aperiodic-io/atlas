@@ -1635,6 +1635,28 @@
     "denominator": "USDT"
   },
   {
+    "id": "CREST:USD",
+    "type": "spot",
+    "base_coin": "CREST",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T11:57:22.739Z",
+    "internal_id": "spot-CREST-USD",
+    "symbol": "CREST",
+    "denominator": "USD"
+  },
+  {
+    "id": "CREST:UST",
+    "type": "spot",
+    "base_coin": "CREST",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T11:57:22.739Z",
+    "internal_id": "spot-CREST-USDT",
+    "symbol": "CREST",
+    "denominator": "USDT"
+  },
+  {
     "id": "CRVUSD",
     "type": "spot",
     "base_coin": "CRV",
@@ -3623,6 +3645,28 @@
     "internal_id": "spot-LAI-USDT",
     "symbol": "LAI",
     "denominator": "USDT"
+  },
+  {
+    "id": "LBAF:BTC",
+    "type": "spot",
+    "base_coin": "LBAF",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T11:57:22.739Z",
+    "internal_id": "spot-LBAF-BTC",
+    "symbol": "LBAF",
+    "denominator": "BTC"
+  },
+  {
+    "id": "LBAF:USD",
+    "type": "spot",
+    "base_coin": "LBAF",
+    "quote_coin": "USD",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T11:57:22.739Z",
+    "internal_id": "spot-LBAF-USD",
+    "symbol": "LBAF",
+    "denominator": "USD"
   },
   {
     "id": "LDOUSD",

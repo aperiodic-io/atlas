@@ -17355,9 +17355,15 @@
   {
    "asset_id": "KWEB",
    "ticker": "KWEB",
-   "name": "KWEB",
+   "name": "KraneShares CSI China Internet ETF (Derivatives)",
    "asset_class": "equity",
+   "cmc_id": 42934,
+   "cmc_slug": "kraneshares-csi-china-internet-etf-derivatives",
+   "categories": [
+    "DeFi"
+   ],
    "status": "active",
+   "cmc_date_added": "2026-09-23T04:34:25Z",
    "minted_at": "2026-10-14"
   },
   {
@@ -20284,6 +20290,17 @@
    "minted_at": "2026-10-14"
   },
   {
+   "asset_id": "MONTRA",
+   "ticker": "MONTRA",
+   "name": "Montra",
+   "asset_class": "crypto",
+   "cmc_id": 42931,
+   "cmc_slug": "montra",
+   "status": "active",
+   "cmc_date_added": "2026-11-23T13:00:02Z",
+   "minted_at": "2026-11-24"
+  },
+  {
    "asset_id": "MOODENG",
    "ticker": "MOODENG",
    "name": "Moo Deng (moodengsol.com)",
@@ -21498,6 +21515,24 @@
    "status": "active",
    "cmc_date_added": "2018-04-10T00:00:00Z",
    "minted_at": "2026-10-14"
+  },
+  {
+   "asset_id": "NDX",
+   "ticker": "NDX",
+   "name": "Nasdaq-100 (Derivatives)",
+   "asset_class": "equity",
+   "cmc_id": 42522,
+   "cmc_slug": "nasdaq-100-derivatives",
+   "categories": [
+    "DeFi",
+    "Tokenized Stock"
+   ],
+   "aliases": [
+    "US100"
+   ],
+   "status": "active",
+   "cmc_date_added": "2026-09-23T04:34:25Z",
+   "minted_at": "2026-11-24"
   },
   {
    "asset_id": "NDX100",
