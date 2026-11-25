@@ -90,12 +90,12 @@
   {
     "id": "AAOISPV/USD",
     "type": "spot",
-    "base_coin": "AAOIx",
+    "base_coin": "AAOISPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-AAOIX-USD",
-    "symbol": "AAOIX",
+    "internal_id": "spot-AAOISPV-USD",
+    "symbol": "AAOISPV",
     "denominator": "USD"
   },
   {
@@ -112,12 +112,12 @@
   {
     "id": "AAPLSPV/USD",
     "type": "spot",
-    "base_coin": "AAPLx",
+    "base_coin": "AAPLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AAPLX-USD",
-    "symbol": "AAPLX",
+    "internal_id": "spot-AAPLSPV-USD",
+    "symbol": "AAPLSPV",
     "denominator": "USD"
   },
   {
@@ -238,12 +238,12 @@
   {
     "id": "ABBVSPV/USD",
     "type": "spot",
-    "base_coin": "ABBVx",
+    "base_coin": "ABBVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ABBVX-USD",
-    "symbol": "ABBVX",
+    "internal_id": "spot-ABBVSPV-USD",
+    "symbol": "ABBVSPV",
     "denominator": "USD"
   },
   {
@@ -260,12 +260,12 @@
   {
     "id": "ABTSPV/USD",
     "type": "spot",
-    "base_coin": "ABTx",
+    "base_coin": "ABTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ABTX-USD",
-    "symbol": "ABTX",
+    "internal_id": "spot-ABTSPV-USD",
+    "symbol": "ABTSPV",
     "denominator": "USD"
   },
   {
@@ -326,12 +326,12 @@
   {
     "id": "ACNSPV/USD",
     "type": "spot",
-    "base_coin": "ACNx",
+    "base_coin": "ACNSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ACNX-USD",
-    "symbol": "ACNX",
+    "internal_id": "spot-ACNSPV-USD",
+    "symbol": "ACNSPV",
     "denominator": "USD"
   },
   {
@@ -531,12 +531,12 @@
   {
     "id": "ADBESPV/USD",
     "type": "spot",
-    "base_coin": "ADBEx",
+    "base_coin": "ADBESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ADBEX-USD",
-    "symbol": "ADBEX",
+    "internal_id": "spot-ADBESPV-USD",
+    "symbol": "ADBESPV",
     "denominator": "USD"
   },
   {
@@ -1191,12 +1191,12 @@
   {
     "id": "AMATSPV/USD",
     "type": "spot",
-    "base_coin": "AMATx",
+    "base_coin": "AMATSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AMATX-USD",
-    "symbol": "AMATX",
+    "internal_id": "spot-AMATSPV-USD",
+    "symbol": "AMATSPV",
     "denominator": "USD"
   },
   {
@@ -1213,12 +1213,12 @@
   {
     "id": "AMBRSPV/USD",
     "type": "spot",
-    "base_coin": "AMBRx",
+    "base_coin": "AMBRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AMBRX-USD",
-    "symbol": "AMBRX",
+    "internal_id": "spot-AMBRSPV-USD",
+    "symbol": "AMBRSPV",
     "denominator": "USD"
   },
   {
@@ -1235,12 +1235,12 @@
   {
     "id": "AMDSPV/USD",
     "type": "spot",
-    "base_coin": "AMDx",
+    "base_coin": "AMDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AMDX-USD",
-    "symbol": "AMDX",
+    "internal_id": "spot-AMDSPV-USD",
+    "symbol": "AMDSPV",
     "denominator": "USD"
   },
   {
@@ -1277,12 +1277,12 @@
   {
     "id": "AMZNSPV/USD",
     "type": "spot",
-    "base_coin": "AMZNx",
+    "base_coin": "AMZNSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AMZNX-USD",
-    "symbol": "AMZNX",
+    "internal_id": "spot-AMZNSPV-USD",
+    "symbol": "AMZNSPV",
     "denominator": "USD"
   },
   {
@@ -1299,12 +1299,12 @@
   {
     "id": "ANETSPV/USD",
     "type": "spot",
-    "base_coin": "ANETx",
+    "base_coin": "ANETSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ANETX-USD",
-    "symbol": "ANETX",
+    "internal_id": "spot-ANETSPV-USD",
+    "symbol": "ANETSPV",
     "denominator": "USD"
   },
   {
@@ -1470,12 +1470,12 @@
   {
     "id": "ANTSPV/USD",
     "type": "spot",
-    "base_coin": "ANTx",
+    "base_coin": "ANTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-11-20T09:39:07.312Z",
-    "internal_id": "spot-ANTX-USD",
-    "symbol": "ANTX",
+    "internal_id": "spot-ANTSPV-USD",
+    "symbol": "ANTSPV",
     "denominator": "USD"
   },
   {
@@ -1580,12 +1580,12 @@
   {
     "id": "APLDSPV/USD",
     "type": "spot",
-    "base_coin": "APLDx",
+    "base_coin": "APLDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-APLDX-USD",
-    "symbol": "APLDX",
+    "internal_id": "spot-APLDSPV-USD",
+    "symbol": "APLDSPV",
     "denominator": "USD"
   },
   {
@@ -1602,12 +1602,12 @@
   {
     "id": "APPSPV/USD",
     "type": "spot",
-    "base_coin": "APPx",
+    "base_coin": "APPSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-APPX-USD",
-    "symbol": "APPX",
+    "internal_id": "spot-APPSPV-USD",
+    "symbol": "APPSPV",
     "denominator": "USD"
   },
   {
@@ -1800,12 +1800,12 @@
   {
     "id": "ARMSPV/USD",
     "type": "spot",
-    "base_coin": "ARMx",
+    "base_coin": "ARMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-ARMX-USD",
-    "symbol": "ARMX",
+    "internal_id": "spot-ARMSPV-USD",
+    "symbol": "ARMSPV",
     "denominator": "USD"
   },
   {
@@ -1873,12 +1873,12 @@
   {
     "id": "ASMLSPV/USD",
     "type": "spot",
-    "base_coin": "ASMLx",
+    "base_coin": "ASMLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ASMLX-USD",
-    "symbol": "ASMLX",
+    "internal_id": "spot-ASMLSPV-USD",
+    "symbol": "ASMLSPV",
     "denominator": "USD"
   },
   {
@@ -1968,12 +1968,12 @@
   {
     "id": "ASTSSPV/USD",
     "type": "spot",
-    "base_coin": "ASTSx",
+    "base_coin": "ASTSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ASTSX-USD",
-    "symbol": "ASTSX",
+    "internal_id": "spot-ASTSSPV-USD",
+    "symbol": "ASTSSPV",
     "denominator": "USD"
   },
   {
@@ -2370,12 +2370,12 @@
   {
     "id": "AVGOSPV/USD",
     "type": "spot",
-    "base_coin": "AVGOx",
+    "base_coin": "AVGOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AVGOX-USD",
-    "symbol": "AVGOX",
+    "internal_id": "spot-AVGOSPV-USD",
+    "symbol": "AVGOSPV",
     "denominator": "USD"
   },
   {
@@ -2447,12 +2447,12 @@
   {
     "id": "AZNSPV/USD",
     "type": "spot",
-    "base_coin": "AZNx",
+    "base_coin": "AZNSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-AZNX-USD",
-    "symbol": "AZNX",
+    "internal_id": "spot-AZNSPV-USD",
+    "symbol": "AZNSPV",
     "denominator": "USD"
   },
   {
@@ -2577,12 +2577,12 @@
   {
     "id": "BACSPV/USD",
     "type": "spot",
-    "base_coin": "BACx",
+    "base_coin": "BACSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BACX-USD",
-    "symbol": "BACX",
+    "internal_id": "spot-BACSPV-USD",
+    "symbol": "BACSPV",
     "denominator": "USD"
   },
   {
@@ -3012,12 +3012,12 @@
   {
     "id": "BESPV/USD",
     "type": "spot",
-    "base_coin": "BEx",
+    "base_coin": "BESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-BEX-USD",
-    "symbol": "BEX",
+    "internal_id": "spot-BESPV-USD",
+    "symbol": "BESPV",
     "denominator": "USD"
   },
   {
@@ -3195,12 +3195,12 @@
   {
     "id": "BITXSPV/USD",
     "type": "spot",
-    "base_coin": "BITXx",
+    "base_coin": "BITXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BITXX-USD",
-    "symbol": "BITXX",
+    "internal_id": "spot-BITXSPV-USD",
+    "symbol": "BITXSPV",
     "denominator": "USD"
   },
   {
@@ -3217,12 +3217,12 @@
   {
     "id": "BKRSPV/USD",
     "type": "spot",
-    "base_coin": "BKRx",
+    "base_coin": "BKRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-BKRX-USD",
-    "symbol": "BKRX",
+    "internal_id": "spot-BKRSPV-USD",
+    "symbol": "BKRSPV",
     "denominator": "USD"
   },
   {
@@ -3391,12 +3391,12 @@
   {
     "id": "BMNRSPV/USD",
     "type": "spot",
-    "base_coin": "BMNRx",
+    "base_coin": "BMNRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BMNRX-USD",
-    "symbol": "BMNRX",
+    "internal_id": "spot-BMNRSPV-USD",
+    "symbol": "BMNRSPV",
     "denominator": "USD"
   },
   {
@@ -3691,12 +3691,12 @@
   {
     "id": "BOTSPV/USD",
     "type": "spot",
-    "base_coin": "BOTx",
+    "base_coin": "BOTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-17T00:00:00.000Z",
-    "internal_id": "spot-BOTX-USD",
-    "symbol": "BOTX",
+    "internal_id": "spot-BOTSPV-USD",
+    "symbol": "BOTSPV",
     "denominator": "USD"
   },
   {
@@ -3753,12 +3753,12 @@
   {
     "id": "BRK.BSPV/USD",
     "type": "spot",
-    "base_coin": "BRK.Bx",
+    "base_coin": "BRK.BSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BRK.BX-USD",
-    "symbol": "BRK.BX",
+    "internal_id": "spot-BRK.BSPV-USD",
+    "symbol": "BRK.BSPV",
     "denominator": "USD"
   },
   {
@@ -3786,12 +3786,12 @@
   {
     "id": "BSPSPV/USD",
     "type": "spot",
-    "base_coin": "BSPx",
+    "base_coin": "BSPSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BSPX-USD",
-    "symbol": "BSPX",
+    "internal_id": "spot-BSPSPV-USD",
+    "symbol": "BSPSPV",
     "denominator": "USD"
   },
   {
@@ -3844,12 +3844,12 @@
   {
     "id": "BTBTSPV/USD",
     "type": "spot",
-    "base_coin": "BTBTx",
+    "base_coin": "BTBTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BTBTX-USD",
-    "symbol": "BTBTX",
+    "internal_id": "spot-BTBTSPV-USD",
+    "symbol": "BTBTSPV",
     "denominator": "USD"
   },
   {
@@ -4086,12 +4086,12 @@
   {
     "id": "BTGOSPV/USD",
     "type": "spot",
-    "base_coin": "BTGOx",
+    "base_coin": "BTGOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-BTGOX-USD",
-    "symbol": "BTGOX",
+    "internal_id": "spot-BTGOSPV-USD",
+    "symbol": "BTGOSPV",
     "denominator": "USD"
   },
   {
@@ -4293,12 +4293,12 @@
   {
     "id": "CBRSSPV/USD",
     "type": "spot",
-    "base_coin": "CBRSx",
+    "base_coin": "CBRSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-CBRSX-USD",
-    "symbol": "CBRSX",
+    "internal_id": "spot-CBRSSPV-USD",
+    "symbol": "CBRSSPV",
     "denominator": "USD"
   },
   {
@@ -4381,12 +4381,12 @@
   {
     "id": "CEGSPV/USD",
     "type": "spot",
-    "base_coin": "CEGx",
+    "base_coin": "CEGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CEGX-USD",
-    "symbol": "CEGX",
+    "internal_id": "spot-CEGSPV-USD",
+    "symbol": "CEGSPV",
     "denominator": "USD"
   },
   {
@@ -4685,12 +4685,12 @@
   {
     "id": "CLSKSPV/USD",
     "type": "spot",
-    "base_coin": "CLSKx",
+    "base_coin": "CLSKSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CLSKX-USD",
-    "symbol": "CLSKX",
+    "internal_id": "spot-CLSKSPV-USD",
+    "symbol": "CLSKSPV",
     "denominator": "USD"
   },
   {
@@ -4728,12 +4728,12 @@
   {
     "id": "CMCSASPV/USD",
     "type": "spot",
-    "base_coin": "CMCSAx",
+    "base_coin": "CMCSASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CMCSAX-USD",
-    "symbol": "CMCSAX",
+    "internal_id": "spot-CMCSASPV-USD",
+    "symbol": "CMCSASPV",
     "denominator": "USD"
   },
   {
@@ -4772,12 +4772,12 @@
   {
     "id": "COINSPV/USD",
     "type": "spot",
-    "base_coin": "COINx",
+    "base_coin": "COINSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-COINX-USD",
-    "symbol": "COINX",
+    "internal_id": "spot-COINSPV-USD",
+    "symbol": "COINSPV",
     "denominator": "USD"
   },
   {
@@ -4878,12 +4878,12 @@
   {
     "id": "COPXSPV/USD",
     "type": "spot",
-    "base_coin": "COPXx",
+    "base_coin": "COPXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-COPXX-USD",
-    "symbol": "COPXX",
+    "internal_id": "spot-COPXSPV-USD",
+    "symbol": "COPXSPV",
     "denominator": "USD"
   },
   {
@@ -4942,12 +4942,12 @@
   {
     "id": "CORZSPV/USD",
     "type": "spot",
-    "base_coin": "CORZx",
+    "base_coin": "CORZSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CORZX-USD",
-    "symbol": "CORZX",
+    "internal_id": "spot-CORZSPV-USD",
+    "symbol": "CORZSPV",
     "denominator": "USD"
   },
   {
@@ -5052,12 +5052,12 @@
   {
     "id": "CRCLSPV/USD",
     "type": "spot",
-    "base_coin": "CRCLx",
+    "base_coin": "CRCLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CRCLX-USD",
-    "symbol": "CRCLX",
+    "internal_id": "spot-CRCLSPV-USD",
+    "symbol": "CRCLSPV",
     "denominator": "USD"
   },
   {
@@ -5074,12 +5074,12 @@
   {
     "id": "CRMSPV/USD",
     "type": "spot",
-    "base_coin": "CRMx",
+    "base_coin": "CRMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CRMX-USD",
-    "symbol": "CRMX",
+    "internal_id": "spot-CRMSPV-USD",
+    "symbol": "CRMSPV",
     "denominator": "USD"
   },
   {
@@ -5180,12 +5180,12 @@
   {
     "id": "CRWDSPV/USD",
     "type": "spot",
-    "base_coin": "CRWDx",
+    "base_coin": "CRWDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CRWDX-USD",
-    "symbol": "CRWDX",
+    "internal_id": "spot-CRWDSPV-USD",
+    "symbol": "CRWDSPV",
     "denominator": "USD"
   },
   {
@@ -5202,12 +5202,12 @@
   {
     "id": "CRWVSPV/USD",
     "type": "spot",
-    "base_coin": "CRWVx",
+    "base_coin": "CRWVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-CRWVX-USD",
-    "symbol": "CRWVX",
+    "internal_id": "spot-CRWVSPV-USD",
+    "symbol": "CRWVSPV",
     "denominator": "USD"
   },
   {
@@ -5224,12 +5224,12 @@
   {
     "id": "CSCOSPV/USD",
     "type": "spot",
-    "base_coin": "CSCOx",
+    "base_coin": "CSCOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CSCOX-USD",
-    "symbol": "CSCOX",
+    "internal_id": "spot-CSCOSPV-USD",
+    "symbol": "CSCOSPV",
     "denominator": "USD"
   },
   {
@@ -5385,12 +5385,12 @@
   {
     "id": "CVXSPV/USD",
     "type": "spot",
-    "base_coin": "CVXx",
+    "base_coin": "CVXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-CVXX-USD",
-    "symbol": "CVXX",
+    "internal_id": "spot-CVXSPV-USD",
+    "symbol": "CVXSPV",
     "denominator": "USD"
   },
   {
@@ -5537,12 +5537,12 @@
   {
     "id": "DAXSPV/USD",
     "type": "spot",
-    "base_coin": "DAXx",
+    "base_coin": "DAXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-DAXX-USD",
-    "symbol": "DAXX",
+    "internal_id": "spot-DAXSPV-USD",
+    "symbol": "DAXSPV",
     "denominator": "USD"
   },
   {
@@ -5647,12 +5647,12 @@
   {
     "id": "DELLSPV/USD",
     "type": "spot",
-    "base_coin": "DELLx",
+    "base_coin": "DELLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-DELLX-USD",
-    "symbol": "DELLX",
+    "internal_id": "spot-DELLSPV-USD",
+    "symbol": "DELLSPV",
     "denominator": "USD"
   },
   {
@@ -5691,12 +5691,12 @@
   {
     "id": "DFDVSPV/USD",
     "type": "spot",
-    "base_coin": "DFDVx",
+    "base_coin": "DFDVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-DFDVX-USD",
-    "symbol": "DFDVX",
+    "internal_id": "spot-DFDVSPV-USD",
+    "symbol": "DFDVSPV",
     "denominator": "USD"
   },
   {
@@ -5724,12 +5724,12 @@
   {
     "id": "DHRSPV/USD",
     "type": "spot",
-    "base_coin": "DHRx",
+    "base_coin": "DHRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-DHRX-USD",
-    "symbol": "DHRX",
+    "internal_id": "spot-DHRSPV-USD",
+    "symbol": "DHRSPV",
     "denominator": "USD"
   },
   {
@@ -6400,12 +6400,12 @@
   {
     "id": "ENHASPV/USD",
     "type": "spot",
-    "base_coin": "ENHAx",
+    "base_coin": "ENHASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ENHAX-USD",
-    "symbol": "ENHAX",
+    "internal_id": "spot-ENHASPV-USD",
+    "symbol": "ENHASPV",
     "denominator": "USD"
   },
   {
@@ -7003,12 +7003,12 @@
   {
     "id": "ETNSPV/USD",
     "type": "spot",
-    "base_coin": "ETNx",
+    "base_coin": "ETNSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ETNX-USD",
-    "symbol": "ETNX",
+    "internal_id": "spot-ETNSPV-USD",
+    "symbol": "ETNSPV",
     "denominator": "USD"
   },
   {
@@ -7338,12 +7338,12 @@
   {
     "id": "EWGSPV/USD",
     "type": "spot",
-    "base_coin": "EWGx",
+    "base_coin": "EWGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-EWGX-USD",
-    "symbol": "EWGX",
+    "internal_id": "spot-EWGSPV-USD",
+    "symbol": "EWGSPV",
     "denominator": "USD"
   },
   {
@@ -7360,12 +7360,12 @@
   {
     "id": "EWQSPV/USD",
     "type": "spot",
-    "base_coin": "EWQx",
+    "base_coin": "EWQSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-EWQX-USD",
-    "symbol": "EWQX",
+    "internal_id": "spot-EWQSPV-USD",
+    "symbol": "EWQSPV",
     "denominator": "USD"
   },
   {
@@ -7422,12 +7422,12 @@
   {
     "id": "EWUSPV/USD",
     "type": "spot",
-    "base_coin": "EWUx",
+    "base_coin": "EWUSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-EWUX-USD",
-    "symbol": "EWUX",
+    "internal_id": "spot-EWUSPV-USD",
+    "symbol": "EWUSPV",
     "denominator": "USD"
   },
   {
@@ -7444,12 +7444,12 @@
   {
     "id": "EWYSPV/USD",
     "type": "spot",
-    "base_coin": "EWYx",
+    "base_coin": "EWYSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-EWYX-USD",
-    "symbol": "EWYX",
+    "internal_id": "spot-EWYSPV-USD",
+    "symbol": "EWYSPV",
     "denominator": "USD"
   },
   {
@@ -7466,12 +7466,12 @@
   {
     "id": "FAAASPV/USD",
     "type": "spot",
-    "base_coin": "FAAAx",
+    "base_coin": "FAAASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FAAAX-USD",
-    "symbol": "FAAAX",
+    "internal_id": "spot-FAAASPV-USD",
+    "symbol": "FAAASPV",
     "denominator": "USD"
   },
   {
@@ -7550,12 +7550,12 @@
   {
     "id": "FDXFSPV/USD",
     "type": "spot",
-    "base_coin": "FDXFx",
+    "base_coin": "FDXFSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-FDXFX-USD",
-    "symbol": "FDXFX",
+    "internal_id": "spot-FDXFSPV-USD",
+    "symbol": "FDXFSPV",
     "denominator": "USD"
   },
   {
@@ -7594,12 +7594,12 @@
   {
     "id": "FEZSPV/USD",
     "type": "spot",
-    "base_coin": "FEZx",
+    "base_coin": "FEZSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FEZX-USD",
-    "symbol": "FEZX",
+    "internal_id": "spot-FEZSPV-USD",
+    "symbol": "FEZSPV",
     "denominator": "USD"
   },
   {
@@ -7636,12 +7636,12 @@
   {
     "id": "FGDLSPV/USD",
     "type": "spot",
-    "base_coin": "FGDLx",
+    "base_coin": "FGDLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FGDLX-USD",
-    "symbol": "FGDLX",
+    "internal_id": "spot-FGDLSPV-USD",
+    "symbol": "FGDLSPV",
     "denominator": "USD"
   },
   {
@@ -7852,12 +7852,12 @@
   {
     "id": "FLBLSPV/USD",
     "type": "spot",
-    "base_coin": "FLBLx",
+    "base_coin": "FLBLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FLBLX-USD",
-    "symbol": "FLBLX",
+    "internal_id": "spot-FLBLSPV-USD",
+    "symbol": "FLBLSPV",
     "denominator": "USD"
   },
   {
@@ -7967,12 +7967,12 @@
   {
     "id": "FLQMSPV/USD",
     "type": "spot",
-    "base_coin": "FLQMx",
+    "base_coin": "FLQMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FLQMX-USD",
-    "symbol": "FLQMX",
+    "internal_id": "spot-FLQMSPV-USD",
+    "symbol": "FLQMSPV",
     "denominator": "USD"
   },
   {
@@ -8146,12 +8146,12 @@
   {
     "id": "FSMLSPV/USD",
     "type": "spot",
-    "base_coin": "FSMLx",
+    "base_coin": "FSMLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-FSMLX-USD",
-    "symbol": "FSMLX",
+    "internal_id": "spot-FSMLSPV-USD",
+    "symbol": "FSMLSPV",
     "denominator": "USD"
   },
   {
@@ -8429,12 +8429,12 @@
   {
     "id": "GDXSPV/USD",
     "type": "spot",
-    "base_coin": "GDXx",
+    "base_coin": "GDXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GDXX-USD",
-    "symbol": "GDXX",
+    "internal_id": "spot-GDXSPV-USD",
+    "symbol": "GDXSPV",
     "denominator": "USD"
   },
   {
@@ -8473,12 +8473,12 @@
   {
     "id": "GEVSPV/USD",
     "type": "spot",
-    "base_coin": "GEVx",
+    "base_coin": "GEVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GEVX-USD",
-    "symbol": "GEVX",
+    "internal_id": "spot-GEVSPV-USD",
+    "symbol": "GEVSPV",
     "denominator": "USD"
   },
   {
@@ -8614,12 +8614,12 @@
   {
     "id": "GLDSPV/USD",
     "type": "spot",
-    "base_coin": "GLDx",
+    "base_coin": "GLDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GLDX-USD",
-    "symbol": "GLDX",
+    "internal_id": "spot-GLDSPV-USD",
+    "symbol": "GLDSPV",
     "denominator": "USD"
   },
   {
@@ -8658,12 +8658,12 @@
   {
     "id": "GLXYSPV/USD",
     "type": "spot",
-    "base_coin": "GLXYx",
+    "base_coin": "GLXYSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GLXYX-USD",
-    "symbol": "GLXYX",
+    "internal_id": "spot-GLXYSPV-USD",
+    "symbol": "GLXYSPV",
     "denominator": "USD"
   },
   {
@@ -8680,12 +8680,12 @@
   {
     "id": "GMESPV/USD",
     "type": "spot",
-    "base_coin": "GMEx",
+    "base_coin": "GMESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GMEX-USD",
-    "symbol": "GMEX",
+    "internal_id": "spot-GMESPV-USD",
+    "symbol": "GMESPV",
     "denominator": "USD"
   },
   {
@@ -8841,12 +8841,12 @@
   {
     "id": "GOOGLSPV/USD",
     "type": "spot",
-    "base_coin": "GOOGLx",
+    "base_coin": "GOOGLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GOOGLX-USD",
-    "symbol": "GOOGLX",
+    "internal_id": "spot-GOOGLSPV-USD",
+    "symbol": "GOOGLSPV",
     "denominator": "USD"
   },
   {
@@ -8978,12 +8978,12 @@
   {
     "id": "GSSPV/USD",
     "type": "spot",
-    "base_coin": "GSx",
+    "base_coin": "GSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-GSX-USD",
-    "symbol": "GSX",
+    "internal_id": "spot-GSSPV-USD",
+    "symbol": "GSSPV",
     "denominator": "USD"
   },
   {
@@ -9161,12 +9161,12 @@
   {
     "id": "HIMSSPV/USD",
     "type": "spot",
-    "base_coin": "HIMSx",
+    "base_coin": "HIMSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-HIMSX-USD",
-    "symbol": "HIMSX",
+    "internal_id": "spot-HIMSSPV-USD",
+    "symbol": "HIMSSPV",
     "denominator": "USD"
   },
   {
@@ -9293,12 +9293,12 @@
   {
     "id": "HONSPV/USD",
     "type": "spot",
-    "base_coin": "HONx",
+    "base_coin": "HONSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-HONX-USD",
-    "symbol": "HONX",
+    "internal_id": "spot-HONSPV-USD",
+    "symbol": "HONSPV",
     "denominator": "USD"
   },
   {
@@ -9315,12 +9315,12 @@
   {
     "id": "HOODSPV/USD",
     "type": "spot",
-    "base_coin": "HOODx",
+    "base_coin": "HOODSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-HOODX-USD",
-    "symbol": "HOODX",
+    "internal_id": "spot-HOODSPV-USD",
+    "symbol": "HOODSPV",
     "denominator": "USD"
   },
   {
@@ -9405,12 +9405,12 @@
   {
     "id": "HUTSPV/USD",
     "type": "spot",
-    "base_coin": "HUTx",
+    "base_coin": "HUTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-HUTX-USD",
-    "symbol": "HUTX",
+    "internal_id": "spot-HUTSPV-USD",
+    "symbol": "HUTSPV",
     "denominator": "USD"
   },
   {
@@ -9480,12 +9480,12 @@
   {
     "id": "IBMSPV/USD",
     "type": "spot",
-    "base_coin": "IBMx",
+    "base_coin": "IBMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IBMX-USD",
-    "symbol": "IBMX",
+    "internal_id": "spot-IBMSPV-USD",
+    "symbol": "IBMSPV",
     "denominator": "USD"
   },
   {
@@ -9626,12 +9626,12 @@
   {
     "id": "IEMGSPV/USD",
     "type": "spot",
-    "base_coin": "IEMGx",
+    "base_coin": "IEMGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IEMGX-USD",
-    "symbol": "IEMGX",
+    "internal_id": "spot-IEMGSPV-USD",
+    "symbol": "IEMGSPV",
     "denominator": "USD"
   },
   {
@@ -9648,12 +9648,12 @@
   {
     "id": "IJRSPV/USD",
     "type": "spot",
-    "base_coin": "IJRx",
+    "base_coin": "IJRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IJRX-USD",
-    "symbol": "IJRX",
+    "internal_id": "spot-IJRSPV-USD",
+    "symbol": "IJRSPV",
     "denominator": "USD"
   },
   {
@@ -9769,12 +9769,12 @@
   {
     "id": "INTCSPV/USD",
     "type": "spot",
-    "base_coin": "INTCx",
+    "base_coin": "INTCSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-INTCX-USD",
-    "symbol": "INTCX",
+    "internal_id": "spot-INTCSPV-USD",
+    "symbol": "INTCSPV",
     "denominator": "USD"
   },
   {
@@ -9853,12 +9853,12 @@
   {
     "id": "IQMSPV/USD",
     "type": "spot",
-    "base_coin": "IQMx",
+    "base_coin": "IQMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IQMX-USD",
-    "symbol": "IQMX",
+    "internal_id": "spot-IQMSPV-USD",
+    "symbol": "IQMSPV",
     "denominator": "USD"
   },
   {
@@ -9897,12 +9897,12 @@
   {
     "id": "IRENSPV/USD",
     "type": "spot",
-    "base_coin": "IRENx",
+    "base_coin": "IRENSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IRENX-USD",
-    "symbol": "IRENX",
+    "internal_id": "spot-IRENSPV-USD",
+    "symbol": "IRENSPV",
     "denominator": "USD"
   },
   {
@@ -9919,12 +9919,12 @@
   {
     "id": "ITASPV/USD",
     "type": "spot",
-    "base_coin": "ITAx",
+    "base_coin": "ITASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ITAX-USD",
-    "symbol": "ITAX",
+    "internal_id": "spot-ITASPV-USD",
+    "symbol": "ITASPV",
     "denominator": "USD"
   },
   {
@@ -9941,12 +9941,12 @@
   {
     "id": "IWMSPV/USD",
     "type": "spot",
-    "base_coin": "IWMx",
+    "base_coin": "IWMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-IWMX-USD",
-    "symbol": "IWMX",
+    "internal_id": "spot-IWMSPV-USD",
+    "symbol": "IWMSPV",
     "denominator": "USD"
   },
   {
@@ -9963,12 +9963,12 @@
   {
     "id": "JAAASPV/USD",
     "type": "spot",
-    "base_coin": "JAAAx",
+    "base_coin": "JAAASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-JAAAX-USD",
-    "symbol": "JAAAX",
+    "internal_id": "spot-JAAASPV-USD",
+    "symbol": "JAAASPV",
     "denominator": "USD"
   },
   {
@@ -10060,12 +10060,12 @@
   {
     "id": "JMKESPV/USD",
     "type": "spot",
-    "base_coin": "JMKEx",
+    "base_coin": "JMKESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-30T00:00:00.000Z",
-    "internal_id": "spot-JMKEX-USD",
-    "symbol": "JMKEX",
+    "internal_id": "spot-JMKESPV-USD",
+    "symbol": "JMKESPV",
     "denominator": "USD"
   },
   {
@@ -10082,12 +10082,12 @@
   {
     "id": "JNJSPV/USD",
     "type": "spot",
-    "base_coin": "JNJx",
+    "base_coin": "JNJSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-JNJX-USD",
-    "symbol": "JNJX",
+    "internal_id": "spot-JNJSPV-USD",
+    "symbol": "JNJSPV",
     "denominator": "USD"
   },
   {
@@ -10126,12 +10126,12 @@
   {
     "id": "JPMSPV/USD",
     "type": "spot",
-    "base_coin": "JPMx",
+    "base_coin": "JPMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-JPMX-USD",
-    "symbol": "JPMX",
+    "internal_id": "spot-JPMSPV-USD",
+    "symbol": "JPMSPV",
     "denominator": "USD"
   },
   {
@@ -10148,12 +10148,12 @@
   {
     "id": "JPSTSPV/USD",
     "type": "spot",
-    "base_coin": "JPSTx",
+    "base_coin": "JPSTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-JPSTX-USD",
-    "symbol": "JPSTX",
+    "internal_id": "spot-JPSTSPV-USD",
+    "symbol": "JPSTSPV",
     "denominator": "USD"
   },
   {
@@ -10604,12 +10604,12 @@
   {
     "id": "KLACSPV/USD",
     "type": "spot",
-    "base_coin": "KLACx",
+    "base_coin": "KLACSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-KLACX-USD",
-    "symbol": "KLACX",
+    "internal_id": "spot-KLACSPV-USD",
+    "symbol": "KLACSPV",
     "denominator": "USD"
   },
   {
@@ -10745,12 +10745,12 @@
   {
     "id": "KOSPV/USD",
     "type": "spot",
-    "base_coin": "KOx",
+    "base_coin": "KOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-KOX-USD",
-    "symbol": "KOX",
+    "internal_id": "spot-KOSPV-USD",
+    "symbol": "KOSPV",
     "denominator": "USD"
   },
   {
@@ -10791,12 +10791,12 @@
   {
     "id": "KRAQSPV/USD",
     "type": "spot",
-    "base_coin": "KRAQx",
+    "base_coin": "KRAQSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-KRAQX-USD",
-    "symbol": "KRAQX",
+    "internal_id": "spot-KRAQSPV-USD",
+    "symbol": "KRAQSPV",
     "denominator": "USD"
   },
   {
@@ -11235,12 +11235,12 @@
   {
     "id": "LINSPV/USD",
     "type": "spot",
-    "base_coin": "LINx",
+    "base_coin": "LINSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-LINX-USD",
-    "symbol": "LINX",
+    "internal_id": "spot-LINSPV-USD",
+    "symbol": "LINSPV",
     "denominator": "USD"
   },
   {
@@ -11301,12 +11301,12 @@
   {
     "id": "LITESPV/USD",
     "type": "spot",
-    "base_coin": "LITEx",
+    "base_coin": "LITESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-LITEX-USD",
-    "symbol": "LITEX",
+    "internal_id": "spot-LITESPV-USD",
+    "symbol": "LITESPV",
     "denominator": "USD"
   },
   {
@@ -11323,12 +11323,12 @@
   {
     "id": "LLYSPV/USD",
     "type": "spot",
-    "base_coin": "LLYx",
+    "base_coin": "LLYSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-LLYX-USD",
-    "symbol": "LLYX",
+    "internal_id": "spot-LLYSPV-USD",
+    "symbol": "LLYSPV",
     "denominator": "USD"
   },
   {
@@ -11367,12 +11367,12 @@
   {
     "id": "LNGSPV/USD",
     "type": "spot",
-    "base_coin": "LNGx",
+    "base_coin": "LNGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-LNGX-USD",
-    "symbol": "LNGX",
+    "internal_id": "spot-LNGSPV-USD",
+    "symbol": "LNGSPV",
     "denominator": "USD"
   },
   {
@@ -11537,12 +11537,12 @@
   {
     "id": "LRCXSPV/USD",
     "type": "spot",
-    "base_coin": "LRCXx",
+    "base_coin": "LRCXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-LRCXX-USD",
-    "symbol": "LRCXX",
+    "internal_id": "spot-LRCXSPV-USD",
+    "symbol": "LRCXSPV",
     "denominator": "USD"
   },
   {
@@ -11937,12 +11937,12 @@
   {
     "id": "MARASPV/USD",
     "type": "spot",
-    "base_coin": "MARAx",
+    "base_coin": "MARASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MARAX-USD",
-    "symbol": "MARAX",
+    "internal_id": "spot-MARASPV-USD",
+    "symbol": "MARASPV",
     "denominator": "USD"
   },
   {
@@ -12084,12 +12084,12 @@
   {
     "id": "MCDSPV/USD",
     "type": "spot",
-    "base_coin": "MCDx",
+    "base_coin": "MCDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MCDX-USD",
-    "symbol": "MCDX",
+    "internal_id": "spot-MCDSPV-USD",
+    "symbol": "MCDSPV",
     "denominator": "USD"
   },
   {
@@ -12106,12 +12106,12 @@
   {
     "id": "MDTSPV/USD",
     "type": "spot",
-    "base_coin": "MDTx",
+    "base_coin": "MDTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MDTX-USD",
-    "symbol": "MDTX",
+    "internal_id": "spot-MDTSPV-USD",
+    "symbol": "MDTSPV",
     "denominator": "USD"
   },
   {
@@ -12282,12 +12282,12 @@
   {
     "id": "METASPV/USD",
     "type": "spot",
-    "base_coin": "METAx",
+    "base_coin": "METASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-METAX-USD",
-    "symbol": "METAX",
+    "internal_id": "spot-METASPV-USD",
+    "symbol": "METASPV",
     "denominator": "USD"
   },
   {
@@ -12815,12 +12815,12 @@
   {
     "id": "MOOSPV/USD",
     "type": "spot",
-    "base_coin": "MOOx",
+    "base_coin": "MOOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MOOX-USD",
-    "symbol": "MOOX",
+    "internal_id": "spot-MOOSPV-USD",
+    "symbol": "MOOSPV",
     "denominator": "USD"
   },
   {
@@ -12917,12 +12917,12 @@
   {
     "id": "MRKSPV/USD",
     "type": "spot",
-    "base_coin": "MRKx",
+    "base_coin": "MRKSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MRKX-USD",
-    "symbol": "MRKX",
+    "internal_id": "spot-MRKSPV-USD",
+    "symbol": "MRKSPV",
     "denominator": "USD"
   },
   {
@@ -12939,12 +12939,12 @@
   {
     "id": "MRNASPV/USD",
     "type": "spot",
-    "base_coin": "MRNAx",
+    "base_coin": "MRNASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-20T00:00:00.000Z",
-    "internal_id": "spot-MRNAX-USD",
-    "symbol": "MRNAX",
+    "internal_id": "spot-MRNASPV-USD",
+    "symbol": "MRNASPV",
     "denominator": "USD"
   },
   {
@@ -12961,12 +12961,12 @@
   {
     "id": "MRVLSPV/USD",
     "type": "spot",
-    "base_coin": "MRVLx",
+    "base_coin": "MRVLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MRVLX-USD",
-    "symbol": "MRVLX",
+    "internal_id": "spot-MRVLSPV-USD",
+    "symbol": "MRVLSPV",
     "denominator": "USD"
   },
   {
@@ -12983,12 +12983,12 @@
   {
     "id": "MSFTSPV/USD",
     "type": "spot",
-    "base_coin": "MSFTx",
+    "base_coin": "MSFTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MSFTX-USD",
-    "symbol": "MSFTX",
+    "internal_id": "spot-MSFTSPV-USD",
+    "symbol": "MSFTSPV",
     "denominator": "USD"
   },
   {
@@ -13027,12 +13027,12 @@
   {
     "id": "MSTRSPV/USD",
     "type": "spot",
-    "base_coin": "MSTRx",
+    "base_coin": "MSTRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MSTRX-USD",
-    "symbol": "MSTRX",
+    "internal_id": "spot-MSTRSPV-USD",
+    "symbol": "MSTRSPV",
     "denominator": "USD"
   },
   {
@@ -13091,12 +13091,12 @@
   {
     "id": "MUSPV/USD",
     "type": "spot",
-    "base_coin": "MUx",
+    "base_coin": "MUSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-MUX-USD",
-    "symbol": "MUX",
+    "internal_id": "spot-MUSPV-USD",
+    "symbol": "MUSPV",
     "denominator": "USD"
   },
   {
@@ -13222,12 +13222,12 @@
   {
     "id": "NBISSPV/USD",
     "type": "spot",
-    "base_coin": "NBISx",
+    "base_coin": "NBISSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-NBISX-USD",
-    "symbol": "NBISX",
+    "internal_id": "spot-NBISSPV-USD",
+    "symbol": "NBISSPV",
     "denominator": "USD"
   },
   {
@@ -13321,12 +13321,12 @@
   {
     "id": "NETSPV/USD",
     "type": "spot",
-    "base_coin": "NETx",
+    "base_coin": "NETSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-NETX-USD",
-    "symbol": "NETX",
+    "internal_id": "spot-NETSPV-USD",
+    "symbol": "NETSPV",
     "denominator": "USD"
   },
   {
@@ -13376,12 +13376,12 @@
   {
     "id": "NFLXSPV/USD",
     "type": "spot",
-    "base_coin": "NFLXx",
+    "base_coin": "NFLXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-NFLXX-USD",
-    "symbol": "NFLXX",
+    "internal_id": "spot-NFLXSPV-USD",
+    "symbol": "NFLXSPV",
     "denominator": "USD"
   },
   {
@@ -13442,12 +13442,12 @@
   {
     "id": "NLRSPV/USD",
     "type": "spot",
-    "base_coin": "NLRx",
+    "base_coin": "NLRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-NLRX-USD",
-    "symbol": "NLRX",
+    "internal_id": "spot-NLRSPV-USD",
+    "symbol": "NLRSPV",
     "denominator": "USD"
   },
   {
@@ -13649,12 +13649,12 @@
   {
     "id": "NVDASPV/USD",
     "type": "spot",
-    "base_coin": "NVDAx",
+    "base_coin": "NVDASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-NVDAX-USD",
-    "symbol": "NVDAX",
+    "internal_id": "spot-NVDASPV-USD",
+    "symbol": "NVDASPV",
     "denominator": "USD"
   },
   {
@@ -13671,12 +13671,12 @@
   {
     "id": "NVOSPV/USD",
     "type": "spot",
-    "base_coin": "NVOx",
+    "base_coin": "NVOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-NVOX-USD",
-    "symbol": "NVOX",
+    "internal_id": "spot-NVOSPV-USD",
+    "symbol": "NVOSPV",
     "denominator": "USD"
   },
   {
@@ -13855,12 +13855,12 @@
   {
     "id": "OKLOSPV/USD",
     "type": "spot",
-    "base_coin": "OKLOx",
+    "base_coin": "OKLOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-OKLOX-USD",
-    "symbol": "OKLOX",
+    "internal_id": "spot-OKLOSPV-USD",
+    "symbol": "OKLOSPV",
     "denominator": "USD"
   },
   {
@@ -14009,12 +14009,12 @@
   {
     "id": "ONDSSPV/USD",
     "type": "spot",
-    "base_coin": "ONDSx",
+    "base_coin": "ONDSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ONDSX-USD",
-    "symbol": "ONDSX",
+    "internal_id": "spot-ONDSSPV-USD",
+    "symbol": "ONDSSPV",
     "denominator": "USD"
   },
   {
@@ -14108,12 +14108,12 @@
   {
     "id": "OPENSPV/USD",
     "type": "spot",
-    "base_coin": "OPENx",
+    "base_coin": "OPENSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-OPENX-USD",
-    "symbol": "OPENX",
+    "internal_id": "spot-OPENSPV-USD",
+    "symbol": "OPENSPV",
     "denominator": "USD"
   },
   {
@@ -14163,12 +14163,12 @@
   {
     "id": "ORCLSPV/USD",
     "type": "spot",
-    "base_coin": "ORCLx",
+    "base_coin": "ORCLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-ORCLX-USD",
-    "symbol": "ORCLX",
+    "internal_id": "spot-ORCLSPV-USD",
+    "symbol": "ORCLSPV",
     "denominator": "USD"
   },
   {
@@ -14318,12 +14318,12 @@
   {
     "id": "PALLSPV/USD",
     "type": "spot",
-    "base_coin": "PALLx",
+    "base_coin": "PALLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-31T00:00:00.000Z",
-    "internal_id": "spot-PALLX-USD",
-    "symbol": "PALLX",
+    "internal_id": "spot-PALLSPV-USD",
+    "symbol": "PALLSPV",
     "denominator": "USD"
   },
   {
@@ -14340,12 +14340,12 @@
   {
     "id": "PANWSPV/USD",
     "type": "spot",
-    "base_coin": "PANWx",
+    "base_coin": "PANWSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PANWX-USD",
-    "symbol": "PANWX",
+    "internal_id": "spot-PANWSPV-USD",
+    "symbol": "PANWSPV",
     "denominator": "USD"
   },
   {
@@ -14680,12 +14680,12 @@
   {
     "id": "PEPSPV/USD",
     "type": "spot",
-    "base_coin": "PEPx",
+    "base_coin": "PEPSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PEPX-USD",
-    "symbol": "PEPX",
+    "internal_id": "spot-PEPSPV-USD",
+    "symbol": "PEPSPV",
     "denominator": "USD"
   },
   {
@@ -14724,12 +14724,12 @@
   {
     "id": "PFESPV/USD",
     "type": "spot",
-    "base_coin": "PFEx",
+    "base_coin": "PFESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PFEX-USD",
-    "symbol": "PFEX",
+    "internal_id": "spot-PFESPV-USD",
+    "symbol": "PFESPV",
     "denominator": "USD"
   },
   {
@@ -14746,12 +14746,12 @@
   {
     "id": "PGSPV/USD",
     "type": "spot",
-    "base_coin": "PGx",
+    "base_coin": "PGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PGX-USD",
-    "symbol": "PGX",
+    "internal_id": "spot-PGSPV-USD",
+    "symbol": "PGSPV",
     "denominator": "USD"
   },
   {
@@ -14903,23 +14903,23 @@
   {
     "id": "PLSPV/USD",
     "type": "spot",
-    "base_coin": "PLx",
+    "base_coin": "PLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PLX-USD",
-    "symbol": "PLX",
+    "internal_id": "spot-PLSPV-USD",
+    "symbol": "PLSPV",
     "denominator": "USD"
   },
   {
     "id": "PLTRSPV/USD",
     "type": "spot",
-    "base_coin": "PLTRx",
+    "base_coin": "PLTRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PLTRX-USD",
-    "symbol": "PLTRX",
+    "internal_id": "spot-PLTRSPV-USD",
+    "symbol": "PLTRSPV",
     "denominator": "USD"
   },
   {
@@ -14969,12 +14969,12 @@
   {
     "id": "PMSPV/USD",
     "type": "spot",
-    "base_coin": "PMx",
+    "base_coin": "PMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PMX-USD",
-    "symbol": "PMX",
+    "internal_id": "spot-PMSPV-USD",
+    "symbol": "PMSPV",
     "denominator": "USD"
   },
   {
@@ -15222,12 +15222,12 @@
   {
     "id": "PPLTSPV/USD",
     "type": "spot",
-    "base_coin": "PPLTx",
+    "base_coin": "PPLTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PPLTX-USD",
-    "symbol": "PPLTX",
+    "internal_id": "spot-PPLTSPV-USD",
+    "symbol": "PPLTSPV",
     "denominator": "USD"
   },
   {
@@ -15493,12 +15493,12 @@
   {
     "id": "PWRSPV/USD",
     "type": "spot",
-    "base_coin": "PWRx",
+    "base_coin": "PWRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PWRX-USD",
-    "symbol": "PWRX",
+    "internal_id": "spot-PWRSPV-USD",
+    "symbol": "PWRSPV",
     "denominator": "USD"
   },
   {
@@ -15526,12 +15526,12 @@
   {
     "id": "PYPLSPV/USD",
     "type": "spot",
-    "base_coin": "PYPLx",
+    "base_coin": "PYPLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-PYPLX-USD",
-    "symbol": "PYPLX",
+    "internal_id": "spot-PYPLSPV-USD",
+    "symbol": "PYPLSPV",
     "denominator": "USD"
   },
   {
@@ -15665,12 +15665,12 @@
   {
     "id": "QQQSPV/USD",
     "type": "spot",
-    "base_coin": "QQQx",
+    "base_coin": "QQQSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-QQQX-USD",
-    "symbol": "QQQX",
+    "internal_id": "spot-QQQSPV-USD",
+    "symbol": "QQQSPV",
     "denominator": "USD"
   },
   {
@@ -15769,12 +15769,12 @@
   {
     "id": "QURESPV/USD",
     "type": "spot",
-    "base_coin": "QUREx",
+    "base_coin": "QURESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-QUREX-USD",
-    "symbol": "QUREX",
+    "internal_id": "spot-QURESPV-USD",
+    "symbol": "QURESPV",
     "denominator": "USD"
   },
   {
@@ -16002,12 +16002,12 @@
   {
     "id": "RBLXSPV/USD",
     "type": "spot",
-    "base_coin": "RBLXx",
+    "base_coin": "RBLXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-RBLXX-USD",
-    "symbol": "RBLXX",
+    "internal_id": "spot-RBLXSPV-USD",
+    "symbol": "RBLXSPV",
     "denominator": "USD"
   },
   {
@@ -16024,12 +16024,12 @@
   {
     "id": "RCATSPV/USD",
     "type": "spot",
-    "base_coin": "RCATx",
+    "base_coin": "RCATSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-RCATX-USD",
-    "symbol": "RCATX",
+    "internal_id": "spot-RCATSPV-USD",
+    "symbol": "RCATSPV",
     "denominator": "USD"
   },
   {
@@ -16337,12 +16337,12 @@
   {
     "id": "RIOTSPV/USD",
     "type": "spot",
-    "base_coin": "RIOTx",
+    "base_coin": "RIOTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-RIOTX-USD",
-    "symbol": "RIOTX",
+    "internal_id": "spot-RIOTSPV-USD",
+    "symbol": "RIOTSPV",
     "denominator": "USD"
   },
   {
@@ -16926,12 +16926,12 @@
   {
     "id": "SATASPV/USD",
     "type": "spot",
-    "base_coin": "SATAx",
+    "base_coin": "SATASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SATAX-USD",
-    "symbol": "SATAX",
+    "internal_id": "spot-SATASPV-USD",
+    "symbol": "SATASPV",
     "denominator": "USD"
   },
   {
@@ -16970,12 +16970,12 @@
   {
     "id": "SBETSPV/USD",
     "type": "spot",
-    "base_coin": "SBETx",
+    "base_coin": "SBETSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SBETX-USD",
-    "symbol": "SBETX",
+    "internal_id": "spot-SBETSPV-USD",
+    "symbol": "SBETSPV",
     "denominator": "USD"
   },
   {
@@ -17085,12 +17085,12 @@
   {
     "id": "SCHFSPV/USD",
     "type": "spot",
-    "base_coin": "SCHFx",
+    "base_coin": "SCHFSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SCHFX-USD",
-    "symbol": "SCHFX",
+    "internal_id": "spot-SCHFSPV-USD",
+    "symbol": "SCHFSPV",
     "denominator": "USD"
   },
   {
@@ -17246,12 +17246,12 @@
   {
     "id": "SGOVSPV/USD",
     "type": "spot",
-    "base_coin": "SGOVx",
+    "base_coin": "SGOVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SGOVX-USD",
-    "symbol": "SGOVX",
+    "internal_id": "spot-SGOVSPV-USD",
+    "symbol": "SGOVSPV",
     "denominator": "USD"
   },
   {
@@ -17279,12 +17279,12 @@
   {
     "id": "SHAZSPV/USD",
     "type": "spot",
-    "base_coin": "SHAZx",
+    "base_coin": "SHAZSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-SHAZX-USD",
-    "symbol": "SHAZX",
+    "internal_id": "spot-SHAZSPV-USD",
+    "symbol": "SHAZSPV",
     "denominator": "USD"
   },
   {
@@ -17447,12 +17447,12 @@
   {
     "id": "SKHYSPV/USD",
     "type": "spot",
-    "base_coin": "SKHYx",
+    "base_coin": "SKHYSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SKHYX-USD",
-    "symbol": "SKHYX",
+    "internal_id": "spot-SKHYSPV-USD",
+    "symbol": "SKHYSPV",
     "denominator": "USD"
   },
   {
@@ -17537,12 +17537,12 @@
   {
     "id": "SLVSPV/USD",
     "type": "spot",
-    "base_coin": "SLVx",
+    "base_coin": "SLVSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SLVX-USD",
-    "symbol": "SLVX",
+    "internal_id": "spot-SLVSPV-USD",
+    "symbol": "SLVSPV",
     "denominator": "USD"
   },
   {
@@ -17581,12 +17581,12 @@
   {
     "id": "SMCISPV/USD",
     "type": "spot",
-    "base_coin": "SMCIx",
+    "base_coin": "SMCISPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SMCIX-USD",
-    "symbol": "SMCIX",
+    "internal_id": "spot-SMCISPV-USD",
+    "symbol": "SMCISPV",
     "denominator": "USD"
   },
   {
@@ -17603,12 +17603,12 @@
   {
     "id": "SMHSPV/USD",
     "type": "spot",
-    "base_coin": "SMHx",
+    "base_coin": "SMHSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SMHX-USD",
-    "symbol": "SMHX",
+    "internal_id": "spot-SMHSPV-USD",
+    "symbol": "SMHSPV",
     "denominator": "USD"
   },
   {
@@ -17625,12 +17625,12 @@
   {
     "id": "SMRSPV/USD",
     "type": "spot",
-    "base_coin": "SMRx",
+    "base_coin": "SMRSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SMRX-USD",
-    "symbol": "SMRX",
+    "internal_id": "spot-SMRSPV-USD",
+    "symbol": "SMRSPV",
     "denominator": "USD"
   },
   {
@@ -17713,12 +17713,12 @@
   {
     "id": "SNDKSPV/USD",
     "type": "spot",
-    "base_coin": "SNDKx",
+    "base_coin": "SNDKSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SNDKX-USD",
-    "symbol": "SNDKX",
+    "internal_id": "spot-SNDKSPV-USD",
+    "symbol": "SNDKSPV",
     "denominator": "USD"
   },
   {
@@ -18146,12 +18146,12 @@
   {
     "id": "SOXLSPV/USD",
     "type": "spot",
-    "base_coin": "SOXLx",
+    "base_coin": "SOXLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SOXLX-USD",
-    "symbol": "SOXLX",
+    "internal_id": "spot-SOXLSPV-USD",
+    "symbol": "SOXLSPV",
     "denominator": "USD"
   },
   {
@@ -18168,12 +18168,12 @@
   {
     "id": "SOXXSPV/USD",
     "type": "spot",
-    "base_coin": "SOXXx",
+    "base_coin": "SOXXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SOXXX-USD",
-    "symbol": "SOXXX",
+    "internal_id": "spot-SOXXSPV-USD",
+    "symbol": "SOXXSPV",
     "denominator": "USD"
   },
   {
@@ -18230,12 +18230,12 @@
   {
     "id": "SPCESPV/USD",
     "type": "spot",
-    "base_coin": "SPCEx",
+    "base_coin": "SPCESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SPCEX-USD",
-    "symbol": "SPCEX",
+    "internal_id": "spot-SPCESPV-USD",
+    "symbol": "SPCESPV",
     "denominator": "USD"
   },
   {
@@ -18252,12 +18252,12 @@
   {
     "id": "SPCXSPV/USD",
     "type": "spot",
-    "base_coin": "SPCXx",
+    "base_coin": "SPCXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SPCXX-USD",
-    "symbol": "SPCXX",
+    "internal_id": "spot-SPCXSPV-USD",
+    "symbol": "SPCXSPV",
     "denominator": "USD"
   },
   {
@@ -18358,12 +18358,12 @@
   {
     "id": "SPYSPV/USD",
     "type": "spot",
-    "base_coin": "SPYx",
+    "base_coin": "SPYSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-SPYX-USD",
-    "symbol": "SPYX",
+    "internal_id": "spot-SPYSPV-USD",
+    "symbol": "SPYSPV",
     "denominator": "USD"
   },
   {
@@ -18586,12 +18586,12 @@
   {
     "id": "STRCSPV/USD",
     "type": "spot",
-    "base_coin": "STRCx",
+    "base_coin": "STRCSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-STRCX-USD",
-    "symbol": "STRCX",
+    "internal_id": "spot-STRCSPV-USD",
+    "symbol": "STRCSPV",
     "denominator": "USD"
   },
   {
@@ -19120,12 +19120,12 @@
   {
     "id": "TBLLSPV/USD",
     "type": "spot",
-    "base_coin": "TBLLx",
+    "base_coin": "TBLLSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TBLLX-USD",
-    "symbol": "TBLLX",
+    "internal_id": "spot-TBLLSPV-USD",
+    "symbol": "TBLLSPV",
     "denominator": "USD"
   },
   {
@@ -19282,12 +19282,12 @@
   {
     "id": "TERSPV/USD",
     "type": "spot",
-    "base_coin": "TERx",
+    "base_coin": "TERSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TERX-USD",
-    "symbol": "TERX",
+    "internal_id": "spot-TERSPV-USD",
+    "symbol": "TERSPV",
     "denominator": "USD"
   },
   {
@@ -19304,12 +19304,12 @@
   {
     "id": "TESPV/USD",
     "type": "spot",
-    "base_coin": "TEx",
+    "base_coin": "TESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-TEX-USD",
-    "symbol": "TEX",
+    "internal_id": "spot-TESPV-USD",
+    "symbol": "TESPV",
     "denominator": "USD"
   },
   {
@@ -19430,12 +19430,12 @@
   {
     "id": "TMOSPV/USD",
     "type": "spot",
-    "base_coin": "TMOx",
+    "base_coin": "TMOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TMOX-USD",
-    "symbol": "TMOX",
+    "internal_id": "spot-TMOSPV-USD",
+    "symbol": "TMOSPV",
     "denominator": "USD"
   },
   {
@@ -19452,12 +19452,12 @@
   {
     "id": "TMUSSPV/USD",
     "type": "spot",
-    "base_coin": "TMUSx",
+    "base_coin": "TMUSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TMUSX-USD",
-    "symbol": "TMUSX",
+    "internal_id": "spot-TMUSSPV-USD",
+    "symbol": "TMUSSPV",
     "denominator": "USD"
   },
   {
@@ -19591,12 +19591,12 @@
   {
     "id": "TONXSPV/USD",
     "type": "spot",
-    "base_coin": "TONXx",
+    "base_coin": "TONXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TONXX-USD",
-    "symbol": "TONXX",
+    "internal_id": "spot-TONXSPV-USD",
+    "symbol": "TONXSPV",
     "denominator": "USD"
   },
   {
@@ -19635,12 +19635,12 @@
   {
     "id": "TQQQSPV/USD",
     "type": "spot",
-    "base_coin": "TQQQx",
+    "base_coin": "TQQQSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TQQQX-USD",
-    "symbol": "TQQQX",
+    "internal_id": "spot-TQQQSPV-USD",
+    "symbol": "TQQQSPV",
     "denominator": "USD"
   },
   {
@@ -19925,12 +19925,12 @@
   {
     "id": "TSLASPV/USD",
     "type": "spot",
-    "base_coin": "TSLAx",
+    "base_coin": "TSLASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TSLAX-USD",
-    "symbol": "TSLAX",
+    "internal_id": "spot-TSLASPV-USD",
+    "symbol": "TSLASPV",
     "denominator": "USD"
   },
   {
@@ -19947,12 +19947,12 @@
   {
     "id": "TSMSPV/USD",
     "type": "spot",
-    "base_coin": "TSMx",
+    "base_coin": "TSMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-TSMX-USD",
-    "symbol": "TSMX",
+    "internal_id": "spot-TSMSPV-USD",
+    "symbol": "TSMSPV",
     "denominator": "USD"
   },
   {
@@ -20027,12 +20027,12 @@
   {
     "id": "TWSTSPV/USD",
     "type": "spot",
-    "base_coin": "TWSTx",
+    "base_coin": "TWSTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-08-14T00:00:00.000Z",
-    "internal_id": "spot-TWSTX-USD",
-    "symbol": "TWSTX",
+    "internal_id": "spot-TWSTSPV-USD",
+    "symbol": "TWSTSPV",
     "denominator": "USD"
   },
   {
@@ -20136,12 +20136,12 @@
   {
     "id": "UBERSPV/USD",
     "type": "spot",
-    "base_coin": "UBERx",
+    "base_coin": "UBERSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-UBERX-USD",
-    "symbol": "UBERX",
+    "internal_id": "spot-UBERSPV-USD",
+    "symbol": "UBERSPV",
     "denominator": "USD"
   },
   {
@@ -20235,12 +20235,12 @@
   {
     "id": "UNHSPV/USD",
     "type": "spot",
-    "base_coin": "UNHx",
+    "base_coin": "UNHSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-UNHX-USD",
-    "symbol": "UNHX",
+    "internal_id": "spot-UNHSPV-USD",
+    "symbol": "UNHSPV",
     "denominator": "USD"
   },
   {
@@ -20390,12 +20390,12 @@
   {
     "id": "URASPV/USD",
     "type": "spot",
-    "base_coin": "URAx",
+    "base_coin": "URASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-URAX-USD",
-    "symbol": "URAX",
+    "internal_id": "spot-URASPV-USD",
+    "symbol": "URASPV",
     "denominator": "USD"
   },
   {
@@ -20434,12 +20434,12 @@
   {
     "id": "USARSPV/USD",
     "type": "spot",
-    "base_coin": "USARx",
+    "base_coin": "USARSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-USARX-USD",
-    "symbol": "USARX",
+    "internal_id": "spot-USARSPV-USD",
+    "symbol": "USARSPV",
     "denominator": "USD"
   },
   {
@@ -21033,12 +21033,12 @@
   {
     "id": "USPXSPV/USD",
     "type": "spot",
-    "base_coin": "USPXx",
+    "base_coin": "USPXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-USPXX-USD",
-    "symbol": "USPXX",
+    "internal_id": "spot-USPXSPV-USD",
+    "symbol": "USPXSPV",
     "denominator": "USD"
   },
   {
@@ -21124,12 +21124,12 @@
   {
     "id": "UUUUSPV/USD",
     "type": "spot",
-    "base_coin": "UUUUx",
+    "base_coin": "UUUUSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-UUUUX-USD",
-    "symbol": "UUUUX",
+    "internal_id": "spot-UUUUSPV-USD",
+    "symbol": "UUUUSPV",
     "denominator": "USD"
   },
   {
@@ -21188,12 +21188,12 @@
   {
     "id": "VCXSPV/USD",
     "type": "spot",
-    "base_coin": "VCXx",
+    "base_coin": "VCXSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VCXX-USD",
-    "symbol": "VCXX",
+    "internal_id": "spot-VCXSPV-USD",
+    "symbol": "VCXSPV",
     "denominator": "USD"
   },
   {
@@ -21362,12 +21362,12 @@
   {
     "id": "VGKSPV/USD",
     "type": "spot",
-    "base_coin": "VGKx",
+    "base_coin": "VGKSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VGKX-USD",
-    "symbol": "VGKX",
+    "internal_id": "spot-VGKSPV-USD",
+    "symbol": "VGKSPV",
     "denominator": "USD"
   },
   {
@@ -21384,12 +21384,12 @@
   {
     "id": "VIDASPV/USD",
     "type": "spot",
-    "base_coin": "VIDAx",
+    "base_coin": "VIDASPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VIDAX-USD",
-    "symbol": "VIDAX",
+    "internal_id": "spot-VIDASPV-USD",
+    "symbol": "VIDASPV",
     "denominator": "USD"
   },
   {
@@ -21483,12 +21483,12 @@
   {
     "id": "VOOSPV/USD",
     "type": "spot",
-    "base_coin": "VOOx",
+    "base_coin": "VOOSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VOOX-USD",
-    "symbol": "VOOX",
+    "internal_id": "spot-VOOSPV-USD",
+    "symbol": "VOOSPV",
     "denominator": "USD"
   },
   {
@@ -21505,12 +21505,12 @@
   {
     "id": "VRTSPV/USD",
     "type": "spot",
-    "base_coin": "VRTx",
+    "base_coin": "VRTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VRTX-USD",
-    "symbol": "VRTX",
+    "internal_id": "spot-VRTSPV-USD",
+    "symbol": "VRTSPV",
     "denominator": "USD"
   },
   {
@@ -21549,12 +21549,12 @@
   {
     "id": "VSPV/USD",
     "type": "spot",
-    "base_coin": "Vx",
+    "base_coin": "VSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VX-USD",
-    "symbol": "VX",
+    "internal_id": "spot-VSPV-USD",
+    "symbol": "VSPV",
     "denominator": "USD"
   },
   {
@@ -21582,12 +21582,12 @@
   {
     "id": "VTISPV/USD",
     "type": "spot",
-    "base_coin": "VTIx",
+    "base_coin": "VTISPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VTIX-USD",
-    "symbol": "VTIX",
+    "internal_id": "spot-VTISPV-USD",
+    "symbol": "VTISPV",
     "denominator": "USD"
   },
   {
@@ -21604,12 +21604,12 @@
   {
     "id": "VTSPV/USD",
     "type": "spot",
-    "base_coin": "VTx",
+    "base_coin": "VTSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VTX-USD",
-    "symbol": "VTX",
+    "internal_id": "spot-VTSPV-USD",
+    "symbol": "VTSPV",
     "denominator": "USD"
   },
   {
@@ -21626,12 +21626,12 @@
   {
     "id": "VUGSPV/USD",
     "type": "spot",
-    "base_coin": "VUGx",
+    "base_coin": "VUGSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VUGX-USD",
-    "symbol": "VUGX",
+    "internal_id": "spot-VUGSPV-USD",
+    "symbol": "VUGSPV",
     "denominator": "USD"
   },
   {
@@ -21692,12 +21692,12 @@
   {
     "id": "VXUSSPV/USD",
     "type": "spot",
-    "base_coin": "VXUSx",
+    "base_coin": "VXUSSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-VXUSX-USD",
-    "symbol": "VXUSX",
+    "internal_id": "spot-VXUSSPV-USD",
+    "symbol": "VXUSSPV",
     "denominator": "USD"
   },
   {
@@ -21869,12 +21869,12 @@
   {
     "id": "WBDSPV/USD",
     "type": "spot",
-    "base_coin": "WBDx",
+    "base_coin": "WBDSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-WBDX-USD",
-    "symbol": "WBDX",
+    "internal_id": "spot-WBDSPV-USD",
+    "symbol": "WBDSPV",
     "denominator": "USD"
   },
   {
@@ -22031,12 +22031,12 @@
   {
     "id": "WENSPV/USD",
     "type": "spot",
-    "base_coin": "WENx",
+    "base_coin": "WENSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-16T00:00:00.000Z",
-    "internal_id": "spot-WENX-USD",
-    "symbol": "WENX",
+    "internal_id": "spot-WENSPV-USD",
+    "symbol": "WENSPV",
     "denominator": "USD"
   },
   {
@@ -22240,12 +22240,12 @@
   {
     "id": "WULFSPV/USD",
     "type": "spot",
-    "base_coin": "WULFx",
+    "base_coin": "WULFSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-WULFX-USD",
-    "symbol": "WULFX",
+    "internal_id": "spot-WULFSPV-USD",
+    "symbol": "WULFSPV",
     "denominator": "USD"
   },
   {
@@ -22710,12 +22710,12 @@
   {
     "id": "XLESPV/USD",
     "type": "spot",
-    "base_coin": "XLEx",
+    "base_coin": "XLESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-XLEX-USD",
-    "symbol": "XLEX",
+    "internal_id": "spot-XLESPV-USD",
+    "symbol": "XLESPV",
     "denominator": "USD"
   },
   {
@@ -22920,12 +22920,12 @@
   {
     "id": "XOMSPV/USD",
     "type": "spot",
-    "base_coin": "XOMx",
+    "base_coin": "XOMSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-XOMX-USD",
-    "symbol": "XOMX",
+    "internal_id": "spot-XOMSPV-USD",
+    "symbol": "XOMSPV",
     "denominator": "USD"
   },
   {
@@ -22942,12 +22942,12 @@
   {
     "id": "XOPSPV/USD",
     "type": "spot",
-    "base_coin": "XOPx",
+    "base_coin": "XOPSPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-XOPX-USD",
-    "symbol": "XOPX",
+    "internal_id": "spot-XOPSPV-USD",
+    "symbol": "XOPSPV",
     "denominator": "USD"
   },
   {
@@ -23422,12 +23422,12 @@
   {
     "id": "YLDESPV/USD",
     "type": "spot",
-    "base_coin": "YLDEx",
+    "base_coin": "YLDESPV",
     "quote_coin": "USD",
     "underlying": "equity",
     "first_capture": "2026-07-10T00:00:00.000Z",
-    "internal_id": "spot-YLDEX-USD",
-    "symbol": "YLDEX",
+    "internal_id": "spot-YLDESPV-USD",
+    "symbol": "YLDESPV",
     "denominator": "USD"
   },
   {

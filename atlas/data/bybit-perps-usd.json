@@ -1723,8 +1723,15 @@
     "quantity_unit": "base",
     "first_capture": "2024-01-17T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
+    "cmc_id": 28846,
+    "category": [
+      "Generative AI"
+    ],
+    "base_asset_id": "AI.SLEEPLESS_AI",
+    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AI.SLEEPLESS_AI-USDT:USDT"
   },
   {
     "id": "AIXBTUSDT",
@@ -2280,6 +2287,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-ANC-USDT:USDT"
+  },
+  {
+    "id": "ANDDUSDT",
+    "type": "perpetual",
+    "base_coin": "ANDD",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:16:29.000Z",
+    "internal_id": "perpetual-ANDD-USDT:USDT",
+    "symbol": "ANDD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "ANDD",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ANDD-USDT:USDT"
   },
   {
     "id": "ANETUSDT",
@@ -12734,8 +12761,13 @@
     "denominator": "USDT",
     "margin": "USDT",
     "first_capture": "2026-08-21T00:00:00.000Z",
+    "cmc_id": 42936,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "JD",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-JD-USDT:USDT"
@@ -13401,6 +13433,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-KO-USDT:USDT"
+  },
+  {
+    "id": "KRUSDT",
+    "type": "perpetual",
+    "base_coin": "KR",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:01:32.000Z",
+    "internal_id": "perpetual-KR-USDT:USDT",
+    "symbol": "KR",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "KR",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KR-USDT:USDT"
   },
   {
     "id": "KSMUSDT",
@@ -23556,6 +23608,26 @@
     "unified_id": "perpetual-TER-USDT:USDT"
   },
   {
+    "id": "TGTSTOCKUSDT",
+    "type": "perpetual",
+    "base_coin": "TGTSTOCK",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:00:29.000Z",
+    "internal_id": "perpetual-TGTSTOCK-USDT:USDT",
+    "symbol": "TGTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "TGTSTOCK",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TGTSTOCK-USDT:USDT"
+  },
+  {
     "id": "THETAUSDT",
     "type": "perpetual",
     "internal_id": "perpetual-THETA-USDT:USDT",
@@ -23654,6 +23726,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-TIA-USDT:USDT"
+  },
+  {
+    "id": "TJXUSDT",
+    "type": "perpetual",
+    "base_coin": "TJX",
+    "quote_coin": "USDT",
+    "settle_coin": "USDT",
+    "quantity_unit": "base",
+    "contract_size": 1.0,
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:58:20.000Z",
+    "internal_id": "perpetual-TJX-USDT:USDT",
+    "symbol": "TJX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "TJX",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TJX-USDT:USDT"
   },
   {
     "id": "TLMUSDT",

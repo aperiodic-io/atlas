@@ -449,7 +449,7 @@
     "margin": "USDT",
     "cmc_id": 28674,
     "category": [],
-    "missing_since": "2026-11-24T11:57:05.615Z",
+    "end_date": "2026-11-24T11:57:05.615Z",
     "base_asset_id": "ACE",
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
@@ -1711,6 +1711,30 @@
     "margin": "USDT",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT"
+  },
+  {
+    "id": "AMDL_USDT",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42900,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "AMDL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-AMDL-USDT:USDT"
   },
   {
     "id": "AMD_USDT",
@@ -10256,6 +10280,31 @@
     "unified_id": "perpetual-ETH-USDT:USDT"
   },
   {
+    "id": "ETN_USDT",
+    "type": "perpetual",
+    "base_coin": "ETN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-ETN-USDT:USDT",
+    "symbol": "ETN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42880,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ETN.EQUITY",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-ETN.EQUITY-USDT:USDT"
+  },
+  {
     "id": "EUL_USDT",
     "type": "perpetual",
     "base_coin": "EUL",
@@ -15317,8 +15366,13 @@
     "symbol": "JD",
     "denominator": "USDT",
     "margin": "USDT",
+    "cmc_id": 42936,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
     "base_asset_id": "JD",
-    "base_asset_match": "venue_reference",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-JD-USDT:USDT"
@@ -16447,7 +16501,7 @@
       "DeFi"
     ],
     "base_asset_id": "KWEB",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-KWEB-USDT:USDT"
@@ -17015,6 +17069,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-LIT-USDT:USDT"
+  },
+  {
+    "id": "LI_USDT",
+    "type": "perpetual",
+    "base_coin": "LI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-LI-USDT:USDT",
+    "symbol": "LI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "LI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-LI-USDT:USDT"
   },
   {
     "id": "LLY_USDT",
@@ -20666,6 +20740,31 @@
     "unified_id": "perpetual-NIL-USDT:USDT"
   },
   {
+    "id": "NIO_USDT",
+    "type": "perpetual",
+    "base_coin": "NIO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-NIO-USDT:USDT",
+    "symbol": "NIO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42901,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NIO",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NIO-USDT:USDT"
+  },
+  {
     "id": "NKE_USDT",
     "type": "perpetual",
     "base_coin": "NKE",
@@ -21094,6 +21193,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NXPC-USDT:USDT"
+  },
+  {
+    "id": "NXPI_USDT",
+    "type": "perpetual",
+    "base_coin": "NXPI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-NXPI-USDT:USDT",
+    "symbol": "NXPI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "NXPI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NXPI-USDT:USDT"
   },
   {
     "id": "NXT_USDT",
@@ -26766,6 +26885,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-SMR.NUSCALE_POWER_CORPORATION_CLASS_A_DERIVATIVE-USDT:USDT"
+  },
+  {
+    "id": "SMTC_USDT",
+    "type": "perpetual",
+    "base_coin": "SMTC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-SMTC-USDT:USDT",
+    "symbol": "SMTC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "SMTC",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-SMTC-USDT:USDT"
   },
   {
     "id": "SNAP_USDT",

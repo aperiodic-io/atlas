@@ -8010,6 +8010,28 @@
     "unified_id": "perpetual-PARTI-USDC:USDC"
   },
   {
+    "id": "PATH",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:49:28.652Z",
+    "internal_id": "perpetual-PATH-USDC:USDC",
+    "symbol": "PATH",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 42321,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "PATH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-PATH-USDC:USDC"
+  },
+  {
     "id": "PAXG",
     "type": "perpetual",
     "contract_size": 1.0,
@@ -10500,6 +10522,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-TEAM-USDC:USDC"
+  },
+  {
+    "id": "TEM",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:49:28.652Z",
+    "internal_id": "perpetual-TEM-USDC:USDC",
+    "symbol": "TEM",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 41950,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TEM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TEM-USDC:USDC"
   },
   {
     "id": "TENCENT",

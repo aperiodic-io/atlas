@@ -1003,7 +1003,8 @@
     "first_capture": "2024-04-12T00:00:00.000Z",
     "internal_id": "spot-APUFF-USDT",
     "symbol": "APUFF",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "APU_USDT",
@@ -1419,7 +1420,8 @@
     "first_capture": "2024-11-27T00:00:00.000Z",
     "internal_id": "spot-AVB-USDT",
     "symbol": "AVB",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "AVNT_USDT",
@@ -1612,7 +1614,8 @@
     "first_capture": "2024-01-26T00:00:00.000Z",
     "internal_id": "spot-BAKE-USDT",
     "symbol": "BAKE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "BALL_USDT",
@@ -2181,7 +2184,8 @@
     "first_capture": "2024-12-02T00:00:00.000Z",
     "internal_id": "spot-BIAOSOL-USDT",
     "symbol": "BIAOSOL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "BIAOTRON_USDT",
@@ -4787,7 +4791,8 @@
     "first_capture": "2024-04-11T00:00:00.000Z",
     "internal_id": "spot-CHKN-USDT",
     "symbol": "CHKN",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CHOW_USDT",
@@ -5054,7 +5059,8 @@
     "first_capture": "2024-06-03T00:00:00.000Z",
     "internal_id": "spot-COK-USDT",
     "symbol": "COK",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "COLLAB_USDT",
@@ -5362,7 +5368,8 @@
     "first_capture": "2024-05-15T00:00:00.000Z",
     "internal_id": "spot-CTA-USDT",
     "symbol": "CTA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CTC_USDT",
@@ -5373,7 +5380,8 @@
     "first_capture": "2022-08-02T00:00:00.000Z",
     "internal_id": "spot-CTC-USDT",
     "symbol": "CTC",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CTSI_USDT",
@@ -9168,6 +9176,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "HBAR_USDT",
+    "type": "spot",
+    "base_coin": "HBAR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-25T07:20:00.000Z",
+    "internal_id": "spot-HBAR-USDT",
+    "symbol": "HBAR",
+    "denominator": "USDT"
+  },
+  {
     "id": "HBB_USDD",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -10908,7 +10927,8 @@
     "first_capture": "2024-11-18T00:00:00.000Z",
     "internal_id": "spot-LESTER-USDT",
     "symbol": "LESTER",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "LETSBONK_USDT",
@@ -11446,7 +11466,8 @@
     "first_capture": "2025-01-24T00:00:00.000Z",
     "internal_id": "spot-LUMO-USDT",
     "symbol": "LUMO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "LUNA_USDD",
@@ -12141,7 +12162,8 @@
     "first_capture": "2024-12-27T00:00:00.000Z",
     "internal_id": "spot-METAV-USDT",
     "symbol": "METAV",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "METIS_USDT",
@@ -12750,7 +12772,8 @@
     "first_capture": "2024-05-29T00:00:00.000Z",
     "internal_id": "spot-MOTHER-USDT",
     "symbol": "MOTHER",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "MOTH_USDT",
@@ -13106,7 +13129,8 @@
     "first_capture": "2025-03-10T00:00:00.000Z",
     "internal_id": "spot-NATO-USDT",
     "symbol": "NATO",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "NAVX_USDT",
@@ -16070,7 +16094,8 @@
     "first_capture": "2024-11-18T00:00:00.000Z",
     "internal_id": "spot-RIFSOL-USDT",
     "symbol": "RIFSOL",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "RIF_USDT",
@@ -16650,7 +16675,8 @@
     "first_capture": "2025-01-17T00:00:00.000Z",
     "internal_id": "spot-SEKOIA-USDT",
     "symbol": "SEKOIA",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "SELFIE_USDT",
@@ -16661,7 +16687,8 @@
     "first_capture": "2024-05-16T00:00:00.000Z",
     "internal_id": "spot-SELFIE-USDT",
     "symbol": "SELFIE",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "SEND_USDT",
@@ -18574,7 +18601,8 @@
     "first_capture": "2024-09-23T00:00:00.000Z",
     "internal_id": "spot-TERMINUS-USDT",
     "symbol": "TERMINUS",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "TESTICLE_USDT",
@@ -19040,7 +19068,8 @@
     "first_capture": "2025-01-03T00:00:00.000Z",
     "internal_id": "spot-TRISG-USDT",
     "symbol": "TRISG",
-    "denominator": "USDT"
+    "denominator": "USDT",
+    "missing_since": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "TRN_USDT",
@@ -25690,6 +25719,17 @@
     "first_capture": "2025-09-15T00:00:00.000Z",
     "internal_id": "spot-XPIN-USDT",
     "symbol": "XPIN",
+    "denominator": "USDT"
+  },
+  {
+    "id": "XPL_USDT",
+    "type": "spot",
+    "base_coin": "XPL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-25T07:40:00.000Z",
+    "internal_id": "spot-XPL-USDT",
+    "symbol": "XPL",
     "denominator": "USDT"
   },
   {

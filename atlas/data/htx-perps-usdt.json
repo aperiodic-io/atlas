@@ -5237,6 +5237,21 @@
     "margin": "USDT"
   },
   {
+    "id": "KWEB-USDT",
+    "type": "perpetual",
+    "base_coin": "KWEB",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-25T00:00:00.000Z",
+    "internal_id": "perpetual-KWEB-USDT:USDT",
+    "symbol": "KWEB",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LA-USDT",
     "type": "perpetual",
     "first_capture": "2025-06-05T00:00:00.000Z",

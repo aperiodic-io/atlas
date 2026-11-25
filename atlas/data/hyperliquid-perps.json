@@ -137,8 +137,15 @@
     "underlying": "crypto",
     "first_capture": "2024-10-29T00:00:00.000Z",
     "end_date": "2025-06-27T00:00:00.000Z",
+    "cmc_id": 28846,
+    "category": [
+      "Generative AI"
+    ],
+    "base_asset_id": "AI.SLEEPLESS_AI",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
-    "margin_asset_id": "USDC"
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-AI.SLEEPLESS_AI-USDC:USDC"
   },
   {
     "id": "AI16Z",
@@ -6326,6 +6333,28 @@
     "unified_id": "perpetual-EWY-USDC:USDC"
   },
   {
+    "id": "io:GOOGL",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:48:45.814Z",
+    "internal_id": "perpetual-IO:GOOGL-USDC:USDC",
+    "symbol": "IO:GOOGL",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 39470,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "GOOGL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-GOOGL-USDC:USDC"
+  },
+  {
     "id": "io:GPRO",
     "type": "perpetual",
     "internal_id": "perpetual-IO:GPRO-USDC:USDC",
@@ -11274,6 +11303,28 @@
     "unified_id": "perpetual-SOXL-USDC:USDC"
   },
   {
+    "id": "xyz:SOXS",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "unknown",
+    "first_capture": "2026-11-25T10:48:45.814Z",
+    "internal_id": "perpetual-XYZ:SOXS-USDC:USDC",
+    "symbol": "XYZ:SOXS",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40862,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SOXS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-SOXS-USDC:USDC"
+  },
+  {
     "id": "xyz:SP500",
     "type": "perpetual",
     "internal_id": "perpetual-XYZ:SP500-USDC:USDC",
@@ -11359,6 +11410,28 @@
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
     "unified_id": "perpetual-TLT-USDC:USDC"
+  },
+  {
+    "id": "xyz:TQQQ",
+    "type": "perpetual",
+    "contract_size": 1.0,
+    "margin_asset": "USDC",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T10:48:45.814Z",
+    "internal_id": "perpetual-XYZ:TQQQ-USDC:USDC",
+    "symbol": "XYZ:TQQQ",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "cmc_id": 40560,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TQQQ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "margin_asset_id": "USDC",
+    "unified_id": "perpetual-TQQQ-USDC:USDC"
   },
   {
     "id": "xyz:TSLA",

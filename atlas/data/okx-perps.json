@@ -6626,6 +6626,27 @@
     "unified_id": "perpetual-JCT-USDT:USDT"
   },
   {
+    "id": "JD-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-25T09:00:00.000Z",
+    "internal_id": "perpetual-JD-USDT:USDT",
+    "symbol": "JD",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42936,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "JD",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-JD-USDT:USDT"
+  },
+  {
     "id": "JELLYJELLY-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-JELLYJELLY-USDT:USDT",
@@ -7150,6 +7171,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-KSTR-USDT:USDT"
+  },
+  {
+    "id": "KUAISHOU-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-25T06:30:00.000Z",
+    "internal_id": "perpetual-KUAISHOU-USDT:USDT",
+    "symbol": "KUAISHOU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 41073,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "KUAISHOU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KUAISHOU-USDT:USDT"
   },
   {
     "id": "KWEB-USDT-SWAP",
@@ -8006,6 +8048,27 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-MEGA-USDT:USDT"
+  },
+  {
+    "id": "MEITUAN-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-25T06:15:00.000Z",
+    "internal_id": "perpetual-MEITUAN-USDT:USDT",
+    "symbol": "MEITUAN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 41074,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "MEITUAN",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-MEITUAN-USDT:USDT"
   },
   {
     "id": "MELI-USDT-SWAP",
@@ -12872,6 +12935,27 @@
     "unified_id": "perpetual-TEM-USDT:USDT"
   },
   {
+    "id": "TENCENT-USDT-SWAP",
+    "type": "perpetual",
+    "underlying": "equity",
+    "contract_size": 1.0,
+    "first_capture": "2026-11-25T06:00:00.000Z",
+    "internal_id": "perpetual-TENCENT-USDT:USDT",
+    "symbol": "TENCENT",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39961,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "TENCENT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-TENCENT-USDT:USDT"
+  },
+  {
     "id": "TER-USDT-SWAP",
     "type": "perpetual",
     "internal_id": "perpetual-TER-USDT:USDT",
@@ -13746,7 +13830,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "NDX",
-    "base_asset_match": "venue_lineage",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NDX-USDT:USDT"
