@@ -42,8 +42,10 @@ term.
 Python 3.12+.
 
 ```bash
-pip install git+https://github.com/aperiodic-io/atlas
+pip install atlas-crypto-security-master
 ```
+
+Or the latest commit: `pip install git+https://github.com/aperiodic-io/atlas`
 
 The snapshots ship with the package, so every lookup is a local dictionary read.
 
