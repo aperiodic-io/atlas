@@ -6964,6 +6964,31 @@
     "unified_id": "perpetual-DISK-USDT:USDT"
   },
   {
+    "id": "DISUSDT",
+    "type": "perpetual",
+    "base_coin": "DIS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T12:24:56.742Z",
+    "internal_id": "perpetual-DIS-USDT:USDT",
+    "symbol": "DIS",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39998,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "DIS",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-DIS-USDT:USDT"
+  },
+  {
     "id": "DJTUSDT",
     "type": "perpetual",
     "base_coin": "DJT",
@@ -15865,6 +15890,31 @@
     "unified_id": "perpetual-NVDL-USDT:USDT"
   },
   {
+    "id": "NVOUSDT",
+    "type": "perpetual",
+    "base_coin": "NVO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T12:25:01.797Z",
+    "internal_id": "perpetual-NVO-USDT:USDT",
+    "symbol": "NVO",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 40104,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "NVO",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-NVO-USDT:USDT"
+  },
+  {
     "id": "NVSUSDT",
     "type": "perpetual",
     "base_coin": "NVS",
@@ -18652,6 +18702,31 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-RIVER-USDT:USDT"
+  },
+  {
+    "id": "RIVNUSDT",
+    "type": "perpetual",
+    "base_coin": "RIVN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T12:25:03.994Z",
+    "internal_id": "perpetual-RIVN-USDT:USDT",
+    "symbol": "RIVN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 39499,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "RIVN",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-RIVN-USDT:USDT"
   },
   {
     "id": "RKLBUSDT",

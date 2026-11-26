@@ -862,6 +862,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "ANT_USDT",
+    "type": "spot",
+    "base_coin": "ANT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T08:00:00.000Z",
+    "internal_id": "spot-ANT-USDT",
+    "symbol": "ANT",
+    "denominator": "USDT"
+  },
+  {
     "id": "ANYONE_USDT",
     "type": "spot",
     "base_coin": "ANYONE",
@@ -1004,7 +1015,7 @@
     "internal_id": "spot-APUFF-USDT",
     "symbol": "APUFF",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "APU_USDT",
@@ -1421,7 +1432,18 @@
     "internal_id": "spot-AVB-USDT",
     "symbol": "AVB",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
+  },
+  {
+    "id": "AVGO_USDT",
+    "type": "spot",
+    "base_coin": "AVGO",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T08:00:00.000Z",
+    "internal_id": "spot-AVGO-USDT",
+    "symbol": "AVGO",
+    "denominator": "USDT"
   },
   {
     "id": "AVNT_USDT",
@@ -1615,7 +1637,7 @@
     "internal_id": "spot-BAKE-USDT",
     "symbol": "BAKE",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "BALL_USDT",
@@ -2185,7 +2207,7 @@
     "internal_id": "spot-BIAOSOL-USDT",
     "symbol": "BIAOSOL",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "BIAOTRON_USDT",
@@ -2465,6 +2487,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "BMNR_USDT",
+    "type": "spot",
+    "base_coin": "BMNR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T08:00:00.000Z",
+    "internal_id": "spot-BMNR-USDT",
+    "symbol": "BMNR",
+    "denominator": "USDT"
+  },
+  {
     "id": "BMT_USDT",
     "type": "spot",
     "base_coin": "BMT",
@@ -2573,6 +2606,17 @@
     "first_capture": "2022-08-02T00:00:00.000Z",
     "internal_id": "spot-BNB-USDT",
     "symbol": "BNB",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BNC_USDT",
+    "type": "spot",
+    "base_coin": "BNC",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T08:00:00.000Z",
+    "internal_id": "spot-BNC-USDT",
+    "symbol": "BNC",
     "denominator": "USDT"
   },
   {
@@ -4792,7 +4836,7 @@
     "internal_id": "spot-CHKN-USDT",
     "symbol": "CHKN",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CHOW_USDT",
@@ -5051,6 +5095,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "COIN_USDT",
+    "type": "spot",
+    "base_coin": "COIN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T08:00:00.000Z",
+    "internal_id": "spot-COIN-USDT",
+    "symbol": "COIN",
+    "denominator": "USDT"
+  },
+  {
     "id": "COK_USDT",
     "type": "spot",
     "base_coin": "COK",
@@ -5060,7 +5115,7 @@
     "internal_id": "spot-COK-USDT",
     "symbol": "COK",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "COLLAB_USDT",
@@ -5369,7 +5424,7 @@
     "internal_id": "spot-CTA-USDT",
     "symbol": "CTA",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CTC_USDT",
@@ -5381,7 +5436,7 @@
     "internal_id": "spot-CTC-USDT",
     "symbol": "CTC",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "CTSI_USDT",
@@ -10928,7 +10983,7 @@
     "internal_id": "spot-LESTER-USDT",
     "symbol": "LESTER",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "LETSBONK_USDT",
@@ -11467,7 +11522,7 @@
     "internal_id": "spot-LUMO-USDT",
     "symbol": "LUMO",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "LUNA_USDD",
@@ -12163,7 +12218,7 @@
     "internal_id": "spot-METAV-USDT",
     "symbol": "METAV",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "METIS_USDT",
@@ -12773,7 +12828,7 @@
     "internal_id": "spot-MOTHER-USDT",
     "symbol": "MOTHER",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "MOTH_USDT",
@@ -13130,7 +13185,7 @@
     "internal_id": "spot-NATO-USDT",
     "symbol": "NATO",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "NAVX_USDT",
@@ -16095,7 +16150,7 @@
     "internal_id": "spot-RIFSOL-USDT",
     "symbol": "RIFSOL",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "RIF_USDT",
@@ -16676,7 +16731,7 @@
     "internal_id": "spot-SEKOIA-USDT",
     "symbol": "SEKOIA",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "SELFIE_USDT",
@@ -16688,7 +16743,7 @@
     "internal_id": "spot-SELFIE-USDT",
     "symbol": "SELFIE",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "SEND_USDT",
@@ -18602,7 +18657,7 @@
     "internal_id": "spot-TERMINUS-USDT",
     "symbol": "TERMINUS",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "TESTICLE_USDT",
@@ -19069,7 +19124,7 @@
     "internal_id": "spot-TRISG-USDT",
     "symbol": "TRISG",
     "denominator": "USDT",
-    "missing_since": "2026-11-25T10:53:05.245Z"
+    "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
     "id": "TRN_USDT",

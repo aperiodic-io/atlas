@@ -6794,6 +6794,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NXPI-USDT",
+    "type": "perpetual",
+    "base_coin": "NXPI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-26T00:00:00.000Z",
+    "internal_id": "perpetual-NXPI-USDT:USDT",
+    "symbol": "NXPI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NYM-USDT",
     "type": "perpetual",
     "first_capture": "2022-04-15T00:00:00.000Z",

@@ -155,7 +155,12 @@
     "symbol": "ANZ",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 35577,
+    "category": [],
+    "base_asset_id": "ANZ",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-ANZ-USDC"
   },
   {
     "id": "APU/USDC",
@@ -3932,7 +3937,12 @@
     "symbol": "WOW",
     "denominator": "USDC",
     "first_capture": "2026-03-02T20:39:53+01:00",
-    "quote_asset_id": "USDC"
+    "cmc_id": 8605,
+    "category": [],
+    "base_asset_id": "WOW",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-WOW-USDC"
   },
   {
     "id": "WOWBIT/USDC",
@@ -3999,6 +4009,22 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT0",
     "unified_id": "spot-XAUT0-USDT0"
+  },
+  {
+    "id": "XBTC/USDC",
+    "type": "spot",
+    "first_capture": "2026-11-26T10:21:50.338Z",
+    "internal_id": "spot-XBTC-USDC",
+    "symbol": "XBTC",
+    "denominator": "USDC",
+    "cmc_id": 39577,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XBTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDC",
+    "unified_id": "spot-XBTC-USDC"
   },
   {
     "id": "XION/USDC",

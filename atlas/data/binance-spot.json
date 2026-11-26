@@ -5045,6 +5045,25 @@
     "unified_id": "spot-AR-TRY"
   },
   {
+    "id": "artybusdt",
+    "type": "spot",
+    "base_coin": "ARTYB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-26T10:21:46.106Z",
+    "internal_id": "spot-ARTYB-USDT",
+    "symbol": "ARTYB",
+    "denominator": "USDT",
+    "cmc_id": 42927,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "ARTYB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-ARTYB-USDT"
+  },
+  {
     "id": "arusdc",
     "type": "spot",
     "internal_id": "spot-AR-USDC",
@@ -20894,6 +20913,25 @@
     "unified_id": "spot-FRAX-USDT"
   },
   {
+    "id": "frhcbusdt",
+    "type": "spot",
+    "base_coin": "FRHCB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-26T10:21:46.106Z",
+    "internal_id": "spot-FRHCB-USDT",
+    "symbol": "FRHCB",
+    "denominator": "USDT",
+    "cmc_id": 42930,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "FRHCB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-FRHCB-USDT"
+  },
+  {
     "id": "frontbtc",
     "type": "spot",
     "internal_id": "spot-FRONT-BTC",
@@ -24932,6 +24970,25 @@
     "unified_id": "spot-HYPE-USDT"
   },
   {
+    "id": "ibitbusdt",
+    "type": "spot",
+    "base_coin": "IBITB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-26T10:21:46.106Z",
+    "internal_id": "spot-IBITB-USDT",
+    "symbol": "IBITB",
+    "denominator": "USDT",
+    "cmc_id": 42926,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IBITB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-IBITB-USDT"
+  },
+  {
     "id": "ibmbusdt",
     "type": "spot",
     "internal_id": "spot-IBMB-USDT",
@@ -25404,6 +25461,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-ID-USDT"
+  },
+  {
+    "id": "igvbusdt",
+    "type": "spot",
+    "base_coin": "IGVB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-26T10:21:46.106Z",
+    "internal_id": "spot-IGVB-USDT",
+    "symbol": "IGVB",
+    "denominator": "USDT",
+    "cmc_id": 42928,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "IGVB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-IGVB-USDT"
   },
   {
     "id": "ilvbnb",
@@ -45689,6 +45765,25 @@
     "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "unified_id": "spot-SOXSB-USDT"
+  },
+  {
+    "id": "soxxbusdt",
+    "type": "spot",
+    "base_coin": "SOXXB",
+    "quote_coin": "USDT",
+    "first_capture": "2026-11-26T10:21:46.106Z",
+    "internal_id": "spot-SOXXB-USDT",
+    "symbol": "SOXXB",
+    "denominator": "USDT",
+    "cmc_id": 42929,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "SOXXB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-SOXXB-USDT"
   },
   {
     "id": "spartabnb",

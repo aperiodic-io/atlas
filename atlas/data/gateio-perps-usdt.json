@@ -8652,17 +8652,8 @@
     "symbol": "DEGO",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 7087,
-    "category": [
-      "DeFi",
-      "Collectibles & NFTs",
-      "DAO"
-    ],
-    "base_asset_id": "DEGO",
-    "base_asset_match": "venue_lineage",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-DEGO-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "DELL_USDT",
@@ -20759,7 +20750,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "NIO",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-NIO-USDT:USDT"
