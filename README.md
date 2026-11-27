@@ -42,7 +42,7 @@ term.
 Python 3.12+.
 
 ```bash
-pip install atlas-crypto-security-master
+pip install atlas-master
 ```
 
 Or the latest commit: `pip install git+https://github.com/aperiodic-io/atlas`

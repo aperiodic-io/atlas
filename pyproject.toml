@@ -3,7 +3,7 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [project]
-name = "atlas-crypto-security-master"
+name = "atlas-master"
 version = "1.0.0"
 authors = [
   { name = "Mark Aron Szulyovszky", email = "mark@aperiodic.io" },
@@ -80,7 +80,7 @@ push = false
 
 
 [tool.hatch.envs.quality]
-dependencies = ["atlas-crypto-security-master[quality]"]
+dependencies = ["atlas-master[quality]"]
 detached = true
 
 [tool.hatch.envs.quality.scripts]
@@ -88,7 +88,7 @@ check = ["ruff lint ."]
 format = ["ruff format ."]
 
 [tool.hatch.envs.test]
-dependencies = ["atlas-crypto-security-master[tests]"]
+dependencies = ["atlas-master[tests]"]
 
 [tool.hatch.envs.test.scripts]
 run = "pytest tests/ --durations 0 -s"
