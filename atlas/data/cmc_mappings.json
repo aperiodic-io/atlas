@@ -20712,6 +20712,54 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1117",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 5.0,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "BYQYS",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "BYQYS",
+            "index": 1273,
+            "isCanonical": false,
+            "name": "BYQYS",
+            "pair": "@1117",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x09c9c5971dd28c23a28b1e39e794fcce",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-19T07:14:13.761741Z",
+        "original_id": "BYQYS/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "BYQYS"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -22312,6 +22360,370 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1157",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 358.88,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQAAPL",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x15d82780780ca72570818f91587b752562d655bc",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized AAPL",
+            "index": 862,
+            "isCanonical": false,
+            "name": "EQAAPL",
+            "pair": "@1157",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x2c4a311a3e3ecbb71bb802ab3571144e",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQAAPL/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQAAPL"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1161",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 250.11,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQAMZN",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x582c6add0eb720ea1c2e2019ff9b7c21fe99288f",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized AMZN",
+            "index": 868,
+            "isCanonical": false,
+            "name": "EQAMZN",
+            "pair": "@1161",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x0cbd6f054ea7f520aa2a7de9d4d68814",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQAMZN/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQAMZN"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1158",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 279.78,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQGOOG",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x4720b40c89ff3a74c6be8ea34cf40fae5eaced79",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized GOOGL",
+            "index": 863,
+            "isCanonical": false,
+            "name": "EQGOOG",
+            "pair": "@1158",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xb91b6d60d85d9c7d85d2d0d96898612b",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQGOOG/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQGOOG"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1159",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 628.78,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQMETA",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xf5c6190d9178097563372a4aca15d52ec24f129a",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized META",
+            "index": 865,
+            "isCanonical": false,
+            "name": "EQMETA",
+            "pair": "@1159",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x06cc89c2b3ef95ed5ea0eb680b63e056",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQMETA/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQMETA"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1160",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 499.5,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQMSFT",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xca911a8ae21baaf9cdec0baa45259c64ec8ae59e",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized MSFT",
+            "index": 866,
+            "isCanonical": false,
+            "name": "EQMSFT",
+            "pair": "@1160",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xb1cbb325020d0ee18163f19cd7495105",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQMSFT/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQMSFT"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1162",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 635.87,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQMU",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x9164fd5f67fe4188ff79675182183512bc37d66d",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized MU",
+            "index": 869,
+            "isCanonical": false,
+            "name": "EQMU",
+            "pair": "@1162",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x61c8a247686d0e6e2589b0b3d8a54055",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQMU/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQMU"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1155",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 153.66,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQNVDA",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xa23afe6bd466bdb806a83afdda76f644fc4347cf",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized NVDA",
+            "index": 860,
+            "isCanonical": false,
+            "name": "EQNVDA",
+            "pair": "@1155",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xfcf10d9a2abb0db07aba1bedffb62508",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQNVDA/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQNVDA"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 6 unreadable of 8123 rows (6 duplicated, total moved by 1 mid-fetch): 0.0739%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -22360,6 +22772,58 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1163",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 131.54,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQSPCX",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xf115ff708a795cd0e06531dec57ed716138be8bd",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized SPCX",
+            "index": 871,
+            "isCanonical": false,
+            "name": "EQSPCX",
+            "pair": "@1163",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x112d84b7a42e962197fac264c83a982c",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQSPCX/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQSPCX"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 6 unreadable of 8123 rows (6 duplicated, total moved by 1 mid-fetch): 0.0739%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -22403,6 +22867,58 @@
       "slug": "",
       "status": "unmapped",
       "symbol": "EQSPY"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1156",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 388.82,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "EQTSLA",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "eqx",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x883dad2aa97175c0d1569e1de61204ac47b2b8fb",
+              "evm_extra_wei_decimals": 0
+            },
+            "fullName": "EQX Tokenized TSLA",
+            "index": 861,
+            "isCanonical": false,
+            "name": "EQTSLA",
+            "pair": "@1156",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xdad4f6d7caa2e78c431a61f96feab683",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-26T07:20:59.432000Z",
+        "original_id": "EQTSLA/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "EQTSLA"
     },
     {
       "cmc_id": null,
@@ -25855,6 +26371,57 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1187",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 0.000205,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "HYBR",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x067b0c72aa4c6bd3bfefff443c536dcd6a25a9c8",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "HYBRA",
+            "index": 394,
+            "isCanonical": false,
+            "name": "HYBR",
+            "pair": "@1187",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0xa2fbfbcf015a5f5d766bf3b469063be8",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-02T08:47:15.706000Z",
+        "original_id": "HYBR/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "HYBR"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -27873,6 +28440,57 @@
       "slug": "",
       "status": "uncertain",
       "symbol": "LUCKY"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1121",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 0.075946,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "LZCC",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x7d73496d792fa2c8144788e88217fa4e9a7e18ea",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "Canton Coin",
+            "index": 1255,
+            "isCanonical": false,
+            "name": "LZCC",
+            "pair": "@1121",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x73404db72c0b2613c83f3c529d68639f",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-10-21T06:57:12.152000Z",
+        "original_id": "LZCC/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "LZCC"
     },
     {
       "cmc_id": null,
@@ -39642,6 +40260,107 @@
       "slug": "",
       "status": "unmapped",
       "symbol": "XMR1"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1189",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 440.73,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "XMR2",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "belu",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "XMR - Beluga",
+            "index": 1333,
+            "isCanonical": false,
+            "name": "XMR2",
+            "pair": "@1189",
+            "quote": "USDC",
+            "szDecimals": 2,
+            "tokenId": "0x5f0c311fab64ce729122ed14d39c7332",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-11T08:46:30.744000Z",
+        "original_id": "XMR2/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XMR2"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1191",
+          "observed_at": "2026-11-27T12:54:27.876763Z",
+          "price": 440.69,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "XMRN",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerLabel": "nh",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0xcb0e319f9e21221083023e3bc46bddee77c69b8f",
+              "evm_extra_wei_decimals": 3
+            },
+            "fullName": "XMR - noiho.xyz",
+            "index": 1336,
+            "isCanonical": false,
+            "name": "XMRN",
+            "pair": "@1191",
+            "quote": "USDC",
+            "szDecimals": 4,
+            "tokenId": "0x31df97a61018272e68e73cbb8ddfe9de",
+            "weiDecimals": 9
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-16T08:56:58.119000Z",
+        "original_id": "XMRN/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-27T12:54:24.595144Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XMRN"
     },
     {
       "cmc_id": null,
