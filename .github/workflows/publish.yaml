@@ -1,12 +1,25 @@
 name: publish
 
-# Publishes to PyPI when a GitHub release is published, through PyPI Trusted Publishing:
-# no token or secret is stored. PyPI trusts this workflow, in the `pypi` environment.
+# Publishes to PyPI through PyPI Trusted Publishing: no token or secret is stored.
+# PyPI trusts this workflow file (publish.yaml) in the `pypi` environment, so every
+# trigger has to stay in this file.
+#
+# - A published GitHub release ships the version in pyproject.toml.
+# - Every day at 05:00 UTC, after the 02:00 data refresh, it ships the latest snapshots
+#   as MAJOR.MINOR.YYYYMMDD (e.g. 1.0.20261128), but only if something under atlas/
+#   changed since the last upload. Manual runs (workflow_dispatch) do the same.
 
 on:
   release:
     types:
       - published
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
 
 jobs:
   publish-package:
@@ -21,12 +34,55 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: setup-uv
         uses: astral-sh/setup-uv@v5
 
+      - name: daily-version
+        id: daily
+        if: github.event_name != 'release'
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, re, subprocess, urllib.request
+
+          def out(key, value):
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write(f"{key}={value}\n")
+
+          pyproject = open("pyproject.toml").read()
+          major, minor = re.search(r'^version = "(\d+)\.(\d+)\.', pyproject, re.M).groups()
+          today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d")
+          version = f"{major}.{minor}.{today}"
+
+          with urllib.request.urlopen("https://pypi.org/pypi/atlas-master/json") as r:
+              info = json.load(r)
+          if version in info["releases"]:
+              print(f"{version} is already on PyPI; nothing to do.")
+              out("publish", "false")
+              raise SystemExit
+          last_upload = max(f["upload_time_iso_8601"] for files in info["releases"].values() for f in files)
+          changed = subprocess.run(
+              ["git", "log", f"--since={last_upload}", "--format=%h", "--", "atlas/"],
+              capture_output=True, text=True, check=True,
+          ).stdout.split()
+          if not changed:
+              print(f"Nothing under atlas/ changed since the last upload ({last_upload}); skipping.")
+              out("publish", "false")
+              raise SystemExit
+
+          open("pyproject.toml", "w").write(
+              re.sub(r'^version = "[^"]+"', f'version = "{version}"', pyproject, count=1, flags=re.M)
+          )
+          print(f"Publishing {version}: {len(changed)} commit(s) under atlas/ since {last_upload}.")
+          out("publish", "true")
+          PY
+
       - name: build-package
+        if: github.event_name == 'release' || steps.daily.outputs.publish == 'true'
         run: uvx hatch build
 
       - name: publish-package
+        if: github.event_name == 'release' || steps.daily.outputs.publish == 'true'
         uses: pypa/gh-action-pypi-publish@release/v1
