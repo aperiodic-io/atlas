@@ -1,0 +1,49 @@
+name: publish-pages
+
+on:
+  push:
+    branches: [main]
+  # The update jobs push with GITHUB_TOKEN, which does not trigger push workflows.
+  workflow_run:
+    workflows: [daily-update, symbology-refresh]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Landing page, searchable catalogue and venue pages, plus every snapshot
+      # JSON at data/<file> and at its old root path. Standard library only.
+      - name: build-site
+        run: python3 site/build.py --data atlas/data --out _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

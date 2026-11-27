@@ -49,6 +49,15 @@ def delisted_end_date(delisted_at_ms: object = None) -> str:
     return utc_timestamp(delisted if delisted and delisted <= now else now)
 
 
+def upcoming(sd: dict) -> dict:
+    """Mark a row the venue lists but that has not started trading.
+
+    The updater does not add it, and keeps the row on file (a relaunch) as it
+    is instead of treating its absence as a delisting.
+    """
+    return {"id": sd["id"], "type": sd["type"], "upcoming": True}
+
+
 class SkipSymbol(Exception):
     """Raised by a parser when a symbol is intentionally skipped or unrecognised."""
 
@@ -76,6 +85,8 @@ KNOWN_QUOTES = [
     "MNT",
     "USDE",
     "USDS",
+    "RLUSD",
+    "XUSD",
     "USD",
     "JPY",
     "MXN",
@@ -100,6 +111,9 @@ KNOWN_QUOTES = [
     "DAI",
     "VAI",
     "KRW",
+    "THB",
+    "AED",
+    "KZT",
     "UST",
     "GUSD",
     "CNHT",
@@ -208,8 +222,8 @@ def venue_margin(
     ``resolve_margin`` can only guess from a whitelist of known linear quote
     assets, so every stablecoin the whitelist has not caught up with is read as
     an inverse contract. A venue that names the margin asset per symbol is
-    authoritative; fall back to the heuristic when it does not (Tardis-sourced
-    rows carry no such field).
+    authoritative; fall back to the heuristic when it does not (history rows
+    recorded before a fetcher carry no such field).
     """
     if ctype == ContractType.spot:
         return None
@@ -249,10 +263,23 @@ def make_contract(
     )
 
 
+def venue_assets(sd: SymbolData) -> tuple[str, str] | None:
+    """The base and quote assets a venue reports for a symbol, when it does.
+
+    Splitting a concatenated ticker against a list of quote currencies is a
+    guess (``ARBIDR`` is ARB/IDR, not AR/BIDR); a venue's own fields are not.
+    """
+    base = sd.get("base_coin")
+    quote = sd.get("quote_coin")
+    if isinstance(base, str) and base and isinstance(quote, str) and quote:
+        return base, quote
+    return None
+
+
 def parse_concat(
     exchange: str, sd: SymbolData, quotes: list[str] = KNOWN_QUOTES
 ) -> Contract:
-    pair = split_concat(sd["id"].upper(), quotes)
+    pair = venue_assets(sd) or split_concat(sd["id"].upper(), quotes)
     if pair is None:
         raise SkipSymbol(f"{exchange}: cannot split {sd['id']!r} against known quotes")
     symbol, denominator = pair

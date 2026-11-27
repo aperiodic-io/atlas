@@ -3087,7 +3087,8 @@
     "internal_id": "perpetual-LRC-USDT:USDT",
     "symbol": "LRC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-24T11:57:18.849Z"
   },
   {
     "id": "LTC_PERP",
@@ -4680,6 +4681,21 @@
     "margin": "USDT"
   },
   {
+    "id": "SNDKX_PERP",
+    "type": "perpetual",
+    "base_coin": "SNDKX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-21T09:07:49.278Z",
+    "internal_id": "perpetual-SNDKX-USDT:USDT",
+    "symbol": "SNDKX",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SNDK_PERP",
     "type": "perpetual",
     "base_coin": "SNDK",
@@ -4692,7 +4708,8 @@
     "internal_id": "perpetual-SNDK-USDT:USDT",
     "symbol": "SNDK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-20T09:35:28.757Z"
   },
   {
     "id": "SNX_PERP",

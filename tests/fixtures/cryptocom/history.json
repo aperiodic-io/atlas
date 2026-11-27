@@ -1,0 +1,82 @@
+[
+ {
+  "id": "BTC_USD",
+  "type": "spot",
+  "availableSince": "2022-11-01T00:00:00.000Z"
+ },
+ {
+  "id": "1INCH_USDT",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z"
+ },
+ {
+  "id": "ETH_BTC",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z"
+ },
+ {
+  "id": "BTC_EUR",
+  "type": "spot",
+  "availableSince": "2023-05-24T00:00:00.000Z"
+ },
+ {
+  "id": "CRO_USD",
+  "type": "spot",
+  "availableSince": "2022-11-01T00:00:00.000Z"
+ },
+ {
+  "id": "EUR_USDT",
+  "type": "spot",
+  "availableSince": "2023-05-24T00:00:00.000Z"
+ },
+ {
+  "id": "SHIB_USD",
+  "type": "spot",
+  "availableSince": "2022-11-01T00:00:00.000Z"
+ },
+ {
+  "id": "SHIB_BTC@OEX_HK",
+  "type": "spot",
+  "availableSince": "2024-05-30T00:00:00.000Z"
+ },
+ {
+  "id": "BTC_PYUSD",
+  "type": "spot",
+  "availableSince": "2023-09-15T00:00:00.000Z"
+ },
+ {
+  "id": "1INCH_BTC",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z",
+  "availableTo": "2022-12-01T00:00:00.000Z"
+ },
+ {
+  "id": "1INCH_USDC",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z",
+  "availableTo": "2022-11-02T00:00:00.000Z"
+ },
+ {
+  "id": "A2Z_USD",
+  "type": "spot",
+  "availableSince": "2025-08-01T00:00:00.000Z",
+  "availableTo": "2026-10-13T00:00:00.000Z"
+ },
+ {
+  "id": "AAVE_BTC",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z",
+  "availableTo": "2023-04-29T00:00:00.000Z"
+ },
+ {
+  "id": "1INCH_USDC",
+  "type": "spot",
+  "availableSince": "2022-06-01T00:00:00.000Z",
+  "availableTo": "2022-11-02T00:00:00.000Z"
+ },
+ {
+  "id": "BTCUSD-PERP",
+  "type": "perpetual",
+  "availableSince": "2022-11-01T00:00:00.000Z"
+ }
+]

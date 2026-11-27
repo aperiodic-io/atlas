@@ -1,5 +1,5 @@
 """Pacifica: parser, exchange-API fetcher (recorded live payload from
-2026-10-14) and the update path with ``--source exchange``.
+2026-10-14) and the update path.
 
 The IDs asserted here are the ones the live producer publishes under its
 Atlas scheme (live-producers ``streaming/feeds/pacifica``):
@@ -17,7 +17,6 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from atlas.contracts import ContractType
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.pacifica import (
     fetch_pacifica_perps,
     pacifica_contract_symbol,
@@ -52,9 +51,7 @@ def _ids(exchange: str, symbols: list[dict]) -> dict[str, str]:
 
 
 def test_registered_as_stable_perpetual_api_venue() -> None:
-    # Beta exchanges are skipped by atlas.update, so this must not be beta.
     exchange = "pacifica-perps"
-    assert is_beta_exchange(exchange) is False
     assert get_allowed_types(exchange) == {"perpetual"}
     assert get_exchange_fetcher(exchange) is not None
     from atlas.update import EXCHANGES
@@ -169,7 +166,7 @@ def test_pacifica_fetch_retries_a_failed_response() -> None:
 
 
 # ---------------------------------------------------------------------------
-# The update path (--source exchange)
+# The update path
 # ---------------------------------------------------------------------------
 
 

@@ -60,6 +60,21 @@
     "margin": "USDC"
   },
   {
+    "id": "AAOI_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "AAOI",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:32.000Z",
+    "internal_id": "perpetual-AAOI-USDC:USDC",
+    "symbol": "AAOI",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "AAPL_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "AAPL",
@@ -191,6 +206,22 @@
     "first_capture": "2026-09-28T00:00:00.000Z",
     "internal_id": "perpetual-ANTH-USDC:USDC",
     "symbol": "ANTH",
+    "denominator": "USDC",
+    "margin": "USDC",
+    "end_date": "2026-11-17T10:04:21.767Z"
+  },
+  {
+    "id": "ANT_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "ANT",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T09:29:35.000Z",
+    "internal_id": "perpetual-ANT-USDC:USDC",
+    "symbol": "ANT",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -401,6 +432,21 @@
     "first_capture": "2026-09-15T00:00:00.000Z",
     "internal_id": "perpetual-BILL-USDC:USDC",
     "symbol": "BILL",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "BMNR_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "BMNR",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:39.000Z",
+    "internal_id": "perpetual-BMNR-USDC:USDC",
+    "symbol": "BMNR",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -931,6 +977,36 @@
     "first_capture": "2026-09-16T00:00:00.000Z",
     "internal_id": "perpetual-GOOGL-USDC:USDC",
     "symbol": "GOOGL",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "GRAM_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "GRAM",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T15:48:38.000Z",
+    "internal_id": "perpetual-GRAM-USDC:USDC",
+    "symbol": "GRAM",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "GRASS_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "GRASS",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T15:48:29.000Z",
+    "internal_id": "perpetual-GRASS-USDC:USDC",
+    "symbol": "GRASS",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -1495,6 +1571,21 @@
     "margin": "USDC"
   },
   {
+    "id": "PEARL_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "PEARL",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:48:13.000Z",
+    "internal_id": "perpetual-PEARL-USDC:USDC",
+    "symbol": "PEARL",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "PENDLE_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "PENDLE",
@@ -1630,6 +1721,21 @@
     "margin": "USDC"
   },
   {
+    "id": "QNT_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "QNT",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-12T17:34:27.000Z",
+    "internal_id": "perpetual-QNT-USDC:USDC",
+    "symbol": "QNT",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "QQQ_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "QQQ",
@@ -1671,6 +1777,21 @@
     "first_capture": "2026-09-18T00:00:00.000Z",
     "internal_id": "perpetual-RESOLV-USDC:USDC",
     "symbol": "RESOLV",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "RKLB_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "RKLB",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:24:01.000Z",
+    "internal_id": "perpetual-RKLB-USDC:USDC",
+    "symbol": "RKLB",
     "denominator": "USDC",
     "margin": "USDC"
   },
@@ -2075,6 +2196,21 @@
     "margin": "USDC"
   },
   {
+    "id": "WDC_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "WDC",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T14:23:46.000Z",
+    "internal_id": "perpetual-WDC-USDC:USDC",
+    "symbol": "WDC",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
     "id": "WIF_USDC-PERPETUAL",
     "type": "perpetual",
     "base_coin": "WIF",
@@ -2206,6 +2342,21 @@
     "first_capture": "2026-08-19T00:00:00.000Z",
     "internal_id": "perpetual-ZEC-USDC:USDC",
     "symbol": "ZEC",
+    "denominator": "USDC",
+    "margin": "USDC"
+  },
+  {
+    "id": "ZRO_USDC-PERPETUAL",
+    "type": "perpetual",
+    "base_coin": "ZRO",
+    "quote_coin": "USDC",
+    "margin_asset": "USDC",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-13T09:48:06.000Z",
+    "internal_id": "perpetual-ZRO-USDC:USDC",
+    "symbol": "ZRO",
     "denominator": "USDC",
     "margin": "USDC"
   }

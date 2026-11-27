@@ -13,10 +13,9 @@ The live producer (live-producers ``streaming/feeds/aster``) streams the
 every Aster contract: USDT, USD1 or Aster's ``U``), so the Atlas ID is
 ``perpetual-<base>-<quote>:<margin>``.
 
-Tardis covers the venue as ``aster-futures`` with lower-cased ids
-(``btcusdt``), the form its websocket streams use; the API fetcher emits the
-same ids so the hybrid source merges the two, as for Binance. Rows only Tardis
-knows (no asset fields) are split against the known quote assets.
+Ids are lower-cased (``btcusdt``), the form the venue's websocket streams use
+and its history on file has. History rows (no asset fields) are split against
+the known quote assets.
 """
 
 from __future__ import annotations

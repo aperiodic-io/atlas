@@ -15,7 +15,14 @@
       "DAO"
     ],
     "margin_asset": "AAVE",
-    "first_capture": "2021-12-29T00:00:00.000Z"
+    "first_capture": "2021-12-29T00:00:00.000Z",
+    "base_coin": "AAVE",
+    "quote_coin": "USD",
+    "base_asset_id": "AAVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "AAVE",
+    "unified_id": "perpetual-AAVE-USD:AAVE"
   },
   {
     "id": "adausd_200925",
@@ -32,7 +39,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-07-20T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20200925"
   },
   {
     "id": "adausd_201225",
@@ -49,7 +61,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-09-06T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20201225"
   },
   {
     "id": "adausd_210326",
@@ -66,7 +83,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20210326"
   },
   {
     "id": "adausd_210625",
@@ -83,7 +105,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20210625"
   },
   {
     "id": "adausd_210924",
@@ -100,7 +127,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20210924"
   },
   {
     "id": "adausd_211231",
@@ -117,7 +149,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20211231"
   },
   {
     "id": "adausd_220325",
@@ -134,7 +171,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20220325"
   },
   {
     "id": "adausd_220624",
@@ -151,7 +193,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20220624"
   },
   {
     "id": "adausd_220930",
@@ -168,7 +215,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20220930"
   },
   {
     "id": "adausd_221230",
@@ -185,7 +237,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20221230"
   },
   {
     "id": "adausd_230331",
@@ -202,7 +259,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20230331"
   },
   {
     "id": "adausd_230630",
@@ -219,7 +281,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20230630"
   },
   {
     "id": "adausd_230929",
@@ -236,7 +303,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20230929"
   },
   {
     "id": "adausd_231229",
@@ -253,7 +325,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20231229"
   },
   {
     "id": "adausd_240329",
@@ -270,7 +347,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20240329"
   },
   {
     "id": "adausd_240628",
@@ -287,7 +369,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20240628"
   },
   {
     "id": "adausd_240927",
@@ -304,7 +391,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20240927"
   },
   {
     "id": "adausd_241227",
@@ -321,7 +413,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20241227"
   },
   {
     "id": "adausd_250328",
@@ -338,7 +435,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20250328"
   },
   {
     "id": "adausd_250627",
@@ -355,7 +457,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20250627"
   },
   {
     "id": "adausd_250926",
@@ -372,7 +479,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "ADA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "future-ADA-USD:ADA-20250926"
   },
   {
     "id": "adausd_perp",
@@ -390,7 +502,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "ADA",
-    "first_capture": "2020-08-26T00:00:00.000Z"
+    "first_capture": "2020-08-26T00:00:00.000Z",
+    "base_coin": "ADA",
+    "quote_coin": "USD",
+    "base_asset_id": "ADA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "perpetual-ADA-USD:ADA"
   },
   {
     "id": "algousd_perp",
@@ -406,7 +525,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-03-15T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "ALGO",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ALGO",
+    "unified_id": "perpetual-ALGO-USD:ALGO"
   },
   {
     "id": "apeusd_perp",
@@ -416,7 +540,19 @@
     "denominator": "USD",
     "margin": "APE",
     "first_capture": "2022-03-28T00:00:00.000Z",
-    "end_date": "2024-05-25T00:00:00.000Z"
+    "end_date": "2024-05-25T00:00:00.000Z",
+    "category": [
+      "Collectibles & NFTs",
+      "DAO",
+      "Metaverse",
+      "Memes"
+    ],
+    "cmc_id": 18876,
+    "base_asset_id": "APE",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "APE",
+    "unified_id": "perpetual-APE-USD:APE"
   },
   {
     "id": "aptusd_perp",
@@ -430,7 +566,12 @@
       "Layer 1"
     ],
     "first_capture": "2022-10-25T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "APT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "APT",
+    "unified_id": "perpetual-APT-USD:APT"
   },
   {
     "id": "atomusd_perp",
@@ -445,7 +586,12 @@
       "Interoperability"
     ],
     "first_capture": "2021-12-23T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "ATOM",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ATOM",
+    "unified_id": "perpetual-ATOM-USD:ATOM"
   },
   {
     "id": "avaxusd_perp",
@@ -463,7 +609,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "AVAX",
-    "first_capture": "2021-11-24T00:00:00.000Z"
+    "first_capture": "2021-11-24T00:00:00.000Z",
+    "base_coin": "AVAX",
+    "quote_coin": "USD",
+    "base_asset_id": "AVAX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "AVAX",
+    "unified_id": "perpetual-AVAX-USD:AVAX"
   },
   {
     "id": "axsusd_perp",
@@ -479,7 +632,12 @@
       "Metaverse"
     ],
     "first_capture": "2022-01-12T00:00:00.000Z",
-    "end_date": "2025-11-11T00:00:00.000Z"
+    "end_date": "2025-11-11T00:00:00.000Z",
+    "base_asset_id": "AXS",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "AXS",
+    "unified_id": "perpetual-AXS-USD:AXS"
   },
   {
     "id": "bchusd_201225",
@@ -494,7 +652,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-03T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20201225"
   },
   {
     "id": "bchusd_210326",
@@ -509,7 +672,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-03T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20210326"
   },
   {
     "id": "bchusd_210625",
@@ -524,7 +692,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20210625"
   },
   {
     "id": "bchusd_210924",
@@ -539,7 +712,12 @@
       "Layer 1"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20210924"
   },
   {
     "id": "bchusd_211231",
@@ -554,7 +732,12 @@
       "Layer 1"
     ],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20211231"
   },
   {
     "id": "bchusd_220325",
@@ -569,7 +752,12 @@
       "Layer 1"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20220325"
   },
   {
     "id": "bchusd_220624",
@@ -584,7 +772,12 @@
       "Layer 1"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20220624"
   },
   {
     "id": "bchusd_220930",
@@ -599,7 +792,12 @@
       "Layer 1"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20220930"
   },
   {
     "id": "bchusd_221230",
@@ -614,7 +812,12 @@
       "Layer 1"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20221230"
   },
   {
     "id": "bchusd_230331",
@@ -629,7 +832,12 @@
       "Layer 1"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20230331"
   },
   {
     "id": "bchusd_230630",
@@ -644,7 +852,12 @@
       "Layer 1"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20230630"
   },
   {
     "id": "bchusd_230929",
@@ -659,7 +872,12 @@
       "Layer 1"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20230929"
   },
   {
     "id": "bchusd_231229",
@@ -674,7 +892,12 @@
       "Layer 1"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20231229"
   },
   {
     "id": "bchusd_240329",
@@ -689,7 +912,12 @@
       "Layer 1"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20240329"
   },
   {
     "id": "bchusd_240628",
@@ -704,7 +932,12 @@
       "Layer 1"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20240628"
   },
   {
     "id": "bchusd_240927",
@@ -719,7 +952,12 @@
       "Layer 1"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20240927"
   },
   {
     "id": "bchusd_241227",
@@ -734,7 +972,12 @@
       "Layer 1"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20241227"
   },
   {
     "id": "bchusd_250328",
@@ -749,7 +992,12 @@
       "Layer 1"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20250328"
   },
   {
     "id": "bchusd_250627",
@@ -764,7 +1012,12 @@
       "Layer 1"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20250627"
   },
   {
     "id": "bchusd_250926",
@@ -779,7 +1032,12 @@
       "Layer 1"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "BCH",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "future-BCH-USD:BCH-20250926"
   },
   {
     "id": "bchusd_perp",
@@ -795,7 +1053,14 @@
       "Layer 1"
     ],
     "margin_asset": "BCH",
-    "first_capture": "2020-09-08T00:00:00.000Z"
+    "first_capture": "2020-09-08T00:00:00.000Z",
+    "base_coin": "BCH",
+    "quote_coin": "USD",
+    "base_asset_id": "BCH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "perpetual-BCH-USD:BCH"
   },
   {
     "id": "bnbusd_201225",
@@ -811,7 +1076,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20201225"
   },
   {
     "id": "bnbusd_210326",
@@ -827,7 +1097,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20210326"
   },
   {
     "id": "bnbusd_210625",
@@ -843,7 +1118,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20210625"
   },
   {
     "id": "bnbusd_210924",
@@ -859,7 +1139,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20210924"
   },
   {
     "id": "bnbusd_211231",
@@ -875,7 +1160,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-06-29T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20211231"
   },
   {
     "id": "bnbusd_220325",
@@ -891,7 +1181,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20220325"
   },
   {
     "id": "bnbusd_220624",
@@ -907,7 +1202,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20220624"
   },
   {
     "id": "bnbusd_220930",
@@ -923,7 +1223,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20220930"
   },
   {
     "id": "bnbusd_221230",
@@ -939,7 +1244,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20221230"
   },
   {
     "id": "bnbusd_230331",
@@ -955,7 +1265,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20230331"
   },
   {
     "id": "bnbusd_230630",
@@ -971,7 +1286,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20230630"
   },
   {
     "id": "bnbusd_230929",
@@ -987,7 +1307,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20230929"
   },
   {
     "id": "bnbusd_231229",
@@ -1003,7 +1328,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20231229"
   },
   {
     "id": "bnbusd_240329",
@@ -1019,7 +1349,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20240329"
   },
   {
     "id": "bnbusd_240628",
@@ -1035,7 +1370,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20240628"
   },
   {
     "id": "bnbusd_240927",
@@ -1051,7 +1391,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20240927"
   },
   {
     "id": "bnbusd_241227",
@@ -1067,7 +1412,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20241227"
   },
   {
     "id": "bnbusd_250328",
@@ -1083,7 +1433,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20250328"
   },
   {
     "id": "bnbusd_250627",
@@ -1099,7 +1454,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20250627"
   },
   {
     "id": "bnbusd_250926",
@@ -1115,7 +1475,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20250926"
   },
   {
     "id": "bnbusd_251226",
@@ -1131,7 +1496,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20251226"
   },
   {
     "id": "bnbusd_260327",
@@ -1147,7 +1517,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20260327"
   },
   {
     "id": "bnbusd_260626",
@@ -1163,7 +1538,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20260626"
   },
   {
     "id": "bnbusd_260925",
@@ -1182,7 +1562,12 @@
     ],
     "margin_asset": "BNB",
     "first_capture": "2026-03-27T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z"
+    "end_date": "2026-09-26T00:00:00.000Z",
+    "base_asset_id": "BNB",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20260925"
   },
   {
     "id": "bnbusd_261225",
@@ -1200,7 +1585,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "BNB",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "base_coin": "BNB",
+    "quote_coin": "USD",
+    "base_asset_id": "BNB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20261225"
   },
   {
     "id": "bnbusd_270326",
@@ -1213,7 +1605,19 @@
     "denominator": "USD",
     "margin": "BNB",
     "delivery_date": "2027-03-26T00:00:00",
-    "first_capture": "2026-09-25T00:00:00.000Z"
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_coin": "BNB",
+    "cmc_id": 1839,
+    "quote_coin": "USD",
+    "base_asset_id": "BNB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "future-BNB-USD:BNB-20270326"
   },
   {
     "id": "bnbusd_perp",
@@ -1230,7 +1634,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "BNB",
-    "first_capture": "2020-08-21T00:00:00.000Z"
+    "first_capture": "2020-08-21T00:00:00.000Z",
+    "base_coin": "BNB",
+    "quote_coin": "USD",
+    "base_asset_id": "BNB",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BNB",
+    "unified_id": "perpetual-BNB-USD:BNB"
   },
   {
     "id": "btcusd_200925",
@@ -1241,7 +1652,16 @@
     "margin": "BTC",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-06-16T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20200925"
   },
   {
     "id": "btcusd_201225",
@@ -1252,7 +1672,16 @@
     "margin": "BTC",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-07-01T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20201225"
   },
   {
     "id": "btcusd_210326",
@@ -1263,7 +1692,16 @@
     "margin": "BTC",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20210326"
   },
   {
     "id": "btcusd_210625",
@@ -1274,7 +1712,16 @@
     "margin": "BTC",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20210625"
   },
   {
     "id": "btcusd_210924",
@@ -1285,7 +1732,16 @@
     "margin": "BTC",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20210924"
   },
   {
     "id": "btcusd_211231",
@@ -1296,7 +1752,16 @@
     "margin": "BTC",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20211231"
   },
   {
     "id": "btcusd_220325",
@@ -1307,7 +1772,16 @@
     "margin": "BTC",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20220325"
   },
   {
     "id": "btcusd_220624",
@@ -1318,7 +1792,16 @@
     "margin": "BTC",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20220624"
   },
   {
     "id": "btcusd_220930",
@@ -1329,7 +1812,16 @@
     "margin": "BTC",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20220930"
   },
   {
     "id": "btcusd_221230",
@@ -1340,7 +1832,16 @@
     "margin": "BTC",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20221230"
   },
   {
     "id": "btcusd_230331",
@@ -1351,7 +1852,16 @@
     "margin": "BTC",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20230331"
   },
   {
     "id": "btcusd_230630",
@@ -1362,7 +1872,16 @@
     "margin": "BTC",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20230630"
   },
   {
     "id": "btcusd_230929",
@@ -1373,7 +1892,16 @@
     "margin": "BTC",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20230929"
   },
   {
     "id": "btcusd_231229",
@@ -1384,7 +1912,16 @@
     "margin": "BTC",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20231229"
   },
   {
     "id": "btcusd_240329",
@@ -1395,7 +1932,16 @@
     "margin": "BTC",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20240329"
   },
   {
     "id": "btcusd_240628",
@@ -1406,7 +1952,16 @@
     "margin": "BTC",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20240628"
   },
   {
     "id": "btcusd_240927",
@@ -1417,7 +1972,16 @@
     "margin": "BTC",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20240927"
   },
   {
     "id": "btcusd_241227",
@@ -1428,7 +1992,16 @@
     "margin": "BTC",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20241227"
   },
   {
     "id": "btcusd_250328",
@@ -1439,7 +2012,16 @@
     "margin": "BTC",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20250328"
   },
   {
     "id": "btcusd_250627",
@@ -1450,7 +2032,16 @@
     "margin": "BTC",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20250627"
   },
   {
     "id": "btcusd_250926",
@@ -1461,7 +2052,16 @@
     "margin": "BTC",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20250926"
   },
   {
     "id": "btcusd_251226",
@@ -1472,7 +2072,16 @@
     "margin": "BTC",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20251226"
   },
   {
     "id": "btcusd_260327",
@@ -1483,7 +2092,16 @@
     "margin": "BTC",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20260327"
   },
   {
     "id": "btcusd_260626",
@@ -1494,7 +2112,16 @@
     "margin": "BTC",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20260626"
   },
   {
     "id": "btcusd_260925",
@@ -1508,7 +2135,16 @@
     "underlying": "crypto",
     "margin_asset": "BTC",
     "first_capture": "2026-03-27T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z"
+    "end_date": "2026-09-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 1,
+    "base_asset_id": "BTC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20260925"
   },
   {
     "id": "btcusd_261225",
@@ -1521,7 +2157,18 @@
     "contract_size": 100.0,
     "underlying": "crypto",
     "margin_asset": "BTC",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "BTC",
+    "cmc_id": 1,
+    "quote_coin": "USD",
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20261225"
   },
   {
     "id": "btcusd_270326",
@@ -1534,7 +2181,18 @@
     "denominator": "USD",
     "margin": "BTC",
     "delivery_date": "2027-03-26T00:00:00",
-    "first_capture": "2026-09-25T00:00:00.000Z"
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "BTC",
+    "cmc_id": 1,
+    "quote_coin": "USD",
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "future-BTC-USD:BTC-20270326"
   },
   {
     "id": "btcusd_perp",
@@ -1546,7 +2204,18 @@
     "contract_size": 100.0,
     "underlying": "crypto",
     "margin_asset": "BTC",
-    "first_capture": "2020-08-11T00:00:00.000Z"
+    "first_capture": "2020-08-11T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "BTC",
+    "cmc_id": 1,
+    "quote_coin": "USD",
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "perpetual-BTC-USD:BTC"
   },
   {
     "id": "chzusd_perp",
@@ -1561,7 +2230,12 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2022-08-18T00:00:00.000Z",
-    "end_date": "2025-10-22T00:00:00.000Z"
+    "end_date": "2025-10-22T00:00:00.000Z",
+    "base_asset_id": "CHZ",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "CHZ",
+    "unified_id": "perpetual-CHZ-USD:CHZ"
   },
   {
     "id": "crvusd_perp",
@@ -1576,7 +2250,12 @@
       "DAO"
     ],
     "first_capture": "2022-01-06T00:00:00.000Z",
-    "end_date": "2022-07-01T00:00:00.000Z"
+    "end_date": "2022-07-01T00:00:00.000Z",
+    "base_asset_id": "CRV",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "CRV",
+    "unified_id": "perpetual-CRV-USD:CRV"
   },
   {
     "id": "dogeusd_perp",
@@ -1588,9 +2267,18 @@
     "contract_size": 10.0,
     "cmc_id": 74,
     "underlying": "crypto",
-    "category": [],
+    "category": [
+      "Memes"
+    ],
     "margin_asset": "DOGE",
-    "first_capture": "2021-02-02T00:00:00.000Z"
+    "first_capture": "2021-02-02T00:00:00.000Z",
+    "base_coin": "DOGE",
+    "quote_coin": "USD",
+    "base_asset_id": "DOGE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOGE",
+    "unified_id": "perpetual-DOGE-USD:DOGE"
   },
   {
     "id": "dogsusd_perp",
@@ -1600,9 +2288,16 @@
     "denominator": "USD",
     "margin": "DOGS",
     "cmc_id": 32698,
-    "category": [],
+    "category": [
+      "Memes"
+    ],
     "first_capture": "2024-09-10T00:00:00.000Z",
-    "end_date": "2025-10-29T00:00:00.000Z"
+    "end_date": "2025-10-29T00:00:00.000Z",
+    "base_asset_id": "DOGS",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOGS",
+    "unified_id": "perpetual-DOGS-USD:DOGS"
   },
   {
     "id": "dotusd_201225",
@@ -1617,7 +2312,12 @@
       "DeFi"
     ],
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20201225"
   },
   {
     "id": "dotusd_210326",
@@ -1632,7 +2332,12 @@
       "DeFi"
     ],
     "first_capture": "2020-11-04T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20210326"
   },
   {
     "id": "dotusd_210625",
@@ -1647,7 +2352,12 @@
       "DeFi"
     ],
     "first_capture": "2020-12-26T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20210625"
   },
   {
     "id": "dotusd_210924",
@@ -1662,7 +2372,12 @@
       "DeFi"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20210924"
   },
   {
     "id": "dotusd_211231",
@@ -1677,7 +2392,12 @@
       "DeFi"
     ],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20211231"
   },
   {
     "id": "dotusd_220325",
@@ -1692,7 +2412,12 @@
       "DeFi"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20220325"
   },
   {
     "id": "dotusd_220624",
@@ -1707,7 +2432,12 @@
       "DeFi"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20220624"
   },
   {
     "id": "dotusd_220930",
@@ -1722,7 +2452,12 @@
       "DeFi"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20220930"
   },
   {
     "id": "dotusd_221230",
@@ -1737,7 +2472,12 @@
       "DeFi"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20221230"
   },
   {
     "id": "dotusd_230331",
@@ -1752,7 +2492,12 @@
       "DeFi"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20230331"
   },
   {
     "id": "dotusd_230630",
@@ -1767,7 +2512,12 @@
       "DeFi"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20230630"
   },
   {
     "id": "dotusd_230929",
@@ -1782,7 +2532,12 @@
       "DeFi"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20230929"
   },
   {
     "id": "dotusd_231229",
@@ -1797,7 +2552,12 @@
       "DeFi"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20231229"
   },
   {
     "id": "dotusd_240329",
@@ -1812,7 +2572,12 @@
       "DeFi"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20240329"
   },
   {
     "id": "dotusd_240628",
@@ -1827,7 +2592,12 @@
       "DeFi"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20240628"
   },
   {
     "id": "dotusd_240927",
@@ -1842,7 +2612,12 @@
       "DeFi"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20240927"
   },
   {
     "id": "dotusd_241227",
@@ -1857,7 +2632,12 @@
       "DeFi"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20241227"
   },
   {
     "id": "dotusd_250328",
@@ -1872,7 +2652,12 @@
       "DeFi"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20250328"
   },
   {
     "id": "dotusd_250627",
@@ -1887,7 +2672,12 @@
       "DeFi"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20250627"
   },
   {
     "id": "dotusd_250926",
@@ -1902,7 +2692,12 @@
       "DeFi"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "DOT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "future-DOT-USD:DOT-20250926"
   },
   {
     "id": "dotusd_perp",
@@ -1918,7 +2713,14 @@
       "DeFi"
     ],
     "margin_asset": "DOT",
-    "first_capture": "2020-08-25T00:00:00.000Z"
+    "first_capture": "2020-08-25T00:00:00.000Z",
+    "base_coin": "DOT",
+    "quote_coin": "USD",
+    "base_asset_id": "DOT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "perpetual-DOT-USD:DOT"
   },
   {
     "id": "egldusd_perp",
@@ -1934,7 +2736,12 @@
       "Metaverse"
     ],
     "first_capture": "2020-12-21T00:00:00.000Z",
-    "end_date": "2025-11-14T00:00:00.000Z"
+    "end_date": "2025-11-14T00:00:00.000Z",
+    "base_asset_id": "EGLD",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "EGLD",
+    "unified_id": "perpetual-EGLD-USD:EGLD"
   },
   {
     "id": "ensusd_perp",
@@ -1948,7 +2755,12 @@
       "DAO"
     ],
     "first_capture": "2022-08-02T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "ENS",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ENS",
+    "unified_id": "perpetual-ENS-USD:ENS"
   },
   {
     "id": "eosusd_201225",
@@ -1959,7 +2771,17 @@
     "margin": "EOS",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-12-02T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1765,
+    "base_asset_id": "EOS",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "EOS",
+    "unified_id": "future-EOS-USD:EOS-20201225"
   },
   {
     "id": "eosusd_210326",
@@ -1970,7 +2792,17 @@
     "margin": "EOS",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-12-02T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1765,
+    "base_asset_id": "EOS",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "EOS",
+    "unified_id": "future-EOS-USD:EOS-20210326"
   },
   {
     "id": "eosusd_perp",
@@ -1980,7 +2812,17 @@
     "denominator": "USD",
     "margin": "EOS",
     "first_capture": "2020-09-07T00:00:00.000Z",
-    "end_date": "2025-05-23T00:00:00.000Z"
+    "end_date": "2025-05-23T00:00:00.000Z",
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1765,
+    "base_asset_id": "EOS",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "EOS",
+    "unified_id": "perpetual-EOS-USD:EOS"
   },
   {
     "id": "etcusd_201225",
@@ -1996,7 +2838,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-12-08T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "ETC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETC",
+    "unified_id": "future-ETC-USD:ETC-20201225"
   },
   {
     "id": "etcusd_210326",
@@ -2012,7 +2859,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2020-12-08T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "base_asset_id": "ETC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETC",
+    "unified_id": "future-ETC-USD:ETC-20210326"
   },
   {
     "id": "etcusd_perp",
@@ -2029,7 +2881,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "ETC",
-    "first_capture": "2020-09-09T00:00:00.000Z"
+    "first_capture": "2020-09-09T00:00:00.000Z",
+    "base_coin": "ETC",
+    "quote_coin": "USD",
+    "base_asset_id": "ETC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETC",
+    "unified_id": "perpetual-ETC-USD:ETC"
   },
   {
     "id": "ethusd_200925",
@@ -2040,7 +2899,17 @@
     "margin": "ETH",
     "delivery_date": "2020-09-25T00:00:00",
     "first_capture": "2020-07-24T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20200925"
   },
   {
     "id": "ethusd_201225",
@@ -2051,7 +2920,17 @@
     "margin": "ETH",
     "delivery_date": "2020-12-25T00:00:00",
     "first_capture": "2020-08-05T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20201225"
   },
   {
     "id": "ethusd_210326",
@@ -2062,7 +2941,17 @@
     "margin": "ETH",
     "delivery_date": "2021-03-26T00:00:00",
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20210326"
   },
   {
     "id": "ethusd_210625",
@@ -2073,7 +2962,17 @@
     "margin": "ETH",
     "delivery_date": "2021-06-25T00:00:00",
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20210625"
   },
   {
     "id": "ethusd_210924",
@@ -2084,7 +2983,17 @@
     "margin": "ETH",
     "delivery_date": "2021-09-24T00:00:00",
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20210924"
   },
   {
     "id": "ethusd_211231",
@@ -2095,7 +3004,17 @@
     "margin": "ETH",
     "delivery_date": "2021-12-31T00:00:00",
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20211231"
   },
   {
     "id": "ethusd_220325",
@@ -2106,7 +3025,17 @@
     "margin": "ETH",
     "delivery_date": "2022-03-25T00:00:00",
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20220325"
   },
   {
     "id": "ethusd_220624",
@@ -2117,7 +3046,17 @@
     "margin": "ETH",
     "delivery_date": "2022-06-24T00:00:00",
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20220624"
   },
   {
     "id": "ethusd_220930",
@@ -2128,7 +3067,17 @@
     "margin": "ETH",
     "delivery_date": "2022-09-30T00:00:00",
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20220930"
   },
   {
     "id": "ethusd_221230",
@@ -2139,7 +3088,17 @@
     "margin": "ETH",
     "delivery_date": "2022-12-30T00:00:00",
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20221230"
   },
   {
     "id": "ethusd_230331",
@@ -2150,7 +3109,17 @@
     "margin": "ETH",
     "delivery_date": "2023-03-31T00:00:00",
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20230331"
   },
   {
     "id": "ethusd_230630",
@@ -2161,7 +3130,17 @@
     "margin": "ETH",
     "delivery_date": "2023-06-30T00:00:00",
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20230630"
   },
   {
     "id": "ethusd_230929",
@@ -2172,7 +3151,17 @@
     "margin": "ETH",
     "delivery_date": "2023-09-29T00:00:00",
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20230929"
   },
   {
     "id": "ethusd_231229",
@@ -2183,7 +3172,17 @@
     "margin": "ETH",
     "delivery_date": "2023-12-29T00:00:00",
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20231229"
   },
   {
     "id": "ethusd_240329",
@@ -2194,7 +3193,17 @@
     "margin": "ETH",
     "delivery_date": "2024-03-29T00:00:00",
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20240329"
   },
   {
     "id": "ethusd_240628",
@@ -2205,7 +3214,17 @@
     "margin": "ETH",
     "delivery_date": "2024-06-28T00:00:00",
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20240628"
   },
   {
     "id": "ethusd_240927",
@@ -2216,7 +3235,17 @@
     "margin": "ETH",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20240927"
   },
   {
     "id": "ethusd_241227",
@@ -2227,7 +3256,17 @@
     "margin": "ETH",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20241227"
   },
   {
     "id": "ethusd_250328",
@@ -2238,7 +3277,17 @@
     "margin": "ETH",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20250328"
   },
   {
     "id": "ethusd_250627",
@@ -2249,7 +3298,17 @@
     "margin": "ETH",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20250627"
   },
   {
     "id": "ethusd_250926",
@@ -2260,7 +3319,17 @@
     "margin": "ETH",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20250926"
   },
   {
     "id": "ethusd_251226",
@@ -2271,7 +3340,17 @@
     "margin": "ETH",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20251226"
   },
   {
     "id": "ethusd_260327",
@@ -2282,7 +3361,17 @@
     "margin": "ETH",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20260327"
   },
   {
     "id": "ethusd_260626",
@@ -2293,7 +3382,17 @@
     "margin": "ETH",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20260626"
   },
   {
     "id": "ethusd_260925",
@@ -2307,7 +3406,17 @@
     "underlying": "crypto",
     "margin_asset": "ETH",
     "first_capture": "2026-03-27T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z"
+    "end_date": "2026-09-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "cmc_id": 1027,
+    "base_asset_id": "ETH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20260925"
   },
   {
     "id": "ethusd_261225",
@@ -2320,7 +3429,19 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "ETH",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_coin": "ETH",
+    "cmc_id": 1027,
+    "quote_coin": "USD",
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20261225"
   },
   {
     "id": "ethusd_270326",
@@ -2333,7 +3454,19 @@
     "denominator": "USD",
     "margin": "ETH",
     "delivery_date": "2027-03-26T00:00:00",
-    "first_capture": "2026-09-25T00:00:00.000Z"
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_coin": "ETH",
+    "cmc_id": 1027,
+    "quote_coin": "USD",
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "future-ETH-USD:ETH-20270326"
   },
   {
     "id": "ethusd_perp",
@@ -2345,7 +3478,19 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "ETH",
-    "first_capture": "2020-08-18T00:00:00.000Z"
+    "first_capture": "2020-08-18T00:00:00.000Z",
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_coin": "ETH",
+    "cmc_id": 1027,
+    "quote_coin": "USD",
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "perpetual-ETH-USD:ETH"
   },
   {
     "id": "filusd_201225",
@@ -2360,7 +3505,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-09T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "FIL",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "FIL",
+    "unified_id": "future-FIL-USD:FIL-20201225"
   },
   {
     "id": "filusd_210326",
@@ -2375,7 +3525,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-10T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "FIL",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "FIL",
+    "unified_id": "future-FIL-USD:FIL-20210326"
   },
   {
     "id": "filusd_perp",
@@ -2391,7 +3546,14 @@
       "Layer 1"
     ],
     "margin_asset": "FIL",
-    "first_capture": "2020-10-23T00:00:00.000Z"
+    "first_capture": "2020-10-23T00:00:00.000Z",
+    "base_coin": "FIL",
+    "quote_coin": "USD",
+    "base_asset_id": "FIL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "FIL",
+    "unified_id": "perpetual-FIL-USD:FIL"
   },
   {
     "id": "ftmusd_perp",
@@ -2401,7 +3563,17 @@
     "denominator": "USD",
     "margin": "FTM",
     "first_capture": "2021-11-04T00:00:00.000Z",
-    "end_date": "2025-01-19T00:00:00.000Z"
+    "end_date": "2025-01-19T00:00:00.000Z",
+    "category": [
+      "DeFi",
+      "Smart Contracts"
+    ],
+    "cmc_id": 3513,
+    "base_asset_id": "FTM",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "FTM",
+    "unified_id": "perpetual-FTM-USD:FTM"
   },
   {
     "id": "galausd_perp",
@@ -2417,7 +3589,12 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2021-12-02T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "base_asset_id": "GALA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "GALA",
+    "unified_id": "perpetual-GALA-USD:GALA"
   },
   {
     "id": "gmtusd_perp",
@@ -2431,7 +3608,12 @@
       "Collectibles & NFTs"
     ],
     "first_capture": "2022-04-27T00:00:00.000Z",
-    "end_date": "2025-10-29T00:00:00.000Z"
+    "end_date": "2025-10-29T00:00:00.000Z",
+    "base_asset_id": "GMT",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "GMT",
+    "unified_id": "perpetual-GMT-USD:GMT"
   },
   {
     "id": "icxusd_perp",
@@ -2447,7 +3629,12 @@
       "Interoperability"
     ],
     "first_capture": "2022-03-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "base_asset_id": "ICX",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ICX",
+    "unified_id": "perpetual-ICX-USD:ICX"
   },
   {
     "id": "kncusd_perp",
@@ -2462,7 +3649,12 @@
       "DAO"
     ],
     "first_capture": "2022-04-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "base_asset_id": "KNC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "KNC",
+    "unified_id": "perpetual-KNC-USD:KNC"
   },
   {
     "id": "linkusd_200925",
@@ -2481,7 +3673,12 @@
       "Interoperability"
     ],
     "first_capture": "2020-07-22T00:00:00.000Z",
-    "end_date": "2020-09-26T00:00:00.000Z"
+    "end_date": "2020-09-26T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20200925"
   },
   {
     "id": "linkusd_201225",
@@ -2500,7 +3697,12 @@
       "Interoperability"
     ],
     "first_capture": "2020-09-06T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20201225"
   },
   {
     "id": "linkusd_210326",
@@ -2519,7 +3721,12 @@
       "Interoperability"
     ],
     "first_capture": "2020-09-25T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20210326"
   },
   {
     "id": "linkusd_210625",
@@ -2538,7 +3745,12 @@
       "Interoperability"
     ],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20210625"
   },
   {
     "id": "linkusd_210924",
@@ -2557,7 +3769,12 @@
       "Interoperability"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20210924"
   },
   {
     "id": "linkusd_211231",
@@ -2576,7 +3793,12 @@
       "Interoperability"
     ],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20211231"
   },
   {
     "id": "linkusd_220325",
@@ -2595,7 +3817,12 @@
       "Interoperability"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20220325"
   },
   {
     "id": "linkusd_220624",
@@ -2614,7 +3841,12 @@
       "Interoperability"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20220624"
   },
   {
     "id": "linkusd_220930",
@@ -2633,7 +3865,12 @@
       "Interoperability"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20220930"
   },
   {
     "id": "linkusd_221230",
@@ -2652,7 +3889,12 @@
       "Interoperability"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20221230"
   },
   {
     "id": "linkusd_230331",
@@ -2671,7 +3913,12 @@
       "Interoperability"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20230331"
   },
   {
     "id": "linkusd_230630",
@@ -2690,7 +3937,12 @@
       "Interoperability"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20230630"
   },
   {
     "id": "linkusd_230929",
@@ -2709,7 +3961,12 @@
       "Interoperability"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20230929"
   },
   {
     "id": "linkusd_231229",
@@ -2728,7 +3985,12 @@
       "Interoperability"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20231229"
   },
   {
     "id": "linkusd_240329",
@@ -2747,7 +4009,12 @@
       "Interoperability"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20240329"
   },
   {
     "id": "linkusd_240628",
@@ -2766,7 +4033,12 @@
       "Interoperability"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20240628"
   },
   {
     "id": "linkusd_240927",
@@ -2785,7 +4057,12 @@
       "Interoperability"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20240927"
   },
   {
     "id": "linkusd_241227",
@@ -2804,7 +4081,12 @@
       "Interoperability"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20241227"
   },
   {
     "id": "linkusd_250328",
@@ -2823,7 +4105,12 @@
       "Interoperability"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20250328"
   },
   {
     "id": "linkusd_250627",
@@ -2842,7 +4129,12 @@
       "Interoperability"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20250627"
   },
   {
     "id": "linkusd_250926",
@@ -2861,7 +4153,12 @@
       "Interoperability"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "LINK",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "future-LINK-USD:LINK-20250926"
   },
   {
     "id": "linkusd_perp",
@@ -2881,7 +4178,14 @@
       "Interoperability"
     ],
     "margin_asset": "LINK",
-    "first_capture": "2020-08-19T00:00:00.000Z"
+    "first_capture": "2020-08-19T00:00:00.000Z",
+    "base_coin": "LINK",
+    "quote_coin": "USD",
+    "base_asset_id": "LINK",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "perpetual-LINK-USD:LINK"
   },
   {
     "id": "ltcusd_201225",
@@ -2897,7 +4201,12 @@
       "Privacy"
     ],
     "first_capture": "2020-12-01T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20201225"
   },
   {
     "id": "ltcusd_210326",
@@ -2913,7 +4222,12 @@
       "Privacy"
     ],
     "first_capture": "2020-12-01T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20210326"
   },
   {
     "id": "ltcusd_210625",
@@ -2929,7 +4243,12 @@
       "Privacy"
     ],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20210625"
   },
   {
     "id": "ltcusd_210924",
@@ -2945,7 +4264,12 @@
       "Privacy"
     ],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20210924"
   },
   {
     "id": "ltcusd_211231",
@@ -2961,7 +4285,12 @@
       "Privacy"
     ],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20211231"
   },
   {
     "id": "ltcusd_220325",
@@ -2977,7 +4306,12 @@
       "Privacy"
     ],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20220325"
   },
   {
     "id": "ltcusd_220624",
@@ -2993,7 +4327,12 @@
       "Privacy"
     ],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20220624"
   },
   {
     "id": "ltcusd_220930",
@@ -3009,7 +4348,12 @@
       "Privacy"
     ],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20220930"
   },
   {
     "id": "ltcusd_221230",
@@ -3025,7 +4369,12 @@
       "Privacy"
     ],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20221230"
   },
   {
     "id": "ltcusd_230331",
@@ -3041,7 +4390,12 @@
       "Privacy"
     ],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20230331"
   },
   {
     "id": "ltcusd_230630",
@@ -3057,7 +4411,12 @@
       "Privacy"
     ],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20230630"
   },
   {
     "id": "ltcusd_230929",
@@ -3073,7 +4432,12 @@
       "Privacy"
     ],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20230929"
   },
   {
     "id": "ltcusd_231229",
@@ -3089,7 +4453,12 @@
       "Privacy"
     ],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20231229"
   },
   {
     "id": "ltcusd_240329",
@@ -3105,7 +4474,12 @@
       "Privacy"
     ],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20240329"
   },
   {
     "id": "ltcusd_240628",
@@ -3121,7 +4495,12 @@
       "Privacy"
     ],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20240628"
   },
   {
     "id": "ltcusd_240927",
@@ -3137,7 +4516,12 @@
       "Privacy"
     ],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20240927"
   },
   {
     "id": "ltcusd_241227",
@@ -3153,7 +4537,12 @@
       "Privacy"
     ],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20241227"
   },
   {
     "id": "ltcusd_250328",
@@ -3169,7 +4558,12 @@
       "Privacy"
     ],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20250328"
   },
   {
     "id": "ltcusd_250627",
@@ -3185,7 +4579,12 @@
       "Privacy"
     ],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20250627"
   },
   {
     "id": "ltcusd_250926",
@@ -3201,7 +4600,12 @@
       "Privacy"
     ],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "LTC",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "future-LTC-USD:LTC-20250926"
   },
   {
     "id": "ltcusd_perp",
@@ -3218,7 +4622,14 @@
       "Privacy"
     ],
     "margin_asset": "LTC",
-    "first_capture": "2020-09-08T00:00:00.000Z"
+    "first_capture": "2020-09-08T00:00:00.000Z",
+    "base_coin": "LTC",
+    "quote_coin": "USD",
+    "base_asset_id": "LTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "perpetual-LTC-USD:LTC"
   },
   {
     "id": "lunausd_perp",
@@ -3229,7 +4640,15 @@
     "margin": "LUNA",
     "cmc_id": 4172,
     "first_capture": "2021-09-03T00:00:00.000Z",
-    "end_date": "2022-05-13T00:00:00.000Z"
+    "end_date": "2022-05-13T00:00:00.000Z",
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "LUNC",
+    "base_asset_match": "override",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LUNC",
+    "unified_id": "perpetual-LUNC-USD:LUNC"
   },
   {
     "id": "manausd_perp",
@@ -3245,7 +4664,12 @@
       "Metaverse"
     ],
     "first_capture": "2021-11-17T00:00:00.000Z",
-    "end_date": "2025-11-14T00:00:00.000Z"
+    "end_date": "2025-11-14T00:00:00.000Z",
+    "base_asset_id": "MANA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "MANA",
+    "unified_id": "perpetual-MANA-USD:MANA"
   },
   {
     "id": "maticusd_perp",
@@ -3255,7 +4679,17 @@
     "denominator": "USD",
     "margin": "MATIC",
     "first_capture": "2021-12-08T00:00:00.000Z",
-    "end_date": "2024-09-06T00:00:00.000Z"
+    "end_date": "2024-09-06T00:00:00.000Z",
+    "category": [
+      "Layer 2",
+      "Privacy"
+    ],
+    "cmc_id": 3890,
+    "base_asset_id": "MATIC",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "MATIC",
+    "unified_id": "perpetual-MATIC-USD:MATIC"
   },
   {
     "id": "nearusd_perp",
@@ -3272,7 +4706,14 @@
       "Staking"
     ],
     "margin_asset": "NEAR",
-    "first_capture": "2021-12-15T00:00:00.000Z"
+    "first_capture": "2021-12-15T00:00:00.000Z",
+    "base_coin": "NEAR",
+    "quote_coin": "USD",
+    "base_asset_id": "NEAR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "NEAR",
+    "unified_id": "perpetual-NEAR-USD:NEAR"
   },
   {
     "id": "opusd_perp",
@@ -3286,7 +4727,12 @@
       "Layer 2"
     ],
     "first_capture": "2022-07-29T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "OP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "OP",
+    "unified_id": "perpetual-OP-USD:OP"
   },
   {
     "id": "roseusd_perp",
@@ -3302,7 +4748,12 @@
       "Privacy"
     ],
     "first_capture": "2022-01-18T00:00:00.000Z",
-    "end_date": "2024-05-25T00:00:00.000Z"
+    "end_date": "2024-05-25T00:00:00.000Z",
+    "base_asset_id": "ROSE",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ROSE",
+    "unified_id": "perpetual-ROSE-USD:ROSE"
   },
   {
     "id": "runeusd_perp",
@@ -3316,7 +4767,12 @@
       "DeFi"
     ],
     "first_capture": "2022-03-23T00:00:00.000Z",
-    "end_date": "2025-11-21T00:00:00.000Z"
+    "end_date": "2025-11-21T00:00:00.000Z",
+    "base_asset_id": "RUNE",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "RUNE",
+    "unified_id": "perpetual-RUNE-USD:RUNE"
   },
   {
     "id": "sandusd_perp",
@@ -3332,7 +4788,12 @@
       "Metaverse"
     ],
     "first_capture": "2021-11-10T00:00:00.000Z",
-    "end_date": "2026-03-26T00:00:00.000Z"
+    "end_date": "2026-03-26T00:00:00.000Z",
+    "base_asset_id": "SAND",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SAND",
+    "unified_id": "perpetual-SAND-USD:SAND"
   },
   {
     "id": "solusd_240927",
@@ -3343,7 +4804,16 @@
     "margin": "SOL",
     "delivery_date": "2024-09-27T00:00:00",
     "first_capture": "2024-08-14T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20240927"
   },
   {
     "id": "solusd_241227",
@@ -3354,7 +4824,16 @@
     "margin": "SOL",
     "delivery_date": "2024-12-27T00:00:00",
     "first_capture": "2024-08-14T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20241227"
   },
   {
     "id": "solusd_250328",
@@ -3365,7 +4844,16 @@
     "margin": "SOL",
     "delivery_date": "2025-03-28T00:00:00",
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20250328"
   },
   {
     "id": "solusd_250627",
@@ -3376,7 +4864,16 @@
     "margin": "SOL",
     "delivery_date": "2025-06-27T00:00:00",
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20250627"
   },
   {
     "id": "solusd_250926",
@@ -3387,7 +4884,16 @@
     "margin": "SOL",
     "delivery_date": "2025-09-26T00:00:00",
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20250926"
   },
   {
     "id": "solusd_251226",
@@ -3398,7 +4904,16 @@
     "margin": "SOL",
     "delivery_date": "2025-12-26T00:00:00",
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20251226"
   },
   {
     "id": "solusd_260327",
@@ -3409,7 +4924,16 @@
     "margin": "SOL",
     "delivery_date": "2026-03-27T00:00:00",
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20260327"
   },
   {
     "id": "solusd_260626",
@@ -3420,7 +4944,16 @@
     "margin": "SOL",
     "delivery_date": "2026-06-26T00:00:00",
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20260626"
   },
   {
     "id": "solusd_260925",
@@ -3434,7 +4967,16 @@
     "underlying": "crypto",
     "margin_asset": "SOL",
     "first_capture": "2026-03-27T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z"
+    "end_date": "2026-09-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "cmc_id": 5426,
+    "base_asset_id": "SOL",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20260925"
   },
   {
     "id": "solusd_261225",
@@ -3447,7 +4989,18 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "SOL",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "SOL",
+    "cmc_id": 5426,
+    "quote_coin": "USD",
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20261225"
   },
   {
     "id": "solusd_270326",
@@ -3460,7 +5013,18 @@
     "denominator": "USD",
     "margin": "SOL",
     "delivery_date": "2027-03-26T00:00:00",
-    "first_capture": "2026-09-25T00:00:00.000Z"
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "SOL",
+    "cmc_id": 5426,
+    "quote_coin": "USD",
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "future-SOL-USD:SOL-20270326"
   },
   {
     "id": "solusd_perp",
@@ -3472,7 +5036,18 @@
     "contract_size": 10.0,
     "underlying": "crypto",
     "margin_asset": "SOL",
-    "first_capture": "2021-09-02T00:00:00.000Z"
+    "first_capture": "2021-09-02T00:00:00.000Z",
+    "category": [
+      "Layer 1"
+    ],
+    "base_coin": "SOL",
+    "cmc_id": 5426,
+    "quote_coin": "USD",
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "perpetual-SOL-USD:SOL"
   },
   {
     "id": "suiusd_perp",
@@ -3488,7 +5063,14 @@
       "Layer 1"
     ],
     "margin_asset": "SUI",
-    "first_capture": "2024-09-18T00:00:00.000Z"
+    "first_capture": "2024-09-18T00:00:00.000Z",
+    "base_coin": "SUI",
+    "quote_coin": "USD",
+    "base_asset_id": "SUI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SUI",
+    "unified_id": "perpetual-SUI-USD:SUI"
   },
   {
     "id": "thetausd_perp",
@@ -3503,7 +5085,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2021-04-14T00:00:00.000Z",
-    "end_date": "2025-11-11T00:00:00.000Z"
+    "end_date": "2025-11-11T00:00:00.000Z",
+    "base_asset_id": "THETA",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "THETA",
+    "unified_id": "perpetual-THETA-USD:THETA"
   },
   {
     "id": "trxusd_201225",
@@ -3518,7 +5105,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-07T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "TRX",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "TRX",
+    "unified_id": "future-TRX-USD:TRX-20201225"
   },
   {
     "id": "trxusd_210326",
@@ -3533,7 +5125,12 @@
       "Layer 1"
     ],
     "first_capture": "2020-12-07T00:00:00.000Z",
-    "end_date": "2021-01-12T00:00:00.000Z"
+    "end_date": "2021-01-12T00:00:00.000Z",
+    "base_asset_id": "TRX",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "TRX",
+    "unified_id": "future-TRX-USD:TRX-20210326"
   },
   {
     "id": "trxusd_perp",
@@ -3549,7 +5146,14 @@
       "Layer 1"
     ],
     "margin_asset": "TRX",
-    "first_capture": "2020-09-07T00:00:00.000Z"
+    "first_capture": "2020-09-07T00:00:00.000Z",
+    "base_coin": "TRX",
+    "quote_coin": "USD",
+    "base_asset_id": "TRX",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "TRX",
+    "unified_id": "perpetual-TRX-USD:TRX"
   },
   {
     "id": "uniusd_perp",
@@ -3566,7 +5170,14 @@
       "DAO"
     ],
     "margin_asset": "UNI",
-    "first_capture": "2021-04-13T00:00:00.000Z"
+    "first_capture": "2021-04-13T00:00:00.000Z",
+    "base_coin": "UNI",
+    "quote_coin": "USD",
+    "base_asset_id": "UNI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "UNI",
+    "unified_id": "perpetual-UNI-USD:UNI"
   },
   {
     "id": "vetusd_perp",
@@ -3582,7 +5193,12 @@
       "Smart Contracts"
     ],
     "first_capture": "2022-03-30T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "base_asset_id": "VET",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "VET",
+    "unified_id": "perpetual-VET-USD:VET"
   },
   {
     "id": "wifusd_perp",
@@ -3592,9 +5208,16 @@
     "denominator": "USD",
     "margin": "WIF",
     "cmc_id": 28752,
-    "category": [],
+    "category": [
+      "Memes"
+    ],
     "first_capture": "2024-07-23T00:00:00.000Z",
-    "end_date": "2026-04-15T00:00:00.000Z"
+    "end_date": "2026-04-15T00:00:00.000Z",
+    "base_asset_id": "WIF",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "WIF",
+    "unified_id": "perpetual-WIF-USD:WIF"
   },
   {
     "id": "wldusd_perp",
@@ -3608,7 +5231,12 @@
       "DeFi"
     ],
     "first_capture": "2024-10-02T00:00:00.000Z",
-    "end_date": "2026-04-15T00:00:00.000Z"
+    "end_date": "2026-04-15T00:00:00.000Z",
+    "base_asset_id": "WLD",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "WLD",
+    "unified_id": "perpetual-WLD-USD:WLD"
   },
   {
     "id": "xlmusd_perp",
@@ -3626,7 +5254,14 @@
       "Smart Contracts"
     ],
     "margin_asset": "XLM",
-    "first_capture": "2021-04-16T00:00:00.000Z"
+    "first_capture": "2021-04-16T00:00:00.000Z",
+    "base_coin": "XLM",
+    "quote_coin": "USD",
+    "base_asset_id": "XLM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XLM",
+    "unified_id": "perpetual-XLM-USD:XLM"
   },
   {
     "id": "xmrusd_perp",
@@ -3641,7 +5276,12 @@
       "Privacy"
     ],
     "first_capture": "2022-04-21T00:00:00.000Z",
-    "end_date": "2024-02-16T00:00:00.000Z"
+    "end_date": "2024-02-16T00:00:00.000Z",
+    "base_asset_id": "XMR",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XMR",
+    "unified_id": "perpetual-XMR-USD:XMR"
   },
   {
     "id": "xrpusd_201225",
@@ -3654,7 +5294,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2020-11-30T00:00:00.000Z",
-    "end_date": "2020-12-26T00:00:00.000Z"
+    "end_date": "2020-12-26T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20201225"
   },
   {
     "id": "xrpusd_210326",
@@ -3667,7 +5312,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2020-11-30T00:00:00.000Z",
-    "end_date": "2021-03-27T00:00:00.000Z"
+    "end_date": "2021-03-27T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20210326"
   },
   {
     "id": "xrpusd_210625",
@@ -3680,7 +5330,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2020-12-25T00:00:00.000Z",
-    "end_date": "2021-06-26T00:00:00.000Z"
+    "end_date": "2021-06-26T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20210625"
   },
   {
     "id": "xrpusd_210924",
@@ -3693,7 +5348,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2021-03-26T00:00:00.000Z",
-    "end_date": "2021-09-25T00:00:00.000Z"
+    "end_date": "2021-09-25T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20210924"
   },
   {
     "id": "xrpusd_211231",
@@ -3706,7 +5366,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2021-06-25T00:00:00.000Z",
-    "end_date": "2022-01-01T00:00:00.000Z"
+    "end_date": "2022-01-01T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20211231"
   },
   {
     "id": "xrpusd_220325",
@@ -3719,7 +5384,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2021-09-24T00:00:00.000Z",
-    "end_date": "2022-03-26T00:00:00.000Z"
+    "end_date": "2022-03-26T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20220325"
   },
   {
     "id": "xrpusd_220624",
@@ -3732,7 +5402,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2021-12-31T00:00:00.000Z",
-    "end_date": "2022-06-25T00:00:00.000Z"
+    "end_date": "2022-06-25T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20220624"
   },
   {
     "id": "xrpusd_220930",
@@ -3745,7 +5420,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2022-03-25T00:00:00.000Z",
-    "end_date": "2022-10-01T00:00:00.000Z"
+    "end_date": "2022-10-01T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20220930"
   },
   {
     "id": "xrpusd_221230",
@@ -3758,7 +5438,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2022-06-24T00:00:00.000Z",
-    "end_date": "2022-12-31T00:00:00.000Z"
+    "end_date": "2022-12-31T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20221230"
   },
   {
     "id": "xrpusd_230331",
@@ -3771,7 +5456,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2022-09-30T00:00:00.000Z",
-    "end_date": "2023-04-01T00:00:00.000Z"
+    "end_date": "2023-04-01T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20230331"
   },
   {
     "id": "xrpusd_230630",
@@ -3784,7 +5474,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2022-12-30T00:00:00.000Z",
-    "end_date": "2023-07-01T00:00:00.000Z"
+    "end_date": "2023-07-01T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20230630"
   },
   {
     "id": "xrpusd_230929",
@@ -3797,7 +5492,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2023-03-31T00:00:00.000Z",
-    "end_date": "2023-09-30T00:00:00.000Z"
+    "end_date": "2023-09-30T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20230929"
   },
   {
     "id": "xrpusd_231229",
@@ -3810,7 +5510,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2023-06-30T00:00:00.000Z",
-    "end_date": "2023-12-30T00:00:00.000Z"
+    "end_date": "2023-12-30T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20231229"
   },
   {
     "id": "xrpusd_240329",
@@ -3823,7 +5528,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2023-09-29T00:00:00.000Z",
-    "end_date": "2024-03-30T00:00:00.000Z"
+    "end_date": "2024-03-30T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20240329"
   },
   {
     "id": "xrpusd_240628",
@@ -3836,7 +5546,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2023-12-29T00:00:00.000Z",
-    "end_date": "2024-06-29T00:00:00.000Z"
+    "end_date": "2024-06-29T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20240628"
   },
   {
     "id": "xrpusd_240927",
@@ -3849,7 +5564,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2024-03-29T00:00:00.000Z",
-    "end_date": "2024-09-28T00:00:00.000Z"
+    "end_date": "2024-09-28T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20240927"
   },
   {
     "id": "xrpusd_241227",
@@ -3862,7 +5582,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2024-06-28T00:00:00.000Z",
-    "end_date": "2024-12-28T00:00:00.000Z"
+    "end_date": "2024-12-28T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20241227"
   },
   {
     "id": "xrpusd_250328",
@@ -3875,7 +5600,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2024-09-27T00:00:00.000Z",
-    "end_date": "2025-03-29T00:00:00.000Z"
+    "end_date": "2025-03-29T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20250328"
   },
   {
     "id": "xrpusd_250627",
@@ -3888,7 +5618,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2024-12-27T00:00:00.000Z",
-    "end_date": "2025-06-28T00:00:00.000Z"
+    "end_date": "2025-06-28T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20250627"
   },
   {
     "id": "xrpusd_250926",
@@ -3901,7 +5636,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2025-03-28T00:00:00.000Z",
-    "end_date": "2025-09-27T00:00:00.000Z"
+    "end_date": "2025-09-27T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20250926"
   },
   {
     "id": "xrpusd_251226",
@@ -3914,7 +5654,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2025-06-27T00:00:00.000Z",
-    "end_date": "2025-12-27T00:00:00.000Z"
+    "end_date": "2025-12-27T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20251226"
   },
   {
     "id": "xrpusd_260327",
@@ -3927,7 +5672,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2025-09-26T00:00:00.000Z",
-    "end_date": "2026-03-28T00:00:00.000Z"
+    "end_date": "2026-03-28T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20260327"
   },
   {
     "id": "xrpusd_260626",
@@ -3940,7 +5690,12 @@
     "cmc_id": 52,
     "category": [],
     "first_capture": "2025-12-26T00:00:00.000Z",
-    "end_date": "2026-06-27T00:00:00.000Z"
+    "end_date": "2026-06-27T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20260626"
   },
   {
     "id": "xrpusd_260925",
@@ -3956,7 +5711,12 @@
     "category": [],
     "margin_asset": "XRP",
     "first_capture": "2026-03-27T00:00:00.000Z",
-    "end_date": "2026-09-26T00:00:00.000Z"
+    "end_date": "2026-09-26T00:00:00.000Z",
+    "base_asset_id": "XRP",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20260925"
   },
   {
     "id": "xrpusd_261225",
@@ -3971,7 +5731,14 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "XRP",
-    "first_capture": "2026-06-26T00:00:00.000Z"
+    "first_capture": "2026-06-26T00:00:00.000Z",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20261225"
   },
   {
     "id": "xrpusd_270326",
@@ -3984,7 +5751,16 @@
     "denominator": "USD",
     "margin": "XRP",
     "delivery_date": "2027-03-26T00:00:00",
-    "first_capture": "2026-09-25T00:00:00.000Z"
+    "first_capture": "2026-09-25T00:00:00.000Z",
+    "category": [],
+    "base_coin": "XRP",
+    "cmc_id": 52,
+    "quote_coin": "USD",
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "future-XRP-USD:XRP-20270326"
   },
   {
     "id": "xrpusd_perp",
@@ -3998,7 +5774,14 @@
     "underlying": "crypto",
     "category": [],
     "margin_asset": "XRP",
-    "first_capture": "2020-09-09T00:00:00.000Z"
+    "first_capture": "2020-09-09T00:00:00.000Z",
+    "base_coin": "XRP",
+    "quote_coin": "USD",
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "perpetual-XRP-USD:XRP"
   },
   {
     "id": "xtzusd_perp",
@@ -4015,7 +5798,12 @@
       "Privacy"
     ],
     "first_capture": "2022-02-14T00:00:00.000Z",
-    "end_date": "2024-05-21T00:00:00.000Z"
+    "end_date": "2024-05-21T00:00:00.000Z",
+    "base_asset_id": "XTZ",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XTZ",
+    "unified_id": "perpetual-XTZ-USD:XTZ"
   },
   {
     "id": "zilusd_perp",
@@ -4031,6 +5819,11 @@
       "Metaverse"
     ],
     "first_capture": "2022-04-07T00:00:00.000Z",
-    "end_date": "2022-12-27T00:00:00.000Z"
+    "end_date": "2022-12-27T00:00:00.000Z",
+    "base_asset_id": "ZIL",
+    "base_asset_match": "snapshot_cmc_id",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ZIL",
+    "unified_id": "perpetual-ZIL-USD:ZIL"
   }
 ]

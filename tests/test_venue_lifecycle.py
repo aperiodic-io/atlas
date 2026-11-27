@@ -156,8 +156,9 @@ class TestBitget:
             rows = _by_id(_fetch(fetch_bitget_perpetual_usdt, self.PAYLOAD))
         clock.assert_now(rows["EUSDT"]["end_date"])
 
-    def test_contracts_not_yet_trading_are_left_out(self):
-        assert "FUSDT" not in _by_id(_fetch(fetch_bitget_perpetual_usdt, self.PAYLOAD))
+    def test_contracts_not_yet_trading_are_flagged_upcoming(self):
+        row = _by_id(_fetch(fetch_bitget_perpetual_usdt, self.PAYLOAD))["FUSDT"]
+        assert row == {"id": "FUSDT", "type": "perpetual", "upcoming": True}
 
     def test_launch_time_is_the_listing_time_on_every_category(self):
         rows = _by_id(_fetch(fetch_bitget_perpetual_usdt, self.PAYLOAD))
@@ -205,8 +206,9 @@ class TestHtx:
             rows = _by_id(_fetch(fetch_htx_perpetual_usdt, self.PAYLOAD))
         clock.assert_now(rows["GONE-USDT"]["end_date"])
 
-    def test_pending_listing_is_left_out(self):
-        assert "NEXT-USDT" not in _by_id(_fetch(fetch_htx_perpetual_usdt, self.PAYLOAD))
+    def test_pending_listing_is_flagged_upcoming(self):
+        row = _by_id(_fetch(fetch_htx_perpetual_usdt, self.PAYLOAD))["NEXT-USDT"]
+        assert row == {"id": "NEXT-USDT", "type": "perpetual", "upcoming": True}
 
     def test_create_date_is_the_listing_time(self):
         rows = _by_id(_fetch(fetch_htx_perpetual_usdt, self.PAYLOAD))
@@ -485,6 +487,7 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
         "aster-perps", "apex-perps", "avantis-perps", "extended-perps",
         "grvt-perps", "lighter-perps", "pacifica-perps", "variational-perps",
         "gateio-perps-usdt", "gateio-perps-btc", "gateio-futures-usdt",
+        "bybit-perps-usd", "bybit-perps-coin",
         "htx-perps-usdt", "mexc-perps", "bitget-perps-usdt",
         "bitget-perps-usdc", "bitget-perps-coin", "bitget-futures-coin",
         "deribit-perps", "deribit-futures", "whitebit-perps",
@@ -494,7 +497,7 @@ def test_reported_delisting_closes_the_row_on_file(tmp_path, monkeypatch):
 def test_daily_update_refreshes_the_venue(exchange):
     # The daily update is what applies these signals; a venue it skips never
     # sees a delisting.
-    from atlas.exchange_definitions import is_beta_exchange
+    from atlas.exchanges import get_exchange_fetcher
 
     assert exchange in updater.EXCHANGES
-    assert not is_beta_exchange(exchange)
+    assert get_exchange_fetcher(exchange) is not None

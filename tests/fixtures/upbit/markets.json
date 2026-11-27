@@ -1,0 +1,182 @@
+[
+ {
+  "market": "BTC-BERA",
+  "korean_name": "베라체인",
+  "english_name": "Berachain",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "KRW-USDT",
+  "korean_name": "테더",
+  "english_name": "Tether",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "BTC-0G",
+  "korean_name": "제로지",
+  "english_name": "0G",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "USDT-BTC",
+  "korean_name": "비트코인",
+  "english_name": "Bitcoin",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "KRW-MPLX",
+  "korean_name": "메타플렉스",
+  "english_name": "Metaplex",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "BTC-ETH",
+  "korean_name": "이더리움",
+  "english_name": "Ethereum",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "KRW-BTC",
+  "korean_name": "비트코인",
+  "english_name": "Bitcoin",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "USDT-BREV",
+  "korean_name": "브레비스",
+  "english_name": "Brevis",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": false,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "BTC-SOPH",
+  "korean_name": "소폰",
+  "english_name": "Sophon",
+  "market_event": {
+   "warning": true,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": true,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "KRW-BLAST",
+  "korean_name": "블라스트",
+  "english_name": "Blast",
+  "market_event": {
+   "warning": true,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": true,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "BTC-VIRTUAL",
+  "korean_name": "버추얼프로토콜",
+  "english_name": "Virtuals Protocol",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": false,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": true,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ },
+ {
+  "market": "USDT-WCT",
+  "korean_name": "월렛커넥트",
+  "english_name": "WalletConnect",
+  "market_event": {
+   "warning": false,
+   "caution": {
+    "PRICE_FLUCTUATIONS": true,
+    "TRADING_VOLUME_SOARING": false,
+    "DEPOSIT_AMOUNT_SOARING": false,
+    "GLOBAL_PRICE_DIFFERENCES": true,
+    "CONCENTRATION_OF_SMALL_ACCOUNTS": false
+   }
+  }
+ }
+]

@@ -63,24 +63,44 @@ def test_exchanges_for_contract_matches_symbol_denominator_margin(tmp_path: Path
     ]
 
 
-def test_okx_perps_snapshot_keeps_legacy_usdc_contract_sizes() -> None:
+def test_okx_perps_snapshot_keeps_delisted_usdc_contract_sizes() -> None:
+    """OKX's USDC swaps (2022-10-18 to 2025-12-12) were 0.0001 BTC and 0.001 ETH a contract
+    for their whole life, per OKX's listing notice: not their USDT twins' sizes. Delisted,
+    no snapshot refreshes them."""
     rows = json.loads(
         (Path(__file__).resolve().parents[1] / "atlas" / "data" / "okx-perps.json").read_text()
     )
     by_id = {row["id"]: row for row in rows}
 
-    assert by_id["BTC-USDC-SWAP"]["contract_size"] == 0.01
-    assert by_id["BTC-USDC-SWAP"]["contract_size_history"] == [
-        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.0001},
-        {"effective_from": "2020-03-20T08:00:00Z", "value": 0.01},
-    ]
-    assert by_id["ETH-USDC-SWAP"]["contract_size"] == 0.1
-    assert by_id["ETH-USDC-SWAP"]["contract_size_history"] == [
-        {"effective_from": "2019-12-04T00:00:00Z", "value": 0.001},
-        {"effective_from": "2020-03-19T08:00:00Z", "value": 0.1},
-    ]
+    assert by_id["BTC-USDC-SWAP"]["contract_size"] == 0.0001
+    assert "contract_size_history" not in by_id["BTC-USDC-SWAP"]
+    assert by_id["ETH-USDC-SWAP"]["contract_size"] == 0.001
+    assert "contract_size_history" not in by_id["ETH-USDC-SWAP"]
     assert by_id["BTC-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
     assert by_id["ETH-USDC-SWAP"]["end_date"] == "2025-12-12T00:00:00.000Z"
+
+
+def test_okx_perps_snapshot_keeps_delisted_unified_margin_contract_sizes() -> None:
+    """OKX's USD-margined `*-USD_UM-SWAP` perps are delisted, so the instruments endpoint no
+    longer returns them and no snapshot would ever fill their size. Without it open interest
+    prices at one coin a contract. Sizes are those of the same underlying's dated
+    unified-margin futures (`BTC-USD_UM-261030` and kin), not the USDT swaps': ETH is 0.001
+    here against 0.1 on `ETH-USDT-SWAP`, SOL 0.1 against 1."""
+    rows = json.loads(
+        (Path(__file__).resolve().parents[1] / "atlas" / "data" / "okx-perps.json").read_text()
+    )
+    by_id = {row["id"]: row for row in rows}
+
+    expected = {
+        "BTC-USD_UM-SWAP": 0.01,
+        "ETH-USD_UM-SWAP": 0.001,
+        "SOL-USD_UM-SWAP": 0.1,
+        "XAU-USD_UM-SWAP": 0.001,
+    }
+    for symbol_id, size in expected.items():
+        assert by_id[symbol_id]["contract_size"] == size, symbol_id
+        assert "contract_size_history" not in by_id[symbol_id], symbol_id
+        assert by_id[symbol_id]["end_date"], symbol_id
 
 
 def test_symbol_ids_includes_mid_window_listing(tmp_path: Path) -> None:
@@ -164,10 +184,10 @@ def test_security_master_returns_instrument_metadata(tmp_path) -> None:
             "quantity_unit": "quote",
         }
     ]
-    (tmp_path / "bybit-perps.json").write_text(json.dumps(data))
+    (tmp_path / "bybit-perps-coin.json").write_text(json.dumps(data))
 
     metadata = SecurityMaster.load(data_dir=tmp_path).instrument_metadata(
-        "bybit-perps", "BTCUSD"
+        "bybit-perps-coin", "BTCUSD"
     )
 
     assert metadata is not None
@@ -175,7 +195,7 @@ def test_security_master_returns_instrument_metadata(tmp_path) -> None:
     metadata["quantity_unit"] = "base"
     assert (
         SecurityMaster.load(data_dir=tmp_path)
-        .instrument_metadata("bybit-perps", "BTCUSD")["quantity_unit"]
+        .instrument_metadata("bybit-perps-coin", "BTCUSD")["quantity_unit"]
         == "quote"
     )
 
@@ -202,3 +222,86 @@ def test_security_master_ignores_non_exchange_json_files(tmp_path: Path) -> None
     )
 
     assert symbols == ["BTCUSDT"]
+
+
+def _rwa_universe(tmp_path: Path) -> SecurityMaster:
+    def perp(row_id, symbol, underlying, first="2026-01-01", end=None, **extra):
+        row = {
+            "id": row_id,
+            "type": "perpetual",
+            "symbol": symbol,
+            "denominator": "USDC",
+            "margin": "USDC",
+            "underlying": underlying,
+            "first_capture": f"{first}T00:00:00.000Z",
+            "internal_id": f"perpetual-{symbol}-USDC:USDC",
+            **extra,
+        }
+        if end:
+            row["end_date"] = f"{end}T00:00:00.000Z"
+        return row
+
+    _write_exchange(
+        tmp_path,
+        "lighter-perps",
+        [
+            perp("3", "TSLA", "equity", base_asset_id="TSLA"),
+            perp("96", "EUR", "forex", base_asset_id="EURUSD"),
+            perp("1", "BTC", "crypto", base_asset_id="BTC"),
+            perp("173", "SPACEX", "pre_market", first="2026-05-08", end="2026-06-19"),
+        ],
+    )
+    _write_exchange(
+        tmp_path,
+        "avantis-perps",
+        [perp("100", "TSLA", "equity", base_asset_id="TSLA"), perp("20", "XAG", "commodity")],
+    )
+    _write_exchange(
+        tmp_path,
+        "binance-spot",
+        [
+            {
+                "id": "btcusdt",
+                "type": "spot",
+                "symbol": "BTC",
+                "denominator": "USDT",
+                "first_capture": "2019-01-01T00:00:00.000Z",
+                "internal_id": "spot-BTC-USDT",
+            }
+        ],
+    )
+    return SecurityMaster.load(data_dir=tmp_path)
+
+
+def test_instruments_filters_by_underlying_asset_class(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+
+    assert sm.instruments(underlying="equity") == [("avantis-perps", "100"), ("lighter-perps", "3")]
+    assert sm.instruments(underlying=["forex", "commodity"]) == [
+        ("avantis-perps", "20"),
+        ("lighter-perps", "96"),
+    ]
+    # A row without a venue classification is not RWA.
+    assert ("binance-spot", "btcusdt") not in sm.instruments(underlying="crypto")
+
+
+def test_instruments_filters_by_exchange_type_and_trading_date(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+
+    assert sm.instruments(exchange="lighter-perps", active_at=datetime(2026, 6, 1)) == [
+        ("lighter-perps", "1"),
+        ("lighter-perps", "173"),
+        ("lighter-perps", "3"),
+        ("lighter-perps", "96"),
+    ]
+    # Delisted on 2026-06-19: not trading after it.
+    assert ("lighter-perps", "173") not in sm.instruments(active_at=datetime(2026, 7, 1))
+    assert sm.instruments(instrument_type="spot") == [("binance-spot", "btcusdt")]
+    assert sm.instruments(exchange=["avantis-perps", "binance-spot"], underlying="equity") == [
+        ("avantis-perps", "100")
+    ]
+
+
+def test_instruments_with_no_filter_is_every_instrument(tmp_path: Path) -> None:
+    sm = _rwa_universe(tmp_path)
+    assert len(sm.instruments()) == len(sm) == 7

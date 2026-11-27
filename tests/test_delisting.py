@@ -7,9 +7,7 @@ import pytest
 from atlas.exchange_definitions.common import ms_to_datetime, parse_utc_timestamp
 from atlas.update_sources import (
     ExchangeApiSymbolSource,
-    HybridSymbolSource,
     SymbolLifecycle,
-    TardisSymbolSource,
 )
 
 updater = importlib.import_module("atlas.update")
@@ -56,30 +54,28 @@ def test_exchange_api_is_the_default_source(data_dir, monkeypatch) -> None:
         ),
     )
     assert updater.update(["binance-spot"]) == []
-    assert updater.parse_args([]).source == "exchange"
 
 
-def test_daily_workflow_uses_exchange_source() -> None:
+def test_daily_workflow_runs_the_update_with_accept_missing() -> None:
     from pathlib import Path
 
-    workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text()
-    assert "python -m atlas.update --source exchange" in workflow
-    assert '--accept-missing "$ACCEPT_MISSING"' in workflow
-    assert "ACCEPT_MISSING: ${{ inputs.accept_missing }}" in workflow
+    workflow = (Path(__file__).parents[1] / ".github/workflows/daily_update.yaml").read_text(encoding="utf-8")
+    # One update per runner (Kraken, then everything else); both take the override.
+    assert workflow.count("python -m atlas.update") == 2
+    assert workflow.count('--accept-missing "$ACCEPT_MISSING"') == 2
+    assert workflow.count("ACCEPT_MISSING: ${{ inputs.accept_missing }}") == 2
 
 
 def test_sources_declare_how_their_rows_relate_to_the_file() -> None:
     assert ExchangeApiSymbolSource.lifecycle is SymbolLifecycle.COMPLETE
-    assert HybridSymbolSource.lifecycle is SymbolLifecycle.MERGE
-    assert TardisSymbolSource.lifecycle is SymbolLifecycle.REPLACE
 
 
 def test_accept_missing_is_a_comma_separated_exchange_list() -> None:
     assert updater.parse_args([]).accept_missing == []
     assert updater.parse_args(["--accept-missing", ""]).accept_missing == []
-    assert updater.parse_args(["--accept-missing", "okx-spot, bybit-perps"]).accept_missing == [
+    assert updater.parse_args(["--accept-missing", "okx-spot, bybit-perps-usd"]).accept_missing == [
         "okx-spot",
-        "bybit-perps",
+        "bybit-perps-usd",
     ]
 
 
@@ -353,7 +349,7 @@ def test_partial_sources_never_infer_delistings(data_dir) -> None:
     assert _read(path)["gonebtc"] == _spot("gonebtc")
 
 
-@pytest.mark.parametrize("lifecycle", [None, SymbolLifecycle.MERGE, SymbolLifecycle.REPLACE])
+@pytest.mark.parametrize("lifecycle", [None, SymbolLifecycle.MERGE])
 def test_sources_that_cannot_see_delistings_clear_pending_misses(data_dir, lifecycle) -> None:
     rows = [*LIVE, _spot("flakybtc", missing_since="2026-10-12T02:00:00.000Z")]
     path = _write(data_dir, "binance-spot", [*rows, _spot("gonebtc", missing_since="2026-10-12T02:00:00.000Z")])
@@ -364,3 +360,69 @@ def test_sources_that_cannot_see_delistings_clear_pending_misses(data_dir, lifec
     assert updater.update(["binance-spot"], source) == []
 
     assert not any("missing_since" in row for row in _read(path).values())
+
+
+# ---------------------------------------------------------------------------
+# Instruments a venue lists but that have not started trading (`upcoming`)
+# ---------------------------------------------------------------------------
+
+
+def test_upcoming_instrument_we_never_tracked_is_not_added(data_dir) -> None:
+    path = _write(data_dir, "binance-spot", LIVE)
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("newusdt", upcoming=True)])) == []
+
+    assert "newusdt" not in _read(path)
+
+
+def test_upcoming_instrument_on_file_stays_as_it_is(data_dir) -> None:
+    """A relaunch (a new trading start on an id we track) is not a delisting."""
+    relaunched = _spot("bsvusdt", first_capture="2020-01-01T00:00:00.000Z", internal_id="spot-BSV-USDT")
+    path = _write(data_dir, "binance-spot", [*LIVE, relaunched])
+    source = _complete_source([*LIVE, _spot("bsvusdt", upcoming=True, first_capture="2027-01-01T00:00:00.000Z")])
+
+    assert updater.update(["binance-spot"], source) == []
+    assert updater.update(["binance-spot"], source) == []
+
+    assert _read(path)["bsvusdt"] == relaunched
+
+
+def test_upcoming_instrument_clears_a_pending_miss(data_dir) -> None:
+    path = _write(data_dir, "binance-spot", [*LIVE, _spot("bsvusdt", missing_since="2026-10-12T02:00:00.000Z")])
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("bsvusdt", upcoming=True)])) == []
+
+    row = _read(path)["bsvusdt"]
+    assert "missing_since" not in row
+    assert "end_date" not in row
+
+
+def test_upcoming_instrument_keeps_a_recorded_end_date(data_dir) -> None:
+    """A delisted id the venue is preparing to relist stays closed until it trades."""
+    ended = _spot("oldusdt", end_date="2025-01-01T00:00:00.000Z")
+    path = _write(data_dir, "binance-spot", [*LIVE, ended])
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, _spot("oldusdt", upcoming=True)])) == []
+
+    assert _read(path)["oldusdt"] == ended
+
+
+def test_upcoming_instruments_count_as_present_for_the_mass_disappearance_guard(data_dir) -> None:
+    rows = [_spot(f"relaunch{i}usdt") for i in range(10)]
+    _write(data_dir, "binance-spot", [*LIVE, *rows])
+    upcoming = [{**row, "upcoming": True} for row in rows]
+
+    assert updater.update(["binance-spot"], _complete_source([*LIVE, *upcoming])) == []
+
+
+@pytest.mark.parametrize("lifecycle", [SymbolLifecycle.MERGE, SymbolLifecycle.COMPLETE])
+def test_upcoming_flag_is_never_written(data_dir, lifecycle) -> None:
+    path = _write(data_dir, "binance-spot", [*LIVE, _spot("bsvusdt")])
+    source = SimpleNamespace(
+        lifecycle=lifecycle,
+        fetch_exchange=lambda _e: {"availableSymbols": [*map(dict, LIVE), _spot("bsvusdt", upcoming=True)]},
+    )
+
+    assert updater.update(["binance-spot"], source) == []
+
+    assert not any("upcoming" in row for row in _read(path).values())

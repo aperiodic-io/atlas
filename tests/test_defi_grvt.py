@@ -11,7 +11,6 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchanges import (
     get_allowed_types,
     get_exchange_fetcher,
@@ -35,10 +34,7 @@ def _response(payload) -> MagicMock:
 
 
 def test_registered_as_stable_perpetual_venue_with_an_api_fetcher():
-    # A beta exchange is skipped by the daily update; GRVT is fetched from the
-    # venue (Tardis does not cover it).
     slug = "grvt-perps"
-    assert not is_beta_exchange(slug)
     assert slug in EXCHANGES
     assert get_allowed_types(slug) == {"perpetual"}
     assert get_exchange_fetcher(slug) is not None

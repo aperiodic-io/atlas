@@ -17,6 +17,7 @@ from .common import (
     parse_yymmdd,
     split_concat,
     utc_timestamp,
+    venue_assets,
     venue_margin,
 )
 from .common import SkipSymbol
@@ -26,7 +27,29 @@ def parse_binance(exchange: str, sd: SymbolData) -> Contract:
     return parse_concat(exchange, sd)
 
 
+def _delivery_from_suffix(sid: str):
+    """Delivery date of a dated Binance contract (``BTCUSDT_261225``), if any."""
+    if "_" in sid:
+        suffix = sid.rsplit("_", 1)[1]
+        return None if suffix == "PERP" else parse_yymmdd(suffix)
+    match = re.match(r"^[A-Z0-9]+?(\d{6})$", sid)
+    return parse_yymmdd(match.group(1)) if match else None
+
+
+def _parse_with_venue_assets(exchange: str, sd: SymbolData) -> Contract | None:
+    assets = venue_assets(sd)
+    if assets is None:
+        return None
+    symbol, denominator = assets
+    ctype = instrument_type(sd)
+    margin = venue_margin(sd, symbol, denominator, ctype)
+    delivery = _delivery_from_suffix(sd["id"].upper()) if ctype.value == "future" else None
+    return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
+
+
 def parse_binance_futures(exchange: str, sd: SymbolData) -> Contract:
+    if (contract := _parse_with_venue_assets(exchange, sd)) is not None:
+        return contract
     sid = sd["id"].upper()
     ctype = instrument_type(sd)
 
@@ -58,6 +81,8 @@ def parse_binance_futures(exchange: str, sd: SymbolData) -> Contract:
 
 
 def parse_binance_delivery(exchange: str, sd: SymbolData) -> Contract:
+    if (contract := _parse_with_venue_assets(exchange, sd)) is not None:
+        return contract
     sid = sd["id"].upper()
     if "_" not in sid:
         raise SkipSymbol(f"{exchange}: expected underscore in {sid!r}")
@@ -71,8 +96,14 @@ def parse_binance_delivery(exchange: str, sd: SymbolData) -> Contract:
     return make_contract(exchange, sd, symbol, denominator, margin, ctype, delivery)
 
 
-def _to_symbol(id_value: str, type_value: str) -> dict[str, str]:
-    return {"id": id_value, "type": type_value}
+def _to_symbol(id_value: str, type_value: str, item: dict | None = None) -> dict[str, str]:
+    symbol = {"id": id_value, "type": type_value}
+    if item is not None:
+        if base := item.get("baseAsset"):
+            symbol["base_coin"] = base
+        if quote := item.get("quoteAsset"):
+            symbol["quote_coin"] = quote
+    return symbol
 
 
 # Spot symbols in these states are either delisted (BREAK) or not yet listed.
@@ -101,7 +132,7 @@ def fetch_binance_spot(timeout_seconds: int) -> list[dict[str, str]]:
         "https://api.binance.com/api/v3/exchangeInfo", timeout=timeout_seconds
     ).json()
     return [
-        _to_symbol(item["symbol"].lower(), "spot")
+        _to_symbol(item["symbol"].lower(), "spot", item)
         for item in payload.get("symbols", [])
         if item.get("status") not in _SPOT_UNLISTED_STATUSES
     ]
@@ -138,6 +169,7 @@ def fetch_binance_futures_usdm(timeout_seconds: int) -> list[dict]:
         sd = _to_symbol(
             item["symbol"].lower(),
             _normalize_binance_instrument_type(item.get("contractType")),
+            item,
         )
         sd["contract_size"] = 1.0
         if margin_asset := item.get("marginAsset"):
@@ -158,6 +190,7 @@ def fetch_binance_futures_coinm(timeout_seconds: int) -> list[dict]:
         sd = _to_symbol(
             item["symbol"].lower(),
             _normalize_binance_instrument_type(item.get("contractType")),
+            item,
         )
         if (cs := item.get("contractSize")) is not None:
             sd["contract_size"] = float(cs)

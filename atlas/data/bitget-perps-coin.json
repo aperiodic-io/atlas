@@ -12,7 +12,18 @@
     "internal_id": "perpetual-AAVE-USD:AAVE",
     "symbol": "AAVE",
     "denominator": "USD",
-    "margin": "AAVE"
+    "margin": "AAVE",
+    "cmc_id": 7278,
+    "category": [
+      "DeFi",
+      "Lending & Borrowing",
+      "DAO"
+    ],
+    "base_asset_id": "AAVE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "AAVE",
+    "unified_id": "perpetual-AAVE-USD:AAVE"
   },
   {
     "id": "ADAUSD_CM",
@@ -27,7 +38,18 @@
     "internal_id": "perpetual-ADA-USD:ADA",
     "symbol": "ADA",
     "denominator": "USD",
-    "margin": "ADA"
+    "margin": "ADA",
+    "cmc_id": 2010,
+    "category": [
+      "Layer 1",
+      "Staking",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ADA",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ADA",
+    "unified_id": "perpetual-ADA-USD:ADA"
   },
   {
     "id": "APTUSD_CM",
@@ -42,7 +64,16 @@
     "internal_id": "perpetual-APT-USD:APT",
     "symbol": "APT",
     "denominator": "USD",
-    "margin": "APT"
+    "margin": "APT",
+    "cmc_id": 21794,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "APT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "APT",
+    "unified_id": "perpetual-APT-USD:APT"
   },
   {
     "id": "AVAXUSD_CM",
@@ -57,7 +88,18 @@
     "internal_id": "perpetual-AVAX-USD:AVAX",
     "symbol": "AVAX",
     "denominator": "USD",
-    "margin": "AVAX"
+    "margin": "AVAX",
+    "cmc_id": 5805,
+    "category": [
+      "Layer 1",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "AVAX",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "AVAX",
+    "unified_id": "perpetual-AVAX-USD:AVAX"
   },
   {
     "id": "BCHUSD_CM",
@@ -72,7 +114,16 @@
     "internal_id": "perpetual-BCH-USD:BCH",
     "symbol": "BCH",
     "denominator": "USD",
-    "margin": "BCH"
+    "margin": "BCH",
+    "cmc_id": 1831,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BCH",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BCH",
+    "unified_id": "perpetual-BCH-USD:BCH"
   },
   {
     "id": "BTCUSD_CM",
@@ -87,7 +138,16 @@
     "internal_id": "perpetual-BTC-USD:BTC",
     "symbol": "BTC",
     "denominator": "USD",
-    "margin": "BTC"
+    "margin": "BTC",
+    "cmc_id": 1,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "BTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "BTC",
+    "unified_id": "perpetual-BTC-USD:BTC"
   },
   {
     "id": "DOGEUSD_CM",
@@ -102,7 +162,16 @@
     "internal_id": "perpetual-DOGE-USD:DOGE",
     "symbol": "DOGE",
     "denominator": "USD",
-    "margin": "DOGE"
+    "margin": "DOGE",
+    "cmc_id": 74,
+    "category": [
+      "Memes"
+    ],
+    "base_asset_id": "DOGE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOGE",
+    "unified_id": "perpetual-DOGE-USD:DOGE"
   },
   {
     "id": "DOTUSD_CM",
@@ -117,7 +186,16 @@
     "internal_id": "perpetual-DOT-USD:DOT",
     "symbol": "DOT",
     "denominator": "USD",
-    "margin": "DOT"
+    "margin": "DOT",
+    "cmc_id": 6636,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "DOT",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "DOT",
+    "unified_id": "perpetual-DOT-USD:DOT"
   },
   {
     "id": "ETCUSD_CM",
@@ -132,7 +210,17 @@
     "internal_id": "perpetual-ETC-USD:ETC",
     "symbol": "ETC",
     "denominator": "USD",
-    "margin": "ETC"
+    "margin": "ETC",
+    "cmc_id": 1321,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETC",
+    "unified_id": "perpetual-ETC-USD:ETC"
   },
   {
     "id": "ETHUSD_CM",
@@ -147,7 +235,17 @@
     "internal_id": "perpetual-ETH-USD:ETH",
     "symbol": "ETH",
     "denominator": "USD",
-    "margin": "ETH"
+    "margin": "ETH",
+    "cmc_id": 1027,
+    "category": [
+      "Layer 1",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "ETH",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "ETH",
+    "unified_id": "perpetual-ETH-USD:ETH"
   },
   {
     "id": "FILUSD_CM",
@@ -162,7 +260,16 @@
     "internal_id": "perpetual-FIL-USD:FIL",
     "symbol": "FIL",
     "denominator": "USD",
-    "margin": "FIL"
+    "margin": "FIL",
+    "cmc_id": 2280,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "FIL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "FIL",
+    "unified_id": "perpetual-FIL-USD:FIL"
   },
   {
     "id": "HYPEUSD_CM",
@@ -177,7 +284,17 @@
     "internal_id": "perpetual-HYPE-USD:HYPE",
     "symbol": "HYPE",
     "denominator": "USD",
-    "margin": "HYPE"
+    "margin": "HYPE",
+    "cmc_id": 32196,
+    "category": [
+      "DeFi",
+      "Layer 1"
+    ],
+    "base_asset_id": "HYPE",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "HYPE",
+    "unified_id": "perpetual-HYPE-USD:HYPE"
   },
   {
     "id": "LINKUSD_CM",
@@ -192,7 +309,20 @@
     "internal_id": "perpetual-LINK-USD:LINK",
     "symbol": "LINK",
     "denominator": "USD",
-    "margin": "LINK"
+    "margin": "LINK",
+    "cmc_id": 1975,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts",
+      "Privacy",
+      "Interoperability"
+    ],
+    "base_asset_id": "LINK",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LINK",
+    "unified_id": "perpetual-LINK-USD:LINK"
   },
   {
     "id": "LTCUSD_CM",
@@ -207,7 +337,17 @@
     "internal_id": "perpetual-LTC-USD:LTC",
     "symbol": "LTC",
     "denominator": "USD",
-    "margin": "LTC"
+    "margin": "LTC",
+    "cmc_id": 2,
+    "category": [
+      "Layer 1",
+      "Privacy"
+    ],
+    "base_asset_id": "LTC",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "LTC",
+    "unified_id": "perpetual-LTC-USD:LTC"
   },
   {
     "id": "NEARUSD_CM",
@@ -222,7 +362,17 @@
     "internal_id": "perpetual-NEAR-USD:NEAR",
     "symbol": "NEAR",
     "denominator": "USD",
-    "margin": "NEAR"
+    "margin": "NEAR",
+    "cmc_id": 6535,
+    "category": [
+      "Layer 1",
+      "Staking"
+    ],
+    "base_asset_id": "NEAR",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "NEAR",
+    "unified_id": "perpetual-NEAR-USD:NEAR"
   },
   {
     "id": "SOLUSD_CM",
@@ -237,7 +387,16 @@
     "internal_id": "perpetual-SOL-USD:SOL",
     "symbol": "SOL",
     "denominator": "USD",
-    "margin": "SOL"
+    "margin": "SOL",
+    "cmc_id": 5426,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SOL",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SOL",
+    "unified_id": "perpetual-SOL-USD:SOL"
   },
   {
     "id": "SUIUSD_CM",
@@ -252,7 +411,16 @@
     "internal_id": "perpetual-SUI-USD:SUI",
     "symbol": "SUI",
     "denominator": "USD",
-    "margin": "SUI"
+    "margin": "SUI",
+    "cmc_id": 20947,
+    "category": [
+      "Layer 1"
+    ],
+    "base_asset_id": "SUI",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "SUI",
+    "unified_id": "perpetual-SUI-USD:SUI"
   },
   {
     "id": "UNIUSD_CM",
@@ -267,7 +435,17 @@
     "internal_id": "perpetual-UNI-USD:UNI",
     "symbol": "UNI",
     "denominator": "USD",
-    "margin": "UNI"
+    "margin": "UNI",
+    "cmc_id": 7083,
+    "category": [
+      "DeFi",
+      "DAO"
+    ],
+    "base_asset_id": "UNI",
+    "base_asset_match": "venue_lineage",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "UNI",
+    "unified_id": "perpetual-UNI-USD:UNI"
   },
   {
     "id": "XLMUSD_CM",
@@ -282,7 +460,18 @@
     "internal_id": "perpetual-XLM-USD:XLM",
     "symbol": "XLM",
     "denominator": "USD",
-    "margin": "XLM"
+    "margin": "XLM",
+    "cmc_id": 512,
+    "category": [
+      "DeFi",
+      "Real World Assets Protocols",
+      "Smart Contracts"
+    ],
+    "base_asset_id": "XLM",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XLM",
+    "unified_id": "perpetual-XLM-USD:XLM"
   },
   {
     "id": "XRPUSD_CM",
@@ -297,6 +486,13 @@
     "internal_id": "perpetual-XRP-USD:XRP",
     "symbol": "XRP",
     "denominator": "USD",
-    "margin": "XRP"
+    "margin": "XRP",
+    "cmc_id": 52,
+    "category": [],
+    "base_asset_id": "XRP",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USD",
+    "margin_asset_id": "XRP",
+    "unified_id": "perpetual-XRP-USD:XRP"
   }
 ]

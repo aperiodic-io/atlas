@@ -57,7 +57,8 @@
     "internal_id": "perpetual-1000BONK-USDC:USDC",
     "symbol": "1000BONK",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "1000BONK_USDT",
@@ -132,7 +133,8 @@
     "internal_id": "perpetual-4STOCK-USDT:USDT",
     "symbol": "4STOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-15T08:45:58.018Z"
   },
   {
     "id": "4_USDT",
@@ -207,7 +209,8 @@
     "internal_id": "perpetual-AAPU-USDT:USDT",
     "symbol": "AAPU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "AAVE_USDC",
@@ -236,6 +239,21 @@
     "first_capture": "2020-10-16T03:33:38Z",
     "internal_id": "perpetual-AAVE-USDT:USDT",
     "symbol": "AAVE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ABBVSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ABBVSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-03-06T12:10:00Z",
+    "internal_id": "perpetual-ABBVSTOCK-USDT:USDT",
+    "symbol": "ABBVSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -432,6 +450,37 @@
     "internal_id": "perpetual-ADMSTOCK-USDT:USDT",
     "symbol": "ADMSTOCK",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
+  },
+  {
+    "id": "ADPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ADPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:28:00Z",
+    "internal_id": "perpetual-ADPSTOCK-USDT:USDT",
+    "symbol": "ADPSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ADSKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ADSKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-ADSKSTOCK-USDT:USDT",
+    "symbol": "ADSKSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -522,7 +571,8 @@
     "internal_id": "perpetual-AGENCY-USDT:USDT",
     "symbol": "AGENCY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "AGI_USDT",
@@ -537,7 +587,8 @@
     "internal_id": "perpetual-AGI-USDT:USDT",
     "symbol": "AGI",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "AGLD_USDT",
@@ -657,7 +708,8 @@
     "internal_id": "perpetual-AIOZ-USDT:USDT",
     "symbol": "AIOZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "AIO_USDT",
@@ -975,6 +1027,21 @@
     "margin": "USDT"
   },
   {
+    "id": "AMDL_USDT",
+    "type": "perpetual",
+    "base_coin": "AMDL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T13:00:00Z",
+    "internal_id": "perpetual-AMDL-USDT:USDT",
+    "symbol": "AMDL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "AMDSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "AMDSTOCK",
@@ -1017,7 +1084,8 @@
     "internal_id": "perpetual-AMKRSTOCK-USDT:USDT",
     "symbol": "AMKRSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "AMTSTOCK_USDT",
@@ -1062,7 +1130,8 @@
     "internal_id": "perpetual-AMZU-USDT:USDT",
     "symbol": "AMZU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-17T10:04:19.505Z"
   },
   {
     "id": "ANETSTOCK_USDT",
@@ -1076,6 +1145,21 @@
     "first_capture": "2026-06-24T04:52:00Z",
     "internal_id": "perpetual-ANETSTOCK-USDT:USDT",
     "symbol": "ANETSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ANFSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ANFSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T11:30:00Z",
+    "internal_id": "perpetual-ANFSTOCK-USDT:USDT",
+    "symbol": "ANFSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -1132,7 +1216,7 @@
     "margin_asset": "USDT",
     "contract_size": 0.001,
     "quantity_unit": "base",
-    "underlying": "pre_market",
+    "underlying": "equity",
     "first_capture": "2026-04-14T03:45:00Z",
     "internal_id": "perpetual-ANTHROPIC-USDT:USDT",
     "symbol": "ANTHROPIC",
@@ -1182,7 +1266,8 @@
     "internal_id": "perpetual-APEX-USDT:USDT",
     "symbol": "APEX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "APE_USDT",
@@ -1257,7 +1342,8 @@
     "internal_id": "perpetual-APM-USDT:USDT",
     "symbol": "APM",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "APPSTOCK_USDT",
@@ -1302,7 +1388,8 @@
     "internal_id": "perpetual-APT-USDC:USDC",
     "symbol": "APT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "APT_USDT",
@@ -1471,6 +1558,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ARTYSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ARTYSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:30:00Z",
+    "internal_id": "perpetual-ARTYSTOCK-USDT:USDT",
+    "symbol": "ARTYSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "ARWRSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "ARWRSTOCK",
@@ -1483,7 +1585,8 @@
     "internal_id": "perpetual-ARWRSTOCK-USDT:USDT",
     "symbol": "ARWRSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "ARX_USDT",
@@ -1633,7 +1736,8 @@
     "internal_id": "perpetual-ASXSTOCK-USDT:USDT",
     "symbol": "ASXSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "ATH_USDT",
@@ -1708,7 +1812,8 @@
     "internal_id": "perpetual-AUDIO-USDT:USDT",
     "symbol": "AUDIO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "AUD_USDT",
@@ -1738,7 +1843,8 @@
     "internal_id": "perpetual-AURORA-USDT:USDT",
     "symbol": "AURORA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "AVAAI_USDT",
@@ -1768,7 +1874,8 @@
     "internal_id": "perpetual-AVAVSTOCK-USDT:USDT",
     "symbol": "AVAVSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "AVAX_USD",
@@ -1887,6 +1994,21 @@
     "first_capture": "2025-05-21T08:02:41Z",
     "internal_id": "perpetual-AWE-USDT:USDT",
     "symbol": "AWE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "AXIS_USDT",
+    "type": "perpetual",
+    "base_coin": "AXIS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T13:10:00Z",
+    "internal_id": "perpetual-AXIS-USDT:USDT",
+    "symbol": "AXIS",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -2053,7 +2175,8 @@
     "internal_id": "perpetual-B3-USDT:USDT",
     "symbol": "B3",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "BABAHKSTOCK_USDT",
@@ -2218,7 +2341,8 @@
     "internal_id": "perpetual-BASECAT-USDT:USDT",
     "symbol": "BASECAT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "BASED_USDT",
@@ -2278,7 +2402,8 @@
     "internal_id": "perpetual-BATON-USDT:USDT",
     "symbol": "BATON",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "BAT_USDT",
@@ -2338,7 +2463,8 @@
     "internal_id": "perpetual-BCH-USD1:USD1",
     "symbol": "BCH",
     "denominator": "USD1",
-    "margin": "USD1"
+    "margin": "USD1",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "BCH_USDC",
@@ -2353,7 +2479,8 @@
     "internal_id": "perpetual-BCH-USDC:USDC",
     "symbol": "BCH",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "BCH_USDT",
@@ -2788,7 +2915,8 @@
     "internal_id": "perpetual-BNTXSTOCK-USDT:USDT",
     "symbol": "BNTXSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "BNT_USDT",
@@ -2879,7 +3007,8 @@
     "internal_id": "perpetual-BP-USDT:USDT",
     "symbol": "BP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "BRETT_USDT",
@@ -3152,6 +3281,21 @@
     "margin": "USDT"
   },
   {
+    "id": "BURLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "BURLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T11:30:00Z",
+    "internal_id": "perpetual-BURLSTOCK-USDT:USDT",
+    "symbol": "BURLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "BWET_USDT",
     "type": "perpetual",
     "base_coin": "BWET",
@@ -3224,7 +3368,8 @@
     "internal_id": "perpetual-CAD-USDT:USDT",
     "symbol": "CAD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-21T09:07:47.132Z"
   },
   {
     "id": "CAHSTOCK_USDT",
@@ -3268,6 +3413,36 @@
     "first_capture": "2026-06-26T12:10:00Z",
     "internal_id": "perpetual-CAP-USDT:USDT",
     "symbol": "CAP",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CARDS_USDT",
+    "type": "perpetual",
+    "base_coin": "CARDS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2025-09-03T06:12:00Z",
+    "internal_id": "perpetual-CARDS-USDT:USDT",
+    "symbol": "CARDS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CARTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CARTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-CARTSTOCK-USDT:USDT",
+    "symbol": "CARTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -3389,6 +3564,21 @@
     "first_capture": "2026-05-15T03:40:00Z",
     "internal_id": "perpetual-CBRSSTOCK-USDT:USDT",
     "symbol": "CBRSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CBSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CBSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-CBSTOCK-USDT:USDT",
+    "symbol": "CBSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -3556,7 +3746,8 @@
     "internal_id": "perpetual-CENT-USDT:USDT",
     "symbol": "CENT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "CETUS_USDT",
@@ -3694,6 +3885,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CHTRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CHTRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T11:15:00Z",
+    "internal_id": "perpetual-CHTRSTOCK-USDT:USDT",
+    "symbol": "CHTRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CHZ_USDT",
     "type": "perpetual",
     "base_coin": "CHZ",
@@ -3735,6 +3941,21 @@
     "first_capture": "2026-09-08T13:46:00Z",
     "internal_id": "perpetual-CIFRSTOCK-USDT:USDT",
     "symbol": "CIFRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-20T13:00:00Z",
+    "internal_id": "perpetual-CISTOCK-USDT:USDT",
+    "symbol": "CISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -3796,7 +4017,8 @@
     "internal_id": "perpetual-CLAUS-USDT:USDT",
     "symbol": "CLAUS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "CLO_USDT",
@@ -3826,7 +4048,8 @@
     "internal_id": "perpetual-CLSKSTOCK-USDT:USDT",
     "symbol": "CLSKSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "CLSSTOCK_USDT",
@@ -3840,6 +4063,36 @@
     "first_capture": "2026-09-14T14:28:00Z",
     "internal_id": "perpetual-CLSSTOCK-USDT:USDT",
     "symbol": "CLSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-CLSTOCK-USDT:USDT",
+    "symbol": "CLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CLXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CLXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T11:00:00Z",
+    "internal_id": "perpetual-CLXSTOCK-USDT:USDT",
+    "symbol": "CLXSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -3874,6 +4127,36 @@
     "margin": "USDT"
   },
   {
+    "id": "CMGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CMGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-CMGSTOCK-USDT:USDT",
+    "symbol": "CMGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CMISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CMISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-CMISTOCK-USDT:USDT",
+    "symbol": "CMISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CNPY_USDT",
     "type": "perpetual",
     "base_coin": "CNPY",
@@ -3886,7 +4169,8 @@
     "internal_id": "perpetual-CNPY-USDT:USDT",
     "symbol": "CNPY",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "COAI_USDT",
@@ -4171,7 +4455,8 @@
     "internal_id": "perpetual-CROSS-USDT:USDT",
     "symbol": "CROSS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "CRO_USDT",
@@ -4201,7 +4486,8 @@
     "internal_id": "perpetual-CRV-USDC:USDC",
     "symbol": "CRV",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "CRV_USDT",
@@ -4321,7 +4607,8 @@
     "internal_id": "perpetual-CTC-USDT:USDT",
     "symbol": "CTC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "CTK_USDT",
@@ -4336,7 +4623,8 @@
     "internal_id": "perpetual-CTK-USDT:USDT",
     "symbol": "CTK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "CTR_USDT",
@@ -4350,6 +4638,21 @@
     "first_capture": "2026-05-26T13:10:00Z",
     "internal_id": "perpetual-CTR-USDT:USDT",
     "symbol": "CTR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CTSHSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CTSHSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-07-30T06:50:00Z",
+    "internal_id": "perpetual-CTSHSTOCK-USDT:USDT",
+    "symbol": "CTSHSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -4395,6 +4698,21 @@
     "first_capture": "2020-11-11T07:15:45Z",
     "internal_id": "perpetual-CVC-USDT:USDT",
     "symbol": "CVC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "CVNASTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CVNASTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-02-12T06:00:00Z",
+    "internal_id": "perpetual-CVNASTOCK-USDT:USDT",
+    "symbol": "CVNASTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -4534,6 +4852,21 @@
     "margin": "USDT"
   },
   {
+    "id": "DANGOTESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DANGOTESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "pre_market",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-DANGOTESTOCK-USDT:USDT",
+    "symbol": "DANGOTESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DARK_USDT",
     "type": "perpetual",
     "base_coin": "DARK",
@@ -4546,7 +4879,8 @@
     "internal_id": "perpetual-DARK-USDT:USDT",
     "symbol": "DARK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "DASHSTOCK_USDT",
@@ -4576,7 +4910,8 @@
     "internal_id": "perpetual-DASH-USDT:USDT",
     "symbol": "DASH",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "DATA_USDT",
@@ -4590,6 +4925,21 @@
     "first_capture": "2026-07-02T04:45:00Z",
     "internal_id": "perpetual-DATA-USDT:USDT",
     "symbol": "DATA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "DCTY_USDT",
+    "type": "perpetual",
+    "base_coin": "DCTY",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-19T05:32:00Z",
+    "internal_id": "perpetual-DCTY-USDT:USDT",
+    "symbol": "DCTY",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -4699,6 +5049,21 @@
     "margin": "USDT"
   },
   {
+    "id": "DHISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DHISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T11:52:00Z",
+    "internal_id": "perpetual-DHISTOCK-USDT:USDT",
+    "symbol": "DHISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DHRSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "DHRSTOCK",
@@ -4804,6 +5169,51 @@
     "margin": "USDT"
   },
   {
+    "id": "DKSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DKSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T11:30:00Z",
+    "internal_id": "perpetual-DKSSTOCK-USDT:USDT",
+    "symbol": "DKSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "DLRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DLRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T14:00:00Z",
+    "internal_id": "perpetual-DLRSTOCK-USDT:USDT",
+    "symbol": "DLRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "DLTRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DLTRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T11:30:00Z",
+    "internal_id": "perpetual-DLTRSTOCK-USDT:USDT",
+    "symbol": "DLTRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "DNA_USDT",
     "type": "perpetual",
     "base_coin": "DNA",
@@ -4816,7 +5226,8 @@
     "internal_id": "perpetual-DNA-USDT:USDT",
     "symbol": "DNA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "DOCUSTOCK_USDT",
@@ -4831,7 +5242,8 @@
     "internal_id": "perpetual-DOCUSTOCK-USDT:USDT",
     "symbol": "DOCUSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "DODO_USDT",
@@ -4966,7 +5378,8 @@
     "internal_id": "perpetual-DOPE-USDT:USDT",
     "symbol": "DOPE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-10T09:08:41.063Z"
   },
   {
     "id": "DOS_USDT",
@@ -5041,7 +5454,8 @@
     "internal_id": "perpetual-DPZSTOCK-USDT:USDT",
     "symbol": "DPZSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "DRAM_USDT",
@@ -5088,6 +5502,36 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-20T07:03:19.709Z"
+  },
+  {
+    "id": "DUKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DUKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:25:00Z",
+    "internal_id": "perpetual-DUKSTOCK-USDT:USDT",
+    "symbol": "DUKSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "DUOLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "DUOLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-DUOLSTOCK-USDT:USDT",
+    "symbol": "DUOLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "DUSK_USDT",
@@ -5197,6 +5641,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ECHOSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ECHOSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:54:00Z",
+    "internal_id": "perpetual-ECHOSTOCK-USDT:USDT",
+    "symbol": "ECHOSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EDEN_USDT",
     "type": "perpetual",
     "base_coin": "EDEN",
@@ -5257,6 +5716,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EIDO_USDT",
+    "type": "perpetual",
+    "base_coin": "EIDO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T09:30:00Z",
+    "internal_id": "perpetual-EIDO-USDT:USDT",
+    "symbol": "EIDO",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EIGEN_USDT",
     "type": "perpetual",
     "base_coin": "EIGEN",
@@ -5313,6 +5787,51 @@
     "first_capture": "2026-08-21T11:23:00Z",
     "internal_id": "perpetual-ELSTOCK-USDT:USDT",
     "symbol": "ELSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ELVSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ELVSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:25:00Z",
+    "internal_id": "perpetual-ELVSTOCK-USDT:USDT",
+    "symbol": "ELVSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "EMESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EMESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:59:00Z",
+    "internal_id": "perpetual-EMESTOCK-USDT:USDT",
+    "symbol": "EMESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "EMRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EMRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:27:00Z",
+    "internal_id": "perpetual-EMRSTOCK-USDT:USDT",
+    "symbol": "EMRSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -5389,7 +5908,8 @@
     "internal_id": "perpetual-ENPHSTOCK-USDT:USDT",
     "symbol": "ENPHSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "ENSO_USDT",
@@ -5422,6 +5942,21 @@
     "margin": "USDT"
   },
   {
+    "id": "ENTGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ENTGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-12T14:00:00Z",
+    "internal_id": "perpetual-ENTGSTOCK-USDT:USDT",
+    "symbol": "ENTGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EOGSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "EOGSTOCK",
@@ -5448,6 +5983,37 @@
     "first_capture": "2025-03-13T08:17:06Z",
     "internal_id": "perpetual-EPIC-USDT:USDT",
     "symbol": "EPIC",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
+  },
+  {
+    "id": "EQIXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EQIXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-EQIXSTOCK-USDT:USDT",
+    "symbol": "EQIXSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "EQTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "EQTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T08:43:00Z",
+    "internal_id": "perpetual-EQTSTOCK-USDT:USDT",
+    "symbol": "EQTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -5509,7 +6075,8 @@
     "internal_id": "perpetual-ETC-USDC:USDC",
     "symbol": "ETC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "ETC_USDT",
@@ -5722,6 +6289,21 @@
     "margin": "USDT"
   },
   {
+    "id": "EWZS_USDT",
+    "type": "perpetual",
+    "base_coin": "EWZS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-29T10:00:00Z",
+    "internal_id": "perpetual-EWZS-USDT:USDT",
+    "symbol": "EWZS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "EWZ_USDT",
     "type": "perpetual",
     "base_coin": "EWZ",
@@ -5748,6 +6330,22 @@
     "first_capture": "2026-07-30T06:48:00Z",
     "internal_id": "perpetual-EXPESTOCK-USDT:USDT",
     "symbol": "EXPESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
+  },
+  {
+    "id": "FANGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FANGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-FANGSTOCK-USDT:USDT",
+    "symbol": "FANGSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -5944,7 +6542,8 @@
     "internal_id": "perpetual-FIGSTOCK-USDT:USDT",
     "symbol": "FIGSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "FILECOIN_USDT",
@@ -5974,7 +6573,38 @@
     "internal_id": "perpetual-FIL-USDC:USDC",
     "symbol": "FIL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
+  },
+  {
+    "id": "FIONA_USDT",
+    "type": "perpetual",
+    "base_coin": "FIONA",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-24T06:17:00Z",
+    "internal_id": "perpetual-FIONA-USDT:USDT",
+    "symbol": "FIONA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FISVSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FISVSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FISVSTOCK-USDT:USDT",
+    "symbol": "FISVSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "FIXSTOCK_USDT",
@@ -6018,6 +6648,21 @@
     "first_capture": "2026-05-18T14:10:00Z",
     "internal_id": "perpetual-FLNCSTOCK-USDT:USDT",
     "symbol": "FLNCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FLOAT_USDT",
+    "type": "perpetual",
+    "base_coin": "FLOAT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T12:23:00Z",
+    "internal_id": "perpetual-FLOAT-USDT:USDT",
+    "symbol": "FLOAT",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6108,6 +6753,21 @@
     "first_capture": "2021-12-10T04:47:16Z",
     "internal_id": "perpetual-FLUX-USDT:USDT",
     "symbol": "FLUX",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FNSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FNSTOCK-USDT:USDT",
+    "symbol": "FNSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6203,6 +6863,21 @@
     "margin": "USDT"
   },
   {
+    "id": "FRHCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FRHCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-12T10:56:00Z",
+    "internal_id": "perpetual-FRHCSTOCK-USDT:USDT",
+    "symbol": "FRHCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "FRMISTOCK_USDT",
     "type": "perpetual",
     "base_coin": "FRMISTOCK",
@@ -6214,6 +6889,52 @@
     "first_capture": "2026-07-13T10:50:00Z",
     "internal_id": "perpetual-FRMISTOCK-USDT:USDT",
     "symbol": "FRMISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
+  },
+  {
+    "id": "FSLRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FSLRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-FSLRSTOCK-USDT:USDT",
+    "symbol": "FSLRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T14:00:00Z",
+    "internal_id": "perpetual-FSTOCK-USDT:USDT",
+    "symbol": "FSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "FTAISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "FTAISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-FTAISTOCK-USDT:USDT",
+    "symbol": "FTAISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6319,6 +7040,21 @@
     "first_capture": "2021-09-16T09:11:54Z",
     "internal_id": "perpetual-GALA-USDT:USDT",
     "symbol": "GALA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "GANG_USDT",
+    "type": "perpetual",
+    "base_coin": "GANG",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 100.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-GANG-USDT:USDT",
+    "symbol": "GANG",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6575,7 +7311,8 @@
     "internal_id": "perpetual-GLXYSTOCK-USDT:USDT",
     "symbol": "GLXYSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "GMBSC_USDT",
@@ -6590,7 +7327,8 @@
     "internal_id": "perpetual-GMBSC-USDT:USDT",
     "symbol": "GMBSC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-01T08:38:13.168Z"
   },
   {
     "id": "GMESTOCK_USDT",
@@ -6604,6 +7342,21 @@
     "first_capture": "2026-05-08T10:28:00Z",
     "internal_id": "perpetual-GMESTOCK-USDT:USDT",
     "symbol": "GMESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "GMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "GMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:52:00Z",
+    "internal_id": "perpetual-GMSTOCK-USDT:USDT",
+    "symbol": "GMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -6695,8 +7448,7 @@
     "internal_id": "perpetual-GPNSTOCK-USDT:USDT",
     "symbol": "GPNSTOCK",
     "denominator": "USDT",
-    "margin": "USDT",
-    "end_date": "2026-10-20T07:03:19.705Z"
+    "margin": "USDT"
   },
   {
     "id": "GPROSTOCK_USDT",
@@ -6741,7 +7493,8 @@
     "internal_id": "perpetual-GP-USDT:USDT",
     "symbol": "GP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "GRABSTOCK_USDT",
@@ -6756,7 +7509,8 @@
     "internal_id": "perpetual-GRABSTOCK-USDT:USDT",
     "symbol": "GRABSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "GRAM_USD1",
@@ -6771,7 +7525,8 @@
     "internal_id": "perpetual-GRAM-USD1:USD1",
     "symbol": "GRAM",
     "denominator": "USD1",
-    "margin": "USD1"
+    "margin": "USD1",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "GRAM_USDC",
@@ -6786,7 +7541,8 @@
     "internal_id": "perpetual-GRAM-USDC:USDC",
     "symbol": "GRAM",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "GRAM_USDT",
@@ -7042,7 +7798,8 @@
     "internal_id": "perpetual-HALSTOCK-USDT:USDT",
     "symbol": "HALSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "HANA_USDT",
@@ -7300,6 +8057,21 @@
     "margin": "USDT"
   },
   {
+    "id": "HLTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HLTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T12:58:00Z",
+    "internal_id": "perpetual-HLTSTOCK-USDT:USDT",
+    "symbol": "HLTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HMSTR_USDT",
     "type": "perpetual",
     "base_coin": "HMSTR",
@@ -7372,6 +8144,22 @@
     "internal_id": "perpetual-HONASTOCK-USDT:USDT",
     "symbol": "HONASTOCK",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
+  },
+  {
+    "id": "HONSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HONSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:55:00Z",
+    "internal_id": "perpetual-HONSTOCK-USDT:USDT",
+    "symbol": "HONSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -7387,7 +8175,8 @@
     "internal_id": "perpetual-HOOKED-USDT:USDT",
     "symbol": "HOOKED",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "HOT_USDT",
@@ -7447,7 +8236,8 @@
     "internal_id": "perpetual-HTZSTOCK-USDT:USDT",
     "symbol": "HTZSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "HUMA_USDT",
@@ -7465,6 +8255,21 @@
     "margin": "USDT"
   },
   {
+    "id": "HUMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HUMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T11:15:00Z",
+    "internal_id": "perpetual-HUMSTOCK-USDT:USDT",
+    "symbol": "HUMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "HUTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "HUTSTOCK",
@@ -7476,6 +8281,21 @@
     "first_capture": "2026-07-28T13:26:00Z",
     "internal_id": "perpetual-HUTSTOCK-USDT:USDT",
     "symbol": "HUTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "HWMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "HWMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T14:00:00Z",
+    "internal_id": "perpetual-HWMSTOCK-USDT:USDT",
+    "symbol": "HWMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -7567,7 +8387,8 @@
     "internal_id": "perpetual-H-USDC:USDC",
     "symbol": "H",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "H_USDT",
@@ -7615,6 +8436,21 @@
     "margin": "USDT"
   },
   {
+    "id": "IBIT_USDT",
+    "type": "perpetual",
+    "base_coin": "IBIT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:30:00Z",
+    "internal_id": "perpetual-IBIT-USDT:USDT",
+    "symbol": "IBIT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "IBKRSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "IBKRSTOCK",
@@ -7641,6 +8477,21 @@
     "first_capture": "2026-01-30T07:28:00Z",
     "internal_id": "perpetual-IBMSTOCK-USDT:USDT",
     "symbol": "IBMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ICESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ICESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:59:00Z",
+    "internal_id": "perpetual-ICESTOCK-USDT:USDT",
+    "symbol": "ICESTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -7672,7 +8523,8 @@
     "internal_id": "perpetual-ICP-USDC:USDC",
     "symbol": "ICP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "ICP_USDT",
@@ -7701,6 +8553,21 @@
     "first_capture": "2025-06-11T10:07:00Z",
     "internal_id": "perpetual-IDOL-USDT:USDT",
     "symbol": "IDOL",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "IDXXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "IDXXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-IDXXSTOCK-USDT:USDT",
+    "symbol": "IDXXSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -7807,7 +8674,8 @@
     "internal_id": "perpetual-INFQSTOCK-USDT:USDT",
     "symbol": "INFQSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "INIT_USDT",
@@ -7881,6 +8749,21 @@
     "first_capture": "2026-10-02T01:48:00Z",
     "internal_id": "perpetual-INNOVENTSTOCK-USDT:USDT",
     "symbol": "INNOVENTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "INSMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "INSMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:58:00Z",
+    "internal_id": "perpetual-INSMSTOCK-USDT:USDT",
+    "symbol": "INSMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8111,6 +8994,21 @@
     "margin": "USDT"
   },
   {
+    "id": "JAGENT_USDT",
+    "type": "perpetual",
+    "base_coin": "JAGENT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10000.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-29T15:16:00Z",
+    "internal_id": "perpetual-JAGENT-USDT:USDT",
+    "symbol": "JAGENT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JASMY_USDT",
     "type": "perpetual",
     "base_coin": "JASMY",
@@ -8137,6 +9035,21 @@
     "first_capture": "2026-08-12T14:00:00Z",
     "internal_id": "perpetual-JBLSTOCK-USDT:USDT",
     "symbol": "JBLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "JCISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "JCISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T13:00:00Z",
+    "internal_id": "perpetual-JCISTOCK-USDT:USDT",
+    "symbol": "JCISTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8183,7 +9096,8 @@
     "internal_id": "perpetual-JEANPHIL-USDT:USDT",
     "symbol": "JEANPHIL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "JELLYJELLY_USDT",
@@ -8212,6 +9126,22 @@
     "first_capture": "2026-08-04T05:57:00Z",
     "internal_id": "perpetual-JMKESTOCK-USDT:USDT",
     "symbol": "JMKESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
+  },
+  {
+    "id": "JNJSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "JNJSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-01-22T05:16:00Z",
+    "internal_id": "perpetual-JNJSTOCK-USDT:USDT",
+    "symbol": "JNJSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8348,7 +9278,8 @@
     "internal_id": "perpetual-KAITO-USDC:USDC",
     "symbol": "KAITO",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "KAITO_USDT",
@@ -8441,6 +9372,21 @@
     "margin": "USDT"
   },
   {
+    "id": "KDPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "KDPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:53:00Z",
+    "internal_id": "perpetual-KDPSTOCK-USDT:USDT",
+    "symbol": "KDPSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KERNEL_USDT",
     "type": "perpetual",
     "base_coin": "KERNEL",
@@ -8513,7 +9459,8 @@
     "internal_id": "perpetual-KHCSTOCK-USDT:USDT",
     "symbol": "KHCSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "KII_USDT",
@@ -8527,6 +9474,22 @@
     "first_capture": "2026-08-14T13:10:00Z",
     "internal_id": "perpetual-KII-USDT:USDT",
     "symbol": "KII",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
+  },
+  {
+    "id": "KIMCHI_USDT",
+    "type": "perpetual",
+    "base_coin": "KIMCHI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-21T15:35:00Z",
+    "internal_id": "perpetual-KIMCHI-USDT:USDT",
+    "symbol": "KIMCHI",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8636,6 +9599,21 @@
     "margin": "USDT"
   },
   {
+    "id": "KMISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "KMISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T12:30:00Z",
+    "internal_id": "perpetual-KMISTOCK-USDT:USDT",
+    "symbol": "KMISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "KMNO_USDT",
     "type": "perpetual",
     "base_coin": "KMNO",
@@ -8662,6 +9640,21 @@
     "first_capture": "2020-07-09T06:13:56Z",
     "internal_id": "perpetual-KNC-USDT:USDT",
     "symbol": "KNC",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "KNTQ_USDT",
+    "type": "perpetual",
+    "base_coin": "KNTQ",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-03T07:33:00Z",
+    "internal_id": "perpetual-KNTQ-USDT:USDT",
+    "symbol": "KNTQ",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8693,7 +9686,8 @@
     "internal_id": "perpetual-KODSTOCK-USDT:USDT",
     "symbol": "KODSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "KOKUSAISTOCK_USDT",
@@ -8752,6 +9746,21 @@
     "first_capture": "2026-06-22T14:15:00Z",
     "internal_id": "perpetual-KORU-USDT:USDT",
     "symbol": "KORU",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "KOR_USDT",
+    "type": "perpetual",
+    "base_coin": "KOR",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-04T14:10:00Z",
+    "internal_id": "perpetual-KOR-USDT:USDT",
+    "symbol": "KOR",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8858,6 +9867,21 @@
     "first_capture": "2026-08-11T09:26:00Z",
     "internal_id": "perpetual-KUAISHOUSTOCK-USDT:USDT",
     "symbol": "KUAISHOUSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "KYMRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "KYMRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-25T11:30:00Z",
+    "internal_id": "perpetual-KYMRSTOCK-USDT:USDT",
+    "symbol": "KYMRSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -8994,7 +10018,8 @@
     "internal_id": "perpetual-LHXSTOCK-USDT:USDT",
     "symbol": "LHXSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "LIGHT_USDT",
@@ -9177,6 +10202,21 @@
     "margin": "USDT"
   },
   {
+    "id": "LNGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "LNGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-30T13:58:00Z",
+    "internal_id": "perpetual-LNGSTOCK-USDT:USDT",
+    "symbol": "LNGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "LONGXIA_USDT",
     "type": "perpetual",
     "base_coin": "LONGXIA",
@@ -9188,6 +10228,21 @@
     "first_capture": "2026-03-09T06:57:00Z",
     "internal_id": "perpetual-LONGXIA-USDT:USDT",
     "symbol": "LONGXIA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "LOWSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "LOWSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T13:00:00Z",
+    "internal_id": "perpetual-LOWSTOCK-USDT:USDT",
+    "symbol": "LOWSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -9249,6 +10304,22 @@
     "internal_id": "perpetual-LRC-USDT:USDT",
     "symbol": "LRC",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
+  },
+  {
+    "id": "LSCCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "LSCCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-LSCCSTOCK-USDT:USDT",
+    "symbol": "LSCCSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -9294,7 +10365,8 @@
     "internal_id": "perpetual-LTC-USD1:USD1",
     "symbol": "LTC",
     "denominator": "USD1",
-    "margin": "USD1"
+    "margin": "USD1",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "LTC_USDC",
@@ -9309,7 +10381,8 @@
     "internal_id": "perpetual-LTC-USDC:USDC",
     "symbol": "LTC",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "LTC_USDT",
@@ -9399,7 +10472,8 @@
     "internal_id": "perpetual-LUNRSTOCK-USDT:USDT",
     "symbol": "LUNRSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "LYN_USDT",
@@ -9458,6 +10532,21 @@
     "first_capture": "2025-12-16T10:10:00Z",
     "internal_id": "perpetual-MAGMA-USDT:USDT",
     "symbol": "MAGMA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MAGS_USDT",
+    "type": "perpetual",
+    "base_coin": "MAGS",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:30:00Z",
+    "internal_id": "perpetual-MAGS-USDT:USDT",
+    "symbol": "MAGS",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -9643,6 +10732,21 @@
     "margin": "USDT"
   },
   {
+    "id": "MCHPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MCHPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-MCHPSTOCK-USDT:USDT",
+    "symbol": "MCHPSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MCKSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "MCKSTOCK",
@@ -9669,6 +10773,36 @@
     "first_capture": "2026-10-09T12:30:00Z",
     "internal_id": "perpetual-MDBSTOCK-USDT:USDT",
     "symbol": "MDBSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MDLNSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MDLNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:30:00Z",
+    "internal_id": "perpetual-MDLNSTOCK-USDT:USDT",
+    "symbol": "MDLNSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MDLZSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MDLZSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T12:30:00Z",
+    "internal_id": "perpetual-MDLZSTOCK-USDT:USDT",
+    "symbol": "MDLZSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -9790,7 +10924,8 @@
     "internal_id": "perpetual-MEMEROBINHOOD-USDT:USDT",
     "symbol": "MEMEROBINHOOD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "MEME_USDT",
@@ -9955,7 +11090,8 @@
     "internal_id": "perpetual-MITO-USDT:USDT",
     "symbol": "MITO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-31T07:56:18.409Z"
   },
   {
     "id": "MITSUBISHISTOCK_USDT",
@@ -9969,6 +11105,21 @@
     "first_capture": "2026-08-17T07:51:00Z",
     "internal_id": "perpetual-MITSUBISHISTOCK-USDT:USDT",
     "symbol": "MITSUBISHISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MMMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MMMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:55:00Z",
+    "internal_id": "perpetual-MMMSTOCK-USDT:USDT",
+    "symbol": "MMMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -10154,6 +11305,22 @@
     "margin": "USDT"
   },
   {
+    "id": "MPLX_USDT",
+    "type": "perpetual",
+    "base_coin": "MPLX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2024-11-26T02:52:00Z",
+    "internal_id": "perpetual-MPLX-USDT:USDT",
+    "symbol": "MPLX",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
+  },
+  {
     "id": "MPSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "MPSTOCK",
@@ -10244,6 +11411,21 @@
     "margin": "USDT"
   },
   {
+    "id": "MSCISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MSCISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-MSCISTOCK-USDT:USDT",
+    "symbol": "MSCISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "MSFTSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "MSFTSTOCK",
@@ -10271,7 +11453,8 @@
     "internal_id": "perpetual-MSFU-USDT:USDT",
     "symbol": "MSFU",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "MSSTOCK_USDT",
@@ -10345,6 +11528,21 @@
     "first_capture": "2026-08-07T10:30:00Z",
     "internal_id": "perpetual-MTSISTOCK-USDT:USDT",
     "symbol": "MTSISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "MTZSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "MTZSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T13:00:00Z",
+    "internal_id": "perpetual-MTZSTOCK-USDT:USDT",
+    "symbol": "MTZSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -10695,6 +11893,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NEESTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NEESTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-02T14:00:00Z",
+    "internal_id": "perpetual-NEESTOCK-USDT:USDT",
+    "symbol": "NEESTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NEIROCTO_USDT",
     "type": "perpetual",
     "base_coin": "NEIROCTO",
@@ -10797,7 +12010,8 @@
     "internal_id": "perpetual-NEX-USDT:USDT",
     "symbol": "NEX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "NFLXSTOCK_USDT",
@@ -10905,6 +12119,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NIUBI_USDT",
+    "type": "perpetual",
+    "base_coin": "NIUBI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-09T12:23:00Z",
+    "internal_id": "perpetual-NIUBI-USDT:USDT",
+    "symbol": "NIUBI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NIULAI_USDT",
     "type": "perpetual",
     "base_coin": "NIULAI",
@@ -10946,6 +12175,21 @@
     "first_capture": "2023-06-21T10:02:36Z",
     "internal_id": "perpetual-NMR-USDT:USDT",
     "symbol": "NMR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "NOCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NOCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-21T12:55:00Z",
+    "internal_id": "perpetual-NOCSTOCK-USDT:USDT",
+    "symbol": "NOCSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -10992,7 +12236,8 @@
     "internal_id": "perpetual-NOT-USDC:USDC",
     "symbol": "NOT",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "NOT_USDT",
@@ -11025,6 +12270,21 @@
     "margin": "USDT"
   },
   {
+    "id": "NRGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NRGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-NRGSTOCK-USDT:USDT",
+    "symbol": "NRGSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "NTAPSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "NTAPSTOCK",
@@ -11036,6 +12296,21 @@
     "first_capture": "2026-06-12T10:35:00Z",
     "internal_id": "perpetual-NTAPSTOCK-USDT:USDT",
     "symbol": "NTAPSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "NTRASTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "NTRASTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-10T13:00:00Z",
+    "internal_id": "perpetual-NTRASTOCK-USDT:USDT",
+    "symbol": "NTRASTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -11127,7 +12402,8 @@
     "internal_id": "perpetual-NVTSSTOCK-USDT:USDT",
     "symbol": "NVTSSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "NXPC_USDT",
@@ -11172,7 +12448,8 @@
     "internal_id": "perpetual-OFC-USDT:USDT",
     "symbol": "OFC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-02T08:47:35.394Z"
   },
   {
     "id": "OGN_USDT",
@@ -11262,7 +12539,8 @@
     "internal_id": "perpetual-OL-USDT:USDT",
     "symbol": "OL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-15T08:45:58.018Z"
   },
   {
     "id": "ONDO_USDC",
@@ -11336,6 +12614,21 @@
     "first_capture": "2023-11-27T11:40:07Z",
     "internal_id": "perpetual-ONG-USDT:USDT",
     "symbol": "ONG",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ONONSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ONONSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:53:00Z",
+    "internal_id": "perpetual-ONONSTOCK-USDT:USDT",
+    "symbol": "ONONSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -11427,7 +12720,8 @@
     "internal_id": "perpetual-OPENSTOCK-USDT:USDT",
     "symbol": "OPENSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "OPG_USDT",
@@ -11472,7 +12766,8 @@
     "internal_id": "perpetual-OP-USDC:USDC",
     "symbol": "OP",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "OP_USDT",
@@ -11563,7 +12858,8 @@
     "internal_id": "perpetual-ORDI-USDC:USDC",
     "symbol": "ORDI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "ORDI_USDT",
@@ -11716,7 +13012,7 @@
     "symbol": "PAPER",
     "denominator": "USDT",
     "margin": "USDT",
-    "missing_since": "2026-10-20T07:03:19.523Z"
+    "end_date": "2026-10-20T07:03:19.523Z"
   },
   {
     "id": "PARTI_USDT",
@@ -11866,7 +13162,8 @@
     "internal_id": "perpetual-PENDLE-USDC:USDC",
     "symbol": "PENDLE",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "PENDLE_USDT",
@@ -11911,7 +13208,8 @@
     "internal_id": "perpetual-PENGU-USDC:USDC",
     "symbol": "PENGU",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "PENGU_USDT",
@@ -12079,6 +13377,21 @@
     "margin": "USDT"
   },
   {
+    "id": "PHSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "PHSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T12:30:00Z",
+    "internal_id": "perpetual-PHSTOCK-USDT:USDT",
+    "symbol": "PHSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "PIEVERSE_USDT",
     "type": "perpetual",
     "base_coin": "PIEVERSE",
@@ -12181,7 +13494,8 @@
     "internal_id": "perpetual-PLSTOCK-USDT:USDT",
     "symbol": "PLSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "PLTRSTOCK_USDT",
@@ -12272,7 +13586,8 @@
     "internal_id": "perpetual-POETSTOCK-USDT:USDT",
     "symbol": "POETSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "POLYMARKETSTOCK_USDT",
@@ -12317,7 +13632,8 @@
     "internal_id": "perpetual-POL-USDC:USDC",
     "symbol": "POL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "POL_USDT",
@@ -12440,6 +13756,21 @@
     "margin": "USDT"
   },
   {
+    "id": "PREDICT_USDT",
+    "type": "perpetual",
+    "base_coin": "PREDICT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T03:27:00Z",
+    "internal_id": "perpetual-PREDICT-USDT:USDT",
+    "symbol": "PREDICT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "PRL_USDT",
     "type": "perpetual",
     "base_coin": "PRL",
@@ -12497,7 +13828,8 @@
     "internal_id": "perpetual-PSTOCK-USDT:USDT",
     "symbol": "PSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "PSXSTOCK_USDT",
@@ -12527,7 +13859,8 @@
     "internal_id": "perpetual-PTB-USDT:USDT",
     "symbol": "PTB",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-15T08:45:58.018Z"
   },
   {
     "id": "PUFFER_USDT",
@@ -12542,7 +13875,8 @@
     "internal_id": "perpetual-PUFFER-USDT:USDT",
     "symbol": "PUFFER",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "PUMPFUN_USDC",
@@ -12602,7 +13936,8 @@
     "internal_id": "perpetual-PURRSTOCK-USDT:USDT",
     "symbol": "PURRSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "PWRSTOCK_USDT",
@@ -12616,6 +13951,21 @@
     "first_capture": "2026-09-14T14:28:00Z",
     "internal_id": "perpetual-PWRSTOCK-USDT:USDT",
     "symbol": "PWRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "PYBOBO_USDT",
+    "type": "perpetual",
+    "base_coin": "PYBOBO",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10000.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2025-11-21T10:10:00Z",
+    "internal_id": "perpetual-PYBOBO-USDT:USDT",
+    "symbol": "PYBOBO",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -12662,7 +14012,8 @@
     "internal_id": "perpetual-QBTSSTOCK-USDT:USDT",
     "symbol": "QBTSSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "QCOMSTOCK_USDT",
@@ -13022,7 +14373,8 @@
     "internal_id": "perpetual-RGTISTOCK-USDT:USDT",
     "symbol": "RGTISTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "RHEA_USDT",
@@ -13037,7 +14389,8 @@
     "internal_id": "perpetual-RHEA-USDT:USDT",
     "symbol": "RHEA",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "RIF_USDT",
@@ -13052,7 +14405,8 @@
     "internal_id": "perpetual-RIF-USDT:USDT",
     "symbol": "RIF",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "RIOTSTOCK_USDT",
@@ -13068,6 +14422,22 @@
     "symbol": "RIOTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
+  },
+  {
+    "id": "RITUAL_USDT",
+    "type": "perpetual",
+    "base_coin": "RITUAL",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-26T16:18:00Z",
+    "internal_id": "perpetual-RITUAL-USDT:USDT",
+    "symbol": "RITUAL",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "RIVER_USDT",
@@ -13115,6 +14485,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RKTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RKTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-04T13:27:00Z",
+    "internal_id": "perpetual-RKTSTOCK-USDT:USDT",
+    "symbol": "RKTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RLC_USDT",
     "type": "perpetual",
     "base_coin": "RLC",
@@ -13142,7 +14527,8 @@
     "internal_id": "perpetual-RLS-USDT:USDT",
     "symbol": "RLS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-15T08:45:58.018Z"
   },
   {
     "id": "ROBINHOOD_USDT",
@@ -13186,6 +14572,21 @@
     "first_capture": "2026-07-07T06:30:00Z",
     "internal_id": "perpetual-ROKSTOCK-USDT:USDT",
     "symbol": "ROKSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ROPSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ROPSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-03T13:00:00Z",
+    "internal_id": "perpetual-ROPSTOCK-USDT:USDT",
+    "symbol": "ROPSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -13235,6 +14636,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RRCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RRCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-RRCSTOCK-USDT:USDT",
+    "symbol": "RRCSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RSR_USDT",
     "type": "perpetual",
     "base_coin": "RSR",
@@ -13265,6 +14681,21 @@
     "margin": "USDT"
   },
   {
+    "id": "RT_USDT",
+    "type": "perpetual",
+    "base_coin": "RT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 10.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-22T12:10:00Z",
+    "internal_id": "perpetual-RT-USDT:USDT",
+    "symbol": "RT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "RUNE_USDT",
     "type": "perpetual",
     "base_coin": "RUNE",
@@ -13276,6 +14707,21 @@
     "first_capture": "2022-03-10T03:29:56Z",
     "internal_id": "perpetual-RUNE-USDT:USDT",
     "symbol": "RUNE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "RVMDSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "RVMDSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-09T12:24:00Z",
+    "internal_id": "perpetual-RVMDSTOCK-USDT:USDT",
+    "symbol": "RVMDSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -13457,6 +14903,22 @@
     "internal_id": "perpetual-SCCOSTOCK-USDT:USDT",
     "symbol": "SCCOSTOCK",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
+  },
+  {
+    "id": "SCHWSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SCHWSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-16T11:15:00Z",
+    "internal_id": "perpetual-SCHWSTOCK-USDT:USDT",
+    "symbol": "SCHWSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -13487,7 +14949,8 @@
     "internal_id": "perpetual-SEI-USDC:USDC",
     "symbol": "SEI",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "SEI_USDT",
@@ -13607,7 +15070,8 @@
     "internal_id": "perpetual-SHIB-USDC:USDC",
     "symbol": "SHIB",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "SHIB_USDT",
@@ -13652,7 +15116,8 @@
     "internal_id": "perpetual-SHLD-USDT:USDT",
     "symbol": "SHLD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "SHOPSTOCK_USDT",
@@ -13684,6 +15149,21 @@
     "denominator": "USDT",
     "margin": "USDT",
     "end_date": "2026-10-19T18:51:30.698Z"
+  },
+  {
+    "id": "SHWSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SHWSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-SHWSTOCK-USDT:USDT",
+    "symbol": "SHWSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
   },
   {
     "id": "SIGN_USDT",
@@ -13773,7 +15253,8 @@
     "internal_id": "perpetual-SITMSTOCK-USDT:USDT",
     "symbol": "SITMSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "SI_USDT",
@@ -14016,6 +15497,21 @@
     "margin": "USDT"
   },
   {
+    "id": "SLSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SLSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.1,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-06-30T13:25:00Z",
+    "internal_id": "perpetual-SLSSTOCK-USDT:USDT",
+    "symbol": "SLSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SLX_USDT",
     "type": "perpetual",
     "base_coin": "SLX",
@@ -14087,6 +15583,22 @@
     "first_capture": "2026-06-29T07:55:00Z",
     "internal_id": "perpetual-SMRSTOCK-USDT:USDT",
     "symbol": "SMRSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
+  },
+  {
+    "id": "SMTCSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SMTCSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-19T12:25:00Z",
+    "internal_id": "perpetual-SMTCSTOCK-USDT:USDT",
+    "symbol": "SMTCSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -14542,6 +16054,21 @@
     "margin": "USDT"
   },
   {
+    "id": "SPGISTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SPGISTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T13:00:00Z",
+    "internal_id": "perpetual-SPGISTOCK-USDT:USDT",
+    "symbol": "SPGISTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "SPK_USDT",
     "type": "perpetual",
     "base_coin": "SPK",
@@ -14644,7 +16171,8 @@
     "internal_id": "perpetual-SPX-USDC:USDC",
     "symbol": "SPX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-10-24T06:49:45.472Z"
   },
   {
     "id": "SPX_USDT",
@@ -14703,6 +16231,21 @@
     "first_capture": "2026-06-16T04:40:00Z",
     "internal_id": "perpetual-SQQQ-USDT:USDT",
     "symbol": "SQQQ",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SSPC_USDT",
+    "type": "perpetual",
+    "base_coin": "SSPC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-19T11:30:00Z",
+    "internal_id": "perpetual-SSPC-USDT:USDT",
+    "symbol": "SSPC",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -14798,6 +16341,21 @@
     "margin": "USDT"
   },
   {
+    "id": "STMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "STMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-07-16T12:00:00Z",
+    "internal_id": "perpetual-STMSTOCK-USDT:USDT",
+    "symbol": "STMSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "STOCKER_USDT",
     "type": "perpetual",
     "base_coin": "STOCKER",
@@ -14841,7 +16399,8 @@
     "internal_id": "perpetual-STORJ-USDT:USDT",
     "symbol": "STORJ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "STO_USDT",
@@ -15081,7 +16640,8 @@
     "internal_id": "perpetual-SWKSSTOCK-USDT:USDT",
     "symbol": "SWKSSTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-03T08:57:12.829Z"
   },
   {
     "id": "SXT_USDT",
@@ -15095,6 +16655,21 @@
     "first_capture": "2025-05-02T08:45:00Z",
     "internal_id": "perpetual-SXT-USDT:USDT",
     "symbol": "SXT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SYKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "SYKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-26T14:28:00Z",
+    "internal_id": "perpetual-SYKSTOCK-USDT:USDT",
+    "symbol": "SYKSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -15305,6 +16880,21 @@
     "first_capture": "2026-07-29T14:23:00Z",
     "internal_id": "perpetual-TBT-USDT:USDT",
     "symbol": "TBT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TDGSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TDGSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-11T11:53:00Z",
+    "internal_id": "perpetual-TDGSTOCK-USDT:USDT",
+    "symbol": "TDGSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -15576,7 +17166,8 @@
     "internal_id": "perpetual-TMX-USDT:USDT",
     "symbol": "TMX",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "TNSR_USDT",
@@ -15624,6 +17215,21 @@
     "margin": "USDT"
   },
   {
+    "id": "TOSTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TOSTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-05T13:30:00Z",
+    "internal_id": "perpetual-TOSTSTOCK-USDT:USDT",
+    "symbol": "TOSTSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TOWNS_USDT",
     "type": "perpetual",
     "base_coin": "TOWNS",
@@ -15650,6 +17256,21 @@
     "first_capture": "2026-08-20T05:50:00Z",
     "internal_id": "perpetual-TOYOTASTOCK-USDT:USDT",
     "symbol": "TOYOTASTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TPRSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TPRSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:58:00Z",
+    "internal_id": "perpetual-TPRSTOCK-USDT:USDT",
+    "symbol": "TPRSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -15711,7 +17332,8 @@
     "internal_id": "perpetual-TREAD-USDT:USDT",
     "symbol": "TREAD",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "TREE_USDT",
@@ -15816,7 +17438,8 @@
     "internal_id": "perpetual-TRX-USD1:USD1",
     "symbol": "TRX",
     "denominator": "USD1",
-    "margin": "USD1"
+    "margin": "USD1",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "TRX_USDC",
@@ -15831,7 +17454,8 @@
     "internal_id": "perpetual-TRX-USDC:USDC",
     "symbol": "TRX",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "TRX_USDT",
@@ -15860,6 +17484,21 @@
     "first_capture": "2025-04-07T09:57:00Z",
     "internal_id": "perpetual-TRY-USDT:USDT",
     "symbol": "TRY",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TSCOSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TSCOSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-23T12:55:00Z",
+    "internal_id": "perpetual-TSCOSTOCK-USDT:USDT",
+    "symbol": "TSCOSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -15924,6 +17563,21 @@
     "margin": "USDT"
   },
   {
+    "id": "TSNSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TSNSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-17T14:26:00Z",
+    "internal_id": "perpetual-TSNSTOCK-USDT:USDT",
+    "symbol": "TSNSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TSTOCK_USDT",
     "type": "perpetual",
     "base_coin": "TSTOCK",
@@ -15950,6 +17604,21 @@
     "first_capture": "2025-02-08T14:44:33Z",
     "internal_id": "perpetual-TST-USDT:USDT",
     "symbol": "TST",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "TTSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TTSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:30:00Z",
+    "internal_id": "perpetual-TTSTOCK-USDT:USDT",
+    "symbol": "TTSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -16089,6 +17758,21 @@
     "margin": "USDT"
   },
   {
+    "id": "TYLSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "TYLSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T11:00:00Z",
+    "internal_id": "perpetual-TYLSTOCK-USDT:USDT",
+    "symbol": "TYLSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "TZA_USDT",
     "type": "perpetual",
     "base_coin": "TZA",
@@ -16130,6 +17814,21 @@
     "first_capture": "2025-11-06T11:10:00Z",
     "internal_id": "perpetual-UAI-USDT:USDT",
     "symbol": "UAI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "UALSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "UALSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-22T12:56:00Z",
+    "internal_id": "perpetual-UALSTOCK-USDT:USDT",
+    "symbol": "UALSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -16345,6 +18044,21 @@
     "margin": "USDT"
   },
   {
+    "id": "UPSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "UPSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-27T14:00:00Z",
+    "internal_id": "perpetual-UPSSTOCK-USDT:USDT",
+    "symbol": "UPSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "UP_USDT",
     "type": "perpetual",
     "base_coin": "UP",
@@ -16357,7 +18071,8 @@
     "internal_id": "perpetual-UP-USDT:USDT",
     "symbol": "UP",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "URISTOCK_USDT",
@@ -16447,7 +18162,8 @@
     "internal_id": "perpetual-USDESTOCK-USDT:USDT",
     "symbol": "USDESTOCK",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
   },
   {
     "id": "USELESS_USDT",
@@ -16627,7 +18343,8 @@
     "internal_id": "perpetual-VELODROME-USDT:USDT",
     "symbol": "VELODROME",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-28T07:51:56.910Z"
   },
   {
     "id": "VELO_USDT",
@@ -16642,7 +18359,8 @@
     "internal_id": "perpetual-VELO-USDT:USDT",
     "symbol": "VELO",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-15T08:45:58.018Z"
   },
   {
     "id": "VELVET_USDT",
@@ -16702,6 +18420,22 @@
     "internal_id": "perpetual-VICRSTOCK-USDT:USDT",
     "symbol": "VICRSTOCK",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-13T09:01:09.146Z"
+  },
+  {
+    "id": "VIKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "VIKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:30:00Z",
+    "internal_id": "perpetual-VIKSTOCK-USDT:USDT",
+    "symbol": "VIKSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -16717,7 +18451,8 @@
     "internal_id": "perpetual-VIRTUAL-USDC:USDC",
     "symbol": "VIRTUAL",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "VIRTUAL_USDT",
@@ -16761,6 +18496,21 @@
     "first_capture": "2026-08-11T12:50:00Z",
     "internal_id": "perpetual-VLOSTOCK-USDT:USDT",
     "symbol": "VLOSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "VRSKSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "VRSKSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:28:00Z",
+    "internal_id": "perpetual-VRSKSTOCK-USDT:USDT",
+    "symbol": "VRSKSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -16840,6 +18590,21 @@
     "margin": "USDT"
   },
   {
+    "id": "VT_USDT",
+    "type": "perpetual",
+    "base_coin": "VT",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-23T10:56:00Z",
+    "internal_id": "perpetual-VT-USDT:USDT",
+    "symbol": "VT",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "VUG_USDT",
     "type": "perpetual",
     "base_coin": "VUG",
@@ -16866,6 +18631,21 @@
     "first_capture": "2025-01-28T01:52:35Z",
     "internal_id": "perpetual-VVV-USDT:USDT",
     "symbol": "VVV",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "VXX_USDT",
+    "type": "perpetual",
+    "base_coin": "VXX",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-24T11:30:00Z",
+    "internal_id": "perpetual-VXX-USDT:USDT",
+    "symbol": "VXX",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -16912,6 +18692,22 @@
     "internal_id": "perpetual-WANGCHAI-USDT:USDT",
     "symbol": "WANGCHAI",
     "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
+  },
+  {
+    "id": "WATSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "WATSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.0001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-10T12:24:00Z",
+    "internal_id": "perpetual-WATSTOCK-USDT:USDT",
+    "symbol": "WATSTOCK",
+    "denominator": "USDT",
     "margin": "USDT"
   },
   {
@@ -16927,7 +18723,8 @@
     "internal_id": "perpetual-WAVES-USDT:USDT",
     "symbol": "WAVES",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "WAXP_USDT",
@@ -17047,7 +18844,8 @@
     "internal_id": "perpetual-WHUF-USDT:USDT",
     "symbol": "WHUF",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "WIF_USDC",
@@ -17062,7 +18860,8 @@
     "internal_id": "perpetual-WIF-USDC:USDC",
     "symbol": "WIF",
     "denominator": "USDC",
-    "margin": "USDC"
+    "margin": "USDC",
+    "end_date": "2026-11-12T09:10:34.109Z"
   },
   {
     "id": "WIF_USDT",
@@ -17181,6 +18980,21 @@
     "first_capture": "2026-10-13T11:00:00Z",
     "internal_id": "perpetual-WMBSTOCK-USDT:USDT",
     "symbol": "WMBSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "WMSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "WMSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-10-20T12:30:00Z",
+    "internal_id": "perpetual-WMSTOCK-USDT:USDT",
+    "symbol": "WMSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -17392,7 +19206,8 @@
     "internal_id": "perpetual-XCN-USDT:USDT",
     "symbol": "XCN",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "XDC_USDT",
@@ -17407,7 +19222,8 @@
     "internal_id": "perpetual-XDC-USDT:USDT",
     "symbol": "XDC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-25T07:13:20.721Z"
   },
   {
     "id": "XDP_USDT",
@@ -17466,6 +19282,21 @@
     "first_capture": "2026-05-11T11:37:00Z",
     "internal_id": "perpetual-XLE-USDT:USDT",
     "symbol": "XLE",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XLF_USDT",
+    "type": "perpetual",
+    "base_coin": "XLF",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-18T11:28:00Z",
+    "internal_id": "perpetual-XLF-USDT:USDT",
+    "symbol": "XLF",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -17572,7 +19403,8 @@
     "internal_id": "perpetual-XMR-USDT:USDT",
     "symbol": "XMR",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
   },
   {
     "id": "XNY_USDT",
@@ -17740,6 +19572,22 @@
     "margin": "USDT"
   },
   {
+    "id": "XTEN_USDT",
+    "type": "perpetual",
+    "base_coin": "XTEN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-10-28T06:33:00Z",
+    "internal_id": "perpetual-XTEN-USDT:USDT",
+    "symbol": "XTEN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "end_date": "2026-11-14T08:30:42.631Z"
+  },
+  {
     "id": "XTZ_USDT",
     "type": "perpetual",
     "base_coin": "XTZ",
@@ -17781,6 +19629,21 @@
     "first_capture": "2023-04-12T05:54:37Z",
     "internal_id": "perpetual-XVS-USDT:USDT",
     "symbol": "XVS",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XYZSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "XYZSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-08-03T10:37:00Z",
+    "internal_id": "perpetual-XYZSTOCK-USDT:USDT",
+    "symbol": "XYZSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -17902,7 +19765,8 @@
     "internal_id": "perpetual-ZCAT-USDT:USDT",
     "symbol": "ZCAT",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-04T08:31:23.066Z"
   },
   {
     "id": "ZC_USDT",
@@ -17917,7 +19781,8 @@
     "internal_id": "perpetual-ZC-USDT:USDT",
     "symbol": "ZC",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-10-26T07:21:20.075Z"
   },
   {
     "id": "ZEC_USD1",
@@ -18216,6 +20081,21 @@
     "first_capture": "2026-09-02T10:10:00Z",
     "internal_id": "perpetual-ZSSTOCK-USDT:USDT",
     "symbol": "ZSSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ZTSSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ZTSSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-06T10:58:00Z",
+    "internal_id": "perpetual-ZTSSTOCK-USDT:USDT",
+    "symbol": "ZTSSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

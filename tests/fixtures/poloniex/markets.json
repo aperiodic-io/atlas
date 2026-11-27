@@ -1,0 +1,527 @@
+[
+ {
+  "symbol": "DASH_BTC",
+  "baseCurrencyName": "DASH",
+  "quoteCurrencyName": "BTC",
+  "displayName": "DASH/BTC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018817267,
+  "tradableStartTime": 1659018817267,
+  "symbolTradeLimit": {
+   "symbol": "DASH_BTC",
+   "priceScale": 6,
+   "quantityScale": 2,
+   "amountScale": 6,
+   "minQuantity": "0.01",
+   "minAmount": "0.00001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "BTC_USDT",
+  "baseCurrencyName": "BTC",
+  "quoteCurrencyName": "USDT",
+  "displayName": "BTC/USDT",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018819512,
+  "tradableStartTime": 1659018819512,
+  "symbolTradeLimit": {
+   "symbol": "BTC_USDT",
+   "priceScale": 2,
+   "quantityScale": 6,
+   "amountScale": 2,
+   "minQuantity": "0.000001",
+   "minAmount": "1",
+   "maxQuantity": "20",
+   "maxAmount": "2000000",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "ETH_BTC",
+  "baseCurrencyName": "ETH",
+  "quoteCurrencyName": "BTC",
+  "displayName": "ETH/BTC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018819937,
+  "tradableStartTime": 1659018819937,
+  "symbolTradeLimit": {
+   "symbol": "ETH_BTC",
+   "priceScale": 5,
+   "quantityScale": 3,
+   "amountScale": 5,
+   "minQuantity": "0.001",
+   "minAmount": "0.00001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "USDT_USDC",
+  "baseCurrencyName": "USDT",
+  "quoteCurrencyName": "USDC",
+  "displayName": "USDT/USDC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018822359,
+  "tradableStartTime": 1659018822359,
+  "symbolTradeLimit": {
+   "symbol": "USDT_USDC",
+   "priceScale": 5,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "200000",
+   "maxAmount": "200000",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "TRX_BTC",
+  "baseCurrencyName": "TRX",
+  "quoteCurrencyName": "BTC",
+  "displayName": "TRX/BTC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018823856,
+  "tradableStartTime": 1659018823856,
+  "symbolTradeLimit": {
+   "symbol": "TRX_BTC",
+   "priceScale": 9,
+   "quantityScale": 0,
+   "amountScale": 8,
+   "minQuantity": "10",
+   "minAmount": "0.00001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "ETH_TRX",
+  "baseCurrencyName": "ETH",
+  "quoteCurrencyName": "TRX",
+  "displayName": "ETH/TRX",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018824051,
+  "tradableStartTime": 1659018824051,
+  "symbolTradeLimit": {
+   "symbol": "ETH_TRX",
+   "priceScale": 2,
+   "quantityScale": 6,
+   "amountScale": 2,
+   "minQuantity": "0.000001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "XRPBULL_USDT",
+  "baseCurrencyName": "XRPBULL",
+  "quoteCurrencyName": "USDT",
+  "displayName": "XRPBULL/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 1659018827620,
+  "tradableStartTime": 1659018827620,
+  "symbolTradeLimit": {
+   "symbol": "XRPBULL_USDT",
+   "priceScale": 8,
+   "quantityScale": 0,
+   "amountScale": 8,
+   "minQuantity": "1",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "BTC_BNB",
+  "baseCurrencyName": "BTC",
+  "quoteCurrencyName": "BNB",
+  "displayName": "BTC/BNB",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018828205,
+  "tradableStartTime": 1659018828205,
+  "symbolTradeLimit": {
+   "symbol": "BTC_BNB",
+   "priceScale": 2,
+   "quantityScale": 6,
+   "amountScale": 8,
+   "minQuantity": "0.000001",
+   "minAmount": "0.001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "OCEAN_USDT",
+  "baseCurrencyName": "OCEAN",
+  "quoteCurrencyName": "USDT",
+  "displayName": "OCEAN/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 1659018780000,
+  "tradableStartTime": 1659018780000,
+  "symbolTradeLimit": {
+   "symbol": "OCEAN_USDT",
+   "priceScale": 4,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "EPIC_USDT",
+  "baseCurrencyName": "EPIC",
+  "quoteCurrencyName": "USDT",
+  "displayName": "EPIC/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 1659018840000,
+  "tradableStartTime": 1659018840000,
+  "symbolTradeLimit": {
+   "symbol": "EPIC_USDT",
+   "priceScale": 4,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "USDD_USDT",
+  "baseCurrencyName": "USDD",
+  "quoteCurrencyName": "USDT",
+  "displayName": "USDD/USDT",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018855080,
+  "tradableStartTime": 1659018855080,
+  "symbolTradeLimit": {
+   "symbol": "USDD_USDT",
+   "priceScale": 5,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "100000",
+   "maxAmount": "100000",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "BTC_USDD",
+  "baseCurrencyName": "BTC",
+  "quoteCurrencyName": "USDD",
+  "displayName": "BTC/USDD",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018855419,
+  "tradableStartTime": 1659018855419,
+  "symbolTradeLimit": {
+   "symbol": "BTC_USDD",
+   "priceScale": 2,
+   "quantityScale": 6,
+   "amountScale": 2,
+   "minQuantity": "0.000001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "OETH_ETH",
+  "baseCurrencyName": "OETH",
+  "quoteCurrencyName": "ETH",
+  "displayName": "OETH/ETH",
+  "state": "PAUSE",
+  "visibleStartTime": 1710334800000,
+  "tradableStartTime": 1710417600000,
+  "symbolTradeLimit": {
+   "symbol": "OETH_ETH",
+   "priceScale": 6,
+   "quantityScale": 6,
+   "amountScale": 2,
+   "minQuantity": "0.000001",
+   "minAmount": "0.0001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "COOL_USDT",
+  "baseCurrencyName": "COOL",
+  "quoteCurrencyName": "USDT",
+  "displayName": "COOL/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 4081140000000,
+  "tradableStartTime": 4081161600000,
+  "symbolTradeLimit": {
+   "symbol": "COOL_USDT",
+   "priceScale": 6,
+   "quantityScale": 2,
+   "amountScale": 6,
+   "minQuantity": "0.01",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "BOBOOLD_USDT",
+  "baseCurrencyName": "BOBOOLD",
+  "quoteCurrencyName": "USDT",
+  "displayName": "BOBOOLD/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 1717473600000,
+  "tradableStartTime": 1717502400000,
+  "symbolTradeLimit": {
+   "symbol": "BOBOOLD_USDT",
+   "priceScale": 9,
+   "quantityScale": 1,
+   "amountScale": 9,
+   "minQuantity": "10",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "GASSOL_USDT",
+  "baseCurrencyName": "GASSOL",
+  "quoteCurrencyName": "USDT",
+  "displayName": "GASSOL/USDT",
+  "state": "PAUSE",
+  "visibleStartTime": 1768806000000,
+  "tradableStartTime": 4072496400000,
+  "symbolTradeLimit": {
+   "symbol": "GASSOL_USDT",
+   "priceScale": 6,
+   "quantityScale": 2,
+   "amountScale": 6,
+   "minQuantity": "0.01",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "DOGE_BTC",
+  "baseCurrencyName": "DOGE",
+  "quoteCurrencyName": "BTC",
+  "displayName": "DOGE/BTC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018817873,
+  "tradableStartTime": 1659018817873,
+  "symbolTradeLimit": {
+   "symbol": "DOGE_BTC",
+   "priceScale": 9,
+   "quantityScale": 0,
+   "amountScale": 8,
+   "minQuantity": "10",
+   "minAmount": "0.00001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "LTC_BTC",
+  "baseCurrencyName": "LTC",
+  "quoteCurrencyName": "BTC",
+  "displayName": "LTC/BTC",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018817950,
+  "tradableStartTime": 1659018817950,
+  "symbolTradeLimit": {
+   "symbol": "LTC_BTC",
+   "priceScale": 6,
+   "quantityScale": 2,
+   "amountScale": 6,
+   "minQuantity": "0.01",
+   "minAmount": "0.00001",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": true,
+   "maxLeverage": 3
+  }
+ },
+ {
+  "symbol": "A_USDT",
+  "baseCurrencyName": "A",
+  "quoteCurrencyName": "USDT",
+  "displayName": "A/USDT",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018821408,
+  "tradableStartTime": 1748703600000,
+  "symbolTradeLimit": {
+   "symbol": "A_USDT",
+   "priceScale": 4,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "70000",
+   "maxAmount": "100000",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "AWE_USDT",
+  "baseCurrencyName": "AWE",
+  "quoteCurrencyName": "USDT",
+  "displayName": "AWE/USDT",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018780000,
+  "tradableStartTime": 1748606400000,
+  "symbolTradeLimit": {
+   "symbol": "AWE_USDT",
+   "priceScale": 5,
+   "quantityScale": 3,
+   "amountScale": 5,
+   "minQuantity": "0.001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ },
+ {
+  "symbol": "RENDER_USDT",
+  "baseCurrencyName": "RENDER",
+  "quoteCurrencyName": "USDT",
+  "displayName": "RENDER/USDT",
+  "state": "NORMAL",
+  "visibleStartTime": 1659018780000,
+  "tradableStartTime": 1722499800000,
+  "symbolTradeLimit": {
+   "symbol": "RENDER_USDT",
+   "priceScale": 4,
+   "quantityScale": 4,
+   "amountScale": 4,
+   "minQuantity": "0.0001",
+   "minAmount": "1",
+   "maxQuantity": "0",
+   "maxAmount": "0",
+   "highestBid": "0",
+   "lowestAsk": "0"
+  },
+  "crossMargin": {
+   "supportCrossMargin": false,
+   "maxLeverage": 1
+  }
+ }
+]

@@ -1,4 +1,9 @@
-"""Populate selected CMC CATEGORY tags for snapshot rows with a CoinMarketCap ID."""
+"""Populate selected CMC CATEGORY tags for snapshot rows with a CoinMarketCap ID.
+
+The unified symbology build (``python -m integrations.symbology``) now stores
+categories on each asset in the Atlas registry and writes them to rows itself;
+this script remains for refreshing ``category`` on snapshots outside it.
+"""
 
 from __future__ import annotations
 
@@ -10,6 +15,11 @@ from typing import Any, Protocol
 
 import requests
 
+from atlas.categories import (
+    ASSET_CATEGORIES,
+    CMC_INDUSTRY_CATEGORIES,
+    categories_from_cmc_tags,
+)
 from integrations.http_retry import retry_delay_seconds
 
 
@@ -19,26 +29,10 @@ REQUEST_TIMEOUT_SECONDS = 20
 DEFAULT_MAX_ATTEMPTS = 5
 DEFAULT_MIN_INTERVAL_SECONDS = 0.25
 MAX_RETRY_DELAY_SECONDS = 120
-INCLUDED_CATEGORY_TAGS = (
-    "DeFi",
-    "Layer 1",
-    "Layer 2",
-    "Tokenized Stock",
-    "Real World Assets Protocols",
-    "Staking",
-    "Play To Earn",
-    "Generative AI",
-    "Smart Contracts",
-    "DApp",
-    "Collectibles & NFTs",
-    "Lending & Borrowing",
-    "DAO",
-    "Metaverse",
-    "Privacy",
-    "AI Agents",
-    "AI Applications",
-    "Interoperability",
-)
+# The allow list is Atlas's own category taxonomy now; these names remain for
+# callers that imported them from here.
+INCLUDED_CATEGORY_TAGS = ASSET_CATEGORIES
+INCLUDED_INDUSTRY_TAGS = CMC_INDUSTRY_CATEGORIES
 
 
 class JsonResponse(Protocol):
@@ -164,12 +158,7 @@ def _parse_categories(payload: object, cmc_id: int) -> list[str]:
     if not isinstance(tags, list):
         raise CmcCategoryError(f"CMC tags are invalid for ID {cmc_id}")
 
-    names = {
-        tag.get("name")
-        for tag in tags
-        if isinstance(tag, dict) and tag.get("category") == "CATEGORY"
-    }
-    return [name for name in INCLUDED_CATEGORY_TAGS if name in names]
+    return categories_from_cmc_tags(tags)
 
 
 def _retry_delay(error: Exception, attempt: int) -> float:

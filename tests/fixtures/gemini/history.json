@@ -1,0 +1,298 @@
+[
+ {
+  "id": "BTCGUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2023-04-20T00:00:00.000Z"
+ },
+ {
+  "id": "BTCUSDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-08-27T00:00:00.000Z"
+ },
+ {
+  "id": "ETHGUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2023-05-18T00:00:00.000Z"
+ },
+ {
+  "id": "HYPEUSDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-11-17T00:00:00.000Z"
+ },
+ {
+  "id": "TRUMPGUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2025-01-21T00:00:00.000Z"
+ },
+ {
+  "id": "XRPUSDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-11-04T00:00:00.000Z"
+ },
+ {
+  "id": "2ZRLUSD",
+  "type": "spot",
+  "availableSince": "2025-10-30T00:00:00.000Z"
+ },
+ {
+  "id": "2ZUSD",
+  "type": "spot",
+  "availableSince": "2025-10-30T00:00:00.000Z"
+ },
+ {
+  "id": "AUDGUSD",
+  "type": "spot",
+  "availableSince": "2025-09-18T00:00:00.000Z"
+ },
+ {
+  "id": "AUDUSD",
+  "type": "spot",
+  "availableSince": "2025-09-18T00:00:00.000Z"
+ },
+ {
+  "id": "BTCEUR",
+  "type": "spot",
+  "availableSince": "2020-10-28T00:00:00.000Z"
+ },
+ {
+  "id": "BTCGBP",
+  "type": "spot",
+  "availableSince": "2020-10-28T00:00:00.000Z"
+ },
+ {
+  "id": "BTCGUSD",
+  "type": "spot",
+  "availableSince": "2021-07-15T00:00:00.000Z"
+ },
+ {
+  "id": "BTCRLUSD",
+  "type": "spot",
+  "availableSince": "2025-08-14T00:00:00.000Z"
+ },
+ {
+  "id": "BTCUSD",
+  "type": "spot",
+  "availableSince": "2019-08-30T00:00:00.000Z"
+ },
+ {
+  "id": "BTCUSDC",
+  "type": "spot",
+  "availableSince": "2025-08-18T00:00:00.000Z"
+ },
+ {
+  "id": "EFILFIL",
+  "type": "spot",
+  "availableSince": "2026-07-24T00:00:00.000Z"
+ },
+ {
+  "id": "ETHSGD",
+  "type": "spot",
+  "availableSince": "2021-01-22T00:00:00.000Z"
+ },
+ {
+  "id": "ETHUSDT",
+  "type": "spot",
+  "availableSince": "2023-01-10T00:00:00.000Z"
+ },
+ {
+  "id": "EURUSD",
+  "type": "spot",
+  "availableSince": "2025-06-26T00:00:00.000Z"
+ },
+ {
+  "id": "EURUSDC",
+  "type": "spot",
+  "availableSince": "2025-06-26T00:00:00.000Z"
+ },
+ {
+  "id": "GRAMSGD",
+  "type": "spot",
+  "availableSince": "2026-09-21T00:00:00.000Z"
+ },
+ {
+  "id": "GRAMUSD",
+  "type": "spot",
+  "availableSince": "2026-08-31T00:00:00.000Z"
+ },
+ {
+  "id": "GUSDGBP",
+  "type": "spot",
+  "availableSince": "2022-06-21T00:00:00.000Z"
+ },
+ {
+  "id": "GUSDSGD",
+  "type": "spot",
+  "availableSince": "2022-04-27T00:00:00.000Z"
+ },
+ {
+  "id": "GUSDUSD",
+  "type": "spot",
+  "availableSince": "2026-07-24T00:00:00.000Z"
+ },
+ {
+  "id": "JITOSOLSOL",
+  "type": "spot",
+  "availableSince": "2025-05-20T00:00:00.000Z"
+ },
+ {
+  "id": "LINKBTC",
+  "type": "spot",
+  "availableSince": "2020-05-05T00:00:00.000Z"
+ },
+ {
+  "id": "LINKETH",
+  "type": "spot",
+  "availableSince": "2020-05-05T00:00:00.000Z"
+ },
+ {
+  "id": "PAXGUSD",
+  "type": "spot",
+  "availableSince": "2020-09-15T00:00:00.000Z"
+ },
+ {
+  "id": "RLUSDGUSD",
+  "type": "spot",
+  "availableSince": "2025-11-11T00:00:00.000Z"
+ },
+ {
+  "id": "RLUSDUSD",
+  "type": "spot",
+  "availableSince": "2025-05-05T00:00:00.000Z"
+ },
+ {
+  "id": "SOLETH",
+  "type": "spot",
+  "availableSince": "2024-03-12T00:00:00.000Z"
+ },
+ {
+  "id": "USD1USD",
+  "type": "spot",
+  "availableSince": "2025-09-01T00:00:00.000Z"
+ },
+ {
+  "id": "USDCUSD",
+  "type": "spot",
+  "availableSince": "2021-11-15T00:00:00.000Z"
+ },
+ {
+  "id": "USDGGUSD",
+  "type": "spot",
+  "availableSince": "2025-12-03T00:00:00.000Z"
+ },
+ {
+  "id": "USDGUSD",
+  "type": "spot",
+  "availableSince": "2025-12-03T00:00:00.000Z"
+ },
+ {
+  "id": "USDGUSDC",
+  "type": "spot",
+  "availableSince": "2025-12-03T00:00:00.000Z"
+ },
+ {
+  "id": "USDTUSD",
+  "type": "spot",
+  "availableSince": "2023-01-10T00:00:00.000Z"
+ },
+ {
+  "id": "XAUTUSD",
+  "type": "spot",
+  "availableSince": "2026-05-21T00:00:00.000Z"
+ },
+ {
+  "id": "BCHGUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2024-12-10T00:00:00.000Z",
+  "availableTo": "2026-04-17T00:00:00.000Z"
+ },
+ {
+  "id": "BCHUSDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-11-17T00:00:00.000Z",
+  "availableTo": "2026-04-17T00:00:00.000Z"
+ },
+ {
+  "id": "FLOKIUSDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-11-17T00:00:00.000Z",
+  "availableTo": "2026-04-17T00:00:00.000Z"
+ },
+ {
+  "id": "KSL2GUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2025-01-15T00:00:00.000Z",
+  "availableTo": "2026-04-17T00:00:00.000Z"
+ },
+ {
+  "id": "KT5USDCPERP",
+  "type": "perpetual",
+  "availableSince": "2025-11-17T00:00:00.000Z",
+  "availableTo": "2026-04-17T00:00:00.000Z"
+ },
+ {
+  "id": "MATICGUSDPERP",
+  "type": "perpetual",
+  "availableSince": "2024-02-08T00:00:00.000Z",
+  "availableTo": "2025-01-23T00:00:00.000Z"
+ },
+ {
+  "id": "1INCHUSD",
+  "type": "spot",
+  "availableSince": "2021-03-23T00:00:00.000Z",
+  "availableTo": "2023-06-17T00:00:00.000Z"
+ },
+ {
+  "id": "BTCDAI",
+  "type": "spot",
+  "availableSince": "2020-10-02T00:00:00.000Z",
+  "availableTo": "2024-06-06T00:00:00.000Z"
+ },
+ {
+  "id": "BUSDUSD",
+  "type": "spot",
+  "availableSince": "2022-09-08T00:00:00.000Z",
+  "availableTo": "2023-04-01T00:00:00.000Z"
+ },
+ {
+  "id": "DAIBTC",
+  "type": "spot",
+  "availableSince": "2020-05-05T00:00:00.000Z",
+  "availableTo": "2020-08-28T00:00:00.000Z"
+ },
+ {
+  "id": "ETHDAI",
+  "type": "spot",
+  "availableSince": "2020-10-02T00:00:00.000Z",
+  "availableTo": "2024-06-06T00:00:00.000Z"
+ },
+ {
+  "id": "LTCBCH",
+  "type": "spot",
+  "availableSince": "2019-08-30T00:00:00.000Z",
+  "availableTo": "2025-01-29T00:00:00.000Z"
+ },
+ {
+  "id": "LUSDUSD",
+  "type": "spot",
+  "availableSince": "2022-03-30T00:00:00.000Z",
+  "availableTo": "2023-09-16T00:00:00.000Z"
+ },
+ {
+  "id": "OXTBTC",
+  "type": "spot",
+  "availableSince": "2020-05-04T00:00:00.000Z",
+  "availableTo": "2024-06-06T00:00:00.000Z"
+ },
+ {
+  "id": "USTUSD",
+  "type": "spot",
+  "availableSince": "2021-09-16T00:00:00.000Z",
+  "availableTo": "2022-05-28T00:00:00.000Z"
+ },
+ {
+  "id": "ZECLTC",
+  "type": "spot",
+  "availableSince": "2019-08-30T00:00:00.000Z",
+  "availableTo": "2024-06-06T00:00:00.000Z"
+ }
+]

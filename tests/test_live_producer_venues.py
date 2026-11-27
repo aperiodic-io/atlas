@@ -127,18 +127,22 @@ class TestGate:
         assert rows[0]["underlying"] == "crypto"
         assert rows[0]["contract_size"] == 0.0001
 
-    def test_tardis_rows_parse_from_the_id(self):
+    def test_history_rows_parse_from_the_id(self):
         assert parse_contract("gateio-perps-btc", {"id": "BTC_USD", "type": "perpetual"}).internal_id == "perpetual-BTC-USD:BTC"
         assert parse_contract("gateio-perps-usdt", {"id": "ETH_USDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
 
-    def test_shared_tardis_feed_is_split_by_settlement(self):
+    @pytest.mark.parametrize(
+        "exchange",
+        [
+            "gateio-perps-usdt", "gateio-perps-btc", "htx-perps-usdt", "bitget-perps-usdt",
+            "bitget-perps-usdc", "bybit-perps-usd", "bybit-perps-coin",
+        ],
+    )
+    def test_every_row_the_family_fetcher_returns_is_kept(self, exchange):
+        """Each settlement family has its own fetcher and file; no id filter second-guesses it."""
         from atlas.exchanges import get_symbol_filter
 
-        usdt, btc = get_symbol_filter("gateio-perps-usdt"), get_symbol_filter("gateio-perps-btc")
-        assert usdt({"id": "BTC_USDT"})
-        assert not usdt({"id": "BTC_USD"})
-        assert btc({"id": "BTC_USD"})
-        assert not btc({"id": "BTC_USDT"})
+        assert get_symbol_filter(exchange) is None
 
 
 # ---------------------------------------------------------------------------
@@ -335,7 +339,7 @@ class TestBitget:
             "OLDUSDT": "crypto",
         }
 
-    def test_tardis_rows_parse_from_the_id(self):
+    def test_history_rows_parse_from_the_id(self):
         assert parse_contract("bitget-perps-usdc", {"id": "ETHPERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USDC:USDC"
         assert parse_contract("bitget-perps-usdt", {"id": "ETHUSDT", "type": "perpetual"}).internal_id == "perpetual-ETH-USDT:USDT"
 
@@ -382,9 +386,9 @@ class TestDeribit:
             "ETH_USDC-16OCT26": "future-ETH-USDC:USDC-20261016",
         }
 
-    def test_tardis_rows_infer_linear_from_the_name(self):
-        assert parse_contract("deribit", {"id": "SOL_USDC-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-SOL-USDC:USDC"
-        assert parse_contract("deribit", {"id": "ETH_USDC-28MAR25", "type": "future"}).internal_id == "future-ETH-USDC:USDC-20250328"
+    def test_history_rows_infer_linear_from_the_name(self):
+        assert parse_contract("deribit-perps", {"id": "SOL_USDC-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-SOL-USDC:USDC"
+        assert parse_contract("deribit-futures", {"id": "ETH_USDC-28MAR25", "type": "future"}).internal_id == "future-ETH-USDC:USDC-20250328"
         assert parse_contract("deribit-perps", {"id": "ETH-PERPETUAL", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:ETH"
 
     def test_contract_size_and_underlying(self):
@@ -450,7 +454,7 @@ def _cdc(symbol, base, inst, product, index, expiry=0, tradable=True):
     }
 
 
-CDC = {"result": {"data": [
+CDC = {"code": 0, "result": {"data": [
     {"symbol": "BTC_USD", "base_ccy": "BTC", "quote_ccy": "USD", "inst_type": "CCY_PAIR", "product_type": "DIGITAL_CURRENCIES", "tradable": True},
     _cdc("BTCUSD-PERP", "BTC", "PERPETUAL_SWAP", "DIGITAL_CURRENCIES", "BTCUSD-INDEX"),
     _cdc("AAPLUSD-PERP", "AAPL", "PERPETUAL_SWAP", "EQUITY", "AAPLUSD-INDEX"),
@@ -487,9 +491,103 @@ class TestCryptocom:
         # The untagged future takes the class of the index it tracks.
         assert _classes(_fetch(fetch_cryptocom_futures, {"/get-instruments": CDC})) == {"BTCUSD-261127": "crypto"}
 
-    def test_tardis_rows_parse_from_the_id(self):
+    def test_history_rows_parse_from_the_id(self):
         assert parse_contract("cryptocom-perps", {"id": "ETHUSD-PERP", "type": "perpetual"}).internal_id == "perpetual-ETH-USD:USD"
         assert parse_contract("cryptocom-futures", {"id": "ETHUSD-250328", "type": "future"}).internal_id == "future-ETH-USD:USD-20250328"
+
+    @pytest.mark.parametrize(
+        "payload",
+        [
+            {"code": 10001, "message": "SYS_ERROR"},
+            {"code": 0, "result": {}},
+            [],
+        ],
+    )
+    def test_error_responses_fail_instead_of_emptying_the_venue(self, payload):
+        from atlas.exchange_definitions.crypto_com import fetch_cryptocom_futures, fetch_cryptocom_perpetual
+
+        for fetcher in (fetch_cryptocom_perpetual, fetch_cryptocom_futures):
+            with pytest.raises(ValueError, match=r"Crypto\.com instruments"):
+                _fetch(fetcher, {"/get-instruments": payload})
+
+
+# ---------------------------------------------------------------------------
+# Bybit (producer slugs bybit-perps-usd / bybit-perps-coin)
+# ---------------------------------------------------------------------------
+
+
+def _bybit(symbol, base, quote, settle, contract_type):
+    return {
+        "symbol": symbol,
+        "status": "Trading",
+        "contractType": contract_type,
+        "baseCoin": base,
+        "quoteCoin": quote,
+        "settleCoin": settle,
+    }
+
+
+BYBIT_PAGES = {
+    "linear": [
+        _bybit("BTCUSDT", "BTC", "USDT", "USDT", "LinearPerpetual"),
+        _bybit("BTCPERP", "BTC", "USDC", "USDC", "LinearPerpetual"),
+        _bybit("BTCUSDT-26DEC25", "BTC", "USDT", "USDT", "LinearFutures"),
+    ],
+    "inverse": [
+        _bybit("BTCUSD", "BTC", "USD", "BTC", "InversePerpetual"),
+        _bybit("BTCUSDZ25", "BTC", "USD", "BTC", "InverseFutures"),
+    ],
+}
+
+
+@pytest.fixture
+def bybit_api():
+    from atlas.exchange_definitions import bybit
+
+    def get(url, params, timeout):
+        rows = BYBIT_PAGES[params["category"]] if params.get("status") == "Trading" else []
+        return _response({"result": {"list": rows, "nextPageCursor": ""}})
+
+    bybit.clear_derivatives_cache()
+    with patch("atlas.exchange_definitions.bybit.requests.get", side_effect=get):
+        yield bybit
+    bybit.clear_derivatives_cache()
+
+
+class TestBybit:
+    def test_ids_match_the_producer(self, bybit_api):
+        # live-producers streams one Bybit category per slug: linear (USDT and
+        # USDC perps) as bybit-perps-usd, inverse as bybit-perps-coin.
+        usd = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
+        coin = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
+        assert _ids("bybit-perps-usd", usd) == {
+            "BTCUSDT": "perpetual-BTC-USDT:USDT",
+            "BTCPERP": "perpetual-BTC-USDC:USDC",
+        }
+        assert _ids("bybit-perps-coin", coin) == {"BTCUSD": "perpetual-BTC-USD:BTC"}
+
+    def test_quantity_units(self, bybit_api):
+        (usd, _) = bybit_api.fetch_bybit_perps_usd(timeout_seconds=5)
+        (coin,) = bybit_api.fetch_bybit_perps_coin(timeout_seconds=5)
+        assert usd["quantity_unit"] == "base"
+        # Inverse sizes are USD contracts.
+        assert coin["quantity_unit"] == "quote"
+
+    def test_snapshots_hold_one_category_each(self):
+        import json
+        from pathlib import Path
+
+        data = Path(__file__).resolve().parents[1] / "atlas" / "data"
+
+        def rows(exchange):
+            return {sd["id"]: sd for sd in json.loads((data / f"{exchange}.json").read_text())}
+
+        usd, coin = rows("bybit-perps-usd"), rows("bybit-perps-coin")
+        assert not usd.keys() & coin.keys()
+        assert {sd["margin"] for sd in usd.values()} <= {"USDT", "USDC"}
+        assert {sd["quantity_unit"] for sd in usd.values()} == {"base"}
+        assert all(sd["margin"] == sd["symbol"] for sd in coin.values())
+        assert {sd["quantity_unit"] for sd in coin.values()} == {"quote"}
 
 
 # ---------------------------------------------------------------------------
@@ -498,31 +596,29 @@ class TestCryptocom:
 
 
 @pytest.mark.parametrize(
-    ("exchange", "tardis_id"),
+    "exchange",
     [
-        ("gateio-perps-usdt", "gate-io-futures"),
-        ("gateio-perps-btc", "gate-io-futures"),
-        ("gateio-futures-usdt", None),
-        ("htx-perps-usdt", "huobi-dm-linear-swap"),
-        ("mexc-perps", None),
-        ("bitget-perps-usdt", "bitget-futures"),
-        ("bitget-perps-usdc", "bitget-futures"),
-        ("bitget-perps-coin", None),
-        ("bitget-futures-coin", None),
-        ("deribit-perps", "deribit"),
-        ("deribit-futures", "deribit"),
-        ("whitebit-perps", None),
-        ("cryptocom-perps", "crypto-com"),
-        ("cryptocom-futures", "crypto-com"),
+        "bybit-perps-usd",
+        "bybit-perps-coin",
+        "gateio-perps-usdt",
+        "gateio-perps-btc",
+        "gateio-futures-usdt",
+        "htx-perps-usdt",
+        "mexc-perps",
+        "bitget-perps-usdt",
+        "bitget-perps-usdc",
+        "bitget-perps-coin",
+        "bitget-futures-coin",
+        "deribit-perps",
+        "deribit-futures",
+        "whitebit-perps",
+        "cryptocom-perps",
+        "cryptocom-futures",
     ],
 )
-def test_tardis_coverage(exchange, tardis_id):
-    from atlas.exchanges import is_on_tardis, to_tardis_exchange_id
+def test_registered_for_the_daily_update(exchange):
+    from atlas.exchanges import get_exchange_fetcher
     from atlas.update import EXCHANGES
 
-    if tardis_id is None:
-        assert not is_on_tardis(exchange)
-    else:
-        assert is_on_tardis(exchange)
-        assert to_tardis_exchange_id(exchange) == tardis_id
+    assert get_exchange_fetcher(exchange) is not None
     assert exchange in EXCHANGES

@@ -2,40 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Atlas - Crypto Security Master - Update All (Hybrid)",
+      "name": "Atlas - Crypto Security Master - Update All",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/atlas/update.py",
-      "args": ["--source", "hybrid"],
+      "args": [],
       "justMyCode": true,
       "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
     },
     {
-      "name": "Atlas - Crypto Security Master - Update All (Tardis)",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/atlas/update.py",
-      "args": ["--source", "tardis"],
-      "justMyCode": true,
-      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
-    },
-    {
-      "name": "Atlas - Crypto Security Master - Update All (Exchange)",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/atlas/update.py",
-      "args": ["--source", "exchange"],
-      "justMyCode": true,
-      "python": "/Users/markszulyovszky/micromamba/envs/unravel/bin/python"
-    },
-    {
-      "name": "Atlas - Crypto Security Master - Update Stable (Tardis)",
+      "name": "Atlas - Crypto Security Master - Update Selected",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/atlas/update.py",
       "args": [
-        "--source",
-        "hybrid",
         "--exchanges",
         "binance-spot,binance-futures,binance-futures-cm,okx-spot,okx-perps,okx-futures"
       ],

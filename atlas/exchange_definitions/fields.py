@@ -3,7 +3,7 @@
 Exchange-API fetchers store the venue's base asset, quote asset and settle
 asset (`base_coin`, `quote_coin`, `margin_asset`) and, for dated contracts, an
 ISO `delivery_date`. Those fields are authoritative; rows that lack them
-(Tardis-only history) fall back to each venue's id parser.
+(history recorded before a fetcher) fall back to each venue's id parser.
 """
 
 from __future__ import annotations

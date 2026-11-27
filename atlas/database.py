@@ -1,12 +1,23 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Iterable
 from datetime import UTC, datetime
 from pathlib import Path
 
 from atlas.exchange_definitions.common import parse_utc_timestamp
+from .assets import Asset, AssetRegistry
+from .categories import ASSET_CATEGORIES
+
 
 _DATA_DIR = Path(__file__).parent / "data"
+_REGISTRY_RELATIVE_PATH = Path("symbology") / "assets.json"
+
+
+def _as_set(value: str | Iterable[str] | None) -> set[str] | None:
+    if value is None:
+        return None
+    return {value} if isinstance(value, str) else set(value)
 
 
 class SecurityMaster:
@@ -16,22 +27,40 @@ class SecurityMaster:
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]],
         contract_index: dict[tuple[str, str, str | None], set[str]],
         metadata_map: dict[tuple[str, str], dict],
+        registry: AssetRegistry | None = None,
     ) -> None:
         self._internal_id_map = internal_id_map
         self._symbol_windows = symbol_windows
         self._contract_index = contract_index
         self._metadata_map = metadata_map
+        self._registry = registry if registry is not None else AssetRegistry()
+        self._asset_index: dict[str, set[tuple[str, str]]] = {}
+        self._unified_index: dict[str, set[tuple[str, str]]] = {}
+        for key, row in metadata_map.items():
+            asset_ids = {row.get("base_asset_id")} | {
+                segment.get("asset_id")
+                for segment in row.get("base_asset_history") or []
+                if isinstance(segment, dict)
+            }
+            for asset_id in asset_ids:
+                if isinstance(asset_id, str):
+                    self._asset_index.setdefault(asset_id, set()).add(key)
+            if isinstance(unified := row.get("unified_id"), str):
+                self._unified_index.setdefault(unified, set()).add(key)
 
     @classmethod
     def load(
         cls,
         data_dir: Path = _DATA_DIR,
         exchanges: list[str] | None = None,
+        registry_path: Path | None = None,
     ) -> SecurityMaster:
         """Load pre-computed internal_ids from per-exchange JSON files.
 
         The internal_id field is written by update.py; symbols without one
         (options, combos, unrecognised formats) are silently absent from the map.
+        The asset registry is read from ``<data_dir>/symbology/assets.json``
+        unless ``registry_path`` names another file.
         """
         internal_id_map: dict[tuple[str, str], str] = {}
         symbol_windows: dict[str, list[tuple[str, datetime, datetime | None]]] = {}
@@ -68,7 +97,8 @@ class SecurityMaster:
                     )
                     contract_index.setdefault(key, set()).add(exchange)
             symbol_windows[exchange] = windows
-        return cls(internal_id_map, symbol_windows, contract_index, metadata_map)
+        registry = AssetRegistry.load(registry_path or data_dir / _REGISTRY_RELATIVE_PATH)
+        return cls(internal_id_map, symbol_windows, contract_index, metadata_map, registry)
 
     def by_exchange_and_original_id(
         self, exchange: str, original_id: str
@@ -132,6 +162,117 @@ class SecurityMaster:
             ):
                 ids.append(symbol_id)
         return ids
+
+    def instruments(
+        self,
+        underlying: str | Iterable[str] | None = None,
+        exchange: str | Iterable[str] | None = None,
+        instrument_type: str | None = None,
+        active_at: datetime | None = None,
+    ) -> list[tuple[str, str]]:
+        """Every ``(exchange, original_id)`` matching all the given filters.
+
+        ``underlying`` is the venue's asset class (``equity``, ``commodity``,
+        ``forex``, ``index``, ``pre_market``, ``crypto``, ``unknown``); a row the
+        venue does not classify matches none. ``active_at`` keeps instruments
+        listed at that moment: on or after ``first_capture``, before ``end_date``.
+        """
+        classes = _as_set(underlying)
+        exchanges = _as_set(exchange)
+        moment = None
+        if active_at is not None:
+            moment = active_at.replace(tzinfo=UTC) if active_at.tzinfo is None else active_at
+        matches = []
+        for key in self._internal_id_map:
+            row = self._metadata_map[key]
+            if exchanges is not None and key[0] not in exchanges:
+                continue
+            if classes is not None and row.get("underlying") not in classes:
+                continue
+            if instrument_type is not None and row.get("type") != instrument_type:
+                continue
+            if moment is not None:
+                start = parse_utc_timestamp(row.get("first_capture"))
+                end = parse_utc_timestamp(row.get("end_date"))
+                if start is None or start > moment or (end is not None and end <= moment):
+                    continue
+            matches.append(key)
+        return sorted(matches)
+
+    # -- Assets ---------------------------------------------------------------
+
+    @property
+    def assets(self) -> AssetRegistry:
+        """The Atlas asset registry the snapshots' asset IDs refer to."""
+        return self._registry
+
+    def asset(self, asset_id: str) -> Asset | None:
+        return self._registry.get(asset_id)
+
+    def asset_by_cmc_id(self, cmc_id: int) -> Asset | None:
+        return self._registry.by_cmc_id(cmc_id)
+
+    def find_assets(self, ticker: str) -> list[Asset]:
+        """Every asset with this ticker or alias; several assets may share one."""
+        return self._registry.find_by_ticker(ticker)
+
+    def assets_in_category(self, category: str) -> list[Asset]:
+        if category not in ASSET_CATEGORIES:
+            raise ValueError(f"unknown asset category {category!r}")
+        return [asset for asset in self._registry if category in asset.categories]
+
+    def base_asset(
+        self, exchange: str, original_id: str, at: datetime | None = None
+    ) -> Asset | None:
+        """The asset an instrument trades, optionally as of ``at``.
+
+        A venue that handed a ticker to a new project without renaming the
+        instrument (Terra's ``LUNA``) records the earlier asset in
+        ``base_asset_history``; ``at`` selects the asset in effect then.
+        """
+        row = self._metadata_map.get((exchange, original_id))
+        if row is None:
+            return None
+        if at is not None:
+            moment = at.replace(tzinfo=UTC) if at.tzinfo is None else at
+            for segment in row.get("base_asset_history") or []:
+                until = parse_utc_timestamp(segment.get("until"))
+                if until is not None and moment < until:
+                    return self.asset(segment["asset_id"])
+        return self._asset_field(row, "base_asset_id")
+
+    def quote_asset(self, exchange: str, original_id: str) -> Asset | None:
+        return self._asset_field(self._metadata_map.get((exchange, original_id)), "quote_asset_id")
+
+    def margin_asset(self, exchange: str, original_id: str) -> Asset | None:
+        return self._asset_field(self._metadata_map.get((exchange, original_id)), "margin_asset_id")
+
+    def unified_id(self, exchange: str, original_id: str) -> str | None:
+        """The instrument's ID in Atlas asset terms: ``perpetual-PEPE-USDT:USDT``."""
+        row = self._metadata_map.get((exchange, original_id))
+        return None if row is None else row.get("unified_id")
+
+    def by_unified_id(self, unified_id: str) -> list[tuple[str, str]]:
+        """Every ``(exchange, original_id)`` trading this unified contract."""
+        return sorted(self._unified_index.get(unified_id, ()))
+
+    def instruments_for_asset(
+        self, asset_id: str, exchange: str | None = None
+    ) -> list[tuple[str, str]]:
+        """Every ``(exchange, original_id)`` whose base asset is, or was, ``asset_id``."""
+        return sorted(
+            key
+            for key in self._asset_index.get(asset_id, ())
+            if exchange is None or key[0] == exchange
+        )
+
+    def exchanges_for_asset(self, asset_id: str) -> list[str]:
+        return sorted({exchange for exchange, _ in self._asset_index.get(asset_id, ())})
+
+    def _asset_field(self, row: dict | None, key: str) -> Asset | None:
+        if row is None or not isinstance(asset_id := row.get(key), str):
+            return None
+        return self.asset(asset_id)
 
     def __len__(self) -> int:
         return len(self._internal_id_map)

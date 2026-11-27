@@ -30,7 +30,7 @@ def parse_hyperliquid(exchange: str, sd: SymbolData) -> Contract:
     # carry their dex as a prefix (`xyz:TSLA`), which is kept in the symbol.
     # A perp dex quotes, margins and settles in its own collateral token, which
     # the fetcher records per symbol: USDC on the main dex, but e.g. USDH or
-    # USDT0 on some HIP-3 dexes. Rows without it (Tardis-only) assume USDC.
+    # USDT0 on some HIP-3 dexes. Rows without it (history) assume USDC.
     collateral = sd.get("margin_asset") or "USDC"
     return make_contract(exchange, sd, sid, collateral, collateral, ctype)
 

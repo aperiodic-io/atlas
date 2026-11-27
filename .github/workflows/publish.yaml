@@ -1,5 +1,7 @@
 name: publish
 
+# Publishes to PyPI when a GitHub release is published, through PyPI Trusted Publishing:
+# no token or secret is stored. PyPI trusts this workflow, in the `pypi` environment.
 
 on:
   release:
@@ -7,32 +9,24 @@ on:
       - published
 
 jobs:
-
   publish-package:
-    if: github.event_name == 'release'
-
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/atlas-master
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: setup-python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
       - name: setup-uv
         uses: astral-sh/setup-uv@v5
 
-      - name: install-dependencies
-        run: |
-          uv pip install --system hatch
-          uv pip install --system ".[tests]"
       - name: build-package
-        run: uv run hatch build
+        run: uvx hatch build
 
       - name: publish-package
-        run: uv run hatch publish --user __token__ --auth $PYPI_TOKEN
-        env:
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        uses: pypa/gh-action-pypi-publish@release/v1

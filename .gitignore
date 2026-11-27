@@ -151,8 +151,8 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
+# GitHub Pages build output (site/build.py)
+/_site
 
 # mypy
 .mypy_cache/
@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Parquet files must not be committed (see AGENTS.md)
+*.parquet

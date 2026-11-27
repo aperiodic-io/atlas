@@ -14,9 +14,8 @@ from unittest.mock import MagicMock, patch
 import pytest
 import requests
 
-from atlas.exchange_definitions import is_beta_exchange
 from atlas.exchange_definitions.apex import apex_symbols, fetch_apex_perps
-from atlas.exchanges import get_allowed_types, get_exchange_fetcher, is_on_tardis
+from atlas.exchanges import get_allowed_types, get_exchange_fetcher
 from atlas.parsers import SkipSymbol, parse_contract
 from atlas.update import EXCHANGES
 
@@ -30,10 +29,8 @@ def _by_id() -> dict[str, dict]:
 
 def test_registered_as_an_api_only_exchange():
     assert EXCHANGE in EXCHANGES
-    assert not is_beta_exchange(EXCHANGE)
     assert get_exchange_fetcher(EXCHANGE) is fetch_apex_perps
     assert get_allowed_types(EXCHANGE) == {"perpetual"}
-    assert not is_on_tardis(EXCHANGE)
 
 
 def test_fetcher_keeps_listed_perpetual_and_stock_contracts():

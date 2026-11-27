@@ -15127,6 +15127,39 @@
       "symbol": "XRP"
     },
     {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
+        "catalogue_issue": "tolerated 4 unreadable of 8091 rows (1 unparseable, 3 duplicated, total moved by 1 mid-fetch): 0.0494%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "XTEN",
+          "observed_at": "2026-10-27T09:13:55.148812Z",
+          "price": 0.28293,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-perps"
+        },
+        "exchange_symbol": "XTEN",
+        "hyperliquid_assets": [
+          {}
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-perps",
+        "first_capture": "2026-10-27T07:12:40.952000Z",
+        "original_id": "XTEN"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-10-27T09:13:49.444220Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "XTEN"
+    },
+    {
       "cmc_id": 10688,
       "evidence": {
         "candidates": [
@@ -25710,6 +25743,54 @@
       "cmc_id": null,
       "evidence": {
         "candidates": [],
+        "catalogue_issue": "tolerated 4 unreadable of 7889 rows (4 duplicated, total moved by 1 mid-fetch): 0.0507%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1193",
+          "observed_at": "2026-11-23T13:25:51.979919Z",
+          "price": 200.5,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "HXMR",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {},
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": null,
+            "fullName": "Hyperliquid XMR - Wagyu.xyz",
+            "index": 1339,
+            "isCanonical": false,
+            "name": "HXMR",
+            "pair": "@1193",
+            "quote": "USDC",
+            "szDecimals": 5,
+            "tokenId": "0x700beac50c950503f401d218e52014e7",
+            "weiDecimals": 10
+          }
+        ],
+        "price_probe_status": "no_ticker_candidate",
+        "rationale": "CoinMarketCap lists no asset with this ticker."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-23T10:12:15.897000Z",
+        "original_id": "HXMR/USDC"
+      },
+      "method": "no_ticker_candidate",
+      "recorded_at": "2026-11-23T13:25:48.329399Z",
+      "slug": "",
+      "status": "unmapped",
+      "symbol": "HXMR"
+    },
+    {
+      "cmc_id": null,
+      "evidence": {
+        "candidates": [],
         "catalogue_issue": "tolerated 1 unreadable of 8124 rows (1 duplicated, total moved by 1 mid-fetch): 0.0123%, within 0.500%",
         "catalogue_trustworthy": true,
         "confidence": "high",
@@ -28577,6 +28658,78 @@
       "slug": "",
       "status": "unmapped",
       "symbol": "MONAD"
+    },
+    {
+      "cmc_id": 42931,
+      "evidence": {
+        "candidates": [
+          {
+            "cmc_id": 42931,
+            "date_added": "2026-11-23T13:00:02Z",
+            "identity_match": null,
+            "is_active": true,
+            "last_updated": "2026-11-23T13:25:33.173000Z",
+            "name": "Montra",
+            "price_issue": "",
+            "price_usd": 0.004074739729105076,
+            "relative_price_difference": 0.000162013764274451,
+            "slug": "montra"
+          }
+        ],
+        "catalogue_issue": "tolerated 4 unreadable of 7889 rows (4 duplicated, total moved by 1 mid-fetch): 0.0507%, within 0.500%",
+        "catalogue_trustworthy": true,
+        "confidence": "high",
+        "exchange_price": {
+          "base_units_per_contract": 1.0,
+          "instrument_id": "@1194",
+          "observed_at": "2026-11-23T13:25:51.979919Z",
+          "price": 0.0040754,
+          "quote_currency": "USDC",
+          "venue": "hyperliquid-spot"
+        },
+        "exchange_symbol": "MONTRA",
+        "hyperliquid_assets": [
+          {
+            "cmc_contract_checks": {
+              "42931": [
+                {
+                  "contractAddress": "0x063f7cc5339f92a5fd7baf3d22233044fda1f327",
+                  "contractChainId": 99901,
+                  "contractPlatform": "Elysium"
+                }
+              ]
+            },
+            "cmc_contract_matches": [],
+            "cmc_quote_source": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail",
+            "deployerTradingFeeShare": "1.0",
+            "evmContract": {
+              "address": "0x9ac909a79c54204fd541e474c35a06728dd6a16c",
+              "evm_extra_wei_decimals": 10
+            },
+            "fullName": "Montra",
+            "index": 1334,
+            "isCanonical": false,
+            "name": "MONTRA",
+            "pair": "@1194",
+            "quote": "USDC",
+            "szDecimals": 1,
+            "tokenId": "0xe71e2d154c1c50d9e18caa3c6175ec17",
+            "weiDecimals": 8
+          }
+        ],
+        "price_probe_status": "price_compatible",
+        "rationale": "The CMC candidate Montra (MONTRA) matches the exchange asset's project name and symbol exactly, and its CMC price is nearly identical to the observed Hyperliquid price. Holding for review because only the ticker and price agree, which cannot establish identity."
+      },
+      "instrument": {
+        "exchange": "hyperliquid-spot",
+        "first_capture": "2026-11-23T10:12:15.897000Z",
+        "original_id": "MONTRA/USDC"
+      },
+      "method": "llm_adjudicated",
+      "recorded_at": "2026-11-23T13:25:48.329399Z",
+      "slug": "montra",
+      "status": "uncertain",
+      "symbol": "MONTRA"
     },
     {
       "cmc_id": 39616,

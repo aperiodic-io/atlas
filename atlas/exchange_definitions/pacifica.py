@@ -74,7 +74,7 @@ _UNDERLYING_OVERRIDES = {"SP500": UnderlyingType.index}
 
 
 def iso_millis(epoch_ms: int) -> str:
-    """Epoch milliseconds as ``2025-06-02T16:22:13.944Z`` (the Tardis style)."""
+    """Epoch milliseconds as ``2025-06-02T16:22:13.944Z`` (the snapshot style)."""
     t = datetime.fromtimestamp(epoch_ms / 1000, tz=UTC)
     return t.strftime("%Y-%m-%dT%H:%M:%S.") + f"{epoch_ms % 1000:03d}Z"
 
