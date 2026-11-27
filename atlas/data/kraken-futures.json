@@ -1466,6 +1466,23 @@
     "internal_id": "future-ETH-USD:USD-20261127",
     "symbol": "ETH",
     "denominator": "USD",
+    "margin": "USD",
+    "end_date": "2026-11-27T08:00:00.000Z"
+  },
+  {
+    "id": "FF_ETHUSD_261204",
+    "type": "future",
+    "base_coin": "ETH",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T08:00:34.254Z",
+    "delivery_date": "2026-12-04T08:00:00+00:00",
+    "internal_id": "future-ETH-USD:USD-20261204",
+    "symbol": "ETH",
+    "denominator": "USD",
     "margin": "USD"
   },
   {
@@ -1907,7 +1924,8 @@
     "internal_id": "future-SOL-USD:USD-20261127",
     "symbol": "SOL",
     "denominator": "USD",
-    "margin": "USD"
+    "margin": "USD",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "FF_SOLUSD_261225",
@@ -1921,6 +1939,22 @@
     "first_capture": "2026-08-28T00:00:00.000Z",
     "delivery_date": "2026-12-25T08:00:00+00:00",
     "internal_id": "future-SOL-USD:USD-20261225",
+    "symbol": "SOL",
+    "denominator": "USD",
+    "margin": "USD"
+  },
+  {
+    "id": "FF_SOLUSD_270326",
+    "type": "future",
+    "base_coin": "SOL",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T08:00:34.527Z",
+    "delivery_date": "2027-03-26T08:00:00+00:00",
+    "internal_id": "future-SOL-USD:USD-20270326",
     "symbol": "SOL",
     "denominator": "USD",
     "margin": "USD"
@@ -3390,6 +3424,23 @@
     "first_capture": "2026-10-23T08:00:30.076Z",
     "delivery_date": "2026-11-27T08:00:00+00:00",
     "internal_id": "future-BTC-USD:USD-20261127",
+    "symbol": "BTC",
+    "denominator": "USD",
+    "margin": "USD",
+    "end_date": "2026-11-27T08:00:00.000Z"
+  },
+  {
+    "id": "FF_XBTUSD_261204",
+    "type": "future",
+    "base_coin": "BTC",
+    "quote_coin": "USD",
+    "margin_asset": "USD",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T08:00:34.651Z",
+    "delivery_date": "2026-12-04T08:00:00+00:00",
+    "internal_id": "future-BTC-USD:USD-20261204",
     "symbol": "BTC",
     "denominator": "USD",
     "margin": "USD"
