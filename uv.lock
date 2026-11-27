@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.12"
 
 [[package]]
-name = "atlas-crypto-security-master"
+name = "atlas-master"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [
