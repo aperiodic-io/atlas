@@ -3910,15 +3910,13 @@
     "symbol": "PRL",
     "denominator": "USDC",
     "margin": "USDC",
-    "cmc_id": 39797,
-    "category": [
-      "DApp"
-    ],
-    "base_asset_id": "PRL",
-    "base_asset_match": "cross_venue_consensus",
+    "cmc_id": 41876,
+    "category": [],
+    "base_asset_id": "PEARL",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDC",
     "margin_asset_id": "USDC",
-    "unified_id": "perpetual-PRL-USDC:USDC"
+    "unified_id": "perpetual-PEARL-USDC:USDC"
   },
   {
     "id": "4098",

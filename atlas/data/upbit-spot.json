@@ -1532,6 +1532,17 @@
     "denominator": "BTC"
   },
   {
+    "id": "BTC-FLR",
+    "type": "spot",
+    "base_coin": "FLR",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:32:24.278Z",
+    "internal_id": "spot-FLR-BTC",
+    "symbol": "FLR",
+    "denominator": "BTC"
+  },
+  {
     "id": "BTC-FLUID",
     "type": "spot",
     "base_coin": "FLUID",
@@ -2181,6 +2192,17 @@
     "first_capture": "2025-05-23T00:00:00.000Z",
     "internal_id": "spot-KERNEL-BTC",
     "symbol": "KERNEL",
+    "denominator": "BTC"
+  },
+  {
+    "id": "BTC-KGEN",
+    "type": "spot",
+    "base_coin": "KGEN",
+    "quote_coin": "BTC",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:32:24.278Z",
+    "internal_id": "spot-KGEN-BTC",
+    "symbol": "KGEN",
     "denominator": "BTC"
   },
   {
@@ -6176,6 +6198,17 @@
     "denominator": "KRW"
   },
   {
+    "id": "KRW-HAEDAL",
+    "type": "spot",
+    "base_coin": "HAEDAL",
+    "quote_coin": "KRW",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:32:24.278Z",
+    "internal_id": "spot-HAEDAL-KRW",
+    "symbol": "HAEDAL",
+    "denominator": "KRW"
+  },
+  {
     "id": "KRW-HBAR",
     "type": "spot",
     "base_coin": "HBAR",
@@ -9694,6 +9727,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "USDT-FLR",
+    "type": "spot",
+    "base_coin": "FLR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:32:24.278Z",
+    "internal_id": "spot-FLR-USDT",
+    "symbol": "FLR",
+    "denominator": "USDT"
+  },
+  {
     "id": "USDT-FLUID",
     "type": "spot",
     "base_coin": "FLUID",
@@ -10037,6 +10081,17 @@
     "first_capture": "2025-05-23T00:00:00.000Z",
     "internal_id": "spot-KERNEL-USDT",
     "symbol": "KERNEL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "USDT-KGEN",
+    "type": "spot",
+    "base_coin": "KGEN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:32:24.278Z",
+    "internal_id": "spot-KGEN-USDT",
+    "symbol": "KGEN",
     "denominator": "USDT"
   },
   {

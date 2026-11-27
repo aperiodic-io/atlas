@@ -72004,7 +72004,12 @@
     "symbol": "VIC",
     "denominator": "USDT",
     "first_capture": "2023-11-21T00:00:00.000Z",
-    "quote_asset_id": "USDT"
+    "cmc_id": 2570,
+    "category": [],
+    "base_asset_id": "VIC",
+    "base_asset_match": "cross_venue_consensus",
+    "quote_asset_id": "USDT",
+    "unified_id": "spot-VIC-USDT"
   },
   {
     "id": "VIDYX_ETH",

@@ -8126,8 +8126,13 @@
     "denominator": "USD",
     "margin": "USD",
     "end_date": "2026-10-19T18:51:22.469Z",
+    "cmc_id": 2570,
+    "category": [],
+    "base_asset_id": "VIC",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USD",
-    "margin_asset_id": "USD"
+    "margin_asset_id": "USD",
+    "unified_id": "perpetual-VIC-USD:USD"
   },
   {
     "id": "VIRTUAL-USD",

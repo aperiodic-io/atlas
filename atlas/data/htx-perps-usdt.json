@@ -137,7 +137,8 @@
     "internal_id": "perpetual-ACE-USDT:USDT",
     "symbol": "ACE",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "ACH-USDT",
@@ -1064,7 +1065,8 @@
     "internal_id": "perpetual-AXIS-USDT:USDT",
     "symbol": "AXIS",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "AXL-USDT",
@@ -2182,7 +2184,8 @@
     "internal_id": "perpetual-CHZ-USDT:USDT",
     "symbol": "CHZ",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "CIEN-USDT",
@@ -3328,7 +3331,8 @@
     "internal_id": "perpetual-EUL-USDT:USDT",
     "symbol": "EUL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "EURUSD-USDT",
@@ -6616,7 +6620,8 @@
     "internal_id": "perpetual-NIL-USDT:USDT",
     "symbol": "NIL",
     "denominator": "USDT",
-    "margin": "USDT"
+    "margin": "USDT",
+    "end_date": "2026-11-27T08:00:00.000Z"
   },
   {
     "id": "NIO-USDT",
@@ -8639,6 +8644,21 @@
     "first_capture": "2026-11-02T00:00:00.000Z",
     "internal_id": "perpetual-SMR-USDT:USDT",
     "symbol": "SMR",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "SMTC-USDT",
+    "type": "perpetual",
+    "base_coin": "SMTC",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.01,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T00:00:00.000Z",
+    "internal_id": "perpetual-SMTC-USDT:USDT",
+    "symbol": "SMTC",
     "denominator": "USDT",
     "margin": "USDT"
   },
@@ -10730,6 +10750,21 @@
     "end_date": "2026-09-26T00:00:00.000Z",
     "internal_id": "perpetual-XETA-USDT:USDT",
     "symbol": "XETA",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "XIAOMI-USDT",
+    "type": "perpetual",
+    "base_coin": "XIAOMI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T00:00:00.000Z",
+    "internal_id": "perpetual-XIAOMI-USDT:USDT",
+    "symbol": "XIAOMI",
     "denominator": "USDT",
     "margin": "USDT"
   },

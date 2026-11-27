@@ -95,6 +95,28 @@
     "denominator": "USDT"
   },
   {
+    "id": "AAOI_USDT",
+    "type": "spot",
+    "base_coin": "AAOI",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-AAOI-USDT",
+    "symbol": "AAOI",
+    "denominator": "USDT"
+  },
+  {
+    "id": "AAPL_USDT",
+    "type": "spot",
+    "base_coin": "AAPL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-AAPL-USDT",
+    "symbol": "AAPL",
+    "denominator": "USDT"
+  },
+  {
     "id": "AAVE_BTC",
     "type": "spot",
     "first_capture": "2022-08-02T00:00:00.000Z",
@@ -762,6 +784,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "AMZN_USDT",
+    "type": "spot",
+    "base_coin": "AMZN",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-AMZN-USDT",
+    "symbol": "AMZN",
+    "denominator": "USDT"
+  },
+  {
     "id": "ANALOS_USDT",
     "type": "spot",
     "first_capture": "2023-12-26T00:00:00.000Z",
@@ -950,6 +983,17 @@
     "first_capture": "2022-08-02T00:00:00.000Z",
     "internal_id": "spot-API3-USDT",
     "symbol": "API3",
+    "denominator": "USDT"
+  },
+  {
+    "id": "APP_USDT",
+    "type": "spot",
+    "base_coin": "APP",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-APP-USDT",
+    "symbol": "APP",
     "denominator": "USDT"
   },
   {
@@ -1536,6 +1580,17 @@
     "first_capture": "2025-05-07T00:00:00.000Z",
     "internal_id": "spot-B2-USDT",
     "symbol": "B2",
+    "denominator": "USDT"
+  },
+  {
+    "id": "BABA_USDT",
+    "type": "spot",
+    "base_coin": "BABA",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-BABA-USDT",
+    "symbol": "BABA",
     "denominator": "USDT"
   },
   {
@@ -6344,6 +6399,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "DRAM_USDT",
+    "type": "spot",
+    "base_coin": "DRAM",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-DRAM-USDT",
+    "symbol": "DRAM",
+    "denominator": "USDT"
+  },
+  {
     "id": "DRGN_USDT",
     "type": "spot",
     "first_capture": "2024-08-26T00:00:00.000Z",
@@ -7281,6 +7347,17 @@
     "symbol": "EVAN",
     "denominator": "USDT",
     "end_date": "2026-11-04T08:35:04.551Z"
+  },
+  {
+    "id": "EWY_USDT",
+    "type": "spot",
+    "base_coin": "EWY",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-EWY-USDT",
+    "symbol": "EWY",
+    "denominator": "USDT"
   },
   {
     "id": "EXE_BTC",
@@ -9474,6 +9551,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "HOOD_USDT",
+    "type": "spot",
+    "base_coin": "HOOD",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-HOOD-USDT",
+    "symbol": "HOOD",
+    "denominator": "USDT"
+  },
+  {
     "id": "HOOKR_USDT",
     "type": "spot",
     "base_coin": "HOOKR",
@@ -9769,6 +9857,17 @@
     "end_date": "2024-12-11T00:00:00.000Z",
     "internal_id": "spot-INTRO-USDT",
     "symbol": "INTRO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "INTW_USDT",
+    "type": "spot",
+    "base_coin": "INTW",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-INTW-USDT",
+    "symbol": "INTW",
     "denominator": "USDT"
   },
   {
@@ -11126,6 +11225,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "LITE_USDT",
+    "type": "spot",
+    "base_coin": "LITE",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-LITE-USDT",
+    "symbol": "LITE",
+    "denominator": "USDT"
+  },
+  {
     "id": "LIT_USDT",
     "type": "spot",
     "base_coin": "LIT",
@@ -12221,6 +12331,17 @@
     "end_date": "2026-11-25T10:53:05.245Z"
   },
   {
+    "id": "META_USDT",
+    "type": "spot",
+    "base_coin": "META",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-META-USDT",
+    "symbol": "META",
+    "denominator": "USDT"
+  },
+  {
     "id": "METIS_USDT",
     "type": "spot",
     "base_coin": "METIS",
@@ -12924,6 +13045,28 @@
     "first_capture": "2026-11-13T06:00:00.000Z",
     "internal_id": "spot-MRNA-USDT",
     "symbol": "MRNA",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MRVL_USDT",
+    "type": "spot",
+    "base_coin": "MRVL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-MRVL-USDT",
+    "symbol": "MRVL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "MSFT_USDT",
+    "type": "spot",
+    "base_coin": "MSFT",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-MSFT-USDT",
+    "symbol": "MSFT",
     "denominator": "USDT"
   },
   {
@@ -14158,6 +14301,17 @@
     "denominator": "USDT"
   },
   {
+    "id": "ORCL_USDT",
+    "type": "spot",
+    "base_coin": "ORCL",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-ORCL-USDT",
+    "symbol": "ORCL",
+    "denominator": "USDT"
+  },
+  {
     "id": "ORDI_USDT",
     "type": "spot",
     "base_coin": "ORDI",
@@ -14895,6 +15049,17 @@
     "first_capture": "2025-08-20T00:00:00.000Z",
     "internal_id": "spot-PLLD-USDT",
     "symbol": "PLLD",
+    "denominator": "USDT"
+  },
+  {
+    "id": "PLTR_USDT",
+    "type": "spot",
+    "base_coin": "PLTR",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-PLTR-USDT",
+    "symbol": "PLTR",
     "denominator": "USDT"
   },
   {
@@ -17754,6 +17919,17 @@
     "end_date": "2024-08-17T00:00:00.000Z",
     "internal_id": "spot-SPYRO-USDT",
     "symbol": "SPYRO",
+    "denominator": "USDT"
+  },
+  {
+    "id": "SPY_USDT",
+    "type": "spot",
+    "base_coin": "SPY",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T05:00:00.000Z",
+    "internal_id": "spot-SPY-USDT",
+    "symbol": "SPY",
     "denominator": "USDT"
   },
   {

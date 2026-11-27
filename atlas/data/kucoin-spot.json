@@ -8302,6 +8302,17 @@
     "end_date": "2026-11-05T08:57:47.910Z"
   },
   {
+    "id": "GAIB-USDT",
+    "type": "spot",
+    "base_coin": "GAIB",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T10:00:00.000Z",
+    "internal_id": "spot-GAIB-USDT",
+    "symbol": "GAIB",
+    "denominator": "USDT"
+  },
+  {
     "id": "GAIN-USDT",
     "type": "spot",
     "first_capture": "2025-09-24T00:00:00.000Z",
@@ -11487,6 +11498,17 @@
     "end_date": "2025-03-29T00:00:00.000Z",
     "internal_id": "spot-KNGL-USDT",
     "symbol": "KNGL",
+    "denominator": "USDT"
+  },
+  {
+    "id": "KNTQ-USDT",
+    "type": "spot",
+    "base_coin": "KNTQ",
+    "quote_coin": "USDT",
+    "underlying": "crypto",
+    "first_capture": "2026-11-27T09:00:00.000Z",
+    "internal_id": "spot-KNTQ-USDT",
+    "symbol": "KNTQ",
     "denominator": "USDT"
   },
   {
