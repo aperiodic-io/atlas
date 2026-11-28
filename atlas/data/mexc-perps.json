@@ -4595,6 +4595,21 @@
     "margin": "USDT"
   },
   {
+    "id": "CSXSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "CSXSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T13:00:00Z",
+    "internal_id": "perpetual-CSXSTOCK-USDT:USDT",
+    "symbol": "CSXSTOCK",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "CTC_USDT",
     "type": "perpetual",
     "base_coin": "CTC",
@@ -9115,6 +9130,21 @@
     "margin": "USDT"
   },
   {
+    "id": "JEPQ_USDT",
+    "type": "perpetual",
+    "base_coin": "JEPQ",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T13:00:00Z",
+    "internal_id": "perpetual-JEPQ-USDT:USDT",
+    "symbol": "JEPQ",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
     "id": "JMKESTOCK_USDT",
     "type": "perpetual",
     "base_coin": "JMKESTOCK",
@@ -12888,6 +12918,21 @@
     "first_capture": "2023-05-08T06:58:35Z",
     "internal_id": "perpetual-ORDI-USDT:USDT",
     "symbol": "ORDI",
+    "denominator": "USDT",
+    "margin": "USDT"
+  },
+  {
+    "id": "ORLYSTOCK_USDT",
+    "type": "perpetual",
+    "base_coin": "ORLYSTOCK",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 0.001,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T13:00:00Z",
+    "internal_id": "perpetual-ORLYSTOCK-USDT:USDT",
+    "symbol": "ORLYSTOCK",
     "denominator": "USDT",
     "margin": "USDT"
   },

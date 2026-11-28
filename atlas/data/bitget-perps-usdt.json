@@ -3704,6 +3704,31 @@
     "unified_id": "perpetual-BID-USDT:USDT"
   },
   {
+    "id": "BIDUUSDT",
+    "type": "perpetual",
+    "base_coin": "BIDU",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T06:06:12.880Z",
+    "internal_id": "perpetual-BIDU-USDT:USDT",
+    "symbol": "BIDU",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42734,
+    "category": [
+      "DeFi",
+      "Tokenized Stock"
+    ],
+    "base_asset_id": "BIDU",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-BIDU-USDT:USDT"
+  },
+  {
     "id": "BIGTIMEUSDT",
     "type": "perpetual",
     "base_coin": "BIGTIME",
@@ -9164,6 +9189,26 @@
     "margin_asset_id": "USDT"
   },
   {
+    "id": "FXIUSDT",
+    "type": "perpetual",
+    "base_coin": "FXI",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T06:06:17.888Z",
+    "internal_id": "perpetual-FXI-USDT:USDT",
+    "symbol": "FXI",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "FXI",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-FXI-USDT:USDT"
+  },
+  {
     "id": "FXSUSDT",
     "type": "perpetual",
     "first_capture": "2024-11-08T00:00:00.000Z",
@@ -12151,14 +12196,17 @@
     "margin_asset": "USDT",
     "contract_size": 1.0,
     "quantity_unit": "base",
-    "underlying": "unknown",
+    "underlying": "equity",
     "first_capture": "2026-11-27T06:06:22.746Z",
     "internal_id": "perpetual-KBHKD-USDT:USDT",
     "symbol": "KBHKD",
     "denominator": "USDT",
     "margin": "USDT",
+    "base_asset_id": "KBHKD",
+    "base_asset_match": "venue_reference",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT"
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-KBHKD-USDT:USDT"
   },
   {
     "id": "KDAUSDT",
@@ -24493,6 +24541,30 @@
     "unified_id": "perpetual-XLE-USDT:USDT"
   },
   {
+    "id": "XLFUSDT",
+    "type": "perpetual",
+    "base_coin": "XLF",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T06:06:15.444Z",
+    "internal_id": "perpetual-XLF-USDT:USDT",
+    "symbol": "XLF",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "cmc_id": 42886,
+    "category": [
+      "DeFi"
+    ],
+    "base_asset_id": "XLF",
+    "base_asset_match": "cmc_market_pair",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-XLF-USDT:USDT"
+  },
+  {
     "id": "XLKUSDT",
     "type": "perpetual",
     "base_coin": "XLK",
@@ -24997,6 +25069,26 @@
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-YGG-USDT:USDT"
+  },
+  {
+    "id": "YINNUSDT",
+    "type": "perpetual",
+    "base_coin": "YINN",
+    "quote_coin": "USDT",
+    "margin_asset": "USDT",
+    "contract_size": 1.0,
+    "quantity_unit": "base",
+    "underlying": "equity",
+    "first_capture": "2026-11-27T06:06:25.116Z",
+    "internal_id": "perpetual-YINN-USDT:USDT",
+    "symbol": "YINN",
+    "denominator": "USDT",
+    "margin": "USDT",
+    "base_asset_id": "YINN",
+    "base_asset_match": "venue_reference",
+    "quote_asset_id": "USDT",
+    "margin_asset_id": "USDT",
+    "unified_id": "perpetual-YINN-USDT:USDT"
   },
   {
     "id": "YZYUSDT",

@@ -24940,13 +24940,13 @@
     "symbol": "RIF",
     "denominator": "USDT",
     "margin": "USDT",
-    "cmc_id": 3701,
+    "cmc_id": 34089,
     "category": [],
-    "base_asset_id": "RIF",
-    "base_asset_match": "venue_lineage",
+    "base_asset_id": "RIF.RIFAMPICIN",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
-    "unified_id": "perpetual-RIF-USDT:USDT"
+    "unified_id": "perpetual-RIF.RIFAMPICIN-USDT:USDT"
   },
   {
     "id": "RIO_USDT",

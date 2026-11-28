@@ -1723,15 +1723,8 @@
     "quantity_unit": "base",
     "first_capture": "2024-01-17T00:00:00.000Z",
     "end_date": "2025-11-15T00:00:00.000Z",
-    "cmc_id": 28846,
-    "category": [
-      "Generative AI"
-    ],
-    "base_asset_id": "AI.SLEEPLESS_AI",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-AI.SLEEPLESS_AI-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "AIXBTUSDT",
@@ -7740,7 +7733,7 @@
       "Tokenized Stock"
     ],
     "base_asset_id": "DIS",
-    "base_asset_match": "cross_venue_consensus",
+    "base_asset_match": "cmc_market_pair",
     "quote_asset_id": "USDT",
     "margin_asset_id": "USDT",
     "unified_id": "perpetual-DIS-USDT:USDT"
@@ -20213,13 +20206,8 @@
     "quantity_unit": "base",
     "first_capture": "2023-10-23T00:00:00.000Z",
     "end_date": "2025-12-03T00:00:00.000Z",
-    "category": [],
-    "cmc_id": 3701,
-    "base_asset_id": "RIF",
-    "base_asset_match": "cross_venue_consensus",
     "quote_asset_id": "USDT",
-    "margin_asset_id": "USDT",
-    "unified_id": "perpetual-RIF-USDT:USDT"
+    "margin_asset_id": "USDT"
   },
   {
     "id": "RIOTUSDT",
